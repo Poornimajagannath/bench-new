@@ -1,6 +1,6 @@
-# Visa Relay Benchmark Lab
+ Benchmark Lab
 
-**Status:** Docs-only (live auth blocked — see BLOCKERS.md)
+**Status:** Docs-only )
 
 ## Structure
 
@@ -15,7 +15,7 @@ visa-relay-bench/
 │   ├── authentication/      # Auth scenario (no live execution)
 │   ├── first-transaction/
 │   ├── setup-checkout/
-│   └── visa-relay-context-swapping/
+│   └──-context-swapping/
 ├── templates/               # Code templates from MCP SDK docs
 │   ├── card-payment/
 │   ├── ach-payment/
@@ -36,7 +36,7 @@ visa-relay-bench/
 | authentication | Auth credential management (docs only) | Blocked |
 | first-transaction | First payment transaction scenario | Ready |
 | setup-checkout | Checkout integration scenario | Ready |
-| visa-relay-context-swapping | Context switching between scenarios | Ready |
+|context-swapping | Context switching between scenarios | Ready |
 
 ## Running
 
@@ -51,8 +51,4 @@ bash scripts/evaluate-run.sh <run-id>
 bash scripts/lab-loop.sh
 ```
 
-## Notes
 
-- All scenarios use docs-only evaluation unless live auth is resolved
-- See BLOCKERS.md for the auth issue status
-- Templates are generated from MCP SDK model documentation
