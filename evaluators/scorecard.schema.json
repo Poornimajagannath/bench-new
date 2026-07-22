@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Autonomous Integration Lab Scorecard",
+  "type": "object",
+  "required": [
+    "run_id",
+    "scenario",
+    "status",
+    "confidence",
+    "scores",
+    "timings",
+    "friction",
+    "reproducibility",
+    "issues"
+  ],
+  "properties": {
+    "run_id": { "type": "string" },
+    "scenario": { "type": "string" },
+    "agent": { "type": "string" },
+    "sdk_language": { "type": "string" },
+    "status": {
+      "type": "string",
+      "enum": ["success", "partial", "failed"]
+    },
+    "confidence": {
+      "type": "string",
+      "enum": ["high", "medium", "low"]
+    },
+    "scores": {
+      "type": "object",
+      "required": [
+        "integration_success",
+        "auth_clarity",
+        "sdk_usability",
+        "docs_sufficiency",
+        "agent_guessing",
+        "human_intervention"
+      ],
+      "properties": {
+        "integration_success": { "type": "integer", "minimum": 0, "maximum": 3 },
+        "auth_clarity": { "type": "integer", "minimum": 0, "maximum": 3 },
+        "sdk_usability": { "type": "integer", "minimum": 0, "maximum": 3 },
+        "docs_sufficiency": { "type": "integer", "minimum": 0, "maximum": 3 },
+        "agent_guessing": { "type": "integer", "minimum": 0, "maximum": 3 },
+        "human_intervention": { "type": "integer", "minimum": 0, "maximum": 3 }
+      }
+    },
+    "timings": {
+      "type": "object",
+      "properties": {
+        "time_to_first_api_response_ms": { "type": "integer", "minimum": 0 },
+        "time_to_first_success_ms": { "type": ["integer", "null"], "minimum": 0 },
+        "total_run_time_ms": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "friction": {
+      "type": "object",
+      "properties": {
+        "human_interventions": { "type": "integer", "minimum": 0 },
+        "docs_pages_consulted": { "type": "integer", "minimum": 0 },
+        "agent_guess_count": { "type": "integer", "minimum": 0 },
+        "auth_failure_count": { "type": "integer", "minimum": 0 },
+        "sdk_failure_count": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "reproducibility": {
+      "type": "object",
+      "required": ["replayable", "pinned_versions", "manifest_complete"],
+      "properties": {
+        "replayable": { "type": "boolean" },
+        "pinned_versions": { "type": "boolean" },
+        "manifest_complete": { "type": "boolean" }
+      }
+    },
+    "issues": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["bucket", "severity", "summary"],
+        "properties": {
+          "bucket": { "type": "string" },
+          "severity": { "type": "string", "enum": ["low", "medium", "high"] },
+          "summary": { "type": "string" }
+        }
+      }
+    },
+    "notes": { "type": "string" }
+  }
+}
