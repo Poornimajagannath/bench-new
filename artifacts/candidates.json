@@ -1,0 +1,105 @@
+{
+  "stage": "docetl_workflow_discovery",
+  "candidate_count": 3,
+  "candidates": [
+    {
+      "workflow_id": "flex-token-lifecycle",
+      "title": "Flex Token Lifecycle",
+      "goal": "Move from a Flex Microform transient token to a correctly scoped permanent TMS instrument without treating the JWT as a reusable PAN.",
+      "stages": [
+        "capture_transient_token",
+        "validate_token_type",
+        "create_permanent_instrument",
+        "authorize_with_instrument"
+      ],
+      "api_sdk_facts": [
+        "Flex Microform returns a short-lived transientTokenJwt",
+        "TMS createInstrument accepts a Flex token via a dedicated transient-token path, not as raw pan",
+        "Transient tokens must not be persisted as long-lived customer credentials"
+      ],
+      "confusion_points": [
+        "transient vs permanent token lifetime",
+        "Flex capture vs TMS persistence",
+        "which API consumes transientTokenJwt",
+        "symptom:TMS createInstrument rejects Flex JWT as pan",
+        "symptom:Developer stores transientTokenJwt in their DB as if it were reusable",
+        "symptom:Confusion between Flexible Token API and Token Management Service"
+      ],
+      "seed_ids": [
+        "seed-flex-01"
+      ],
+      "surface_hints": [
+        "docs",
+        "sdk",
+        "vap_cli"
+      ]
+    },
+    {
+      "workflow_id": "http-signature-debug",
+      "title": "HTTP Signature Debug",
+      "goal": "Produce a sandbox-safe HTTP Signature request using SDK-correct credential field names and a canonical signed-headers set.",
+      "stages": [
+        "load_sandbox_env_vars",
+        "build_digest",
+        "build_signature_base",
+        "attach_vc_headers",
+        "interpret_auth_failure"
+      ],
+      "api_sdk_facts": [
+        "Sandbox host is apitest.cybersource.com",
+        "SDK expects merchantKeyId and merchantsecretKey (not keyId/secretKey)",
+        "Signed headers typically include host, date, request-target, digest, v-c-merchant-id"
+      ],
+      "confusion_points": [
+        "SDK field name drift vs docs",
+        "signature base string construction",
+        "sandbox credential vs production endpoint mixups",
+        "symptom:401 Authentication Failed on apitest.cybersource.com",
+        "symptom:Docs say keyId/secretKey but SDK expects merchantKeyId/merchantsecretKey",
+        "symptom:Signed headers string host,date,request-target,digest,v-c-merchant-id still rejected"
+      ],
+      "seed_ids": [
+        "seed-httpsig-01"
+      ],
+      "surface_hints": [
+        "docs",
+        "sdk",
+        "vap_cli"
+      ]
+    },
+    {
+      "workflow_id": "microform-payer-auth-state-machine",
+      "title": "Microform + Payer Auth State Machine",
+      "goal": "Sequence Microform tokenization with Payer Authentication enrollment, challenge/frictionless handling, and authorization using the authentication result.",
+      "stages": [
+        "microform_tokenize",
+        "payer_auth_setup",
+        "enrollment_check",
+        "challenge_or_frictionless",
+        "validate_authentication",
+        "authorize_with_auth_result"
+      ],
+      "api_sdk_facts": [
+        "Microform tokenization is not itself a Payer Auth / 3DS completion",
+        "Enrollment may return FRICTIONLESS, CHALLENGE, or UNAVAILABLE paths",
+        "Authorization must carry authentication transaction references when 3DS was performed"
+      ],
+      "confusion_points": [
+        "Microform capture vs Payer Auth state machine",
+        "enrollment \u2192 challenge \u2192 validation ordering",
+        "which ids must flow into payment authorization",
+        "symptom:Developer authorizes immediately after Microform token without enrollment check",
+        "symptom:Challenge/frictionless paths collapsed into one success branch",
+        "symptom:Missing authentication transaction id on subsequent auth request"
+      ],
+      "seed_ids": [
+        "seed-mpa-01"
+      ],
+      "surface_hints": [
+        "docs",
+        "vap_cli",
+        "mcp"
+      ]
+    }
+  ]
+}

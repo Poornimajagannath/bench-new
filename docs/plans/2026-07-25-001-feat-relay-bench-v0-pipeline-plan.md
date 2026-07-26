@@ -31,15 +31,15 @@ hard question seeds
 
 ## Definition of Done
 
-- [ ] `relay_bench/` package with schemas, discovery, task_pack, verifiers, routing, reporting
-- [ ] `pipelines/synthesize_candidates.py` produces typed candidates from frozen seeds
-- [ ] `pipelines/run_demo.py` demos the three seeded workflows
-- [ ] `pipelines/run_bench_v0.py --workflow microform-payer-auth-state-machine` runs the full staged pipeline
-- [ ] Agent-visible task packs omit oracle, bad answer, and verifier-private checks
-- [ ] Hidden truth lives in a separate artifact / in-memory structure used only by the verifier
-- [ ] No network, no live credentials, no PAN/secret logging
-- [ ] Unit tests cover discovery, task pack separation, verifiers, reporting
-- [ ] All verification commands listed in the Cursor build prompt pass
+- [x] `relay_bench/` package with schemas, discovery, task_pack, verifiers, routing, reporting
+- [x] `pipelines/synthesize_candidates.py` produces typed candidates from frozen seeds
+- [x] `pipelines/run_demo.py` demos the three seeded workflows
+- [x] `pipelines/run_bench_v0.py --workflow microform-payer-auth-state-machine` runs the full staged pipeline
+- [x] Agent-visible task packs omit oracle, bad answer, and verifier-private checks
+- [x] Hidden truth lives in a separate artifact / in-memory structure used only by the verifier
+- [x] No network, no live credentials, no PAN/secret logging
+- [x] Unit tests cover discovery, task pack separation, verifiers, reporting
+- [x] All verification commands listed in the Cursor build prompt pass
 
 ## Module Responsibilities
 
