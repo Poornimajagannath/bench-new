@@ -66,17 +66,19 @@ class DiscoveryTests(unittest.TestCase):
 
     def test_synthesize_payload_includes_pipeline_stages(self):
         payload = synthesize_candidates_payload()
-        self.assertEqual(payload["stage"], "docetl_extract_suggest_pm")
+        self.assertEqual(payload["stage"], "docetl_inspired_extract_suggest_pm")
         self.assertEqual(
             payload["pipeline"],
             [
                 "raw_forum_docs_support_questions",
-                "docetl_extract_goal_symptoms_entities",
+                "docetl_inspired_extract_goal_symptoms_entities",
                 "suggest_workflow_id_and_stages",
                 "pm_approve_or_edit",
-                "relay_bench_task_pack_and_verifier",
+                "relay_bench_task_pack_and_stable_bench_inspired_verifier",
             ],
         )
+        self.assertIn("ucbepic/docetl", payload["inspired_by"]["discovery"])
+        self.assertIn("tempo-evals", payload["inspired_by"]["verifier"])
         self.assertEqual(payload["suggestion_count"], 3)
         self.assertEqual(payload["approved_candidate_count"], 3)
 

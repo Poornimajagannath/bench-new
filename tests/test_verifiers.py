@@ -5,7 +5,7 @@ from relay_bench.discovery import discover_workflows
 from relay_bench.task_pack import build_hidden_truth
 from relay_bench.verifiers import (
     bad_answer_probe_passed,
-    run_tempo_verification,
+    run_stable_bench_inspired_verification,
     verify_answer,
     verify_bad_answer,
     verify_oracle,
@@ -80,14 +80,14 @@ class VerifierTests(unittest.TestCase):
         probe = verify_bad_answer(weakened)
         self.assertFalse(probe.passed)
         with self.assertRaises(AssertionError) as ctx:
-            run_tempo_verification(weakened)
+            run_stable_bench_inspired_verification(weakened)
         self.assertIn("missing=", str(ctx.exception))
         self.assertIn("dual_path_handling", str(ctx.exception))
 
-    def test_run_tempo_verification_bundle(self):
+    def test_run_stable_bench_inspired_verification_bundle(self):
         candidate = discover_workflows(workflow_id="http-signature-debug")[0]
         hidden = build_hidden_truth(candidate)
-        results = run_tempo_verification(hidden)
+        results = run_stable_bench_inspired_verification(hidden)
         self.assertIn("oracle_answer", results)
         self.assertIn("bad_answer", results)
         self.assertTrue(results["bad_answer"].passed)

@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""DocETL stage: raw questions → extract → suggest (+ show PM-approved set)."""
+"""DocETL-inspired stage: raw questions → extract → suggest (+ show PM-approved set).
+
+Does not import the real `docetl` package.
+"""
 
 from __future__ import annotations
 

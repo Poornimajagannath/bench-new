@@ -1,14 +1,19 @@
-"""Tempo-style verifier over simulated fixtures.
+"""Stable Bench-inspired verifier over simulated fixtures.
+
+V0 does NOT import or depend on `tempo-evals`, Harbor, Docker isolation,
+or the Stable Bench task/runtime format. This is a local deterministic
+prototype inspired by oracle/verifier separation patterns from
+tempoxyz/tempo-evals (Stable Bench).
 
 Stage boundary: HiddenTruth (+ optional candidate answer) → VerifierResult.
-No network. Deterministic fixture checks only.
+No network.
 """
 
 from __future__ import annotations
 
 import json
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List
 
 from relay_bench.schemas import CheckResult, HiddenTruth, VerifierResult
 
@@ -92,7 +97,7 @@ def verify_oracle(hidden: HiddenTruth) -> VerifierResult:
     return verify_answer(hidden, hidden.oracle_answer, subject="oracle_answer")
 
 
-def run_tempo_verification(hidden: HiddenTruth) -> Dict[str, VerifierResult]:
+def run_stable_bench_inspired_verification(hidden: HiddenTruth) -> Dict[str, VerifierResult]:
     """Run oracle (must pass) and bad-answer (must catch full expected set) probes."""
     oracle = verify_oracle(hidden)
     bad = verify_bad_answer(hidden)
@@ -117,7 +122,8 @@ def write_verifier_results(
     RESULT_DIR.mkdir(parents=True, exist_ok=True)
     path = RESULT_DIR / f"{workflow_id}.result.json"
     payload = {
-        "stage": "tempo_verifier",
+        "stage": "stable_bench_inspired_verifier",
+        "inspired_by": "tempoxyz/tempo-evals Stable Bench (not imported in V0)",
         "workflow_id": workflow_id,
         "results": {k: v.to_dict() for k, v in results.items()},
     }

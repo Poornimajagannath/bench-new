@@ -1,5 +1,6 @@
 {
-  "stage": "tempo_verifier",
+  "stage": "stable_bench_inspired_verifier",
+  "inspired_by": "tempoxyz/tempo-evals Stable Bench (not imported in V0)",
   "workflow_id": "microform-payer-auth-state-machine",
   "results": {
     "oracle_answer": {

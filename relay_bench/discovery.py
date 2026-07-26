@@ -1,7 +1,10 @@
-"""DocETL-style discovery stages over raw forum/docs/support questions.
+"""DocETL-inspired discovery stages over raw forum/docs/support questions.
 
 Flow (pre-PM):
   raw questions → extract goal/symptoms/entities → suggest workflow_id + stages
+
+V0 does NOT import or depend on the real `docetl` package (ucbepic/docetl).
+This is a small local heuristic prototype inspired by DocETL's extract/map pattern.
 
 No task packs, no verifiers, no network.
 """
@@ -126,7 +129,7 @@ def load_raw_questions(path: Optional[Path] = None) -> List[RawQuestion]:
         if "workflow_id" in item:
             raise ValueError(
                 f"Raw question {item.get('seed_id')!r} must not include workflow_id; "
-                "DocETL suggests workflow_id after extraction"
+                "DocETL-inspired discovery suggests workflow_id after extraction"
             )
         questions.append(
             RawQuestion(
@@ -172,7 +175,7 @@ def _split_symptom_clauses(text: str) -> List[str]:
 
 
 def extract_from_question(question: RawQuestion) -> Extraction:
-    """DocETL-style map: raw question → goal / symptoms / entities."""
+    """DocETL-inspired map: raw question → goal / symptoms / entities."""
     text = question.question
     lower = text.lower()
 
@@ -293,13 +296,17 @@ def synthesize_candidates_payload(
         approved = [c for c in approved if c.workflow_id == workflow_id]
 
     return {
-        "stage": "docetl_extract_suggest_pm",
+        "stage": "docetl_inspired_extract_suggest_pm",
+        "inspired_by": {
+            "discovery": "ucbepic/docetl (not imported in V0)",
+            "verifier": "tempoxyz/tempo-evals Stable Bench (not imported in V0)",
+        },
         "pipeline": [
             "raw_forum_docs_support_questions",
-            "docetl_extract_goal_symptoms_entities",
+            "docetl_inspired_extract_goal_symptoms_entities",
             "suggest_workflow_id_and_stages",
             "pm_approve_or_edit",
-            "relay_bench_task_pack_and_verifier",
+            "relay_bench_task_pack_and_stable_bench_inspired_verifier",
         ],
         "suggestion_count": len(suggestions),
         "suggestions": suggestions,

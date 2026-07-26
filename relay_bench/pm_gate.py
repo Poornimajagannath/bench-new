@@ -1,4 +1,4 @@
-"""PM approve/edit gate between DocETL suggestions and Relay Bench task packs.
+"""PM approve/edit gate between DocETL-inspired suggestions and Relay Bench task packs.
 
 V0 uses frozen PM decisions under data/pm_approvals.json (local proof, no UI).
 Rejected suggestions never become task packs or verifiers.
@@ -98,6 +98,6 @@ def require_pm_approved_candidate(
     if not matches:
         raise LookupError(
             f"No PM-approved candidate for workflow_id={workflow_id!r}. "
-            "DocETL suggestions require PM approve/edit before task pack creation."
+            "DocETL-inspired suggestions require PM approve/edit before task pack creation."
         )
     return matches[0]

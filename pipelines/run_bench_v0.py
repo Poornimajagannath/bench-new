@@ -1,11 +1,14 @@
 #!/usr/bin/env python3
 """Relay Bench V0 staged pipeline runner.
 
+Local prototype inspired by DocETL and Tempo Stable Bench.
+Does NOT import `docetl`, `tempo-evals`, Harbor, or Docker isolation.
+
 raw forum/docs/support questions
--> DocETL extracts goal/symptoms/entities
+-> DocETL-inspired extract of goal/symptoms/entities
 -> suggests workflow_id + stages
 -> PM approves/edits
--> Relay Bench creates task pack + verifier
+-> Relay Bench creates task pack + Stable Bench-inspired verifier
 -> failure classifier
 -> product-surface improvement action
 -> PM-readable report
@@ -27,7 +30,10 @@ from relay_bench.pm_gate import require_pm_approved_candidate
 from relay_bench.reporting import build_report, write_report
 from relay_bench.routing import classify_failure
 from relay_bench.task_pack import materialize_contract
-from relay_bench.verifiers import run_tempo_verification, write_verifier_results
+from relay_bench.verifiers import (
+    run_stable_bench_inspired_verification,
+    write_verifier_results,
+)
 
 
 SUPPORTED = {
@@ -64,7 +70,7 @@ def run_pipeline(workflow_id: str) -> int:
     print(f"[bench_v0] task_pack={pack_path}")
     print(f"[bench_v0] hidden_truth={hidden_path} (not agent-facing)")
 
-    results = run_tempo_verification(hidden)
+    results = run_stable_bench_inspired_verification(hidden)
     result_path = write_verifier_results(workflow_id, results)
     print(f"[bench_v0] verifier_results={result_path}")
     print(

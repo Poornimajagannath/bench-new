@@ -4,14 +4,17 @@ from relay_bench.discovery import discover_workflows
 from relay_bench.reporting import build_report, render_markdown, write_report
 from relay_bench.routing import classify_failure
 from relay_bench.task_pack import build_hidden_truth, materialize_contract
-from relay_bench.verifiers import run_tempo_verification, write_verifier_results
+from relay_bench.verifiers import (
+    run_stable_bench_inspired_verification,
+    write_verifier_results,
+)
 
 
 class ReportingTests(unittest.TestCase):
     def test_report_answers_five_questions(self):
         candidate = discover_workflows(workflow_id="microform-payer-auth-state-machine")[0]
         pack, hidden, pack_path, _hidden_path = materialize_contract(candidate)
-        results = run_tempo_verification(hidden)
+        results = run_stable_bench_inspired_verification(hidden)
         result_path = write_verifier_results(candidate.workflow_id, results)
         classification = classify_failure(candidate, results["bad_answer"])
         report = build_report(

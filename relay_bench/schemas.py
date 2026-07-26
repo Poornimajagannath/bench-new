@@ -1,4 +1,7 @@
-"""Typed artifacts that join DocETL-style discovery and Tempo-style verification."""
+"""Typed artifacts that join DocETL-inspired discovery and Stable Bench-inspired verification.
+
+V0 is a local prototype. It does not import `docetl` or `tempo-evals`.
+"""
 
 from __future__ import annotations
 
@@ -22,7 +25,7 @@ class RawQuestion:
 
 @dataclass
 class Extraction:
-    """DocETL-style extract: goal / symptoms / entities from a raw question."""
+    """DocETL-inspired extract: goal / symptoms / entities from a raw question."""
 
     seed_id: str
     goal: str
