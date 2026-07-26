@@ -1,0 +1,76 @@
+{
+  "stage": "stable_bench_inspired_verifier",
+  "inspired_by": "tempoxyz/tempo-evals Stable Bench (not imported in V0)",
+  "workflow_id": "microform-payer-auth-state-machine",
+  "results": {
+    "oracle_answer": {
+      "workflow_id": "microform-payer-auth-state-machine",
+      "subject": "oracle_answer",
+      "passed": true,
+      "checks": [
+        {
+          "check_id": "enrollment_present",
+          "passed": true,
+          "detail": "runs_enrollment_check: expected=True actual=True",
+          "private": true
+        },
+        {
+          "check_id": "dual_path_handling",
+          "passed": true,
+          "detail": "handles_challenge_and_frictionless: expected=True actual=True",
+          "private": true
+        },
+        {
+          "check_id": "auth_refs_on_payment",
+          "passed": true,
+          "detail": "passes_auth_refs_to_payment: expected=True actual=True",
+          "private": true
+        },
+        {
+          "check_id": "state_machine_complete",
+          "passed": true,
+          "detail": "stages_completed contains_all ['enrollment_check', 'challenge_or_frictionless', 'validate_authentication']: True",
+          "private": true
+        }
+      ],
+      "caught_failures": []
+    },
+    "bad_answer": {
+      "workflow_id": "microform-payer-auth-state-machine",
+      "subject": "bad_answer",
+      "passed": true,
+      "checks": [
+        {
+          "check_id": "enrollment_present",
+          "passed": false,
+          "detail": "runs_enrollment_check: expected=True actual=False",
+          "private": true
+        },
+        {
+          "check_id": "dual_path_handling",
+          "passed": false,
+          "detail": "handles_challenge_and_frictionless: expected=True actual=False",
+          "private": true
+        },
+        {
+          "check_id": "auth_refs_on_payment",
+          "passed": false,
+          "detail": "passes_auth_refs_to_payment: expected=True actual=False",
+          "private": true
+        },
+        {
+          "check_id": "state_machine_complete",
+          "passed": false,
+          "detail": "stages_completed contains_all ['enrollment_check', 'challenge_or_frictionless', 'validate_authentication']: False",
+          "private": true
+        }
+      ],
+      "caught_failures": [
+        "enrollment_present",
+        "dual_path_handling",
+        "auth_refs_on_payment",
+        "state_machine_complete"
+      ]
+    }
+  }
+}

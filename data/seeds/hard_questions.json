@@ -1,0 +1,33 @@
+[
+  {
+    "seed_id": "seed-flex-01",
+    "source": "public-forum-frozen",
+    "channel": "forum",
+    "question": "I created a Flex Microform transient token — can I pass it straight into TMS to store a permanent instrument, or do I need another step? TMS createInstrument rejects my Flex JWT when I send it as pan, and I'm not sure if I should persist transientTokenJwt in my DB.",
+    "public_refs": [
+      "developer.cybersource.com/docs/flex",
+      "developer.cybersource.com/docs/tms",
+      "stackoverflow.com/questions/58177298"
+    ]
+  },
+  {
+    "seed_id": "seed-httpsig-01",
+    "source": "public-docs-frozen",
+    "channel": "docs",
+    "question": "My HTTP Signature request looks correct but CyberSource returns Authentication Failed on apitest.cybersource.com. Am I using the wrong SDK field names for key id and secret? Docs say keyId/secretKey but something still fails with host,date,request-target,digest,v-c-merchant-id.",
+    "public_refs": [
+      "developer.cybersource.com/docs/authentication",
+      "developer.cybersource.com/llms.txt"
+    ]
+  },
+  {
+    "seed_id": "seed-mpa-01",
+    "source": "public-docs-frozen",
+    "channel": "support",
+    "question": "After Microform tokenization, where does Payer Authentication (3DS) enrollment and challenge fit — and what states must I handle before authorization? Right now we authorize immediately after the Microform token and sometimes miss the authentication transaction id.",
+    "public_refs": [
+      "developer.cybersource.com/docs/flex-microform",
+      "developer.cybersource.com/docs/payer-authentication"
+    ]
+  }
+]

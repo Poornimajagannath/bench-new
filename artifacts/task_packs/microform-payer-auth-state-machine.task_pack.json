@@ -1,0 +1,26 @@
+{
+  "workflow_id": "microform-payer-auth-state-machine",
+  "title": "Microform + Payer Auth State Machine",
+  "goal": "Sequence Microform tokenization with Payer Authentication enrollment, challenge/frictionless handling, and authorization using the authentication result.",
+  "prompt": "Workflow: Microform + Payer Auth State Machine\nGoal: Sequence Microform tokenization with Payer Authentication enrollment, challenge/frictionless handling, and authorization using the authentication result.\n\nUsing only the allowed context, produce a step-by-step integration plan that covers every workflow stage. Do not call live payment APIs. Do not include credentials, PANs, or secrets.",
+  "allowed_context": [
+    "Microform tokenization is not itself a Payer Auth / 3DS completion",
+    "Enrollment may return FRICTIONLESS, CHALLENGE, or UNAVAILABLE paths",
+    "Authorization must carry authentication transaction references when 3DS was performed"
+  ],
+  "constraints": [
+    "No network calls",
+    "No live CyberSource sandbox credentials",
+    "No raw PAN, secrets, or credential logging",
+    "Public forum/docs seeds are frozen input only"
+  ],
+  "expected_deliverable": "A structured plan listing each stage, the API/SDK fact it depends on, and the readiness check before moving to the next stage.",
+  "stages": [
+    "microform_tokenize",
+    "payer_auth_setup",
+    "enrollment_check",
+    "challenge_or_frictionless",
+    "validate_authentication",
+    "authorize_with_auth_result"
+  ]
+}

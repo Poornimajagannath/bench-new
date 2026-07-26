@@ -1,0 +1,390 @@
+{
+  "stage": "docetl_inspired_extract_suggest_pm",
+  "inspired_by": {
+    "discovery": "ucbepic/docetl (not imported in V0)",
+    "verifier": "tempoxyz/tempo-evals Stable Bench (not imported in V0)"
+  },
+  "pipeline": [
+    "raw_forum_docs_support_questions",
+    "docetl_inspired_extract_goal_symptoms_entities",
+    "suggest_workflow_id_and_stages",
+    "pm_approve_or_edit",
+    "relay_bench_task_pack_and_stable_bench_inspired_verifier"
+  ],
+  "suggestion_count": 3,
+  "suggestions": [
+    {
+      "raw_question": {
+        "seed_id": "seed-flex-01",
+        "source": "public-forum-frozen",
+        "channel": "forum",
+        "question": "I created a Flex Microform transient token \u2014 can I pass it straight into TMS to store a permanent instrument, or do I need another step? TMS createInstrument rejects my Flex JWT when I send it as pan, and I'm not sure if I should persist transientTokenJwt in my DB.",
+        "public_refs": [
+          "developer.cybersource.com/docs/flex",
+          "developer.cybersource.com/docs/tms",
+          "stackoverflow.com/questions/58177298"
+        ]
+      },
+      "extraction": {
+        "seed_id": "seed-flex-01",
+        "goal": "can I pass it straight into TMS to store a permanent instrument, or do I need another step?",
+        "symptoms": [
+          "TMS createInstrument rejects my Flex JWT when I send it as pan,",
+          "'m not sure if I should persist transientTokenJwt in my DB"
+        ],
+        "entities": [
+          "Flex",
+          "Microform",
+          "TMS",
+          "transientTokenJwt",
+          "createInstrument"
+        ],
+        "confidence": 0.95
+      },
+      "suggestion": {
+        "seed_id": "seed-flex-01",
+        "suggested_workflow_id": "flex-token-lifecycle",
+        "title": "Flex Token Lifecycle",
+        "stages": [
+          "capture_transient_token",
+          "validate_token_type",
+          "create_permanent_instrument",
+          "authorize_with_instrument"
+        ],
+        "rationale": [
+          "entity_hit:flex",
+          "entity_hit:microform",
+          "entity_hit:transienttokenjwt",
+          "entity_hit:tms",
+          "entity_hit:createinstrument",
+          "entity_hit:permanent instrument"
+        ],
+        "confidence": 0.99
+      }
+    },
+    {
+      "raw_question": {
+        "seed_id": "seed-httpsig-01",
+        "source": "public-docs-frozen",
+        "channel": "docs",
+        "question": "My HTTP Signature request looks correct but CyberSource returns Authentication Failed on apitest.cybersource.com. Am I using the wrong SDK field names for key id and secret? Docs say keyId/secretKey but something still fails with host,date,request-target,digest,v-c-merchant-id.",
+        "public_refs": [
+          "developer.cybersource.com/docs/authentication",
+          "developer.cybersource.com/llms.txt"
+        ]
+      },
+      "extraction": {
+        "seed_id": "seed-httpsig-01",
+        "goal": "Am I using the wrong SDK field names for key id and secret?",
+        "symptoms": [
+          "My HTTP Signature request looks correct but CyberSource returns Authentication Failed on apitest.cybersource.com",
+          "Am I using the wrong SDK field names for key id and secret",
+          "Docs say keyId/secretKey but something still fails with host,date,request-target,digest,v-c-merchant-id"
+        ],
+        "entities": [
+          "HTTP Signature",
+          "Authentication Failed",
+          "keyId",
+          "secretKey",
+          "v-c-merchant-id",
+          "apitest.cybersource.com"
+        ],
+        "confidence": 0.95
+      },
+      "suggestion": {
+        "seed_id": "seed-httpsig-01",
+        "suggested_workflow_id": "http-signature-debug",
+        "title": "HTTP Signature Debug",
+        "stages": [
+          "load_sandbox_env_vars",
+          "build_digest",
+          "build_signature_base",
+          "attach_vc_headers",
+          "interpret_auth_failure"
+        ],
+        "rationale": [
+          "entity_hit:http signature",
+          "entity_hit:authentication failed",
+          "entity_hit:keyid",
+          "entity_hit:secretkey",
+          "entity_hit:v-c-merchant-id",
+          "entity_hit:apitest"
+        ],
+        "confidence": 0.99
+      }
+    },
+    {
+      "raw_question": {
+        "seed_id": "seed-mpa-01",
+        "source": "public-docs-frozen",
+        "channel": "support",
+        "question": "After Microform tokenization, where does Payer Authentication (3DS) enrollment and challenge fit \u2014 and what states must I handle before authorization? Right now we authorize immediately after the Microform token and sometimes miss the authentication transaction id.",
+        "public_refs": [
+          "developer.cybersource.com/docs/flex-microform",
+          "developer.cybersource.com/docs/payer-authentication"
+        ]
+      },
+      "extraction": {
+        "seed_id": "seed-mpa-01",
+        "goal": "where does Payer Authentication (3DS) enrollment and challenge fit \u2014 and what states must I handle before authorization?",
+        "symptoms": [
+          "Right now we authorize immediately after the Microform token and sometimes miss the authentication transaction id"
+        ],
+        "entities": [
+          "Microform",
+          "Payer Authentication",
+          "3DS",
+          "enrollment",
+          "challenge",
+          "authorization"
+        ],
+        "confidence": 0.95
+      },
+      "suggestion": {
+        "seed_id": "seed-mpa-01",
+        "suggested_workflow_id": "microform-payer-auth-state-machine",
+        "title": "Microform + Payer Auth State Machine",
+        "stages": [
+          "microform_tokenize",
+          "payer_auth_setup",
+          "enrollment_check",
+          "challenge_or_frictionless",
+          "validate_authentication",
+          "authorize_with_auth_result"
+        ],
+        "rationale": [
+          "entity_hit:payer authentication",
+          "entity_hit:3ds",
+          "entity_hit:enrollment",
+          "entity_hit:challenge",
+          "entity_hit:microform",
+          "entity_hit:authentication transaction"
+        ],
+        "confidence": 0.99
+      }
+    }
+  ],
+  "approved_candidate_count": 3,
+  "approved_candidates": [
+    {
+      "workflow_id": "flex-token-lifecycle",
+      "title": "Flex Token Lifecycle",
+      "goal": "can I pass it straight into TMS to store a permanent instrument, or do I need another step?",
+      "stages": [
+        "capture_transient_token",
+        "validate_token_type",
+        "create_permanent_instrument",
+        "authorize_with_instrument"
+      ],
+      "api_sdk_facts": [
+        "Flex Microform returns a short-lived transientTokenJwt",
+        "TMS createInstrument accepts a Flex token via a dedicated transient-token path, not as raw pan",
+        "Transient tokens must not be persisted as long-lived customer credentials"
+      ],
+      "confusion_points": [
+        "TMS createInstrument rejects my Flex JWT when I send it as pan,",
+        "'m not sure if I should persist transientTokenJwt in my DB",
+        "entity:Flex",
+        "entity:Microform",
+        "entity:TMS",
+        "entity:transientTokenJwt",
+        "entity:createInstrument"
+      ],
+      "seed_ids": [
+        "seed-flex-01"
+      ],
+      "surface_hints": [
+        "docs",
+        "sdk",
+        "vap_cli"
+      ],
+      "pm_decision": "approve",
+      "extraction": {
+        "seed_id": "seed-flex-01",
+        "goal": "can I pass it straight into TMS to store a permanent instrument, or do I need another step?",
+        "symptoms": [
+          "TMS createInstrument rejects my Flex JWT when I send it as pan,",
+          "'m not sure if I should persist transientTokenJwt in my DB"
+        ],
+        "entities": [
+          "Flex",
+          "Microform",
+          "TMS",
+          "transientTokenJwt",
+          "createInstrument"
+        ],
+        "confidence": 0.95
+      },
+      "suggestion": {
+        "seed_id": "seed-flex-01",
+        "suggested_workflow_id": "flex-token-lifecycle",
+        "title": "Flex Token Lifecycle",
+        "stages": [
+          "capture_transient_token",
+          "validate_token_type",
+          "create_permanent_instrument",
+          "authorize_with_instrument"
+        ],
+        "rationale": [
+          "entity_hit:flex",
+          "entity_hit:microform",
+          "entity_hit:transienttokenjwt",
+          "entity_hit:tms",
+          "entity_hit:createinstrument",
+          "entity_hit:permanent instrument"
+        ],
+        "confidence": 0.99
+      }
+    },
+    {
+      "workflow_id": "http-signature-debug",
+      "title": "HTTP Signature Debug",
+      "goal": "Am I using the wrong SDK field names for key id and secret?",
+      "stages": [
+        "load_sandbox_env_vars",
+        "build_digest",
+        "build_signature_base",
+        "attach_vc_headers",
+        "interpret_auth_failure"
+      ],
+      "api_sdk_facts": [
+        "Sandbox host is apitest.cybersource.com",
+        "SDK expects merchantKeyId and merchantsecretKey (not keyId/secretKey)",
+        "Signed headers typically include host, date, request-target, digest, v-c-merchant-id"
+      ],
+      "confusion_points": [
+        "My HTTP Signature request looks correct but CyberSource returns Authentication Failed on apitest.cybersource.com",
+        "Am I using the wrong SDK field names for key id and secret",
+        "Docs say keyId/secretKey but something still fails with host,date,request-target,digest,v-c-merchant-id",
+        "entity:HTTP Signature",
+        "entity:Authentication Failed",
+        "entity:keyId",
+        "entity:secretKey",
+        "entity:v-c-merchant-id",
+        "entity:apitest.cybersource.com"
+      ],
+      "seed_ids": [
+        "seed-httpsig-01"
+      ],
+      "surface_hints": [
+        "docs",
+        "sdk",
+        "vap_cli"
+      ],
+      "pm_decision": "approve",
+      "extraction": {
+        "seed_id": "seed-httpsig-01",
+        "goal": "Am I using the wrong SDK field names for key id and secret?",
+        "symptoms": [
+          "My HTTP Signature request looks correct but CyberSource returns Authentication Failed on apitest.cybersource.com",
+          "Am I using the wrong SDK field names for key id and secret",
+          "Docs say keyId/secretKey but something still fails with host,date,request-target,digest,v-c-merchant-id"
+        ],
+        "entities": [
+          "HTTP Signature",
+          "Authentication Failed",
+          "keyId",
+          "secretKey",
+          "v-c-merchant-id",
+          "apitest.cybersource.com"
+        ],
+        "confidence": 0.95
+      },
+      "suggestion": {
+        "seed_id": "seed-httpsig-01",
+        "suggested_workflow_id": "http-signature-debug",
+        "title": "HTTP Signature Debug",
+        "stages": [
+          "load_sandbox_env_vars",
+          "build_digest",
+          "build_signature_base",
+          "attach_vc_headers",
+          "interpret_auth_failure"
+        ],
+        "rationale": [
+          "entity_hit:http signature",
+          "entity_hit:authentication failed",
+          "entity_hit:keyid",
+          "entity_hit:secretkey",
+          "entity_hit:v-c-merchant-id",
+          "entity_hit:apitest"
+        ],
+        "confidence": 0.99
+      }
+    },
+    {
+      "workflow_id": "microform-payer-auth-state-machine",
+      "title": "Microform + Payer Auth State Machine",
+      "goal": "Sequence Microform tokenization with Payer Authentication enrollment, challenge/frictionless handling, and authorization using the authentication result.",
+      "stages": [
+        "microform_tokenize",
+        "payer_auth_setup",
+        "enrollment_check",
+        "challenge_or_frictionless",
+        "validate_authentication",
+        "authorize_with_auth_result"
+      ],
+      "api_sdk_facts": [
+        "Microform tokenization is not itself a Payer Auth / 3DS completion",
+        "Enrollment may return FRICTIONLESS, CHALLENGE, or UNAVAILABLE paths",
+        "Authorization must carry authentication transaction references when 3DS was performed"
+      ],
+      "confusion_points": [
+        "Right now we authorize immediately after the Microform token and sometimes miss the authentication transaction id",
+        "entity:Microform",
+        "entity:Payer Authentication",
+        "entity:3DS",
+        "entity:enrollment",
+        "entity:challenge",
+        "entity:authorization"
+      ],
+      "seed_ids": [
+        "seed-mpa-01"
+      ],
+      "surface_hints": [
+        "docs",
+        "vap_cli",
+        "mcp"
+      ],
+      "pm_decision": "edit",
+      "extraction": {
+        "seed_id": "seed-mpa-01",
+        "goal": "where does Payer Authentication (3DS) enrollment and challenge fit \u2014 and what states must I handle before authorization?",
+        "symptoms": [
+          "Right now we authorize immediately after the Microform token and sometimes miss the authentication transaction id"
+        ],
+        "entities": [
+          "Microform",
+          "Payer Authentication",
+          "3DS",
+          "enrollment",
+          "challenge",
+          "authorization"
+        ],
+        "confidence": 0.95
+      },
+      "suggestion": {
+        "seed_id": "seed-mpa-01",
+        "suggested_workflow_id": "microform-payer-auth-state-machine",
+        "title": "Microform + Payer Auth State Machine",
+        "stages": [
+          "microform_tokenize",
+          "payer_auth_setup",
+          "enrollment_check",
+          "challenge_or_frictionless",
+          "validate_authentication",
+          "authorize_with_auth_result"
+        ],
+        "rationale": [
+          "entity_hit:payer authentication",
+          "entity_hit:3ds",
+          "entity_hit:enrollment",
+          "entity_hit:challenge",
+          "entity_hit:microform",
+          "entity_hit:authentication transaction"
+        ],
+        "confidence": 0.99
+      }
+    }
+  ]
+}

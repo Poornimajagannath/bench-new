@@ -1,0 +1,69 @@
+{
+  "workflow_id": "http-signature-debug",
+  "oracle_answer": {
+    "credential_fields": [
+      "merchantKeyId",
+      "merchantsecretKey"
+    ],
+    "endpoint_host": "apitest.cybersource.com",
+    "signed_headers": [
+      "host",
+      "date",
+      "request-target",
+      "digest",
+      "v-c-merchant-id"
+    ],
+    "logs_secrets": false
+  },
+  "bad_answer": {
+    "credential_fields": [
+      "keyId",
+      "secretKey"
+    ],
+    "endpoint_host": "api.cybersource.com",
+    "signed_headers": [
+      "host",
+      "date",
+      "digest"
+    ],
+    "logs_secrets": false,
+    "mistake": "Uses doc field names and production host; omits request-target and v-c-merchant-id"
+  },
+  "verifier_private_checks": [
+    {
+      "check_id": "sdk_field_names",
+      "field": "credential_fields",
+      "expected": [
+        "merchantKeyId",
+        "merchantsecretKey"
+      ]
+    },
+    {
+      "check_id": "sandbox_host",
+      "field": "endpoint_host",
+      "expected": "apitest.cybersource.com"
+    },
+    {
+      "check_id": "signed_headers_complete",
+      "field": "signed_headers",
+      "contains_all": [
+        "host",
+        "date",
+        "request-target",
+        "digest",
+        "v-c-merchant-id"
+      ]
+    },
+    {
+      "check_id": "no_secret_logging",
+      "field": "logs_secrets",
+      "expected": false
+    }
+  ],
+  "fixture_id": "fixture-httpsig-v0",
+  "expected_bad_failure_ids": [
+    "sdk_field_names",
+    "sandbox_host",
+    "signed_headers_complete"
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "workflow_id": "microform-payer-auth-state-machine",
+  "oracle_answer": {
+    "tokenizes_with_microform": true,
+    "runs_enrollment_check": true,
+    "handles_challenge_and_frictionless": true,
+    "passes_auth_refs_to_payment": true,
+    "stages_completed": [
+      "microform_tokenize",
+      "payer_auth_setup",
+      "enrollment_check",
+      "challenge_or_frictionless",
+      "validate_authentication",
+      "authorize_with_auth_result"
+    ]
+  },
+  "bad_answer": {
+    "tokenizes_with_microform": true,
+    "runs_enrollment_check": false,
+    "handles_challenge_and_frictionless": false,
+    "passes_auth_refs_to_payment": false,
+    "stages_completed": [
+      "microform_tokenize",
+      "authorize_with_auth_result"
+    ],
+    "mistake": "Authorizes immediately after Microform token; skips enrollment/challenge/validation"
+  },
+  "verifier_private_checks": [
+    {
+      "check_id": "enrollment_present",
+      "field": "runs_enrollment_check",
+      "expected": true
+    },
+    {
+      "check_id": "dual_path_handling",
+      "field": "handles_challenge_and_frictionless",
+      "expected": true
+    },
+    {
+      "check_id": "auth_refs_on_payment",
+      "field": "passes_auth_refs_to_payment",
+      "expected": true
+    },
+    {
+      "check_id": "state_machine_complete",
+      "field": "stages_completed",
+      "contains_all": [
+        "enrollment_check",
+        "challenge_or_frictionless",
+        "validate_authentication"
+      ]
+    }
+  ],
+  "fixture_id": "fixture-mpa-v0",
+  "expected_bad_failure_ids": [
+    "enrollment_present",
+    "dual_path_handling",
+    "auth_refs_on_payment",
+    "state_machine_complete"
+  ]
+}
