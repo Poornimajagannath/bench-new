@@ -11,6 +11,16 @@
     ]
   },
   {
+    "seed_id": "seed-flex-02",
+    "source": "public-forum-frozen",
+    "channel": "forum",
+    "question": "Does a Flex Microform transientTokenJwt expire too quickly for TMS createInstrument? Support said not to treat the JWT like a reusable PAN, but our checkout still fails when creating a permanent instrument.",
+    "public_refs": [
+      "developer.cybersource.com/docs/flex",
+      "developer.cybersource.com/docs/tms"
+    ]
+  },
+  {
     "seed_id": "seed-httpsig-01",
     "source": "public-docs-frozen",
     "channel": "docs",

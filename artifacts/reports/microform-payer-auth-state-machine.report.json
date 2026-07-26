@@ -7,7 +7,8 @@
     "entity:3DS",
     "entity:enrollment",
     "entity:challenge",
-    "entity:authorization"
+    "entity:authorization",
+    "alt_goal:where does Payer Authentication (3DS) enrollment and challenge fit \u2014 and what states must I handle before authorization?"
   ],
   "relay_discovered": [
     "Sequence Microform tokenization with Payer Authentication enrollment, challenge/frictionless handling, and authorization using the authentication result.",

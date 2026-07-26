@@ -1,7 +1,7 @@
 # Plan: Relay Bench V0 Pipeline
 
-**ID:** 2026-07-25-001  
-**Status:** Implemented (local prototype)  
+**ID:** 2026-07-25-001
+**Status:** Implemented (local prototype)
 **Scope:** Local proof inside this repo (not production Relay)
 
 ## Honest V0 label
@@ -64,7 +64,7 @@ Raw questions must not carry a pre-assigned `workflow_id`. Suggestion is produce
 |--------|----------------|
 | `schemas.py` | Typed dataclasses for seeds, candidates, task packs, hidden truth, verifier results, actions, reports |
 | `discovery.py` | DocETL-inspired: raw questions → extract goal/symptoms/entities → suggest workflow_id + stages |
-| `pm_gate.py` | PM approve/edit/reject gate; only approved rows become `WorkflowCandidate` |
+| `pm_gate.py` | PM approve/edit/reject gate; reduce approved seeds by `workflow_id` into one richer `WorkflowCandidate` |
 | `task_pack.py` | Split approved candidate into agent-visible `TaskPack` + verifier-only `HiddenTruth` |
 | `verifiers.py` | Stable Bench-inspired checks against simulated fixtures; return structured `VerifierResult` |
 | `routing.py` | Classify failures → `ImprovementAction` (docs, SDK, VAP CLI workflow verifier, etc.) |

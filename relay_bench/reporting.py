@@ -117,16 +117,17 @@ def render_markdown(report: BenchReport) -> str:
             lines.extend(["- recovery path:"])
             for rp in cli.recovery_path:
                 lines.append(f"  - {rp}")
-            lines.append("")
             break
 
-    return "\n".join(lines)
+    # Exactly one trailing newline; no blank line at EOF.
+    body = "\n".join(line.rstrip() for line in lines).rstrip() + "\n"
+    return body
 
 
 def write_report(report: BenchReport) -> tuple[Path, Path]:
     REPORT_DIR.mkdir(parents=True, exist_ok=True)
     md_path = REPORT_DIR / f"{report.workflow_id}.report.md"
     json_path = REPORT_DIR / f"{report.workflow_id}.report.json"
-    md_path.write_text(render_markdown(report) + "\n", encoding="utf-8")
+    md_path.write_text(render_markdown(report), encoding="utf-8")
     json_path.write_text(json.dumps(report.to_dict(), indent=2) + "\n", encoding="utf-8")
     return md_path, json_path

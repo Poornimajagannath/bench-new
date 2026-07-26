@@ -11,6 +11,7 @@ Local proof only. No network. No live credentials.
 - entity:enrollment
 - entity:challenge
 - entity:authorization
+- alt_goal:where does Payer Authentication (3DS) enrollment and challenge fit — and what states must I handle before authorization?
 
 ## 2. What Relay discovered
 
@@ -69,4 +70,3 @@ Local proof only. No network. No live credentials.
   - Compare agent plan stages against workflow contract stages
   - Apply verifier-private checks to the candidate answer only
   - Emit support-safe evidence without secrets or PAN
-
