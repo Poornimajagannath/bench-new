@@ -89,6 +89,9 @@ class HiddenTruth:
     bad_answer: Dict[str, Any]
     verifier_private_checks: List[Dict[str, Any]]
     fixture_id: str
+    # Check IDs the known-bad answer must fail. Bad-answer probe passes only
+    # when every ID in this list appears in caught_failures.
+    expected_bad_failure_ids: List[str] = field(default_factory=list)
 
     def to_dict(self) -> Dict[str, Any]:
         return asdict(self)

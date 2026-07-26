@@ -58,6 +58,12 @@ _HIDDEN: Dict[str, Dict[str, object]] = {
                 "contains": "validate_token_type",
             },
         ],
+        "expected_bad_failure_ids": [
+            "no_persist_transient",
+            "uses_flex_to_tms_path",
+            "creates_permanent_instrument",
+            "stage_order_includes_validate",
+        ],
     },
     "http-signature-debug": {
         "fixture_id": "fixture-httpsig-v0",
@@ -107,6 +113,12 @@ _HIDDEN: Dict[str, Dict[str, object]] = {
                 "field": "logs_secrets",
                 "expected": False,
             },
+        ],
+        # Known-bad answer keeps logs_secrets=False; that check must not be required.
+        "expected_bad_failure_ids": [
+            "sdk_field_names",
+            "sandbox_host",
+            "signed_headers_complete",
         ],
     },
     "microform-payer-auth-state-machine": {
@@ -159,6 +171,12 @@ _HIDDEN: Dict[str, Dict[str, object]] = {
                 ],
             },
         ],
+        "expected_bad_failure_ids": [
+            "enrollment_present",
+            "dual_path_handling",
+            "auth_refs_on_payment",
+            "state_machine_complete",
+        ],
     },
 }
 
@@ -197,12 +215,18 @@ def build_hidden_truth(candidate: WorkflowCandidate) -> HiddenTruth:
     raw = _HIDDEN.get(candidate.workflow_id)
     if raw is None:
         raise KeyError(f"No hidden truth for workflow_id={candidate.workflow_id!r}")
+    expected_ids = list(raw["expected_bad_failure_ids"])  # type: ignore[arg-type]
+    if not expected_ids:
+        raise ValueError(
+            f"HiddenTruth for {candidate.workflow_id!r} must declare expected_bad_failure_ids"
+        )
     return HiddenTruth(
         workflow_id=candidate.workflow_id,
         oracle_answer=dict(raw["oracle_answer"]),  # type: ignore[arg-type]
         bad_answer=dict(raw["bad_answer"]),  # type: ignore[arg-type]
         verifier_private_checks=list(raw["verifier_private_checks"]),  # type: ignore[arg-type]
         fixture_id=str(raw["fixture_id"]),
+        expected_bad_failure_ids=expected_ids,
     )
 
 

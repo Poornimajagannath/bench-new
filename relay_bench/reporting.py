@@ -17,6 +17,17 @@ ROOT = Path(__file__).resolve().parents[1]
 REPORT_DIR = ROOT / "artifacts" / "reports"
 
 
+def repo_relative(path: Path | str) -> str:
+    """Emit portable repo-relative paths (e.g. artifacts/task_packs/...)."""
+    p = Path(path)
+    resolved = p.resolve() if p.is_absolute() else (ROOT / p).resolve()
+    try:
+        return resolved.relative_to(ROOT.resolve()).as_posix()
+    except ValueError:
+        # Outside the repo: fall back to the original path string.
+        return Path(path).as_posix()
+
+
 def build_report(
     candidate: WorkflowCandidate,
     classification: FailureClassification,
@@ -43,8 +54,8 @@ def build_report(
         verifier_caught=list(bad_result.caught_failures),
         next_product_improvements=next_improvements,
         classification=classification,
-        task_pack_path=str(task_pack_path),
-        verifier_result_path=str(verifier_result_path),
+        task_pack_path=repo_relative(task_pack_path),
+        verifier_result_path=repo_relative(verifier_result_path),
     )
 
 

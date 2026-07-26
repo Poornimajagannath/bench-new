@@ -21,6 +21,15 @@ class TaskPackTests(unittest.TestCase):
         self.assertIn("runs_enrollment_check", hidden.oracle_answer)
         self.assertFalse(hidden.bad_answer["runs_enrollment_check"])
         self.assertTrue(hidden.verifier_private_checks)
+        self.assertEqual(
+            sorted(hidden.expected_bad_failure_ids),
+            [
+                "auth_refs_on_payment",
+                "dual_path_handling",
+                "enrollment_present",
+                "state_machine_complete",
+            ],
+        )
 
     def test_materialize_writes_separate_artifacts(self):
         pack, hidden, pack_path, hidden_path = materialize_contract(self.candidate)

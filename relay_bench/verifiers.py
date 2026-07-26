@@ -63,15 +63,26 @@ def verify_answer(
     )
 
 
+def bad_answer_probe_passed(hidden: HiddenTruth, caught_failures: List[str]) -> bool:
+    """Bad-answer probe succeeds only when the full expected failure set is caught."""
+    expected = set(hidden.expected_bad_failure_ids)
+    if not expected:
+        return False
+    return expected.issubset(set(caught_failures))
+
+
+def missing_expected_failures(hidden: HiddenTruth, caught_failures: List[str]) -> List[str]:
+    return sorted(set(hidden.expected_bad_failure_ids) - set(caught_failures))
+
+
 def verify_bad_answer(hidden: HiddenTruth) -> VerifierResult:
-    """Prove the verifier catches the known-bad answer (Tempo-style negative case)."""
+    """Prove the verifier catches the full expected bad-answer failure set."""
     result = verify_answer(hidden, hidden.bad_answer, subject="bad_answer")
-    # For the bad-answer probe, "success" means we caught at least one failure.
-    caught = not result.passed
+    passed = bad_answer_probe_passed(hidden, result.caught_failures)
     return VerifierResult(
         workflow_id=result.workflow_id,
         subject="bad_answer",
-        passed=caught,
+        passed=passed,
         checks=result.checks,
         caught_failures=result.caught_failures,
     )
@@ -82,7 +93,7 @@ def verify_oracle(hidden: HiddenTruth) -> VerifierResult:
 
 
 def run_tempo_verification(hidden: HiddenTruth) -> Dict[str, VerifierResult]:
-    """Run oracle (must pass) and bad-answer (must be caught) probes."""
+    """Run oracle (must pass) and bad-answer (must catch full expected set) probes."""
     oracle = verify_oracle(hidden)
     bad = verify_bad_answer(hidden)
     if not oracle.passed:
@@ -90,8 +101,11 @@ def run_tempo_verification(hidden: HiddenTruth) -> Dict[str, VerifierResult]:
             f"Oracle failed verification for {hidden.workflow_id}: {oracle.caught_failures}"
         )
     if not bad.passed:
+        missing = missing_expected_failures(hidden, bad.caught_failures)
         raise AssertionError(
-            f"Verifier failed to catch bad answer for {hidden.workflow_id}"
+            f"Verifier failed to catch full expected bad-answer set for "
+            f"{hidden.workflow_id}: missing={missing} caught={bad.caught_failures} "
+            f"expected={list(hidden.expected_bad_failure_ids)}"
         )
     return {"oracle_answer": oracle, "bad_answer": bad}
 

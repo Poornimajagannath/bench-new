@@ -35,6 +35,19 @@ class ReportingTests(unittest.TestCase):
         self.assertTrue(report.developer_confusion)
         self.assertTrue(report.verifier_caught)
 
+        # Portable repo-relative artifact paths (no absolute /workspace or machine roots).
+        self.assertEqual(
+            report.task_pack_path,
+            "artifacts/task_packs/microform-payer-auth-state-machine.task_pack.json",
+        )
+        self.assertEqual(
+            report.verifier_result_path,
+            "artifacts/verifier_results/microform-payer-auth-state-machine.result.json",
+        )
+        self.assertFalse(report.task_pack_path.startswith("/"))
+        self.assertFalse(report.verifier_result_path.startswith("/"))
+        self.assertNotIn("/workspace/", md)
+
         md_path, json_path = write_report(report)
         self.assertTrue(md_path.exists())
         self.assertTrue(json_path.exists())
