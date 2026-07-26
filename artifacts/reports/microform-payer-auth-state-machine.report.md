@@ -46,8 +46,8 @@ Local proof only. No network. No live credentials.
 
 ## Artifacts
 
-- task pack: `/workspace/artifacts/task_packs/microform-payer-auth-state-machine.task_pack.json`
-- verifier results: `/workspace/artifacts/verifier_results/microform-payer-auth-state-machine.result.json`
+- task pack: `artifacts/task_packs/microform-payer-auth-state-machine.task_pack.json`
+- verifier results: `artifacts/verifier_results/microform-payer-auth-state-machine.result.json`
 
 ## VAP CLI workflow verifier (recommended)
 

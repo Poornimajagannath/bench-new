@@ -60,5 +60,10 @@
       "expected": false
     }
   ],
-  "fixture_id": "fixture-httpsig-v0"
+  "fixture_id": "fixture-httpsig-v0",
+  "expected_bad_failure_ids": [
+    "sdk_field_names",
+    "sandbox_host",
+    "signed_headers_complete"
+  ]
 }

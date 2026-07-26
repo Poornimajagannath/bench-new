@@ -43,5 +43,11 @@
       "contains": "validate_token_type"
     }
   ],
-  "fixture_id": "fixture-flex-v0"
+  "fixture_id": "fixture-flex-v0",
+  "expected_bad_failure_ids": [
+    "no_persist_transient",
+    "uses_flex_to_tms_path",
+    "creates_permanent_instrument",
+    "stage_order_includes_validate"
+  ]
 }

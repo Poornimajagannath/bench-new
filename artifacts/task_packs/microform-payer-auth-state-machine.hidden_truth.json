@@ -51,5 +51,11 @@
       ]
     }
   ],
-  "fixture_id": "fixture-mpa-v0"
+  "fixture_id": "fixture-mpa-v0",
+  "expected_bad_failure_ids": [
+    "enrollment_present",
+    "dual_path_handling",
+    "auth_refs_on_payment",
+    "state_machine_complete"
+  ]
 }

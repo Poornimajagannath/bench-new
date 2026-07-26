@@ -115,6 +115,6 @@
       }
     ]
   },
-  "task_pack_path": "/workspace/artifacts/task_packs/microform-payer-auth-state-machine.task_pack.json",
-  "verifier_result_path": "/workspace/artifacts/verifier_results/microform-payer-auth-state-machine.result.json"
+  "task_pack_path": "artifacts/task_packs/microform-payer-auth-state-machine.task_pack.json",
+  "verifier_result_path": "artifacts/verifier_results/microform-payer-auth-state-machine.result.json"
 }
