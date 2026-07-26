@@ -1,8 +1,8 @@
 {
   "workflow_id": "flex-token-lifecycle",
   "title": "Flex Token Lifecycle",
-  "goal": "Move from a Flex Microform transient token to a correctly scoped permanent TMS instrument without treating the JWT as a reusable PAN.",
-  "prompt": "Workflow: Flex Token Lifecycle\nGoal: Move from a Flex Microform transient token to a correctly scoped permanent TMS instrument without treating the JWT as a reusable PAN.\n\nUsing only the allowed context, produce a step-by-step integration plan that covers every workflow stage. Do not call live payment APIs. Do not include credentials, PANs, or secrets.",
+  "goal": "can I pass it straight into TMS to store a permanent instrument, or do I need another step?",
+  "prompt": "Workflow: Flex Token Lifecycle\nGoal: can I pass it straight into TMS to store a permanent instrument, or do I need another step?\n\nUsing only the allowed context, produce a step-by-step integration plan that covers every workflow stage. Do not call live payment APIs. Do not include credentials, PANs, or secrets.",
   "allowed_context": [
     "Flex Microform returns a short-lived transientTokenJwt",
     "TMS createInstrument accepts a Flex token via a dedicated transient-token path, not as raw pan",

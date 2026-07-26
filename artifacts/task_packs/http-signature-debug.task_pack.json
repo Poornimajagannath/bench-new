@@ -1,8 +1,8 @@
 {
   "workflow_id": "http-signature-debug",
   "title": "HTTP Signature Debug",
-  "goal": "Produce a sandbox-safe HTTP Signature request using SDK-correct credential field names and a canonical signed-headers set.",
-  "prompt": "Workflow: HTTP Signature Debug\nGoal: Produce a sandbox-safe HTTP Signature request using SDK-correct credential field names and a canonical signed-headers set.\n\nUsing only the allowed context, produce a step-by-step integration plan that covers every workflow stage. Do not call live payment APIs. Do not include credentials, PANs, or secrets.",
+  "goal": "Am I using the wrong SDK field names for key id and secret?",
+  "prompt": "Workflow: HTTP Signature Debug\nGoal: Am I using the wrong SDK field names for key id and secret?\n\nUsing only the allowed context, produce a step-by-step integration plan that covers every workflow stage. Do not call live payment APIs. Do not include credentials, PANs, or secrets.",
   "allowed_context": [
     "Sandbox host is apitest.cybersource.com",
     "SDK expects merchantKeyId and merchantsecretKey (not keyId/secretKey)",

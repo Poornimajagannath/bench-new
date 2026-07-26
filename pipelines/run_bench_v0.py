@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """Relay Bench V0 staged pipeline runner.
 
-hard question seeds
--> DocETL-style workflow discovery
--> typed workflow candidates
--> Relay workflow contract / benchmark task pack
--> Tempo-style verifier
+raw forum/docs/support questions
+-> DocETL extracts goal/symptoms/entities
+-> suggests workflow_id + stages
+-> PM approves/edits
+-> Relay Bench creates task pack + verifier
 -> failure classifier
 -> product-surface improvement action
 -> PM-readable report
@@ -22,7 +22,8 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from relay_bench.discovery import discover_workflows
+from relay_bench.discovery import discover_suggestions
+from relay_bench.pm_gate import require_pm_approved_candidate
 from relay_bench.reporting import build_report, write_report
 from relay_bench.routing import classify_failure
 from relay_bench.task_pack import materialize_contract
@@ -37,21 +38,32 @@ SUPPORTED = {
 
 
 def run_pipeline(workflow_id: str) -> int:
-    print(f"[bench_v0] stage=discovery workflow={workflow_id}")
-    candidates = discover_workflows(workflow_id=workflow_id)
-    if not candidates:
-        print(f"[bench_v0] no candidate for {workflow_id}", file=sys.stderr)
-        return 1
-    candidate = candidates[0]
-    print(f"[bench_v0] discovered title={candidate.title!r} seeds={candidate.seed_ids}")
+    print("[bench_v0] stage=raw_questions_extract_suggest")
+    rows = discover_suggestions()
+    for question, extraction, suggestion in rows:
+        print(
+            f"[bench_v0] seed={question.seed_id} channel={question.channel} "
+            f"suggest={suggestion.suggested_workflow_id} "
+            f"entities={extraction.entities}"
+        )
 
-    print("[bench_v0] stage=task_pack")
+    print("[bench_v0] stage=pm_approve_or_edit")
+    try:
+        candidate = require_pm_approved_candidate(workflow_id, rows=rows)
+    except LookupError as exc:
+        print(f"[bench_v0] {exc}", file=sys.stderr)
+        return 1
+    print(
+        f"[bench_v0] pm_decision={candidate.pm_decision} "
+        f"workflow={candidate.workflow_id!r} seeds={candidate.seed_ids}"
+    )
+
+    print("[bench_v0] stage=task_pack_and_verifier")
     pack, hidden, pack_path, hidden_path = materialize_contract(candidate)
     pack.assert_agent_safe()
     print(f"[bench_v0] task_pack={pack_path}")
     print(f"[bench_v0] hidden_truth={hidden_path} (not agent-facing)")
 
-    print("[bench_v0] stage=tempo_verifier")
     results = run_tempo_verification(hidden)
     result_path = write_verifier_results(workflow_id, results)
     print(f"[bench_v0] verifier_results={result_path}")
@@ -83,6 +95,7 @@ def run_pipeline(workflow_id: str) -> int:
     summary = {
         "ok": True,
         "workflow_id": workflow_id,
+        "pm_decision": candidate.pm_decision,
         "task_pack": str(pack_path),
         "hidden_truth": str(hidden_path),
         "verifier_results": str(result_path),
@@ -101,7 +114,7 @@ def main() -> int:
         "--workflow",
         required=True,
         choices=sorted(SUPPORTED),
-        help="Workflow id to benchmark",
+        help="PM-approved workflow id to benchmark",
     )
     args = parser.parse_args()
     return run_pipeline(args.workflow)

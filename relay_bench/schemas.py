@@ -6,26 +6,14 @@ from dataclasses import asdict, dataclass, field
 from typing import Any, Dict, List, Optional
 
 
-def _to_dict(obj: Any) -> Any:
-    if hasattr(obj, "to_dict"):
-        return obj.to_dict()
-    if isinstance(obj, list):
-        return [_to_dict(x) for x in obj]
-    if isinstance(obj, dict):
-        return {k: _to_dict(v) for k, v in obj.items()}
-    return obj
-
-
 @dataclass(frozen=True)
-class HardQuestionSeed:
-    """Frozen public forum/docs seed — never mutated at runtime."""
+class RawQuestion:
+    """Frozen raw forum/docs/support question — input only, no workflow labels."""
 
     seed_id: str
-    workflow_id: str
     source: str
+    channel: str  # forum | docs | support
     question: str
-    symptoms: List[str]
-    confusion_themes: List[str]
     public_refs: List[str]
 
     def to_dict(self) -> Dict[str, Any]:
@@ -33,8 +21,52 @@ class HardQuestionSeed:
 
 
 @dataclass
+class Extraction:
+    """DocETL-style extract: goal / symptoms / entities from a raw question."""
+
+    seed_id: str
+    goal: str
+    symptoms: List[str]
+    entities: List[str]
+    confidence: float
+
+    def to_dict(self) -> Dict[str, Any]:
+        return asdict(self)
+
+
+@dataclass
+class WorkflowSuggestion:
+    """Suggested workflow_id + stages from extraction (pre-PM)."""
+
+    seed_id: str
+    suggested_workflow_id: str
+    title: str
+    stages: List[str]
+    rationale: List[str]
+    confidence: float
+
+    def to_dict(self) -> Dict[str, Any]:
+        return asdict(self)
+
+
+@dataclass
+class PmDecision:
+    """PM approve/edit gate over a suggestion."""
+
+    seed_id: str
+    decision: str  # approve | edit | reject
+    approved_workflow_id: str
+    edited_stages: Optional[List[str]]
+    edited_goal: Optional[str]
+    pm_notes: str
+
+    def to_dict(self) -> Dict[str, Any]:
+        return asdict(self)
+
+
+@dataclass
 class WorkflowCandidate:
-    """Typed output of DocETL-style workflow discovery."""
+    """PM-approved workflow candidate ready for task pack + verifier creation."""
 
     workflow_id: str
     title: str
@@ -44,6 +76,9 @@ class WorkflowCandidate:
     confusion_points: List[str]
     seed_ids: List[str]
     surface_hints: List[str] = field(default_factory=list)
+    pm_decision: str = "approve"
+    extraction: Optional[Dict[str, Any]] = None
+    suggestion: Optional[Dict[str, Any]] = None
 
     def to_dict(self) -> Dict[str, Any]:
         return asdict(self)
@@ -153,8 +188,7 @@ class ImprovementAction:
     vap_cli: Optional[VapCliDescriptor] = None
 
     def to_dict(self) -> Dict[str, Any]:
-        d = asdict(self)
-        return d
+        return asdict(self)
 
 
 @dataclass

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Lightweight per-workflow demo (pre-V0 path).
 
-Keeps discovery + task-pack materialization runnable without the full bench report.
+Requires PM approve/edit before task-pack materialization.
 """
 
 from __future__ import annotations
@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from relay_bench.discovery import discover_workflows
+from relay_bench.pm_gate import require_pm_approved_candidate
 from relay_bench.task_pack import materialize_contract
 
 
@@ -36,15 +36,16 @@ def main() -> int:
     )
     args = parser.parse_args()
 
-    candidates = discover_workflows(workflow_id=args.workflow)
-    if not candidates:
-        print(f"[run_demo] no candidate for {args.workflow}", file=sys.stderr)
+    try:
+        candidate = require_pm_approved_candidate(args.workflow)
+    except LookupError as exc:
+        print(f"[run_demo] {exc}", file=sys.stderr)
         return 1
 
-    candidate = candidates[0]
     pack, hidden, pack_path, hidden_path = materialize_contract(candidate)
 
     print(f"[run_demo] workflow={candidate.workflow_id}")
+    print(f"[run_demo] pm_decision={candidate.pm_decision}")
     print(f"[run_demo] title={candidate.title}")
     print(f"[run_demo] stages={candidate.stages}")
     print(f"[run_demo] task_pack={pack_path}")

@@ -1,19 +1,9 @@
 [
   {
     "seed_id": "seed-flex-01",
-    "workflow_id": "flex-token-lifecycle",
     "source": "public-forum-frozen",
-    "question": "I created a Flex Microform transient token — can I pass it straight into TMS to store a permanent instrument, or do I need another step?",
-    "symptoms": [
-      "TMS createInstrument rejects Flex JWT as pan",
-      "Developer stores transientTokenJwt in their DB as if it were reusable",
-      "Confusion between Flexible Token API and Token Management Service"
-    ],
-    "confusion_themes": [
-      "transient vs permanent token lifetime",
-      "Flex capture vs TMS persistence",
-      "which API consumes transientTokenJwt"
-    ],
+    "channel": "forum",
+    "question": "I created a Flex Microform transient token — can I pass it straight into TMS to store a permanent instrument, or do I need another step? TMS createInstrument rejects my Flex JWT when I send it as pan, and I'm not sure if I should persist transientTokenJwt in my DB.",
     "public_refs": [
       "developer.cybersource.com/docs/flex",
       "developer.cybersource.com/docs/tms",
@@ -22,19 +12,9 @@
   },
   {
     "seed_id": "seed-httpsig-01",
-    "workflow_id": "http-signature-debug",
     "source": "public-docs-frozen",
-    "question": "My HTTP Signature request looks correct but CyberSource returns Authentication Failed. Am I using the wrong SDK field names for key id and secret?",
-    "symptoms": [
-      "401 Authentication Failed on apitest.cybersource.com",
-      "Docs say keyId/secretKey but SDK expects merchantKeyId/merchantsecretKey",
-      "Signed headers string host,date,request-target,digest,v-c-merchant-id still rejected"
-    ],
-    "confusion_themes": [
-      "SDK field name drift vs docs",
-      "signature base string construction",
-      "sandbox credential vs production endpoint mixups"
-    ],
+    "channel": "docs",
+    "question": "My HTTP Signature request looks correct but CyberSource returns Authentication Failed on apitest.cybersource.com. Am I using the wrong SDK field names for key id and secret? Docs say keyId/secretKey but something still fails with host,date,request-target,digest,v-c-merchant-id.",
     "public_refs": [
       "developer.cybersource.com/docs/authentication",
       "developer.cybersource.com/llms.txt"
@@ -42,19 +22,9 @@
   },
   {
     "seed_id": "seed-mpa-01",
-    "workflow_id": "microform-payer-auth-state-machine",
     "source": "public-docs-frozen",
-    "question": "After Microform tokenization, where does Payer Authentication (3DS) enrollment and challenge fit — and what states must I handle before authorization?",
-    "symptoms": [
-      "Developer authorizes immediately after Microform token without enrollment check",
-      "Challenge/frictionless paths collapsed into one success branch",
-      "Missing authentication transaction id on subsequent auth request"
-    ],
-    "confusion_themes": [
-      "Microform capture vs Payer Auth state machine",
-      "enrollment → challenge → validation ordering",
-      "which ids must flow into payment authorization"
-    ],
+    "channel": "support",
+    "question": "After Microform tokenization, where does Payer Authentication (3DS) enrollment and challenge fit — and what states must I handle before authorization? Right now we authorize immediately after the Microform token and sometimes miss the authentication transaction id.",
     "public_refs": [
       "developer.cybersource.com/docs/flex-microform",
       "developer.cybersource.com/docs/payer-authentication"

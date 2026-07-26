@@ -1,0 +1,33 @@
+[
+  {
+    "seed_id": "seed-flex-01",
+    "decision": "approve",
+    "approved_workflow_id": "flex-token-lifecycle",
+    "edited_stages": null,
+    "edited_goal": null,
+    "pm_notes": "Approve suggested Flex→TMS lifecycle; keep template stages."
+  },
+  {
+    "seed_id": "seed-httpsig-01",
+    "decision": "approve",
+    "approved_workflow_id": "http-signature-debug",
+    "edited_stages": null,
+    "edited_goal": null,
+    "pm_notes": "Approve HTTP Signature debug workflow as suggested."
+  },
+  {
+    "seed_id": "seed-mpa-01",
+    "decision": "edit",
+    "approved_workflow_id": "microform-payer-auth-state-machine",
+    "edited_stages": [
+      "microform_tokenize",
+      "payer_auth_setup",
+      "enrollment_check",
+      "challenge_or_frictionless",
+      "validate_authentication",
+      "authorize_with_auth_result"
+    ],
+    "edited_goal": "Sequence Microform tokenization with Payer Authentication enrollment, challenge/frictionless handling, and authorization using the authentication result.",
+    "pm_notes": "Edit: lock the full state machine stages before task-pack creation."
+  }
+]

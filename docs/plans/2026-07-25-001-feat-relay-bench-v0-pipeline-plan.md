@@ -19,15 +19,17 @@ DocETL-style extraction and Tempo-style benchmarking stay **separate stages** jo
 ## Pipeline
 
 ```text
-hard question seeds
--> DocETL-style workflow discovery
--> typed workflow candidates
--> Relay workflow contract / benchmark task pack
--> Tempo-style verifier
+raw forum/docs/support questions
+-> DocETL extracts goal/symptoms/entities
+-> suggests workflow_id + stages
+-> PM approves/edits
+-> Relay Bench creates task pack + verifier
 -> failure classifier
 -> product-surface improvement action
 -> PM-readable report
 ```
+
+Raw questions must not carry a pre-assigned `workflow_id`. Suggestion is produced from extraction; task packs are created only after PM approve/edit (`data/pm_approvals.json` for the local V0 proof).
 
 ## Definition of Done
 
@@ -46,8 +48,9 @@ hard question seeds
 | Module | Responsibility |
 |--------|----------------|
 | `schemas.py` | Typed dataclasses for seeds, candidates, task packs, hidden truth, verifier results, actions, reports |
-| `discovery.py` | DocETL-style map/reduce over frozen seeds → `WorkflowCandidate` |
-| `task_pack.py` | Split candidate into agent-visible `TaskPack` + verifier-only `HiddenTruth` |
+| `discovery.py` | Raw questions → extract goal/symptoms/entities → suggest workflow_id + stages |
+| `pm_gate.py` | PM approve/edit/reject gate; only approved rows become `WorkflowCandidate` |
+| `task_pack.py` | Split approved candidate into agent-visible `TaskPack` + verifier-only `HiddenTruth` |
 | `verifiers.py` | Tempo-style checks against simulated fixtures; return structured `VerifierResult` |
 | `routing.py` | Classify failures → `ImprovementAction` (docs, SDK, VAP CLI workflow verifier, etc.) |
 | `reporting.py` | PM-readable markdown/JSON answering the five proof questions |

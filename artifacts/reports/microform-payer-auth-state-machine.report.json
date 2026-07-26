@@ -1,12 +1,13 @@
 {
   "workflow_id": "microform-payer-auth-state-machine",
   "developer_confusion": [
-    "Microform capture vs Payer Auth state machine",
-    "enrollment \u2192 challenge \u2192 validation ordering",
-    "which ids must flow into payment authorization",
-    "symptom:Developer authorizes immediately after Microform token without enrollment check",
-    "symptom:Challenge/frictionless paths collapsed into one success branch",
-    "symptom:Missing authentication transaction id on subsequent auth request"
+    "Right now we authorize immediately after the Microform token and sometimes miss the authentication transaction id",
+    "entity:Microform",
+    "entity:Payer Authentication",
+    "entity:3DS",
+    "entity:enrollment",
+    "entity:challenge",
+    "entity:authorization"
   ],
   "relay_discovered": [
     "Sequence Microform tokenization with Payer Authentication enrollment, challenge/frictionless handling, and authorization using the authentication result.",
@@ -41,11 +42,11 @@
       "check_failed:dual_path_handling",
       "check_failed:auth_refs_on_payment",
       "check_failed:state_machine_complete",
-      "Microform capture vs Payer Auth state machine",
-      "enrollment \u2192 challenge \u2192 validation ordering",
-      "which ids must flow into payment authorization",
-      "symptom:Developer authorizes immediately after Microform token without enrollment check",
-      "symptom:Challenge/frictionless paths collapsed into one success branch"
+      "Right now we authorize immediately after the Microform token and sometimes miss the authentication transaction id",
+      "entity:Microform",
+      "entity:Payer Authentication",
+      "entity:3DS",
+      "entity:enrollment"
     ],
     "actions": [
       {

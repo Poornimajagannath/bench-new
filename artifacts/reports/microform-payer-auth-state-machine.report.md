@@ -4,12 +4,13 @@ Local proof only. No network. No live credentials.
 
 ## 1. What developers were confused about
 
-- Microform capture vs Payer Auth state machine
-- enrollment → challenge → validation ordering
-- which ids must flow into payment authorization
-- symptom:Developer authorizes immediately after Microform token without enrollment check
-- symptom:Challenge/frictionless paths collapsed into one success branch
-- symptom:Missing authentication transaction id on subsequent auth request
+- Right now we authorize immediately after the Microform token and sometimes miss the authentication transaction id
+- entity:Microform
+- entity:Payer Authentication
+- entity:3DS
+- entity:enrollment
+- entity:challenge
+- entity:authorization
 
 ## 2. What Relay discovered
 

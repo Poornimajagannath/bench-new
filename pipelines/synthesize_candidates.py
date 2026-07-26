@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""DocETL-style stage: frozen seeds → typed workflow candidates."""
+"""DocETL stage: raw questions → extract → suggest (+ show PM-approved set)."""
 
 from __future__ import annotations
 
@@ -16,8 +16,10 @@ from relay_bench.discovery import synthesize_candidates_payload
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Synthesize typed workflow candidates from frozen seeds")
-    parser.add_argument("--workflow", default=None, help="Optional workflow_id filter")
+    parser = argparse.ArgumentParser(
+        description="Extract/suggest workflow candidates from raw forum/docs/support questions"
+    )
+    parser.add_argument("--workflow", default=None, help="Optional suggested workflow_id filter")
     parser.add_argument(
         "--out",
         default=str(ROOT / "artifacts" / "candidates.json"),
@@ -31,9 +33,17 @@ def main() -> int:
     out_path.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
 
     print(f"[synthesize_candidates] wrote {out_path}")
-    print(f"[synthesize_candidates] candidates={payload['candidate_count']}")
-    for c in payload["candidates"]:
-        print(f"  - {c['workflow_id']}: {c['title']}")
+    print(f"[synthesize_candidates] suggestions={payload['suggestion_count']}")
+    for row in payload["suggestions"]:
+        s = row["suggestion"]
+        e = row["extraction"]
+        print(
+            f"  - seed={s['seed_id']} suggest={s['suggested_workflow_id']} "
+            f"entities={e['entities']}"
+        )
+    print(f"[synthesize_candidates] pm_approved={payload['approved_candidate_count']}")
+    for c in payload["approved_candidates"]:
+        print(f"  - approved {c['workflow_id']} ({c['pm_decision']})")
     return 0
 
 
