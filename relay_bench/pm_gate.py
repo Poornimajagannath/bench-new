@@ -53,7 +53,30 @@ def _unique_extend(target: List[str], values: Sequence[str]) -> None:
             target.append(value)
 
 
+def _default_stages_for_approved_workflow(
+    workflow_id: str,
+    rows: Sequence[ApprovedRow],
+) -> List[str]:
+    """Stages when PM did not supply edited_stages.
+
+    Always prefer the *approved* workflow catalog. Never keep suggestion stages
+    after a PM remaps approved_workflow_id away from suggested_workflow_id.
+    """
+    catalog_stages = list(catalog_entry(workflow_id)["stages"])  # type: ignore[arg-type]
+    remapped = any(
+        bool(decision.approved_workflow_id)
+        and decision.approved_workflow_id != suggestion.suggested_workflow_id
+        for _q, _e, suggestion, decision in rows
+    )
+    if remapped:
+        return catalog_stages
+
+    # Same-workflow approve: suggestion stages should match catalog; catalog wins.
+    return catalog_stages
+
+
 def _resolve_workflow_edits(
+    workflow_id: str,
     rows: Sequence[ApprovedRow],
 ) -> Tuple[List[str], str, str]:
     """Resolve stages/goal/pm_decision at workflow level from per-seed PM decisions."""
@@ -71,7 +94,7 @@ def _resolve_workflow_edits(
                     f"{stages!r} vs {other!r}"
                 )
     else:
-        stages = list(rows[0][2].stages)
+        stages = _default_stages_for_approved_workflow(workflow_id, rows)
 
     edited_goals = [
         decision.edited_goal
@@ -99,7 +122,7 @@ def _reduce_workflow_group(
     rows: Sequence[ApprovedRow],
 ) -> WorkflowCandidate:
     catalog = catalog_entry(workflow_id)
-    stages, goal, pm_decision = _resolve_workflow_edits(rows)
+    stages, goal, pm_decision = _resolve_workflow_edits(workflow_id, rows)
 
     seed_ids: List[str] = []
     confusion: List[str] = []
@@ -142,11 +165,22 @@ def _reduce_workflow_group(
             "merged_from_seed_count": len(seed_ids),
         },
         suggestion={
-            "suggested_workflow_id": workflow_id,
+            "approved_workflow_id": workflow_id,
+            "original_suggested_workflow_ids": sorted(
+                {
+                    suggestion.suggested_workflow_id
+                    for _q, _e, suggestion, _d in rows
+                }
+            ),
             "stages": stages,
             "rationale": rationales,
             "pm_notes": pm_notes,
             "merged_from_seed_count": len(seed_ids),
+            "remapped_from_suggestion": any(
+                bool(decision.approved_workflow_id)
+                and decision.approved_workflow_id != suggestion.suggested_workflow_id
+                for _q, _e, suggestion, decision in rows
+            ),
         },
     )
 

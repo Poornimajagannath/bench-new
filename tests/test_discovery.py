@@ -1,6 +1,7 @@
 import unittest
 
 from relay_bench.discovery import (
+    catalog_entry,
     discover_suggestions,
     discover_workflows,
     extract_from_question,
@@ -166,6 +167,63 @@ class DiscoveryTests(unittest.TestCase):
         flex = require_pm_approved_candidate("flex-token-lifecycle")
         self.assertEqual(sorted(flex.seed_ids), ["seed-flex-01", "seed-flex-02"])
         self.assertEqual(flex.extraction["merged_from_seed_count"], 2)
+
+    def test_pm_remap_uses_approved_catalog_stages_not_suggestion(self):
+        """PM can correct workflow_id; stages must follow the approved catalog."""
+        flex_stages = [
+            "capture_transient_token",
+            "validate_token_type",
+            "create_permanent_instrument",
+            "authorize_with_instrument",
+        ]
+        httpsig_stages = list(catalog_entry("http-signature-debug")["stages"])
+        rows = [
+            (
+                RawQuestion(
+                    seed_id="syn-remap",
+                    source="test",
+                    channel="forum",
+                    question="Looks like Flex but PM says HTTP Signature",
+                    public_refs=[],
+                ),
+                Extraction(
+                    seed_id="syn-remap",
+                    goal="Why does auth fail after Flex token create?",
+                    symptoms=["Authentication Failed after Flex setup"],
+                    entities=["Flex", "Authentication Failed"],
+                    confidence=0.5,
+                ),
+                WorkflowSuggestion(
+                    seed_id="syn-remap",
+                    suggested_workflow_id="flex-token-lifecycle",
+                    title="Flex Token Lifecycle",
+                    stages=flex_stages[:2],
+                    rationale=["entity_hit:flex"],
+                    confidence=0.5,
+                ),
+            )
+        ]
+        decisions = {
+            "syn-remap": PmDecision(
+                seed_id="syn-remap",
+                decision="approve",
+                approved_workflow_id="http-signature-debug",
+                edited_stages=None,
+                edited_goal=None,
+                pm_notes="Correct mapping away from Flex suggestion",
+            )
+        }
+        approved = apply_pm_decisions(rows, decisions)
+        self.assertEqual(len(approved), 1)
+        candidate = approved[0]
+        self.assertEqual(candidate.workflow_id, "http-signature-debug")
+        self.assertEqual(candidate.stages, httpsig_stages)
+        self.assertNotEqual(candidate.stages, flex_stages[:2])
+        self.assertTrue(candidate.suggestion["remapped_from_suggestion"])
+        self.assertEqual(
+            candidate.suggestion["original_suggested_workflow_ids"],
+            ["flex-token-lifecycle"],
+        )
 
     def test_discover_workflows_returns_pm_approved_only(self):
         candidates = discover_workflows()
