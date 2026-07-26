@@ -11,7 +11,7 @@
     "pm_approve_or_edit",
     "relay_bench_task_pack_and_stable_bench_inspired_verifier"
   ],
-  "suggestion_count": 3,
+  "suggestion_count": 4,
   "suggestions": [
     {
       "raw_question": {
@@ -43,6 +43,53 @@
       },
       "suggestion": {
         "seed_id": "seed-flex-01",
+        "suggested_workflow_id": "flex-token-lifecycle",
+        "title": "Flex Token Lifecycle",
+        "stages": [
+          "capture_transient_token",
+          "validate_token_type",
+          "create_permanent_instrument",
+          "authorize_with_instrument"
+        ],
+        "rationale": [
+          "entity_hit:flex",
+          "entity_hit:microform",
+          "entity_hit:transienttokenjwt",
+          "entity_hit:tms",
+          "entity_hit:createinstrument",
+          "entity_hit:permanent instrument"
+        ],
+        "confidence": 0.99
+      }
+    },
+    {
+      "raw_question": {
+        "seed_id": "seed-flex-02",
+        "source": "public-forum-frozen",
+        "channel": "forum",
+        "question": "Does a Flex Microform transientTokenJwt expire too quickly for TMS createInstrument? Support said not to treat the JWT like a reusable PAN, but our checkout still fails when creating a permanent instrument.",
+        "public_refs": [
+          "developer.cybersource.com/docs/flex",
+          "developer.cybersource.com/docs/tms"
+        ]
+      },
+      "extraction": {
+        "seed_id": "seed-flex-02",
+        "goal": "Resolve developer confusion involving Flex, Microform, TMS, transientTokenJwt",
+        "symptoms": [
+          "Support said not to treat the JWT like a reusable PAN, but our checkout still fails when creating a permanent instrument"
+        ],
+        "entities": [
+          "Flex",
+          "Microform",
+          "TMS",
+          "transientTokenJwt",
+          "createInstrument"
+        ],
+        "confidence": 0.95
+      },
+      "suggestion": {
+        "seed_id": "seed-flex-02",
         "suggested_workflow_id": "flex-token-lifecycle",
         "title": "Flex Token Lifecycle",
         "stages": [
@@ -188,10 +235,13 @@
         "entity:Microform",
         "entity:TMS",
         "entity:transientTokenJwt",
-        "entity:createInstrument"
+        "entity:createInstrument",
+        "Support said not to treat the JWT like a reusable PAN, but our checkout still fails when creating a permanent instrument",
+        "alt_goal:Resolve developer confusion involving Flex, Microform, TMS, transientTokenJwt"
       ],
       "seed_ids": [
-        "seed-flex-01"
+        "seed-flex-01",
+        "seed-flex-02"
       ],
       "surface_hints": [
         "docs",
@@ -200,11 +250,18 @@
       ],
       "pm_decision": "approve",
       "extraction": {
-        "seed_id": "seed-flex-01",
-        "goal": "can I pass it straight into TMS to store a permanent instrument, or do I need another step?",
+        "seed_ids": [
+          "seed-flex-01",
+          "seed-flex-02"
+        ],
+        "goals": [
+          "can I pass it straight into TMS to store a permanent instrument, or do I need another step?",
+          "Resolve developer confusion involving Flex, Microform, TMS, transientTokenJwt"
+        ],
         "symptoms": [
           "TMS createInstrument rejects my Flex JWT when I send it as pan,",
-          "'m not sure if I should persist transientTokenJwt in my DB"
+          "'m not sure if I should persist transientTokenJwt in my DB",
+          "Support said not to treat the JWT like a reusable PAN, but our checkout still fails when creating a permanent instrument"
         ],
         "entities": [
           "Flex",
@@ -213,12 +270,10 @@
           "transientTokenJwt",
           "createInstrument"
         ],
-        "confidence": 0.95
+        "merged_from_seed_count": 2
       },
       "suggestion": {
-        "seed_id": "seed-flex-01",
         "suggested_workflow_id": "flex-token-lifecycle",
-        "title": "Flex Token Lifecycle",
         "stages": [
           "capture_transient_token",
           "validate_token_type",
@@ -233,7 +288,11 @@
           "entity_hit:createinstrument",
           "entity_hit:permanent instrument"
         ],
-        "confidence": 0.99
+        "pm_notes": [
+          "Approve suggested Flex\u2192TMS lifecycle; keep template stages.",
+          "Second Flex confusion seed; merge into the same workflow contract."
+        ],
+        "merged_from_seed_count": 2
       }
     },
     {
@@ -273,8 +332,12 @@
       ],
       "pm_decision": "approve",
       "extraction": {
-        "seed_id": "seed-httpsig-01",
-        "goal": "Am I using the wrong SDK field names for key id and secret?",
+        "seed_ids": [
+          "seed-httpsig-01"
+        ],
+        "goals": [
+          "Am I using the wrong SDK field names for key id and secret?"
+        ],
         "symptoms": [
           "My HTTP Signature request looks correct but CyberSource returns Authentication Failed on apitest.cybersource.com",
           "Am I using the wrong SDK field names for key id and secret",
@@ -288,12 +351,10 @@
           "v-c-merchant-id",
           "apitest.cybersource.com"
         ],
-        "confidence": 0.95
+        "merged_from_seed_count": 1
       },
       "suggestion": {
-        "seed_id": "seed-httpsig-01",
         "suggested_workflow_id": "http-signature-debug",
-        "title": "HTTP Signature Debug",
         "stages": [
           "load_sandbox_env_vars",
           "build_digest",
@@ -309,7 +370,10 @@
           "entity_hit:v-c-merchant-id",
           "entity_hit:apitest"
         ],
-        "confidence": 0.99
+        "pm_notes": [
+          "Approve HTTP Signature debug workflow as suggested."
+        ],
+        "merged_from_seed_count": 1
       }
     },
     {
@@ -336,7 +400,8 @@
         "entity:3DS",
         "entity:enrollment",
         "entity:challenge",
-        "entity:authorization"
+        "entity:authorization",
+        "alt_goal:where does Payer Authentication (3DS) enrollment and challenge fit \u2014 and what states must I handle before authorization?"
       ],
       "seed_ids": [
         "seed-mpa-01"
@@ -348,8 +413,12 @@
       ],
       "pm_decision": "edit",
       "extraction": {
-        "seed_id": "seed-mpa-01",
-        "goal": "where does Payer Authentication (3DS) enrollment and challenge fit \u2014 and what states must I handle before authorization?",
+        "seed_ids": [
+          "seed-mpa-01"
+        ],
+        "goals": [
+          "where does Payer Authentication (3DS) enrollment and challenge fit \u2014 and what states must I handle before authorization?"
+        ],
         "symptoms": [
           "Right now we authorize immediately after the Microform token and sometimes miss the authentication transaction id"
         ],
@@ -361,12 +430,10 @@
           "challenge",
           "authorization"
         ],
-        "confidence": 0.95
+        "merged_from_seed_count": 1
       },
       "suggestion": {
-        "seed_id": "seed-mpa-01",
         "suggested_workflow_id": "microform-payer-auth-state-machine",
-        "title": "Microform + Payer Auth State Machine",
         "stages": [
           "microform_tokenize",
           "payer_auth_setup",
@@ -383,7 +450,10 @@
           "entity_hit:microform",
           "entity_hit:authentication transaction"
         ],
-        "confidence": 0.99
+        "pm_notes": [
+          "Edit: lock the full state machine stages before task-pack creation."
+        ],
+        "merged_from_seed_count": 1
       }
     }
   ]

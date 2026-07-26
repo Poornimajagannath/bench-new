@@ -5,21 +5,29 @@ from relay_bench.discovery import (
     discover_workflows,
     extract_from_question,
     load_raw_questions,
-    suggest_workflow,
     synthesize_candidates_payload,
 )
-from relay_bench.pm_gate import apply_pm_decisions, load_pm_decisions
+from relay_bench.pm_gate import (
+    apply_pm_decisions,
+    load_pm_decisions,
+    require_pm_approved_candidate,
+)
+from relay_bench.schemas import (
+    Extraction,
+    PmDecision,
+    RawQuestion,
+    WorkflowSuggestion,
+)
 
 
 class DiscoveryTests(unittest.TestCase):
     def test_raw_questions_have_no_workflow_labels(self):
         questions = load_raw_questions()
-        self.assertGreaterEqual(len(questions), 3)
+        self.assertGreaterEqual(len(questions), 4)
         channels = {q.channel for q in questions}
         self.assertTrue({"forum", "docs", "support"} & channels)
         for q in questions:
             self.assertTrue(q.question)
-            self.assertFalse(hasattr(q, "workflow_id") and getattr(q, "workflow_id"))
 
     def test_extract_goal_symptoms_entities(self):
         questions = {q.seed_id: q for q in load_raw_questions()}
@@ -39,6 +47,9 @@ class DiscoveryTests(unittest.TestCase):
             by_seed["seed-flex-01"][1].suggested_workflow_id, "flex-token-lifecycle"
         )
         self.assertEqual(
+            by_seed["seed-flex-02"][1].suggested_workflow_id, "flex-token-lifecycle"
+        )
+        self.assertEqual(
             by_seed["seed-httpsig-01"][1].suggested_workflow_id, "http-signature-debug"
         )
         self.assertEqual(
@@ -52,10 +63,109 @@ class DiscoveryTests(unittest.TestCase):
         # Without PM decisions, nothing is task-pack-ready.
         self.assertEqual(apply_pm_decisions(rows, {}), [])
         approved = apply_pm_decisions(rows, load_pm_decisions())
+        # 4 approved seeds reduce to 3 workflow contracts.
         self.assertEqual(len(approved), 3)
         mpa = next(c for c in approved if c.workflow_id == "microform-payer-auth-state-machine")
         self.assertEqual(mpa.pm_decision, "edit")
         self.assertIn("enrollment_check", mpa.stages)
+
+    def test_multiple_seeds_reduce_to_one_workflow_candidate(self):
+        """DocETL value: many confused inputs → one richer workflow contract."""
+        stages = [
+            "capture_transient_token",
+            "validate_token_type",
+            "create_permanent_instrument",
+            "authorize_with_instrument",
+        ]
+        rows = [
+            (
+                RawQuestion(
+                    seed_id="syn-flex-a",
+                    source="test",
+                    channel="forum",
+                    question="Flex TMS transient token confusion A",
+                    public_refs=[],
+                ),
+                Extraction(
+                    seed_id="syn-flex-a",
+                    goal="How do I move Flex tokens into TMS?",
+                    symptoms=["createInstrument rejects JWT as pan"],
+                    entities=["Flex", "TMS"],
+                    confidence=0.8,
+                ),
+                WorkflowSuggestion(
+                    seed_id="syn-flex-a",
+                    suggested_workflow_id="flex-token-lifecycle",
+                    title="Flex Token Lifecycle",
+                    stages=stages,
+                    rationale=["entity_hit:flex"],
+                    confidence=0.8,
+                ),
+            ),
+            (
+                RawQuestion(
+                    seed_id="syn-flex-b",
+                    source="test",
+                    channel="support",
+                    question="Flex TMS transient token confusion B",
+                    public_refs=[],
+                ),
+                Extraction(
+                    seed_id="syn-flex-b",
+                    goal="Why does transientTokenJwt expire before TMS?",
+                    symptoms=["JWT expires before permanent instrument create"],
+                    entities=["Flex", "transientTokenJwt", "TMS"],
+                    confidence=0.7,
+                ),
+                WorkflowSuggestion(
+                    seed_id="syn-flex-b",
+                    suggested_workflow_id="flex-token-lifecycle",
+                    title="Flex Token Lifecycle",
+                    stages=stages,
+                    rationale=["entity_hit:tms"],
+                    confidence=0.7,
+                ),
+            ),
+        ]
+        decisions = {
+            "syn-flex-a": PmDecision(
+                seed_id="syn-flex-a",
+                decision="approve",
+                approved_workflow_id="flex-token-lifecycle",
+                edited_stages=None,
+                edited_goal=None,
+                pm_notes="approve A",
+            ),
+            "syn-flex-b": PmDecision(
+                seed_id="syn-flex-b",
+                decision="edit",
+                approved_workflow_id="flex-token-lifecycle",
+                edited_stages=stages,
+                edited_goal="Move from Flex transient token to permanent TMS instrument safely.",
+                pm_notes="edit B stages/goal at workflow level",
+            ),
+        }
+
+        approved = apply_pm_decisions(rows, decisions)
+        self.assertEqual(len(approved), 1)
+        candidate = approved[0]
+        self.assertEqual(candidate.workflow_id, "flex-token-lifecycle")
+        self.assertEqual(sorted(candidate.seed_ids), ["syn-flex-a", "syn-flex-b"])
+        self.assertEqual(candidate.pm_decision, "edit")
+        self.assertEqual(candidate.stages, stages)
+        self.assertEqual(
+            candidate.goal,
+            "Move from Flex transient token to permanent TMS instrument safely.",
+        )
+        self.assertIn("createInstrument rejects JWT as pan", candidate.confusion_points)
+        self.assertIn("JWT expires before permanent instrument create", candidate.confusion_points)
+        self.assertIn("entity:transientTokenJwt", candidate.confusion_points)
+        self.assertEqual(candidate.extraction["merged_from_seed_count"], 2)
+
+        # Frozen seed fixture also merges the two Flex questions.
+        flex = require_pm_approved_candidate("flex-token-lifecycle")
+        self.assertEqual(sorted(flex.seed_ids), ["seed-flex-01", "seed-flex-02"])
+        self.assertEqual(flex.extraction["merged_from_seed_count"], 2)
 
     def test_discover_workflows_returns_pm_approved_only(self):
         candidates = discover_workflows()
@@ -79,7 +189,8 @@ class DiscoveryTests(unittest.TestCase):
         )
         self.assertIn("ucbepic/docetl", payload["inspired_by"]["discovery"])
         self.assertIn("tempo-evals", payload["inspired_by"]["verifier"])
-        self.assertEqual(payload["suggestion_count"], 3)
+        self.assertEqual(payload["suggestion_count"], 4)
+        # Reduced by workflow_id, not one candidate per seed.
         self.assertEqual(payload["approved_candidate_count"], 3)
 
 

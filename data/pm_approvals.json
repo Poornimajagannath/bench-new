@@ -8,6 +8,14 @@
     "pm_notes": "Approve suggested Flex→TMS lifecycle; keep template stages."
   },
   {
+    "seed_id": "seed-flex-02",
+    "decision": "approve",
+    "approved_workflow_id": "flex-token-lifecycle",
+    "edited_stages": null,
+    "edited_goal": null,
+    "pm_notes": "Second Flex confusion seed; merge into the same workflow contract."
+  },
+  {
     "seed_id": "seed-httpsig-01",
     "decision": "approve",
     "approved_workflow_id": "http-signature-debug",
