@@ -24,7 +24,7 @@ from relay_bench.schemas import (
 class DiscoveryTests(unittest.TestCase):
     def test_raw_questions_have_no_workflow_labels(self):
         questions = load_raw_questions()
-        self.assertGreaterEqual(len(questions), 4)
+        self.assertEqual(len(questions), 20)
         channels = {q.channel for q in questions}
         self.assertTrue({"forum", "docs", "support"} & channels)
         for q in questions:
@@ -64,7 +64,7 @@ class DiscoveryTests(unittest.TestCase):
         # Without PM decisions, nothing is task-pack-ready.
         self.assertEqual(apply_pm_decisions(rows, {}), [])
         approved = apply_pm_decisions(rows, load_pm_decisions())
-        # 4 approved seeds reduce to 3 workflow contracts.
+        # 20 approved seeds reduce to 3 workflow contracts.
         self.assertEqual(len(approved), 3)
         mpa = next(c for c in approved if c.workflow_id == "microform-payer-auth-state-machine")
         self.assertEqual(mpa.pm_decision, "edit")
@@ -163,10 +163,12 @@ class DiscoveryTests(unittest.TestCase):
         self.assertIn("entity:transientTokenJwt", candidate.confusion_points)
         self.assertEqual(candidate.extraction["merged_from_seed_count"], 2)
 
-        # Frozen seed fixture also merges the two Flex questions.
+        # Frozen seed fixture merges all Flex questions into one contract.
         flex = require_pm_approved_candidate("flex-token-lifecycle")
-        self.assertEqual(sorted(flex.seed_ids), ["seed-flex-01", "seed-flex-02"])
-        self.assertEqual(flex.extraction["merged_from_seed_count"], 2)
+        self.assertEqual(len(flex.seed_ids), 7)
+        self.assertIn("seed-flex-01", flex.seed_ids)
+        self.assertIn("seed-flex-07", flex.seed_ids)
+        self.assertEqual(flex.extraction["merged_from_seed_count"], 7)
 
     def test_pm_remap_uses_approved_catalog_stages_not_suggestion(self):
         """PM can correct workflow_id; stages must follow the approved catalog."""
@@ -247,7 +249,7 @@ class DiscoveryTests(unittest.TestCase):
         )
         self.assertIn("ucbepic/docetl", payload["inspired_by"]["discovery"])
         self.assertIn("tempo-evals", payload["inspired_by"]["verifier"])
-        self.assertEqual(payload["suggestion_count"], 4)
+        self.assertEqual(payload["suggestion_count"], 20)
         # Reduced by workflow_id, not one candidate per seed.
         self.assertEqual(payload["approved_candidate_count"], 3)
 

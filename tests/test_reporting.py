@@ -41,7 +41,7 @@ class ReportingTests(unittest.TestCase):
         # Portable repo-relative artifact paths (no absolute /workspace or machine roots).
         self.assertEqual(
             report.task_pack_path,
-            "artifacts/task_packs/microform-payer-auth-state-machine.task_pack.json",
+            "artifacts/task_packs/microform-payer-auth-state-machine.agent_task.json",
         )
         self.assertEqual(
             report.verifier_result_path,
