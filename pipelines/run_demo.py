@@ -42,14 +42,14 @@ def main() -> int:
         print(f"[run_demo] {exc}", file=sys.stderr)
         return 1
 
-    pack, hidden, pack_path, hidden_path = materialize_contract(candidate)
+    pack, hidden, agent_path, private_path = materialize_contract(candidate)
 
     print(f"[run_demo] workflow={candidate.workflow_id}")
     print(f"[run_demo] pm_decision={candidate.pm_decision}")
     print(f"[run_demo] title={candidate.title}")
     print(f"[run_demo] stages={candidate.stages}")
-    print(f"[run_demo] task_pack={pack_path}")
-    print(f"[run_demo] hidden_truth={hidden_path} (verifier-only)")
+    print(f"[run_demo] agent_task={agent_path}")
+    print(f"[run_demo] verifier_private={private_path} (verifier-only)")
     print(f"[run_demo] agent_prompt_chars={len(pack.prompt)}")
     print(f"[run_demo] fixture_id={hidden.fixture_id}")
     print(json.dumps({"ok": True, "workflow_id": candidate.workflow_id}, indent=2))

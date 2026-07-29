@@ -65,10 +65,10 @@ def run_pipeline(workflow_id: str) -> int:
     )
 
     print("[bench_v0] stage=task_pack_and_verifier")
-    pack, hidden, pack_path, hidden_path = materialize_contract(candidate)
+    pack, hidden, agent_path, private_path = materialize_contract(candidate)
     pack.assert_agent_safe()
-    print(f"[bench_v0] task_pack={pack_path}")
-    print(f"[bench_v0] hidden_truth={hidden_path} (not agent-facing)")
+    print(f"[bench_v0] agent_task={agent_path}")
+    print(f"[bench_v0] verifier_private={private_path} (not agent-facing)")
 
     results = run_stable_bench_inspired_verification(hidden)
     result_path = write_verifier_results(workflow_id, results)
@@ -90,7 +90,7 @@ def run_pipeline(workflow_id: str) -> int:
         candidate=candidate,
         classification=classification,
         bad_result=results["bad_answer"],
-        task_pack_path=pack_path,
+        task_pack_path=agent_path,
         verifier_result_path=result_path,
         bad_answer_mistake=str(hidden.bad_answer.get("mistake", "")),
     )
@@ -102,8 +102,8 @@ def run_pipeline(workflow_id: str) -> int:
         "ok": True,
         "workflow_id": workflow_id,
         "pm_decision": candidate.pm_decision,
-        "task_pack": str(pack_path),
-        "hidden_truth": str(hidden_path),
+        "agent_task": str(agent_path),
+        "verifier_private": str(private_path),
         "verifier_results": str(result_path),
         "report_md": str(md_path),
         "report_json": str(json_path),

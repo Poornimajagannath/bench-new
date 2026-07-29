@@ -19,7 +19,8 @@ from typing import Dict, Iterable, List, Optional, Tuple
 from relay_bench.schemas import Extraction, RawQuestion, WorkflowSuggestion
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_SEEDS_PATH = ROOT / "data" / "seeds" / "hard_questions.json"
+DEFAULT_SEEDS_PATH = ROOT / "data" / "hard_questions.seed.jsonl"
+LEGACY_SEEDS_PATH = ROOT / "data" / "seeds" / "hard_questions.json"
 
 # Catalog used only for suggestion (not pre-labels on raw questions).
 _WORKFLOW_CATALOG: Dict[str, Dict[str, object]] = {
@@ -120,26 +121,42 @@ _ENTITY_PATTERNS: List[Tuple[str, str]] = [
 ]
 
 
-def load_raw_questions(path: Optional[Path] = None) -> List[RawQuestion]:
-    seeds_path = path or DEFAULT_SEEDS_PATH
-    raw = json.loads(seeds_path.read_text(encoding="utf-8"))
-    questions: List[RawQuestion] = []
-    for item in raw:
-        # Refuse pre-labeled workflow seeds — suggestion must come from extraction.
-        if "workflow_id" in item:
-            raise ValueError(
-                f"Raw question {item.get('seed_id')!r} must not include workflow_id; "
-                "DocETL-inspired discovery suggests workflow_id after extraction"
-            )
-        questions.append(
-            RawQuestion(
-                seed_id=item["seed_id"],
-                source=item["source"],
-                channel=item.get("channel", "docs"),
-                question=item["question"],
-                public_refs=list(item.get("public_refs", [])),
-            )
+def _parse_seed_item(item: Dict[str, object]) -> RawQuestion:
+    # Refuse pre-labeled workflow seeds — suggestion must come from extraction.
+    if "workflow_id" in item:
+        raise ValueError(
+            f"Raw question {item.get('seed_id')!r} must not include workflow_id; "
+            "DocETL-inspired discovery suggests workflow_id after extraction"
         )
+    return RawQuestion(
+        seed_id=str(item["seed_id"]),
+        source=str(item["source"]),
+        channel=str(item.get("channel", "docs")),
+        question=str(item["question"]),
+        public_refs=list(item.get("public_refs", [])),  # type: ignore[arg-type]
+    )
+
+
+def load_raw_questions(path: Optional[Path] = None) -> List[RawQuestion]:
+    """Load frozen seeds from JSONL (preferred) or legacy JSON array."""
+    seeds_path = path or (
+        DEFAULT_SEEDS_PATH if DEFAULT_SEEDS_PATH.exists() else LEGACY_SEEDS_PATH
+    )
+    text = seeds_path.read_text(encoding="utf-8")
+    questions: List[RawQuestion] = []
+    if seeds_path.suffix == ".jsonl":
+        for line_no, line in enumerate(text.splitlines(), start=1):
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                item = json.loads(line)
+            except json.JSONDecodeError as exc:
+                raise ValueError(f"Invalid JSONL at {seeds_path}:{line_no}") from exc
+            questions.append(_parse_seed_item(item))
+    else:
+        raw = json.loads(text)
+        questions = [_parse_seed_item(item) for item in raw]
     return questions
 
 

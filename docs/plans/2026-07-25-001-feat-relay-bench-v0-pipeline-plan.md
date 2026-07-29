@@ -96,9 +96,13 @@ When routing to VAP CLI, treat the CLI as a **workflow verifier**, not a thin co
 ## Artifacts
 
 ```text
-artifacts/task_packs/<workflow>.task_pack.json
-artifacts/task_packs/<workflow>.hidden_truth.json   # verifier-only; never agent-facing
+data/hard_questions.seed.jsonl                      # 20 frozen raw questions
+artifacts/task_packs/<workflow>.agent_task.json     # agent-visible
+artifacts/task_packs/<workflow>.verifier_private.json  # verifier-only; never agent-facing
+artifacts/task_packs/<workflow>.task_pack.json      # legacy alias of agent-visible fields
+artifacts/task_packs/<workflow>.hidden_truth.json   # legacy alias of verifier-private
 artifacts/verifier_results/<workflow>.result.json
 artifacts/reports/<workflow>.report.md
 artifacts/reports/<workflow>.report.json
+reports/                                            # stable PM-facing narratives
 ```

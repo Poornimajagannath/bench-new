@@ -1,54 +1,72 @@
- Benchmark Lab
+# Relay Bench V0 (local prototype)
 
-**Status:** Docs-only )
+**Status:** Credential-free local proof
+**Not:** production Relay, live CyberSource sandbox, real DocETL, or real Tempo/Harbor
 
-## Structure
+## Product thesis
 
-```
-visa-relay-bench/
-├── README.md                # This file
-├── BLOCKERS.md              # Live auth blockers (HTTP Signature v1.0 bug)
-├── FINDINGS-TEMPLATE.md     # Benchmark result format
-├── CLAUDE.md                # Agent instructions
-├── scenarios/               # Test scenarios
-│   ├── agent-readiness-testing/
-│   ├── authentication/      # Auth scenario (no live execution)
-│   ├── first-transaction/
-│   ├── setup-checkout/
-│   └──-context-swapping/
-├── templates/               # Code templates from MCP SDK docs
-│   ├── card-payment/
-│   ├── ach-payment/
-│   ├── digital-wallet/
-│   ├── multi-currency/
-│   └── config/
-├── evaluators/              # Scoring rubrics
-├── scripts/                 # Run scripts
-├── context/                 # Reference docs
-└── prompts/                 # Agent prompts
+Developers stuck on Flex, Microform + Payer Auth, or HTTP Signature should not have to stitch together forum threads, docs pages, SDK quirks, and AI guesses.
+
+Relay Bench turns that confusion into a **workflow contract**:
+
+```text
+public developer confusion
+→ structured workflow candidate
+→ agent-visible task pack (agent_task)
+→ hidden verifier/oracle (verifier_private)
+→ structured verifier result
+→ product-surface improvement action
+→ PM-readable report
 ```
 
-## Scenarios
+That improves:
 
-| Scenario | Description | Status |
-|----------|-------------|--------|
-| agent-readiness-testing | Test if agents can handle CyberSource workflows | Ready |
-| authentication | Auth credential management (docs only) | Blocked |
-| first-transaction | First payment transaction scenario | Ready |
-| setup-checkout | Checkout integration scenario | Ready |
-|context-swapping | Context switching between scenarios | Ready |
+1. **Docs** — rewrite around misunderstood workflows, not isolated APIs
+2. **VAP CLI** — eventually `vap workflow verify --id <workflow> --fixture local`
+3. **Assistant / MCP answers** — ground replies in the contract
+4. **Quality gate** — prove bad answers are caught so docs/CLI/assistant can be measured
 
-## Running
+## V0 boundary (honest label)
+
+| Label | Upstream | Used in V0? |
+|-------|----------|-------------|
+| DocETL-inspired discovery | [`ucbepic/docetl`](https://github.com/ucbepic/docetl) | **No import** — local heuristic extract/suggest |
+| Stable Bench-inspired verifier | [`tempoxyz/tempo-evals`](https://github.com/tempoxyz/tempo-evals) | **No Harbor/Docker** — deterministic fixture checks |
+
+V0 is dependency-light Python stdlib only. No network. No sandbox credentials. No PAN/secret logging.
+
+## Pipeline
+
+```text
+hard question seeds (20 frozen JSONL)
+→ DocETL-inspired extract goal/symptoms/entities
+→ suggest workflow_id + stages
+→ PM approve/edit (reduce many seeds → one contract)
+→ Relay Bench creates agent_task + verifier_private
+→ failure classifier
+→ product-surface improvement action
+→ PM-readable report
+```
+
+## Run
 
 ```bash
-# Run a single scenario
-bash scripts/run-scenario.sh <scenario-name>
-
-# Evaluate results
-bash scripts/evaluate-run.sh <run-id>
-
-# Full lab loop
-bash scripts/lab-loop.sh
+python3 -m unittest discover -s tests
+python3 pipelines/synthesize_candidates.py
+python3 pipelines/run_demo.py --workflow flex-token-lifecycle
+python3 pipelines/run_demo.py --workflow http-signature-debug
+python3 pipelines/run_demo.py --workflow microform-payer-auth-state-machine
+python3 pipelines/run_bench_v0.py --workflow microform-payer-auth-state-machine
 ```
 
+## PM entrypoints
 
+- `HANDOFF.md` — intent and acceptance criteria
+- `reports/pm_workbook.md` — why Relay Bench exists
+- `reports/demo_microform_payer_auth_state_machine.md` — advanced workflow proof
+- `reports/generated_failure_taxonomy.md` — failure-class routing
+- `artifacts/reports/microform-payer-auth-state-machine.report.md` — latest generated proof
+
+## Plan
+
+`docs/plans/2026-07-25-001-feat-relay-bench-v0-pipeline-plan.md` is authoritative for CE/DoD.

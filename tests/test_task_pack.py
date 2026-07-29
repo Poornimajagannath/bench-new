@@ -2,12 +2,22 @@ import json
 import unittest
 
 from relay_bench.discovery import discover_workflows
-from relay_bench.task_pack import build_hidden_truth, build_task_pack, materialize_contract
+from relay_bench.task_pack import (
+    assert_no_verifier_leak,
+    build_hidden_truth,
+    build_task_pack,
+    materialize_contract,
+    to_agent_task,
+    to_verifier_private,
+)
 
 
 class TaskPackTests(unittest.TestCase):
     def setUp(self):
-        self.candidate = discover_workflows(workflow_id="microform-payer-auth-state-machine")[0]
+        self.candidates = {
+            c.workflow_id: c for c in discover_workflows()
+        }
+        self.candidate = self.candidates["microform-payer-auth-state-machine"]
 
     def test_agent_pack_has_no_hidden_fields(self):
         pack = build_task_pack(self.candidate)
@@ -31,17 +41,60 @@ class TaskPackTests(unittest.TestCase):
             ],
         )
 
-    def test_materialize_writes_separate_artifacts(self):
-        pack, hidden, pack_path, hidden_path = materialize_contract(self.candidate)
-        self.assertTrue(pack_path.exists())
-        self.assertTrue(hidden_path.exists())
-        written_pack = json.loads(pack_path.read_text(encoding="utf-8"))
-        written_hidden = json.loads(hidden_path.read_text(encoding="utf-8"))
-        self.assertEqual(written_pack["workflow_id"], pack.workflow_id)
-        self.assertIn("oracle_answer", written_hidden)
-        self.assertNotIn("oracle_answer", written_pack)
-        self.assertNotIn("bad_answer", written_pack)
-        self.assertNotIn("verifier_private_checks", written_pack)
+    def test_agent_task_verifier_private_separation_for_all_workflows(self):
+        for workflow_id, candidate in self.candidates.items():
+            with self.subTest(workflow=workflow_id):
+                pack, hidden, agent_path, private_path = materialize_contract(candidate)
+                self.assertTrue(str(agent_path).endswith(".agent_task.json"))
+                self.assertTrue(str(private_path).endswith(".verifier_private.json"))
+
+                agent_payload = json.loads(agent_path.read_text(encoding="utf-8"))
+                private_payload = json.loads(private_path.read_text(encoding="utf-8"))
+                assert_no_verifier_leak(agent_payload)
+
+                self.assertIn("agent_task", agent_payload)
+                self.assertIn("verifier_private", private_payload)
+                agent_task = agent_payload["agent_task"]
+                self.assertEqual(agent_task["workflow_id"], workflow_id)
+                self.assertEqual(agent_task["environment_mode"], "local-simulated")
+                self.assertIn("instruction", agent_task)
+                self.assertIn("allowed_public_evidence_ids", agent_task)
+
+                private = private_payload["verifier_private"]
+                self.assertIn("oracle_summary", private)
+                self.assertIn("bad_answer_fixture", private)
+                self.assertIn("hidden_checks", private)
+                self.assertIn("scoring_rubric", private)
+
+                agent_blob = json.dumps(agent_payload)
+                for banned in (
+                    "oracle_summary",
+                    "bad_answer_fixture",
+                    "hidden_checks",
+                    "scoring_rubric",
+                    "expected_bad_failure_ids",
+                ):
+                    self.assertNotIn(f'"{banned}"', agent_blob)
+
+                # Distinctive oracle/bad values must not leak into agent JSON.
+                mistake = str(hidden.bad_answer.get("mistake", ""))
+                if mistake:
+                    self.assertNotIn(mistake, agent_blob)
+
+                # Legacy aliases still written for plan path compatibility.
+                legacy_pack = agent_path.with_name(f"{workflow_id}.task_pack.json")
+                legacy_hidden = agent_path.with_name(f"{workflow_id}.hidden_truth.json")
+                self.assertTrue(legacy_pack.exists())
+                self.assertTrue(legacy_hidden.exists())
+                self.assertEqual(build_task_pack(candidate).workflow_id, pack.workflow_id)
+                self.assertEqual(
+                    to_agent_task(pack, candidate)["agent_task"]["workflow_id"],
+                    workflow_id,
+                )
+                self.assertEqual(
+                    to_verifier_private(hidden)["verifier_private"]["fixture_id"],
+                    hidden.fixture_id,
+                )
 
 
 if __name__ == "__main__":

@@ -4,7 +4,7 @@ Local proof only. No network. No live credentials.
 
 ## 1. What developers were confused about
 
-- Right now we authorize immediately after the Microform token and sometimes miss the authentication transaction id
+- We authorize immediately after the Microform token
 - entity:Microform
 - entity:Payer Authentication
 - entity:3DS
@@ -12,6 +12,22 @@ Local proof only. No network. No live credentials.
 - entity:challenge
 - entity:authorization
 - alt_goal:where does Payer Authentication (3DS) enrollment and challenge fit — and what states must I handle before authorization?
+- Payer Authentication enrollment sometimes returns challenge and sometimes frictionless
+- Our Microform flow collapses both into one success branch and auth refs are missing on payment
+- entity:frictionless
+- alt_goal:Resolve developer confusion involving Microform, Payer Authentication, enrollment, challenge
+- Do we still need enrollment_check after Microform tokenize if the card network often returns frictionless
+- We skip validation_authentication and payments fail intermittently
+- alt_goal:Resolve developer confusion involving Microform, frictionless
+- Which authentication transaction id must flow from Payer Auth validation into the authorization request after Microform? We only pass the Flex token today.
+- entity:Flex
+- alt_goal:Which authentication transaction id must flow from Payer Auth validation into the authorization request after Microform?
+- Is Microform tokenization itself a completed 3DS / Payer Authentication step? Our checkout treats tokenize as done and never runs challenge_or_frictionless handling.
+- alt_goal:Resolve developer confusion involving Microform, Payer Authentication, 3DS
+- What is the correct state machine order for Microform then Payer Auth setup, enrollment, challenge, validate, authorize
+- alt_goal:What is the correct state machine order for Microform then Payer Auth setup, enrollment, challenge, validate, authorize?
+- Without it, enrollment fails and authorization has no authentication references
+- alt_goal:Resolve developer confusion involving Microform, enrollment, authorization
 
 ## 2. What Relay discovered
 
@@ -48,7 +64,7 @@ Local proof only. No network. No live credentials.
 
 ## Artifacts
 
-- task pack: `artifacts/task_packs/microform-payer-auth-state-machine.task_pack.json`
+- task pack: `artifacts/task_packs/microform-payer-auth-state-machine.agent_task.json`
 - verifier results: `artifacts/verifier_results/microform-payer-auth-state-machine.result.json`
 
 ## VAP CLI workflow verifier (recommended)

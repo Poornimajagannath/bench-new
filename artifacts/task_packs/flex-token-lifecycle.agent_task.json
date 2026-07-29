@@ -1,0 +1,39 @@
+{
+  "agent_task": {
+    "instruction": "Workflow: Flex Token Lifecycle\nGoal: can I pass it straight into TMS to store a permanent instrument, or do I need another step?\n\nUsing only the allowed context, produce a step-by-step integration plan that covers every workflow stage. Do not call live payment APIs. Do not include credentials, PANs, or secrets.",
+    "workflow_id": "flex-token-lifecycle",
+    "title": "Flex Token Lifecycle",
+    "goal": "can I pass it straight into TMS to store a permanent instrument, or do I need another step?",
+    "allowed_public_evidence_ids": [
+      "api_fact:1",
+      "api_fact:2",
+      "api_fact:3",
+      "seed:seed-flex-01",
+      "seed:seed-flex-02",
+      "seed:seed-flex-03",
+      "seed:seed-flex-04",
+      "seed:seed-flex-05",
+      "seed:seed-flex-06",
+      "seed:seed-flex-07"
+    ],
+    "allowed_context": [
+      "Flex Microform returns a short-lived transientTokenJwt",
+      "TMS createInstrument accepts a Flex token via a dedicated transient-token path, not as raw pan",
+      "Transient tokens must not be persisted as long-lived customer credentials"
+    ],
+    "environment_mode": "local-simulated",
+    "required_artifact": "A structured plan listing each stage, the API/SDK fact it depends on, and the readiness check before moving to the next stage.",
+    "stages": [
+      "capture_transient_token",
+      "validate_token_type",
+      "create_permanent_instrument",
+      "authorize_with_instrument"
+    ],
+    "constraints": [
+      "No network calls",
+      "No live CyberSource sandbox credentials",
+      "No raw PAN, secrets, or credential logging",
+      "Public forum/docs seeds are frozen input only"
+    ]
+  }
+}

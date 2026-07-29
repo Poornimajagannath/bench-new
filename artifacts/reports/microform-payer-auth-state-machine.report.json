@@ -1,14 +1,30 @@
 {
   "workflow_id": "microform-payer-auth-state-machine",
   "developer_confusion": [
-    "Right now we authorize immediately after the Microform token and sometimes miss the authentication transaction id",
+    "We authorize immediately after the Microform token",
     "entity:Microform",
     "entity:Payer Authentication",
     "entity:3DS",
     "entity:enrollment",
     "entity:challenge",
     "entity:authorization",
-    "alt_goal:where does Payer Authentication (3DS) enrollment and challenge fit \u2014 and what states must I handle before authorization?"
+    "alt_goal:where does Payer Authentication (3DS) enrollment and challenge fit \u2014 and what states must I handle before authorization?",
+    "Payer Authentication enrollment sometimes returns challenge and sometimes frictionless",
+    "Our Microform flow collapses both into one success branch and auth refs are missing on payment",
+    "entity:frictionless",
+    "alt_goal:Resolve developer confusion involving Microform, Payer Authentication, enrollment, challenge",
+    "Do we still need enrollment_check after Microform tokenize if the card network often returns frictionless",
+    "We skip validation_authentication and payments fail intermittently",
+    "alt_goal:Resolve developer confusion involving Microform, frictionless",
+    "Which authentication transaction id must flow from Payer Auth validation into the authorization request after Microform? We only pass the Flex token today.",
+    "entity:Flex",
+    "alt_goal:Which authentication transaction id must flow from Payer Auth validation into the authorization request after Microform?",
+    "Is Microform tokenization itself a completed 3DS / Payer Authentication step? Our checkout treats tokenize as done and never runs challenge_or_frictionless handling.",
+    "alt_goal:Resolve developer confusion involving Microform, Payer Authentication, 3DS",
+    "What is the correct state machine order for Microform then Payer Auth setup, enrollment, challenge, validate, authorize",
+    "alt_goal:What is the correct state machine order for Microform then Payer Auth setup, enrollment, challenge, validate, authorize?",
+    "Without it, enrollment fails and authorization has no authentication references",
+    "alt_goal:Resolve developer confusion involving Microform, enrollment, authorization"
   ],
   "relay_discovered": [
     "Sequence Microform tokenization with Payer Authentication enrollment, challenge/frictionless handling, and authorization using the authentication result.",
@@ -43,7 +59,7 @@
       "check_failed:dual_path_handling",
       "check_failed:auth_refs_on_payment",
       "check_failed:state_machine_complete",
-      "Right now we authorize immediately after the Microform token and sometimes miss the authentication transaction id",
+      "We authorize immediately after the Microform token",
       "entity:Microform",
       "entity:Payer Authentication",
       "entity:3DS",
@@ -117,6 +133,6 @@
       }
     ]
   },
-  "task_pack_path": "artifacts/task_packs/microform-payer-auth-state-machine.task_pack.json",
+  "task_pack_path": "artifacts/task_packs/microform-payer-auth-state-machine.agent_task.json",
   "verifier_result_path": "artifacts/verifier_results/microform-payer-auth-state-machine.result.json"
 }

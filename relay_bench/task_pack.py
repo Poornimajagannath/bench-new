@@ -230,22 +230,96 @@ def build_hidden_truth(candidate: WorkflowCandidate) -> HiddenTruth:
     )
 
 
+def to_agent_task(pack: TaskPack, candidate: WorkflowCandidate) -> Dict[str, object]:
+    """Agent-visible contract. Must never include verifier_private fields."""
+    evidence_ids = [
+        f"api_fact:{idx + 1}" for idx, _ in enumerate(pack.allowed_context)
+    ] + [f"seed:{sid}" for sid in candidate.seed_ids]
+    return {
+        "agent_task": {
+            "instruction": pack.prompt,
+            "workflow_id": pack.workflow_id,
+            "title": pack.title,
+            "goal": pack.goal,
+            "allowed_public_evidence_ids": evidence_ids,
+            "allowed_context": list(pack.allowed_context),
+            "environment_mode": "local-simulated",
+            "required_artifact": pack.expected_deliverable,
+            "stages": list(pack.stages),
+            "constraints": list(pack.constraints),
+        }
+    }
+
+
+def to_verifier_private(hidden: HiddenTruth) -> Dict[str, object]:
+    """Verifier-only contract. Never export into agent_task artifacts."""
+    return {
+        "verifier_private": {
+            "workflow_id": hidden.workflow_id,
+            "fixture_id": hidden.fixture_id,
+            "oracle_summary": dict(hidden.oracle_answer),
+            "bad_answer_fixture": dict(hidden.bad_answer),
+            "hidden_checks": list(hidden.verifier_private_checks),
+            "scoring_rubric": {
+                "expected_bad_failure_ids": list(hidden.expected_bad_failure_ids),
+                "oracle_must_pass": True,
+                "bad_answer_must_fail_all_expected": True,
+            },
+        }
+    }
+
+
+_BANNED_AGENT_KEYS = (
+    "oracle_answer",
+    "oracle_summary",
+    "bad_answer",
+    "bad_answer_fixture",
+    "verifier_private",
+    "verifier_private_checks",
+    "hidden_checks",
+    "hidden_truth",
+    "scoring_rubric",
+    "expected_bad_failure_ids",
+)
+
+
+def assert_no_verifier_leak(agent_payload: Dict[str, object]) -> None:
+    blob = json.dumps(agent_payload)
+    for banned in _BANNED_AGENT_KEYS:
+        if banned in agent_payload or banned in agent_payload.get("agent_task", {}):  # type: ignore[operator]
+            raise ValueError(f"agent_task leaked key {banned!r}")
+        # Value leak: private fixture markers must not appear in agent JSON.
+        if banned in ("oracle_summary", "bad_answer_fixture", "hidden_checks", "scoring_rubric"):
+            if f'"{banned}"' in blob:
+                raise ValueError(f"agent_task leaked field name {banned!r}")
+
+
 def materialize_contract(candidate: WorkflowCandidate) -> Tuple[TaskPack, HiddenTruth, Path, Path]:
-    """Write agent-visible pack and verifier-only hidden truth as separate artifacts."""
+    """Write agent_task and verifier_private as separate artifacts (plus legacy aliases)."""
     TASK_PACK_DIR.mkdir(parents=True, exist_ok=True)
     pack = build_task_pack(candidate)
     hidden = build_hidden_truth(candidate)
 
+    agent_payload = to_agent_task(pack, candidate)
+    private_payload = to_verifier_private(hidden)
+    assert_no_verifier_leak(agent_payload)
+
+    agent_path = TASK_PACK_DIR / f"{candidate.workflow_id}.agent_task.json"
+    private_path = TASK_PACK_DIR / f"{candidate.workflow_id}.verifier_private.json"
+    # Legacy aliases kept for plan path compatibility.
     pack_path = TASK_PACK_DIR / f"{candidate.workflow_id}.task_pack.json"
     hidden_path = TASK_PACK_DIR / f"{candidate.workflow_id}.hidden_truth.json"
 
+    agent_path.write_text(json.dumps(agent_payload, indent=2) + "\n", encoding="utf-8")
+    private_path.write_text(json.dumps(private_payload, indent=2) + "\n", encoding="utf-8")
     pack_path.write_text(json.dumps(pack.to_dict(), indent=2) + "\n", encoding="utf-8")
     hidden_path.write_text(json.dumps(hidden.to_dict(), indent=2) + "\n", encoding="utf-8")
 
-    # Defense in depth: re-read pack and ensure no hidden leakage.
-    written = json.loads(pack_path.read_text(encoding="utf-8"))
+    written_agent = json.loads(agent_path.read_text(encoding="utf-8"))
+    assert_no_verifier_leak(written_agent)
+    written_pack = json.loads(pack_path.read_text(encoding="utf-8"))
     for banned_key in ("oracle_answer", "bad_answer", "verifier_private_checks", "hidden_truth"):
-        if banned_key in written:
+        if banned_key in written_pack:
             raise ValueError(f"Task pack artifact leaked key {banned_key!r}")
 
-    return pack, hidden, pack_path, hidden_path
+    return pack, hidden, agent_path, private_path
