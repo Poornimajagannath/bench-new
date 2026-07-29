@@ -1,4 +1,6 @@
+import json
 import unittest
+from pathlib import Path
 
 from relay_bench.discovery import (
     catalog_entry,
@@ -19,6 +21,8 @@ from relay_bench.schemas import (
     RawQuestion,
     WorkflowSuggestion,
 )
+
+ROOT = Path(__file__).resolve().parents[1]
 
 
 class DiscoveryTests(unittest.TestCase):
@@ -252,6 +256,12 @@ class DiscoveryTests(unittest.TestCase):
         self.assertEqual(payload["suggestion_count"], 20)
         # Reduced by workflow_id, not one candidate per seed.
         self.assertEqual(payload["approved_candidate_count"], 3)
+
+    def test_candidates_artifact_is_fresh(self):
+        artifact = json.loads(
+            (ROOT / "artifacts" / "candidates.json").read_text(encoding="utf-8")
+        )
+        self.assertEqual(artifact, synthesize_candidates_payload())
 
 
 if __name__ == "__main__":
