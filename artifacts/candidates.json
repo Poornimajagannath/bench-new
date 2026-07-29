@@ -273,7 +273,10 @@
         "merged_from_seed_count": 2
       },
       "suggestion": {
-        "suggested_workflow_id": "flex-token-lifecycle",
+        "approved_workflow_id": "flex-token-lifecycle",
+        "original_suggested_workflow_ids": [
+          "flex-token-lifecycle"
+        ],
         "stages": [
           "capture_transient_token",
           "validate_token_type",
@@ -292,7 +295,8 @@
           "Approve suggested Flex\u2192TMS lifecycle; keep template stages.",
           "Second Flex confusion seed; merge into the same workflow contract."
         ],
-        "merged_from_seed_count": 2
+        "merged_from_seed_count": 2,
+        "remapped_from_suggestion": false
       }
     },
     {
@@ -354,7 +358,10 @@
         "merged_from_seed_count": 1
       },
       "suggestion": {
-        "suggested_workflow_id": "http-signature-debug",
+        "approved_workflow_id": "http-signature-debug",
+        "original_suggested_workflow_ids": [
+          "http-signature-debug"
+        ],
         "stages": [
           "load_sandbox_env_vars",
           "build_digest",
@@ -373,7 +380,8 @@
         "pm_notes": [
           "Approve HTTP Signature debug workflow as suggested."
         ],
-        "merged_from_seed_count": 1
+        "merged_from_seed_count": 1,
+        "remapped_from_suggestion": false
       }
     },
     {
@@ -433,7 +441,10 @@
         "merged_from_seed_count": 1
       },
       "suggestion": {
-        "suggested_workflow_id": "microform-payer-auth-state-machine",
+        "approved_workflow_id": "microform-payer-auth-state-machine",
+        "original_suggested_workflow_ids": [
+          "microform-payer-auth-state-machine"
+        ],
         "stages": [
           "microform_tokenize",
           "payer_auth_setup",
@@ -453,7 +464,8 @@
         "pm_notes": [
           "Edit: lock the full state machine stages before task-pack creation."
         ],
-        "merged_from_seed_count": 1
+        "merged_from_seed_count": 1,
+        "remapped_from_suggestion": false
       }
     }
   ]
