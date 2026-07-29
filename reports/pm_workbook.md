@@ -47,6 +47,7 @@ This package proves the **shape**. It does not yet import real DocETL or Tempo e
 
 ## Where to look next
 
-1. `reports/demo_microform_payer_auth_state_machine.md`
-2. `artifacts/reports/microform-payer-auth-state-machine.report.md`
-3. `reports/generated_failure_taxonomy.md`
+1. `reports/what_we_built.md`
+2. `reports/demo_microform_payer_auth_state_machine.md`
+3. `artifacts/reports/microform-payer-auth-state-machine.report.md`
+4. `reports/generated_failure_taxonomy.md`

@@ -61,6 +61,7 @@ python3 pipelines/run_bench_v0.py --workflow microform-payer-auth-state-machine
 
 ## PM entrypoints
 
+- `reports/what_we_built.md` — orientation: what Relay Bench V0 is
 - `HANDOFF.md` — intent and acceptance criteria
 - `reports/pm_workbook.md` — why Relay Bench exists
 - `reports/demo_microform_payer_auth_state_machine.md` — advanced workflow proof
