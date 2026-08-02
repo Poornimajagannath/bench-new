@@ -51,12 +51,12 @@ API/SDK facts:
 ## 4. What hidden truth exists, without showing it?
 
 - hidden_truth_path: `artifacts/task_packs/http-signature-debug.verifier_private.json`
-- oracle_present: `True`
-- bad_answer_present: `True`
-- private_checks_present: `True`
-- agent_pack_omits_oracle: `True`
-- agent_pack_omits_bad_answer: `True`
-- agent_pack_omits_private_checks: `True`
+- oracle_present: `true`
+- bad_answer_present: `true`
+- private_checks_present: `true`
+- agent_pack_omits_oracle: `true`
+- agent_pack_omits_bad_answer: `true`
+- agent_pack_omits_private_checks: `true`
 - oracle_field_count: `4`
 - bad_answer_field_count: `5`
 - private_check_count: `4`
@@ -66,7 +66,7 @@ Hidden truth content is intentionally omitted from this bundle.
 
 ## 5. How would this map to a future Harbor/Tempo-style eval task?
 
-- preview_only: `True`
+- preview_only: `true`
 - runner_integration: `not implemented`
 - environment.mode: `local-simulated`
 - test_ref.workflow_id: `http-signature-debug`
