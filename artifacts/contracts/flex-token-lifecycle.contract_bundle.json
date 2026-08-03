@@ -1,0 +1,87 @@
+{
+  "schema_version": "relay.workflow_contract_bundle.v0",
+  "workflow_id": "flex-token-lifecycle",
+  "title": "Flex Token Lifecycle",
+  "goal": "can I pass it straight into TMS to store a permanent instrument, or do I need another step?",
+  "stages": [
+    "capture_transient_token",
+    "validate_token_type",
+    "create_permanent_instrument",
+    "authorize_with_instrument"
+  ],
+  "api_sdk_facts": [
+    "Flex Microform returns a short-lived transientTokenJwt",
+    "TMS createInstrument accepts a Flex token via a dedicated transient-token path, not as raw pan",
+    "Transient tokens must not be persisted as long-lived customer credentials"
+  ],
+  "confusion_points": [
+    "TMS createInstrument rejects my Flex JWT when I send it as pan",
+    "entity:Flex",
+    "entity:Microform",
+    "entity:TMS",
+    "entity:createInstrument",
+    "Support said not to treat the JWT like a reusable PAN, but checkout still fails when creating a permanent instrument",
+    "entity:transientTokenJwt",
+    "alt_goal:Resolve developer confusion involving Flex, Microform, TMS, transientTokenJwt",
+    "Is persisting the Flex JWT wrong, and what is the correct permanent instrument path",
+    "alt_goal:how transientTokenJwt but our backend stores it in Redis for later TMS createInstrument. Is persisting the Flex JWT wrong, and what is the correct permanent instrument path?",
+    "Can TMS createInstrument accept a Flex Microform token without sending pan? We keep getting INVALID_DATA when we map transientTokenJwt into card number fields.",
+    "alt_goal:Can TMS createInstrument accept a Flex Microform token without sending pan?",
+    "We thought authorize with the transient token was enough and skipped TMS entirely",
+    "alt_goal:which API creates a reusable instrument identifier?",
+    "Our team mixes Flex Microform JWT handling with TMS instrument CRUD and auth keeps failing",
+    "alt_goal:Resolve developer confusion involving Flex, Microform, TMS",
+    "We authorize immediately with transientTokenJwt and later cannot reuse it",
+    "entity:authorization",
+    "alt_goal:What is the correct lifecycle from Flex Microform capture to permanent TMS instrument before authorization?"
+  ],
+  "source_seed_ids": [
+    "seed-flex-01",
+    "seed-flex-02",
+    "seed-flex-03",
+    "seed-flex-04",
+    "seed-flex-05",
+    "seed-flex-06",
+    "seed-flex-07"
+  ],
+  "pm_decision": "approve",
+  "task_pack_path": "artifacts/task_packs/flex-token-lifecycle.agent_task.json",
+  "hidden_truth_receipt": {
+    "hidden_truth_path": "artifacts/task_packs/flex-token-lifecycle.verifier_private.json",
+    "agent_visible_path": "artifacts/task_packs/flex-token-lifecycle.agent_task.json",
+    "oracle_present": true,
+    "bad_answer_present": true,
+    "private_checks_present": true,
+    "agent_pack_omits_oracle": true,
+    "agent_pack_omits_bad_answer": true,
+    "agent_pack_omits_private_checks": true,
+    "oracle_field_count": 4,
+    "bad_answer_field_count": 5,
+    "private_check_count": 4,
+    "hidden_truth_sha256": "6d30eebb9b243e326da91e537140bcdd0793d64387c8f946b2ae926fdbb6a2bd",
+    "agent_visible_sha256": "44f0dc4e36e250cf5b3b6cb8a2a1584a454c08c09bb0fce001d5013edcce96ec"
+  },
+  "harbor_shape_preview": {
+    "preview_only": true,
+    "runner_integration": "not implemented",
+    "inspired_by": "Harbor / Tempo Stable Bench task shape (not imported in V0)",
+    "instruction": "Workflow: Flex Token Lifecycle\nGoal: can I pass it straight into TMS to store a permanent instrument, or do I need another step?\n\nUsing only the allowed context, produce a step-by-step integration plan that covers every workflow stage. Do not call live payment APIs. Do not include credentials, PANs, or secrets.",
+    "environment": {
+      "mode": "local-simulated",
+      "network": "denied",
+      "credentials": "none",
+      "note": "Harbor/Tempo-style isolation is preview-only; no Docker runner in V0"
+    },
+    "test_ref": {
+      "workflow_id": "flex-token-lifecycle",
+      "agent_task_path": "artifacts/task_packs/flex-token-lifecycle.agent_task.json",
+      "verifier_style": "stable-bench-inspired-local-fixture"
+    },
+    "expected_artifact": "A structured plan listing each stage, the API/SDK fact it depends on, and the readiness check before moving to the next stage.",
+    "required_receipts": [
+      "hidden_truth_receipt",
+      "verifier_result"
+    ],
+    "isolation_note": "V0 does not run Harbor, tempo-evals, or Docker isolation. This preview documents how a future eval export could package the agent-visible task against verifier-private fixtures."
+  }
+}

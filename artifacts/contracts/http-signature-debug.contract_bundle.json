@@ -1,0 +1,87 @@
+{
+  "schema_version": "relay.workflow_contract_bundle.v0",
+  "workflow_id": "http-signature-debug",
+  "title": "HTTP Signature Debug",
+  "goal": "Am I using the wrong SDK field names for key id and secret?",
+  "stages": [
+    "load_sandbox_env_vars",
+    "build_digest",
+    "build_signature_base",
+    "attach_vc_headers",
+    "interpret_auth_failure"
+  ],
+  "api_sdk_facts": [
+    "Sandbox host is apitest.cybersource.com",
+    "SDK expects merchantKeyId and merchantsecretKey (not keyId/secretKey)",
+    "Signed headers typically include host, date, request-target, digest, v-c-merchant-id"
+  ],
+  "confusion_points": [
+    "My HTTP Signature request looks correct but CyberSource returns Authentication Failed on apitest.cybersource.com",
+    "Am I using the wrong SDK field names for key id and secret",
+    "entity:HTTP Signature",
+    "entity:Authentication Failed",
+    "entity:keyId",
+    "entity:secretKey",
+    "entity:apitest.cybersource.com",
+    "HTTP Signature signed headers include host,date,digest but we still get 401. Do we need request-target and v-c-merchant-id in the signature base on apitest?",
+    "entity:v-c-merchant-id",
+    "alt_goal:Resolve developer confusion involving HTTP Signature, v-c-merchant-id, apitest.cybersource.com",
+    "Authentication Failed every time on sandbox",
+    "entity:merchantKeyId",
+    "alt_goal:Resolve developer confusion involving Authentication Failed, keyId, secretKey, merchantKeyId",
+    "Is Authentication Failed expected, and what host should sandbox use",
+    "alt_goal:what host should sandbox use?",
+    "Our manual HMAC matches locally but apitest still rejects the request",
+    "alt_goal:How should the digest and signature base string be built for CyberSource HTTP Signature?",
+    "Does logging the shared secret in debug headers cause Authentication Failed, or is the issue only field names like keyId vs merchantKeyId on HTTP Signature",
+    "alt_goal:Resolve developer confusion involving HTTP Signature, Authentication Failed, keyId, merchantKeyId"
+  ],
+  "source_seed_ids": [
+    "seed-httpsig-01",
+    "seed-httpsig-02",
+    "seed-httpsig-03",
+    "seed-httpsig-04",
+    "seed-httpsig-05",
+    "seed-httpsig-06"
+  ],
+  "pm_decision": "approve",
+  "task_pack_path": "artifacts/task_packs/http-signature-debug.agent_task.json",
+  "hidden_truth_receipt": {
+    "hidden_truth_path": "artifacts/task_packs/http-signature-debug.verifier_private.json",
+    "agent_visible_path": "artifacts/task_packs/http-signature-debug.agent_task.json",
+    "oracle_present": true,
+    "bad_answer_present": true,
+    "private_checks_present": true,
+    "agent_pack_omits_oracle": true,
+    "agent_pack_omits_bad_answer": true,
+    "agent_pack_omits_private_checks": true,
+    "oracle_field_count": 4,
+    "bad_answer_field_count": 5,
+    "private_check_count": 4,
+    "hidden_truth_sha256": "0318a7735e7f495c8233af7050d680dbb520ddc40049c1d944f4cb91b2909184",
+    "agent_visible_sha256": "873caea15261b3ff435bc3636d2901c6b0fadae67154519fdf32540879e7de06"
+  },
+  "harbor_shape_preview": {
+    "preview_only": true,
+    "runner_integration": "not implemented",
+    "inspired_by": "Harbor / Tempo Stable Bench task shape (not imported in V0)",
+    "instruction": "Workflow: HTTP Signature Debug\nGoal: Am I using the wrong SDK field names for key id and secret?\n\nUsing only the allowed context, produce a step-by-step integration plan that covers every workflow stage. Do not call live payment APIs. Do not include credentials, PANs, or secrets.",
+    "environment": {
+      "mode": "local-simulated",
+      "network": "denied",
+      "credentials": "none",
+      "note": "Harbor/Tempo-style isolation is preview-only; no Docker runner in V0"
+    },
+    "test_ref": {
+      "workflow_id": "http-signature-debug",
+      "agent_task_path": "artifacts/task_packs/http-signature-debug.agent_task.json",
+      "verifier_style": "stable-bench-inspired-local-fixture"
+    },
+    "expected_artifact": "A structured plan listing each stage, the API/SDK fact it depends on, and the readiness check before moving to the next stage.",
+    "required_receipts": [
+      "hidden_truth_receipt",
+      "verifier_result"
+    ],
+    "isolation_note": "V0 does not run Harbor, tempo-evals, or Docker isolation. This preview documents how a future eval export could package the agent-visible task against verifier-private fixtures."
+  }
+}

@@ -12,6 +12,7 @@ raw forum/docs/support questions
 -> failure classifier
 -> product-surface improvement action
 -> PM-readable report
+-> Workflow Contract Compiler (durable bundle + Harbor/Tempo-style preview)
 """
 
 from __future__ import annotations
@@ -25,6 +26,7 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
+from relay_bench.contract_compiler import compile_and_write
 from relay_bench.discovery import discover_suggestions
 from relay_bench.pm_gate import require_pm_approved_candidate
 from relay_bench.reporting import build_report, write_report
@@ -98,6 +100,22 @@ def run_pipeline(workflow_id: str) -> int:
     print(f"[bench_v0] report_md={md_path}")
     print(f"[bench_v0] report_json={json_path}")
 
+    print("[bench_v0] stage=contract_compiler")
+    bundle, contract_json, contract_md = compile_and_write(
+        candidate,
+        agent_visible_path=agent_path,
+        hidden_truth_path=private_path,
+        verifier_result_path=result_path,
+        improvement_actions=classification.actions,
+        ensure_materialized=False,
+    )
+    print(f"[bench_v0] contract_json={contract_json}")
+    print(f"[bench_v0] contract_md={contract_md}")
+    print(
+        f"[bench_v0] harbor_preview_only="
+        f"{bundle['harbor_shape_preview']['preview_only']}"
+    )
+
     summary = {
         "ok": True,
         "workflow_id": workflow_id,
@@ -107,6 +125,8 @@ def run_pipeline(workflow_id: str) -> int:
         "verifier_results": str(result_path),
         "report_md": str(md_path),
         "report_json": str(json_path),
+        "contract_json": str(contract_json),
+        "contract_md": str(contract_md),
         "hidden_truth_separated": True,
         "pm_open": str(md_path),
     }
