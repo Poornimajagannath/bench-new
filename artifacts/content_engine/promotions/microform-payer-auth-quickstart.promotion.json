@@ -1,0 +1,25 @@
+{
+  "source_id": "microform-payer-auth-quickstart",
+  "status": "promoted",
+  "schema_passed": true,
+  "content_passed": true,
+  "agent_use_status": "passed",
+  "issues": [],
+  "promoted_unit_ids": [
+    "microform-payer-auth-quickstart:overview:0:overview",
+    "microform-payer-auth-quickstart:prerequisite:0:prerequisites",
+    "microform-payer-auth-quickstart:step:1:tokenize-with-microform",
+    "microform-payer-auth-quickstart:step:2:run-payer-auth-setup",
+    "microform-payer-auth-quickstart:step:3:check-enrollment",
+    "microform-payer-auth-quickstart:step:4:handle-challenge-or-frictionless",
+    "microform-payer-auth-quickstart:step:5:validate-authentication",
+    "microform-payer-auth-quickstart:step:6:authorize-with-authentication-references",
+    "microform-payer-auth-quickstart:validation_check:7:validation-checks",
+    "microform-payer-auth-quickstart:warning:7:warnings",
+    "microform-payer-auth-quickstart:next_step:7:next-steps"
+  ],
+  "linked_workflow_id": "microform-payer-auth-state-machine",
+  "contract_bundle_path": "artifacts/contracts/microform-payer-auth-state-machine.contract_bundle.json",
+  "context_pack_path": "artifacts/content_engine/context_packs/microform-payer-auth-quickstart.context_pack.json",
+  "objects_path": "artifacts/content_engine/objects/microform-payer-auth-quickstart.quickstart_units.json"
+}

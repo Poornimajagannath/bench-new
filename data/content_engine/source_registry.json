@@ -1,0 +1,16 @@
+[
+  {
+    "source_id": "microform-payer-auth-quickstart",
+    "source_type": "quickstart",
+    "canonical_url": "local://fixtures/microform-payer-auth-quickstart.md",
+    "repo_path": "data/content_engine/snapshots/microform-payer-auth-quickstart.md",
+    "owning_team": "relay-bench-local",
+    "product": ["cybersource", "visa-acceptance"],
+    "audience": ["developer"],
+    "refresh_cadence": "manual-fixture",
+    "trust_level": "experimental",
+    "parser_strategy": "markdown_native",
+    "enabled": true,
+    "linked_workflow_id": "microform-payer-auth-state-machine"
+  }
+]
