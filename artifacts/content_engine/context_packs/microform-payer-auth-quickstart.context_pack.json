@@ -1,0 +1,180 @@
+{
+  "pack_id": "ctx-microform-payer-auth-quickstart",
+  "source_id": "microform-payer-auth-quickstart",
+  "product": [
+    "cybersource",
+    "visa-acceptance"
+  ],
+  "audience": [
+    "developer"
+  ],
+  "title": "Microform + Payer Authentication Quickstart",
+  "goal": "Sequence Microform tokenization with Payer Authentication enrollment, challenge or frictionless handling, validation, and authorization.",
+  "unit_ids": [
+    "microform-payer-auth-quickstart:overview:0:overview",
+    "microform-payer-auth-quickstart:prerequisite:0:prerequisites",
+    "microform-payer-auth-quickstart:step:1:tokenize-with-microform",
+    "microform-payer-auth-quickstart:step:2:run-payer-auth-setup",
+    "microform-payer-auth-quickstart:step:3:check-enrollment",
+    "microform-payer-auth-quickstart:step:4:handle-challenge-or-frictionless",
+    "microform-payer-auth-quickstart:step:5:validate-authentication",
+    "microform-payer-auth-quickstart:step:6:authorize-with-authentication-references",
+    "microform-payer-auth-quickstart:validation_check:7:validation-checks",
+    "microform-payer-auth-quickstart:warning:7:warnings",
+    "microform-payer-auth-quickstart:next_step:7:next-steps"
+  ],
+  "units_summary": [
+    {
+      "unit_id": "microform-payer-auth-quickstart:overview:0:overview",
+      "unit_type": "overview",
+      "title": "Overview",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "microform-payer-auth-quickstart:prerequisite:0:prerequisites",
+      "unit_type": "prerequisite",
+      "title": "Prerequisites",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "microform-payer-auth-quickstart:step:1:tokenize-with-microform",
+      "unit_type": "step",
+      "title": "Tokenize with Microform",
+      "sequence_number": 1,
+      "requires": [
+        "microform_client"
+      ],
+      "outcomes": [
+        "transient_token_available"
+      ],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "microform-payer-auth-quickstart:step:2:run-payer-auth-setup",
+      "unit_type": "step",
+      "title": "Run Payer Auth setup",
+      "sequence_number": 2,
+      "requires": [
+        "transient_token_available"
+      ],
+      "outcomes": [
+        "payer_auth_setup_complete"
+      ],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "microform-payer-auth-quickstart:step:3:check-enrollment",
+      "unit_type": "step",
+      "title": "Check enrollment",
+      "sequence_number": 3,
+      "requires": [
+        "payer_auth_setup_complete"
+      ],
+      "outcomes": [
+        "enrollment_path_known"
+      ],
+      "failure_modes": [
+        "skipping enrollment and authorizing immediately"
+      ],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "microform-payer-auth-quickstart:step:4:handle-challenge-or-frictionless",
+      "unit_type": "step",
+      "title": "Handle challenge or frictionless",
+      "sequence_number": 4,
+      "requires": [
+        "enrollment_path_known"
+      ],
+      "outcomes": [
+        "authentication_result_ready"
+      ],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "microform-payer-auth-quickstart:step:5:validate-authentication",
+      "unit_type": "step",
+      "title": "Validate authentication",
+      "sequence_number": 5,
+      "requires": [
+        "authentication_result_ready"
+      ],
+      "outcomes": [
+        "auth_refs_ready"
+      ],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "microform-payer-auth-quickstart:step:6:authorize-with-authentication-references",
+      "unit_type": "step",
+      "title": "Authorize with authentication references",
+      "sequence_number": 6,
+      "requires": [
+        "auth_refs_ready"
+      ],
+      "outcomes": [
+        "authorization_submitted"
+      ],
+      "failure_modes": [
+        "authorizing with only the Flex/Microform token and no auth refs"
+      ],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "microform-payer-auth-quickstart:validation_check:7:validation-checks",
+      "unit_type": "validation_check",
+      "title": "Validation checks",
+      "sequence_number": 7,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "microform-payer-auth-quickstart:warning:7:warnings",
+      "unit_type": "warning",
+      "title": "Warnings",
+      "sequence_number": 7,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "microform-payer-auth-quickstart:next_step:7:next-steps",
+      "unit_type": "next_step",
+      "title": "Next steps",
+      "sequence_number": 7,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    }
+  ],
+  "provenance": {
+    "source_id": "microform-payer-auth-quickstart",
+    "snapshot_id": "microform-payer-auth-quickstart-41556b43a776",
+    "content_hash": "41556b43a7766fa5989e0e367b5ccb85bd3cd9830c9fe2ae7d474554c0c33d19",
+    "canonical_url": "local://fixtures/microform-payer-auth-quickstart.md",
+    "doc_id": "doc-microform-payer-auth-quickstart"
+  },
+  "constraints": [
+    "Derived Relay context pack \u2014 does not rewrite source docs",
+    "No network calls",
+    "No live credentials, PAN, or secrets",
+    "DocETL-style extraction only in V0"
+  ],
+  "linked_workflow_id": "microform-payer-auth-state-machine"
+}

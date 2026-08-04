@@ -1,0 +1,21 @@
+{
+  "doc_id": "doc-microform-payer-auth-quickstart",
+  "source_id": "microform-payer-auth-quickstart",
+  "snapshot_id": "microform-payer-auth-quickstart-41556b43a776",
+  "title": "Microform + Payer Authentication Quickstart",
+  "canonical_url": "local://fixtures/microform-payer-auth-quickstart.md",
+  "source_format": "markdown",
+  "product": [
+    "cybersource",
+    "visa-acceptance"
+  ],
+  "audience": [
+    "developer"
+  ],
+  "page_type": "quickstart",
+  "freshness_date": "2026-08-04",
+  "normalized_markdown": "# Microform + Payer Authentication Quickstart\n\nAudience: developer\nProduct: CyberSource / Visa Acceptance\nFreshness: 2026-08-04\n\nGoal: Sequence Microform tokenization with Payer Authentication enrollment, challenge or frictionless handling, validation, and authorization.\n\n## Overview\n\nMicroform tokenization captures card data in the browser. It is **not** itself a completed Payer Authentication / 3DS step. After tokenize, you still need enrollment and either challenge or frictionless handling before authorization.\n\n## Prerequisites\n\n- Sandbox merchant credentials available as environment variables (never hardcode)\n- Microform client integrated on the checkout page\n- Payer Authentication enabled for the sandbox MID\n\n## Steps\n\n### 1. Tokenize with Microform\n\nCapture the payment fields with Microform and obtain a transient token.\n\nRequires: microform_client\nOutcome: transient_token_available\nEvidence: \"Microform tokenization captures card data in the browser.\"\n\n### 2. Run Payer Auth setup\n\nCreate the Payer Authentication setup request using the tokenized payment data.\n\nRequires: transient_token_available\nOutcome: payer_auth_setup_complete\nEvidence: \"After tokenize, you still need enrollment\"\n\n### 3. Check enrollment\n\nCall enrollment check. Expect FRICTIONLESS, CHALLENGE, or UNAVAILABLE.\n\nRequires: payer_auth_setup_complete\nOutcome: enrollment_path_known\nFailure modes: skipping enrollment and authorizing immediately\nEvidence: \"Expect FRICTIONLESS, CHALLENGE, or UNAVAILABLE\"\n\n### 4. Handle challenge or frictionless\n\nBranch on the enrollment path. Do not collapse both into one success branch.\n\nRequires: enrollment_path_known\nOutcome: authentication_result_ready\nEvidence: \"Branch on the enrollment path\"\n\n### 5. Validate authentication\n\nValidate the authentication result before payment.\n\nRequires: authentication_result_ready\nOutcome: auth_refs_ready\nEvidence: \"Validate the authentication result before payment\"\n\n### 6. Authorize with authentication references\n\nSubmit authorization including authentication transaction references when 3DS was performed.\n\nRequires: auth_refs_ready\nOutcome: authorization_submitted\nFailure modes: authorizing with only the Flex/Microform token and no auth refs\nEvidence: \"including authentication transaction references when 3DS was performed\"\n\n## Validation checks\n\n- Confirm enrollment ran before authorization\n- Confirm challenge and frictionless paths are both handled\n- Confirm authorization carries authentication references when required\n\n## Warnings\n\n- Do not treat Microform tokenize as completed 3DS\n- Do not log raw PAN, shared secrets, or credential material\n\n## Next steps\n\n- Add support-safe evidence collection for failed enrollments\n- Wire a VAP CLI workflow verifier for this contract\n",
+  "extracted_metadata": {
+    "goal": "Sequence Microform tokenization with Payer Authentication enrollment, challenge or frictionless handling, validation, and authorization."
+  }
+}

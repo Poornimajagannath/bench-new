@@ -1,0 +1,381 @@
+{
+  "stage": "content_engine_extract",
+  "inspired_by": "ucbepic/docetl (not imported in V0)",
+  "source_id": "microform-payer-auth-quickstart",
+  "units": [
+    {
+      "unit_id": "microform-payer-auth-quickstart:overview:0:overview",
+      "source_page_id": "doc-microform-payer-auth-quickstart",
+      "unit_type": "overview",
+      "title": "Overview",
+      "goal": "Sequence Microform tokenization with Payer Authentication enrollment, challenge or frictionless handling, validation, and authorization.",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "task": [
+        "microform-payer-auth-state-machine"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "Microform tokenization captures card data in the browser. It is **not** itself a completed Payer Authentication / 3DS step. After tokenize, you still need enrollment and either challenge or frictionless handling before authorization.",
+      "commands": [],
+      "api_entities": [
+        "Microform",
+        "Payer Authentication",
+        "enrollment",
+        "challenge",
+        "frictionless",
+        "authorization",
+        "3DS"
+      ],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.9,
+      "evidence_quotes": [
+        "Microform tokenization captures card data in the browser. It is **not** itself a completed Payer Authentication / 3DS step. After tokenize, you still need en..."
+      ]
+    },
+    {
+      "unit_id": "microform-payer-auth-quickstart:prerequisite:0:prerequisites",
+      "source_page_id": "doc-microform-payer-auth-quickstart",
+      "unit_type": "prerequisite",
+      "title": "Prerequisites",
+      "goal": "Sequence Microform tokenization with Payer Authentication enrollment, challenge or frictionless handling, validation, and authorization.",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "task": [
+        "microform-payer-auth-state-machine"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "- Sandbox merchant credentials available as environment variables (never hardcode)\n- Microform client integrated on the checkout page\n- Payer Authentication enabled for the sandbox MID",
+      "commands": [],
+      "api_entities": [
+        "Microform",
+        "Payer Authentication"
+      ],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.9,
+      "evidence_quotes": [
+        "- Sandbox merchant credentials available as environment variables (never hardcode) - Microform client integrated on the checkout page - Payer Authentication ..."
+      ]
+    },
+    {
+      "unit_id": "microform-payer-auth-quickstart:step:1:tokenize-with-microform",
+      "source_page_id": "doc-microform-payer-auth-quickstart",
+      "unit_type": "step",
+      "title": "Tokenize with Microform",
+      "goal": "Sequence Microform tokenization with Payer Authentication enrollment, challenge or frictionless handling, validation, and authorization.",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "task": [
+        "microform-payer-auth-state-machine"
+      ],
+      "sequence_number": 1,
+      "body_markdown": "Capture the payment fields with Microform and obtain a transient token.\n\nRequires: microform_client\nOutcome: transient_token_available\nEvidence: \"Microform tokenization captures card data in the browser.\"",
+      "commands": [],
+      "api_entities": [
+        "Microform"
+      ],
+      "requires": [
+        "microform_client"
+      ],
+      "outcomes": [
+        "transient_token_available"
+      ],
+      "failure_modes": [],
+      "confidence": 0.9,
+      "evidence_quotes": [
+        "Microform tokenization captures card data in the browser."
+      ]
+    },
+    {
+      "unit_id": "microform-payer-auth-quickstart:step:2:run-payer-auth-setup",
+      "source_page_id": "doc-microform-payer-auth-quickstart",
+      "unit_type": "step",
+      "title": "Run Payer Auth setup",
+      "goal": "Sequence Microform tokenization with Payer Authentication enrollment, challenge or frictionless handling, validation, and authorization.",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "task": [
+        "microform-payer-auth-state-machine"
+      ],
+      "sequence_number": 2,
+      "body_markdown": "Create the Payer Authentication setup request using the tokenized payment data.\n\nRequires: transient_token_available\nOutcome: payer_auth_setup_complete\nEvidence: \"After tokenize, you still need enrollment\"",
+      "commands": [],
+      "api_entities": [
+        "Payer Authentication",
+        "enrollment"
+      ],
+      "requires": [
+        "transient_token_available"
+      ],
+      "outcomes": [
+        "payer_auth_setup_complete"
+      ],
+      "failure_modes": [],
+      "confidence": 0.9,
+      "evidence_quotes": [
+        "After tokenize, you still need enrollment"
+      ]
+    },
+    {
+      "unit_id": "microform-payer-auth-quickstart:step:3:check-enrollment",
+      "source_page_id": "doc-microform-payer-auth-quickstart",
+      "unit_type": "step",
+      "title": "Check enrollment",
+      "goal": "Sequence Microform tokenization with Payer Authentication enrollment, challenge or frictionless handling, validation, and authorization.",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "task": [
+        "microform-payer-auth-state-machine"
+      ],
+      "sequence_number": 3,
+      "body_markdown": "Call enrollment check. Expect FRICTIONLESS, CHALLENGE, or UNAVAILABLE.\n\nRequires: payer_auth_setup_complete\nOutcome: enrollment_path_known\nFailure modes: skipping enrollment and authorizing immediately\nEvidence: \"Expect FRICTIONLESS, CHALLENGE, or UNAVAILABLE\"",
+      "commands": [],
+      "api_entities": [
+        "enrollment",
+        "challenge",
+        "frictionless"
+      ],
+      "requires": [
+        "payer_auth_setup_complete"
+      ],
+      "outcomes": [
+        "enrollment_path_known"
+      ],
+      "failure_modes": [
+        "skipping enrollment and authorizing immediately"
+      ],
+      "confidence": 0.9,
+      "evidence_quotes": [
+        "Expect FRICTIONLESS, CHALLENGE, or UNAVAILABLE"
+      ]
+    },
+    {
+      "unit_id": "microform-payer-auth-quickstart:step:4:handle-challenge-or-frictionless",
+      "source_page_id": "doc-microform-payer-auth-quickstart",
+      "unit_type": "step",
+      "title": "Handle challenge or frictionless",
+      "goal": "Sequence Microform tokenization with Payer Authentication enrollment, challenge or frictionless handling, validation, and authorization.",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "task": [
+        "microform-payer-auth-state-machine"
+      ],
+      "sequence_number": 4,
+      "body_markdown": "Branch on the enrollment path. Do not collapse both into one success branch.\n\nRequires: enrollment_path_known\nOutcome: authentication_result_ready\nEvidence: \"Branch on the enrollment path\"",
+      "commands": [],
+      "api_entities": [
+        "enrollment",
+        "challenge",
+        "frictionless"
+      ],
+      "requires": [
+        "enrollment_path_known"
+      ],
+      "outcomes": [
+        "authentication_result_ready"
+      ],
+      "failure_modes": [],
+      "confidence": 0.9,
+      "evidence_quotes": [
+        "Branch on the enrollment path"
+      ]
+    },
+    {
+      "unit_id": "microform-payer-auth-quickstart:step:5:validate-authentication",
+      "source_page_id": "doc-microform-payer-auth-quickstart",
+      "unit_type": "step",
+      "title": "Validate authentication",
+      "goal": "Sequence Microform tokenization with Payer Authentication enrollment, challenge or frictionless handling, validation, and authorization.",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "task": [
+        "microform-payer-auth-state-machine"
+      ],
+      "sequence_number": 5,
+      "body_markdown": "Validate the authentication result before payment.\n\nRequires: authentication_result_ready\nOutcome: auth_refs_ready\nEvidence: \"Validate the authentication result before payment\"",
+      "commands": [],
+      "api_entities": [],
+      "requires": [
+        "authentication_result_ready"
+      ],
+      "outcomes": [
+        "auth_refs_ready"
+      ],
+      "failure_modes": [],
+      "confidence": 0.9,
+      "evidence_quotes": [
+        "Validate the authentication result before payment"
+      ]
+    },
+    {
+      "unit_id": "microform-payer-auth-quickstart:step:6:authorize-with-authentication-references",
+      "source_page_id": "doc-microform-payer-auth-quickstart",
+      "unit_type": "step",
+      "title": "Authorize with authentication references",
+      "goal": "Sequence Microform tokenization with Payer Authentication enrollment, challenge or frictionless handling, validation, and authorization.",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "task": [
+        "microform-payer-auth-state-machine"
+      ],
+      "sequence_number": 6,
+      "body_markdown": "Submit authorization including authentication transaction references when 3DS was performed.\n\nRequires: auth_refs_ready\nOutcome: authorization_submitted\nFailure modes: authorizing with only the Flex/Microform token and no auth refs\nEvidence: \"including authentication transaction references when 3DS was performed\"",
+      "commands": [],
+      "api_entities": [
+        "Microform",
+        "authorization",
+        "3DS"
+      ],
+      "requires": [
+        "auth_refs_ready"
+      ],
+      "outcomes": [
+        "authorization_submitted"
+      ],
+      "failure_modes": [
+        "authorizing with only the Flex/Microform token and no auth refs"
+      ],
+      "confidence": 0.9,
+      "evidence_quotes": [
+        "including authentication transaction references when 3DS was performed"
+      ]
+    },
+    {
+      "unit_id": "microform-payer-auth-quickstart:validation_check:7:validation-checks",
+      "source_page_id": "doc-microform-payer-auth-quickstart",
+      "unit_type": "validation_check",
+      "title": "Validation checks",
+      "goal": "Sequence Microform tokenization with Payer Authentication enrollment, challenge or frictionless handling, validation, and authorization.",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "task": [
+        "microform-payer-auth-state-machine"
+      ],
+      "sequence_number": 7,
+      "body_markdown": "- Confirm enrollment ran before authorization\n- Confirm challenge and frictionless paths are both handled\n- Confirm authorization carries authentication references when required",
+      "commands": [],
+      "api_entities": [
+        "enrollment",
+        "challenge",
+        "frictionless",
+        "authorization"
+      ],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.9,
+      "evidence_quotes": [
+        "- Confirm enrollment ran before authorization - Confirm challenge and frictionless paths are both handled - Confirm authorization carries authentication refe..."
+      ]
+    },
+    {
+      "unit_id": "microform-payer-auth-quickstart:warning:7:warnings",
+      "source_page_id": "doc-microform-payer-auth-quickstart",
+      "unit_type": "warning",
+      "title": "Warnings",
+      "goal": "Sequence Microform tokenization with Payer Authentication enrollment, challenge or frictionless handling, validation, and authorization.",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "task": [
+        "microform-payer-auth-state-machine"
+      ],
+      "sequence_number": 7,
+      "body_markdown": "- Do not treat Microform tokenize as completed 3DS\n- Do not log raw PAN, shared secrets, or credential material",
+      "commands": [],
+      "api_entities": [
+        "Microform",
+        "3DS"
+      ],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.9,
+      "evidence_quotes": [
+        "- Do not treat Microform tokenize as completed 3DS - Do not log raw PAN, shared secrets, or credential material"
+      ]
+    },
+    {
+      "unit_id": "microform-payer-auth-quickstart:next_step:7:next-steps",
+      "source_page_id": "doc-microform-payer-auth-quickstart",
+      "unit_type": "next_step",
+      "title": "Next steps",
+      "goal": "Sequence Microform tokenization with Payer Authentication enrollment, challenge or frictionless handling, validation, and authorization.",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "task": [
+        "microform-payer-auth-state-machine"
+      ],
+      "sequence_number": 7,
+      "body_markdown": "- Add support-safe evidence collection for failed enrollments\n- Wire a VAP CLI workflow verifier for this contract",
+      "commands": [],
+      "api_entities": [
+        "enrollment"
+      ],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.9,
+      "evidence_quotes": [
+        "- Add support-safe evidence collection for failed enrollments - Wire a VAP CLI workflow verifier for this contract"
+      ]
+    }
+  ]
+}
