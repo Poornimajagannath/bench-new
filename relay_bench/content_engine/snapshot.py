@@ -26,7 +26,6 @@ def materialize_snapshot(record: SourceRecord) -> SourceSnapshot:
 
     text = source_path.read_text(encoding="utf-8")
     content_hash = _sha256_text(text)
-    fetched_at = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     snapshot_id = f"{record.source_id}-{content_hash[:12]}"
 
     SNAPSHOT_ARTIFACT_DIR.mkdir(parents=True, exist_ok=True)
@@ -34,6 +33,14 @@ def materialize_snapshot(record: SourceRecord) -> SourceSnapshot:
     meta_path = SNAPSHOT_ARTIFACT_DIR / f"{snapshot_id}.json"
     raw_path.write_text(text, encoding="utf-8")
 
+    # Reuse prior metadata for the same content-addressed snapshot so reruns
+    # stay deterministic (fetched_at must not churn the artifact).
+    if meta_path.exists():
+        prior = json.loads(meta_path.read_text(encoding="utf-8"))
+        if prior.get("content_hash") == content_hash:
+            return SourceSnapshot(**prior)
+
+    fetched_at = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     snapshot = SourceSnapshot(
         snapshot_id=snapshot_id,
         source_id=record.source_id,
