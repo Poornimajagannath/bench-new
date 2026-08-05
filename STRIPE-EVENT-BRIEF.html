@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stripe Agentic Commerce — Strategic Research</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0f1117;color:#e2e8f0;line-height:1.65;padding:0}
+.container{max-width:900px;margin:0 auto;padding:2rem 2.5rem 4rem}
+
+header{text-align:center;padding:3rem 0 2.5rem;border-bottom:1px solid #1e293b;margin-bottom:2.5rem}
+h1{font-size:1.85rem;font-weight:700;letter-spacing:-0.03em;margin-bottom:0.5rem;background:linear-gradient(135deg,#60a5fa,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.subtitle{color:#94a3b8;font-size:0.95rem;font-weight:400}
+.meta{margin-top:1rem;color:#64748b;font-size:0.78rem;display:flex;justify-content:center;gap:2rem;flex-wrap:wrap}
+.meta span{display:flex;align-items:center;gap:0.3rem}
+.meta strong{color:#94a3b8;font-weight:600}
+
+section{margin-bottom:2.5rem}
+h2{font-size:1.2rem;font-weight:700;color:#f1f5f9;margin-bottom:1rem;padding-bottom:0.4rem;border-bottom:1px solid #1e293b;letter-spacing:-0.01em}
+h3{font-size:1rem;font-weight:600;color:#cbd5e1;margin:1.2rem 0 0.5rem}
+
+p{margin-bottom:0.85rem;color:#cbd5e1;font-size:0.92rem}
+strong{color:#f1f5f9}
+
+.highlight-box{background:rgba(96,165,250,0.07);border:1px solid rgba(96,165,250,0.2);border-radius:0.75rem;padding:1.25rem 1.5rem;margin:1.5rem 0}
+.highlight-box p{margin-bottom:0.4rem;color:#93c5fd}
+.highlight-box strong{color:#bfdbfe}
+
+.stripe-quote{background:rgba(139,92,246,0.06);border-left:3px solid #8b5cf6;border-radius:0 0.75rem 0.75rem 0;padding:1rem 1.5rem;margin:1.5rem 0;font-style:italic;color:#c4b5fd;font-size:0.9rem}
+
+.tag{display:inline-block;background:rgba(96,165,250,0.1);color:#60a5fa;border:1px solid rgba(96,165,250,0.2);border-radius:9999px;padding:0.15rem 0.6rem;font-size:0.72rem;font-weight:600;margin:0.15rem 0.25rem 0.15rem 0}
+
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.5rem 0}
+.grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin:1.5rem 0}
+
+.card{background:rgba(30,41,59,0.3);border:1px solid #1e293b;border-radius:0.75rem;padding:1.25rem;transition:border-color 0.2s}
+.card:hover{border-color:#334155}
+.card h3{font-size:0.92rem;color:#f1f5f9;margin:0 0 0.6rem}
+.card p{font-size:0.83rem;color:#94a3b8;margin:0}
+.card .card-dot{width:8px;height:8px;border-radius:50%;display:inline-block;margin-right:0.4rem;vertical-align:middle}
+
+.product-card{background:rgba(30,41,59,0.2);border:1px solid #1e293b;border-radius:0.75rem;padding:1.2rem;margin:0.75rem 0}
+.product-card h3{color:#f1f5f9;font-size:0.95rem;margin:0 0 0.4rem;display:flex;align-items:center;gap:0.5rem}
+.product-card .version{font-size:0.68rem;background:rgba(52,211,153,0.1);color:#34d399;border:1px solid rgba(52,211,153,0.2);padding:0.1rem 0.5rem;border-radius:9999px;font-weight:600}
+.product-card p{font-size:0.83rem;color:#94a3b8;margin:0.3rem 0 0}
+.product-card ul{list-style:none;margin:0.5rem 0 0;padding:0}
+.product-card ul li{font-size:0.82rem;color:#94a3b8;padding:0.15rem 0 0.15rem 1rem;position:relative}
+.product-card ul li::before{content:"→";position:absolute;left:0;color:#60a5fa}
+
+.partner{display:flex;align-items:center;gap:0.75rem;padding:0.6rem 1rem;background:rgba(30,41,59,0.2);border:1px solid #1e293b;border-radius:0.5rem;margin:0.3rem 0}
+.partner .initials{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;flex-shrink:0}
+.partner .info{font-size:0.83rem}
+.partner .info strong{color:#e2e8f0;display:block;font-size:0.85rem}
+.partner .info span{color:#94a3b8}
+
+.question{padding:1rem 1.25rem;background:rgba(251,191,36,0.04);border:1px solid rgba(251,191,36,0.12);border-radius:0.5rem;margin:0.5rem 0;font-size:0.88rem;color:#fbbf24;cursor:default}
+.question::before{content:"Q: ";color:#fbbf24;font-weight:700}
+
+.positive{color:#34d399}
+.negative{color:#fb7185}
+.neutral{color:#fbbf24}
+
+table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:0.83rem}
+th{text-align:left;padding:0.6rem 0.8rem;background:rgba(30,41,59,0.5);color:#94a3b8;font-weight:600;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.05em;border-bottom:1px solid #1e293b}
+td{padding:0.6rem 0.8rem;border-bottom:1px solid #1e293b;color:#cbd5e1}
+tr:hover td{background:rgba(30,41,59,0.2)}
+
+.benchmark-bar{height:20px;border-radius:3px;margin:0.3rem 0;position:relative;min-width:100px}
+.benchmark-bar .fill{height:100%;border-radius:3px;display:flex;align-items:center;padding-left:0.5rem;font-size:0.7rem;font-weight:700;color:#fff}
+.benchmark-row{margin:0.4rem 0}
+.benchmark-row .label{font-size:0.8rem;color:#94a3b8;min-width:120px;display:inline-block;vertical-align:middle}
+
+.divider{height:1px;background:linear-gradient(to right,transparent,#1e293b,transparent);margin:2rem 0}
+
+footer{text-align:center;padding:2rem 0 1rem;color:#475569;font-size:0.75rem;border-top:1px solid #1e293b;margin-top:2rem}
+
+@media(max-width:640px){
+  .container{padding:1.5rem 1rem 3rem}
+  .grid-2,.grid-3{grid-template-columns:1fr}
+  h1{font-size:1.4rem}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+<h1>Stripe's Agent-Native Payments Play</h1>
+<div class="subtitle">Research brief for Stripe Agentic Commerce Next — Seattle, July 23, 2025</div>
+<div class="meta">
+  <span>📊 Source: stripe.com/blog</span>
+  <span>📅 Extracted: July 22, 2025</span>
+  <span>🔍 3 articles analyzed</span>
+</div>
+</header>
+
+<!-- EXECUTIVE SUMMARY -->
+<section>
+<h2>Executive Summary</h2>
+<p>Stripe is executing a coordinated push into agent-native payments. They're building protocols, products, and developer tooling to position themselves as the "Infrastructure for the Agent Economy." This is a <strong>product launch, not a recruiting event</strong> — real products are shipping, real customers are listed on their site, and the narrative is established.</p>
+
+<div class="highlight-box">
+  <p><strong>The core insight:</strong> Stripe is doing to agent commerce what Visa/Visa Relay aims to do — but they got first to market with both the narrative and working products.</p>
+  <p>Stripe's 7/10 Fortune 100 adoption, 200M+ Link consumer base, and real customer logos (BestBuy, Etsy, URBN, Wix, Fanatics, Coach) make this the most serious competitor in the space.</p>
+</div>
+
+<p>Stripe has released three major pieces of content revealing their full stack:</p>
+<ul style="list-style:none;margin:1rem 0 0">
+  <li>🔹 <strong>Machine Payments Protocol (MPP)</strong> — open standard for agent-to-agent and agent-to-business payments</li>
+  <li>🔹 <strong>Agentic Commerce Suite</strong> — product catalog → agents → checkout in one integration</li>
+  <li>🔹 <strong>Agent Integration Benchmark</strong> — first production-realistic benchmark for agentic API integrations</li>
+</ul>
+</section>
+
+<div class="divider"></div>
+
+<!-- STRIPE'S AGENTIC COMMERCE STACK -->
+<section>
+<h2>The Stripe Agentic Commerce Stack</h2>
+
+<div class="product-card">
+  <h3>
+    <span class="card-dot" style="background:#60a5fa"></span>
+    Machine Payments Protocol (MPP)
+    <span class="version">LIVE — March 2026</span>
+  </h3>
+  <p>Open standard, internet-native way for agents to pay. Co-authored with Tempo. An agent requests a resource from any HTTP endpoint and receives a payment request — authorizes it, and gets the resource.</p>
+  <ul>
+    <li>Supports cards, stablecoins, buy-now-pay-later, and more payment methods</li>
+    <li>Payments appear in merchant Dashboard exactly like human transactions</li>
+    <li>Existing Stripe infrastructure applies: tax, fraud, reporting, refunds, payouts</li>
+    <li>Uses PaymentIntents API — only a few lines of code to integrate</li>
+  </ul>
+</div>
+
+<div class="product-card">
+  <h3>
+    <span class="card-dot" style="background:#a78bfa"></span>
+    Shared Payment Tokens (SPTs)
+    <span class="version">LIVE</span>
+  </h3>
+  <p>Tokenization layer that enables fraud protection for agent-initiated transactions. Risk signals (card testing likelihood, stolen cards) are stored and shared through SPTs.</p>
+  <ul>
+    <li>Distinguishes legitimate agent transactions from fraud</li>
+    <li>Agents never see raw payment credentials</li>
+    <li>Scopes include amount, currency, and merchant restrictions</li>
+    <li>Stablecoins and other payment types coming soon</li>
+  </ul>
+</div>
+
+<div class="product-card">
+  <h3>
+    <span class="card-dot" style="background:#fbbf24"></span>
+    Link's Wallet for Agents
+    <span class="version">LIVE — April 2026</span>
+  </h3>
+  <p>Consumer wallet where personal AI agents make authorized purchases on behalf of users. Built on top of Issuing for agents. Access to 200M+ Link consumers.</p>
+  <ul>
+    <li>Standard OAuth flow for consumer grants</li>
+    <li>Agent creates spend request → consumer approves → agent receives card or SPT</li>
+    <li>Review and approve in Link web app, iOS app, or Android app</li>
+    <li>Spending limits, agent management, and purchase tracking</li>
+  </ul>
+</div>
+
+<div class="product-card">
+  <h3>
+    <span class="card-dot" style="background:#34d399"></span>
+    Issuing for Agents
+    <span class="version">LIVE</span>
+  </h3>
+  <p>Underlying infrastructure: single-use virtual cards, fund storage, spending controls, transaction monitoring, fraud tools.</p>
+  <ul>
+    <li>Build custom agentic wallets and cards</li>
+    <li>Define when/how agents move funds, card-level permissions</li>
+    <li>Fraud controls at transaction authorization</li>
+    <li>Real-time and historical card activity visibility</li>
+  </ul>
+</div>
+
+<div class="product-card">
+  <h3>
+    <span class="card-dot" style="background:#fb7185"></span>
+    Agentic Commerce Suite (Business-facing)
+    <span class="version">LIVE</span>
+  </h3>
+  <p>Product catalog → agents → checkout. Businesses upload catalog, select agents to sell through. Merchants of record stay with the business.</p>
+  <ul>
+    <li>Build once, sell everywhere across agent network</li>
+    <li>Maintain control over pricing, descriptions, fulfillment</li>
+    <li>Platforms can offer agentic channels to users</li>
+    <li>Radar fraud protection built in</li>
+  </ul>
+</div>
+
+</section>
+
+<div class="divider"></div>
+
+<!-- KEY CUSTOMERS AND PARTNERS -->
+<section>
+<h2>Key Customers &amp; Partners</h2>
+<p>These aren't case studies from a slide deck — they're live logos on Stripe's product page:</p>
+
+<div class="grid-3">
+  <div class="partner">
+    <div class="initials" style="background:rgba(96,165,250,0.15);color:#60a5fa">PA</div>
+    <div class="info"><strong>Parallel</strong><span>Parag Agrawal — Agents pay per API call for web access</span></div>
+  </div>
+  <div class="partner">
+    <div class="initials" style="background:rgba(251,191,36,0.15);color:#fbbf24">BB</div>
+    <div class="info"><strong>Browserbase</strong><span>Agents spin up headless browsers, pay per session</span></div>
+  </div>
+  <div class="partner">
+    <div class="initials" style="background:rgba(52,211,153,0.15);color:#34d399">PF</div>
+    <div class="info"><strong>PostalForm</strong><span>Agents pay to print and send physical mail</span></div>
+  </div>
+  <div class="partner">
+    <div class="initials" style="background:rgba(251,113,133,0.15);color:#fb7185">PB</div>
+    <div class="info"><strong>Prospect Butcher Co.</strong><span>Agents order sandwiches for delivery/pickup</span></div>
+  </div>
+  <div class="partner">
+    <div class="initials" style="background:rgba(167,139,250,0.15);color:#a78bfa">SC</div>
+    <div class="info"><strong>Stripe Climate</strong><span>Agents contribute programmatically</span></div>
+  </div>
+  <div class="partner">
+    <div class="initials" style="background:rgba(251,146,60,0.15);color:#fb923c">UR</div>
+    <div class="info"><strong>URBN</strong><span>"Agentic commerce is another way to make it easier for customers to discover, shop"</span></div>
+  </div>
+</div>
+
+<p><strong>Listed on Agentic Commerce Suite:</strong> BestBuy, Wix, Etsy, Fanatics, Coach, URBN</p>
+</section>
+
+<div class="divider"></div>
+
+<!-- STRIPE'S AGENT BENCHMARK -->
+<section>
+<h2>Stripe's Agent Integration Benchmark</h2>
+<p>Published March 2, 2026. One of the first production-realistic benchmarks for agentic API integration. 11 environments spanning three categories.</p>
+
+<div class="grid-2" style="margin-top:1.5rem">
+  <div>
+    <h3>Key Findings</h3>
+    <div class="benchmark-row">
+      <div class="label">Claude Opus 4.5 (full-stack)</div>
+      <div class="benchmark-bar"><div class="fill" style="width:92%;background:linear-gradient(90deg,#34d399,#6ee7b7)">92%</div></div>
+    </div>
+    <div class="benchmark-row">
+      <div class="label">GPT-5.2 (gym tasks)</div>
+      <div class="benchmark-bar"><div class="fill" style="width:73%;background:linear-gradient(90deg,#60a5fa,#93c5fd)">73%</div></div>
+    </div>
+    <div class="benchmark-row">
+      <div class="label">Best avg turns/run</div>
+      <div class="benchmark-bar"><div class="fill" style="width:63%;background:linear-gradient(90deg,#fbbf24,#fde68a)">63</div></div>
+    </div>
+  </div>
+  <div>
+    <h3>Three Categories</h3>
+    <p><span class="positive">● Backend-only</span> — API calls, code generation</p>
+    <p><span class="neutral">● Full-stack</span> — API + frontend + testing</p>
+    <p><span class="negative">● Browser-based</span> — UI navigation, form filling</p>
+  </div>
+</div>
+
+<div class="highlight-box">
+  <p><strong>Key failure mode:</strong> Inability to handle ambiguous situations sensibly. Some agents see 400 errors and declare the task complete without valid testing. Best agents write test data generation scripts to properly validate their changes.</p>
+  <p><strong>Key success:</strong> Agent self-verifies by completing test purchases. One agent used Stripe Link (the digital wallet) to complete checkout end-to-end without being instructed to — demonstrating genuine understanding of the ecosystem.</p>
+</div>
+
+<p>Why this matters for Visa Relay: Stripe is establishing the benchmark for what "agent-readiness" actually means. If Visa wants to claim agent-readiness, they need comparable measurements.</p>
+</section>
+
+<div class="divider"></div>
+
+<!-- STRIPE VS VISA COMPARISON -->
+<section>
+<h2>Stripe vs. Visa: The Parallel Plays</h2>
+<p>Both are building agent-commerce infrastructure, but with fundamentally different advantages.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dimension</th>
+      <th>Stripe</th>
+      <th>Visa / Visa Relay</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>First-mover advantage</strong></td>
+      <td>✅ Protocol + products + narrative — all live</td>
+      <td>Visa Relay concept established, but MPP-equivalent unclear</td>
+    </tr>
+    <tr>
+      <td><strong>Developer adoption</strong></td>
+      <td>🏆 7/10 Fortune 100, 9/10 Forbes AI 50</td>
+      <td>Enterprise relationships, but dev-first adoption unproven</td>
+    </tr>
+    <tr>
+      <td><strong>Consumer scale</strong></td>
+      <td>🏆 200M+ Link consumers</td>
+      <td>Visa network has billions, but agent-facing interface not established</td>
+    </tr>
+    <tr>
+      <td><strong>Enterprise trust</strong></td>
+      <td>Strong, but newer to agent-space</td>
+      <td>🏆 Decades of enterprise trust, compliance, PCI</td>
+    </tr>
+    <tr>
+      <td><strong>Reconciliation</strong></td>
+      <td>Standard Stripe reconciliation</td>
+      <td>🏆 CyberSource/Visa Acceptance expertise — critical for agent txns</td>
+    </tr>
+    <tr>
+      <td><strong>Network scale</strong></td>
+      <td>Strong, but Stripe is a single network</td>
+      <td>🏆 Visa's global network across issuers, acquirers, merchants</td>
+    </tr>
+    <tr>
+      <td><strong>Protocol openness</strong></td>
+      <td>🏆 MPP co-authored with Tempo — open standard</td>
+      <td>Network protocols exist but agent-specific standards unclear</td>
+    </tr>
+  </tbody>
+</table>
+</section>
+
+<div class="divider"></div>
+
+<!-- WHAT VISA NEEDS TO ANSWER -->
+<section>
+<h2>What Visa/Visa Relay Needs to Answer</h2>
+<p>After the event, these questions define Visa's competitive position:</p>
+
+<div class="grid-2">
+  <div>
+    <h3>Protocol Layer</h3>
+    <div class="question">What is Visa's version of MPP?</div>
+    <div class="question">How does Visa handle the "agent identity" problem — proving an agent is authorized to spend?</div>
+    <div class="question">What's the Visa version of SPTs?</div>
+  </div>
+  <div>
+    <h3>Product Layer</h3>
+    <div class="question">What is Visa's version of Link's agent wallet?</div>
+    <div class="question">How do you measure agent integration quality like Stripe does?</div>
+    <div class="question">What's Visa's approach to reconciliation for agent-initiated transactions?</div>
+  </div>
+</div>
+
+<h3>Visa's Defensible Advantages</h3>
+<ul style="list-style:none;margin:1rem 0 0">
+  <li>🔹 <strong>Enterprise trust:</strong> Visa's brand carries weight where fraud/reconciliation matters most</li>
+  <li>🔹 <strong>Reconciliation expertise:</strong> CyberSource has deep experience Stripe doesn't</li>
+  <li>🔹 <strong>Multi-network:</strong> Visa connects issuers, acquirers, merchants across many networks</li>
+  <li>🔹 <strong>Compliance:</strong> Battle-tested PCI, regulatory infrastructure for enterprise</li>
+</ul>
+</section>
+
+<div class="divider"></div>
+
+<!-- EVENT PREP -->
+<section>
+<h2>Event Prep: What to Ask &amp; Listen For</h2>
+
+<h3>Technical Questions</h3>
+<div class="question">What's the hardest part of building agent transactions that you didn't expect?</div>
+<div class="question">How do MPP and SPTs compare to traditional tokenization?</div>
+<div class="question">What reconciliation problems are unique to agent-initiated transactions?</div>
+<div class="question">How do you handle the "agent identity" problem in production?</div>
+<div class="question">What's missing from your current agent commerce stack?</div>
+
+<h3>Business Questions</h3>
+<div class="question">What business models are emerging that wouldn't exist without agent commerce?</div>
+<div class="question">How are you thinking about the relationship between businesses and agents in the future?</div>
+<div class="question">What's the biggest friction point for businesses adopting agentic commerce?</div>
+
+<h3>Competitive Questions</h3>
+<div class="question">How do you see Visa's role in the agent economy?</div>
+<div class="question">What would differentiate a Visa-powered agentic commerce experience from Stripe's?</div>
+<div class="question">Are you collaborating with other card networks on agent protocols?</div>
+
+<h3>What to Listen For During Talks</h3>
+<ul style="list-style:none;margin:1rem 0 0">
+  <li>🔊 Real friction points businesses face (beyond marketing claims)</li>
+  <li>🔊 Where Stripe's agent stack is fragile or incomplete</li>
+  <li>🔊 What businesses actually care about when enabling agent commerce</li>
+  <li>🔊 How MPP is gaining traction vs. theoretical</li>
+  <li>🔊 What the "agent identity" problem looks like in production</li>
+</ul>
+</section>
+
+<div class="divider"></div>
+
+<!-- POORNIMA'S POSITIONING -->
+<section>
+<h2>Poornima's Positioning at the Event</h2>
+
+<h3>Her Differentiators</h3>
+<div class="grid-3">
+  <div class="card">
+    <h3><span class="card-dot" style="background:#60a5fa"></span> CyberSource/Visa Acceptance</h3>
+    <p>Deep enterprise payment infrastructure experience. Not just API integration — real-world processing, clearing, settlement.</p>
+  </div>
+  <div class="card">
+    <h3><span class="card-dot" style="background:#a78bfa"></span> Reconciliation</h3>
+    <p>Reconciliation expertise that matters for agent transactions. This is the unsolved problem for agent payments.</p>
+  </div>
+  <div class="card">
+    <h3><span class="card-dot" style="background:#34d399"></span> Visa Relay</h3>
+    <p>Direct experience with agent-readiness challenges at the scale of a global card network.</p>
+  </div>
+</div>
+
+<h3>How to Talk About It</h3>
+<p><span class="positive">"I work on making payment platforms agent-ready — at Visa, we're building Visa Relay to let AI agents transact across Visa's network."</span></p>
+<p><span class="neutral">"Reconciliation is the unsolved problem for agent transactions — here's what we're thinking about at Visa."</span></p>
+<p><span class="positive">"Visa's enterprise trust is our advantage — here's how we're thinking about agent commerce for enterprise use cases."</span></p>
+</section>
+
+<div class="divider"></div>
+
+<!-- TIMELINE -->
+<section>
+<h2>Post-Event Follow-Up</h2>
+<table>
+  <thead>
+    <tr>
+      <th>When</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>48 hours</strong></td>
+      <td>LinkedIn connections with anyone interesting. Document key learnings in a brief.</td>
+    </tr>
+    <tr>
+      <td><strong>1 week</strong></td>
+      <td>Share insights with Visa Relay team. Identify 2-3 specific actions based on what was heard.</td>
+    </tr>
+    <tr>
+      <td><strong>Ongoing</strong></td>
+      <td>Monitor Stripe's Agentic Commerce announcements. Track MPP adoption metrics. Build competitive intel on Visa's positioning.</td>
+    </tr>
+  </tbody>
+</table>
+</section>
+
+<footer>
+  Prepared for Stripe Agentic Commerce Next · Seattle, July 23, 2025<br>
+  Sources: stripe.com/blog (MPP, Agent Benchmarks, Link Wallet), stripe.com/use-cases/agentic-commerce<br>
+  Built with research pulled directly from Stripe's published content
+</footer>
+
+</div>
+</body>
+</html>
