@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Relay Integration Success OS",
+    "subtitle": "From spec to verified integration",
+    "quality_profile": "showcase"
+  },
+  "components": [
+    { "id": "sources", "type": "external", "label": "Upstream Sources", "sublabel": "OpenAPI, docs, tickets, SDKs", "pos": [30, 130], "size": [150, 70] },
+    { "id": "ingest", "type": "backend", "label": "Ingest", "sublabel": "Fetch, snapshot, version", "pos": [240, 130], "size": [140, 70] },
+    { "id": "docetl", "type": "backend", "label": "DocETL", "sublabel": "Extract, normalize, reduce", "pos": [440, 130], "size": [140, 70] },
+    { "id": "humanify", "type": "backend", "label": "Humanify", "sublabel": "AI wiki to review", "pos": [640, 130], "size": [130, 70] },
+    { "id": "serve", "type": "cloud", "label": "Serve", "sublabel": "Quickstarts, docs, test harness", "pos": [830, 130], "size": [150, 70] }
+  ],
+  "boundaries": [
+    { "kind": "region", "label": "Relay System", "wraps": ["ingest", "docetl", "humanify", "serve"] }
+  ],
+  "connections": [
+    { "from": "sources", "to": "ingest" },
+    { "from": "ingest", "to": "docetl" },
+    { "from": "docetl", "to": "humanify" },
+    { "from": "humanify", "to": "serve" }
+  ]
+}
