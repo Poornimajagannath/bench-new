@@ -8,7 +8,10 @@ from pathlib import Path
 
 from relay_bench.content_engine.extract import extract_quickstart_units
 from relay_bench.content_engine.normalize import normalize_document
-from relay_bench.content_engine.pipeline import run_content_engine
+from relay_bench.content_engine.pipeline import (
+    run_content_engine,
+    synthesize_quickstart_units_payload,
+)
 from relay_bench.content_engine.registry import require_source
 from relay_bench.content_engine.segment import segment_document
 from relay_bench.content_engine.snapshot import materialize_snapshot
@@ -97,6 +100,28 @@ class ContentEngineTests(unittest.TestCase):
         self.assertEqual(first.content_hash, second.content_hash)
         self.assertEqual(first.snapshot_id, second.snapshot_id)
         self.assertTrue((ROOT / first.raw_bytes_location).exists())
+
+    def test_quickstart_units_artifact_matches_default_heuristic(self):
+        """Checked-in objects artifact must match default CLI (heuristic) extract.
+
+        DocETL --discovery docetl runs rewrite the file with imported-code_map;
+        that must not leave the committed proof artifact stale vs `python3
+        pipelines/run_content_engine_v0.py --source …` with no flags.
+        """
+        path = (
+            ROOT
+            / "artifacts"
+            / "content_engine"
+            / "objects"
+            / "microform-payer-auth-quickstart.quickstart_units.json"
+        )
+        artifact = json.loads(path.read_text(encoding="utf-8"))
+        expected = synthesize_quickstart_units_payload(
+            "microform-payer-auth-quickstart",
+            discovery="heuristic",
+        )
+        self.assertEqual(artifact["extractor_label"], "style-only")
+        self.assertEqual(artifact, expected)
 
 
 if __name__ == "__main__":
