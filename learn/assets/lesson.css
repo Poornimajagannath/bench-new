@@ -1,0 +1,134 @@
+:root {
+  --bg: #0f1419;
+  --panel: #1a222d;
+  --ink: #e8eef4;
+  --muted: #9aabbc;
+  --accent: #3ecf8e;
+  --warn: #f0b429;
+  --danger: #f07178;
+  --line: #2a3644;
+  --font: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --mono: "SF Mono", "Menlo", Consolas, monospace;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+body {
+  padding: 1.25rem 1rem 4rem;
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+h1, h2, h3 {
+  line-height: 1.25;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+}
+
+h1 { font-size: 1.7rem; margin: 0 0 0.5rem; }
+h2 { font-size: 1.25rem; margin: 2rem 0 0.75rem; border-top: 1px solid var(--line); padding-top: 1.25rem; }
+h3 { font-size: 1.05rem; margin: 1.25rem 0 0.5rem; color: var(--accent); }
+
+p, li { color: var(--ink); }
+.muted, .meta { color: var(--muted); font-size: 0.95rem; }
+
+a { color: var(--accent); }
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1rem 1.1rem;
+  margin: 1rem 0;
+}
+
+.lanes {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.lane-a { border-left: 4px solid #5cc8ff; }
+.lane-b { border-left: 4px solid #c792ea; }
+
+code, .path {
+  font-family: var(--mono);
+  font-size: 0.86em;
+  background: #0b1015;
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+}
+
+pre {
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  background: #0b1015;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.9rem;
+  overflow-x: auto;
+}
+
+.diagram {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  margin: 1rem 0;
+  background: #111;
+}
+
+.quiz button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  margin: 0.5rem 0;
+  padding: 0.85rem 1rem;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: #121921;
+  color: var(--ink);
+  font: inherit;
+  cursor: pointer;
+}
+
+.quiz button:active { transform: scale(0.99); }
+.quiz button.correct { border-color: var(--accent); background: #143226; }
+.quiz button.wrong { border-color: var(--danger); background: #2a1518; }
+
+.feedback {
+  min-height: 1.5rem;
+  margin-top: 0.75rem;
+  font-weight: 600;
+}
+
+.feedback.ok { color: var(--accent); }
+.feedback.bad { color: var(--danger); }
+
+.cite {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.footer-ask {
+  margin-top: 2.5rem;
+  padding: 1rem;
+  border: 1px dashed var(--line);
+  border-radius: 12px;
+  background: #141b23;
+}
