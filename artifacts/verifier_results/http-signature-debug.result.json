@@ -1,0 +1,75 @@
+{
+  "stage": "stable_bench_inspired_verifier",
+  "inspired_by": "tempoxyz/tempo-evals Stable Bench (not imported in V0)",
+  "workflow_id": "http-signature-debug",
+  "results": {
+    "oracle_answer": {
+      "workflow_id": "http-signature-debug",
+      "subject": "oracle_answer",
+      "passed": true,
+      "checks": [
+        {
+          "check_id": "sdk_field_names",
+          "passed": true,
+          "detail": "credential_fields: expected=['merchantKeyId', 'merchantsecretKey'] actual=['merchantKeyId', 'merchantsecretKey']",
+          "private": true
+        },
+        {
+          "check_id": "sandbox_host",
+          "passed": true,
+          "detail": "endpoint_host: expected='apitest.cybersource.com' actual='apitest.cybersource.com'",
+          "private": true
+        },
+        {
+          "check_id": "signed_headers_complete",
+          "passed": true,
+          "detail": "signed_headers contains_all ['host', 'date', 'request-target', 'digest', 'v-c-merchant-id']: True",
+          "private": true
+        },
+        {
+          "check_id": "no_secret_logging",
+          "passed": true,
+          "detail": "logs_secrets: expected=False actual=False",
+          "private": true
+        }
+      ],
+      "caught_failures": []
+    },
+    "bad_answer": {
+      "workflow_id": "http-signature-debug",
+      "subject": "bad_answer",
+      "passed": true,
+      "checks": [
+        {
+          "check_id": "sdk_field_names",
+          "passed": false,
+          "detail": "credential_fields: expected=['merchantKeyId', 'merchantsecretKey'] actual=['keyId', 'secretKey']",
+          "private": true
+        },
+        {
+          "check_id": "sandbox_host",
+          "passed": false,
+          "detail": "endpoint_host: expected='apitest.cybersource.com' actual='api.cybersource.com'",
+          "private": true
+        },
+        {
+          "check_id": "signed_headers_complete",
+          "passed": false,
+          "detail": "signed_headers contains_all ['host', 'date', 'request-target', 'digest', 'v-c-merchant-id']: False",
+          "private": true
+        },
+        {
+          "check_id": "no_secret_logging",
+          "passed": true,
+          "detail": "logs_secrets: expected=False actual=False",
+          "private": true
+        }
+      ],
+      "caught_failures": [
+        "sdk_field_names",
+        "sandbox_host",
+        "signed_headers_complete"
+      ]
+    }
+  }
+}

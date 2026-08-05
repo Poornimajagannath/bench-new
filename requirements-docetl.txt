@@ -1,0 +1,2 @@
+# Optional: real DocETL adapter for --discovery docetl / docetl-llm
+docetl>=0.3.0,<0.4

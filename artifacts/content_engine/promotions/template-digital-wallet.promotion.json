@@ -1,0 +1,107 @@
+{
+  "source_id": "template-digital-wallet",
+  "status": "promoted",
+  "schema_passed": true,
+  "content_passed": true,
+  "agent_use_status": "deferred",
+  "issues": [
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "template-digital-wallet:step:1:**google-pay-requires-`brand`-field**-\u2014-set-to-`"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "template-digital-wallet:step:2:**apple-pay-requires-token-from-apple's-sdk**-\u2014-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "template-digital-wallet:step:3:**paypal-requires-paypal-sdk-integration**-\u2014-dif"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "template-digital-wallet:step:4:**digital-wallet-tokens-expire**-\u2014-must-refresh-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "template-digital-wallet:step:5:**some-processors-require-additional-3d-secure**"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "template-digital-wallet:step:6:**wallet-payments-cannot-be-voided**-\u2014-must-use-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "template-digital-wallet:step:7:**wallet-transactions-have-different-fee-structu"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "template-digital-wallet:step:8:user-initiates-payment-in-wallet-app"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "template-digital-wallet:step:9:wallet-app-authenticates-user-(biometrics,-pin,-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "template-digital-wallet:step:10:wallet-app-sends-token-to-merchant"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "template-digital-wallet:step:11:merchant-includes-token-in-cybersource-payment-r"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "template-digital-wallet:step:12:cybersource-processes-transaction-with-token"
+    }
+  ],
+  "promoted_unit_ids": [
+    "template-digital-wallet:overview:0:sdk-models-used",
+    "template-digital-wallet:overview:0:ptsv2paymentspaymentinformationtokenizedcard",
+    "template-digital-wallet:overview:0:ptsv2paymentspaymentinformationwallet",
+    "template-digital-wallet:overview:0:wallet-types",
+    "template-digital-wallet:step:1:**google-pay-requires-`brand`-field**-\u2014-set-to-`",
+    "template-digital-wallet:step:2:**apple-pay-requires-token-from-apple's-sdk**-\u2014-",
+    "template-digital-wallet:step:3:**paypal-requires-paypal-sdk-integration**-\u2014-dif",
+    "template-digital-wallet:step:4:**digital-wallet-tokens-expire**-\u2014-must-refresh-",
+    "template-digital-wallet:step:5:**some-processors-require-additional-3d-secure**",
+    "template-digital-wallet:step:6:**wallet-payments-cannot-be-voided**-\u2014-must-use-",
+    "template-digital-wallet:step:7:**wallet-transactions-have-different-fee-structu",
+    "template-digital-wallet:step:8:user-initiates-payment-in-wallet-app",
+    "template-digital-wallet:step:9:wallet-app-authenticates-user-(biometrics,-pin,-",
+    "template-digital-wallet:step:10:wallet-app-sends-token-to-merchant",
+    "template-digital-wallet:step:11:merchant-includes-token-in-cybersource-payment-r",
+    "template-digital-wallet:step:12:cybersource-processes-transaction-with-token",
+    "template-digital-wallet:overview:0:3d-secure-model-properties",
+    "template-digital-wallet:overview:0:error-recovery",
+    "template-digital-wallet:overview:0:wallet-specific-errors",
+    "template-digital-wallet:overview:0:implementation-checklist"
+  ],
+  "linked_workflow_id": null,
+  "contract_bundle_path": null,
+  "context_pack_path": "artifacts/content_engine/context_packs/template-digital-wallet.context_pack.json",
+  "objects_path": "artifacts/content_engine/objects/template-digital-wallet.quickstart_units.json"
+}

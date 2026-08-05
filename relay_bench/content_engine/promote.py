@@ -44,12 +44,26 @@ def _agent_use_status(record: SourceRecord) -> str:
     return "deferred"
 
 
-def write_objects(source_id: str, units: List[QuickstartUnit]) -> Path:
+def write_objects(
+    source_id: str,
+    units: List[QuickstartUnit],
+    *,
+    extractor_label: str = "style-only",
+) -> Path:
     OBJECTS_DIR.mkdir(parents=True, exist_ok=True)
     path = OBJECTS_DIR / f"{source_id}.quickstart_units.json"
+    if extractor_label == "style-only":
+        inspired_by = "ucbepic/docetl (not imported; heuristic extract)"
+    elif extractor_label == "imported-code_map":
+        inspired_by = "ucbepic/docetl (imported; Frame.code_map, no LLM)"
+    elif extractor_label == "imported-llm-map":
+        inspired_by = "ucbepic/docetl (imported; Frame.map with LLM)"
+    else:
+        inspired_by = f"ucbepic/docetl ({extractor_label})"
     payload = {
         "stage": "content_engine_extract",
-        "inspired_by": "ucbepic/docetl (not imported in V0)",
+        "inspired_by": inspired_by,
+        "extractor_label": extractor_label,
         "source_id": source_id,
         "units": [u.to_dict() for u in units],
     }
@@ -62,13 +76,17 @@ def promote_units(
     doc: NormalizedDocument,
     snapshot: SourceSnapshot,
     units: List[QuickstartUnit],
+    *,
+    extractor_label: str = "style-only",
 ) -> Tuple[PromotionDecision, Optional[Path]]:
     schema_passed, schema_issues = validate_schema(units)
     content_passed, content_issues = validate_content(units)
     issues: List[ValidationIssue] = schema_issues + content_issues
     agent_use = _agent_use_status(record)
 
-    objects_path = write_objects(record.source_id, units)
+    objects_path = write_objects(
+        record.source_id, units, extractor_label=extractor_label
+    )
 
     decision = PromotionDecision(
         source_id=record.source_id,

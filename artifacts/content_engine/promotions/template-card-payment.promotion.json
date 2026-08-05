@@ -1,0 +1,28 @@
+{
+  "source_id": "template-card-payment",
+  "status": "promoted",
+  "schema_passed": true,
+  "content_passed": true,
+  "agent_use_status": "passed",
+  "issues": [
+    {
+      "code": "no_steps",
+      "severity": "warning",
+      "message": "no step units; promoting reference-style units with evidence",
+      "unit_id": null
+    }
+  ],
+  "promoted_unit_ids": [
+    "template-card-payment:overview:0:sdk-models-used",
+    "template-card-payment:overview:0:ptsv2paymentsclientreferenceinformation",
+    "template-card-payment:overview:0:ptsv2paymentsorderinformationamountdetails",
+    "template-card-payment:overview:0:ptsv2paymentsorderinformationbillto",
+    "template-card-payment:overview:0:ptsv2paymentspaymentinformationcard",
+    "template-card-payment:overview:0:card-type-codes",
+    "template-card-payment:overview:0:error-recovery"
+  ],
+  "linked_workflow_id": "flex-token-lifecycle",
+  "contract_bundle_path": "artifacts/contracts/flex-token-lifecycle.contract_bundle.json",
+  "context_pack_path": "artifacts/content_engine/context_packs/template-card-payment.context_pack.json",
+  "objects_path": "artifacts/content_engine/objects/template-card-payment.quickstart_units.json"
+}

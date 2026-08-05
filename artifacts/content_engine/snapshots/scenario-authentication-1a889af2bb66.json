@@ -1,0 +1,11 @@
+{
+  "snapshot_id": "scenario-authentication-1a889af2bb66",
+  "source_id": "scenario-authentication",
+  "fetched_at": "2026-08-05T04:04:13Z",
+  "content_hash": "1a889af2bb6642f4e38c633a009bd003def1fb07a0c6a2193ac81e9e26f45cca",
+  "version_tag": "1a889af2bb66",
+  "mime_type": "text/markdown",
+  "raw_bytes_location": "artifacts/content_engine/snapshots/scenario-authentication-1a889af2bb66.md",
+  "canonical_url": "local://scenarios/authentication/task.md",
+  "upstream_last_modified": ""
+}

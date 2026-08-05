@@ -1,0 +1,141 @@
+{
+  "pack_id": "ctx-scenario-setup-checkout",
+  "source_id": "scenario-setup-checkout",
+  "product": [
+    "cybersource",
+    "visa-acceptance"
+  ],
+  "audience": [
+    "developer",
+    "agent"
+  ],
+  "title": "Setup Checkout \u2014 Unified Checkout or Flex Microcheckout",
+  "goal": "Setup Checkout \u2014 Unified Checkout or Flex Microcheckout",
+  "unit_ids": [
+    "scenario-setup-checkout:overview:0:question",
+    "scenario-setup-checkout:step:1:read-the-cybersource-checkout-documentation",
+    "scenario-setup-checkout:step:2:understand-the-checkout-setup-process-(unified-c",
+    "scenario-setup-checkout:step:3:configure-the-checkout-with-the-right-parameters",
+    "scenario-setup-checkout:step:4:make-a-test-transaction-that-returns-a-transacti",
+    "scenario-setup-checkout:prerequisite:0:inputs",
+    "scenario-setup-checkout:validation_check:5:success-criteria",
+    "scenario-setup-checkout:warning:5:error-categories-to-track",
+    "scenario-setup-checkout:next_step:5:resources",
+    "scenario-setup-checkout:next_step:5:agent-instruction"
+  ],
+  "units_summary": [
+    {
+      "unit_id": "scenario-setup-checkout:overview:0:question",
+      "unit_type": "overview",
+      "title": "Question",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "scenario-setup-checkout:step:1:read-the-cybersource-checkout-documentation",
+      "unit_type": "step",
+      "title": "Read the CyberSource checkout documentation",
+      "sequence_number": 1,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "scenario-setup-checkout:step:2:understand-the-checkout-setup-process-(unified-c",
+      "unit_type": "step",
+      "title": "Understand the checkout setup process (Unified Checkout or Flex Microcheckout)",
+      "sequence_number": 2,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "scenario-setup-checkout:step:3:configure-the-checkout-with-the-right-parameters",
+      "unit_type": "step",
+      "title": "Configure the checkout with the right parameters",
+      "sequence_number": 3,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "scenario-setup-checkout:step:4:make-a-test-transaction-that-returns-a-transacti",
+      "unit_type": "step",
+      "title": "Make a test transaction that returns a transaction ID",
+      "sequence_number": 4,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "scenario-setup-checkout:prerequisite:0:inputs",
+      "unit_type": "prerequisite",
+      "title": "Inputs",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "scenario-setup-checkout:validation_check:5:success-criteria",
+      "unit_type": "validation_check",
+      "title": "Success Criteria",
+      "sequence_number": 5,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "scenario-setup-checkout:warning:5:error-categories-to-track",
+      "unit_type": "warning",
+      "title": "Error Categories to Track",
+      "sequence_number": 5,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "scenario-setup-checkout:next_step:5:resources",
+      "unit_type": "next_step",
+      "title": "Resources",
+      "sequence_number": 5,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "scenario-setup-checkout:next_step:5:agent-instruction",
+      "unit_type": "next_step",
+      "title": "Agent Instruction",
+      "sequence_number": 5,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    }
+  ],
+  "provenance": {
+    "source_id": "scenario-setup-checkout",
+    "snapshot_id": "scenario-setup-checkout-d7a764ae44ec",
+    "content_hash": "d7a764ae44ec8c91e9776cf4369a732ed801d44c8efe5d6814ac9e224d5a24ec",
+    "canonical_url": "local://scenarios/setup-checkout/task.md",
+    "doc_id": "doc-scenario-setup-checkout"
+  },
+  "constraints": [
+    "Derived Relay context pack \u2014 does not rewrite source docs",
+    "No live credentials, PAN, or secrets",
+    "Extraction backend recorded in provenance / honest_label (heuristic default; optional real DocETL via --discovery)"
+  ],
+  "linked_workflow_id": "microform-payer-auth-state-machine"
+}

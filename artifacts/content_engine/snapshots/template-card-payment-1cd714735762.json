@@ -1,0 +1,11 @@
+{
+  "snapshot_id": "template-card-payment-1cd714735762",
+  "source_id": "template-card-payment",
+  "fetched_at": "2026-08-05T04:04:14Z",
+  "content_hash": "1cd71473576265ca9037e2a32bafe7092fa1a9cb59a2b02f3c8b3601b9a1d5ac",
+  "version_tag": "1cd714735762",
+  "mime_type": "text/markdown",
+  "raw_bytes_location": "artifacts/content_engine/snapshots/template-card-payment-1cd714735762.md",
+  "canonical_url": "local://templates/card-payment/README.md",
+  "upstream_last_modified": ""
+}

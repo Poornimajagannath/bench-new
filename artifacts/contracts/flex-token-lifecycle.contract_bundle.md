@@ -75,5 +75,7 @@ Hidden truth content is intentionally omitted from this bundle.
 
 ## 6. What verifier result or product action exists now?
 
-- verifier_result_path: _(not present yet)_
-- improvement_actions: _(not present yet)_
+- verifier_result_path: `artifacts/verifier_results/flex-token-lifecycle.result.json`
+- improvement_actions:
+  - [docs] Clarify Flex Token Lifecycle stage ordering in public docs
+  - [vap_cli] Ship a VAP CLI workflow verifier for this contract

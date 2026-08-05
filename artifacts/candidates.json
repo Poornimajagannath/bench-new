@@ -1,7 +1,7 @@
 {
   "stage": "docetl_inspired_extract_suggest_pm",
   "inspired_by": {
-    "discovery": "ucbepic/docetl (not imported in V0)",
+    "discovery": "ucbepic/docetl (heuristic default; optional import via relay_bench.docetl_discovery / --discovery docetl)",
     "verifier": "tempoxyz/tempo-evals Stable Bench (not imported in V0)"
   },
   "pipeline": [

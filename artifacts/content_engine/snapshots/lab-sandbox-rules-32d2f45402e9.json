@@ -1,0 +1,11 @@
+{
+  "snapshot_id": "lab-sandbox-rules-32d2f45402e9",
+  "source_id": "lab-sandbox-rules",
+  "fetched_at": "2026-08-05T04:04:13Z",
+  "content_hash": "32d2f45402e9831b57f5d293ad363fc261900562a94813afa656ceed48766d0b",
+  "version_tag": "32d2f45402e9",
+  "mime_type": "text/markdown",
+  "raw_bytes_location": "artifacts/content_engine/snapshots/lab-sandbox-rules-32d2f45402e9.md",
+  "canonical_url": "local://context/sandbox-rules.md",
+  "upstream_last_modified": ""
+}

@@ -1,0 +1,211 @@
+{
+  "stage": "content_engine_extract",
+  "inspired_by": "ucbepic/docetl (imported; Frame.code_map, no LLM)",
+  "extractor_label": "imported-code_map",
+  "source_id": "template-card-payment",
+  "units": [
+    {
+      "unit_id": "template-card-payment:overview:0:sdk-models-used",
+      "source_page_id": "doc-template-card-payment",
+      "unit_type": "overview",
+      "title": "SDK Models Used",
+      "goal": "Card Payment Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "flex-token-lifecycle"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "- `CreatePaymentRequest` \u2014 Main payment request object\n- `Ptsv2paymentsClientReferenceInformation` \u2014 Order reference\n- `Ptsv2paymentsOrderInformation` \u2014 Order details\n- `Ptsv2paymentsOrderInformationAmountDetails` \u2014 Amount and currency\n- `Ptsv2paymentsOrderInformationBillTo` \u2014 Billing address\n- `Ptsv2paymentsPaymentInformation` \u2014 Payment method\n- `Ptsv2paymentsPaymentInformationCard` \u2014 Card details\n- `Ptsv2paymentsProcessingInformation` \u2014 Processing options",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "- `CreatePaymentRequest` \u2014 Main payment request object - `Ptsv2paymentsClientReferenceInformation` \u2014 Order reference - `Ptsv2paymentsOrderInformation` \u2014 Orde..."
+      ]
+    },
+    {
+      "unit_id": "template-card-payment:overview:0:ptsv2paymentsclientreferenceinformation",
+      "source_page_id": "doc-template-card-payment",
+      "unit_type": "overview",
+      "title": "Ptsv2paymentsClientReferenceInformation",
+      "goal": "Card Payment Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "flex-token-lifecycle"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "| Property | Type | Required | Description |\n|----------|------|----------|-------------|\n| `code` | string | Yes | Merchant-generated order reference |\n| `transaction_id` | string | No | Custom transaction ID |\n| `comments` | string | No | Brief order description |",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "| Property | Type | Required | Description | |----------|------|----------|-------------| | `code` | string | Yes | Merchant-generated order reference | | `t..."
+      ]
+    },
+    {
+      "unit_id": "template-card-payment:overview:0:ptsv2paymentsorderinformationamountdetails",
+      "source_page_id": "doc-template-card-payment",
+      "unit_type": "overview",
+      "title": "Ptsv2paymentsOrderInformationAmountDetails",
+      "goal": "Card Payment Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "flex-token-lifecycle"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "| Property | Type | Required | Description |\n|----------|------|----------|-------------|\n| `total_amount` | string | Yes | Grand total (e.g., \"10.00\") |\n| `currency` | string | Yes | ISO 3-character currency code (e.g., \"USD\") |\n| `tax_amount` | string | No | Total tax amount |\n| `freight_amount` | string | No | Shipping/handling charges |",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "| Property | Type | Required | Description | |----------|------|----------|-------------| | `total_amount` | string | Yes | Grand total (e.g., \"10.00\") | | `..."
+      ]
+    },
+    {
+      "unit_id": "template-card-payment:overview:0:ptsv2paymentsorderinformationbillto",
+      "source_page_id": "doc-template-card-payment",
+      "unit_type": "overview",
+      "title": "Ptsv2paymentsOrderInformationBillTo",
+      "goal": "Card Payment Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "flex-token-lifecycle"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "| Property | Type | Required | Description |\n|----------|------|----------|-------------|\n| `first_name` | string | No | Customer's first name |\n| `last_name` | string | No | Customer's last name |\n| `email` | string | No | Customer's email |\n| `country` | string | Yes | ISO 2-character country code |\n| `administrative_area` | string | No | State/province |\n| `postal_code` | string | No | Postal code |",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "| Property | Type | Required | Description | |----------|------|----------|-------------| | `first_name` | string | No | Customer's first name | | `last_name..."
+      ]
+    },
+    {
+      "unit_id": "template-card-payment:overview:0:ptsv2paymentspaymentinformationcard",
+      "source_page_id": "doc-template-card-payment",
+      "unit_type": "overview",
+      "title": "Ptsv2paymentsPaymentInformationCard",
+      "goal": "Card Payment Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "flex-token-lifecycle"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "| Property | Type | Required | Description |\n|----------|------|----------|-------------|\n| `number` | string | Yes | Card number (PAN) |\n| `expiration_month` | string | Yes | Two-digit month (MM) |\n| `expiration_year` | string | Yes | Four-digit year (YYYY) |\n| `type` | string | Yes | Three-digit card type code |\n| `security_code` | string | No | CVV (optional for ecom) |",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "| Property | Type | Required | Description | |----------|------|----------|-------------| | `number` | string | Yes | Card number (PAN) | | `expiration_month..."
+      ]
+    },
+    {
+      "unit_id": "template-card-payment:overview:0:card-type-codes",
+      "source_page_id": "doc-template-card-payment",
+      "unit_type": "overview",
+      "title": "Card Type Codes",
+      "goal": "Card Payment Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "flex-token-lifecycle"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "| Type | Code |\n|------|------|\n| Visa | 001 |\n| Mastercard | 002 |\n| American Express | 003 |\n| Discover | 004 |\n| Diners Club | 005 |\n| JCB | 007 |",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "| Type | Code | |------|------| | Visa | 001 | | Mastercard | 002 | | American Express | 003 | | Discover | 004 | | Diners Club | 005 | | JCB | 007 |"
+      ]
+    },
+    {
+      "unit_id": "template-card-payment:overview:0:error-recovery",
+      "source_page_id": "doc-template-card-payment",
+      "unit_type": "overview",
+      "title": "Error Recovery",
+      "goal": "Card Payment Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "flex-token-lifecycle"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "| Error | Recovery |\n|-------|----------|\n| `INVALID_DATA` | Check card number format, expiry date, and required fields |\n| `AUTH_FAILED` | Verify auth credentials and API key format |\n| `CARD_DECLINED` | Prompt customer for different card or payment method |\n| `NETWORK_ERROR` | Implement retry with exponential backoff |",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "| Error | Recovery | |-------|----------| | `INVALID_DATA` | Check card number format, expiry date, and required fields | | `AUTH_FAILED` | Verify auth crede..."
+      ]
+    }
+  ]
+}

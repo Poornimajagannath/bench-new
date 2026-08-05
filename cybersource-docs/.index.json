@@ -1,0 +1,55 @@
+{
+  "docs_fetched": 9,
+  "results": [
+    {
+      "url": "https://developer.cybersource.com/docs/cybs/en-us/platform/developer/all/rest/rest-getting-started.md",
+      "status": "ok",
+      "lines": 2956
+    },
+    {
+      "url": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.md",
+      "status": "ok",
+      "lines": 8341
+    },
+    {
+      "url": "https://developer.cybersource.com/docs/cybs/en-unified-checkout/developer/all/rest/unified-checkout.md",
+      "status": "fail",
+      "error": "HTTP Error 500: Internal Server Error"
+    },
+    {
+      "url": "https://developer.cybersource.com/docs/cybs/en-us/security-keys/user/all/ada/security-keys.md",
+      "status": "ok",
+      "lines": 1286
+    },
+    {
+      "url": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.md",
+      "status": "ok",
+      "lines": 17548
+    },
+    {
+      "url": "https://developer.cybersource.com/docs/cybs/en-us/payer-authentication/developer/all/rest/payer-auth.md",
+      "status": "ok",
+      "lines": 12540
+    },
+    {
+      "url": "https://developer.cybersource.com/docs/cybs/en-us/credentials/developer/ctv/rest/credentials.md",
+      "status": "ok",
+      "lines": 9905
+    },
+    {
+      "url": "https://developer.cybersource.com/hello-world/sandbox.md",
+      "status": "ok",
+      "lines": 6
+    },
+    {
+      "url": "https://developer.cybersource.com/hello-world/testing-guide.md",
+      "status": "ok",
+      "lines": 63
+    },
+    {
+      "url": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/quick-start/all/na/uc-qsg.md",
+      "status": "ok",
+      "lines": 452
+    }
+  ]
+}

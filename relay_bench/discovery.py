@@ -1,12 +1,12 @@
-"""DocETL-inspired discovery stages over raw forum/docs/support questions.
+"""Heuristic discovery stages over raw forum/docs/support questions.
 
 Flow (pre-PM):
   raw questions → extract goal/symptoms/entities → suggest workflow_id + stages
 
-V0 does NOT import or depend on the real `docetl` package (ucbepic/docetl).
-This is a small local heuristic prototype inspired by DocETL's extract/map pattern.
+Default path does NOT import the real `docetl` package. For the optional
+DocETL adapter (Frame.code_map / Frame.map), see `relay_bench.docetl_discovery`.
 
-No task packs, no verifiers, no network.
+No task packs, no verifiers, no network on the heuristic path.
 """
 
 from __future__ import annotations
@@ -315,7 +315,10 @@ def synthesize_candidates_payload(
     return {
         "stage": "docetl_inspired_extract_suggest_pm",
         "inspired_by": {
-            "discovery": "ucbepic/docetl (not imported in V0)",
+            "discovery": (
+                "ucbepic/docetl (heuristic default; optional import via "
+                "relay_bench.docetl_discovery / --discovery docetl)"
+            ),
             "verifier": "tempoxyz/tempo-evals Stable Bench (not imported in V0)",
         },
         "pipeline": [

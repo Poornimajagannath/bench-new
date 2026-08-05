@@ -1,0 +1,25 @@
+{
+  "source_id": "lab-auth-context",
+  "status": "promoted",
+  "schema_passed": true,
+  "content_passed": true,
+  "agent_use_status": "passed",
+  "issues": [
+    {
+      "code": "no_steps",
+      "severity": "warning",
+      "message": "no step units; promoting reference-style units with evidence",
+      "unit_id": null
+    }
+  ],
+  "promoted_unit_ids": [
+    "lab-auth-context:prerequisite:0:credential-loading",
+    "lab-auth-context:prerequisite:0:required-environment-variables",
+    "lab-auth-context:troubleshooting:1:auth-error-taxonomy",
+    "lab-auth-context:troubleshooting:1:sdk-field-names-(known-gap)"
+  ],
+  "linked_workflow_id": "http-signature-debug",
+  "contract_bundle_path": "artifacts/contracts/http-signature-debug.contract_bundle.json",
+  "context_pack_path": "artifacts/content_engine/context_packs/lab-auth-context.context_pack.json",
+  "objects_path": "artifacts/content_engine/objects/lab-auth-context.quickstart_units.json"
+}

@@ -1,0 +1,22 @@
+{
+  "doc_id": "doc-templates-index",
+  "source_id": "templates-index",
+  "snapshot_id": "templates-index-e0a362841480",
+  "title": "Visa Relay \u2014 Payment Templates",
+  "canonical_url": "local://templates/README.md",
+  "source_format": "markdown",
+  "product": [
+    "cybersource",
+    "visa-acceptance"
+  ],
+  "audience": [
+    "developer",
+    "agent"
+  ],
+  "page_type": "template",
+  "freshness_date": "unknown",
+  "normalized_markdown": "# Visa Relay \u2014 Payment Templates\n\n## Purpose\n\nThese templates show correct CyberSource SDK integration patterns for different payment methods. Agents should reference these when generating integration code.\n\n## Files\n\n| Template | Description |\n|----------|-------------|\n| `card-payment/` | Standard Visa/Mastercard/Amex card payments |\n| `ach-payment/` | Bank account (ACH/EFT) payments |\n| `digital-wallet/` | Google Pay, Apple Pay, PayPal |\n| `multi-currency/` | Multi-currency handling with DCC |\n| `config/` | Authentication and configuration templates |\n\n## Common Gotchas\n\n1. **Auth type must be `HTTP_Signature`** (capitalized), NOT `http_signature`\n2. **SDK field names differ from docs**: `merchantKeyId`/`merchantsecretKey` vs `keyId`/`secretKey`\n3. **`type` field is required** for card payments to avoid wrong card type processing\n4. **`total_amount` and `currency` are required** in `amountDetails`\n5. **`code` is required** in `clientReferenceInformation`\n6. **Card expiry must be future year** (2031, not 2025)\n7. **CyberSource sandbox is rate-limited** \u2014 implement retry logic\n",
+  "extracted_metadata": {
+    "goal": "Visa Relay \u2014 Payment Templates"
+  }
+}

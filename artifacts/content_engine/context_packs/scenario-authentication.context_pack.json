@@ -1,0 +1,130 @@
+{
+  "pack_id": "ctx-scenario-authentication",
+  "source_id": "scenario-authentication",
+  "product": [
+    "cybersource",
+    "visa-acceptance"
+  ],
+  "audience": [
+    "developer",
+    "agent"
+  ],
+  "title": "Authentication \u2014 First API Call",
+  "goal": "Authentication \u2014 First API Call",
+  "unit_ids": [
+    "scenario-authentication:overview:0:question",
+    "scenario-authentication:step:1:understand-where-to-get-api-credentials-from-the",
+    "scenario-authentication:step:2:use-the-correct-credential-format-(not-what-docs",
+    "scenario-authentication:step:3:make-a-successful-api-call-with-the-test-card",
+    "scenario-authentication:prerequisite:0:inputs",
+    "scenario-authentication:validation_check:4:success-criteria",
+    "scenario-authentication:warning:4:error-categories-to-track",
+    "scenario-authentication:next_step:4:resources",
+    "scenario-authentication:next_step:4:agent-instruction"
+  ],
+  "units_summary": [
+    {
+      "unit_id": "scenario-authentication:overview:0:question",
+      "unit_type": "overview",
+      "title": "Question",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "scenario-authentication:step:1:understand-where-to-get-api-credentials-from-the",
+      "unit_type": "step",
+      "title": "Understand where to get API credentials from the CyberSource developer portal",
+      "sequence_number": 1,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "scenario-authentication:step:2:use-the-correct-credential-format-(not-what-docs",
+      "unit_type": "step",
+      "title": "Use the correct credential format (not what docs claim \u2014 the SDK field names are different from what the docs say)",
+      "sequence_number": 2,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "scenario-authentication:step:3:make-a-successful-api-call-with-the-test-card",
+      "unit_type": "step",
+      "title": "Make a successful API call with the test card",
+      "sequence_number": 3,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "scenario-authentication:prerequisite:0:inputs",
+      "unit_type": "prerequisite",
+      "title": "Inputs",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "scenario-authentication:validation_check:4:success-criteria",
+      "unit_type": "validation_check",
+      "title": "Success Criteria",
+      "sequence_number": 4,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "scenario-authentication:warning:4:error-categories-to-track",
+      "unit_type": "warning",
+      "title": "Error Categories to Track",
+      "sequence_number": 4,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "scenario-authentication:next_step:4:resources",
+      "unit_type": "next_step",
+      "title": "Resources",
+      "sequence_number": 4,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "scenario-authentication:next_step:4:agent-instruction",
+      "unit_type": "next_step",
+      "title": "Agent Instruction",
+      "sequence_number": 4,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    }
+  ],
+  "provenance": {
+    "source_id": "scenario-authentication",
+    "snapshot_id": "scenario-authentication-1a889af2bb66",
+    "content_hash": "1a889af2bb6642f4e38c633a009bd003def1fb07a0c6a2193ac81e9e26f45cca",
+    "canonical_url": "local://scenarios/authentication/task.md",
+    "doc_id": "doc-scenario-authentication"
+  },
+  "constraints": [
+    "Derived Relay context pack \u2014 does not rewrite source docs",
+    "No live credentials, PAN, or secrets",
+    "Extraction backend recorded in provenance / honest_label (heuristic default; optional real DocETL via --discovery)"
+  ],
+  "linked_workflow_id": "http-signature-debug"
+}

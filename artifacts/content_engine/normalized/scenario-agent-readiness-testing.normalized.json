@@ -1,0 +1,22 @@
+{
+  "doc_id": "doc-scenario-agent-readiness-testing",
+  "source_id": "scenario-agent-readiness-testing",
+  "snapshot_id": "scenario-agent-readiness-testing-bbd7e23b6d2a",
+  "title": "Agent Readiness Testing \u2014 Benchmark Scenario",
+  "canonical_url": "local://scenarios/agent-readiness-testing/task.md",
+  "source_format": "markdown",
+  "product": [
+    "cybersource",
+    "visa-acceptance"
+  ],
+  "audience": [
+    "developer",
+    "agent"
+  ],
+  "page_type": "scenario",
+  "freshness_date": "unknown",
+  "normalized_markdown": "# Agent Readiness Testing \u2014 Benchmark Scenario\n\n**Date:** 2026-07-21\n**Purpose:** Test whether AI agents can systematically identify and report DX issues when integrating with payment APIs.\n\n## Question\n\nCan an agent systematically test a payment integration and produce a structured report of DX issues, blockers, and recommendations?\n\n## Context\n\nAgents integrating CyberSource face several categories of DX issues:\n- SDK installation problems (version mismatches, missing dependencies)\n- Authentication failures (field name mismatches, crypto issues)\n- Model structure errors (missing required fields, wrong nested objects)\n- Error handling gaps (unclear error responses, missing recovery docs)\n- Currency/internationalization issues (wrong ISO codes, locale handling)\n\nThe agent must demonstrate:\n1. Systematic testing methodology\n2. Ability to categorize and prioritize issues\n3. Clear documentation of findings\n4. Actionable recommendations\n\n## Expected Behavior\n\nThe agent should:\n- Read the CyberSource documentation\n- Test multiple integration scenarios (auth, card payment, currency config)\n- Document each finding with severity and bucket\n- Produce a structured findings report\n- Recommend fixes for each issue\n\n## Scenarios\n\n### Scenario A: Auth Integration Test\n**Task:** Test authentication with CyberSource and report all DX issues encountered\n\n**Success Criteria:**\n- [ ] Agent correctly identifies SDK installation requirements\n- [ ] Agent discovers field name mismatches between docs and SDK\n- [ ] Agent documents auth failures with root cause analysis\n- [ ] Agent provides severity ratings for each issue\n\n### Scenario B: Multi-Payment Method Test\n**Task:** Test card, ACH, and digital wallet integrations and report findings\n\n**Success Criteria:**\n- [ ] Agent understands differences between payment methods\n- [ ] Agent documents model structure requirements for each type\n- [ ] Agent identifies currency handling gaps\n- [ ] Agent reports error handling deficiencies\n\n### Scenario C: Currency & Internationalization Test\n**Task:** Test multi-currency payment flows and report DX issues\n\n**Success Criteria:**\n- [ ] Agent tests at least 3 different currencies\n- [ ] Agent identifies locale handling issues\n- [ ] Agent documents tax/jurisdiction configuration gaps\n- [ ] Agent provides recommendations for internationalization\n\n## Resources\n\n- CyberSource REST API spec (via MCP `get_model_class_details`)\n- CyberSource SDK templates (via MCP `get_code_template`)\n- Currency/tax configuration docs\n- Error handling documentation\n\n## Agent Instruction\n\nRead the CyberSource documentation via MCP tools. Systematically test integration scenarios (auth, payment methods, currency config) and produce a structured DX issue report with severity ratings and recommendations.\n",
+  "extracted_metadata": {
+    "goal": "Agent Readiness Testing \u2014 Benchmark Scenario"
+  }
+}

@@ -1,0 +1,313 @@
+{
+  "stage": "content_engine_extract",
+  "inspired_by": "ucbepic/docetl (imported; Frame.code_map, no LLM)",
+  "extractor_label": "imported-code_map",
+  "source_id": "scenario-setup-checkout",
+  "units": [
+    {
+      "unit_id": "scenario-setup-checkout:overview:0:question",
+      "source_page_id": "doc-scenario-setup-checkout",
+      "unit_type": "overview",
+      "title": "Question",
+      "goal": "Setup Checkout \u2014 Unified Checkout or Flex Microcheckout",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "microform-payer-auth-state-machine"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "Can an agent configure a checkout integration (Unified Checkout or Flex Microcheckout) and successfully capture a payment?",
+      "commands": [],
+      "api_entities": [
+        "Flex",
+        "Unified Checkout"
+      ],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "Can an agent configure a checkout integration (Unified Checkout or Flex Microcheckout) and successfully capture a payment?"
+      ]
+    },
+    {
+      "unit_id": "scenario-setup-checkout:step:1:read-the-cybersource-checkout-documentation",
+      "source_page_id": "doc-scenario-setup-checkout",
+      "unit_type": "step",
+      "title": "Read the CyberSource checkout documentation",
+      "goal": "Setup Checkout \u2014 Unified Checkout or Flex Microcheckout",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "microform-payer-auth-state-machine"
+      ],
+      "sequence_number": 1,
+      "body_markdown": "Read the CyberSource checkout documentation",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.7,
+      "evidence_quotes": [
+        "Read the CyberSource checkout documentation"
+      ]
+    },
+    {
+      "unit_id": "scenario-setup-checkout:step:2:understand-the-checkout-setup-process-(unified-c",
+      "source_page_id": "doc-scenario-setup-checkout",
+      "unit_type": "step",
+      "title": "Understand the checkout setup process (Unified Checkout or Flex Microcheckout)",
+      "goal": "Setup Checkout \u2014 Unified Checkout or Flex Microcheckout",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "microform-payer-auth-state-machine"
+      ],
+      "sequence_number": 2,
+      "body_markdown": "Understand the checkout setup process (Unified Checkout or Flex Microcheckout)",
+      "commands": [],
+      "api_entities": [
+        "Flex",
+        "Unified Checkout"
+      ],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.7,
+      "evidence_quotes": [
+        "Understand the checkout setup process (Unified Checkout or Flex Microcheckout)"
+      ]
+    },
+    {
+      "unit_id": "scenario-setup-checkout:step:3:configure-the-checkout-with-the-right-parameters",
+      "source_page_id": "doc-scenario-setup-checkout",
+      "unit_type": "step",
+      "title": "Configure the checkout with the right parameters",
+      "goal": "Setup Checkout \u2014 Unified Checkout or Flex Microcheckout",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "microform-payer-auth-state-machine"
+      ],
+      "sequence_number": 3,
+      "body_markdown": "Configure the checkout with the right parameters",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.7,
+      "evidence_quotes": [
+        "Configure the checkout with the right parameters"
+      ]
+    },
+    {
+      "unit_id": "scenario-setup-checkout:step:4:make-a-test-transaction-that-returns-a-transacti",
+      "source_page_id": "doc-scenario-setup-checkout",
+      "unit_type": "step",
+      "title": "Make a test transaction that returns a transaction ID",
+      "goal": "Setup Checkout \u2014 Unified Checkout or Flex Microcheckout",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "microform-payer-auth-state-machine"
+      ],
+      "sequence_number": 4,
+      "body_markdown": "Make a test transaction that returns a transaction ID",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.7,
+      "evidence_quotes": [
+        "Make a test transaction that returns a transaction ID"
+      ]
+    },
+    {
+      "unit_id": "scenario-setup-checkout:prerequisite:0:inputs",
+      "source_page_id": "doc-scenario-setup-checkout",
+      "unit_type": "prerequisite",
+      "title": "Inputs",
+      "goal": "Setup Checkout \u2014 Unified Checkout or Flex Microcheckout",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "microform-payer-auth-state-machine"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "- CyberSource sandbox credentials (from authentication scenario)\n- CyberSource test card (4111111111111111, expiry 12/2031)\n- CyberSource sandbox URL\n- Checkout configuration options (from CyberSource docs)",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "- CyberSource sandbox credentials (from authentication scenario) - CyberSource test card (4111111111111111, expiry 12/2031) - CyberSource sandbox URL - Check..."
+      ]
+    },
+    {
+      "unit_id": "scenario-setup-checkout:validation_check:5:success-criteria",
+      "source_page_id": "doc-scenario-setup-checkout",
+      "unit_type": "validation_check",
+      "title": "Success Criteria",
+      "goal": "Setup Checkout \u2014 Unified Checkout or Flex Microcheckout",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "microform-payer-auth-state-machine"
+      ],
+      "sequence_number": 5,
+      "body_markdown": "- [ ] **PASS**: Agent configures a checkout (Unified Checkout or Flex Microcheckout)\n- [ ] **PASS**: Agent makes a test transaction that returns a transaction ID\n- [ ] **PASS**: Transaction ID is a valid CyberSource format (not an error)",
+      "commands": [],
+      "api_entities": [
+        "Flex",
+        "Unified Checkout"
+      ],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "- [ ] **PASS**: Agent configures a checkout (Unified Checkout or Flex Microcheckout) - [ ] **PASS**: Agent makes a test transaction that returns a transactio..."
+      ]
+    },
+    {
+      "unit_id": "scenario-setup-checkout:warning:5:error-categories-to-track",
+      "source_page_id": "doc-scenario-setup-checkout",
+      "unit_type": "warning",
+      "title": "Error Categories to Track",
+      "goal": "Setup Checkout \u2014 Unified Checkout or Flex Microcheckout",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "microform-payer-auth-state-machine"
+      ],
+      "sequence_number": 5,
+      "body_markdown": "- `CHECKOUT_MISSING_CONFIG` \u2014 agent didn't find the right config parameters\n- `CHECKOUT_INVALID_PARAMS` \u2014 agent used wrong checkout parameters\n- `CHECKOUT_NO_TRANSACTION_ID` \u2014 agent got a response but no transaction ID\n- `CHECKOUT_AUTH_ERROR` \u2014 agent's auth failed during checkout setup",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "- `CHECKOUT_MISSING_CONFIG` \u2014 agent didn't find the right config parameters - `CHECKOUT_INVALID_PARAMS` \u2014 agent used wrong checkout parameters - `CHECKOUT_NO..."
+      ]
+    },
+    {
+      "unit_id": "scenario-setup-checkout:next_step:5:resources",
+      "source_page_id": "doc-scenario-setup-checkout",
+      "unit_type": "next_step",
+      "title": "Resources",
+      "goal": "Setup Checkout \u2014 Unified Checkout or Flex Microcheckout",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "microform-payer-auth-state-machine"
+      ],
+      "sequence_number": 5,
+      "body_markdown": "- CyberSource developer portal: `developer.cybersource.com`\n- CyberSource llms.txt: `developer.cybersource.com/llms.txt`\n- Checkout docs: `developer.cybersource.com/docs/checkout` (or similar)\n- Unified Checkout API reference\n- Flex Microcheckout API reference",
+      "commands": [],
+      "api_entities": [
+        "Flex",
+        "Unified Checkout"
+      ],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "- CyberSource developer portal: `developer.cybersource.com` - CyberSource llms.txt: `developer.cybersource.com/llms.txt` - Checkout docs: `developer.cybersou..."
+      ]
+    },
+    {
+      "unit_id": "scenario-setup-checkout:next_step:5:agent-instruction",
+      "source_page_id": "doc-scenario-setup-checkout",
+      "unit_type": "next_step",
+      "title": "Agent Instruction",
+      "goal": "Setup Checkout \u2014 Unified Checkout or Flex Microcheckout",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "microform-payer-auth-state-machine"
+      ],
+      "sequence_number": 5,
+      "body_markdown": "Read the CyberSource checkout documentation. Set up either Unified Checkout or Flex Microcheckout with the test card and make a test transaction that returns a transaction ID.",
+      "commands": [],
+      "api_entities": [
+        "Flex",
+        "Unified Checkout"
+      ],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "Read the CyberSource checkout documentation. Set up either Unified Checkout or Flex Microcheckout with the test card and make a test transaction that returns..."
+      ]
+    }
+  ]
+}

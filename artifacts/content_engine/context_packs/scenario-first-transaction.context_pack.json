@@ -1,0 +1,141 @@
+{
+  "pack_id": "ctx-scenario-first-transaction",
+  "source_id": "scenario-first-transaction",
+  "product": [
+    "cybersource",
+    "visa-acceptance"
+  ],
+  "audience": [
+    "developer",
+    "agent"
+  ],
+  "title": "First Transaction \u2014 Payment Auth",
+  "goal": "First Transaction \u2014 Payment Auth",
+  "unit_ids": [
+    "scenario-first-transaction:overview:0:question",
+    "scenario-first-transaction:step:1:use-the-credentials-from-the-authentication-scen",
+    "scenario-first-transaction:step:2:read-the-cybersource-payment-api-documentation",
+    "scenario-first-transaction:step:3:make-a-test-payment-auth-with-the-test-card",
+    "scenario-first-transaction:step:4:get-a-transaction-id-back-in-the-response",
+    "scenario-first-transaction:prerequisite:0:inputs",
+    "scenario-first-transaction:validation_check:5:success-criteria",
+    "scenario-first-transaction:warning:5:error-categories-to-track",
+    "scenario-first-transaction:next_step:5:resources",
+    "scenario-first-transaction:next_step:5:agent-instruction"
+  ],
+  "units_summary": [
+    {
+      "unit_id": "scenario-first-transaction:overview:0:question",
+      "unit_type": "overview",
+      "title": "Question",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "scenario-first-transaction:step:1:use-the-credentials-from-the-authentication-scen",
+      "unit_type": "step",
+      "title": "Use the credentials from the authentication scenario",
+      "sequence_number": 1,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "scenario-first-transaction:step:2:read-the-cybersource-payment-api-documentation",
+      "unit_type": "step",
+      "title": "Read the CyberSource payment API documentation",
+      "sequence_number": 2,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "scenario-first-transaction:step:3:make-a-test-payment-auth-with-the-test-card",
+      "unit_type": "step",
+      "title": "Make a test payment auth with the test card",
+      "sequence_number": 3,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "scenario-first-transaction:step:4:get-a-transaction-id-back-in-the-response",
+      "unit_type": "step",
+      "title": "Get a transaction ID back in the response",
+      "sequence_number": 4,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "scenario-first-transaction:prerequisite:0:inputs",
+      "unit_type": "prerequisite",
+      "title": "Inputs",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "scenario-first-transaction:validation_check:5:success-criteria",
+      "unit_type": "validation_check",
+      "title": "Success Criteria",
+      "sequence_number": 5,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "scenario-first-transaction:warning:5:error-categories-to-track",
+      "unit_type": "warning",
+      "title": "Error Categories to Track",
+      "sequence_number": 5,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "scenario-first-transaction:next_step:5:resources",
+      "unit_type": "next_step",
+      "title": "Resources",
+      "sequence_number": 5,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "scenario-first-transaction:next_step:5:agent-instruction",
+      "unit_type": "next_step",
+      "title": "Agent Instruction",
+      "sequence_number": 5,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    }
+  ],
+  "provenance": {
+    "source_id": "scenario-first-transaction",
+    "snapshot_id": "scenario-first-transaction-a075c1262ab2",
+    "content_hash": "a075c1262ab265c43e724b22fe9ee3e7323a3f54595f89a1a8fd45aa68c10f54",
+    "canonical_url": "local://scenarios/first-transaction/task.md",
+    "doc_id": "doc-scenario-first-transaction"
+  },
+  "constraints": [
+    "Derived Relay context pack \u2014 does not rewrite source docs",
+    "No live credentials, PAN, or secrets",
+    "Extraction backend recorded in provenance / honest_label (heuristic default; optional real DocETL via --discovery)"
+  ],
+  "linked_workflow_id": "flex-token-lifecycle"
+}

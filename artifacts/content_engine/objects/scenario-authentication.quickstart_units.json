@@ -1,0 +1,272 @@
+{
+  "stage": "content_engine_extract",
+  "inspired_by": "ucbepic/docetl (imported; Frame.code_map, no LLM)",
+  "extractor_label": "imported-code_map",
+  "source_id": "scenario-authentication",
+  "units": [
+    {
+      "unit_id": "scenario-authentication:overview:0:question",
+      "source_page_id": "doc-scenario-authentication",
+      "unit_type": "overview",
+      "title": "Question",
+      "goal": "Authentication \u2014 First API Call",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "http-signature-debug"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "Can an agent figure out how to authenticate with the CyberSource API and make its first successful call?",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "Can an agent figure out how to authenticate with the CyberSource API and make its first successful call?"
+      ]
+    },
+    {
+      "unit_id": "scenario-authentication:step:1:understand-where-to-get-api-credentials-from-the",
+      "source_page_id": "doc-scenario-authentication",
+      "unit_type": "step",
+      "title": "Understand where to get API credentials from the CyberSource developer portal",
+      "goal": "Authentication \u2014 First API Call",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "http-signature-debug"
+      ],
+      "sequence_number": 1,
+      "body_markdown": "Understand where to get API credentials from the CyberSource developer portal",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.7,
+      "evidence_quotes": [
+        "Understand where to get API credentials from the CyberSource developer portal"
+      ]
+    },
+    {
+      "unit_id": "scenario-authentication:step:2:use-the-correct-credential-format-(not-what-docs",
+      "source_page_id": "doc-scenario-authentication",
+      "unit_type": "step",
+      "title": "Use the correct credential format (not what docs claim \u2014 the SDK field names are different from what the docs say)",
+      "goal": "Authentication \u2014 First API Call",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "http-signature-debug"
+      ],
+      "sequence_number": 2,
+      "body_markdown": "Use the correct credential format (not what docs claim \u2014 the SDK field names are different from what the docs say)",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.7,
+      "evidence_quotes": [
+        "Use the correct credential format (not what docs claim \u2014 the SDK field names are different from what the docs say)"
+      ]
+    },
+    {
+      "unit_id": "scenario-authentication:step:3:make-a-successful-api-call-with-the-test-card",
+      "source_page_id": "doc-scenario-authentication",
+      "unit_type": "step",
+      "title": "Make a successful API call with the test card",
+      "goal": "Authentication \u2014 First API Call",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "http-signature-debug"
+      ],
+      "sequence_number": 3,
+      "body_markdown": "Make a successful API call with the test card",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.7,
+      "evidence_quotes": [
+        "Make a successful API call with the test card"
+      ]
+    },
+    {
+      "unit_id": "scenario-authentication:prerequisite:0:inputs",
+      "source_page_id": "doc-scenario-authentication",
+      "unit_type": "prerequisite",
+      "title": "Inputs",
+      "goal": "Authentication \u2014 First API Call",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "http-signature-debug"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "- CyberSource sandbox credentials (set via env vars: `CYBS_MERCHANT_ID`, `CYBS_KEY_ID`, `CYBS_SHARED_SECRET`)\n- CyberSource test card number (standard test card, e.g., 4111111111111111)\n- CyberSource sandbox URL",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "- CyberSource sandbox credentials (set via env vars: `CYBS_MERCHANT_ID`, `CYBS_KEY_ID`, `CYBS_SHARED_SECRET`) - CyberSource test card number (standard test c..."
+      ]
+    },
+    {
+      "unit_id": "scenario-authentication:validation_check:4:success-criteria",
+      "source_page_id": "doc-scenario-authentication",
+      "unit_type": "validation_check",
+      "title": "Success Criteria",
+      "goal": "Authentication \u2014 First API Call",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "http-signature-debug"
+      ],
+      "sequence_number": 4,
+      "body_markdown": "- [ ] Agent successfully authenticates (no auth errors)\n- [ ] Agent makes a valid API call that returns a response (not an error)\n- [ ] Agent uses the correct credential field names (not what the docs claim)",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "- [ ] Agent successfully authenticates (no auth errors) - [ ] Agent makes a valid API call that returns a response (not an error) - [ ] Agent uses the correc..."
+      ]
+    },
+    {
+      "unit_id": "scenario-authentication:warning:4:error-categories-to-track",
+      "source_page_id": "doc-scenario-authentication",
+      "unit_type": "warning",
+      "title": "Error Categories to Track",
+      "goal": "Authentication \u2014 First API Call",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "http-signature-debug"
+      ],
+      "sequence_number": 4,
+      "body_markdown": "- `AUTH_MISSING_CREDENTIALS` \u2014 agent didn't find or use credentials\n- `AUTH_WRONG_FIELD_NAMES` \u2014 agent used `keyId`/`secretKey` instead of `merchantKeyId`/`merchantsecretKey`\n- `AUTH_INVALID_MERCHANT_ID` \u2014 agent found wrong merchant ID\n- `AUTH_NETWORK_ERROR` \u2014 agent pointed to wrong API endpoint",
+      "commands": [],
+      "api_entities": [
+        "merchantKeyId",
+        "merchantsecretKey"
+      ],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "- `AUTH_MISSING_CREDENTIALS` \u2014 agent didn't find or use credentials - `AUTH_WRONG_FIELD_NAMES` \u2014 agent used `keyId`/`secretKey` instead of `merchantKeyId`/`m..."
+      ]
+    },
+    {
+      "unit_id": "scenario-authentication:next_step:4:resources",
+      "source_page_id": "doc-scenario-authentication",
+      "unit_type": "next_step",
+      "title": "Resources",
+      "goal": "Authentication \u2014 First API Call",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "http-signature-debug"
+      ],
+      "sequence_number": 4,
+      "body_markdown": "- CyberSource developer portal: `developer.cybersource.com`\n- CyberSource llms.txt: `developer.cybersource.com/llms.txt`\n- CyberSource API reference (for auth endpoints)",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "- CyberSource developer portal: `developer.cybersource.com` - CyberSource llms.txt: `developer.cybersource.com/llms.txt` - CyberSource API reference (for aut..."
+      ]
+    },
+    {
+      "unit_id": "scenario-authentication:next_step:4:agent-instruction",
+      "source_page_id": "doc-scenario-authentication",
+      "unit_type": "next_step",
+      "title": "Agent Instruction",
+      "goal": "Authentication \u2014 First API Call",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "http-signature-debug"
+      ],
+      "sequence_number": 4,
+      "body_markdown": "Read the CyberSource developer documentation and find the authentication section. Get the right credentials and make a successful API call with the sandbox test card.",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "Read the CyberSource developer documentation and find the authentication section. Get the right credentials and make a successful API call with the sandbox t..."
+      ]
+    }
+  ]
+}
