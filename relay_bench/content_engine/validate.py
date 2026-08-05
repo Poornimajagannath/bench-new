@@ -8,9 +8,16 @@ from typing import List, Tuple
 from relay_bench.content_engine.schemas import QuickstartUnit, ValidationIssue
 
 _SECRETISH = re.compile(
-    r"(?i)\b(pan|primary account number|shared[_-]?secret|merchantsecretkey|password\s*[:=])\b"
+    r"(?i)\b(password\s*[:=]|merchantsecretkey\s*[:=]\s*\S+|shared[_-]?secret\s*[:=]\s*\S+)\b"
 )
 _RAW_CARDISH = re.compile(r"\b(?:\d[ -]*?){13,19}\b")
+
+# Public CyberSource sandbox test PANs — allowed in lab docs.
+_ALLOWED_TEST_PANS = {
+    "4111111111111111",
+    "4000000000000002",
+    "5555555555554444",
+}
 
 ALLOWED_UNIT_TYPES = {
     "overview",
@@ -100,29 +107,48 @@ def validate_schema(units: List[QuickstartUnit]) -> Tuple[bool, List[ValidationI
     return passed, issues
 
 
+def _contains_disallowed_pan(text: str) -> bool:
+    for match in _RAW_CARDISH.finditer(text):
+        digits = re.sub(r"\D", "", match.group(0))
+        if digits not in _ALLOWED_TEST_PANS:
+            return True
+    return False
+
+
 def validate_content(units: List[QuickstartUnit]) -> Tuple[bool, List[ValidationIssue]]:
     issues: List[ValidationIssue] = []
     steps = [u for u in units if u.unit_type == "step"]
     if not steps:
-        issues.append(
-            ValidationIssue(
-                "no_steps",
-                "error",
-                "quickstart must include at least one step unit",
+        grounded = [u for u in units if u.evidence_quotes]
+        if grounded:
+            issues.append(
+                ValidationIssue(
+                    "no_steps",
+                    "warning",
+                    "no step units; promoting reference-style units with evidence",
+                )
             )
-        )
+        else:
+            issues.append(
+                ValidationIssue(
+                    "no_steps",
+                    "error",
+                    "must include at least one step unit or grounded reference unit",
+                )
+            )
 
-    for unit in steps:
+    check_units = steps or units
+    for unit in check_units:
         if not unit.evidence_quotes:
             issues.append(
                 ValidationIssue(
                     "missing_evidence",
                     "error",
-                    "step units require evidence_quotes for grounding",
+                    "units require evidence_quotes for grounding",
                     unit.unit_id,
                 )
             )
-        if not unit.requires:
+        if unit.unit_type == "step" and not unit.requires:
             issues.append(
                 ValidationIssue(
                     "missing_requires",
@@ -135,12 +161,12 @@ def validate_content(units: List[QuickstartUnit]) -> Tuple[bool, List[Validation
         blob = " ".join(
             [unit.title, unit.body_markdown, " ".join(unit.evidence_quotes)]
         )
-        if _SECRETISH.search(blob) or _RAW_CARDISH.search(blob):
+        if _SECRETISH.search(blob) or _contains_disallowed_pan(blob):
             issues.append(
                 ValidationIssue(
                     "secret_or_pan_material",
                     "error",
-                    "unit appears to contain secret or PAN-like material",
+                    "unit appears to contain secret or non-test PAN-like material",
                     unit.unit_id,
                 )
             )

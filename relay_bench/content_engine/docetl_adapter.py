@@ -1,7 +1,7 @@
 """Optional real DocETL adapter for Content Engine extraction.
 
 Modes:
-  heuristic   — local regex extract; does not import docetl (default)
+  heuristic   — local extract; does not import docetl (default)
   docetl      — imports ucbepic/docetl and runs Frame.code_map (no LLM)
   docetl-llm  — imports docetl and runs Frame.map (requires LLM API key)
 
@@ -14,8 +14,10 @@ import os
 from typing import Any, Dict, List, Optional, Tuple
 
 from relay_bench.content_engine.extract import (
+    _build_unit,
     _step_number,
     extract_quickstart_units,
+    parse_segment_rows,
 )
 from relay_bench.content_engine.schemas import (
     DocumentSegment,
@@ -33,89 +35,21 @@ _LLM_KEY_ENVS = (
     "LITELLM_API_KEY",
 )
 
+# DocETL code_map executes this string. It imports shared Relay parsers so
+# heuristic and DocETL backends stay aligned on real-doc shapes.
 _CODE_MAP_TRANSFORM = r'''
 def transform(doc):
-    """Per-segment field extract via DocETL code_map (no LLM)."""
-    import re
-
-    UNIT_TYPES = {
-        "overview": "overview",
-        "prerequisites": "prerequisite",
-        "prerequisite": "prerequisite",
-        "validation checks": "validation_check",
-        "warnings": "warning",
-        "next steps": "next_step",
-    }
-
-    def field(pattern, text):
-        match = re.search(pattern, text, flags=re.IGNORECASE | re.MULTILINE)
-        return match.group(1).strip() if match else None
-
-    def list_field(label, text):
-        value = field(rf"^{label}:\s*(.+)$", text)
-        if not value:
-            return []
-        return [part.strip() for part in re.split(r",|;", value) if part.strip()]
-
-    def evidence(text):
-        quoted = re.findall(r'Evidence:\s*"([^"]+)"', text)
-        if quoted:
-            return quoted
-        compact = " ".join(text.split())
-        if len(compact) > 160:
-            compact = compact[:157] + "..."
-        return [compact] if compact else []
-
-    def unit_type_for_heading(heading):
-        key = heading.strip().lower()
-        if key in {"steps", "step"}:
-            return None
-        if key in UNIT_TYPES:
-            return UNIT_TYPES[key]
-        if re.match(r"^\d+\.", key):
-            return "step"
-        return None
+    from relay_bench.content_engine.extract import parse_segment_rows
 
     heading = doc.get("heading") or "root"
-    body = (doc.get("body") or "").strip()
-    unit_type = unit_type_for_heading(heading)
-    if unit_type is None or not body or heading == "root":
-        return {"skip": True}
-
-    title = re.sub(r"^\d+\.\s*", "", heading).strip()
-    api_entities = []
-    blob = (title + " " + body).lower()
-    for token in (
-        "Microform",
-        "Payer Authentication",
-        "enrollment",
-        "challenge",
-        "frictionless",
-        "authorization",
-        "3DS",
-    ):
-        if token.lower() in blob:
-            api_entities.append(token)
-
-    requires = list_field("Requires", body)
-    confidence = 0.9 if evidence(body) and (requires or unit_type != "step") else 0.75
-    if unit_type == "step" and not requires:
-        confidence = 0.55
-
+    body = doc.get("body") or ""
+    rows = parse_segment_rows(heading, body)
+    # code_map returns one dict per input doc; pack multi-unit results.
     return {
-        "skip": False,
-        "unit_type": unit_type,
-        "title": title,
-        "body_markdown": body,
-        "requires": requires,
-        "outcomes": list_field("Outcome", body),
-        "failure_modes": list_field("Failure modes", body),
-        "evidence_quotes": evidence(body),
-        "api_entities": api_entities,
-        "confidence": confidence,
-        "heading": heading,
-        "source_span": doc.get("source_span") or "",
         "index": doc.get("index", 0),
+        "source_span": doc.get("source_span") or "",
+        "heading": heading,
+        "parsed_rows": rows,
     }
 '''
 
@@ -126,7 +60,6 @@ class DocETLUnavailableError(RuntimeError):
 
 def normalize_extract_mode(mode: Optional[str]) -> str:
     raw = (mode or os.environ.get("RELAY_DISCOVERY") or "heuristic").strip().lower()
-    # Accept plan alias "--discovery docetl"
     aliases = {
         "style": "heuristic",
         "style-only": "heuristic",
@@ -199,78 +132,28 @@ def _segments_as_docs(segments: List[DocumentSegment]) -> List[Dict[str, Any]]:
     return docs
 
 
-def _entity_hints(title: str, body: str) -> List[str]:
-    api_entities: List[str] = []
-    blob = (title + " " + body).lower()
-    for token in (
-        "Microform",
-        "Payer Authentication",
-        "enrollment",
-        "challenge",
-        "frictionless",
-        "authorization",
-        "3DS",
-    ):
-        if token.lower() in blob:
-            api_entities.append(token)
-    return api_entities
-
-
-def _build_units_from_rows(
+def _build_units_from_parsed(
     record: SourceRecord,
     doc: NormalizedDocument,
-    rows: List[Dict[str, Any]],
+    packed_rows: List[Dict[str, Any]],
 ) -> List[QuickstartUnit]:
-    goal = doc.extracted_metadata.get("goal") or doc.title
-    # Preserve document order.
-    ordered = sorted(rows, key=lambda r: int(r.get("index", 0)))
+    ordered = sorted(packed_rows, key=lambda r: int(r.get("index", 0)))
     units: List[QuickstartUnit] = []
     seq = 0
-    for row in ordered:
-        if row.get("skip"):
-            continue
-        unit_type = str(row["unit_type"])
-        title = str(row["title"])
-        body = str(row.get("body_markdown") or "")
-        heading = str(row.get("heading") or title)
-
-        if unit_type == "step":
-            seq = _step_number(heading, seq + 1)
-            sequence_number = seq
-        else:
-            sequence_number = 0 if unit_type in {"overview", "prerequisite"} else seq + 1
-
-        requires = list(row.get("requires") or [])
-        outcomes = list(row.get("outcomes") or [])
-        failure_modes = list(row.get("failure_modes") or [])
-        evidence = list(row.get("evidence_quotes") or [])
-        api_entities = list(row.get("api_entities") or _entity_hints(title, body))
-        confidence = float(row.get("confidence") or 0.75)
-
-        units.append(
-            QuickstartUnit(
-                unit_id=(
-                    f"{record.source_id}:{unit_type}:{sequence_number}:"
-                    f"{title.lower().replace(' ', '-')[:48]}"
-                ),
-                source_page_id=doc.doc_id,
-                unit_type=unit_type,
-                title=title,
-                goal=goal,
-                product=list(record.product),
-                audience=list(record.audience),
-                task=[record.linked_workflow_id or record.source_id],
-                sequence_number=sequence_number,
-                body_markdown=body,
-                commands=[],
-                api_entities=api_entities,
-                requires=requires,
-                outcomes=outcomes,
-                failure_modes=failure_modes,
-                confidence=confidence,
-                evidence_quotes=evidence,
-            )
-        )
+    for packed in ordered:
+        for row in packed.get("parsed_rows") or []:
+            if row.get("skip"):
+                continue
+            unit_type = str(row["unit_type"])
+            heading_for_seq = str(row.get("heading") or packed.get("heading") or "")
+            if unit_type == "step":
+                seq = _step_number(heading_for_seq, seq + 1)
+                sequence_number = seq
+            else:
+                sequence_number = (
+                    0 if unit_type in {"overview", "prerequisite"} else seq + 1
+                )
+            units.append(_build_unit(record, doc, row, sequence_number))
     return units
 
 
@@ -287,12 +170,15 @@ def _extract_via_code_map(
             "or use --discovery heuristic"
         ) from exc
 
+    # Ensure shared parser is importable inside DocETL workers.
+    _ = parse_segment_rows
+
     frame = docetl.from_list(_segments_as_docs(segments), name="segments")
-    rows = frame.code_map(
+    packed = frame.code_map(
         name="extract_quickstart_fields",
         code=_CODE_MAP_TRANSFORM,
     ).collect()
-    return _build_units_from_rows(record, doc, rows)
+    return _build_units_from_parsed(record, doc, packed)
 
 
 def _extract_via_llm_map(
@@ -319,10 +205,11 @@ def _extract_via_llm_map(
         f"Overall goal: {goal}\n"
         "Heading: {{ input.heading }}\n"
         "Body:\n{{ input.body }}\n\n"
-        "If the heading is only a container (e.g. 'Steps') or the segment has no "
-        "actionable content, set skip=true.\n"
+        "If the heading is only a container (e.g. 'Steps') with no actionable "
+        "content of its own, set skip=true unless the body has numbered steps "
+        "(then prefer one unit summarizing the section).\n"
         "unit_type must be one of: overview, prerequisite, step, validation_check, "
-        "warning, next_step.\n"
+        "warning, troubleshooting, next_step.\n"
         "evidence_quotes must be short grounded snippets copied from the body."
     )
     output_schema = {
@@ -343,7 +230,15 @@ def _extract_via_llm_map(
         prompt=prompt,
         output={"schema": output_schema},
     ).collect()
-    return _build_units_from_rows(record, doc, rows)
+    packed = [
+        {
+            "index": row.get("index", i),
+            "heading": row.get("heading"),
+            "parsed_rows": [row],
+        }
+        for i, row in enumerate(rows)
+    ]
+    return _build_units_from_parsed(record, doc, packed)
 
 
 def extract_quickstart_units_with_backend(
