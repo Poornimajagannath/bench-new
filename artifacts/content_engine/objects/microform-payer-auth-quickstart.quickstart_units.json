@@ -1,6 +1,7 @@
 {
   "stage": "content_engine_extract",
-  "inspired_by": "ucbepic/docetl (not imported in V0)",
+  "inspired_by": "ucbepic/docetl (not imported; heuristic extract)",
+  "extractor_label": "style-only",
   "source_id": "microform-payer-auth-quickstart",
   "units": [
     {

@@ -1,7 +1,7 @@
-"""DocETL-style extraction of quickstart units from segments.
+"""Heuristic extraction of quickstart units from segments.
 
-V0 does NOT import `docetl`. This is a local heuristic extractor that emits
-the same typed `quickstart_unit` shapes a real DocETL map could produce later.
+Default Content Engine path does NOT import `docetl`. For the real DocETL
+package adapter (Frame.code_map / Frame.map), see `docetl_adapter.py`.
 """
 
 from __future__ import annotations
