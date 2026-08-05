@@ -1,0 +1,22 @@
+[
+  {"seed_id": "seed-flex-01", "decision": "approve", "approved_workflow_id": "flex-token-lifecycle", "edited_stages": null, "edited_goal": null, "pm_notes": "Merge into Flex→TMS lifecycle contract."},
+  {"seed_id": "seed-flex-02", "decision": "approve", "approved_workflow_id": "flex-token-lifecycle", "edited_stages": null, "edited_goal": null, "pm_notes": "Merge into Flex→TMS lifecycle contract."},
+  {"seed_id": "seed-flex-03", "decision": "approve", "approved_workflow_id": "flex-token-lifecycle", "edited_stages": null, "edited_goal": null, "pm_notes": "Merge into Flex→TMS lifecycle contract."},
+  {"seed_id": "seed-flex-04", "decision": "approve", "approved_workflow_id": "flex-token-lifecycle", "edited_stages": null, "edited_goal": null, "pm_notes": "Merge into Flex→TMS lifecycle contract."},
+  {"seed_id": "seed-flex-05", "decision": "approve", "approved_workflow_id": "flex-token-lifecycle", "edited_stages": null, "edited_goal": null, "pm_notes": "Merge into Flex→TMS lifecycle contract."},
+  {"seed_id": "seed-flex-06", "decision": "approve", "approved_workflow_id": "flex-token-lifecycle", "edited_stages": null, "edited_goal": null, "pm_notes": "Merge into Flex→TMS lifecycle contract."},
+  {"seed_id": "seed-flex-07", "decision": "approve", "approved_workflow_id": "flex-token-lifecycle", "edited_stages": null, "edited_goal": null, "pm_notes": "Merge into Flex→TMS lifecycle contract."},
+  {"seed_id": "seed-httpsig-01", "decision": "approve", "approved_workflow_id": "http-signature-debug", "edited_stages": null, "edited_goal": null, "pm_notes": "Merge into HTTP Signature debug contract."},
+  {"seed_id": "seed-httpsig-02", "decision": "approve", "approved_workflow_id": "http-signature-debug", "edited_stages": null, "edited_goal": null, "pm_notes": "Merge into HTTP Signature debug contract."},
+  {"seed_id": "seed-httpsig-03", "decision": "approve", "approved_workflow_id": "http-signature-debug", "edited_stages": null, "edited_goal": null, "pm_notes": "Merge into HTTP Signature debug contract."},
+  {"seed_id": "seed-httpsig-04", "decision": "approve", "approved_workflow_id": "http-signature-debug", "edited_stages": null, "edited_goal": null, "pm_notes": "Merge into HTTP Signature debug contract."},
+  {"seed_id": "seed-httpsig-05", "decision": "approve", "approved_workflow_id": "http-signature-debug", "edited_stages": null, "edited_goal": null, "pm_notes": "Merge into HTTP Signature debug contract."},
+  {"seed_id": "seed-httpsig-06", "decision": "approve", "approved_workflow_id": "http-signature-debug", "edited_stages": null, "edited_goal": null, "pm_notes": "Merge into HTTP Signature debug contract."},
+  {"seed_id": "seed-mpa-01", "decision": "edit", "approved_workflow_id": "microform-payer-auth-state-machine", "edited_stages": ["microform_tokenize", "payer_auth_setup", "enrollment_check", "challenge_or_frictionless", "validate_authentication", "authorize_with_auth_result"], "edited_goal": "Sequence Microform tokenization with Payer Authentication enrollment, challenge/frictionless handling, and authorization using the authentication result.", "pm_notes": "Lock full state machine stages."},
+  {"seed_id": "seed-mpa-02", "decision": "approve", "approved_workflow_id": "microform-payer-auth-state-machine", "edited_stages": null, "edited_goal": null, "pm_notes": "Merge into Microform + Payer Auth contract."},
+  {"seed_id": "seed-mpa-03", "decision": "approve", "approved_workflow_id": "microform-payer-auth-state-machine", "edited_stages": null, "edited_goal": null, "pm_notes": "Merge into Microform + Payer Auth contract."},
+  {"seed_id": "seed-mpa-04", "decision": "approve", "approved_workflow_id": "microform-payer-auth-state-machine", "edited_stages": null, "edited_goal": null, "pm_notes": "Merge into Microform + Payer Auth contract."},
+  {"seed_id": "seed-mpa-05", "decision": "approve", "approved_workflow_id": "microform-payer-auth-state-machine", "edited_stages": null, "edited_goal": null, "pm_notes": "Merge into Microform + Payer Auth contract."},
+  {"seed_id": "seed-mpa-06", "decision": "approve", "approved_workflow_id": "microform-payer-auth-state-machine", "edited_stages": null, "edited_goal": null, "pm_notes": "Merge into Microform + Payer Auth contract."},
+  {"seed_id": "seed-mpa-07", "decision": "approve", "approved_workflow_id": "microform-payer-auth-state-machine", "edited_stages": null, "edited_goal": null, "pm_notes": "Merge into Microform + Payer Auth contract."}
+]

@@ -1,0 +1,53 @@
+{
+  "workflow_id": "flex-token-lifecycle",
+  "oracle_answer": {
+    "uses_transient_token_path": true,
+    "persists_transient_jwt": false,
+    "calls_tms_create_instrument": true,
+    "stages_completed": [
+      "capture_transient_token",
+      "validate_token_type",
+      "create_permanent_instrument",
+      "authorize_with_instrument"
+    ]
+  },
+  "bad_answer": {
+    "uses_transient_token_path": false,
+    "persists_transient_jwt": true,
+    "calls_tms_create_instrument": false,
+    "stages_completed": [
+      "capture_transient_token",
+      "authorize_with_instrument"
+    ],
+    "mistake": "Treats transientTokenJwt as a reusable PAN and skips TMS persistence"
+  },
+  "verifier_private_checks": [
+    {
+      "check_id": "no_persist_transient",
+      "field": "persists_transient_jwt",
+      "expected": false
+    },
+    {
+      "check_id": "uses_flex_to_tms_path",
+      "field": "uses_transient_token_path",
+      "expected": true
+    },
+    {
+      "check_id": "creates_permanent_instrument",
+      "field": "calls_tms_create_instrument",
+      "expected": true
+    },
+    {
+      "check_id": "stage_order_includes_validate",
+      "field": "stages_completed",
+      "contains": "validate_token_type"
+    }
+  ],
+  "fixture_id": "fixture-flex-v0",
+  "expected_bad_failure_ids": [
+    "no_persist_transient",
+    "uses_flex_to_tms_path",
+    "creates_permanent_instrument",
+    "stage_order_includes_validate"
+  ]
+}
