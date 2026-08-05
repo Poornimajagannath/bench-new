@@ -1,0 +1,369 @@
+{
+  "stage": "specs_to_docs_compose",
+  "source_id": "cybersource-payments-core-openapi",
+  "lineage_origin": "generated_from_spec",
+  "units": [
+    {
+      "unit_id": "cybersource-payments-core-openapi:ref:createCredit",
+      "doc_id": "doc-cybersource-payments-core-openapi",
+      "api_name": "CyberSource Payments Core (local Relay fixture)",
+      "endpoint": "/pts/v2/credits",
+      "http_method": "POST",
+      "summary": "Create a credit",
+      "auth_requirements": [
+        "httpSignature"
+      ],
+      "path_params": [],
+      "query_params": [],
+      "request_fields": [
+        {
+          "name": "CreditRequest",
+          "type": "object",
+          "required": true,
+          "constraints": []
+        }
+      ],
+      "response_fields": [
+        {
+          "name": "Payment",
+          "type": "object",
+          "description": "Success schema Payment"
+        }
+      ],
+      "error_cases": [
+        {
+          "code": "error_schema",
+          "meaning": "Error payload shaped by ErrorResponse",
+          "recovery": "Inspect reason/details; fix request or auth; retry in sandbox only"
+        }
+      ],
+      "workflows": [
+        "microform-payer-auth-state-machine"
+      ],
+      "code_examples": [],
+      "evidence_quotes": [
+        "Create a credit"
+      ],
+      "operation_id": "createCredit",
+      "lineage_origin": "generated_from_spec"
+    },
+    {
+      "unit_id": "cybersource-payments-core-openapi:ref:createPayment",
+      "doc_id": "doc-cybersource-payments-core-openapi",
+      "api_name": "CyberSource Payments Core (local Relay fixture)",
+      "endpoint": "/pts/v2/payments",
+      "http_method": "POST",
+      "summary": "Create a payment authorization",
+      "auth_requirements": [
+        "httpSignature"
+      ],
+      "path_params": [],
+      "query_params": [],
+      "request_fields": [
+        {
+          "name": "CreatePaymentRequest",
+          "type": "object",
+          "required": true,
+          "constraints": []
+        }
+      ],
+      "response_fields": [
+        {
+          "name": "Payment",
+          "type": "object",
+          "description": "Success schema Payment"
+        }
+      ],
+      "error_cases": [
+        {
+          "code": "error_schema",
+          "meaning": "Error payload shaped by ErrorResponse",
+          "recovery": "Inspect reason/details; fix request or auth; retry in sandbox only"
+        }
+      ],
+      "workflows": [
+        "microform-payer-auth-state-machine"
+      ],
+      "code_examples": [],
+      "evidence_quotes": [
+        "Create a payment authorization",
+        "Authorize a payment in sandbox using tokenized or instrument identifiers. Do not send raw PAN."
+      ],
+      "operation_id": "createPayment",
+      "lineage_origin": "generated_from_spec"
+    },
+    {
+      "unit_id": "cybersource-payments-core-openapi:ref:getPayment",
+      "doc_id": "doc-cybersource-payments-core-openapi",
+      "api_name": "CyberSource Payments Core (local Relay fixture)",
+      "endpoint": "/pts/v2/payments/{id}",
+      "http_method": "GET",
+      "summary": "Retrieve a payment",
+      "auth_requirements": [
+        "httpSignature"
+      ],
+      "path_params": [
+        {
+          "name": "id",
+          "type": "string",
+          "required": true,
+          "description": "Path parameter id"
+        }
+      ],
+      "query_params": [],
+      "request_fields": [],
+      "response_fields": [
+        {
+          "name": "Payment",
+          "type": "object",
+          "description": "Success schema Payment"
+        }
+      ],
+      "error_cases": [
+        {
+          "code": "error_schema",
+          "meaning": "Error payload shaped by ErrorResponse",
+          "recovery": "Inspect reason/details; fix request or auth; retry in sandbox only"
+        }
+      ],
+      "workflows": [
+        "microform-payer-auth-state-machine"
+      ],
+      "code_examples": [],
+      "evidence_quotes": [
+        "Retrieve a payment"
+      ],
+      "operation_id": "getPayment",
+      "lineage_origin": "generated_from_spec"
+    },
+    {
+      "unit_id": "cybersource-payments-core-openapi:ref:capturePayment",
+      "doc_id": "doc-cybersource-payments-core-openapi",
+      "api_name": "CyberSource Payments Core (local Relay fixture)",
+      "endpoint": "/pts/v2/payments/{id}/captures",
+      "http_method": "POST",
+      "summary": "Capture an authorized payment",
+      "auth_requirements": [
+        "httpSignature"
+      ],
+      "path_params": [
+        {
+          "name": "id",
+          "type": "string",
+          "required": true,
+          "description": "Path parameter id"
+        }
+      ],
+      "query_params": [],
+      "request_fields": [
+        {
+          "name": "CaptureRequest",
+          "type": "object",
+          "required": true,
+          "constraints": []
+        }
+      ],
+      "response_fields": [
+        {
+          "name": "Payment",
+          "type": "object",
+          "description": "Success schema Payment"
+        }
+      ],
+      "error_cases": [
+        {
+          "code": "error_schema",
+          "meaning": "Error payload shaped by ErrorResponse",
+          "recovery": "Inspect reason/details; fix request or auth; retry in sandbox only"
+        }
+      ],
+      "workflows": [
+        "microform-payer-auth-state-machine"
+      ],
+      "code_examples": [],
+      "evidence_quotes": [
+        "Capture an authorized payment"
+      ],
+      "operation_id": "capturePayment",
+      "lineage_origin": "generated_from_spec"
+    },
+    {
+      "unit_id": "cybersource-payments-core-openapi:ref:createMppCredentialSetup",
+      "doc_id": "doc-cybersource-payments-core-openapi",
+      "api_name": "CyberSource Payments Core (local Relay fixture)",
+      "endpoint": "/risk/v1/authentication-setups",
+      "http_method": "POST",
+      "summary": "Create payer authentication / MPP credential setup",
+      "auth_requirements": [
+        "httpSignature"
+      ],
+      "path_params": [],
+      "query_params": [],
+      "request_fields": [
+        {
+          "name": "MppCredentialRequest",
+          "type": "object",
+          "required": true,
+          "constraints": []
+        }
+      ],
+      "response_fields": [
+        {
+          "name": "MppCredential",
+          "type": "object",
+          "description": "Success schema MppCredential"
+        }
+      ],
+      "error_cases": [
+        {
+          "code": "error_schema",
+          "meaning": "Error payload shaped by ErrorResponse",
+          "recovery": "Inspect reason/details; fix request or auth; retry in sandbox only"
+        }
+      ],
+      "workflows": [
+        "microform-payer-auth-state-machine"
+      ],
+      "code_examples": [],
+      "evidence_quotes": [
+        "Create payer authentication / MPP credential setup",
+        "Payer Authentication setup prerequisite before enrollment. Microform tokenize alone is not 3DS completion."
+      ],
+      "operation_id": "createMppCredentialSetup",
+      "lineage_origin": "generated_from_spec"
+    },
+    {
+      "unit_id": "cybersource-payments-core-openapi:ref:checkMppEnrollment",
+      "doc_id": "doc-cybersource-payments-core-openapi",
+      "api_name": "CyberSource Payments Core (local Relay fixture)",
+      "endpoint": "/risk/v1/authentications",
+      "http_method": "POST",
+      "summary": "Check payer authentication enrollment",
+      "auth_requirements": [
+        "httpSignature"
+      ],
+      "path_params": [],
+      "query_params": [],
+      "request_fields": [
+        {
+          "name": "MppCredentialRequest",
+          "type": "object",
+          "required": true,
+          "constraints": []
+        }
+      ],
+      "response_fields": [
+        {
+          "name": "MppCredential",
+          "type": "object",
+          "description": "Success schema MppCredential"
+        }
+      ],
+      "error_cases": [
+        {
+          "code": "error_schema",
+          "meaning": "Error payload shaped by ErrorResponse",
+          "recovery": "Inspect reason/details; fix request or auth; retry in sandbox only"
+        }
+      ],
+      "workflows": [
+        "microform-payer-auth-state-machine"
+      ],
+      "code_examples": [],
+      "evidence_quotes": [
+        "Check payer authentication enrollment",
+        "Enrollment may return FRICTIONLESS, CHALLENGE, or UNAVAILABLE paths."
+      ],
+      "operation_id": "checkMppEnrollment",
+      "lineage_origin": "generated_from_spec"
+    },
+    {
+      "unit_id": "cybersource-payments-core-openapi:ref:createCustomer",
+      "doc_id": "doc-cybersource-payments-core-openapi",
+      "api_name": "CyberSource Payments Core (local Relay fixture)",
+      "endpoint": "/tms/v2/customers",
+      "http_method": "POST",
+      "summary": "Create a TMS customer",
+      "auth_requirements": [
+        "httpSignature"
+      ],
+      "path_params": [],
+      "query_params": [],
+      "request_fields": [
+        {
+          "name": "CustomerRequest",
+          "type": "object",
+          "required": true,
+          "constraints": []
+        }
+      ],
+      "response_fields": [
+        {
+          "name": "Customer",
+          "type": "object",
+          "description": "Success schema Customer"
+        }
+      ],
+      "error_cases": [
+        {
+          "code": "error_schema",
+          "meaning": "Error payload shaped by ErrorResponse",
+          "recovery": "Inspect reason/details; fix request or auth; retry in sandbox only"
+        }
+      ],
+      "workflows": [
+        "microform-payer-auth-state-machine"
+      ],
+      "code_examples": [],
+      "evidence_quotes": [
+        "Create a TMS customer"
+      ],
+      "operation_id": "createCustomer",
+      "lineage_origin": "generated_from_spec"
+    },
+    {
+      "unit_id": "cybersource-payments-core-openapi:ref:getCustomer",
+      "doc_id": "doc-cybersource-payments-core-openapi",
+      "api_name": "CyberSource Payments Core (local Relay fixture)",
+      "endpoint": "/tms/v2/customers/{customerId}",
+      "http_method": "GET",
+      "summary": "Retrieve a TMS customer",
+      "auth_requirements": [
+        "httpSignature"
+      ],
+      "path_params": [
+        {
+          "name": "customerId",
+          "type": "string",
+          "required": true,
+          "description": "Path parameter customerId"
+        }
+      ],
+      "query_params": [],
+      "request_fields": [],
+      "response_fields": [
+        {
+          "name": "Customer",
+          "type": "object",
+          "description": "Success schema Customer"
+        }
+      ],
+      "error_cases": [
+        {
+          "code": "error_schema",
+          "meaning": "Error payload shaped by ErrorResponse",
+          "recovery": "Inspect reason/details; fix request or auth; retry in sandbox only"
+        }
+      ],
+      "workflows": [
+        "microform-payer-auth-state-machine"
+      ],
+      "code_examples": [],
+      "evidence_quotes": [
+        "Retrieve a TMS customer"
+      ],
+      "operation_id": "getCustomer",
+      "lineage_origin": "generated_from_spec"
+    }
+  ]
+}

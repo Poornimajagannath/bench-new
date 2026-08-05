@@ -1,7 +1,7 @@
 # Plan: Relay Specs-to-Docs V0 (local prototype plan)
 
 **ID:** 2026-08-04-002
-**Status:** Planned (not implemented)
+**Status:** Implemented (local prototype)
 **Scope:** Local proof planning inside `bench-new` (not production Relay)
 
 ## Honest label
@@ -230,15 +230,22 @@ Expected artifacts:
 
 ## Definition of Done (when implemented later)
 
-- [ ] Local OpenAPI source registered and snapshotted
-- [ ] Parser emits deterministic `contract_entity` objects
-- [ ] Composer emits `api_reference_unit` drafts + eval seeds
-- [ ] Reconciliation report created without mutating source fixtures
-- [ ] Promotion blocked on contract-alignment failure
-- [ ] Linked workflow/quickstart lineage recorded when available
-- [ ] Unit tests cover parse/compose/reconcile/promote
-- [ ] Language remains honest: no real GitHub automation, DocETL, or Harbor claims
-- [ ] Existing content-engine and contract-compiler tests still pass
+- [x] Local OpenAPI source registered and snapshotted
+- [x] Parser emits deterministic `contract_entity` objects
+- [x] Composer emits `api_reference_unit` drafts + eval seeds
+- [x] Reconciliation report created without mutating source fixtures
+- [x] Promotion blocked on contract-alignment failure
+- [x] Linked workflow/quickstart lineage recorded when available
+- [x] Unit tests cover parse/compose/reconcile/promote
+- [x] Language remains honest: no real GitHub automation, DocETL, or Harbor claims
+- [x] Existing content-engine and contract-compiler tests still pass
+
+### Local CyberSource fixture note
+
+Upstream “8 CyberSource drafts” were not present in this repo when Specs-to-Docs V0 was implemented.
+V0 ships a frozen local OpenAPI fixture with 8 operations covering Payments, Captures, Credits, Customers, and MPP Credentials:
+`data/content_engine/specs/cybersource-payments-core.openapi.json`.
+It is CyberSource-shaped and sandbox-oriented; it is **not** a live downloaded CyberSource catalog.
 
 ## Rollout alignment with SDD
 
@@ -262,6 +269,8 @@ Expected artifacts:
 
 Implement Specs-to-Docs as a **separate local lane** that feeds the same Relay object graph and promotion gates, rather than bolting generation into the quickstart extractor. Keep human docs and upstream specs immutable; generate Relay-layer drafts; reconcile; eval; then promote.
 
-## Explicit non-action in this PR
+## Implementation command
 
-This document is plan-only. No parser/composer/reconcile code, fixtures, or pipeline command are included here.
+```bash
+python3 pipelines/run_specs_to_docs_v0.py --source cybersource-payments-core-openapi
+```
