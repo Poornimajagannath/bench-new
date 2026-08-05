@@ -1,0 +1,51 @@
+{
+  "source_id": "template-config",
+  "status": "promoted",
+  "schema_passed": true,
+  "content_passed": true,
+  "agent_use_status": "passed",
+  "issues": [
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "template-config:step:1:**sdk-v0.0.77**-\u2014-auth-type-must-be-`http_signat"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "template-config:step:2:**sdk-config-validation**-\u2014-`ast.literal_eval`-c"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "template-config:step:3:**sdk-model-names**-\u2014-use-`ptsv2payments*`-prefi"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "template-config:step:4:**sdk-field-casing**-\u2014-snake_case-in-python-(e.g"
+    }
+  ],
+  "promoted_unit_ids": [
+    "template-config:overview:0:environment-variables",
+    "template-config:overview:0:configuration-dictionary-(python-sdk)",
+    "template-config:overview:0:docs-vs-sdk",
+    "template-config:overview:0:auth-type-values",
+    "template-config:overview:0:sandbox-vs-production",
+    "template-config:prerequisite:0:sdk-installation",
+    "template-config:step:1:**sdk-v0.0.77**-\u2014-auth-type-must-be-`http_signat",
+    "template-config:step:2:**sdk-config-validation**-\u2014-`ast.literal_eval`-c",
+    "template-config:step:3:**sdk-model-names**-\u2014-use-`ptsv2payments*`-prefi",
+    "template-config:step:4:**sdk-field-casing**-\u2014-snake_case-in-python-(e.g",
+    "template-config:overview:0:error-handling-template",
+    "template-config:overview:0:security-checklist"
+  ],
+  "linked_workflow_id": "http-signature-debug",
+  "contract_bundle_path": "artifacts/contracts/http-signature-debug.contract_bundle.json",
+  "context_pack_path": "artifacts/content_engine/context_packs/template-config.context_pack.json",
+  "objects_path": "artifacts/content_engine/objects/template-config.quickstart_units.json"
+}

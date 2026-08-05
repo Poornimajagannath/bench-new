@@ -1,0 +1,42 @@
+{
+  "source_id": "scenario-authentication",
+  "status": "promoted",
+  "schema_passed": true,
+  "content_passed": true,
+  "agent_use_status": "passed",
+  "issues": [
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "scenario-authentication:step:1:understand-where-to-get-api-credentials-from-the"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "scenario-authentication:step:2:use-the-correct-credential-format-(not-what-docs"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "scenario-authentication:step:3:make-a-successful-api-call-with-the-test-card"
+    }
+  ],
+  "promoted_unit_ids": [
+    "scenario-authentication:overview:0:question",
+    "scenario-authentication:step:1:understand-where-to-get-api-credentials-from-the",
+    "scenario-authentication:step:2:use-the-correct-credential-format-(not-what-docs",
+    "scenario-authentication:step:3:make-a-successful-api-call-with-the-test-card",
+    "scenario-authentication:prerequisite:0:inputs",
+    "scenario-authentication:validation_check:4:success-criteria",
+    "scenario-authentication:warning:4:error-categories-to-track",
+    "scenario-authentication:next_step:4:resources",
+    "scenario-authentication:next_step:4:agent-instruction"
+  ],
+  "linked_workflow_id": "http-signature-debug",
+  "contract_bundle_path": "artifacts/contracts/http-signature-debug.contract_bundle.json",
+  "context_pack_path": "artifacts/content_engine/context_packs/scenario-authentication.context_pack.json",
+  "objects_path": "artifacts/content_engine/objects/scenario-authentication.quickstart_units.json"
+}

@@ -83,5 +83,71 @@
       "verifier_result"
     ],
     "isolation_note": "V0 does not run Harbor, tempo-evals, or Docker isolation. This preview documents how a future eval export could package the agent-visible task against verifier-private fixtures."
-  }
+  },
+  "verifier_result_path": "artifacts/verifier_results/flex-token-lifecycle.result.json",
+  "improvement_actions": [
+    {
+      "action_id": "flex-token-lifecycle-docs",
+      "product_surface": "docs",
+      "severity": "high",
+      "summary": "Clarify Flex Token Lifecycle stage ordering in public docs",
+      "rationale": "Developers confused adjacent APIs and skipped required stages.",
+      "vap_cli": null
+    },
+    {
+      "action_id": "flex-token-lifecycle-vap-cli",
+      "product_surface": "vap_cli",
+      "severity": "high",
+      "summary": "Ship a VAP CLI workflow verifier for this contract",
+      "rationale": "CLI should verify readiness, recovery, and support-safe evidence \u2014 not only wrap an API call.",
+      "vap_cli": {
+        "goal": "can I pass it straight into TMS to store a permanent instrument, or do I need another step?",
+        "command": "vap workflow verify --id flex-token-lifecycle --fixture local",
+        "api_sdk_facts": [
+          "Flex Microform returns a short-lived transientTokenJwt",
+          "TMS createInstrument accepts a Flex token via a dedicated transient-token path, not as raw pan",
+          "Transient tokens must not be persisted as long-lived customer credentials"
+        ],
+        "readiness_checks": [
+          "Frozen seeds present under data/seeds/",
+          "No live credentials exported",
+          "Local fixture id resolved for workflow",
+          "Stage ready: capture_transient_token",
+          "Stage ready: validate_token_type",
+          "Stage ready: create_permanent_instrument",
+          "Stage ready: authorize_with_instrument"
+        ],
+        "recovery_path": [
+          "Re-run discovery to refresh typed candidate",
+          "Compare agent plan stages against workflow contract stages",
+          "Apply verifier-private checks to the candidate answer only",
+          "Emit support-safe evidence without secrets or PAN"
+        ],
+        "support_safe_evidence": [
+          "workflow_id",
+          "failed check ids",
+          "stage list",
+          "public doc refs from seeds"
+        ],
+        "telemetry_eval_hints": [
+          "track:enrollment_skip_rate",
+          "track:field_name_mismatch_rate",
+          "track:transient_token_persist_attempts",
+          "eval:verifier_catch_rate_on_bad_answer"
+        ],
+        "future_mcp_metadata": {
+          "mcp_tool": "vap.verify_workflow",
+          "inputs": [
+            "workflow_id",
+            "candidate_answer_ref"
+          ],
+          "outputs": [
+            "check_results",
+            "improvement_actions"
+          ],
+          "auth": "none-local-fixture"
+        }
+      }
+    }
+  ]
 }

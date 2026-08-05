@@ -1,0 +1,298 @@
+{
+  "stage": "content_engine_extract",
+  "inspired_by": "ucbepic/docetl (imported; Frame.code_map, no LLM)",
+  "extractor_label": "imported-code_map",
+  "source_id": "scenario-first-transaction",
+  "units": [
+    {
+      "unit_id": "scenario-first-transaction:overview:0:question",
+      "source_page_id": "doc-scenario-first-transaction",
+      "unit_type": "overview",
+      "title": "Question",
+      "goal": "First Transaction \u2014 Payment Auth",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "flex-token-lifecycle"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "Can an agent make its first successful payment authentication with CyberSource?",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "Can an agent make its first successful payment authentication with CyberSource?"
+      ]
+    },
+    {
+      "unit_id": "scenario-first-transaction:step:1:use-the-credentials-from-the-authentication-scen",
+      "source_page_id": "doc-scenario-first-transaction",
+      "unit_type": "step",
+      "title": "Use the credentials from the authentication scenario",
+      "goal": "First Transaction \u2014 Payment Auth",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "flex-token-lifecycle"
+      ],
+      "sequence_number": 1,
+      "body_markdown": "Use the credentials from the authentication scenario",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.7,
+      "evidence_quotes": [
+        "Use the credentials from the authentication scenario"
+      ]
+    },
+    {
+      "unit_id": "scenario-first-transaction:step:2:read-the-cybersource-payment-api-documentation",
+      "source_page_id": "doc-scenario-first-transaction",
+      "unit_type": "step",
+      "title": "Read the CyberSource payment API documentation",
+      "goal": "First Transaction \u2014 Payment Auth",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "flex-token-lifecycle"
+      ],
+      "sequence_number": 2,
+      "body_markdown": "Read the CyberSource payment API documentation",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.7,
+      "evidence_quotes": [
+        "Read the CyberSource payment API documentation"
+      ]
+    },
+    {
+      "unit_id": "scenario-first-transaction:step:3:make-a-test-payment-auth-with-the-test-card",
+      "source_page_id": "doc-scenario-first-transaction",
+      "unit_type": "step",
+      "title": "Make a test payment auth with the test card",
+      "goal": "First Transaction \u2014 Payment Auth",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "flex-token-lifecycle"
+      ],
+      "sequence_number": 3,
+      "body_markdown": "Make a test payment auth with the test card",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.7,
+      "evidence_quotes": [
+        "Make a test payment auth with the test card"
+      ]
+    },
+    {
+      "unit_id": "scenario-first-transaction:step:4:get-a-transaction-id-back-in-the-response",
+      "source_page_id": "doc-scenario-first-transaction",
+      "unit_type": "step",
+      "title": "Get a transaction ID back in the response",
+      "goal": "First Transaction \u2014 Payment Auth",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "flex-token-lifecycle"
+      ],
+      "sequence_number": 4,
+      "body_markdown": "Get a transaction ID back in the response",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.7,
+      "evidence_quotes": [
+        "Get a transaction ID back in the response"
+      ]
+    },
+    {
+      "unit_id": "scenario-first-transaction:prerequisite:0:inputs",
+      "source_page_id": "doc-scenario-first-transaction",
+      "unit_type": "prerequisite",
+      "title": "Inputs",
+      "goal": "First Transaction \u2014 Payment Auth",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "flex-token-lifecycle"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "- CyberSource sandbox credentials (from authentication scenario)\n- CyberSource test card (4111111111111111, expiry 12/2031)\n- CyberSource sandbox URL\n- Payment API documentation",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "- CyberSource sandbox credentials (from authentication scenario) - CyberSource test card (4111111111111111, expiry 12/2031) - CyberSource sandbox URL - Payme..."
+      ]
+    },
+    {
+      "unit_id": "scenario-first-transaction:validation_check:5:success-criteria",
+      "source_page_id": "doc-scenario-first-transaction",
+      "unit_type": "validation_check",
+      "title": "Success Criteria",
+      "goal": "First Transaction \u2014 Payment Auth",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "flex-token-lifecycle"
+      ],
+      "sequence_number": 5,
+      "body_markdown": "- [ ] **PASS**: Agent makes a payment auth that returns a 200-level HTTP response\n- [ ] **PASS**: Agent does not throw payment errors (400/422)\n- [ ] **PASS**: Agent gets a transaction ID in the response",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "- [ ] **PASS**: Agent makes a payment auth that returns a 200-level HTTP response - [ ] **PASS**: Agent does not throw payment errors (400/422) - [ ] **PASS*..."
+      ]
+    },
+    {
+      "unit_id": "scenario-first-transaction:warning:5:error-categories-to-track",
+      "source_page_id": "doc-scenario-first-transaction",
+      "unit_type": "warning",
+      "title": "Error Categories to Track",
+      "goal": "First Transaction \u2014 Payment Auth",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "flex-token-lifecycle"
+      ],
+      "sequence_number": 5,
+      "body_markdown": "- `PAYMENT_MISSING_FIELD` \u2014 agent didn't include required fields (e.g., billTo)\n- `PAYMENT_INVALID_CARD` \u2014 agent used an invalid card number\n- `PAYMENT_AUTH_ERROR` \u2014 agent's auth failed\n- `PAYMENT_WRONG_ENDPOINT` \u2014 agent pointed to wrong API endpoint",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "- `PAYMENT_MISSING_FIELD` \u2014 agent didn't include required fields (e.g., billTo) - `PAYMENT_INVALID_CARD` \u2014 agent used an invalid card number - `PAYMENT_AUTH_..."
+      ]
+    },
+    {
+      "unit_id": "scenario-first-transaction:next_step:5:resources",
+      "source_page_id": "doc-scenario-first-transaction",
+      "unit_type": "next_step",
+      "title": "Resources",
+      "goal": "First Transaction \u2014 Payment Auth",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "flex-token-lifecycle"
+      ],
+      "sequence_number": 5,
+      "body_markdown": "- CyberSource developer portal: `developer.cybersource.com`\n- CyberSource llms.txt: `developer.cybersource.com/llms.txt`\n- Payment API reference",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "- CyberSource developer portal: `developer.cybersource.com` - CyberSource llms.txt: `developer.cybersource.com/llms.txt` - Payment API reference"
+      ]
+    },
+    {
+      "unit_id": "scenario-first-transaction:next_step:5:agent-instruction",
+      "source_page_id": "doc-scenario-first-transaction",
+      "unit_type": "next_step",
+      "title": "Agent Instruction",
+      "goal": "First Transaction \u2014 Payment Auth",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "flex-token-lifecycle"
+      ],
+      "sequence_number": 5,
+      "body_markdown": "Read the CyberSource payment documentation. Make a payment authentication with the test card that returns a transaction ID.",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "Read the CyberSource payment documentation. Make a payment authentication with the test card that returns a transaction ID."
+      ]
+    }
+  ]
+}

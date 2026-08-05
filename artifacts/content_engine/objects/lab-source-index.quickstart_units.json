@@ -1,0 +1,188 @@
+{
+  "stage": "content_engine_extract",
+  "inspired_by": "ucbepic/docetl (imported; Frame.code_map, no LLM)",
+  "extractor_label": "imported-code_map",
+  "source_id": "lab-source-index",
+  "units": [
+    {
+      "unit_id": "lab-source-index:overview:0:documentation",
+      "source_page_id": "doc-lab-source-index",
+      "unit_type": "overview",
+      "title": "Documentation",
+      "goal": "Source Index \u2014 CyberSource Developer Portal",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "lab-source-index"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "- **Developer Portal:** https://developer.cybersource.com\n- **LLMs.txt:** https://developer.cybersource.com/llms.txt \u2014 full site index, preferred patterns, security rules\n- **API Reference (OpenAPI):** https://developer.cybersource.com/api-reference-assets/specs/cybs_merged.json\n- **GitHub SDKs:** https://github.com/CyberSource \u2014 official REST SDKs",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "- **Developer Portal:** https://developer.cybersource.com - **LLMs.txt:** https://developer.cybersource.com/llms.txt \u2014 full site index, preferred patterns, s..."
+      ]
+    },
+    {
+      "unit_id": "lab-source-index:overview:0:preferred-patterns-(from-llms.txt)",
+      "source_page_id": "doc-lab-source-index",
+      "unit_type": "overview",
+      "title": "Preferred Patterns (from llms.txt)",
+      "goal": "Source Index \u2014 CyberSource Developer Portal",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "lab-source-index"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "- Use **REST API** only (Simple Order/SOAP deprecated)\n- Use **JSON** request/response formats\n- Prefer **JWT** over HTTP Signature for auth\n- Use **Unified Checkout** as default for web card acceptance\n- Use **Token Management Service** for tokenization\n- Always test on **sandbox** at `apitest.cybersource.com`\n- Default processor: **Visa Platform Connect (CTV)**",
+      "commands": [],
+      "api_entities": [
+        "HTTP Signature",
+        "Unified Checkout"
+      ],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "- Use **REST API** only (Simple Order/SOAP deprecated) - Use **JSON** request/response formats - Prefer **JWT** over HTTP Signature for auth - Use **Unified ..."
+      ]
+    },
+    {
+      "unit_id": "lab-source-index:overview:0:mcp-(agent-toolkit)",
+      "source_page_id": "doc-lab-source-index",
+      "unit_type": "overview",
+      "title": "MCP (Agent Toolkit)",
+      "goal": "Source Index \u2014 CyberSource Developer Portal",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "lab-source-index"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "- **Visa Acceptance Agent Toolkit:** https://developer.visaacceptance.com/docs/vas/en-us/agent-toolkit/\n- **CyberSource MCP:** Not yet public \u2014 available in private CyberSource GitHub repo or via Google search",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "- **Visa Acceptance Agent Toolkit:** https://developer.visaacceptance.com/docs/vas/en-us/agent-toolkit/ - **CyberSource MCP:** Not yet public \u2014 available in ..."
+      ]
+    },
+    {
+      "unit_id": "lab-source-index:prerequisite:0:sdk-installation",
+      "source_page_id": "doc-lab-source-index",
+      "unit_type": "prerequisite",
+      "title": "SDK Installation",
+      "goal": "Source Index \u2014 CyberSource Developer Portal",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "lab-source-index"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "```bash\n# Node.js SDK (official, latest)\nnpm install cybersource-rest-client\n\n# Python SDK (official)\npip install cybersource-rest-client\n\n# TypeScript SDK\nnpm install @paciolan/cybersource-sdk\n```",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "```bash # Node.js SDK (official, latest) npm install cybersource-rest-client # Python SDK (official) pip install cybersource-rest-client # TypeScript SDK npm..."
+      ]
+    },
+    {
+      "unit_id": "lab-source-index:prerequisite:0:sandbox-testing",
+      "source_page_id": "doc-lab-source-index",
+      "unit_type": "prerequisite",
+      "title": "Sandbox Testing",
+      "goal": "Source Index \u2014 CyberSource Developer Portal",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "lab-source-index"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "- **Test card:** 4111111111111111, expiry 12/2031, CVV 123\n- **Sandbox endpoint:** https://apitest.cybersource.com\n- **Sandbox signup:** https://developer.cybersource.com/hello-world/sandbox.md",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "- **Test card:** 4111111111111111, expiry 12/2031, CVV 123 - **Sandbox endpoint:** https://apitest.cybersource.com - **Sandbox signup:** https://developer.cy..."
+      ]
+    },
+    {
+      "unit_id": "lab-source-index:warning:1:known-doc-gaps",
+      "source_page_id": "doc-lab-source-index",
+      "unit_type": "warning",
+      "title": "Known Doc Gaps",
+      "goal": "Source Index \u2014 CyberSource Developer Portal",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "lab-source-index"
+      ],
+      "sequence_number": 1,
+      "body_markdown": "- SDK auth field names differ from docs: SDK uses `merchantKeyId` / `merchantsecretKey`, docs say `keyId` / `secretKey`\n- Some required fields (e.g., `billTo` on payments) not documented in API reference\n- Response codes are documented but error recovery guidance is sparse",
+      "commands": [],
+      "api_entities": [
+        "merchantKeyId",
+        "merchantsecretKey"
+      ],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "- SDK auth field names differ from docs: SDK uses `merchantKeyId` / `merchantsecretKey`, docs say `keyId` / `secretKey` - Some required fields (e.g., `billTo..."
+      ]
+    }
+  ]
+}

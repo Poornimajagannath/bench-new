@@ -1,0 +1,588 @@
+{
+  "stage": "content_engine_extract",
+  "inspired_by": "ucbepic/docetl (imported; Frame.code_map, no LLM)",
+  "extractor_label": "imported-code_map",
+  "source_id": "template-digital-wallet",
+  "units": [
+    {
+      "unit_id": "template-digital-wallet:overview:0:sdk-models-used",
+      "source_page_id": "doc-template-digital-wallet",
+      "unit_type": "overview",
+      "title": "SDK Models Used",
+      "goal": "Digital Wallet Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "template-digital-wallet"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "- `CreatePaymentRequest` \u2014 Main payment request object\n- `Ptsv2paymentsClientReferenceInformation` \u2014 Order reference\n- `Ptsv2paymentsOrderInformation` \u2014 Order details\n- `Ptsv2paymentsOrderInformationAmountDetails` \u2014 Amount and currency\n- `Ptsv2paymentsOrderInformationBillTo` \u2014 Billing address\n- `Ptsv2paymentsPaymentInformation` \u2014 Payment method\n- `Ptsv2paymentsPaymentInformationTokenizedCard` \u2014 Tokenized card (wallet)\n- `Ptsv2paymentsPaymentInformationWallet` \u2014 Wallet payment (PayPal, etc.)",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "- `CreatePaymentRequest` \u2014 Main payment request object - `Ptsv2paymentsClientReferenceInformation` \u2014 Order reference - `Ptsv2paymentsOrderInformation` \u2014 Orde..."
+      ]
+    },
+    {
+      "unit_id": "template-digital-wallet:overview:0:ptsv2paymentspaymentinformationtokenizedcard",
+      "source_page_id": "doc-template-digital-wallet",
+      "unit_type": "overview",
+      "title": "Ptsv2paymentsPaymentInformationTokenizedCard",
+      "goal": "Digital Wallet Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "template-digital-wallet"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "| Property | Type | Required | Description |\n|----------|------|----------|-------------|\n| `number` | string | Yes | Tokenized card number (from wallet) |\n| `expiration_month` | string | Yes | Two-digit month (MM) |\n| `expiration_year` | string | Yes | Four-digit year (YYYY) |\n| `type` | string | Yes | Three-digit card type code |\n| `brand` | string | No | Wallet brand identifier |",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "| Property | Type | Required | Description | |----------|------|----------|-------------| | `number` | string | Yes | Tokenized card number (from wallet) | |..."
+      ]
+    },
+    {
+      "unit_id": "template-digital-wallet:overview:0:ptsv2paymentspaymentinformationwallet",
+      "source_page_id": "doc-template-digital-wallet",
+      "unit_type": "overview",
+      "title": "Ptsv2paymentsPaymentInformationWallet",
+      "goal": "Digital Wallet Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "template-digital-wallet"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "| Property | Type | Required | Description |\n|----------|------|----------|-------------|\n| `wallet_type` | string | Yes | GOOGLE_PAY, APPLE_PAY, PAYPAL, etc. |\n| `token_id` | string | Yes | Token from wallet provider |\n| `provider` | string | No | Wallet provider identifier |",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "| Property | Type | Required | Description | |----------|------|----------|-------------| | `wallet_type` | string | Yes | GOOGLE_PAY, APPLE_PAY, PAYPAL, etc..."
+      ]
+    },
+    {
+      "unit_id": "template-digital-wallet:overview:0:wallet-types",
+      "source_page_id": "doc-template-digital-wallet",
+      "unit_type": "overview",
+      "title": "Wallet Types",
+      "goal": "Digital Wallet Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "template-digital-wallet"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "| Wallet | Type Value | Required Fields |\n|--------|-----------|-----------------|\n| Google Pay | `GOOGLE_PAY` | token_id, brand |\n| Apple Pay | `APPLE_PAY` | token_id, brand |\n| PayPal | `PAYPAL` | payer_id, provider |\n| Amazon Pay | `AMAZON_PAY` | token_id, provider |",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "| Wallet | Type Value | Required Fields | |--------|-----------|-----------------| | Google Pay | `GOOGLE_PAY` | token_id, brand | | Apple Pay | `APPLE_PAY` ..."
+      ]
+    },
+    {
+      "unit_id": "template-digital-wallet:step:1:**google-pay-requires-`brand`-field**-\u2014-set-to-`",
+      "source_page_id": "doc-template-digital-wallet",
+      "unit_type": "step",
+      "title": "**Google Pay requires `brand` field** \u2014 set to `GOOGLE_PAY` or wallet brand",
+      "goal": "Digital Wallet Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "template-digital-wallet"
+      ],
+      "sequence_number": 1,
+      "body_markdown": "**Google Pay requires `brand` field** \u2014 set to `GOOGLE_PAY` or wallet brand",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.7,
+      "evidence_quotes": [
+        "**Google Pay requires `brand` field** \u2014 set to `GOOGLE_PAY` or wallet brand"
+      ]
+    },
+    {
+      "unit_id": "template-digital-wallet:step:2:**apple-pay-requires-token-from-apple's-sdk**-\u2014-",
+      "source_page_id": "doc-template-digital-wallet",
+      "unit_type": "step",
+      "title": "**Apple Pay requires token from Apple's SDK** \u2014 cannot be hardcoded",
+      "goal": "Digital Wallet Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "template-digital-wallet"
+      ],
+      "sequence_number": 2,
+      "body_markdown": "**Apple Pay requires token from Apple's SDK** \u2014 cannot be hardcoded",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.7,
+      "evidence_quotes": [
+        "**Apple Pay requires token from Apple's SDK** \u2014 cannot be hardcoded"
+      ]
+    },
+    {
+      "unit_id": "template-digital-wallet:step:3:**paypal-requires-paypal-sdk-integration**-\u2014-dif",
+      "source_page_id": "doc-template-digital-wallet",
+      "unit_type": "step",
+      "title": "**PayPal requires PayPal SDK integration** \u2014 different flow than cards",
+      "goal": "Digital Wallet Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "template-digital-wallet"
+      ],
+      "sequence_number": 3,
+      "body_markdown": "**PayPal requires PayPal SDK integration** \u2014 different flow than cards",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.7,
+      "evidence_quotes": [
+        "**PayPal requires PayPal SDK integration** \u2014 different flow than cards"
+      ]
+    },
+    {
+      "unit_id": "template-digital-wallet:step:4:**digital-wallet-tokens-expire**-\u2014-must-refresh-",
+      "source_page_id": "doc-template-digital-wallet",
+      "unit_type": "step",
+      "title": "**Digital wallet tokens expire** \u2014 must refresh periodically",
+      "goal": "Digital Wallet Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "template-digital-wallet"
+      ],
+      "sequence_number": 4,
+      "body_markdown": "**Digital wallet tokens expire** \u2014 must refresh periodically",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.7,
+      "evidence_quotes": [
+        "**Digital wallet tokens expire** \u2014 must refresh periodically"
+      ]
+    },
+    {
+      "unit_id": "template-digital-wallet:step:5:**some-processors-require-additional-3d-secure**",
+      "source_page_id": "doc-template-digital-wallet",
+      "unit_type": "step",
+      "title": "**Some processors require additional 3D Secure** for wallet payments",
+      "goal": "Digital Wallet Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "template-digital-wallet"
+      ],
+      "sequence_number": 5,
+      "body_markdown": "**Some processors require additional 3D Secure** for wallet payments",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.7,
+      "evidence_quotes": [
+        "**Some processors require additional 3D Secure** for wallet payments"
+      ]
+    },
+    {
+      "unit_id": "template-digital-wallet:step:6:**wallet-payments-cannot-be-voided**-\u2014-must-use-",
+      "source_page_id": "doc-template-digital-wallet",
+      "unit_type": "step",
+      "title": "**Wallet payments cannot be voided** \u2014 must use capture/refund instead",
+      "goal": "Digital Wallet Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "template-digital-wallet"
+      ],
+      "sequence_number": 6,
+      "body_markdown": "**Wallet payments cannot be voided** \u2014 must use capture/refund instead",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.7,
+      "evidence_quotes": [
+        "**Wallet payments cannot be voided** \u2014 must use capture/refund instead"
+      ]
+    },
+    {
+      "unit_id": "template-digital-wallet:step:7:**wallet-transactions-have-different-fee-structu",
+      "source_page_id": "doc-template-digital-wallet",
+      "unit_type": "step",
+      "title": "**Wallet transactions have different fee structures** \u2014 check with processor",
+      "goal": "Digital Wallet Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "template-digital-wallet"
+      ],
+      "sequence_number": 7,
+      "body_markdown": "**Wallet transactions have different fee structures** \u2014 check with processor",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.7,
+      "evidence_quotes": [
+        "**Wallet transactions have different fee structures** \u2014 check with processor"
+      ]
+    },
+    {
+      "unit_id": "template-digital-wallet:step:8:user-initiates-payment-in-wallet-app",
+      "source_page_id": "doc-template-digital-wallet",
+      "unit_type": "step",
+      "title": "User initiates payment in wallet app",
+      "goal": "Digital Wallet Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "template-digital-wallet"
+      ],
+      "sequence_number": 8,
+      "body_markdown": "User initiates payment in wallet app",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.7,
+      "evidence_quotes": [
+        "User initiates payment in wallet app"
+      ]
+    },
+    {
+      "unit_id": "template-digital-wallet:step:9:wallet-app-authenticates-user-(biometrics,-pin,-",
+      "source_page_id": "doc-template-digital-wallet",
+      "unit_type": "step",
+      "title": "Wallet app authenticates user (biometrics, PIN, etc.)",
+      "goal": "Digital Wallet Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "template-digital-wallet"
+      ],
+      "sequence_number": 9,
+      "body_markdown": "Wallet app authenticates user (biometrics, PIN, etc.)",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.7,
+      "evidence_quotes": [
+        "Wallet app authenticates user (biometrics, PIN, etc.)"
+      ]
+    },
+    {
+      "unit_id": "template-digital-wallet:step:10:wallet-app-sends-token-to-merchant",
+      "source_page_id": "doc-template-digital-wallet",
+      "unit_type": "step",
+      "title": "Wallet app sends token to merchant",
+      "goal": "Digital Wallet Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "template-digital-wallet"
+      ],
+      "sequence_number": 10,
+      "body_markdown": "Wallet app sends token to merchant",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.7,
+      "evidence_quotes": [
+        "Wallet app sends token to merchant"
+      ]
+    },
+    {
+      "unit_id": "template-digital-wallet:step:11:merchant-includes-token-in-cybersource-payment-r",
+      "source_page_id": "doc-template-digital-wallet",
+      "unit_type": "step",
+      "title": "Merchant includes token in CyberSource payment request",
+      "goal": "Digital Wallet Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "template-digital-wallet"
+      ],
+      "sequence_number": 11,
+      "body_markdown": "Merchant includes token in CyberSource payment request",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.7,
+      "evidence_quotes": [
+        "Merchant includes token in CyberSource payment request"
+      ]
+    },
+    {
+      "unit_id": "template-digital-wallet:step:12:cybersource-processes-transaction-with-token",
+      "source_page_id": "doc-template-digital-wallet",
+      "unit_type": "step",
+      "title": "CyberSource processes transaction with token",
+      "goal": "Digital Wallet Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "template-digital-wallet"
+      ],
+      "sequence_number": 12,
+      "body_markdown": "CyberSource processes transaction with token",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.7,
+      "evidence_quotes": [
+        "CyberSource processes transaction with token"
+      ]
+    },
+    {
+      "unit_id": "template-digital-wallet:overview:0:3d-secure-model-properties",
+      "source_page_id": "doc-template-digital-wallet",
+      "unit_type": "overview",
+      "title": "3D Secure Model Properties",
+      "goal": "Digital Wallet Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "template-digital-wallet"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "| Property | Type | Required | Description |\n|----------|------|----------|-------------|\n| `authentication_status` | string | No | Y, N, U, A, R, C, D |\n| `eci` | string | No | Electronic Commerce Indicator |\n| `avs_result` | string | No | AVS result code |",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "| Property | Type | Required | Description | |----------|------|----------|-------------| | `authentication_status` | string | No | Y, N, U, A, R, C, D | | `..."
+      ]
+    },
+    {
+      "unit_id": "template-digital-wallet:overview:0:error-recovery",
+      "source_page_id": "doc-template-digital-wallet",
+      "unit_type": "overview",
+      "title": "Error Recovery",
+      "goal": "Digital Wallet Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "template-digital-wallet"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "| Error | Recovery |\n|-------|----------|\n| `INVALID_DATA` | Check token format and expiry |\n| `TOKEN_EXPIRED` | Prompt user to re-authenticate with wallet |\n| `AUTH_FAILED` | Verify auth credentials |\n| `NETWORK_ERROR` | Implement retry with exponential backoff |\n| `3D_SECURE_REQUIRED` | Redirect user for authentication |",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "| Error | Recovery | |-------|----------| | `INVALID_DATA` | Check token format and expiry | | `TOKEN_EXPIRED` | Prompt user to re-authenticate with wallet |..."
+      ]
+    },
+    {
+      "unit_id": "template-digital-wallet:overview:0:wallet-specific-errors",
+      "source_page_id": "doc-template-digital-wallet",
+      "unit_type": "overview",
+      "title": "Wallet-Specific Errors",
+      "goal": "Digital Wallet Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "template-digital-wallet"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "| Error | Meaning | Fix |\n|-------|---------|-----|\n| `INVALID_TOKEN` | Token is malformed or expired | Prompt user to re-authenticate |\n| `TOKEN_NOT_FOUND` | Token not found on CyberSource side | Use fresh token from wallet provider |\n| `3D_SECURE_FAILED` | Authentication failed | Redirect user to retry authentication |\n| `WALLET_NOT_SUPPORTED` | Processor doesn't support this wallet | Fall back to card payment |\n| `INSUFFICIENT_FUNDS` | Wallet balance insufficient | Prompt user for different payment method |",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "| Error | Meaning | Fix | |-------|---------|-----| | `INVALID_TOKEN` | Token is malformed or expired | Prompt user to re-authenticate | | `TOKEN_NOT_FOUND` ..."
+      ]
+    },
+    {
+      "unit_id": "template-digital-wallet:overview:0:implementation-checklist",
+      "source_page_id": "doc-template-digital-wallet",
+      "unit_type": "overview",
+      "title": "Implementation Checklist",
+      "goal": "Digital Wallet Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "template-digital-wallet"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "- [ ] Integrate wallet provider SDK (Google, Apple, PayPal, etc.)\n- [ ] Configure wallet payment buttons in UI\n- [ ] Handle token refresh flow\n- [ ] Implement 3D Secure fallback\n- [ ] Add error handling for expired tokens\n- [ ] Test with wallet test cards\n- [ ] Verify fee structure with processor",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "- [ ] Integrate wallet provider SDK (Google, Apple, PayPal, etc.) - [ ] Configure wallet payment buttons in UI - [ ] Handle token refresh flow - [ ] Implemen..."
+      ]
+    }
+  ]
+}

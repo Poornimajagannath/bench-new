@@ -1,0 +1,75 @@
+{
+  "pack_id": "ctx-lab-sandbox-rules",
+  "source_id": "lab-sandbox-rules",
+  "product": [
+    "cybersource",
+    "visa-acceptance"
+  ],
+  "audience": [
+    "developer",
+    "agent"
+  ],
+  "title": "Sandbox Rules",
+  "goal": "Sandbox Rules",
+  "unit_ids": [
+    "lab-sandbox-rules:prerequisite:0:test-cards",
+    "lab-sandbox-rules:overview:0:sandbox-behavior",
+    "lab-sandbox-rules:overview:0:what-sandbox-simulates",
+    "lab-sandbox-rules:warning:1:what-sandbox-does-not-simulate"
+  ],
+  "units_summary": [
+    {
+      "unit_id": "lab-sandbox-rules:prerequisite:0:test-cards",
+      "unit_type": "prerequisite",
+      "title": "Test Cards",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "lab-sandbox-rules:overview:0:sandbox-behavior",
+      "unit_type": "overview",
+      "title": "Sandbox Behavior",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "lab-sandbox-rules:overview:0:what-sandbox-simulates",
+      "unit_type": "overview",
+      "title": "What Sandbox Simulates",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "lab-sandbox-rules:warning:1:what-sandbox-does-not-simulate",
+      "unit_type": "warning",
+      "title": "What Sandbox Does NOT Simulate",
+      "sequence_number": 1,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    }
+  ],
+  "provenance": {
+    "source_id": "lab-sandbox-rules",
+    "snapshot_id": "lab-sandbox-rules-32d2f45402e9",
+    "content_hash": "32d2f45402e9831b57f5d293ad363fc261900562a94813afa656ceed48766d0b",
+    "canonical_url": "local://context/sandbox-rules.md",
+    "doc_id": "doc-lab-sandbox-rules"
+  },
+  "constraints": [
+    "Derived Relay context pack \u2014 does not rewrite source docs",
+    "No live credentials, PAN, or secrets",
+    "Extraction backend recorded in provenance / honest_label (heuristic default; optional real DocETL via --discovery)"
+  ],
+  "linked_workflow_id": null
+}

@@ -36,6 +36,17 @@ def normalize_document(
     title = title_match.group(1).strip() if title_match else record.source_id
     freshness = _meta_line(r"^Freshness:\s*(.+)$", markdown) or "unknown"
     goal = _meta_line(r"^Goal:\s*(.+)$", markdown)
+    if not goal:
+        # Real scenario docs often put the intent under ## Question.
+        q = re.search(
+            r"^##\s+Question\s*\n+(.+?)(?:\n##|\Z)",
+            markdown,
+            flags=re.IGNORECASE | re.DOTALL,
+        )
+        if q:
+            goal = " ".join(q.group(1).split())
+    if not goal:
+        goal = title
 
     doc = NormalizedDocument(
         doc_id=f"doc-{record.source_id}",
@@ -49,7 +60,7 @@ def normalize_document(
         page_type=record.source_type,
         freshness_date=freshness,
         normalized_markdown=markdown,
-        extracted_metadata={"goal": goal} if goal else {},
+        extracted_metadata={"goal": goal},
     )
 
     NORMALIZED_DIR.mkdir(parents=True, exist_ok=True)

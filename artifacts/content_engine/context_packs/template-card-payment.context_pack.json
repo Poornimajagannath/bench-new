@@ -1,0 +1,108 @@
+{
+  "pack_id": "ctx-template-card-payment",
+  "source_id": "template-card-payment",
+  "product": [
+    "cybersource",
+    "visa-acceptance"
+  ],
+  "audience": [
+    "developer",
+    "agent"
+  ],
+  "title": "Card Payment Integration Template",
+  "goal": "Card Payment Integration Template",
+  "unit_ids": [
+    "template-card-payment:overview:0:sdk-models-used",
+    "template-card-payment:overview:0:ptsv2paymentsclientreferenceinformation",
+    "template-card-payment:overview:0:ptsv2paymentsorderinformationamountdetails",
+    "template-card-payment:overview:0:ptsv2paymentsorderinformationbillto",
+    "template-card-payment:overview:0:ptsv2paymentspaymentinformationcard",
+    "template-card-payment:overview:0:card-type-codes",
+    "template-card-payment:overview:0:error-recovery"
+  ],
+  "units_summary": [
+    {
+      "unit_id": "template-card-payment:overview:0:sdk-models-used",
+      "unit_type": "overview",
+      "title": "SDK Models Used",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-card-payment:overview:0:ptsv2paymentsclientreferenceinformation",
+      "unit_type": "overview",
+      "title": "Ptsv2paymentsClientReferenceInformation",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-card-payment:overview:0:ptsv2paymentsorderinformationamountdetails",
+      "unit_type": "overview",
+      "title": "Ptsv2paymentsOrderInformationAmountDetails",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-card-payment:overview:0:ptsv2paymentsorderinformationbillto",
+      "unit_type": "overview",
+      "title": "Ptsv2paymentsOrderInformationBillTo",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-card-payment:overview:0:ptsv2paymentspaymentinformationcard",
+      "unit_type": "overview",
+      "title": "Ptsv2paymentsPaymentInformationCard",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-card-payment:overview:0:card-type-codes",
+      "unit_type": "overview",
+      "title": "Card Type Codes",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-card-payment:overview:0:error-recovery",
+      "unit_type": "overview",
+      "title": "Error Recovery",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    }
+  ],
+  "provenance": {
+    "source_id": "template-card-payment",
+    "snapshot_id": "template-card-payment-1cd714735762",
+    "content_hash": "1cd71473576265ca9037e2a32bafe7092fa1a9cb59a2b02f3c8b3601b9a1d5ac",
+    "canonical_url": "local://templates/card-payment/README.md",
+    "doc_id": "doc-template-card-payment"
+  },
+  "constraints": [
+    "Derived Relay context pack \u2014 does not rewrite source docs",
+    "No live credentials, PAN, or secrets",
+    "Extraction backend recorded in provenance / honest_label (heuristic default; optional real DocETL via --discovery)"
+  ],
+  "linked_workflow_id": "flex-token-lifecycle"
+}

@@ -1,0 +1,356 @@
+{
+  "stage": "content_engine_extract",
+  "inspired_by": "ucbepic/docetl (imported; Frame.code_map, no LLM)",
+  "extractor_label": "imported-code_map",
+  "source_id": "template-config",
+  "units": [
+    {
+      "unit_id": "template-config:overview:0:environment-variables",
+      "source_page_id": "doc-template-config",
+      "unit_type": "overview",
+      "title": "Environment Variables",
+      "goal": "Configuration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "http-signature-debug"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "```bash\n# Required\nCYBS_MERCHANT_ID=your_merchant_id_from_developer_portal\nCYBS_KEY_ID=your_http_signature_key_id\nCYBS_SHARED_SECRET=your_shared_secret\nCYBS_ENVIRONMENT=sandbox  # or \"production\"\n\n# Optional\nCYBS_RUN_ID=run_identifier\nCYBS_SCENARIO=scenario_name\nCYBS_LANGUAGE=python  # or \"node\", \"java\", \"typescript\"\n```",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "```bash # Required CYBS_MERCHANT_ID=your_merchant_id_from_developer_portal CYBS_KEY_ID=your_http_signature_key_id CYBS_SHARED_SECRET=your_shared_secret CYBS_..."
+      ]
+    },
+    {
+      "unit_id": "template-config:overview:0:configuration-dictionary-(python-sdk)",
+      "source_page_id": "doc-template-config",
+      "unit_type": "overview",
+      "title": "Configuration Dictionary (Python SDK)",
+      "goal": "Configuration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "http-signature-debug"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "```python\nconfiguration_dictionary = {\n    \"merchantid\": os.environ[\"CYBS_MERCHANT_ID\"],\n    \"run_environment\": \"apitest.cybersource.com\",  # sandbox (CyberSource REST only)\n    # \"run_environment\": \"api.cybersource.com\",    # production\n    \"authentication_type\": \"HTTP_Signature\",  # MUST be capitalized!\n    \"merchant_keyid\": os.environ[\"CYBS_KEY_ID\"],\n    \"merchant_secretkey\": os.environ[\"CYBS_SHARED_SECRET\"],\n    \"isSDK\": True,  # Required by SDK\n}\n```",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "```python configuration_dictionary = { \"merchantid\": os.environ[\"CYBS_MERCHANT_ID\"], \"run_environment\": \"apitest.cybersource.com\", # sandbox (CyberSource RES..."
+      ]
+    },
+    {
+      "unit_id": "template-config:overview:0:docs-vs-sdk",
+      "source_page_id": "doc-template-config",
+      "unit_type": "overview",
+      "title": "Docs vs SDK",
+      "goal": "Configuration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "http-signature-debug"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "| In Docs | In SDK | Correct? |\n|---------|--------|----------|\n| `keyId` | `merchant_keyid` | `merchant_keyid` \u2705 |\n| `secretKey` | `merchant_secretkey` | `merchant_secretkey` \u2705 |\n| `merchantId` | `merchantid` | `merchantid` \u2705 |\n| `runEnvironment` | `run_environment` | `run_environment` \u2705 |\n| `authType` | `authentication_type` | `authentication_type` \u2705 |",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "| In Docs | In SDK | Correct? | |---------|--------|----------| | `keyId` | `merchant_keyid` | `merchant_keyid` \u2705 | | `secretKey` | `merchant_secretkey` | `m..."
+      ]
+    },
+    {
+      "unit_id": "template-config:overview:0:auth-type-values",
+      "source_page_id": "doc-template-config",
+      "unit_type": "overview",
+      "title": "Auth Type Values",
+      "goal": "Configuration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "http-signature-debug"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "| Value | Use Case |\n|-------|----------|\n| `HTTP_Signature` | Production-ready, simpler setup |\n| `jwt` | Requires P12 certificate, MLE support |",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "| Value | Use Case | |-------|----------| | `HTTP_Signature` | Production-ready, simpler setup | | `jwt` | Requires P12 certificate, MLE support |"
+      ]
+    },
+    {
+      "unit_id": "template-config:overview:0:sandbox-vs-production",
+      "source_page_id": "doc-template-config",
+      "unit_type": "overview",
+      "title": "Sandbox vs Production",
+      "goal": "Configuration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "http-signature-debug"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "| Property | Sandbox | Production |\n|----------|---------|------------|\n| `run_environment` | `apitest.cybersource.com` | `api.cybersource.com` |\n| `authentication_type` | `HTTP_Signature` | `HTTP_Signature` or `jwt` |\n| Test cards | `4111111111111111` | Real cards only |\n| Response time | Fast (simulated) | Real processing time |",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "| Property | Sandbox | Production | |----------|---------|------------| | `run_environment` | `apitest.cybersource.com` | `api.cybersource.com` | | `authenti..."
+      ]
+    },
+    {
+      "unit_id": "template-config:prerequisite:0:sdk-installation",
+      "source_page_id": "doc-template-config",
+      "unit_type": "prerequisite",
+      "title": "SDK Installation",
+      "goal": "Configuration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "http-signature-debug"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "```bash\npip install cybersource-rest-client-python\n```",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "```bash pip install cybersource-rest-client-python ```"
+      ]
+    },
+    {
+      "unit_id": "template-config:step:1:**sdk-v0.0.77**-\u2014-auth-type-must-be-`http_signat",
+      "source_page_id": "doc-template-config",
+      "unit_type": "step",
+      "title": "**SDK v0.0.77** \u2014 auth type must be `HTTP_Signature` (capitalized)",
+      "goal": "Configuration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "http-signature-debug"
+      ],
+      "sequence_number": 1,
+      "body_markdown": "**SDK v0.0.77** \u2014 auth type must be `HTTP_Signature` (capitalized)",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.7,
+      "evidence_quotes": [
+        "**SDK v0.0.77** \u2014 auth type must be `HTTP_Signature` (capitalized)"
+      ]
+    },
+    {
+      "unit_id": "template-config:step:2:**sdk-config-validation**-\u2014-`ast.literal_eval`-c",
+      "source_page_id": "doc-template-config",
+      "unit_type": "step",
+      "title": "**SDK config validation** \u2014 `ast.literal_eval` crashes on JSON booleans (requires patch)",
+      "goal": "Configuration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "http-signature-debug"
+      ],
+      "sequence_number": 2,
+      "body_markdown": "**SDK config validation** \u2014 `ast.literal_eval` crashes on JSON booleans (requires patch)",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.7,
+      "evidence_quotes": [
+        "**SDK config validation** \u2014 `ast.literal_eval` crashes on JSON booleans (requires patch)"
+      ]
+    },
+    {
+      "unit_id": "template-config:step:3:**sdk-model-names**-\u2014-use-`ptsv2payments*`-prefi",
+      "source_page_id": "doc-template-config",
+      "unit_type": "step",
+      "title": "**SDK model names** \u2014 use `Ptsv2payments*` prefix, not `Payment*`",
+      "goal": "Configuration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "http-signature-debug"
+      ],
+      "sequence_number": 3,
+      "body_markdown": "**SDK model names** \u2014 use `Ptsv2payments*` prefix, not `Payment*`",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.7,
+      "evidence_quotes": [
+        "**SDK model names** \u2014 use `Ptsv2payments*` prefix, not `Payment*`"
+      ]
+    },
+    {
+      "unit_id": "template-config:step:4:**sdk-field-casing**-\u2014-snake_case-in-python-(e.g",
+      "source_page_id": "doc-template-config",
+      "unit_type": "step",
+      "title": "**SDK field casing** \u2014 snake_case in Python (e.g., `total_amount`, not `totalAmount`)",
+      "goal": "Configuration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "http-signature-debug"
+      ],
+      "sequence_number": 4,
+      "body_markdown": "**SDK field casing** \u2014 snake_case in Python (e.g., `total_amount`, not `totalAmount`)",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.7,
+      "evidence_quotes": [
+        "**SDK field casing** \u2014 snake_case in Python (e.g., `total_amount`, not `totalAmount`)"
+      ]
+    },
+    {
+      "unit_id": "template-config:overview:0:error-handling-template",
+      "source_page_id": "doc-template-config",
+      "unit_type": "overview",
+      "title": "Error Handling Template",
+      "goal": "Configuration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "http-signature-debug"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "```python\nfrom CyberSource.rest import ApiException\n\ntry:\n    api = PaymentsApi(client_config)\n    return_data, status, body = api.create_payment(json.dumps(request_dict))\n    print(f\"Status: {status}\")\n    print(f\"Response: {body}\")\nexcept ApiException as e:\n    print(f\"API Error {e.status}: {e.reason}\")\n    # Handle specific error codes\n    if e.status == 400:\n        # Invalid data \u2014 check request fields\n        pass\n    elif e.status == 401:\n        # Auth failed \u2014 verify credentials\n        pass\n    elif e.status == 500:\n        # Server error \u2014 implement retry\n        pass\n```",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "```python from CyberSource.rest import ApiException try: api = PaymentsApi(client_config) return_data, status, body = api.create_payment(json.dumps(request_d..."
+      ]
+    },
+    {
+      "unit_id": "template-config:overview:0:security-checklist",
+      "source_page_id": "doc-template-config",
+      "unit_type": "overview",
+      "title": "Security Checklist",
+      "goal": "Configuration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "http-signature-debug"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "- [ ] Never hardcode credentials in source code\n- [ ] Load all credentials from environment variables\n- [ ] Never print secrets in logs (mask with `***`)\n- [ ] Use sandbox for testing, production only when verified\n- [ ] Rotate API keys regularly\n- [ ] Use HTTPS for all API calls (CyberSource enforces this)\n- [ ] Log all API calls for audit trail\n- [ ] Implement rate limiting for sandbox testing",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "- [ ] Never hardcode credentials in source code - [ ] Load all credentials from environment variables - [ ] Never print secrets in logs (mask with `***`) - [..."
+      ]
+    }
+  ]
+}

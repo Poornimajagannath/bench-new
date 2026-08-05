@@ -1,0 +1,11 @@
+{
+  "snapshot_id": "scenario-setup-checkout-d7a764ae44ec",
+  "source_id": "scenario-setup-checkout",
+  "fetched_at": "2026-08-05T04:04:14Z",
+  "content_hash": "d7a764ae44ec8c91e9776cf4369a732ed801d44c8efe5d6814ac9e224d5a24ec",
+  "version_tag": "d7a764ae44ec",
+  "mime_type": "text/markdown",
+  "raw_bytes_location": "artifacts/content_engine/snapshots/scenario-setup-checkout-d7a764ae44ec.md",
+  "canonical_url": "local://scenarios/setup-checkout/task.md",
+  "upstream_last_modified": ""
+}

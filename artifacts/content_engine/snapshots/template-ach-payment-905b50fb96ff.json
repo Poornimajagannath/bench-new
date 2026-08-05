@@ -1,0 +1,11 @@
+{
+  "snapshot_id": "template-ach-payment-905b50fb96ff",
+  "source_id": "template-ach-payment",
+  "fetched_at": "2026-08-05T04:04:14Z",
+  "content_hash": "905b50fb96ffd2ba6e5dd9d691caaa9589ae3e91d4d6078006651973396f50ad",
+  "version_tag": "905b50fb96ff",
+  "mime_type": "text/markdown",
+  "raw_bytes_location": "artifacts/content_engine/snapshots/template-ach-payment-905b50fb96ff.md",
+  "canonical_url": "local://templates/ach-payment/README.md",
+  "upstream_last_modified": ""
+}

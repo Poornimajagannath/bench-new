@@ -1,0 +1,196 @@
+{
+  "pack_id": "ctx-template-ach-payment",
+  "source_id": "template-ach-payment",
+  "product": [
+    "cybersource",
+    "visa-acceptance"
+  ],
+  "audience": [
+    "developer",
+    "agent"
+  ],
+  "title": "ACH Payment Integration Template",
+  "goal": "ACH Payment Integration Template",
+  "unit_ids": [
+    "template-ach-payment:overview:0:sdk-models-used",
+    "template-ach-payment:overview:0:ptsv2paymentspaymentinformationbank",
+    "template-ach-payment:overview:0:ptsv2paymentspaymentinformationbankaccount",
+    "template-ach-payment:overview:0:us-(ach)",
+    "template-ach-payment:overview:0:eu-(sepa)",
+    "template-ach-payment:overview:0:uk-(bacs)",
+    "template-ach-payment:overview:0:required-fields-for-ach",
+    "template-ach-payment:overview:0:error-recovery",
+    "template-ach-payment:step:1:**routing-numbers-must-be-9-digits**-\u2014-not-8,-no",
+    "template-ach-payment:step:2:**account-numbers-are-8-17-digits**-for-most-pro",
+    "template-ach-payment:step:3:**ach-takes-3-5-business-days**-to-settle-\u2014-unli",
+    "template-ach-payment:step:4:**sepa-requires-iban-format**-\u2014-not-just-account",
+    "template-ach-payment:step:5:**bacs-requires-sort-code**-\u2014-6-digits-in-xx-xx-",
+    "template-ach-payment:step:6:**name-on-account-must-match**-the-billing-addre",
+    "template-ach-payment:step:7:**ach-cannot-be-reversed-instantly**-\u2014-requires-"
+  ],
+  "units_summary": [
+    {
+      "unit_id": "template-ach-payment:overview:0:sdk-models-used",
+      "unit_type": "overview",
+      "title": "SDK Models Used",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-ach-payment:overview:0:ptsv2paymentspaymentinformationbank",
+      "unit_type": "overview",
+      "title": "Ptsv2paymentsPaymentInformationBank",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-ach-payment:overview:0:ptsv2paymentspaymentinformationbankaccount",
+      "unit_type": "overview",
+      "title": "Ptsv2paymentsPaymentInformationBankAccount",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-ach-payment:overview:0:us-(ach)",
+      "unit_type": "overview",
+      "title": "US (ACH)",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-ach-payment:overview:0:eu-(sepa)",
+      "unit_type": "overview",
+      "title": "EU (SEPA)",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-ach-payment:overview:0:uk-(bacs)",
+      "unit_type": "overview",
+      "title": "UK (BACS)",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-ach-payment:overview:0:required-fields-for-ach",
+      "unit_type": "overview",
+      "title": "Required Fields for ACH",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-ach-payment:overview:0:error-recovery",
+      "unit_type": "overview",
+      "title": "Error Recovery",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-ach-payment:step:1:**routing-numbers-must-be-9-digits**-\u2014-not-8,-no",
+      "unit_type": "step",
+      "title": "**Routing numbers must be 9 digits** \u2014 not 8, not 10, exactly 9",
+      "sequence_number": 1,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-ach-payment:step:2:**account-numbers-are-8-17-digits**-for-most-pro",
+      "unit_type": "step",
+      "title": "**Account numbers are 8-17 digits** for most processors",
+      "sequence_number": 2,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-ach-payment:step:3:**ach-takes-3-5-business-days**-to-settle-\u2014-unli",
+      "unit_type": "step",
+      "title": "**ACH takes 3-5 business days** to settle \u2014 unlike cards which are instant",
+      "sequence_number": 3,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-ach-payment:step:4:**sepa-requires-iban-format**-\u2014-not-just-account",
+      "unit_type": "step",
+      "title": "**SEPA requires IBAN format** \u2014 not just account number",
+      "sequence_number": 4,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-ach-payment:step:5:**bacs-requires-sort-code**-\u2014-6-digits-in-xx-xx-",
+      "unit_type": "step",
+      "title": "**BACS requires sort code** \u2014 6 digits in XX-XX-XX format",
+      "sequence_number": 5,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-ach-payment:step:6:**name-on-account-must-match**-the-billing-addre",
+      "unit_type": "step",
+      "title": "**Name on account must match** the billing address name",
+      "sequence_number": 6,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-ach-payment:step:7:**ach-cannot-be-reversed-instantly**-\u2014-requires-",
+      "unit_type": "step",
+      "title": "**ACH cannot be reversed instantly** \u2014 requires separate reversal flow",
+      "sequence_number": 7,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    }
+  ],
+  "provenance": {
+    "source_id": "template-ach-payment",
+    "snapshot_id": "template-ach-payment-905b50fb96ff",
+    "content_hash": "905b50fb96ffd2ba6e5dd9d691caaa9589ae3e91d4d6078006651973396f50ad",
+    "canonical_url": "local://templates/ach-payment/README.md",
+    "doc_id": "doc-template-ach-payment"
+  },
+  "constraints": [
+    "Derived Relay context pack \u2014 does not rewrite source docs",
+    "No live credentials, PAN, or secrets",
+    "Extraction backend recorded in provenance / honest_label (heuristic default; optional real DocETL via --discovery)"
+  ],
+  "linked_workflow_id": null
+}

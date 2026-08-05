@@ -1,0 +1,284 @@
+{
+  "pack_id": "ctx-template-multi-currency",
+  "source_id": "template-multi-currency",
+  "product": [
+    "cybersource",
+    "visa-acceptance"
+  ],
+  "audience": [
+    "developer",
+    "agent"
+  ],
+  "title": "Multi-Currency Integration Template",
+  "goal": "Multi-Currency Integration Template",
+  "unit_ids": [
+    "template-multi-currency:overview:0:sdk-models-used",
+    "template-multi-currency:overview:0:ptsv2paymentsorderinformationamountdetails-(mult",
+    "template-multi-currency:overview:0:ptsv2paymentsorderinformationamountdetailscurren",
+    "template-multi-currency:overview:0:currency-codes-(iso-4217)",
+    "template-multi-currency:overview:0:when-to-use-dcc",
+    "template-multi-currency:step:1:customer-selects-currency-on-checkout",
+    "template-multi-currency:step:2:dcc-provider-returns-exchange-rate",
+    "template-multi-currency:step:3:merchant-includes-rate-and-converted-amount-in-p",
+    "template-multi-currency:step:4:cybersource-processes-with-dcc-flags",
+    "template-multi-currency:step:5:response-includes-dcc-details-for-receipt",
+    "template-multi-currency:overview:0:dcc-required-fields",
+    "template-multi-currency:step:6:**all-amounts-must-be-strings**-\u2014-never-use-floa",
+    "template-multi-currency:step:7:**currency-codes-are-3-characters**-\u2014-iso-4217-s",
+    "template-multi-currency:step:8:**decimal-places-vary-by-currency**-\u2014-jpy-has-0,",
+    "template-multi-currency:step:9:**exchange-rates-must-be-from-certified-dcc-prov",
+    "template-multi-currency:step:10:**dcc-rates-expire**-\u2014-typically-within-minutes-",
+    "template-multi-currency:step:11:**some-processors-don't-support-all-currencies**",
+    "template-multi-currency:step:12:**tax/jurisdiction-config-must-match-merchant's-",
+    "template-multi-currency:step:13:**multi-currency-transactions-require-additional",
+    "template-multi-currency:overview:0:best-practices",
+    "template-multi-currency:overview:0:exchange-rate-source",
+    "template-multi-currency:overview:0:error-recovery",
+    "template-multi-currency:overview:0:multi-currency-checklist"
+  ],
+  "units_summary": [
+    {
+      "unit_id": "template-multi-currency:overview:0:sdk-models-used",
+      "unit_type": "overview",
+      "title": "SDK Models Used",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-multi-currency:overview:0:ptsv2paymentsorderinformationamountdetails-(mult",
+      "unit_type": "overview",
+      "title": "Ptsv2paymentsOrderInformationAmountDetails (Multi-Currency)",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-multi-currency:overview:0:ptsv2paymentsorderinformationamountdetailscurren",
+      "unit_type": "overview",
+      "title": "Ptsv2paymentsOrderInformationAmountDetailsCurrencyConversion",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-multi-currency:overview:0:currency-codes-(iso-4217)",
+      "unit_type": "overview",
+      "title": "Currency Codes (ISO 4217)",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-multi-currency:overview:0:when-to-use-dcc",
+      "unit_type": "overview",
+      "title": "When to Use DCC",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-multi-currency:step:1:customer-selects-currency-on-checkout",
+      "unit_type": "step",
+      "title": "Customer selects currency on checkout",
+      "sequence_number": 1,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-multi-currency:step:2:dcc-provider-returns-exchange-rate",
+      "unit_type": "step",
+      "title": "DCC provider returns exchange rate",
+      "sequence_number": 2,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-multi-currency:step:3:merchant-includes-rate-and-converted-amount-in-p",
+      "unit_type": "step",
+      "title": "Merchant includes rate and converted amount in payment request",
+      "sequence_number": 3,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-multi-currency:step:4:cybersource-processes-with-dcc-flags",
+      "unit_type": "step",
+      "title": "CyberSource processes with DCC flags",
+      "sequence_number": 4,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-multi-currency:step:5:response-includes-dcc-details-for-receipt",
+      "unit_type": "step",
+      "title": "Response includes DCC details for receipt",
+      "sequence_number": 5,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-multi-currency:overview:0:dcc-required-fields",
+      "unit_type": "overview",
+      "title": "DCC Required Fields",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-multi-currency:step:6:**all-amounts-must-be-strings**-\u2014-never-use-floa",
+      "unit_type": "step",
+      "title": "**All amounts must be strings** \u2014 never use floats (floating point precision issues)",
+      "sequence_number": 6,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-multi-currency:step:7:**currency-codes-are-3-characters**-\u2014-iso-4217-s",
+      "unit_type": "step",
+      "title": "**Currency codes are 3 characters** \u2014 ISO 4217 standard (USD, EUR, GBP, etc.)",
+      "sequence_number": 7,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-multi-currency:step:8:**decimal-places-vary-by-currency**-\u2014-jpy-has-0,",
+      "unit_type": "step",
+      "title": "**Decimal places vary by currency** \u2014 JPY has 0, USD has 2, KRW has 0",
+      "sequence_number": 8,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-multi-currency:step:9:**exchange-rates-must-be-from-certified-dcc-prov",
+      "unit_type": "step",
+      "title": "**Exchange rates must be from certified DCC providers** \u2014 not random rates",
+      "sequence_number": 9,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-multi-currency:step:10:**dcc-rates-expire**-\u2014-typically-within-minutes-",
+      "unit_type": "step",
+      "title": "**DCC rates expire** \u2014 typically within minutes of request",
+      "sequence_number": 10,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-multi-currency:step:11:**some-processors-don't-support-all-currencies**",
+      "unit_type": "step",
+      "title": "**Some processors don't support all currencies** \u2014 check with your provider",
+      "sequence_number": 11,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-multi-currency:step:12:**tax/jurisdiction-config-must-match-merchant's-",
+      "unit_type": "step",
+      "title": "**Tax/jurisdiction config must match merchant's legal entity** \u2014 not customer's location",
+      "sequence_number": 12,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-multi-currency:step:13:**multi-currency-transactions-require-additional",
+      "unit_type": "step",
+      "title": "**Multi-currency transactions require additional risk checks** \u2014 higher fraud rates",
+      "sequence_number": 13,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-multi-currency:overview:0:best-practices",
+      "unit_type": "overview",
+      "title": "Best Practices",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-multi-currency:overview:0:exchange-rate-source",
+      "unit_type": "overview",
+      "title": "Exchange Rate Source",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-multi-currency:overview:0:error-recovery",
+      "unit_type": "overview",
+      "title": "Error Recovery",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-multi-currency:overview:0:multi-currency-checklist",
+      "unit_type": "overview",
+      "title": "Multi-Currency Checklist",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    }
+  ],
+  "provenance": {
+    "source_id": "template-multi-currency",
+    "snapshot_id": "template-multi-currency-1271d1a78aa5",
+    "content_hash": "1271d1a78aa56872b2413bcd0a2a0aa4bec6ed0c7ca855f6b584cd34f6ce3525",
+    "canonical_url": "local://templates/multi-currency/README.md",
+    "doc_id": "doc-template-multi-currency"
+  },
+  "constraints": [
+    "Derived Relay context pack \u2014 does not rewrite source docs",
+    "No live credentials, PAN, or secrets",
+    "Extraction backend recorded in provenance / honest_label (heuristic default; optional real DocETL via --discovery)"
+  ],
+  "linked_workflow_id": null
+}

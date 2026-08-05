@@ -59,9 +59,9 @@ def build_context_pack(
         },
         constraints=[
             "Derived Relay context pack — does not rewrite source docs",
-            "No network calls",
             "No live credentials, PAN, or secrets",
-            "DocETL-style extraction only in V0",
+            "Extraction backend recorded in provenance / honest_label "
+            "(heuristic default; optional real DocETL via --discovery)",
         ],
         linked_workflow_id=record.linked_workflow_id,
     )

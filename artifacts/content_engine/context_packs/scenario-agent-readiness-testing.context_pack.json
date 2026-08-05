@@ -1,0 +1,141 @@
+{
+  "pack_id": "ctx-scenario-agent-readiness-testing",
+  "source_id": "scenario-agent-readiness-testing",
+  "product": [
+    "cybersource",
+    "visa-acceptance"
+  ],
+  "audience": [
+    "developer",
+    "agent"
+  ],
+  "title": "Agent Readiness Testing \u2014 Benchmark Scenario",
+  "goal": "Agent Readiness Testing \u2014 Benchmark Scenario",
+  "unit_ids": [
+    "scenario-agent-readiness-testing:overview:0:question",
+    "scenario-agent-readiness-testing:step:1:systematic-testing-methodology",
+    "scenario-agent-readiness-testing:step:2:ability-to-categorize-and-prioritize-issues",
+    "scenario-agent-readiness-testing:step:3:clear-documentation-of-findings",
+    "scenario-agent-readiness-testing:step:4:actionable-recommendations",
+    "scenario-agent-readiness-testing:overview:0:scenario-a:-auth-integration-test",
+    "scenario-agent-readiness-testing:overview:0:scenario-b:-multi-payment-method-test",
+    "scenario-agent-readiness-testing:overview:0:scenario-c:-currency-&-internationalization-test",
+    "scenario-agent-readiness-testing:next_step:5:resources",
+    "scenario-agent-readiness-testing:next_step:5:agent-instruction"
+  ],
+  "units_summary": [
+    {
+      "unit_id": "scenario-agent-readiness-testing:overview:0:question",
+      "unit_type": "overview",
+      "title": "Question",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "scenario-agent-readiness-testing:step:1:systematic-testing-methodology",
+      "unit_type": "step",
+      "title": "Systematic testing methodology",
+      "sequence_number": 1,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "scenario-agent-readiness-testing:step:2:ability-to-categorize-and-prioritize-issues",
+      "unit_type": "step",
+      "title": "Ability to categorize and prioritize issues",
+      "sequence_number": 2,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "scenario-agent-readiness-testing:step:3:clear-documentation-of-findings",
+      "unit_type": "step",
+      "title": "Clear documentation of findings",
+      "sequence_number": 3,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "scenario-agent-readiness-testing:step:4:actionable-recommendations",
+      "unit_type": "step",
+      "title": "Actionable recommendations",
+      "sequence_number": 4,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "scenario-agent-readiness-testing:overview:0:scenario-a:-auth-integration-test",
+      "unit_type": "overview",
+      "title": "Scenario A: Auth Integration Test",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "scenario-agent-readiness-testing:overview:0:scenario-b:-multi-payment-method-test",
+      "unit_type": "overview",
+      "title": "Scenario B: Multi-Payment Method Test",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "scenario-agent-readiness-testing:overview:0:scenario-c:-currency-&-internationalization-test",
+      "unit_type": "overview",
+      "title": "Scenario C: Currency & Internationalization Test",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "scenario-agent-readiness-testing:next_step:5:resources",
+      "unit_type": "next_step",
+      "title": "Resources",
+      "sequence_number": 5,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "scenario-agent-readiness-testing:next_step:5:agent-instruction",
+      "unit_type": "next_step",
+      "title": "Agent Instruction",
+      "sequence_number": 5,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    }
+  ],
+  "provenance": {
+    "source_id": "scenario-agent-readiness-testing",
+    "snapshot_id": "scenario-agent-readiness-testing-bbd7e23b6d2a",
+    "content_hash": "bbd7e23b6d2a257ba476981c41d53f1c0ddf765d1536b642506cf328f84db71e",
+    "canonical_url": "local://scenarios/agent-readiness-testing/task.md",
+    "doc_id": "doc-scenario-agent-readiness-testing"
+  },
+  "constraints": [
+    "Derived Relay context pack \u2014 does not rewrite source docs",
+    "No live credentials, PAN, or secrets",
+    "Extraction backend recorded in provenance / honest_label (heuristic default; optional real DocETL via --discovery)"
+  ],
+  "linked_workflow_id": null
+}

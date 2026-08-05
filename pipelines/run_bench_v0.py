@@ -2,10 +2,12 @@
 """Relay Bench V0 staged pipeline runner.
 
 Local prototype inspired by DocETL and Tempo Stable Bench.
-Does NOT import `docetl`, `tempo-evals`, Harbor, or Docker isolation.
+Default discovery is heuristic (no docetl import). Optional --discovery docetl
+runs the real DocETL package via code_map. Still does not import tempo-evals,
+Harbor, or Docker isolation.
 
 raw forum/docs/support questions
--> DocETL-inspired extract of goal/symptoms/entities
+-> extract goal/symptoms/entities (heuristic | DocETL)
 -> suggests workflow_id + stages
 -> PM approves/edits
 -> Relay Bench creates task pack + Stable Bench-inspired verifier
@@ -21,13 +23,17 @@ import argparse
 import json
 import sys
 from pathlib import Path
+from typing import Optional
 
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from relay_bench.contract_compiler import compile_and_write
-from relay_bench.discovery import discover_suggestions
+from relay_bench.docetl_discovery import (
+    EXTRACT_MODES,
+    discover_suggestions_with_backend,
+)
 from relay_bench.pm_gate import require_pm_approved_candidate
 from relay_bench.reporting import build_report, write_report
 from relay_bench.routing import classify_failure
@@ -45,9 +51,18 @@ SUPPORTED = {
 }
 
 
-def run_pipeline(workflow_id: str) -> int:
+def run_pipeline(
+    workflow_id: str,
+    *,
+    discovery: Optional[str] = None,
+    fallback_on_error: bool = False,
+) -> int:
     print("[bench_v0] stage=raw_questions_extract_suggest")
-    rows = discover_suggestions()
+    rows, honest = discover_suggestions_with_backend(
+        mode=discovery,
+        fallback_on_error=fallback_on_error,
+    )
+    print(f"[bench_v0] discovery_label={honest.get('docetl')} mode={honest.get('extract_mode')}")
     for question, extraction, suggestion in rows:
         print(
             f"[bench_v0] seed={question.seed_id} channel={question.channel} "
@@ -129,6 +144,7 @@ def run_pipeline(workflow_id: str) -> int:
         "contract_md": str(contract_md),
         "hidden_truth_separated": True,
         "pm_open": str(md_path),
+        "honest_label": honest,
     }
     print(json.dumps(summary, indent=2))
     return 0
@@ -142,8 +158,26 @@ def main() -> int:
         choices=sorted(SUPPORTED),
         help="PM-approved workflow id to benchmark",
     )
+    parser.add_argument(
+        "--discovery",
+        default=None,
+        choices=list(EXTRACT_MODES),
+        help=(
+            "Discovery extract backend: heuristic (default), docetl (real code_map), "
+            "or docetl-llm. If omitted, reads RELAY_DISCOVERY, else heuristic."
+        ),
+    )
+    parser.add_argument(
+        "--fallback-on-error",
+        action="store_true",
+        help="If DocETL mode cannot run, fall back to heuristic and label honesty",
+    )
     args = parser.parse_args()
-    return run_pipeline(args.workflow)
+    return run_pipeline(
+        args.workflow,
+        discovery=args.discovery,
+        fallback_on_error=args.fallback_on_error,
+    )
 
 
 if __name__ == "__main__":

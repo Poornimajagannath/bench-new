@@ -1,0 +1,98 @@
+{
+  "stage": "content_engine_extract",
+  "inspired_by": "ucbepic/docetl (imported; Frame.code_map, no LLM)",
+  "extractor_label": "imported-code_map",
+  "source_id": "templates-index",
+  "units": [
+    {
+      "unit_id": "templates-index:overview:0:purpose",
+      "source_page_id": "doc-templates-index",
+      "unit_type": "overview",
+      "title": "Purpose",
+      "goal": "Visa Relay \u2014 Payment Templates",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "http-signature-debug"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "These templates show correct CyberSource SDK integration patterns for different payment methods. Agents should reference these when generating integration code.",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "These templates show correct CyberSource SDK integration patterns for different payment methods. Agents should reference these when generating integration code."
+      ]
+    },
+    {
+      "unit_id": "templates-index:overview:0:files",
+      "source_page_id": "doc-templates-index",
+      "unit_type": "overview",
+      "title": "Files",
+      "goal": "Visa Relay \u2014 Payment Templates",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "http-signature-debug"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "| Template | Description |\n|----------|-------------|\n| `card-payment/` | Standard Visa/Mastercard/Amex card payments |\n| `ach-payment/` | Bank account (ACH/EFT) payments |\n| `digital-wallet/` | Google Pay, Apple Pay, PayPal |\n| `multi-currency/` | Multi-currency handling with DCC |\n| `config/` | Authentication and configuration templates |",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "| Template | Description | |----------|-------------| | `card-payment/` | Standard Visa/Mastercard/Amex card payments | | `ach-payment/` | Bank account (ACH/..."
+      ]
+    },
+    {
+      "unit_id": "templates-index:warning:1:common-gotchas",
+      "source_page_id": "doc-templates-index",
+      "unit_type": "warning",
+      "title": "Common Gotchas",
+      "goal": "Visa Relay \u2014 Payment Templates",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "http-signature-debug"
+      ],
+      "sequence_number": 1,
+      "body_markdown": "1. **Auth type must be `HTTP_Signature`** (capitalized), NOT `http_signature`\n2. **SDK field names differ from docs**: `merchantKeyId`/`merchantsecretKey` vs `keyId`/`secretKey`\n3. **`type` field is required** for card payments to avoid wrong card type processing\n4. **`total_amount` and `currency` are required** in `amountDetails`\n5. **`code` is required** in `clientReferenceInformation`\n6. **Card expiry must be future year** (2031, not 2025)\n7. **CyberSource sandbox is rate-limited** \u2014 implement retry logic",
+      "commands": [],
+      "api_entities": [
+        "merchantKeyId",
+        "merchantsecretKey"
+      ],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "1. **Auth type must be `HTTP_Signature`** (capitalized), NOT `http_signature` 2. **SDK field names differ from docs**: `merchantKeyId`/`merchantsecretKey` vs..."
+      ]
+    }
+  ]
+}

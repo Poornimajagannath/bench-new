@@ -1,0 +1,22 @@
+{
+  "doc_id": "doc-lab-sandbox-rules",
+  "source_id": "lab-sandbox-rules",
+  "snapshot_id": "lab-sandbox-rules-32d2f45402e9",
+  "title": "Sandbox Rules",
+  "canonical_url": "local://context/sandbox-rules.md",
+  "source_format": "markdown",
+  "product": [
+    "cybersource",
+    "visa-acceptance"
+  ],
+  "audience": [
+    "developer",
+    "agent"
+  ],
+  "page_type": "context",
+  "freshness_date": "unknown",
+  "normalized_markdown": "# Sandbox Rules\n\n## Test Cards\n\n- **Card Number:** `4111111111111111`\n- **Expiry:** `12/2031`\n- **CVV:** `123`\n- **Billing:** 123 Test St, Seattle, WA 98101, USA\n\n## Sandbox Behavior\n\n- Sandbox simulates production but with test data only\n- Never use production endpoints or credentials\n- Sandbox is rate-limited \u2014 allow retries\n- Sandbox returns predictable responses for testing\n\n## What Sandbox Simulates\n\n- Payment processing\n- Authentication\n- Error responses\n- Transaction IDs\n\n## What Sandbox Does NOT Simulate\n\n- Production-level fraud detection\n- Real card issuer responses\n- Actual fund transfers\n",
+  "extracted_metadata": {
+    "goal": "Sandbox Rules"
+  }
+}

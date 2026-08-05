@@ -1,0 +1,64 @@
+{
+  "pack_id": "ctx-templates-index",
+  "source_id": "templates-index",
+  "product": [
+    "cybersource",
+    "visa-acceptance"
+  ],
+  "audience": [
+    "developer",
+    "agent"
+  ],
+  "title": "Visa Relay \u2014 Payment Templates",
+  "goal": "Visa Relay \u2014 Payment Templates",
+  "unit_ids": [
+    "templates-index:overview:0:purpose",
+    "templates-index:overview:0:files",
+    "templates-index:warning:1:common-gotchas"
+  ],
+  "units_summary": [
+    {
+      "unit_id": "templates-index:overview:0:purpose",
+      "unit_type": "overview",
+      "title": "Purpose",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "templates-index:overview:0:files",
+      "unit_type": "overview",
+      "title": "Files",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "templates-index:warning:1:common-gotchas",
+      "unit_type": "warning",
+      "title": "Common Gotchas",
+      "sequence_number": 1,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    }
+  ],
+  "provenance": {
+    "source_id": "templates-index",
+    "snapshot_id": "templates-index-e0a362841480",
+    "content_hash": "e0a362841480d085ed5d97241bc2656b276e370888b5f01aac5efbdca34fc3da",
+    "canonical_url": "local://templates/README.md",
+    "doc_id": "doc-templates-index"
+  },
+  "constraints": [
+    "Derived Relay context pack \u2014 does not rewrite source docs",
+    "No live credentials, PAN, or secrets",
+    "Extraction backend recorded in provenance / honest_label (heuristic default; optional real DocETL via --discovery)"
+  ],
+  "linked_workflow_id": "http-signature-debug"
+}

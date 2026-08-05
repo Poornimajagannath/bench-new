@@ -115,9 +115,9 @@ python3 pipelines/run_content_engine_v0.py --source microform-payer-auth-quickst
 - [x] Language stays DocETL-style / Harbor-Tempo-style honest
 - [x] Existing workflow contract compiler tests still pass
 
-## Later phases (not this PR)
+## Later phases
 
-1. Optional `--discovery docetl` adapter when an API key exists
+1. Optional `--discovery docetl` adapter — **done in follow-on** (`docetl` = real package `code_map` without LLM; `docetl-llm` when an API key exists)
 2. API reference + sample extraction
 3. Real Tempo/Harbor agent-use runner
 4. Proactive starter-pack onboarding + synthetic tasks
