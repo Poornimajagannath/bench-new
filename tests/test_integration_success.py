@@ -47,8 +47,16 @@ class IntegrationSuccessTests(unittest.TestCase):
         self.assertIn("Local proof only", md)
 
     def test_markdown_renderer_includes_lineage(self):
-        result = assemble_integration_success_pack(ensure_compiled=False)
-        pack = json.loads((ROOT / result["pack_json"]).read_text(encoding="utf-8"))
+        # Read the checked-in pack; do not reassemble with ensure_compiled=False
+        # (that rewrites compile_results to null and dirties the proof artifact).
+        pack_path = (
+            ROOT
+            / "artifacts"
+            / "content_engine"
+            / "integration_success"
+            / "integration_success_pack.json"
+        )
+        pack = json.loads(pack_path.read_text(encoding="utf-8"))
         md = render_integration_success_markdown(pack)
         self.assertIn("Lineage", md)
         self.assertIn("Honesty", md)
