@@ -1,0 +1,247 @@
+{
+  "schema_version": "relay.integration_success_pack.v0",
+  "product": "Integration Success OS",
+  "audience": [
+    "backend_developer"
+  ],
+  "promise": "A developer can integrate our API in a single session, with clear steps, working references, and a go-live checklist.",
+  "workflow_id": "microform-payer-auth-state-machine",
+  "quickstart_source": "microform-payer-auth-quickstart",
+  "openapi_source": "cybersource-payments-core-openapi",
+  "guided_quickstart": {
+    "title": "CyberSource / Visa Acceptance guided integration",
+    "steps": [
+      {
+        "sequence_number": 1,
+        "title": "Tokenize with Microform",
+        "requires": [
+          "microform_client"
+        ],
+        "outcomes": [
+          "transient_token_available"
+        ],
+        "failure_modes": []
+      },
+      {
+        "sequence_number": 2,
+        "title": "Run Payer Auth setup",
+        "requires": [
+          "transient_token_available"
+        ],
+        "outcomes": [
+          "payer_auth_setup_complete"
+        ],
+        "failure_modes": []
+      },
+      {
+        "sequence_number": 3,
+        "title": "Check enrollment",
+        "requires": [
+          "payer_auth_setup_complete"
+        ],
+        "outcomes": [
+          "enrollment_path_known"
+        ],
+        "failure_modes": [
+          "skipping enrollment and authorizing immediately"
+        ]
+      },
+      {
+        "sequence_number": 4,
+        "title": "Handle challenge or frictionless",
+        "requires": [
+          "enrollment_path_known"
+        ],
+        "outcomes": [
+          "authentication_result_ready"
+        ],
+        "failure_modes": []
+      },
+      {
+        "sequence_number": 5,
+        "title": "Validate authentication",
+        "requires": [
+          "authentication_result_ready"
+        ],
+        "outcomes": [
+          "auth_refs_ready"
+        ],
+        "failure_modes": []
+      },
+      {
+        "sequence_number": 6,
+        "title": "Authorize with authentication references",
+        "requires": [
+          "auth_refs_ready"
+        ],
+        "outcomes": [
+          "authorization_submitted"
+        ],
+        "failure_modes": [
+          "authorizing with only the Flex/Microform token and no auth refs"
+        ]
+      }
+    ],
+    "step_count": 6
+  },
+  "api_reference": {
+    "operation_count": 8,
+    "operation_ids": [
+      "createCredit",
+      "createPayment",
+      "getPayment",
+      "capturePayment",
+      "createMppCredentialSetup",
+      "checkMppEnrollment",
+      "createCustomer",
+      "getCustomer"
+    ],
+    "unit_ids": [
+      "cybersource-payments-core-openapi:ref:createCredit",
+      "cybersource-payments-core-openapi:ref:createPayment",
+      "cybersource-payments-core-openapi:ref:getPayment",
+      "cybersource-payments-core-openapi:ref:capturePayment",
+      "cybersource-payments-core-openapi:ref:createMppCredentialSetup",
+      "cybersource-payments-core-openapi:ref:checkMppEnrollment",
+      "cybersource-payments-core-openapi:ref:createCustomer",
+      "cybersource-payments-core-openapi:ref:getCustomer"
+    ]
+  },
+  "test_scenarios": [
+    {
+      "seed_id": "createCredit-happy-path",
+      "kind": "happy_path",
+      "operation_id": "createCredit",
+      "user_query": "Call POST /pts/v2/credits successfully in sandbox"
+    },
+    {
+      "seed_id": "createCredit-missing-auth",
+      "kind": "missing_auth",
+      "operation_id": "createCredit",
+      "user_query": "What happens if auth is missing for createCredit?"
+    },
+    {
+      "seed_id": "createCredit-error-recovery",
+      "kind": "error_recovery",
+      "operation_id": "createCredit",
+      "user_query": "How do I recover from errors on createCredit?"
+    },
+    {
+      "seed_id": "createPayment-happy-path",
+      "kind": "happy_path",
+      "operation_id": "createPayment",
+      "user_query": "Call POST /pts/v2/payments successfully in sandbox"
+    },
+    {
+      "seed_id": "createPayment-missing-auth",
+      "kind": "missing_auth",
+      "operation_id": "createPayment",
+      "user_query": "What happens if auth is missing for createPayment?"
+    },
+    {
+      "seed_id": "createPayment-error-recovery",
+      "kind": "error_recovery",
+      "operation_id": "createPayment",
+      "user_query": "How do I recover from errors on createPayment?"
+    },
+    {
+      "seed_id": "getPayment-happy-path",
+      "kind": "happy_path",
+      "operation_id": "getPayment",
+      "user_query": "Call GET /pts/v2/payments/{id} successfully in sandbox"
+    },
+    {
+      "seed_id": "getPayment-missing-auth",
+      "kind": "missing_auth",
+      "operation_id": "getPayment",
+      "user_query": "What happens if auth is missing for getPayment?"
+    },
+    {
+      "seed_id": "getPayment-error-recovery",
+      "kind": "error_recovery",
+      "operation_id": "getPayment",
+      "user_query": "How do I recover from errors on getPayment?"
+    },
+    {
+      "seed_id": "capturePayment-happy-path",
+      "kind": "happy_path",
+      "operation_id": "capturePayment",
+      "user_query": "Call POST /pts/v2/payments/{id}/captures successfully in sandbox"
+    },
+    {
+      "seed_id": "capturePayment-missing-auth",
+      "kind": "missing_auth",
+      "operation_id": "capturePayment",
+      "user_query": "What happens if auth is missing for capturePayment?"
+    },
+    {
+      "seed_id": "capturePayment-error-recovery",
+      "kind": "error_recovery",
+      "operation_id": "capturePayment",
+      "user_query": "How do I recover from errors on capturePayment?"
+    }
+  ],
+  "go_live_checklist": [
+    {
+      "id": "auth-env",
+      "title": "Load sandbox auth from environment variables",
+      "detail": "Use CYBS_MERCHANT_ID / CYBS_KEY_ID / CYBS_SHARED_SECRET; never hardcode."
+    },
+    {
+      "id": "first-api-call",
+      "title": "Complete first successful sandbox API call",
+      "detail": "Primary ops available: createCredit, createPayment, getPayment, capturePayment"
+    },
+    {
+      "id": "payer-auth-path",
+      "title": "Do not treat Microform tokenize as completed 3DS",
+      "detail": "Run enrollment and challenge/frictionless handling before authorization."
+    },
+    {
+      "id": "error-recovery",
+      "title": "Handle auth and validation errors without leaking secrets",
+      "detail": "Use generated error eval seeds; keep evidence support-safe."
+    },
+    {
+      "id": "go-live-switch",
+      "title": "Switch to production only after sandbox checklist passes",
+      "detail": "V0 does not call production. Keep CYBS_ENVIRONMENT=sandbox until ready."
+    }
+  ],
+  "lineage": {
+    "quickstart_units_path": "artifacts/content_engine/objects/microform-payer-auth-quickstart.quickstart_units.json",
+    "quickstart_context_pack_path": "artifacts/content_engine/context_packs/microform-payer-auth-quickstart.context_pack.json",
+    "api_reference_units_path": "artifacts/content_engine/generated/cybersource-payments-core-openapi.api_reference_units.json",
+    "eval_seeds_path": "artifacts/content_engine/generated/cybersource-payments-core-openapi.eval_seeds.json",
+    "workflow_contract_path": "artifacts/contracts/microform-payer-auth-state-machine.contract_bundle.json",
+    "origins": [
+      "ingested_prose",
+      "generated_from_spec",
+      "hybrid_reconciled"
+    ]
+  },
+  "constraints": [
+    "Local prototype only",
+    "No network calls",
+    "No live credentials, PAN, or secrets",
+    "DocETL-style / Harbor-Tempo-style labels remain honest",
+    "OpenAPI alone does not replace full onboarding narrative"
+  ],
+  "honest_label": {
+    "docetl": "style-only-upstream",
+    "tempo_harbor": "eval-seeds-only",
+    "network": "denied",
+    "humanify": "not-implemented"
+  },
+  "compile_results": {
+    "quickstart": {
+      "ok": true,
+      "unit_count": 11
+    },
+    "specs_to_docs": {
+      "ok": true,
+      "entity_count": 8,
+      "unit_count": 8
+    }
+  }
+}
