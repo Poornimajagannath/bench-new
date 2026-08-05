@@ -23,6 +23,7 @@ This is a throwaway-but-reviewable local prototype. It is **not** production Rel
 | `pipelines/run_bench_v0.py` | Full staged proof for one workflow |
 | `artifacts/` | Generated task packs, verifier results, reports |
 | `reports/` | Stable PM-facing narrative copies |
+| `reports/what_we_built.md` | Orientation overview of what V0 is and is not |
 | `docs/plans/2026-07-25-001-feat-relay-bench-v0-pipeline-plan.md` | Authoritative CE plan |
 
 ## Acceptance criteria
