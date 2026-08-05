@@ -1,0 +1,251 @@
+{
+  "pack_id": "ctx-template-digital-wallet",
+  "source_id": "template-digital-wallet",
+  "product": [
+    "cybersource",
+    "visa-acceptance"
+  ],
+  "audience": [
+    "developer",
+    "agent"
+  ],
+  "title": "Digital Wallet Integration Template",
+  "goal": "Digital Wallet Integration Template",
+  "unit_ids": [
+    "template-digital-wallet:overview:0:sdk-models-used",
+    "template-digital-wallet:overview:0:ptsv2paymentspaymentinformationtokenizedcard",
+    "template-digital-wallet:overview:0:ptsv2paymentspaymentinformationwallet",
+    "template-digital-wallet:overview:0:wallet-types",
+    "template-digital-wallet:step:1:**google-pay-requires-`brand`-field**-\u2014-set-to-`",
+    "template-digital-wallet:step:2:**apple-pay-requires-token-from-apple's-sdk**-\u2014-",
+    "template-digital-wallet:step:3:**paypal-requires-paypal-sdk-integration**-\u2014-dif",
+    "template-digital-wallet:step:4:**digital-wallet-tokens-expire**-\u2014-must-refresh-",
+    "template-digital-wallet:step:5:**some-processors-require-additional-3d-secure**",
+    "template-digital-wallet:step:6:**wallet-payments-cannot-be-voided**-\u2014-must-use-",
+    "template-digital-wallet:step:7:**wallet-transactions-have-different-fee-structu",
+    "template-digital-wallet:step:8:user-initiates-payment-in-wallet-app",
+    "template-digital-wallet:step:9:wallet-app-authenticates-user-(biometrics,-pin,-",
+    "template-digital-wallet:step:10:wallet-app-sends-token-to-merchant",
+    "template-digital-wallet:step:11:merchant-includes-token-in-cybersource-payment-r",
+    "template-digital-wallet:step:12:cybersource-processes-transaction-with-token",
+    "template-digital-wallet:overview:0:3d-secure-model-properties",
+    "template-digital-wallet:overview:0:error-recovery",
+    "template-digital-wallet:overview:0:wallet-specific-errors",
+    "template-digital-wallet:overview:0:implementation-checklist"
+  ],
+  "units_summary": [
+    {
+      "unit_id": "template-digital-wallet:overview:0:sdk-models-used",
+      "unit_type": "overview",
+      "title": "SDK Models Used",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-digital-wallet:overview:0:ptsv2paymentspaymentinformationtokenizedcard",
+      "unit_type": "overview",
+      "title": "Ptsv2paymentsPaymentInformationTokenizedCard",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-digital-wallet:overview:0:ptsv2paymentspaymentinformationwallet",
+      "unit_type": "overview",
+      "title": "Ptsv2paymentsPaymentInformationWallet",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-digital-wallet:overview:0:wallet-types",
+      "unit_type": "overview",
+      "title": "Wallet Types",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-digital-wallet:step:1:**google-pay-requires-`brand`-field**-\u2014-set-to-`",
+      "unit_type": "step",
+      "title": "**Google Pay requires `brand` field** \u2014 set to `GOOGLE_PAY` or wallet brand",
+      "sequence_number": 1,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-digital-wallet:step:2:**apple-pay-requires-token-from-apple's-sdk**-\u2014-",
+      "unit_type": "step",
+      "title": "**Apple Pay requires token from Apple's SDK** \u2014 cannot be hardcoded",
+      "sequence_number": 2,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-digital-wallet:step:3:**paypal-requires-paypal-sdk-integration**-\u2014-dif",
+      "unit_type": "step",
+      "title": "**PayPal requires PayPal SDK integration** \u2014 different flow than cards",
+      "sequence_number": 3,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-digital-wallet:step:4:**digital-wallet-tokens-expire**-\u2014-must-refresh-",
+      "unit_type": "step",
+      "title": "**Digital wallet tokens expire** \u2014 must refresh periodically",
+      "sequence_number": 4,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-digital-wallet:step:5:**some-processors-require-additional-3d-secure**",
+      "unit_type": "step",
+      "title": "**Some processors require additional 3D Secure** for wallet payments",
+      "sequence_number": 5,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-digital-wallet:step:6:**wallet-payments-cannot-be-voided**-\u2014-must-use-",
+      "unit_type": "step",
+      "title": "**Wallet payments cannot be voided** \u2014 must use capture/refund instead",
+      "sequence_number": 6,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-digital-wallet:step:7:**wallet-transactions-have-different-fee-structu",
+      "unit_type": "step",
+      "title": "**Wallet transactions have different fee structures** \u2014 check with processor",
+      "sequence_number": 7,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-digital-wallet:step:8:user-initiates-payment-in-wallet-app",
+      "unit_type": "step",
+      "title": "User initiates payment in wallet app",
+      "sequence_number": 8,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-digital-wallet:step:9:wallet-app-authenticates-user-(biometrics,-pin,-",
+      "unit_type": "step",
+      "title": "Wallet app authenticates user (biometrics, PIN, etc.)",
+      "sequence_number": 9,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-digital-wallet:step:10:wallet-app-sends-token-to-merchant",
+      "unit_type": "step",
+      "title": "Wallet app sends token to merchant",
+      "sequence_number": 10,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-digital-wallet:step:11:merchant-includes-token-in-cybersource-payment-r",
+      "unit_type": "step",
+      "title": "Merchant includes token in CyberSource payment request",
+      "sequence_number": 11,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-digital-wallet:step:12:cybersource-processes-transaction-with-token",
+      "unit_type": "step",
+      "title": "CyberSource processes transaction with token",
+      "sequence_number": 12,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-digital-wallet:overview:0:3d-secure-model-properties",
+      "unit_type": "overview",
+      "title": "3D Secure Model Properties",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-digital-wallet:overview:0:error-recovery",
+      "unit_type": "overview",
+      "title": "Error Recovery",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-digital-wallet:overview:0:wallet-specific-errors",
+      "unit_type": "overview",
+      "title": "Wallet-Specific Errors",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-digital-wallet:overview:0:implementation-checklist",
+      "unit_type": "overview",
+      "title": "Implementation Checklist",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    }
+  ],
+  "provenance": {
+    "source_id": "template-digital-wallet",
+    "snapshot_id": "template-digital-wallet-2f0cc0808c03",
+    "content_hash": "2f0cc0808c0322a12e8bfb060401d85d664f28652ff47d14747f20e378b9df30",
+    "canonical_url": "local://templates/digital-wallet/README.md",
+    "doc_id": "doc-template-digital-wallet"
+  },
+  "constraints": [
+    "Derived Relay context pack \u2014 does not rewrite source docs",
+    "No live credentials, PAN, or secrets",
+    "Extraction backend recorded in provenance / honest_label (heuristic default; optional real DocETL via --discovery)"
+  ],
+  "linked_workflow_id": null
+}

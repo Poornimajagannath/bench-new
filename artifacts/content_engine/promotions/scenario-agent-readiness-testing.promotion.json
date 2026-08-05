@@ -1,0 +1,49 @@
+{
+  "source_id": "scenario-agent-readiness-testing",
+  "status": "promoted",
+  "schema_passed": true,
+  "content_passed": true,
+  "agent_use_status": "deferred",
+  "issues": [
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "scenario-agent-readiness-testing:step:1:systematic-testing-methodology"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "scenario-agent-readiness-testing:step:2:ability-to-categorize-and-prioritize-issues"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "scenario-agent-readiness-testing:step:3:clear-documentation-of-findings"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "scenario-agent-readiness-testing:step:4:actionable-recommendations"
+    }
+  ],
+  "promoted_unit_ids": [
+    "scenario-agent-readiness-testing:overview:0:question",
+    "scenario-agent-readiness-testing:step:1:systematic-testing-methodology",
+    "scenario-agent-readiness-testing:step:2:ability-to-categorize-and-prioritize-issues",
+    "scenario-agent-readiness-testing:step:3:clear-documentation-of-findings",
+    "scenario-agent-readiness-testing:step:4:actionable-recommendations",
+    "scenario-agent-readiness-testing:overview:0:scenario-a:-auth-integration-test",
+    "scenario-agent-readiness-testing:overview:0:scenario-b:-multi-payment-method-test",
+    "scenario-agent-readiness-testing:overview:0:scenario-c:-currency-&-internationalization-test",
+    "scenario-agent-readiness-testing:next_step:5:resources",
+    "scenario-agent-readiness-testing:next_step:5:agent-instruction"
+  ],
+  "linked_workflow_id": null,
+  "contract_bundle_path": null,
+  "context_pack_path": "artifacts/content_engine/context_packs/scenario-agent-readiness-testing.context_pack.json",
+  "objects_path": "artifacts/content_engine/objects/scenario-agent-readiness-testing.quickstart_units.json"
+}

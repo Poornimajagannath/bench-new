@@ -1,0 +1,27 @@
+{
+  "source_id": "lab-source-index",
+  "status": "promoted",
+  "schema_passed": true,
+  "content_passed": true,
+  "agent_use_status": "deferred",
+  "issues": [
+    {
+      "code": "no_steps",
+      "severity": "warning",
+      "message": "no step units; promoting reference-style units with evidence",
+      "unit_id": null
+    }
+  ],
+  "promoted_unit_ids": [
+    "lab-source-index:overview:0:documentation",
+    "lab-source-index:overview:0:preferred-patterns-(from-llms.txt)",
+    "lab-source-index:overview:0:mcp-(agent-toolkit)",
+    "lab-source-index:prerequisite:0:sdk-installation",
+    "lab-source-index:prerequisite:0:sandbox-testing",
+    "lab-source-index:warning:1:known-doc-gaps"
+  ],
+  "linked_workflow_id": null,
+  "contract_bundle_path": null,
+  "context_pack_path": "artifacts/content_engine/context_packs/lab-source-index.context_pack.json",
+  "objects_path": "artifacts/content_engine/objects/lab-source-index.quickstart_units.json"
+}

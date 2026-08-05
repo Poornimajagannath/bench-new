@@ -1,0 +1,11 @@
+{
+  "snapshot_id": "scenario-visa-relay-context-swapping-1fe2bea52851",
+  "source_id": "scenario-visa-relay-context-swapping",
+  "fetched_at": "2026-08-05T04:04:14Z",
+  "content_hash": "1fe2bea52851334200f0a1ed34e1f8b291b66f74506ae790fad28901422d01e1",
+  "version_tag": "1fe2bea52851",
+  "mime_type": "text/markdown",
+  "raw_bytes_location": "artifacts/content_engine/snapshots/scenario-visa-relay-context-swapping-1fe2bea52851.md",
+  "canonical_url": "local://scenarios/visa-relay-context-swapping/task.md",
+  "upstream_last_modified": ""
+}

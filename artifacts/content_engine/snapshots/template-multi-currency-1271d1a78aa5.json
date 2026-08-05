@@ -1,0 +1,11 @@
+{
+  "snapshot_id": "template-multi-currency-1271d1a78aa5",
+  "source_id": "template-multi-currency",
+  "fetched_at": "2026-08-05T04:04:14Z",
+  "content_hash": "1271d1a78aa56872b2413bcd0a2a0aa4bec6ed0c7ca855f6b584cd34f6ce3525",
+  "version_tag": "1271d1a78aa5",
+  "mime_type": "text/markdown",
+  "raw_bytes_location": "artifacts/content_engine/snapshots/template-multi-currency-1271d1a78aa5.md",
+  "canonical_url": "local://templates/multi-currency/README.md",
+  "upstream_last_modified": ""
+}

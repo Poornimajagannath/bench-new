@@ -1,0 +1,163 @@
+{
+  "pack_id": "ctx-template-config",
+  "source_id": "template-config",
+  "product": [
+    "cybersource",
+    "visa-acceptance"
+  ],
+  "audience": [
+    "developer",
+    "agent"
+  ],
+  "title": "Configuration Template",
+  "goal": "Configuration Template",
+  "unit_ids": [
+    "template-config:overview:0:environment-variables",
+    "template-config:overview:0:configuration-dictionary-(python-sdk)",
+    "template-config:overview:0:docs-vs-sdk",
+    "template-config:overview:0:auth-type-values",
+    "template-config:overview:0:sandbox-vs-production",
+    "template-config:prerequisite:0:sdk-installation",
+    "template-config:step:1:**sdk-v0.0.77**-\u2014-auth-type-must-be-`http_signat",
+    "template-config:step:2:**sdk-config-validation**-\u2014-`ast.literal_eval`-c",
+    "template-config:step:3:**sdk-model-names**-\u2014-use-`ptsv2payments*`-prefi",
+    "template-config:step:4:**sdk-field-casing**-\u2014-snake_case-in-python-(e.g",
+    "template-config:overview:0:error-handling-template",
+    "template-config:overview:0:security-checklist"
+  ],
+  "units_summary": [
+    {
+      "unit_id": "template-config:overview:0:environment-variables",
+      "unit_type": "overview",
+      "title": "Environment Variables",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-config:overview:0:configuration-dictionary-(python-sdk)",
+      "unit_type": "overview",
+      "title": "Configuration Dictionary (Python SDK)",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-config:overview:0:docs-vs-sdk",
+      "unit_type": "overview",
+      "title": "Docs vs SDK",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-config:overview:0:auth-type-values",
+      "unit_type": "overview",
+      "title": "Auth Type Values",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-config:overview:0:sandbox-vs-production",
+      "unit_type": "overview",
+      "title": "Sandbox vs Production",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-config:prerequisite:0:sdk-installation",
+      "unit_type": "prerequisite",
+      "title": "SDK Installation",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-config:step:1:**sdk-v0.0.77**-\u2014-auth-type-must-be-`http_signat",
+      "unit_type": "step",
+      "title": "**SDK v0.0.77** \u2014 auth type must be `HTTP_Signature` (capitalized)",
+      "sequence_number": 1,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-config:step:2:**sdk-config-validation**-\u2014-`ast.literal_eval`-c",
+      "unit_type": "step",
+      "title": "**SDK config validation** \u2014 `ast.literal_eval` crashes on JSON booleans (requires patch)",
+      "sequence_number": 2,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-config:step:3:**sdk-model-names**-\u2014-use-`ptsv2payments*`-prefi",
+      "unit_type": "step",
+      "title": "**SDK model names** \u2014 use `Ptsv2payments*` prefix, not `Payment*`",
+      "sequence_number": 3,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-config:step:4:**sdk-field-casing**-\u2014-snake_case-in-python-(e.g",
+      "unit_type": "step",
+      "title": "**SDK field casing** \u2014 snake_case in Python (e.g., `total_amount`, not `totalAmount`)",
+      "sequence_number": 4,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-config:overview:0:error-handling-template",
+      "unit_type": "overview",
+      "title": "Error Handling Template",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "template-config:overview:0:security-checklist",
+      "unit_type": "overview",
+      "title": "Security Checklist",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    }
+  ],
+  "provenance": {
+    "source_id": "template-config",
+    "snapshot_id": "template-config-e485c8f22097",
+    "content_hash": "e485c8f22097e537a844aa11b3a93fa846534bdc169bbffce7d2d595a8cb6d56",
+    "canonical_url": "local://templates/config/README.md",
+    "doc_id": "doc-template-config"
+  },
+  "constraints": [
+    "Derived Relay context pack \u2014 does not rewrite source docs",
+    "No live credentials, PAN, or secrets",
+    "Extraction backend recorded in provenance / honest_label (heuristic default; optional real DocETL via --discovery)"
+  ],
+  "linked_workflow_id": "http-signature-debug"
+}

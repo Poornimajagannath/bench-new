@@ -1,0 +1,22 @@
+{
+  "doc_id": "doc-scenario-authentication",
+  "source_id": "scenario-authentication",
+  "snapshot_id": "scenario-authentication-1a889af2bb66",
+  "title": "Authentication \u2014 First API Call",
+  "canonical_url": "local://scenarios/authentication/task.md",
+  "source_format": "markdown",
+  "product": [
+    "cybersource",
+    "visa-acceptance"
+  ],
+  "audience": [
+    "developer",
+    "agent"
+  ],
+  "page_type": "scenario",
+  "freshness_date": "unknown",
+  "normalized_markdown": "# Authentication \u2014 First API Call\n\n## Question\n\nCan an agent figure out how to authenticate with the CyberSource API and make its first successful call?\n\n## Context\n\nThe developer needs to:\n1. Understand where to get API credentials from the CyberSource developer portal\n2. Use the correct credential format (not what docs claim \u2014 the SDK field names are different from what the docs say)\n3. Make a successful API call with the test card\n\n## Expected Behavior\n\nThe agent should:\n- Read the CyberSource developer docs\n- Find the authentication/credentials section\n- Use the correct field names (`merchantKeyId`, `merchantsecretKey` \u2014 NOT `keyId`, `secretKey`)\n- Make an API call with the sandbox test card\n- Get a valid auth response (not an error)\n\n## Inputs\n\n- CyberSource sandbox credentials (set via env vars: `CYBS_MERCHANT_ID`, `CYBS_KEY_ID`, `CYBS_SHARED_SECRET`)\n- CyberSource test card number (standard test card, e.g., 4111111111111111)\n- CyberSource sandbox URL\n\n## Success Criteria\n\n- [ ] Agent successfully authenticates (no auth errors)\n- [ ] Agent makes a valid API call that returns a response (not an error)\n- [ ] Agent uses the correct credential field names (not what the docs claim)\n\n## Error Categories to Track\n\n- `AUTH_MISSING_CREDENTIALS` \u2014 agent didn't find or use credentials\n- `AUTH_WRONG_FIELD_NAMES` \u2014 agent used `keyId`/`secretKey` instead of `merchantKeyId`/`merchantsecretKey`\n- `AUTH_INVALID_MERCHANT_ID` \u2014 agent found wrong merchant ID\n- `AUTH_NETWORK_ERROR` \u2014 agent pointed to wrong API endpoint\n\n## Resources\n\n- CyberSource developer portal: `developer.cybersource.com`\n- CyberSource llms.txt: `developer.cybersource.com/llms.txt`\n- CyberSource API reference (for auth endpoints)\n\n## Agent Instruction\n\nRead the CyberSource developer documentation and find the authentication section. Get the right credentials and make a successful API call with the sandbox test card.\n",
+  "extracted_metadata": {
+    "goal": "Authentication \u2014 First API Call"
+  }
+}

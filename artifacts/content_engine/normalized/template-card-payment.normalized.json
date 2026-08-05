@@ -1,0 +1,22 @@
+{
+  "doc_id": "doc-template-card-payment",
+  "source_id": "template-card-payment",
+  "snapshot_id": "template-card-payment-1cd714735762",
+  "title": "Card Payment Integration Template",
+  "canonical_url": "local://templates/card-payment/README.md",
+  "source_format": "markdown",
+  "product": [
+    "cybersource",
+    "visa-acceptance"
+  ],
+  "audience": [
+    "developer",
+    "agent"
+  ],
+  "page_type": "template",
+  "freshness_date": "unknown",
+  "normalized_markdown": "# Card Payment Integration Template\n\n## SDK Models Used\n\n- `CreatePaymentRequest` \u2014 Main payment request object\n- `Ptsv2paymentsClientReferenceInformation` \u2014 Order reference\n- `Ptsv2paymentsOrderInformation` \u2014 Order details\n- `Ptsv2paymentsOrderInformationAmountDetails` \u2014 Amount and currency\n- `Ptsv2paymentsOrderInformationBillTo` \u2014 Billing address\n- `Ptsv2paymentsPaymentInformation` \u2014 Payment method\n- `Ptsv2paymentsPaymentInformationCard` \u2014 Card details\n- `Ptsv2paymentsProcessingInformation` \u2014 Processing options\n\n## SDK Model Property Reference\n\n### Ptsv2paymentsClientReferenceInformation\n| Property | Type | Required | Description |\n|----------|------|----------|-------------|\n| `code` | string | Yes | Merchant-generated order reference |\n| `transaction_id` | string | No | Custom transaction ID |\n| `comments` | string | No | Brief order description |\n\n### Ptsv2paymentsOrderInformationAmountDetails\n| Property | Type | Required | Description |\n|----------|------|----------|-------------|\n| `total_amount` | string | Yes | Grand total (e.g., \"10.00\") |\n| `currency` | string | Yes | ISO 3-character currency code (e.g., \"USD\") |\n| `tax_amount` | string | No | Total tax amount |\n| `freight_amount` | string | No | Shipping/handling charges |\n\n### Ptsv2paymentsOrderInformationBillTo\n| Property | Type | Required | Description |\n|----------|------|----------|-------------|\n| `first_name` | string | No | Customer's first name |\n| `last_name` | string | No | Customer's last name |\n| `email` | string | No | Customer's email |\n| `country` | string | Yes | ISO 2-character country code |\n| `administrative_area` | string | No | State/province |\n| `postal_code` | string | No | Postal code |\n\n### Ptsv2paymentsPaymentInformationCard\n| Property | Type | Required | Description |\n|----------|------|----------|-------------|\n| `number` | string | Yes | Card number (PAN) |\n| `expiration_month` | string | Yes | Two-digit month (MM) |\n| `expiration_year` | string | Yes | Four-digit year (YYYY) |\n| `type` | string | Yes | Three-digit card type code |\n| `security_code` | string | No | CVV (optional for ecom) |\n\n## Card Type Codes\n\n| Type | Code |\n|------|------|\n| Visa | 001 |\n| Mastercard | 002 |\n| American Express | 003 |\n| Discover | 004 |\n| Diners Club | 005 |\n| JCB | 007 |\n\n## Error Recovery\n\n| Error | Recovery |\n|-------|----------|\n| `INVALID_DATA` | Check card number format, expiry date, and required fields |\n| `AUTH_FAILED` | Verify auth credentials and API key format |\n| `CARD_DECLINED` | Prompt customer for different card or payment method |\n| `NETWORK_ERROR` | Implement retry with exponential backoff |\n",
+  "extracted_metadata": {
+    "goal": "Card Payment Integration Template"
+  }
+}

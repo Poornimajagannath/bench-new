@@ -1,0 +1,49 @@
+{
+  "source_id": "scenario-first-transaction",
+  "status": "promoted",
+  "schema_passed": true,
+  "content_passed": true,
+  "agent_use_status": "passed",
+  "issues": [
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "scenario-first-transaction:step:1:use-the-credentials-from-the-authentication-scen"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "scenario-first-transaction:step:2:read-the-cybersource-payment-api-documentation"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "scenario-first-transaction:step:3:make-a-test-payment-auth-with-the-test-card"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "scenario-first-transaction:step:4:get-a-transaction-id-back-in-the-response"
+    }
+  ],
+  "promoted_unit_ids": [
+    "scenario-first-transaction:overview:0:question",
+    "scenario-first-transaction:step:1:use-the-credentials-from-the-authentication-scen",
+    "scenario-first-transaction:step:2:read-the-cybersource-payment-api-documentation",
+    "scenario-first-transaction:step:3:make-a-test-payment-auth-with-the-test-card",
+    "scenario-first-transaction:step:4:get-a-transaction-id-back-in-the-response",
+    "scenario-first-transaction:prerequisite:0:inputs",
+    "scenario-first-transaction:validation_check:5:success-criteria",
+    "scenario-first-transaction:warning:5:error-categories-to-track",
+    "scenario-first-transaction:next_step:5:resources",
+    "scenario-first-transaction:next_step:5:agent-instruction"
+  ],
+  "linked_workflow_id": "flex-token-lifecycle",
+  "contract_bundle_path": "artifacts/contracts/flex-token-lifecycle.contract_bundle.json",
+  "context_pack_path": "artifacts/content_engine/context_packs/scenario-first-transaction.context_pack.json",
+  "objects_path": "artifacts/content_engine/objects/scenario-first-transaction.quickstart_units.json"
+}

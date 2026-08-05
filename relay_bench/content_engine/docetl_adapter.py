@@ -147,7 +147,9 @@ def _build_units_from_parsed(
             unit_type = str(row["unit_type"])
             heading_for_seq = str(row.get("heading") or packed.get("heading") or "")
             if unit_type == "step":
-                seq = _step_number(heading_for_seq, seq + 1)
+                hinted = _step_number(heading_for_seq, seq + 1)
+                # Nested lists often restart at 1; keep global monotonic sequence.
+                seq = hinted if hinted > seq else seq + 1
                 sequence_number = seq
             else:
                 sequence_number = (

@@ -1,0 +1,11 @@
+{
+  "snapshot_id": "scenario-agent-readiness-testing-bbd7e23b6d2a",
+  "source_id": "scenario-agent-readiness-testing",
+  "fetched_at": "2026-08-05T04:04:13Z",
+  "content_hash": "bbd7e23b6d2a257ba476981c41d53f1c0ddf765d1536b642506cf328f84db71e",
+  "version_tag": "bbd7e23b6d2a",
+  "mime_type": "text/markdown",
+  "raw_bytes_location": "artifacts/content_engine/snapshots/scenario-agent-readiness-testing-bbd7e23b6d2a.md",
+  "canonical_url": "local://scenarios/agent-readiness-testing/task.md",
+  "upstream_last_modified": ""
+}

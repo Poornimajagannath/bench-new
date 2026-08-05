@@ -1,0 +1,24 @@
+{
+  "source_id": "templates-index",
+  "status": "promoted",
+  "schema_passed": true,
+  "content_passed": true,
+  "agent_use_status": "passed",
+  "issues": [
+    {
+      "code": "no_steps",
+      "severity": "warning",
+      "message": "no step units; promoting reference-style units with evidence",
+      "unit_id": null
+    }
+  ],
+  "promoted_unit_ids": [
+    "templates-index:overview:0:purpose",
+    "templates-index:overview:0:files",
+    "templates-index:warning:1:common-gotchas"
+  ],
+  "linked_workflow_id": "http-signature-debug",
+  "contract_bundle_path": "artifacts/contracts/http-signature-debug.contract_bundle.json",
+  "context_pack_path": "artifacts/content_engine/context_packs/templates-index.context_pack.json",
+  "objects_path": "artifacts/content_engine/objects/templates-index.quickstart_units.json"
+}

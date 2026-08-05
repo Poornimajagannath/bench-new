@@ -1,0 +1,443 @@
+{
+  "stage": "content_engine_extract",
+  "inspired_by": "ucbepic/docetl (imported; Frame.code_map, no LLM)",
+  "extractor_label": "imported-code_map",
+  "source_id": "template-ach-payment",
+  "units": [
+    {
+      "unit_id": "template-ach-payment:overview:0:sdk-models-used",
+      "source_page_id": "doc-template-ach-payment",
+      "unit_type": "overview",
+      "title": "SDK Models Used",
+      "goal": "ACH Payment Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "template-ach-payment"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "- `CreatePaymentRequest` \u2014 Main payment request object\n- `Ptsv2paymentsClientReferenceInformation` \u2014 Order reference\n- `Ptsv2paymentsOrderInformation` \u2014 Order details\n- `Ptsv2paymentsOrderInformationAmountDetails` \u2014 Amount and currency\n- `Ptsv2paymentsOrderInformationBillTo` \u2014 Billing address\n- `Ptsv2paymentsPaymentInformation` \u2014 Payment method\n- `Ptsv2paymentsPaymentInformationBank` \u2014 Bank account details\n- `Ptsv2paymentsPaymentInformationBankAccount` \u2014 Bank account structure",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "- `CreatePaymentRequest` \u2014 Main payment request object - `Ptsv2paymentsClientReferenceInformation` \u2014 Order reference - `Ptsv2paymentsOrderInformation` \u2014 Orde..."
+      ]
+    },
+    {
+      "unit_id": "template-ach-payment:overview:0:ptsv2paymentspaymentinformationbank",
+      "source_page_id": "doc-template-ach-payment",
+      "unit_type": "overview",
+      "title": "Ptsv2paymentsPaymentInformationBank",
+      "goal": "ACH Payment Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "template-ach-payment"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "| Property | Type | Required | Description |\n|----------|------|----------|-------------|\n| `account_type` | string | Yes | CHECKING or SAVINGS |\n| `account_number` | string | Yes | Bank account number |\n| `routing_number` | string | Yes | 9-digit routing number |\n| `bank_name` | string | No | Bank name |\n| `account_holder_name` | string | No | Name on the account |\n| `account_holder_type` | string | No | PERSON or BUSINESS |",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "| Property | Type | Required | Description | |----------|------|----------|-------------| | `account_type` | string | Yes | CHECKING or SAVINGS | | `account_..."
+      ]
+    },
+    {
+      "unit_id": "template-ach-payment:overview:0:ptsv2paymentspaymentinformationbankaccount",
+      "source_page_id": "doc-template-ach-payment",
+      "unit_type": "overview",
+      "title": "Ptsv2paymentsPaymentInformationBankAccount",
+      "goal": "ACH Payment Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "template-ach-payment"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "| Property | Type | Required | Description |\n|----------|------|----------|-------------|\n| `account_type` | string | Yes | CHECKING, SAVINGS, or LOAN |\n| `account_number` | string | Yes | Bank account number |\n| `routing_number` | string | Yes | 9-digit ABA routing number |\n| `name_on_account` | string | No | Name on the account |\n| `account_holder_type` | string | No | PERSON or BUSINESS |",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "| Property | Type | Required | Description | |----------|------|----------|-------------| | `account_type` | string | Yes | CHECKING, SAVINGS, or LOAN | | `a..."
+      ]
+    },
+    {
+      "unit_id": "template-ach-payment:overview:0:us-(ach)",
+      "source_page_id": "doc-template-ach-payment",
+      "unit_type": "overview",
+      "title": "US (ACH)",
+      "goal": "ACH Payment Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "template-ach-payment"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "| Field | Format |\n|-------|--------|\n| Routing Number | 9 digits (0-9) |\n| Account Number | 8-17 digits (0-9) |\n| Account Type | CHECKING or SAVINGS |",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "| Field | Format | |-------|--------| | Routing Number | 9 digits (0-9) | | Account Number | 8-17 digits (0-9) | | Account Type | CHECKING or SAVINGS |"
+      ]
+    },
+    {
+      "unit_id": "template-ach-payment:overview:0:eu-(sepa)",
+      "source_page_id": "doc-template-ach-payment",
+      "unit_type": "overview",
+      "title": "EU (SEPA)",
+      "goal": "ACH Payment Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "template-ach-payment"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "| Field | Format |\n|-------|--------|\n| IBAN | 15-34 alphanumeric characters |\n| BIC/SWIFT | 8 or 11 characters |\n| Account Number | Varies by country |",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "| Field | Format | |-------|--------| | IBAN | 15-34 alphanumeric characters | | BIC/SWIFT | 8 or 11 characters | | Account Number | Varies by country |"
+      ]
+    },
+    {
+      "unit_id": "template-ach-payment:overview:0:uk-(bacs)",
+      "source_page_id": "doc-template-ach-payment",
+      "unit_type": "overview",
+      "title": "UK (BACS)",
+      "goal": "ACH Payment Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "template-ach-payment"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "| Field | Format |\n|-------|--------|\n| Sort Code | 6 digits (XX-XX-XX) |\n| Account Number | 8 digits (0-9) |",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "| Field | Format | |-------|--------| | Sort Code | 6 digits (XX-XX-XX) | | Account Number | 8 digits (0-9) |"
+      ]
+    },
+    {
+      "unit_id": "template-ach-payment:overview:0:required-fields-for-ach",
+      "source_page_id": "doc-template-ach-payment",
+      "unit_type": "overview",
+      "title": "Required Fields for ACH",
+      "goal": "ACH Payment Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "template-ach-payment"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "- `paymentInformation.bank.accountType` \u2014 must be `CHECKING` or `SAVINGS`\n- `paymentInformation.bank.accountNumber` \u2014 bank account number\n- `paymentInformation.bank.routingNumber` \u2014 9-digit routing number\n- `orderInformation.billTo.firstName` \u2014 customer first name\n- `orderInformation.billTo.lastName` \u2014 customer last name\n- `orderInformation.amountDetails.totalAmount` \u2014 order total\n- `orderInformation.amountDetails.currency` \u2014 ISO 3-character currency code\n- `clientReferenceInformation.code` \u2014 merchant reference",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "- `paymentInformation.bank.accountType` \u2014 must be `CHECKING` or `SAVINGS` - `paymentInformation.bank.accountNumber` \u2014 bank account number - `paymentInformati..."
+      ]
+    },
+    {
+      "unit_id": "template-ach-payment:overview:0:error-recovery",
+      "source_page_id": "doc-template-ach-payment",
+      "unit_type": "overview",
+      "title": "Error Recovery",
+      "goal": "ACH Payment Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "template-ach-payment"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "| Error | Recovery |\n|-------|----------|\n| `INVALID_DATA` | Check routing number format (must be 9 digits), account number length |\n| `AUTH_FAILED` | Verify auth credentials |\n| `ACCOUNT_CLOSED` | Prompt customer for different account |\n| `INSUFFICIENT_FUNDS` | Prompt customer for different account |\n| `NETWORK_ERROR` | Implement retry with exponential backoff |",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "| Error | Recovery | |-------|----------| | `INVALID_DATA` | Check routing number format (must be 9 digits), account number length | | `AUTH_FAILED` | Verify..."
+      ]
+    },
+    {
+      "unit_id": "template-ach-payment:step:1:**routing-numbers-must-be-9-digits**-\u2014-not-8,-no",
+      "source_page_id": "doc-template-ach-payment",
+      "unit_type": "step",
+      "title": "**Routing numbers must be 9 digits** \u2014 not 8, not 10, exactly 9",
+      "goal": "ACH Payment Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "template-ach-payment"
+      ],
+      "sequence_number": 1,
+      "body_markdown": "**Routing numbers must be 9 digits** \u2014 not 8, not 10, exactly 9",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.7,
+      "evidence_quotes": [
+        "**Routing numbers must be 9 digits** \u2014 not 8, not 10, exactly 9"
+      ]
+    },
+    {
+      "unit_id": "template-ach-payment:step:2:**account-numbers-are-8-17-digits**-for-most-pro",
+      "source_page_id": "doc-template-ach-payment",
+      "unit_type": "step",
+      "title": "**Account numbers are 8-17 digits** for most processors",
+      "goal": "ACH Payment Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "template-ach-payment"
+      ],
+      "sequence_number": 2,
+      "body_markdown": "**Account numbers are 8-17 digits** for most processors",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.7,
+      "evidence_quotes": [
+        "**Account numbers are 8-17 digits** for most processors"
+      ]
+    },
+    {
+      "unit_id": "template-ach-payment:step:3:**ach-takes-3-5-business-days**-to-settle-\u2014-unli",
+      "source_page_id": "doc-template-ach-payment",
+      "unit_type": "step",
+      "title": "**ACH takes 3-5 business days** to settle \u2014 unlike cards which are instant",
+      "goal": "ACH Payment Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "template-ach-payment"
+      ],
+      "sequence_number": 3,
+      "body_markdown": "**ACH takes 3-5 business days** to settle \u2014 unlike cards which are instant",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.7,
+      "evidence_quotes": [
+        "**ACH takes 3-5 business days** to settle \u2014 unlike cards which are instant"
+      ]
+    },
+    {
+      "unit_id": "template-ach-payment:step:4:**sepa-requires-iban-format**-\u2014-not-just-account",
+      "source_page_id": "doc-template-ach-payment",
+      "unit_type": "step",
+      "title": "**SEPA requires IBAN format** \u2014 not just account number",
+      "goal": "ACH Payment Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "template-ach-payment"
+      ],
+      "sequence_number": 4,
+      "body_markdown": "**SEPA requires IBAN format** \u2014 not just account number",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.7,
+      "evidence_quotes": [
+        "**SEPA requires IBAN format** \u2014 not just account number"
+      ]
+    },
+    {
+      "unit_id": "template-ach-payment:step:5:**bacs-requires-sort-code**-\u2014-6-digits-in-xx-xx-",
+      "source_page_id": "doc-template-ach-payment",
+      "unit_type": "step",
+      "title": "**BACS requires sort code** \u2014 6 digits in XX-XX-XX format",
+      "goal": "ACH Payment Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "template-ach-payment"
+      ],
+      "sequence_number": 5,
+      "body_markdown": "**BACS requires sort code** \u2014 6 digits in XX-XX-XX format",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.7,
+      "evidence_quotes": [
+        "**BACS requires sort code** \u2014 6 digits in XX-XX-XX format"
+      ]
+    },
+    {
+      "unit_id": "template-ach-payment:step:6:**name-on-account-must-match**-the-billing-addre",
+      "source_page_id": "doc-template-ach-payment",
+      "unit_type": "step",
+      "title": "**Name on account must match** the billing address name",
+      "goal": "ACH Payment Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "template-ach-payment"
+      ],
+      "sequence_number": 6,
+      "body_markdown": "**Name on account must match** the billing address name",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.7,
+      "evidence_quotes": [
+        "**Name on account must match** the billing address name"
+      ]
+    },
+    {
+      "unit_id": "template-ach-payment:step:7:**ach-cannot-be-reversed-instantly**-\u2014-requires-",
+      "source_page_id": "doc-template-ach-payment",
+      "unit_type": "step",
+      "title": "**ACH cannot be reversed instantly** \u2014 requires separate reversal flow",
+      "goal": "ACH Payment Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "template-ach-payment"
+      ],
+      "sequence_number": 7,
+      "body_markdown": "**ACH cannot be reversed instantly** \u2014 requires separate reversal flow",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.7,
+      "evidence_quotes": [
+        "**ACH cannot be reversed instantly** \u2014 requires separate reversal flow"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "doc_id": "doc-scenario-first-transaction",
+  "source_id": "scenario-first-transaction",
+  "snapshot_id": "scenario-first-transaction-a075c1262ab2",
+  "title": "First Transaction \u2014 Payment Auth",
+  "canonical_url": "local://scenarios/first-transaction/task.md",
+  "source_format": "markdown",
+  "product": [
+    "cybersource",
+    "visa-acceptance"
+  ],
+  "audience": [
+    "developer",
+    "agent"
+  ],
+  "page_type": "scenario",
+  "freshness_date": "unknown",
+  "normalized_markdown": "# First Transaction \u2014 Payment Auth\n\n## Question\n\nCan an agent make its first successful payment authentication with CyberSource?\n\n## Context\n\nThe developer needs to:\n1. Use the credentials from the authentication scenario\n2. Read the CyberSource payment API documentation\n3. Make a test payment auth with the test card\n4. Get a transaction ID back in the response\n\n## Expected Behavior\n\nThe agent should:\n- Read the CyberSource developer docs about payments/APIs\n- Use the correct auth fields and API endpoint\n- Make a payment auth with the test card\n- Get a transaction ID back in the response\n\n## Inputs\n\n- CyberSource sandbox credentials (from authentication scenario)\n- CyberSource test card (4111111111111111, expiry 12/2031)\n- CyberSource sandbox URL\n- Payment API documentation\n\n## Success Criteria\n\n- [ ] **PASS**: Agent makes a payment auth that returns a 200-level HTTP response\n- [ ] **PASS**: Agent does not throw payment errors (400/422)\n- [ ] **PASS**: Agent gets a transaction ID in the response\n\n## Error Categories to Track\n\n- `PAYMENT_MISSING_FIELD` \u2014 agent didn't include required fields (e.g., billTo)\n- `PAYMENT_INVALID_CARD` \u2014 agent used an invalid card number\n- `PAYMENT_AUTH_ERROR` \u2014 agent's auth failed\n- `PAYMENT_WRONG_ENDPOINT` \u2014 agent pointed to wrong API endpoint\n\n## Resources\n\n- CyberSource developer portal: `developer.cybersource.com`\n- CyberSource llms.txt: `developer.cybersource.com/llms.txt`\n- Payment API reference\n\n## Agent Instruction\n\nRead the CyberSource payment documentation. Make a payment authentication with the test card that returns a transaction ID.\n",
+  "extracted_metadata": {
+    "goal": "First Transaction \u2014 Payment Auth"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "stage": "content_engine_extract",
-  "inspired_by": "ucbepic/docetl (not imported; heuristic extract)",
-  "extractor_label": "style-only",
+  "inspired_by": "ucbepic/docetl (imported; Frame.code_map, no LLM)",
+  "extractor_label": "imported-code_map",
   "source_id": "microform-payer-auth-quickstart",
   "units": [
     {
@@ -35,7 +35,7 @@
       "requires": [],
       "outcomes": [],
       "failure_modes": [],
-      "confidence": 0.9,
+      "confidence": 0.85,
       "evidence_quotes": [
         "Microform tokenization captures card data in the browser. It is **not** itself a completed Payer Authentication / 3DS step. After tokenize, you still need en..."
       ]
@@ -66,7 +66,7 @@
       "requires": [],
       "outcomes": [],
       "failure_modes": [],
-      "confidence": 0.9,
+      "confidence": 0.85,
       "evidence_quotes": [
         "- Sandbox merchant credentials available as environment variables (never hardcode) - Microform client integrated on the checkout page - Payer Authentication ..."
       ]
@@ -268,7 +268,8 @@
       "api_entities": [
         "Microform",
         "authorization",
-        "3DS"
+        "3DS",
+        "Flex"
       ],
       "requires": [
         "auth_refs_ready"
@@ -312,7 +313,7 @@
       "requires": [],
       "outcomes": [],
       "failure_modes": [],
-      "confidence": 0.9,
+      "confidence": 0.85,
       "evidence_quotes": [
         "- Confirm enrollment ran before authorization - Confirm challenge and frictionless paths are both handled - Confirm authorization carries authentication refe..."
       ]
@@ -343,7 +344,7 @@
       "requires": [],
       "outcomes": [],
       "failure_modes": [],
-      "confidence": 0.9,
+      "confidence": 0.85,
       "evidence_quotes": [
         "- Do not treat Microform tokenize as completed 3DS - Do not log raw PAN, shared secrets, or credential material"
       ]
@@ -373,7 +374,7 @@
       "requires": [],
       "outcomes": [],
       "failure_modes": [],
-      "confidence": 0.9,
+      "confidence": 0.85,
       "evidence_quotes": [
         "- Add support-safe evidence collection for failed enrollments - Wire a VAP CLI workflow verifier for this contract"
       ]
