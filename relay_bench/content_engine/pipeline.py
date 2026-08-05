@@ -9,11 +9,40 @@ from relay_bench.content_engine.docetl_adapter import (
     normalize_extract_mode,
 )
 from relay_bench.content_engine.normalize import normalize_document
-from relay_bench.content_engine.promote import promote_units
+from relay_bench.content_engine.promote import build_objects_payload, promote_units
 from relay_bench.content_engine.registry import require_source
 from relay_bench.content_engine.segment import segment_document
 from relay_bench.content_engine.snapshot import materialize_snapshot
 from relay_bench.reporting import repo_relative
+
+
+def synthesize_quickstart_units_payload(
+    source_id: str,
+    *,
+    discovery: Optional[str] = None,
+    fallback_on_error: bool = False,
+) -> Dict[str, Any]:
+    """Rebuild the objects artifact payload without writing (freshness checks).
+
+    Defaults match the CLI: heuristic extract unless discovery/env selects DocETL.
+    """
+    mode = normalize_extract_mode(discovery)
+    record = require_source(source_id)
+    snapshot = materialize_snapshot(record)
+    doc = normalize_document(record, snapshot)
+    segments = segment_document(doc)
+    units, honest = extract_quickstart_units_with_backend(
+        record,
+        doc,
+        segments,
+        mode=mode,
+        fallback_on_error=fallback_on_error,
+    )
+    return build_objects_payload(
+        source_id,
+        units,
+        extractor_label=honest.get("docetl", "style-only"),
+    )
 
 
 def run_content_engine(

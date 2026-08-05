@@ -27,6 +27,16 @@ ROOT = Path(__file__).resolve().parents[1]
 
 @unittest.skipUnless(docetl_available(), "docetl package not installed")
 class DocETLAdapterTests(unittest.TestCase):
+    @classmethod
+    def tearDownClass(cls) -> None:
+        # DocETL pipeline tests rewrite the checked-in objects artifact.
+        # Restore the default heuristic proof so the suite leaves git clean
+        # and matches pipelines/run_content_engine_v0.py with no flags.
+        run_content_engine(
+            "microform-payer-auth-quickstart",
+            discovery="heuristic",
+        )
+
     def test_normalize_modes(self):
         self.assertEqual(normalize_extract_mode("heuristic"), "heuristic")
         self.assertEqual(normalize_extract_mode("docetl"), "docetl")

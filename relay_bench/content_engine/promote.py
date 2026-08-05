@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
-from typing import List, Optional, Tuple
+from typing import Any, Dict, List, Optional, Tuple
 
 from relay_bench.content_engine.context_pack import (
     build_context_pack,
@@ -44,14 +44,13 @@ def _agent_use_status(record: SourceRecord) -> str:
     return "deferred"
 
 
-def write_objects(
+def build_objects_payload(
     source_id: str,
     units: List[QuickstartUnit],
     *,
     extractor_label: str = "style-only",
-) -> Path:
-    OBJECTS_DIR.mkdir(parents=True, exist_ok=True)
-    path = OBJECTS_DIR / f"{source_id}.quickstart_units.json"
+) -> Dict[str, Any]:
+    """Build the quickstart_units objects artifact payload (no I/O)."""
     if extractor_label == "style-only":
         inspired_by = "ucbepic/docetl (not imported; heuristic extract)"
     elif extractor_label == "imported-code_map":
@@ -60,13 +59,26 @@ def write_objects(
         inspired_by = "ucbepic/docetl (imported; Frame.map with LLM)"
     else:
         inspired_by = f"ucbepic/docetl ({extractor_label})"
-    payload = {
+    return {
         "stage": "content_engine_extract",
         "inspired_by": inspired_by,
         "extractor_label": extractor_label,
         "source_id": source_id,
         "units": [u.to_dict() for u in units],
     }
+
+
+def write_objects(
+    source_id: str,
+    units: List[QuickstartUnit],
+    *,
+    extractor_label: str = "style-only",
+) -> Path:
+    OBJECTS_DIR.mkdir(parents=True, exist_ok=True)
+    path = OBJECTS_DIR / f"{source_id}.quickstart_units.json"
+    payload = build_objects_payload(
+        source_id, units, extractor_label=extractor_label
+    )
     path.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
     return path
 
