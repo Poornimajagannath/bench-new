@@ -1,0 +1,116 @@
+{
+  "source_id": "template-multi-currency",
+  "status": "promoted",
+  "schema_passed": true,
+  "content_passed": true,
+  "agent_use_status": "deferred",
+  "issues": [
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "template-multi-currency:step:1:customer-selects-currency-on-checkout"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "template-multi-currency:step:2:dcc-provider-returns-exchange-rate"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "template-multi-currency:step:3:merchant-includes-rate-and-converted-amount-in-p"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "template-multi-currency:step:4:cybersource-processes-with-dcc-flags"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "template-multi-currency:step:5:response-includes-dcc-details-for-receipt"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "template-multi-currency:step:6:**all-amounts-must-be-strings**-\u2014-never-use-floa"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "template-multi-currency:step:7:**currency-codes-are-3-characters**-\u2014-iso-4217-s"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "template-multi-currency:step:8:**decimal-places-vary-by-currency**-\u2014-jpy-has-0,"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "template-multi-currency:step:9:**exchange-rates-must-be-from-certified-dcc-prov"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "template-multi-currency:step:10:**dcc-rates-expire**-\u2014-typically-within-minutes-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "template-multi-currency:step:11:**some-processors-don't-support-all-currencies**"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "template-multi-currency:step:12:**tax/jurisdiction-config-must-match-merchant's-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "template-multi-currency:step:13:**multi-currency-transactions-require-additional"
+    }
+  ],
+  "promoted_unit_ids": [
+    "template-multi-currency:overview:0:sdk-models-used",
+    "template-multi-currency:overview:0:ptsv2paymentsorderinformationamountdetails-(mult",
+    "template-multi-currency:overview:0:ptsv2paymentsorderinformationamountdetailscurren",
+    "template-multi-currency:overview:0:currency-codes-(iso-4217)",
+    "template-multi-currency:overview:0:when-to-use-dcc",
+    "template-multi-currency:step:1:customer-selects-currency-on-checkout",
+    "template-multi-currency:step:2:dcc-provider-returns-exchange-rate",
+    "template-multi-currency:step:3:merchant-includes-rate-and-converted-amount-in-p",
+    "template-multi-currency:step:4:cybersource-processes-with-dcc-flags",
+    "template-multi-currency:step:5:response-includes-dcc-details-for-receipt",
+    "template-multi-currency:overview:0:dcc-required-fields",
+    "template-multi-currency:step:6:**all-amounts-must-be-strings**-\u2014-never-use-floa",
+    "template-multi-currency:step:7:**currency-codes-are-3-characters**-\u2014-iso-4217-s",
+    "template-multi-currency:step:8:**decimal-places-vary-by-currency**-\u2014-jpy-has-0,",
+    "template-multi-currency:step:9:**exchange-rates-must-be-from-certified-dcc-prov",
+    "template-multi-currency:step:10:**dcc-rates-expire**-\u2014-typically-within-minutes-",
+    "template-multi-currency:step:11:**some-processors-don't-support-all-currencies**",
+    "template-multi-currency:step:12:**tax/jurisdiction-config-must-match-merchant's-",
+    "template-multi-currency:step:13:**multi-currency-transactions-require-additional",
+    "template-multi-currency:overview:0:best-practices",
+    "template-multi-currency:overview:0:exchange-rate-source",
+    "template-multi-currency:overview:0:error-recovery",
+    "template-multi-currency:overview:0:multi-currency-checklist"
+  ],
+  "linked_workflow_id": null,
+  "contract_bundle_path": null,
+  "context_pack_path": "artifacts/content_engine/context_packs/template-multi-currency.context_pack.json",
+  "objects_path": "artifacts/content_engine/objects/template-multi-currency.quickstart_units.json"
+}

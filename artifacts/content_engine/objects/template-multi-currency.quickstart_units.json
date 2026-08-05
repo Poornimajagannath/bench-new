@@ -1,0 +1,675 @@
+{
+  "stage": "content_engine_extract",
+  "inspired_by": "ucbepic/docetl (imported; Frame.code_map, no LLM)",
+  "extractor_label": "imported-code_map",
+  "source_id": "template-multi-currency",
+  "units": [
+    {
+      "unit_id": "template-multi-currency:overview:0:sdk-models-used",
+      "source_page_id": "doc-template-multi-currency",
+      "unit_type": "overview",
+      "title": "SDK Models Used",
+      "goal": "Multi-Currency Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "template-multi-currency"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "- `CreatePaymentRequest` \u2014 Main payment request object\n- `Ptsv2paymentsClientReferenceInformation` \u2014 Order reference\n- `Ptsv2paymentsOrderInformation` \u2014 Order details\n- `Ptsv2paymentsOrderInformationAmountDetails` \u2014 Amount and currency\n- `Ptsv2paymentsOrderInformationAmountDetailsCurrencyConversion` \u2014 DCC conversion\n- `Ptsv2paymentsProcessingInformation` \u2014 Processing options",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "- `CreatePaymentRequest` \u2014 Main payment request object - `Ptsv2paymentsClientReferenceInformation` \u2014 Order reference - `Ptsv2paymentsOrderInformation` \u2014 Orde..."
+      ]
+    },
+    {
+      "unit_id": "template-multi-currency:overview:0:ptsv2paymentsorderinformationamountdetails-(mult",
+      "source_page_id": "doc-template-multi-currency",
+      "unit_type": "overview",
+      "title": "Ptsv2paymentsOrderInformationAmountDetails (Multi-Currency)",
+      "goal": "Multi-Currency Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "template-multi-currency"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "| Property | Type | Required | Description |\n|----------|------|----------|-------------|\n| `total_amount` | string | Yes | Grand total in merchant currency |\n| `currency` | string | Yes | ISO 3-character currency code |\n| `original_amount` | string | No | Original amount before conversion |\n| `original_currency` | string | No | Original currency code |\n| `exchange_rate` | string | No | Exchange rate (4 decimal places) |\n| `exchange_rate_time_stamp` | string | No | Format: YYYYMMDD HH:MM |\n| `foreign_amount` | string | No | Converted foreign amount |\n| `foreign_currency` | string | No | Foreign currency code |",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "| Property | Type | Required | Description | |----------|------|----------|-------------| | `total_amount` | string | Yes | Grand total in merchant currency ..."
+      ]
+    },
+    {
+      "unit_id": "template-multi-currency:overview:0:ptsv2paymentsorderinformationamountdetailscurren",
+      "source_page_id": "doc-template-multi-currency",
+      "unit_type": "overview",
+      "title": "Ptsv2paymentsOrderInformationAmountDetailsCurrencyConversion",
+      "goal": "Multi-Currency Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "template-multi-currency"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "| Property | Type | Required | Description |\n|----------|------|----------|-------------|\n| `exchange_rate` | string | No | DCC exchange rate |\n| `converted_amount` | string | No | Amount after conversion |\n| `converted_currency` | string | No | Currency after conversion |\n| `provider` | string | No | DCC provider name |",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "| Property | Type | Required | Description | |----------|------|----------|-------------| | `exchange_rate` | string | No | DCC exchange rate | | `converted_..."
+      ]
+    },
+    {
+      "unit_id": "template-multi-currency:overview:0:currency-codes-(iso-4217)",
+      "source_page_id": "doc-template-multi-currency",
+      "unit_type": "overview",
+      "title": "Currency Codes (ISO 4217)",
+      "goal": "Multi-Currency Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "template-multi-currency"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "| Currency | Code | Example Amount | Locale |\n|----------|------|----------------|--------|\n| US Dollar | USD | 10.00 | en-US |\n| Euro | EUR | 10,00 | de-DE |\n| British Pound | GBP | 10.00 | en-GB |\n| Canadian Dollar | CAD | 10.00 | en-CA |\n| Japanese Yen | JPY | 1000 | ja-JP |\n| Chinese Yuan | CNY | 10.00 | zh-CN |\n| Australian Dollar | AUD | 10.00 | en-AU |\n| Swiss Franc | CHF | 10.00 | de-CH |",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "| Currency | Code | Example Amount | Locale | |----------|------|----------------|--------| | US Dollar | USD | 10.00 | en-US | | Euro | EUR | 10,00 | de-DE ..."
+      ]
+    },
+    {
+      "unit_id": "template-multi-currency:overview:0:when-to-use-dcc",
+      "source_page_id": "doc-template-multi-currency",
+      "unit_type": "overview",
+      "title": "When to Use DCC",
+      "goal": "Multi-Currency Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "template-multi-currency"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "- International customers want to pay in their home currency\n- Merchant wants to avoid FX risk\n- Customer explicitly requests conversion",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "- International customers want to pay in their home currency - Merchant wants to avoid FX risk - Customer explicitly requests conversion"
+      ]
+    },
+    {
+      "unit_id": "template-multi-currency:step:1:customer-selects-currency-on-checkout",
+      "source_page_id": "doc-template-multi-currency",
+      "unit_type": "step",
+      "title": "Customer selects currency on checkout",
+      "goal": "Multi-Currency Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "template-multi-currency"
+      ],
+      "sequence_number": 1,
+      "body_markdown": "Customer selects currency on checkout",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.7,
+      "evidence_quotes": [
+        "Customer selects currency on checkout"
+      ]
+    },
+    {
+      "unit_id": "template-multi-currency:step:2:dcc-provider-returns-exchange-rate",
+      "source_page_id": "doc-template-multi-currency",
+      "unit_type": "step",
+      "title": "DCC provider returns exchange rate",
+      "goal": "Multi-Currency Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "template-multi-currency"
+      ],
+      "sequence_number": 2,
+      "body_markdown": "DCC provider returns exchange rate",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.7,
+      "evidence_quotes": [
+        "DCC provider returns exchange rate"
+      ]
+    },
+    {
+      "unit_id": "template-multi-currency:step:3:merchant-includes-rate-and-converted-amount-in-p",
+      "source_page_id": "doc-template-multi-currency",
+      "unit_type": "step",
+      "title": "Merchant includes rate and converted amount in payment request",
+      "goal": "Multi-Currency Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "template-multi-currency"
+      ],
+      "sequence_number": 3,
+      "body_markdown": "Merchant includes rate and converted amount in payment request",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.7,
+      "evidence_quotes": [
+        "Merchant includes rate and converted amount in payment request"
+      ]
+    },
+    {
+      "unit_id": "template-multi-currency:step:4:cybersource-processes-with-dcc-flags",
+      "source_page_id": "doc-template-multi-currency",
+      "unit_type": "step",
+      "title": "CyberSource processes with DCC flags",
+      "goal": "Multi-Currency Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "template-multi-currency"
+      ],
+      "sequence_number": 4,
+      "body_markdown": "CyberSource processes with DCC flags",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.7,
+      "evidence_quotes": [
+        "CyberSource processes with DCC flags"
+      ]
+    },
+    {
+      "unit_id": "template-multi-currency:step:5:response-includes-dcc-details-for-receipt",
+      "source_page_id": "doc-template-multi-currency",
+      "unit_type": "step",
+      "title": "Response includes DCC details for receipt",
+      "goal": "Multi-Currency Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "template-multi-currency"
+      ],
+      "sequence_number": 5,
+      "body_markdown": "Response includes DCC details for receipt",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.7,
+      "evidence_quotes": [
+        "Response includes DCC details for receipt"
+      ]
+    },
+    {
+      "unit_id": "template-multi-currency:overview:0:dcc-required-fields",
+      "source_page_id": "doc-template-multi-currency",
+      "unit_type": "overview",
+      "title": "DCC Required Fields",
+      "goal": "Multi-Currency Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "template-multi-currency"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "- `amountDetails.originalAmount` \u2014 original amount\n- `amountDetails.originalCurrency` \u2014 original currency\n- `amountDetails.foreignAmount` \u2014 converted amount\n- `amountDetails.foreignCurrency` \u2014 converted currency\n- `amountDetails.exchangeRate` \u2014 exchange rate\n- `amountDetails.exchangeRateTimeStamp` \u2014 rate timestamp",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "- `amountDetails.originalAmount` \u2014 original amount - `amountDetails.originalCurrency` \u2014 original currency - `amountDetails.foreignAmount` \u2014 converted amount ..."
+      ]
+    },
+    {
+      "unit_id": "template-multi-currency:step:6:**all-amounts-must-be-strings**-\u2014-never-use-floa",
+      "source_page_id": "doc-template-multi-currency",
+      "unit_type": "step",
+      "title": "**All amounts must be strings** \u2014 never use floats (floating point precision issues)",
+      "goal": "Multi-Currency Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "template-multi-currency"
+      ],
+      "sequence_number": 6,
+      "body_markdown": "**All amounts must be strings** \u2014 never use floats (floating point precision issues)",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.7,
+      "evidence_quotes": [
+        "**All amounts must be strings** \u2014 never use floats (floating point precision issues)"
+      ]
+    },
+    {
+      "unit_id": "template-multi-currency:step:7:**currency-codes-are-3-characters**-\u2014-iso-4217-s",
+      "source_page_id": "doc-template-multi-currency",
+      "unit_type": "step",
+      "title": "**Currency codes are 3 characters** \u2014 ISO 4217 standard (USD, EUR, GBP, etc.)",
+      "goal": "Multi-Currency Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "template-multi-currency"
+      ],
+      "sequence_number": 7,
+      "body_markdown": "**Currency codes are 3 characters** \u2014 ISO 4217 standard (USD, EUR, GBP, etc.)",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.7,
+      "evidence_quotes": [
+        "**Currency codes are 3 characters** \u2014 ISO 4217 standard (USD, EUR, GBP, etc.)"
+      ]
+    },
+    {
+      "unit_id": "template-multi-currency:step:8:**decimal-places-vary-by-currency**-\u2014-jpy-has-0,",
+      "source_page_id": "doc-template-multi-currency",
+      "unit_type": "step",
+      "title": "**Decimal places vary by currency** \u2014 JPY has 0, USD has 2, KRW has 0",
+      "goal": "Multi-Currency Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "template-multi-currency"
+      ],
+      "sequence_number": 8,
+      "body_markdown": "**Decimal places vary by currency** \u2014 JPY has 0, USD has 2, KRW has 0",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.7,
+      "evidence_quotes": [
+        "**Decimal places vary by currency** \u2014 JPY has 0, USD has 2, KRW has 0"
+      ]
+    },
+    {
+      "unit_id": "template-multi-currency:step:9:**exchange-rates-must-be-from-certified-dcc-prov",
+      "source_page_id": "doc-template-multi-currency",
+      "unit_type": "step",
+      "title": "**Exchange rates must be from certified DCC providers** \u2014 not random rates",
+      "goal": "Multi-Currency Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "template-multi-currency"
+      ],
+      "sequence_number": 9,
+      "body_markdown": "**Exchange rates must be from certified DCC providers** \u2014 not random rates",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.7,
+      "evidence_quotes": [
+        "**Exchange rates must be from certified DCC providers** \u2014 not random rates"
+      ]
+    },
+    {
+      "unit_id": "template-multi-currency:step:10:**dcc-rates-expire**-\u2014-typically-within-minutes-",
+      "source_page_id": "doc-template-multi-currency",
+      "unit_type": "step",
+      "title": "**DCC rates expire** \u2014 typically within minutes of request",
+      "goal": "Multi-Currency Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "template-multi-currency"
+      ],
+      "sequence_number": 10,
+      "body_markdown": "**DCC rates expire** \u2014 typically within minutes of request",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.7,
+      "evidence_quotes": [
+        "**DCC rates expire** \u2014 typically within minutes of request"
+      ]
+    },
+    {
+      "unit_id": "template-multi-currency:step:11:**some-processors-don't-support-all-currencies**",
+      "source_page_id": "doc-template-multi-currency",
+      "unit_type": "step",
+      "title": "**Some processors don't support all currencies** \u2014 check with your provider",
+      "goal": "Multi-Currency Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "template-multi-currency"
+      ],
+      "sequence_number": 11,
+      "body_markdown": "**Some processors don't support all currencies** \u2014 check with your provider",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.7,
+      "evidence_quotes": [
+        "**Some processors don't support all currencies** \u2014 check with your provider"
+      ]
+    },
+    {
+      "unit_id": "template-multi-currency:step:12:**tax/jurisdiction-config-must-match-merchant's-",
+      "source_page_id": "doc-template-multi-currency",
+      "unit_type": "step",
+      "title": "**Tax/jurisdiction config must match merchant's legal entity** \u2014 not customer's location",
+      "goal": "Multi-Currency Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "template-multi-currency"
+      ],
+      "sequence_number": 12,
+      "body_markdown": "**Tax/jurisdiction config must match merchant's legal entity** \u2014 not customer's location",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.7,
+      "evidence_quotes": [
+        "**Tax/jurisdiction config must match merchant's legal entity** \u2014 not customer's location"
+      ]
+    },
+    {
+      "unit_id": "template-multi-currency:step:13:**multi-currency-transactions-require-additional",
+      "source_page_id": "doc-template-multi-currency",
+      "unit_type": "step",
+      "title": "**Multi-currency transactions require additional risk checks** \u2014 higher fraud rates",
+      "goal": "Multi-Currency Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "template-multi-currency"
+      ],
+      "sequence_number": 13,
+      "body_markdown": "**Multi-currency transactions require additional risk checks** \u2014 higher fraud rates",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.7,
+      "evidence_quotes": [
+        "**Multi-currency transactions require additional risk checks** \u2014 higher fraud rates"
+      ]
+    },
+    {
+      "unit_id": "template-multi-currency:overview:0:best-practices",
+      "source_page_id": "doc-template-multi-currency",
+      "unit_type": "overview",
+      "title": "Best Practices",
+      "goal": "Multi-Currency Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "template-multi-currency"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "```python\n# CORRECT: Use strings with fixed precision\namount = \"10.00\"  # USD\nrate = \"1.1500\"   # 4 decimal places\ntimestamp = \"20260721 14:30\"  # YYYYMMDD HH:MM format\n\n# WRONG: Using floats\namount = 10.00  # floating point precision issues\nrate = 1.15  # insufficient precision\n```",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "```python # CORRECT: Use strings with fixed precision amount = \"10.00\" # USD rate = \"1.1500\" # 4 decimal places timestamp = \"20260721 14:30\" # YYYYMMDD HH:MM..."
+      ]
+    },
+    {
+      "unit_id": "template-multi-currency:overview:0:exchange-rate-source",
+      "source_page_id": "doc-template-multi-currency",
+      "unit_type": "overview",
+      "title": "Exchange Rate Source",
+      "goal": "Multi-Currency Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "template-multi-currency"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "- Use DCC provider rates \u2014 not Google/XE rates\n- DCC providers are certified under PCI standards\n- Store rate timestamps for audit compliance",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "- Use DCC provider rates \u2014 not Google/XE rates - DCC providers are certified under PCI standards - Store rate timestamps for audit compliance"
+      ]
+    },
+    {
+      "unit_id": "template-multi-currency:overview:0:error-recovery",
+      "source_page_id": "doc-template-multi-currency",
+      "unit_type": "overview",
+      "title": "Error Recovery",
+      "goal": "Multi-Currency Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "template-multi-currency"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "| Error | Recovery |\n|-------|----------|\n| `INVALID_DATA` | Check currency code format (must be 3 chars) |\n| `INVALID_CURRENCY` | Check if processor supports requested currency |\n| `RATE_EXPIRED` | Re-fetch exchange rate from DCC provider |\n| `DCC_NOT_SUPPORTED` | Fall back to merchant currency |\n| `NETWORK_ERROR` | Implement retry with exponential backoff |",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "| Error | Recovery | |-------|----------| | `INVALID_DATA` | Check currency code format (must be 3 chars) | | `INVALID_CURRENCY` | Check if processor support..."
+      ]
+    },
+    {
+      "unit_id": "template-multi-currency:overview:0:multi-currency-checklist",
+      "source_page_id": "doc-template-multi-currency",
+      "unit_type": "overview",
+      "title": "Multi-Currency Checklist",
+      "goal": "Multi-Currency Integration Template",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "template-multi-currency"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "- [ ] Integrate DCC provider API\n- [ ] Configure supported currencies\n- [ ] Set up exchange rate caching\n- [ ] Implement rate expiration handling\n- [ ] Add currency conversion display in UI\n- [ ] Configure tax/jurisdiction rules per currency\n- [ ] Test with multiple currencies\n- [ ] Verify PCI compliance for DCC flow\n- [ ] Set up audit logging for rate changes\n- [ ] Configure fallback to merchant currency",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "- [ ] Integrate DCC provider API - [ ] Configure supported currencies - [ ] Set up exchange rate caching - [ ] Implement rate expiration handling - [ ] Add c..."
+      ]
+    }
+  ]
+}

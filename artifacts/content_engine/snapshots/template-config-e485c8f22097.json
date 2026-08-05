@@ -1,0 +1,11 @@
+{
+  "snapshot_id": "template-config-e485c8f22097",
+  "source_id": "template-config",
+  "fetched_at": "2026-08-05T04:04:14Z",
+  "content_hash": "e485c8f22097e537a844aa11b3a93fa846534bdc169bbffce7d2d595a8cb6d56",
+  "version_tag": "e485c8f22097",
+  "mime_type": "text/markdown",
+  "raw_bytes_location": "artifacts/content_engine/snapshots/template-config-e485c8f22097.md",
+  "canonical_url": "local://templates/config/README.md",
+  "upstream_last_modified": ""
+}

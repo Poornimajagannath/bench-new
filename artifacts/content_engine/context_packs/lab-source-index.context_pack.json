@@ -1,0 +1,97 @@
+{
+  "pack_id": "ctx-lab-source-index",
+  "source_id": "lab-source-index",
+  "product": [
+    "cybersource",
+    "visa-acceptance"
+  ],
+  "audience": [
+    "developer",
+    "agent"
+  ],
+  "title": "Source Index \u2014 CyberSource Developer Portal",
+  "goal": "Source Index \u2014 CyberSource Developer Portal",
+  "unit_ids": [
+    "lab-source-index:overview:0:documentation",
+    "lab-source-index:overview:0:preferred-patterns-(from-llms.txt)",
+    "lab-source-index:overview:0:mcp-(agent-toolkit)",
+    "lab-source-index:prerequisite:0:sdk-installation",
+    "lab-source-index:prerequisite:0:sandbox-testing",
+    "lab-source-index:warning:1:known-doc-gaps"
+  ],
+  "units_summary": [
+    {
+      "unit_id": "lab-source-index:overview:0:documentation",
+      "unit_type": "overview",
+      "title": "Documentation",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "lab-source-index:overview:0:preferred-patterns-(from-llms.txt)",
+      "unit_type": "overview",
+      "title": "Preferred Patterns (from llms.txt)",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "lab-source-index:overview:0:mcp-(agent-toolkit)",
+      "unit_type": "overview",
+      "title": "MCP (Agent Toolkit)",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "lab-source-index:prerequisite:0:sdk-installation",
+      "unit_type": "prerequisite",
+      "title": "SDK Installation",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "lab-source-index:prerequisite:0:sandbox-testing",
+      "unit_type": "prerequisite",
+      "title": "Sandbox Testing",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "lab-source-index:warning:1:known-doc-gaps",
+      "unit_type": "warning",
+      "title": "Known Doc Gaps",
+      "sequence_number": 1,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    }
+  ],
+  "provenance": {
+    "source_id": "lab-source-index",
+    "snapshot_id": "lab-source-index-66f619df8f1f",
+    "content_hash": "66f619df8f1fe213931452ad42dfd29374c7d7f46d7c2c78d6fba952357c0800",
+    "canonical_url": "local://context/source-index.md",
+    "doc_id": "doc-lab-source-index"
+  },
+  "constraints": [
+    "Derived Relay context pack \u2014 does not rewrite source docs",
+    "No live credentials, PAN, or secrets",
+    "Extraction backend recorded in provenance / honest_label (heuristic default; optional real DocETL via --discovery)"
+  ],
+  "linked_workflow_id": null
+}

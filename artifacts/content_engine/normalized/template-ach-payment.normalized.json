@@ -1,0 +1,22 @@
+{
+  "doc_id": "doc-template-ach-payment",
+  "source_id": "template-ach-payment",
+  "snapshot_id": "template-ach-payment-905b50fb96ff",
+  "title": "ACH Payment Integration Template",
+  "canonical_url": "local://templates/ach-payment/README.md",
+  "source_format": "markdown",
+  "product": [
+    "cybersource",
+    "visa-acceptance"
+  ],
+  "audience": [
+    "developer",
+    "agent"
+  ],
+  "page_type": "template",
+  "freshness_date": "unknown",
+  "normalized_markdown": "# ACH Payment Integration Template\n\n## SDK Models Used\n\n- `CreatePaymentRequest` \u2014 Main payment request object\n- `Ptsv2paymentsClientReferenceInformation` \u2014 Order reference\n- `Ptsv2paymentsOrderInformation` \u2014 Order details\n- `Ptsv2paymentsOrderInformationAmountDetails` \u2014 Amount and currency\n- `Ptsv2paymentsOrderInformationBillTo` \u2014 Billing address\n- `Ptsv2paymentsPaymentInformation` \u2014 Payment method\n- `Ptsv2paymentsPaymentInformationBank` \u2014 Bank account details\n- `Ptsv2paymentsPaymentInformationBankAccount` \u2014 Bank account structure\n\n## SDK Model Property Reference\n\n### Ptsv2paymentsPaymentInformationBank\n| Property | Type | Required | Description |\n|----------|------|----------|-------------|\n| `account_type` | string | Yes | CHECKING or SAVINGS |\n| `account_number` | string | Yes | Bank account number |\n| `routing_number` | string | Yes | 9-digit routing number |\n| `bank_name` | string | No | Bank name |\n| `account_holder_name` | string | No | Name on the account |\n| `account_holder_type` | string | No | PERSON or BUSINESS |\n\n### Ptsv2paymentsPaymentInformationBankAccount\n| Property | Type | Required | Description |\n|----------|------|----------|-------------|\n| `account_type` | string | Yes | CHECKING, SAVINGS, or LOAN |\n| `account_number` | string | Yes | Bank account number |\n| `routing_number` | string | Yes | 9-digit ABA routing number |\n| `name_on_account` | string | No | Name on the account |\n| `account_holder_type` | string | No | PERSON or BUSINESS |\n\n## Bank Transfers by Region\n\n### US (ACH)\n| Field | Format |\n|-------|--------|\n| Routing Number | 9 digits (0-9) |\n| Account Number | 8-17 digits (0-9) |\n| Account Type | CHECKING or SAVINGS |\n\n### EU (SEPA)\n| Field | Format |\n|-------|--------|\n| IBAN | 15-34 alphanumeric characters |\n| BIC/SWIFT | 8 or 11 characters |\n| Account Number | Varies by country |\n\n### UK (BACS)\n| Field | Format |\n|-------|--------|\n| Sort Code | 6 digits (XX-XX-XX) |\n| Account Number | 8 digits (0-9) |\n\n## Required Fields for ACH\n\n- `paymentInformation.bank.accountType` \u2014 must be `CHECKING` or `SAVINGS`\n- `paymentInformation.bank.accountNumber` \u2014 bank account number\n- `paymentInformation.bank.routingNumber` \u2014 9-digit routing number\n- `orderInformation.billTo.firstName` \u2014 customer first name\n- `orderInformation.billTo.lastName` \u2014 customer last name\n- `orderInformation.amountDetails.totalAmount` \u2014 order total\n- `orderInformation.amountDetails.currency` \u2014 ISO 3-character currency code\n- `clientReferenceInformation.code` \u2014 merchant reference\n\n## Error Recovery\n\n| Error | Recovery |\n|-------|----------|\n| `INVALID_DATA` | Check routing number format (must be 9 digits), account number length |\n| `AUTH_FAILED` | Verify auth credentials |\n| `ACCOUNT_CLOSED` | Prompt customer for different account |\n| `INSUFFICIENT_FUNDS` | Prompt customer for different account |\n| `NETWORK_ERROR` | Implement retry with exponential backoff |\n\n## ACH-Specific Gotchas\n\n1. **Routing numbers must be 9 digits** \u2014 not 8, not 10, exactly 9\n2. **Account numbers are 8-17 digits** for most processors\n3. **ACH takes 3-5 business days** to settle \u2014 unlike cards which are instant\n4. **SEPA requires IBAN format** \u2014 not just account number\n5. **BACS requires sort code** \u2014 6 digits in XX-XX-XX format\n6. **Name on account must match** the billing address name\n7. **ACH cannot be reversed instantly** \u2014 requires separate reversal flow\n",
+  "extracted_metadata": {
+    "goal": "ACH Payment Integration Template"
+  }
+}

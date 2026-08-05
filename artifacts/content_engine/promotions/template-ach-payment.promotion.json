@@ -1,0 +1,72 @@
+{
+  "source_id": "template-ach-payment",
+  "status": "promoted",
+  "schema_passed": true,
+  "content_passed": true,
+  "agent_use_status": "deferred",
+  "issues": [
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "template-ach-payment:step:1:**routing-numbers-must-be-9-digits**-\u2014-not-8,-no"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "template-ach-payment:step:2:**account-numbers-are-8-17-digits**-for-most-pro"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "template-ach-payment:step:3:**ach-takes-3-5-business-days**-to-settle-\u2014-unli"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "template-ach-payment:step:4:**sepa-requires-iban-format**-\u2014-not-just-account"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "template-ach-payment:step:5:**bacs-requires-sort-code**-\u2014-6-digits-in-xx-xx-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "template-ach-payment:step:6:**name-on-account-must-match**-the-billing-addre"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "template-ach-payment:step:7:**ach-cannot-be-reversed-instantly**-\u2014-requires-"
+    }
+  ],
+  "promoted_unit_ids": [
+    "template-ach-payment:overview:0:sdk-models-used",
+    "template-ach-payment:overview:0:ptsv2paymentspaymentinformationbank",
+    "template-ach-payment:overview:0:ptsv2paymentspaymentinformationbankaccount",
+    "template-ach-payment:overview:0:us-(ach)",
+    "template-ach-payment:overview:0:eu-(sepa)",
+    "template-ach-payment:overview:0:uk-(bacs)",
+    "template-ach-payment:overview:0:required-fields-for-ach",
+    "template-ach-payment:overview:0:error-recovery",
+    "template-ach-payment:step:1:**routing-numbers-must-be-9-digits**-\u2014-not-8,-no",
+    "template-ach-payment:step:2:**account-numbers-are-8-17-digits**-for-most-pro",
+    "template-ach-payment:step:3:**ach-takes-3-5-business-days**-to-settle-\u2014-unli",
+    "template-ach-payment:step:4:**sepa-requires-iban-format**-\u2014-not-just-account",
+    "template-ach-payment:step:5:**bacs-requires-sort-code**-\u2014-6-digits-in-xx-xx-",
+    "template-ach-payment:step:6:**name-on-account-must-match**-the-billing-addre",
+    "template-ach-payment:step:7:**ach-cannot-be-reversed-instantly**-\u2014-requires-"
+  ],
+  "linked_workflow_id": null,
+  "contract_bundle_path": null,
+  "context_pack_path": "artifacts/content_engine/context_packs/template-ach-payment.context_pack.json",
+  "objects_path": "artifacts/content_engine/objects/template-ach-payment.quickstart_units.json"
+}

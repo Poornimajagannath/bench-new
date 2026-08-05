@@ -1,0 +1,75 @@
+{
+  "pack_id": "ctx-lab-auth-context",
+  "source_id": "lab-auth-context",
+  "product": [
+    "cybersource",
+    "visa-acceptance"
+  ],
+  "audience": [
+    "developer",
+    "agent"
+  ],
+  "title": "Authentication Context",
+  "goal": "Authentication Context",
+  "unit_ids": [
+    "lab-auth-context:prerequisite:0:credential-loading",
+    "lab-auth-context:prerequisite:0:required-environment-variables",
+    "lab-auth-context:troubleshooting:1:auth-error-taxonomy",
+    "lab-auth-context:troubleshooting:1:sdk-field-names-(known-gap)"
+  ],
+  "units_summary": [
+    {
+      "unit_id": "lab-auth-context:prerequisite:0:credential-loading",
+      "unit_type": "prerequisite",
+      "title": "Credential Loading",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "lab-auth-context:prerequisite:0:required-environment-variables",
+      "unit_type": "prerequisite",
+      "title": "Required Environment Variables",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "lab-auth-context:troubleshooting:1:auth-error-taxonomy",
+      "unit_type": "troubleshooting",
+      "title": "Auth Error Taxonomy",
+      "sequence_number": 1,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "lab-auth-context:troubleshooting:1:sdk-field-names-(known-gap)",
+      "unit_type": "troubleshooting",
+      "title": "SDK Field Names (Known Gap)",
+      "sequence_number": 1,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    }
+  ],
+  "provenance": {
+    "source_id": "lab-auth-context",
+    "snapshot_id": "lab-auth-context-67354844102f",
+    "content_hash": "67354844102f2ba10b48200c3837854d7abfc445ea4e0d0950574587ab50562d",
+    "canonical_url": "local://context/auth.md",
+    "doc_id": "doc-lab-auth-context"
+  },
+  "constraints": [
+    "Derived Relay context pack \u2014 does not rewrite source docs",
+    "No live credentials, PAN, or secrets",
+    "Extraction backend recorded in provenance / honest_label (heuristic default; optional real DocETL via --discovery)"
+  ],
+  "linked_workflow_id": "http-signature-debug"
+}

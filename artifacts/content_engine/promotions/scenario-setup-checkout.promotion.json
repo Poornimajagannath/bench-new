@@ -1,0 +1,49 @@
+{
+  "source_id": "scenario-setup-checkout",
+  "status": "promoted",
+  "schema_passed": true,
+  "content_passed": true,
+  "agent_use_status": "passed",
+  "issues": [
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "scenario-setup-checkout:step:1:read-the-cybersource-checkout-documentation"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "scenario-setup-checkout:step:2:understand-the-checkout-setup-process-(unified-c"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "scenario-setup-checkout:step:3:configure-the-checkout-with-the-right-parameters"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "scenario-setup-checkout:step:4:make-a-test-transaction-that-returns-a-transacti"
+    }
+  ],
+  "promoted_unit_ids": [
+    "scenario-setup-checkout:overview:0:question",
+    "scenario-setup-checkout:step:1:read-the-cybersource-checkout-documentation",
+    "scenario-setup-checkout:step:2:understand-the-checkout-setup-process-(unified-c",
+    "scenario-setup-checkout:step:3:configure-the-checkout-with-the-right-parameters",
+    "scenario-setup-checkout:step:4:make-a-test-transaction-that-returns-a-transacti",
+    "scenario-setup-checkout:prerequisite:0:inputs",
+    "scenario-setup-checkout:validation_check:5:success-criteria",
+    "scenario-setup-checkout:warning:5:error-categories-to-track",
+    "scenario-setup-checkout:next_step:5:resources",
+    "scenario-setup-checkout:next_step:5:agent-instruction"
+  ],
+  "linked_workflow_id": "microform-payer-auth-state-machine",
+  "contract_bundle_path": "artifacts/contracts/microform-payer-auth-state-machine.contract_bundle.json",
+  "context_pack_path": "artifacts/content_engine/context_packs/scenario-setup-checkout.context_pack.json",
+  "objects_path": "artifacts/content_engine/objects/scenario-setup-checkout.quickstart_units.json"
+}

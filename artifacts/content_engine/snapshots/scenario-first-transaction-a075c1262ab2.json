@@ -1,0 +1,11 @@
+{
+  "snapshot_id": "scenario-first-transaction-a075c1262ab2",
+  "source_id": "scenario-first-transaction",
+  "fetched_at": "2026-08-05T04:04:13Z",
+  "content_hash": "a075c1262ab265c43e724b22fe9ee3e7323a3f54595f89a1a8fd45aa68c10f54",
+  "version_tag": "a075c1262ab2",
+  "mime_type": "text/markdown",
+  "raw_bytes_location": "artifacts/content_engine/snapshots/scenario-first-transaction-a075c1262ab2.md",
+  "canonical_url": "local://scenarios/first-transaction/task.md",
+  "upstream_last_modified": ""
+}

@@ -1,0 +1,124 @@
+{
+  "stage": "content_engine_extract",
+  "inspired_by": "ucbepic/docetl (imported; Frame.code_map, no LLM)",
+  "extractor_label": "imported-code_map",
+  "source_id": "lab-sandbox-rules",
+  "units": [
+    {
+      "unit_id": "lab-sandbox-rules:prerequisite:0:test-cards",
+      "source_page_id": "doc-lab-sandbox-rules",
+      "unit_type": "prerequisite",
+      "title": "Test Cards",
+      "goal": "Sandbox Rules",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "lab-sandbox-rules"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "- **Card Number:** `4111111111111111`\n- **Expiry:** `12/2031`\n- **CVV:** `123`\n- **Billing:** 123 Test St, Seattle, WA 98101, USA",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "- **Card Number:** `4111111111111111` - **Expiry:** `12/2031` - **CVV:** `123` - **Billing:** 123 Test St, Seattle, WA 98101, USA"
+      ]
+    },
+    {
+      "unit_id": "lab-sandbox-rules:overview:0:sandbox-behavior",
+      "source_page_id": "doc-lab-sandbox-rules",
+      "unit_type": "overview",
+      "title": "Sandbox Behavior",
+      "goal": "Sandbox Rules",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "lab-sandbox-rules"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "- Sandbox simulates production but with test data only\n- Never use production endpoints or credentials\n- Sandbox is rate-limited \u2014 allow retries\n- Sandbox returns predictable responses for testing",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "- Sandbox simulates production but with test data only - Never use production endpoints or credentials - Sandbox is rate-limited \u2014 allow retries - Sandbox re..."
+      ]
+    },
+    {
+      "unit_id": "lab-sandbox-rules:overview:0:what-sandbox-simulates",
+      "source_page_id": "doc-lab-sandbox-rules",
+      "unit_type": "overview",
+      "title": "What Sandbox Simulates",
+      "goal": "Sandbox Rules",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "lab-sandbox-rules"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "- Payment processing\n- Authentication\n- Error responses\n- Transaction IDs",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "- Payment processing - Authentication - Error responses - Transaction IDs"
+      ]
+    },
+    {
+      "unit_id": "lab-sandbox-rules:warning:1:what-sandbox-does-not-simulate",
+      "source_page_id": "doc-lab-sandbox-rules",
+      "unit_type": "warning",
+      "title": "What Sandbox Does NOT Simulate",
+      "goal": "Sandbox Rules",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "lab-sandbox-rules"
+      ],
+      "sequence_number": 1,
+      "body_markdown": "- Production-level fraud detection\n- Real card issuer responses\n- Actual fund transfers",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "- Production-level fraud detection - Real card issuer responses - Actual fund transfers"
+      ]
+    }
+  ]
+}

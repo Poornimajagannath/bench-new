@@ -4,12 +4,13 @@
 source registry
 -> local snapshot
 -> normalize / segment
--> DocETL-style extract (quickstart_unit)
+-> extract (heuristic | real DocETL code_map | DocETL LLM map)
 -> schema + content validation
 -> promote + context-pack stub
 
-Does NOT import docetl / tempo-evals / Harbor.
-Does NOT call the network or use live credentials.
+Default extract is heuristic (no docetl import).
+Pass --discovery docetl to run the real DocETL package via code_map.
+Pass --discovery docetl-llm only when an LLM API key is configured.
 """
 
 from __future__ import annotations
@@ -23,6 +24,7 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
+from relay_bench.content_engine.docetl_adapter import EXTRACT_MODES
 from relay_bench.content_engine.pipeline import run_content_engine
 from relay_bench.content_engine.registry import list_enabled_sources
 
@@ -36,14 +38,43 @@ def main() -> int:
         choices=enabled,
         help="Registered local source_id to compile",
     )
+    parser.add_argument(
+        "--discovery",
+        default=None,
+        choices=list(EXTRACT_MODES),
+        help=(
+            "Extract backend: heuristic (default), docetl (real package code_map), "
+            "or docetl-llm (real package LLM map; needs API key). "
+            "If omitted, reads RELAY_DISCOVERY, else heuristic."
+        ),
+    )
+    parser.add_argument(
+        "--fallback-on-error",
+        action="store_true",
+        help="If DocETL mode cannot run, fall back to heuristic and label honesty",
+    )
     args = parser.parse_args()
 
-    print(f"[content_engine] stage=registry source={args.source}")
-    result = run_content_engine(args.source)
+    discovery = args.discovery  # None => env RELAY_DISCOVERY => heuristic
+    print(
+        f"[content_engine] stage=registry source={args.source} "
+        f"discovery={discovery or 'auto'}"
+    )
+    try:
+        result = run_content_engine(
+            args.source,
+            discovery=discovery,
+            fallback_on_error=args.fallback_on_error,
+        )
+    except Exception as exc:
+        print(f"[content_engine] error: {exc}", file=sys.stderr)
+        return 2
+
     print(
         f"[content_engine] stage=promote status={result['promotion_status']} "
         f"units={result['unit_count']} schema={result['schema_passed']} "
-        f"content={result['content_passed']} agent_use={result['agent_use_status']}"
+        f"content={result['content_passed']} agent_use={result['agent_use_status']} "
+        f"docetl={result['honest_label'].get('docetl')}"
     )
     if result["context_pack_path"]:
         print(f"[content_engine] context_pack={result['context_pack_path']}")

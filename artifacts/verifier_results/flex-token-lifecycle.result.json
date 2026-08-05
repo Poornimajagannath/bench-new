@@ -1,0 +1,76 @@
+{
+  "stage": "stable_bench_inspired_verifier",
+  "inspired_by": "tempoxyz/tempo-evals Stable Bench (not imported in V0)",
+  "workflow_id": "flex-token-lifecycle",
+  "results": {
+    "oracle_answer": {
+      "workflow_id": "flex-token-lifecycle",
+      "subject": "oracle_answer",
+      "passed": true,
+      "checks": [
+        {
+          "check_id": "no_persist_transient",
+          "passed": true,
+          "detail": "persists_transient_jwt: expected=False actual=False",
+          "private": true
+        },
+        {
+          "check_id": "uses_flex_to_tms_path",
+          "passed": true,
+          "detail": "uses_transient_token_path: expected=True actual=True",
+          "private": true
+        },
+        {
+          "check_id": "creates_permanent_instrument",
+          "passed": true,
+          "detail": "calls_tms_create_instrument: expected=True actual=True",
+          "private": true
+        },
+        {
+          "check_id": "stage_order_includes_validate",
+          "passed": true,
+          "detail": "stages_completed contains 'validate_token_type': True",
+          "private": true
+        }
+      ],
+      "caught_failures": []
+    },
+    "bad_answer": {
+      "workflow_id": "flex-token-lifecycle",
+      "subject": "bad_answer",
+      "passed": true,
+      "checks": [
+        {
+          "check_id": "no_persist_transient",
+          "passed": false,
+          "detail": "persists_transient_jwt: expected=False actual=True",
+          "private": true
+        },
+        {
+          "check_id": "uses_flex_to_tms_path",
+          "passed": false,
+          "detail": "uses_transient_token_path: expected=True actual=False",
+          "private": true
+        },
+        {
+          "check_id": "creates_permanent_instrument",
+          "passed": false,
+          "detail": "calls_tms_create_instrument: expected=True actual=False",
+          "private": true
+        },
+        {
+          "check_id": "stage_order_includes_validate",
+          "passed": false,
+          "detail": "stages_completed contains 'validate_token_type': False",
+          "private": true
+        }
+      ],
+      "caught_failures": [
+        "no_persist_transient",
+        "uses_flex_to_tms_path",
+        "creates_permanent_instrument",
+        "stage_order_includes_validate"
+      ]
+    }
+  }
+}

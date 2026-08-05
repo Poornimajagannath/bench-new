@@ -1,0 +1,298 @@
+{
+  "stage": "content_engine_extract",
+  "inspired_by": "ucbepic/docetl (imported; Frame.code_map, no LLM)",
+  "extractor_label": "imported-code_map",
+  "source_id": "scenario-agent-readiness-testing",
+  "units": [
+    {
+      "unit_id": "scenario-agent-readiness-testing:overview:0:question",
+      "source_page_id": "doc-scenario-agent-readiness-testing",
+      "unit_type": "overview",
+      "title": "Question",
+      "goal": "Agent Readiness Testing \u2014 Benchmark Scenario",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "scenario-agent-readiness-testing"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "Can an agent systematically test a payment integration and produce a structured report of DX issues, blockers, and recommendations?",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "Can an agent systematically test a payment integration and produce a structured report of DX issues, blockers, and recommendations?"
+      ]
+    },
+    {
+      "unit_id": "scenario-agent-readiness-testing:step:1:systematic-testing-methodology",
+      "source_page_id": "doc-scenario-agent-readiness-testing",
+      "unit_type": "step",
+      "title": "Systematic testing methodology",
+      "goal": "Agent Readiness Testing \u2014 Benchmark Scenario",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "scenario-agent-readiness-testing"
+      ],
+      "sequence_number": 1,
+      "body_markdown": "Systematic testing methodology",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.7,
+      "evidence_quotes": [
+        "Systematic testing methodology"
+      ]
+    },
+    {
+      "unit_id": "scenario-agent-readiness-testing:step:2:ability-to-categorize-and-prioritize-issues",
+      "source_page_id": "doc-scenario-agent-readiness-testing",
+      "unit_type": "step",
+      "title": "Ability to categorize and prioritize issues",
+      "goal": "Agent Readiness Testing \u2014 Benchmark Scenario",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "scenario-agent-readiness-testing"
+      ],
+      "sequence_number": 2,
+      "body_markdown": "Ability to categorize and prioritize issues",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.7,
+      "evidence_quotes": [
+        "Ability to categorize and prioritize issues"
+      ]
+    },
+    {
+      "unit_id": "scenario-agent-readiness-testing:step:3:clear-documentation-of-findings",
+      "source_page_id": "doc-scenario-agent-readiness-testing",
+      "unit_type": "step",
+      "title": "Clear documentation of findings",
+      "goal": "Agent Readiness Testing \u2014 Benchmark Scenario",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "scenario-agent-readiness-testing"
+      ],
+      "sequence_number": 3,
+      "body_markdown": "Clear documentation of findings",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.7,
+      "evidence_quotes": [
+        "Clear documentation of findings"
+      ]
+    },
+    {
+      "unit_id": "scenario-agent-readiness-testing:step:4:actionable-recommendations",
+      "source_page_id": "doc-scenario-agent-readiness-testing",
+      "unit_type": "step",
+      "title": "Actionable recommendations",
+      "goal": "Agent Readiness Testing \u2014 Benchmark Scenario",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "scenario-agent-readiness-testing"
+      ],
+      "sequence_number": 4,
+      "body_markdown": "Actionable recommendations",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.7,
+      "evidence_quotes": [
+        "Actionable recommendations"
+      ]
+    },
+    {
+      "unit_id": "scenario-agent-readiness-testing:overview:0:scenario-a:-auth-integration-test",
+      "source_page_id": "doc-scenario-agent-readiness-testing",
+      "unit_type": "overview",
+      "title": "Scenario A: Auth Integration Test",
+      "goal": "Agent Readiness Testing \u2014 Benchmark Scenario",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "scenario-agent-readiness-testing"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "**Task:** Test authentication with CyberSource and report all DX issues encountered\n\n**Success Criteria:**\n- [ ] Agent correctly identifies SDK installation requirements\n- [ ] Agent discovers field name mismatches between docs and SDK\n- [ ] Agent documents auth failures with root cause analysis\n- [ ] Agent provides severity ratings for each issue",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "**Task:** Test authentication with CyberSource and report all DX issues encountered **Success Criteria:** - [ ] Agent correctly identifies SDK installation r..."
+      ]
+    },
+    {
+      "unit_id": "scenario-agent-readiness-testing:overview:0:scenario-b:-multi-payment-method-test",
+      "source_page_id": "doc-scenario-agent-readiness-testing",
+      "unit_type": "overview",
+      "title": "Scenario B: Multi-Payment Method Test",
+      "goal": "Agent Readiness Testing \u2014 Benchmark Scenario",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "scenario-agent-readiness-testing"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "**Task:** Test card, ACH, and digital wallet integrations and report findings\n\n**Success Criteria:**\n- [ ] Agent understands differences between payment methods\n- [ ] Agent documents model structure requirements for each type\n- [ ] Agent identifies currency handling gaps\n- [ ] Agent reports error handling deficiencies",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "**Task:** Test card, ACH, and digital wallet integrations and report findings **Success Criteria:** - [ ] Agent understands differences between payment metho..."
+      ]
+    },
+    {
+      "unit_id": "scenario-agent-readiness-testing:overview:0:scenario-c:-currency-&-internationalization-test",
+      "source_page_id": "doc-scenario-agent-readiness-testing",
+      "unit_type": "overview",
+      "title": "Scenario C: Currency & Internationalization Test",
+      "goal": "Agent Readiness Testing \u2014 Benchmark Scenario",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "scenario-agent-readiness-testing"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "**Task:** Test multi-currency payment flows and report DX issues\n\n**Success Criteria:**\n- [ ] Agent tests at least 3 different currencies\n- [ ] Agent identifies locale handling issues\n- [ ] Agent documents tax/jurisdiction configuration gaps\n- [ ] Agent provides recommendations for internationalization",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "**Task:** Test multi-currency payment flows and report DX issues **Success Criteria:** - [ ] Agent tests at least 3 different currencies - [ ] Agent identifi..."
+      ]
+    },
+    {
+      "unit_id": "scenario-agent-readiness-testing:next_step:5:resources",
+      "source_page_id": "doc-scenario-agent-readiness-testing",
+      "unit_type": "next_step",
+      "title": "Resources",
+      "goal": "Agent Readiness Testing \u2014 Benchmark Scenario",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "scenario-agent-readiness-testing"
+      ],
+      "sequence_number": 5,
+      "body_markdown": "- CyberSource REST API spec (via MCP `get_model_class_details`)\n- CyberSource SDK templates (via MCP `get_code_template`)\n- Currency/tax configuration docs\n- Error handling documentation",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "- CyberSource REST API spec (via MCP `get_model_class_details`) - CyberSource SDK templates (via MCP `get_code_template`) - Currency/tax configuration docs -..."
+      ]
+    },
+    {
+      "unit_id": "scenario-agent-readiness-testing:next_step:5:agent-instruction",
+      "source_page_id": "doc-scenario-agent-readiness-testing",
+      "unit_type": "next_step",
+      "title": "Agent Instruction",
+      "goal": "Agent Readiness Testing \u2014 Benchmark Scenario",
+      "product": [
+        "cybersource",
+        "visa-acceptance"
+      ],
+      "audience": [
+        "developer",
+        "agent"
+      ],
+      "task": [
+        "scenario-agent-readiness-testing"
+      ],
+      "sequence_number": 5,
+      "body_markdown": "Read the CyberSource documentation via MCP tools. Systematically test integration scenarios (auth, payment methods, currency config) and produce a structured DX issue report with severity ratings and recommendations.",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "Read the CyberSource documentation via MCP tools. Systematically test integration scenarios (auth, payment methods, currency config) and produce a structured..."
+      ]
+    }
+  ]
+}

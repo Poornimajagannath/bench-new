@@ -1,0 +1,25 @@
+{
+  "source_id": "lab-sandbox-rules",
+  "status": "promoted",
+  "schema_passed": true,
+  "content_passed": true,
+  "agent_use_status": "deferred",
+  "issues": [
+    {
+      "code": "no_steps",
+      "severity": "warning",
+      "message": "no step units; promoting reference-style units with evidence",
+      "unit_id": null
+    }
+  ],
+  "promoted_unit_ids": [
+    "lab-sandbox-rules:prerequisite:0:test-cards",
+    "lab-sandbox-rules:overview:0:sandbox-behavior",
+    "lab-sandbox-rules:overview:0:what-sandbox-simulates",
+    "lab-sandbox-rules:warning:1:what-sandbox-does-not-simulate"
+  ],
+  "linked_workflow_id": null,
+  "contract_bundle_path": null,
+  "context_pack_path": "artifacts/content_engine/context_packs/lab-sandbox-rules.context_pack.json",
+  "objects_path": "artifacts/content_engine/objects/lab-sandbox-rules.quickstart_units.json"
+}

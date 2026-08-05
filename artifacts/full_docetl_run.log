@@ -1,0 +1,717 @@
+[full_docetl] start discovery=docetl docetl_available=True
+[full_docetl] stage=synthesize_candidates
+[full_docetl] candidates suggestions=20 approved=3 path=artifacts/candidates.json
+[full_docetl] stage=content_engine sources=15
+[full_docetl] content_engine source=lab-auth-context type=context
+[04:04:48] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/5 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 5/5 [00:00<00:00, 119156.36it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.01s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=promoted units=4 docetl=imported-code_map ok=True
+[full_docetl] content_engine source=lab-sandbox-rules type=context
+[04:04:48] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/5 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 5/5 [00:00<00:00, 169125.16it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.01s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=promoted units=4 docetl=imported-code_map ok=True
+[full_docetl] content_engine source=lab-source-index type=context
+[04:04:48] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/7 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 7/7 [00:00<00:00, 42861.50it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.01s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=promoted units=6 docetl=imported-code_map ok=True
+[full_docetl] content_engine source=microform-payer-auth-quickstart type=quickstart
+[04:04:48] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/13 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 13/13 [00:00<00:00, 315178.91it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.01s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=promoted units=11 docetl=imported-code_map ok=True
+[full_docetl] content_engine source=scenario-agent-readiness-testing type=scenario
+[04:04:48] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/10 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 10/10 [00:00<00:00, 52298.05it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.01s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=promoted units=10 docetl=imported-code_map ok=True
+[full_docetl] content_engine source=scenario-authentication type=scenario
+[04:04:48] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/9 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 9/9 [00:00<00:00, 314572.80it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.01s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=promoted units=9 docetl=imported-code_map ok=True
+[full_docetl] content_engine source=scenario-first-transaction type=scenario
+[04:04:48] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/9 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 9/9 [00:00<00:00, 253347.22it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.01s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=promoted units=10 docetl=imported-code_map ok=True
+[full_docetl] content_engine source=scenario-setup-checkout type=scenario
+[04:04:48] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/9 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 9/9 [00:00<00:00, 45208.07it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.01s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=promoted units=10 docetl=imported-code_map ok=True
+[full_docetl] content_engine source=scenario-visa-relay-context-swapping type=scenario
+[04:04:48] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/10 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 10/10 [00:00<00:00, 332881.27it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.01s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=promoted units=10 docetl=imported-code_map ok=True
+[full_docetl] content_engine source=template-ach-payment type=template
+[04:04:48] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/12 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 12/12 [00:00<00:00, 282762.07it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.01s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=promoted units=15 docetl=imported-code_map ok=True
+[full_docetl] content_engine source=template-card-payment type=template
+[04:04:48] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/9 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 9/9 [00:00<00:00, 290374.89it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.01s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=promoted units=7 docetl=imported-code_map ok=True
+[full_docetl] content_engine source=template-config type=template
+[04:04:48] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/11 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 11/11 [00:00<00:00, 339245.18it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.01s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=promoted units=12 docetl=imported-code_map ok=True
+[full_docetl] content_engine source=template-digital-wallet type=template
+[04:04:48] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/12 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 12/12 [00:00<00:00, 292625.86it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.01s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=promoted units=20 docetl=imported-code_map ok=True
+[full_docetl] content_engine source=template-multi-currency type=template
+[04:04:48] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/16 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 16/16 [00:00<00:00, 29279.61it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.01s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=promoted units=23 docetl=imported-code_map ok=True
+[full_docetl] content_engine source=templates-index type=template
+[04:04:48] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/4 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 4/4 [00:00<00:00, 29330.80it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.01s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=promoted units=3 docetl=imported-code_map ok=True
+[full_docetl] stage=bench_v0
+[full_docetl] bench workflow=flex-token-lifecycle
+[bench_v0] stage=raw_questions_extract_suggest
+[04:04:48] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_goal_symptoms_entities' (code_map)              
+           ✓ Operation 'scan_questions' (scan)                                  
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'questions' from in-memory data                     
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_goal_symptoms_entities/scan_questions (Cost: $0.00)   
+Processing extract_goal_symptoms_entities (code_map):   0%|          | 0/20 [00:00<?, ?it/s]Processing extract_goal_symptoms_entities (code_map): 100%|██████████| 20/20 [00:00<00:00, 367921.40it/s]
+           ✓ step_extract_goal_symptoms_entities/extract_goal_symptoms_entities 
+           (Cost: $0.00)                                                        
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭── Step Execution: step_extract_goal_symptoms_entities/boundary ───╮
+           │ ✓ step_extract_goal_symptoms_entities/scan_questions (Cost:       │
+           │ $0.00)                                                            │
+           │ ✓                                                                 │
+           │ step_extract_goal_symptoms_entities/extract_goal_symptoms_entitie │
+           │ s (Cost: $0.00)                                                   │
+           │ Step step_extract_goal_symptoms_entities/boundary completed.      │
+           │ Cost: $0.00                                                       │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.01s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[bench_v0] discovery_label=imported-code_map mode=docetl
+[bench_v0] seed=seed-flex-01 channel=forum suggest=flex-token-lifecycle entities=['Flex', 'Microform', 'TMS', 'createInstrument']
+[bench_v0] seed=seed-flex-02 channel=forum suggest=flex-token-lifecycle entities=['Flex', 'Microform', 'TMS', 'transientTokenJwt', 'createInstrument']
+[bench_v0] seed=seed-flex-03 channel=docs suggest=flex-token-lifecycle entities=['Flex', 'TMS', 'transientTokenJwt', 'createInstrument']
+[bench_v0] seed=seed-flex-04 channel=forum suggest=flex-token-lifecycle entities=['Flex', 'Microform', 'TMS', 'transientTokenJwt', 'createInstrument']
+[bench_v0] seed=seed-flex-05 channel=support suggest=flex-token-lifecycle entities=['Flex', 'TMS']
+[bench_v0] seed=seed-flex-06 channel=forum suggest=flex-token-lifecycle entities=['Flex', 'Microform', 'TMS']
+[bench_v0] seed=seed-flex-07 channel=docs suggest=flex-token-lifecycle entities=['Flex', 'Microform', 'TMS', 'transientTokenJwt', 'authorization']
+[bench_v0] seed=seed-httpsig-01 channel=docs suggest=http-signature-debug entities=['HTTP Signature', 'Authentication Failed', 'keyId', 'secretKey', 'apitest.cybersource.com']
+[bench_v0] seed=seed-httpsig-02 channel=forum suggest=http-signature-debug entities=['HTTP Signature', 'v-c-merchant-id', 'apitest.cybersource.com']
+[bench_v0] seed=seed-httpsig-03 channel=support suggest=http-signature-debug entities=['Authentication Failed', 'keyId', 'secretKey', 'merchantKeyId']
+[bench_v0] seed=seed-httpsig-04 channel=forum suggest=http-signature-debug entities=['HTTP Signature', 'Authentication Failed']
+[bench_v0] seed=seed-httpsig-05 channel=docs suggest=http-signature-debug entities=['HTTP Signature', 'apitest.cybersource.com']
+[bench_v0] seed=seed-httpsig-06 channel=forum suggest=http-signature-debug entities=['HTTP Signature', 'Authentication Failed', 'keyId', 'merchantKeyId']
+[bench_v0] seed=seed-mpa-01 channel=support suggest=microform-payer-auth-state-machine entities=['Microform', 'Payer Authentication', '3DS', 'enrollment', 'challenge', 'authorization']
+[bench_v0] seed=seed-mpa-02 channel=forum suggest=microform-payer-auth-state-machine entities=['Microform', 'Payer Authentication', 'enrollment', 'challenge', 'frictionless']
+[bench_v0] seed=seed-mpa-03 channel=docs suggest=microform-payer-auth-state-machine entities=['Microform', 'frictionless']
+[bench_v0] seed=seed-mpa-04 channel=forum suggest=microform-payer-auth-state-machine entities=['Flex', 'Microform', 'authorization']
+[bench_v0] seed=seed-mpa-05 channel=support suggest=microform-payer-auth-state-machine entities=['Microform', 'Payer Authentication', '3DS']
+[bench_v0] seed=seed-mpa-06 channel=forum suggest=microform-payer-auth-state-machine entities=['Microform', 'enrollment', 'challenge']
+[bench_v0] seed=seed-mpa-07 channel=docs suggest=microform-payer-auth-state-machine entities=['Microform', 'enrollment', 'authorization']
+[bench_v0] stage=pm_approve_or_edit
+[bench_v0] pm_decision=approve workflow='flex-token-lifecycle' seeds=['seed-flex-01', 'seed-flex-02', 'seed-flex-03', 'seed-flex-04', 'seed-flex-05', 'seed-flex-06', 'seed-flex-07']
+[bench_v0] stage=task_pack_and_verifier
+[bench_v0] agent_task=/workspace/artifacts/task_packs/flex-token-lifecycle.agent_task.json
+[bench_v0] verifier_private=/workspace/artifacts/task_packs/flex-token-lifecycle.verifier_private.json (not agent-facing)
+[bench_v0] verifier_results=/workspace/artifacts/verifier_results/flex-token-lifecycle.result.json
+[bench_v0] oracle_passed=True bad_answer_caught=True
+[bench_v0] stage=failure_classifier
+[bench_v0] category=token-lifecycle-confusion actions=2
+[bench_v0] stage=report
+[bench_v0] report_md=/workspace/artifacts/reports/flex-token-lifecycle.report.md
+[bench_v0] report_json=/workspace/artifacts/reports/flex-token-lifecycle.report.json
+[bench_v0] stage=contract_compiler
+[bench_v0] contract_json=/workspace/artifacts/contracts/flex-token-lifecycle.contract_bundle.json
+[bench_v0] contract_md=/workspace/artifacts/contracts/flex-token-lifecycle.contract_bundle.md
+[bench_v0] harbor_preview_only=True
+{
+  "ok": true,
+  "workflow_id": "flex-token-lifecycle",
+  "pm_decision": "approve",
+  "agent_task": "/workspace/artifacts/task_packs/flex-token-lifecycle.agent_task.json",
+  "verifier_private": "/workspace/artifacts/task_packs/flex-token-lifecycle.verifier_private.json",
+  "verifier_results": "/workspace/artifacts/verifier_results/flex-token-lifecycle.result.json",
+  "report_md": "/workspace/artifacts/reports/flex-token-lifecycle.report.md",
+  "report_json": "/workspace/artifacts/reports/flex-token-lifecycle.report.json",
+  "contract_json": "/workspace/artifacts/contracts/flex-token-lifecycle.contract_bundle.json",
+  "contract_md": "/workspace/artifacts/contracts/flex-token-lifecycle.contract_bundle.md",
+  "hidden_truth_separated": true,
+  "pm_open": "/workspace/artifacts/reports/flex-token-lifecycle.report.md",
+  "honest_label": {
+    "docetl": "imported-code_map",
+    "extract_mode": "docetl",
+    "tempo_harbor": "preview-via-linked-contract-if-present",
+    "network": "denied"
+  }
+}
+[full_docetl]   bench ok=True exit=0
+[full_docetl] bench workflow=http-signature-debug
+[bench_v0] stage=raw_questions_extract_suggest
+[04:04:48] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_goal_symptoms_entities' (code_map)              
+           ✓ Operation 'scan_questions' (scan)                                  
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'questions' from in-memory data                     
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_goal_symptoms_entities/scan_questions (Cost: $0.00)   
+Processing extract_goal_symptoms_entities (code_map):   0%|          | 0/20 [00:00<?, ?it/s]Processing extract_goal_symptoms_entities (code_map): 100%|██████████| 20/20 [00:00<00:00, 358487.52it/s]
+           ✓ step_extract_goal_symptoms_entities/extract_goal_symptoms_entities 
+           (Cost: $0.00)                                                        
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭── Step Execution: step_extract_goal_symptoms_entities/boundary ───╮
+           │ ✓ step_extract_goal_symptoms_entities/scan_questions (Cost:       │
+           │ $0.00)                                                            │
+           │ ✓                                                                 │
+           │ step_extract_goal_symptoms_entities/extract_goal_symptoms_entitie │
+           │ s (Cost: $0.00)                                                   │
+           │ Step step_extract_goal_symptoms_entities/boundary completed.      │
+           │ Cost: $0.00                                                       │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.01s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[bench_v0] discovery_label=imported-code_map mode=docetl
+[bench_v0] seed=seed-flex-01 channel=forum suggest=flex-token-lifecycle entities=['Flex', 'Microform', 'TMS', 'createInstrument']
+[bench_v0] seed=seed-flex-02 channel=forum suggest=flex-token-lifecycle entities=['Flex', 'Microform', 'TMS', 'transientTokenJwt', 'createInstrument']
+[bench_v0] seed=seed-flex-03 channel=docs suggest=flex-token-lifecycle entities=['Flex', 'TMS', 'transientTokenJwt', 'createInstrument']
+[bench_v0] seed=seed-flex-04 channel=forum suggest=flex-token-lifecycle entities=['Flex', 'Microform', 'TMS', 'transientTokenJwt', 'createInstrument']
+[bench_v0] seed=seed-flex-05 channel=support suggest=flex-token-lifecycle entities=['Flex', 'TMS']
+[bench_v0] seed=seed-flex-06 channel=forum suggest=flex-token-lifecycle entities=['Flex', 'Microform', 'TMS']
+[bench_v0] seed=seed-flex-07 channel=docs suggest=flex-token-lifecycle entities=['Flex', 'Microform', 'TMS', 'transientTokenJwt', 'authorization']
+[bench_v0] seed=seed-httpsig-01 channel=docs suggest=http-signature-debug entities=['HTTP Signature', 'Authentication Failed', 'keyId', 'secretKey', 'apitest.cybersource.com']
+[bench_v0] seed=seed-httpsig-02 channel=forum suggest=http-signature-debug entities=['HTTP Signature', 'v-c-merchant-id', 'apitest.cybersource.com']
+[bench_v0] seed=seed-httpsig-03 channel=support suggest=http-signature-debug entities=['Authentication Failed', 'keyId', 'secretKey', 'merchantKeyId']
+[bench_v0] seed=seed-httpsig-04 channel=forum suggest=http-signature-debug entities=['HTTP Signature', 'Authentication Failed']
+[bench_v0] seed=seed-httpsig-05 channel=docs suggest=http-signature-debug entities=['HTTP Signature', 'apitest.cybersource.com']
+[bench_v0] seed=seed-httpsig-06 channel=forum suggest=http-signature-debug entities=['HTTP Signature', 'Authentication Failed', 'keyId', 'merchantKeyId']
+[bench_v0] seed=seed-mpa-01 channel=support suggest=microform-payer-auth-state-machine entities=['Microform', 'Payer Authentication', '3DS', 'enrollment', 'challenge', 'authorization']
+[bench_v0] seed=seed-mpa-02 channel=forum suggest=microform-payer-auth-state-machine entities=['Microform', 'Payer Authentication', 'enrollment', 'challenge', 'frictionless']
+[bench_v0] seed=seed-mpa-03 channel=docs suggest=microform-payer-auth-state-machine entities=['Microform', 'frictionless']
+[bench_v0] seed=seed-mpa-04 channel=forum suggest=microform-payer-auth-state-machine entities=['Flex', 'Microform', 'authorization']
+[bench_v0] seed=seed-mpa-05 channel=support suggest=microform-payer-auth-state-machine entities=['Microform', 'Payer Authentication', '3DS']
+[bench_v0] seed=seed-mpa-06 channel=forum suggest=microform-payer-auth-state-machine entities=['Microform', 'enrollment', 'challenge']
+[bench_v0] seed=seed-mpa-07 channel=docs suggest=microform-payer-auth-state-machine entities=['Microform', 'enrollment', 'authorization']
+[bench_v0] stage=pm_approve_or_edit
+[bench_v0] pm_decision=approve workflow='http-signature-debug' seeds=['seed-httpsig-01', 'seed-httpsig-02', 'seed-httpsig-03', 'seed-httpsig-04', 'seed-httpsig-05', 'seed-httpsig-06']
+[bench_v0] stage=task_pack_and_verifier
+[bench_v0] agent_task=/workspace/artifacts/task_packs/http-signature-debug.agent_task.json
+[bench_v0] verifier_private=/workspace/artifacts/task_packs/http-signature-debug.verifier_private.json (not agent-facing)
+[bench_v0] verifier_results=/workspace/artifacts/verifier_results/http-signature-debug.result.json
+[bench_v0] oracle_passed=True bad_answer_caught=True
+[bench_v0] stage=failure_classifier
+[bench_v0] category=auth-mechanism actions=3
+[bench_v0] stage=report
+[bench_v0] report_md=/workspace/artifacts/reports/http-signature-debug.report.md
+[bench_v0] report_json=/workspace/artifacts/reports/http-signature-debug.report.json
+[bench_v0] stage=contract_compiler
+[bench_v0] contract_json=/workspace/artifacts/contracts/http-signature-debug.contract_bundle.json
+[bench_v0] contract_md=/workspace/artifacts/contracts/http-signature-debug.contract_bundle.md
+[bench_v0] harbor_preview_only=True
+{
+  "ok": true,
+  "workflow_id": "http-signature-debug",
+  "pm_decision": "approve",
+  "agent_task": "/workspace/artifacts/task_packs/http-signature-debug.agent_task.json",
+  "verifier_private": "/workspace/artifacts/task_packs/http-signature-debug.verifier_private.json",
+  "verifier_results": "/workspace/artifacts/verifier_results/http-signature-debug.result.json",
+  "report_md": "/workspace/artifacts/reports/http-signature-debug.report.md",
+  "report_json": "/workspace/artifacts/reports/http-signature-debug.report.json",
+  "contract_json": "/workspace/artifacts/contracts/http-signature-debug.contract_bundle.json",
+  "contract_md": "/workspace/artifacts/contracts/http-signature-debug.contract_bundle.md",
+  "hidden_truth_separated": true,
+  "pm_open": "/workspace/artifacts/reports/http-signature-debug.report.md",
+  "honest_label": {
+    "docetl": "imported-code_map",
+    "extract_mode": "docetl",
+    "tempo_harbor": "preview-via-linked-contract-if-present",
+    "network": "denied"
+  }
+}
+[full_docetl]   bench ok=True exit=0
+[full_docetl] bench workflow=microform-payer-auth-state-machine
+[bench_v0] stage=raw_questions_extract_suggest
+[04:04:48] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_goal_symptoms_entities' (code_map)              
+           ✓ Operation 'scan_questions' (scan)                                  
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'questions' from in-memory data                     
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_goal_symptoms_entities/scan_questions (Cost: $0.00)   
+Processing extract_goal_symptoms_entities (code_map):   0%|          | 0/20 [00:00<?, ?it/s]Processing extract_goal_symptoms_entities (code_map): 100%|██████████| 20/20 [00:00<00:00, 321402.61it/s]
+           ✓ step_extract_goal_symptoms_entities/extract_goal_symptoms_entities 
+           (Cost: $0.00)                                                        
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭── Step Execution: step_extract_goal_symptoms_entities/boundary ───╮
+           │ ✓ step_extract_goal_symptoms_entities/scan_questions (Cost:       │
+           │ $0.00)                                                            │
+           │ ✓                                                                 │
+           │ step_extract_goal_symptoms_entities/extract_goal_symptoms_entitie │
+           │ s (Cost: $0.00)                                                   │
+           │ Step step_extract_goal_symptoms_entities/boundary completed.      │
+           │ Cost: $0.00                                                       │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.01s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[bench_v0] discovery_label=imported-code_map mode=docetl
+[bench_v0] seed=seed-flex-01 channel=forum suggest=flex-token-lifecycle entities=['Flex', 'Microform', 'TMS', 'createInstrument']
+[bench_v0] seed=seed-flex-02 channel=forum suggest=flex-token-lifecycle entities=['Flex', 'Microform', 'TMS', 'transientTokenJwt', 'createInstrument']
+[bench_v0] seed=seed-flex-03 channel=docs suggest=flex-token-lifecycle entities=['Flex', 'TMS', 'transientTokenJwt', 'createInstrument']
+[bench_v0] seed=seed-flex-04 channel=forum suggest=flex-token-lifecycle entities=['Flex', 'Microform', 'TMS', 'transientTokenJwt', 'createInstrument']
+[bench_v0] seed=seed-flex-05 channel=support suggest=flex-token-lifecycle entities=['Flex', 'TMS']
+[bench_v0] seed=seed-flex-06 channel=forum suggest=flex-token-lifecycle entities=['Flex', 'Microform', 'TMS']
+[bench_v0] seed=seed-flex-07 channel=docs suggest=flex-token-lifecycle entities=['Flex', 'Microform', 'TMS', 'transientTokenJwt', 'authorization']
+[bench_v0] seed=seed-httpsig-01 channel=docs suggest=http-signature-debug entities=['HTTP Signature', 'Authentication Failed', 'keyId', 'secretKey', 'apitest.cybersource.com']
+[bench_v0] seed=seed-httpsig-02 channel=forum suggest=http-signature-debug entities=['HTTP Signature', 'v-c-merchant-id', 'apitest.cybersource.com']
+[bench_v0] seed=seed-httpsig-03 channel=support suggest=http-signature-debug entities=['Authentication Failed', 'keyId', 'secretKey', 'merchantKeyId']
+[bench_v0] seed=seed-httpsig-04 channel=forum suggest=http-signature-debug entities=['HTTP Signature', 'Authentication Failed']
+[bench_v0] seed=seed-httpsig-05 channel=docs suggest=http-signature-debug entities=['HTTP Signature', 'apitest.cybersource.com']
+[bench_v0] seed=seed-httpsig-06 channel=forum suggest=http-signature-debug entities=['HTTP Signature', 'Authentication Failed', 'keyId', 'merchantKeyId']
+[bench_v0] seed=seed-mpa-01 channel=support suggest=microform-payer-auth-state-machine entities=['Microform', 'Payer Authentication', '3DS', 'enrollment', 'challenge', 'authorization']
+[bench_v0] seed=seed-mpa-02 channel=forum suggest=microform-payer-auth-state-machine entities=['Microform', 'Payer Authentication', 'enrollment', 'challenge', 'frictionless']
+[bench_v0] seed=seed-mpa-03 channel=docs suggest=microform-payer-auth-state-machine entities=['Microform', 'frictionless']
+[bench_v0] seed=seed-mpa-04 channel=forum suggest=microform-payer-auth-state-machine entities=['Flex', 'Microform', 'authorization']
+[bench_v0] seed=seed-mpa-05 channel=support suggest=microform-payer-auth-state-machine entities=['Microform', 'Payer Authentication', '3DS']
+[bench_v0] seed=seed-mpa-06 channel=forum suggest=microform-payer-auth-state-machine entities=['Microform', 'enrollment', 'challenge']
+[bench_v0] seed=seed-mpa-07 channel=docs suggest=microform-payer-auth-state-machine entities=['Microform', 'enrollment', 'authorization']
+[bench_v0] stage=pm_approve_or_edit
+[bench_v0] pm_decision=edit workflow='microform-payer-auth-state-machine' seeds=['seed-mpa-01', 'seed-mpa-02', 'seed-mpa-03', 'seed-mpa-04', 'seed-mpa-05', 'seed-mpa-06', 'seed-mpa-07']
+[bench_v0] stage=task_pack_and_verifier
+[bench_v0] agent_task=/workspace/artifacts/task_packs/microform-payer-auth-state-machine.agent_task.json
+[bench_v0] verifier_private=/workspace/artifacts/task_packs/microform-payer-auth-state-machine.verifier_private.json (not agent-facing)
+[bench_v0] verifier_results=/workspace/artifacts/verifier_results/microform-payer-auth-state-machine.result.json
+[bench_v0] oracle_passed=True bad_answer_caught=True
+[bench_v0] stage=failure_classifier
+[bench_v0] category=state-machine-gap actions=2
+[bench_v0] stage=report
+[bench_v0] report_md=/workspace/artifacts/reports/microform-payer-auth-state-machine.report.md
+[bench_v0] report_json=/workspace/artifacts/reports/microform-payer-auth-state-machine.report.json
+[bench_v0] stage=contract_compiler
+[bench_v0] contract_json=/workspace/artifacts/contracts/microform-payer-auth-state-machine.contract_bundle.json
+[bench_v0] contract_md=/workspace/artifacts/contracts/microform-payer-auth-state-machine.contract_bundle.md
+[bench_v0] harbor_preview_only=True
+{
+  "ok": true,
+  "workflow_id": "microform-payer-auth-state-machine",
+  "pm_decision": "edit",
+  "agent_task": "/workspace/artifacts/task_packs/microform-payer-auth-state-machine.agent_task.json",
+  "verifier_private": "/workspace/artifacts/task_packs/microform-payer-auth-state-machine.verifier_private.json",
+  "verifier_results": "/workspace/artifacts/verifier_results/microform-payer-auth-state-machine.result.json",
+  "report_md": "/workspace/artifacts/reports/microform-payer-auth-state-machine.report.md",
+  "report_json": "/workspace/artifacts/reports/microform-payer-auth-state-machine.report.json",
+  "contract_json": "/workspace/artifacts/contracts/microform-payer-auth-state-machine.contract_bundle.json",
+  "contract_md": "/workspace/artifacts/contracts/microform-payer-auth-state-machine.contract_bundle.md",
+  "hidden_truth_separated": true,
+  "pm_open": "/workspace/artifacts/reports/microform-payer-auth-state-machine.report.md",
+  "honest_label": {
+    "docetl": "imported-code_map",
+    "extract_mode": "docetl",
+    "tempo_harbor": "preview-via-linked-contract-if-present",
+    "network": "denied"
+  }
+}
+[full_docetl]   bench ok=True exit=0
+[full_docetl] summary=artifacts/full_docetl_run.json
+{
+  "discovery": "docetl",
+  "promoted_count": 15,
+  "blocked_count": 0,
+  "bench_ok_count": 3,
+  "honest_labels": [
+    "imported-code_map"
+  ]
+}
