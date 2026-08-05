@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lesson 0001 — Two lanes</title>
+  <link rel="stylesheet" href="../assets/lesson.css" />
+</head>
+<body>
+  <p class="meta">
+    <span>Lesson 0001</span>
+    <span>·</span>
+    <a href="../MISSION.md">Mission</a>
+    <span>·</span>
+    <a href="../RESOURCES.md">Resources</a>
+  </p>
+
+  <h1>Two lanes, one lab</h1>
+  <p class="muted">One tangible win: name which Relay Bench lane made an artifact — and what “honest” means for DocETL.</p>
+
+  <img
+    class="diagram"
+    src="../../diagrams/relay-bench-runtime-phone.png"
+    alt="Relay Bench Runtime architecture map"
+  />
+
+  <h2>The skill</h2>
+  <p>
+    When someone (or an agent) claims “we integrated DocETL,” you should be able to ask:
+    <strong>which lane, and what did the honest label say?</strong>
+  </p>
+
+  <h2>Knowledge (small)</h2>
+  <div class="lanes">
+    <div class="card lane-a">
+      <h3>Lane A — Content compile</h3>
+      <p>
+        Local docs → registry → extract (heuristic or real DocETL <code>code_map</code>) →
+        schema/evidence gates → <strong>context packs</strong>.
+      </p>
+      <p class="muted">Look under <span class="path">artifacts/content_engine/</span></p>
+    </div>
+    <div class="card lane-b">
+      <h3>Lane B — Bench / contract</h3>
+      <p>
+        Hard-question seeds → discovery → PM approve/edit → task packs →
+        <strong>contract bundles</strong> (Harbor shape is preview-only).
+      </p>
+      <p class="muted">Look under <span class="path">artifacts/task_packs/</span> and <span class="path">artifacts/contracts/</span></p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Honesty labels (non-negotiable)</h3>
+    <ul>
+      <li><strong>style-only</strong> — local heuristic; <code>docetl</code> package not imported</li>
+      <li><strong>imported-code_map</strong> — real DocETL ran <code>Frame.code_map</code> (no LLM)</li>
+      <li><strong>preview-only</strong> — Harbor/Tempo shape exported for inspection, not a live runner</li>
+    </ul>
+    <p class="cite">
+      Upstream DocETL concepts:
+      <a href="https://ucbepic.github.io/docetl/">ucbepic.github.io/docetl</a>
+      · Lab product promise:
+      <a href="../../products/relay/integration-success-os-spec.md">Integration Success OS spec</a>
+    </p>
+  </div>
+
+  <h2>Practice</h2>
+  <p>Tap the best answer. Feedback is immediate.</p>
+
+  <div class="card quiz" id="q1">
+    <p><strong>1.</strong> A file lands at <span class="path">artifacts/content_engine/context_packs/…</span>. Which lane?</p>
+    <button type="button" data-ok="1">Lane A content-compile path</button>
+    <button type="button" data-ok="0">Lane B bench-contract path&nbsp;</button>
+    <button type="button" data-ok="0">Lane C seed-inventory path</button>
+    <div class="feedback" aria-live="polite"></div>
+  </div>
+
+  <div class="card quiz" id="q2">
+    <p><strong>2.</strong> Run log says <code>docetl: imported-code_map</code>. What happened?</p>
+    <button type="button" data-ok="0">Local heuristic; DocETL idle.</button>
+    <button type="button" data-ok="1">Real DocETL; code_map fired.</button>
+    <button type="button" data-ok="0">Live Harbor; Tempo running&nbsp;</button>
+    <div class="feedback" aria-live="polite"></div>
+  </div>
+
+  <div class="card quiz" id="q3">
+    <p><strong>3.</strong> Contract bundle marks Harbor <code>preview_only: true</code>. Safe claim?</p>
+    <button type="button" data-ok="0">Harbor runs fully in CI now</button>
+    <button type="button" data-ok="0">Tempo scores live prod now</button>
+    <button type="button" data-ok="1">Shape only; no live runner</button>
+    <div class="feedback" aria-live="polite"></div>
+  </div>
+
+  <h2>Primary source (read next)</h2>
+  <p>
+    Skim the DocETL overview so “map / code_map” isn’t a magic word:
+    <a href="https://ucbepic.github.io/docetl/">https://ucbepic.github.io/docetl/</a>
+  </p>
+
+  <div class="footer-ask">
+    <strong>Stuck or curious?</strong> Ask the agent (your teacher) follow-ups —
+    e.g. “walk a real context pack JSON with me” or “quiz me on promotion failures.”
+  </div>
+
+  <script>
+    document.querySelectorAll(".quiz").forEach((quiz) => {
+      const feedback = quiz.querySelector(".feedback");
+      quiz.querySelectorAll("button").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          quiz.querySelectorAll("button").forEach((b) => {
+            b.classList.remove("correct", "wrong");
+            b.disabled = true;
+          });
+          const ok = btn.dataset.ok === "1";
+          btn.classList.add(ok ? "correct" : "wrong");
+          if (!ok) {
+            const right = quiz.querySelector('button[data-ok="1"]');
+            if (right) right.classList.add("correct");
+          }
+          feedback.textContent = ok ? "Nice — that sticks." : "Not that one — see the green answer.";
+          feedback.className = "feedback " + (ok ? "ok" : "bad");
+        });
+      });
+    });
+  </script>
+</body>
+</html>
