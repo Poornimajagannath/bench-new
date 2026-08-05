@@ -1,0 +1,56 @@
+{
+  "source_id": "cybersource-payments-core-openapi",
+  "spec_snapshot_id": "cybersource-payments-core-openapi-36023ffe0629",
+  "compared_against": [
+    "artifacts/contracts/microform-payer-auth-state-machine.contract_bundle.json",
+    "artifacts/content_engine/objects/microform-payer-auth-quickstart.quickstart_units.json"
+  ],
+  "added_entities": [
+    "cybersource-payments-core-openapi:createCredit",
+    "cybersource-payments-core-openapi:createPayment",
+    "cybersource-payments-core-openapi:getPayment",
+    "cybersource-payments-core-openapi:capturePayment",
+    "cybersource-payments-core-openapi:createMppCredentialSetup",
+    "cybersource-payments-core-openapi:checkMppEnrollment",
+    "cybersource-payments-core-openapi:createCustomer",
+    "cybersource-payments-core-openapi:getCustomer"
+  ],
+  "removed_entities": [],
+  "changed_entities": [],
+  "missing_quickstart_links": [],
+  "stale_human_claims": [],
+  "decisions": [
+    {
+      "entity_id": "cybersource-payments-core-openapi:createCredit",
+      "action": "generate"
+    },
+    {
+      "entity_id": "cybersource-payments-core-openapi:createPayment",
+      "action": "generate"
+    },
+    {
+      "entity_id": "cybersource-payments-core-openapi:getPayment",
+      "action": "generate"
+    },
+    {
+      "entity_id": "cybersource-payments-core-openapi:capturePayment",
+      "action": "generate"
+    },
+    {
+      "entity_id": "cybersource-payments-core-openapi:createMppCredentialSetup",
+      "action": "generate"
+    },
+    {
+      "entity_id": "cybersource-payments-core-openapi:checkMppEnrollment",
+      "action": "generate"
+    },
+    {
+      "entity_id": "cybersource-payments-core-openapi:createCustomer",
+      "action": "generate"
+    },
+    {
+      "entity_id": "cybersource-payments-core-openapi:getCustomer",
+      "action": "generate"
+    }
+  ]
+}

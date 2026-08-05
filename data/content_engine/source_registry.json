@@ -12,5 +12,19 @@
     "parser_strategy": "markdown_native",
     "enabled": true,
     "linked_workflow_id": "microform-payer-auth-state-machine"
+  },
+  {
+    "source_id": "cybersource-payments-core-openapi",
+    "source_type": "openapi",
+    "canonical_url": "local://fixtures/cybersource-payments-core.openapi.json",
+    "repo_path": "data/content_engine/specs/cybersource-payments-core.openapi.json",
+    "owning_team": "relay-bench-local",
+    "product": ["cybersource", "visa-acceptance"],
+    "audience": ["developer"],
+    "refresh_cadence": "manual-fixture",
+    "trust_level": "experimental",
+    "parser_strategy": "openapi_parser",
+    "enabled": true,
+    "linked_workflow_id": "microform-payer-auth-state-machine"
   }
 ]

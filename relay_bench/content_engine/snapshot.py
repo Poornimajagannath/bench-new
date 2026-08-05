@@ -27,10 +27,22 @@ def materialize_snapshot(record: SourceRecord) -> SourceSnapshot:
     text = source_path.read_text(encoding="utf-8")
     content_hash = _sha256_text(text)
     snapshot_id = f"{record.source_id}-{content_hash[:12]}"
+    suffix = source_path.suffix or ".txt"
+    mime_type = {
+        ".md": "text/markdown",
+        ".markdown": "text/markdown",
+        ".json": "application/json",
+        ".yaml": "application/yaml",
+        ".yml": "application/yaml",
+    }.get(suffix.lower(), "text/plain")
 
     SNAPSHOT_ARTIFACT_DIR.mkdir(parents=True, exist_ok=True)
-    raw_path = SNAPSHOT_ARTIFACT_DIR / f"{snapshot_id}.md"
-    meta_path = SNAPSHOT_ARTIFACT_DIR / f"{snapshot_id}.json"
+    raw_path = SNAPSHOT_ARTIFACT_DIR / f"{snapshot_id}{suffix}"
+    # Avoid clobbering JSON raw snapshots: meta uses .meta.json for .json sources.
+    if suffix.lower() == ".json":
+        meta_path = SNAPSHOT_ARTIFACT_DIR / f"{snapshot_id}.meta.json"
+    else:
+        meta_path = SNAPSHOT_ARTIFACT_DIR / f"{snapshot_id}.json"
     raw_path.write_text(text, encoding="utf-8")
 
     # Reuse prior metadata for the same content-addressed snapshot so reruns
@@ -47,7 +59,7 @@ def materialize_snapshot(record: SourceRecord) -> SourceSnapshot:
         fetched_at=fetched_at,
         content_hash=content_hash,
         version_tag=content_hash[:12],
-        mime_type="text/markdown",
+        mime_type=mime_type,
         raw_bytes_location=repo_relative(raw_path),
         canonical_url=record.canonical_url,
         upstream_last_modified="",
