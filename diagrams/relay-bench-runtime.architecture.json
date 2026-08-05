@@ -1,0 +1,275 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Relay Bench Runtime",
+    "subtitle": "Local compile lanes: docs \u2192 DocETL extract \u2192 promote \u2192 contracts / packs",
+    "output": "relay-bench-runtime.architecture.html",
+    "quality_profile": "showcase",
+    "visual_preset": "blueprint",
+    "views": [
+      {
+        "id": "content-compile",
+        "label": "Content compile path",
+        "focus": [
+          "sources",
+          "registry",
+          "docetl",
+          "promote",
+          "context_packs"
+        ],
+        "note": "Primary path from local CyberSource docs through DocETL extract to promoted context packs."
+      },
+      {
+        "id": "bench-contract",
+        "label": "Bench + contract path",
+        "focus": [
+          "seeds",
+          "discovery",
+          "pm_gate",
+          "task_pack",
+          "contracts"
+        ],
+        "note": "Confusion seeds become PM-approved workflows, task packs, and Harbor-preview contract bundles."
+      },
+      {
+        "id": "upstream-inspirations",
+        "label": "Upstream inspirations",
+        "focus": [
+          "docetl",
+          "contracts",
+          "cybs_docs"
+        ],
+        "note": "DocETL is imported for code_map; Tempo/Harbor remain preview-only in contract export."
+      }
+    ]
+  },
+  "layout": {
+    "mode": "grid",
+    "origin": [
+      40,
+      80
+    ],
+    "cols": 5,
+    "gapX": 48,
+    "gapY": 70,
+    "cellW": 140,
+    "cellH": 64
+  },
+  "components": [
+    {
+      "id": "cybs_docs",
+      "type": "external",
+      "label": "CyberSource docs",
+      "sublabel": "llms.txt corpus",
+      "tag": "174 files",
+      "row": 0,
+      "col": 0
+    },
+    {
+      "id": "sources",
+      "type": "external",
+      "label": "Lab sources",
+      "sublabel": "context / scenarios / templates",
+      "row": 0,
+      "col": 1
+    },
+    {
+      "id": "seeds",
+      "type": "external",
+      "label": "Hard questions",
+      "sublabel": "frozen seeds",
+      "row": 0,
+      "col": 3
+    },
+    {
+      "id": "registry",
+      "type": "backend",
+      "label": "Source registry",
+      "sublabel": "snapshot + normalize",
+      "row": 1,
+      "col": 1
+    },
+    {
+      "id": "docetl",
+      "type": "backend",
+      "label": "DocETL adapter",
+      "sublabel": "code_map extract",
+      "tag": "imported",
+      "row": 1,
+      "col": 2
+    },
+    {
+      "id": "discovery",
+      "type": "backend",
+      "label": "Discovery",
+      "sublabel": "goal / symptoms / entities",
+      "row": 1,
+      "col": 3
+    },
+    {
+      "id": "promote",
+      "type": "security",
+      "label": "Promotion gates",
+      "sublabel": "schema + evidence",
+      "row": 2,
+      "col": 1
+    },
+    {
+      "id": "pm_gate",
+      "type": "security",
+      "label": "PM gate",
+      "sublabel": "approve / edit",
+      "row": 2,
+      "col": 3
+    },
+    {
+      "id": "context_packs",
+      "type": "database",
+      "label": "Context packs",
+      "sublabel": "promoted units",
+      "row": 2,
+      "col": 2
+    },
+    {
+      "id": "task_pack",
+      "type": "backend",
+      "label": "Task packs",
+      "sublabel": "agent + verifier private",
+      "row": 2,
+      "col": 4
+    },
+    {
+      "id": "contracts",
+      "type": "database",
+      "label": "Contract bundles",
+      "sublabel": "Harbor preview only",
+      "tag": "preview",
+      "row": 3,
+      "col": 4
+    },
+    {
+      "id": "agents",
+      "type": "frontend",
+      "label": "Agent consumers",
+      "sublabel": "bench / MCP later",
+      "row": 3,
+      "col": 2
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "bench-new local lab (no production Cybersource)",
+      "wraps": [
+        "registry",
+        "docetl",
+        "discovery",
+        "promote",
+        "pm_gate",
+        "context_packs",
+        "task_pack",
+        "contracts"
+      ]
+    },
+    {
+      "kind": "security-group",
+      "label": "eval / promotion firewall",
+      "wraps": [
+        "promote",
+        "pm_gate"
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "cybs-to-registry",
+      "from": "cybs_docs",
+      "to": "registry",
+      "variant": "dashed"
+    },
+    {
+      "id": "sources-to-registry",
+      "from": "sources",
+      "to": "registry",
+      "label": "register",
+      "variant": "emphasis",
+      "labelDy": 24
+    },
+    {
+      "id": "registry-to-docetl",
+      "from": "registry",
+      "to": "docetl"
+    },
+    {
+      "id": "docetl-to-promote",
+      "from": "docetl",
+      "to": "promote",
+      "label": "units"
+    },
+    {
+      "id": "promote-to-packs",
+      "from": "promote",
+      "to": "context_packs"
+    },
+    {
+      "id": "seeds-to-discovery",
+      "from": "seeds",
+      "to": "discovery"
+    },
+    {
+      "id": "discovery-to-pm",
+      "from": "discovery",
+      "to": "pm_gate"
+    },
+    {
+      "id": "pm-to-task",
+      "from": "pm_gate",
+      "to": "task_pack",
+      "label": "approved"
+    },
+    {
+      "id": "task-to-contracts",
+      "from": "task_pack",
+      "to": "contracts"
+    },
+    {
+      "id": "packs-to-agents",
+      "from": "context_packs",
+      "to": "agents",
+      "variant": "dashed"
+    },
+    {
+      "id": "contracts-to-agents",
+      "from": "contracts",
+      "to": "agents",
+      "variant": "dashed"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Compile lanes",
+      "items": [
+        "Content Engine: registry \u2192 DocETL code_map \u2192 promote \u2192 context packs",
+        "Bench V0: seeds \u2192 discovery \u2192 PM gate \u2192 task pack \u2192 contract bundle"
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "Honest integrations",
+      "items": [
+        "DocETL imported for Frame.code_map (no LLM required)",
+        "Tempo / Harbor remain preview-only in contract export"
+      ]
+    },
+    {
+      "dot": "rose",
+      "title": "Sandbox rules",
+      "items": [
+        "No production CyberSource endpoints or credentials",
+        "Promotion blocks ungrounded or secret-bearing units"
+      ]
+    }
+  ]
+}
