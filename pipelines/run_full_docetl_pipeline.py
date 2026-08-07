@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Run the whole Relay Bench + Content Engine pipeline with real DocETL.
 
-Uses repo-tracked CyberSource lab docs from context/, scenarios/, templates/
+Uses repo-tracked Payment Gateway lab docs from context/, scenarios/, templates/
 plus the Microform quickstart fixture.
 
 Stages:

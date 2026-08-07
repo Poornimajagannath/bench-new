@@ -11,7 +11,7 @@
       "title": "Question",
       "goal": "Agent Readiness Testing \u2014 Benchmark Scenario",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -40,7 +40,7 @@
       "title": "Systematic testing methodology",
       "goal": "Agent Readiness Testing \u2014 Benchmark Scenario",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -69,7 +69,7 @@
       "title": "Ability to categorize and prioritize issues",
       "goal": "Agent Readiness Testing \u2014 Benchmark Scenario",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -98,7 +98,7 @@
       "title": "Clear documentation of findings",
       "goal": "Agent Readiness Testing \u2014 Benchmark Scenario",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -127,7 +127,7 @@
       "title": "Actionable recommendations",
       "goal": "Agent Readiness Testing \u2014 Benchmark Scenario",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -156,7 +156,7 @@
       "title": "Scenario A: Auth Integration Test",
       "goal": "Agent Readiness Testing \u2014 Benchmark Scenario",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -167,7 +167,7 @@
         "scenario-agent-readiness-testing"
       ],
       "sequence_number": 0,
-      "body_markdown": "**Task:** Test authentication with CyberSource and report all DX issues encountered\n\n**Success Criteria:**\n- [ ] Agent correctly identifies SDK installation requirements\n- [ ] Agent discovers field name mismatches between docs and SDK\n- [ ] Agent documents auth failures with root cause analysis\n- [ ] Agent provides severity ratings for each issue",
+      "body_markdown": "**Task:** Test authentication with Payment Gateway and report all DX issues encountered\n\n**Success Criteria:**\n- [ ] Agent correctly identifies SDK installation requirements\n- [ ] Agent discovers field name mismatches between docs and SDK\n- [ ] Agent documents auth failures with root cause analysis\n- [ ] Agent provides severity ratings for each issue",
       "commands": [],
       "api_entities": [],
       "requires": [],
@@ -175,7 +175,7 @@
       "failure_modes": [],
       "confidence": 0.85,
       "evidence_quotes": [
-        "**Task:** Test authentication with CyberSource and report all DX issues encountered **Success Criteria:** - [ ] Agent correctly identifies SDK installation r..."
+        "**Task:** Test authentication with Payment Gateway and report all DX issues encountered **Success Criteria:** - [ ] Agent correctly identifies SDK installation r..."
       ]
     },
     {
@@ -185,7 +185,7 @@
       "title": "Scenario B: Multi-Payment Method Test",
       "goal": "Agent Readiness Testing \u2014 Benchmark Scenario",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -214,7 +214,7 @@
       "title": "Scenario C: Currency & Internationalization Test",
       "goal": "Agent Readiness Testing \u2014 Benchmark Scenario",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -243,7 +243,7 @@
       "title": "Resources",
       "goal": "Agent Readiness Testing \u2014 Benchmark Scenario",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -254,7 +254,7 @@
         "scenario-agent-readiness-testing"
       ],
       "sequence_number": 5,
-      "body_markdown": "- CyberSource REST API spec (via MCP `get_model_class_details`)\n- CyberSource SDK templates (via MCP `get_code_template`)\n- Currency/tax configuration docs\n- Error handling documentation",
+      "body_markdown": "- Payment Gateway REST API spec (via MCP `get_model_class_details`)\n- Payment Gateway SDK templates (via MCP `get_code_template`)\n- Currency/tax configuration docs\n- Error handling documentation",
       "commands": [],
       "api_entities": [],
       "requires": [],
@@ -262,7 +262,7 @@
       "failure_modes": [],
       "confidence": 0.85,
       "evidence_quotes": [
-        "- CyberSource REST API spec (via MCP `get_model_class_details`) - CyberSource SDK templates (via MCP `get_code_template`) - Currency/tax configuration docs -..."
+        "- Payment Gateway REST API spec (via MCP `get_model_class_details`) - Payment Gateway SDK templates (via MCP `get_code_template`) - Currency/tax configuration docs -..."
       ]
     },
     {
@@ -272,7 +272,7 @@
       "title": "Agent Instruction",
       "goal": "Agent Readiness Testing \u2014 Benchmark Scenario",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -283,7 +283,7 @@
         "scenario-agent-readiness-testing"
       ],
       "sequence_number": 5,
-      "body_markdown": "Read the CyberSource documentation via MCP tools. Systematically test integration scenarios (auth, payment methods, currency config) and produce a structured DX issue report with severity ratings and recommendations.",
+      "body_markdown": "Read the Payment Gateway documentation via MCP tools. Systematically test integration scenarios (auth, payment methods, currency config) and produce a structured DX issue report with severity ratings and recommendations.",
       "commands": [],
       "api_entities": [],
       "requires": [],
@@ -291,7 +291,7 @@
       "failure_modes": [],
       "confidence": 0.85,
       "evidence_quotes": [
-        "Read the CyberSource documentation via MCP tools. Systematically test integration scenarios (auth, payment methods, currency config) and produce a structured..."
+        "Read the Payment Gateway documentation via MCP tools. Systematically test integration scenarios (auth, payment methods, currency config) and produce a structured..."
       ]
     }
   ]

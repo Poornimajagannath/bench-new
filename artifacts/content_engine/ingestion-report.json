@@ -126,7 +126,7 @@
       "detail": "no quickstart/endpoint/error/prose claim extracted"
     },
     {
-      "path": "2026-08-07/en-us_paze_integration_all_rest_paze_paze-txns-auth-cybs.md.md",
+      "path": "2026-08-07/en-us_paze_integration_all_rest_paze_paze-txns-auth-pgw.md.md",
       "reason": "no_schema_match",
       "detail": "no quickstart/endpoint/error/prose claim extracted"
     },

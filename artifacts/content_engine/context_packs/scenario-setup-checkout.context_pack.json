@@ -2,7 +2,7 @@
   "pack_id": "ctx-scenario-setup-checkout",
   "source_id": "scenario-setup-checkout",
   "product": [
-    "cybersource",
+    "payment-gateway",
     "acceptance-platform"
   ],
   "audience": [
@@ -13,7 +13,7 @@
   "goal": "Setup Checkout \u2014 Unified Checkout or Flex Microcheckout",
   "unit_ids": [
     "scenario-setup-checkout:overview:0:question",
-    "scenario-setup-checkout:step:1:read-the-cybersource-checkout-documentation",
+    "scenario-setup-checkout:step:1:read-the-payment-gateway-checkout-documentation",
     "scenario-setup-checkout:step:2:understand-the-checkout-setup-process-(unified-c",
     "scenario-setup-checkout:step:3:configure-the-checkout-with-the-right-parameters",
     "scenario-setup-checkout:step:4:make-a-test-transaction-that-returns-a-transacti",
@@ -35,9 +35,9 @@
       "evidence_quote_count": 1
     },
     {
-      "unit_id": "scenario-setup-checkout:step:1:read-the-cybersource-checkout-documentation",
+      "unit_id": "scenario-setup-checkout:step:1:read-the-payment-gateway-checkout-documentation",
       "unit_type": "step",
-      "title": "Read the CyberSource checkout documentation",
+      "title": "Read the Payment Gateway checkout documentation",
       "sequence_number": 1,
       "requires": [],
       "outcomes": [],

@@ -41,7 +41,7 @@ def transform(doc):
         (r"\bsecretkey\b", "secretKey"),
         (r"\bmerchantkeyid\b", "merchantKeyId"),
         (r"\bv-c-merchant-id\b", "v-c-merchant-id"),
-        (r"\bapitest(?:\.cybersource\.com)?\b", "apitest.cybersource.com"),
+        (r"\bapitest(?:\.payment-gateway\.com)?\b", "apitest.example.com"),
         (r"\bpayer authentication\b", "Payer Authentication"),
         (r"\b3ds\b", "3DS"),
         (r"\benrollment\b", "enrollment"),

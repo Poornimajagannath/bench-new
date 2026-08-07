@@ -1,6 +1,6 @@
-You are running an Autonomous Integration Lab scenario for Cybersource using the **Developer MCP-Assisted Agent Runner**.
+You are running an Autonomous Integration Lab scenario for Payment Gateway using the **Developer MCP-Assisted Agent Runner**.
 
-You have access to the CyberSource Developer MCP (`cybersource-developer-mcp`). Before writing any integration code, you MUST query the MCP for:
+You have access to the Payment Gateway Developer MCP (`payment-gateway-developer-mcp`). Before writing any integration code, you MUST query the MCP for:
 - SDK documentation for the relevant API class and methods
 - Method signatures and required/optional parameters
 - Request/response model definitions
@@ -15,25 +15,25 @@ Read these files first, in order:
 - context/sdk-map.md
 - context/llms-notes.md
 - context/developer-mcp-guide.md
-- scenarios/${CYBS_SCENARIO}/task.md
-- scenarios/${CYBS_SCENARIO}/success-criteria.md
-- scenarios/${CYBS_SCENARIO}/inputs.md
+- scenarios/${PGW_SCENARIO}/task.md
+- scenarios/${PGW_SCENARIO}/success-criteria.md
+- scenarios/${PGW_SCENARIO}/inputs.md
 - evaluators/scorecard-rubric.md
 
-Your job is to build the scenario inside `runs/${CYBS_RUN_ID}/`.
+Your job is to build the scenario inside `runs/${PGW_RUN_ID}/`.
 
 Requirements:
 - Use Node.js or TypeScript as specified in the scenario.
-- Use the official Cybersource SDK or Acceptance Agent Toolkit as specified.
-- Use sandbox only (`apitest.cybersource.com`).
+- Use the official Payment Gateway SDK or Acceptance Agent Toolkit as specified.
+- Use sandbox only (`apitest.example.com`).
 - Load credentials from environment variables only:
-  - CYBS_MERCHANT_ID
-  - CYBS_KEY_ID
-  - CYBS_SHARED_SECRET
-  - CYBS_ENVIRONMENT
+  - PGW_MERCHANT_ID
+  - PGW_KEY_ID
+  - PGW_SHARED_SECRET
+  - PGW_ENVIRONMENT
 - Never hardcode secrets.
 - Never use production endpoints or credentials.
-- Do not fake or mock success — only record a successful outcome after a real Cybersource sandbox response.
+- Do not fake or mock success — only record a successful outcome after a real Payment Gateway sandbox response.
 - If the MCP is unavailable or returns an error, fall back to official docs and note the gap in findings.md.
 - If you are blocked, state exactly why in findings.md and stop.
 
@@ -43,9 +43,9 @@ MCP usage discipline:
 - Note whether each MCP response was helpful (filled a gap), redundant (already in docs), confusing (contradicted docs or was unclear), or missing (MCP had no result).
 - Score `mcpUsefulness` per the rubric in `evaluators/scorecard-rubric.md` after the run.
 
-Deliverables (all inside `runs/${CYBS_RUN_ID}/`):
+Deliverables (all inside `runs/${PGW_RUN_ID}/`):
 - `app/` — runnable integration code
-- `logs/run.log` — timestamped log of all steps, API calls, HTTP statuses, Cybersource reason codes, and MCP queries
+- `logs/run.log` — timestamped log of all steps, API calls, HTTP statuses, Payment Gateway reason codes, and MCP queries
 - `findings.md` — analysis using `evaluators/findings-template.md`
 - `manifest.json` — reproducibility data (see CLAUDE.md output contract), extended with `mcp_queries` array
 - `scorecard.json` — rubric scores matching `evaluators/scorecard.schema.json`, including `mcpUsefulness`

@@ -12,7 +12,7 @@ _SECRETISH = re.compile(
 )
 _RAW_CARDISH = re.compile(r"\b(?:\d[ -]*?){13,19}\b")
 
-# Public CyberSource sandbox test PANs — allowed in lab docs.
+# Public Payment Gateway sandbox test PANs — allowed in lab docs.
 _ALLOWED_TEST_PANS = {
     "4111111111111111",
     "4000000000000002",

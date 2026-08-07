@@ -66,7 +66,7 @@
     "bad_answer_field_count": 6,
     "private_check_count": 4,
     "hidden_truth_sha256": "6b70bcae5256da6cac7754388fc99244c82dad08c6a1e8aae60f19b8383cdddc",
-    "agent_visible_sha256": "a65f5309920290ff5b7d814c319af4098760eac8de1a906e79ee9b5bee88ab64"
+    "agent_visible_sha256": "7c3792320d6c9ccd42741e6bbc6b29ce7983be9daf63ca629968c27fb7c1dabd"
   },
   "harbor_shape_preview": {
     "preview_only": true,

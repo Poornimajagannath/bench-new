@@ -1,7 +1,7 @@
 # Microform + Payer Authentication Quickstart
 
 Audience: developer
-Product: CyberSource / Acceptance Platform
+Product: Payment Gateway / Acceptance Platform
 Freshness: 2026-08-04
 
 Goal: Sequence Microform tokenization with Payer Authentication enrollment, challenge or frictionless handling, validation, and authorization.

@@ -11,7 +11,7 @@
       "title": "Question",
       "goal": "Setup Checkout \u2014 Unified Checkout or Flex Microcheckout",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -37,13 +37,13 @@
       ]
     },
     {
-      "unit_id": "scenario-setup-checkout:step:1:read-the-cybersource-checkout-documentation",
+      "unit_id": "scenario-setup-checkout:step:1:read-the-payment-gateway-checkout-documentation",
       "source_page_id": "doc-scenario-setup-checkout",
       "unit_type": "step",
-      "title": "Read the CyberSource checkout documentation",
+      "title": "Read the Payment Gateway checkout documentation",
       "goal": "Setup Checkout \u2014 Unified Checkout or Flex Microcheckout",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -54,7 +54,7 @@
         "microform-payer-auth-state-machine"
       ],
       "sequence_number": 1,
-      "body_markdown": "Read the CyberSource checkout documentation",
+      "body_markdown": "Read the Payment Gateway checkout documentation",
       "commands": [],
       "api_entities": [],
       "requires": [],
@@ -62,7 +62,7 @@
       "failure_modes": [],
       "confidence": 0.7,
       "evidence_quotes": [
-        "Read the CyberSource checkout documentation"
+        "Read the Payment Gateway checkout documentation"
       ]
     },
     {
@@ -72,7 +72,7 @@
       "title": "Understand the checkout setup process (Unified Checkout or Flex Microcheckout)",
       "goal": "Setup Checkout \u2014 Unified Checkout or Flex Microcheckout",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -104,7 +104,7 @@
       "title": "Configure the checkout with the right parameters",
       "goal": "Setup Checkout \u2014 Unified Checkout or Flex Microcheckout",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -133,7 +133,7 @@
       "title": "Make a test transaction that returns a transaction ID",
       "goal": "Setup Checkout \u2014 Unified Checkout or Flex Microcheckout",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -162,7 +162,7 @@
       "title": "Inputs",
       "goal": "Setup Checkout \u2014 Unified Checkout or Flex Microcheckout",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -173,7 +173,7 @@
         "microform-payer-auth-state-machine"
       ],
       "sequence_number": 0,
-      "body_markdown": "- CyberSource sandbox credentials (from authentication scenario)\n- CyberSource test card (4111111111111111, expiry 12/2031)\n- CyberSource sandbox URL\n- Checkout configuration options (from CyberSource docs)",
+      "body_markdown": "- Payment Gateway sandbox credentials (from authentication scenario)\n- Payment Gateway test card (4111111111111111, expiry 12/2031)\n- Payment Gateway sandbox URL\n- Checkout configuration options (from Payment Gateway docs)",
       "commands": [],
       "api_entities": [],
       "requires": [],
@@ -181,7 +181,7 @@
       "failure_modes": [],
       "confidence": 0.85,
       "evidence_quotes": [
-        "- CyberSource sandbox credentials (from authentication scenario) - CyberSource test card (4111111111111111, expiry 12/2031) - CyberSource sandbox URL - Check..."
+        "- Payment Gateway sandbox credentials (from authentication scenario) - Payment Gateway test card (4111111111111111, expiry 12/2031) - Payment Gateway sandbox URL - Check..."
       ]
     },
     {
@@ -191,7 +191,7 @@
       "title": "Success Criteria",
       "goal": "Setup Checkout \u2014 Unified Checkout or Flex Microcheckout",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -202,7 +202,7 @@
         "microform-payer-auth-state-machine"
       ],
       "sequence_number": 5,
-      "body_markdown": "- [ ] **PASS**: Agent configures a checkout (Unified Checkout or Flex Microcheckout)\n- [ ] **PASS**: Agent makes a test transaction that returns a transaction ID\n- [ ] **PASS**: Transaction ID is a valid CyberSource format (not an error)",
+      "body_markdown": "- [ ] **PASS**: Agent configures a checkout (Unified Checkout or Flex Microcheckout)\n- [ ] **PASS**: Agent makes a test transaction that returns a transaction ID\n- [ ] **PASS**: Transaction ID is a valid Payment Gateway format (not an error)",
       "commands": [],
       "api_entities": [
         "Flex",
@@ -223,7 +223,7 @@
       "title": "Error Categories to Track",
       "goal": "Setup Checkout \u2014 Unified Checkout or Flex Microcheckout",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -252,7 +252,7 @@
       "title": "Resources",
       "goal": "Setup Checkout \u2014 Unified Checkout or Flex Microcheckout",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -263,7 +263,7 @@
         "microform-payer-auth-state-machine"
       ],
       "sequence_number": 5,
-      "body_markdown": "- CyberSource developer portal: `developer.cybersource.com`\n- CyberSource llms.txt: `developer.cybersource.com/llms.txt`\n- Checkout docs: `developer.cybersource.com/docs/checkout` (or similar)\n- Unified Checkout API reference\n- Flex Microcheckout API reference",
+      "body_markdown": "- Payment Gateway developer portal: `developer.example.com`\n- Payment Gateway llms.txt: `developer.example.com/llms.txt`\n- Checkout docs: `developer.example.com/docs/checkout` (or similar)\n- Unified Checkout API reference\n- Flex Microcheckout API reference",
       "commands": [],
       "api_entities": [
         "Flex",
@@ -274,7 +274,7 @@
       "failure_modes": [],
       "confidence": 0.85,
       "evidence_quotes": [
-        "- CyberSource developer portal: `developer.cybersource.com` - CyberSource llms.txt: `developer.cybersource.com/llms.txt` - Checkout docs: `developer.cybersou..."
+        "- Payment Gateway developer portal: `developer.example.com` - Payment Gateway llms.txt: `developer.example.com/llms.txt` - Checkout docs: `developer.cybersou..."
       ]
     },
     {
@@ -284,7 +284,7 @@
       "title": "Agent Instruction",
       "goal": "Setup Checkout \u2014 Unified Checkout or Flex Microcheckout",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -295,7 +295,7 @@
         "microform-payer-auth-state-machine"
       ],
       "sequence_number": 5,
-      "body_markdown": "Read the CyberSource checkout documentation. Set up either Unified Checkout or Flex Microcheckout with the test card and make a test transaction that returns a transaction ID.",
+      "body_markdown": "Read the Payment Gateway checkout documentation. Set up either Unified Checkout or Flex Microcheckout with the test card and make a test transaction that returns a transaction ID.",
       "commands": [],
       "api_entities": [
         "Flex",
@@ -306,7 +306,7 @@
       "failure_modes": [],
       "confidence": 0.85,
       "evidence_quotes": [
-        "Read the CyberSource checkout documentation. Set up either Unified Checkout or Flex Microcheckout with the test card and make a test transaction that returns..."
+        "Read the Payment Gateway checkout documentation. Set up either Unified Checkout or Flex Microcheckout with the test card and make a test transaction that returns..."
       ]
     }
   ]

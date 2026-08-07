@@ -60,11 +60,11 @@ class SourceMixTests(unittest.TestCase):
             self.assertIn("Top 10 prose-only sections", md)
 
     def test_real_openapi_loads(self):
-        spec = ROOT / "data/content_engine/specs/cybersource-payments-core.openapi.json"
+        spec = ROOT / "data/content_engine/specs/payments-core.openapi.json"
         self.assertTrue(spec.exists())
         result = analyze_source_mix(
             openapi_path=spec,
-            docs_dir=ROOT / "cybersource-docs",
+            docs_dir=ROOT / "gateway-docs",
             sample_limit=5,
         )
         self.assertGreaterEqual(result["docs_sampled"], 1)

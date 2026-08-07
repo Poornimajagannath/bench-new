@@ -55,8 +55,8 @@ Wallet payments often trigger 3D Secure authentication. The flow:
 1. User initiates payment in wallet app
 2. Wallet app authenticates user (biometrics, PIN, etc.)
 3. Wallet app sends token to merchant
-4. Merchant includes token in CyberSource payment request
-5. CyberSource processes transaction with token
+4. Merchant includes token in Payment Gateway payment request
+5. Payment Gateway processes transaction with token
 
 ### 3D Secure Model Properties
 
@@ -81,7 +81,7 @@ Wallet payments often trigger 3D Secure authentication. The flow:
 | Error | Meaning | Fix |
 |-------|---------|-----|
 | `INVALID_TOKEN` | Token is malformed or expired | Prompt user to re-authenticate |
-| `TOKEN_NOT_FOUND` | Token not found on CyberSource side | Use fresh token from wallet provider |
+| `TOKEN_NOT_FOUND` | Token not found on Payment Gateway side | Use fresh token from wallet provider |
 | `3D_SECURE_FAILED` | Authentication failed | Redirect user to retry authentication |
 | `WALLET_NOT_SUPPORTED` | Processor doesn't support this wallet | Fall back to card payment |
 | `INSUFFICIENT_FUNDS` | Wallet balance insufficient | Prompt user for different payment method |

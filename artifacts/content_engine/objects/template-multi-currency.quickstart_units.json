@@ -11,7 +11,7 @@
       "title": "SDK Models Used",
       "goal": "Multi-Currency Integration Template",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -40,7 +40,7 @@
       "title": "Ptsv2paymentsOrderInformationAmountDetails (Multi-Currency)",
       "goal": "Multi-Currency Integration Template",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -69,7 +69,7 @@
       "title": "Ptsv2paymentsOrderInformationAmountDetailsCurrencyConversion",
       "goal": "Multi-Currency Integration Template",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -98,7 +98,7 @@
       "title": "Currency Codes (ISO 4217)",
       "goal": "Multi-Currency Integration Template",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -127,7 +127,7 @@
       "title": "When to Use DCC",
       "goal": "Multi-Currency Integration Template",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -156,7 +156,7 @@
       "title": "Customer selects currency on checkout",
       "goal": "Multi-Currency Integration Template",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -185,7 +185,7 @@
       "title": "DCC provider returns exchange rate",
       "goal": "Multi-Currency Integration Template",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -214,7 +214,7 @@
       "title": "Merchant includes rate and converted amount in payment request",
       "goal": "Multi-Currency Integration Template",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -237,13 +237,13 @@
       ]
     },
     {
-      "unit_id": "template-multi-currency:step:4:cybersource-processes-with-dcc-flags",
+      "unit_id": "template-multi-currency:step:4:payment-gateway-processes-with-dcc-flags",
       "source_page_id": "doc-template-multi-currency",
       "unit_type": "step",
-      "title": "CyberSource processes with DCC flags",
+      "title": "Payment Gateway processes with DCC flags",
       "goal": "Multi-Currency Integration Template",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -254,7 +254,7 @@
         "template-multi-currency"
       ],
       "sequence_number": 4,
-      "body_markdown": "CyberSource processes with DCC flags",
+      "body_markdown": "Payment Gateway processes with DCC flags",
       "commands": [],
       "api_entities": [],
       "requires": [],
@@ -262,7 +262,7 @@
       "failure_modes": [],
       "confidence": 0.7,
       "evidence_quotes": [
-        "CyberSource processes with DCC flags"
+        "Payment Gateway processes with DCC flags"
       ]
     },
     {
@@ -272,7 +272,7 @@
       "title": "Response includes DCC details for receipt",
       "goal": "Multi-Currency Integration Template",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -301,7 +301,7 @@
       "title": "DCC Required Fields",
       "goal": "Multi-Currency Integration Template",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -330,7 +330,7 @@
       "title": "**All amounts must be strings** \u2014 never use floats (floating point precision issues)",
       "goal": "Multi-Currency Integration Template",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -359,7 +359,7 @@
       "title": "**Currency codes are 3 characters** \u2014 ISO 4217 standard (USD, EUR, GBP, etc.)",
       "goal": "Multi-Currency Integration Template",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -388,7 +388,7 @@
       "title": "**Decimal places vary by currency** \u2014 JPY has 0, USD has 2, KRW has 0",
       "goal": "Multi-Currency Integration Template",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -417,7 +417,7 @@
       "title": "**Exchange rates must be from certified DCC providers** \u2014 not random rates",
       "goal": "Multi-Currency Integration Template",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -446,7 +446,7 @@
       "title": "**DCC rates expire** \u2014 typically within minutes of request",
       "goal": "Multi-Currency Integration Template",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -475,7 +475,7 @@
       "title": "**Some processors don't support all currencies** \u2014 check with your provider",
       "goal": "Multi-Currency Integration Template",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -504,7 +504,7 @@
       "title": "**Tax/jurisdiction config must match merchant's legal entity** \u2014 not customer's location",
       "goal": "Multi-Currency Integration Template",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -533,7 +533,7 @@
       "title": "**Multi-currency transactions require additional risk checks** \u2014 higher fraud rates",
       "goal": "Multi-Currency Integration Template",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -562,7 +562,7 @@
       "title": "Best Practices",
       "goal": "Multi-Currency Integration Template",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -591,7 +591,7 @@
       "title": "Exchange Rate Source",
       "goal": "Multi-Currency Integration Template",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -620,7 +620,7 @@
       "title": "Error Recovery",
       "goal": "Multi-Currency Integration Template",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -649,7 +649,7 @@
       "title": "Multi-Currency Checklist",
       "goal": "Multi-Currency Integration Template",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [

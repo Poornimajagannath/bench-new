@@ -4,10 +4,10 @@
 
 | Variable | Value | Source |
 |----------|-------|--------|
-| `CYBS_MERCHANT_ID` | `YOUR_MERCHANT_ID` | CyberSource developer portal |
-| `CYBS_KEY_ID` | `YOUR_KEY_ID` | CyberSource developer portal |
-| `CYBS_SHARED_SECRET` | `YOUR_SHARED_SECRET` | CyberSource developer portal |
-| `CYBS_ENVIRONMENT` | `sandbox` | Must be sandbox for testing |
+| `PGW_MERCHANT_ID` | `YOUR_MERCHANT_ID` | Payment Gateway developer portal |
+| `PGW_KEY_ID` | `YOUR_KEY_ID` | Payment Gateway developer portal |
+| `PGW_SHARED_SECRET` | `YOUR_SHARED_SECRET` | Payment Gateway developer portal |
+| `PGW_ENVIRONMENT` | `sandbox` | Must be sandbox for testing |
 
 ## Test Cards
 
@@ -47,7 +47,7 @@
 
 | Property | Value |
 |----------|-------|
-| URL | `https://apitest.cybersource.com` |
+| URL | `https://apitest.example.com` |
 | API Version | v2 (PTS) |
 | Auth Type | `HTTP_Signature` |
 
@@ -116,7 +116,7 @@
 - SDK auth type must be `HTTP_Signature` (capitalized), not `http_signature`
 - SDK field names differ from docs: `merchantKeyId`/`merchantsecretKey` vs `keyId`/`secretKey`
 - Card expiry must be future year (2031, not 2025)
-- CyberSource sandbox is rate-limited
+- Payment Gateway sandbox is rate-limited
 - `type` field is required for card payments to avoid wrong card type processing
 - `total_amount` and `currency` are required in `amountDetails`
 - `code` is required in `clientReferenceInformation`

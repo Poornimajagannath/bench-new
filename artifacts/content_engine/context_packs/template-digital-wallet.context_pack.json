@@ -2,7 +2,7 @@
   "pack_id": "ctx-template-digital-wallet",
   "source_id": "template-digital-wallet",
   "product": [
-    "cybersource",
+    "payment-gateway",
     "acceptance-platform"
   ],
   "audience": [
@@ -26,8 +26,8 @@
     "template-digital-wallet:step:8:user-initiates-payment-in-wallet-app",
     "template-digital-wallet:step:9:wallet-app-authenticates-user-(biometrics,-pin,-",
     "template-digital-wallet:step:10:wallet-app-sends-token-to-merchant",
-    "template-digital-wallet:step:11:merchant-includes-token-in-cybersource-payment-r",
-    "template-digital-wallet:step:12:cybersource-processes-transaction-with-token",
+    "template-digital-wallet:step:11:merchant-includes-token-in-payment-gateway-payment-r",
+    "template-digital-wallet:step:12:payment-gateway-processes-transaction-with-token",
     "template-digital-wallet:overview:0:3d-secure-model-properties",
     "template-digital-wallet:overview:0:error-recovery",
     "template-digital-wallet:overview:0:wallet-specific-errors",
@@ -175,9 +175,9 @@
       "evidence_quote_count": 1
     },
     {
-      "unit_id": "template-digital-wallet:step:11:merchant-includes-token-in-cybersource-payment-r",
+      "unit_id": "template-digital-wallet:step:11:merchant-includes-token-in-payment-gateway-payment-r",
       "unit_type": "step",
-      "title": "Merchant includes token in CyberSource payment request",
+      "title": "Merchant includes token in Payment Gateway payment request",
       "sequence_number": 11,
       "requires": [],
       "outcomes": [],
@@ -185,9 +185,9 @@
       "evidence_quote_count": 1
     },
     {
-      "unit_id": "template-digital-wallet:step:12:cybersource-processes-transaction-with-token",
+      "unit_id": "template-digital-wallet:step:12:payment-gateway-processes-transaction-with-token",
       "unit_type": "step",
-      "title": "CyberSource processes transaction with token",
+      "title": "Payment Gateway processes transaction with token",
       "sequence_number": 12,
       "requires": [],
       "outcomes": [],

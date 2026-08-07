@@ -1,5 +1,5 @@
 {
-  "openapi_path": "data/content_engine/specs/cybersource-payments-core.openapi.json",
+  "openapi_path": "data/content_engine/specs/payments-core.openapi.json",
   "docs_sampled": 40,
   "overall_spec_backed_share": 0.741,
   "overall_prose_only_share": 0.259,
@@ -7,7 +7,7 @@
   "guides": [
     {
       "guide": "credentials",
-      "path": "cybersource-docs/credentials.md",
+      "path": "gateway-docs/credentials.md",
       "spec_backed_share": 0.783,
       "prose_only_share": 0.217,
       "spec_hits": 18,
@@ -16,7 +16,7 @@
     },
     {
       "guide": "en-us_apple-pay_developer_all_rest_applepay_applepay-getting-started",
-      "path": "cybersource-docs/en-us_apple-pay_developer_all_rest_applepay_applepay-getting-started.md.md",
+      "path": "gateway-docs/en-us_apple-pay_developer_all_rest_applepay_applepay-getting-started.md.md",
       "spec_backed_share": 1.0,
       "prose_only_share": 0.0,
       "spec_hits": 1,
@@ -25,7 +25,7 @@
     },
     {
       "guide": "en-us_click-to-pay_developer_all_rest_click-to-pay_ctp-getting-started-cs-setup-intro",
-      "path": "cybersource-docs/en-us_click-to-pay_developer_all_rest_click-to-pay_ctp-getting-started-cs-setup-intro.md.md",
+      "path": "gateway-docs/en-us_click-to-pay_developer_all_rest_click-to-pay_ctp-getting-started-cs-setup-intro.md.md",
       "spec_backed_share": 1.0,
       "prose_only_share": 0.0,
       "spec_hits": 7,
@@ -34,7 +34,7 @@
     },
     {
       "guide": "en-us_click-to-pay_developer_all_rest_click-to-pay_ctp-getting-started-ss-setup",
-      "path": "cybersource-docs/en-us_click-to-pay_developer_all_rest_click-to-pay_ctp-getting-started-ss-setup.md.md",
+      "path": "gateway-docs/en-us_click-to-pay_developer_all_rest_click-to-pay_ctp-getting-started-ss-setup.md.md",
       "spec_backed_share": 0.7,
       "prose_only_share": 0.3,
       "spec_hits": 7,
@@ -43,7 +43,7 @@
     },
     {
       "guide": "en-us_click-to-pay_developer_all_rest_click-to-pay_ctp-tokens-intro",
-      "path": "cybersource-docs/en-us_click-to-pay_developer_all_rest_click-to-pay_ctp-tokens-intro.md.md",
+      "path": "gateway-docs/en-us_click-to-pay_developer_all_rest_click-to-pay_ctp-tokens-intro.md.md",
       "spec_backed_share": 0.8,
       "prose_only_share": 0.2,
       "spec_hits": 12,
@@ -52,7 +52,7 @@
     },
     {
       "guide": "en-us_click-to-pay_developer_all_rest_click-to-pay_uc-token-get-pymnt-credentials",
-      "path": "cybersource-docs/en-us_click-to-pay_developer_all_rest_click-to-pay_uc-token-get-pymnt-credentials.md.md",
+      "path": "gateway-docs/en-us_click-to-pay_developer_all_rest_click-to-pay_uc-token-get-pymnt-credentials.md.md",
       "spec_backed_share": 0.9,
       "prose_only_share": 0.1,
       "spec_hits": 9,
@@ -61,7 +61,7 @@
     },
     {
       "guide": "en-us_click-to-pay_developer_all_rest_click-to-pay_uc-token-get-pymnt-details",
-      "path": "cybersource-docs/en-us_click-to-pay_developer_all_rest_click-to-pay_uc-token-get-pymnt-details.md.md",
+      "path": "gateway-docs/en-us_click-to-pay_developer_all_rest_click-to-pay_uc-token-get-pymnt-details.md.md",
       "spec_backed_share": 0.889,
       "prose_only_share": 0.111,
       "spec_hits": 8,
@@ -70,7 +70,7 @@
     },
     {
       "guide": "en-us_cp-retail_integration_ctv_rest_cp-retail_cp-payment-services-intro",
-      "path": "cybersource-docs/en-us_cp-retail_integration_ctv_rest_cp-retail_cp-payment-services-intro.md.md",
+      "path": "gateway-docs/en-us_cp-retail_integration_ctv_rest_cp-retail_cp-payment-services-intro.md.md",
       "spec_backed_share": 1.0,
       "prose_only_share": 0.0,
       "spec_hits": 4,
@@ -79,7 +79,7 @@
     },
     {
       "guide": "en-us_credentials_developer_ctv_rest_credentials",
-      "path": "cybersource-docs/en-us_credentials_developer_ctv_rest_credentials.md.md",
+      "path": "gateway-docs/en-us_credentials_developer_ctv_rest_credentials.md.md",
       "spec_backed_share": 0.783,
       "prose_only_share": 0.217,
       "spec_hits": 18,
@@ -88,7 +88,7 @@
     },
     {
       "guide": "en-us_credentials_developer_ctv_rest_credentials_credentials-cit-intro",
-      "path": "cybersource-docs/en-us_credentials_developer_ctv_rest_credentials_credentials-cit-intro.md.md",
+      "path": "gateway-docs/en-us_credentials_developer_ctv_rest_credentials_credentials-cit-intro.md.md",
       "spec_backed_share": 0.8,
       "prose_only_share": 0.2,
       "spec_hits": 4,
@@ -97,7 +97,7 @@
     },
     {
       "guide": "en-us_credentials_developer_ctv_rest_credentials_credentials-delay-intro",
-      "path": "cybersource-docs/en-us_credentials_developer_ctv_rest_credentials_credentials-delay-intro.md.md",
+      "path": "gateway-docs/en-us_credentials_developer_ctv_rest_credentials_credentials-delay-intro.md.md",
       "spec_backed_share": 1.0,
       "prose_only_share": 0.0,
       "spec_hits": 1,
@@ -106,7 +106,7 @@
     },
     {
       "guide": "en-us_credentials_developer_ctv_rest_credentials_credentials-incremental-intro",
-      "path": "cybersource-docs/en-us_credentials_developer_ctv_rest_credentials_credentials-incremental-intro.md.md",
+      "path": "gateway-docs/en-us_credentials_developer_ctv_rest_credentials_credentials-incremental-intro.md.md",
       "spec_backed_share": 1.0,
       "prose_only_share": 0.0,
       "spec_hits": 2,
@@ -115,7 +115,7 @@
     },
     {
       "guide": "en-us_credentials_developer_ctv_rest_credentials_credentials-install-intro",
-      "path": "cybersource-docs/en-us_credentials_developer_ctv_rest_credentials_credentials-install-intro.md.md",
+      "path": "gateway-docs/en-us_credentials_developer_ctv_rest_credentials_credentials-install-intro.md.md",
       "spec_backed_share": 0.5,
       "prose_only_share": 0.5,
       "spec_hits": 1,
@@ -124,7 +124,7 @@
     },
     {
       "guide": "en-us_credentials_developer_ctv_rest_credentials_credentials-intro",
-      "path": "cybersource-docs/en-us_credentials_developer_ctv_rest_credentials_credentials-intro.md.md",
+      "path": "gateway-docs/en-us_credentials_developer_ctv_rest_credentials_credentials-intro.md.md",
       "spec_backed_share": 0.833,
       "prose_only_share": 0.167,
       "spec_hits": 10,
@@ -133,7 +133,7 @@
     },
     {
       "guide": "en-us_credentials_developer_ctv_rest_credentials_credentials-mc-subscription-intro",
-      "path": "cybersource-docs/en-us_credentials_developer_ctv_rest_credentials_credentials-mc-subscription-intro.md.md",
+      "path": "gateway-docs/en-us_credentials_developer_ctv_rest_credentials_credentials-mc-subscription-intro.md.md",
       "spec_backed_share": 1.0,
       "prose_only_share": 0.0,
       "spec_hits": 1,
@@ -142,7 +142,7 @@
     },
     {
       "guide": "en-us_credentials_developer_ctv_rest_credentials_credentials-mit-stand-order-intro",
-      "path": "cybersource-docs/en-us_credentials_developer_ctv_rest_credentials_credentials-mit-stand-order-intro.md.md",
+      "path": "gateway-docs/en-us_credentials_developer_ctv_rest_credentials_credentials-mit-stand-order-intro.md.md",
       "spec_backed_share": 1.0,
       "prose_only_share": 0.0,
       "spec_hits": 1,
@@ -151,7 +151,7 @@
     },
     {
       "guide": "en-us_credentials_developer_ctv_rest_credentials_credentials-noshow-intro",
-      "path": "cybersource-docs/en-us_credentials_developer_ctv_rest_credentials_credentials-noshow-intro.md.md",
+      "path": "gateway-docs/en-us_credentials_developer_ctv_rest_credentials_credentials-noshow-intro.md.md",
       "spec_backed_share": 1.0,
       "prose_only_share": 0.0,
       "spec_hits": 2,
@@ -160,7 +160,7 @@
     },
     {
       "guide": "en-us_credentials_developer_ctv_rest_credentials_credentials-reauth-intro",
-      "path": "cybersource-docs/en-us_credentials_developer_ctv_rest_credentials_credentials-reauth-intro.md.md",
+      "path": "gateway-docs/en-us_credentials_developer_ctv_rest_credentials_credentials-reauth-intro.md.md",
       "spec_backed_share": 1.0,
       "prose_only_share": 0.0,
       "spec_hits": 2,
@@ -169,7 +169,7 @@
     },
     {
       "guide": "en-us_credentials_developer_ctv_rest_credentials_credentials-recur-intro",
-      "path": "cybersource-docs/en-us_credentials_developer_ctv_rest_credentials_credentials-recur-intro.md.md",
+      "path": "gateway-docs/en-us_credentials_developer_ctv_rest_credentials_credentials-recur-intro.md.md",
       "spec_backed_share": 0.667,
       "prose_only_share": 0.333,
       "spec_hits": 2,
@@ -178,7 +178,7 @@
     },
     {
       "guide": "en-us_credentials_developer_ctv_rest_credentials_credentials-resub-intro",
-      "path": "cybersource-docs/en-us_credentials_developer_ctv_rest_credentials_credentials-resub-intro.md.md",
+      "path": "gateway-docs/en-us_credentials_developer_ctv_rest_credentials_credentials-resub-intro.md.md",
       "spec_backed_share": 1.0,
       "prose_only_share": 0.0,
       "spec_hits": 3,
@@ -187,7 +187,7 @@
     },
     {
       "guide": "en-us_additional-amount-types_reference_all_na_additional-amount-types",
-      "path": "cybersource-docs/en-us_additional-amount-types_reference_all_na_additional-amount-types.md.md",
+      "path": "gateway-docs/en-us_additional-amount-types_reference_all_na_additional-amount-types.md.md",
       "spec_backed_share": 1.0,
       "prose_only_share": 0.0,
       "spec_hits": 3,
@@ -196,7 +196,7 @@
     },
     {
       "guide": "en-us_batch_user_all_so_batch-upload_batch-results-txns-rpt-request",
-      "path": "cybersource-docs/en-us_batch_user_all_so_batch-upload_batch-results-txns-rpt-request.md.md",
+      "path": "gateway-docs/en-us_batch_user_all_so_batch-upload_batch-results-txns-rpt-request.md.md",
       "spec_backed_share": 1.0,
       "prose_only_share": 0.0,
       "spec_hits": 2,
@@ -205,7 +205,7 @@
     },
     {
       "guide": "en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro",
-      "path": "cybersource-docs/en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro.md.md",
+      "path": "gateway-docs/en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro.md.md",
       "spec_backed_share": 0.0,
       "prose_only_share": 1.0,
       "spec_hits": 0,
@@ -214,7 +214,7 @@
     },
     {
       "guide": "en-us_cp-retail_integration_ctv_rest_cp-retail_dcc-intro",
-      "path": "cybersource-docs/en-us_cp-retail_integration_ctv_rest_cp-retail_dcc-intro.md.md",
+      "path": "gateway-docs/en-us_cp-retail_integration_ctv_rest_cp-retail_dcc-intro.md.md",
       "spec_backed_share": 0.0,
       "prose_only_share": 1.0,
       "spec_hits": 0,
@@ -223,7 +223,7 @@
     },
     {
       "guide": "en-us_doc-rel_relnote_all_na_doc-release-notes_doc-release-notes-intro_December-2025_sis-pax-25-12",
-      "path": "cybersource-docs/en-us_doc-rel_relnote_all_na_doc-release-notes_doc-release-notes-intro_December-2025_sis-pax-25-12.md.md",
+      "path": "gateway-docs/en-us_doc-rel_relnote_all_na_doc-release-notes_doc-release-notes-intro_December-2025_sis-pax-25-12.md.md",
       "spec_backed_share": 0.833,
       "prose_only_share": 0.167,
       "spec_hits": 5,
@@ -232,7 +232,7 @@
     },
     {
       "guide": "en-us_echeck_user_all_rest_echeck-user-guide_echeck-reports-use-case",
-      "path": "cybersource-docs/en-us_echeck_user_all_rest_echeck-user-guide_echeck-reports-use-case.md.md",
+      "path": "gateway-docs/en-us_echeck_user_all_rest_echeck-user-guide_echeck-reports-use-case.md.md",
       "spec_backed_share": 1.0,
       "prose_only_share": 0.0,
       "spec_hits": 6,
@@ -241,7 +241,7 @@
     },
     {
       "guide": "en-us_installment-plans_developer_all_rest_installment-plans",
-      "path": "cybersource-docs/en-us_installment-plans_developer_all_rest_installment-plans.md.md",
+      "path": "gateway-docs/en-us_installment-plans_developer_all_rest_installment-plans.md.md",
       "spec_backed_share": 0.76,
       "prose_only_share": 0.24,
       "spec_hits": 19,
@@ -250,7 +250,7 @@
     },
     {
       "guide": "en-us_lodging_developer_ctv_rest_lodging_lodging-trxn-types",
-      "path": "cybersource-docs/en-us_lodging_developer_ctv_rest_lodging_lodging-trxn-types.md.md",
+      "path": "gateway-docs/en-us_lodging_developer_ctv_rest_lodging_lodging-trxn-types.md.md",
       "spec_backed_share": 0.0,
       "prose_only_share": 1.0,
       "spec_hits": 0,
@@ -259,7 +259,7 @@
     },
     {
       "guide": "en-us_pax-all-in-one_integration_all_na_pax-all-in-one_pax-aio-release-notes-intro",
-      "path": "cybersource-docs/en-us_pax-all-in-one_integration_all_na_pax-all-in-one_pax-aio-release-notes-intro.md.md",
+      "path": "gateway-docs/en-us_pax-all-in-one_integration_all_na_pax-all-in-one_pax-aio-release-notes-intro.md.md",
       "spec_backed_share": 0.818,
       "prose_only_share": 0.182,
       "spec_hits": 9,
@@ -268,7 +268,7 @@
     },
     {
       "guide": "en-us_paybylink_developer_all_rest_paybylink_paybylink-intro",
-      "path": "cybersource-docs/en-us_paybylink_developer_all_rest_paybylink_paybylink-intro.md.md",
+      "path": "gateway-docs/en-us_paybylink_developer_all_rest_paybylink_paybylink-intro.md.md",
       "spec_backed_share": 0.875,
       "prose_only_share": 0.125,
       "spec_hits": 7,
@@ -277,7 +277,7 @@
     },
     {
       "guide": "en-us_pin-debit_developer_ctv_rest_pin-debit_pd-processing",
-      "path": "cybersource-docs/en-us_pin-debit_developer_ctv_rest_pin-debit_pd-processing.md.md",
+      "path": "gateway-docs/en-us_pin-debit_developer_ctv_rest_pin-debit_pd-processing.md.md",
       "spec_backed_share": 1.0,
       "prose_only_share": 0.0,
       "spec_hits": 2,
@@ -286,7 +286,7 @@
     },
     {
       "guide": "en-us_platform_relnote_all_na_rn-2025-09-05_rn-general",
-      "path": "cybersource-docs/en-us_platform_relnote_all_na_rn-2025-09-05_rn-general.md.md",
+      "path": "gateway-docs/en-us_platform_relnote_all_na_rn-2025-09-05_rn-general.md.md",
       "spec_backed_share": 0.0,
       "prose_only_share": 1.0,
       "spec_hits": 0,
@@ -295,7 +295,7 @@
     },
     {
       "guide": "en-us_platform_relnote_all_na_rn-2026-01-02_rn-general",
-      "path": "cybersource-docs/en-us_platform_relnote_all_na_rn-2026-01-02_rn-general.md.md",
+      "path": "gateway-docs/en-us_platform_relnote_all_na_rn-2026-01-02_rn-general.md.md",
       "spec_backed_share": 0.0,
       "prose_only_share": 1.0,
       "spec_hits": 0,
@@ -304,7 +304,7 @@
     },
     {
       "guide": "en-us_platform_relnote_all_na_rn-2026-04-10_rn-general",
-      "path": "cybersource-docs/en-us_platform_relnote_all_na_rn-2026-04-10_rn-general.md.md",
+      "path": "gateway-docs/en-us_platform_relnote_all_na_rn-2026-04-10_rn-general.md.md",
       "spec_backed_share": 0.0,
       "prose_only_share": 1.0,
       "spec_hits": 0,
@@ -313,7 +313,7 @@
     },
     {
       "guide": "en-us_recurring-billing_user_all_rest_recurring-billing-user_recur-bill-services-intro",
-      "path": "cybersource-docs/en-us_recurring-billing_user_all_rest_recurring-billing-user_recur-bill-services-intro.md.md",
+      "path": "gateway-docs/en-us_recurring-billing_user_all_rest_recurring-billing-user_recur-bill-services-intro.md.md",
       "spec_backed_share": 0.75,
       "prose_only_share": 0.25,
       "spec_hits": 3,
@@ -322,7 +322,7 @@
     },
     {
       "guide": "en-us_sa_developer_all_sa-checkout_secure-acceptance",
-      "path": "cybersource-docs/en-us_sa_developer_all_sa-checkout_secure-acceptance.md.md",
+      "path": "gateway-docs/en-us_sa_developer_all_sa-checkout_secure-acceptance.md.md",
       "spec_backed_share": 0.774,
       "prose_only_share": 0.226,
       "spec_hits": 24,
@@ -331,7 +331,7 @@
     },
     {
       "guide": "en-us_state-codes_reference_all_na_state-codes",
-      "path": "cybersource-docs/en-us_state-codes_reference_all_na_state-codes.md.md",
+      "path": "gateway-docs/en-us_state-codes_reference_all_na_state-codes.md.md",
       "spec_backed_share": 1.0,
       "prose_only_share": 0.0,
       "spec_hits": 4,
@@ -340,7 +340,7 @@
     },
     {
       "guide": "en-us_tap-to-phone_integration_all_rest_tap-to-phone_ttp-release-notes-intro",
-      "path": "cybersource-docs/en-us_tap-to-phone_integration_all_rest_tap-to-phone_ttp-release-notes-intro.md.md",
+      "path": "gateway-docs/en-us_tap-to-phone_integration_all_rest_tap-to-phone_ttp-release-notes-intro.md.md",
       "spec_backed_share": 0.818,
       "prose_only_share": 0.182,
       "spec_hits": 9,
@@ -349,7 +349,7 @@
     },
     {
       "guide": "en-us_tms_developer_all_rest_tms_tms-cust-tkn_tms-ship-tkn",
-      "path": "cybersource-docs/en-us_tms_developer_all_rest_tms_tms-cust-tkn_tms-ship-tkn.md.md",
+      "path": "gateway-docs/en-us_tms_developer_all_rest_tms_tms-cust-tkn_tms-ship-tkn.md.md",
       "spec_backed_share": 0.5,
       "prose_only_share": 0.5,
       "spec_hits": 1,
@@ -358,7 +358,7 @@
     },
     {
       "guide": "en-us_txn-search_developer_all_rest_txn-search",
-      "path": "cybersource-docs/en-us_txn-search_developer_all_rest_txn-search.md.md",
+      "path": "gateway-docs/en-us_txn-search_developer_all_rest_txn-search.md.md",
       "spec_backed_share": 0.85,
       "prose_only_share": 0.15,
       "spec_hits": 17,

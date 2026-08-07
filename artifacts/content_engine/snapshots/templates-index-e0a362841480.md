@@ -2,7 +2,7 @@
 
 ## Purpose
 
-These templates show correct CyberSource SDK integration patterns for different payment methods. Agents should reference these when generating integration code.
+These templates show correct Payment Gateway SDK integration patterns for different payment methods. Agents should reference these when generating integration code.
 
 ## Files
 
@@ -22,4 +22,4 @@ These templates show correct CyberSource SDK integration patterns for different 
 4. **`total_amount` and `currency` are required** in `amountDetails`
 5. **`code` is required** in `clientReferenceInformation`
 6. **Card expiry must be future year** (2031, not 2025)
-7. **CyberSource sandbox is rate-limited** — implement retry logic
+7. **Payment Gateway sandbox is rate-limited** — implement retry logic

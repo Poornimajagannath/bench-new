@@ -1,4 +1,4 @@
-"""Tests for Specs-to-Docs V0 (CyberSource-shaped local OpenAPI fixture)."""
+"""Tests for Specs-to-Docs V0 (Payment Gateway-shaped local OpenAPI fixture)."""
 
 from __future__ import annotations
 
@@ -19,7 +19,7 @@ from relay_bench.content_engine.specs_validate import (
 from relay_bench.content_engine.schemas import ApiReferenceUnit
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE_ID = "cybersource-payments-core-openapi"
+SOURCE_ID = "payments-core-openapi"
 
 EXPECTED_OPS = {
     "createPayment",
@@ -43,7 +43,7 @@ class SpecsToDocsTests(unittest.TestCase):
             "microform-payer-auth-state-machine",
         )
 
-    def test_parser_emits_eight_cybersource_operations(self):
+    def test_parser_emits_eight_payment_gateway_operations(self):
         record = require_source(SOURCE_ID)
         snapshot = materialize_snapshot(record)
         entities = parse_openapi_entities(record, snapshot)

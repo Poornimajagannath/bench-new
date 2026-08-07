@@ -1,30 +1,30 @@
 # Autonomous Integration Lab — Claude Code Operating Manual
 
-You are running inside the Autonomous Integration Lab for Cybersource. Read this file first on every session.
+You are running inside the Autonomous Integration Lab for Payment Gateway. Read this file first on every session.
 
 ## Purpose
 
-This lab measures whether an AI coding agent can complete a Cybersource sandbox integration from near-zero context, using the same artifacts a real developer would use: public docs, official SDKs, sandbox credentials, and local context files. Every run produces a replayable artifact set: generated app, logs, findings report, scorecard JSON, and manifest.
+This lab measures whether an AI coding agent can complete a Payment Gateway sandbox integration from near-zero context, using the same artifacts a real developer would use: public docs, official SDKs, sandbox credentials, and local context files. Every run produces a replayable artifact set: generated app, logs, findings report, scorecard JSON, and manifest.
 
 ## Lab rules (non-negotiable)
 
-1. **Sandbox only.** Never use production Cybersource endpoints or credentials.
+1. **Sandbox only.** Never use production Payment Gateway endpoints or credentials.
 2. **No hardcoded secrets.** Load all credentials from environment variables only.
 3. **Never print secrets.** Redact any credential values from logs and output.
 4. **Do not fake success.** If a sandbox call fails, record the failure accurately.
 5. **If blocked, say so precisely.** State the exact blocker in findings.md rather than guessing past it silently.
-6. **Record everything.** Every API call, its HTTP status, and its Cybersource reason code must appear in logs/run.log.
+6. **Record everything.** Every API call, its HTTP status, and its Payment Gateway reason code must appear in logs/run.log.
 
 ## Required env vars
 
 ```
-CYBS_MERCHANT_ID      — your sandbox merchant ID from developer.cybersource.com
-CYBS_KEY_ID           — HTTP Signature key ID (from Business Center > Payment Configuration > Key Management)
-CYBS_SHARED_SECRET    — shared secret paired with CYBS_KEY_ID
-CYBS_ENVIRONMENT      — must be "sandbox"
-CYBS_RUN_ID           — set by run-scenario.sh; identifies the run folder
-CYBS_SCENARIO         — set by run-scenario.sh; identifies the scenario
-CYBS_LANGUAGE         — set by run-scenario.sh; default "node"
+PGW_MERCHANT_ID      — your sandbox merchant ID from developer.example.com
+PGW_KEY_ID           — HTTP Signature key ID (from Business Center > Payment Configuration > Key Management)
+PGW_SHARED_SECRET    — shared secret paired with PGW_KEY_ID
+PGW_ENVIRONMENT      — must be "sandbox"
+PGW_RUN_ID           — set by run-scenario.sh; identifies the run folder
+PGW_SCENARIO         — set by run-scenario.sh; identifies the scenario
+PGW_LANGUAGE         — set by run-scenario.sh; default "node"
 ANTHROPIC_API_KEY     — for Claude Code execution
 ```
 
@@ -39,7 +39,7 @@ ANTHROPIC_API_KEY     — for Claude Code execution
 
 ## Output contract
 
-Every run must emit these files inside `runs/$CYBS_RUN_ID/`:
+Every run must emit these files inside `runs/$PGW_RUN_ID/`:
 
 | File | Required | Description |
 |---|---|---|
@@ -56,7 +56,7 @@ Every run must emit these files inside `runs/$CYBS_RUN_ID/`:
 The `.claude/settings.json` file enforces these at runtime:
 
 - **SessionStart**: validate required env vars; write run metadata banner to logs/run.log
-- **PreToolUse**: deny any command targeting production endpoints, deny writes outside `runs/$CYBS_RUN_ID/` and `app/`
+- **PreToolUse**: deny any command targeting production endpoints, deny writes outside `runs/$PGW_RUN_ID/` and `app/`
 - **PostToolUse**: append tool call metadata to transcript
 - **SessionEnd**: verify `findings.md`, `manifest.json`, and `scorecard.json` exist; warn if missing
 
@@ -76,14 +76,14 @@ claude -p \
   --output-format stream-json \
   --verbose \
   --include-hook-events \
-  "Run scenario $CYBS_SCENARIO in runs/${CYBS_RUN_ID}"
+  "Run scenario $PGW_SCENARIO in runs/${PGW_RUN_ID}"
 
 # Evaluator run
 claude -p \
   --append-system-prompt-file prompts/evaluator.md \
   --output-format json \
   --json-schema "$(cat evaluators/scorecard.schema.json)" \
-  "Evaluate run ${CYBS_RUN_ID}"
+  "Evaluate run ${PGW_RUN_ID}"
 
 # Full loop (multiple iterations, retry, CI gate)
 scripts/lab-loop.sh -s first-payment-node -n 3 -r 1 -t 3

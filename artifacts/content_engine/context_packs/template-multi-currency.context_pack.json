@@ -2,7 +2,7 @@
   "pack_id": "ctx-template-multi-currency",
   "source_id": "template-multi-currency",
   "product": [
-    "cybersource",
+    "payment-gateway",
     "acceptance-platform"
   ],
   "audience": [
@@ -20,7 +20,7 @@
     "template-multi-currency:step:1:customer-selects-currency-on-checkout",
     "template-multi-currency:step:2:dcc-provider-returns-exchange-rate",
     "template-multi-currency:step:3:merchant-includes-rate-and-converted-amount-in-p",
-    "template-multi-currency:step:4:cybersource-processes-with-dcc-flags",
+    "template-multi-currency:step:4:payment-gateway-processes-with-dcc-flags",
     "template-multi-currency:step:5:response-includes-dcc-details-for-receipt",
     "template-multi-currency:overview:0:dcc-required-fields",
     "template-multi-currency:step:6:**all-amounts-must-be-strings**-\u2014-never-use-floa",
@@ -118,9 +118,9 @@
       "evidence_quote_count": 1
     },
     {
-      "unit_id": "template-multi-currency:step:4:cybersource-processes-with-dcc-flags",
+      "unit_id": "template-multi-currency:step:4:payment-gateway-processes-with-dcc-flags",
       "unit_type": "step",
-      "title": "CyberSource processes with DCC flags",
+      "title": "Payment Gateway processes with DCC flags",
       "sequence_number": 4,
       "requires": [],
       "outcomes": [],

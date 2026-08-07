@@ -8,7 +8,7 @@ The agent successfully configures a checkout and makes a test transaction that r
 
 - [ ] **PASS**: Agent configures a checkout (Unified Checkout or Flex Microcheckout)
 - [ ] **PASS**: Agent makes a test transaction that returns a transaction ID
-- [ ] **PASS**: Transaction ID is a valid CyberSource format (not an error)
+- [ ] **PASS**: Transaction ID is a valid Payment Gateway format (not an error)
 - [ ] **PASS**: Agent does not throw checkout configuration errors (400/422)
 
 ## Fail Conditions
@@ -40,7 +40,7 @@ The agent successfully configures a checkout and makes a test transaction that r
   "result": {
     "pass": true,
     "checkout_type": "Unified Checkout",
-    "docs_read": ["developer.cybersource.com/docs/checkout", "developer.cybersource.com/docs/unified-checkout"],
+    "docs_read": ["developer.example.com/docs/checkout", "developer.example.com/docs/unified-checkout"],
     "errors": [],
     "error_count": 0,
     "transaction_id": "TXN_1234567890",

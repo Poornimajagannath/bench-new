@@ -11,7 +11,7 @@
       "title": "Credential Loading",
       "goal": "Authentication Context",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -40,7 +40,7 @@
       "title": "Required Environment Variables",
       "goal": "Authentication Context",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -51,7 +51,7 @@
         "http-signature-debug"
       ],
       "sequence_number": 0,
-      "body_markdown": "- `CYBS_MERCHANT_ID` \u2014 Sandbox merchant ID from developer.cybersource.com\n- `CYBS_KEY_ID` \u2014 HTTP Signature key ID\n- `CYBS_SHARED_SECRET` \u2014 Shared secret paired with CYBS_KEY_ID\n- `CYBS_ENVIRONMENT` \u2014 Must be \"sandbox\"",
+      "body_markdown": "- `PGW_MERCHANT_ID` \u2014 Sandbox merchant ID from developer.example.com\n- `PGW_KEY_ID` \u2014 HTTP Signature key ID\n- `PGW_SHARED_SECRET` \u2014 Shared secret paired with PGW_KEY_ID\n- `PGW_ENVIRONMENT` \u2014 Must be \"sandbox\"",
       "commands": [],
       "api_entities": [
         "HTTP Signature"
@@ -61,7 +61,7 @@
       "failure_modes": [],
       "confidence": 0.85,
       "evidence_quotes": [
-        "- `CYBS_MERCHANT_ID` \u2014 Sandbox merchant ID from developer.cybersource.com - `CYBS_KEY_ID` \u2014 HTTP Signature key ID - `CYBS_SHARED_SECRET` \u2014 Shared secret pair..."
+        "- `PGW_MERCHANT_ID` \u2014 Sandbox merchant ID from developer.example.com - `PGW_KEY_ID` \u2014 HTTP Signature key ID - `PGW_SHARED_SECRET` \u2014 Shared secret pair..."
       ]
     },
     {
@@ -71,7 +71,7 @@
       "title": "Auth Error Taxonomy",
       "goal": "Authentication Context",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -82,7 +82,7 @@
         "http-signature-debug"
       ],
       "sequence_number": 1,
-      "body_markdown": "| Error | Likely Cause | Fix |\n|-------|-------------|-----|\n| 401 Unauthorized | Wrong credentials | Verify CYBS_KEY_ID and CYBS_SHARED_SECRET |\n| 403 Forbidden | Invalid merchant ID | Check CYBS_MERCHANT_ID |\n| 400 Bad Request | Wrong field names | Use `merchantKeyId` and `merchantsecretKey` NOT `keyId` and `secretKey` |\n| Network Error | Wrong endpoint | Use sandbox endpoint: `https://apitest.cybersource.com` |",
+      "body_markdown": "| Error | Likely Cause | Fix |\n|-------|-------------|-----|\n| 401 Unauthorized | Wrong credentials | Verify PGW_KEY_ID and PGW_SHARED_SECRET |\n| 403 Forbidden | Invalid merchant ID | Check PGW_MERCHANT_ID |\n| 400 Bad Request | Wrong field names | Use `merchantKeyId` and `merchantsecretKey` NOT `keyId` and `secretKey` |\n| Network Error | Wrong endpoint | Use sandbox endpoint: `https://apitest.example.com` |",
       "commands": [],
       "api_entities": [
         "merchantKeyId",
@@ -93,7 +93,7 @@
       "failure_modes": [],
       "confidence": 0.85,
       "evidence_quotes": [
-        "| Error | Likely Cause | Fix | |-------|-------------|-----| | 401 Unauthorized | Wrong credentials | Verify CYBS_KEY_ID and CYBS_SHARED_SECRET | | 403 Forbi..."
+        "| Error | Likely Cause | Fix | |-------|-------------|-----| | 401 Unauthorized | Wrong credentials | Verify PGW_KEY_ID and PGW_SHARED_SECRET | | 403 Forbi..."
       ]
     },
     {
@@ -103,7 +103,7 @@
       "title": "SDK Field Names (Known Gap)",
       "goal": "Authentication Context",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -114,7 +114,7 @@
         "http-signature-debug"
       ],
       "sequence_number": 1,
-      "body_markdown": "The CyberSource SDK expects:\n- `merchantKeyId` (NOT `keyId`)\n- `merchantsecretKey` (NOT `secretKey`)\n\nThis is documented incorrectly in some places. Verify in the SDK source.",
+      "body_markdown": "The Payment Gateway SDK expects:\n- `merchantKeyId` (NOT `keyId`)\n- `merchantsecretKey` (NOT `secretKey`)\n\nThis is documented incorrectly in some places. Verify in the SDK source.",
       "commands": [],
       "api_entities": [
         "merchantKeyId",
@@ -125,7 +125,7 @@
       "failure_modes": [],
       "confidence": 0.85,
       "evidence_quotes": [
-        "The CyberSource SDK expects: - `merchantKeyId` (NOT `keyId`) - `merchantsecretKey` (NOT `secretKey`) This is documented incorrectly in some places. Verify in..."
+        "The Payment Gateway SDK expects: - `merchantKeyId` (NOT `keyId`) - `merchantsecretKey` (NOT `secretKey`) This is documented incorrectly in some places. Verify in..."
       ]
     }
   ]

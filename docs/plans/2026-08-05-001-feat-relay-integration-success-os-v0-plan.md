@@ -19,7 +19,7 @@ This is **not** the full Integration Success OS. It assembles already-promoted R
 
 ```text
 content_engine (quickstart)
-+ specs_to_docs (CyberSource-shaped OpenAPI)
++ specs_to_docs (Payment Gateway-shaped OpenAPI)
 + workflow contract bundle
 -> integration_success_pack.json/.md
    - guided steps

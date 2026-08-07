@@ -2,15 +2,15 @@
   "pack_id": "ctx-lab-source-index",
   "source_id": "lab-source-index",
   "product": [
-    "cybersource",
+    "payment-gateway",
     "acceptance-platform"
   ],
   "audience": [
     "developer",
     "agent"
   ],
-  "title": "Source Index \u2014 CyberSource Developer Portal",
-  "goal": "Source Index \u2014 CyberSource Developer Portal",
+  "title": "Source Index \u2014 Payment Gateway Developer Portal",
+  "goal": "Source Index \u2014 Payment Gateway Developer Portal",
   "unit_ids": [
     "lab-source-index:overview:0:documentation",
     "lab-source-index:overview:0:preferred-patterns-(from-llms.txt)",

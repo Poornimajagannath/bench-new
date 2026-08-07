@@ -11,7 +11,7 @@
       "title": "Environment Variables",
       "goal": "Configuration Template",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -30,7 +30,7 @@
       "failure_modes": [],
       "confidence": 0.85,
       "evidence_quotes": [
-        "```bash # Required CYBS_MERCHANT_ID=your_merchant_id_from_developer_portal CYBS_KEY_ID=your_http_signature_key_id CYBS_SHARED_SECRET=your_shared_secret CYBS_..."
+        "```bash # Required PGW_MERCHANT_ID=your_merchant_id_from_developer_portal PGW_KEY_ID=your_http_signature_key_id PGW_SHARED_SECRET=your_shared_secret PGW_..."
       ]
     },
     {
@@ -40,7 +40,7 @@
       "title": "Configuration Dictionary (Python SDK)",
       "goal": "Configuration Template",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -51,7 +51,7 @@
         "http-signature-debug"
       ],
       "sequence_number": 0,
-      "body_markdown": "```python\nconfiguration_dictionary = {\n    \"merchantid\": os.environ[\"CYBS_MERCHANT_ID\"],\n    \"run_environment\": \"apitest.cybersource.com\",  # sandbox (CyberSource REST only)\n    # \"run_environment\": \"api.cybersource.com\",    # production\n    \"authentication_type\": \"HTTP_Signature\",  # MUST be capitalized!\n    \"merchant_keyid\": os.environ[\"CYBS_KEY_ID\"],\n    \"merchant_secretkey\": os.environ[\"CYBS_SHARED_SECRET\"],\n    \"isSDK\": True,  # Required by SDK\n}\n```",
+      "body_markdown": "```python\nconfiguration_dictionary = {\n    \"merchantid\": os.environ[\"PGW_MERCHANT_ID\"],\n    \"run_environment\": \"apitest.example.com\",  # sandbox (Payment Gateway REST only)\n    # \"run_environment\": \"api.example.com\",    # production\n    \"authentication_type\": \"HTTP_Signature\",  # MUST be capitalized!\n    \"merchant_keyid\": os.environ[\"PGW_KEY_ID\"],\n    \"merchant_secretkey\": os.environ[\"PGW_SHARED_SECRET\"],\n    \"isSDK\": True,  # Required by SDK\n}\n```",
       "commands": [],
       "api_entities": [],
       "requires": [],
@@ -59,7 +59,7 @@
       "failure_modes": [],
       "confidence": 0.85,
       "evidence_quotes": [
-        "```python configuration_dictionary = { \"merchantid\": os.environ[\"CYBS_MERCHANT_ID\"], \"run_environment\": \"apitest.cybersource.com\", # sandbox (CyberSource RES..."
+        "```python configuration_dictionary = { \"merchantid\": os.environ[\"PGW_MERCHANT_ID\"], \"run_environment\": \"apitest.example.com\", # sandbox (Payment Gateway RES..."
       ]
     },
     {
@@ -69,7 +69,7 @@
       "title": "Docs vs SDK",
       "goal": "Configuration Template",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -98,7 +98,7 @@
       "title": "Auth Type Values",
       "goal": "Configuration Template",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -127,7 +127,7 @@
       "title": "Sandbox vs Production",
       "goal": "Configuration Template",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -138,7 +138,7 @@
         "http-signature-debug"
       ],
       "sequence_number": 0,
-      "body_markdown": "| Property | Sandbox | Production |\n|----------|---------|------------|\n| `run_environment` | `apitest.cybersource.com` | `api.cybersource.com` |\n| `authentication_type` | `HTTP_Signature` | `HTTP_Signature` or `jwt` |\n| Test cards | `4111111111111111` | Real cards only |\n| Response time | Fast (simulated) | Real processing time |",
+      "body_markdown": "| Property | Sandbox | Production |\n|----------|---------|------------|\n| `run_environment` | `apitest.example.com` | `api.example.com` |\n| `authentication_type` | `HTTP_Signature` | `HTTP_Signature` or `jwt` |\n| Test cards | `4111111111111111` | Real cards only |\n| Response time | Fast (simulated) | Real processing time |",
       "commands": [],
       "api_entities": [],
       "requires": [],
@@ -146,7 +146,7 @@
       "failure_modes": [],
       "confidence": 0.85,
       "evidence_quotes": [
-        "| Property | Sandbox | Production | |----------|---------|------------| | `run_environment` | `apitest.cybersource.com` | `api.cybersource.com` | | `authenti..."
+        "| Property | Sandbox | Production | |----------|---------|------------| | `run_environment` | `apitest.example.com` | `api.example.com` | | `authenti..."
       ]
     },
     {
@@ -156,7 +156,7 @@
       "title": "SDK Installation",
       "goal": "Configuration Template",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -167,7 +167,7 @@
         "http-signature-debug"
       ],
       "sequence_number": 0,
-      "body_markdown": "```bash\npip install cybersource-rest-client-python\n```",
+      "body_markdown": "```bash\npip install payment-gateway-rest-client-python\n```",
       "commands": [],
       "api_entities": [],
       "requires": [],
@@ -175,7 +175,7 @@
       "failure_modes": [],
       "confidence": 0.85,
       "evidence_quotes": [
-        "```bash pip install cybersource-rest-client-python ```"
+        "```bash pip install payment-gateway-rest-client-python ```"
       ]
     },
     {
@@ -185,7 +185,7 @@
       "title": "**SDK v0.0.77** \u2014 auth type must be `HTTP_Signature` (capitalized)",
       "goal": "Configuration Template",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -214,7 +214,7 @@
       "title": "**SDK config validation** \u2014 `ast.literal_eval` crashes on JSON booleans (requires patch)",
       "goal": "Configuration Template",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -243,7 +243,7 @@
       "title": "**SDK model names** \u2014 use `Ptsv2payments*` prefix, not `Payment*`",
       "goal": "Configuration Template",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -272,7 +272,7 @@
       "title": "**SDK field casing** \u2014 snake_case in Python (e.g., `total_amount`, not `totalAmount`)",
       "goal": "Configuration Template",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -301,7 +301,7 @@
       "title": "Error Handling Template",
       "goal": "Configuration Template",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -312,7 +312,7 @@
         "http-signature-debug"
       ],
       "sequence_number": 0,
-      "body_markdown": "```python\nfrom CyberSource.rest import ApiException\n\ntry:\n    api = PaymentsApi(client_config)\n    return_data, status, body = api.create_payment(json.dumps(request_dict))\n    print(f\"Status: {status}\")\n    print(f\"Response: {body}\")\nexcept ApiException as e:\n    print(f\"API Error {e.status}: {e.reason}\")\n    # Handle specific error codes\n    if e.status == 400:\n        # Invalid data \u2014 check request fields\n        pass\n    elif e.status == 401:\n        # Auth failed \u2014 verify credentials\n        pass\n    elif e.status == 500:\n        # Server error \u2014 implement retry\n        pass\n```",
+      "body_markdown": "```python\nfrom Payment Gateway.rest import ApiException\n\ntry:\n    api = PaymentsApi(client_config)\n    return_data, status, body = api.create_payment(json.dumps(request_dict))\n    print(f\"Status: {status}\")\n    print(f\"Response: {body}\")\nexcept ApiException as e:\n    print(f\"API Error {e.status}: {e.reason}\")\n    # Handle specific error codes\n    if e.status == 400:\n        # Invalid data \u2014 check request fields\n        pass\n    elif e.status == 401:\n        # Auth failed \u2014 verify credentials\n        pass\n    elif e.status == 500:\n        # Server error \u2014 implement retry\n        pass\n```",
       "commands": [],
       "api_entities": [],
       "requires": [],
@@ -320,7 +320,7 @@
       "failure_modes": [],
       "confidence": 0.85,
       "evidence_quotes": [
-        "```python from CyberSource.rest import ApiException try: api = PaymentsApi(client_config) return_data, status, body = api.create_payment(json.dumps(request_d..."
+        "```python from Payment Gateway.rest import ApiException try: api = PaymentsApi(client_config) return_data, status, body = api.create_payment(json.dumps(request_d..."
       ]
     },
     {
@@ -330,7 +330,7 @@
       "title": "Security Checklist",
       "goal": "Configuration Template",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -341,7 +341,7 @@
         "http-signature-debug"
       ],
       "sequence_number": 0,
-      "body_markdown": "- [ ] Never hardcode credentials in source code\n- [ ] Load all credentials from environment variables\n- [ ] Never print secrets in logs (mask with `***`)\n- [ ] Use sandbox for testing, production only when verified\n- [ ] Rotate API keys regularly\n- [ ] Use HTTPS for all API calls (CyberSource enforces this)\n- [ ] Log all API calls for audit trail\n- [ ] Implement rate limiting for sandbox testing",
+      "body_markdown": "- [ ] Never hardcode credentials in source code\n- [ ] Load all credentials from environment variables\n- [ ] Never print secrets in logs (mask with `***`)\n- [ ] Use sandbox for testing, production only when verified\n- [ ] Rotate API keys regularly\n- [ ] Use HTTPS for all API calls (Payment Gateway enforces this)\n- [ ] Log all API calls for audit trail\n- [ ] Implement rate limiting for sandbox testing",
       "commands": [],
       "api_entities": [],
       "requires": [],

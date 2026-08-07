@@ -9,8 +9,8 @@ from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional, Sequence, Set, Tuple
 
 ROOT = Path(__file__).resolve().parents[2]
-DEFAULT_OPENAPI = ROOT / "data" / "content_engine" / "specs" / "cybersource-payments-core.openapi.json"
-DEFAULT_DOCS_DIR = ROOT / "cybersource-docs"
+DEFAULT_OPENAPI = ROOT / "data" / "content_engine" / "specs" / "payments-core.openapi.json"
+DEFAULT_DOCS_DIR = ROOT / "gateway-docs"
 
 _SPEC_HINTS = (
     "endpoint",

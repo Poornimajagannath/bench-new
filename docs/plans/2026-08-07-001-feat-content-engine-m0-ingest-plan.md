@@ -26,7 +26,7 @@ Build-spec v2 keeps the Integration Success OS lane and adds a content engine wi
 
 ### Problem Frame
 
-`cybersource-docs/` already holds ~360 llms.txt docs and the content engine already snapshots a few fixtures, but there is no durable source-mix decision, no immutable `raw/<date>/` + schema-gated `normalized/` store that serve layers must respect, and no portal that reads generated `content/*.md` (the v2-named `lib/quickstart-data.js` does not exist here — A1 must create the honest serve path rather than delete a missing file).
+`gateway-docs/` already holds ~360 llms.txt docs and the content engine already snapshots a few fixtures, but there is no durable source-mix decision, no immutable `raw/<date>/` + schema-gated `normalized/` store that serve layers must respect, and no portal that reads generated `content/*.md` (the v2-named `lib/quickstart-data.js` does not exist here — A1 must create the honest serve path rather than delete a missing file).
 
 ### Requirements
 
@@ -37,7 +37,7 @@ Build-spec v2 keeps the Integration Success OS lane and adds a content engine wi
 - R5. Portal (and later MCP/evals) may read only `normalized/` and `content/`, never `raw/` or hand-pasted JS data modules.
 - R6. Thin `portal/` serves `content/*.md` with real markdown rendering and an honest empty state when content is absent.
 - R7. CI fails closed on gitleaks findings, raw markdown leak patterns in rendered HTML, and broken local content links.
-- R8. Prefer offline replay from the existing `cybersource-docs/` corpus so unittest stays network-free; optional network fetch remains behind an explicit flag.
+- R8. Prefer offline replay from the existing `gateway-docs/` corpus so unittest stays network-free; optional network fetch remains behind an explicit flag.
 
 ### Scope Boundaries
 
@@ -66,7 +66,7 @@ Out of scope: A2 fact renderer PR loop, A3 humanizer, A4 nightly, B1–B3 tempo 
   Rejected: Block LFG until a different portal branch appears.
   Reason: Files absent after search of local workspace and Poornimajagannath GitHub; headless LFG must ship the serve contract the spec requires.
 
-- KTD2. Default ingestion is offline from `cybersource-docs/` (+ local OpenAPI fixture); `--fetch` may hit llms.txt when explicitly requested.
+- KTD2. Default ingestion is offline from `gateway-docs/` (+ local OpenAPI fixture); `--fetch` may hit llms.txt when explicitly requested.
   Rejected: Always network-fetch in CI/tests.
   Reason: Repo README honesty: credential-free / network-free unittest proof.
 
@@ -74,7 +74,7 @@ Out of scope: A2 fact renderer PR loop, A3 humanizer, A4 nightly, B1–B3 tempo 
   Rejected: New parallel schema language.
   Reason: Existing `relay_bench/content_engine/schemas.py` already models quickstart units and snapshots.
 
-- KTD4. Cap M0 sampling to OpenAPI fixture ops + a stratified sample of cybersource-docs (auth/quickstart/payments/index-like) so the report finishes offline and stays reviewable.
+- KTD4. Cap M0 sampling to OpenAPI fixture ops + a stratified sample of gateway-docs (auth/quickstart/payments/index-like) so the report finishes offline and stays reviewable.
   Rejected: Score all 360 docs line-by-line by hand.
   Reason: Decision rule needs a directional split, not exhaustive labeling.
 
@@ -82,14 +82,14 @@ Out of scope: A2 fact renderer PR loop, A3 humanizer, A4 nightly, B1–B3 tempo 
 
 ### Assumptions
 
-- A1. `data/content_engine/specs/cybersource-payments-core.openapi.json` is the authoritative local OpenAPI for M0 scoring.
-- A2. Existing `cybersource-docs/` files are acceptable evidence for `raw/` when stamped with reconstructed source URLs from filename/index conventions.
+- A1. `data/content_engine/specs/payments-core.openapi.json` is the authoritative local OpenAPI for M0 scoring.
+- A2. Existing `gateway-docs/` files are acceptable evidence for `raw/` when stamped with reconstructed source URLs from filename/index conventions.
 - A3. Portal may be Node stdlib HTTP (no framework) to keep deps light.
 
 ### Technical Design
 
 ```text
-cybersource-docs/ (+ optional llms fetch)
+gateway-docs/ (+ optional llms fetch)
   -> raw/<YYYY-MM-DD>/... + meta.json (immutable)
   -> schema extract -> normalized/*.json (+ drop log)
   -> (later A2) content/*.md
@@ -118,7 +118,7 @@ Files: `pipelines/run_source_mix.py`, `relay_bench/content_engine/source_mix.py`
 
 Files: `pipelines/run_ingestion_snapshot.py`, `relay_bench/content_engine/ingest.py`, `tests/test_ingest.py`, `artifacts/content_engine/ingestion-report.md`, `raw/` (generated), `normalized/` (generated)
 
-- Offline default: stamp-copy from `cybersource-docs/` into `raw/<date>/` with `source_url` + `fetched_at`.
+- Offline default: stamp-copy from `gateway-docs/` into `raw/<date>/` with `source_url` + `fetched_at`.
 - Extract schema-matching claims only; log drops (index pages, revision histories, unmatched blobs).
 - Refuse to modify existing raw files (second run uses new date dir or skips unchanged hashes).
 - Test: temp corpus produces raw meta, normalized claims with pointers, and drop log entries; portal/MCP read paths documented to exclude raw.

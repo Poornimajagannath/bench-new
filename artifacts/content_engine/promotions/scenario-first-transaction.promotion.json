@@ -15,7 +15,7 @@
       "code": "missing_requires",
       "severity": "warning",
       "message": "step has no requires dependencies",
-      "unit_id": "scenario-first-transaction:step:2:read-the-cybersource-payment-api-documentation"
+      "unit_id": "scenario-first-transaction:step:2:read-the-payment-gateway-payment-api-documentation"
     },
     {
       "code": "missing_requires",
@@ -33,7 +33,7 @@
   "promoted_unit_ids": [
     "scenario-first-transaction:overview:0:question",
     "scenario-first-transaction:step:1:use-the-credentials-from-the-authentication-scen",
-    "scenario-first-transaction:step:2:read-the-cybersource-payment-api-documentation",
+    "scenario-first-transaction:step:2:read-the-payment-gateway-payment-api-documentation",
     "scenario-first-transaction:step:3:make-a-test-payment-auth-with-the-test-card",
     "scenario-first-transaction:step:4:get-a-transaction-id-back-in-the-response",
     "scenario-first-transaction:prerequisite:0:inputs",

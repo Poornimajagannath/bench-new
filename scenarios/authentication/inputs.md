@@ -4,9 +4,9 @@
 
 | Variable | Value | Source |
 |----------|-------|--------|
-| `CYBS_MERCHANT_ID` | `YOUR_MERCHANT_ID` | CyberSource developer portal |
-| `CYBS_KEY_ID` | `YOUR_KEY_ID` | CyberSource developer portal |
-| `CYBS_SHARED_SECRET` | `YOUR_SHARED_SECRET` | CyberSource developer portal |
+| `PGW_MERCHANT_ID` | `YOUR_MERCHANT_ID` | Payment Gateway developer portal |
+| `PGW_KEY_ID` | `YOUR_KEY_ID` | Payment Gateway developer portal |
+| `PGW_SHARED_SECRET` | `YOUR_SHARED_SECRET` | Payment Gateway developer portal |
 
 ## Test Card
 
@@ -17,13 +17,13 @@
 
 ## Sandbox Endpoint
 
-- **URL:** `https://apitest.cybersource.com`
+- **URL:** `https://apitest.example.com`
 - **API version:** Latest (check developer portal for current version)
 
 ## Documentation Source
 
-- **Portal:** `developer.cybersource.com`
-- **LLMs.txt:** `developer.cybersource.com/llms.txt`
+- **Portal:** `developer.example.com`
+- **LLMs.txt:** `developer.example.com/llms.txt`
 - **Auth docs path:** `/docs/authentication` (or similar — agent needs to find this)
 
 ## Expected Response Shape
@@ -33,7 +33,7 @@ A successful auth/API call returns:
 {
   "status": 200,
   "data": {
-    // Some valid response from the CyberSource API
+    // Some valid response from the Payment Gateway API
   }
 }
 ```
@@ -42,4 +42,4 @@ A successful auth/API call returns:
 
 - SDK auth field names are `merchantKeyId` and `merchantsecretKey` — NOT `keyId` and `secretKey`
 - Card expiry must be a future year (2031, not 2025)
-- CyberSource sandbox is rate-limited (allow retries)
+- Payment Gateway sandbox is rate-limited (allow retries)

@@ -106,10 +106,10 @@ def run_specs_to_docs(source_id: str) -> Dict[str, Any]:
     payload["honest_label"] = {
         "docetl": "not-used",
         "network": "denied",
-        "fixture": "local-cybersource-shaped-openapi",
+        "fixture": "local-payment-gateway-shaped-openapi",
         "note": (
             "Local fixture covering Payments/Captures/Credits/Customers/"
-            "MPP Credential operations. Not a live CyberSource download."
+            "MPP Credential operations. Not a live Payment Gateway download."
         ),
     }
     promo_path.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")

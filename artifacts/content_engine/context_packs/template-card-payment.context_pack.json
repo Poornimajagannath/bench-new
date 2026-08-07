@@ -2,7 +2,7 @@
   "pack_id": "ctx-template-card-payment",
   "source_id": "template-card-payment",
   "product": [
-    "cybersource",
+    "payment-gateway",
     "acceptance-platform"
   ],
   "audience": [

@@ -9,23 +9,23 @@ Local proof only. DocETL-style extraction and Harbor/Tempo-style eval export are
 **Goal:** Am I using the wrong SDK field names for key id and secret?
 
 Confusion points:
-- My HTTP Signature request looks correct but CyberSource returns Authentication Failed on apitest.cybersource.com
+- My HTTP Signature request looks correct but Payment Gateway returns Authentication Failed on apitest.example.com
 - Am I using the wrong SDK field names for key id and secret
 - entity:HTTP Signature
 - entity:Authentication Failed
 - entity:keyId
 - entity:secretKey
-- entity:apitest.cybersource.com
+- entity:apitest.example.com
 - HTTP Signature signed headers include host,date,digest but we still get 401. Do we need request-target and v-c-merchant-id in the signature base on apitest?
 - entity:v-c-merchant-id
-- alt_goal:Resolve developer confusion involving HTTP Signature, v-c-merchant-id, apitest.cybersource.com
+- alt_goal:Resolve developer confusion involving HTTP Signature, v-c-merchant-id, apitest.example.com
 - Authentication Failed every time on sandbox
 - entity:merchantKeyId
 - alt_goal:Resolve developer confusion involving Authentication Failed, keyId, secretKey, merchantKeyId
 - Is Authentication Failed expected, and what host should sandbox use
 - alt_goal:what host should sandbox use?
 - Our manual HMAC matches locally but apitest still rejects the request
-- alt_goal:How should the digest and signature base string be built for CyberSource HTTP Signature?
+- alt_goal:How should the digest and signature base string be built for Payment Gateway HTTP Signature?
 - Does logging the shared secret in debug headers cause Authentication Failed, or is the issue only field names like keyId vs merchantKeyId on HTTP Signature
 - alt_goal:Resolve developer confusion involving HTTP Signature, Authentication Failed, keyId, merchantKeyId
 
@@ -38,7 +38,7 @@ Source seed ids: `seed-httpsig-01, seed-httpsig-02, seed-httpsig-03, seed-httpsi
 - stages: `load_sandbox_env_vars, build_digest, build_signature_base, attach_vc_headers, interpret_auth_failure`
 
 API/SDK facts:
-- Sandbox host is apitest.cybersource.com
+- Sandbox host is apitest.example.com
 - SDK expects merchantKeyId and merchantsecretKey (not keyId/secretKey)
 - Signed headers typically include host, date, request-target, digest, v-c-merchant-id
 
@@ -60,7 +60,7 @@ API/SDK facts:
 - oracle_field_count: `4`
 - bad_answer_field_count: `5`
 - private_check_count: `4`
-- hidden_truth_sha256: `0318a7735e7f495c8233af7050d680dbb520ddc40049c1d944f4cb91b2909184`
+- hidden_truth_sha256: `7a1324965f49d0bca6d4214d00bedf090e0f5271dbaea78b88f7bd406f5e9a59`
 
 Hidden truth content is intentionally omitted from this bundle.
 

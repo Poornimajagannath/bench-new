@@ -2,7 +2,7 @@
 
 Milestone 0 inventory: what fraction of each guide's facts could be regenerated from the local OpenAPI fixture versus facts that exist only in prose.
 
-- OpenAPI: `data/content_engine/specs/cybersource-payments-core.openapi.json`
+- OpenAPI: `data/content_engine/specs/payments-core.openapi.json`
 - Guides sampled: 40
 - Overall spec-backed share: **74.1%**
 - Overall prose-only share: **25.9%**

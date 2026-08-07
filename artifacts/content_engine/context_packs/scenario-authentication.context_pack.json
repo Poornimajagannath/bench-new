@@ -2,7 +2,7 @@
   "pack_id": "ctx-scenario-authentication",
   "source_id": "scenario-authentication",
   "product": [
-    "cybersource",
+    "payment-gateway",
     "acceptance-platform"
   ],
   "audience": [
@@ -36,7 +36,7 @@
     {
       "unit_id": "scenario-authentication:step:1:understand-where-to-get-api-credentials-from-the",
       "unit_type": "step",
-      "title": "Understand where to get API credentials from the CyberSource developer portal",
+      "title": "Understand where to get API credentials from the Payment Gateway developer portal",
       "sequence_number": 1,
       "requires": [],
       "outcomes": [],

@@ -22,11 +22,11 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Source-mix inventory (M0)")
     parser.add_argument(
         "--openapi",
-        default=str(ROOT / "data/content_engine/specs/cybersource-payments-core.openapi.json"),
+        default=str(ROOT / "data/content_engine/specs/payments-core.openapi.json"),
     )
     parser.add_argument(
         "--docs-dir",
-        default=str(ROOT / "cybersource-docs"),
+        default=str(ROOT / "gateway-docs"),
     )
     parser.add_argument("--sample-limit", type=int, default=40)
     parser.add_argument(

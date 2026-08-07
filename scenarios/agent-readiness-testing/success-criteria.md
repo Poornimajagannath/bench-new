@@ -50,7 +50,7 @@ The agent systematically tests multiple integration scenarios, identifies DX iss
       "currency-config": 1
     },
     "docs_read": [
-      "CyberSource Auth Documentation",
+      "Payment Gateway Auth Documentation",
       "Payment Model Structures",
       "Currency/Tax Configuration"
     ],

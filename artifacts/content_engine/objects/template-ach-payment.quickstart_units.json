@@ -11,7 +11,7 @@
       "title": "SDK Models Used",
       "goal": "ACH Payment Integration Template",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -40,7 +40,7 @@
       "title": "Ptsv2paymentsPaymentInformationBank",
       "goal": "ACH Payment Integration Template",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -69,7 +69,7 @@
       "title": "Ptsv2paymentsPaymentInformationBankAccount",
       "goal": "ACH Payment Integration Template",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -98,7 +98,7 @@
       "title": "US (ACH)",
       "goal": "ACH Payment Integration Template",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -127,7 +127,7 @@
       "title": "EU (SEPA)",
       "goal": "ACH Payment Integration Template",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -156,7 +156,7 @@
       "title": "UK (BACS)",
       "goal": "ACH Payment Integration Template",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -185,7 +185,7 @@
       "title": "Required Fields for ACH",
       "goal": "ACH Payment Integration Template",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -214,7 +214,7 @@
       "title": "Error Recovery",
       "goal": "ACH Payment Integration Template",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -243,7 +243,7 @@
       "title": "**Routing numbers must be 9 digits** \u2014 not 8, not 10, exactly 9",
       "goal": "ACH Payment Integration Template",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -272,7 +272,7 @@
       "title": "**Account numbers are 8-17 digits** for most processors",
       "goal": "ACH Payment Integration Template",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -301,7 +301,7 @@
       "title": "**ACH takes 3-5 business days** to settle \u2014 unlike cards which are instant",
       "goal": "ACH Payment Integration Template",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -330,7 +330,7 @@
       "title": "**SEPA requires IBAN format** \u2014 not just account number",
       "goal": "ACH Payment Integration Template",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -359,7 +359,7 @@
       "title": "**BACS requires sort code** \u2014 6 digits in XX-XX-XX format",
       "goal": "ACH Payment Integration Template",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -388,7 +388,7 @@
       "title": "**Name on account must match** the billing address name",
       "goal": "ACH Payment Integration Template",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -417,7 +417,7 @@
       "title": "**ACH cannot be reversed instantly** \u2014 requires separate reversal flow",
       "goal": "ACH Payment Integration Template",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [

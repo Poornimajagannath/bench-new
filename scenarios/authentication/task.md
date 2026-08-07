@@ -2,19 +2,19 @@
 
 ## Question
 
-Can an agent figure out how to authenticate with the CyberSource API and make its first successful call?
+Can an agent figure out how to authenticate with the Payment Gateway API and make its first successful call?
 
 ## Context
 
 The developer needs to:
-1. Understand where to get API credentials from the CyberSource developer portal
+1. Understand where to get API credentials from the Payment Gateway developer portal
 2. Use the correct credential format (not what docs claim — the SDK field names are different from what the docs say)
 3. Make a successful API call with the test card
 
 ## Expected Behavior
 
 The agent should:
-- Read the CyberSource developer docs
+- Read the Payment Gateway developer docs
 - Find the authentication/credentials section
 - Use the correct field names (`merchantKeyId`, `merchantsecretKey` — NOT `keyId`, `secretKey`)
 - Make an API call with the sandbox test card
@@ -22,9 +22,9 @@ The agent should:
 
 ## Inputs
 
-- CyberSource sandbox credentials (set via env vars: `CYBS_MERCHANT_ID`, `CYBS_KEY_ID`, `CYBS_SHARED_SECRET`)
-- CyberSource test card number (standard test card, e.g., 4111111111111111)
-- CyberSource sandbox URL
+- Payment Gateway sandbox credentials (set via env vars: `PGW_MERCHANT_ID`, `PGW_KEY_ID`, `PGW_SHARED_SECRET`)
+- Payment Gateway test card number (standard test card, e.g., 4111111111111111)
+- Payment Gateway sandbox URL
 
 ## Success Criteria
 
@@ -41,10 +41,10 @@ The agent should:
 
 ## Resources
 
-- CyberSource developer portal: `developer.cybersource.com`
-- CyberSource llms.txt: `developer.cybersource.com/llms.txt`
-- CyberSource API reference (for auth endpoints)
+- Payment Gateway developer portal: `developer.example.com`
+- Payment Gateway llms.txt: `developer.example.com/llms.txt`
+- Payment Gateway API reference (for auth endpoints)
 
 ## Agent Instruction
 
-Read the CyberSource developer documentation and find the authentication section. Get the right credentials and make a successful API call with the sandbox test card.
+Read the Payment Gateway developer documentation and find the authentication section. Get the right credentials and make a successful API call with the sandbox test card.

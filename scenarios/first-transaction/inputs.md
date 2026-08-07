@@ -4,9 +4,9 @@
 
 | Variable | Value | Source |
 |----------|-------|--------|
-| `CYBS_MERCHANT_ID` | `YOUR_MERCHANT_ID` | CyberSource developer portal |
-| `CYBS_KEY_ID` | `YOUR_KEY_ID` | CyberSource developer portal |
-| `CYBS_SHARED_SECRET` | `YOUR_SHARED_SECRET` | CyberSource developer portal |
+| `PGW_MERCHANT_ID` | `YOUR_MERCHANT_ID` | Payment Gateway developer portal |
+| `PGW_KEY_ID` | `YOUR_KEY_ID` | Payment Gateway developer portal |
+| `PGW_SHARED_SECRET` | `YOUR_SHARED_SECRET` | Payment Gateway developer portal |
 
 ## Test Card
 
@@ -18,14 +18,14 @@
 
 ## Sandbox Endpoint
 
-- **URL:** `https://apitest.cybersource.com`
+- **URL:** `https://apitest.example.com`
 - **API version:** Latest (check developer portal)
 - **Payment endpoint:** `/pts/v2/payments` (or similar — agent needs to find this)
 
 ## Documentation Source
 
-- **Portal:** `developer.cybersource.com`
-- **LLMs.txt:** `developer.cybersource.com/llms.txt`
+- **Portal:** `developer.example.com`
+- **LLMs.txt:** `developer.example.com/llms.txt`
 - **Payment docs path:** `/docs/payments` or `/docs/api-reference` (agent needs to find this)
 
 ## Expected Request Shape
@@ -69,7 +69,7 @@ A payment auth request should look like:
 
 ## Gotchas (for reference, NOT shown to agent)
 
-- `billTo` is required but documented nowhere in the CyberSource docs — this is a known gap
+- `billTo` is required but documented nowhere in the Payment Gateway docs — this is a known gap
 - Locality, lastName, email, address1, country are required fields
 - Card expiry must be a future year (2031, not 2025)
 - Payment endpoint path may vary by API version

@@ -2,7 +2,7 @@
   "pack_id": "ctx-templates-index",
   "source_id": "templates-index",
   "product": [
-    "cybersource",
+    "payment-gateway",
     "acceptance-platform"
   ],
   "audience": [

@@ -85,7 +85,7 @@ Relay needs to answer: What's Relay's version of MPP? What's Relay's version of 
 - "I'm particularly interested in how platforms like Relay can compete with Stripe's developer-first agent-commerce play"
 
 **Her differentiators:**
-- Enterprise payment infrastructure experience (CyberSource/Acceptance Platform)
+- Enterprise payment infrastructure experience (Payment Gateway/Acceptance Platform)
 - Deep knowledge of reconciliation (the talk topic)
 - payment network scale that Stripe can't match
 - Understanding of enterprise compliance/risks that Stripe's developer-first approach may miss

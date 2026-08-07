@@ -6,23 +6,23 @@ Load credentials from environment variables ONLY. Never hardcode or commit secre
 
 ## Required Environment Variables
 
-- `CYBS_MERCHANT_ID` — Sandbox merchant ID from developer.cybersource.com
-- `CYBS_KEY_ID` — HTTP Signature key ID
-- `CYBS_SHARED_SECRET` — Shared secret paired with CYBS_KEY_ID
-- `CYBS_ENVIRONMENT` — Must be "sandbox"
+- `PGW_MERCHANT_ID` — Sandbox merchant ID from developer.example.com
+- `PGW_KEY_ID` — HTTP Signature key ID
+- `PGW_SHARED_SECRET` — Shared secret paired with PGW_KEY_ID
+- `PGW_ENVIRONMENT` — Must be "sandbox"
 
 ## Auth Error Taxonomy
 
 | Error | Likely Cause | Fix |
 |-------|-------------|-----|
-| 401 Unauthorized | Wrong credentials | Verify CYBS_KEY_ID and CYBS_SHARED_SECRET |
-| 403 Forbidden | Invalid merchant ID | Check CYBS_MERCHANT_ID |
+| 401 Unauthorized | Wrong credentials | Verify PGW_KEY_ID and PGW_SHARED_SECRET |
+| 403 Forbidden | Invalid merchant ID | Check PGW_MERCHANT_ID |
 | 400 Bad Request | Wrong field names | Use `merchantKeyId` and `merchantsecretKey` NOT `keyId` and `secretKey` |
-| Network Error | Wrong endpoint | Use sandbox endpoint: `https://apitest.cybersource.com` |
+| Network Error | Wrong endpoint | Use sandbox endpoint: `https://apitest.example.com` |
 
 ## SDK Field Names (Known Gap)
 
-The CyberSource SDK expects:
+The Payment Gateway SDK expects:
 - `merchantKeyId` (NOT `keyId`)
 - `merchantsecretKey` (NOT `secretKey`)
 

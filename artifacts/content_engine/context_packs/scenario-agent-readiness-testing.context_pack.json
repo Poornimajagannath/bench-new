@@ -2,7 +2,7 @@
   "pack_id": "ctx-scenario-agent-readiness-testing",
   "source_id": "scenario-agent-readiness-testing",
   "product": [
-    "cybersource",
+    "payment-gateway",
     "acceptance-platform"
   ],
   "audience": [

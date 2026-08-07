@@ -6,7 +6,7 @@ The agent successfully generates correct code for a multi-payment method integra
 
 ## Pass Conditions
 
-- [ ] **PASS**: Agent generates code that correctly maps CyberSource SDK model structures for at least 2 different payment methods (card + ACH OR card + digital wallet)
+- [ ] **PASS**: Agent generates code that correctly maps Payment Gateway SDK model structures for at least 2 different payment methods (card + ACH OR card + digital wallet)
 - [ ] **PASS**: Agent uses correct SDK model names (e.g., `Ptsv2paymentsPaymentInformationCard`, `Ptsv2paymentsOrderInformationBillTo`, `Ptsv2paymentsOrderInformationAmountDetails`)
 - [ ] **PASS**: Agent handles currency/tax configuration correctly (ISO codes, decimal precision)
 - [ ] **PASS**: Agent does not hardcode credentials — uses environment variables only
@@ -42,7 +42,7 @@ The agent successfully generates correct code for a multi-payment method integra
   "result": {
     "pass": true,
     "docs_read": [
-      "CyberSource Payments API (pts/v2/payments)",
+      "Payment Gateway Payments API (pts/v2/payments)",
       "Payment model structure (card, ACH, digital wallet)",
       "Currency/tax configuration docs"
     ],

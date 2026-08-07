@@ -4,9 +4,9 @@
 
 | Variable | Value | Source |
 |----------|-------|--------|
-| `CYBS_MERCHANT_ID` | `YOUR_MERCHANT_ID` | CyberSource developer portal |
-| `CYBS_KEY_ID` | `YOUR_KEY_ID` | CyberSource developer portal |
-| `CYBS_SHARED_SECRET` | `YOUR_SHARED_SECRET` | CyberSource developer portal |
+| `PGW_MERCHANT_ID` | `YOUR_MERCHANT_ID` | Payment Gateway developer portal |
+| `PGW_KEY_ID` | `YOUR_KEY_ID` | Payment Gateway developer portal |
+| `PGW_SHARED_SECRET` | `YOUR_SHARED_SECRET` | Payment Gateway developer portal |
 
 ## Test Card
 
@@ -17,13 +17,13 @@
 
 ## Sandbox Endpoint
 
-- **URL:** `https://apitest.cybersource.com`
+- **URL:** `https://apitest.example.com`
 - **API version:** Latest (check developer portal)
 
 ## Documentation Source
 
-- **Portal:** `developer.cybersource.com`
-- **LLMs.txt:** `developer.cybersource.com/llms.txt`
+- **Portal:** `developer.example.com`
+- **LLMs.txt:** `developer.example.com/llms.txt`
 - **Checkout docs path:** `/docs/checkout` (or similar — agent needs to find this)
 
 ## Checkout Options

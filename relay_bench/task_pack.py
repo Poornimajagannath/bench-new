@@ -69,7 +69,7 @@ _HIDDEN: Dict[str, Dict[str, object]] = {
         "fixture_id": "fixture-httpsig-v0",
         "oracle_answer": {
             "credential_fields": ["merchantKeyId", "merchantsecretKey"],
-            "endpoint_host": "apitest.cybersource.com",
+            "endpoint_host": "apitest.example.com",
             "signed_headers": [
                 "host",
                 "date",
@@ -81,7 +81,7 @@ _HIDDEN: Dict[str, Dict[str, object]] = {
         },
         "bad_answer": {
             "credential_fields": ["keyId", "secretKey"],
-            "endpoint_host": "api.cybersource.com",
+            "endpoint_host": "api.example.com",
             "signed_headers": ["host", "date", "digest"],
             "logs_secrets": False,
             "mistake": "Uses doc field names and production host; omits request-target and v-c-merchant-id",
@@ -95,7 +95,7 @@ _HIDDEN: Dict[str, Dict[str, object]] = {
             {
                 "check_id": "sandbox_host",
                 "field": "endpoint_host",
-                "expected": "apitest.cybersource.com",
+                "expected": "apitest.example.com",
             },
             {
                 "check_id": "signed_headers_complete",
@@ -197,7 +197,7 @@ def build_task_pack(candidate: WorkflowCandidate) -> TaskPack:
         allowed_context=list(candidate.api_sdk_facts),
         constraints=[
             "No network calls",
-            "No live CyberSource sandbox credentials",
+            "No live Payment Gateway sandbox credentials",
             "No raw PAN, secrets, or credential logging",
             "Public forum/docs seeds are frozen input only",
         ],

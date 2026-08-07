@@ -69,13 +69,13 @@
       "code": "missing_requires",
       "severity": "warning",
       "message": "step has no requires dependencies",
-      "unit_id": "template-digital-wallet:step:11:merchant-includes-token-in-cybersource-payment-r"
+      "unit_id": "template-digital-wallet:step:11:merchant-includes-token-in-payment-gateway-payment-r"
     },
     {
       "code": "missing_requires",
       "severity": "warning",
       "message": "step has no requires dependencies",
-      "unit_id": "template-digital-wallet:step:12:cybersource-processes-transaction-with-token"
+      "unit_id": "template-digital-wallet:step:12:payment-gateway-processes-transaction-with-token"
     }
   ],
   "promoted_unit_ids": [
@@ -93,8 +93,8 @@
     "template-digital-wallet:step:8:user-initiates-payment-in-wallet-app",
     "template-digital-wallet:step:9:wallet-app-authenticates-user-(biometrics,-pin,-",
     "template-digital-wallet:step:10:wallet-app-sends-token-to-merchant",
-    "template-digital-wallet:step:11:merchant-includes-token-in-cybersource-payment-r",
-    "template-digital-wallet:step:12:cybersource-processes-transaction-with-token",
+    "template-digital-wallet:step:11:merchant-includes-token-in-payment-gateway-payment-r",
+    "template-digital-wallet:step:12:payment-gateway-processes-transaction-with-token",
     "template-digital-wallet:overview:0:3d-secure-model-properties",
     "template-digital-wallet:overview:0:error-recovery",
     "template-digital-wallet:overview:0:wallet-specific-errors",

@@ -9,7 +9,7 @@ Can an agent systematically test a payment integration and produce a structured 
 
 ## Context
 
-Agents integrating CyberSource face several categories of DX issues:
+Agents integrating Payment Gateway face several categories of DX issues:
 - SDK installation problems (version mismatches, missing dependencies)
 - Authentication failures (field name mismatches, crypto issues)
 - Model structure errors (missing required fields, wrong nested objects)
@@ -25,7 +25,7 @@ The agent must demonstrate:
 ## Expected Behavior
 
 The agent should:
-- Read the CyberSource documentation
+- Read the Payment Gateway documentation
 - Test multiple integration scenarios (auth, card payment, currency config)
 - Document each finding with severity and bucket
 - Produce a structured findings report
@@ -34,7 +34,7 @@ The agent should:
 ## Scenarios
 
 ### Scenario A: Auth Integration Test
-**Task:** Test authentication with CyberSource and report all DX issues encountered
+**Task:** Test authentication with Payment Gateway and report all DX issues encountered
 
 **Success Criteria:**
 - [ ] Agent correctly identifies SDK installation requirements
@@ -62,11 +62,11 @@ The agent should:
 
 ## Resources
 
-- CyberSource REST API spec (via MCP `get_model_class_details`)
-- CyberSource SDK templates (via MCP `get_code_template`)
+- Payment Gateway REST API spec (via MCP `get_model_class_details`)
+- Payment Gateway SDK templates (via MCP `get_code_template`)
 - Currency/tax configuration docs
 - Error handling documentation
 
 ## Agent Instruction
 
-Read the CyberSource documentation via MCP tools. Systematically test integration scenarios (auth, payment methods, currency config) and produce a structured DX issue report with severity ratings and recommendations.
+Read the Payment Gateway documentation via MCP tools. Systematically test integration scenarios (auth, payment methods, currency config) and produce a structured DX issue report with severity ratings and recommendations.

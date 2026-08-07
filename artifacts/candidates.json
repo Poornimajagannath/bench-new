@@ -20,8 +20,8 @@
         "channel": "forum",
         "question": "I created a Flex Microform transient token \u2014 can I pass it straight into TMS to store a permanent instrument, or do I need another step? TMS createInstrument rejects my Flex JWT when I send it as pan.",
         "public_refs": [
-          "developer.cybersource.com/docs/flex",
-          "developer.cybersource.com/docs/tms"
+          "developer.example.com/docs/flex",
+          "developer.example.com/docs/tms"
         ]
       },
       "extraction": {
@@ -65,8 +65,8 @@
         "channel": "forum",
         "question": "Does a Flex Microform transientTokenJwt expire too quickly for TMS createInstrument? Support said not to treat the JWT like a reusable PAN, but checkout still fails when creating a permanent instrument.",
         "public_refs": [
-          "developer.cybersource.com/docs/flex",
-          "developer.cybersource.com/docs/tms"
+          "developer.example.com/docs/flex",
+          "developer.example.com/docs/tms"
         ]
       },
       "extraction": {
@@ -112,7 +112,7 @@
         "channel": "docs",
         "question": "Flex docs show transientTokenJwt but our backend stores it in Redis for later TMS createInstrument. Is persisting the Flex JWT wrong, and what is the correct permanent instrument path?",
         "public_refs": [
-          "developer.cybersource.com/docs/flex"
+          "developer.example.com/docs/flex"
         ]
       },
       "extraction": {
@@ -156,7 +156,7 @@
         "channel": "forum",
         "question": "Can TMS createInstrument accept a Flex Microform token without sending pan? We keep getting INVALID_DATA when we map transientTokenJwt into card number fields.",
         "public_refs": [
-          "developer.cybersource.com/docs/tms"
+          "developer.example.com/docs/tms"
         ]
       },
       "extraction": {
@@ -201,8 +201,8 @@
         "channel": "support",
         "question": "After Flex capture, which API creates a reusable instrument identifier? We thought authorize with the transient token was enough and skipped TMS entirely.",
         "public_refs": [
-          "developer.cybersource.com/docs/flex",
-          "developer.cybersource.com/docs/tms"
+          "developer.example.com/docs/flex",
+          "developer.example.com/docs/tms"
         ]
       },
       "extraction": {
@@ -282,7 +282,7 @@
         "channel": "docs",
         "question": "What is the correct lifecycle from Flex Microform capture to permanent TMS instrument before authorization? We authorize immediately with transientTokenJwt and later cannot reuse it.",
         "public_refs": [
-          "developer.cybersource.com/docs/flex"
+          "developer.example.com/docs/flex"
         ]
       },
       "extraction": {
@@ -324,16 +324,16 @@
         "seed_id": "seed-httpsig-01",
         "source": "public-docs-frozen",
         "channel": "docs",
-        "question": "My HTTP Signature request looks correct but CyberSource returns Authentication Failed on apitest.cybersource.com. Am I using the wrong SDK field names for key id and secret? Docs say keyId/secretKey.",
+        "question": "My HTTP Signature request looks correct but Payment Gateway returns Authentication Failed on apitest.example.com. Am I using the wrong SDK field names for key id and secret? Docs say keyId/secretKey.",
         "public_refs": [
-          "developer.cybersource.com/docs/authentication"
+          "developer.example.com/docs/authentication"
         ]
       },
       "extraction": {
         "seed_id": "seed-httpsig-01",
         "goal": "Am I using the wrong SDK field names for key id and secret?",
         "symptoms": [
-          "My HTTP Signature request looks correct but CyberSource returns Authentication Failed on apitest.cybersource.com",
+          "My HTTP Signature request looks correct but Payment Gateway returns Authentication Failed on apitest.example.com",
           "Am I using the wrong SDK field names for key id and secret"
         ],
         "entities": [
@@ -341,7 +341,7 @@
           "Authentication Failed",
           "keyId",
           "secretKey",
-          "apitest.cybersource.com"
+          "apitest.example.com"
         ],
         "confidence": 0.95
       },
@@ -373,19 +373,19 @@
         "channel": "forum",
         "question": "HTTP Signature signed headers include host,date,digest but we still get 401. Do we need request-target and v-c-merchant-id in the signature base on apitest?",
         "public_refs": [
-          "developer.cybersource.com/docs/authentication"
+          "developer.example.com/docs/authentication"
         ]
       },
       "extraction": {
         "seed_id": "seed-httpsig-02",
-        "goal": "Resolve developer confusion involving HTTP Signature, v-c-merchant-id, apitest.cybersource.com",
+        "goal": "Resolve developer confusion involving HTTP Signature, v-c-merchant-id, apitest.example.com",
         "symptoms": [
           "HTTP Signature signed headers include host,date,digest but we still get 401. Do we need request-target and v-c-merchant-id in the signature base on apitest?"
         ],
         "entities": [
           "HTTP Signature",
           "v-c-merchant-id",
-          "apitest.cybersource.com"
+          "apitest.example.com"
         ],
         "confidence": 0.8
       },
@@ -415,7 +415,7 @@
         "channel": "support",
         "question": "SDK expects merchantKeyId and merchantsecretKey but our config uses keyId/secretKey from the getting-started page. Authentication Failed every time on sandbox.",
         "public_refs": [
-          "developer.cybersource.com/llms.txt"
+          "developer.example.com/llms.txt"
         ]
       },
       "extraction": {
@@ -457,9 +457,9 @@
         "seed_id": "seed-httpsig-04",
         "source": "public-forum-frozen",
         "channel": "forum",
-        "question": "We pointed HTTP Signature at api.cybersource.com with sandbox keys by mistake. Is Authentication Failed expected, and what host should sandbox use?",
+        "question": "We pointed HTTP Signature at api.example.com with sandbox keys by mistake. Is Authentication Failed expected, and what host should sandbox use?",
         "public_refs": [
-          "developer.cybersource.com/docs/authentication"
+          "developer.example.com/docs/authentication"
         ]
       },
       "extraction": {
@@ -497,20 +497,20 @@
         "seed_id": "seed-httpsig-05",
         "source": "public-docs-frozen",
         "channel": "docs",
-        "question": "How should the digest and signature base string be built for CyberSource HTTP Signature? Our manual HMAC matches locally but apitest still rejects the request.",
+        "question": "How should the digest and signature base string be built for Payment Gateway HTTP Signature? Our manual HMAC matches locally but apitest still rejects the request.",
         "public_refs": [
-          "developer.cybersource.com/docs/authentication"
+          "developer.example.com/docs/authentication"
         ]
       },
       "extraction": {
         "seed_id": "seed-httpsig-05",
-        "goal": "How should the digest and signature base string be built for CyberSource HTTP Signature?",
+        "goal": "How should the digest and signature base string be built for Payment Gateway HTTP Signature?",
         "symptoms": [
           "Our manual HMAC matches locally but apitest still rejects the request"
         ],
         "entities": [
           "HTTP Signature",
-          "apitest.cybersource.com"
+          "apitest.example.com"
         ],
         "confidence": 0.7
       },
@@ -539,7 +539,7 @@
         "channel": "forum",
         "question": "Does logging the shared secret in debug headers cause Authentication Failed, or is the issue only field names like keyId vs merchantKeyId on HTTP Signature?",
         "public_refs": [
-          "developer.cybersource.com/docs/authentication"
+          "developer.example.com/docs/authentication"
         ]
       },
       "extraction": {
@@ -583,8 +583,8 @@
         "channel": "support",
         "question": "After Microform tokenization, where does Payer Authentication (3DS) enrollment and challenge fit \u2014 and what states must I handle before authorization? We authorize immediately after the Microform token.",
         "public_refs": [
-          "developer.cybersource.com/docs/flex-microform",
-          "developer.cybersource.com/docs/payer-authentication"
+          "developer.example.com/docs/flex-microform",
+          "developer.example.com/docs/payer-authentication"
         ]
       },
       "extraction": {
@@ -632,7 +632,7 @@
         "channel": "forum",
         "question": "Payer Authentication enrollment sometimes returns challenge and sometimes frictionless. Our Microform flow collapses both into one success branch and auth refs are missing on payment.",
         "public_refs": [
-          "developer.cybersource.com/docs/payer-authentication"
+          "developer.example.com/docs/payer-authentication"
         ]
       },
       "extraction": {
@@ -679,7 +679,7 @@
         "channel": "docs",
         "question": "Do we still need enrollment_check after Microform tokenize if the card network often returns frictionless? We skip validation_authentication and payments fail intermittently.",
         "public_refs": [
-          "developer.cybersource.com/docs/payer-authentication"
+          "developer.example.com/docs/payer-authentication"
         ]
       },
       "extraction": {
@@ -721,7 +721,7 @@
         "channel": "forum",
         "question": "Which authentication transaction id must flow from Payer Auth validation into the authorization request after Microform? We only pass the Flex token today.",
         "public_refs": [
-          "developer.cybersource.com/docs/payer-authentication"
+          "developer.example.com/docs/payer-authentication"
         ]
       },
       "extraction": {
@@ -763,7 +763,7 @@
         "channel": "support",
         "question": "Is Microform tokenization itself a completed 3DS / Payer Authentication step? Our checkout treats tokenize as done and never runs challenge_or_frictionless handling.",
         "public_refs": [
-          "developer.cybersource.com/docs/flex-microform"
+          "developer.example.com/docs/flex-microform"
         ]
       },
       "extraction": {
@@ -807,7 +807,7 @@
         "channel": "forum",
         "question": "What is the correct state machine order for Microform then Payer Auth setup, enrollment, challenge, validate, authorize? We keep authorizing before enrollment_check.",
         "public_refs": [
-          "developer.cybersource.com/docs/payer-authentication"
+          "developer.example.com/docs/payer-authentication"
         ]
       },
       "extraction": {
@@ -850,7 +850,7 @@
         "channel": "docs",
         "question": "After a successful Microform capture, payer_auth_setup seems optional in samples. Without it, enrollment fails and authorization has no authentication references.",
         "public_refs": [
-          "developer.cybersource.com/docs/payer-authentication"
+          "developer.example.com/docs/payer-authentication"
         ]
       },
       "extraction": {
@@ -1015,28 +1015,28 @@
         "interpret_auth_failure"
       ],
       "api_sdk_facts": [
-        "Sandbox host is apitest.cybersource.com",
+        "Sandbox host is apitest.example.com",
         "SDK expects merchantKeyId and merchantsecretKey (not keyId/secretKey)",
         "Signed headers typically include host, date, request-target, digest, v-c-merchant-id"
       ],
       "confusion_points": [
-        "My HTTP Signature request looks correct but CyberSource returns Authentication Failed on apitest.cybersource.com",
+        "My HTTP Signature request looks correct but Payment Gateway returns Authentication Failed on apitest.example.com",
         "Am I using the wrong SDK field names for key id and secret",
         "entity:HTTP Signature",
         "entity:Authentication Failed",
         "entity:keyId",
         "entity:secretKey",
-        "entity:apitest.cybersource.com",
+        "entity:apitest.example.com",
         "HTTP Signature signed headers include host,date,digest but we still get 401. Do we need request-target and v-c-merchant-id in the signature base on apitest?",
         "entity:v-c-merchant-id",
-        "alt_goal:Resolve developer confusion involving HTTP Signature, v-c-merchant-id, apitest.cybersource.com",
+        "alt_goal:Resolve developer confusion involving HTTP Signature, v-c-merchant-id, apitest.example.com",
         "Authentication Failed every time on sandbox",
         "entity:merchantKeyId",
         "alt_goal:Resolve developer confusion involving Authentication Failed, keyId, secretKey, merchantKeyId",
         "Is Authentication Failed expected, and what host should sandbox use",
         "alt_goal:what host should sandbox use?",
         "Our manual HMAC matches locally but apitest still rejects the request",
-        "alt_goal:How should the digest and signature base string be built for CyberSource HTTP Signature?",
+        "alt_goal:How should the digest and signature base string be built for Payment Gateway HTTP Signature?",
         "Does logging the shared secret in debug headers cause Authentication Failed, or is the issue only field names like keyId vs merchantKeyId on HTTP Signature",
         "alt_goal:Resolve developer confusion involving HTTP Signature, Authentication Failed, keyId, merchantKeyId"
       ],
@@ -1065,14 +1065,14 @@
         ],
         "goals": [
           "Am I using the wrong SDK field names for key id and secret?",
-          "Resolve developer confusion involving HTTP Signature, v-c-merchant-id, apitest.cybersource.com",
+          "Resolve developer confusion involving HTTP Signature, v-c-merchant-id, apitest.example.com",
           "Resolve developer confusion involving Authentication Failed, keyId, secretKey, merchantKeyId",
           "what host should sandbox use?",
-          "How should the digest and signature base string be built for CyberSource HTTP Signature?",
+          "How should the digest and signature base string be built for Payment Gateway HTTP Signature?",
           "Resolve developer confusion involving HTTP Signature, Authentication Failed, keyId, merchantKeyId"
         ],
         "symptoms": [
-          "My HTTP Signature request looks correct but CyberSource returns Authentication Failed on apitest.cybersource.com",
+          "My HTTP Signature request looks correct but Payment Gateway returns Authentication Failed on apitest.example.com",
           "Am I using the wrong SDK field names for key id and secret",
           "HTTP Signature signed headers include host,date,digest but we still get 401. Do we need request-target and v-c-merchant-id in the signature base on apitest?",
           "Authentication Failed every time on sandbox",
@@ -1085,7 +1085,7 @@
           "Authentication Failed",
           "keyId",
           "secretKey",
-          "apitest.cybersource.com",
+          "apitest.example.com",
           "v-c-merchant-id",
           "merchantKeyId"
         ],

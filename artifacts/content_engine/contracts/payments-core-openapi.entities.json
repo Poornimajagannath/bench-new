@@ -1,0 +1,242 @@
+{
+  "stage": "specs_to_docs_parse",
+  "source_id": "payments-core-openapi",
+  "snapshot_id": "payments-core-openapi-3c0a54262889",
+  "content_hash": "3c0a54262889baf799d1a8c7c8d79cbc9bbe16713e34d8c299207627aa04ce98",
+  "entity_count": 8,
+  "entities": [
+    {
+      "entity_id": "payments-core-openapi:createCredit",
+      "product": [
+        "payment-gateway",
+        "acceptance-platform"
+      ],
+      "service_name": "Payment Gateway Payments Core (local Relay fixture)",
+      "endpoint": "/pts/v2/credits",
+      "http_method": "POST",
+      "operation_id": "createCredit",
+      "auth_schemes": [
+        "httpSignature"
+      ],
+      "request_schema_refs": [
+        "CreditRequest"
+      ],
+      "response_schema_refs": [
+        "Payment"
+      ],
+      "error_schema_refs": [
+        "ErrorResponse"
+      ],
+      "tags": [
+        "Credits"
+      ],
+      "examples": [],
+      "summary": "Create a credit",
+      "description": ""
+    },
+    {
+      "entity_id": "payments-core-openapi:createPayment",
+      "product": [
+        "payment-gateway",
+        "acceptance-platform"
+      ],
+      "service_name": "Payment Gateway Payments Core (local Relay fixture)",
+      "endpoint": "/pts/v2/payments",
+      "http_method": "POST",
+      "operation_id": "createPayment",
+      "auth_schemes": [
+        "httpSignature"
+      ],
+      "request_schema_refs": [
+        "CreatePaymentRequest"
+      ],
+      "response_schema_refs": [
+        "Payment"
+      ],
+      "error_schema_refs": [
+        "ErrorResponse"
+      ],
+      "tags": [
+        "Payments"
+      ],
+      "examples": [],
+      "summary": "Create a payment authorization",
+      "description": "Authorize a payment in sandbox using tokenized or instrument identifiers. Do not send raw PAN."
+    },
+    {
+      "entity_id": "payments-core-openapi:getPayment",
+      "product": [
+        "payment-gateway",
+        "acceptance-platform"
+      ],
+      "service_name": "Payment Gateway Payments Core (local Relay fixture)",
+      "endpoint": "/pts/v2/payments/{id}",
+      "http_method": "GET",
+      "operation_id": "getPayment",
+      "auth_schemes": [
+        "httpSignature"
+      ],
+      "request_schema_refs": [],
+      "response_schema_refs": [
+        "Payment"
+      ],
+      "error_schema_refs": [
+        "ErrorResponse"
+      ],
+      "tags": [
+        "Payments"
+      ],
+      "examples": [],
+      "summary": "Retrieve a payment",
+      "description": ""
+    },
+    {
+      "entity_id": "payments-core-openapi:capturePayment",
+      "product": [
+        "payment-gateway",
+        "acceptance-platform"
+      ],
+      "service_name": "Payment Gateway Payments Core (local Relay fixture)",
+      "endpoint": "/pts/v2/payments/{id}/captures",
+      "http_method": "POST",
+      "operation_id": "capturePayment",
+      "auth_schemes": [
+        "httpSignature"
+      ],
+      "request_schema_refs": [
+        "CaptureRequest"
+      ],
+      "response_schema_refs": [
+        "Payment"
+      ],
+      "error_schema_refs": [
+        "ErrorResponse"
+      ],
+      "tags": [
+        "Captures"
+      ],
+      "examples": [],
+      "summary": "Capture an authorized payment",
+      "description": ""
+    },
+    {
+      "entity_id": "payments-core-openapi:createMppCredentialSetup",
+      "product": [
+        "payment-gateway",
+        "acceptance-platform"
+      ],
+      "service_name": "Payment Gateway Payments Core (local Relay fixture)",
+      "endpoint": "/risk/v1/authentication-setups",
+      "http_method": "POST",
+      "operation_id": "createMppCredentialSetup",
+      "auth_schemes": [
+        "httpSignature"
+      ],
+      "request_schema_refs": [
+        "MppCredentialRequest"
+      ],
+      "response_schema_refs": [
+        "MppCredential"
+      ],
+      "error_schema_refs": [
+        "ErrorResponse"
+      ],
+      "tags": [
+        "MPP Credentials"
+      ],
+      "examples": [],
+      "summary": "Create payer authentication / MPP credential setup",
+      "description": "Payer Authentication setup prerequisite before enrollment. Microform tokenize alone is not 3DS completion."
+    },
+    {
+      "entity_id": "payments-core-openapi:checkMppEnrollment",
+      "product": [
+        "payment-gateway",
+        "acceptance-platform"
+      ],
+      "service_name": "Payment Gateway Payments Core (local Relay fixture)",
+      "endpoint": "/risk/v1/authentications",
+      "http_method": "POST",
+      "operation_id": "checkMppEnrollment",
+      "auth_schemes": [
+        "httpSignature"
+      ],
+      "request_schema_refs": [
+        "MppCredentialRequest"
+      ],
+      "response_schema_refs": [
+        "MppCredential"
+      ],
+      "error_schema_refs": [
+        "ErrorResponse"
+      ],
+      "tags": [
+        "MPP Credentials"
+      ],
+      "examples": [],
+      "summary": "Check payer authentication enrollment",
+      "description": "Enrollment may return FRICTIONLESS, CHALLENGE, or UNAVAILABLE paths."
+    },
+    {
+      "entity_id": "payments-core-openapi:createCustomer",
+      "product": [
+        "payment-gateway",
+        "acceptance-platform"
+      ],
+      "service_name": "Payment Gateway Payments Core (local Relay fixture)",
+      "endpoint": "/tms/v2/customers",
+      "http_method": "POST",
+      "operation_id": "createCustomer",
+      "auth_schemes": [
+        "httpSignature"
+      ],
+      "request_schema_refs": [
+        "CustomerRequest"
+      ],
+      "response_schema_refs": [
+        "Customer"
+      ],
+      "error_schema_refs": [
+        "ErrorResponse"
+      ],
+      "tags": [
+        "Customers"
+      ],
+      "examples": [],
+      "summary": "Create a TMS customer",
+      "description": ""
+    },
+    {
+      "entity_id": "payments-core-openapi:getCustomer",
+      "product": [
+        "payment-gateway",
+        "acceptance-platform"
+      ],
+      "service_name": "Payment Gateway Payments Core (local Relay fixture)",
+      "endpoint": "/tms/v2/customers/{customerId}",
+      "http_method": "GET",
+      "operation_id": "getCustomer",
+      "auth_schemes": [
+        "httpSignature"
+      ],
+      "request_schema_refs": [],
+      "response_schema_refs": [
+        "Customer"
+      ],
+      "error_schema_refs": [
+        "ErrorResponse"
+      ],
+      "tags": [
+        "Customers"
+      ],
+      "examples": [],
+      "summary": "Retrieve a TMS customer",
+      "description": ""
+    }
+  ],
+  "honest_label": {
+    "network": "denied",
+    "fixture": "local-openapi",
+    "note": "Not a live Payment Gateway OpenAPI download"
+  }
+}

@@ -20,7 +20,7 @@ There is no dependency on `docetl`, `harbor`, or `tempo-evals` in V0.
 
 ## Problem
 
-Developers hit hard, multi-step CyberSource / Acceptance Platform workflows (Flex tokens, HTTP Signature, Microform + Payer Auth) and get stuck. We need a **local, credential-free** pipeline that:
+Developers hit hard, multi-step Payment Gateway / Acceptance Platform workflows (Flex tokens, HTTP Signature, Microform + Payer Auth) and get stuck. We need a **local, credential-free** pipeline that:
 
 1. Discovers typed workflow candidates from raw forum/docs/support questions (DocETL-inspired).
 2. Emits Relay workflow contracts / agent-visible benchmark task packs.
@@ -83,7 +83,7 @@ When routing to Relay CLI, treat the CLI as a **workflow verifier**, not a thin 
 ## Non-Goals (V0)
 
 - Importing or depending on `docetl`, `tempo-evals`, Harbor, or Docker isolation
-- Live CyberSource sandbox calls
+- Live Payment Gateway sandbox calls
 - Real credential materialization
 - Production Relay deployment
 - Opaque single-script fusion of discovery + verification

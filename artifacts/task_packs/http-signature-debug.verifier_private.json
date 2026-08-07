@@ -7,7 +7,7 @@
         "merchantKeyId",
         "merchantsecretKey"
       ],
-      "endpoint_host": "apitest.cybersource.com",
+      "endpoint_host": "apitest.example.com",
       "signed_headers": [
         "host",
         "date",
@@ -22,7 +22,7 @@
         "keyId",
         "secretKey"
       ],
-      "endpoint_host": "api.cybersource.com",
+      "endpoint_host": "api.example.com",
       "signed_headers": [
         "host",
         "date",
@@ -43,7 +43,7 @@
       {
         "check_id": "sandbox_host",
         "field": "endpoint_host",
-        "expected": "apitest.cybersource.com"
+        "expected": "apitest.example.com"
       },
       {
         "check_id": "signed_headers_complete",

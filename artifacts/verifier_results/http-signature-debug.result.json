@@ -17,7 +17,7 @@
         {
           "check_id": "sandbox_host",
           "passed": true,
-          "detail": "endpoint_host: expected='apitest.cybersource.com' actual='apitest.cybersource.com'",
+          "detail": "endpoint_host: expected='apitest.example.com' actual='apitest.example.com'",
           "private": true
         },
         {
@@ -49,7 +49,7 @@
         {
           "check_id": "sandbox_host",
           "passed": false,
-          "detail": "endpoint_host: expected='apitest.cybersource.com' actual='api.cybersource.com'",
+          "detail": "endpoint_host: expected='apitest.example.com' actual='api.example.com'",
           "private": true
         },
         {

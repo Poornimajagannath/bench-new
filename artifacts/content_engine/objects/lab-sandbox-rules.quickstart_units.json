@@ -11,7 +11,7 @@
       "title": "Test Cards",
       "goal": "Sandbox Rules",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -40,7 +40,7 @@
       "title": "Sandbox Behavior",
       "goal": "Sandbox Rules",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -69,7 +69,7 @@
       "title": "What Sandbox Simulates",
       "goal": "Sandbox Rules",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -98,7 +98,7 @@
       "title": "What Sandbox Does NOT Simulate",
       "goal": "Sandbox Rules",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [

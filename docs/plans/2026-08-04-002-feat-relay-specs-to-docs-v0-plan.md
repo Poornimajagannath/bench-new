@@ -240,12 +240,12 @@ Expected artifacts:
 - [x] Language remains honest: no real GitHub automation, DocETL, or Harbor claims
 - [x] Existing content-engine and contract-compiler tests still pass
 
-### Local CyberSource fixture note
+### Local Payment Gateway fixture note
 
-Upstream “8 CyberSource drafts” were not present in this repo when Specs-to-Docs V0 was implemented.
+Upstream “8 Payment Gateway drafts” were not present in this repo when Specs-to-Docs V0 was implemented.
 V0 ships a frozen local OpenAPI fixture with 8 operations covering Payments, Captures, Credits, Customers, and MPP Credentials:
-`data/content_engine/specs/cybersource-payments-core.openapi.json`.
-It is CyberSource-shaped and sandbox-oriented; it is **not** a live downloaded CyberSource catalog.
+`data/content_engine/specs/payments-core.openapi.json`.
+It is Payment Gateway-shaped and sandbox-oriented; it is **not** a live downloaded Payment Gateway catalog.
 
 ## Rollout alignment with SDD
 
@@ -263,7 +263,7 @@ It is CyberSource-shaped and sandbox-oriented; it is **not** a live downloaded C
 2. How are intentional spec-vs-guide exceptions represented?
 3. Are generated reference drafts auto-promoted after gates, or always `draft` until human signoff?
 4. Should eval seeds enter the existing verifier lane immediately, or stay advisory in V0?
-5. Multi-brand inheritance (shared / Relay / CyberSource): defer or minimal tag only?
+5. Multi-brand inheritance (shared / Relay / Payment Gateway): defer or minimal tag only?
 
 ## Recommended decision
 
@@ -272,5 +272,5 @@ Implement Specs-to-Docs as a **separate local lane** that feeds the same Relay o
 ## Implementation command
 
 ```bash
-python3 pipelines/run_specs_to_docs_v0.py --source cybersource-payments-core-openapi
+python3 pipelines/run_specs_to_docs_v0.py --source payments-core-openapi
 ```

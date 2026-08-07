@@ -2,7 +2,7 @@
   "pack_id": "ctx-scenario-relay-context-swapping",
   "source_id": "scenario-relay-context-swapping",
   "product": [
-    "cybersource",
+    "payment-gateway",
     "acceptance-platform"
   ],
   "audience": [

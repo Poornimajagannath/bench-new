@@ -2,29 +2,29 @@
 
 ## Question
 
-Can an agent make its first successful payment authentication with CyberSource?
+Can an agent make its first successful payment authentication with Payment Gateway?
 
 ## Context
 
 The developer needs to:
 1. Use the credentials from the authentication scenario
-2. Read the CyberSource payment API documentation
+2. Read the Payment Gateway payment API documentation
 3. Make a test payment auth with the test card
 4. Get a transaction ID back in the response
 
 ## Expected Behavior
 
 The agent should:
-- Read the CyberSource developer docs about payments/APIs
+- Read the Payment Gateway developer docs about payments/APIs
 - Use the correct auth fields and API endpoint
 - Make a payment auth with the test card
 - Get a transaction ID back in the response
 
 ## Inputs
 
-- CyberSource sandbox credentials (from authentication scenario)
-- CyberSource test card (4111111111111111, expiry 12/2031)
-- CyberSource sandbox URL
+- Payment Gateway sandbox credentials (from authentication scenario)
+- Payment Gateway test card (4111111111111111, expiry 12/2031)
+- Payment Gateway sandbox URL
 - Payment API documentation
 
 ## Success Criteria
@@ -42,10 +42,10 @@ The agent should:
 
 ## Resources
 
-- CyberSource developer portal: `developer.cybersource.com`
-- CyberSource llms.txt: `developer.cybersource.com/llms.txt`
+- Payment Gateway developer portal: `developer.example.com`
+- Payment Gateway llms.txt: `developer.example.com/llms.txt`
 - Payment API reference
 
 ## Agent Instruction
 
-Read the CyberSource payment documentation. Make a payment authentication with the test card that returns a transaction ID.
+Read the Payment Gateway payment documentation. Make a payment authentication with the test card that returns a transaction ID.

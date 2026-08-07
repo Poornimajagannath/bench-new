@@ -4,27 +4,27 @@
 
 ```bash
 # Required
-CYBS_MERCHANT_ID=your_merchant_id_from_developer_portal
-CYBS_KEY_ID=your_http_signature_key_id
-CYBS_SHARED_SECRET=your_shared_secret
-CYBS_ENVIRONMENT=sandbox  # or "production"
+PGW_MERCHANT_ID=your_merchant_id_from_developer_portal
+PGW_KEY_ID=your_http_signature_key_id
+PGW_SHARED_SECRET=your_shared_secret
+PGW_ENVIRONMENT=sandbox  # or "production"
 
 # Optional
-CYBS_RUN_ID=run_identifier
-CYBS_SCENARIO=scenario_name
-CYBS_LANGUAGE=python  # or "node", "java", "typescript"
+PGW_RUN_ID=run_identifier
+PGW_SCENARIO=scenario_name
+PGW_LANGUAGE=python  # or "node", "java", "typescript"
 ```
 
 ## Configuration Dictionary (Python SDK)
 
 ```python
 configuration_dictionary = {
-    "merchantid": os.environ["CYBS_MERCHANT_ID"],
-    "run_environment": "apitest.cybersource.com",  # sandbox (CyberSource REST only)
-    # "run_environment": "api.cybersource.com",    # production
+    "merchantid": os.environ["PGW_MERCHANT_ID"],
+    "run_environment": "apitest.example.com",  # sandbox (Payment Gateway REST only)
+    # "run_environment": "api.example.com",    # production
     "authentication_type": "HTTP_Signature",  # MUST be capitalized!
-    "merchant_keyid": os.environ["CYBS_KEY_ID"],
-    "merchant_secretkey": os.environ["CYBS_SHARED_SECRET"],
+    "merchant_keyid": os.environ["PGW_KEY_ID"],
+    "merchant_secretkey": os.environ["PGW_SHARED_SECRET"],
     "isSDK": True,  # Required by SDK
 }
 ```
@@ -52,7 +52,7 @@ configuration_dictionary = {
 
 | Property | Sandbox | Production |
 |----------|---------|------------|
-| `run_environment` | `apitest.cybersource.com` | `api.cybersource.com` |
+| `run_environment` | `apitest.example.com` | `api.example.com` |
 | `authentication_type` | `HTTP_Signature` | `HTTP_Signature` or `jwt` |
 | Test cards | `4111111111111111` | Real cards only |
 | Response time | Fast (simulated) | Real processing time |
@@ -60,7 +60,7 @@ configuration_dictionary = {
 ## SDK Installation
 
 ```bash
-pip install cybersource-rest-client-python
+pip install payment-gateway-rest-client-python
 ```
 
 ## Version-Specific Gotchas
@@ -73,7 +73,7 @@ pip install cybersource-rest-client-python
 ## Error Handling Template
 
 ```python
-from CyberSource.rest import ApiException
+from Payment Gateway.rest import ApiException
 
 try:
     api = PaymentsApi(client_config)
@@ -101,6 +101,6 @@ except ApiException as e:
 - [ ] Never print secrets in logs (mask with `***`)
 - [ ] Use sandbox for testing, production only when verified
 - [ ] Rotate API keys regularly
-- [ ] Use HTTPS for all API calls (CyberSource enforces this)
+- [ ] Use HTTPS for all API calls (Payment Gateway enforces this)
 - [ ] Log all API calls for audit trail
 - [ ] Implement rate limiting for sandbox testing

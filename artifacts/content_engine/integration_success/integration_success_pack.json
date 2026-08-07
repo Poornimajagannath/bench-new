@@ -7,9 +7,9 @@
   "promise": "A developer can integrate our API in a single session, with clear steps, working references, and a go-live checklist.",
   "workflow_id": "microform-payer-auth-state-machine",
   "quickstart_source": "microform-payer-auth-quickstart",
-  "openapi_source": "cybersource-payments-core-openapi",
+  "openapi_source": "payments-core-openapi",
   "guided_quickstart": {
-    "title": "CyberSource / Acceptance Platform guided integration",
+    "title": "Payment Gateway / Acceptance Platform guided integration",
     "steps": [
       {
         "sequence_number": 1,
@@ -97,14 +97,14 @@
       "getCustomer"
     ],
     "unit_ids": [
-      "cybersource-payments-core-openapi:ref:createCredit",
-      "cybersource-payments-core-openapi:ref:createPayment",
-      "cybersource-payments-core-openapi:ref:getPayment",
-      "cybersource-payments-core-openapi:ref:capturePayment",
-      "cybersource-payments-core-openapi:ref:createMppCredentialSetup",
-      "cybersource-payments-core-openapi:ref:checkMppEnrollment",
-      "cybersource-payments-core-openapi:ref:createCustomer",
-      "cybersource-payments-core-openapi:ref:getCustomer"
+      "payments-core-openapi:ref:createCredit",
+      "payments-core-openapi:ref:createPayment",
+      "payments-core-openapi:ref:getPayment",
+      "payments-core-openapi:ref:capturePayment",
+      "payments-core-openapi:ref:createMppCredentialSetup",
+      "payments-core-openapi:ref:checkMppEnrollment",
+      "payments-core-openapi:ref:createCustomer",
+      "payments-core-openapi:ref:getCustomer"
     ]
   },
   "test_scenarios": [
@@ -185,7 +185,7 @@
     {
       "id": "auth-env",
       "title": "Load sandbox auth from environment variables",
-      "detail": "Use CYBS_MERCHANT_ID / CYBS_KEY_ID / CYBS_SHARED_SECRET; never hardcode."
+      "detail": "Use PGW_MERCHANT_ID / PGW_KEY_ID / PGW_SHARED_SECRET; never hardcode."
     },
     {
       "id": "first-api-call",
@@ -205,14 +205,14 @@
     {
       "id": "go-live-switch",
       "title": "Switch to production only after sandbox checklist passes",
-      "detail": "V0 does not call production. Keep CYBS_ENVIRONMENT=sandbox until ready."
+      "detail": "V0 does not call production. Keep PGW_ENVIRONMENT=sandbox until ready."
     }
   ],
   "lineage": {
     "quickstart_units_path": "artifacts/content_engine/objects/microform-payer-auth-quickstart.quickstart_units.json",
     "quickstart_context_pack_path": "artifacts/content_engine/context_packs/microform-payer-auth-quickstart.context_pack.json",
-    "api_reference_units_path": "artifacts/content_engine/generated/cybersource-payments-core-openapi.api_reference_units.json",
-    "eval_seeds_path": "artifacts/content_engine/generated/cybersource-payments-core-openapi.eval_seeds.json",
+    "api_reference_units_path": "artifacts/content_engine/generated/payments-core-openapi.api_reference_units.json",
+    "eval_seeds_path": "artifacts/content_engine/generated/payments-core-openapi.eval_seeds.json",
     "workflow_contract_path": "artifacts/contracts/microform-payer-auth-state-machine.contract_bundle.json",
     "origins": [
       "ingested_prose",

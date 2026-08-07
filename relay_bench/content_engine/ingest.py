@@ -11,10 +11,10 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional, Sequence, Tuple
 
 ROOT = Path(__file__).resolve().parents[2]
-DEFAULT_DOCS_DIR = ROOT / "cybersource-docs"
+DEFAULT_DOCS_DIR = ROOT / "gateway-docs"
 DEFAULT_RAW_ROOT = ROOT / "raw"
 DEFAULT_NORMALIZED_ROOT = ROOT / "normalized"
-DEFAULT_OPENAPI = ROOT / "data" / "content_engine" / "specs" / "cybersource-payments-core.openapi.json"
+DEFAULT_OPENAPI = ROOT / "data" / "content_engine" / "specs" / "payments-core.openapi.json"
 
 CLAIM_SCHEMAS = (
     "quickstart_step",
@@ -75,7 +75,7 @@ def _hash_bytes(data: bytes) -> str:
 
 
 def reconstruct_source_url(filename: str) -> str:
-    """Best-effort URL reconstruction from download-cybersource-docs naming."""
+    """Best-effort URL reconstruction from download-gateway-docs naming."""
     name = filename
     if name.endswith(".md.md"):
         name = name[:-3]
@@ -83,8 +83,8 @@ def reconstruct_source_url(filename: str) -> str:
         name = name + ".md"
     # Common prefixes from the downloader.
     if name.startswith("en-us_"):
-        return f"https://developer.cybersource.com/docs/cybs/{name.replace('_', '/', 1)}"
-    return f"https://developer.cybersource.com/docs/cybs/{name}"
+        return f"https://developer.example.com/docs/gateway/{name.replace('_', '/', 1)}"
+    return f"https://developer.example.com/docs/gateway/{name}"
 
 
 def stamp_copy_to_raw(

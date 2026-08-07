@@ -11,7 +11,7 @@
       "title": "SDK Models Used",
       "goal": "Card Payment Integration Template",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -40,7 +40,7 @@
       "title": "Ptsv2paymentsClientReferenceInformation",
       "goal": "Card Payment Integration Template",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -69,7 +69,7 @@
       "title": "Ptsv2paymentsOrderInformationAmountDetails",
       "goal": "Card Payment Integration Template",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -98,7 +98,7 @@
       "title": "Ptsv2paymentsOrderInformationBillTo",
       "goal": "Card Payment Integration Template",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -127,7 +127,7 @@
       "title": "Ptsv2paymentsPaymentInformationCard",
       "goal": "Card Payment Integration Template",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -156,7 +156,7 @@
       "title": "Card Type Codes",
       "goal": "Card Payment Integration Template",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -185,7 +185,7 @@
       "title": "Error Recovery",
       "goal": "Card Payment Integration Template",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [

@@ -1,7 +1,7 @@
 # Relay Bench V0 (local prototype)
 
 **Status:** Credential-free local proof
-**Not:** production Relay, live CyberSource sandbox, real DocETL, or real Tempo/Harbor
+**Not:** production Relay, live Payment Gateway sandbox, real DocETL, or real Tempo/Harbor
 
 ## Product thesis
 

@@ -6,7 +6,7 @@
   "canonical_url": "local://templates/ach-payment/README.md",
   "source_format": "markdown",
   "product": [
-    "cybersource",
+    "payment-gateway",
     "acceptance-platform"
   ],
   "audience": [

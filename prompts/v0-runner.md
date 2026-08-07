@@ -1,4 +1,4 @@
-You are running an Autonomous Integration Lab scenario for Cybersource.
+You are running an Autonomous Integration Lab scenario for Payment Gateway.
 
 Read these files first, in order:
 - context/auth.md
@@ -6,30 +6,30 @@ Read these files first, in order:
 - context/sandbox-rules.md
 - context/sdk-map.md
 - context/llms-notes.md
-- scenarios/${CYBS_SCENARIO}/task.md
-- scenarios/${CYBS_SCENARIO}/success-criteria.md
-- scenarios/${CYBS_SCENARIO}/inputs.md
+- scenarios/${PGW_SCENARIO}/task.md
+- scenarios/${PGW_SCENARIO}/success-criteria.md
+- scenarios/${PGW_SCENARIO}/inputs.md
 - evaluators/scorecard-rubric.md
 
-Your job is to build the scenario inside `runs/${CYBS_RUN_ID}/`.
+Your job is to build the scenario inside `runs/${PGW_RUN_ID}/`.
 
 Requirements:
 - Use Node.js (or TypeScript if the scenario specifies it).
-- Use the official Cybersource SDK or Acceptance Agent Toolkit as specified in the scenario.
-- Use sandbox only (`apitest.cybersource.com`).
+- Use the official Payment Gateway SDK or Acceptance Agent Toolkit as specified in the scenario.
+- Use sandbox only (`apitest.example.com`).
 - Load credentials from environment variables only:
-  - CYBS_MERCHANT_ID
-  - CYBS_KEY_ID
-  - CYBS_SHARED_SECRET
-  - CYBS_ENVIRONMENT
+  - PGW_MERCHANT_ID
+  - PGW_KEY_ID
+  - PGW_SHARED_SECRET
+  - PGW_ENVIRONMENT
 - Never hardcode secrets.
 - Never use production endpoints or credentials.
-- Do not fake or mock success — only record a successful outcome after a real Cybersource sandbox response.
+- Do not fake or mock success — only record a successful outcome after a real Payment Gateway sandbox response.
 - If you are blocked, state exactly why in findings.md and stop.
 
-Deliverables (all inside `runs/${CYBS_RUN_ID}/`):
+Deliverables (all inside `runs/${PGW_RUN_ID}/`):
 - `app/` — runnable integration code
-- `logs/run.log` — timestamped log of all steps, API calls, HTTP statuses, and Cybersource reason codes
+- `logs/run.log` — timestamped log of all steps, API calls, HTTP statuses, and Payment Gateway reason codes
 - `findings.md` — analysis using `evaluators/findings-template.md`
 - `manifest.json` — reproducibility data (see CLAUDE.md output contract)
 - `scorecard.json` — rubric scores matching `evaluators/scorecard.schema.json`

@@ -11,7 +11,7 @@
       "title": "Purpose",
       "goal": "Relay \u2014 Payment Templates",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -22,7 +22,7 @@
         "http-signature-debug"
       ],
       "sequence_number": 0,
-      "body_markdown": "These templates show correct CyberSource SDK integration patterns for different payment methods. Agents should reference these when generating integration code.",
+      "body_markdown": "These templates show correct Payment Gateway SDK integration patterns for different payment methods. Agents should reference these when generating integration code.",
       "commands": [],
       "api_entities": [],
       "requires": [],
@@ -30,7 +30,7 @@
       "failure_modes": [],
       "confidence": 0.85,
       "evidence_quotes": [
-        "These templates show correct CyberSource SDK integration patterns for different payment methods. Agents should reference these when generating integration code."
+        "These templates show correct Payment Gateway SDK integration patterns for different payment methods. Agents should reference these when generating integration code."
       ]
     },
     {
@@ -40,7 +40,7 @@
       "title": "Files",
       "goal": "Relay \u2014 Payment Templates",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -69,7 +69,7 @@
       "title": "Common Gotchas",
       "goal": "Relay \u2014 Payment Templates",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -80,7 +80,7 @@
         "http-signature-debug"
       ],
       "sequence_number": 1,
-      "body_markdown": "1. **Auth type must be `HTTP_Signature`** (capitalized), NOT `http_signature`\n2. **SDK field names differ from docs**: `merchantKeyId`/`merchantsecretKey` vs `keyId`/`secretKey`\n3. **`type` field is required** for card payments to avoid wrong card type processing\n4. **`total_amount` and `currency` are required** in `amountDetails`\n5. **`code` is required** in `clientReferenceInformation`\n6. **Card expiry must be future year** (2031, not 2025)\n7. **CyberSource sandbox is rate-limited** \u2014 implement retry logic",
+      "body_markdown": "1. **Auth type must be `HTTP_Signature`** (capitalized), NOT `http_signature`\n2. **SDK field names differ from docs**: `merchantKeyId`/`merchantsecretKey` vs `keyId`/`secretKey`\n3. **`type` field is required** for card payments to avoid wrong card type processing\n4. **`total_amount` and `currency` are required** in `amountDetails`\n5. **`code` is required** in `clientReferenceInformation`\n6. **Card expiry must be future year** (2031, not 2025)\n7. **Payment Gateway sandbox is rate-limited** \u2014 implement retry logic",
       "commands": [],
       "api_entities": [
         "merchantKeyId",

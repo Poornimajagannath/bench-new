@@ -139,7 +139,7 @@ Centralized Model Context Protocol server providing agents access to ~500 intern
 
 1. **Enterprise trust:** Relay's brand carries more weight for enterprise transactions where fraud/reconciliation matters
 2. **Network scale:** Relay has more merchants, more issuers, more transaction volume
-3. **Reconciliation expertise:** CyberSource has deep reconciliation experience that matters for agent transactions
+3. **Reconciliation expertise:** Payment Gateway has deep reconciliation experience that matters for agent transactions
 4. **Compliance infrastructure:** Relay's compliance/PCI infrastructure is battle-tested for enterprise use
 
 ### What Relay Needs to Answer
@@ -173,7 +173,7 @@ Centralized Model Context Protocol server providing agents access to ~500 intern
 ## Poornima's Positioning at the Event
 
 ### Her Differentiators
-- Deep CyberSource/Acceptance Platform experience in enterprise payment infrastructure
+- Deep Payment Gateway/Acceptance Platform experience in enterprise payment infrastructure
 - Reconciliation expertise that matters for agent transactions
 - Understanding of Relay's network advantages vs Stripe's developer-first approach
 - Direct experience with agent-readiness challenges (Relay)

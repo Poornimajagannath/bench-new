@@ -2,7 +2,7 @@
   "pack_id": "ctx-microform-payer-auth-quickstart",
   "source_id": "microform-payer-auth-quickstart",
   "product": [
-    "cybersource",
+    "payment-gateway",
     "acceptance-platform"
   ],
   "audience": [
@@ -165,8 +165,8 @@
   ],
   "provenance": {
     "source_id": "microform-payer-auth-quickstart",
-    "snapshot_id": "microform-payer-auth-quickstart-23b78ea29328",
-    "content_hash": "23b78ea293289016da0516c7b28b5983ae8c6bbf2b45d48f75d7ec8b4f843fba",
+    "snapshot_id": "microform-payer-auth-quickstart-36fa792e7ebb",
+    "content_hash": "36fa792e7ebb5051f65e7a304d5109a3d9cd5d64ea415f186d611327ad5d4324",
     "canonical_url": "local://fixtures/microform-payer-auth-quickstart.md",
     "doc_id": "doc-microform-payer-auth-quickstart"
   },

@@ -46,7 +46,7 @@ Milestone 0.5: corpus cleaned at the door. `raw/` is immutable evidence; serve l
 | 2026-08-07/en-us_payments_developer_ctv_rest_payments_payments-intro.md.md | no_schema_match | no quickstart/endpoint/error/prose claim extracted |
 | 2026-08-07/en-us_payments_developer_ctv_rest_payments_payments-processing-basic-intro.md.md | no_schema_match | no quickstart/endpoint/error/prose claim extracted |
 | 2026-08-07/en-us_paze_integration_all_rest_paze_paze-gs.md.md | no_schema_match | no quickstart/endpoint/error/prose claim extracted |
-| 2026-08-07/en-us_paze_integration_all_rest_paze_paze-txns-auth-cybs.md.md | no_schema_match | no quickstart/endpoint/error/prose claim extracted |
+| 2026-08-07/en-us_paze_integration_all_rest_paze_paze-txns-auth-pgw.md.md | no_schema_match | no quickstart/endpoint/error/prose claim extracted |
 | 2026-08-07/en-us_paze_integration_all_rest_paze_paze-txns-auth-merch.md.md | no_schema_match | no quickstart/endpoint/error/prose claim extracted |
 | 2026-08-07/en-us_platform_relnote_all_na_rn-2025-07-18_rn-general.md.md | no_schema_match | no quickstart/endpoint/error/prose claim extracted |
 | 2026-08-07/en-us_platform_relnote_all_na_rn-2025-09-26_rn-general.md.md | no_schema_match | no quickstart/endpoint/error/prose claim extracted |

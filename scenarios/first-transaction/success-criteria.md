@@ -2,7 +2,7 @@
 
 ## What Success Looks Like
 
-The agent successfully makes a payment authentication with CyberSource that returns a transaction ID.
+The agent successfully makes a payment authentication with Payment Gateway that returns a transaction ID.
 
 ## Pass Conditions
 
@@ -39,7 +39,7 @@ The agent successfully makes a payment authentication with CyberSource that retu
   "timestamp": "2026-07-21T16:00:00Z",
   "result": {
     "pass": true,
-    "docs_read": ["developer.cybersource.com/docs/payments", "developer.cybersource.com/docs/api-reference"],
+    "docs_read": ["developer.example.com/docs/payments", "developer.example.com/docs/api-reference"],
     "errors": [],
     "error_count": 0,
     "transaction_id": "TXN_1234567890",
@@ -55,6 +55,6 @@ The agent successfully makes a payment authentication with CyberSource that retu
 
 ## Notes
 
-- The `billTo` field is known to be required but undocumented in CyberSource docs — this scenario tests if agents discover it through errors
+- The `billTo` field is known to be required but undocumented in Payment Gateway docs — this scenario tests if agents discover it through errors
 - If the agent fails, record which error was encountered and which docs the agent read before failing
 - This is the most "production-like" scenario — tests the full payment flow

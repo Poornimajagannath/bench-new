@@ -1,0 +1,11144 @@
+`Token Management Service` Developer Guide {#tms-about-guide}
+=============================================================
+
+This developer guide is written for merchants who want to tokenize customers' sensitive personal information and eliminate payment data from their networks to ensure that it is not compromised. The purpose of this guide is to help you create and manage tokens.
+
+Conventions
+-----------
+
+These special statements are used in this document:
+
+> IMPORTANT
+> An *Important* statement contains information essential to successfully completing a task or learning a concept.
+> WARNING
+> A *Warning* contains information or instructions, which, if not heeded, can result in a security risk, irreversible loss of data, or significant cost in time or revenue or both.
+
+Related Documentation
+---------------------
+
+Refer to the Technical Documentation Hub in the `Payment Gateway` Developer Center for additional technical documentation:  
+[https://developer.example.com/docs.html](https://developer.example.com/docs.md "")
+
+Customer Support
+----------------
+
+For support information about any service, visit the Support Center:  
+<http://support.example.com>
+
+Recent Revisions to This Document {#tms-doc-revisions}
+======================================================
+
+25.07.01
+--------
+
+`TMS` Onboarding
+:
+Updated the steps for configuring network tokenization in the `Business Center` to include support for American Express. See [Configure Network Tokenization Using the Business Center](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-onboarding/tms-vault-hierarchy/tms-vault-network-tokenization.md "")
+:
+Added a note about using keys to authenticate `TMS` requests. See [Requesting the Token Management Service API](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-create-request.md "").
+
+Network Tokens
+:
+Added prerequisites for retrieving network token payment credentials. See [Retrieve Network Token Payment Credentials](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-net-tkn-intro/tms-net-tkn-partner-retrieve-pay-cred-intro.md "")
+
+25.06.01
+--------
+
+This revision contains only editorial changes and no technical updates.
+
+25.04.01
+--------
+
+`TMS` Workflows
+:
+Updated the PAN tokenization workflow and steps. See [PAN Tokenization Process Using TMS](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-workflows/tms-workflow-tknization-tms.md "").
+
+25.01.01
+--------
+
+Network Tokens
+:
+Added support for retrieving an AFT cryptogram as a network token payment credential. See [Retrieve Network Token AFT Payment Credentials](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-net-tkn-intro/tms-net-tkn-partner-retrieve-aft-pay-cred-intro.md "").
+:
+Updated the endpoint for generating a network token for an existing instrument identifier. See [Provision a Network Token for an Existing Instrument Identifier](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-net-tkn-intro/tms-net-tkn-partner-ii-intro.md "").
+
+`TMS` Workflows
+:
+Updated the MIT workflows for merchants and partners. See [Network Token MIT for Merchants](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-workflows/tms-workflow-net-tkn-auth-mit-merchant.md "") and [Network Token MIT for Partners](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-workflows/tms-workflow-net-tkn-auth-mit-aggregator.md "").
+
+Life-Cycle Management
+:
+Added examples for life-cycle management notifications after a network token update. See [Network Token Life-Cycle Management](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-net-tkn-onboard/tms-lcm.md "").
+:
+Added life-cycle management reason values. See [Network Token Life-Cycle Management](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-net-tkn-onboard/tms-lcm.md "").
+:
+Added a note about setting the organization ID to that of the vault owner when creating a new webhook subscription. See [Create Webhook Subscription](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-overview-webhook/tms-net-tkn-webhook-create-sub-intro.md "").
+
+24.11.01
+--------
+
+Instrument Identifier Tokens
+:
+Added push provisioning to the list of supported features for instrument identifier tokens. See [Instrument Identifier Tokens](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-overview/tms-token-types/tms-ii-tkn-intro.md "").
+
+Message-Level Encryption Keys
+:
+Added a statement about creating MLE keys for multiple merchants. See [Message-Level Encryption Keys](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-onboarding/tms-mle-setup.md "").
+
+Network Tokens
+:
+Added support for push provisioning for network tokens. See [Push Provisioning for Network Tokens](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-net-tkn-card-intro.md "").
+
+Test Card numbers
+:
+Updated the list of test card numbers for network token provisioning. See [Test Card Numbers](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-create-request/tms-test-cards.md "").
+
+Token Requestor IDs
+:
+Added steps for entering the acquirer ID during token requestor ID enrollment. See [Token Requestor IDs](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-net-tkn-onboard/tms-trids.md "").
+
+`Token Management Service` Workflows
+:
+Added a workflow for push provisioning. See [Push Provisioning Process](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-workflows/tms-workflow-push-provisioning.md "").
+
+24.10.01
+--------
+
+BIN Request
+:
+Added support for retrieving BIN details in a TMS request. See [BIN Lookup Service and TMS](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-bin-lookup-service.md "").
+
+Network Tokens
+:
+Added support for deleting a standalone network token. See [Delete a Standalone Network Token](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-net-tkn-intro/tms-net-tkn-card-delete-tkn-consumer-intro.md "").
+
+HTTP Status Codes
+:
+Added the `502` HTTP status code. See [HTTP Status Codes](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-ref-info/tms-http-status.md "").
+
+24.09.01
+--------
+
+Unmasked Payment Details
+:
+Added information on setting the header and configuring your settings for retrieving unmasked payment details. See these topics:
+
+    * [Retrieve a Customer's Default Payment with an Unmasked Card Number](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-cust-tkn/tms-cust-tkn-retrieve-default-pay-unmasked-intro.md "")
+    * [Retrieve a Customer Payment Instrument with an Unmasked Card Number](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-cust-pi-tkn/tms-cust-pi-tkn-retrieve-unmasked-intro.md "")
+    * [Retrieve a Payment Instrument with an Unmasked Card Number](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-pi-tkn/tms-pi-tkn-retrieve-pi-unmasked-card-intro.md "")
+    * [Retrieve an Instrument Identifier with an Unmasked Card Number](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-ii-tkn/tms-ii-retrieve-unmasked-card-intro.md "").
+
+Network Tokens
+:
+Added support for provisioning a network token for a card and consumer ID. See [Provision a Network Token for a Consumer](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-net-tkn-intro/tms-net-tkn-card-create-cof-intro.md "").
+:
+Added support for provisioning a network token for a token. See [Provision a Network Token for a Token](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-net-tkn-intro/tms-net-tkn-card-create-token-intro.md "").
+:
+Added support for retrieving a network token. See [Retrieve a Standalone Network Token](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-net-tkn-intro/tms-net-tkn-card-retrieve-tkn-consumer-intro.md "").
+:
+Added `EXPIRED` as a network token status. See [Network Token Life-Cycle Management](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-net-tkn-onboard/tms-lcm.md "").
+
+Message-Level Encryption Keys
+:
+Added information about extracting the public key. See [Message-Level Encryption Keys](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-onboarding/tms-mle-setup.md "").
+
+24.08.01
+--------
+
+Test Card Numbers
+:
+Updated test card numbers for provisioning network tokens. See [Test Card Numbers](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-create-request/tms-test-cards.md "").
+
+CARD Platform Connect: Specifications and Conditions for Resellers/Partners {#vpc-partner-reseller-disclaimer}
+==============================================================================================================
+
+The following are specifications and conditions that apply to a Reseller/Partner enabling its merchants through Payment Gateway for Platform Connect ("VPC") processing. Failure to meet any of the specifications and conditions below is subject to the liability provisions and indemnification obligations under Reseller/Partner's contract with Relay/Payment Gateway.
+
+1. Before boarding merchants for payment processing on a VPC acquirer's connection, Reseller/Partner and the VPC acquirer must have a contract or other legal agreement that permits Reseller/Partner to enable its merchants to process payments with the acquirer through the dedicated VPC connection and/or traditional connection with such VPC acquirer.
+2. Reseller/Partner is responsible for boarding and enabling its merchants in accordance with the terms of the contract or other legal agreement with the relevant VPC acquirer.
+3. Reseller/Partner acknowledges and agrees that all considerations and fees associated with chargebacks, interchange downgrades, settlement issues, funding delays, and other processing related activities are strictly between Reseller and the relevant VPC acquirer.
+4. Reseller/Partner acknowledges and agrees that the relevant VPC acquirer is responsible for payment processing issues, including but not limited to, transaction declines by network/issuer, decline rates, and interchange qualification, as may be agreed to or outlined in the contract or other legal agreement between Reseller/Partner and such VPC acquirer.
+
+DISCLAIMER: NEITHER CARD NOR PAYMENT GATEWAY WILL BE RESPONSIBLE OR LIABLE FOR ANY ERRORS OR OMISSIONS BY THE Platform Connect ACQUIRER IN PROCESSING TRANSACTIONS. NEITHER CARD NOR PAYMENT GATEWAY WILL BE RESPONSIBLE OR LIABLE FOR RESELLER/PARTNER BOARDING MERCHANTS OR ENABLING MERCHANT PROCESSING IN VIOLATION OF THE TERMS AND CONDITIONS IMPOSED BY THE RELEVANT Platform Connect ACQUIRER.
+
+TERMS OF USE APPLICABLE TO CARD NETWORK TOKENS {#tms-network-tkn-terms-of-use-pgw}
+===================================================================================
+
+The following terms and conditions govern your use, receipt and/or possession of Card Network Tokens.
+
+1. **DEFINTIONS.** Capitalized terms used herein shall have the following meanings:
+   1. "**Card Network PAN**" means a number that is associated with a Payment Network for purposes of card transactions, all in accordance with Payment Network Rules.
+   2. "**Card Network Token**" means a number provided by Payment Gateway pursuant to your use of Token Management Service ("TMS") that (i) is mapped to and is a surrogate for a Card Network PAN; and (ii) to use the underlying Card Network PAN number in accordance with the Payment Gateway Documentation.
+   3. "**Payment Network Rules**" means the operating rules, bylaws, schedules, supplements and addenda, manuals, instructions, releases, specifications and other requirements, as may be amended from time to time, of any of the Payment Networks.
+   4. "**Payment Network(s)"** means Relay, MasterCard, American Express, Discover Financial Services, and any affiliates thereof or any other payment network applicable to these Terms.
+2. **LIMITATIONS ON USE OF CARD NETWORK TOKENS.** You agree to the following with respect to your use, receipt and/or possession of Card Network Tokens:
+   1. You shall not maintain or create a mapping of the Card Network Token to the associated Card Network PAN.
+   2. Upon request by Payment Gateway and/or the applicable Payment Network, you shall use commercially reasonable efforts to delete any or all of the Card Network Tokens. You acknowledge and agree that Payment Gateway or the applicable Payment Network may request that you delete any Card Network Token at their sole discretion.
+   3. You shall not initiate any transaction with a Card Network Token without appropriate consent from and disclosures to the cardholder, including any necessary consents in order for the applicable Payment Network to receive, store, process and share any data in order to deliver the token service. Except as authorized in accordance with the applicable Payment Network Rules, you must use the Card Network Token only for transactions that are authorized, cleared and settled through the applicable Payment Network.
+   4. You shall not use a Card Network Token in a manner that a Card Network PAN cannot be used under the applicable Payment Network Rules. You agree that your responsibility for use of Card Network Tokens is the same as your responsibilities for use of Account Numbers under the applicable Payment Network Rules.
+   5. You agree that the Payment Network Rules govern your relationship with the applicable Payment Network and use of Card Network Tokens as if the Card Network Tokens were Card Network PANs. You must comply with all applicable Payment Network Rules, as determined by the applicable Payment Network.
+   6. You agree that any Card Network Tokens will be stored in compliance with PCI-DSS and such storage is subject to your representations and warranties set forth in the applicable agreement between you and Payment Gateway.
+   7. If you are a Reseller or Partner, to enable American Express Network Tokens, you must have a direct acquiring or processing agreement signed with American Express in order to support American Express Network Tokens on behalf of your merchants.
+3. **CARD ART.**Payment Gateway may pass through rights allowing you to use, reproduce, display and provide issuers' trademarks and issuer-provided card art (collectively, "Issuer IP") on a non- exclusive basis in strict accordance with the meta-data made available to you and such issuers' branding guidelines (which may be updated by issuer from time to time), for use and display solely for use with Card Network Tokens provisioned via TMS. You agree that you will not and will not cause your affiliates or agents to alter the meta-data in any way.
+
+Introduction to the `Token Management Service` {#tms-overview}
+==============================================================
+
+The `Token Management Service` (`TMS`) enables you to replace personally identifiable information (PII), such as the primary account numbers (PANs), with unique tokens. These tokens do not include the PII data, but act as a placeholder for the personal information that would otherwise need to be shared. By using tokens, businesses can provide a secure payment experience, reduce the risk of fraud, and comply with industry consumer security regulations such as PCI-DSS.  
+`TMS` links tokens across service providers, payment types, and channels for sellers, acquirers, and technology partners. `TMS` tokenizes, securely stores, and manages the primary account number (PAN), the payment card expiration date, electronic check details, and customer data. `TMS` also enables you to create a network token of a customer's payment card.
+IMPORTANT Due to mandates from the Reserve Bank of India, Indian merchants cannot store PANs. Use network tokenization instead.  
+You can manage sensitive data securely by creating, retrieving, updating, and deleting tokens through the [TMS API](https://developer.example.com/api-reference-assets/index.md#token-management "").  
+`TMS` simplifies your PCI DSS compliance. `TMS` passes tokens back to you that represent this data. You then store these tokens in your environment and databases instead of storing customer payment details.  
+`TMS` protects sensitive payment information through tokenization and secures and manages customer data using these token types:
+
+* Customer tokens
+* Instrument identifier tokens
+* Payment instrument tokens
+* Shipping address tokens
+
+These `TMS` tokens can be used individually, or they can be associated with one customer token:
+
+#### Figure:
+
+`TMS` Token Types  
+![Diagram of the unified token identifier.](/content/dam/new-documentation/documentation/en-us/topics/payments-processing/payment-services/tms/images/token-types-intro-600x400.svg/jcr:content/renditions/original)
+
+Types of Tokens {#tms-token-types}
+==================================
+
+These tokens comprise the types of `TMS` tokens:
+
+* **Customer Token**: Contains customer's email address, customer ID, shipping address (stored in a token), and other related data.
+* **Shipping Address Token**: Contains the shipping address associated with a customer token.
+* **Payment Instrument Token**: Contains the complete billing details for the payment type including cardholder name, expiration date, and billing address.
+* **Instrument Identifier Token**: Contains the tokenized primary account number (PAN) for card payments as well as the associated network token or US or Canadian bank account number and routing number.
+* **Network Token**: Network tokens pass through an acquirer and are de-tokenized by the payment network or issuer. For customer-initiated transactions, they require a cryptogram. Network tokens are mapped to instrument identifier tokens.
+
+{#tms-token-types_ul_1}
+
+#### Figure:
+
+`TMS` Token Types  
+![](/content/dam/new-documentation/documentation/en-us/topics/payments-processing/payment-services/tms/images/tkn-overview-600x530.svg/jcr:content/renditions/original)
+
+Customer Tokens {#tms-cust-tkn-intro}
+=====================================
+
+The customer token contains data about the merchant's customer including email address, customer ID, shipping address (stored in a token), and other related fields.
+
+Shipping Address Tokens {#tms-ship-tkn-intro}
+=============================================
+
+The shipping address token contains the shipping address information associated with a customer token. This token includes any shipping address details, including the recipient's first and last name, company, shipping address, email, and phone number. A customer can have one or more shipping addresses, with one allocated as the customer's default shipping address.
+
+Payment Instrument Tokens {#tms-pi-tkn-intro}
+=============================================
+
+The payment instrument token contains the complete billing details for the payment type including cardholder name, expiration date, and billing address. These are standalone payment instruments that cannot be associated with a customer.
+
+Instrument Identifier Tokens {#tms-ii-tkn-intro}
+================================================
+
+Instrument identifier tokens represent tokenized payment account numbers. Tokenized payment account information includes a primary account number (PAN) for card payments, or a US or Canadian bank account number and routing number for an ACH bank account. An instrument identifier token can exist independently, or it can be associated with a payment instrument.  
+An instrument identifier token can also contain an associated network token.  
+Instrument identifier tokens are associated with these features:
+
+Card Art
+:
+`TMS` card art helps your customers select a card. See [Card Art](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-card-art.md "").
+
+Enrollable Network Tokens
+:
+`TMS` can enroll certain *network tokens* in an instrument identifier token to be used for future payments. Future payments require only the instrument identifier token for the payment information. The types of network tokens you can enroll into an instrument identifier are tokens used for in-app payment methods such as:
+
+    * Android Pay
+    * Apple Pay
+    * Chase Pay
+    * Google Pay
+    * Samsung Pay
+    * `Relay Click to Pay`
+
+    See [Create an Instrument Identifier for Enrollable Network Tokens](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-ii-tkn/tms-ii-tkn-create-device-tkn-intro.md "").
+
+Push Provisioning
+:
+Push provisioning connects you with participating issuers to quickly provide credentials to your customers. See [Push Provisioning for Network Tokens](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-net-tkn-card-intro.md "").
+
+Network Tokens {#tms-net-tkn}
+=============================
+
+When a `TMS` token is used in a transaction, the `TMS` token is de-tokenized, and the PAN is sent to the issuer for authorization. The primary account number (PAN) is still exchanged as the transaction is processed. However, the PAN is removed from transaction processing and replaced with network tokens, making the transaction more secure.  
+The network scheme generates network tokens. A token replaces customer card information in order to ensure secure transactions. Network tokens are mapped to instrument identifier tokens. The minimum card data required in order to request a network token is the PAN and the expiration date.  
+Using a network token has benefits:
+
+* Improved authorization rates for credentials-on-file (COF) and recurring payments.
+* Real-time card information updates with life-cycle management. See [Network Token Life-Cycle Management](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-net-tkn-onboard/tms-lcm.md "") for more information. When the customer's card details change, you can receive the updated information automatically. See [Manage Webhook Subscriptions](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-overview-webhook.md "") for more information on managing webhooks.
+* Improved customer tracking through the payment account reference (PAR), which is a consumer identifier that is less sensitive than the PAN. The PAR can be exchanged as the transaction is processed.  
+  Network tokens can be provided for merchants and partners.  
+  IMPORTANT American Express does not support the payment facilitator (PayFac) model for processing network tokens. Contact your American Express representative for more information.
+
+`Token Management Service` Workflows {#tms-workflows}
+=====================================================
+
+Tokenization workflows:
+
+* [PAN Tokenization Process Using `TMS`](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-workflows/tms-workflow-tknization-tms.md "")
+* [Network Token Tokenization Process](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-workflows/tms-workflow-tknization-net-tkn.md "")
+
+Network tokens workflows---merchant model:
+
+* [Network Token Provisioning---Merchant Model](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-workflows/tms-workflow-net-tkn-prov-merchant.md "")
+
+* [Network Token Authorizations (CIT)---Merchant Model](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-workflows/tms-workflow-net-tkn-auth-cit-merchant.md "")
+
+* [Network Token Authorizations (MIT)---Merchant Model](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-workflows/tms-workflow-net-tkn-auth-mit-merchant.md "")  
+  Network tokens workflows---partner model:
+
+* [Network Token Onboarding---Partner Model](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-net-tkn-onboard/tms-workflow-net-tkn-onboard-aggregator.md "")
+
+* [Network Token Provisioning---Partner Model](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-workflows/tms-workflow-net-tkn-prov-aggregator.md "")
+
+* [Network Token Authorizations (CIT)---Partner Model](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-workflows/tms-workflow-net-tkn-auth-cit-aggregator.md "")
+
+* [Network Token Authorizations (MIT)---Partner Model](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-workflows/tms-workflow-net-tkn-auth-mit-aggregator.md "")
+
+PAN Tokenization Process Using `TMS` {#tms-workflow-tknization-tms}
+===================================================================
+
+This workflow shows the tokenization process for `TMS` tokens.
+
+#### Figure:
+
+PAN Tokenization Process with `TMS` ![](/content/dam/new-documentation/documentation/en-us/topics/payments-processing/payment-services/tms/images/tokenization-tms-pan-600x275.svg/jcr:content/renditions/original)
+1. The customer makes a purchase on the merchant's website using a PAN.
+2. The merchant sends the PAN to the `Payment Gateway` gateway.
+3. `TMS` creates a token for the merchant to store.
+4. `Payment Gateway` detokenizes the `TMS` token when it is used in a transaction.
+5. The detokenized PAN is exchanged across the payment ecosystem.
+
+Network Token Tokenization Process {#tms-workflow-tknization-net-tkn}
+=====================================================================
+
+This workflow shows the tokenization process for network tokens.
+
+#### Figure:
+
+Network Token Tokenization Process ![](/content/dam/new-documentation/documentation/en-us/topics/payments-processing/payment-services/tms/images/tokenization-net-tkn-600x415.svg/jcr:content/renditions/original)
+1. The customer makes a purchase on the merchant's website using a PAN.
+2. The merchant sends the PAN to the gateway.
+3. `TMS` creates a token.
+4. `TMS` provisions a network token and links it to the `TMS` token.
+5. The merchant stores the `TMS` token for subsequent transactions.
+6. The network token and cryptogram are exchanged throughout the payment ecosystem.
+
+Push Provisioning Process {#tms-workflow-push-provisioning}
+===========================================================
+
+This workflow shows the process for push provisioning.
+
+#### Figure:
+
+Push Provisioning Process ![](/content/dam/new-documentation/documentation/en-us/topics/payments-processing/payment-services/tms/images/push-provisioning-600x665.svg/jcr:content/renditions/original)
+1. The customer logs in to their bank account and chooses a card and merchant.
+2. The issuer sends the encrypted payment and user data to the network token provider.
+3. The network token provider sends the encrypted payment and user data to the issuer.
+4. The issuer invokes the merchant application with the token request push data.
+5. The customer registers for a merchant account or logs into an existing account.
+6. You decrypt the push data.
+7. You send a request to `TMS` to provision a network tokenized card.
+8. `TMS` sends a request to the network token provider to provision the tokenized card.
+9. The network token provider sends the provisioning response to `TMS`.
+10. `TMS` sends you the `TMS` token along with the provisioning status.
+11. Using the response sent from `TMS`, you send a request to `TMS` to retrieve the instrument identifier token. See [Retrieve an Instrument Identifier](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-ii-tkn/tms-ii-tkn-retrieve-intro.md "").
+12. `TMS` sends you the instrument identifier token.
+13. You store the instrument identifier token for future transactions. Your designation as a merchant or a partner determines how you use an instrument identifier token in an authorization. For more information, see:
+    * Merchant: [Authorize a Payment with an Instrument Identifier](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-ii-tkn/tms-ii-tkn-pay-intro.md "")
+
+* Partner: [Retrieve Network Token Payment Credentials](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-net-tkn-intro/tms-net-tkn-partner-retrieve-pay-cred-intro.md "")
+
+Network Token Provisioning for Merchants {#tms-workflow-net-tkn-prov-merchant}
+==============================================================================
+
+This workflow shows the process of network token provisioning for merchants.
+
+#### Figure:
+
+Network Token Provisioning for Merchants: Tokenizing PAN  
+![](/content/dam/new-documentation/documentation/en-us/topics/payments-processing/payment-services/tms/images/net-tkn-merch-prov-tokenize-600x415.svg/jcr:content/renditions/original)  
+**Tokenizing PAN**
+
+1. The customer enters their card data and sends the PAN to the merchant.
+2. The merchant sends the PAN to `Token Management Service`.
+3. `Token Management Service` generates a `TMS` token and synchronously provisions a network token from the card brand.
+4. `Token Management Service` sends the merchant the `TMS` token, expiration date, suffix, and payment account reference (PAR).
+5. The merchant stores the `TMS` token ID and network token flag and sends the customer the masked card number.
+   {#tms-workflow-net-tkn-prov-merchant_ol_ivq_x3w_4wb}
+
+#### Figure:
+
+Network Token Provisioning for Merchants: Cryptogram Retrieval  
+![](/content/dam/new-documentation/documentation/en-us/topics/payments-processing/payment-services/tms/images/net-tkn-merch-prov-retrieve-crypto-600x315.svg/jcr:content/renditions/original)  
+**Cryptogram Retrieval**
+
+1. The merchant requests the cryptogram using a `TMS` token from `Token Management Service`.
+2. `Token Management Service` looks up the network token and sends the token metadata to the card brand.
+3. The card brand generates the cryptogram and sends it to `Token Management Service`.
+4. `Token Management Service` sends the network token and cryptogram to the merchant.
+5. The merchant uses the network token along with the cryptogram to start the authorization.
+   {#tms-workflow-net-tkn-prov-merchant_ol_lyz_gkw_4wb}
+
+#### Figure:
+
+Network Token Provisioning for Merchants: PAR Retrieval  
+![](/content/dam/new-documentation/documentation/en-us/topics/payments-processing/payment-services/tms/images/net-tkn-merch-prov-retrieve-par-600x330.svg/jcr:content/renditions/original)  
+**PAR Retrieval**
+
+1. The merchant retrieves the `TMS` token and sends to `Token Management Service`.
+2. `Token Management Service` looks up the token and retrieves the PAR.
+3. `Token Management Service` sends the PAR to the merchant.
+4. The merchant stores the PAR.
+   {#tms-workflow-net-tkn-prov-merchant_ol_etw_wkw_4wb}
+
+Network Token CIT for Merchants {#tms-workflow-net-tkn-auth-cit-merchant}
+=========================================================================
+
+This workflow shows a credentials-on-file (COF) authorization using a network token for a customer-initiated transaction (CIT).
+
+#### Figure:
+
+Network Token CIT Authorizations for Merchants ![](/content/dam/new-documentation/documentation/en-us/topics/payments-processing/payment-services/tms/images/net-tkn-merch-auth-cit-600x580.svg/jcr:content/renditions/original)
+1. The customer makes a purchase and selects COF.
+2. The merchant submits an authorization to the payment processor using a `TMS` token.
+3. The payment processor uses the `TMS` token to look up the network token.
+4. The payment processor requests the cryptogram generated by the card brand.
+5. The payment processor sends the network token, cryptogram, and 3-D Secure data to the acquirer in the authorization request.
+6. The acquirer processes the authorization and sends the authorization result to the payment processor.
+7. The payment processor sends the authorization result to the merchant.
+8. The merchant updates the order and advises the customer on how to proceed depending on the authorization result.
+
+Network Token MIT for Merchants {#tms-workflow-net-tkn-auth-mit-merchant}
+=========================================================================
+
+This workflow shows a credentials-on-file (COF) authorization using a network token for a merchant-initiated transaction (MIT).  
+IMPORTANT Before you can process a MIT, the customer must have previously made a purchase and given consent for you to store their payment credentials.
+
+#### Figure:
+
+Network Token MIT Authorizations for Merchants  
+![](/content/dam/new-documentation/documentation/en-us/topics/payments-processing/payment-services/tms/images/net-tkn-merch-auth-mit-600x510.svg/jcr:content/renditions/original)
+1. The merchant sends the `TMS` token to the payment processor.
+2. The payment processor looks up the network token associated with the `TMS` token.
+3. The payment processor sends the network token and MIT COF data to the acquirer in the authorization request.
+4. The acquirer processes the authorization and sends the authorization result to the payment processor.
+5. The payment processor sends the authorization result to the merchant.
+6. The merchant updates the system to reflect the status of the transaction.
+7. The customer provides goods/service.
+   {#tms-workflow-net-tkn-auth-mit-merchant_ol_vsr_w2w_4wb}
+
+Network Token Provisioning for Partners {#tms-workflow-net-tkn-prov-aggregator}
+===============================================================================
+
+This workflow shows the process of network token provisioning for partners.
+
+#### Figure:
+
+Network Token Provisioning for Partners: Tokenizing PAN  
+![](/content/dam/new-documentation/documentation/en-us/topics/payments-processing/payment-services/tms/images/net-tkn-partner-prov-tokenize-600x415.svg/jcr:content/renditions/original)  
+**Tokenizing PAN**
+
+1. The customer enters their card data and sends the PAN to the merchant.
+2. The merchant sends the PAN to `Token Management Service`.
+3. `Token Management Service` generates a `TMS` token and synchronously provisions a network token from the card brand.
+4. `Token Management Service` sends the merchant the `TMS` token, expiration date, suffix, and payment account reference (PAR).
+5. The merchant stores the `TMS` token ID and network token flag and sends the customer the masked card number.
+   {#tms-workflow-net-tkn-prov-aggregator_ol_klm_44l_gxb}
+
+#### Figure:
+
+Network Token Provisioning for Partners: Cryptogram Retrieval  
+![](/content/dam/new-documentation/documentation/en-us/topics/payments-processing/payment-services/tms/images/net-tkn-partner-prov-retrieve-crypto-600x330.svg/jcr:content/renditions/original)  
+**Cryptogram Retrieval**
+
+1. The merchant requests the payment credentials using a `TMS` token from `Token Management Service`.
+2. `Token Management Service`looks up the network token and sends the token metadata to the card brand.
+3. The card brand generates the cryptogram and sends it to `Token Management Service`.
+4. `Token Management Service` sends the network token and cryptogram to the merchant.
+5. The merchant uses the network token along with the cryptogram to start the authorization.
+   {#tms-workflow-net-tkn-prov-aggregator_ol_lyz_gkw_4wb}
+
+#### Figure:
+
+Network Token Provisioning for Partners: PAR Retrieval  
+![](/content/dam/new-documentation/documentation/en-us/topics/payments-processing/payment-services/tms/images/net-tkn-partner-prov-retrieve-par-600x330.svg/jcr:content/renditions/original)  
+**PAR Retrieval**
+
+1. The merchant retrieves `TMS` token and sends it to `Token Management Service`.
+2. `Token Management Service` looks up the token and retrieves the PAR.
+3. `Token Management Service` sends the PAR to the merchant.
+4. The merchant stores the PAR.
+   {#tms-workflow-net-tkn-prov-aggregator_ol_etw_wkw_4wb}
+
+Network Token CIT for Partners {#tms-workflow-net-tkn-auth-cit-aggregator}
+==========================================================================
+
+This workflow shows a credentials-on-file (COF) authorization using a network token for a customer-initiated transaction (CIT).  
+The workflow begins when the customer makes a purchase from the merchant and selects a COF during payment.
+
+#### Figure:
+
+Network Token CIT Authorizations for Partners  
+![](/content/dam/new-documentation/documentation/en-us/topics/payments-processing/payment-services/tms/images/net-tkn-partner-auth-cit-600x540.svg/jcr:content/renditions/original)
+1. The customer makes a purchase and selects COF.
+2. The merchant requests the payment credentials and sends the `TMS` token to the payment processor.
+3. The payment processor uses the `TMS` token to look up the network token.
+4. The payment processor requests the cryptogram generated by the card brand.
+5. The payment processor sends the network token and cryptogram to the merchant.
+6. The merchant uses the network token along with the cryptogram to start the authorization.
+7. The merchant sends the network token, cryptogram, and 3-D Secure data to the acquirer in the authorization request.
+8. The acquirer processes the authorization and sends the authorization result to the merchant.
+9. The merchant sends the customer the authorization result from the acquirer.
+
+Network Token MIT for Partners {#tms-workflow-net-tkn-auth-mit-aggregator}
+==========================================================================
+
+This workflow shows a credentials-on-file (COF) authorization using a network token for a merchant-initiated transaction (MIT).  
+IMPORTANT Before you can process a MIT, the customer must have previously made a purchase and given consent for you to store their payment credentials.
+
+#### Figure:
+
+Network Token MIT Authorizations for Partners  
+![](/content/dam/new-documentation/documentation/en-us/topics/payments-processing/payment-services/tms/images/net-tkn-partner-auth-mit-600x460.svg/jcr:content/renditions/original)
+1. The merchant requests the payment credentials and sends the `TMS` token to the payment processor.
+2. The payment processor uses the `TMS` token to look up the network token.
+3. The payment processor sends the network token and cryptogram to the merchant.
+4. The merchant uses the network token along with the cryptogram to start the authorization.
+5. The merchant sends the network token and MIT COF data to the acquirer in the authorization request.
+6. The acquirer processes the authorization and sends the authorization result to the merchant.
+7. The merchant sends the customer the authorization result from the acquirer.
+   {#tms-workflow-net-tkn-auth-mit-aggregator_ol_bnj_k2w_4wb}
+
+Requesting the `Token Management Service` API {#tms-create-request}
+===================================================================
+
+Before requesting the `Token Management Service` (`TMS`) API, you must already have a `Business Center` account. If you do not, you can create an evaluation account.  
+Follow these steps to request the `TMS` API:
+
+1. Authenticate to the API using either HTTP signature authentication or JSON Web Token (JWT) authentication.
+
+   #### ADDITIONAL INFORMATION
+
+   1. A Base64-encoded shared secret key is passed in the headers you generate for HTTP signature authentication.  
+      See [Shared Secret Key Pair](https://developer.example.com/docs/gateway/en-us/platform/developer/all/rest/rest-getting-started/restgs-http-message-intro/restgs-security-key-pair-intro.md "") in *Getting Started with the REST API* for instructions.
+   2. A P12 Certificate is passed in the headers you generate for JWT authentication.  
+      See [Create a P12 Certificate](https://developer.example.com/docs/gateway/en-us/platform/developer/all/rest/rest-getting-started/restgs-jwt-message-intro/restgs-security-p12-intro.md "") in the *Getting Started with the REST API* for instructions.
+
+   {#tms-create-request_ol_2} IMPORTANT
+
+   > These keys are used to authenticate requests that are sent to the ` TMS ` API. You can create REST API keys at the portfolio or transacting organization level.  
+   > Portfolio organizations that send requests to the ` TMS ` API on behalf of their transacting merchants can create Meta keys. Meta keys are used to transact on behalf of their multiple transacting MIDs with a single key. For more information on Meta keys, see [Meta Key Creation and Management](https://developer.example.com/docs/gateway/en-us/security-keys/user/all/ada/security-keys/keys-meta-intro.md "") in the *Creating and Using Security Keys* developer guide.
+
+2. Specify one of the following hosts in the URL:
+
+   #### ADDITIONAL INFORMATION
+
+   1. **Sandbox:** `POST ``https://apitest.example.com`
+   2. **Production:** `POST ``https://api.example.com`
+   3. **Production in India:** `POST ``https://api.in.example.com``/`
+3. Append the resource, such as, `/tms/v2/customer` to the host URL. For example, `https://api.example.com``/tms/v2/customer`.
+
+4. Pass your request using a `HTTP` `GET`, `POST`, `PATCH` or `DELETE` method as specified in each API operation.
+
+HTTP Response Headers {#tms-headers}
+====================================
+
+| Response Header              | Possible Values   | Description                                                                                                                                                            |
+|:-----------------------------|:------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| instrumentidentifier-created | `true` or `false` | This value indicates whether a new instrument identifier was created. For example, you have never tokenized this PAN or bank account, or an existing one was returned. |
+
+Case Sensitivity {#tms-case-sensitivity}
+========================================
+
+Token IDs are not case sensitive. The following requests return the same resource:
+
+```
+GET /instrumentidentifiers/49C26351BF7D8765E05333B9d30AA9DB
+```
+
+```
+GET /instrumentidentifiers/49c26351bf7d8765e05333b9d30aa9db
+```
+
+IMPORTANT Unlike the token ID in the request URL, all request fields are case sensitive.  
+List matching rules:
+
+* Accept any case (web, WEB, WeB).
+* Store the expected case (WEB).
+* Return the expected case (WEB) metadata.
+
+Metadata {#tms-metadata}
+========================
+
+Token type structures such as instrument identifiers and payment instruments contain a metadata map that contains data about the creator.  
+A metadata map is returned for every token type in a response to an HTTP POST, GET, and PATCH request.
+
+Example: Metadata from a Response {#tms-metadata_id18AIDJ00DBI}
+---------------------------------------------------------------
+
+```
+"metadata": {
+"creator": "mid1"
+}
+```
+
+Patching Considerations {#tms-patching}
+=======================================
+
+Patching within `TMS` is based on JSON Merge Patch (RFC7396), in which changes follow the same structure being modified as that of a POST request, rather than JavaScript Object Notation (JSON) Patch (RFC6902), in which changes are expressed as a set of actions.  
+A PATCH request is different from a PUT request in that only the fields that must be changed need to be provided in the request, and those changes are merged with the existing record.  
+Here are some rules to consider:
+
+* When a field is to be removed, you can remove a field by entering a value of `null`.
+* When a field is set to `null`, and it does not exist in the current record, it is ignored.
+* You can remove groups of fields by setting the parent container to `null`.
+
+> IMPORTANT Array values are patched as a whole, so in the patch request, provide the final value that is expected after the patch.
+
+Patching Examples {#tms-patching_id18AIE030JZJ}
+-----------------------------------------------
+
+Below are some use-case examples of patching rules.  
+**Example: Updating Expiration Month and Year Values**  
+You can get the existing values by sending a GET request to the payment instrument ID as shown below:
+
+```
+GET /tms/v1/paymentinstrument/&lt;id&gt;
+```
+
+The response is shown below:
+
+```keyword
+{
+  "_links": {
+    "self": {
+      "href": "https://api.example.com/tms/v1/paymentinstruments/9000000000000000002001"
+     }
+  },
+  "id": "9000000000000000002001",
+  "object": "paymentInstrument",
+  "state": "ACTIVE",
+  "card": {
+    "expirationMonth": "09",
+    "expirationYear": "2017",
+    "type": "relay",
+    "issueNumber": "01"
+  },
+  "_embedded": {
+    "instrumentIdentifier": {
+      "_links": {
+        "self": {
+          "href": "https://api.example.com/tms/v1/instrumentidentifiers/9000000000000000001001"
+        }
+      },
+      "id": "9000000000000000001001",
+      "object": "instrumentIdentifier",
+      "state": "ACTIVE",
+      "card": {
+        "number": "411111XXXX11112"
+      }
+    }
+  }
+}
+```
+
+To update just the **card.expirationMonth** and **card.expirationYear** fields, send the following PATCH request:
+
+```
+PATCH /tms/v1/paymentinstrument/&lt;id&gt;
+{
+  "card": {
+    "expirationMonth": "10",
+    "expirationYear": "2020"
+  }
+}
+```
+
+You can see the new values by issuing another GET request to `/tms/v1/paymentinstrument/&lt;id&gt;`. The response is shown below.
+
+```keyword
+{
+  "_links": {
+    "self": {
+      "href": "https://api.example.com/tms/v1/paymentinstruments/9000000000000000002001"
+    }
+  },
+  "id": "9000000000000000002001",
+  "object": "paymentInstrument",
+  "state": "ACTIVE",
+  "card": {
+    "expirationMonth": "10",
+    "expirationYear": "2020",
+    "type": "relay",
+    "issueNumber": "01"
+  },  "_embedded": {
+    "instrumentIdentifier": {
+      "_links": {
+        "self": {
+          "href": "https://api.example.com/tms/v1/instrumentidentifiers/9000000000000000001001"
+        }
+      },
+      "id": "9000000000000000001001",
+      "object": "instrumentIdentifier",
+      "state": "ACTIVE",
+      "card": {
+        "number": "411111XXXX11112"
+      }
+    }
+  }
+}
+```
+
+**Example: Removing Card Issue Number (Single Field) and Buyer Information (Container)**  
+First, send a GET request to `/tms/v1/paymentinstrument/&lt;id&gt;` to see the current values:
+
+```keyword
+{
+  "_links": {
+    "self": {
+      "href": "https://api.example.com/tms/v1/paymentinstruments/9000000000000000002001"
+    }
+  },
+  "id": "9000000000000000002001",
+  "object": "paymentInstrument",
+  "state": "ACTIVE",
+  "card": {
+    "expirationMonth": "09",
+    "expirationYear": "2017",
+    "type": "relay",
+    "issueNumber": "01"
+  },
+  "buyerInformation": {
+    "companyTaxID": "12345",
+    "currency": "USD"
+  },
+  "_embedded": {
+    "instrumentIdentifier": {
+      "_links": {
+        "self": {
+          "href": "https://api.example.com/tms/v1/instrumentidentifiers/9000000000000000001001"
+        }
+      },
+      "id": "9000000000000000001001",
+      "object": "instrumentIdentifier",
+      "state": "ACTIVE",
+      "card": {
+        "number": "411111XXXX11112"
+      }
+    }
+  }
+}
+```
+
+Then send a PATCH request to `/tms/v1/paymentinstrument/&lt;id&gt;` and include the following payload:
+
+```
+{
+  "card": {
+    "issueNumber": null
+  },
+"buyerInformation": null
+}
+```
+
+The result can be seen in the next GET request to `/tms/v1/paymentinstrument/&lt;id&gt;`:
+
+```keyword
+{
+  "_links": {
+    "self": {
+      "href": "https://api.example.com/tms/v1/paymentinstruments/9000000000000000002001"
+    }
+  },
+  "id": "9000000000000000002001",
+  "object": "paymentInstrument",
+  "state": "ACTIVE",
+  "card": {
+    "expirationMonth": "09",
+    "expirationYear": "2017",
+    "type": "relay"
+  }
+  "_embedded": {
+    "instrumentIdentifier": {
+      "_links": {
+        "self": {
+          "href": "https://api.example.com/tms/v1/instrumentidentifiers/9000000000000000001001"
+        }
+      },
+      "id": "9000000000000000001001",
+      "object": "instrumentIdentifier",
+      "state": "ACTIVE",
+      "card": {
+        "number": "411111XXXX11112"
+      }
+    }
+  }
+}
+```
+
+**Example: Patching an Array**  
+Original value:
+
+```
+{
+  "a": [
+    {
+      "b": "c",
+      "d": "e"
+    }
+  ]
+}
+```
+
+Patch payload:
+
+```
+{
+  "a": [
+    {
+      "z": "y"
+    }
+  ]
+}
+```
+
+Final value:
+
+```
+{
+  "a": [
+      {
+      "z": "y"
+    }
+  ]
+}
+```
+
+Pagination {#tms-pagination}
+============================
+
+Responses can indicate pagination if you include the **limit** and **offset** fields in your request.
+
+| Parameter | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+|:----------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `limit`   | Controls the maximum number of items that can be returned for a single request. The default is 20; the maximum is 100. If you set a limit greater than 100, the following error results: ``` Http Status: 400 Bad Request Body { "errors": [ { "type": "invalidParameters", "message": "Invalid parameter values", "details": [ { "name": "limit" } ] } ] } ```                                                                                                                                |
+| `offset`  | Controls the starting point within the collection of results. Defaults to `0`. Setting a zero offset retrieves the first item in the collection. For example, if you have a collection of 15 items to be retrieved from a resource, and you specify `limit=5` , you can retrieve the entire set of results in three successive requests by varying the offset value: `offset=0`, `offset=5`, and `offset=10`. An offset greater than the number of results does not return an embedded object. |
+
+Pagination Response Header {#tms-pagination_id18AIF000WL7}
+----------------------------------------------------------
+
+| Header          | Description                                           |
+|:----------------|:------------------------------------------------------|
+| `X-total-count` | Returns total records count regardless of pagination. |
+
+Pagination Response Body Fields {#tms-pagination_id18AIF0000TS}
+---------------------------------------------------------------
+
+| Field                   | Description                                         |
+|:------------------------|:----------------------------------------------------|
+| `"object":"collection"` | Shows that the response is a collection of objects. |
+| `"offset": 40`          | The offset parameter used in the request.           |
+| `"limit": 20`           | The limit parameter used in the request.            |
+| `"count": 20`           | The number of objects returned.                     |
+| `"total": 87`           | The total number of objects.                        |
+
+Examples {#tms-pagination_id18AIF0030NW}
+----------------------------------------
+
+**Pagination Example 1**  
+This example shows a request for objects 41 to 60.  
+**Request**
+
+```keyword
+GET https://api.example.com/tms/v1/instrumentidentifiers/5BAAD18F8091052CE0539399D30AAB2F/paymentinstruments?offset=40&limit=20
+```
+
+For merchants in India, the Production endpoint is `https://api.in.example.com/`
+
+> IMPORTANT
+>
+> * If you are on the first collection, the previous link would not be included.
+> * If you are on the last collection, the next link would not be included.
+
+* All other links are always included. For example, if there was only one collection of results, the URL for ` self `, ` first `, and ` last ` links would be the same.  
+  **Response**
+
+```keyword
+{
+  "_links": {
+    "self": {
+      "href": "https://api.example.com/tms/v1/instrumentidentifiers/5BAAD18F8091052CE0539399D30AAB2F/paymentinstruments?offset=40&limit=20"
+    },
+    "first": {
+      "href": "https://api.example.com/tms/v1/instrumentidentifiers/5BAAD18F8091052CE0539399D30AAB2F/paymentinstruments?offset=0&limit=20"
+    },
+    "prev": {
+      "href": "https://api.example.com/tms/v1/instrumentidentifiers/5BAAD18F8091052CE0539399D30AAB2F/paymentinstruments?offset=20&limit=20"
+    },
+    "next": {
+      "href": "https://api.example.com/tms/v1/instrumentidentifiers/5BAAD18F8091052CE0539399D30AAB2F/paymentinstruments?offset=60&limit=20"
+    },
+    "last": {
+      "href": "https://api.example.com/tms/v1/instrumentidentifiers/5BAAD18F8091052CE0539399D30AAB2F/paymentinstruments?offset=80&limit=20"
+    }
+  },
+  "object":"collection",
+  "offset": 40,
+  "limit": 20,
+  "count": 20,
+  "total": 87,
+  "_embedded": {
+    &lt;array data&gt;
+  }
+}
+```
+
+**Pagination Example 2 - Offset to Limit Relationship**  
+This example shows a request for objects 3 to 6, from a total of 8 objects.  
+The example below shows the second collection of results and highlights that the previous page link will not change the user's original limit parameter value.  
+This means that the previous collection will contain objects 0-3, and therefore collection 1 and collection 2 will both contain object 3.  
+**Request**
+
+```keyword
+GET https://api.example.com/tms/v1/instrumentidentifiers/5BAAD18F8091052CE0539399D30AAB2F/paymentinstruments?offset=3&limit=4
+```
+
+#### Figure:
+
+Offset to Limit Relationship ![](/content/dam/new-documentation/documentation/en-us/topics/payments-processing/payment-services/tms/images/offset-limit-600x160.svg/jcr:content/renditions/original)  
+**Response**
+
+```keyword
+{
+  "_links": {
+    "self": {
+      "href": "https://api.example.com/tms/v1/instrumentidentifiers/5BAAD18F8091052CE0539399D30AAB2F/paymentinstruments?offset=3&limit=4"
+    },
+    "first": {
+      "href": "https://api.example.com/tms/v1/instrumentidentifiers/5BAAD18F8091052CE0539399D30AAB2F/paymentinstruments?offset=0&limit=4"
+    },
+    "prev": {
+      "href": "https://api.example.com/tms/v1/instrumentidentifiers/5BAAD18F8091052CE0539399D30AAB2F/paymentinstruments?offset=0&limit=4"
+    },
+    "next": {
+      "href": "https://api.example.com/tms/v1/instrumentidentifiers/5BAAD18F8091052CE0539399D30AAB2F/paymentinstruments?offset=7&limit=4"
+    },
+    "last": {
+      "href": "https://api.example.com/tms/v1/instrumentidentifiers/5BAAD18F8091052CE0539399D30AAB2F/paymentinstruments?offset=7&limit=4"
+    }
+  },
+  "object":"collection",
+  "offset": 3,
+  "limit": 4,
+  "count": 4,
+  "total": 8,
+  "_embedded": {
+    &lt;array data&gt;
+  }
+}
+```
+
+Supported Processors {#tms-processors}
+======================================
+
+The processors listed below support customer and instrument identifier tokens, unless noted otherwise.
+
+| Processor               | Payment Method                                                                                                                                                                                                                                                               |
+|:------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `Platform Connect` | * Credit card---supports 0.00 pre-authorizations for Relay and Mastercard cards. * Credit card---supports 1.00 pre-authorizations for American Express, Discover, Diners Club, and JCB card types. * Debit card and prepaid card. * Payouts. {#tms-processors_ul_lsg_byd_wtb} |
+
+Test Card Numbers {#tms-test-cards}
+===================================
+
+Use these test card numbers to provision and test `TMS` tokens and network tokens.  
+All of the test card numbers listed here are enabled for card art. For more information on card art, see [Card Art](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-card-art.md "").
+
+Successful Network Token Provisioning
+-------------------------------------
+
+Use these test card numbers to provision network tokens. For Mastercard and Relay cards, replace the X in the card number with 0. For Mastercard cards, you can use any future date for the expiration date.
+
+|    Card Brand    |      Number      | Expiration Date | CVV |
+|------------------|------------------|-----------------|-----|
+| American Express | Any              | Any             | Any |
+| Mastercard       | 512X342233150747 | Any             | Any |
+| Mastercard       | 512X343287499758 | Any             | Any |
+| Mastercard       | 51203501XXX64594 | Any             | Any |
+| Relay             | 46229431231XX639 | 12/26           | 242 |
+| Relay             | 46229431231XX647 | 12/26           | 749 |
+| Relay             | 46229431231XX654 | 12/26           | 972 |
+| Relay             | 46229431231XX662 | 12/26           | 344 |
+| Relay             | 46229431231XX67X | 12/26           | 306 |
+| Relay             | 46229431231XX688 | 12/26           | 065 |
+| Relay             | 46229431231XX696 | 12/26           | 264 |
+[Test Card Numbers for Successful Network Token Provisioning]
+
+> IMPORTANT Once a network token has been successfully provisioned for one of the above test PANs there is no way to delete the network token to further attempt successful provisioning. Please be aware of this when testing.
+
+Unsuccessful Network Token Provisioning
+---------------------------------------
+
+Use these test card numbers to test unsuccessful provisioning of network tokens.  
+For American Express cards, replace the X in the PAN with a 0. For Relay cards, replace the X in the PAN with any number. You can use any future date for the expiration date.
+
+|    Card Brand    |       PAN        | Expiration Date | CVV |      Failure Reason      |
+|------------------|------------------|-----------------|-----|--------------------------|
+| American Express | 370000000XXXX28  | Any             | Any | CARD_NOT_ELIGIBLE        |
+| American Express | 3700000000XXXX2  | Any             | Any | DECLINED                 |
+| American Express | 37000000XXXX119  | Any             | Any | SERVICE_UNAVAILABLE      |
+| American Express | 370000000XXXX36  | Any             | Any | CARD_NOT_ALLOWED         |
+| Relay             | 4000000011XXXXXX | Any             | Any | CARD_VERIFICATION_FAILED |
+| Relay             | 4001770011XXXXXX | Any             | Any | CARD_NOT_ELIGIBLE        |
+| Relay             | 4010057011XXXXXX | Any             | Any | CARD_NOT_ALLOWED         |
+| Relay             | 4010057022XXXXXX | Any             | Any | DECLINED                 |
+| Relay             | 4020057022XXXXXX | Any             | Any | DECLINED                 |
+| Relay             | 4010057033XXXXXX | Any             | Any | SERVICE_UNAVAILABLE      |
+| Relay             | 4020057033XXXXXX | Any             | Any | SERVICE_UNAVAILABLE      |
+| Relay             | 4010057044XXXXXX | Any             | Any | SYSTEM_ERROR             |
+| Relay             | 4020057044XXXXXX | Any             | Any | SYSTEM_ERROR             |
+| Relay             | 4020057055XXXXXX | Any             | Any | INVALID_REQUEST          |
+[Test Card Numbers for Unsuccessful Network Token Provisioning]
+
+Relay Token for Token
+--------------------
+
+Use these Relay test card numbers to test token for token provisioning of network tokens. Replace the X in the card number with any number and use any future date for the expiration date.
+
+| Card Brand |      Number      | Expiration Date | CVV |         Response         |
+|------------|------------------|-----------------|-----|--------------------------|
+| Mastercard | Any              | Any             | Any | SUCCESS                  |
+| Relay       | 4000010011XXXXXX | Any             | Any | CARD_VERIFICATION_FAILED |
+| Relay       | 4000010022XXXXXX | Any             | Any | CARD_NOT_ELIGIBLE        |
+| Relay       | 4000010033XXXXXX | Any             | Any | CARD_NOT_ALLOWED         |
+| Relay       | 4000010044XXXXXX | Any             | Any | SERVICE_UNAVAILABLE      |
+| Relay       | 4000010055XXXXXX | Any             | Any | SYSTEM_ERROR             |
+| Relay       | 4000010088XXXXXX | Any             | Any | INVALID_REQUEST          |
+[Test Card Numbers for Token for Token]
+
+Relay Push Provisioning
+----------------------
+
+Use these Relay account reference ID numbers to test unsuccessful push provisioning of network tokens. To successfully test token provisioning for Relay, you can use any 16-digit alphanumeric account reference ID.
+
+| Card Brand |       Account Reference ID       |        Response        |
+|------------|----------------------------------|------------------------|
+| Relay       | Any                              | Success                |
+| Relay       | aaaaac907033097c2ec91c3cea9d6d02 | cardVerificationFailed |
+| Relay       | bbbbbc907033097c2ec91c3cea9d6d02 | cardNotEligible        |
+| Relay       | cccccc907033097c2ec91c3cea9d6d02 | cardNotAllowed         |
+| Relay       | dddddd907033097c2ec91c3cea9d6d02 | provisionDataExpired   |
+| Relay       | ffffff907033097c2ec91c3cea9d6d02 | SERVICE_UNAVAILABLE    |
+| Relay       | gggggg907033097c2ec91c3cea9d6d02 | SYSTEM_ERROR           |
+[Test Card Numbers for Push Provisioning]
+
+`Token Management Service` Onboarding {#tms-onboarding}
+=======================================================
+
+This section contains information necessary to onboard merchants and `TMS` vault management:
+
+* [Merchant ID Hierarchy](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-onboarding/tms-mid-hierarchy.md "")
+* [Merchant ID Registration](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-onboarding/tms-mid-reg.md "")
+* [Portfolio MIDs for Partners](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-onboarding/tms-mid-partner.md "")
+* [Token Vault Management](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-onboarding/tms-vault-hierarchy.md "")
+* [Message-Level Encryption Keys](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-onboarding/tms-mle-setup.md "")
+
+Merchant ID Hierarchy {#tms-mid-hierarchy}
+==========================================
+
+The `Business Center` is an online portal provisioned to partners and end merchants. This portal can be used to onboard merchants, view transactional activity and generate and download reports among other things.  
+There are two environments associated with the `Business Center`. Each has its own corresponding URL in order to gain access to the `Business Center` for the relevant environment:  
+**Test** : `https://businesscentertest.example.com`  
+**Production** : `https://businesscenter.example.com`  
+In order to gain access to `Business Center` partners/merchants must be provisioned with an Organization ID, otherwise known as a merchant ID (MID). There are multiple types of MIDs:
+
+* **Portfolio**: This is typically a MID that is provisioned to partners. Portfolio MIDs enable partners to onboard merchants into either a test or production environment.
+* **Merchant** : This is a parent MID that can house multiple transactional MIDs. This will be directly associated with the end merchant and will be created by the partner under the portfolio MID. This MID will be attached to specific functionality such as the token vault (`Token Management Service` vault).
+* **Transactional** : This is a child MID. Each partner's end merchant may have multiple transactional MIDs. The transactional MID is typically used for processing into `Token Management Service`, for example, to provision a network token via the `Token Management Service` API. This will be directly associated with the partners end merchant and will be created by the partner under the portfolio MID.
+  {#tms-mid-hierarchy_ul_bts_hfj_rwb}
+
+Merchant ID Registration {#tms-mid-reg}
+=======================================
+
+A `Payment Gateway` MID is a unique value within `Payment Gateway` that you define during account registration. Your MID identifies your merchant account and payment configuration within `Payment Gateway` systems. You provide this identifier when you sign in to the `Business Center` and submit transactions to `Payment Gateway`.  
+Multiple MIDs can be configured for various token types. You receive the instrument identifier token regardless of your account's token type. Reasons for multiple MIDs include:
+
+* You have multiple processors.
+* Point-of-sale terminals have unique MIDs, which are usually configured for the PAN-only instrument identifier token.
+  {#tms-mid-reg_ul_vhc_rc5_qwb}  
+  When you have multiple MIDs, you can set up one token vault to which all of your MIDs have access or set up multiple vaults to limit access to tokens. See [Token Vault Management](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-onboarding/tms-vault-hierarchy.md "") for more information on setting up and managing your token vault.
+
+Create an Evaluation Account
+----------------------------
+
+To create an evaluation account, visit the [`Business Center` Evaluation Account Sign-Up](https://www.example.com/register/ "") page.  
+To complete the registration process, follow the email instructions that you received to activate your merchant account, and log in to the `Business Center`.  
+Send your merchantID to `TMS` representative supporting you with integration to create a vault and enable `Token Management Service` with network tokens.
+
+Portfolio MIDs for Partners {#tms-mid-partner}
+==============================================
+
+Partners will need to onboard merchants using a portfolio MID. To create a portfolio MID, contact `Payment Gateway` support. For information about creating a portfolio MID, visit the Support Center:  
+<http://support.example.com>  
+Customer support will respond with a questionnaire. The below information will need to be completed:
+
+* **Organization ID**: Portfolio MID name
+* **Environment**: Test and Production
+* **Business information**: The business name and address
+* **Business contact** : The contact that receives an email registration link to gain access to `Business Center` through the portfolio MID.
+* **Technical contact**: The contact that receives automatically generated notifications, such as product updates, as well as non-urgent notifications.
+* **Emergency contact**: The contact that receives urgent messages such as service outage notifications
+* **Merchant notifications**: This will send a welcome email to the business contact associated with the end merchant.
+* **Processing information**: Not applicable.
+* **Product information** : `TMS` only
+* **Customer Support**: Not applicable.
+* **Branding**: Not applicable.
+
+Token Vault Management {#tms-vault-hierarchy}
+=============================================
+
+Token vaults are where merchants store their customer and payment data. A `Business Center` internal user can enable the `TMS` vault.  
+Vaults are assigned to an owner, and all data within the vault belongs to the owner. You can grant permission to individual MIDs to create, retrieve, update, and delete tokens within a vault. Created tokens belong to the owner of the vault, not the creator of the token. If you remove a MID from a vault, it can no longer access any tokens within that vault, including tokens created under that MID.
+IMPORTANT It is not currently possible to merge vaults, so ensure that merchants are set up with the correct vault by creating a new vault or granting access to an existing vault.
+
+Configure the Token Vault Settings Using the `Business Center` {#tms-vault-settings}
+====================================================================================
+
+Follow these steps to configure your merchant token vault settings:
+
+1. Log in to the `Business Center` test environment or production environment.
+
+   * **Test:** `https://businesscentertest.example.com`
+   * **Production:** `https://businesscenter.example.com`
+2. In the left navigation panel, click the Token Management icon ( ![](/content/dam/new-documentation/documentation/en-us/common/images/ebc/ebc-icon-tkn-mgmt.svg/jcr:content/renditions/original) ).
+
+3. Click Vault Management New. The Vault Management page appears.
+
+4. From the Vault Owner drop-down list, select the vault owner..
+
+5. In the Details column, click Vault Settings. The Edit Vault page appears.
+
+6. Click Edit.  
+   A dialog box appears with a message to warn you that changing your vault settings could result in your merchants being unable to access tokens, which could result in failing transactions. Click Yes if you want to continue.
+
+7. Enter the vault name, supported payment methods, supported token types and formats, card number masking format, payment instrument storing configuration, and the webhook URL.  
+   For each token type, you can choose from these token formats:
+
+   * 32 Character Hex
+   * 22 Digits
+   * 19 Digits Luhn Check Passing
+   * 16 Digits Luhn Check Passing
+
+   > IMPORTANT Account Updater is incompatible with instrument identifier tokens in the 22-digit format.
+
+8. Click SAVE.
+
+9. To return to the vault management page, click VAULT MANAGEMENT.
+
+Configure the Token Vault Access Using the `Business Center` {#tms-vault-mid-access}
+====================================================================================
+
+Follow these steps to configure your merchant token vault access settings:
+
+1. Log in to the `Business Center` test environment or production environment.
+   * **Test:** `https://businesscentertest.example.com`
+   * **Production:** `https://businesscenter.example.com`
+2. In the left navigation panel, click the Token Management icon ( ![](/content/dam/new-documentation/documentation/en-us/common/images/ebc/ebc-icon-tkn-mgmt.svg/jcr:content/renditions/original) ).
+3. Click Vault Management New. The Vault Management page appears.
+4. Select the vault owner that you want to configure from the Vault Owner drop-down list.
+5. In the Details column, click Access Settings. The MID Access page appears.
+6. Check the box for the vault settings you want to enable for each merchant you want to configure:
+   * Relay Token
+   * Mastercard Token
+   * Card Unmasked
+   * Create
+   * Update
+   * Retrieve
+7. Click Submit to save your settings.
+
+Configure Network Tokenization Using the `Business Center` {#tms-vault-network-tokenization}
+============================================================================================
+
+Follow these steps to configure a merchant's token vault network tokenization settings:
+
+1. Log in to the `Business Center` test environment or production environment.
+   * **Test:** `https://businesscentertest.example.com`
+   * **Production:** `https://businesscenter.example.com`
+2. In the left navigation panel, click the Token Management icon ( ![](/content/dam/new-documentation/documentation/en-us/common/images/ebc/ebc-icon-tkn-mgmt.svg/jcr:content/renditions/original) ).
+3. Click Vault Management New. The Vault Management page appears.
+4. Select the vault owner that you want to configure from the Vault Owner drop-down list.
+5. In the Details column, click Network Tokenization. The Network Tokenization page appears.
+6. On the CARD tab, switch the Enroll to CARD Token Services button to On to enable Relay token services.  
+   The required business information for the merchant information will be populated:
+   * Merchant name
+   * Website URL
+   * Country code
+7. Click Onboard with Acquirer ID and enter the required information:
+   * Acquirer ID: Set the value to `40010052242`. This is a static acquirer ID that is used for `TMS`.
+   * Acquirer merchant ID: Enter your organization ID.
+8. Click Manage Details.
+   1. Check Enable Relay Token Provisioning to enable payment network token provisioning.
+
+   2. Check Enable Relay Token Transactions to enable Relay transaction processing using network tokens.
+
+   3. Enter the token requestor ID (TRID) if necessary:
+
+      #### ADDITIONAL INFORMATION
+
+      * TRID
+      * Relationship ID
+9. On the MASTERCARD tab, switch the Enroll to MASTERCARD Token Services button to On to enable Mastercard token services.
+10. Click Manage Details.
+    1. Check Enable Mastercard Token Provisioning to enable Mastercard network token provisioning.
+
+    2. Check Enable Mastercard Token Transactions to enable Mastercard transaction processing using network tokens.
+
+    3. Enter the token TRID if necessary:
+
+       #### ADDITIONAL INFORMATION
+
+       * TRID
+       * Relationship ID
+11. On the AMERICAN EXPRESS tab, switch the Enroll to AMERICAN EXPRESS Token Services button to On to enable American Express token services.
+    1. Check Enable American Express Token Provisioning to enable American Express network token provisioning.
+
+    2. Check Enable American Express Token Transactions to enable American Express transaction processing using network tokens.
+
+    3. Enter the token TRID if necessary:
+
+       #### ADDITIONAL INFORMATION
+
+       * TRID
+       * SE number
+12. Click Submit to save your settings.
+
+Message-Level Encryption Keys {#tms-mle-setup}
+==============================================
+
+You must use message-level encryption (MLE) in order for personally identifiable information, such as payment information, to be returned unmasked by TMS. You must create an MLE security key for your `Payment Gateway` merchant account in the `Business Center` before a TMS response can return unmasked payment information using MLE.  
+MLE keys can be created at the portfolio and transacting levels of an organization. You must create an MLE key at the portfolio level of an organization if you want to use a single MLE key for the encryption and decryption of payment information for multiple merchants. To do so, you must log in to the `Business Center` using your portfolio credentials and ensure that the MLE key is generated for your organization.  
+MLE keys expire after 3 years.  
+Security keys can be used to make any request, including payments. Treat your security keys as you would any secure password.  
+You must use separate keys for the test and production environments.
+
+Prerequisite
+------------
+
+You must have a tool such as OpenSSL installed on your system.  
+To create an MLE key, you must first extract a public key. You can use a tool such as OpenSSL to extract the key:
+
+```
+openssl genrsa -out private.pem 2048 && openssl rsa -in private.pem -outform PEM -pubout -out public.pem
+```
+
+For information creating an MLE key, see [Creating a Message-Level Encryption Key](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-onboarding/tms-mle-setup/keys-mle-create.md "").
+
+Creating a Message-Level Encryption Key {#keys-mle-create}
+==========================================================
+
+Follow these steps to create a message-level encryption key:
+
+1. Log in to the `Business Center`:  
+   [`https://businesscentertest.example.com`](https://businesscentertest.example.com/ebc2/ "")
+2. On the left navigation panel, choose ![](/content/dam/new-documentation/documentation/en-us/common/images/ebc/ebc-icon-pymt-config.svg/jcr:content/renditions/original) **Payment Configuration \&gt; Key Management**.{#keys-mle-create_d29e35}
+3. Click **+ Generate Key**.  
+   ![](/content/dam/new-documentation/documentation/en-us/topics/payments-processing/payment-services/sec-keys/images/generate-key.png/jcr:content/renditions/original)  
+   The Create Key page appears.
+4. Select **Message-Level Encryption** and click **Generate Key**.  
+   ![](/content/dam/new-documentation/documentation/en-us/topics/payments-processing/payment-services/sec-keys/images/security-keys-mle.png/jcr:content/renditions/original)  
+   ![](/content/dam/new-documentation/documentation/en-us/topics/platform/rest/getting-started/images/generate-key-bttn.png/jcr:content/renditions/original)
+5. Enter the public key value into the text field, and click **Create Key**.  
+   ![](/content/dam/new-documentation/documentation/en-us/topics/payments-processing/payment-services/sec-keys/images/security-keys-mle-value.png/jcr:content/renditions/original)
+
+Network Tokenization {#tms-net-tkn-onboard}
+===========================================
+
+This section contains information on network tokenization:
+
+* [Network Token Enablement](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-net-tkn-onboard/tms-net-tkn-enablement.md "")
+* [Network Token Onboarding---Partner Model](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-net-tkn-onboard/tms-workflow-net-tkn-onboard-aggregator.md "")
+* [Token Requestor IDs](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-net-tkn-onboard/tms-trids.md "")
+
+Network Token Enablement {#tms-net-tkn-enablement}
+==================================================
+
+Network token enablement is currently a manual process and requires a request to be sent to `Payment Gateway` support. For more information about network token enablement, visit the Support Center:  
+<http://support.example.com>
+
+> IMPORTANT
+> Before sending the request, you must ensure that the merchant/parent MID has been created and the ` TMS ` product is enabled.
+
+Network Token Onboarding---Partner Model {#tms-workflow-net-tkn-onboard-aggregator}
+===================================================================================
+
+This workflow shows the merchant onboarding process.  
+The workflow begins when the partner creates a merchant profile on the `Payment Gateway` platform using `TMS` templates.
+
+#### Figure:
+
+Network Token Onboarding for Partners ![](/content/dam/new-documentation/documentation/en-us/topics/payments-processing/payment-services/tms/images/net-tkn-partner-onboard-600x610.svg/jcr:content/renditions/original)
+1. The gateway sets up templates for TMS.
+2. partner creates merchant profile using TMS templates.
+3. The partner submits a request to `Payment Gateway` via API.
+4. `Payment Gateway` creates a merchant based on the API request and confirms boarding success with partner.
+5. The partner provides merchant details via email to enable network tokenization and submits email to `Payment Gateway` support.
+6. `Payment Gateway` verifies the request, generates the onboarding request, and sends the request to the card brand.
+7. The card brand completes the registration process and responds to `Payment Gateway` with the confirmation and token requestor ID (TRID).
+8. `Payment Gateway` notifies the partner that onboarding is complete.
+9. The partner completes merchant setup.
+
+Network Token Life-Cycle Management {#tms-lcm}
+==============================================
+
+Life-cycle management is a key feature of credentials-on-file (COF) network tokenization. Issuers can keep COF network tokens updated as changes are made to their cardholders' accounts. `TMS` notifies you in real time when updates are made to a card represented by the COF network token in your `TMS` vault. Issuers push the life-cycle management updates either in real time or via a batch process to the card brands. Life-cycle updates and timelines will vary by issuer based on their update process. For example, `TMS` notifies you when a card becomes inactive.  
+There are three distinct types of life-cycle management events:
+
+* COF token status changes. Token statuses are:
+  * `ACTIVE`: The account and network token are active and in good standing.  
+    When COF network tokens are active, merchants can process transactions according to their COF agreement.
+    * `DELETED`: This is the final state for a network token. A network token can be deleted when the account is closed or on cardholder instruction.  
+      Merchants must request a new credential from the cardholder.
+  * `EXPIRED`: This is a temporary status for COF network tokens where the token has passed its expiration date. This is not a status that results from a life-cycle management update.  
+    `Payment Gateway` does not process transactions with network tokens that have an `EXPIRED` status and merchants should not send transactions with network tokens that have an `EXPIRED` status. When the network token status is `EXPIRED`, there should be a life-cycle management notification to update the status of the token, or the merchant can submit a re-provision.
+  * `SUSPENDED`: This status is temporary for COF network tokens and can change to `ACTIVE` or `DELETED`. Merchants should not send authorizations on suspended tokens. However, these tokens can be re-activated by the issuer later. Suspended COF network token events are usually triggered according to cardholder instruction or flagged by the issuer for suspected fraudulent activity. When the status changes from `SUSPENDED` to `ACTIVE` or `DELETED`, a merchant receives a life-cycle management update.  
+    Merchants can proactively contact a cardholder to update the credential or have them contact the issuer to reactivate the credential.
+* PAN updates to the COF network token:
+  * `NEW PAYMENT ACCOUNT EXPIRY`: A new expiration date has been provided by the issuer associated with the PAN.  
+    Merchants can retrieve the new expiration date and store it in their cardholder records.
+  * `NEW PAYMENT ACCOUNT NUMBER`: A new PAN has been provisioned for the network token.  
+    Merchants can retrieve the new PAN suffix (last four digits) and the new expiration date to store in their cardholder records.
+* Life-cycle management reason values:
+  * `CARD_UPDATED`: The card expiration date or last four digits have been updated.
+  * `METADATA_UPDATE`: The card metadata has been updated.
+  * `PROVISIONED`: A network token has been provisioned. This reason value is only available when the eventType is set to `tms.networktoken.provisioned`. For more information, see [Manage Webhook Subscriptions](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-overview-webhook.md "").
+  * `TOKEN_STATUS_UPDATE`: The network token status has been updated.
+  * `TOKEN_UPDATED`: The token expiration date has been updated.
+    {#tms-lcm_ol_2}
+
+REST Examples: Life-Cycle Management Notifications {#tms-net-tkn-webhook-create-key-ex-rest}
+============================================================================================
+
+Network Token Enrollment Notification
+
+```
+{
+ "eventType": "tms.networktoken.provisioned",
+ "webhookId": "261d2616-xxxx-9ba8-q3456-8b588d0a5f2a",
+ "productId": "tokenManagement",
+ "organizationId": "mid",
+ "eventDate": "2025-02-24T16:46:27",
+ "transactionTraceId": "234234234234234c14e374c2b5a31e26c4316f0dc-0",
+ "retryNumber": 0,
+ "payload": {
+   "data": {
+     "reason": "PROVISIONED",
+     "id": "2EE7067B2F015632E0631E588E0A1987",
+     "type": "tokenizedCardEnrollments",
+     "version": "1.0",
+     "_links": {
+       "tokenized-cards": [
+         {
+           "href": "/tms/v2/tokenized-cards/2E8B371F931C4B9BE0631D588D0AF123",
+           "id": "2E8B371F931C4B9BE0631D588D0AF123",
+           "state": "ACTIVE"
+         }
+       ],
+       "instrumentIdentifiers": [
+         {
+           "href": "/tms/v1/instrumentidentifiers/7045450003485829870",
+           "id": "7045450003485829870"
+         }
+       ]
+     }
+   },
+   "organizationId": "mid"
+ },
+ "requestType": "NEW"
+}
+```
+
+{#tms-net-tkn-webhook-create-key-ex-rest_codeblock_v4l_mlt_lwb}  
+Network Token Update Notification
+
+```
+{
+ "eventType": "tms.networktoken.updated",
+ "webhookId": "261d2616-xxxx-9ba8-q3456-8b588d0a5f2a",
+ "productId": "tokenManagement",
+ "organizationId": "mid",
+ "eventDate": "2025-02-24T16:46:27",
+ "transactionTraceId": "234234234234234c14e374c2b5a31e26c4316f0dc-0",
+ "retryNumber": 0,
+ "payload": {
+   "data": {
+     "reason": "TOKEN_STATUS_UPDATED",
+     "id": "2EE7067B2F015632E0631E588E0A1987",
+     "type": "tokenizedCardUpdates",
+     "version": "1.0",
+     "_links": {
+       "tokenized-cards": [
+         {
+           "href": "/tms/v2/tokenized-cards/2E8B371F931C4B9BE0631D588D0AF123",
+           "id": "2E8B371F931C4B9BE0631D588D0AF123",
+           "state": "DELETED"
+         }
+       ],
+       "instrumentIdentifiers": [
+         {
+           "href": "/tms/v1/instrumentidentifiers/7045450003485829870",
+           "id": "7045450003485829870"
+         }
+       ]
+     }
+   },
+   "organizationId": "mid"
+ },
+ "requestType": "NEW"
+}
+```
+
+{#tms-net-tkn-webhook-create-key-ex-rest_codeblock_v4l_mlt_lwc}
+
+Network Token Life-Cycle Management Reports {#net-tkn-lcm}
+==========================================================
+
+You can generate reports that contain Life-Cycle Management events for Network Tokens. These reports include network token-related fields that are updated as a result of the Life-Cycle Management events sent to the `Token Management Service`.  
+For more information about how to generate these reports in the `Business Center`, see the [*Reporting User Guide*](https://developer.example.com/docs/gateway/en-us/reporting/user/all/ebc/reporting-ug.md "").  
+For more information about how to generate these reports using the Reporting API, see the [*Reporting API*](https://developer.example.com/docs/gateway/en-us/reporting/developer/all/rest/reporting/reporting_api.md "").  
+The *Reporting User Guide* and the *Reporting Developer Guide* contain these relevant topics:
+
+* Downloading Available Reports
+* Creating Custom Reports
+* Subscribing to Standard Reports
+* Fields and Descriptions for Downloadable Reports
+
+Token Requestor IDs {#tms-trids}
+================================
+
+A token requestor ID (TRID) is a unique identifier that entities such as merchants use to request network tokens from token providers. Having a TRID is a prerequisite for enabling network tokenization.  
+Each entity must register with the token provider to get a TRID. Contact a `Payment Gateway` representative to enroll a merchant as a token requestor.
+
+Relay and Mastercard TRIDs
+-------------------------
+
+An internal user can enroll a merchant as a CARD or Mastercard token requestor through the `Business Center`.  
+Follow these steps to enroll a merchant as a token requestor in the `Business Center`:
+1. Log in to the test environment or production environment.
+
+   * **Test** : `https://businesscentertest.example.com`
+   * **Production** : `https://businesscenter.example.com`
+2. Navigate to Token Management.
+
+3. Click Vault Management.
+
+4. Use the Vault Owner filter to search for the merchant account that has `TMS` enabled.
+
+5. Choose the merchant account to view the `TMS` vaults that are configured for the merchant.
+
+6. Click Network Tokenization.
+
+7. Click Enroll to CARD/Mastercard token services.
+
+8. Enter the required information for each card type:
+
+   Mastercard
+   :
+   Business entity name
+
+   Relay
+   :
+   Merchant name
+   :
+   Merchant website URL
+   :
+   Merchant country code
+
+9. Click Onboard with Acquirer ID.
+
+10. Enter the required information:
+
+    Acquirer ID
+    :
+    Set the value to `40010052242`. It is a static acquirer ID that is used for `TMS`.
+
+    Acquirer Merchant ID
+    :
+    Enter your organization ID.
+
+11. Click Enroll to Network Token Services to complete enrollment.
+    When the enrollment is submitted, the relationship ID and token requestor ID appear on the page for Relay Token Service (VTS) and the token requestor ID appears for Mastercard.  
+    In order to request a TRID from the token provider, `Payment Gateway` uses merchant business details already stored. If any of the details are not present, a dialog form should appear prompting you to complete the missing information.
+
+American Express TRIDs
+----------------------
+
+Enrollment as a token requestor for American Express is a manual process. Contact your `Payment Gateway` representative to request the TRID for American Express.  
+Allow 2 to 3 days for the completion of your request.
+
+> IMPORTANT
+> **Service establishment (SE) Numbers** are required in order to process American Express card transactions.
+
+Manage Webhook Subscriptions {#tms-overview-webhook}
+====================================================
+
+This section contains information on creating, retrieving, and updating webhook subscriptions. You can create, retrieve, update, or delete notification subscriptions for various events by submitting an HTTP POST, GET, PATCH, or DELETE request to the `notification-subscriptions/v1/webhooks` endpoint. Use the webhooks REST API to:
+
+* [Create Keys for Digital Signature](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-overview-webhook/tms-net-tkn-webhook-create-key-intro.md "")
+* [Create Webhook Subscription](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-overview-webhook/tms-net-tkn-webhook-create-sub-intro.md "")
+* [Retrieve Webhook Subscription Details](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-overview-webhook/tms-net-tkn-webhook-retrieve-sub-intro.md "")
+* [Update Webhook Subscription](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-overview-webhook/tms-net-tkn-webhook-update-sub-intro.md "")
+* [Delete Webhook Subscription](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-overview-webhook/tms-net-tkn-webhook-delete-sub-intro.md "")
+  {#tms-overview-webhook_ul_3}  
+  When you send an API request to create a webhooks subscription, you must include the product and its associated events to which you are subscribing.  
+  You can create webhooks subscriptions for these `Token Management Service` network token events:
+
+|    Product ID     |          Event Types           |                                               Description                                               |
+|-------------------|--------------------------------|---------------------------------------------------------------------------------------------------------|
+| `tokenManagement` | `tms.networktoken.updated`     | Notifies you of a network token's change in expiration date or status (suspend, resume, or deactivate). |
+| `tokenManagement` | `tms.networktoken.provisioned` | Notifies you when a network token provision for an instrument identifier token has been successful.     |
+| `tokenManagement` | `tms.networktoken.binding`     | Notifies you of the binding status of the network token with the device.                                |
+[`Token Management Service`]
+
+Example: Product and Network Token Events in a Webhook Subscription
+
+```
+"productId": "tokenManagement",
+"eventTypes": [
+  "tms.networktoken.provisioned",
+  "tms.networktoken.updated",
+  "tms.networktoken.binding"
+]
+```
+
+For more info, see the [Webhooks Developer Guide](https://developer.example.com/docs/gateway/en-us/webhooks/implementation/all/rest/webhooks/wh-fg-intro.md "") .
+
+Create Keys for Digital Signature {#tms-net-tkn-webhook-create-key-intro}
+=========================================================================
+
+This section describes how to create keys for digital signature.
+
+Endpoint
+--------
+
+**Test:** `POST ``https://apitest.example.com``/kms/egress/v2/keys-sym`{#tms-net-tkn-webhook-create-key-intro_restcust-test}  
+**Production:** `POST ``https://api.example.com``/kms/egress/v2/keys-sym`  
+**Production in India:** `POST ``https://api.in.example.com``/kms/egress/v2/keys-sym`{#tms-net-tkn-webhook-create-key-intro_restcust-prod-india}
+
+Required Fields for Creating Keys for Digital Signature {#tms-net-tkn-webhook-create-key-reqfields}
+===================================================================================================
+
+clientRequestAction
+:
+
+keyInformation.provider
+:
+
+keyInformation.tenant
+:
+
+keyInformation.keyType
+:
+
+keyInformation.organizationId
+:
+{#tms-net-tkn-webhook-create-key-reqfields_dl_bcz_qry_dwb}
+
+REST Example: Creating Keys for Digital Signature {#tms-net-tkn-webhook-create-key-ex-rest}
+===========================================================================================
+
+Request
+
+```
+{
+  "clientRequestAction": "CREATE",
+  "keyInformation": {
+    "provider": "nrtd",
+    "tenant": "testrest",
+    "keyType": "sharedSecret",
+    "organizationId": "testrest"
+  }
+}
+```
+
+{#tms-net-tkn-webhook-create-key-ex-rest_codeblock_v4l_mlt_lwb}  
+Response to a Successful Request
+
+```
+{
+    "submitTimeUtc": "2023-02-10T21:26:58Z",
+    "status": "SUCCESS",
+    "keyInformation": {
+        "provider": "nrtd",
+        "tenant": "testrest",
+        "organizationId": "testrest",
+        "keyId": "f4602849-1466-7937-e053-5a588d0ac970",
+        "key": "CWK8MHJbHldt74kftIP/+0tTG89We+SWkS7qXjiVJJA=",
+        "keyType": "sharedSecret",
+        "status": "active",
+        "expirationDate": "2026-02-09T21:26:58Z"
+    }
+}
+```
+
+{#tms-net-tkn-webhook-create-key-ex-rest_codeblock_x4l_mlt_lwb}
+
+Create Webhook Subscription {#tms-net-tkn-webhook-create-sub-intro}
+===================================================================
+
+This section describes how to create a webhook subscription.
+
+> IMPORTANT
+> You must set the organizationId field value to that of the ` TMS ` vault owner. To receive life-cycle management notifications for network tokens that are created by transacting merchant IDs (MIDs) under that ` TMS ` vault, you must set the scope of the field value to ` descendants `.
+
+Endpoint
+--------
+
+**Test:** `POST ``https://apitest.example.com``/notification-subscriptions/v1/webhooks`{#tms-net-tkn-webhook-create-sub-intro_restcust-test}  
+**Production:** `POST ``https://api.example.com``/notification-subscriptions/v1/webhooks`  
+**Production in India:** `POST ``https://api.in.example.com``/notification-subscriptions/v1/webhooks`{#tms-net-tkn-webhook-create-sub-intro_restcust-prod-india}
+
+Required Fields for Creating Webhook Subscription {#tms-net-tkn-webhook-create-sub-reqfields}
+=============================================================================================
+
+clientRequestAction
+:
+
+keyInformation.provider
+:
+
+keyInformation.tenant
+:
+The value must be set to `nrtd`.
+
+keyInformation.keyType
+:
+
+keyInformation.organizationId
+:
+
+keyInformation.expiryDuration
+:
+{#tms-net-tkn-webhook-create-sub-reqfields_dl_bcz_qry_dwb}
+
+REST Example: Creating a Webhook Subscription {#tms-net-tkn-webhook-create-sub-ex-rest}
+=======================================================================================
+
+Request
+
+```
+{
+   "organization": {"organizationId": "TMSVaultOwnerOrgID"},
+   "product": {"productId": "tokenManagement"},
+   "webhook":    {
+      "webhookId": "e33b4ff7-f94a-2de4-e053-a2588e0a0403",
+      "webhookUrl": "https://URL",
+      "createdOn": "2021-12-15 23:46:00.053",
+      "eventTypes":       [
+         {"name": "tms.networktoken.binding"},
+         {"name": "tms.networktoken.provisioned"},
+         {"name": "tms.networktoken.updated"}
+      ],
+      "status": "ACTIVE",
+      "retryPolicy":       {
+         "algorithm": "ARITHMETIC",
+         "firstRetry": 5,
+         "interval": 5,
+         "numberOfRetries": 4,
+         "deactivateFlag": false,
+         "repeatSequenceCount": 4,
+         "repeatSequenceWaitTime": 5
+      },
+      "securityPolicy": [      {
+         "digitalSignatureEnabled": "yes",
+         "proxyType": "external",
+         "security_id": "c05cc30a-ce9b-487f-be38-65ab5977b5bc",
+         "security_type": "key"
+      }]
+   }
+}
+```
+
+{#tms-net-tkn-webhook-create-sub-ex-rest_codeblock_v4l_mlt_lwb}  
+Response to a Successful Request
+
+```
+{
+  "organizationId": "TMSVaultOwnerOrgID",
+  "productId": "terminalManagement",
+  "eventTypes": [
+    "tms.networktoken.binding",
+    "tms.networktoken.provisioned",
+    "tms.networktoken.updated"
+  ],
+  "webhookId": "e33b4ff7-f94a-2de4-e053-a2588e0a0403",
+  "webhookUrl": "https://NewURL",
+  "healthCheckUrl": "https://URL",
+  "createdOn": "2022-07-07 17:24:05.116",
+  "status": "ACTIVE",
+  "retryPolicy": {
+    "algorithm": "ARITHMETIC",
+    "firstRetry": 1,
+    "interval": 1,
+    "numberOfRetries": 3,
+    "deactivateFlag": false,
+    "repeatSequenceCount": 0,
+    "repeatSequenceWaitTime": 0
+  },
+  "securityPolicy": {
+    "securityType": "KEY",
+    "proxyType": "external",
+    "digitalSignatureEnabled": "yes"
+  },
+  "version": "3",
+  "deliveryType": "nrtdCentral",
+  "notificationScope": "DESCENDANTS"
+}
+```
+
+{#tms-net-tkn-webhook-create-sub-ex-rest_codeblock_x4l_mlt_lwb}
+
+Retrieve Webhook Subscription Details {#tms-net-tkn-webhook-retrieve-sub-intro}
+===============================================================================
+
+This section describes how to retrieve webhook subscription details.
+
+Endpoint
+--------
+
+**Test:** `GET ``https://apitest.example.com``/notification-subscriptions/v1/webhooks/{webhookID}`{#tms-net-tkn-webhook-retrieve-sub-intro_restcust-test}  
+**Production:** `GET ``https://api.example.com``/notification-subscriptions/v1/webhooks/{webhookID}`  
+**Production in India:** `GET ``https://api.in.example.com``/notification-subscriptions/v1/webhooks/{webhookID}`{#tms-net-tkn-webhook-retrieve-sub-intro_restcust-prod-india}
+
+Required Field for Retrieving Webhook Subscription Details {#tms-net-tkn-webhook-retrieve-sub-reqfields}
+========================================================================================================
+
+webhookID
+:
+Include the ID of the webhook you would like to update.
+{#tms-net-tkn-webhook-retrieve-sub-reqfields_dl_bcz_qry_dwb}
+
+REST Example: Retrieving Webhook Subscription Details {#tms-net-tkn-webhook-retrieve-sub-ex-rest}
+=================================================================================================
+
+Request
+
+```keyword
+GET https://apitest.example.com/notification-subscriptions/v1/webhooks/e33b4ff7-f94a-2de4-e053-a2588e0a0403
+```
+
+{#tms-net-tkn-webhook-retrieve-sub-ex-rest_codeblock_v4l_mlt_lwb}  
+Response to a Successful Request
+
+```
+{  
+  "organizationId": "testrest",  
+  "productId": "tokenManagement",  
+  "eventTypes": [  
+    "tms.networktoken.binding",  
+    "tms.networktoken.provisioned",    
+    "tms.networktoken.updated"
+  ],  
+  "webhookId": "e33b4ff7-f94a-2de4-e053-a2588e0a0403",  
+  "webhookUrl": "https://URL",  
+  "healthCheckUrl": "https://jURL",  
+  "createdOn": "2022-07-07 17:24:05.116",  
+  "status": "ACTIVE",  
+  "retryPolicy": {    
+    "algorithm": "ARITHMETIC",    
+    "firstRetry": 1,    
+    "interval": 1,    
+    "numberOfRetries": 3,    
+    "deactivateFlag": false,    
+    "repeatSequenceCount": 0,    
+    "repeatSequenceWaitTime": 0  
+  },  
+  "securityPolicy": {    
+    "securityType": "KEY",    
+    "proxyType": "external",    
+    "digitalSignatureEnabled": "yes"  
+  },  
+  "version": "3",  
+  "deliveryType": "nrtdCentral",  
+  "notificationScope": "DESCENDANTS"
+}
+```
+
+{#tms-net-tkn-webhook-retrieve-sub-ex-rest_codeblock_x4l_mlt_lwb}
+
+Update Webhook Subscription {#tms-net-tkn-webhook-update-sub-intro}
+===================================================================
+
+This section describes how to update a webhook subscription.
+
+Endpoint
+--------
+
+**Test:** `PATCH ``https://apitest.example.com``/notification-subscriptions/v1/webhooks/{webhookID}`{#tms-net-tkn-webhook-update-sub-intro_restcust-test}  
+**Production:** `PATCH ``https://api.example.com``/notification-subscriptions/v1/webhooks/{webhookID}`  
+**Production in India:** `PATCH ``https://api.in.example.com``/notification-subscriptions/v1/webhooks/{webhookID}`{#tms-net-tkn-webhook-update-sub-intro_restcust-prod-india}
+
+Required Field for Updating Webhook Subscription {#tms-net-tkn-webhook-update-sub-reqfields}
+============================================================================================
+
+webhookID
+:
+Include the ID of the webhook you would like to update.
+{#tms-net-tkn-webhook-update-sub-reqfields_dl_bcz_qry_dwb}
+
+REST Example: Updating Webhook Subscriptions {#tms-net-tkn-webhook-update-sub-ex-rest}
+======================================================================================
+
+Request
+
+```
+{
+  "description": "Update to my sample webhook",
+  "organizationId": "testrest",
+  "productId": "terminalManagement",
+  "webhookUrl": "https://NewURL"
+}
+```
+
+{#tms-net-tkn-webhook-update-sub-ex-rest_codeblock_v4l_mlt_lwb}  
+Response to a Successful Request
+
+```
+{
+  "organizationId": "testrest",
+  "productId": "terminalManagement",
+  "eventTypes": [
+    "tms.networktoken.binding",
+    "tms.networktoken.provisioned",
+    "tms.networktoken.updated"
+  ],
+  "webhookId": "e33b4ff7-f94a-2de4-e053-a2588e0a0403",
+  "webhookUrl": "https://NewURL",
+  "healthCheckUrl": "https://URL",
+  "createdOn": "2022-07-07 17:24:05.116",
+  "status": "ACTIVE",
+  "retryPolicy": {
+    "algorithm": "ARITHMETIC",
+    "firstRetry": 1,
+    "interval": 1,
+    "numberOfRetries": 3,
+    "deactivateFlag": false,
+    "repeatSequenceCount": 0,
+    "repeatSequenceWaitTime": 0
+  },
+  "securityPolicy": {
+    "securityType": "KEY",
+    "proxyType": "external",
+    "digitalSignatureEnabled": "yes"
+  },
+  "version": "3",
+  "deliveryType": "nrtdCentral",
+  "notificationScope": "DESCENDANTS"
+}
+```
+
+{#tms-net-tkn-webhook-update-sub-ex-rest_codeblock_x4l_mlt_lwb}
+
+Delete Webhook Subscription {#tms-net-tkn-webhook-delete-sub-intro}
+===================================================================
+
+This section describes how to delete a webhook subscription.
+
+Endpoint
+--------
+
+**Test:** `DELETE ``https://apitest.example.com``/notification-subscriptions/v1/webhooks/{webhookID}`{#tms-net-tkn-webhook-delete-sub-intro_restcust-test}  
+**Production:** `DELETE ``https://api.example.com``/notification-subscriptions/v1/webhooks/{webhookID}`  
+**Production in India:** `DELETE ``https://api.in.example.com``/notification-subscriptions/v1/webhooks/{webhookID}`{#tms-net-tkn-webhook-delete-sub-intro_restcust-prod-india}
+
+Required Field for Deleting a Webhook Subscription {#tms-net-tkn-webhook-delete-sub-reqfields}
+==============================================================================================
+
+webhookID
+:
+Include the ID of the webhook you would like to update.
+
+REST Example: Deleting a Webhook Subscription {#tms-net-tkn-webhook-delete-sub-ex-rest}
+=======================================================================================
+
+Request
+
+```keyword
+DELETE https://apitest.example.com/notification-subscriptions/v1/webhooks/{{tms-webhook-id}}
+```
+
+Response to a Successful Request  
+A successful delete response returns an empty `HTTP 204 No Content` status. For more information, see [HTTP Status Codes](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-ref-info/tms-http-status.md "").
+
+Network Tokens {#tms_net_tkn_intro}
+===================================
+
+Authorize a Payment While Ignoring Network Token {#tms-net-tkn-direct-merch-pay-intro}
+======================================================================================
+
+This section describes how to authorize a payment ignoring a network token.
+
+Endpoint
+--------
+
+**Test:** `POST ``https://apitest.example.com``/pts/v2/payments`{#tms-net-tkn-direct-merch-pay-intro_restcust-test}  
+**Production:** `POST ``https://api.example.com``/pts/v2/payments `  
+**Production in India:** `POST ``https://api.in.example.com``/pts/v2/payments`{#tms-net-tkn-direct-merch-pay-intro_restcust-prod-india}
+
+Required Fields for Authorizing a Payment While Ignoring Network Token {#tms-net-tkn-direct-merch-pay-reqfields}
+================================================================================================================
+
+[clientReferenceInformation.code](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/client-ref-info-aa/client-ref-info-code.md "")
+:
+
+[paymentInformation.customer.id](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/payment-info-aa/payment-info-customer-id.md "")
+:
+
+[paymentInformation.paymentInformation.id](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/payment-info-aa/payment-info-payment-instrument-id.md "")
+:
+
+[paymentInformation.shippingAddress.id](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/payment-info-aa/payment-info-shipping-add-id.md "")
+:
+
+[orderInformation.amountDetails.currency](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-amount-details-currency.md "")
+:
+
+[orderInformation.amountDetails.totalAmount](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-amount-details-total-amount.md "")
+:
+
+[processingInformation.capture](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/processing-info-aa/processing-info-capture-a.md "")
+:
+
+[processingInformation.commerceIndicator](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/processing-info-aa/processing-info-commerce-ind.md "")
+:
+
+[tokenInformation.networkTokenOption](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/token-info-aa/token-info-network-token-option.md "")
+:
+Set value to `ignore`.
+{#tms-net-tkn-direct-merch-pay-reqfields_dl_bcz_qry_dwb}
+
+Related Information {#tms-net-tkn-direct-merch-pay-reqfields_section_jpc_xzz_sxb}
+---------------------------------------------------------------------------------
+
+* [API Field Reference for the REST API](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/api-fields-about-guide.md "")
+  {#tms-net-tkn-direct-merch-pay-reqfields_ul_kpc_xzz_sxb}
+
+REST Example: Authorizing a Payment While Ignoring Network Token {#tms-net-tkn-direct-merch-pay-ex-rest}
+========================================================================================================
+
+Request
+
+```
+{
+    "clientReferenceInformation": {
+        "code": "RTS-Auth"
+    },
+    "paymentInformation": {
+        "card": {
+            "expirationYear": "2031",
+            "expirationMonth": "12",
+            "type": "001"
+        },
+        "instrumentIdentifier": {
+            "id": "7010000000016241111"
+        }
+    },
+    "orderInformation": {
+        "amountDetails": {
+            "currency": "USD",
+            "totalAmount": "1.00"
+        }
+    },
+    "processingInformation": {
+        "capture": "false",
+        "commerceIndicator": "internet"
+    },
+    "tokenInformation": {
+        "networkTokenOption": "ignore"
+    }
+}
+```
+
+{#tms-net-tkn-direct-merch-pay-ex-rest_codeblock_v4l_mlt_lwb}  
+Response to a Successful Request
+
+```
+{
+    "_links": {
+        "authReversal": {
+            "method": "POST",
+            "href": "/pts/v2/payments/6769913443166412604951/reversals"
+        },
+        "self": {
+            "method": "GET",
+            "href": "/pts/v2/payments/6769913443166412604951"
+        },
+        "capture": {
+            "method": "POST",
+            "href": "/pts/v2/payments/6769913443166412604951/captures"
+        }
+    },
+    "clientReferenceInformation": {
+        "code": "RTS-Auth"
+    },
+    "id": "6769913443166412604951",
+    "orderInformation": {
+        "amountDetails": {
+            "authorizedAmount": "1.00",
+            "currency": "USD"
+        }
+    },
+    "paymentAccountInformation": {
+        "card": {
+            "type": "001"
+        }
+    },
+    "paymentInformation": {
+        "tokenizedCard": {
+            "type": "001"
+        },
+        "instrumentIdentifier": {
+            "id": "7030000000014911515",
+            "state": "ACTIVE"
+        },
+        "shippingAddress": {
+            "id": "F537CE8DBA2F032CE053AF598E0A64F2"
+        },
+        "paymentInstrument": {
+            "id": "F537E3D12322416EE053AF598E0AD771"
+        },
+        "card": {
+            "type": "001"
+        },
+        "customer": {
+            "id": "F537CE8DBA2C032CE053AF598E0A64F2"
+        }
+    },
+    "pointOfSaleInformation": {
+        "terminalId": "111111"
+    },
+    "processorInformation": {
+        "paymentAccountReferenceNumber": "V0010013019326121174070050420",
+        "approvalCode": "888888",
+        "networkTransactionId": "123456789619999",
+        "transactionId": "123456789619999",
+        "responseCode": "100",
+        "avs": {
+            "code": "X",
+            "codeRaw": "I1"
+        }
+    },
+    "reconciliationId": "744295942E2LY3F8",
+    "status": "AUTHORIZED",
+    "submitTimeUtc": "2023-02-21T14:55:44Z"
+}
+```
+
+{#tms-net-tkn-direct-merch-pay-ex-rest_codeblock_x4l_mlt_lwb}
+
+Update Merchant-Initiated Transaction Authorization Options {#tms-mit-update-auth-opt-intro}
+============================================================================================
+
+This section describes how to update merchant-initiated transaction (MIT) authorization options.
+
+Endpoint
+--------
+
+**Test:** `PATCH ``https://apitest.example.com``/tms/v1/instrumentidentifiers/{instrumentIdentifierTokenId}`{#tms-mit-update-auth-opt-intro_restcust-test}  
+**Production:** `PATCH ``https://api.example.com``/tms/v1/instrumentidentifiers/{instrumentIdentifierTokenId}`  
+**Production in India:** `PATCH ``https://api.in.example.com``/tms/v1/instrumentidentifiers/{instrumentIdentifierTokenId}`{#tms-mit-update-auth-opt-intro_restcust-prod-india}  
+*`{instrumentIdentifierTokenId}`* is the instrument identifier token ID returned in the id field when you created the instrument identifier token. For more information, see [Create an Instrument Identifier](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-ii-tkn/tms-ii-tkn-create-intro.md "").
+
+Required Fields for Updating MIT Authorization Options {#tms-mit-update-auth-opt-reqfields}
+===========================================================================================
+
+processingInformation.authorizationOptions. initiator.merchantInitiatedTransaction.previousTransactionId
+:
+
+processingInformation.authorizationOptions. initiator.merchantInitiatedTransaction.originalAuthorizedAmount
+:
+
+processingInformation.authorizationOptions. initiator.merchantInitiatedTransaction.processorTransactionId
+:
+
+Related Information {#tms-mit-update-auth-opt-reqfields_section_jpc_xzz_sxb}
+----------------------------------------------------------------------------
+
+* [API Field Reference for the REST API](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/api-fields-about-guide.md "")
+  {#tms-mit-update-auth-opt-reqfields_ul_kpc_xzz_sxb}
+
+REST Example: Updating MIT Authorization Options {#tms-mit-update-auth-opt-ex-rest}
+===================================================================================
+
+Request
+
+```
+{
+    "processingInformation": {
+        "authorizationOptions": {
+            "initiator": {
+                "merchantInitiatedTransaction": {
+                    "previousTransactionId": "123456789012345",
+                    "originalAuthorizedAmount": "1",
+                    "processorTransactionId": "123456789012345123"
+                }
+            }
+        }
+    }
+}
+```
+
+Response to a Successful Request
+
+```keyword
+{
+    "_links": {
+        "self": {
+            "href": "https://apitest.example.com/tms/v1/instrumentidentifiers/7010000000016241111"
+        },
+        "paymentInstruments": {
+            "href": "https://apitest.example.com/tms/v1/instrumentidentifiers/7010000000016241111/paymentinstruments"
+        }
+    },
+    "id": "7010000000016241111",
+    "object": "instrumentIdentifier",
+    "state": "ACTIVE",
+    "card": {
+        "number": "411111XXXXXX1111"
+    },
+    "processingInformation": {
+        "authorizationOptions": {
+            "initiator": {
+                "merchantInitiatedTransaction": {
+                    "previousTransactionId": "123456789012345",
+                    "originalAuthorizedAmount": "1",
+                    "processorTransactionId": "123456789012345123"
+                }
+            }
+        }
+    },
+    "metadata": {
+        "creator": "testrest"
+    }
+}
+```
+
+Provision a Network Token for a Card Number {#tms-net-tkn-partner-card-intro}
+=============================================================================
+
+This section describes how to provision a network token for a card number.  
+Network tokens that are provisioned by `TMS` are card-on-file (COF) tokens.
+
+Endpoint
+--------
+
+**Test:** `POST ``https://apitest.example.com``/tms/v1/instrumentidentifiers`{#tms-net-tkn-partner-card-intro_restcust-test}  
+**Production:** `POST ``https://api.example.com``/tms/v1/instrumentidentifiers`  
+**Production in India:** `POST ``https://api.in.example.com``/tms/v1/instrumentidentifiers`{#tms-net-tkn-partner-card-intro_restcust-prod-india}
+
+Required Fields for Provisioning a Network Token for a Card Number {#tms-net-tkn-partner-card-reqfields}
+========================================================================================================
+
+card.number
+:
+
+card.expirationMonth
+:
+
+card.expirationYear
+:
+
+type
+:
+{#tms-net-tkn-partner-card-reqfields_dl_bcz_qry_dwb}
+
+Related Information {#tms-net-tkn-partner-card-reqfields_section_jpc_xzz_sxb}
+-----------------------------------------------------------------------------
+
+* [API Field Reference for the REST API](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/api-fields-about-guide.md "")
+  {#tms-net-tkn-partner-card-reqfields_ul_kpc_xzz_sxb}
+
+Optional Fields for Provisioning a Network Token for a Card Number {#tms-net-tkn-partner-card-optfields}
+========================================================================================================
+
+card.securityCode
+:
+{#tms-net-tkn-partner-card-optfields_dl_bcz_qry_dwb}
+
+Related Information {#tms-net-tkn-partner-card-optfields_section_jpc_xzz_sxb}
+-----------------------------------------------------------------------------
+
+* [API Field Reference for the REST API](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/api-fields-about-guide.md "")
+  {#tms-net-tkn-partner-card-optfields_ul_kpc_xzz_sxb}
+
+REST Example: Provisioning a Network Token for a Card Number {#tms-net-tkn-partner-card-ex-rest}
+================================================================================================
+
+Request
+
+```
+{
+  "type": "enrollable card",
+  "card": {
+    "number": "4895379987X11515",
+    "expirationMonth": "12",
+    "expirationYear": "2031",
+    "securityCode": "089"
+  }
+}
+```
+
+{#tms-net-tkn-partner-card-ex-rest_codeblock_v4l_mlt_lwb}  
+Response to a Successful Request
+
+```keyword
+{
+    "_links": {
+        "self": {
+            "href": "https://apitest.example.com/tms/v1/instrumentidentifiers/7030000000014911515"
+        },
+        "paymentInstruments": {
+            "href": "https://apitest.example.com/tms/v1/instrumentidentifiers/7030000000014911515/paymentinstruments"
+        }
+    },
+    "id": "7030000000014911515",
+    "object": "instrumentIdentifier",
+    "state": "ACTIVE",
+    "tokenizedCard": {
+        "state": "ACTIVE",
+        "number": "489537XXXXXX5914",
+        "expirationMonth": "12",
+        "expirationYear": "2022",
+        "type": "relay",
+        "card": {
+            "suffix": "1515",
+            "expirationMonth": "12",
+            "expirationYear": "2031"
+        }
+    },
+    "card": {
+        "number": "489537XXXXXX1515"
+    },
+    "issuer": {
+        "paymentAccountReference": "V0010013019326121174070050420"
+    },
+    "metadata": {
+        "creator": "testrest"
+    }
+}
+```
+
+{#tms-net-tkn-partner-card-ex-rest_codeblock_x4l_mlt_lwb}
+
+Provision a Network Token for an Existing Instrument Identifier {#tms-net-tkn-partner-ii-intro}
+===============================================================================================
+
+This section describes how to provision a network token for an existing instrument identifier.
+
+Endpoint
+--------
+
+**Test:** `POST ``https://apitest.example.com``/tms/v1/instrumentidentifiers/{instrumentIdentifierTokenId}/enrollment`{#tms-net-tkn-partner-ii-intro_restcust-test}  
+**Production:** `POST ``https://api.example.com``/tms/v1/instrumentidentifiers/{instrumentIdentifierTokenId}/enrollment`  
+**Production in India:** `POST ``https://api.in.example.com``/tms/v1/instrumentidentifiers/{instrumentIdentifierTokenId}/enrollment`{#tms-net-tkn-partner-ii-intro_restcust-prod-india}  
+`instrumentIdentifierTokenId` is the instrument identifier token ID returned in the id field when you created the instrument identifier token. For more information, see [Create an Instrument Identifier](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-ii-tkn/tms-ii-tkn-create-intro.md "").
+
+Required Fields for Provisioning a Network Token for an Existing Instrument Identifier {#tms-net-tkn-partner-ii-reqfields}
+==========================================================================================================================
+
+card.expirationMonth
+:
+
+card.expirationYear
+:
+
+card.securityCode
+:
+
+instrumentIdentifierTokenId
+:
+Include the ID of the instrument identifier token you want to retrieve in the URL path.
+
+type
+:
+{#tms-net-tkn-partner-ii-reqfields_dl_bcz_qry_dwb}
+
+Related Information {#tms-net-tkn-partner-ii-reqfields_section_jpc_xzz_sxb}
+---------------------------------------------------------------------------
+
+* [API Field Reference for the REST API](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/api-fields-about-guide.md "")
+  {#tms-net-tkn-partner-ii-reqfields_ul_kpc_xzz_sxb}
+
+Optional Fields for Provisioning a Network Token for an Existing Instrument Identifier {#tms-net-tkn-partner-ii-optfields}
+==========================================================================================================================
+
+card.securityCode
+:
+{#tms-net-tkn-partner-ii-optfields_dl_bcz_qry_dwb}
+
+REST Example: Provisioning a Network Token for an Existing Instrument Identifier {#tms-net-tkn-partner-ii-ex-rest}
+==================================================================================================================
+
+Request
+
+```
+{
+  "type": "enrollable card",
+  "card": {
+    "expirationMonth": "12",
+    "expirationYear": "2031",
+    "securityCode": "089"
+  }
+}
+```
+
+{#tms-net-tkn-partner-ii-ex-rest_codeblock_v4l_mlt_lwb}  
+Response to a Successful Request
+
+```keyword
+{
+  "_links": {
+    "self": {
+      "href": "https://apitest.example.com/tms/v1/instrumentidentifiers/7010000000016241111"
+    },
+    "paymentInstruments": {
+      "href": "https://apitest.example.com/tms/v1/instrumentidentifiers/7010000000016241111/paymentinstruments"
+    }
+  },
+  "id": "7010000000016241111",
+  "object": "instrumentIdentifier",
+  "state": "ACTIVE",
+  "tokenizedCard": {
+    "state": "ACTIVE",
+    "type": "relay"
+  },
+  "card": {
+    "number": "411111XXXXXX1111"
+  },
+  "metadata": {
+    "creator": "testrest"
+  }
+}
+```
+
+{#tms-net-tkn-partner-ii-ex-rest_codeblock_x4l_mlt_lwb}
+
+Provision a Network Token for a Consumer {#tms-net-tkn-card-create-cof-intro}
+=============================================================================
+
+When you provision a network token for an individual consumer in a wallet, you can manage the network token and payment credentials separately for that consumer. Provisioning network tokens for a consumer is supported for American Express, Mastercard, and Relay. This section describes how to provision a network token for a card number and a consumer ID.  
+Network tokens that are provisioned by `TMS` are card-on-file (COF) tokens.
+
+> IMPORTANT
+> You must be enabled as an ECOM enabler in the Relay Token Service (VTS) to provision a network token with a consumer ID. For more information, contact your ` Payment Gateway ` account representative.
+
+Endpoint
+--------
+
+**Test:** `POST ``https://apitest.example.com``/tms/v2/tokenized-cards`  
+**Production:** `POST ``https://api.example.com``/tms/v2/tokenized-cards`  
+**Production in India:** `POST ``https://api.in.example.com``/tms/v2/tokenized-cards`
+
+Required Fields for Provisioning a COF Network Token for a Consumer {#tms-net-tkn-card-create-cof-reqfields}
+============================================================================================================
+
+card.number
+:
+
+card.expirationMonth
+:
+
+card.expirationYear
+:
+
+card.securityCode
+:
+
+createInstrumentIdentifier
+:
+Set to `true`.
+
+source
+:
+Set to `ONFILE`.
+
+consumerId
+:
+When this field is not included, a network token is provisioned only for the PAN in the request.
+
+Related Information
+-------------------
+
+* [API Field Reference for the REST API](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/rest-api-fields-intro.md "")
+  {#tms-net-tkn-card-create-cof-reqfields_ul_kpc_xzz_sxb}
+
+REST Example: Provisioning a Network Token for a Consumer {#tms-net-tkn-card-create-cof-ex-rest}
+================================================================================================
+
+Request
+
+```
+{
+  "createInstrumentIdentifier": true,
+  "source": "ONFILE",
+  "consumerId": "123456",
+  "card": {
+    "number": "X895379980000580",
+    "expirationMonth": "12",
+    "expirationYear": "2023",
+    "securityCode": "123"
+  }
+}
+```
+
+{#tms-net-tkn-card-create-cof-ex-rest_codeblock_c51_vmt_gwb}  
+Response to a Successful Request
+
+```
+{
+  "_links": {
+    "self": {
+      "href": "/tms/v2/tokenized-cards/7030000000014911515"
+    },
+    "instrumentidentifier": {
+      "href": "/tms/v1/instrument-identifier/7030000000042974378"
+    }
+  },
+  "id": "7030000000014911515",
+  "object": "tokenizedCard",
+  "state": "ACTIVE",
+  "source": "ONFILE",
+  "enrollmentId": "96eb80a56b76ae1d486e14f40b3d7a01",
+  "tokenReferenceId": "059ae2f74835647400c219884b7bc601",
+  "paymentAccountReference": "V0010013022298169667504231315",
+  "number": "489537XXXXXX9215",
+  "expirationMonth": "10",
+  "expirationYear": "2031",
+  "type": "001",
+  "card": {
+    "suffix": "0580",
+    "expirationMonth": "12",
+    "expirationYear": "2023"
+  },
+  "metadata": {
+    "cardArt": {
+      "combinedAsset": {
+        "id": "d3225702-354a-4f17-8c40-1727de7ffa57",
+        "_links": {
+          "self": {
+            "href": "/tms/v2/tokens/7030000000042974378/mdes/assets/card-art-combined"
+          }
+        }
+      }
+    },
+    "issuer": {
+      "name": "METROBANK CARD CORPORATION (A FINANCE COMPANY)",
+      "shortDescription": "METROBANK CARD CORPORATION"
+    },
+    "creator": "testrest"
+  }
+}
+```
+
+Provision a Network Token for a Token {#tms-net-tkn-card-create-token-intro}
+============================================================================
+
+This section describes how to create a network token for a given token.  
+Network tokens that are provisioned by `TMS` are card-on-file (COF) tokens.
+
+Endpoint
+--------
+
+**Test:** `POST ``https://apitest.example.com``/tms/v2/tokenized-cards`  
+**Production:** `POST ``https://api.example.com``/tms/v2/tokenized-cards`  
+**Production in India:** `POST ``https://api.in.example.com``/tms/v2/tokenized-cards`
+
+Required Fields for Provisioning a Network Token for a Token {#tms-net-tkn-card-create-token-reqfields}
+=======================================================================================================
+
+card.number
+:
+Set to the tokenized card number. When source is set to `TOKEN`, this field value must be a digital network token to provision a COF network token.
+
+card.expirationMonth
+:
+
+card.expirationYear
+:
+
+card.securityCode
+:
+
+createInstrumentIdentifier
+:
+Set to `true`.
+
+source
+:
+Set to `TOKEN`. The value set for card.number must be a digital network token to provision a COF network token.
+
+consumerId
+:
+When this field is not included, a network token is provisioned only for the PAN in the request.
+
+Related Information
+-------------------
+
+* [API Field Reference for the REST API](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/api-fields-about-guide.md "")
+  {#tms-net-tkn-card-create-token-reqfields_ul_kpc_xzz_sxb}
+
+REST Example: Provisioning a Network Token for a Token {#tms-net-tkn-card-create-token-ex-rest}
+===============================================================================================
+
+Request
+
+```
+{
+  "createInstrumentIdentifier": true,
+  "source": "TOKEN",
+  "card": {
+    "number": "X621943123037127",
+    "expirationMonth": "12",
+    "expirationYear": "2025",
+    "securityCode": "123"
+  }
+}
+```
+
+{#tms-net-tkn-card-create-token-ex-rest_codeblock_c51_vmt_gwb}  
+Response to a Successful Request
+
+```
+{
+  "_links": {
+    "self": {
+      "href": "/tms/v2/tokenized-cards/7030000000014911515"
+    },
+    "instrumentidentifier": {
+      "href": "/tms/v1/instrument-identifier/7030000000042974378"
+    }
+  },
+  "id": "7030000000014911515",
+  "object": "tokenizedCard",
+  "state": "ACTIVE",
+  "source": "TOKEN",
+  "enrollmentId": "96eb80a56b76ae1d486e14f40b3d7a01",
+  "tokenReferenceId": "059ae2f74835647400c219884b7bc601",
+  "paymentAccountReference": "V0010013022298169667504231315",
+  "number": "489537XXXXXX9215",
+  "expirationMonth": "10",
+  "expirationYear": "2031",
+  "type": "001",
+  "card": {
+    "suffix": "0580",
+    "expirationMonth": "12",
+    "expirationYear": "2023"
+  },
+  "metadata": {
+    "cardArt": {
+      "combinedAsset": {
+        "id": "d3225702-354a-4f17-8c40-1727de7ffa57",
+        "_links": {
+          "self": {
+            "href": "/tms/v2/tokens/7030000000042974378/mdes/assets/card-art-combined"
+          }
+        }
+      }
+    },
+    "issuer": {
+      "name": "METROBANK CARD CORPORATION (A FINANCE COMPANY)",
+      "shortDescription": "METROBANK CARD CORPORATION"
+    },
+    "creator": "testrest"
+  }
+}
+```
+
+Retrieve a Standalone Network Token {#tms-net-tkn-card-retrieve-tkn-consumer-intro}
+===================================================================================
+
+This section contains the required information for partners, merchants, and acquirers to retrieve a standalone network token.
+
+Endpoint
+--------
+
+**Test:** `GET ``https://apitest.example.com``/tms/v2/tokenized-cards/{tokenizedCardId}`  
+**Production:** `GET ``https://api.example.com``/tms/v2/tokenized-cards/{tokenizedCardId}`  
+**Production in India:** `GET ``https://api.in.example.com``/tms/v2/tokenized-cards/{tokenizedCardId}`  
+*{tokenizedCardId}* is the tokenized card ID returned in the id field when you provisioned the network token. For more information, see [Provision a Network Token for a Consumer](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-net-tkn-intro/tms-net-tkn-card-create-cof-intro.md "").
+
+REST Example: Retrieving a Standalone Network Token {#tms-net-tkn-card-retrieve-tkn-consumer-ex-rest}
+=====================================================================================================
+
+Request
+
+```keyword
+GET https://apitest.example.com/tms/v2/tokenized-cards/223ACDECF1681954E063A2598D0A786D
+```
+
+Response to a Successful Request
+
+```
+{
+    "_links": {
+        "self": {
+            "href": "/tms/v2/tokenized-cards/223ACDECF1681954E063A2598D0A786D"
+        },
+        "instrumentIdentifier": {
+            "href": "/tms/v1/instrumentidentifiers/7040890000006625091"
+        }
+    },
+    "id": "223ACDECF1681954E063A2598D0A786D",
+    "object": "tokenizedCard",
+    "state": "ACTIVE",
+    "enrollmentId": "FM4MMC00001441368fa429c85a5d4df5ad1875bfd2faa5eb",
+    "tokenReferenceId": "DM4MMC1US0000000a7fab5f3a27e49daaf1984f7b49ab2f6",
+    "number": "521415XXXXXX5091",
+    "expirationMonth": "10",
+    "expirationYear": "2027",
+    "type": "mastercard",
+    "card": {
+        "suffix": "0747",
+        "expirationMonth": "12",
+        "expirationYear": "2025"
+    },
+    "metadata": {
+        "cardArt": {
+            "combinedAsset": {
+                "id": "9a90ad5f-8577-4a7a-856f-eb66e5437671",
+                "_links": {
+                    "self": {
+                        "href": "/tms/v2/tokens/7040890000006625091/mdes/assets/card-art-combined"
+                    }
+                }
+            },
+            "brandLogoAsset": {
+                "id": "3d7c2517-6b98-4eac-a099-9bd407830e0e",
+                "_links": {
+                    "self": {
+                        "href": "/tms/v2/tokens/7040890000006625091/mdes/assets/brand-logo"
+                    }
+                }
+            },
+            "issuerLogoAsset": {
+                "id": "f607c880-ceaa-4e88-86a7-de854abc8417",
+                "_links": {
+                    "self": {
+                        "href": "/tms/v2/tokens/7040890000006625091/mdes/assets/issuer-logo"
+                    }
+                }
+            },
+            "iconAsset": {
+                "id": "549a3034-12da-4e85-b0d9-9ad19fec6e2b",
+                "_links": {
+                    "self": {
+                        "href": "/tms/v2/tokens/7040890000006625091/mdes/assets/icon"
+                    }
+                }
+            },
+            "foregroundColor": "0F0F0F"
+        },
+        "issuer": {
+            "name": "Test IssuerÂ®",
+            "shortDescription": "MasterCard Test Bank",
+            "longDescription": "Test Bank for MasterCard MTF"
+        }
+    },
+    "source": "ONFILE"
+}
+```
+
+Delete a Standalone Network Token {#tms-net-tkn-card-delete-tkn-consumer-intro}
+===============================================================================
+
+This section contains the required information for partners, merchants, and acquirers to delete a standalone network token.  
+A successful delete response returns an empty `HTTP 204 No Content` status. For information on status codes, see [HTTP Status Codes](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-ref-info/tms-http-status.md "").
+
+> IMPORTANT This is only available for Relay network tokens. You cannot use this feature to delete American Express or Mastercard network tokens.
+
+Endpoint
+--------
+
+**Test:** `DELETE ``https://apitest.example.com``/tms/v2/tokenized-cards/{tokenizedCardId}`  
+**Production:** `DELETE ``https://api.example.com``/tms/v2/tokenized-cards/{tokenizedCardId}`  
+**Production in India:** `DELETE ``https://api.in.example.com``/tms/v2/tokenized-cards/{tokenizedCardId}`  
+*{tokenizedCardId}* is the tokenized card ID returned in the id field when you provisioned the network token. For more information, see [Provision a Network Token for a Consumer](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-net-tkn-intro/tms-net-tkn-card-create-cof-intro.md "").
+
+REST Example: Deleting a Standalone Network Token {#tms-net-tkn-card-delete-tkn-consumer-ex-rest}
+=================================================================================================
+
+Request
+
+```keyword
+DELETE https://apitest.example.com/tms/v2/tokenized-cards/223ACDECF1681954E063A2598D0A786D
+```
+
+Response to a Successful Request  
+A successful delete response returns an empty `HTTP 204 No Content` status.
+
+Retrieve Network Token Payment Credentials {#tms-net-tkn-partner-retrieve-pay-cred-intro}
+=========================================================================================
+
+This section describes how to retrieve network token payment credentials such as:
+
+* Network token value
+* Cryptogram (Relay and Mastercard only)
+* Dynamic card verification value (CVV) (American Express only)  
+  Network token payment credentials are returned as a JSON web encryption (JWE) response.
+
+Prerequisites
+-------------
+
+You must have the payment credentials service enabled for the `TMS` vault from which the network token is retrieved. For information on how to enable the payment credentials service, see [Token Vault Management](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-onboarding/tms-vault-hierarchy.md "").  
+You must have a message-level encryption (MLE) key from the `Business Center` to retrieve network token data. For information on how to create an MLE key, see [Message-Level Encryption Keys](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-onboarding/tms-mle-setup.md "").
+
+Endpoint
+--------
+
+**Test:** `POST ``https://apitest.example.com``/tms/v2/tokens/`*{tokenId}/*`payment-credentials`{#tms-net-tkn-partner-retrieve-pay-cred-intro_restcust-test}  
+**Production:** `POST ``https://api.example.com``/tms/v2/tokens/`*{tokenId}*`/payment-credentials`  
+**Production in India:** `POST ``https://api.in.example.com``/tms/v2/tokens/`*{tokenId}*`/payment-credentials`{#tms-net-tkn-partner-retrieve-pay-cred-intro_restcust-prod-india}  
+The *`{tokenId}`* is the token ID returned in the id field when you created the customer, payment instrument or instrument identifier token. See [Create an Instrument Identifier](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-ii-tkn/tms-ii-tkn-create-intro.md "") for more information.
+
+REST Example: Retrieving Network Token Payment Credentials {#tms-net-tkn-partner-retrieve-pay-cred-ex-rest}
+===========================================================================================================
+
+Request
+
+```keyword
+POST https://apitest.example.com/tms/v2/tokens/7040890000006625091/payment-credentials
+```
+
+{#tms-net-tkn-partner-retrieve-pay-cred-ex-rest_codeblock_v4l_mlt_lwb}  
+Response to a Successful Request: BASE 64
+
+```
+JraWQiOiI5OWY5YmVjOTlmMzQ1MDJmMDE2NWIyYmJhYWYyODAxNDNhOTI0OWNjIiwiY3R5IjoianNvbiIsInR5cCI6IkpXVCIsImVuYyI6IkEyNTZHQ00iLCJhbGciOiJSU0EtT0FFUC0yNTYifQ.uYCE2zysWJB8E562FGJl4YyotZEHw4Az-2fvhjaUWubuAZ2tmZm44oKUdsfsBLYWInxpMDUsiENTTHG_UJJ25Snhcft6eZGj79gW_S55ZAGAi1eYIJA08gr01U7P-1QIzQ5t6dlkTRZElYDiNjypSaVfQPQPODaGNfB04Li7Pt88i-PIspGafq9P7TgacPyKoIkvM5CwLWbwSZYN_jdFq8hEu4Dy7gqDpf0z-rCdtWggWpFbGwdurDrKCbLBoQ4dY7OckJoe2OOWH-O1h_7uZymDDUjnqWFRcHgjxY7bmWJz94i_r4QUaoTQiaaqgyP6A2H3Gmt6Dy4VpIzO2XgLQA._cLex9BPstYqqnfe.RMbdjAqWR6HaVZ7USbp6j-KWPC1jGc3Wzk4M_CwJ58X2NNZ5ekUpAvU28_MbqQ2W6MLhJ7ulgfU5mk9_Y5nvAW6Yh68Ctye2yOhgu_V_33aLmz3iZP5AEGi7HeJVng0hy4EaQHNb92XYXUV1mvFHJokA4cRaj3eKwh6v-1lRhB4uIgXU62ZanVGGu5c7UkVkf6JiigZarGJiY2DKCRjYnbQYkj4JNFY94JlS50wTnGrk3MiAJN9DYIU-6US98zWGJ8VhBwhMuXk1juqVBfifjJMFa_-vnJjGpq1ri2buZ7hMJG-x0PIYoHUGSFeqNrcLUjJxI0o8lnXfhj7DtfYvNc0e4g5U39xtk-T2TDnQfdekRVxgdxcVR4mZdEqUHBxYUWTSW4AbgV-fjuCGDCkUoPIgkZ95y4RJhSPZzjZHdulf2Fk3L7e-nto2PB25zUTt_aXeNBSH8zjmaI2ve6D3VN0ScduRMl_9PXv1876opHEGqgkKLSTXcTUasXKlzMEiUzLl3p5pN30KnVbryAzuU3hhmIMyyPpEQkp9h3WlD4sc5oH1E8YtihLlSTtTUNwX5dJuR6iVwpKqFxECqYPtDWlzXQDTedFqdTA4isE3MCs.th9qWPzsevuDYp--06oPOw
+```
+
+{#tms-net-tkn-partner-retrieve-pay-cred-ex-rest_codeblock_qbw_5fd_rwb}  
+Response to a Successful Request: Decrypted
+
+```
+{
+    "_links": {
+      "self": {
+        "href": "/tms/v2/tokens/7040890000006625091/payment-credentials"
+      },
+      "tokenized-cards": {
+        "href": "/tms/v2/tokenized-cards/223ACDECF1681954E063A2598D0A786D"
+      }
+    },
+    "tokenizedCard": {
+      "id": "223ACDECF1681954E063A2598D0A786D",
+      "state": "ACTIVE",
+      "enrollmentId": "FM4MMC00001441368fa429c85a5d4df5ad1875bfd2faa5eb",
+      "tokenReferenceId": "DM4MMC1US0000000a7fab5f3a27e49daaf1984f7b49ab2f6",
+      "number": “X214150083525091",
+      "expirationMonth": "10",
+      "expirationYear": "2027",
+      "type": "mastercard",
+      "cryptogram": "AJnA9YsVfmS8AAFHiRkBAAADFA==",
+      "requestorId": "50162233570",
+      "card": {
+        "suffix": "0747",
+        "expirationMonth": "12",
+        "expirationYear": "2025"
+      },
+      "metadata": {
+        "cardArt": {
+          "combinedAsset": {
+            "id": "9a90ad5f-8577-4a7a-856f-eb66e5437671",
+            "_links": {
+              "self": {
+                "href": "/tms/v2/tokens/7040890000006625091/mdes/assets/card-art-combined"
+              }
+            }
+          },
+          "brandLogoAsset": {
+            "id": "3d7c2517-6b98-4eac-a099-9bd407830e0e",
+            "_links": {
+              "self": {
+                "href": "/tms/v2/tokens/7040890000006625091/mdes/assets/brand-logo"
+              }
+            }
+          },
+          "issuerLogoAsset": {
+            "id": "f607c880-ceaa-4e88-86a7-de854abc8417",
+            "_links": {
+              "self": {
+                "href": "/tms/v2/tokens/7040890000006625091/mdes/assets/issuer-logo"
+              }
+            }
+          },
+          "iconAsset": {
+            "id": "549a3034-12da-4e85-b0d9-9ad19fec6e2b",
+            "_links": {
+              "self": {
+                "href": "/tms/v2/tokens/7040890000006625091/mdes/assets/icon"
+              }
+            }
+          },
+          "foregroundColor": "0F0F0F"
+        },
+        "issuer": {
+          "name": "Test IssuerÂ®",
+          "shortDescription": "MasterCard Test Bank",
+          "longDescription": "Test Bank for MasterCard MTF"
+        }
+      },
+      "source": "ONFILE"
+    },
+    "card": {
+      "number": "521415XXXXXX5091"
+    },
+    "issuer": {
+      "paymentAccountReference": "50015018T6JE5ZORJON0QTP9HHMYN"
+    },
+    "processingInformation": {}
+  }
+```
+
+For more information on decrypting data, see [Encrypt and Decrypt Data](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-ref-info/tms-encrypt-decrypt.md "").
+
+Retrieve Network Token AFT Payment Credentials {#tms-net-tkn-partner-retrieve-aft-pay-cred-intro}
+=================================================================================================
+
+This section describes how to retrieve the payment credentials for a Relay Token Service (VTS) network token that is used for account funding transactions (AFTs). You can retrieve these payment credentials for a VTS network token:
+
+* VTS network token value
+* AFT cryptogram (Relay only)  
+  The VTS network token payment credentials are returned as a JSON Web Encryption (JWE) response.
+
+> IMPORTANT You must contact your Relay representative to ensure that your system is enabled to retrieve an AFT cryptogram.
+
+Endpoint
+--------
+
+**Test:** `POST ``https://apitest.example.com``/tms/v2/tokens/`*{tokenId}/*`payment-credentials`{#tms-net-tkn-partner-retrieve-aft-pay-cred-intro_restcust-test}  
+**Production:** `POST ``https://api.example.com``/tms/v2/tokens/`*{tokenId}*`/payment-credentials`  
+**Production in India:** `POST ``https://api.in.example.com``/tms/v2/tokens/`*{tokenId}*`/payment-credentials`{#tms-net-tkn-partner-retrieve-aft-pay-cred-intro_restcust-prod-india}  
+The *`{tokenId}`* is the token ID returned in the id field when you create the customer, payment instrument, or instrument identifier token. For more information, see [Create an Instrument Identifier](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-ii-tkn/tms-ii-tkn-create-intro.md "").
+
+Required Fields for Retrieving Network Token AFT Payment Credentials {#tms-net-tkn-partner-retrieve-aft-pay-cred-reqfields}
+===========================================================================================================================
+
+paymentCredentialType
+:
+Set to `CRYPTOGRAM`.
+
+transactionType
+:
+Set to `AFT`.
+
+Related Information
+-------------------
+
+* [API Field Reference for the REST API](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/api-fields-about-guide.md "")
+  {#tms-net-tkn-partner-retrieve-aft-pay-cred-reqfields_ul_kpc_xzz_sxb}
+
+REST Example: Retrieving Network Token AFT Payment Credentials {#tms-net-tkn-partner-retrieve-aft-pay-cred-ex-rest}
+===================================================================================================================
+
+Request
+
+```
+{
+  "paymentCredentialType": "CRYPTOGRAM",
+  "transactionType": "AFT"
+}                        
+```
+
+{#tms-net-tkn-partner-retrieve-aft-pay-cred-ex-rest_codeblock-request-nt-aft}  
+Response to a Successful Request: BASE 64
+
+```
+eyJraWQiOiJmOTdmOWIyMDZkYzQxNzJmZGRlOWRlNjM5NjMyMWViZTI2NjY4NDc0IiwiY3R5IjoianNvbiIsInR5cCI6IkpXVCIsImVuYyI6IkEyNTZHQ00iLCJhbGciOiJSU0EtT0FFUC0yNTYifQ.VH168JF7g104i2dDQ_NAfPEDakHYI54C5mJ-YJItC1VKN3zLlpEZf9VJrUcYrTew6zCNNRKs3treD-Mn3VNK6eYm2YAhkeuryYIU2NXZVW3CsZsqeOu5y3c2eO_AiDHRYIKG9MJLoXYqgb-oIotvsmN3p4nYuiYIL21FkdssBV-V66kyMWPaVZpTqFp0lZBm0NN6p1MoUEybPc5vBpY2I24QZFHJjtX6jxdivA5XmgBgj2DEnue7KlsS3AtMsixmSGOd46FR0iadGQFQHAvs8lDjfcUj5-vxcFopp8wBOd1sNsItCnqj4WTZFbZGyTe-GnouSCfNX7uC-oHHdxRGdA.z8TDop4oz778UEUI.yNSpacqPUTGVScMLQJNDjFEvlWdY7YrywJNh7_hCgQBPeW-a1wPnKRsg_9qubr6_2xYldoNTzrGgiuTj5_cToO5sZF0zFoaDjN9zZMVeppYTB9dfgvQd8AF0AFemhm9lfJVLgjbejPTAHHtJspIUGbV4QUPQTAQLLrlT_WSRf-hjQRUHrqoXpkXg-Fjzf1SLNTJb8aFWuvLjNtQMoau-CwSBeJSbCluDuOKU56TFCZn-9UtE67uDoSgPMgs8XVyAPdSdHLFK8yXzp0mvYqEcR3_p75-MHXsA4qQJuAfXoHjEFsUpqyCkUBPLE7meGfiuQE9fnlqmtVAtvrdlwdqTVJc_388UJLIGqm0KDuD4gGhdzYuCEnNSrV8VnQ87IggFPMl4kqtbfCjJ-qvowC6m1a1Wv8rzRo9AqAFXmUpkTaE4vCaPMnRbXuzY0dss81LQlyGri0_eBy6WfOvXe-0yOviDKFxT_GVeF4nSwkbpxMGGI7aWbVXJ-_r6LBgALtgIbiQZqrWrgLv_FV7DDhY7HnN39R14gve6yxNPu7RCFEViy6RUldo_JxPCjNBL6xGXn1ccnxSCQwyvFGvrF1wvm-Ed8vCnImimX4ClV0_ba9lyOUYGIIS7-CWrra7TvtISVdYL4J0vPnOHvr8RCwEi5Y6iBtV-Ew6BhHpVd8aFdSTTOfHI7bUtUUE8mFmtnLD1atC-sa2sBjrw4PlB-NQMEE4uAGeeccYmYdfPUQdLuMRkzkoPFoNwqnJJ5UC8T6GzEQxZCzfxgTyn_m2toU-Sbb42QKB0BI01czad24FuILk93QaVv2SwRX_OQWb8lCxbWFIaxGrHEGLL5YpgqrVKFDLWETD9o-ysQzFweiW-SORrbLhmKs2xp3GT75d_wxE5IOvLl_A7tJl8I5BQ-aBnTtyZofEJsd6inYHM0TYzj-9YRK4r-grA3xvytI50dwkJJJ4Ju9wJGuxAdKvbxYrkwKgn0HKBE58BGjKElT6j0gLXU0bsuDPo1E_OSj9NGyUeB9LKGIptGNQOBeNi06pYwTGMkjfPZi9S1Zv9wnr7CwcSe_xImu4f192co8hJKUIXosbAZturQ-8tR5BOZSKrLgO4vCQfJmYxYC1IVaDWknhTe78ev9qVZD0HP7H_gqXPHY5O5DfBr-pxFCnYt-oQwt24hc2_r13JvzekYP3bjoUV9YsoO8-eJ1A4NyO8Bk2qUZMEWca_szCz_uCiozwdXWc0HVIUWsn1BvrbRKzM91UxrEZkKmP3xaOPQv91FMTgVvJEG7pxrObH49gGgNO8rU-J46Hd01YcAFzvgqYTSxGaCF5lgmgbXzPK16AWfGYKPXEUExZERvVhIxhQRKpBKD3KJFO772blKdfTjPl_QqnUJ5_wy7QScUP_7okJZduC9JgNy-S4htThQHL4AW2XO6RzInaup4fZ3tkaIdNTacQQwFcd-kJ3Bj049VcV2BkMR1oP2__P2siMQ8H3oD8IZAb9S0buFezp1KVNflKNW2fTQDXEESzFZi-aL4OxMSll6yujkXtKtjOZoMYZawNeuLGtltZQZ8BkhvzRTrwuBHWNcbhCN9-0qwC4YuBZ8FD1Rpd1vPNOPMpEMblq9BKf_wlGeXUMK0XzsVdQLfcBd6aDHAysFnt8Y961oYTX8kA.uT1yJ32LL_T1TifxlH3HdA
+```
+
+Response to a Successful Request: Decrypted
+
+```
+{
+  "_links": {
+    "self": {
+      "href": "/tms/v2/tokens/1CD10F58FB7C7DB8E063A2598D0A1405/payment-credentials"
+    },
+    "tokenized-cards": {
+      "href": "/tms/v2/tokenized-cards/1CD10F58FB837DB8E063A2598D0A1405"
+    }
+  },
+  "tokenizedCard": {
+    "id": "1CD10F58FB837DB8E063A2598D0A1405",
+    "state": "ACTIVE",
+    "enrollmentId": "da1fb810b1b3e01db5b215de5261df01",
+    "tokenReferenceId": "090673c4811a91960f021ad3a24e2e01",
+    "number": "X895370017256311",
+    "expirationMonth": "12",
+    "expirationYear": "2031",
+    "type": "relay",
+    "cryptogram": "AwAAAADi9THGeHw4ARJ4QAoAAAA=",
+    "eci": "07",
+    "requestorId": "40010052236",
+    "card": {
+      "suffix": "7161",
+      "expirationMonth": "12",
+      "expirationYear": "2030"
+    },
+    "metadata": {
+      "cardArt": {
+        "combinedAsset": {
+          "id": "8f64614def1a41d39ea8acae4616bf6f",
+          "_links": {
+            "self": {
+              "href": "/tms/v2/tokens/1CD10F58FB7C7DB8E063A2598D0A1405/vts/assets/card-art-combined"
+            }
+          }
+        },
+        "brandLogoAsset": {
+          "id": "00000000000000000000000000001071",
+          "_links": {
+            "self": {
+              "href": "/tms/v2/tokens/1CD10F58FB7C7DB8E063A2598D0A1405/vts/assets/brand-logo"
+            }
+          }
+        },
+        "foregroundColor": "1af0f0"
+      },
+      "issuer": {
+        "shortDescription": "shortDescription",
+        "longDescription": "longDescription"
+      }
+    },
+    "source": "ONFILE"
+  },
+  "card": {
+    "number": "X622943123037161"
+  },
+  "issuer": {
+    "paymentAccountReference": "V0010013024026372674590402581"
+  },
+  "processingInformation": {
+    "commerceIndicator": "internet"
+  }
+}
+ 
+```
+
+For more information on decrypting data, see [Encrypt and Decrypt Data](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-ref-info/tms-encrypt-decrypt.md "").
+
+Provision a Network Token with Push Provisioning {#tms-net-tkn-card-create-intro}
+=================================================================================
+
+This section describes how to provision a network token with push provisioning.
+IMPORTANT This feature is in pilot phase. You have early access to this feature even though it might contain bugs or unfinished work. Please consider the risk when using this feature.  
+Push provisioning connects you with participating banks to enable the secure transfer of customer and payment information that is stored by banks. Using push provisioning, the issuer can provide credentials straight to your customer in seconds.
+
+Prerequisites
+-------------
+
+Before using the push provisioning service, you must meet these requirements:
+
+* You must be configured for `TMS`. See [Token Management Service Onboarding](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-onboarding.md "").
+* Network tokens must be enabled. For more information, see [Network Token Enablement](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-net-tkn-onboard/tms-net-tkn-enablement.md "").
+* Push provisioning must be enabled with the card brand.
+* The issuer must be integrated with the card brand.
+
+Endpoint
+--------
+
+**Test:** `POST ``https://apitest.example.com``/tms/v2/tokenized-cards`  
+**Production:** `POST ``https://api.example.com``/tms/v2/tokenized-cards`  
+**Production in India:** `POST ``https://api.in.example.com``/tms/v2/tokenized-cards`
+
+Use the Push Provisioning Instrument Identifier in Authorizations {#tms-net-tkn-card-create-intro_tms-net-tkn-card-create-intro-ii-auth}
+----------------------------------------------------------------------------------------------------------------------------------------
+
+You can include the instrument identifier that is returned when you create or retrieve a network tokenized card with push provisioning in an authorization. For more information, see [Authorize a Payment with an Instrument Identifier](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-ii-tkn/tms-ii-tkn-pay-intro.md "").  
+You can also create other token types, such as customer, shipping address, and payment instrument tokens, when you send the authorization request. For more information, see [REST Example: Authorizing a Payment with an Instrument Identifier While Creating TMS Tokens](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-ii-tkn/tms-ii-tkn-pay-intro/tms-ii-tkn-pay-create-ex-rest.md "")
+
+Required Fields for Provisioning a Network Token with Push Provisioning {#tms-net-tkn-card-create-reqfields}
+============================================================================================================
+
+accountReferenceId
+:
+
+card.type
+:
+Set to `001`.
+
+createInstrumentIdentifier
+:
+Set to `true`.
+
+source
+:
+Set to `ISSUER`.
+
+Related Information
+-------------------
+
+* [API Field Reference for the REST API](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/rest-api-fields-intro.md "")
+  {#tms-net-tkn-card-create-reqfields_ul_kpc_xzz_sxb}
+
+Optional Fields for Provisioning a Network Token with Push Provisioning {#tms-net-tkn-card-create-optfields}
+============================================================================================================
+
+passcode.value
+:
+
+Related Information
+-------------------
+
+* [API Field Reference for the REST API](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/rest-api-fields-intro.md "")
+  {#tms-net-tkn-card-create-optfields_ul_kpc_xzz_sxb}
+
+REST Example: Provisioning a Network Token with Push Provisioning {#tms-net-tkn-card-create-ex-rest}
+====================================================================================================
+
+Request
+
+```
+{
+  "accountReferenceId": "703699458563818460001",
+  "createInstrumentIdentifier": true,
+  "source": "ISSUER",
+  "card": {
+    "type": "001"
+  }
+}
+```
+
+{#tms-net-tkn-card-create-ex-rest_codeblock_c51_vmt_gwb}  
+Request with Passcode
+
+```
+{
+  "source": "ISSUER",
+  "accountReferenceId": "703699458563818460001",
+  "card": {
+    "type": "001"
+  },
+  "passcode": {
+    "value": "123456"
+  },
+  "createInstrumentIdentifier": true
+}
+```
+
+Response to a Successful Request
+
+```keyword
+{
+    "_links": {
+        "self": {
+            "href": "https://apitest.example.com/tms/v2/tokenized-cards/139C09B1970689FAE0633F36CF0A2D7B"
+        },
+        "instrumentIdentifier": {
+            "href": "https://apitest.example.com/tms/v1/instrumentidentifiers/7010000000016241111"
+        }
+    },
+    "id": "139C09B1970689FAE0633F36CF0A2D7B",
+    "object": "tokenizedCard",
+    "state": "ACTIVE",
+    "enrollmentId": "ja9mejoqszrqfubwy9mqz4ot4fnlvgpp",
+    "tokenReferenceId": "uvfofwjor4nobycjf5cy9cwfyzu5pipa",
+    "number": "404626XXXXXX0572",
+    "expirationMonth": "03",
+    "expirationYear": "2025",
+    "type": "relay",
+    "card": {
+        "suffix": "4608",
+        "expirationMonth": "03",
+        "expirationYear": "2025"
+    },
+    "source": "ISSUER",
+    "accountReferenceId": "703699458563818460001"
+}
+```
+
+Network Token Provision Failures {#tms-net-tkn-fail-ex-rest}
+============================================================
+
+|       Reason Code        |                                  Description                                   |
+|--------------------------|--------------------------------------------------------------------------------|
+| INVALID_REQUEST          | The network token provision request contained invalid data.                    |
+| CARD_VERIFICATION_FAILED | The network token provision request contained data that could not be verified. |
+| CARD_NOT_ELIGIBLE        | Card cannot be used currently with issuer for tokenization.                    |
+| CARD_NOT_ALLOWED         | Card cannot be used currently with card association for tokenization.          |
+| DECLINED                 | Card cannot be used currently with issuer for tokenization.                    |
+| SERVICE_UNAVAILABLE      | The network token service was unavailable or timed out.                        |
+| SYSTEM_ERROR             | An unexpected error occurred with network token service, check configuration.  |
+[Network Token Provision Failure Reason Codes and Descriptions]
+
+Lost and Stolen Card Response
+
+```keyword
+{
+    "_links": {
+        "self": {
+            "href": "https://apitest.example.com/tms/v1/instrumentidentifiers/7030000000041554452"
+        },
+        "paymentInstruments": {
+            "href": "https://apitest.example.com/tms/v1/instrumentidentifiers/7030000000041554452/paymentinstruments"
+        }
+    },
+    "id": "7030000000041554452",
+    "object": "instrumentIdentifier",
+    "state": "ACTIVE",
+    "tokenizedCard": {
+        "state": "UNPROVISIONED",
+        "reason": "CARD_NOT_ELIGIBLE",
+        "type": "relay"
+    },
+    "card": {
+        "number": "400555XXXXXX4452"
+    },
+    "metadata": {
+        "creator": "testrest"
+    }
+}
+```
+
+{#tms-net-tkn-fail-ex-rest_codeblock_x4l_mlt_lwb} Issuer Decline Response
+
+```keyword
+{
+    "_links": {
+        "self": {
+            "href": "https://apitest.example.com/tms/v1/instrumentidentifiers/7030000000051790079"
+        },
+        "paymentInstruments": {
+            "href": "https://apitest.example.com/tms/v1/instrumentidentifiers/7030000000051790079/paymentinstruments"
+        }
+    },
+    "id": "7030000000051790079",
+    "object": "instrumentIdentifier",
+    "state": "ACTIVE",
+    "tokenizedCard": {
+        "state": "UNPROVISIONED",
+        "reason": "CARD_NOT_ALLOWED",
+        "type": "relay"
+    },
+    "card": {
+        "number": "462294XXXXXX0079"
+    },
+    "metadata": {
+        "creator": "testrest"
+    }
+}
+```
+
+Past Expiration Date Response
+
+```keyword
+{
+    "_links": {
+        "self": {
+            "href": "https://apitest.example.com/tms/v1/instrumentidentifiers/7030000000224170019"
+        },
+        "paymentInstruments": {
+            "href": "https://apitest.example.com/tms/v1/instrumentidentifiers/7030000000224170019/paymentinstruments"
+        }
+    },
+    "id": "7030000000224170019",
+    "object": "instrumentIdentifier",
+    "state": "ACTIVE",
+    "tokenizedCard": {
+        "state": "UNPROVISIONED",
+        "reason": "CARD_NOT_ALLOWED",
+        "type": "relay"
+    },
+    "card": {
+        "number": "476134XXXXXX0019"
+    },
+    "metadata": {
+        "creator": "testrest"
+    }
+}
+```
+
+Issuer Not Participating Response
+
+```keyword
+{
+    "_links": {
+        "self": {
+            "href": "https://apitest.example.com/tms/v1/instrumentidentifiers/7030000000224170019"
+        },
+        "paymentInstruments": {
+            "href": "https://apitest.example.com/tms/v1/instrumentidentifiers/7030000000224170019/paymentinstruments"
+        }
+    },
+    "id": "7030000000224170019",
+    "object": "instrumentIdentifier",
+    "state": "ACTIVE",
+    "tokenizedCard": {
+        "state": "UNPROVISIONED",
+        "reason": "CARD_NOT_ALLOWED",
+        "type": "relay"
+    },
+    "card": {
+        "number": "476134XXXXXX0019"
+    },
+    "metadata": {
+        "creator": "testrest"
+    }
+}
+```
+
+Customer Tokens {#tms-cust-tkn}
+===============================
+
+The customer token contains data about the merchant's customer including email address, customer ID, shipping address (stored in a token), and other related fields.
+
+Manage Customer Tokens {#tms-manage-cust-tkn}
+=============================================
+
+This section contains information on managing customer tokens.  
+The customer token represents customer-related information including details for a payment card or electronic check, billing address, shipping address, and merchant defined data. You can create, retrieve, update, or delete a customer by submitting an HTTP `POST`, `GET`, `PATCH`, or `DELETE` operation to the `tms/v2/customers` endpoint. Use the `TMS` REST API to:
+
+* [Create a customer token](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-cust-tkn/tms-cust-tkn-create-intro.md "")
+* [Retrieve a customer token](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-cust-tkn/tms-cust-tkn-retrieve-intro.md "")
+* [Update a customer's information](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-cust-tkn/tms-cust-tkn-update-intro.md "")
+* [Delete a customer token](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-cust-tkn/tms-cust-tkn-delete-intro.md "")
+  {#tms-manage-cust-tkn_ul_3}  
+  For more information on customer tokens, see [Customer Tokens](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-overview/tms-token-types/tms-cust-tkn-intro.md "").
+
+Create a Customer {#tms-cust-tkn-create-intro}
+==============================================
+
+This section describes how to create a customer token with no payment details.
+
+Endpoint
+--------
+
+**Test:** `POST ``https://apitest.example.com``/tms/v2/customers`{#tms-cust-tkn-create-intro_restcust-test}  
+**Production:** `POST ``https://api.example.com``/tms/v2/customers`  
+**Production in India:** `POST ``https://api.in.example.com``/tms/v2/customers`{#tms-cust-tkn-create-intro_restcust-prod-india}
+
+Required Fields for Creating a Customer {#tms-cust-tkn-create-reqfields}
+========================================================================
+
+You can include any of the following fields in the body of the request:
+
+buyerInformation.merchantCustomerID
+:
+
+buyerInformation.email
+:
+
+clientReferenceInformation.code
+:
+
+merchantDefinedInformation.name
+:
+
+merchantDefinedInformation.value
+:
+{#tms-cust-tkn-create-reqfields_dl_u12_vqy_dwb}
+
+Related Information {#tms-cust-tkn-create-reqfields_section_jpc_xzz_sxb}
+------------------------------------------------------------------------
+
+* [API Field Reference for the REST API](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/api-fields-about-guide.md "")
+  {#tms-cust-tkn-create-reqfields_ul_kpc_xzz_sxb}
+
+REST Example: Creating a Customer {#tms-cust-tkn-create-ex-rest}
+================================================================
+
+Request
+
+```keyword
+{
+  "buyerInformation": {
+    "merchantCustomerID": "Your customer identifier",
+    "email": "test@pgw.com"
+  },
+  "clientReferenceInformation": {
+    "code": "123456"
+  },
+  "merchantDefinedInformation": [
+    {
+      "name": "data1",
+      "value": "Your customer data"
+    }
+  ]
+}
+```
+
+Response to a Successful Request
+
+```
+{
+  "_links": {
+    "self": {
+      "href": "/tms/v2/customers/F2F3ADA770102B51E053A2598D0A9078"
+    },
+    "paymentInstruments": {
+      "href": "/tms/v2/customers/F2F3ADA770102B51E053A2598D0A9078/payment-instruments"
+    },
+    "shippingAddresses": {
+      "href": "/tms/v2/customers/F2F3ADA770102B51E053A2598D0A9078/shipping-addresses"
+    }
+  },
+  "id": "F2F3ADA770102B51E053A2598D0A9078",
+  "buyerInformation": {
+    "merchantCustomerID": "Your customer identifier",
+    "email": "test@pgw.com"
+  },
+  "clientReferenceInformation": {
+    "code": "TC50171_3"
+  },
+  "merchantDefinedInformation": [
+    {
+      "name": "data1",
+      "value": "Your customer data"
+    }
+  ],
+  "metadata": {
+    "creator": "testrest"
+  }
+}
+```
+
+Retrieve a Customer {#tms-cust-tkn-retrieve-intro}
+==================================================
+
+This section describes how to retrieve a customer token.
+
+Endpoint
+--------
+
+**Test:** `GET ``https://apitest.example.com``/tms/v2/customers/`*{customerTokenId}*` `{#tms-cust-tkn-retrieve-intro_restcust-test}  
+**Production:** `GET ``https://api.example.com``/tms/v2/customers/`*{customerTokenId}*` `  
+**Production in India:** `GET ``https://api.in.example.com``/tms/v2/customers/`*{customerTokenId}*` `{#tms-cust-tkn-retrieve-intro_restcust-prod-india}  
+The *`{customerTokenId}`* is the customer token ID returned in the id field when you created the customer token. For more information, see [Create a Customer](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-cust-tkn/tms-cust-tkn-create-intro.md "").
+
+REST Example: Retrieving a Customer {#tms-cust-tkn-retrieve-ex-rest}
+====================================================================
+
+Request
+
+```keyword
+GET https://apitest.example.com/tms/v2/customers/F2F3ADA770102B51E053A2598D0A9078
+```
+
+Response to a Successful Request
+
+```
+{
+  "_links": {
+    "self": {
+      "href": "/tms/v2/customers/F2F3ADA770102B51E053A2598D0A9078"
+    },
+    "paymentInstruments": {
+      "href": "/tms/v2/customers/F2F3ADA770102B51E053A2598D0A9078/payment-instruments"
+    },
+    "shippingAddresses": {
+      "href": "/tms/v2/customers/F2F3ADA770102B51E053A2598D0A9078/shipping-addresses"
+    }
+  },
+  "id": "F2F3ADA770102B51E053A2598D0A9078",
+  "buyerInformation": {
+    "merchantCustomerID": "Your customer identifier",
+    "email": "test@pgw.com"
+  },
+  "clientReferenceInformation": {
+    "code": "TC50171_3"
+  },
+  "merchantDefinedInformation": [
+    {
+      "name": "data1",
+      "value": "Your customer data"
+    }
+  ],
+  "metadata": {
+    "creator": "testrest"
+  }
+}       
+```
+
+Update a Customer {#tms-cust-tkn-update-intro}
+==============================================
+
+This section describes how to update a customer token.
+
+Endpoint
+--------
+
+**Test:** `PATCH ``https://apitest.example.com``/tms/v2/customers/`*{customerTokenId}*{#tms-cust-tkn-update-intro_restcust-test}  
+**Production:** `PATCH ``https://api.example.com``/tms/v2/customers/`*{customerTokenId}*  
+**Production in India:** `PATCH ``https://api.in.example.com``/tms/v2/customers/`*{customerTokenId}*{#tms-cust-tkn-update-intro_restcust-prod-india}  
+The *`{customerTokenId}`* is the customer token ID returned in the id field when you created the customer token. For more information, see [Create a Customer](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-cust-tkn/tms-cust-tkn-create-intro.md ""). Include only the fields you want to add or update in the request.
+
+Optional Fields for Updating a Customer {#tms-cust-tkn-update-optfields}
+========================================================================
+
+You can include any of the following fields in the body of the request:
+
+buyerInformation.merchantCustomerID
+:
+
+buyerInformation.email
+:
+
+clientReferenceInformation.code
+:
+
+merchantDefinedInformation.name
+:
+
+merchantDefinedInformation.value
+:
+{#tms-cust-tkn-update-optfields_dl_u12_vqy_dwb}
+
+Related Information {#tms-cust-tkn-update-optfields_section_jpc_xzz_sxb}
+------------------------------------------------------------------------
+
+* [API Field Reference for the REST API](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/api-fields-about-guide.md "")
+  {#tms-cust-tkn-update-optfields_ul_kpc_xzz_sxb}
+
+REST Example: Updating a Customer {#tms-cust-tkn-update-ex-rest}
+================================================================
+
+Request
+
+```keyword
+PATCH https://apitest.example.com/tms/v2/customers/F2F3ADA770102B51E053A2598D0A9078
+```
+
+Response to a Successful Request
+
+```
+{
+  "_links": {
+    "self": {
+      "href": "/tms/v2/customers/F2F3ADA770102B51E053A2598D0A9078"
+    },
+    "paymentInstruments": {
+      "href": "/tms/v2/customers/F2F3ADA770102B51E053A2598D0A9078/payment-instruments"
+    },
+    "shippingAddresses": {
+      "href": "/tms/v2/customers/F2F3ADA770102B51E053A2598D0A9078/shipping-addresses"
+    }
+  },
+  "id": "F2F3ADA770102B51E053A2598D0A9078",
+  "buyerInformation": {
+    "merchantCustomerID": "Your customer identifier",
+    "email": "test@pgw.com"
+  },
+  "clientReferenceInformation": {
+    "code": "TC50171_3"
+  },
+  "merchantDefinedInformation": [
+    {
+      "name": "data1",
+      "value": "Your customer data"
+    }
+  ],
+  "metadata": {
+    "creator": "testrest"
+  }
+}
+            
+```
+
+Delete a Customer {#tms-cust-tkn-delete-intro}
+==============================================
+
+This section describes how to delete a customer token.
+
+Endpoint
+--------
+
+**Test:** `DELETE ``https://apitest.example.com``/tms/v2/customers/`*{customerTokenId}*` `{#tms-cust-tkn-delete-intro_restcust-test}  
+**Production:** `DELETE ``https://api.example.com``/tms/v2/customers/`*{customerTokenId}*` `  
+**Production in India:** `DELETE ``https://api.in.example.com``/tms/v2/customers/`*{customerTokenId}*` `{#tms-cust-tkn-delete-intro_restcust-prod-india}  
+The *`{customerTokenId}`* is the customer token ID returned in the id field when you created the customer token. For more information, see [Create a Customer](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-cust-tkn/tms-cust-tkn-create-intro.md "").
+
+Required Fields for Deleting a Customer Token {#tms-cust-tkn-delete-reqfields}
+==============================================================================
+
+customerTokenId
+:
+Include the ID of the customer token you want to retrieve in the URL path.
+{#tms-cust-tkn-delete-reqfields_dl_u12_vqy_dwb}
+
+Related Information {#tms-cust-tkn-delete-reqfields_section_jpc_xzz_sxb}
+------------------------------------------------------------------------
+
+* [API Field Reference for the REST API](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/api-fields-about-guide.md "")
+  {#tms-cust-tkn-delete-reqfields_ul_kpc_xzz_sxb}
+
+REST Example: Deleting a Customer {#tms-cust-tkn-delete-ex-rest}
+================================================================
+
+Request
+
+```keyword
+DELETE https://apitest.example.com/tms/v2/customers/F2F3ADA770102B51E053A2598D0A9078
+```
+
+Response to a Successful Request  
+A successful delete response returns an empty `HTTP 204 No Content` status. For more information, see [HTTP Status Codes](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-ref-info/tms-http-status.md "").
+
+Retrieve a Customer's Default Payment with an Unmasked Card Number {#tms-cust-tkn-retrieve-default-pay-unmasked-intro}
+======================================================================================================================
+
+This section describes how to retrieve a customer's default payment with an unmasked card number.
+
+> IMPORTANT
+> To retrieve unmasked payment details, you must ensure that your MLE key pair and your token vault are configured correctly. For more information on MLE keys, see [Message-Level Encryption Keys](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-onboarding/tms-mle-setup.md ""). For more information on token vaults, see [Token Vault Management](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-onboarding/tms-vault-hierarchy.md ""). If necessary, contact your ` Payment Gateway ` account manager or customer support.  
+> The response is BASE 64-encoded JSON web encryption (JWE) token. The decoded JWE has these elements:
+
+```
+{ "alg": "RSA-OAEP-256", //The algorithm used to encrypt the CEK 
+    "cty": "json", //The content type 
+    "typ": "JWT", //The token type 
+    "enc": "A256GCM", //The algorithm that is used to encrypt the message 
+    "kid": "keyId" //The serial number of shared public cert for encryption of CEK
+} 
+&lt;Encrypted Data&gt; //The encrypted payload that matches the JSON response normally returned by the TMS API, except with an unmasked payment details
+```
+
+Header Configuration
+--------------------
+
+You must pass this request header to retrieve unmasked payment details: `Accept: application/jose`.  
+The term `application/jose` refers to Javascript Object Signing and Encryption (JOSE). JOSE is a framework that provides end-to-end security to JavaScript Object Notation (JSON)-based data structures. JOSE achieves this by offering a collection of specifications to encrypt and digitally sign JSON payloads. In this case, the response is message-level encrypted using a JSON Web Token (JWT).
+
+Endpoint
+--------
+
+**Test:** `GET ``https://apitest.example.com``/tms/v2/customers/`*{customerTokenId}*` `{#tms-cust-tkn-retrieve-default-pay-unmasked-intro_restcust-test}  
+**Production:** `GET ``https://api.example.com``/tms/v2/customers/`*{customerTokenId}*` `  
+**Production in India:** `GET ``https://api.in.example.com``/tms/v2/customers/`*{customerTokenId}*` `{#tms-cust-tkn-retrieve-default-pay-unmasked-intro_restcust-prod-india}  
+The *`{customerTokenId}`* is the customer token ID returned in the id field when you created the customer token. For more information, see [Create a Customer](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-cust-tkn/tms-cust-tkn-create-intro.md "").
+
+REST Example: Retrieving a Customer's Default Payment with an Unmasked Card Number {#tms-cust-tkn-retrieve-default-pay-unmasked-ex-rest}
+========================================================================================================================================
+
+Request
+
+```keyword
+GET https://apitest.example.com/tms/v2/customers/F45FB3E443AC3C57E053A2598D0A9CFF
+```
+
+{#tms-cust-tkn-retrieve-default-pay-unmasked-ex-rest_codeblock_qdl_z3n_lwb}  
+Response to a Successful Request
+
+```
+eyJraWQiOiJiYTE1ZDRmMTIzMTM0NjlkZjg5MDM1Nzk2YWE4Nzc4ZGM0NTY4ODlkIiwiY3R5IjoianNvbiIsInR5cCI6IkpXVCIsImVuYyI
+6IkEyNTZHQ00iLCJhbGciOiJSU0EtT0FFUC0yNTYifQ.zxPTNWvHt40Dbtwlx2T53Jd-vazzEeN7v_6nyyPE8FpAylO9dMCQL0XOG_1AQZR
+ZPhrAvilhV2Gp8xc1OuF6w0w8LtDQGcgoTVQM0HitMXSs05b_0FzYNZXHr9OPwmJxzizNoptI-Arlw55yfJNM8QNBLYGIEJkKI061P84Dk9
+by-c3bfo8z8D0xO4LpA51dndSkk5QFIWaNSz5CC0nuANyPPJzGVLguBx8HYNLMH4g_dx6SEVw-QYBO0-s_Xfmv3wRjGpH0STzn7j_1MxpW7
+tfXaYcrglPNCoOiSHc6dg141lHGSdvALS71qZTo49WVWbuO2kBYyhxVD1x_1P4ztQ.D1H34AH9Rwu1cr5F.dqCwRR8Ug8uv1Ow437anK8br
+Ye7KPWfcw_R7ShoIlNhWCmQcQ9mVK8UCKcbuVbxt7S6_whJHOfWlm1jqwIvA7ZYtHfVyVHsG11wRZZd3vn4HGJ4rAUa3T0d_EnvF2Jeffpj
+cTG6MZN5_nB4z2Ism4dLcxsnWIdzU2993hscS5641wvX3GYAhqD5OqweT1hqW8URyuSQh27WDJSlMmARE0s3hVq6O0XcdejOmulyVKMNFFp
+Wpcif3G-VnTMzDI7iMx448u2tClA895cvG-E4ISDvRZ3eIjH4wgRE5Btxy5SwbS7VfCYDyRLa9z1LewRV3EwFxvb6_POtq2Da5QYSG7U-XO
+aSNie6bZ7oTYKn7lD-1-crcfQY6ieSWUxMKcsi3bD0_yz1Y_Lc0Wc4M7MCIRwDmbctmZvxZuRwiBiSMsKll9gQdKTn8sEeGv7DWooJBxqiZ
+kbPlzkHnw2El4Z9HETIGH1Iq0nsKC78NzTiT96i0SHN22iqZGYdIUPwB9zZJQGJNxZ3ag_Cf4C6ATAubJG4jVtdQ_JtbhHLYwhXlQFTiPMQ
+rqnoh7GZDaOX3jEP9_LQiNam8U-ZNGuQby2jgqPyLQKb4dsB31eBz9TLCa7SkXqWp5_a18QVpNxeQEB0mJC7s0iy3XXB7GxxzrKLgqsxhmJ
+ZjLaKUo1-Sen3HG_9oWTlXXh2r2C0b3AzX1HQ8POC5E8RcK7e-tLtvMJrLNHMZXRVAeREbVah13b1Fs-CIDWnw9QcCUxjfYNCwwOZUAZTIX
+tq4YnaQYkSE6OJV-yRrajbo7CzM1HXZEioW9S9eFRJmqKpu_vtatwJXme3XjyjAqahSYCBtIx2__8688MpTmSm1_WEOZrNXoV0-htOqQAQ4
+IIza4FpWfpevUJUs8hOu2FIr_Adm0-IIE2MsSptXrNvxmahuDwNpmapNUeLg7aZoQVlp33TrwcQ0AfQeD36s1nkWOhRmPfjVfXvKCeJxmD2
+ndXBJxLzko0BkqWwe9WSH-RDyaN3u7TXHgyp2EDO0p6rRO8F2veRv76T6ppMrGWK9xjZLFaA1kNNt_RTlsn1hedb_R-ztOw-4y4u405yv8E
+2z0W0mE58FLlWJ7AORSQjEtVANrlnwzLjE4xi_xv41CrwI8_uhlyQFfy0aj13bOyFg5nQd7k1MsawzFJfsNBRrCNwf07cpP_4nH_yv4UvV4
+qSaf1DR0epfQ4iWvaZOWqhN_vJeAxXAasChiuZJ8gN2qrq_p1fO4lGIUjLcyvn9W1fqDVcgLLZUVCcHdHiFpZT7C6iKqDQBjUaAQ6E-jsES
+0t2EmwkkJ21jxnwUtwCQLShXNUjXDjwKrbAiFAiHrBALXJnBY5Yd0JkJ7srB4dWR4lZxb5M5g9n-gUkto8O_u1JtII34EgbKbOHbpbOgCEN
+rGUnjaIXrTVHy1uWBBTV7gmkkqd1HD9lwqbmj4IDyIdUwjkUJ4ZX9MB_E7PJ_asWnye5-RO3vFlL7_dSQkmJAiseNrve0bTlynMZW-KsC9s
+0We-jjDqJP52uZ-jmJwL1hhIUef3Yt40IytfuyxiIWkGJB0qM2cppdh6F8bdbFxomWeOxFW8qllZ-1hhp5ISoW6oy8f6OyvIxFQMjkXMfoh
+CdBwB3wOZYoCPq2JmrXYExQcStI3MHMkvBkNP5slTX-uT-mJlx5XHLLOPdO9io58D0CEcmdDAiZqPtQssaFKsj4Z6EMlgewmC8E7mO6LLhF
+Fcof_qDaJ7d6ZNnUiVUq0tAQnxiBH6NfKybQ64O_j2yq4bE1Fzc_aOM5YcQqch8riYU0VWeS0xzgdetta8AYTjmIGE1SKhvEh_KxngNK6Rn
+4GiE_-g6tQaI65ZJ9OMfVdzVbuBJ04IU1VI9KPZhAAd_xZYOnKzkaKHlogkMOaI-Pz-CKP4Ij-hrjzNIHHI8dHtXcLT5e4BGFksN87UGvJu
+PDJEqpCOXcvxRKe5C0129SSMGq_MefP04pkHAnKQ1qg_gIlxz7H2lvCKGBrgnm6yfE1kD9CYqtHdDZlgcZY_dl56MRpW8fOs5xtaDVgTlme
+kd4qtt59R6FpN1LQFmpKIqza5AJqPinUaZJSxvF6nkK76xx8ozxFIFitygAkK6eh8fTiuArXkTul0E3277fg-gCv9h2xz0CnDnNV5ubLfJp
+2QDboy-JRE_NFN3E0eqr5MkGETtiXeGyQTGwFtr0KuvsZu4V8qg1DxiF_pPdlszTyhGL2q21Vcr2IBDzrgNKkGDLPvPXUVIjHA1XM-4dnv9
+ZIx0Eb5jsGQhecQrmQaH4wcM3ZE2sWPGwLJutbVuywSnQg6YWz-PAQDk2Er4icNuybTrdw4RoZPNzY-2BGxWrpbo4J4SMK84jmsxPatCI1s
+I12uhXp27LrtHEUfHHLVlFw2KHIpCWirQ7mLicp7Be1dAx3ak-RapHaH9qTVkDuMVuWIzvaj6ulY2mBltcSMyFpr7_vEGYY3LEU8_Udnvyn
+SwKuXqt3MiHE0h2bEeL6X6YXC2D8iOEgsIEh6naEyKxhdfzk0BpM1MyLnAqkr34BoJhyrM_P0ZfRF4YNauqVqvr0qAZN757nRwHcPfDal22
+jnVdxd65TRUtymqV5gnfKNVBFF5NfjU0zcuK3kr3llkSHaULobBOlJ3W-tBx37-0cjuXqci_ZgbRnVCbF3TnOe_kULrPLrGakcjOfVOXNhg
+ckSR6Rz3At7MIhzAhKCtZm3qyxcARxrMGMrIcW3ShE62DfOOlTLotq9TJCkyI6LI93TBtQOlYnDZNcU4KW9hFqo0ZACy9cbEHA_LNUFtwUL
+spFw_gu3AlUTFp3LDRDAGu9_4Ip-aw4xCPOWN7-oNuzfpasdFx7IioHahxvBi1HmMUsn09p96finQndMoByC8enwwBILNKJ9BBEgS0jaQn7
+Ymag4G1xArMNnECF2ip7CDWc9dvivhHxS_AftERedVYksH7XP3YEMUoOlsOrwVhGGArZrWpHmNcX0woTvK9lJLjxHMl9w6lhhcvY3X-glV5
+AKJczoDnVJe-6Q9cnH0BYE8b_0LgdlcN7dVGEXkjR9EAm0bsytEO6zm53u-zRwq5wzBVBA7WMBuQLPjyvUB9WPueBfKPhJhnYIYKCZZplRw
+RxGg04RKkwl8nKGMSfpITD0L6NiYWg-aS7aSQVa21RpYxZoCr9t2lFo8gxe0Lhr5mGZRLv_toZ5wuxViHUPTvtG-UVv6IS3M4k6GTzSh90j
+OOBeDfChJzPLXzQWLsIYTUfzmEbkcncuo7c8auEgEabcfo4q7loiCuK_QODY_wB6_PDh6rWhINsAN0KC27sPcv0rIkADo9uDGhKCPb314EK
+9RhUUsGBJjOvxX1oKfy0OXfURdYeG8DC6zCZtazrX6DO12rcsZlCPu2Fj1ZPWoAdKYqUAaeX8DdYBAFhvmhxuLlmXYW4zPj89ZhDrbSDCxs
+e0w6rlWbXTaEkiqc3-4S8Az3DJG73jSMB58PtAKUHfpjWR9sp0TLtpfxw_XPtwbE_7EHmchQqNq9zFiB0F6Cxu1eF-5eObABh-EEpQ68Ppp
+3zuorFSSNUuW-nKGl_Eio6gPyUYuMSen8zA.BARlPgBMj068Dt6OGEiPnA
+```
+
+{#tms-cust-tkn-retrieve-default-pay-unmasked-ex-rest_codeblock_vdl_z3n_lwb}
+
+Retrieve a Customer's Default Payment and Shipping Details {#tms-cust-tkn-retrieve-default-pay-ship-intro}
+==========================================================================================================
+
+This section describes how to retrieve a customer's default payment and shipping details.
+
+Endpoint
+--------
+
+**Test:** `GET ``https://apitest.example.com``/tms/v2/customers/`*{customerTokenId}*` `  
+**Production:** `GET ``https://api.example.com``/tms/v2/customers/`*{customerTokenId}*` `  
+**Production in India:** `GET ``https://api.in.example.com``/tms/v2/customers/`*{customerTokenId}*` `  
+The *`{customerTokenId}`* is the customer token ID returned in the id field when you created the customer token. For more information, see [Create a Customer](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-cust-tkn/tms-cust-tkn-create-intro.md "").
+
+REST Example: Retrieving a Customer's Default Payment and Shipping Details {#tms-cust-tkn-retrieve-default-pay-ship-ex-rest}
+============================================================================================================================
+
+Request
+
+```keyword
+GET https://apitest.example.com/tms/v2/customers/F45FB3E443AC3C57E053A2598D0A9CFF
+```
+
+{#tms-cust-tkn-retrieve-default-pay-ship-ex-rest_codeblock_lly_z3n_lwb}  
+Response to a Successful Request
+
+```
+{
+    "_links": {
+        "self": {
+            "href": "/tms/v2/customers/F45FB3E443AC3C57E053A2598D0A9CFF"
+        },
+        "paymentInstruments": {
+            "href": "/tms/v2/customers/F45FB3E443AC3C57E053A2598D0A9CFF/payment-instruments"
+        },
+        "shippingAddresses": {
+            "href": "/tms/v2/customers/F45FB3E443AC3C57E053A2598D0A9CFF/shipping-addresses"
+        }
+    },
+    "id": "F45FB3E443AC3C57E053A2598D0A9CFF",
+    "clientReferenceInformation": {
+        "code": "TC50171_3"
+    },
+    "defaultPaymentInstrument": {
+        "id": "F45FC6785E3C31A2E053A2598D0A5346"
+    },
+    "defaultShippingAddress": {
+        "id": "F45FB3E443AF3C57E053A2598D0A9CFF"
+    },
+    "metadata": {
+        "creator": "testrest"
+    },
+    "_embedded": {
+        "defaultPaymentInstrument": {
+            "_links": {
+                "self": {
+                    "href": "/tms/v2/customers/F45FB3E443AC3C57E053A2598D0A9CFF/payment-instruments/F45FC6785E3C31A2E053A2598D0A5346"
+                },
+                "customer": {
+                    "href": "/tms/v2/customers/F45FB3E443AC3C57E053A2598D0A9CFF"
+                }
+            },
+            "id": "F45FC6785E3C31A2E053A2598D0A5346",
+            "default": true,
+            "state": "ACTIVE",
+            "card": {
+                "expirationMonth": "12",
+                "expirationYear": "2031",
+                "type": "001"
+            },
+            "buyerInformation": {
+                "currency": "USD"
+            },
+            "billTo": {
+                "firstName": "JOHN",
+                "lastName": "DEO",
+                "address1": "201 S. Division St.",
+                "address2": "Address 2",
+                "locality": "Ann Arbor",
+                "administrativeArea": "MI",
+                "postalCode": "48104-2201",
+                "country": "US",
+                "email": "test@pgw.com",
+                "phoneNumber": "999999999"
+            },
+            "processingInformation": {
+                "billPaymentProgramEnabled": false
+            },
+            "instrumentIdentifier": {
+                "id": "7030000000014911515"
+            },
+            "metadata": {
+                "creator": "testrest"
+            },
+            "_embedded": {
+                "instrumentIdentifier": {
+                    "_links": {
+                        "self": {
+                            "href": "/tms/v1/instrumentidentifiers/7030000000014911515"
+                        },
+                        "paymentInstruments": {
+                            "href": "/tms/v1/instrumentidentifiers/7030000000014911515/paymentinstruments"
+                        }
+                    },
+                    "id": "7030000000014911515",
+                    "object": "instrumentIdentifier",
+                    "state": "ACTIVE",
+                    "tokenizedCard": {
+                        "state": "ACTIVE",
+                        "number": "489537XXXXXX5914",
+                        "expirationMonth": "12",
+                        "expirationYear": "2022",
+                        "type": "relay",
+                        "requestorId": "40010052236",
+                        "card": {
+                            "suffix": "1515",
+                            "expirationMonth": "12",
+                            "expirationYear": "2031"
+                        }
+                    },
+                    "card": {
+                        "number": "489537XXXXXX1515"
+                    },
+                    "issuer": {
+                        "paymentAccountReference": "V0010013019326121174070050420"
+                    },
+                    "processingInformation": {
+                        "authorizationOptions": {
+                            "initiator": {
+                                "merchantInitiatedTransaction": {
+                                    "previousTransactionId": "123456789619999"
+                                }
+                            }
+                        }
+                    },
+                    "metadata": {
+                        "creator": "testrest"
+                    }
+                }
+            }
+        },
+        "defaultShippingAddress": {
+            "_links": {
+                "self": {
+                    "href": "/tms/v2/customers/F45FB3E443AC3C57E053A2598D0A9CFF/shipping-addresses/F45FB3E443AF3C57E053A2598D0A9CFF"
+                },
+                "customer": {
+                    "href": "/tms/v2/customers/F45FB3E443AC3C57E053A2598D0A9CFF"
+                }
+            },
+            "id": "F45FB3E443AF3C57E053A2598D0A9CFF",
+            "default": true,
+            "shipTo": {
+                "firstName": "JOHN",
+                "lastName": "DEO",
+                "company": "Relay",
+                "address1": "201 S. Division St.",
+                "address2": "Address 2",
+                "locality": "Ann Arbor",
+                "administrativeArea": "MI",
+                "postalCode": "48104-2201",
+                "country": "US"
+            },
+            "metadata": {
+                "creator": "testrest"
+            }
+        }
+    }
+}
+```
+
+{#tms-cust-tkn-retrieve-default-pay-ship-ex-rest_codeblock_nly_z3n_lwb}
+
+Payments with Customer Tokens {#tms-pay-cust-tkn}
+=================================================
+
+This section contains information on making payments with customer tokens.  
+The customer token represents customer-related information including details for a payment card or electronic check, billing address, shipping address, and merchant defined data.  
+You can make a payment using an existing customer token or create one. To make a payment using a new customer token, you must include token creation in the authorization request. For example:
+
+* [Create a Customer Token with Validated Payment Details](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-cust-tkn/tms-cust-tkn-create-valid-pay-intro.md "")
+  {#tms-pay-cust-tkn_ul_pyh_p4v_qwb}  
+  To process a payment using an existing customer token, you must include the customer token ID as the value in the `paymentInformation.customer.id` field. For example:
+
+* [Authorizing a Payment with a Customer Token](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-cust-tkn/tms-cust-tkn-pay-intro.md "")
+
+* [Making a Credit with a Customer Token](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-cust-tkn/tms-cust-tkn-credit-intro.md "")
+  {#tms-pay-cust-tkn_ul_sbn_34v_qwb}  
+  For more information on customer tokens, see [Customer Tokens](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-overview/tms-token-types/tms-cust-tkn-intro.md "").
+
+Create a Customer Token with Validated Payment Details {#tms-cust-tkn-create-valid-pay-intro}
+=============================================================================================
+
+This section describes how to create a customer with validated payment details.
+
+Endpoint
+--------
+
+**Test:** `POST ``https://apitest.example.com``/pts/v2/payments `{#tms-cust-tkn-create-valid-pay-intro_restcust-test}  
+**Production:** `POST ``https://api.example.com``/pts/v2/payments `  
+**Production in India:** `POST ``https://api.in.example.com``/pts/v2/payments`{#tms-cust-tkn-create-valid-pay-intro_restcust-prod-india}
+
+Required Fields for Creating a Customer Token with Validated Payment Details Using the REST API {#tms-cust-tkn-create-valid-pay-reqfields}
+==========================================================================================================================================
+
+orderInformation.amountDetails.currency
+
+orderInformation.amountDetails.totalAmount
+:
+
+orderInformation.billTo.address1
+:
+
+orderInformation.billTo.administrativeArea
+:
+
+orderInformation.billTo.country
+:
+
+orderInformation.billTo.email
+:
+
+orderInformation.billTo.firstName
+:
+
+orderInformation.billTo.lastName
+:
+
+orderInformation.billTo.locality
+:
+
+orderInformation.billTo.postalCode
+:
+
+paymentInformation.card.expirationMonth
+:
+
+paymentInformation.card.expirationYear
+:
+
+paymentInformation.card.number
+:
+
+paymentInformation.card.type
+:
+
+processingInformation.actionList
+:
+Set the value to `TOKEN_CREATE`.
+
+processingInformation.actionTokenTypes
+:
+Set the value to `customer`.
+
+Related Information {#tms-cust-tkn-create-valid-pay-reqfields_section_jpc_xzz_sxb}
+----------------------------------------------------------------------------------
+
+* [API Field Reference for the REST API](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/api-fields-about-guide.md "")
+  {#tms-cust-tkn-create-valid-pay-reqfields_ul_kpc_xzz_sxb}
+
+REST Example: Creating a Customer Token with Validated Payment Details {#tms-cust-tkn-create-valid-pay-ex-rest}
+===============================================================================================================
+
+Request
+
+```keyword
+POST https://apitest.example.com/pts/v2/payments
+
+{
+    "clientReferenceInformation": {
+        "code": "TC50171_3"
+    },
+    "processingInformation": {
+        "commerceIndicator": "internet",
+        "actionList": [
+            "TOKEN_CREATE"
+        ],
+        "actionTokenTypes": [
+            "customer",
+            "paymentInstrument",
+            "shippingAddress"
+        ]
+    },
+    "orderInformation": {
+        "billTo": {
+            "country": "US",
+            "lastName": "Deo",
+            "address2": "Address 2",
+            "address1": "201 S. Division St.",
+            "postalCode": "48104-2201",
+            "locality": "Ann Arbor",
+            "administrativeArea": "MI",
+            "firstName": "John",
+            "phoneNumber": "999999999",
+            "district": "MI",
+            "buildingNumber": "123",
+            "company": "Relay",
+            "email": "test@pgw.com"
+        },
+        "shipTo": {
+            "country": "US",
+            "lastName": "Deo",
+            "address2": "Address 2",
+            "address1": "201 S. Division St.",
+            "postalCode": "48104-2201",
+            "locality": "Ann Arbor",
+            "administrativeArea": "MI",
+            "firstName": "John",
+            "phoneNumber": "999999999",
+            "district": "MI",
+            "buildingNumber": "123",
+            "company": "Relay",
+            "email": "test@pgw.com"
+        },
+        "amountDetails": {
+            "totalAmount": "102.00",
+            "currency": "USD"
+        }
+    },
+    "paymentInformation": {
+        "card": {
+            "expirationYear": "2031",
+            "number": "4895379987X11515",
+            "securityCode": "089",
+            "expirationMonth": "12",
+            "type": "001"
+        }
+    }
+}
+```
+
+{#tms-cust-tkn-create-valid-pay-ex-rest_codeblock_nlr_x3n_lwb}  
+Response to a Successful Request
+
+```
+{
+    "_links": {
+        "authReversal": {
+            "method": "POST",
+            "href": "/pts/v2/payments/6760630088136127303955/reversals"
+        },
+        "self": {
+            "method": "GET",
+            "href": "/pts/v2/payments/6760630088136127303955"
+        },
+        "capture": {
+            "method": "POST",
+            "href": "/pts/v2/payments/6760630088136127303955/captures"
+        }
+    },
+    "clientReferenceInformation": {
+        "code": "TC50171_3"
+    },
+    "id": "6760630088136127303955",
+    "orderInformation": {
+        "amountDetails": {
+            "authorizedAmount": "102.00",
+            "currency": "USD"
+        }
+    },
+    "paymentAccountInformation": {
+        "card": {
+            "type": "001"
+        }
+    },
+    "paymentInformation": {
+        "tokenizedCard": {
+            "type": "001"
+        },
+        "card": {
+            "type": "001"
+        }
+    },
+    "pointOfSaleInformation": {
+        "terminalId": "111111"
+    },
+    "processorInformation": {
+        "paymentAccountReferenceNumber": "V0010013019326121174070050420",
+        "approvalCode": "888888",
+        "networkTransactionId": "123456789619999",
+        "transactionId": "123456789619999",
+        "responseCode": "100",
+        "avs": {
+            "code": "X",
+            "codeRaw": "I1"
+        }
+    },
+    "reconciliationId": "69816012FDTK35GM",
+    "status": "AUTHORIZED",
+    "submitTimeUtc": "2023-02-10T21:03:29Z",
+    "tokenInformation": {
+        "instrumentidentifierNew": false,
+        "instrumentIdentifier": {
+            "state": "ACTIVE",
+            "id": "7030000000014911515"
+        },
+        "shippingAddress": {
+            "id": "F45FB3E443AF3C57E053A2598D0A9CFF"
+        },
+        "paymentInstrument": {
+            "id": "F45FC6785E3C31A2E053A2598D0A5346"
+        },
+        "customer": {
+            "id": "F45FB3E443AC3C57E053A2598D0A9CFF"
+        }
+    }
+}
+```
+
+{#tms-cust-tkn-create-valid-pay-ex-rest_codeblock_plr_x3n_lwb}
+
+Authorizing a Payment with a Customer Token {#tms-cust-tkn-pay-intro}
+=====================================================================
+
+This section provides the information you need to authorize a payment with a customer token.
+
+Endpoint
+--------
+
+**Production:** `POST ``https://api.example.com``/pts/v2/payments `  
+**Test:** `POST ``https://apitest.example.com``/pts/v2/payments `{#tms-cust-tkn-pay-intro_restcust-test}  
+**Production in India:** `POST ``https://api.in.example.com``/pts/v2/payments`{#tms-cust-tkn-pay-intro_restcust-prod-india}
+
+Required Fields for Authorizing a Payment with a Customer Token {#tms-cust-tkn-pay-reqfields}
+=============================================================================================
+
+[clientReferenceInformation.code](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/client-ref-info-aa/client-ref-info-code.md "")
+:
+
+[orderInformation.amountDetails.currency](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-amount-details-currency.md "")
+
+[orderInformation.amountDetails.totalAmount](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-amount-details-total-amount.md "")
+:
+
+paymentInformation.customer.id
+:
+Set to the ID of the customer token you want to use.
+{#tms-cust-tkn-pay-reqfields_dl_u12_vqy_dwb}
+
+Related Information {#tms-cust-tkn-pay-reqfields_section_jpc_xzz_sxb}
+---------------------------------------------------------------------
+
+* [API field reference guide for the REST API](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/api-fields-about-guide.md "")
+  {#tms-cust-tkn-pay-reqfields_ul_kpc_xzz_sxb}
+
+REST Example: Authorizing a Payment with a Customer Token {#tms-cust-tkn-pay-ex-rest}
+=====================================================================================
+
+Request
+
+```
+{
+  "clientReferenceInformation": {
+    "code": "12345678"
+  },
+    "paymentInformation": {
+        "customer": {
+            "id": "F45FB3E443AC3C57E053A2598D0A9CFF"
+        }
+        
+    },
+    "orderInformation": {
+        "amountDetails": {
+            "currency": "USD",
+            "totalAmount": "10.00"
+        }
+    }
+}
+```
+
+{#tms-cust-tkn-pay-ex-rest_codeblock_ndp_y3n_lwb}  
+Response to a Successful Request  
+The request response returns the payment instrument and shipping address IDs that are used as the customer's defaults.
+
+```
+{
+  "_links": {
+    "authReversal": {
+      "method": "POST",
+      "href": "/pts/v2/payments/7055928871556818104953/reversals"
+    },
+    "self": {
+      "method": "GET",
+      "href": "/pts/v2/payments/7055928871556818104953"
+    },
+    "capture": {
+      "method": "POST",
+      "href": "/pts/v2/payments/7055928871556818104953/captures"
+    }
+  },
+  "clientReferenceInformation": {
+    "code": "12345678"
+  },
+  "id": "7055928871556818104953",
+  "orderInformation": {
+    "amountDetails": {
+      "authorizedAmount": "10.00",
+      "currency": "USD"
+    }
+  },
+  "paymentAccountInformation": {
+    "card": {
+      "type": "001"
+    }
+  },
+  "paymentInformation": {
+    "tokenizedCard": {
+      "type": "001"
+    },
+    "instrumentIdentifier": {
+      "id": "7010000000016241111",
+      "state": "ACTIVE"
+    },
+    "shippingAddress": {
+      "id": "0F35F0D99AD088B5E063A2598D0AE066"
+    },
+    "paymentInstrument": {
+      "id": "0F35E9CFEA463E34E063A2598D0A3FC2"
+    },
+    "card": {
+      "type": "001"
+    },
+    "customer": {
+      "id": "B21E6717A6F03479E05341588E0A303F"
+    }
+  },
+  "pointOfSaleInformation": {
+    "terminalId": "111111"
+  },
+  "processorInformation": {
+    "approvalCode": "888888",
+    "networkTransactionId": "123456789619999",
+    "transactionId": "123456789619999",
+    "responseCode": "100",
+    "avs": {
+      "code": "X",
+      "codeRaw": "I1"
+    }
+  },
+  "reconciliationId": "67467352CRIISD1G",
+  "status": "AUTHORIZED",
+  "submitTimeUtc": "2024-01-18T15:48:07Z"
+}
+```
+
+{#tms-cust-tkn-pay-ex-rest_codeblock_pdp_y3n_lwb}
+
+REST Example: Authorizing a Payment Using a Customer Token Linked to a Network Token {#tms-cust-tkn-pay-nt-ex-rest}
+===================================================================================================================
+
+Request
+
+```
+{
+  "clientReferenceInformation": {
+    "code": "12345678"
+  },
+  "paymentInformation": {
+    "customer": {
+      "id": "F60328413BAB09A4E053AF598E0A33DB"
+    }
+  },
+  "orderInformation": {
+    "amountDetails": {
+      "totalAmount": "102.21",
+      "currency": "USD"
+    }
+  }
+}
+```
+
+{#tms-cust-tkn-pay-nt-ex-rest_codeblock_ndp_y3n_lwb}  
+Response to a Successful Request  
+The request response returns the payment instrument and shipping address IDs that are used as the customer's defaults.
+
+```
+{
+  "_links": {
+    "authReversal": {
+      "method": "POST",
+      "href": "/pts/v2/payments/6778647071126384904953/reversals"
+    },
+    "self": {
+      "method": "GET",
+      "href": "/pts/v2/payments/6778647071126384904953"
+    },
+    "capture": {
+      "method": "POST",
+      "href": "/pts/v2/payments/6778647071126384904953/captures"
+    }
+  },
+  "clientReferenceInformation": {
+    "code": "TC50171_3"
+  },
+  "id": "6778647071126384904953",
+  "issuerInformation": {
+    "responseRaw": "0110322000000E100002000....."
+  },
+  "orderInformation": {
+    "amountDetails": {
+      "authorizedAmount": "102.21",
+      "currency": "USD"
+    }
+  },
+  "paymentAccountInformation": {
+    "card": {
+      "type": "002"
+    }
+  },
+  "paymentInformation": {
+    "tokenizedCard": {
+      "type": "002"
+    },
+    "instrumentIdentifier": {
+      "id": "7020000000010603216",
+      "state": "ACTIVE"
+    },
+    "shippingAddress": {
+      "id": "F60328413BAE09A4E053AF598E0A33DB"
+    },
+    "paymentInstrument": {
+      "id": "F6032841BE33098EE053AF598E0AB0A5"
+    },
+    "card": {
+      "type": "002"
+    },
+    "customer": {
+      "id": "F60328413BAB09A4E053AF598E0A33DB"
+    }
+  },
+  "pointOfSaleInformation": {
+    "terminalId": "08244117"
+  },  "processingInformation": {    "paymentSolution": "014"  },
+  "processorInformation": {
+    "paymentAccountReferenceNumber": "50015OU4U5UYXLV127XTONYN49CL1",
+    "merchantNumber": "000844028303882",
+    "approvalCode": "831000",
+    "networkTransactionId": "0602MCC603474",
+    "transactionId": "0602MCC603474",
+    "responseCode": "00",
+    "avs": {
+      "code": "Y",
+      "codeRaw": "Y"
+    }
+  },
+  "reconciliationId": "EUHW1EMHIZ3O",
+  "status": "AUTHORIZED",
+  "submitTimeUtc": "2023-03-03T17:31:48Z"
+}
+```
+
+{#tms-cust-tkn-pay-nt-ex-rest_codeblock_pdp_y3n_lwb}
+
+Making a Credit with a Customer Token {#tms-cust-tkn-credit-intro}
+==================================================================
+
+This section describes how to make a credit with a customer token.
+
+Endpoint
+--------
+
+**Test:** `POST ``https://apitest.example.com``/pts/v2/credits `{#tms-cust-tkn-credit-intro_restcust-test}  
+**Production:** `POST ``https://api.example.com``/pts/v2/credits `  
+**Production in India:** `POST ``https://api.in.example.com``/pts/v2/credits`{#tms-cust-tkn-credit-intro_restcust-prod-india}
+
+Required Fields for Making a Credit with a Customer Token {#tms-cust-tkn-credit-reqfields}
+==========================================================================================
+
+[clientReferenceInformation.code](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/client-ref-info-aa/client-ref-info-code.md "")
+:
+
+[orderInformation.amountDetails.currency](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-amount-details-currency.md "")
+
+[orderInformation.amountDetails.totalAmount](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-amount-details-total-amount.md "")
+:
+
+paymentInformation.customer.id
+:
+Set to the ID of the customer token you want to use.
+
+Related Information {#tms-cust-tkn-credit-reqfields_section_jpc_xzz_sxb}
+------------------------------------------------------------------------
+
+* [API field reference guide for the REST API](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/api-fields-about-guide.md "")
+  {#tms-cust-tkn-credit-reqfields_ul_kpc_xzz_sxb}
+
+REST Example: Making a Credit with a Customer Token {#tms-cust-tkn-credit-ex-rest}
+==================================================================================
+
+Request
+
+```
+{
+  "clientReferenceInformation": {
+    "code": "12345678"
+  },
+    "paymentInformation": {
+        "customer": {
+            "id": "F45FB3E443AC3C57E053A2598D0A9CFF"
+        }
+    },
+    "orderInformation": {
+        "amountDetails": {
+            "currency": "USD",
+            "totalAmount": "10.00"
+        }
+    }
+}
+```
+
+{#tms-cust-tkn-credit-ex-rest_codeblock_ond_y3n_lwb}  
+Response to a Successful Request
+
+```
+{
+  "_links": {
+    "void": {
+      "method": "POST",
+      "href": "/pts/v2/credits/7055967677826132904951/voids"
+    },
+    "self": {
+      "method": "GET",
+      "href": "/pts/v2/credits/7055967677826132904951"
+    }
+  },
+  "clientReferenceInformation": {
+    "code": "12345678"
+  },
+  "creditAmountDetails": {
+    "currency": "USD",
+    "creditAmount": "10.00"
+  },
+  "id": "7055967677826132904951",
+  "orderInformation": {
+    "amountDetails": {
+      "currency": "USD"
+    }
+  },
+  "paymentAccountInformation": {
+    "card": {
+      "type": "001"
+    }
+  },
+  "paymentInformation": {
+    "tokenizedCard": {
+      "type": "001"
+    },
+    "instrumentIdentifier": {
+      "id": "7030000000014831523",
+      "state": "ACTIVE"
+    },
+    "shippingAddress": {
+      "id": "F45FD8DE51B99E9CE053A2598D0AFDFA"
+    },
+    "paymentInstrument": {
+      "id": "F45FE45E7993C7DBE053A2598D0AED19"
+    },
+    "card": {
+      "type": "001"
+    },
+    "customer": {
+      "id": "F45FB3E443AC3C57E053A2598D0A9CFF"
+    }
+  },
+  "processorInformation": {
+    "paymentAccountReferenceNumber": "V0010013019326121538313096266",
+    "approvalCode": "888888",
+    "responseCode": "100"
+  },
+  "reconciliationId": "67444961BRIL0BB8",
+  "status": "PENDING",
+  "submitTimeUtc": "2024-01-18T16:52:48Z"
+}
+```
+
+{#tms-cust-tkn-credit-ex-rest_codeblock_qnd_y3n_lwb}
+
+Shipping Address Tokens {#tms-ship-tkn}
+=======================================
+
+The shipping address token contains the shipping address information associated with a customer token. This token includes any shipping address details, including the recipient's first and last name, company, shipping address, email, and phone number. A customer can have one or more shipping addresses, with one allocated as the customer's default shipping address.
+
+Manage Shipping Address Tokens {#tms-manage-ship-addr-tkn}
+==========================================================
+
+This section contains information managing shipping address tokens.  
+A shipping address token is associated with a customer token. You can create, retrieve, update, or delete an instrument identifier by submitting an HTTP `POST`, `GET`, `PATCH`, or `DELETE` operation to the `/tms/v2/customers/`*{customerTokenId}*`/shipping-addresses` endpoint. Use the `TMS` REST API shipping address endpoint to:
+* [Create a shipping address token](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-ship-tkn/tms-ship-addr-tkn-create-intro.md "")
+* [Retrieve a shipping address token](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-ship-tkn/tms-ship-addr-tkn-retrieve-intro.md "") or [multiple shipping address tokens for a specific customer](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-ship-tkn/tms-ship-addr-tkn-retrieve-all-intro.md "")
+* [Update a shipping address](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-ship-tkn/tms-ship-addr-tkn-update-intro.md "")
+* [Delete a shipping address](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-ship-tkn/tms-ship-addr-tkn-delete-intro.md "")
+  {#tms-manage-ship-addr-tkn_ul_3}  
+  For more information on shipping address tokens, see [Shipping Address Tokens](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-overview/tms-token-types/tms-ship-tkn-intro.md "").
+
+Create a Customer Shipping Address {#tms-ship-addr-tkn-create-intro}
+====================================================================
+
+This section describes how to create a customer shipping address.
+
+Endpoint {#tms-ship-addr-tkn-create-intro_section_hqw_rjt_gwb}
+--------------------------------------------------------------
+
+**Test:** `POST ``https://apitest.example.com``/tms/v2/customers/`*{customerTokenId}*`/shipping-addresses`{#tms-ship-addr-tkn-create-intro_restcust-test}  
+**Production:** `POST ``https://api.example.com``/tms/v2/customers/`*{customerTokenId}*`/shipping-addresses`  
+**Production in India:** `POST ``https://api.in.example.com``/tms/v2/customers/`*{customerTokenId}*`/shipping-addresses`{#tms-ship-addr-tkn-create-intro_restcust-prod-india}  
+The *`{customerTokenId}`* is the customer token ID returned in the id field when you created the customer token. For more information, see [Create a Customer](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-cust-tkn/tms-cust-tkn-create-intro.md "").  
+If the default field is not supplied and the customer does not already have a shipping address, then the shipping address will become the default. Otherwise, it will become a customer's non-default shipping address.
+
+Required Fields for Creating a Customer Shipping Address {#tms-ship-addr-tkn-create-reqfields}
+==============================================================================================
+
+You can include any of the following fields in the body of the request:
+
+shipTo.address1
+:
+
+shipTo.address2
+:
+
+shipTo.administrativeArea
+:
+
+shipTo.company
+:
+
+shipTo.country
+:
+
+shipTo.email
+:
+
+shipTo.firstName
+:
+
+shipTo.lastName
+:
+
+shipTo.locality
+:
+
+shipTo.phoneNumber
+:
+
+shipTo.postalCode
+:
+{#tms-ship-addr-tkn-create-reqfields_dl_e1p_mry_dwb}
+
+Related Information {#tms-ship-addr-tkn-create-reqfields_section_jpc_xzz_sxb}
+-----------------------------------------------------------------------------
+
+* [API Field Reference for the REST API](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/api-fields-about-guide.md "")
+  {#tms-ship-addr-tkn-create-reqfields_ul_kpc_xzz_sxb}
+
+REST Example: Creating a Customer Shipping Address {#tms-ship-addr-tkn-create-ex-rest}
+======================================================================================
+
+Request
+
+```keyword
+POST https://apitest.example.com/tms/v2/customers/F2F3ADA770102B51E053A2598D0A9078/shipping-addresses
+```
+
+{#tms-ship-addr-tkn-create-ex-rest_codeblock_c51_vmt_gwb}  
+Response to a Successful Request
+
+```
+{
+  "_links": {
+    "self": {
+      "href": "/tms/v2/customers/F2F3ADA770102B51E053A2598D0A9078/shipping-addresses/F2F4C2D1B966D631E053A2598D0AB155"
+    },
+    "customer": {
+      "href": "/tms/v2/customers/F2F3ADA770102B51E053A2598D0A9078"
+    }
+  },
+  "id": "F2F4C2D1B966D631E053A2598D0AB155",
+  "default": true,
+  "shipTo": {
+    "firstName": "John",
+    "lastName": "Doe",
+    "company": "Company Name",
+    "address1": "1 Market St",
+    "locality": "San Francisco",
+    "administrativeArea": "CA",
+    "postalCode": "94105",
+    "country": "US",
+    "email": "test@pgw.com",
+    "phoneNumber": "4158880000"
+  },
+  "metadata": {
+    "creator": "testrest"
+  }
+}
+```
+
+{#tms-ship-addr-tkn-create-ex-rest_codeblock_e51_vmt_gwb}
+
+Add a Default Shipping Address {#tms-ship-addr-add-default-addr-intro}
+======================================================================
+
+This section describes how to add a default customer shipping address.
+
+Endpoint
+--------
+
+**Test:** `POST ``https://apitest.example.com``/tms/v2/customers/`*{customerTokenId}*`/shipping-addresses`{#tms-ship-addr-add-default-addr-intro_restcust-test}  
+**Production:** `POST ``https://api.example.com``/tms/v2/customers/`*{customerTokenId}*`/shipping-addresses`  
+**Production in India:** `POST ``https://api.in.example.com``/tms/v2/customers/`*{customerTokenId}*`/shipping-addresses`{#tms-ship-addr-add-default-addr-intro_restcust-prod-india}  
+The *`{customerTokenId}`* is the customer token ID returned in the id field when you created the customer token. For more information, see [Create a Customer](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-cust-tkn/tms-cust-tkn-create-intro.md "").
+
+Required Fields for Adding a Default Shipping Address {#tms-ship-addr-add-default-addr-reqfields}
+=================================================================================================
+
+You can include any of the following fields in the body of the request:
+
+default
+:
+Set to `true`.
+
+shipTo.address1
+:
+
+shipTo.address2
+:
+
+shipTo.administrativeArea
+:
+
+shipTo.company
+:
+
+shipTo.country
+:
+
+shipTo.email
+:
+
+shipTo.firstName
+:
+
+shipTo.lastName
+:
+
+shipTo.locality
+:
+
+shipTo.phoneNumber
+:
+
+shipTo.postalCode
+:
+{#tms-ship-addr-add-default-addr-reqfields_dl_u12_vqy_dwb}
+
+Related Information {#tms-ship-addr-add-default-addr-reqfields_section_jpc_xzz_sxb}
+-----------------------------------------------------------------------------------
+
+* [API Field Reference for the REST API](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/api-fields-about-guide.md "")
+  {#tms-ship-addr-add-default-addr-reqfields_ul_kpc_xzz_sxb}
+
+REST Example: Adding a Default Shipping Address {#tms-ship-addr-add-default-addr-ex-rest}
+=========================================================================================
+
+Request
+
+```
+{
+    "default": true,
+    "shipTo": {
+        "firstName": "John",
+        "lastName": "Doe",
+        "company": "Relay",
+        "address1": "1 Market St",
+        "locality": "san francisco",
+        "administrativeArea": "CA",
+        "postalCode": "94105",
+        "country": "US",
+        "phoneNumber": "4158880000",
+        "email": "test@pgw.com"
+    }
+}
+```
+
+Response to a Successful Request
+
+```
+{
+    "_links": {
+        "self": {
+            "href": "/tms/v2/customers/F45FB3E443AC3C57E053A2598D0A9CFF/shipping-addresses/F45FD8DE51A89E9CE053A2598D0AFDFA"
+        },
+        "customer": {
+            "href": "/tms/v2/customers/F45FB3E443AC3C57E053A2598D0A9CFF"
+        }
+    },
+    "id": "F45FD8DE51A89E9CE053A2598D0AFDFA",
+    "default": true,
+    "shipTo": {
+        "firstName": "John",
+        "lastName": "Doe",
+        "company": "Relay",
+        "address1": "1 Market St",
+        "locality": "san francisco",
+        "administrativeArea": "CA",
+        "postalCode": "94105",
+        "country": "US",
+        "email": "test@pgw.com",
+        "phoneNumber": "4158880000"
+    },
+    "metadata": {
+        "creator": "testrest"
+    }
+}
+```
+
+Add a Non-Default Shipping Address {#tms-ship-addr-add-nondefault-addr-intro}
+=============================================================================
+
+This section describes how to add a non-default customer shipping address.
+
+Endpoint {#tms-ship-addr-add-nondefault-addr-intro_section_xwm_zlp_mwb}
+-----------------------------------------------------------------------
+
+**Test:** `POST ``https://apitest.example.com``/tms/v2/customers/`*{customerTokenId}*`/shipping-addresses`{#tms-ship-addr-add-nondefault-addr-intro_restcust-test}  
+**Production:** `POST ``https://api.example.com``/tms/v2/customers/`*{customerTokenId}*`/shipping-addresses`  
+**Production in India:** `POST ``https://api.in.example.com``/tms/v2/customers/`*{customerTokenId}*`/shipping-addresses`{#tms-ship-addr-add-nondefault-addr-intro_restcust-prod-india}  
+The *`{customerTokenId}`* is the customer token ID returned in the id field when you created the customer token. For more information, see [Create a Customer Shipping Address](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-ship-tkn/tms-ship-addr-tkn-create-intro.md "").
+
+Required Fields for Adding a Non-Default Shipping Address {#tms-ship-addr-add-nondefault-addr-reqfields}
+========================================================================================================
+
+You can include any of the following fields in the body of the request:
+
+default
+:
+Set to `false`.
+{#tms-ship-addr-add-nondefault-addr-reqfields_dl_u12_vqy_dwb}
+
+shipTo.address1
+:
+
+shipTo.address2
+:
+
+shipTo.administrativeArea
+:
+
+shipTo.company
+:
+
+shipTo.country
+:
+
+shipTo.email
+:
+
+shipTo.firstName
+:
+
+shipTo.lastName
+:
+
+shipTo.locality
+:
+
+shipTo.phoneNumber
+:
+
+shipTo.postalCode
+:
+{#tms-ship-addr-add-nondefault-addr-reqfields_dl_e1p_mry_dwb}
+
+Related Information {#tms-ship-addr-add-nondefault-addr-reqfields_section_jpc_xzz_sxb}
+--------------------------------------------------------------------------------------
+
+* [API Field Reference for the REST API](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/api-fields-about-guide.md "")
+  {#tms-ship-addr-add-nondefault-addr-reqfields_ul_kpc_xzz_sxb}
+
+REST Example: Adding a Non-Default Shipping Address {#tms-ship-addr-add-nondefault-addr-ex-rest}
+================================================================================================
+
+Request
+
+```
+{
+	"default": false,
+        "shipTo": {
+        "firstName": "John",
+        "lastName": "Doe",
+        "company": "Relay",
+        "address1": "1 Market St",
+        "locality": "san francisco",
+        "administrativeArea": "CA",
+        "postalCode": "94105",
+        "country": "US",
+        "phoneNumber": "4158880000",
+        "email": "test@pgw.com"
+    }
+}
+```
+
+{#tms-ship-addr-add-nondefault-addr-ex-rest_codeblock_orm_5jn_lwb}  
+Response to a Successful Request
+
+```
+{
+    "_links": {
+        "self": {
+            "href": "/tms/v2/customers/F45FB3E443AC3C57E053A2598D0A9CFF/shipping-addresses/F45FD8DE51B99E9CE053A2598D0AFDFA"
+        },
+        "customer": {
+            "href": "/tms/v2/customers/F45FB3E443AC3C57E053A2598D0A9CFF"
+        }
+    },
+    "id": "F45FD8DE51B99E9CE053A2598D0AFDFA",
+    "default": false,
+    "shipTo": {
+        "firstName": "John",
+        "lastName": "Doe",
+        "company": "Relay",
+        "address1": "1 Market St",
+        "locality": "san francisco",
+        "administrativeArea": "CA",
+        "postalCode": "94105",
+        "country": "US",
+        "email": "test@pgw.com",
+        "phoneNumber": "4158880000"
+    },
+    "metadata": {
+        "creator": "testrest"
+    }
+}
+```
+
+{#tms-ship-addr-add-nondefault-addr-ex-rest_codeblock_qrm_5jn_lwb}
+
+Change a Default Shipping Address {#tms-ship-addr-change-default-addr-intro}
+============================================================================
+
+This section describes how to change a default customer shipping address.
+
+Endpoint
+--------
+
+**Test:** `PATCH ``https://apitest.example.com``/tms/v2/customers/`*{customerTokenId}*`/shipping-addresses/{shippingAddressTokenId}`{#tms-ship-addr-change-default-addr-intro_restcust-test}  
+**Production:** `PATCH ``https://api.example.com``/tms/v2/customers/`*{customerTokenId}*`/shipping-addresses/{shippingAddressTokenId}`  
+**Production in India:** `PATCH ``https://api.in.example.com``/tms/v2/customers/`*{customerTokenId}*`/shipping-addresses/{shippingAddressTokenId}`{#tms-ship-addr-change-default-addr-intro_restcust-prod-india}  
+The *`{customerTokenId}`* is the customer token ID returned in the id field when you created the customer token. In the *`{shippingAddressTokenId}`* path parameter, pass the shipping address token ID response field returned when you created a shipping address token. For more information, see [Create a Customer](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-cust-tkn/tms-cust-tkn-create-intro.md "") and [Create a Customer Shipping Address](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-ship-tkn/tms-ship-addr-tkn-create-intro.md "").
+
+Required Fields for Changing a Default Shipping Address {#tms-ship-addr-change-default-addr-reqfields}
+======================================================================================================
+
+default
+:
+Set to `true`.
+{#tms-ship-addr-change-default-addr-reqfields_dl_u12_vqy_dwb}
+
+Related Information {#tms-ship-addr-change-default-addr-reqfields_section_jpc_xzz_sxb}
+--------------------------------------------------------------------------------------
+
+* [API Field Reference for the REST API](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/api-fields-about-guide.md "")
+  {#tms-ship-addr-change-default-addr-reqfields_ul_kpc_xzz_sxb}
+
+REST Example: Changing Default Shipping Address {#tms-ship-addr-change-default-addr-ex-rest}
+============================================================================================
+
+Request
+
+```
+{
+    "default": true
+}
+```
+
+{#tms-ship-addr-change-default-addr-ex-rest_codeblock_y3z_vjn_lwb}  
+Response to a Successful Request
+
+```
+{
+    "_links": {
+        "self": {
+            "href": "/tms/v2/customers/F45FB3E443AC3C57E053A2598D0A9CFF/shipping-addresses/F45FD8DE51B99E9CE053A2598D0AFDFA"
+        },
+        "customer": {
+            "href": "/tms/v2/customers/F45FB3E443AC3C57E053A2598D0A9CFF"
+        }
+    },
+    "id": "F45FD8DE51B99E9CE053A2598D0AFDFA",
+    "default": true,
+    "shipTo": {
+        "firstName": "John",
+        "lastName": "Doe",
+        "company": "Relay",
+        "address1": "1 Market St",
+        "locality": "san francisco",
+        "administrativeArea": "CA",
+        "postalCode": "94105",
+        "country": "US",
+        "email": "test@pgw.com",
+        "phoneNumber": "4158880000"
+    },
+    "metadata": {
+        "creator": "testrest"
+    }
+}
+```
+
+{#tms-ship-addr-change-default-addr-ex-rest_codeblock_ajz_vjn_lwb}
+
+Retrieve a Customer Shipping Address {#tms-ship-addr-tkn-retrieve-intro}
+========================================================================
+
+This section describes how to retrieve a customer shipping address.
+
+Endpoint {#tms-ship-addr-tkn-retrieve-intro_section_hqw_rjt_gwb}
+----------------------------------------------------------------
+
+**Test:** `GET ``https://apitest.example.com``/tms/v2/customers/`*{customerTokenId}*`/shipping-addresses/{shippingAddressTokenId}`{#tms-ship-addr-tkn-retrieve-intro_restcust-test}  
+**Production:** `GET ``https://api.example.com``/tms/v2/customers/`*{customerTokenId}*`/shipping-addresses/{shippingAddressTokenId}`  
+**Production in India:** `GET ``https://api.in.example.com``/tms/v2/customers/`*{customerTokenId}*`/shipping-addresses/{shippingAddressTokenId}`{#tms-ship-addr-tkn-retrieve-intro_restcust-prod-india}  
+The *`{customerTokenId}`* is the customer token ID returned in the id field when you created the customer token. In the *`{shippingAddressTokenId}`* path parameter, pass the shipping address token ID response field returned when you created a shipping address token. For more information, see [Create a Customer](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-cust-tkn/tms-cust-tkn-create-intro.md "") and [Create a Customer Shipping Address](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-ship-tkn/tms-ship-addr-tkn-create-intro.md "").
+
+REST Example: Retrieving a Shipping Address {#tms-ship-addr-tkn-retrieve-ex-rest}
+=================================================================================
+
+Request
+
+```keyword
+GET https://apitest.example.com/tms/v2/customers/F2F3ADA770102B51E053A2598D0A9078/shipping-addresses/F2F4C2D1B966D631E053A2598D0AB155
+```
+
+{#tms-ship-addr-tkn-retrieve-ex-rest_codeblock_c51_vmt_gwb}  
+Response to a Successful Request
+
+```
+{ 
+  "shipTo": { 
+    "firstName": "Jane", 
+    "lastName": "Smith", 
+    "company": "Lear Group, LLC", 
+    "address1": "123 Mountain Peaks Rd", 
+    "address2": "", 
+    "locality": "Mountain Peaks", 
+    "administrativeArea": "CA", 
+    "postalCode": "90212", 
+    "country": "US", 
+    "email": "jane.smith@leargroupllc.world", 
+    "phoneNumber": "123-456-7890" 
+  }
+}
+```
+
+{#tms-ship-addr-tkn-retrieve-ex-rest_codeblock_e51_vmt_gwb}
+
+Retrieve All Customer Shipping Addresses {#tms-ship-addr-tkn-retrieve-all-intro}
+================================================================================
+
+This section describes how to retrieve all customer shipping addresses.
+
+Endpoint {#tms-ship-addr-tkn-retrieve-all-intro_section_hqw_rjt_gwb}
+--------------------------------------------------------------------
+
+**Test:** `GET ``https://apitest.example.com``/tms/v2/customers/`*{customerTokenId}*`/shipping-addresses`{#tms-ship-addr-tkn-retrieve-all-intro_restcust-test}  
+**Production:** `GET ``https://api.example.com``/tms/v2/customers/`*{customerTokenId}*`/shipping-addresses`  
+**Production in India:** `GET ``https://api.in.example.com``/tms/v2/customers/`*{customerTokenId}*`/shipping-addresses`{#tms-ship-addr-tkn-retrieve-all-intro_restcust-prod-india}  
+The *`{customerTokenId}`* is the customer token ID returned in the id field when you created the customer token. For more information, see [Create a Customer](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-cust-tkn/tms-cust-tkn-create-intro.md "").  
+Use these query string parameters to filter the list of payment instrument tokens:
+* `offset` --- Page offset number.
+* `limit` --- Maximum number of items you would like returned.
+  {#tms-ship-addr-tkn-retrieve-all-intro_ul_yxk_x1y_mwb}
+
+REST Example: Retrieving All Customer Shipping Addresses {#tms-ship-addr-tkn-retrieve-all-ex-rest}
+==================================================================================================
+
+Request
+
+```keyword
+GET https://apitest.example.com/tms/v2/customers/F2F3ADA770102B51E053A2598D0A9078/shipping-addresses?offset=0&limit=20
+```
+
+{#tms-ship-addr-tkn-retrieve-all-ex-rest_codeblock_c51_vmt_gwb}  
+Response to a Successful Request  
+The shipping address in the first array element is the default shipping address.
+
+```
+{
+  "_links": {
+    "self": {
+      "href": "/tms/v2/customers/F2F3ADA770102B51E053A2598D0A9078/shipping-addresses?offset=0&limit=20"
+    },
+    "first": {
+      "href": "/tms/v2/customers/F2F3ADA770102B51E053A2598D0A9078/shipping-addresses?offset=0&limit=20"
+    },
+    "last": {
+      "href": "/tms/v2/customers/F2F3ADA770102B51E053A2598D0A9078/shipping-addresses?offset=0&limit=20"
+    }
+  },
+  "offset": 0,
+  "limit": 20,
+  "count": 1,
+  "total": 1,
+  "_embedded": {
+    "shippingAddresses": [ 
+      {
+        "_links": {
+          "self": {
+            "href": "/tms/v2/customers/F2F3ADA770102B51E053A2598D0A9078/shipping-addresses/F2F4C2D1B966D631E053A2598D0AB155"
+          },
+          "customer": {
+            "href": "/tms/v2/customers/F2F3ADA770102B51E053A2598D0A9078"
+          }
+        },
+        "id": "F2F4C2D1B966D631E053A2598D0AB155",
+        "default": true,
+        "shipTo": {
+          "firstName": "John",
+          "lastName": "Doe",
+          "company": "Company Name",
+          "address1": "1 Market St",
+          "locality": "San Francisco",
+          "administrativeArea": "CA",
+          "postalCode": "94105",
+          "country": "US",
+          "email": "test@pgw.com",
+          "phoneNumber": "4158880000"
+        },
+        "metadata": {
+          "creator": "testrest"
+        }
+      }
+    ]
+  }
+}
+```
+
+{#tms-ship-addr-tkn-retrieve-all-ex-rest_codeblock_e51_vmt_gwb}
+
+Update a Customer Shipping Address {#tms-ship-addr-tkn-update-intro}
+====================================================================
+
+This section describes how to update a customer shipping address.
+
+Endpoint {#tms-ship-addr-tkn-update-intro_section_hqw_rjt_gwb}
+--------------------------------------------------------------
+
+**Test:** `PATCH ``https://apitest.example.com``/tms/v2/customers/`*{customerTokenId}*`/shipping-addresses/{shippingAddressTokenId}`{#tms-ship-addr-tkn-update-intro_restcust-test}  
+**Production:** `PATCH ``https://api.example.com``/tms/v2/customers/`*{customerTokenId}*`/shipping-addresses/{shippingAddressTokenId}`  
+**Production in India:** `PATCH ``https://api.in.example.com``/tms/v2/customers/`*{customerTokenId}*`/shipping-addresses/{shippingAddressTokenId}`{#tms-ship-addr-tkn-update-intro_restcust-prod-india}  
+The *`{customerTokenId}`* is the customer token ID returned in the id field when you created the customer token. In the *`{shippingAddressTokenId}`* path parameter, pass the shipping address token ID response field returned when you created a shipping address token. For more information, see [Create a Customer](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-cust-tkn/tms-cust-tkn-create-intro.md "") and [Create a Customer Shipping Address](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-ship-tkn/tms-ship-addr-tkn-create-intro.md "").
+
+Required Fields for Updating a Customer Shipping Address {#tms-ship-addr-tkn-update-reqfields}
+==============================================================================================
+
+shipTo.address1
+:
+
+shipTo.address2
+:
+
+shipTo.administrativeArea
+:
+
+shipTo.company
+:
+
+shipTo.country
+:
+
+shipTo.email
+:
+
+shipTo.firstName
+:
+
+shipTo.lastName
+:
+
+shipTo.locality
+:
+
+shipTo.phoneNumber
+:
+
+shipTo.postalCode
+:
+
+Related Information {#tms-ship-addr-tkn-update-reqfields_section_jpc_xzz_sxb}
+-----------------------------------------------------------------------------
+
+* [API Field Reference for the REST API](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/api-fields-about-guide.md "")
+  {#tms-ship-addr-tkn-update-reqfields_ul_kpc_xzz_sxb}
+
+REST Example: Updating a Customer Shipping Address {#tms-ship-addr-tkn-update-ex-rest}
+======================================================================================
+
+Request
+
+```
+{ 
+  "shipTo": { 
+    "firstName": "Jane", 
+    "lastName": "Smith", 
+    "company": "Lear Group, LLC", 
+    "address1": "123 Mountain Peaks Rd", 
+    "address2": "Unit B", 
+    "locality": "Mountain Peaks", 
+    "administrativeArea": "CA", 
+    "postalCode": "90212", 
+    "country": "US", 
+    "email": "jane.smith@leargroupllc.world", 
+    "phoneNumber": "123-456-7890" 
+  }
+}
+```
+
+{#tms-ship-addr-tkn-update-ex-rest_codeblock_c51_vmt_gwb}  
+Response to a Successful Request
+
+```
+{ 
+  "shipTo": { 
+    "firstName": "Jane", 
+    "lastName": "Smith", 
+    "company": "Lear Group, LLC", 
+    "address1": "123 Mountain Peaks Rd", 
+    "address2": "Unit B", 
+    "locality": "Mountain Peaks", 
+    "administrativeArea": "CA", 
+    "postalCode": "90212", 
+    "country": "US", 
+    "email": "jane.smith@leargroupllc.world", 
+    "phoneNumber": "123-456-7890" 
+  }
+}
+```
+
+{#tms-ship-addr-tkn-update-ex-rest_codeblock_e51_vmt_gwb}
+
+Delete a Customer Shipping Address {#tms-ship-addr-tkn-delete-intro}
+====================================================================
+
+This section describes how to delete a customer shipping address.
+
+Endpoint {#tms-ship-addr-tkn-delete-intro_section_hqw_rjt_gwb}
+--------------------------------------------------------------
+
+**Test:** `DELETE ``https://apitest.example.com``/tms/v2/customers/`*{customerTokenId}*`/shipping-addresses/{shippingAddressTokenId}`{#tms-ship-addr-tkn-delete-intro_restcust-test}  
+**Production:** `DELETE ``https://api.example.com``/tms/v2/customers/`*{customerTokenId}*`/shipping-addresses/{shippingAddressTokenId}`  
+**Production in India:** `DELETE ``https://api.in.example.com``/tms/v2/customers/`*{customerTokenId}*`/shipping-addresses/{shippingAddressTokenId}`{#tms-ship-addr-tkn-delete-intro_restcust-prod-india}  
+The *`{customerTokenId}`* is the customer token ID returned in the id field when you created the customer token. In the *`{shippingAddressTokenId}`* path parameter, pass the shipping address token ID response field returned when you created a shipping address token. For more information, see [Create a Customer](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-cust-tkn/tms-cust-tkn-create-intro.md "") and [Create a Customer Shipping Address](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-ship-tkn/tms-ship-addr-tkn-create-intro.md "").
+IMPORTANT If you have more than one shipping address, the default shipping address cannot be deleted without first selecting a new default shipping address.
+
+Required Fields for Deleting a Customer Shipping Address {#tms-ship-addr-tkn-delete-reqfields}
+==============================================================================================
+
+customerTokenId
+:
+Include the ID of the customer token you want to retrieve in the URL path.
+
+shippingAddressTokenId
+:
+Include the ID of the shipping address token you want to retrieve in the URL path.
+
+Related Information {#tms-ship-addr-tkn-delete-reqfields_section_jpc_xzz_sxb}
+-----------------------------------------------------------------------------
+
+* [API Field Reference for the REST API](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/api-fields-about-guide.md "")
+  {#tms-ship-addr-tkn-delete-reqfields_ul_kpc_xzz_sxb}
+
+REST Example: Deleting a Customer Shipping Address {#tms-ship-addr-tkn-delete-ex-rest}
+======================================================================================
+
+Request
+
+```keyword
+DELETE https://apitest.example.com/tms/v2/customers/F2F3ADA770102B51E053A2598D0A9078/shipping-addresses/F2F4C2D1B966D631E053A2598D0AB155
+```
+
+{#tms-ship-addr-tkn-delete-ex-rest_codeblock_c51_vmt_gwb}  
+Response to a Successful Request
+A successful delete response returns an empty `HTTP 204 No Content` status. For more information, see [HTTP Status Codes](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-ref-info/tms-http-status.md "").
+
+Payments with Shipping Address Tokens {#tms-pay-ship-addr-tkn}
+==============================================================
+
+This section contains information on making payments with shipping address tokens.  
+A shipping address token is associated with a specific customer token. This includes any shipping address details, including first and last name, company, shipping address, email, and phone number.  
+To make a payment using a shipping address token, you must either create the token in the authorization request or include the customer token ID as the value in the `paymentInformation.customer.id` and `paymentInformation.shippingAddress.id` fields. You can make payments using non-default shipping address tokens. For example:
+
+* [Authorizing a Payment with a Non-Default Shipping Address](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-ship-tkn/tms-ship-addr-make-pay-nondefault-ship-addr-intro.md "")
+  {#tms-pay-ship-addr-tkn_ul_h3x_z4v_qwb}  
+  For more information on shipping address tokens, see [Shipping Address Tokens](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-overview/tms-token-types/tms-ship-tkn-intro.md "").
+
+Authorizing a Payment with a Non-Default Shipping Address {#tms-ship-addr-make-pay-nondefault-ship-addr-intro}
+==============================================================================================================
+
+This section provides the information you need in order to make a payment with a non-default shipping address.
+
+Endpoint {#tms-ship-addr-make-pay-nondefault-ship-addr-intro_section_m1k_n4p_mwb}
+---------------------------------------------------------------------------------
+
+**Production:** `POST ``https://api.example.com``/pts/v2/payments `  
+**Test:** `POST ``https://apitest.example.com``/pts/v2/payments `{#tms-ship-addr-make-pay-nondefault-ship-addr-intro_restcust-test}  
+**Production in India:** `POST ``https://api.in.example.com``/pts/v2/payments`{#tms-ship-addr-make-pay-nondefault-ship-addr-intro_restcust-prod-india}
+
+Required Fields for Authorizing a Payment with a Non-Default Shipping Address {#tms-ship-addr-make-pay-nondefault-ship-addr-reqfields}
+======================================================================================================================================
+
+[clientReferenceInformation.code](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/client-ref-info-aa/client-ref-info-code.md "")
+:
+
+[orderInformation.amountDetails.currency](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-amount-details-currency.md "")
+
+[orderInformation.amountDetails.totalAmount](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-amount-details-total-amount.md "")
+:
+
+paymentInformation.customer.id
+:
+Set to the ID of the customer token you want to use.
+
+paymentInformation.shippingAddress.id
+:
+Set to the ID of the shipping address token you want to use.
+{#tms-ship-addr-make-pay-nondefault-ship-addr-reqfields_dl_u12_vqy_dwb}
+
+Related Information {#tms-ship-addr-make-pay-nondefault-ship-addr-reqfields_section_jpc_xzz_sxb}
+------------------------------------------------------------------------------------------------
+
+* [API field reference guide for the REST API](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/api-fields-about-guide.md "")
+  {#tms-ship-addr-make-pay-nondefault-ship-addr-reqfields_ul_kpc_xzz_sxb}
+
+REST Example: Authorizing a Payment with a Non-Default Shipping Address {#tms-ship-addr-make-pay-nondefault-ship-addr-ex-rest}
+==============================================================================================================================
+
+Request
+
+```
+{
+  "clientReferenceInformation": {
+    "code": "12345678"
+  },
+    "paymentInformation": {
+        "customer": {
+            "id": "F45FB3E443AC3C57E053A2598D0A9CFF"
+        },
+        "shippingAddress": {
+            "id": "F45FD8DE51B99E9CE053A2598D0AFDFA"
+        }
+    },
+    "orderInformation": {
+        "amountDetails": {
+            "currency": "USD",
+            "totalAmount": "10.00"
+        }
+    }
+}
+```
+
+{#tms-ship-addr-make-pay-nondefault-ship-addr-ex-rest_codeblock_bnm_wjn_lwb}  
+Response to a Successful Request
+
+```
+{
+  "_links": {
+    "authReversal": {
+      "method": "POST",
+      "href": "/pts/v2/payments/7055949037316786904953/reversals"
+    },
+    "self": {
+      "method": "GET",
+      "href": "/pts/v2/payments/7055949037316786904953"
+    },
+    "capture": {
+      "method": "POST",
+      "href": "/pts/v2/payments/7055949037316786904953/captures"
+    }
+  },
+  "clientReferenceInformation": {
+    "code": "12345678"
+  },
+  "id": "7055949037316786904953",
+  "orderInformation": {
+    "amountDetails": {
+      "authorizedAmount": "10.00",
+      "currency": "USD"
+    }
+  },
+  "paymentAccountInformation": {
+    "card": {
+      "type": "001"
+    }
+  },
+  "paymentInformation": {
+    "tokenizedCard": {
+      "type": "001"
+    },
+    "instrumentIdentifier": {
+      "id": "7030000000014831523",
+      "state": "ACTIVE"
+    },
+    "shippingAddress": {
+      "id": "F45FD8DE51B99E9CE053A2598D0AFDFA"
+    },
+    "paymentInstrument": {
+      "id": "F45FE45E7993C7DBE053A2598D0AED19"
+    },
+    "card": {
+      "type": "001"
+    },
+    "customer": {
+      "id": "F45FB3E443AC3C57E053A2598D0A9CFF"
+    }
+  },
+  "pointOfSaleInformation": {
+    "terminalId": "111111"
+  },
+  "processorInformation": {
+    "approvalCode": "888888",
+    "networkTransactionId": "123456789619999",
+    "transactionId": "123456789619999",
+    "responseCode": "100",
+    "avs": {
+      "code": "X",
+      "codeRaw": "I1"
+    }
+  },
+  "reconciliationId": "674679208RIKQ52K",
+  "status": "AUTHORIZED",
+  "submitTimeUtc": "2024-01-18T16:21:44Z"
+}
+```
+
+{#tms-ship-addr-make-pay-nondefault-ship-addr-ex-rest_codeblock_dnm_wjn_lwb}
+
+Customer Payment Instrument Tokens {#tms-cust-pi-tkn}
+=====================================================
+
+Customer payment instruments are payment instruments that are linked to a specific customer token. Supported payment instruments include payment cards, tokenized cards (Apple Pay and Android Pay), or ACH bank accounts.
+
+Manage Customer Payment Instrument Tokens {#tms-manage-cust-pi-tkn}
+===================================================================
+
+This section contains information on managing customer payment instrument tokens.  
+Customer payment instruments are payment instruments that are linked to a specific customer token. The following payment instruments are supported:
+
+* Payment card
+* Tokenized card (Apple Pay and Android Pay)
+* ACH bank account
+  {#tms-manage-cust-pi-tkn_ul_c52_kb2_pwb}  
+  You can create, retrieve, update, or delete a payment instrument by submitting an HTTP `POST`, `GET`, `PATCH`, or `DELETE` operation to the `tms/v2/customers/`*{customerTokenId}*`/payment-instruments` endpoint. Use the `TMS` REST API payment instrument endpoint to:
+* [Create a customer payment instrument token](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-cust-pi-tkn/tms-cust-pi-tkn-create-intro.md "")
+* [Retrieve a customer payment instrument token](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-cust-pi-tkn/tms-cust-pi-tkn-retrieve-intro.md "")
+* [Update a customer payment instrument](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-cust-pi-tkn/tms-cust-pi-tkn-update-intro.md "")
+* [Delete a customer payment instrument](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-cust-pi-tkn/tms-cust-pi-tkn-delete-intro.md "")
+  {#tms-manage-cust-pi-tkn_ul_g1m_jxw_mwb}  
+  For more information on customer tokens and payment instrument tokens, see [Customer Tokens](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-overview/tms-token-types/tms-cust-tkn-intro.md "") and [Payment Instrument Tokens](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-overview/tms-token-types/tms-pi-tkn-intro.md ""), respectively.
+
+Create a Customer Payment Instrument {#tms-cust-pi-tkn-create-intro}
+====================================================================
+
+This section describes how to create a customer payment instrument token.
+
+Endpoint
+--------
+
+**Test:** `POST ``https://apitest.example.com``/tms/v2/customers/`*{customerTokenId}*`/payment-instruments `{#tms-cust-pi-tkn-create-intro_restcust-test}  
+**Production:** `POST ``https://api.example.com``/tms/v2/customers/`*{customerTokenId}*`/payment-instruments`  
+**Production in India:** `POST ``https://api.in.example.com``/tms/v2/customers/`*{customerTokenId}*`/payment-instruments`{#tms-cust-pi-tkn-create-intro_restcust-prod-india}  
+The *`{customerTokenId}`* is the customer token ID returned in the id field when you created the customer token. For more information, see [Create a Customer](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-cust-tkn/tms-cust-tkn-create-intro.md "").
+
+Required Fields for Creating a Customer Payment Instrument {#tms-cust-pi-tkn-create-reqfields}
+==============================================================================================
+
+card.type
+:
+Required if the instrument identifier ID being linked to is card-based.
+
+Related Information {#tms-cust-pi-tkn-create-reqfields_section_jpc_xzz_sxb}
+---------------------------------------------------------------------------
+
+* [API Field Reference for the REST API](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/api-fields-about-guide.md "")
+  {#tms-cust-pi-tkn-create-reqfields_ul_kpc_xzz_sxb}
+
+Optional Fields for Creating a Customer Payment Instrument {#tms-cust-pi-tkn-create-optfields}
+==============================================================================================
+
+bankAccount.type
+:
+
+billTo.address1
+:
+
+billTo.address2
+:
+
+billTo.aminstrativeArea
+:
+
+billTo.company
+:
+
+billTo.country
+:
+
+billTo.email
+:
+
+billTo.firstName
+:
+
+billTo.lastName
+:
+
+billTo.locality
+:
+
+billTo.phoneNumber
+:
+
+billTo.postalCode
+:
+
+buyerInformation.companyTaxID
+:
+
+buyerInformation.currency
+:
+
+buyerInformation.dateOfBirth
+:
+
+buyerInformation.personalIdentification.id
+:
+
+buyerInformation.personalIdentification.issuedBy.administrativeArea
+:
+
+buyerInformation.personalIdentification.type
+:
+
+card.expirationMonth
+:
+
+card.expirationYear
+:
+
+card.issueNumber
+:
+
+card.startMonth
+:
+
+card.startYear
+:
+
+card.useAs
+:
+
+card.tokenizedInformation.requestorID
+:
+
+card.tokenizedInformation.transactionType
+:
+
+default
+:
+If you do not include this field, the first payment instrument for a customer becomes the default. A subsequent payment instrument becomes the non-default option.
+
+instrumentIdentifier.id
+:
+
+processingInformation.billPaymentProgramEnabled
+:
+
+merchantInformation.merchantDescriptor.alternateName
+:
+{#tms-cust-pi-tkn-create-optfields_dl_bcz_qry_dwb}
+
+Related Information {#tms-cust-pi-tkn-create-optfields_section_jpc_xzz_sxb}
+---------------------------------------------------------------------------
+
+* [API Field Reference for the REST API](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/api-fields-about-guide.md "")
+  {#tms-cust-pi-tkn-create-optfields_ul_kpc_xzz_sxb}
+
+REST Example: Creating a Customer Payment Instrument {#tms-cust-pi-tkn-create-ex-rest}
+======================================================================================
+
+Request
+
+```
+{
+  "card": {
+    "expirationMonth": "12",
+    "expirationYear": "2031",
+    "type": "001"
+  },
+  "billTo": {
+    "firstName": "John",
+    "lastName": "Doe",
+    "company": "Company Name",
+    "address1": "1 Market St",
+    "locality": "San Francisco",
+    "administrativeArea": "CA",
+    "postalCode": "94105",
+    "country": "US",
+    "email": "test@pgw.com",
+    "phoneNumber": "4158880000"
+  },
+  "instrumentIdentifier": {
+    "id": "7010000000016241111"
+  }
+}         
+```
+
+Response to a Successful Request
+
+```
+{
+  "_links": {
+    "self": {
+      "href": "/tms/v2/customers/F2F3ADA770102B51E053A2598D0A9078/payment-instruments/F39732BE4BDA9A1EE053AF598E0A4081"
+    },
+    "customer": {
+      "href": "/tms/v2/customers/F2F3ADA770102B51E053A2598D0A9078"
+    }
+  },
+  "id": "F39732BE4BDA9A1EE053AF598E0A4081",
+  "default": true,
+  "state": "ACTIVE",
+  "card": {
+    "expirationMonth": "12",
+    "expirationYear": "2031",
+    "type": "001"
+  },
+  "billTo": {
+    "firstName": "John",
+    "lastName": "Doe",
+    "company": "Company Name",
+    "address1": "1 Market St",
+    "locality": "San Francisco",
+    "administrativeArea": "CA",
+    "postalCode": "94105",
+    "country": "US",
+    "email": "test@pgw.com",
+    "phoneNumber": "4158880000"
+  },
+  "instrumentIdentifier": {
+    "id": "7010000000016241111"
+  },
+  "metadata": {
+    "creator": "testrest"
+  },
+  "_embedded": {
+    "instrumentIdentifier": {
+      "_links": {
+        "self": {
+          "href": "/tms/v1/instrumentidentifiers/7010000000016241111"
+        },
+        "paymentInstruments": {
+          "href": "/tms/v1/instrumentidentifiers/7010000000016241111/paymentinstruments"
+        }
+      },
+      "id": "7010000000016241111",
+      "object": "instrumentIdentifier",
+      "state": "ACTIVE",
+      "card": {
+        "number": "411111XXXXXX1111"
+      },
+      "processingInformation": {
+        "authorizationOptions": {
+          "initiator": {
+            "merchantInitiatedTransaction": {
+              "previousTransactionId": "123456789012345"
+            }
+          }
+        }
+      },
+      "metadata": {
+        "creator": "testrest"
+      }
+    }
+  }
+}
+}
+```
+
+Add a Default Payment Instrument Using Instrument Identifier {#tms-cust-pi-tkn-add-default-pi-ii-intro}
+=======================================================================================================
+
+This section describes how add a default payment instrument using an instrument identifier.
+
+Endpoint
+--------
+
+**Test:** `POST ``https://apitest.example.com``/tms/v2/customers/`*{customerTokenId}*`/payment-instruments`{#tms-cust-pi-tkn-add-default-pi-ii-intro_restcust-test}  
+**Production:** `POST ``https://api.example.com``/tms/v2/customers/`*{customerTokenId}*`/payment-instruments`  
+**Production in India:** `POST ``https://api.in.example.com``/tms/v2/customers/`*{customerTokenId}*`/payment-instruments`{#tms-cust-pi-tkn-add-default-pi-ii-intro_restcust-prod-india}  
+The *`{customerTokenId}`* is the customer token ID returned in the id field when you created the customer token. For more information, see [Create a Customer](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-cust-tkn/tms-cust-tkn-create-intro.md "").
+
+Required Fields for Adding a Default Payment Instrument Using Instrument Identifier Using the REST API {#tms-cust-pi-tkn-add-default-pi-ii-reqfields}
+=====================================================================================================================================================
+
+default
+:
+Set value to `true`.
+{#tms-cust-pi-tkn-add-default-pi-ii-reqfields_dl_bcz_qry_dwb}
+
+Related Information {#tms-cust-pi-tkn-add-default-pi-ii-reqfields_section_jpc_xzz_sxb}
+--------------------------------------------------------------------------------------
+
+* [API Field Reference for the REST API](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/api-fields-about-guide.md "")
+  {#tms-cust-pi-tkn-add-default-pi-ii-reqfields_ul_kpc_xzz_sxb}
+
+Optional Fields for Adding a Default Payment Instrument Using Instrument Identifier Using the REST API {#tms-cust-pi-tkn-add-default-pi-ii-optfields}
+=====================================================================================================================================================
+
+bankAccount.type
+:
+
+billTo.address1
+:
+
+billTo.address2
+:
+
+billTo.aminstrativeArea
+:
+
+billTo.company
+:
+
+billTo.country
+:
+
+billTo.email
+:
+
+billTo.firstName
+:
+
+billTo.lastName
+:
+
+billTo.locality
+:
+
+billTo.phoneNumber
+:
+
+billTo.postalCode
+:
+
+buyerInformation.companyTaxID
+:
+
+buyerInformation.currency
+:
+
+buyerInformation.dateOfBirth
+:
+
+buyerInformation.personalIdentification.id
+:
+
+buyerInformation.personalIdentification.issuedBy.administrativeArea
+:
+
+buyerInformation.personalIdentification.type
+:
+
+card.expirationMonth
+:
+
+card.expirationYear
+:
+
+card.issueNumber
+:
+
+card.startMonth
+:
+
+card.startYear
+:
+
+card.type
+:
+
+card.useAs
+:
+
+card.tokenizedInformation.requestorID
+:
+
+card.tokenizedInformation.transactionType
+:
+
+instrumentIdentifier.id
+:
+
+processingInformation.billPaymentProgramEnabled
+:
+
+merchantInformation.merchantDescriptor.alternateName
+:
+{#tms-cust-pi-tkn-add-default-pi-ii-optfields_dl_bcz_qry_dwb}
+
+Related Information {#tms-cust-pi-tkn-add-default-pi-ii-optfields_section_jpc_xzz_sxb}
+--------------------------------------------------------------------------------------
+
+* [API Field Reference for the REST API](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/api-fields-about-guide.md "")
+  {#tms-cust-pi-tkn-add-default-pi-ii-optfields_ul_kpc_xzz_sxb}
+
+REST Example: Adding a Default Payment Instrument Using Instrument Identifier {#tms-cust-pi-tkn-add-default-pi-ii-ex-rest}
+==========================================================================================================================
+
+Request
+
+```
+{
+    "default": true,
+    "card": {
+        "expirationMonth": "12",
+        "expirationYear": "2031",
+        "type": "001"
+    },
+    "billTo": {
+        "firstName": "John",
+        "lastName": "Doe",
+        "company": "Relay",
+        "address1": "1 Market St",
+        "locality": "san francisco",
+        "administrativeArea": "CA",
+        "postalCode": "94105",
+        "country": "US",
+        "phoneNumber": "4158880000",
+        "email": "test@pgw.com"
+    },
+    "instrumentIdentifier": {
+        "id": "7010000000016241111"
+    }
+}
+```
+
+{#tms-cust-pi-tkn-add-default-pi-ii-ex-rest_codeblock_v4l_mlt_lwb}  
+Response to a Successful Request
+
+```
+{
+    "_links": {
+        "self": {
+            "href": "/tms/v2/customers/F45FB3E443AC3C57E053A2598D0A9CFF/payment-instruments/F45FD8DE542A9E9CE053A2598D0AFDFA"
+        },
+        "customer": {
+            "href": "/tms/v2/customers/F45FB3E443AC3C57E053A2598D0A9CFF"
+        }
+    },
+    "id": "F45FD8DE542A9E9CE053A2598D0AFDFA",
+    "default": true,
+    "state": "ACTIVE",
+    "card": {
+        "expirationMonth": "12",
+        "expirationYear": "2031",
+        "type": "001"
+    },
+    "billTo": {
+        "firstName": "John",
+        "lastName": "Doe",
+        "company": "Relay",
+        "address1": "1 Market St",
+        "locality": "san francisco",
+        "administrativeArea": "CA",
+        "postalCode": "94105",
+        "country": "US",
+        "email": "test@pgw.com",
+        "phoneNumber": "4158880000"
+    },
+    "instrumentIdentifier": {
+        "id": "7030000000014911515"
+    },
+    "metadata": {
+        "creator": "testrest"
+    },
+    "_embedded": {
+        "instrumentIdentifier": {
+            "_links": {
+                "self": {
+                    "href": "/tms/v1/instrumentidentifiers/7030000000014911515"
+                },
+                "paymentInstruments": {
+                    "href": "/tms/v1/instrumentidentifiers/7030000000014911515/paymentinstruments"
+                }
+            },
+            "id": "7030000000014911515",
+            "object": "instrumentIdentifier",
+            "state": "ACTIVE",
+            "card": {
+                "number": "489537XXXXXX1515"
+            },
+            "issuer": {
+                "paymentAccountReference": "V0010013019326121174070050420"
+            },
+            "processingInformation": {
+                "authorizationOptions": {
+                    "initiator": {
+                        "merchantInitiatedTransaction": {
+                            "previousTransactionId": "123456789619999"
+                        }
+                    }
+                }
+            },
+            "metadata": {
+                "creator": "testrest"
+            }
+        }
+    }
+}
+```
+
+{#tms-cust-pi-tkn-add-default-pi-ii-ex-rest_codeblock_x4l_mlt_lwb}
+
+Add a Default Payment Instrument with Validated Payment {#tms-cust-pi-tkn-add-default-pi-valid-intro}
+=====================================================================================================
+
+This section describes how to add a default payment instrument with a validated payment method.
+
+Endpoint
+--------
+
+**Test:** `POST ``https://apitest.example.com``/pts/v2/payments `{#tms-cust-pi-tkn-add-default-pi-valid-intro_restcust-test}  
+**Production:** `POST ``https://api.example.com``/pts/v2/payments `  
+**Production in India:** `POST ``https://api.in.example.com``/pts/v2/payments`{#tms-cust-pi-tkn-add-default-pi-valid-intro_restcust-prod-india}
+
+Required Fields for Adding a Default Payment Instrument with Validated Payment Using the REST API {#tms-cust-pi-tkn-add-default-pi-valid-reqfields}
+===================================================================================================================================================
+
+orderInformation.amountDetails.currency
+
+orderInformation.amountDetails.totalAmount
+:
+
+orderInformation.billTo.address1
+:
+
+orderInformation.billTo.administrativeArea
+:
+
+orderInformation.billTo.country
+:
+
+orderInformation.billTo.email
+:
+
+orderInformation.billTo.firstName
+:
+
+orderInformation.billTo.lastName
+:
+
+orderInformation.billTo.locality
+:
+
+orderInformation.billTo.postalCode
+:
+
+paymentInformation.card.expirationMonth
+:
+
+paymentInformation.card.expirationYear
+:
+
+paymentInformation.card.number
+:
+
+paymentInformation.card.type
+:
+
+paymentInformation.customer.id
+:
+Set the value to the ID of the customer token.
+
+processingInformation.actionList
+:
+Set the value to `TOKEN_CREATE`.
+
+processingInformation.actionTokenTypes
+:
+Set the value to `paymentInstrument`.
+
+tokenInformation.paymentInstrument.default
+:
+Set value to `true`.
+{#tms-cust-pi-tkn-add-default-pi-valid-reqfields_dl_bcz_qry_dwb}
+
+Related Information {#tms-cust-pi-tkn-add-default-pi-valid-reqfields_section_jpc_xzz_sxb}
+-----------------------------------------------------------------------------------------
+
+* [API Field Reference for the REST API](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/api-fields-about-guide.md "")
+  {#tms-cust-pi-tkn-add-default-pi-valid-reqfields_ul_kpc_xzz_sxb}
+
+REST Example: Adding a Default Payment Instrument with Validated Payment {#tms-cust-pi-tkn-add-default-pi-valid-ex-rest}
+========================================================================================================================
+
+Request
+
+```
+{
+    "clientReferenceInformation": {
+        "code": "TC50171_3"
+    },
+    "processingInformation": {
+        "commerceIndicator": "internet",
+        "actionList": [
+            "TOKEN_CREATE"
+        ],
+        "actionTokenTypes": [
+            "paymentInstrument"
+        ]
+    },
+    "orderInformation": {
+        "billTo": {
+            "country": "US",
+            "lastName": "Deo",
+            "address2": "Address 2",
+            "address1": "201 S. Division St.",
+            "postalCode": "48104-2201",
+            "locality": "Ann Arbor",
+            "administrativeArea": "MI",
+            "firstName": "John",
+            "phoneNumber": "999999999",
+            "district": "MI",
+            "buildingNumber": "123",
+            "company": "Relay",
+            "email": "test@pgw.com"
+        },
+        "shipTo": {
+            "country": "US",
+            "lastName": "Deo",
+            "address2": "Address 2",
+            "address1": "201 S. Division St.",
+            "postalCode": "48104-2201",
+            "locality": "Ann Arbor",
+            "administrativeArea": "MI",
+            "firstName": "John",
+            "phoneNumber": "999999999",
+            "district": "MI",
+            "buildingNumber": "123",
+            "company": "Relay",
+            "email": "test@pgw.com"
+        },
+        "amountDetails": {
+            "totalAmount": "102.00",
+            "currency": "USD"
+        }
+    },
+    "paymentInformation": {
+        "customer": {
+            "id": "{{tms-customer-id}}"
+        },
+        "card": {
+            "expirationYear": "2031",
+            "number": "4895379987X11523",
+            "securityCode": "965",
+            "expirationMonth": "12",
+            "type": "001"
+        }
+    },
+    "tokenInformation": {
+        "paymentInstrument": {
+            "default": "true"
+        }
+    }
+}
+```
+
+{#tms-cust-pi-tkn-add-default-pi-valid-ex-rest_codeblock_v4l_mlt_lwb}  
+Response to a Successful Request
+
+```
+{
+    "_links": {
+        "authReversal": {
+            "method": "POST",
+            "href": "/pts/v2/payments/6760637747316173203955/reversals"
+        },
+        "self": {
+            "method": "GET",
+            "href": "/pts/v2/payments/6760637747316173203955"
+        },
+        "capture": {
+            "method": "POST",
+            "href": "/pts/v2/payments/6760637747316173203955/captures"
+        }
+    },
+    "clientReferenceInformation": {
+        "code": "TC50171_3"
+    },
+    "id": "6760637747316173203955",
+    "orderInformation": {
+        "amountDetails": {
+            "authorizedAmount": "102.00",
+            "currency": "USD"
+        }
+    },
+    "paymentAccountInformation": {
+        "card": {
+            "type": "001"
+        }
+    },
+    "paymentInformation": {
+        "tokenizedCard": {
+            "type": "001"
+        },
+        "shippingAddress": {
+            "id": "F45FD8DE51B99E9CE053A2598D0AFDFA"
+        },
+        "card": {
+            "type": "001"
+        },
+        "customer": {
+            "id": "F45FB3E443AC3C57E053A2598D0A9CFF"
+        }
+    },
+    "pointOfSaleInformation": {
+        "terminalId": "111111"
+    },
+    "processorInformation": {
+        "paymentAccountReferenceNumber": "V0010013019326121538313096266",
+        "approvalCode": "888888",
+        "networkTransactionId": "123456789619999",
+        "transactionId": "123456789619999",
+        "responseCode": "100",
+        "avs": {
+            "code": "X",
+            "codeRaw": "I1"
+        }
+    },
+    "reconciliationId": "69815876LDTHD4XU",
+    "status": "AUTHORIZED",
+    "submitTimeUtc": "2023-02-10T21:16:15Z",
+    "tokenInformation": {
+        "instrumentidentifierNew": false,
+        "instrumentIdentifier": {
+            "state": "ACTIVE",
+            "id": "7030000000014831523"
+        },
+        "paymentInstrument": {
+            "id": "F45FE45E7993C7DBE053A2598D0AED19"
+        }
+    }
+}
+```
+
+{#tms-cust-pi-tkn-add-default-pi-valid-ex-rest_codeblock_x4l_mlt_lwb}
+
+Add a Non-Default Payment Instrument Using Instrument Identifier {#tms-cust-pi-tkn-add-nondefault-pi-ii-intro}
+==============================================================================================================
+
+This section describes how to add a non-default payment instrument using instrument identifier.
+
+Endpoint
+--------
+
+**Test:** `POST ``https://apitest.example.com``/tms/v2/customers/`*{customerTokenId}* `/payment-instruments/`*{paymentInstrumentTokenId}*` `{#tms-cust-pi-tkn-add-nondefault-pi-ii-intro_restcust-test}  
+**Production:** `POST ``https://api.example.com``/tms/v2/customers/`*{customerTokenId}* `/payment-instruments/`*{paymentInstrumentTokenId}*  
+**Production in India:** `POST ``https://api.in.example.com``/tms/v2/customers/`*{customerTokenId}* `/payment-instruments/`*{paymentInstrumentTokenId}*{#tms-cust-pi-tkn-add-nondefault-pi-ii-intro_restcust-prod-india}  
+The *`{customerTokenId}`* is the customer token ID returned in the id field when you created the customer token. The *`{paymentInstrumentTokenId}`* is the payment instrument token ID you want to retrieve. For more information, see [Create a Customer](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-cust-tkn/tms-cust-tkn-create-intro.md "") and [Create a Customer Payment Instrument](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-cust-pi-tkn/tms-cust-pi-tkn-create-intro.md "").
+
+Required Fields for Adding a Non-Default Payment Instrument Using Instrument Identifier {#tms-cust-pi-tkn-add-nondefault-pi-ii-reqfields}
+=========================================================================================================================================
+
+customerTokenId
+:
+Include the ID of the customer token you want to retrieve in the URL path.
+
+paymentInstrumentTokenId
+:
+Include the ID of the payment instrument token you want to retrieve in the URL path.
+{#tms-cust-pi-tkn-add-nondefault-pi-ii-reqfields_dl_bcz_qry_dwb}
+
+Related Information {#tms-cust-pi-tkn-add-nondefault-pi-ii-reqfields_section_jpc_xzz_sxb}
+-----------------------------------------------------------------------------------------
+
+* [API Field Reference for the REST API](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/api-fields-about-guide.md "")
+  {#tms-cust-pi-tkn-add-nondefault-pi-ii-reqfields_ul_kpc_xzz_sxb}
+
+Optional Fields for Adding a Non-Default Payment Instrument Using Instrument Identifier {#tms-cust-pi-tkn-add-nondefault-pi-ii-optfields}
+=========================================================================================================================================
+
+bankAccount.type
+:
+
+billTo.address1
+:
+
+billTo.address2
+:
+
+billTo.aminstrativeArea
+:
+
+billTo.company
+:
+
+billTo.country
+:
+
+billTo.email
+:
+
+billTo.firstName
+:
+
+billTo.lastName
+:
+
+billTo.locality
+:
+
+billTo.phoneNumber
+:
+
+billTo.postalCode
+:
+
+buyerInformation.companyTaxID
+:
+
+buyerInformation.currency
+:
+
+buyerInformation.dateOfBirth
+:
+
+buyerInformation.personalIdentification.id
+:
+
+buyerInformation.personalIdentification.issuedBy.administrativeArea
+:
+
+buyerInformation.personalIdentification.type
+:
+
+card.expirationMonth
+:
+
+card.expirationYear
+:
+
+card.issueNumber
+:
+
+card.startMonth
+:
+
+card.startYear
+:
+
+card.type
+:
+
+card.useAs
+:
+
+card.tokenizedInformation.requestorID
+:
+
+card.tokenizedInformation.transactionType
+:
+
+default
+:
+Set value to `true` if default, otherwise set value to `false`.
+
+instrumentIdentifier.id
+:
+Set the value to the ID of the instrument identifier token.
+
+processingInformation.billPaymentProgramEnabled
+:
+
+merchantInformation.merchantDescriptor.alternateName
+:
+{#tms-cust-pi-tkn-add-nondefault-pi-ii-optfields_dl_bcz_qry_dwb}
+
+Related Information {#tms-cust-pi-tkn-add-nondefault-pi-ii-optfields_section_jpc_xzz_sxb}
+-----------------------------------------------------------------------------------------
+
+* [API Field Reference for the REST API](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/api-fields-about-guide.md "")
+  {#tms-cust-pi-tkn-add-nondefault-pi-ii-optfields_ul_kpc_xzz_sxb}
+
+REST Example: Adding a Non-Default Payment Instrument Using Instrument Identifier {#tms-cust-pi-tkn-add-nondefault-pi-ii-ex-rest}
+=================================================================================================================================
+
+Request
+
+```
+{
+    "default": false,
+    "card": {
+        "expirationMonth": "12",
+        "expirationYear": "2031",
+        "type": "001"
+    },
+    "billTo": {
+        "firstName": "John",
+        "lastName": "Doe",
+        "company": "Relay",
+        "address1": "1 Market St",
+        "locality": "san francisco",
+        "administrativeArea": "CA",
+        "postalCode": "94105",
+        "country": "US",
+        "phoneNumber": "4158880000",
+        "email": "test@pgw.com"
+    },
+    "instrumentIdentifier": {
+        "id": "{{tms-instrumentIdentifier-id}}"
+    }
+}
+```
+
+{#tms-cust-pi-tkn-add-nondefault-pi-ii-ex-rest_codeblock_v4l_mlt_lwb}  
+Response to a Successful Request
+
+```
+{
+    "_links": {
+        "self": {
+            "href": "/tms/v2/customers/F45FB3E443AC3C57E053A2598D0A9CFF/payment-instruments/F45FE3A5DAD6CF8CE053A2598D0AA1EF"
+        },
+        "customer": {
+            "href": "/tms/v2/customers/F45FB3E443AC3C57E053A2598D0A9CFF"
+        }
+    },
+    "id": "F45FE3A5DAD6CF8CE053A2598D0AA1EF",
+    "default": false,
+    "state": "ACTIVE",
+    "card": {
+        "expirationMonth": "12",
+        "expirationYear": "2031",
+        "type": "001"
+    },
+    "billTo": {
+        "firstName": "John",
+        "lastName": "Doe",
+        "company": "Relay",
+        "address1": "1 Market St",
+        "locality": "san francisco",
+        "administrativeArea": "CA",
+        "postalCode": "94105",
+        "country": "US",
+        "email": "test@pgw.com",
+        "phoneNumber": "4158880000"
+    },
+    "instrumentIdentifier": {
+        "id": "7030000000012931531"
+    },
+    "metadata": {
+        "creator": "testrest"
+    },
+    "_embedded": {
+        "instrumentIdentifier": {
+            "_links": {
+                "self": {
+                    "href": "/tms/v1/instrumentidentifiers/7030000000012931531"
+                },
+                "paymentInstruments": {
+                    "href": "/tms/v1/instrumentidentifiers/7030000000012931531/paymentinstruments"
+                }
+            },
+            "id": "7030000000012931531",
+            "object": "instrumentIdentifier",
+            "state": "ACTIVE",
+            "card": {
+                "number": "489537XXXXXX1531"
+            },
+            "issuer": {
+                "paymentAccountReference": "V0010013019326121921451482293"
+            },
+            "processingInformation": {
+                "authorizationOptions": {
+                    "initiator": {
+                        "merchantInitiatedTransaction": {
+                            "previousTransactionId": "123456789619999"
+                        }
+                    }
+                }
+            },
+            "metadata": {
+                "creator": "testrest"
+            }
+        }
+    }
+}
+```
+
+{#tms-cust-pi-tkn-add-nondefault-pi-ii-ex-rest_codeblock_x4l_mlt_lwb}
+
+Add a Non-Default Payment Instrument with Validated Payment {#tms-cust-pi-tkn-add-nondefault-pi-valid-intro}
+============================================================================================================
+
+This section describes how to add a non-default payment instrument with a validated payment.
+
+Endpoint
+--------
+
+**Test:** `GET ``https://apitest.example.com``/pts/v2/payments `{#tms-cust-pi-tkn-add-nondefault-pi-valid-intro_restcust-test}  
+**Production:** `GET ``https://api.example.com``/pts/v2/payments`  
+**Production in India:** `GET ``https://api.in.example.com``/pts/v2/payments`{#tms-cust-pi-tkn-add-nondefault-pi-valid-intro_restcust-prod-india}  
+The *`{customerTokenId}`* is the customer token ID returned in the id field when you created the customer token. For more information, see [Create a Customer](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-cust-tkn/tms-cust-tkn-create-intro.md "").
+
+Required Fields for Adding a Non-Default Payment Instrument with Validated Payment Using the REST API {#tms-cust-pi-tkn-add-nondefault-pi-valid-reqfields}
+==========================================================================================================================================================
+
+orderInformation.amountDetails.currency
+
+orderInformation.amountDetails.totalAmount
+:
+
+orderInformation.billTo.address1
+:
+
+orderInformation.billTo.administrativeArea
+:
+
+orderInformation.billTo.country
+:
+
+orderInformation.billTo.email
+:
+
+orderInformation.billTo.firstName
+:
+
+orderInformation.billTo.lastName
+:
+
+orderInformation.billTo.locality
+:
+
+orderInformation.billTo.postalCode
+:
+
+paymentInformation.card.expirationMonth
+:
+
+paymentInformation.card.expirationYear
+:
+
+paymentInformation.card.number
+:
+
+paymentInformation.card.type
+:
+
+paymentInformation.customer.id
+:
+Set the value to the ID of the customer token.
+
+processingInformation.actionList
+:
+Set the value to `TOKEN_CREATE`.
+
+processingInformation.actionTokenTypes
+:
+Set the value to `paymentInstrument`.
+
+tokenInformation.paymentInstrument.default
+:
+Set value to `false`.
+{#tms-cust-pi-tkn-add-nondefault-pi-valid-reqfields_dl_bcz_qry_dwb}
+
+Related Information {#tms-cust-pi-tkn-add-nondefault-pi-valid-reqfields_section_jpc_xzz_sxb}
+--------------------------------------------------------------------------------------------
+
+* [API Field Reference for the REST API](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/api-fields-about-guide.md "")
+  {#tms-cust-pi-tkn-add-nondefault-pi-valid-reqfields_ul_kpc_xzz_sxb}
+
+REST Example: Adding a Non-Default Payment Instrument with Validated Payment {#tms-cust-pi-tkn-add-nondefault-pi-valid-ex-rest}
+===============================================================================================================================
+
+Request
+
+```
+{
+    "clientReferenceInformation": {
+        "code": "TC50171_3"
+    },
+    "processingInformation": {
+        "commerceIndicator": "internet",
+        "actionList": [
+            "TOKEN_CREATE"
+        ],
+        "actionTokenTypes": [
+            "paymentInstrument"
+        ]
+    },
+    "orderInformation": {
+        "billTo": {
+            "country": "US",
+            "lastName": "Deo",
+            "address2": "Address 2",
+            "address1": "201 S. Division St.",
+            "postalCode": "48104-2201",
+            "locality": "Ann Arbor",
+            "administrativeArea": "MI",
+            "firstName": "John",
+            "phoneNumber": "999999999",
+            "district": "MI",
+            "buildingNumber": "123",
+            "company": "Relay",
+            "email": "test@pgw.com"
+        },
+        "shipTo": {
+            "country": "US",
+            "lastName": "Deo",
+            "address2": "Address 2",
+            "address1": "201 S. Division St.",
+            "postalCode": "48104-2201",
+            "locality": "Ann Arbor",
+            "administrativeArea": "MI",
+            "firstName": "John",
+            "phoneNumber": "999999999",
+            "district": "MI",
+            "buildingNumber": "123",
+            "company": "Relay",
+            "email": "test@pgw.com"
+        },
+        "amountDetails": {
+            "totalAmount": "102.00",
+            "currency": "USD"
+        }
+    },
+    "paymentInformation": {
+        "customer": {
+            "id": "{{tms-customer-id}}"
+        },
+        "card": {
+            "expirationYear": "2031",
+            "number": "4895379987X11531",
+            "securityCode": "258",
+            "expirationMonth": "12",
+            "type": "001"
+        }
+    },
+    "tokenInformation": {
+        "paymentInstrument": {
+            "default": "false"
+        }
+    }
+}
+```
+
+{#tms-cust-pi-tkn-add-nondefault-pi-valid-ex-rest_codeblock_v4l_mlt_lwb}  
+Response to a Successful Request
+
+```
+{
+    "_links": {
+        "authReversal": {
+            "method": "POST",
+            "href": "/pts/v2/payments/6760638084316175703955/reversals"
+        },
+        "self": {
+            "method": "GET",
+            "href": "/pts/v2/payments/6760638084316175703955"
+        },
+        "capture": {
+            "method": "POST",
+            "href": "/pts/v2/payments/6760638084316175703955/captures"
+        }
+    },
+    "clientReferenceInformation": {
+        "code": "TC50171_3"
+    },
+    "id": "6760638084316175703955",
+    "orderInformation": {
+        "amountDetails": {
+            "authorizedAmount": "102.00",
+            "currency": "USD"
+        }
+    },
+    "paymentAccountInformation": {
+        "card": {
+            "type": "001"
+        }
+    },
+    "paymentInformation": {
+        "tokenizedCard": {
+            "type": "001"
+        },
+        "shippingAddress": {
+            "id": "F45FD8DE51B99E9CE053A2598D0AFDFA"
+        },
+        "card": {
+            "type": "001"
+        },
+        "customer": {
+            "id": "F45FB3E443AC3C57E053A2598D0A9CFF"
+        }
+    },
+    "pointOfSaleInformation": {
+        "terminalId": "111111"
+    },
+    "processorInformation": {
+        "paymentAccountReferenceNumber": "V0010013019326121921451482293",
+        "approvalCode": "888888",
+        "networkTransactionId": "123456789619999",
+        "transactionId": "123456789619999",
+        "responseCode": "100",
+        "avs": {
+            "code": "X",
+            "codeRaw": "I1"
+        }
+    },
+    "reconciliationId": "698162754DTIATRS",
+    "status": "AUTHORIZED",
+    "submitTimeUtc": "2023-02-10T21:16:48Z",
+    "tokenInformation": {
+        "instrumentidentifierNew": false,
+        "instrumentIdentifier": {
+            "state": "ACTIVE",
+            "id": "7030000000012931531"
+        },
+        "paymentInstrument": {
+            "id": "F45FE45E79DCC7DBE053A2598D0AED19"
+        }
+    }
+}
+```
+
+{#tms-cust-pi-tkn-add-nondefault-pi-valid-ex-rest_codeblock_x4l_mlt_lwb}
+
+Change a Customer's Default Payment Instrument {#tms-cust-pi-tkn-change-default-pi-intro}
+=========================================================================================
+
+This section describes how to change a customer's default payment instrument.
+
+Endpoint
+--------
+
+**Test:** `PATCH ``https://apitest.example.com``/tms/v2/customers/`*{customerTokenId}* `/payment-instruments/`*{paymentInstrumentTokenId}*{#tms-cust-pi-tkn-change-default-pi-intro_restcust-test}  
+**Production:** `PATCH ``https://api.example.com``/tms/v2/customers/`*{customerTokenId}* `/payment-instruments/`*{paymentInstrumentTokenId}*  
+**Production in India:** `PATCH ``https://api.in.example.com``/tms/v2/customers/`*{customerTokenId}* `/payment-instruments/`*{paymentInstrumentTokenId}*{#tms-cust-pi-tkn-change-default-pi-intro_restcust-prod-india}  
+The *`{customerTokenId}`* is the customer token ID returned in the id field when you created the customer token. The *`{paymentInstrumentTokenId}`* is the payment instrument token ID you want to retrieve. For more information, see [Create a Customer](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-cust-tkn/tms-cust-tkn-create-intro.md "") and [Create a Customer Payment Instrument](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-cust-pi-tkn/tms-cust-pi-tkn-create-intro.md "").
+
+Required Fields for Changing a Customer's Default Payment Instrument {#tms-cust-pi-tkn-change-default-pi-reqfields}
+===================================================================================================================
+
+default
+:
+Set value to `true`.
+{#tms-cust-pi-tkn-change-default-pi-reqfields_dl_bcz_qry_dwb}
+
+Related Information {#tms-cust-pi-tkn-change-default-pi-reqfields_section_jpc_xzz_sxb}
+--------------------------------------------------------------------------------------
+
+* [API Field Reference for the REST API](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/api-fields-about-guide.md "")
+  {#tms-cust-pi-tkn-change-default-pi-reqfields_ul_kpc_xzz_sxb}
+
+REST Example: Changing a Customer's Default Payment Instrument {#tms-cust-pi-tkn-change-default-pi-ex-rest}
+===========================================================================================================
+
+Request
+
+```
+{
+    "default": true
+}
+```
+
+{#tms-cust-pi-tkn-change-default-pi-ex-rest_codeblock_v4l_mlt_lwb}  
+Response to a Successful Request
+
+```
+{
+    "_links": {
+        "self": {
+            "href": "/tms/v2/customers/F4D5E715F75E9910E053A2598D0A7278/payment-instruments/F4D5E715F7BD9910E053A2598D0A7278"
+        },
+        "customer": {
+            "href": "/tms/v2/customers/F4D5E715F75E9910E053A2598D0A7278"
+        }
+    },
+    "id": "F4D5E715F7BD9910E053A2598D0A7278",
+    "default": true,
+    "state": "ACTIVE",
+    "card": {
+        "expirationMonth": "12",
+        "expirationYear": "2031",
+        "type": "001"
+    },
+    "billTo": {
+        "firstName": "John",
+        "lastName": "Doe",
+        "company": "Relay",
+        "address1": "1 Market St",
+        "locality": "san francisco",
+        "administrativeArea": "CA",
+        "postalCode": "94105",
+        "country": "US",
+        "email": "test@pgw.com",
+        "phoneNumber": "4158880000"
+    },
+    "instrumentIdentifier": {
+        "id": "7010000000016241111"
+    },
+    "metadata": {
+        "creator": "testrest"
+    },
+    "_embedded": {
+        "instrumentIdentifier": {
+            "_links": {
+                "self": {
+                    "href": "/tms/v1/instrumentidentifiers/7010000000016241111"
+                },
+                "paymentInstruments": {
+                    "href": "/tms/v1/instrumentidentifiers/7010000000016241111/paymentinstruments"
+                }
+            },
+            "id": "7010000000016241111",
+            "object": "instrumentIdentifier",
+            "state": "ACTIVE",
+            "card": {
+                "number": "411111XXXXXX1111"
+            },
+            "processingInformation": {
+                "authorizationOptions": {
+                    "initiator": {
+                        "merchantInitiatedTransaction": {
+                            "previousTransactionId": "123456789619999"
+                        }
+                    }
+                }
+            },
+            "metadata": {
+                "creator": "testrest"
+            }
+        }
+    }
+}
+```
+
+{#tms-cust-pi-tkn-change-default-pi-ex-rest_codeblock_x4l_mlt_lwb}
+
+Retrieve a Customer Payment Instrument {#tms-cust-pi-tkn-retrieve-intro}
+========================================================================
+
+This section describes how to retrieve a customer payment instrument token.
+
+Endpoint
+--------
+
+**Test:** `GET ``https://apitest.example.com``/tms/v2/customers/`*{customerTokenId}* `/payment-instruments/`*{paymentInstrumentTokenId}*{#tms-cust-pi-tkn-retrieve-intro_restcust-test}  
+**Production:** `GET ``https://api.example.com``/tms/v2/customers/`*{customerTokenId}* `/payment-instruments/`*{paymentInstrumentTokenId}*  
+**Production in India:** `GET ``https://api.in.example.com``/tms/v2/customers/`*{customerTokenId}* `/payment-instruments/`*{paymentInstrumentTokenId}*{#tms-cust-pi-tkn-retrieve-intro_restcust-prod-india}  
+The *`{customerTokenId}`* is the customer token ID returned in the id field when you created the customer token. The *`{paymentInstrumentTokenId}`* is the payment instrument token ID you want to retrieve. For more information, see [Create a Customer](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-cust-tkn/tms-cust-tkn-create-intro.md "") and [Create a Customer Payment Instrument](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-cust-pi-tkn/tms-cust-pi-tkn-create-intro.md "").
+
+REST Example: Retrieving a Customer Payment Instrument {#tms-cust-pi-tkn-retrieve-ex-rest}
+==========================================================================================
+
+Request
+
+```keyword
+GET https://apitest.example.com/tms/v2/customers/F2F3ADA770102B51E053A2598D0A9078/payment-instruments/F39732BE4BDA9A1EE053AF598E0A4081
+```
+
+Response to a Successful Request
+
+```
+{
+  "_links": {
+    "self": {
+      "href": "/tms/v2/customers/F2F3ADA770102B51E053A2598D0A9078/payment-instruments/F39732BE4BDA9A1EE053AF598E0A4081"
+    },
+    "customer": {
+      "href": "/tms/v2/customers/F2F3ADA770102B51E053A2598D0A9078"
+    }
+  },
+  "id": "F39732BE4BDA9A1EE053AF598E0A4081",
+  "default": true,
+  "state": "ACTIVE",
+  "card": {
+    "expirationMonth": "12",
+    "expirationYear": "2031",
+    "type": "001"
+  },
+  "billTo": {
+    "firstName": "John",
+    "lastName": "Doe",
+    "company": "Company Name",
+    "address1": "1 Market St",
+    "locality": "San Francisco",
+    "administrativeArea": "CA",
+    "postalCode": "94105",
+    "country": "US",
+    "email": "test@pgw.com",
+    "phoneNumber": "4158880000"
+  },
+  "instrumentIdentifier": {
+    "id": "7010000000016241111"
+  },
+  "metadata": {
+    "creator": "testrest"
+  },
+  "_embedded": {
+    "instrumentIdentifier": {
+      "_links": {
+        "self": {
+          "href": "/tms/v1/instrumentidentifiers/7010000000016241111"
+        },
+        "paymentInstruments": {
+          "href": "/tms/v1/instrumentidentifiers/7010000000016241111/paymentinstruments"
+        }
+      },
+      "id": "7010000000016241111",
+      "object": "instrumentIdentifier",
+      "state": "ACTIVE",
+      "card": {
+        "number": "411111XXXXXX1111"
+      },
+      "processingInformation": {
+        "authorizationOptions": {
+          "initiator": {
+            "merchantInitiatedTransaction": {
+              "previousTransactionId": "123456789012345"
+            }
+          }
+        }
+      },
+      "metadata": {
+        "creator": "testrest"
+      }
+    }
+  }
+}
+```
+
+Retrieve a Customer Payment Instrument with an Unmasked Card Number {#tms-cust-pi-tkn-retrieve-unmasked-intro}
+==============================================================================================================
+
+This section describes how to retrieve a payment instrument with an unmasked card number.
+
+> IMPORTANT
+> To retrieve unmasked payment details, you must ensure that your MLE key pair and your token vault are configured correctly. For more information on MLE keys, see [Message-Level Encryption Keys](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-onboarding/tms-mle-setup.md ""). For more information on token vaults, see [Token Vault Management](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-onboarding/tms-vault-hierarchy.md ""). If necessary, contact your ` Payment Gateway ` account manager or customer support.  
+> The response is BASE 64-encoded JSON web encryption (JWE) token. The decoded JWE has these elements:
+
+```
+{ "alg": "RSA-OAEP-256", //The algorithm used to encrypt the CEK 
+    "cty": "json", //The content type 
+    "typ": "JWT", //The token type 
+    "enc": "A256GCM", //The algorithm that is used to encrypt the message 
+    "kid": "keyId" //The serial number of shared public cert for encryption of CEK
+} 
+&lt;Encrypted Data&gt; //The encrypted payload that matches the JSON response normally returned by the TMS API, except with an unmasked payment details
+```
+
+Header Configuration
+--------------------
+
+You must pass this request header to retrieve unmasked payment details: `Accept: application/jose`.  
+The term `application/jose` refers to Javascript Object Signing and Encryption (JOSE). JOSE is a framework that provides end-to-end security to JavaScript Object Notation (JSON)-based data structures. JOSE achieves this by offering a collection of specifications to encrypt and digitally sign JSON payloads. In this case, the response is message-level encrypted using a JSON Web Token (JWT).
+
+Endpoint
+--------
+
+**Test:** `GET ``https://apitest.example.com``/tms/v2/customers/`*{customerTokenId}* `/payment-instruments/`*{paymentInstrumentTokenId}*` `{#tms-cust-pi-tkn-retrieve-unmasked-intro_restcust-test}  
+**Production:** `GET ``https://api.example.com``/tms/v2/customers/`*{customerTokenId}* `/payment-instruments/`*{paymentInstrumentTokenId}*  
+**Production in India:** `GET ``https://api.in.example.com``/tms/v2/customers/`*{customerTokenId}* `/payment-instruments/`*{paymentInstrumentTokenId}*{#tms-cust-pi-tkn-retrieve-unmasked-intro_restcust-prod-india}  
+The *`{customerTokenId}`* is the customer token ID returned in the id field when you created the customer token. The *`{paymentInstrumentTokenId}`* is the payment instrument token ID you want to retrieve. For more information, see [Create a Customer](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-cust-tkn/tms-cust-tkn-create-intro.md "") and [Create a Customer Payment Instrument](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-cust-pi-tkn/tms-cust-pi-tkn-create-intro.md "").
+
+REST Example: Retrieving a Customer Payment Instrument with an Unmasked Card Number {#tms-cust-pi-tkn-retrieve-unmasked-ex-rest}
+================================================================================================================================
+
+Request
+
+```keyword
+GET https://apitest.example.com/tms/v2/customers/F2F3ADA770102B51E053A2598D0A9078/payment-instruments/F39732BE4BDA9A1EE053AF598E0A4081
+```
+
+{#tms-cust-pi-tkn-retrieve-unmasked-ex-rest_codeblock_v4l_mlt_lwb}  
+Response to a Successful Request
+
+```
+eyJraWQiOiJiYTE1ZDRmMTIzMTM0NjlkZjg5MDM1Nzk2YWE4Nzc4ZGM0NTY4ODlkIiwiY3R5IjoianNvbiIsInR5cCI6IkpXVCIsImVuYyI6IkEyNTZHQ00iLCJhbGciOiJSU0EtT0FFUC0yNTYifQ.FZbQse7mPcf255vpZFXM4Zy8DGalqehCYUi6h6ett2WqfP2XA0uzPeRxE-P6O8Ju1trkSOJcZ4PqBcX4xwYmSs8PUmhkakncpjXSvYUaq4RY39kj9BRzvn47F18OWCW4CDzaTkOxi7ynGN6vb_Y3_wn5KLXAQVTUCM7Lke45oAFrCnVACBJtQgONKM7GZwLwRiWp_HP6D4IMUZe5Qw8Qz438scq9DQtOBum_JK_xx_IKA-r1XOkWdvnCasQnK1eEc2jPo3EL9GDe6w3zQFEbhNtC4Rsa33-lc0lxjfuAsI8YmmtHYKeITvQ-6mB7cOP-guKnRAJk2SUPkMOL6UIfg.zvgReLHE0ybDfWRp.bCMwJgHEV9B9xHrL9Ej1en8xZCiYEuCN6H4mcKOqxJAxZocO1AtR1xgyrfDIINAi6Jq9UJedIvLJFyMfXx2D2x4njHmxOKzC2KJS_KTpXR1s1-pJNG68jwZ-g_zPqj1PLa_EGSu73NWhJYalGvhDuo6Ek8bkGVUtNm9OZ89oX2KbxuWc2LQ0JbBBa_dfQWAjkRcM-URlEbhf1nvlzLwTXhRN2wfB7L1BcAsao51DyYXowOJpWwSK1StC2EKDXSzgpfXP1ZwSKA8SSkpVSmwOkb0n6DZNkwtKlg4eGDok9atJpbZ3qCEqqKDYCy1levJQ7w-In2OPLpSpFGyPRUGPBMTnzQo-GtGEM1tiKbpDUzaCL_0iFSGjJCPeottP-B98R2YKdmGa3IwyVWgzhAMJBkAfEGAx0TCWwqZE5xFW9uT2MzdX3_Mz9qBgCRa101km9dHYwajClVb1VETlHjS7zpQ1OtXPKmluAGTvGSr6PWn9ZiqkOd4R5LC7oA4OdVlpPhY2mJhektLOZj1uUIr5AaHyjHx-BnnFio0CDjM03t8gl9gIeQ44ugUMwYc19Mvkiikxsvl8h9Ua2hCSFbvvq1cCOcZwb2UtI8EZcJdltw2utoiO5IbsSkE9hU2b16QMXoVIMxiFN0OdTfJqMzJfPnyVBIkN3nmHmwLwKSek5HqdujU1hFhMJxDRdtmLD__5L0iAxuz1Sm3yx5HmjXWjCpzIfT9vT-pSfIdIwBakF9pBRXDSCZsAEqlwddS1DbjfNk43E_wKTmwQW96OlnUX7SK70gICydciHsSsrElcp6lGFpbPMGs8QN1czKPrH0lrnkD21xkxhXjmC7Iqa0-XFXIU8qSV7PsBtUjOnz7oKOzXvIli2SV2gzPEKOQ449HKPXDoBynaT5pWi4WC3JmOwAhyx2f05ABZF9-Nj_EGLe7H5EoBaCohbKkc3j24nNQ4r_n5cC5weBCxIdkrSKh54pFQdRr72pqEW2XoOTy1Jafi3EJdC_GF0BKI3AFVw3fGEJq_rpe8PxgkkliAuywVJ43iG_uzD-6Ib5jIA8RcDFah2jh_3tYeWws2EW3qnCuAUXREKebdGlH2BTgcgxzDn9Y6AJi3Zrdc948qxXpowiYWr5t_5xN8x5kJcOzKVNOCzi5LggcIN-FmZsyB4rRjv9aGPrscoC1pL7xlLEnyHRnIOUy96NTG7qOQbhV3dzawvzZN_UZ6LTyTMV9X0679NNGS2RrjxFsrYuMHdQr3SeVcTKe5FL3QBiKFgFjnYMdh73ztYW5tn6rAx2Daq5G-FkQnD8PnHnzCplGRXopja00xEkL9lugeKxSEorDPaO8ov499M191BrTqc6XaBl7kYuelWfAoVEfCT9FvNf28H0xA5vXJNqKFye2ExkMyk3jjfCn3pkoFwmbyha1gmaLgz788GxMyKtH9K6KMKfgSCfj-w5eJbTl7QJeyYjFuVUqixZI024YAUoo4OrcCZag1IzLNkpOo_xOqf1iMbREnDcp2MKxMdkJWI72uB5XWztHaQPnzBAxJcBw0_gB5AHy_AIk.ogA-QQ53MEu1VwH6_H-DQA
+```
+
+{#tms-cust-pi-tkn-retrieve-unmasked-ex-rest_codeblock_x4l_mlt_lwb}
+
+List Payment Instruments for a Customer {#tms-cust-pi-tkn-retrieve-mult-intro}
+==============================================================================
+
+This section describes how to retrieve a customer's payment instruments.
+
+Endpoint
+--------
+
+**Test:** `GET ``https://apitest.example.com``/tms/v2/customers/`*{customerTokenId}*`/payment-instruments`{#tms-cust-pi-tkn-retrieve-mult-intro_restcust-test}  
+**Production:** `GET ``https://api.example.com``/tms/v2/customers/`*{customerTokenId}*`/payment-instruments`  
+**Production in India:** `GET ``https://api.in.example.com``/tms/v2/customers/`*{customerTokenId}*`/payment-instruments`{#tms-cust-pi-tkn-retrieve-mult-intro_restcust-prod-india}  
+The *`{customerTokenId}`* is the customer token ID returned in the id field when you created the customer token. For more information, see [Create a Customer](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-cust-tkn/tms-cust-tkn-create-intro.md "") and [Create a Customer Payment Instrument](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-cust-pi-tkn/tms-cust-pi-tkn-create-intro.md "").  
+Use these query string parameters to filter the list of payment instrument tokens:
+* `offset` --- Page offset number.
+* `limit` --- Maximum number of items you would like returned.
+  {#tms-cust-pi-tkn-retrieve-mult-intro_ul_yxk_x1y_mwb}
+
+Required Fields for Listing Payment Instruments for a Customer {#tms-cust-pi-tkn-retrieve-mult-reqfields}
+=========================================================================================================
+
+customerTokenId
+:
+Include the ID of the customer token you want to retrieve in the URL path.
+
+Related Information {#tms-cust-pi-tkn-retrieve-mult-reqfields_section_jpc_xzz_sxb}
+----------------------------------------------------------------------------------
+
+* [API Field Reference for the REST API](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/api-fields-about-guide.md "")
+  {#tms-cust-pi-tkn-retrieve-mult-reqfields_ul_kpc_xzz_sxb}
+
+REST Example: Listing Payment Instruments for a Customer {#tms-cust-pi-tkn-retrieve-mult-ex-rest}
+=================================================================================================
+
+Request
+
+```keyword
+GET https://apitest.example.com/tms/v2/customers/7A906EC3D0F73581E0539599D30AADC1/payment-instruments?offset=4&limit=2
+```
+
+Response to a Successful Request
+
+```
+{  
+  "_links": {
+    "self": {
+      "href": "/tms/v2/customers/7A906EC3D0F73581E0539599D30AADC1/payment-instruments?offset=4&limit=2"    
+    },
+    "first": { 
+      "href": "/tms/v2/customers/7A906EC3D0F73581E0539599D30AADC1/payment-instruments?offset=0&limit=2"    
+    },    
+    "prev": {
+      "href": "/tms/v2/customers/7A906EC3D0F73581E0539599D30AADC1/payment-instruments?offset=2&limit=2"    
+    },
+    "next": { 
+      "href": "/tms/v2/customers/7A906EC3D0F73581E0539599D30AADC1/payment-instruments?offset=6&limit=2"   
+    },
+      "last": { 
+        "href": "/tms/v2/customers/7A906EC3D0F73581E0539599D30AADC1/payment-instruments?offset=8&limit=2"    
+      }  
+  },
+  "offset": 4,
+  "limit": 2,
+  "count": 2,
+  "total": 10,
+  "_embedded": {
+    "paymentInstruments": [ 
+      { 
+        "_links": {
+          "self": {
+            "href": "/tms/v2/customers/7A906EC3D0F73581E0539599D30AADC1/payment-instruments/7A906EC3D0F73581E0539599D30AAPI1"
+          },
+          "customer": {
+            "href": "/tms/v2/customers/7A906EC3D0F73581E0539599D30AADC1"
+          }
+        },
+        "id": "7A906EC3D0F73581E0539599D30AAPI1",
+        "state": "ACTIVE",
+        "card": {
+          "expirationMonth": "09",
+          "expirationYear": "2017",
+          "type": "001",
+          "issueNumber": "01",
+          "startMonth": "01",
+          "startYear": "2016",
+          "useAs": "pinless debit",
+          "tokenizedInformation": {
+            "requestorID": "12345",
+            "transactionType": "1"
+          }
+        },
+        "buyerInformation": {
+          "companyTaxID": "12345",
+          "currency": "USD",
+          "dateOfBirth": "2000-12-13",
+          "personalIdentification": [
+            {
+              "id": "57684432111321",
+              "type": "driver license",
+              "issuedBy": {
+                "administrativeArea": "CA"
+              }
+            }
+          ]
+        },
+        "billTo": {
+          "firstName": "John",
+          "lastName": "Smith",
+          "company": "Company Name",
+          "address1": "8310 Capital of Texas Highwas North",
+          "address2": "Bluffstone Drive",
+          "locality": "Austin",
+          "administrativeArea": "TX",
+          "postalCode": "78731",
+          "country": "US",
+          "email": "john.smith@test.com",
+          "phoneNumber": "+44 2890447951"
+        },
+        "processingInformation": {
+          "billPaymentProgramEnabled": true,
+          "bankTransferOptions": {
+            "SECCode": "WEB" 
+          }
+        },
+        "merchantInformation": {
+          "merchantDescriptor": {
+            "alternateName": "Branch Name"
+          }
+        },
+        "metadata": {
+          "creator": "mid"        
+        },
+        "instrumentIdentifier": {
+          "id": "7040000000057621111"
+        },
+        "_embedded": {
+          "instrumentIdentifier": {
+            "_links": {
+              "self": {
+                "href": "/tms/v1/instrumentidentifiers/7040000000057621111"
+              },
+              "paymentInstruments": {
+                "href": "/tms/v1/instrumentidentifiers/7040000000057621111/paymentinstruments"
+              }
+            },
+            "id": "7040000000057621111",
+            "object": "instrumentIdentifier",
+            "state": "ACTIVE",
+            "card": {
+              "number": "411111XXXXX1111"
+            },
+            "issuer": {
+              "paymentAccountReference": "V000000000000411111111111111"
+            },
+            "metadata": {
+              "creator": "mid"
+            }
+          }
+        }
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/tms/v2/customers/7A906EC3D0F73581E0539599D30AAPI1/payment-instruments/7A906EC3D0F73581E0539599D30AAPI2"
+          },
+          "customer": {
+            "href": "/tms/v2/customers/7A906EC3D0F73581E0539599D30AAPI2"
+          }
+        },
+        "id": "7A906EC3D0F73581E0539599D30AAPI2",
+        "state": "ACTIVE",
+        "card": {
+          "expirationMonth": "09",
+          "expirationYear": "2017",
+          "type": "001",
+          "issueNumber": "01",
+          "startMonth": "01",
+          "startYear": "2016",
+          "useAs": "pinless debit",
+          "tokenizedInformation": {
+            "requestorID": "12345",
+            "transactionType": "1"
+          }
+        },
+        "buyerInformation": {
+          "companyTaxID": "12345",
+          "currency": "USD",
+          "dateOfBirth": "2000-12-13",
+          "personalIdentification": [
+            {
+              "id": "57684432111321",
+              "type": "driver license",
+              "issuedBy": {
+                "administrativeArea": "CA"
+              }
+            }
+          ]
+        },
+        "billTo": {
+          "firstName": "John",
+          "lastName": "Smith",
+          "company": "Company Name",
+          "address1": "8310 Capital of Texas Highway North",
+          "address2": "Bluffstone Drive",
+          "locality": "Austin",
+          "administrativeArea": "TX",
+          "postalCode": "78731",
+          "country": "US",
+          "email": "john.smith@test.com",
+          "phoneNumber": "+44 2890447951"
+        },
+        "processingInformation": {
+          "billPaymentProgramEnabled": true,
+          "bankTransferOptions": {
+            "SECCode": "WEB"
+          }
+        },
+        "merchantInformation": {
+          "merchantDescriptor": {
+            "alternateName": "Branch Name"
+          }
+        },
+        "metadata": {
+          "creator": "mid"
+        },
+        "instrumentIdentifier": {
+          "id": "7040000000057621111"
+        },
+        "_embedded": {
+          "instrumentIdentifier": {
+            "_links": {
+              "self": {
+                "href": "/tms/v1/instrumentidentifiers/7040000000057621111"
+              },
+              "paymentInstruments": {
+                "href": "/tms/v1/instrumentidentifiers/7040000000057621111/paymentinstruments"
+              }
+            },
+            "id": "7040000000057621111",
+            "object": "instrumentIdentifier",
+            "state": "ACTIVE",
+            "card": {
+              "number": "411111XXXXX1111"
+            },
+            "issuer": {
+              "paymentAccountReference": "V000000000000411111111111111"
+            },
+            "metadata": {
+              "creator": "mid"
+            }
+          }
+        }
+      }
+    ]
+  }
+}
+```
+
+Update a Customer Payment Instrument {#tms-cust-pi-tkn-update-intro}
+====================================================================
+
+This section describes how to update a customer payment instrument token.
+
+Endpoint
+--------
+
+**Test:** `PATCH ``https://apitest.example.com``/tms/v2/customers/`*{customerTokenId}* `/payment-instruments/`*{paymentInstrumentTokenId}*` `{#tms-cust-pi-tkn-update-intro_restcust-test}  
+**Production:** `PATCH ``https://api.example.com``/tms/v2/customers/`*{customerTokenId}* `/payment-instruments/`*{paymentInstrumentTokenId}*  
+**Production in India:** `PATCH ``https://api.in.example.com``/tms/v2/customers/`*{customerTokenId}* `/payment-instruments/`*{paymentInstrumentTokenId}*{#tms-cust-pi-tkn-update-intro_restcust-prod-india}  
+The *`{customerTokenId}`* is the customer token ID returned in the id field when you created the customer token. The *`{paymentInstrumentTokenId}`* is the payment instrument token ID you want to retrieve. For more information, see [Create a Customer](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-cust-tkn/tms-cust-tkn-create-intro.md "") and [Create a Customer Payment Instrument](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-cust-pi-tkn/tms-cust-pi-tkn-create-intro.md "").
+
+Required Fields for Updating a Customer Payment Instrument {#tms-cust-pi-tkn-update-reqfields}
+==============================================================================================
+
+customerTokenId
+:
+Include the ID of the customer token you want to retrieve in the URL path.
+
+paymentInstrumentTokenId
+:
+Include the ID of the payment instrument token you want to retrieve in the URL path.
+{#tms-cust-pi-tkn-update-reqfields_dl_bcz_qry_dwb}
+
+Related Information {#tms-cust-pi-tkn-update-reqfields_section_jpc_xzz_sxb}
+---------------------------------------------------------------------------
+
+* [API Field Reference for the REST API](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/api-fields-about-guide.md "")
+  {#tms-cust-pi-tkn-update-reqfields_ul_kpc_xzz_sxb}
+
+Optional Fields for Updating a Customer Payment Instrument {#tms-cust-pi-tkn-update-optfields}
+==============================================================================================
+
+bankAccount.type
+:
+
+billTo.address1
+:
+
+billTo.address2
+:
+
+billTo.aminstrativeArea
+:
+
+billTo.company
+:
+
+billTo.country
+:
+
+billTo.email
+:
+
+billTo.firstName
+:
+
+billTo.lastName
+:
+
+billTo.locality
+:
+
+billTo.phoneNumber
+:
+
+billTo.postalCode
+:
+
+buyerInformation.companyTaxID
+:
+
+buyerInformation.currency
+:
+
+buyerInformation.dateOfBirth
+:
+
+buyerInformation.personalIdentification.id
+:
+
+buyerInformation.personalIdentification.issuedBy.administrativeArea
+:
+
+buyerInformation.personalIdentification.type
+:
+
+card.expirationMonth
+:
+
+card.expirationYear
+:
+
+card.issueNumber
+:
+
+card.startMonth
+:
+
+card.startYear
+:
+
+card.type
+:
+
+card.useAs
+:
+
+card.tokenizedInformation.requestorID
+:
+
+card.tokenizedInformation.transactionType
+:
+
+default
+:
+Set value to `true` if default, otherwise set value to `false`.
+
+instrumentIdentifier.id
+:
+
+processingInformation.billPaymentProgramEnabled
+:
+
+merchantInformation.merchantDescriptor.alternateName
+:
+{#tms-cust-pi-tkn-update-optfields_dl_bcz_qry_dwb}
+
+Related Information {#tms-cust-pi-tkn-update-optfields_section_jpc_xzz_sxb}
+---------------------------------------------------------------------------
+
+* [API Field Reference for the REST API](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/api-fields-about-guide.md "")
+  {#tms-cust-pi-tkn-update-optfields_ul_kpc_xzz_sxb}
+
+REST Example: Updating a Customer Payment Instrument {#tms-cust-pi-tkn-update-ex-rest}
+======================================================================================
+
+Request
+
+```
+{
+  "default": "true",
+  "card": {
+    "expirationMonth": "12",
+    "expirationYear": "2031",
+    "type": "001"
+  },
+  "billTo": {
+    "firstName": "John",
+    "lastName": "Doe",
+    "company": "Company Name",
+    "address1": "1 Market St",
+    "address2": "Unit B",
+    "locality": "San Francisco",
+    "administrativeArea": "CA",
+    "postalCode": "94105",
+    "country": "US",
+    "email": "test@pgw.com",
+    "phoneNumber": "4158880000"
+  },
+  "instrumentIdentifier": {
+    "id": "7010000000016241111"
+  }
+}
+```
+
+Response to a Successful Request
+
+```
+{
+  "_links": {
+    "self": {
+      "href": "/tms/v2/customers/F2F3ADA770102B51E053A2598D0A9078/payment-instruments/F39732BE4BDA9A1EE053AF598E0A4081"
+    },
+    "customer": {
+      "href": "/tms/v2/customers/F2F3ADA770102B51E053A2598D0A9078"
+    }
+  },
+  "id": "F39732BE4BDA9A1EE053AF598E0A4081",
+  "default": true,
+  "state": "ACTIVE",
+  "card": {
+    "expirationMonth": "12",
+    "expirationYear": "2031",
+    "type": "001"
+  },
+  "billTo": {
+    "firstName": "John",
+    "lastName": "Doe",
+    "company": "Company Name",
+    "address1": "1 Market St",
+    "address2": "Unit B",
+    "locality": "San Francisco",
+    "administrativeArea": "CA",
+    "postalCode": "94105",
+    "country": "US",
+    "email": "test@pgw.com",
+    "phoneNumber": "4158880000"
+  },
+  "instrumentIdentifier": {
+    "id": "7010000000016241111"
+  },
+  "metadata": {
+    "creator": "testrest"
+  },
+  "_embedded": {
+    "instrumentIdentifier": {
+      "_links": {
+        "self": {
+          "href": "/tms/v1/instrumentidentifiers/7010000000016241111"
+        },
+        "paymentInstruments": {
+          "href": "/tms/v1/instrumentidentifiers/7010000000016241111/paymentinstruments"
+        }
+      },
+      "id": "7010000000016241111",
+      "object": "instrumentIdentifier",
+      "state": "ACTIVE",
+      "card": {
+        "number": "411111XXXXXX1111"
+      },
+      "processingInformation": {
+        "authorizationOptions": {
+          "initiator": {
+            "merchantInitiatedTransaction": {
+              "previousTransactionId": "123456789012345"
+            }
+          }
+        }
+      },
+      "metadata": {
+        "creator": "testrest"
+      }
+    }
+  }
+}
+```
+
+Delete a Customer Payment Instrument {#tms-cust-pi-tkn-delete-intro}
+====================================================================
+
+This section describes how to delete a customer payment instrument token.
+
+Endpoint
+--------
+
+**Test:** `DELETE ``https://apitest.example.com``/tms/v2/customers/`*{customerTokenId}* `/payment-instruments/`*{paymentInstrumentTokenId}*` `{#tms-cust-pi-tkn-delete-intro_restcust-test}  
+**Production:** `DELETE ``https://api.example.com``/tms/v2/customers/`*{customerTokenId}* `/payment-instruments/`*{paymentInstrumentTokenId}*  
+**Production in India:** `DELETE ``https://api.in.example.com``/tms/v2/customers/`*{customerTokenId}* `/payment-instruments/`*{paymentInstrumentTokenId}*{#tms-cust-pi-tkn-delete-intro_restcust-prod-india}  
+The *`{customerTokenId}`* is the customer token ID returned in the id field when you created the customer token. The *`{paymentInstrumentTokenId}`* is the payment instrument token ID you want to retrieve. For more information, see [Create a Customer](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-cust-tkn/tms-cust-tkn-create-intro.md "") and [Create a Customer Payment Instrument](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-cust-pi-tkn/tms-cust-pi-tkn-create-intro.md "").
+IMPORTANT If you have more than one payment Instrument, then the default payment Instrument cannot be deleted without first selecting a new default payment instrument.
+
+REST Example: Deleting a Customer Payment Instrument {#tms-cust-pi-tkn-delete-ex-rest}
+======================================================================================
+
+Request
+
+```ph codeph
+DELETE `https://apitest.example.com`/tms/v2/customers/F2F3ADA770102B51E053A2598D0A9078/payment-instruments/F39732BE4BDA9A1EE053AF598E0A4081    
+```
+
+Response to a Successful Request  
+A successful delete response returns an empty `HTTP 204 No Content` status. For more information, see [HTTP Status Codes](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-ref-info/tms-http-status.md "").
+
+Payments with Customer Payment Instrument Tokens {#tms-pay-cust-pi-tkn}
+=======================================================================
+
+This section contains information on making payments with customer payment instrument tokens.  
+Customer payment instruments are payment instruments that are linked to a specific customer token. The following payment instruments are supported:
+
+* Payment card
+
+* Tokenized card (Apple Pay and Android Pay)
+
+* ACH bank account
+  {#tms-pay-cust-pi-tkn_ul_c52_kb2_pwb}  
+  To process a payment using a payment instrument token, you must include the customer token ID as the value in the `paymentInformation.paymentInstrument.id` field. You can make payments using non-default payment instruments associated with the customer. For example:
+
+* [Authorizing a Payment with a Non-Default Payment Instrument](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-cust-pi-tkn/tms-cust-pi-tkn-pay-nondefault-pi-intro.md "")
+
+* [Making a Credit with a Non-Default Payment Instrument](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-cust-pi-tkn/tms-cust-pi-tkn-credit-nondefault-pi-intro.md "")
+  {#tms-pay-cust-pi-tkn_ul_cl2_fqv_qwb}  
+  For more information on customer tokens and payment instrument tokens, see [Customer Tokens](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-overview/tms-token-types/tms-cust-tkn-intro.md "") and [Payment Instrument Tokens](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-overview/tms-token-types/tms-pi-tkn-intro.md ""), respectively.
+
+Authorizing a Payment with a Non-Default Payment Instrument {#tms-cust-pi-tkn-pay-nondefault-pi-intro}
+======================================================================================================
+
+This section provides the information you need in order to authorize a payment with a non-default payment instrument.
+
+Endpoint
+--------
+
+**Production:** `POST ``https://api.example.com``/pts/v2/payments `  
+**Test:** `POST ``https://apitest.example.com``/pts/v2/payments`{#tms-cust-pi-tkn-pay-nondefault-pi-intro_restcust-test}  
+**Production in India:** `POST ``https://api.in.example.com``/pts/v2/payments`{#tms-cust-pi-tkn-pay-nondefault-pi-intro_restcust-prod-india}
+
+Required Fields for Authorizing a Payment with a Non-Default Payment Instrument {#tms-cust-pi-tkn-pay-nondefault-pi-reqfields}
+==============================================================================================================================
+
+[clientReferenceInformation.code](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/client-ref-info-aa/client-ref-info-code.md "")
+:
+
+[orderInformation.amountDetails.currency](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-amount-details-currency.md "")
+
+[orderInformation.amountDetails.totalAmount](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-amount-details-total-amount.md "")
+:
+
+[paymentInformation.paymentInstrument.id](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/payment-info-aa/payment-info-payment-instrument-id.md "")
+:
+Set to the ID of the payment instrument token you want to use.
+{#tms-cust-pi-tkn-pay-nondefault-pi-reqfields_dl_bcz_qry_dwb}
+
+Related Information {#tms-cust-pi-tkn-pay-nondefault-pi-reqfields_section_jpc_xzz_sxb}
+--------------------------------------------------------------------------------------
+
+* [API field reference guide for the REST API](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/api-fields-about-guide.md "")
+  {#tms-cust-pi-tkn-pay-nondefault-pi-reqfields_ul_kpc_xzz_sxb}
+
+Optional Fields for Authorizing a Payment with a Non-Default Payment Instrument {#tms-cust-pi-tkn-pay-nondefault-pi-optfields}
+==============================================================================================================================
+
+You can use these optional fields to include additional information when authorizing a payment with a non-default payment instrument.
+
+[orderInformation.amountDetails.currency](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-amount-details-currency.md "")
+
+[orderInformation.amountDetails.totalAmount](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-amount-details-total-amount.md "")
+:
+
+[orderInformation.billTo.address1](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-bill-to-address1.md "")
+:
+
+[orderInformation.billTo.administrativeArea](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-bill-to-admin-area.md "")
+:
+
+[orderInformation.billTo.country](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-bill-to-company-country.md "")
+:
+
+[orderInformation.billTo.email](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-bill-to-email.md "")
+:
+
+[orderInformation.billTo.firstName](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-bill-to-first-name.md "")
+:
+
+[orderInformation.billTo.lastName](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-bill-to-last-name.md "")
+:
+
+[orderInformation.billTo.locality](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-bill-to-locality.md "")
+:
+
+[orderInformation.billTo.postalCode](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-bill-to-postal-code.md "")
+:
+
+[paymentInformation.card.expirationMonth](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/payment-info-aa/payment-info-card-exp-mo.md "")
+:
+
+[paymentInformation.card.expirationYear](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/payment-info-aa/payment-info-card-exp-year.md "")
+:
+
+[paymentInformation.card.number](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/payment-info-aa/payment-info-card-number.md "")
+:
+
+[paymentInformation.card.type](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/payment-info-aa/payment-info-card-type-a.md "")
+:
+{#tms-cust-pi-tkn-pay-nondefault-pi-optfields_dl_bcz_qry_dwb}
+
+Related Information {#tms-cust-pi-tkn-pay-nondefault-pi-optfields_section_jpc_xzz_sxb}
+--------------------------------------------------------------------------------------
+
+* [API field reference guide for the REST API](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/api-fields-about-guide.md "")
+  {#tms-cust-pi-tkn-pay-nondefault-pi-optfields_ul_kpc_xzz_sxb}
+
+REST Example: Authorizing a Payment with a Non-Default Payment Instrument {#tms-cust-pi-tkn-pay-nondefault-pi-ex-rest}
+======================================================================================================================
+
+Request
+
+```
+{
+  "clientReferenceInformation": {
+    "code": "12345678"
+  },
+    "paymentInformation": {
+        "paymentInstrument": {
+            "id": "0F3BB131F8143A58E063A2598D0AB921"
+        }
+    },
+    "orderInformation": {
+        "amountDetails": {
+            "currency": "USD",
+            "totalAmount": "10.00"
+        }
+    }
+}
+```
+
+{#tms-cust-pi-tkn-pay-nondefault-pi-ex-rest_codeblock_v4l_mlt_lwb}  
+Response to a Successful Request
+
+```
+{
+  "_links": {
+    "authReversal": {
+      "method": "POST",
+      "href": "/pts/v2/payments/7055952648586653304951/reversals"
+    },
+    "self": {
+      "method": "GET",
+      "href": "/pts/v2/payments/7055952648586653304951"
+    },
+    "capture": {
+      "method": "POST",
+      "href": "/pts/v2/payments/7055952648586653304951/captures"
+    }
+  },
+  "clientReferenceInformation": {
+    "code": "12345678"
+  },
+  "id": "7055952648586653304951",
+  "orderInformation": {
+    "amountDetails": {
+      "authorizedAmount": "10.00",
+      "currency": "USD"
+    }
+  },
+  "paymentAccountInformation": {
+    "card": {
+      "type": "001"
+    }
+  },
+  "paymentInformation": {
+    "tokenizedCard": {
+      "type": "001"
+    },
+    "instrumentIdentifier": {
+      "id": "7010000000016241111",
+      "state": "ACTIVE"
+    },
+    "paymentInstrument": {
+      "id": "0F3BB131F8143A58E063A2598D0AB921"
+    },
+    "card": {
+      "type": "001"
+    }
+  },
+  "pointOfSaleInformation": {
+    "terminalId": "111111"
+  },
+  "processorInformation": {
+    "approvalCode": "888888",
+    "networkTransactionId": "123456789619999",
+    "transactionId": "123456789619999",
+    "responseCode": "100",
+    "avs": {
+      "code": "X",
+      "codeRaw": "I1"
+    }
+  },
+  "reconciliationId": "67468244CRIL0U0Y",
+  "status": "AUTHORIZED",
+  "submitTimeUtc": "2024-01-18T16:27:45Z"
+}
+```
+
+{#tms-cust-pi-tkn-pay-nondefault-pi-ex-rest_codeblock_x4l_mlt_lwb}
+
+Making a Credit with a Non-Default Payment Instrument {#tms-cust-pi-tkn-credit-nondefault-pi-intro}
+===================================================================================================
+
+This section describes how to make a credit with a non-default payment instrument.
+
+Endpoint
+--------
+
+**Test:** `POST ``https://apitest.example.com``/pts/v2/credits `{#tms-cust-pi-tkn-credit-nondefault-pi-intro_restcust-test}  
+**Production:** `POST ``https://api.example.com``pts/v2/credits `  
+**Production in India:** `POST ``https://api.in.example.com``pts/v2/credits`{#tms-cust-pi-tkn-credit-nondefault-pi-intro_restcust-prod-india}
+
+Required Fields for Making a Credit with a Non-Default Payment Instrument {#tms-cust-pi-tkn-credit-nondefault-pi-reqfields}
+===========================================================================================================================
+
+[clientReferenceInformation.code](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/client-ref-info-aa/client-ref-info-code.md "")
+:
+
+[orderInformation.amountDetails.currency](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-amount-details-currency.md "")
+
+[orderInformation.amountDetails.totalAmount](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-amount-details-total-amount.md "")
+:
+
+[paymentInformation.paymentInstrument.id](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/payment-info-aa/payment-info-payment-instrument-id.md "")
+:
+Set to the ID of the payment instrument token that you want to use.
+{#tms-cust-pi-tkn-credit-nondefault-pi-reqfields_dl_u12_vqy_dwb}
+
+Related Information {#tms-cust-pi-tkn-credit-nondefault-pi-reqfields_section_jpc_xzz_sxb}
+-----------------------------------------------------------------------------------------
+
+* [API field reference guide for the REST API](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/api-fields-about-guide.md "")
+  {#tms-cust-pi-tkn-credit-nondefault-pi-reqfields_ul_kpc_xzz_sxb}
+
+Optional Fields for Making a Credit with a Non-Default Payment Instrument {#tms-cust-pi-tkn-credit-nondefault-pi-optfields}
+===========================================================================================================================
+
+You can use these optional fields to include additional information when making a credit with a non-default payment instrument.
+
+[orderInformation.amountDetails.currency](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-amount-details-currency.md "")
+
+[orderInformation.amountDetails.totalAmount](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-amount-details-total-amount.md "")
+:
+
+[orderInformation.billTo.address1](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-bill-to-address1.md "")
+:
+
+[orderInformation.billTo.administrativeArea](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-bill-to-admin-area.md "")
+:
+
+[orderInformation.billTo.country](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-bill-to-company-country.md "")
+:
+
+[orderInformation.billTo.email](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-bill-to-email.md "")
+:
+
+[orderInformation.billTo.firstName](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-bill-to-first-name.md "")
+:
+
+[orderInformation.billTo.lastName](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-bill-to-last-name.md "")
+:
+
+[orderInformation.billTo.locality](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-bill-to-locality.md "")
+:
+
+[orderInformation.billTo.postalCode](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-bill-to-postal-code.md "")
+:
+
+[paymentInformation.card.expirationMonth](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/payment-info-aa/payment-info-card-exp-mo.md "")
+:
+
+[paymentInformation.card.expirationYear](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/payment-info-aa/payment-info-card-exp-year.md "")
+:
+
+[paymentInformation.card.number](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/payment-info-aa/payment-info-card-number.md "")
+:
+
+[paymentInformation.card.type](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/payment-info-aa/payment-info-card-type-a.md "")
+:
+{#tms-cust-pi-tkn-credit-nondefault-pi-optfields_dl_u12_vqy_dwb}
+
+Related Information {#tms-cust-pi-tkn-credit-nondefault-pi-optfields_section_jpc_xzz_sxb}
+-----------------------------------------------------------------------------------------
+
+* [API field reference guide for the REST API](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/api-fields-about-guide.md "")
+  {#tms-cust-pi-tkn-credit-nondefault-pi-optfields_ul_kpc_xzz_sxb}
+
+REST Example: Making a Credit with a Non-Default Payment Instrument {#tms-cust-pi-tkn-credit-nondefault-pi-ex-rest}
+===================================================================================================================
+
+Request
+
+```
+{
+  "clientReferenceInformation": {
+    "code": "12345678"
+  },
+    "paymentInformation": {
+        "paymentInstrument": {
+            "id": "0F3BB131F8143A58E063A2598D0AB921"
+        }
+    },
+    "orderInformation": {
+        "amountDetails": {
+            "currency": "USD",
+            "totalAmount": "10.00"
+        }
+    }
+}
+```
+
+{#tms-cust-pi-tkn-credit-nondefault-pi-ex-rest_codeblock_v4l_mlt_lwb}  
+Response to a Successful Request
+
+```
+{
+  "_links": {
+    "void": {
+      "method": "POST",
+      "href": "/pts/v2/credits/7055968581386446104953/voids"
+    },
+    "self": {
+      "method": "GET",
+      "href": "/pts/v2/credits/7055968581386446104953"
+    }
+  },
+  "clientReferenceInformation": {
+    "code": "12345678"
+  },
+  "creditAmountDetails": {
+    "currency": "USD",
+    "creditAmount": "10.00"
+  },
+  "id": "7055968581386446104953",
+  "orderInformation": {
+    "amountDetails": {
+      "currency": "USD"
+    }
+  },
+  "paymentAccountInformation": {
+    "card": {
+      "type": "001"
+    }
+  },
+  "paymentInformation": {
+    "tokenizedCard": {
+      "type": "001"
+    },
+    "instrumentIdentifier": {
+      "id": "7010000000016241111",
+      "state": "ACTIVE"
+    },
+    "paymentInstrument": {
+      "id": "0F3BB131F8143A58E063A2598D0AB921"
+    },
+    "card": {
+      "type": "001"
+    }
+  },
+  "processorInformation": {
+    "approvalCode": "888888",
+    "responseCode": "100"
+  },
+  "reconciliationId": "67445196PRILCQCN",
+  "status": "PENDING",
+  "submitTimeUtc": "2024-01-18T16:54:18Z"
+}
+```
+
+{#tms-cust-pi-tkn-credit-nondefault-pi-ex-rest_codeblock_x4l_mlt_lwb}
+
+Payment Instrument Tokens {#tms-pi-tkn}
+=======================================
+
+The payment instrument token contains the complete billing details for the payment type including cardholder name, expiration date, and billing address. These are standalone payment instruments that cannot be associated with a customer.
+
+Manage Payment Instrument Tokens {#tms-manage-pi-tkn}
+=====================================================
+
+This section contains information on managing payment instrument tokens.  
+A payment instrument represents a means of payment and a payment instrument token stores this information using an instrument identifier token. It does not store the card number and cannot exist without an associated instrument identifier. It can include an instrument identifier, expiration date, billing address, and card type.  
+You can create, retrieve, update, or delete an instrument identifier by submitting an HTTP POST, `GET`, `PATCH`, or `DELETE` operation to the `tms/v1/paymentinstruments` endpoint. Use the `TMS` REST API payment instrument endpoint to:
+* [Create a payment instrument token](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-pi-tkn/tms-pi-tkn-create-intro.md "")
+* [Retrieve a payment instrument token](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-pi-tkn/tms-pi-tkn-retrieve-intro.md "")
+* [Update a payment instrument](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-pi-tkn/tms-pi-tkn-update-intro.md "")
+* [Delete a payment instrument](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-pi-tkn/tms-pi-tkn-delete-intro.md "")
+  {#tms-manage-pi-tkn_ul_g1m_jxw_mwb}  
+  For more information on payment instrument tokens, see [Payment Instrument Tokens](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-overview/tms-token-types/tms-pi-tkn-intro.md "").
+
+Create a Payment Instrument {#tms-pi-tkn-create-intro}
+======================================================
+
+This section describes how to create a payment instrument token.
+
+Endpoint
+--------
+
+**Test:** `POST ``https://apitest.example.com``/tms/v1/paymentinstruments`{#tms-pi-tkn-create-intro_restcust-test}  
+**Production:** `POST ``https://api.example.com``/tms/v1/paymentinstruments`  
+**Production in India:** `POST ``https://api.in.example.com``/tms/v1/paymentinstruments`{#tms-pi-tkn-create-intro_restcust-prod-india}
+
+Required Fields for Creating a Payment Instrument {#tms-pi-tkn-create-reqfields}
+================================================================================
+
+card.type
+:
+
+instrumentIdentifier.id
+:
+Include the ID of the instrument identifier token you want to use to create a payment instrument.
+{#tms-pi-tkn-create-reqfields_dl_bcz_qry_dwb}
+
+Related Information {#tms-pi-tkn-create-reqfields_section_jpc_xzz_sxb}
+----------------------------------------------------------------------
+
+* [API Field Reference for the REST API](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/api-fields-about-guide.md "")
+  {#tms-pi-tkn-create-reqfields_ul_kpc_xzz_sxb}
+
+Optional Fields for Creating a Payment Instrument {#tms-pi-tkn-create-optfields}
+================================================================================
+
+default
+:
+Set value to `true` if default, otherwise set value to `false`.
+
+bankAccount.type
+:
+
+billTo.firstName
+:
+
+billTo.lastName
+:
+
+billTo.company
+:
+
+billTo.address1
+:
+
+billTo.locality
+:
+
+billTo.administrativeArea
+:
+
+billTo.postalCode
+:
+
+billTo.country
+:
+
+billTo.email
+:
+
+billTo.phoneNumber
+:
+
+card.expirationMonth
+:
+
+card.expirationYear
+:
+
+card.issueNumber
+:
+
+card.startMonth
+:
+
+card.startYear
+:
+
+card.useAs
+:
+
+tokenizedInformation.requestorID
+:
+
+tokenizedInformation.transactionType
+:
+
+buyerInformation.companyTaxID
+:
+
+buyerInformation.currency
+:
+
+buyerInformation.dateOfBirth
+:
+
+buyerInformation.personalIdentification.id
+:
+
+buyerInformation.personalIdentification.type
+:
+
+buyerInformation.personalIdentification.issuedBy.administrativeArea
+:
+
+billTo.address2
+:
+
+processingInformation.billPaymentProgramEnabled
+:
+
+processingInformation.bankTransferOptions.SECCode
+:
+
+merchantInformation.merchantDescriptor.alternateName
+:
+{#tms-pi-tkn-create-optfields_dl_bcz_qry_dwb}
+
+Related Information {#tms-pi-tkn-create-optfields_section_jpc_xzz_sxb}
+----------------------------------------------------------------------
+
+* [API Field Reference for the REST API](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/api-fields-about-guide.md "")
+  {#tms-pi-tkn-create-optfields_ul_kpc_xzz_sxb}
+
+REST Example: Creating a Payment Instrument {#tms-pi-tkn-create-ex-rest}
+========================================================================
+
+Request
+
+```
+{
+  "card": {
+    "expirationMonth": "12",
+    "expirationYear": "2031",
+    "type": "relay"
+  },
+  "billTo": {
+    "firstName": "John",
+    "lastName": "Doe",
+    "company": "Company Name",
+    "address1": "1 Market St",
+    "locality": "San Francisco",
+    "administrativeArea": "CA",
+    "postalCode": "94105",
+    "country": "US",
+    "email": "test@pgw.com",
+    "phoneNumber": "4158880000"
+  },
+  "instrumentIdentifier": {
+    "id": "7010000000016241111"
+  }
+}
+```
+
+{#tms-pi-tkn-create-ex-rest_codeblock_ud1_pc1_jwb}  
+Response to a Successful Request
+
+```keyword
+{
+  "_links": {
+    "self": {
+      "href": https://apitest.example.com/tms/v1/paymentinstruments/F39763E8CFDF2354E053AF598E0AF684"
+    }
+  },
+  "id": "F39763E8CFDF2354E053AF598E0AF684",
+  "object": "paymentInstrument",
+  "state": "ACTIVE",
+  "card": {
+    "expirationMonth": "12",
+    "expirationYear": "2031",
+    "type": "relay"
+  },
+  "billTo": {
+    "firstName": "John",
+    "lastName": "Doe",
+    "company": "Company Name",
+    "address1": "1 Market St",
+    "locality": "San Francisco",
+    "administrativeArea": "CA",
+    "postalCode": "94105",
+    "country": "US",
+    "email": "test@pgw.com",
+    "phoneNumber": "4158880000"
+  },
+  "metadata": {
+    "creator": "testrest"
+  },
+  "_embedded": {
+    "instrumentIdentifier": {
+      "_links": {
+        "self": {
+          "href": "https://apitest.example.com/tms/v1/instrumentidentifiers/7010000000016241111"
+        },
+        "paymentInstruments": {
+          "href": "https://apitest.example.com/tms/v1/instrumentidentifiers/7010000000016241111/paymentinstruments"
+        }
+      },
+      "id": "7010000000016241111",
+      "object": "instrumentIdentifier",
+      "state": "ACTIVE",
+      "card": {
+        "number": "411111XXXXXX1111"
+      },
+      "processingInformation": {
+        "authorizationOptions": {
+          "initiator": {
+            "merchantInitiatedTransaction": {
+              "previousTransactionId": "123456789619999"
+            }
+          }
+        }
+      },
+      "metadata": {
+        "creator": "testrest"
+      }
+    }
+  }
+}
+```
+
+{#tms-pi-tkn-create-ex-rest_codeblock_wd1_pc1_jwb}
+
+Retrieve a Payment Instrument {#tms-pi-tkn-retrieve-intro}
+==========================================================
+
+This section describes how to retrieve a payment instrument token.
+
+Endpoint
+--------
+
+**Test:** `GET ``https://apitest.example.com``/tms/v1/paymentinstruments/`*{paymentInstrumentTokenId}*{#tms-pi-tkn-retrieve-intro_restcust-test}  
+**Production:** `GET ``https://api.example.com``/tms/v1/paymentinstruments/`*{paymentInstrumentTokenId}*  
+**Production in India:** `GET ``https://api.in.example.com``/tms/v1/paymentinstruments/`*{paymentInstrumentTokenId}*{#tms-pi-tkn-retrieve-intro_restcust-prod-india}  
+The *`{paymentInstrumentTokenId}`* is the payment instrument token ID you want to retrieve. For more information, see [Create a Payment Instrument](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-pi-tkn/tms-pi-tkn-create-intro.md "").
+
+REST Example: Retrieving a Payment Instrument {#tms-pi-tkn-retrieve-ex-rest}
+============================================================================
+
+Request
+
+```ph codeph
+GET `https://apitest.example.com`/tms/v1/paymentinstruments/F39763E8CFDF2354E053AF598E0AF684   
+```
+
+{#tms-pi-tkn-retrieve-ex-rest_codeblock_ud1_pc1_jwb}  
+Response to a Successful Request
+
+```keyword
+{
+  "_links": {
+    "self": {
+      "href": "https://apitest.example.comtms/v1/paymentinstruments/F39763E8CFDF2354E053AF598E0AF684"
+    }
+  },
+  "id": "F39763E8CFDF2354E053AF598E0AF684",
+  "object": "paymentInstrument",
+  "state": "ACTIVE",
+  "card": {
+    "expirationMonth": "12",
+    "expirationYear": "2031",
+    "type": "relay"
+  },
+  "billTo": {
+    "firstName": "John",
+    "lastName": "Doe",
+    "company": "Company Name",
+    "address1": "1 Market St",
+    "locality": "San Francisco",
+    "administrativeArea": "CA",
+    "postalCode": "94105",
+    "country": "US",
+    "email": "test@pgw.com",
+    "phoneNumber": "4158880000"
+  },
+  "metadata": {
+    "creator": "testrest"
+  },
+  "_embedded": {
+    "instrumentIdentifier": {
+      "_links": {
+        "self": {
+          "href": "https://apitest.example.com/tms/v1/instrumentidentifiers/7010000000016241111"
+        },
+        "paymentInstruments": {
+          "href": "https://apitest.example.comtms/v1/instrumentidentifiers/7010000000016241111/paymentinstruments"
+        }
+      },
+      "id": "7010000000016241111",
+      "object": "instrumentIdentifier",
+      "state": "ACTIVE",
+      "card": {
+        "number": "411111XXXXXX1111"
+      },
+      "processingInformation": {
+        "authorizationOptions": {
+          "initiator": {
+            "merchantInitiatedTransaction": {
+              "previousTransactionId": "123456789619999"
+            }
+          }
+        }
+      },
+      "metadata": {
+        "creator": "testrest"
+      }
+    }
+  }
+}
+```
+
+{#tms-pi-tkn-retrieve-ex-rest_codeblock_wd1_pc1_jwb}
+
+Find Payment Instruments by Card Number {#tms-pi-tkn-retrieve-pi-card-intro}
+============================================================================
+
+This section describes how to find payment instruments by card number.
+
+Endpoint
+--------
+
+**Test:** `GET ``https://apitest.example.com``/tms/v1/instrumentidentifiers/{instrumentIdentifierTokenId}/paymentinstruments?offset=0&limit=20`{#tms-pi-tkn-retrieve-pi-card-intro_restcust-test}  
+**Production:** `GET ``https://api.example.com``/tms/v1/instrumentidentifiers/{instrumentIdentifierTokenId}/paymentinstruments?offset=0&limit=20`  
+**Production in India:** `GET ``https://api.in.example.com``/tms/v1/instrumentidentifiers/{instrumentIdentifierTokenId}/paymentinstruments?offset=0&limit=20`{#tms-pi-tkn-retrieve-pi-card-intro_restcust-prod-india}  
+`instrumentIdentifierTokenId` is the instrument identifier token ID returned in the id field when you created the instrument identifier token. For more information, see [Create an Instrument Identifier](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-ii-tkn/tms-ii-tkn-create-intro.md "").  
+Use these query string parameters to filter the list of payment instrument tokens:
+* `offset` --- Page offset number.
+* `limit` --- Maximum number of items you would like returned.
+  {#tms-pi-tkn-retrieve-pi-card-intro_ul_yxk_x1y_mwb}
+
+Required Fields for Finding Payment Instruments by Card Number {#tms-pi-tkn-retrieve-pi-card-reqfields}
+=======================================================================================================
+
+instrumentIdentifierTokenId
+:
+Include the ID of the instrument identifier token you want to retrieve in the URL path.
+{#tms-pi-tkn-retrieve-pi-card-reqfields_dl_bcz_qry_dwb}
+
+Related Information {#tms-pi-tkn-retrieve-pi-card-reqfields_section_jpc_xzz_sxb}
+--------------------------------------------------------------------------------
+
+* [API Field Reference for the REST API](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/api-fields-about-guide.md "")
+  {#tms-pi-tkn-retrieve-pi-card-reqfields_ul_kpc_xzz_sxb}
+
+REST Example: Finding Payment Instruments by Card Number {#tms-pi-tkn-retrieve-pi-card-ex-rest}
+===============================================================================================
+
+Request
+
+```keyword
+GET https://apitest.example.com/tms/v1/instrumentidentifiers/7010000000016241111/paymentinstruments?offset=0&limit=5
+```
+
+{#tms-pi-tkn-retrieve-pi-card-ex-rest_codeblock_v4l_mlt_lwb}  
+Response to a Successful Request
+
+```keyword
+{
+    "_links": {
+        "self": {
+            "href": "https://apitest.example.com/tms/v1/instrumentidentifiers/7010000000016241111/paymentinstruments?offset=0&limit=5"
+        },
+        "first": {
+            "href": "https://apitest.example.comtms/v1/instrumentidentifiers/7010000000016241111/paymentinstruments?offset=0&limit=5"
+        },
+        "next": {
+            "href": "https://apitest.example.com/tms/v1/instrumentidentifiers/7010000000016241111/paymentinstruments?offset=5&limit=5"
+        },
+        "last": {
+            "href": "https://apitest.example.com/tms/v1/instrumentidentifiers/7010000000016241111/paymentinstruments?offset=121265&limit=5"
+        }
+    },
+    "object": "collection",
+    "offset": 0,
+    "limit": 5,
+    "count": 5,
+    "total": 121269,
+    "_embedded": {
+        "paymentInstruments": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "https://apitest.example.com/tms/v1/paymentinstruments/F4D5E715F7BD9910E053A2598D0A7278"
+                    },
+                    "customer": {
+                        "href": "https://apitest.example.com/tms/v1/customers/F4D5E715F75E9910E053A2598D0A7278"
+                    }
+                },
+                "id": "F4D5E715F7BD9910E053A2598D0A7278",
+                "object": "paymentInstrument",
+                "state": "ACTIVE",
+                "card": {
+                    "expirationMonth": "12",
+                    "expirationYear": "2031",
+                    "type": "relay"
+                },
+                "billTo": {
+                    "firstName": "John",
+                    "lastName": "Doe",
+                    "company": "Relay",
+                    "address1": "1 Market St",
+                    "locality": "san francisco",
+                    "administrativeArea": "CA",
+                    "postalCode": "94105",
+                    "country": "US",
+                    "email": "test@pgw.com",
+                    "phoneNumber": "4158880000"
+                },
+                "metadata": {
+                    "creator": "testrest"
+                },
+                "_embedded": {
+                    "instrumentIdentifier": {
+                        "_links": {
+                            "self": {
+                                "href": "https://apitest.example.com/tms/v1/instrumentidentifiers/7010000000016241111"
+                            },
+                            "paymentInstruments": {
+                                "href": "https://apitest.example.com/tms/v1/instrumentidentifiers/7010000000016241111/paymentinstruments"
+                            }
+                        },
+                        "id": "7010000000016241111",
+                        "object": "instrumentIdentifier",
+                        "state": "ACTIVE",
+                        "card": {
+                            "number": "411111XXXXXX1111"
+                        },
+                        "processingInformation": {
+                            "authorizationOptions": {
+                                "initiator": {
+                                    "merchantInitiatedTransaction": {
+                                        "previousTransactionId": "123456789619999"
+                                    }
+                                }
+                            }
+                        },
+                        "metadata": {
+                            "creator": "testrest"
+                        }
+                    }
+                }
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "https://apitest.example.com/tms/v1/paymentinstruments/F4D5E70505B30CF9E053AF598E0A005F"
+                    },
+                    "customer": {
+                        "href": "https://apitest.example.com/tms/v1/customers/F4D5E70505B40CF9E053AF598E0A005F"
+                    }
+                },
+                "id": "F4D5E70505B30CF9E053AF598E0A005F",
+                "object": "paymentInstrument",
+                "state": "ACTIVE",
+                "card": {
+                    "expirationMonth": "02",
+                    "expirationYear": "2024",
+                    "type": "relay"
+                },
+                "buyerInformation": {
+                    "currency": "USD"
+                },
+                "billTo": {
+                    "firstName": "NOREAL",
+                    "lastName": "NAME",
+                    "address1": "1295 Charleston Road",
+                    "locality": "Mountain View",
+                    "administrativeArea": "CA",
+                    "postalCode": "94043",
+                    "country": "US",
+                    "email": "customer_email=null@example.com"
+                },
+                "metadata": {
+                    "creator": "testrest"
+                },
+                "_embedded": {
+                    "instrumentIdentifier": {
+                        "_links": {
+                            "self": {
+                                "href": "https://apitest.example.com/tms/v1/instrumentidentifiers/7010000000016241111"
+                            },
+                            "paymentInstruments": {
+                                "href": "https://apitest.example.com/tms/v1/instrumentidentifiers/7010000000016241111/paymentinstruments"
+                            }
+                        },
+                        "id": "7010000000016241111",
+                        "object": "instrumentIdentifier",
+                        "state": "ACTIVE",
+                        "card": {
+                            "number": "411111XXXXXX1111"
+                        },
+                        "processingInformation": {
+                            "authorizationOptions": {
+                                "initiator": {
+                                    "merchantInitiatedTransaction": {
+                                        "previousTransactionId": "123456789619999"
+                                    }
+                                }
+                            }
+                        },
+                        "metadata": {
+                            "creator": "testrest"
+                        }
+                    }
+                }
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "https://apitest.example.com/tms/v1/paymentinstruments/F4D566EED6D369CCE053AF598E0A495B"
+                    },
+                    "customer": {
+                        "href": "https://apitest.example.com/tms/v1/customers/F4D5523603862EE0E053AF598E0AE5FE"
+                    }
+                },
+                "id": "F4D566EED6D369CCE053AF598E0A495B",
+                "object": "paymentInstrument",
+                "state": "ACTIVE",
+                "card": {
+                    "expirationMonth": "12",
+                    "expirationYear": "2031",
+                    "type": "relay"
+                },
+                "buyerInformation": {
+                    "currency": "USD"
+                },
+                "billTo": {
+                    "firstName": "JOHN",
+                    "lastName": "DOE",
+                    "address1": "1 Market St",
+                    "locality": "san francisco",
+                    "administrativeArea": "CA",
+                    "postalCode": "94105",
+                    "country": "US",
+                    "email": "test@pgw.com",
+                    "phoneNumber": "4158880000"
+                },
+                "processingInformation": {
+                    "billPaymentProgramEnabled": false
+                },
+                "metadata": {
+                    "creator": "testrest"
+                },
+                "_embedded": {
+                    "instrumentIdentifier": {
+                        "_links": {
+                            "self": {
+                                "href": "https://apitest.example.com/tms/v1/instrumentidentifiers/7010000000016241111"
+                            },
+                            "paymentInstruments": {
+                                "href": "https://apitest.example.com/tms/v1/instrumentidentifiers/7010000000016241111/paymentinstruments"
+                            }
+                        },
+                        "id": "7010000000016241111",
+                        "object": "instrumentIdentifier",
+                        "state": "ACTIVE",
+                        "card": {
+                            "number": "411111XXXXXX1111"
+                        },
+                        "processingInformation": {
+                            "authorizationOptions": {
+                                "initiator": {
+                                    "merchantInitiatedTransaction": {
+                                        "previousTransactionId": "123456789619999"
+                                    }
+                                }
+                            }
+                        },
+                        "metadata": {
+                            "creator": "testrest"
+                        }
+                    }
+                }
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "https://apitest.example.com/tms/v1/paymentinstruments/F4CDBDD6E0A57EC9E053AF598E0AB69F"
+                    },
+                    "customer": {
+                        "href": "https://apitest.example.com/tms/v1/customers/F4CDBCA630247B2EE053AF598E0ADC91"
+                    }
+                },
+                "id": "F4CDBDD6E0A57EC9E053AF598E0AB69F",
+                "object": "paymentInstrument",
+                "state": "ACTIVE",
+                "card": {
+                    "expirationMonth": "12",
+                    "expirationYear": "2034",
+                    "type": "relay"
+                },
+                "buyerInformation": {
+                    "currency": "USD"
+                },
+                "billTo": {
+                    "firstName": "JOHN",
+                    "lastName": "DOE",
+                    "address1": "1 Market St",
+                    "locality": "san francisco",
+                    "administrativeArea": "CA",
+                    "postalCode": "94105",
+                    "country": "US",
+                    "email": "test@pgw.com",
+                    "phoneNumber": "4158880000"
+                },
+                "processingInformation": {
+                    "billPaymentProgramEnabled": false
+                },
+                "metadata": {
+                    "creator": "testrest"
+                },
+                "_embedded": {
+                    "instrumentIdentifier": {
+                        "_links": {
+                            "self": {
+                                "href": "https://apitest.example.com/tms/v1/instrumentidentifiers/7010000000016241111"
+                            },
+                            "paymentInstruments": {
+                                "href": "https://apitest.example.com/tms/v1/instrumentidentifiers/7010000000016241111/paymentinstruments"
+                            }
+                        },
+                        "id": "7010000000016241111",
+                        "object": "instrumentIdentifier",
+                        "state": "ACTIVE",
+                        "card": {
+                            "number": "411111XXXXXX1111"
+                        },
+                        "processingInformation": {
+                            "authorizationOptions": {
+                                "initiator": {
+                                    "merchantInitiatedTransaction": {
+                                        "previousTransactionId": "123456789619999"
+                                    }
+                                }
+                            }
+                        },
+                        "metadata": {
+                            "creator": "testrest"
+                        }
+                    }
+                }
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "https://apitest.example.com/tms/v1/paymentinstruments/F4CDEF212EAA0B13E053AF598E0AB8F4"
+                    },
+                    "customer": {
+                        "href": "https://apitest.example.com/tms/v1/customers/F4CDBCA630247B2EE053AF598E0ADC91"
+                    }
+                },
+                "id": "F4CDEF212EAA0B13E053AF598E0AB8F4",
+                "object": "paymentInstrument",
+                "state": "ACTIVE",
+                "card": {
+                    "expirationMonth": "12",
+                    "expirationYear": "2031",
+                    "type": "relay"
+                },
+                "buyerInformation": {
+                    "currency": "USD"
+                },
+                "billTo": {
+                    "firstName": "JOHN",
+                    "lastName": "DOE",
+                    "address1": "1 Market St",
+                    "locality": "san francisco",
+                    "administrativeArea": "CA",
+                    "postalCode": "94105",
+                    "country": "US",
+                    "email": "test@pgw.com",
+                    "phoneNumber": "4158880000"
+                },
+                "processingInformation": {
+                    "billPaymentProgramEnabled": false
+                },
+                "metadata": {
+                    "creator": "testrest"
+                },
+                "_embedded": {
+                    "instrumentIdentifier": {
+                        "_links": {
+                            "self": {
+                                "href": "https://apitest.example.com/tms/v1/instrumentidentifiers/7010000000016241111"
+                            },
+                            "paymentInstruments": {
+                                "href": "https://apitest.example.com/tms/v1/instrumentidentifiers/7010000000016241111/paymentinstruments"
+                            }
+                        },
+                        "id": "7010000000016241111",
+                        "object": "instrumentIdentifier",
+                        "state": "ACTIVE",
+                        "card": {
+                            "number": "411111XXXXXX1111"
+                        },
+                        "processingInformation": {
+                            "authorizationOptions": {
+                                "initiator": {
+                                    "merchantInitiatedTransaction": {
+                                        "previousTransactionId": "123456789619999"
+                                    }
+                                }
+                            }
+                        },
+                        "metadata": {
+                            "creator": "testrest"
+                        }
+                    }
+                }
+            }
+        ]
+    }
+}
+```
+
+{#tms-pi-tkn-retrieve-pi-card-ex-rest_codeblock_x4l_mlt_lwb}
+
+Retrieve a Payment Instrument with an Unmasked Card Number {#tms-pi-tkn-retrieve-pi-unmasked-card-intro}
+========================================================================================================
+
+This section describes how to retrieve a payment instrument with an unmasked card number.
+
+> IMPORTANT
+> To retrieve unmasked payment details, you must ensure that your MLE key pair and your token vault are configured correctly. For more information on MLE keys, see [Message-Level Encryption Keys](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-onboarding/tms-mle-setup.md ""). For more information on token vaults, see [Token Vault Management](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-onboarding/tms-vault-hierarchy.md ""). If necessary, contact your ` Payment Gateway ` account manager or customer support.  
+> The response is BASE 64-encoded JSON web encryption (JWE) token. The decoded JWE has these elements:
+
+```
+{ "alg": "RSA-OAEP-256", //The algorithm used to encrypt the CEK 
+    "cty": "json", //The content type 
+    "typ": "JWT", //The token type 
+    "enc": "A256GCM", //The algorithm that is used to encrypt the message 
+    "kid": "keyId" //The serial number of shared public cert for encryption of CEK
+} 
+&lt;Encrypted Data&gt; //The encrypted payload that matches the JSON response normally returned by the TMS API, except with an unmasked payment details
+```
+
+Header Configuration
+--------------------
+
+You must pass this request header to retrieve unmasked payment details: `Accept: application/jose`.  
+The term `application/jose` refers to Javascript Object Signing and Encryption (JOSE). JOSE is a framework that provides end-to-end security to JavaScript Object Notation (JSON)-based data structures. JOSE achieves this by offering a collection of specifications to encrypt and digitally sign JSON payloads. In this case, the response is message-level encrypted using a JSON Web Token (JWT).
+
+Endpoint
+--------
+
+**Test:** `GET ``https://apitest.example.com``/tms/v1/paymentinstruments/`*{paymentInstrumentTokenId}*{#tms-pi-tkn-retrieve-pi-unmasked-card-intro_restcust-test}  
+**Production:** `GET ``https://api.example.com``/tms/v1/paymentinstruments/`*{paymentInstrumentTokenId}*  
+**Production in India:** `GET ``https://api.in.example.com``/tms/v1/paymentinstruments/`*{paymentInstrumentTokenId}*{#tms-pi-tkn-retrieve-pi-unmasked-card-intro_restcust-prod-india}  
+The *`{paymentInstrumentTokenId}`* is the payment instrument token ID you want to retrieve. For more information, see [Create a Payment Instrument](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-pi-tkn/tms-pi-tkn-create-intro.md "").
+
+REST Example: Retrieving a Payment Instrument with an Unmasked Card Number {#tms-pi-tkn-retrieve-pi-unmasked-card-ex-rest}
+==========================================================================================================================
+
+Request
+
+```keyword
+GET https://apitest.example.com/tms/v1/paymentinstruments/F39763E8CFDF2354E053AF598E0AF684
+```
+
+{#tms-pi-tkn-retrieve-pi-unmasked-card-ex-rest_codeblock_v4l_mlt_lwb}  
+Response to a Successful Request
+
+```
+eyJraWQiOiJiYTE1ZDRmMTIzMTM0NjlkZjg5MDM1Nzk2YWE4Nzc4ZGM0NTY4ODlkIiwiY3R5IjoianNvbiIsInR5cCI6IkpXVCIsImVuYyI6IkEyNTZHQ00iLCJhbGciOiJSU0EtT0FFUC0yNTYifQ.sPdY7WNX0jWady6jdHytYj8WmAyBLq401OeNNc3-cb2LWyOo11LY3r2mcJo_foZN3W175B0LzEH1IgYT96eQ8qpct7UXvvQLqdB25XCQIsRMU0tqugAox9QKDk1q0DMZpeki8O0_HWu1Nk6vGKwQP2XrCPDs9eZ4tHQCoId_8bffjHFOOgVDgFtG7pJ0MpIC7eeadJZCQKsEp5ZEwzTaGmyJrVLpwMKPMKh63eLYNSTndQihOpMXlWZS1yMvZJzgdf18qQdBB-bINs2jGhgTAGhPaorRsFpHPqvOQm9WRAMFJU0nq1zzEd2xyf9nG45Wl6VXEOZi87c7riyketm0lA.mxf5cgCFa2NwXuS1._NBdqbu4r0glrtKkIOLkGdiu1AzmbNLloKFY7-tMIaQ2xA1IpgR1tDHQOfQbumPS752jtjPPvXpHnXHp3pxifM8TJR_F76NcMI0SO3r5_PLePiLtQeyZJnaW6o6ENTrFNnhgG80TNLFS4NqsX6sIQsgm5D2S2Kf1yQL4B3goxHJTMulngvTBVJBGUf6rw5zr-q-w7buAA8NoquyIfGx0wORSFO8e_392aX5AWbySFoUobJ1arQJARsfKdoyHsskmfsCJAwRZF6_uvFbw7uoq60TmBjwfGTdsJffqGEYSuU8ZzXWl6Q9sPAGptwHj-JuWVnEZAq3362Cgqv3DfZtEAS-ewBd8DpzCQXatC4pUz1xj3sE5RzBQtzt8IY_exCL970UsMxh5pJc8eqT61z5Sf7nxaNj1limcnH7_rnR1LaJ8foQAvZo8rJl8PuLe3inNOqYhAMpu6UURNB126LPHi0W7F7o4MtFa8fm5rNF7Mbk-z4Xwx4b-FNKr3g_5JyYbJgOSAF9Kwbg7GzOGLyIPwTvXpUbFkyWoGWCgvfRDTVTBrbdlwcuFFDlFA4B-i9L79DcMRgHb6VqgVuy-A4fA9990ctmwChY0kkfnJYcFcEaT0bgLpJw6hadtmGgyW62yJMCRLF4GtU_PUyZ6k9s64KH6Ulro7Cbu_wcXiqklqymgCr50Ifx-gDtL3tAv_YoiI-numvNsk0EY8JZtmI4YOUK9V1SbrVy354X3rhPzUt2k5F8LHnExOnKugsACoFFOjpDaEBe1kI7X6UfKZU876m1H0lS5-ccZ3VVDbdpxHlMKrSrMehno6g4ba9phdqtvuajef6P73yF3kvHoHhXvxxrEUYcUGIlef9HMvN6NS9sxj2j5Q9LsED1XuyGBoRd5JO-gjeIHx0P__6SPiX2WdfqvVNIaS9f1k1eOOmCTERz9Esmb7vS13XzKyaN5DAFM9R3Tl2PUmDN-AtlRN5A9moTsvvQKci-CsGTUeEYUWfpbU4UHtzXic06BygAaFJat1plfeJy1u1qhVLUWkC4Jo6i_KryvAiJ8qb8urb_TFGWHhs2-JLQs8e3e20Ze4AkayQW-hypmshrsMgi86mqcD4o7IOY_27H4PYD2rVNPw0lSUuxDYCp87ILro_ROiMKu3Gi1jlX-MDqJ-v3PCf21EjgEsB8kV4L1O8ZKFCVOFGpVaXTvhKXjeEUyYVSB9uM6UTWcYGJznkClJV3vio1xpnRVpeppmTc4x0FABt7xPXCI_B81Q2q2mR9MS_Az7l-XTRIPz6skcMMjSyS6HI4f-zg__TVWw78gupg4O0xFT1Mpbcs3HxQPtcBHoQ3EWenIcB1Pnso9IOwN3z4bSDj1OI3-cgMRFPwUKLhJvOh0I5Jql_BKSdEnTJ4WyqY2EswrlG7dZ4fVexoMOi9UX117GqQcmdj0mboOnXDPKfclfv55nkg7ogHhz5OvsonLxXA9LwCnL0iyISowImm1pUc-Gx1gnEPXvx1Xew7ARamkJIam3MAqhLmxwE0E6CO9xw8AG3wDSznPK3RyE6JeiuVxhRbr5hJGQLIfH-gu13NTMh3JtPNsnmz0uvF2nZKmcWj8QmuHE76L3qYD7xCwXbGwSDPHp7AhAPueCG8D0sG6Ilf_0S9P3-mTM1PhL2_AFpF_r9L-R-3-QrgJXVGYTbQaIFJvGG_swpS_o6s2c9iEKI7WK3nZG0pfjiFw0UGTF4cNEj2DWzgLCj21pcKgqUDbncf3hYbqnHgNUmxHGjjOxZdiaL31-ccfNodHg6O8kvRr_hhEA9IKG49uCJoPqJtJmOFa4MuSEdIuWBF_lSc.fenpFUQKAgR4qz7Ft_6Igg
+```
+
+{#tms-pi-tkn-retrieve-pi-unmasked-card-ex-rest_codeblock_x4l_mlt_lwb}
+
+Update a Payment Instrument {#tms-pi-tkn-update-intro}
+======================================================
+
+This section describes how to update a payment instrument token.
+
+Endpoint
+--------
+
+**Test:** `PATCH ``https://apitest.example.com``/tms/v1/paymentinstruments/`*{paymentInstrumentTokenId}*{#tms-pi-tkn-update-intro_restcust-test}  
+**Production:** `PATCH ``https://api.example.com``/tms/v1/paymentinstruments/`*{paymentInstrumentTokenId}*  
+**Production in India:** `PATCH ``https://api.in.example.com``/tms/v1/paymentinstruments/`*{paymentInstrumentTokenId}*{#tms-pi-tkn-update-intro_restcust-prod-india}  
+The *`{paymentInstrumentTokenId}`* is the payment instrument token ID you want to retrieve. For more information, see [Create a Payment Instrument](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-pi-tkn/tms-pi-tkn-create-intro.md "").
+
+Optional Fields for Updating a Payment Instrument {#tms-pi-tkn-update-optfields}
+================================================================================
+
+default
+:
+
+bankAccount.type
+:
+
+card.issueNumber
+:
+
+card.startMonth
+:
+
+card.startYear
+:
+
+card.useAs
+:
+
+tokenizedInformation.requestorID
+:
+
+tokenizedInformation.transactionType
+:
+
+buyerInformation.companyTaxID
+:
+
+buyerInformation.currency
+:
+
+buyerInformation.dateOfBirth
+:
+
+buyerInformation.personalIdentification.id
+:
+
+buyerInformation.personalIdentification.type
+:
+
+buyerInformation.personalIdentification.issuedBy.administrativeArea
+:
+
+billTo.address2
+:
+
+processingInformation.billPaymentProgramEnabled
+:
+
+processingInformation.bankTransferOptions.SECCode
+:
+
+merchantInformation.merchantDescriptor.alternateName
+:
+
+Related Information {#tms-pi-tkn-update-optfields_section_jpc_xzz_sxb}
+----------------------------------------------------------------------
+
+* [API Field Reference for the REST API](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/api-fields-about-guide.md "")
+  {#tms-pi-tkn-update-optfields_ul_kpc_xzz_sxb}
+
+REST Example: Updating a Payment Instrument {#tms-pi-tkn-update-ex-rest}
+========================================================================
+
+Request
+
+```ph codeph
+PATCH `https://apitest.example.com`/tms/v1/paymentinstruments/F39763E8CFDF2354E053AF598E0AF684
+
+{
+  "card": {
+    "expirationMonth": "12",
+    "expirationYear": "2031",
+    "type": "relay"
+  },
+  "billTo": {
+    "firstName": "John",
+    "lastName": "Doe",
+    "company": "Company Name",
+    "address1": "1 Market St",
+    "address2": "Unit B"
+    "locality": "San Francisco",
+    "administrativeArea": "CA",
+    "postalCode": "94105",
+    "country": "US",
+    "email": "test@pgw.com",
+    "phoneNumber": "4158880000"
+  },
+  "instrumentIdentifier": {
+    "id": "7010000000016241111"
+  }
+}
+```
+
+{#tms-pi-tkn-update-ex-rest_codeblock_ud1_pc1_jwb}  
+Response to a Successful Request
+
+```keyword
+{
+  "_links": {
+    "self": {
+      "href": "https://apitest.example.com/tms/v1/paymentinstruments/F39763E8CFDF2354E053AF598E0AF684"
+    }
+  },
+  "id": "F39763E8CFDF2354E053AF598E0AF684",
+  "object": "paymentInstrument",
+  "state": "ACTIVE",
+  "card": {
+    "expirationMonth": "12",
+    "expirationYear": "2031",
+    "type": "relay"
+  },
+  "billTo": {
+    "firstName": "Jack",
+    "lastName": "Smith",
+    "company": "Company Name",
+    "address1": "1 Market St",
+    "address2": "Unit B",
+    "locality": "San Francisco",
+    "administrativeArea": "CA",
+    "postalCode": "94105",
+    "country": "US",
+    "email": "updatedemail@vas.com",
+    "phoneNumber": "4158888674"
+  },
+  "metadata": {
+    "creator": "testrest"
+  },
+  "_embedded": {
+    "instrumentIdentifier": {
+      "_links": {
+        "self": {
+          "href": "https://apitest.example.com/tms/v1/instrumentidentifiers/7010000000016241111"
+        },
+        "paymentInstruments": {
+          "href": "https://apitest.example.com/tms/v1/instrumentidentifiers/7010000000016241111/paymentinstruments"
+        }
+      },
+      "id": "7010000000016241111",
+      "object": "instrumentIdentifier",
+      "state": "ACTIVE",
+      "card": {
+        "number": "411111XXXXXX1111"
+      },
+      "processingInformation": {
+        "authorizationOptions": {
+          "initiator": {
+            "merchantInitiatedTransaction": {
+              "previousTransactionId": "123456789619999"
+            }
+          }
+        }
+      },
+      "metadata": {
+        "creator": "testrest"
+      }
+    }
+  }
+}
+```
+
+{#tms-pi-tkn-update-ex-rest_codeblock_wd1_pc1_jwb}
+
+Delete a Payment Instrument {#tms-pi-tkn-delete-intro}
+======================================================
+
+This section describes how to delete a payment instrument token.
+
+Endpoint
+--------
+
+**Test:** `DELETE ``https://apitest.example.com``/tms/v1/paymentinstruments/`*{paymentInstrumentTokenId}*{#tms-pi-tkn-delete-intro_restcust-test}  
+**Production:** `DELETE ``https://api.example.com``/tms/v1/paymentinstruments/`*{paymentInstrumentTokenId}*  
+**Production in India:** `DELETE ``https://api.in.example.com``/tms/v1/paymentinstruments/`*{paymentInstrumentTokenId}*{#tms-pi-tkn-delete-intro_restcust-prod-india}  
+The *`{paymentInstrumentTokenId}`* is the payment instrument token ID you want to retrieve. For more information, see [Create a Payment Instrument](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-pi-tkn/tms-pi-tkn-create-intro.md "").
+
+Required Fields for Deleting a Payment Instrument {#tms-pi-tkn-delete-reqfields}
+================================================================================
+
+paymentInstrumentTokenId
+:
+Include the ID of the payment instrument token you want to retrieve in the URL path.
+{#tms-pi-tkn-delete-reqfields_dl_bcz_qry_dwb}
+
+Related Information {#tms-pi-tkn-delete-reqfields_section_jpc_xzz_sxb}
+----------------------------------------------------------------------
+
+* [API Field Reference for the REST API](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/api-fields-about-guide.md "")
+  {#tms-pi-tkn-delete-reqfields_ul_kpc_xzz_sxb}
+
+REST Example: Deleting a Payment Instrument {#tms-pi-tkn-delete-ex-rest}
+========================================================================
+
+Request
+
+```ph codeph
+DELETE `https://apitest.example.com`/tms/v1/paymentinstruments/F39763E8CFDF2354E053AF598E0AF684          
+```
+
+{#tms-pi-tkn-delete-ex-rest_codeblock_ud1_pc1_jwb}  
+Successful Response
+A successful delete response returns an empty `HTTP 204 No Content` status. For more information, see [HTTP Status Codes](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-ref-info/tms-http-status.md "").
+
+Payments with Payment Instrument Tokens {#tms-pay-pi-tkn}
+=========================================================
+
+This section contains information on making payments with payment instrument tokens.  
+A payment instrument represents a means of payment and a payment instrument token stores this information using an instrument identifier token. It does not store the card number and cannot exist without an associated instrument identifier. It can include an instrument identifier, expiration date, billing address, and card type. In the case of non-network token transactions, you can use card or bank account information fields with a payment instrument to make a payment transaction.  
+To process a payment using a payment instrument token, you must include the customer token ID as the value in the `paymentInformation.paymentInstrument.id` field. For example:
+
+* [Authorizing a Payment with a Payment Instrument](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-pi-tkn/tms-pi-tkn-pay-intro.md "")
+* [Making a Credit with a Payment Instrument](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-pi-tkn/tms-pi-tkn-credit-intro.md "")
+  {#tms-pay-pi-tkn_ul_cl2_fqv_qwb}  
+  For more information on payment instrument tokens, see [Payment Instrument Tokens](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-overview/tms-token-types/tms-pi-tkn-intro.md "").
+
+Authorizing a Payment with a Payment Instrument {#tms-pi-tkn-pay-intro}
+=======================================================================
+
+This section provides the information you need in order to authorize a payment with a payment instrument.
+
+Endpoint {#tms-pi-tkn-pay-intro_section_dqc_gyd_pwb}
+----------------------------------------------------
+
+**Production:** `POST ``https://api.example.com``/pts/v2/payments `  
+**Test:** `POST ``https://apitest.example.com``/pts/v2/payments`{#tms-pi-tkn-pay-intro_restcust-test}  
+**Production in India:** `POST ``https://api.in.example.com``/pts/v2/payments`{#tms-pi-tkn-pay-intro_restcust-prod-india}
+
+Required Fields for Authorizing a Payment with a Payment Instrument {#tms-pi-tkn-pay-reqfields}
+===============================================================================================
+
+[clientReferenceInformation.code](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/client-ref-info-aa/client-ref-info-code.md "")
+:
+
+[orderInformation.amountDetails.currency](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-amount-details-currency.md "")
+
+[orderInformation.amountDetails.totalAmount](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-amount-details-total-amount.md "")
+:
+
+[paymentInformation.paymentInstrument.id](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/payment-info-aa/payment-info-payment-instrument-id.md "")
+:
+Set to the ID of the payment instrument token you want to use.
+
+Related Information {#tms-pi-tkn-pay-reqfields_section_jpc_xzz_sxb}
+-------------------------------------------------------------------
+
+* [API field reference guide for the REST API](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/api-fields-about-guide.md "")
+  {#tms-pi-tkn-pay-reqfields_ul_kpc_xzz_sxb}
+
+Optional Fields for Authorizing a Payment with a Payment Instrument {#tms-pi-tkn-pay-optfields}
+===============================================================================================
+
+You can use these optional fields to include additional information when authorizing a payment with a payment instrument.
+
+[orderInformation.amountDetails.currency](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-amount-details-currency.md "")
+
+[orderInformation.amountDetails.totalAmount](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-amount-details-total-amount.md "")
+:
+
+[orderInformation.billTo.address1](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-bill-to-address1.md "")
+:
+
+[orderInformation.billTo.administrativeArea](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-bill-to-admin-area.md "")
+:
+
+[orderInformation.billTo.country](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-bill-to-company-country.md "")
+:
+
+[orderInformation.billTo.email](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-bill-to-email.md "")
+:
+
+[orderInformation.billTo.firstName](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-bill-to-first-name.md "")
+:
+
+[orderInformation.billTo.lastName](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-bill-to-last-name.md "")
+:
+
+[orderInformation.billTo.locality](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-bill-to-locality.md "")
+:
+
+[orderInformation.billTo.postalCode](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-bill-to-postal-code.md "")
+:
+
+[paymentInformation.card.expirationMonth](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/payment-info-aa/payment-info-card-exp-mo.md "")
+:
+
+[paymentInformation.card.expirationYear](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/payment-info-aa/payment-info-card-exp-year.md "")
+:
+
+[paymentInformation.card.number](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/payment-info-aa/payment-info-card-number.md "")
+:
+
+[paymentInformation.card.type](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/payment-info-aa/payment-info-card-type-a.md "")
+:
+{#tms-pi-tkn-pay-optfields_dl_gv1_vnj_rwb}
+
+Related Information {#tms-pi-tkn-pay-optfields_section_jpc_xzz_sxb}
+-------------------------------------------------------------------
+
+* [API field reference guide for the REST API](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/api-fields-about-guide.md "")
+  {#tms-pi-tkn-pay-optfields_ul_kpc_xzz_sxb}
+
+REST Example: Authorizing a Payment with a Payment Instrument {#tms-pi-tkn-pay-ex-rest}
+=======================================================================================
+
+Request
+
+```
+{
+  "clientReferenceInformation": {
+    "code": "12345678"
+  },
+    "paymentInformation": {
+        "paymentInstrument": {
+            "id": "F4D5E715F7BD9910E053A2598D0A7278"
+        }
+    },
+    "orderInformation": {
+        "amountDetails": {
+            "currency": "USD",
+            "totalAmount": "10.00"
+        }
+    }
+}
+```
+
+{#tms-pi-tkn-pay-ex-rest_codeblock_v4l_mlt_lwb}  
+Response to a Successful Request
+
+```
+{
+    "_links": {
+        "authReversal": {
+            "method": "POST",
+            "href": "/pts/v2/payments/6765713628736138103955/reversals"
+        },
+        "self": {
+            "method": "GET",
+            "href": "/pts/v2/payments/6765713628736138103955"
+        },
+        "capture": {
+            "method": "POST",
+            "href": "/pts/v2/payments/6765713628736138103955/captures"
+        }
+    },
+    "clientReferenceInformation": {
+        "code": "12345678"
+    },
+    "id": "6765713628736138103955",
+    "orderInformation": {
+        "amountDetails": {
+            "authorizedAmount": "10.00",
+            "currency": "USD"
+        }
+    },
+    "paymentAccountInformation": {
+        "card": {
+            "type": "001"
+        }
+    },
+    "paymentInformation": {
+        "tokenizedCard": {
+            "type": "001"
+        },
+        "instrumentIdentifier": {
+            "id": "7010000000016241111",
+            "state": "ACTIVE"
+        },
+        "paymentInstrument": {
+            "id": "F4D5E715F7BD9910E053A2598D0A7278"
+        },
+        "card": {
+            "type": "001"
+        },
+        "customer": {
+            "id": "F4D5E715F75E9910E053A2598D0A7278"
+        }
+    },
+    "pointOfSaleInformation": {
+        "terminalId": "111111"
+    },
+    "processorInformation": {
+        "approvalCode": "888888",
+        "networkTransactionId": "123456789619999",
+        "transactionId": "123456789619999",
+        "responseCode": "100",
+        "avs": {
+            "code": "X",
+            "codeRaw": "I1"
+        }
+    },
+    "reconciliationId": "60561224BE37KN5W",
+    "status": "AUTHORIZED",
+    "submitTimeUtc": "2023-02-16T18:16:03Z"
+}
+```
+
+{#tms-pi-tkn-pay-ex-rest_codeblock_x4l_mlt_lwb}
+
+Making a Credit with a Payment Instrument {#tms-pi-tkn-credit-intro}
+====================================================================
+
+This section describes how to make a credit with a payment instrument.
+
+Endpoint {#tms-pi-tkn-credit-intro_section_mks_hyd_pwb}
+-------------------------------------------------------
+
+**Test:** `POST ``https://apitest.example.com``/pts/v2/credits `{#tms-pi-tkn-credit-intro_restcust-test}  
+**Production:** `POST ``https://api.example.com``pts/v2/credits `  
+**Production in India:** `POST ``https://api.in.example.com``pts/v2/credits`{#tms-pi-tkn-credit-intro_restcust-prod-india}
+
+Required Fields for Making a Credit with a Payment Instrument {#tms-pi-tkn-credit-reqfields}
+============================================================================================
+
+[clientReferenceInformation.code](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/client-ref-info-aa/client-ref-info-code.md "")
+:
+
+[orderInformation.amountDetails.currency](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-amount-details-currency.md "")
+
+[orderInformation.amountDetails.totalAmount](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-amount-details-total-amount.md "")
+:
+
+[paymentInformation.paymentInstrument.id](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/payment-info-aa/payment-info-payment-instrument-id.md "")
+:
+Set to the ID of the payment instrument token you want to use.
+
+Related Information {#tms-pi-tkn-credit-reqfields_section_jpc_xzz_sxb}
+----------------------------------------------------------------------
+
+* [API field reference guide for the REST API](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/api-fields-about-guide.md "")
+  {#tms-pi-tkn-credit-reqfields_ul_kpc_xzz_sxb}
+
+REST Example: Making a Credit with a Payment Instrument {#tms-pi-tkn-credit-ex-rest}
+====================================================================================
+
+Request
+
+```
+{
+  "clientReferenceInformation": {
+    "code": "12345678"
+  },
+    "paymentInformation": {
+        "paymentInstrument": {
+            "id": "F4D5E715F7BD9910E053A2598D0A7278"
+        }
+    },
+    "orderInformation": {
+        "amountDetails": {
+            "currency": "USD",
+            "totalAmount": "10.00"
+        }
+    }
+}
+```
+
+{#tms-pi-tkn-credit-ex-rest_codeblock_v4l_mlt_lwb}  
+Response to a Successful Request
+
+```
+{
+  "_links": {
+    "void": {
+      "method": "POST",
+      "href": "/pts/v2/credits/7055969586686467104953/voids"
+    },
+    "self": {
+      "method": "GET",
+      "href": "/pts/v2/credits/7055969586686467104953"
+    }
+  },
+  "clientReferenceInformation": {
+    "code": "12345678"
+  },
+  "creditAmountDetails": {
+    "currency": "USD",
+    "creditAmount": "10.00"
+  },
+  "id": "7055969586686467104953",
+  "orderInformation": {
+    "amountDetails": {
+      "currency": "USD"
+    }
+  },
+  "paymentAccountInformation": {
+    "card": {
+      "type": "001"
+    }
+  },
+  "paymentInformation": {
+    "tokenizedCard": {
+      "type": "001"
+    },
+    "instrumentIdentifier": {
+      "id": "7010000000016241111",
+      "state": "ACTIVE"
+    },
+    "paymentInstrument": {
+      "id": "F4D5E715F7BD9910E053A2598D0A7278"
+    },
+    "card": {
+      "type": "001"
+    }
+  },
+  "processorInformation": {
+    "approvalCode": "888888",
+    "responseCode": "100"
+  },
+  "reconciliationId": "67446174JRIKXXHB",
+  "status": "PENDING",
+  "submitTimeUtc": "2024-01-18T16:55:59Z"
+}
+```
+
+{#tms-pi-tkn-credit-ex-rest_codeblock_x4l_mlt_lwb}
+
+Instrument Identifier Tokens {#tms-ii-tkn}
+==========================================
+
+Instrument identifier tokens represent tokenized payment account numbers. Tokenized payment account information includes a primary account number (PAN) for card payments, or a US or Canadian bank account number and routing number for an ACH bank account. An instrument identifier token can exist independently, or it can be associated with a payment instrument.  
+An instrument identifier token can also contain an associated network token.  
+Instrument identifier tokens are associated with these features:
+
+Card Art
+:
+`TMS` card art helps your customers select a card. See [Card Art](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-card-art.md "").
+
+Enrollable Network Tokens
+:
+`TMS` can enroll certain *network tokens* in an instrument identifier token to be used for future payments. Future payments require only the instrument identifier token for the payment information. The types of network tokens you can enroll into an instrument identifier are tokens used for in-app payment methods such as:
+
+    * Android Pay
+    * Apple Pay
+    * Chase Pay
+    * Google Pay
+    * Samsung Pay
+    * `Relay Click to Pay`
+
+    See [Create an Instrument Identifier for Enrollable Network Tokens](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-ii-tkn/tms-ii-tkn-create-device-tkn-intro.md "").
+
+Push Provisioning
+:
+Push provisioning connects you with participating issuers to quickly provide credentials to your customers. See [Push Provisioning for Network Tokens](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-net-tkn-card-intro.md "").
+
+Manage Instrument Identifier Tokens {#tms-manage-ii-tkn}
+========================================================
+
+This section contains information on managing instrument identifier tokens.  
+The instrument identifier token type represents the tokenized Primary Account Number (PAN) for card payments, or US or Canadian bank account number and routing number. An instrument identifier can contain a credit card, ACH bank account, or tokenized card such as Apple Pay or Android Pay. You can create, retrieve, update, or delete an instrument identifier by submitting an HTTP `POST`, `GET`, `PATCH`, or `DELETE` operation to the `/tms/v1/instrumentidentifiers` endpoint.  
+Use the `TMS` REST API instrument identifier endpoint to:
+* [Create an instrument identifier token](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-ii-tkn/tms-ii-tkn-create-intro.md "")
+* [Retrieve an instrument identifier token](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-ii-tkn/tms-ii-tkn-retrieve-intro.md "")
+* [Update an instrument identifier](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-ii-tkn/tms-ii-tkn-update-intro.md "")
+* [Delete an instrument identifier](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-ii-tkn/tms-ii-tkn-delete-intro.md "")
+* [List payment instruments for an instrument identifier](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-ii-tkn/tms-ii-tkn-retrieve-pi-intro.md "")
+  {#tms-manage-ii-tkn_ul_g1m_jxw_mwb}  
+  For more information on instrument identifier tokens, see [Instrument Identifier Tokens](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-overview/tms-token-types/tms-ii-tkn-intro.md "").
+
+Create an Instrument Identifier {#tms-ii-tkn-create-intro}
+==========================================================
+
+This section describes how to create an instrument identifier.
+
+Endpoint {#tms-ii-tkn-create-intro_section_bys_smk_dwb}
+-------------------------------------------------------
+
+**Test:** `POST ``https://apitest.example.com``/tms/v1/instrumentidentifiers`{#tms-ii-tkn-create-intro_restcust-test}  
+**Production:** `POST ``https://api.example.com``/tms/v1/instrumentidentifiers`  
+**Production in India:** `POST ``https://api.in.example.com``/tms/v1/instrumentidentifiers`{#tms-ii-tkn-create-intro_restcust-prod-india}
+
+Required Fields for Creating an Instrument Identifier {#tms-ii-tkn-create-reqfields}
+====================================================================================
+
+card.number
+:
+{#tms-ii-tkn-create-reqfields_dl_u12_vqy_dwb}
+
+Related Information {#tms-ii-tkn-create-reqfields_section_jpc_xzz_sxb}
+----------------------------------------------------------------------
+
+* [API Field Reference for the REST API](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/api-fields-about-guide.md "")
+  {#tms-ii-tkn-create-reqfields_ul_kpc_xzz_sxb}
+
+Optional Fields for Creating an Instrument Identifier {#tms-ii-tkn-create-optfields}
+====================================================================================
+
+bankAccount.number
+:
+
+bankAccount.routingNumber
+:
+
+billTo.address1
+:
+
+billTo.address2
+:
+
+billTo.administrativeArea
+:
+
+billTo.country
+:
+
+billTo.locality
+:
+
+billTo.postalCode
+:
+
+card.expirationMonth
+:
+
+card.expirationYear
+:
+
+card.securityCode
+:
+
+processingInformation.authorizationOptions.initiator. merchantInitiatedTransaction.previousTransactionID
+:
+
+Related Information {#tms-ii-tkn-create-optfields_section_jpc_xzz_sxb}
+----------------------------------------------------------------------
+
+* [API Field Reference for the REST API](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/api-fields-about-guide.md "")
+  {#tms-ii-tkn-create-optfields_ul_kpc_xzz_sxb}
+
+REST Example: Creating a Card Instrument Identifier {#tms-ii-tkn-create-ex-rest}
+================================================================================
+
+Request
+
+```
+{
+  "card": {
+    "number": "4111XXXX11111111"
+  }
+}
+```
+
+{#tms-ii-tkn-create-ex-rest_codeblock_c51_vmt_gwb}  
+Response to a Successful Request
+
+```keyword
+{
+  "_links": {
+    "self": {
+      "href": "https://apitest.example.com/tms/v1/instrumentidentifiers/7010000000016241111"
+    },
+    "paymentInstruments": {
+      "href": "https://apitest.example.com/tms/v1/instrumentidentifiers/7010000000016241111/paymentinstruments"
+    }
+  },
+  "id": "7010000000016241111",
+  "object": "instrumentIdentifier",
+  "state": "ACTIVE",
+  "card": {
+    "number": "411111XXXXXX1111"
+  },
+  "metadata": {
+    "creator": "testrest"
+  }
+}
+```
+
+REST Example: Creating a Bank Account Instrument Identifier {#tms-ii-tkn-create-ex-bank-rest}
+=============================================================================================
+
+Request
+
+```keyword
+POST https://apitest.example.com/tms/v1/instrumentidentifiers
+{
+  "bankAccount": {
+    "number": "4100",
+    "routingNumber": "X71923284"
+  }
+}
+```
+
+{#tms-ii-tkn-create-ex-bank-rest_codeblock_c51_vmt_gwb} Response to a Successful Request
+
+```keyword
+{
+  "_links": {
+    "self": {
+      "href": "https://apitest.example.com/tms/v1/instrumentidentifiers/A7A91A2CA872B272E05340588D0A0699"
+    },
+    "paymentInstruments": {
+      "href": "https://apitest.example.com/tms/v1/instrumentidentifiers/A7A91A2CA872B272E05340588D0A0699/paymentinstruments"
+    }
+  },
+  "id": "A7A91A2CA872B272E05340588D0A0699",
+  "object": "instrumentIdentifier",
+  "state": "ACTIVE",
+  "bankAccount": {
+    "number": "XXXX",
+    "routingNumber": "X71923284"
+  },
+  "metadata": {
+    "creator": "testrest"
+  }
+}
+```
+
+{#tms-ii-tkn-create-ex-bank-rest_codeblock_rbb_4rj_rwb}
+
+Create an Instrument Identifier for Enrollable Network Tokens {#tms-ii-tkn-create-device-tkn-intro}
+===================================================================================================
+
+> IMPORTANT
+> To create an instrument identifier for an enrollable network token using the ` Token Management Service ` (` TMS `), you must send the request using message-level encryption (MLE). For more information about MLE, see [Message-Level Encryption Keys](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-onboarding/tms-mle-setup.md "").  
+> `TMS` can enroll certain network tokens into an instrument identifier token for future payments. Any future payments will require only the instrument identifier token for the payment information.  
+> Enrollable network tokens can be used for these in-app payment methods:
+
+* Android Pay
+* Apple Pay
+* Chase Pay
+* Google Pay
+* Samsung Pay
+* `Relay Click to Pay`  
+  These tokenized payment methods are also referred to as *digital payments* , *digital wallets* , and *tokenized cards*.
+
+Endpoint {#tms-ii-tkn-create-device-tkn-intro_section_bys_smk_dwb}
+------------------------------------------------------------------
+
+**Test:** `POST ``https://apitest.example.com``/tms/v1/instrumentidentifiers`{#tms-ii-tkn-create-device-tkn-intro_restcust-test}  
+**Production:** `POST ``https://api.example.com``/tms/v1/instrumentidentifiers`  
+**Production in India:** `POST ``https://api.in.example.com``/tms/v1/instrumentidentifiers`{#tms-ii-tkn-create-device-tkn-intro_restcust-prod-india}
+
+Header
+------
+
+Set the component type in the request header to `application/jose`.
+
+Response to a Successful Request
+--------------------------------
+
+A successful response includes the instrument identifier in the id field and the `TOKEN` indicator in the tokenizedCard.source field. The `TOKEN` indicator denotes that the instrument identifier was created from a device token. A payment account reference (PAR) number is also returned in the issuer.paymentAccountReference field.  
+`Payment Gateway` returns a reason code in the details.reason response field to indicate the reason for an API request's status. For more information about all possible reason codes, see the [*`Payment Gateway` Reason Codes with REST API response*](https://support.example.com/knowledgebase/knowledgearticle/?code=KA-04103 "") article.
+
+Merchant-Initiated Transactions
+-------------------------------
+
+You can create an instrument identifier that stores a device token while you are requesting an authorization. Such requests are typically performed for follow-on merchant-initiated transactions. For more information about how to create an instrument identifier within an authorization request, see these sections in the *Payments Developer Guide* :
+
+* [Installment Payments](https://developer.example.com/docs/gateway/en-us/payments/developer/ctv/rest/payments/credentials-processsing-intro/credentials-install-intro.md "")
+* [Recurring Payments](https://developer.example.com/docs/gateway/en-us/payments/developer/ctv/rest/payments/credentials-processsing-intro/credentials-recur-intro.md "")
+* [Unscheduled COF Payments](https://developer.example.com/docs/gateway/en-us/payments/developer/ctv/rest/payments/credentials-processsing-intro/credentials-ucof-intro.md "")
+
+Required Fields for Creating an Instrument Identifier for a Device Token {#tms-ii-tkn-create-device-tkn-reqfields}
+==================================================================================================================
+
+card.number
+:
+
+type
+:
+Set to `enrollable token`.
+
+Related Information
+-------------------
+
+* [API Field Reference for the REST API](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/api-fields-about-guide.md "")
+  {#tms-ii-tkn-create-device-tkn-reqfields_ul_kpc_xzz_sxb}
+
+Optional Fields for Creating an Instrument Identifier {#tms-ii-tkn-create-device-tkn-optfields}
+===============================================================================================
+
+bankAccount.number
+:
+
+bankAccount.routingNumber
+:
+
+billTo.address1
+:
+
+billTo.address2
+:
+
+billTo.administrativeArea
+:
+
+billTo.country
+:
+
+billTo.locality
+:
+
+billTo.postalCode
+:
+
+card.expirationMonth
+:
+
+card.expirationYear
+:
+
+card.securityCode
+:
+
+processingInformation.authorizationOptions.initiator. merchantInitiatedTransaction.previousTransactionID
+:
+
+Related Information {#tms-ii-tkn-create-device-tkn-optfields_d21e131}
+---------------------------------------------------------------------
+
+* [API Field Reference for the REST API](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/api-fields-about-guide.md "")
+  {#tms-ii-tkn-create-device-tkn-optfields_d21e136}
+
+REST Example: Creating an Instrument Identifier for a Device Token {#tms-ii-tkn-create-device-tkn-ex-rest}
+==========================================================================================================
+
+Request
+
+```
+{
+  "type": "enrollable token",
+  "card": {
+    "number": "41111XXXX1111111"
+  }
+}
+```
+
+{#tms-ii-tkn-create-device-tkn-ex-rest_codeblock_c51_vmt_gwb}  
+Response to a Successful Request
+
+```keyword
+{
+  "_links": {
+    "self": {
+      "href": "https://apitest.example.com/tms/v1/instrumentidentifiers/7030000000014911515"
+    },
+    "paymentInstruments": {
+      "href": "https://apitest.example.com/tms/v1/instrumentidentifiers/7030000000014911515/paymentinstruments"
+    }
+  },
+   "id": "7040000000015027161",
+  "object": "instrumentIdentifier",
+  "state": "ACTIVE",
+  "tokenizedCard": {
+    "source": "TOKEN",
+    "state": "ACTIVE",
+    "enrollmentId": "da1fb810b1b3e01db5b215de5261df01",
+    "tokenReferenceId": "090673c4811a91960f021ad3a24e2e01",
+    "number": "41111XXXX1111111",
+    "type": "relay",
+    "card": {
+      "suffix": "1111"
+    }
+  },
+  "card": {
+    "number": "41111XXXX1111111"
+  },
+  "issuer": {
+    "paymentAccountReference": "V0010013024026372674590402581"
+  },
+  "metadata": {
+    "creator": "testrest"
+  }
+}
+```
+
+Retrieve an Instrument Identifier {#tms-ii-tkn-retrieve-intro}
+==============================================================
+
+This section describes how to retrieve an instrument identifier.
+
+Endpoint {#tms-ii-tkn-retrieve-intro_section_bys_smk_dwb}
+---------------------------------------------------------
+
+**Test:** `GET ``https://apitest.example.com``/tms/v1/instrumentidentifiers/{instrumentIdentifierTokenId}`{#tms-ii-tkn-retrieve-intro_restcust-test}  
+**Production:** `GET ``https://api.example.com``/tms/v1/instrumentidentifiers/{instrumentIdentifierTokenId}`  
+**Production in India:** `GET ``https://api.in.example.com``/tms/v1/instrumentidentifiers/{instrumentIdentifierTokenId}`{#tms-ii-tkn-retrieve-intro_restcust-prod-india}  
+*{instrumentIdentifierTokenId}* is the instrument identifier token ID returned in the id field when you created the instrument identifier token. For more information, see [Create an Instrument Identifier](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-ii-tkn/tms-ii-tkn-create-intro.md "").
+
+REST Example: Retrieving an Instrument Identifier {#tms-ii-tkn-retrieve-ex-rest}
+================================================================================
+
+Request
+
+```keyword
+GET https://apitest.example.com/tms/v1/instrumentidentifiers/7030000000046226486
+```
+
+Response to a Successful Request
+
+```
+{
+    "_links": {
+        "self": {
+            "href": https://apitest.example.com/tms/v1/instrumentidentifiers/7030000000046226486
+        },
+        "paymentInstruments": {
+            "href": https://apitest.example.com/tms/v1/instrumentidentifiers/7030000000046226486/paymentinstruments
+        }
+    },
+    "id": "7030000000046226486",
+    "object": "instrumentIdentifier",
+    "state": "ACTIVE",
+    "tokenizedCard": {
+        "state": "ACTIVE",
+        "enrollmentId": "80efd04a838265dcdf9d114eb542be01",
+        "tokenReferenceId": "003769ea947eb057c13c192f1d26f002",
+        "number": "489537XXXXXX2655",
+        "expirationMonth": "12",
+        "expirationYear": "2030",
+        "type": "relay",
+        "card": {
+            "suffix": "6486",
+            "expirationMonth": "12",
+            "expirationYear": "2030"
+        }
+    },
+    "card": {
+        "number": "489537XXXXXX6486"
+    },
+    "issuer": {
+        "paymentAccountReference": "V0010013020037567013722096631"
+    },
+    "metadata": {
+        "creator": "testacct"
+    }
+}
+```
+
+Update an Instrument Identifier {#tms-ii-tkn-update-intro}
+==========================================================
+
+This section describes how to update an instrument identifier.
+
+Endpoint {#tms-ii-tkn-update-intro_section_rlf_5mk_dwb}
+-------------------------------------------------------
+
+**Test:** `PATCH ``https://apitest.example.com``/tms/v1/instrumentidentifiers/{instrumentIdentifierTokenId}`{#tms-ii-tkn-update-intro_restcust-test}  
+**Production:** `PATCH ``https://api.example.com``/tms/v1/instrumentidentifiers/{instrumentIdentifierTokenId}`  
+**Production in India:** `PATCH ``https://api.in.example.com``/tms/v1/instrumentidentifiers/{instrumentIdentifierTokenId}`{#tms-ii-tkn-update-intro_restcust-prod-india}  
+*`{instrumentIdentifierTokenId}`* is the instrument identifier token ID returned in the id field when you created the instrument identifier token. For more information, see [Create an Instrument Identifier](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-ii-tkn/tms-ii-tkn-create-intro.md "").
+
+Optional Fields for Updating an Instrument Identifier {#tms-ii-tkn-update-optfields}
+====================================================================================
+
+bankAccount.number
+:
+
+bankAccount.routingNumber
+:
+
+billTo.address1
+:
+
+billTo.address2
+:
+
+billTo.administrativeArea
+:
+
+billTo.country
+:
+
+billTo.locality
+:
+
+billTo.postalCode
+:
+
+card.expirationMonth
+:
+
+card.expirationYear
+:
+
+card.securityCode
+:
+{#tms-ii-tkn-update-optfields_dl_u12_vqy_dwb}
+
+Related Information {#tms-ii-tkn-update-optfields_section_jpc_xzz_sxb}
+----------------------------------------------------------------------
+
+* [API Field Reference for the REST API](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/api-fields-about-guide.md "")
+  {#tms-ii-tkn-update-optfields_ul_kpc_xzz_sxb}
+
+REST Example: Updating an Instrument Identifier {#tms-ii-tkn-update-ex-rest}
+============================================================================
+
+Request
+
+```keyword
+PATCH https://apitest.example.com/tms/v1/instrumentidentifiers/7010000000016241111
+```
+
+Response to a Successful Request
+
+```keyword
+{
+  "_links": {
+    "self": {
+      "href": "https://apitest.example.com/tms/v1/instrumentidentifiers/7010000000016241111"
+    },
+    "paymentInstruments": {
+      "href": "https://apitest.example.com/tms/v1/instrumentidentifiers/7010000000016241111/paymentinstruments"
+    }
+  },
+  "id": "7010000000016241111",
+  "object": "instrumentIdentifier",
+  "state": "ACTIVE",
+  "card": {
+    "number": "411111XXXXXX1111"
+  },
+  "processingInformation": {
+    "authorizationOptions": {
+      "initiator": {
+        "merchantInitiatedTransaction": {
+          "previousTransactionId": "123456789012345"
+        }
+      }
+    }
+  },
+  "metadata": {
+    "creator": "testrest"
+  }
+}
+```
+
+Retrieve an Instrument Identifier's Payment Instruments {#tms-ii-tkn-retrieve-pi-intro}
+=======================================================================================
+
+This section describes how to retrieve the payment instrument tokens associated with an instrument identifier token.
+
+Endpoint {#tms-ii-tkn-retrieve-pi-intro_section_rlf_5mk_dwb}
+------------------------------------------------------------
+
+**Test:** `GET ``https://apitest.example.com``/tms/v1/instrumentidentifiers/{instrumentIdentifierTokenId}/paymentinstruments?`{#tms-ii-tkn-retrieve-pi-intro_restcust-test}  
+**Production:** `GET ``https://api.example.com``/tms/v1/instrumentidentifiers/{instrumentIdentifierTokenId}/paymentinstruments?`  
+**Production in India:** `GET ``https://api.in.example.com``/tms/v1/instrumentidentifiers/{instrumentIdentifierTokenId}/paymentinstruments?`{#tms-ii-tkn-retrieve-pi-intro_restcust-prod-india}  
+*`{instrumentIdentifierTokenId}`* is the instrument identifier token ID returned in the id field when you created the instrument identifier token. For more information, see [Create an Instrument Identifier](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-ii-tkn/tms-ii-tkn-create-intro.md "").  
+Use these query string parameters to filter the list of payment instrument tokens:
+* `offset` --- Page offset number.
+* `limit` --- Maximum number of items you would like returned.
+  {#tms-ii-tkn-retrieve-pi-intro_ul_yxk_x1y_mwb}
+
+REST Example: Retrieving an Instrument Identifier's Payment Instruments {#tms-ii-tkn-retrieve-pi-ex-rest}
+=========================================================================================================
+
+Request
+
+```keyword
+GET https://apitest.example.com/tms/v1/instrumentidentifiers/7010000000016241111/paymentinstruments?offset=0&limit=5
+```
+
+Response to a Successful Request
+
+```keyword
+{
+  "_links": {
+    "self": {
+      "href": "https://apitest.example.com/tms/v1/instrumentidentifiers/7010000000016241111/paymentinstruments?offset=0&limit=5"
+    },
+    "first": {
+      "href": "https://apitest.example.com/tms/v1/instrumentidentifiers/7010000000016241111/paymentinstruments?offset=0&limit=5"
+    },
+    "next": {
+      "href": "https://apitest.example.com/tms/v1/instrumentidentifiers/7010000000016241111/paymentinstruments?offset=5&limit=5"
+    },
+    "last": {
+      "href": "https://apitest.example.com/tms/v1/instrumentidentifiers/7010000000016241111/paymentinstruments?offset=120820&limit=5"
+    }
+  },
+  "object": "collection",
+  "offset": 0,
+  "limit": 5,
+  "count": 5,
+  "total": 120825,
+  "_embedded": {
+    "paymentInstruments": [
+      {
+        "_links": {
+          "self": {
+            "href": "https://apitest.example.com/tms/v1/paymentinstruments/F396A4DD49CA23ADE053A2598D0AECC4"
+          },
+          "customer": {
+            "href": "https://apitest.example.com/tms/v1/customers/F396A4DD49CB23ADE053A2598D0AECC4"
+          }
+        },
+        "id": "F396A4DD49CA23ADE053A2598D0AECC4",
+        "object": "paymentInstrument",
+        "state": "ACTIVE",
+        "card": {
+          "expirationMonth": "12",
+          "expirationYear": "2031",
+          "type": "relay"
+        },
+        "buyerInformation": {
+          "currency": "USD"
+        },
+        "billTo": {
+          "firstName": "JOHN",
+          "lastName": "DOE",
+          "address1": "1 Market St",
+          "locality": "san francisco",
+          "administrativeArea": "CA",
+          "postalCode": "94105",
+          "country": "US",
+          "email": "test@pgw.com",
+          "phoneNumber": "4158880000"
+        },
+        "processingInformation": {
+          "billPaymentProgramEnabled": false
+        },
+        "metadata": {
+          "creator": "testrest"
+        },
+        "_embedded": {
+          "instrumentIdentifier": {
+            "_links": {
+              "self": {
+                "href": "https://apitest.example.com/tms/v1/instrumentidentifiers/7010000000016241111"
+              },
+              "paymentInstruments": {
+                "href": "https://apitest.example.com/tms/v1/instrumentidentifiers/7010000000016241111/paymentinstruments"
+              }
+            },
+            "id": "7010000000016241111",
+            "object": "instrumentIdentifier",
+            "state": "ACTIVE",
+            "card": {
+              "number": "411111XXXXXX1111"
+            },
+            "processingInformation": {
+              "authorizationOptions": {
+                "initiator": {
+                  "merchantInitiatedTransaction": {
+                    "previousTransactionId": "123456789012345"
+                  }
+                }
+              }
+            },
+            "metadata": {
+              "creator": "testrest"
+            }
+          }
+        }
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "https://apitest.example.com/tms/v1/paymentinstruments/F3969009C44DED0DE053AF598E0AD4E0"
+          },
+          "customer": {
+            "href": "https://apitest.example.com/tms/v1/customers/F396A109D27377A5E053AF598E0AA34A"
+          }
+        },
+        "id": "F3969009C44DED0DE053AF598E0AD4E0",
+        "object": "paymentInstrument",
+        "state": "ACTIVE",
+        "card": {
+          "type": "relay"
+        },
+        "metadata": {
+          "creator": "testrest"
+        },
+        "_embedded": {
+          "instrumentIdentifier": {
+            "_links": {
+              "self": {
+                "href": "https://apitest.example.com/tms/v1/instrumentidentifiers/7010000000016241111"
+              },
+              "paymentInstruments": {
+                "href": "https://apitest.example.com/tms/v1/instrumentidentifiers/7010000000016241111/paymentinstruments"
+              }
+            },
+            "id": "7010000000016241111",
+            "object": "instrumentIdentifier",
+            "state": "ACTIVE",
+            "card": {
+              "number": "411111XXXXXX1111"
+            },
+            "processingInformation": {
+              "authorizationOptions": {
+                "initiator": {
+                  "merchantInitiatedTransaction": {
+                    "previousTransactionId": "123456789012345"
+                  }
+                }
+              }
+            },
+            "metadata": {
+              "creator": "testrest"
+            }
+          }
+        }
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "https://apitest.example.com/tms/v1/paymentinstruments/F396A109F3637776E053AF598E0A87E4"
+          },
+          "customer": {
+            "href": "https://apitest.example.com/tms/v1/customers/F396A109D27377A5E053AF598E0AA34A"
+          }
+        },
+        "id": "F396A109F3637776E053AF598E0A87E4",
+        "object": "paymentInstrument",
+        "state": "ACTIVE",
+        "card": {
+          "expirationMonth": "12",
+          "expirationYear": "2031",
+          "type": "relay"
+        },
+        "billTo": {
+          "firstName": "John",
+          "lastName": "Doe",
+          "company": "Company Name",
+          "address1": "1 Market St",
+          "locality": "San Francisco",
+          "administrativeArea": "CA",
+          "postalCode": "94105",
+          "country": "US",
+          "email": "test@pgw.com",
+          "phoneNumber": "4158880000"
+        },
+        "metadata": {
+          "creator": "testrest"
+        },
+        "_embedded": {
+          "instrumentIdentifier": {
+            "_links": {
+              "self": {
+                "href": "https://apitest.example.com/tms/v1/instrumentidentifiers/7010000000016241111"
+              },
+              "paymentInstruments": {
+                "href": "https://apitest.example.com/tms/v1/instrumentidentifiers/7010000000016241111/paymentinstruments"
+              }
+            },
+            "id": "7010000000016241111",
+            "object": "instrumentIdentifier",
+            "state": "ACTIVE",
+            "card": {
+              "number": "411111XXXXXX1111"
+            },
+            "processingInformation": {
+              "authorizationOptions": {
+                "initiator": {
+                  "merchantInitiatedTransaction": {
+                    "previousTransactionId": "123456789012345"
+                  }
+                }
+              }
+            },
+            "metadata": {
+              "creator": "testrest"
+            }
+          }
+        }
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "https://apitest.example.com/tms/v1/paymentinstruments/F3965253C47640F5E053AF598E0AA05A"
+          }
+        },
+        "id": "F3965253C47640F5E053AF598E0AA05A",
+        "object": "paymentInstrument",
+        "state": "ACTIVE",
+        "card": {
+          "expirationMonth": "02",
+          "expirationYear": "2028",
+          "type": "relay"
+        },
+        "billTo": {
+          "firstName": "John",
+          "lastName": "Snow"
+        },
+        "metadata": {
+          "creator": "testrest"
+        },
+        "_embedded": {
+          "instrumentIdentifier": {
+            "_links": {
+              "self": {
+                "href": "https://apitest.example.com/tms/v1/instrumentidentifiers/7010000000016241111"
+              },
+              "paymentInstruments": {
+                "href": "https://apitest.example.com/tms/v1/instrumentidentifiers/7010000000016241111/paymentinstruments"
+              }
+            },
+            "id": "7010000000016241111",
+            "object": "instrumentIdentifier",
+            "state": "ACTIVE",
+            "card": {
+              "number": "411111XXXXXX1111"
+            },
+            "processingInformation": {
+              "authorizationOptions": {
+                "initiator": {
+                  "merchantInitiatedTransaction": {
+                    "previousTransactionId": "123456789012345"
+                  }
+                }
+              }
+            },
+            "metadata": {
+              "creator": "testrest"
+            }
+          }
+        }
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "https://apitest.example.com/tms/v1/paymentinstruments/F395F6426D9A30AEE053AF598E0A5BD4"
+          }
+        },
+        "id": "F395F6426D9A30AEE053AF598E0A5BD4",
+        "object": "paymentInstrument",
+        "state": "ACTIVE",
+        "card": {
+          "expirationMonth": "12",
+          "expirationYear": "2031",
+          "type": "relay"
+        },
+        "billTo": {
+          "firstName": "John",
+          "lastName": "Doe",
+          "company": "Company Name",
+          "address1": "1 Market St",
+          "locality": "San Francisco",
+          "administrativeArea": "CA",
+          "postalCode": "94105",
+          "country": "US",
+          "email": "test@pgw.com",
+          "phoneNumber": "4158880000"
+        },
+        "metadata": {
+          "creator": "testrest"
+        },
+        "_embedded": {
+          "instrumentIdentifier": {
+            "_links": {
+              "self": {
+                "href": "https://apitest.example.com/tms/v1/instrumentidentifiers/7010000000016241111"
+              },
+              "paymentInstruments": {
+                "href": "https://apitest.example.com/tms/v1/instrumentidentifiers/7010000000016241111/paymentinstruments"
+              }
+            },
+            "id": "7010000000016241111",
+            "object": "instrumentIdentifier",
+            "state": "ACTIVE",
+            "card": {
+              "number": "411111XXXXXX1111"
+            },
+            "processingInformation": {
+              "authorizationOptions": {
+                "initiator": {
+                  "merchantInitiatedTransaction": {
+                    "previousTransactionId": "123456789012345"
+                  }
+                }
+              }
+            },
+            "metadata": {
+              "creator": "testrest"
+            }
+          }
+        }
+      }
+    ]
+  }
+}
+```
+
+Retrieve an Instrument Identifier with an Unmasked Card Number {#tms-ii-retrieve-unmasked-card-intro}
+=====================================================================================================
+
+This section describes how retrieve an instrument identifier with an unmasked card number.
+
+> IMPORTANT
+> To retrieve unmasked payment details, you must ensure that your MLE key pair and your token vault are configured correctly. For more information on MLE keys, see [Message-Level Encryption Keys](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-onboarding/tms-mle-setup.md ""). For more information on token vaults, see [Token Vault Management](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-onboarding/tms-vault-hierarchy.md ""). If necessary, contact your ` Payment Gateway ` account manager or customer support.  
+> The response is BASE 64-encoded JSON web encryption (JWE) token. The decoded JWE has these elements:
+
+```
+{ "alg": "RSA-OAEP-256", //The algorithm used to encrypt the CEK 
+    "cty": "json", //The content type 
+    "typ": "JWT", //The token type 
+    "enc": "A256GCM", //The algorithm that is used to encrypt the message 
+    "kid": "keyId" //The serial number of shared public cert for encryption of CEK
+} 
+&lt;Encrypted Data&gt; //The encrypted payload that matches the JSON response normally returned by the TMS API, except with an unmasked payment details
+```
+
+Header Configuration {#tms-ii-retrieve-unmasked-card-intro_tms-ii-retrieve-unmasked-card-header}
+------------------------------------------------------------------------------------------------
+
+You must pass this request header to retrieve unmasked payment details: `Accept: application/jose`.  
+The term `application/jose` refers to Javascript Object Signing and Encryption (JOSE). JOSE is a framework that provides end-to-end security to JavaScript Object Notation (JSON)-based data structures. JOSE achieves this by offering a collection of specifications to encrypt and digitally sign JSON payloads. In this case, the response is message-level encrypted using a JSON Web Token (JWT).
+
+Endpoint
+--------
+
+**Test:** `GET ``https://apitest.example.com``/tms/v1/instrumentidentifiers/{instrumentIdentifierTokenId}`{#tms-ii-retrieve-unmasked-card-intro_restcust-test}  
+**Production:** `GET ``https://api.example.com``/tms/v1/instrumentidentifiers/{instrumentIdentifierTokenId}`  
+**Production in India:** `GET ``https://api.in.example.com``/tms/v1/instrumentidentifiers/{instrumentIdentifierTokenId}`{#tms-ii-retrieve-unmasked-card-intro_restcust-prod-india}  
+*{instrumentIdentifierTokenId}* is the instrument identifier token ID returned in the id field when you created the instrument identifier token. For more information, see [Create an Instrument Identifier](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-ii-tkn/tms-ii-tkn-create-intro.md "").
+
+REST Example: Retrieving an Instrument Identifier with an Unmasked Card Number {#tms-ii-retrieve-unmasked-card-ex-rest}
+=======================================================================================================================
+
+Request
+
+```keyword
+GET https://apitest.example.com/tms/v1/instrumentidentifiers/7010000000016241111
+```
+
+Response to a Successful Request
+
+```
+eyJraWQiOiJiYTE1ZDRmMTIzMTM0NjlkZjg5MDM1Nzk2YWE4Nzc4ZGM0NTY4ODlkIiwiY3R5IjoianNvbiIsInR5cCI6IkpXVCIsImVuYyI6IkEyNTZHQ00iLCJhbGciOiJSU0EtT0FFUC0yNTYifQ.N_XRPaRJACKNHBAUvXIu11eoB kgouHb5mrA1LL-WHVfKRpfUoGpHRVp0WRy7b1NLh4-qAlLI3QKnxxplx4tzSaJCn3kQDNt0BnRmKecRvFTGKXk09eATF8J7lLfNjYZEgZgA4qe3FdIEWIMN_BwQMJMEy0cMJdpyGtvUt9G6rgmQUDsjwSDU5tQNMopjgqjDUw6rBjbxTprNtBLpNCqjbSe4-vW_xiZIfFpQs_45YPWV4fRn5YuH7ebfckB1evTdfGRlBMHXfjac_QA8a1gMv_50T2y1VXllam2OSC2hSabOtd43pGDsFwj5HhOGjobb6GprbNedlIBL5Mlo-2_wCg.OkTe1Z7OredhIrF_.3eEeC9OUfz7uXxl1FLSZZNFGUiX7vk77SGVCW7cypDuVpy5QpK2wVJzTYrjJFgGlEiE05GwXP04gOsOOp5C6OEhCXKbdGMZO_V0FAyxk1dnx28ur-cSG-86HdbBRbWsvcuh4ghMqx8WTlA-M13YKubY6L2LcK0yWROn9MrYlUWzgJFjXFZDkpCxsHpMtvXRxcF6nTQkJD4rw_SHGuHqWbVlQKyIEBcvbuyecjYtz7iZtP_HS349TOOmpbJDxJ-X8exZy3LLTmD7PHjpySYGx-svlkP-Qu4yi_xFtzmkwf7T7O56SAa9DidDeH9ftGi7V67MBMBGK6Ndl8nK4sn6SieBDMWxnFthNdHZFEhlSONIywGfE-mYI5nuagrNVOo-ZQqJ2woYXdocdEvyTQ7oDvRy432872l6nUDTZcVdYlVj79KDrW73LjvUYWcAvXZr0bDgI-e1YNziInqgi3DlNNeL6W2srYrSuqJG5-NnWIISt3Pb8qfa2ve06uRhztpyWisWEZOCVG1SLg_LZTPjaDoe2woJ1kyP2VaEM4VoRynQ0dCZsLlpu8_s24rj96T-qoi2QkUybUQ3rpYiUUPl1-jhhimMpar4wsJJRIsVfsf6KVz876ReMgvW1Jzm5G0Ypj7acvvqnDAeMEfRzXvpLvAVpGXP6RbVXuyg3wyUg_8-PqOlllRiavS8eg9-ZdeuAkPQ.4vZxOPrGjw51SFJmn_cF3g
+```
+
+{#tms-ii-retrieve-unmasked-card-ex-rest_codeblock_jqh_4px_mwb}
+
+Delete an Instrument Identifier {#tms-ii-tkn-delete-intro}
+==========================================================
+
+This section describes how to delete an instrument identifier.
+
+Endpoint {#tms-ii-tkn-delete-intro_section_rlf_5mk_dwb}
+-------------------------------------------------------
+
+**Test:** `DELETE ``https://apitest.example.com``/tms/v1/instrumentidentifiers/{instrumentIdentifierTokenId}`{#tms-ii-tkn-delete-intro_restcust-test}  
+**Production:** `DELETE ``https://api.example.com``/tms/v1/instrumentidentifiers/{instrumentIdentifierTokenId}`  
+**Production in India:** `DELETE ``https://api.in.example.com``/tms/v1/instrumentidentifiers/{instrumentIdentifierTokenId}`{#tms-ii-tkn-delete-intro_restcust-prod-india}  
+*{instrumentIdentifierTokenId}* is the instrument identifier token ID returned in the id field in the id field when you created the instrument identifier token. For more information, see [Create an Instrument Identifier](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-ii-tkn/tms-ii-tkn-create-intro.md "").
+
+REST Example: Deleting an Instrument Identifier {#tms-ii-tkn-delete-ex-rest}
+============================================================================
+
+Request
+
+```keyword
+DELETE https://apitest.example.com/tms/v1/instrumentidentifiers/7010000000016241111
+```
+
+Response to a Successful Request
+A successful delete response returns an empty `HTTP 204 No Content` status. For more information, see [HTTP Status Codes](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-ref-info/tms-http-status.md "").
+
+Payments with Instrument Identifier Tokens {#tms-pay-ii-tkn}
+============================================================
+
+This section contains information on making payments using instrument identifier tokens.  
+An instrument identifier token represents either a payment card number or, in the case of an ACH bank account, the routing and account numbers. The expiration date and billing address fields are pass through fields. The pass-through fields are used for payment network token enrollment with card associations.  
+You can make a payment using an existing instrument identifier token or create one. To make a payment using a new instrument identifier token, you must include token creation in the authorization request. For example:
+
+* [Create an Instrument Identifier Token with Validated Payment Details](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-ii-tkn/tms-ii-create-valid-pay-intro.md "")
+  {#tms-pay-ii-tkn_ul_pyh_p4v_qwb}  
+  To process a payment using an existing instrument identifier token, you must include the instrument identifier token ID as the value in the `paymentInformation.instrumentIdentifier.id` field. For example:
+
+* [Authorize a Payment with an Instrument Identifier](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-ii-tkn/tms-ii-tkn-pay-intro.md "")
+
+* [Making a Credit with an Instrument Identifier](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-ii-tkn/tms-ii-tkn-credit-intro.md "")
+  {#tms-pay-ii-tkn_ul_sbn_34v_qwb}  
+  For more information on instrument identifier tokens, see [Instrument Identifier Tokens](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-overview/tms-token-types/tms-ii-tkn-intro.md "").
+
+Create an Instrument Identifier Token with Validated Payment Details {#tms-ii-create-valid-pay-intro}
+=====================================================================================================
+
+This section describes how to create a instrument identifier token with validated payment details.
+
+Endpoint
+--------
+
+**Test:** `POST ``https://apitest.example.com``/pts/v2/payments `{#tms-ii-create-valid-pay-intro_restcust-test}  
+**Production:** `POST ``https://api.example.com``/pts/v2/payments `  
+**Production in India:** `POST ``https://api.in.example.com``/pts/v2/payments`{#tms-ii-create-valid-pay-intro_restcust-prod-india}  
+`customerTokenId` is the customer tokenID returned in the id field when you created the customer token. For more information, see [Create a Customer](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-cust-tkn/tms-cust-tkn-create-intro.md "").
+
+Required Fields for Creating an Instrument Identifier Token with Validated Payment Details {#tms-ii-create-valid-pay-reqfields}
+===============================================================================================================================
+
+[orderInformation.amountDetails.currency](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-amount-details-currency.md "")
+
+[orderInformation.amountDetails.totalAmount](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-amount-details-total-amount.md "")
+:
+
+[orderInformation.billTo.address1](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-bill-to-address1.md "")
+:
+
+[orderInformation.billTo.administrativeArea](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-bill-to-admin-area.md "")
+:
+
+[orderInformation.billTo.country](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-bill-to-country.md "")
+:
+
+[orderInformation.billTo.email](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-bill-to-email.md "")
+:
+
+[orderInformation.billTo.firstName](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-bill-to-first-name.md "")
+:
+
+[orderInformation.billTo.lastName](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-bill-to-last-name.md "")
+:
+
+[orderInformation.billTo.locality](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-bill-to-locality.md "")
+:
+
+[orderInformation.billTo.postalCode](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-bill-to-postal-code.md "")
+:
+
+[paymentInformation.card.expirationMonth](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/payment-info-aa/payment-info-card-exp-mo.md "")
+:
+
+[paymentInformation.card.expirationYear](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/payment-info-aa/payment-info-card-exp-year.md "")
+:
+
+[paymentInformation.card.number](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/payment-info-aa/payment-info-card-number.md "")
+:
+
+[paymentInformation.card.type](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/payment-info-aa/payment-info-card-type-a.md "")
+:
+
+[processingInformation.actionList](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/processing-info-aa/processing-info-action-list.md "")
+:
+Set the value to `TOKEN_CREATE`.
+
+[processingInformation.actionTokenTypes](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/processing-info-aa/processing-info-action-token-types.md "")
+:
+Set the value to `instrumentIdentifier`.
+{#tms-ii-create-valid-pay-reqfields_dl_u12_vqy_dwb}
+
+Related Information {#tms-ii-create-valid-pay-reqfields_section_jpc_xzz_sxb}
+----------------------------------------------------------------------------
+
+* [API Field Reference for the REST API](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/api-fields-about-guide.md "")
+  {#tms-ii-create-valid-pay-reqfields_ul_kpc_xzz_sxb}
+
+REST Example: Creating an Instrument Identifier with Validated Payment Details {#tms-ii-create-valid-pay-ex-rest}
+=================================================================================================================
+
+Request
+
+```
+{
+    "clientReferenceInformation": {
+        "code": "TC50171_3"
+    },
+    "processingInformation": {
+        "commerceIndicator": "internet",
+        "actionList": [
+            "TOKEN_CREATE"
+        ],
+        "actionTokenTypes": [
+            "instrumentIdentifier"
+        ]
+    },
+    "orderInformation": {
+        "billTo": {
+            "country": "US",
+            "lastName": "Deo",
+            "address2": "Address 2",
+            "address1": "201 S. Division St.",
+            "postalCode": "48104-2201",
+            "locality": "Ann Arbor",
+            "administrativeArea": "MI",
+            "firstName": "John",
+            "phoneNumber": "999999999",
+            "district": "MI",
+            "buildingNumber": "123",
+            "company": "Relay",
+            "email": "test@pgw.com"
+        },
+        "shipTo": {
+            "country": "US",
+            "lastName": "Deo",
+            "address2": "Address 2",
+            "address1": "201 S. Division St.",
+            "postalCode": "48104-2201",
+            "locality": "Ann Arbor",
+            "administrativeArea": "MI",
+            "firstName": "John",
+            "phoneNumber": "999999999",
+            "district": "MI",
+            "buildingNumber": "123",
+            "company": "Relay",
+            "email": "test@pgw.com"
+        },
+        "amountDetails": {
+            "totalAmount": "102.00",
+            "currency": "USD"
+        }
+    },
+    "paymentInformation": {
+        "card": {
+            "expirationYear": "2031",
+            "number": "4895379987X11515",
+            "securityCode": "890",
+            "expirationMonth": "12",
+            "type": "001"
+        }
+    }
+}
+```
+
+Response to a Successful Request
+
+```
+{
+    "_links": {
+        "authReversal": {
+            "method": "POST",
+            "href": "/pts/v2/payments/6760634870346154903955/reversals"
+        },
+        "self": {
+            "method": "GET",
+            "href": "/pts/v2/payments/6760634870346154903955"
+        },
+        "capture": {
+            "method": "POST",
+            "href": "/pts/v2/payments/6760634870346154903955/captures"
+        }
+    },
+    "clientReferenceInformation": {
+        "code": "TC50171_3"
+    },
+    "id": "6760634870346154903955",
+    "orderInformation": {
+        "amountDetails": {
+            "authorizedAmount": "102.00",
+            "currency": "USD"
+        }
+    },
+    "paymentAccountInformation": {
+        "card": {
+            "type": "001"
+        }
+    },
+    "paymentInformation": {
+        "tokenizedCard": {
+            "type": "001"
+        },
+        "card": {
+            "type": "001"
+        }
+    },
+    "pointOfSaleInformation": {
+        "terminalId": "111111"
+    },
+    "processorInformation": {
+        "paymentAccountReferenceNumber": "V0010013019326121174070050420",
+        "approvalCode": "888888",
+        "networkTransactionId": "123456789619999",
+        "transactionId": "123456789619999",
+        "responseCode": "100",
+        "avs": {
+            "code": "X",
+            "codeRaw": "I1"
+        }
+    },
+    "reconciliationId": "698162504DTIATR3",
+    "status": "AUTHORIZED",
+    "submitTimeUtc": "2023-02-10T21:11:27Z",
+    "tokenInformation": {
+        "instrumentidentifierNew": false,
+        "instrumentIdentifier": {
+            "state": "ACTIVE",
+            "id": "7030000000014911515"
+        }
+    }
+}
+```
+
+Authorize a Payment with an Instrument Identifier {#tms-ii-tkn-pay-intro}
+=========================================================================
+
+This section provides the information you need in order to authorize a payment with an instrument identifier token.
+
+Endpoint
+--------
+
+**Production:** `POST ``https://api.example.com``/pts/v2/payments `  
+**Test:** `POST ``https://apitest.example.com``/pts/v2/payments`{#tms-ii-tkn-pay-intro_restcust-test}  
+**Production in India:** `POST ``https://api.in.example.com``/pts/v2/payments`{#tms-ii-tkn-pay-intro_restcust-prod-india}
+
+Required Fields for Authorizing a Payment with an Instrument Identifier {#tms-ii-tkn-pay-reqfields}
+===================================================================================================
+
+[clientReferenceInformation.code](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/client-ref-info-aa/client-ref-info-code.md "")
+:
+
+[orderInformation.amountDetails.currency](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-amount-details-currency.md "")
+
+[orderInformation.amountDetails.totalAmount](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-amount-details-total-amount.md "")
+:
+
+paymentInformation.instrumentIdentifier.id
+:
+Set to the ID of the instrument identifier token you want to use.
+{#tms-ii-tkn-pay-reqfields_dl_u12_vqy_dwb}
+
+Related Information {#tms-ii-tkn-pay-reqfields_section_jpc_xzz_sxb}
+-------------------------------------------------------------------
+
+* [API field reference guide for the REST API](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/api-fields-about-guide.md "")
+  {#tms-ii-tkn-pay-reqfields_ul_kpc_xzz_sxb}
+
+REST Example: Authorizing a Payment with an Instrument Identifier {#tms-ii-tkn-pay-ex-rest}
+===========================================================================================
+
+Request
+
+```
+{
+  "clientReferenceInformation": {
+    "code": "12345678"
+  },
+    "paymentInformation": {
+        "instrumentIdentifier": {
+            "id": "7010000000016241111"
+        }
+    },
+    "orderInformation": {
+        "amountDetails": {
+            "currency": "USD",
+            "totalAmount": "10.00"
+        }
+    }
+}
+```
+
+{#tms-ii-tkn-pay-ex-rest_codeblock_okq_f1t_lwb}  
+Response to a Successful Request
+
+```
+{
+  "_links": {
+    "authReversal": {
+      "method": "POST",
+      "href": "/pts/v2/payments/7055955288186053404953/reversals"
+    },
+    "self": {
+      "method": "GET",
+      "href": "/pts/v2/payments/7055955288186053404953"
+    },
+    "capture": {
+      "method": "POST",
+      "href": "/pts/v2/payments/7055955288186053404953/captures"
+    }
+  },
+  "clientReferenceInformation": {
+    "code": "12345678"
+  },
+  "id": "7055955288186053404953",
+  "orderInformation": {
+    "amountDetails": {
+      "authorizedAmount": "10.00",
+      "currency": "USD"
+    }
+  },
+  "paymentAccountInformation": {
+    "card": {
+      "type": "001"
+    }
+  },
+  "paymentInformation": {
+    "tokenizedCard": {
+      "type": "001"
+    },
+    "instrumentIdentifier": {
+      "id": "7010000000016241111",
+      "state": "ACTIVE"
+    },
+    "card": {
+      "type": "001"
+    }
+  },
+  "pointOfSaleInformation": {
+    "terminalId": "111111"
+  },
+  "processorInformation": {
+    "approvalCode": "888888",
+    "networkTransactionId": "123456789619999",
+    "transactionId": "123456789619999",
+    "responseCode": "100",
+    "avs": {
+      "code": "1"
+    }
+  },
+  "reconciliationId": "67468271CRIL0U24",
+  "status": "AUTHORIZED",
+  "submitTimeUtc": "2024-01-18T16:32:09Z"
+}
+```
+
+{#tms-ii-tkn-pay-ex-rest_codeblock_qkq_f1t_lwb}
+
+REST Example: Authorizing a Payment with an Instrument Identifier While Creating `TMS` Tokens {#tms-ii-tkn-pay-create-ex-rest}
+==============================================================================================================================
+
+Request
+
+```
+{
+  "clientReferenceInformation": {
+    "code": "TC50171_3"
+  },
+  "processingInformation": {
+    "actionList": [
+      "TOKEN_CREATE"
+    ],
+    "actionTokenTypes": [
+      "customer",
+      "paymentInstrument",
+      "shippingAddress"
+    ]
+  },
+  "paymentInformation": {
+    "instrumentIdentifier": {
+      "id": "7010000000016241111"
+    }
+  },
+  "orderInformation": {
+    "amountDetails": {
+      "totalAmount": "102.21",
+      "currency": "USD"
+    },
+    "billTo": {
+      "firstName": "John",
+      "lastName": "Doe",
+      "address1": "1 Market St",
+      "locality": "san francisco",
+      "administrativeArea": "CA",
+      "postalCode": "94105",
+      "country": "US",
+      "email": "test@pgw.com",
+      "phoneNumber": "4158880000"
+    },
+    "shipTo": {
+      "firstName": "John",
+      "lastName": "Doe",
+      "address1": "1 Market St",
+      "locality": "san francisco",
+      "administrativeArea": "CA",
+      "postalCode": "94105",
+      "country": "US"
+    }
+  }
+}
+```
+
+{#tms-ii-tkn-pay-create-ex-rest_codeblock_okq_f1t_lwb}  
+Response to a Successful Request
+
+```
+{
+  "_links": {
+    "authReversal": {
+      "method": "POST",
+      "href": "/pts/v2/payments/7114679840376687203955/reversals"
+    },
+    "self": {
+      "method": "GET",
+      "href": "/pts/v2/payments/7114679840376687203955"
+    },
+    "capture": {
+      "method": "POST",
+      "href": "/pts/v2/payments/7114679840376687203955/captures"
+    }
+  },
+  "clientReferenceInformation": {
+    "code": "TC50171_3"
+  },
+  "id": "7114679840376687203955",
+  "orderInformation": {
+    "amountDetails": {
+      "authorizedAmount": "102.21",
+      "currency": "USD"
+    }
+  },
+  "paymentAccountInformation": {
+    "card": {
+      "type": "001"
+    }
+  },
+  "paymentInformation": {
+    "tokenizedCard": {
+      "type": "001"
+    },
+    "instrumentIdentifier": {
+      "id": "7010000000016241111",
+      "state": "ACTIVE"
+    },
+    "card": {
+      "type": "001"
+    }
+  },
+  "pointOfSaleInformation": {
+    "terminalId": "111111"
+  },
+  "processorInformation": {
+    "approvalCode": "888888",
+    "networkTransactionId": "123456789619999",
+    "transactionId": "123456789619999",
+    "responseCode": "100",
+    "avs": {
+      "code": "X",
+      "codeRaw": "I1"
+    }
+  },
+  "reconciliationId": "623971212U7PN4IU",
+  "status": "AUTHORIZED",
+  "submitTimeUtc": "2024-03-26T15:46:24Z",
+  "tokenInformation": {
+    "shippingAddress": {
+      "id": "14930C904FC4D97BE063A2598D0AE0F1"
+    },
+    "paymentInstrument": {
+      "id": "149310A4A924E911E063A2598D0A47AD"
+    },
+    "customer": {
+      "id": "14930C904FC1D97BE063A2598D0AE0F1"
+    }
+  }
+}
+```
+
+{#tms-ii-tkn-pay-create-ex-rest_codeblock_qkq_f1t_lwb}
+
+Making a Credit with an Instrument Identifier {#tms-ii-tkn-credit-intro}
+========================================================================
+
+This section describes how to make a credit with an instrument identifier token.
+
+Endpoint
+--------
+
+**Test:** `POST ``https://apitest.example.com``/pts/v2/credits `{#tms-ii-tkn-credit-intro_restcust-test}  
+**Production:** `POST ``https://api.example.com``pts/v2/credits `  
+**Production in India:** `POST ``https://api.in.example.com``pts/v2/credits`{#tms-ii-tkn-credit-intro_restcust-prod-india}
+
+Required Fields for Making a Credit with an Instrument Identifier {#tms-ii-tkn-credit-reqfields}
+================================================================================================
+
+[clientReferenceInformation.code](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/client-ref-info-aa/client-ref-info-code.md "")
+:
+
+[orderInformation.amountDetails.currency](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-amount-details-currency.md "")
+
+[orderInformation.amountDetails.totalAmount](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-amount-details-total-amount.md "")
+:
+
+[paymentInformation.paymentInstrument.id](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/payment-info-aa/payment-info-payment-instrument-id.md "")
+:
+Set to the ID of the payment instrument token you want to use.
+
+Related Information {#tms-ii-tkn-credit-reqfields_section_jpc_xzz_sxb}
+----------------------------------------------------------------------
+
+* [API field reference guide for the REST API](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/api-fields-about-guide.md "")
+  {#tms-ii-tkn-credit-reqfields_ul_kpc_xzz_sxb}
+
+REST Example: Making a Credit with an Instrument Identifier {#tms-ii-tkn-credit-ex-rest}
+========================================================================================
+
+Request
+
+```
+{
+  "clientReferenceInformation": {
+    "code": "12345678"
+  },
+    "paymentInformation": {
+        "instrumentIdentifier": {
+            "id": "7010000000016241111"
+        }
+    },
+    "orderInformation": {
+        "amountDetails": {
+            "currency": "USD",
+            "totalAmount": "10.00"
+        }
+    }
+}
+```
+
+Response to a Successful Request
+
+```
+{
+  "_links": {
+    "void": {
+      "method": "POST",
+      "href": "/pts/v2/credits/7055970261066212404951/voids"
+    },
+    "self": {
+      "method": "GET",
+      "href": "/pts/v2/credits/7055970261066212404951"
+    }
+  },
+  "clientReferenceInformation": {
+    "code": "12345678"
+  },
+  "creditAmountDetails": {
+    "currency": "USD",
+    "creditAmount": "10.00"
+  },
+  "id": "7055970261066212404951",
+  "orderInformation": {
+    "amountDetails": {
+      "currency": "USD"
+    }
+  },
+  "paymentAccountInformation": {
+    "card": {
+      "type": "001"
+    }
+  },
+  "paymentInformation": {
+    "tokenizedCard": {
+      "type": "001"
+    },
+    "instrumentIdentifier": {
+      "id": "7010000000016241111",
+      "state": "ACTIVE"
+    },
+    "card": {
+      "type": "001"
+    }
+  },
+  "processorInformation": {
+    "approvalCode": "888888",
+    "responseCode": "100"
+  },
+  "reconciliationId": "67445198PRILCQCQ",
+  "status": "PENDING",
+  "submitTimeUtc": "2024-01-18T16:57:06Z"
+}
+```
+
+Legacy Tokens {#tms-legacy-tkn}
+===============================
+
+A legacy token refers to an existing customer token, instrument identifier token, payment instrument token, or a shipping address token.
+
+Payments with Legacy Tokens {#tms-overview-legacy-tkn}
+======================================================
+
+This section contains information on making payments with legacy tokens.  
+It is recommended to use the `TMS` customer, payment instrument, or instrument identifier token ID fields rather than the legacy token ID. To process a payment using legacy token, instrument identifier token, or payment instrument token, you must include the legacy token ID in the request. For example:
+
+* [Authorizing a Payment with a Legacy Token](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-legacy-tkn/tms-legacy-tkn-pay-intro.md "")
+* [Making a Credit with a Legacy Token](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-legacy-tkn/tms-legacy-tkn-credit-intro.md "")
+  {#tms-overview-legacy-tkn_ul_sbn_34v_qwb}
+
+Authorizing a Payment with a Legacy Token {#tms-legacy-tkn-pay-intro}
+=====================================================================
+
+This section describes how to authorize a payment with a legacy token.
+
+Endpoint {#tms-legacy-tkn-pay-intro_d9e16}
+------------------------------------------
+
+**Production:** `POST ``https://api.example.com``/pts/v2/payments`{#tms-legacy-tkn-pay-intro_d9e25}  
+**Test:** `POST ``https://apitest.example.com``/pts/v2/payments`{#tms-legacy-tkn-pay-intro_d9e35}
+
+Required Fields for Authorizing a Payment with a Legacy Token {#tms-legacy-tkn-pay-reqfields}
+=============================================================================================
+
+[clientReferenceInformation.code](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/client-ref-info-aa/client-ref-info-code.md "")
+:
+
+paymentInformation.legacyToken.id
+:
+Include the ID of the legacy token you want to use to authorize a payment.
+
+[orderInformation.amountDetails.currency](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-amount-details-currency.md "")
+:
+
+[orderInformation.amountDetails.totalAmount](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-amount-details-total-amount.md "")
+:
+{#tms-legacy-tkn-pay-reqfields_dl_bcz_qry_dwb}
+
+Related Information {#tms-legacy-tkn-pay-reqfields_section_jpc_xzz_sxb}
+-----------------------------------------------------------------------
+
+* [API field reference guide for the REST API](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/api-fields-about-guide.md "")
+  {#tms-legacy-tkn-pay-reqfields_ul_kpc_xzz_sxb}
+
+REST Example: Authorizing a Payment with a Legacy Token {#tms-legacy-tkn-pay-ex-rest}
+=====================================================================================
+
+Request
+
+```
+{
+  "clientReferenceInformation": {
+    "code": "12345678"
+  },
+  "paymentInformation": {
+    "legacyToken": {
+      "id": "B21E6717A6F03479E05341588E0A303F"
+    }
+  },
+  "orderInformation": {
+    "amountDetails": {
+      "totalAmount": "22.00",
+      "currency": "USD"
+    }
+  }
+}
+```
+
+{#tms-legacy-tkn-pay-ex-rest_codeblock_v4l_mlt_lwb}  
+Response to a Successful Request
+
+```
+{
+  "_links": {
+    "authReversal": {
+      "method": "POST",
+      "href": "/pts/v2/payments/7055956342476789004951/reversals"
+    },
+    "self": {
+      "method": "GET",
+      "href": "/pts/v2/payments/7055956342476789004951"
+    },
+    "capture": {
+      "method": "POST",
+      "href": "/pts/v2/payments/7055956342476789004951/captures"
+    }
+  },
+  "clientReferenceInformation": {
+    "code": "12345678"
+  },
+  "id": "7055956342476789004951",
+  "orderInformation": {
+    "amountDetails": {
+      "authorizedAmount": "22.00",
+      "currency": "USD"
+    }
+  },
+  "paymentAccountInformation": {
+    "card": {
+      "type": "001"
+    }
+  },
+  "paymentInformation": {
+    "tokenizedCard": {
+      "type": "001"
+    },
+    "card": {
+      "type": "001"
+    }
+  },
+  "pointOfSaleInformation": {
+    "terminalId": "111111"
+  },
+  "processorInformation": {
+    "approvalCode": "888888",
+    "networkTransactionId": "123456789619999",
+    "transactionId": "123456789619999",
+    "responseCode": "100",
+    "avs": {
+      "code": "X",
+      "codeRaw": "I1"
+    }
+  },
+  "reconciliationId": "67468431FRIIS246",
+  "status": "AUTHORIZED",
+  "submitTimeUtc": "2024-01-18T16:33:54Z"
+}
+```
+
+{#tms-legacy-tkn-pay-ex-rest_codeblock_x4l_mlt_lwb}
+
+Making a Credit with a Legacy Token {#tms-legacy-tkn-credit-intro}
+==================================================================
+
+This section describes how to make a credit with a legacy token.
+
+Endpoint
+--------
+
+**Test:** `POST ``https://apitest.example.com``/pts/v2/credits`{#tms-legacy-tkn-credit-intro_restcust-test}  
+**Production:** `POST ``https://api.example.com``/pts/v2/credits `  
+**Production in India:** `POST ``https://api.in.example.com``/pts/v2/credits`{#tms-legacy-tkn-credit-intro_restcust-prod-india}
+
+Required Fields for Making a Credit with a Legacy Token {#tms-legacy-tkn-credit-reqfields}
+==========================================================================================
+
+[clientReferenceInformation.code](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/client-ref-info-aa/client-ref-info-code.md "")
+:
+
+[orderInformation.amountDetails.currency](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-amount-details-currency.md "")
+:
+
+[orderInformation.amountDetails.totalAmount](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-amount-details-total-amount.md "")
+:
+
+paymentInformation.legacyToken.id
+:
+Include the ID of the legacy token that you want to use to authorize a payment.
+
+Related Information {#tms-legacy-tkn-credit-reqfields_section_jpc_xzz_sxb}
+--------------------------------------------------------------------------
+
+* [API field reference guide for the REST API](https://developer.example.com/docs/gateway/en-us/api-fields/reference/all/rest/api-fields/api-fields-about-guide.md "")
+  {#tms-legacy-tkn-credit-reqfields_ul_kpc_xzz_sxb}
+
+REST Example: Making a Credit with a Legacy Token {#tms-legacy-tkn-credit-ex-rest}
+==================================================================================
+
+Request
+
+```
+{
+  "clientReferenceInformation": {
+    "code": "12345678"
+  },
+  "paymentInformation": {
+    "legacyToken": {
+      "id": "B21E6717A6F03479E05341588E0A303F"
+    }
+  },
+  "orderInformation": {
+    "amountDetails": {
+      "totalAmount": "22.00",
+      "currency": "USD"
+    }
+  }
+}
+```
+
+{#tms-legacy-tkn-credit-ex-rest_codeblock_v4l_mlt_lwb}  
+Response to a Successful Request
+
+```
+{
+  "_links": {
+    "void": {
+      "method": "POST",
+      "href": "/pts/v2/credits/7055970562096509704953/voids"
+    },
+    "self": {
+      "method": "GET",
+      "href": "/pts/v2/credits/7055970562096509704953"
+    }
+  },
+  "clientReferenceInformation": {
+    "code": "12345678"
+  },
+  "creditAmountDetails": {
+    "currency": "USD",
+    "creditAmount": "22.00"
+  },
+  "id": "7055970562096509704953",
+  "orderInformation": {
+    "amountDetails": {
+      "currency": "USD"
+    }
+  },
+  "paymentAccountInformation": {
+    "card": {
+      "type": "001"
+    }
+  },
+  "paymentInformation": {
+    "tokenizedCard": {
+      "type": "001"
+    },
+    "card": {
+      "type": "001"
+    }
+  },
+  "processorInformation": {
+    "approvalCode": "888888",
+    "responseCode": "100"
+  },
+  "reconciliationId": "67444779FRILJT84",
+  "status": "PENDING",
+  "submitTimeUtc": "2024-01-18T16:57:36Z"
+}
+```
+
+{#tms-legacy-tkn-credit-ex-rest_codeblock_x4l_mlt_lwb}
+
+Card Art {#tms-card-art}
+========================
+
+IMPORTANT This feature is in pilot phase. You have early access to this feature even though it might contain bugs or unfinished work. Please consider the risk when using this feature.  
+You can choose to display card art provided by `TMS` to help your customers identify the card that they are selecting. `Payment Gateway` recommends that card art be shown in all cardholder-facing interactions where it applies.  
+Card art is available for these card types:
+
+* American Express
+* Mastercard
+* Relay
+
+Retrieve Card Art {#tms-net-tkn-card-art-retrieve-intro}
+========================================================
+
+This section describes how to retrieve card assets.
+
+Endpoint
+--------
+
+**Test:** `POST ``https://apitest.example.com``/tms/v2/tokens/`*{tokenId}* `/`*{provider}* `/assets/`*{asset.type}*{#tms-net-tkn-card-art-retrieve-intro_restcust-test}  
+**Production:** `POST ``https://api.example.com``/tms/v2/tokens/`*{tokenId}* `/`*{provider}* `/assets/`*{asset.type}*  
+**Production in India:** `POST ``https://api.in.example.com``/tms/v2/tokens/`*{tokenId}* `/`*{provider}* `/assets/`*{asset.type}*{#tms-net-tkn-card-art-retrieve-intro_restcust-prod-india}  
+The *`{tokenId}`* is the instrument identifier ID returned in the id field when you created the `TMS` token.  
+The *`{provider}`* is the provider of the card for which you want to retrieve card art. Possible values:
+
+* `aets`: American Express
+
+* `mdes`: Mastercard
+
+* `mscof`: Mastercard
+
+* `vts`: Relay  
+  The *`{asset.types}`* is the card art asset that you retrieve. Possible values:
+
+* `card-art-combined`: background image, brand logo, and issuer logo
+
+* `card-background`: background image
+
+* `card-issuer-logo`: issuer logo
+
+* `card-brand-logo`: brand logo
+
+* `card-co-brand-logo`: co-branded card logo
+
+* `card-icon`: card brand icon  
+  The availability of card asset types depends on the provider:
+
+|    Card Art Asset    |                                                            `aets`                                                            |                                                            `mdes`                                                            |                                                           `mscof`                                                            |                                                            `vts`                                                             |
+|----------------------|------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
+| `card-art-combined`  | ![](/content/dam/new-documentation/documentation/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/new-documentation/documentation/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/new-documentation/documentation/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/new-documentation/documentation/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) |
+| `card-background`    | ![](/content/dam/new-documentation/documentation/en-us/common/images/circlex-filled.svg/jcr:content/renditions/original)     | ![](/content/dam/new-documentation/documentation/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/new-documentation/documentation/en-us/common/images/circlex-filled.svg/jcr:content/renditions/original)     | ![](/content/dam/new-documentation/documentation/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) |
+| `card-issuer-logo`   | ![](/content/dam/new-documentation/documentation/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/new-documentation/documentation/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/new-documentation/documentation/en-us/common/images/circlex-filled.svg/jcr:content/renditions/original)     | ![](/content/dam/new-documentation/documentation/en-us/common/images/circlex-filled.svg/jcr:content/renditions/original)     |
+| `card-brand-logo`    | ![](/content/dam/new-documentation/documentation/en-us/common/images/circlex-filled.svg/jcr:content/renditions/original)     | ![](/content/dam/new-documentation/documentation/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/new-documentation/documentation/en-us/common/images/circlex-filled.svg/jcr:content/renditions/original)     | ![](/content/dam/new-documentation/documentation/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) |
+| `card-co-brand-logo` | ![](/content/dam/new-documentation/documentation/en-us/common/images/circlex-filled.svg/jcr:content/renditions/original)     | ![](/content/dam/new-documentation/documentation/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/new-documentation/documentation/en-us/common/images/circlex-filled.svg/jcr:content/renditions/original)     | ![](/content/dam/new-documentation/documentation/en-us/common/images/circlex-filled.svg/jcr:content/renditions/original)     |
+| `card-icon`          | ![](/content/dam/new-documentation/documentation/en-us/common/images/circlex-filled.svg/jcr:content/renditions/original)     | ![](/content/dam/new-documentation/documentation/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/new-documentation/documentation/en-us/common/images/circlex-filled.svg/jcr:content/renditions/original)     | ![](/content/dam/new-documentation/documentation/en-us/common/images/circlex-filled.svg/jcr:content/renditions/original)     |
+[Card Art Assets and Providers]
+
+REST Example: Retrieving Card Art Assets {#tms-net-tkn-card-art-combined-ex-rest}
+=================================================================================
+
+Request for the Issuer Logo
+
+```keyword
+GET https://apitest.example.com/tms/v2/tokens/{tokenId}/{provider}/assets/card-issuer-logo
+```
+
+Response to a Successful Request
+
+```
+{
+    "id": "3883d6a112284123b8b23ec595670eb7",
+    "type": "issuerLogo",
+    "provider": "vts",
+    "content": [
+        {
+            "type": "image/png",
+            "data": "R0l...aP=",	        //Base-64 encoded data
+            "width": 200,			// Include if provided by the issuer
+            "height": 200			// Include if provided by the issuer
+        }
+    ]
+}
+```
+
+BIN Lookup Service and `TMS` {#tms-bin-lookup-service}
+======================================================
+
+When some types of tokens are provisioned, `TMS` returns the BIN details that are provided by the BIN Lookup Service. This section describes how to retrieve the BIN information provided by the BIN Lookup Service for a PAN or network token.
+
+> IMPORTANT
+> You must be enabled for network tokenization to retrieve BIN details using ` TMS `.  
+> `TMS` returns BIN data when you send a request to create or retrieve these token types:
+
+* [Payment instrument tokens](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-pi-tkn.md "")
+* [Instrument identifier tokens](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-ii-tkn.md "")  
+  For more information about using the BIN Lookup Service, see the [*BIN Lookup Service Developer Guide*](https://developer.example.com/docs/gateway/en-us/bin-lookup/developer/all/rest/bin-lookup/bin-lookup-about-guide.md "")
+
+Endpoints
+---------
+
+Instrument Identifier Tokens
+:
+**Test:** `GET ``https://apitest.example.com``/tms/v1/instrumentidentifiers/{instrumentIdentifierTokenId}?retrieveBinDetails=true`{#tms-bin-lookup-service_restcust-test}
+:
+**Test:** `POST ``https://apitest.example.com``/tms/v1/instrumentidentifiers?retrieveBinDetails=true`{#tms-bin-lookup-service_restcust-test-post}
+:
+**Production:** `GET ``https://api.example.com``/tms/v1/instrumentidentifiers/{instrumentIdentifierTokenId}?retrieveBinDetails=true`
+:
+**Production:** `POST ``https://api.example.com``/tms/v1/instrumentidentifiers?retrieveBinDetails=true`{#tms-bin-lookup-service_restcust-prod-post}
+:
+**Production in India:** `GET ``https://api.in.example.com``/tms/v1/instrumentidentifiers/{instrumentIdentifierTokenId}?retrieveBinDetails=true`{#tms-bin-lookup-service_restcust-prod-india}
+:
+**Production in India:** `POST ``https://api.in.example.com``/tms/v1/instrumentidentifiers?retrieveBinDetails=true`
+
+Payment Instrument Tokens
+:
+**Test:** `GET ``https://apitest.example.com``/tms/v1/paymentinstruments/{paymentInstrumentTokenId}?retrieveBinDetails=true`{#tms-bin-lookup-service_rest-pi-test}
+:
+**Test:** `POST ``https://apitest.example.com``/tms/v1/paymentinstruments?retrieveBinDetails=true`{#tms-bin-lookup-service_rest-pi-test-post}
+:
+**Production:** `GET ``https://api.example.com``/tms/v1/paymentinstruments/{paymentInstrumentTokenId}?retrieveBinDetails=true`{#tms-bin-lookup-service_rest-pi-prod}
+:
+**Production:** `POST ``https://api.example.com``/tms/v1/paymentinstruments?retrieveBinDetails=true`{#tms-bin-lookup-service_rest-pi-prod-post}
+:
+**Production in India:** `GET ``https://api.in.example.com``/tms/v1/paymentinstruments/{paymentInstrumentTokenId}?retrieveBinDetails=true`
+:
+**Production in India:** `POST ``https://api.in.example.com``/tms/v1/paymentinstruments?retrieveBinDetails=true`  
+*`{instrumentIdentifierTokenId}`* and *{paymentInstrumentTokenId}* are the token IDs that are returned in the id field when you created the token.
+
+REST Example: Retrieving an Instrument Identifier with BIN Details {#tms-bin-lookup-service-ex-rest}
+====================================================================================================
+
+Request
+
+```ph codeph
+GET `https://apitest.example.com`/tms/v1/instrumentidentifiers/7049989999918257179?retrieveBinDetails=true 
+```
+
+{#tms-bin-lookup-service-ex-rest_codeblock_ud1_pc1_jwb}  
+Response to a Successful Request
+
+```
+{
+    "_links": {
+        "self": {
+            "href": "/tms/v1/instrumentidentifiers/7049989999918257179"
+        },
+        "paymentInstruments": {
+            "href": "/tms/v1/instrumentidentifiers/7049989999918257179/paymentinstruments"
+        },
+        "tokenized-cards": {
+            "href": "/tms/v2/tokenized-cards/23589328AA5A15CDE063A2598D0A702B"
+        }
+    },
+    "id": "7049989999918257179",
+    "object": "instrumentIdentifier",
+    "state": "ACTIVE",
+    "tokenizedCard": {
+        "id": "23589328AA5A15CDE063A2598D0A702B",
+        "state": "ACTIVE",
+        "enrollmentId": "abea32809655e12383cd1b006e119d01",
+        "tokenReferenceId": "131db9889f4c503b240519cca8f35901",
+        "number": "489537XXXXXX5398",
+        "expirationMonth": "12",
+        "expirationYear": "2030",
+        "type": "relay",
+        "card": {
+            "suffix": "7179",
+            "expirationMonth": "12",
+            "expirationYear": "2030"
+        },
+        "metadata": {
+            "cardArt": {
+                "combinedAsset": {
+                    "id": "8f64614def1a41d39ea8acae4616bf6f",
+                    "_links": {
+                        "self": {
+                            "href": "/tms/v2/tokens/7049989999918257179/vts/assets/card-art-combined"
+                        }
+                    }
+                },
+                "brandLogoAsset": {
+                    "id": "00000000000000000000000000001071",
+                    "_links": {
+                        "self": {
+                            "href": "/tms/v2/tokens/7049989999918257179/vts/assets/brand-logo"
+                        }
+                    }
+                },
+                "foregroundColor": "1af0f0"
+            },
+            "issuer": {
+                "shortDescription": "shortDescription",
+                "longDescription": "longDescription"
+            }
+        },
+        "source": "ONFILE"
+    },
+    "card": {
+        "number": "462294XXXXXX7179"
+    },
+    "issuer": {
+        "paymentAccountReference": "V0010013024023377525412642508"
+    },
+    "metadata": {
+        "creator": "mid"
+    },
+    "_embedded": {
+        "binLookup": {
+            "issuer": {
+                "country": "US"
+            },
+            "status": "COMPLETED",
+            "paymentAccountInformation": {
+                "card": {
+                    "type": "001",
+                    "brandName": "CARD",
+                    "credentialType": "PAN",
+                    "cardType": "CARD"
+                }
+            }
+        }
+    }
+}
+```
+
+Using `Token Management Service` with Wallet Apps {#tms-wallet-tkn}
+===================================================================
+
+Use the `TMS` API features to create an e-wallet app for your customers.
+
+Manage Tokens with Wallet Apps {#tms-wallet-manage}
+===================================================
+
+This section contains information for on managing tokens using wallet apps.  
+Use the Token Management Service (TMS) API features to create an e-wallet app for your customers. You can use your e-wallet to create, update, patch, and delete payment methods. Use the TMS API to:
+
+* [Create a New Customer Account](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-wallet-tkn/tms-wallet-create-cust-acct.md "")
+* [Add a New Shipping Address](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-wallet-tkn/tms-wallet-add-ship-addr.md "")
+* [Create a New Payment Instrument with the Payments API](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-wallet-tkn/tms-wallet-add-pay.md "")
+* [Add a New Payment Method Address](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-wallet-tkn/tms-wallet-add-pay-addr.md "")
+* [Edit or Delete a Shipping Address](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-wallet-tkn/tms-wallet-edit-ship-addr.md "")
+* [Edit or Delete a Payment Method](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-wallet-tkn/tms-wallet-edit-pay.md "")
+* [Change the Default Payment Method](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-wallet-tkn/tms-wallet-change-default-pay.md "")
+* [View Wallet](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-wallet-tkn/tms-wallet-view.md "")
+  {#tms-wallet-manage_ul_qbl_2vv_qwb}
+
+Create a New Customer Account {#tms-wallet-create-cust-acct}
+============================================================
+
+Use the `TMS` API in your e-wallet app when creating a new customer account to store customer information securely.
+
+1. Call the `POST /tms/v2/customers` endpoint to create a new customer in the e-wallet app customer sign-up flow.
+2. The request returns the customer token. Store the customer token with the customer profile information in your database.
+
+Add a New Shipping Address {#tms-wallet-add-ship-addr}
+======================================================
+
+Use the `TMS` API in your e-wallet app to store a customer's new shipping address.
+
+1. When you collect the new customer's shipping address, use the customer token from the [Create a New Customer Account](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-wallet-tkn/tms-wallet-create-cust-acct.md "") step to create a shipping address for that customer.
+2. Call `POST /tms/v2/customers/`*{customerTokenId}*`/shipping-addresses`.
+
+Edit or Delete a Shipping Address {#tms-wallet-edit-ship-addr}
+==============================================================
+
+Use the `TMS` API in your e-wallet app to edit or delete a customer's shipping address.
+
+1. To get all addresses, call: `GET /tms/v2/customers/`*{customerTokenId}*`/shipping-address.`
+
+   #### ADDITIONAL INFORMATION
+
+   The first record is the default.
+
+2. To add an address, call: `POST /tms/v2/customers/`*{customerTokenId}*`/shipping-addresses`.
+
+   #### ADDITIONAL INFORMATION
+
+   This adds a non-default shipping address. If it is the customer's first address, it becomes the default address.
+
+3. To edit an address, call: `PATCH /tms/v2/customers/`*{customerTokenId}*`/shipping-addresses/{shippingAddressTokenId}`.
+
+4. To delete an address, call: `DELETE /tms/v2/customers/`*{customerTokenId}*`/shipping-addresses/{shippingAddressTokenId}.`
+
+5. To set an address as the default address, call: `PATCH /tms/v2/customers/`*{customerTokenId}*`/shipping-addresses/{shippingAddressTokenId}` and set the value of the request field `default` to `true`.
+
+Create a New Payment Instrument with the Payments API {#tms-wallet-add-pay}
+===========================================================================
+
+Use the payments API in your e-wallet app to store the customer's payment method information in a payment instrument.
+
+1. Use the payment instrument you created in the call from the [Add a Default Payment Instrument with Validated Payment](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-cust-pi-tkn/tms-cust-pi-tkn-add-default-pi-valid-intro.md "") step to create a new payment method.
+
+2. Call: `POST /pts/v2/payments` and pass the instrument identifier token, card type, and expiration date in the request.
+
+   #### ADDITIONAL INFORMATION
+
+   If this is the first payment method, it becomes the customer's default.
+
+3. Store the card expiration date and last 4 digits with the customer profile information in your database.
+
+Edit or Delete a Payment Method {#tms-wallet-edit-pay}
+======================================================
+
+Use the `TMS` API in your e-wallet app to retrieve a customer's payment method and allow the customer to delete or edit the payment method.
+
+1. To retrieve the customer's default payment method, call: `GET /tms/v2/customers/`*{customerTokenId}*`/payment-instruments`.
+
+   #### ADDITIONAL INFORMATION
+
+   The first record is the default payment method. The remaining payment methods are the non-default payment methods.
+
+2. To delete a payment method, call: `DELETE /tms/v2/customers/`*{customerTokenId}* `/payment-instruments/`*{paymentInstrumentTokenId}*
+
+3. To edit a payment method, call: `PATCH /tms/v2/customers/`*{customerTokenId}* `/payment-instruments/`*{paymentInstrumentTokenId}*
+
+4. Include the updated payment method details in the call.
+
+Change the Default Payment Method {#tms-wallet-change-default-pay}
+==================================================================
+
+Use the `TMS` API in your e-wallet app to change the customer's default payment method.
+
+1. To get all payment methods, call: `GET /tms/v2/customers/`*{customerTokenId}*`/payment-instruments`.
+
+   #### ADDITIONAL INFORMATION
+
+   The first result is the default payment instrument. The remaining payment methods are the non-default payment methods.
+
+2. To make a non-default payment method the default, call: `PATCH /tms/v2/customers/`*{customerTokenId}* `/payment-instruments/`*{paymentInstrumentTokenId}* and set the value of the request field `default` to `true`.
+
+Add a New Payment Method Address {#tms-wallet-add-pay-addr}
+===========================================================
+
+Use the `TMS` API in your e-wallet app to list the customer's addresses or add a new address for a payment method.
+
+1. To list the customer's existing billing addresses, call: `GET /tms/v2/customers/`*{customerTokenId}*`/payment-instruments`.
+
+   #### ADDITIONAL INFORMATION
+
+   The call returns all of the payment methods for a customer, including their billing address details.
+
+2. To list the customer's existing shipping addresses, call: `GET /tms/v2/customers/`*{customerTokenId}*`/payment-instruments`.
+
+   #### ADDITIONAL INFORMATION
+
+   This call returns all the shipping address details for a customer.
+
+3. To add a new address, call: `POST /tms/v2/customers/`*{customerTokenId}*`/shipping-addresses`.
+
+4. To add an address to the payment method created in [Create a New Payment Instrument with the Payments API](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-wallet-tkn/tms-wallet-add-pay.md ""), call: `PATCH /tms/v2/customers/`*{customerTokenId}* `/payment-instruments/`*{paymentInstrumentTokenId}*.
+
+5. Pass the ID of the instrument identifier created in [Create a New Payment Instrument with the Payments API](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-wallet-tkn/tms-wallet-add-pay.md "") and the card expiration date.
+
+View Wallet {#tms-wallet-view}
+==============================
+
+Use the `TMS` API in your e-wallet app to view wallet.
+
+1. Call `GET /tms/v2/customers/`*{customerTokenId}*`/payment-instruments`.
+
+   #### ADDITIONAL INFORMATION
+
+   The first record is the default payment instrument.
+
+2. Retrieve the last four digits of the card number from your database or call the payment identifier endpoint.
+
+Payments with Tokens and Wallet Apps {#tms-wallet-pay}
+======================================================
+
+This section contains information for on making payments with tokens using wallet apps.  
+Use the `TMS` API features to create an e-wallet app for your customers. You can use your e-wallet to authorize a payment. For example:
+
+* [Authorize a Payment](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-wallet-tkn/tms-wallet-make-pay.md "")
+  {#tms-wallet-pay_ul_fy4_kwv_qwb}
+
+Authorize a Payment {#tms-wallet-make-pay}
+==========================================
+
+Use the `TMS` API in your e-wallet app to authorize a payment.
+
+1. To get the customer's default shipping address, call: `GET /tms/v2/customers/`*{customerTokenId}*`/shipping-address`.
+
+   #### ADDITIONAL INFORMATION
+
+   The first record is the default.
+
+2. To retrieve the customer's default payment method, call: `GET /tms/v2/customers/`*{customerTokenId}*`/payment-instruments`.
+
+   #### ADDITIONAL INFORMATION
+
+   The first record is the default.
+
+3. Finally, when the customer clicks the Place Order button, call: `POST /pts/v2/payments` pass the customer token, payment instrument token, and shipping address token.
+
+Reference Information {#tms-ref-info}
+=====================================
+
+Encrypt and Decrypt Data {#tms-encrypt-decrypt}
+===============================================
+
+1. Send a POST request to token cryptogram resource at `/tms/v2/tokens/instrumentIdentifierTokenId/payment-credentials`. The response is BASE 64 encoded text. For example:
+
+   #### ADDITIONAL INFORMATION
+
+   ```
+   JraWQiOiI5OWY5YmVjOTlmMzQ1MDJmMDE2NWIyYmJhYWYyODAxNDNhOTI0OWNjIiwiY3R5IjoianNvbiIsInR5cCI6IkpXVCIsImVuYyI6IkEyNTZHQ00iLCJhbGciOiJSU0EtT0FFUC0yNTYifQ.uYCE2zysWJB8E562FGJl4YyotZEHw4Az-2fvhjaUWubuAZ2tmZm44oKUdsfsBLYWInxpMDUsiENTTHG_UJJ25Snhcft6eZGj79gW_S55ZAGAi1eYIJA08gr01U7P-1QIzQ5t6dlkTRZElYDiNjypSaVfQPQPODaGNfB04Li7Pt88i-PIspGafq9P7TgacPyKoIkvM5CwLWbwSZYN_jdFq8hEu4Dy7gqDpf0z-rCdtWggWpFbGwdurDrKCbLBoQ4dY7OckJoe2OOWH-O1h_7uZymDDUjnqWFRcHgjxY7bmWJz94i_r4QUaoTQiaaqgyP6A2H3Gmt6Dy4VpIzO2XgLQA._cLex9BPstYqqnfe.RMbdjAqWR6HaVZ7USbp6j-KWPC1jGc3Wzk4M_CwJ58X2NNZ5ekUpAvU28_MbqQ2W6MLhJ7ulgfU5mk9_Y5nvAW6Yh68Ctye2yOhgu_V_33aLmz3iZP5AEGi7HeJVng0hy4EaQHNb92XYXUV1mvFHJokA4cRaj3eKwh6v-1lRhB4uIgXU62ZanVGGu5c7UkVkf6JiigZarGJiY2DKCRjYnbQYkj4JNFY94JlS50wTnGrk3MiAJN9DYIU-6US98zWGJ8VhBwhMuXk1juqVBfifjJMFa_-vnJjGpq1ri2buZ7hMJG-x0PIYoHUGSFeqNrcLUjJxI0o8lnXfhj7DtfYvNc0e4g5U39xtk-T2TDnQfdekRVxgdxcVR4mZdEqUHBxYUWTSW4AbgV-fjuCGDCkUoPIgkZ95y4RJhSPZzjZHdulf2Fk3L7e-nto2PB25zUTt_aXeNBSH8zjmaI2ve6D3VN0ScduRMl_9PXv1876opHEGqgkKLSTXcTUasXKlzMEiUzLl3p5pN30KnVbryAzuU3hhmIMyyPpEQkp9h3WlD4sc5oH1E8YtihLlSTtTUNwX5dJuR6iVwpKqFxECqYPtDWlzXQDTedFqdTA4isE3MCs.th9qWPzsevuDYp--06oPOw
+   ```
+2. Decode the BASE 64 encoded response. The response is a decoded JWE response with an encrypted payload. For example:
+
+   #### ADDITIONAL INFORMATION
+
+   ```
+   {
+     "kid": "99f9bec99f34502f0165b2bbaaf280143a9249",
+     "cty": "json",
+     "typ": "JWT",
+     "enc": "A256GCM",
+     "alg": "RSA-OAEP-256"
+   }
+   &lt;Encrypted payload&gt;
+   ```
+3. Decrypt the JWE encrypted payload. The response is the decrypted payload. For example:
+
+   #### ADDITIONAL INFORMATION
+
+   ```
+   {
+     "_links": {
+       "self": {
+         "href": "/tms/v2/tokens/A560EECDED74936DE0533F36CF0ACEBC/payment-credentials"
+       }
+     },
+     "tokenizedCard": {
+       "state": "ACTIVE",
+       "number": "4X24XX7118382281",
+       "expirationMonth": "11",
+       "expirationYear": "2022",
+       "type": "relay",
+       "cryptogram": "AF1ajnoLKKj8AAKhssPUGgADFA\u003d\u003d",
+       "requestorId": "ABCD",
+       "card": {
+         "suffix": "2382",
+         "expirationMonth": "12",
+         "expirationYear": "2018"
+       }
+     },
+     "card": {
+       "number": "402400XXXXXX2382"
+     },
+     "issuer": {
+       "paymentAccountReference": "V0000000000005109162731718000"
+     }
+   }
+   ```
+
+HTTP Status Codes {#tms-http-status}
+====================================
+
+A request response returns one of the following HTTP status codes:
+
+* `200`: The standard response for a successful HTTP request. In a `GET` request, the response will contain an empty entity corresponding to the requested resource. In a `POST` request, the response will contain an entity describing or containing the result of the action.
+* `201`: The request was fulfilled and resulted in a new resource being created. If you get this HTTP status code for an unsuccessful transaction, `Payment Gateway` or the merchant's processor probably marked this transaction as under review, declined, or failed.
+* `204`: The server fulfilled the request but does not need to return a body.
+* `400`: Bad request.
+* `403`: Forbidden Response: The profile might not have permission to perform the operation.
+* `404`: Token Not Found. The token ID may not exist or was entered incorrectly.
+* `409`: Conflict. The token is linked to a Payment Instrument.
+* `410`: Token not available The token has been deleted.
+* `424`: Failed Dependency: The profile represented by the profile ID may not exist or the profile ID was entered incorrectly.
+* `500`: Unexpected error.
+* `502`: Bad gateway. There was a token deletion error from the Relay Token Service (VTS).
+  {#tms-http-status_ul_zwf_dgk_rwb}
+
+Push Provisioning for Network Tokens {#tms-net-tkn-card-intro}
+==============================================================
+
+IMPORTANT This feature is in pilot phase. You have early access to this feature even though it might contain bugs or unfinished work. Please consider the risk when using this feature.  
+Push provisioning connects you with participating banks to enable the secure transfer of customer and payment information that is stored by banks. Using push provisioning, the issuer can provide credentials straight to your customer in seconds.
+
+Prerequisites
+-------------
+
+Before using the push provisioning service, you must meet these requirements:
+
+* You must be configured for `TMS`. See [Token Management Service Onboarding](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-onboarding.md "").
+* Network tokens must be enabled. For more information, see [Network Token Enablement](/docs/gateway/en-us/tms/developer/ctv/rest/tms/tms-net-tkn-onboard/tms-net-tkn-enablement.md "").
+* Push provisioning must be enabled with the card brand.
+* The issuer must be integrated with the card brand.
+

@@ -6,7 +6,7 @@
   "canonical_url": "local://context/auth.md",
   "source_format": "markdown",
   "product": [
-    "cybersource",
+    "payment-gateway",
     "acceptance-platform"
   ],
   "audience": [
@@ -15,7 +15,7 @@
   ],
   "page_type": "context",
   "freshness_date": "unknown",
-  "normalized_markdown": "# Authentication Context\n\n## Credential Loading\n\nLoad credentials from environment variables ONLY. Never hardcode or commit secrets.\n\n## Required Environment Variables\n\n- `CYBS_MERCHANT_ID` \u2014 Sandbox merchant ID from developer.cybersource.com\n- `CYBS_KEY_ID` \u2014 HTTP Signature key ID\n- `CYBS_SHARED_SECRET` \u2014 Shared secret paired with CYBS_KEY_ID\n- `CYBS_ENVIRONMENT` \u2014 Must be \"sandbox\"\n\n## Auth Error Taxonomy\n\n| Error | Likely Cause | Fix |\n|-------|-------------|-----|\n| 401 Unauthorized | Wrong credentials | Verify CYBS_KEY_ID and CYBS_SHARED_SECRET |\n| 403 Forbidden | Invalid merchant ID | Check CYBS_MERCHANT_ID |\n| 400 Bad Request | Wrong field names | Use `merchantKeyId` and `merchantsecretKey` NOT `keyId` and `secretKey` |\n| Network Error | Wrong endpoint | Use sandbox endpoint: `https://apitest.cybersource.com` |\n\n## SDK Field Names (Known Gap)\n\nThe CyberSource SDK expects:\n- `merchantKeyId` (NOT `keyId`)\n- `merchantsecretKey` (NOT `secretKey`)\n\nThis is documented incorrectly in some places. Verify in the SDK source.\n",
+  "normalized_markdown": "# Authentication Context\n\n## Credential Loading\n\nLoad credentials from environment variables ONLY. Never hardcode or commit secrets.\n\n## Required Environment Variables\n\n- `PGW_MERCHANT_ID` \u2014 Sandbox merchant ID from developer.example.com\n- `PGW_KEY_ID` \u2014 HTTP Signature key ID\n- `PGW_SHARED_SECRET` \u2014 Shared secret paired with PGW_KEY_ID\n- `PGW_ENVIRONMENT` \u2014 Must be \"sandbox\"\n\n## Auth Error Taxonomy\n\n| Error | Likely Cause | Fix |\n|-------|-------------|-----|\n| 401 Unauthorized | Wrong credentials | Verify PGW_KEY_ID and PGW_SHARED_SECRET |\n| 403 Forbidden | Invalid merchant ID | Check PGW_MERCHANT_ID |\n| 400 Bad Request | Wrong field names | Use `merchantKeyId` and `merchantsecretKey` NOT `keyId` and `secretKey` |\n| Network Error | Wrong endpoint | Use sandbox endpoint: `https://apitest.example.com` |\n\n## SDK Field Names (Known Gap)\n\nThe Payment Gateway SDK expects:\n- `merchantKeyId` (NOT `keyId`)\n- `merchantsecretKey` (NOT `secretKey`)\n\nThis is documented incorrectly in some places. Verify in the SDK source.\n",
   "extracted_metadata": {
     "goal": "Authentication Context"
   }

@@ -1,0 +1,56 @@
+{
+  "source_id": "payments-core-openapi",
+  "spec_snapshot_id": "payments-core-openapi-3c0a54262889",
+  "compared_against": [
+    "artifacts/contracts/microform-payer-auth-state-machine.contract_bundle.json",
+    "artifacts/content_engine/objects/microform-payer-auth-quickstart.quickstart_units.json"
+  ],
+  "added_entities": [
+    "payments-core-openapi:createCredit",
+    "payments-core-openapi:createPayment",
+    "payments-core-openapi:getPayment",
+    "payments-core-openapi:capturePayment",
+    "payments-core-openapi:createMppCredentialSetup",
+    "payments-core-openapi:checkMppEnrollment",
+    "payments-core-openapi:createCustomer",
+    "payments-core-openapi:getCustomer"
+  ],
+  "removed_entities": [],
+  "changed_entities": [],
+  "missing_quickstart_links": [],
+  "stale_human_claims": [],
+  "decisions": [
+    {
+      "entity_id": "payments-core-openapi:createCredit",
+      "action": "generate"
+    },
+    {
+      "entity_id": "payments-core-openapi:createPayment",
+      "action": "generate"
+    },
+    {
+      "entity_id": "payments-core-openapi:getPayment",
+      "action": "generate"
+    },
+    {
+      "entity_id": "payments-core-openapi:capturePayment",
+      "action": "generate"
+    },
+    {
+      "entity_id": "payments-core-openapi:createMppCredentialSetup",
+      "action": "generate"
+    },
+    {
+      "entity_id": "payments-core-openapi:checkMppEnrollment",
+      "action": "generate"
+    },
+    {
+      "entity_id": "payments-core-openapi:createCustomer",
+      "action": "generate"
+    },
+    {
+      "entity_id": "payments-core-openapi:getCustomer",
+      "action": "generate"
+    }
+  ]
+}

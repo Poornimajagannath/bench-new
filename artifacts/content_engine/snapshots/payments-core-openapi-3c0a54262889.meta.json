@@ -1,0 +1,11 @@
+{
+  "snapshot_id": "payments-core-openapi-3c0a54262889",
+  "source_id": "payments-core-openapi",
+  "fetched_at": "2026-08-07T03:46:59Z",
+  "content_hash": "3c0a54262889baf799d1a8c7c8d79cbc9bbe16713e34d8c299207627aa04ce98",
+  "version_tag": "3c0a54262889",
+  "mime_type": "application/json",
+  "raw_bytes_location": "artifacts/content_engine/snapshots/payments-core-openapi-3c0a54262889.json",
+  "canonical_url": "local://fixtures/payments-core.openapi.json",
+  "upstream_last_modified": ""
+}

@@ -20,12 +20,12 @@ from relay_bench.content_engine.ingest import (  # noqa: E402
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Ingestion snapshot (M0.5)")
-    parser.add_argument("--docs-dir", default=str(ROOT / "cybersource-docs"))
+    parser.add_argument("--docs-dir", default=str(ROOT / "gateway-docs"))
     parser.add_argument("--raw-root", default=str(ROOT / "raw"))
     parser.add_argument("--normalized-root", default=str(ROOT / "normalized"))
     parser.add_argument(
         "--openapi",
-        default=str(ROOT / "data/content_engine/specs/cybersource-payments-core.openapi.json"),
+        default=str(ROOT / "data/content_engine/specs/payments-core.openapi.json"),
     )
     parser.add_argument("--stamp-date", default=None, help="YYYY-MM-DD (default: today)")
     parser.add_argument("--sample-limit", type=int, default=60)

@@ -19,7 +19,7 @@ ROOT = Path(__file__).resolve().parents[2]
 ISO_DIR = ROOT / "artifacts" / "content_engine" / "integration_success"
 
 DEFAULT_QUICKSTART_SOURCE = "microform-payer-auth-quickstart"
-DEFAULT_OPENAPI_SOURCE = "cybersource-payments-core-openapi"
+DEFAULT_OPENAPI_SOURCE = "payments-core-openapi"
 DEFAULT_WORKFLOW_ID = "microform-payer-auth-state-machine"
 
 
@@ -32,7 +32,7 @@ def _go_live_checklist(operation_ids: List[str]) -> List[Dict[str, str]]:
         {
             "id": "auth-env",
             "title": "Load sandbox auth from environment variables",
-            "detail": "Use CYBS_MERCHANT_ID / CYBS_KEY_ID / CYBS_SHARED_SECRET; never hardcode.",
+            "detail": "Use PGW_MERCHANT_ID / PGW_KEY_ID / PGW_SHARED_SECRET; never hardcode.",
         },
         {
             "id": "first-api-call",
@@ -52,7 +52,7 @@ def _go_live_checklist(operation_ids: List[str]) -> List[Dict[str, str]]:
         {
             "id": "go-live-switch",
             "title": "Switch to production only after sandbox checklist passes",
-            "detail": "V0 does not call production. Keep CYBS_ENVIRONMENT=sandbox until ready.",
+            "detail": "V0 does not call production. Keep PGW_ENVIRONMENT=sandbox until ready.",
         },
     ]
 
@@ -147,7 +147,7 @@ def assemble_integration_success_pack(
         "quickstart_source": quickstart_source,
         "openapi_source": openapi_source,
         "guided_quickstart": {
-            "title": "CyberSource / Acceptance Platform guided integration",
+            "title": "Payment Gateway / Acceptance Platform guided integration",
             "steps": steps,
             "step_count": len(steps),
         },

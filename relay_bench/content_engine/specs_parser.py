@@ -135,7 +135,7 @@ def write_entities(
         "honest_label": {
             "network": "denied",
             "fixture": "local-openapi",
-            "note": "Not a live CyberSource OpenAPI download",
+            "note": "Not a live Payment Gateway OpenAPI download",
         },
     }
     path.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")

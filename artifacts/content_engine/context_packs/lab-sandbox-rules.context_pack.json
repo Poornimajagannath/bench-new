@@ -2,7 +2,7 @@
   "pack_id": "ctx-lab-sandbox-rules",
   "source_id": "lab-sandbox-rules",
   "product": [
-    "cybersource",
+    "payment-gateway",
     "acceptance-platform"
   ],
   "audience": [

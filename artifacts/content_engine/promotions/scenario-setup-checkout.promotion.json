@@ -9,7 +9,7 @@
       "code": "missing_requires",
       "severity": "warning",
       "message": "step has no requires dependencies",
-      "unit_id": "scenario-setup-checkout:step:1:read-the-cybersource-checkout-documentation"
+      "unit_id": "scenario-setup-checkout:step:1:read-the-payment-gateway-checkout-documentation"
     },
     {
       "code": "missing_requires",
@@ -32,7 +32,7 @@
   ],
   "promoted_unit_ids": [
     "scenario-setup-checkout:overview:0:question",
-    "scenario-setup-checkout:step:1:read-the-cybersource-checkout-documentation",
+    "scenario-setup-checkout:step:1:read-the-payment-gateway-checkout-documentation",
     "scenario-setup-checkout:step:2:understand-the-checkout-setup-process-(unified-c",
     "scenario-setup-checkout:step:3:configure-the-checkout-with-the-right-parameters",
     "scenario-setup-checkout:step:4:make-a-test-transaction-that-returns-a-transacti",

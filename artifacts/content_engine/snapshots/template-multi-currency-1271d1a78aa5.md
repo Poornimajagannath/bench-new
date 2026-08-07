@@ -55,7 +55,7 @@
 1. Customer selects currency on checkout
 2. DCC provider returns exchange rate
 3. Merchant includes rate and converted amount in payment request
-4. CyberSource processes with DCC flags
+4. Payment Gateway processes with DCC flags
 5. Response includes DCC details for receipt
 
 ### DCC Required Fields

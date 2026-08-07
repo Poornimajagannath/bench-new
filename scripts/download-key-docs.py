@@ -1,30 +1,30 @@
 #!/usr/bin/env python3
-"""Fetch key CyberSource integration docs for the Relay pipeline"""
+"""Fetch key Payment Gateway integration docs for the Relay pipeline"""
 import re
 import os
 import json
 import urllib.request
 
 DOCS_URLS = [
-    "https://developer.cybersource.com/docs/cybs/en-us/platform/developer/all/rest/rest-getting-started.md",
-    "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.md",
-    "https://developer.cybersource.com/docs/cybs/en-unified-checkout/developer/all/rest/unified-checkout.md",
-    "https://developer.cybersource.com/docs/cybs/en-us/security-keys/user/all/ada/security-keys.md",
-    "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.md",
-    "https://developer.cybersource.com/docs/cybs/en-us/payer-authentication/developer/all/rest/payer-auth.md",
-    "https://developer.cybersource.com/docs/cybs/en-us/credentials/developer/ctv/rest/credentials.md",
-    "https://developer.cybersource.com/hello-world/sandbox.md",
-    "https://developer.cybersource.com/hello-world/testing-guide.md",
-    "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/quick-start/all/na/uc-qsg.md",
+    "https://developer.example.com/docs/gateway/en-us/platform/developer/all/rest/rest-getting-started.md",
+    "https://developer.example.com/docs/gateway/en-us/payments/developer/ctv/rest/payments.md",
+    "https://developer.example.com/docs/gateway/en-unified-checkout/developer/all/rest/unified-checkout.md",
+    "https://developer.example.com/docs/gateway/en-us/security-keys/user/all/ada/security-keys.md",
+    "https://developer.example.com/docs/gateway/en-us/tms/developer/all/rest/tms.md",
+    "https://developer.example.com/docs/gateway/en-us/payer-authentication/developer/all/rest/payer-auth.md",
+    "https://developer.example.com/docs/gateway/en-us/credentials/developer/ctv/rest/credentials.md",
+    "https://developer.example.com/hello-world/sandbox.md",
+    "https://developer.example.com/hello-world/testing-guide.md",
+    "https://developer.example.com/docs/gateway/en-us/unified-checkout/quick-start/all/na/uc-qsg.md",
 ]
 
-OUTPUT_DIR = "cybersource-docs"
+OUTPUT_DIR = "gateway-docs"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 results = []
 for url in DOCS_URLS:
     try:
-        req = urllib.request.Request(url, headers={'User-Agent': 'CyberSource-Relay/1.0'})
+        req = urllib.request.Request(url, headers={'User-Agent': 'Payment Gateway-Relay/1.0'})
         with urllib.request.urlopen(req, timeout=15) as resp:
             content = resp.read().decode('utf-8')
             filename = url.split('/')[-1]

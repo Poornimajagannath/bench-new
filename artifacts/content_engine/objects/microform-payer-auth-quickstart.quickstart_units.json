@@ -11,7 +11,7 @@
       "title": "Overview",
       "goal": "Sequence Microform tokenization with Payer Authentication enrollment, challenge or frictionless handling, validation, and authorization.",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -47,7 +47,7 @@
       "title": "Prerequisites",
       "goal": "Sequence Microform tokenization with Payer Authentication enrollment, challenge or frictionless handling, validation, and authorization.",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -78,7 +78,7 @@
       "title": "Tokenize with Microform",
       "goal": "Sequence Microform tokenization with Payer Authentication enrollment, challenge or frictionless handling, validation, and authorization.",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -112,7 +112,7 @@
       "title": "Run Payer Auth setup",
       "goal": "Sequence Microform tokenization with Payer Authentication enrollment, challenge or frictionless handling, validation, and authorization.",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -147,7 +147,7 @@
       "title": "Check enrollment",
       "goal": "Sequence Microform tokenization with Payer Authentication enrollment, challenge or frictionless handling, validation, and authorization.",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -185,7 +185,7 @@
       "title": "Handle challenge or frictionless",
       "goal": "Sequence Microform tokenization with Payer Authentication enrollment, challenge or frictionless handling, validation, and authorization.",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -221,7 +221,7 @@
       "title": "Validate authentication",
       "goal": "Sequence Microform tokenization with Payer Authentication enrollment, challenge or frictionless handling, validation, and authorization.",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -253,7 +253,7 @@
       "title": "Authorize with authentication references",
       "goal": "Sequence Microform tokenization with Payer Authentication enrollment, challenge or frictionless handling, validation, and authorization.",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -292,7 +292,7 @@
       "title": "Validation checks",
       "goal": "Sequence Microform tokenization with Payer Authentication enrollment, challenge or frictionless handling, validation, and authorization.",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -325,7 +325,7 @@
       "title": "Warnings",
       "goal": "Sequence Microform tokenization with Payer Authentication enrollment, challenge or frictionless handling, validation, and authorization.",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [
@@ -356,7 +356,7 @@
       "title": "Next steps",
       "goal": "Sequence Microform tokenization with Payer Authentication enrollment, challenge or frictionless handling, validation, and authorization.",
       "product": [
-        "cybersource",
+        "payment-gateway",
         "acceptance-platform"
       ],
       "audience": [

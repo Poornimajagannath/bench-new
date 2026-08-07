@@ -2,7 +2,7 @@
 
 ## What Success Looks Like
 
-The agent successfully authenticates with CyberSource and makes at least one valid API call.
+The agent successfully authenticates with Payment Gateway and makes at least one valid API call.
 
 ## Pass Conditions
 
@@ -38,7 +38,7 @@ The agent successfully authenticates with CyberSource and makes at least one val
   "timestamp": "2026-07-21T16:00:00Z",
   "result": {
     "pass": true,
-    "docs_read": ["developer.cybersource.com/docs/auth", "developer.cybersource.com/docs/credentials"],
+    "docs_read": ["developer.example.com/docs/auth", "developer.example.com/docs/credentials"],
     "errors": [],
     "error_count": 0,
     "first_api_call_status": 200,
@@ -50,5 +50,5 @@ The agent successfully authenticates with CyberSource and makes at least one val
 ## Notes
 
 - The agent should NOT be given the correct field names — they need to find them in the docs or discover them through trial/error
-- The CyberSource lab already has a known bug: docs claim `keyId`/`secretKey` but SDK expects `merchantKeyId`/`merchantsecretKey`. This scenario tests whether agents can discover the right field names.
+- The Payment Gateway lab already has a known bug: docs claim `keyId`/`secretKey` but SDK expects `merchantKeyId`/`merchantsecretKey`. This scenario tests whether agents can discover the right field names.
 - If the agent fails, record which error was encountered and which docs the agent read before failing
