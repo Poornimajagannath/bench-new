@@ -34,7 +34,7 @@ class ReportingTests(unittest.TestCase):
             "What product surface improves next",
         ):
             self.assertIn(heading, md)
-        self.assertIn("VAP CLI workflow verifier", md)
+        self.assertIn("Relay CLI workflow verifier", md)
         self.assertTrue(report.developer_confusion)
         self.assertTrue(report.verifier_caught)
 

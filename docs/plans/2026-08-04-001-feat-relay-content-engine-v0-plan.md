@@ -16,7 +16,7 @@ It does **not** claim:
 | Real Tempo / Harbor runner | **No** — Harbor/Tempo-style preview via existing contract compiler |
 | Live llms.txt / portal fetch | **No** — frozen local snapshots only |
 | `error-discovery` skill | **No** — needs agent/eval traces first |
-| Production Relay / VAP CLI edits | **No** |
+| Production Relay / Relay CLI edits | **No** |
 
 ## Product center
 

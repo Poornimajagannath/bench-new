@@ -359,7 +359,7 @@ quickstart:
     - Node.js 18+
   steps:
     - title: "Install SDK"
-      action: "npm install @visa/acceptance-sdk"
+      action: "npm install @relay/acceptance-sdk"
       expected_outcome: "SDK installed"
     - title: "Initialize client"
       action: "const client = new AcceptanceClient({ apiKey: 'YOUR_KEY' })"

@@ -2,24 +2,24 @@
   "stage": "content_engine_extract",
   "inspired_by": "ucbepic/docetl (imported; Frame.code_map, no LLM)",
   "extractor_label": "imported-code_map",
-  "source_id": "scenario-visa-relay-context-swapping",
+  "source_id": "scenario-relay-context-swapping",
   "units": [
     {
-      "unit_id": "scenario-visa-relay-context-swapping:overview:0:question",
-      "source_page_id": "doc-scenario-visa-relay-context-swapping",
+      "unit_id": "scenario-relay-context-swapping:overview:0:question",
+      "source_page_id": "doc-scenario-relay-context-swapping",
       "unit_type": "overview",
       "title": "Question",
-      "goal": "Visa Relay \u2014 Context-Swapping Benchmark",
+      "goal": "Relay \u2014 Context-Swapping Benchmark",
       "product": [
         "cybersource",
-        "visa-acceptance"
+        "acceptance-platform"
       ],
       "audience": [
         "developer",
         "agent"
       ],
       "task": [
-        "scenario-visa-relay-context-swapping"
+        "scenario-relay-context-swapping"
       ],
       "sequence_number": 0,
       "body_markdown": "Can an agent successfully adapt a CyberSource integration when the merchant credentials, business requirements, and API usage patterns change?",
@@ -34,21 +34,21 @@
       ]
     },
     {
-      "unit_id": "scenario-visa-relay-context-swapping:step:1:understanding-of-payment-method-differences",
-      "source_page_id": "doc-scenario-visa-relay-context-swapping",
+      "unit_id": "scenario-relay-context-swapping:step:1:understanding-of-payment-method-differences",
+      "source_page_id": "doc-scenario-relay-context-swapping",
       "unit_type": "step",
       "title": "Understanding of payment method differences",
-      "goal": "Visa Relay \u2014 Context-Swapping Benchmark",
+      "goal": "Relay \u2014 Context-Swapping Benchmark",
       "product": [
         "cybersource",
-        "visa-acceptance"
+        "acceptance-platform"
       ],
       "audience": [
         "developer",
         "agent"
       ],
       "task": [
-        "scenario-visa-relay-context-swapping"
+        "scenario-relay-context-swapping"
       ],
       "sequence_number": 1,
       "body_markdown": "Understanding of payment method differences",
@@ -63,21 +63,21 @@
       ]
     },
     {
-      "unit_id": "scenario-visa-relay-context-swapping:step:2:ability-to-handle-currency/tax-configuration",
-      "source_page_id": "doc-scenario-visa-relay-context-swapping",
+      "unit_id": "scenario-relay-context-swapping:step:2:ability-to-handle-currency/tax-configuration",
+      "source_page_id": "doc-scenario-relay-context-swapping",
       "unit_type": "step",
       "title": "Ability to handle currency/tax configuration",
-      "goal": "Visa Relay \u2014 Context-Swapping Benchmark",
+      "goal": "Relay \u2014 Context-Swapping Benchmark",
       "product": [
         "cybersource",
-        "visa-acceptance"
+        "acceptance-platform"
       ],
       "audience": [
         "developer",
         "agent"
       ],
       "task": [
-        "scenario-visa-relay-context-swapping"
+        "scenario-relay-context-swapping"
       ],
       "sequence_number": 2,
       "body_markdown": "Ability to handle currency/tax configuration",
@@ -92,21 +92,21 @@
       ]
     },
     {
-      "unit_id": "scenario-visa-relay-context-swapping:step:3:knowledge-of-security-requirements",
-      "source_page_id": "doc-scenario-visa-relay-context-swapping",
+      "unit_id": "scenario-relay-context-swapping:step:3:knowledge-of-security-requirements",
+      "source_page_id": "doc-scenario-relay-context-swapping",
       "unit_type": "step",
       "title": "Knowledge of security requirements",
-      "goal": "Visa Relay \u2014 Context-Swapping Benchmark",
+      "goal": "Relay \u2014 Context-Swapping Benchmark",
       "product": [
         "cybersource",
-        "visa-acceptance"
+        "acceptance-platform"
       ],
       "audience": [
         "developer",
         "agent"
       ],
       "task": [
-        "scenario-visa-relay-context-swapping"
+        "scenario-relay-context-swapping"
       ],
       "sequence_number": 3,
       "body_markdown": "Knowledge of security requirements",
@@ -121,21 +121,21 @@
       ]
     },
     {
-      "unit_id": "scenario-visa-relay-context-swapping:step:4:proper-error-handling-for-different-failure-mode",
-      "source_page_id": "doc-scenario-visa-relay-context-swapping",
+      "unit_id": "scenario-relay-context-swapping:step:4:proper-error-handling-for-different-failure-mode",
+      "source_page_id": "doc-scenario-relay-context-swapping",
       "unit_type": "step",
       "title": "Proper error handling for different failure modes",
-      "goal": "Visa Relay \u2014 Context-Swapping Benchmark",
+      "goal": "Relay \u2014 Context-Swapping Benchmark",
       "product": [
         "cybersource",
-        "visa-acceptance"
+        "acceptance-platform"
       ],
       "audience": [
         "developer",
         "agent"
       ],
       "task": [
-        "scenario-visa-relay-context-swapping"
+        "scenario-relay-context-swapping"
       ],
       "sequence_number": 4,
       "body_markdown": "Proper error handling for different failure modes",
@@ -150,21 +150,21 @@
       ]
     },
     {
-      "unit_id": "scenario-visa-relay-context-swapping:overview:0:scenario-a:-multi-payment-method-integration",
-      "source_page_id": "doc-scenario-visa-relay-context-swapping",
+      "unit_id": "scenario-relay-context-swapping:overview:0:scenario-a:-multi-payment-method-integration",
+      "source_page_id": "doc-scenario-relay-context-swapping",
       "unit_type": "overview",
       "title": "Scenario A: Multi-Payment Method Integration",
-      "goal": "Visa Relay \u2014 Context-Swapping Benchmark",
+      "goal": "Relay \u2014 Context-Swapping Benchmark",
       "product": [
         "cybersource",
-        "visa-acceptance"
+        "acceptance-platform"
       ],
       "audience": [
         "developer",
         "agent"
       ],
       "task": [
-        "scenario-visa-relay-context-swapping"
+        "scenario-relay-context-swapping"
       ],
       "sequence_number": 0,
       "body_markdown": "**Task:** Generate code that accepts card, ACH, and digital wallet payments\n\n**Success Criteria:**\n- [ ] Agent understands the difference between payment types\n- [ ] Agent generates correct model structures for each payment type\n- [ ] Agent includes proper error handling for each payment method\n- [ ] Agent handles currency conversion correctly",
@@ -179,21 +179,21 @@
       ]
     },
     {
-      "unit_id": "scenario-visa-relay-context-swapping:overview:0:scenario-b:-currency-&-tax-configuration",
-      "source_page_id": "doc-scenario-visa-relay-context-swapping",
+      "unit_id": "scenario-relay-context-swapping:overview:0:scenario-b:-currency-&-tax-configuration",
+      "source_page_id": "doc-scenario-relay-context-swapping",
       "unit_type": "overview",
       "title": "Scenario B: Currency & Tax Configuration",
-      "goal": "Visa Relay \u2014 Context-Swapping Benchmark",
+      "goal": "Relay \u2014 Context-Swapping Benchmark",
       "product": [
         "cybersource",
-        "visa-acceptance"
+        "acceptance-platform"
       ],
       "audience": [
         "developer",
         "agent"
       ],
       "task": [
-        "scenario-visa-relay-context-swapping"
+        "scenario-relay-context-swapping"
       ],
       "sequence_number": 0,
       "body_markdown": "**Task:** Generate code that handles multi-currency payments with tax calculation\n\n**Success Criteria:**\n- [ ] Agent understands currency code requirements\n- [ ] Agent includes tax jurisdiction configuration\n- [ ] Agent handles decimal precision correctly\n- [ ] Agent includes proper validation",
@@ -208,21 +208,21 @@
       ]
     },
     {
-      "unit_id": "scenario-visa-relay-context-swapping:overview:0:scenario-c:-recurring-billing-&-tokenization",
-      "source_page_id": "doc-scenario-visa-relay-context-swapping",
+      "unit_id": "scenario-relay-context-swapping:overview:0:scenario-c:-recurring-billing-&-tokenization",
+      "source_page_id": "doc-scenario-relay-context-swapping",
       "unit_type": "overview",
       "title": "Scenario C: Recurring Billing & Tokenization",
-      "goal": "Visa Relay \u2014 Context-Swapping Benchmark",
+      "goal": "Relay \u2014 Context-Swapping Benchmark",
       "product": [
         "cybersource",
-        "visa-acceptance"
+        "acceptance-platform"
       ],
       "audience": [
         "developer",
         "agent"
       ],
       "task": [
-        "scenario-visa-relay-context-swapping"
+        "scenario-relay-context-swapping"
       ],
       "sequence_number": 0,
       "body_markdown": "**Task:** Generate code for subscription payments with token management\n\n**Success Criteria:**\n- [ ] Agent understands token creation flow\n- [ ] Agent generates correct subscription model structure\n- [ ] Agent handles recurring billing schedule\n- [ ] Agent includes proper error handling for failed recurring payments",
@@ -237,24 +237,24 @@
       ]
     },
     {
-      "unit_id": "scenario-visa-relay-context-swapping:next_step:5:resources",
-      "source_page_id": "doc-scenario-visa-relay-context-swapping",
+      "unit_id": "scenario-relay-context-swapping:next_step:5:resources",
+      "source_page_id": "doc-scenario-relay-context-swapping",
       "unit_type": "next_step",
       "title": "Resources",
-      "goal": "Visa Relay \u2014 Context-Swapping Benchmark",
+      "goal": "Relay \u2014 Context-Swapping Benchmark",
       "product": [
         "cybersource",
-        "visa-acceptance"
+        "acceptance-platform"
       ],
       "audience": [
         "developer",
         "agent"
       ],
       "task": [
-        "scenario-visa-relay-context-swapping"
+        "scenario-relay-context-swapping"
       ],
       "sequence_number": 5,
-      "body_markdown": "- CyberSource REST API spec (via MCP `get_model_class_details`)\n- CyberSource SDK templates (via MCP `get_code_template`)\n- Visa Acceptance Agent Toolkit docs (via MCP)",
+      "body_markdown": "- CyberSource REST API spec (via MCP `get_model_class_details`)\n- CyberSource SDK templates (via MCP `get_code_template`)\n- Acceptance Agent Toolkit docs (via MCP)",
       "commands": [],
       "api_entities": [],
       "requires": [],
@@ -262,25 +262,25 @@
       "failure_modes": [],
       "confidence": 0.85,
       "evidence_quotes": [
-        "- CyberSource REST API spec (via MCP `get_model_class_details`) - CyberSource SDK templates (via MCP `get_code_template`) - Visa Acceptance Agent Toolkit doc..."
+        "- CyberSource REST API spec (via MCP `get_model_class_details`) - CyberSource SDK templates (via MCP `get_code_template`) - Acceptance Agent Toolkit doc..."
       ]
     },
     {
-      "unit_id": "scenario-visa-relay-context-swapping:next_step:5:agent-instruction",
-      "source_page_id": "doc-scenario-visa-relay-context-swapping",
+      "unit_id": "scenario-relay-context-swapping:next_step:5:agent-instruction",
+      "source_page_id": "doc-scenario-relay-context-swapping",
       "unit_type": "next_step",
       "title": "Agent Instruction",
-      "goal": "Visa Relay \u2014 Context-Swapping Benchmark",
+      "goal": "Relay \u2014 Context-Swapping Benchmark",
       "product": [
         "cybersource",
-        "visa-acceptance"
+        "acceptance-platform"
       ],
       "audience": [
         "developer",
         "agent"
       ],
       "task": [
-        "scenario-visa-relay-context-swapping"
+        "scenario-relay-context-swapping"
       ],
       "sequence_number": 5,
       "body_markdown": "Read the CyberSource documentation via MCP tools. Generate code for a multi-payment method integration that handles card, ACH, and digital wallet payments with proper error handling.",

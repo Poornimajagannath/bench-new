@@ -20,7 +20,7 @@ type: index
 - **Sherlock Research** → `ledgers/sherlock-research.md`
 
 ## Key GBrain Pages
-- **VAP Strategy** → `products/visa-acceptance/`
+- **Platform Strategy** → `products/acceptance-platform/`
 - **Career Plan** → `career/poornima/`
 - **Market Intelligence** → `intelligence/`
 - **Reports** → `reports/`

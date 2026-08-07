@@ -22,7 +22,7 @@ public developer confusion
 That improves:
 
 1. **Docs** — rewrite around misunderstood workflows, not isolated APIs
-2. **VAP CLI** — eventually `vap workflow verify --id <workflow> --fixture local`
+2. **Relay CLI** — eventually `relay workflow verify --id <workflow> --fixture local`
 3. **Assistant / MCP answers** — ground replies in the contract
 4. **Quality gate** — prove bad answers are caught so docs/CLI/assistant can be measured
 

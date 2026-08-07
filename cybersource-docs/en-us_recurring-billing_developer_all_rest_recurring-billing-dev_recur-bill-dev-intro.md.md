@@ -2,7 +2,7 @@ Introduction to Recurring Billing {#recur-bill-dev-intro}
 =========================================================
 
 This guide explains how to integrate the Recurring Billing REST API into your payment system.  
-The Recurring Billing service enables you to create and manage payment plans and subscriptions for recurring payment schedules. It automates the storage and handling of your customer's payment information and personal data within secure Visa data centers in compliance with credentials-on-file (COF) best practices. Storage risks and the PCI DSS scope are reduced through the use of the `Token Management Service` (`TMS`).  
+The Recurring Billing service enables you to create and manage payment plans and subscriptions for recurring payment schedules. It automates the storage and handling of your customer's payment information and personal data within secure Relay data centers in compliance with credentials-on-file (COF) best practices. Storage risks and the PCI DSS scope are reduced through the use of the `Token Management Service` (`TMS`).  
 `Cybersource` Recurring Billing consists of these three elements:
 
 * **Plan:** Stores the billing schedule.

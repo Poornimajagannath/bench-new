@@ -25,7 +25,7 @@ Requesting the BIN Lookup Service Using the REST API {#bin-lookup-req-task}
 
 * `Flex API` JWT transient token
 
-* Network tokens (Visa VTS, Mastercard MDES, and Discover)  
+* Network tokens (Relay VTS, Mastercard MDES, and Discover)  
   Follow these steps to request the BIN Lookup Service:
 
 1. Send the request to the BIN Lookup Service endpoint:

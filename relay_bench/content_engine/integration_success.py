@@ -147,7 +147,7 @@ def assemble_integration_success_pack(
         "quickstart_source": quickstart_source,
         "openapi_source": openapi_source,
         "guided_quickstart": {
-            "title": "CyberSource / Visa Acceptance guided integration",
+            "title": "CyberSource / Acceptance Platform guided integration",
             "steps": steps,
             "step_count": len(steps),
         },

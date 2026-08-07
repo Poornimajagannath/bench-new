@@ -42,7 +42,7 @@
   "next_product_improvements": [
     "Clarify HTTP Signature Debug stage ordering in public docs",
     "Align SDK credential field names with docs (or docs with SDK)",
-    "Ship a VAP CLI workflow verifier for this contract"
+    "Ship a Relay CLI workflow verifier for this contract"
   ],
   "classification": {
     "workflow_id": "http-signature-debug",
@@ -76,14 +76,14 @@
         "vap_cli": null
       },
       {
-        "action_id": "http-signature-debug-vap-cli",
+        "action_id": "http-signature-debug-relay-cli",
         "product_surface": "vap_cli",
         "severity": "high",
-        "summary": "Ship a VAP CLI workflow verifier for this contract",
+        "summary": "Ship a Relay CLI workflow verifier for this contract",
         "rationale": "CLI should verify readiness, recovery, and support-safe evidence \u2014 not only wrap an API call.",
         "vap_cli": {
           "goal": "Am I using the wrong SDK field names for key id and secret?",
-          "command": "vap workflow verify --id http-signature-debug --fixture local",
+          "command": "relay workflow verify --id http-signature-debug --fixture local",
           "api_sdk_facts": [
             "Sandbox host is apitest.cybersource.com",
             "SDK expects merchantKeyId and merchantsecretKey (not keyId/secretKey)",
@@ -118,7 +118,7 @@
             "eval:verifier_catch_rate_on_bad_answer"
           ],
           "future_mcp_metadata": {
-            "mcp_tool": "vap.verify_workflow",
+            "mcp_tool": "relay.verify_workflow",
             "inputs": [
               "workflow_id",
               "candidate_answer_ref"

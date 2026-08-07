@@ -3,14 +3,14 @@
   "source_id": "templates-index",
   "product": [
     "cybersource",
-    "visa-acceptance"
+    "acceptance-platform"
   ],
   "audience": [
     "developer",
     "agent"
   ],
-  "title": "Visa Relay \u2014 Payment Templates",
-  "goal": "Visa Relay \u2014 Payment Templates",
+  "title": "Relay \u2014 Payment Templates",
+  "goal": "Relay \u2014 Payment Templates",
   "unit_ids": [
     "templates-index:overview:0:purpose",
     "templates-index:overview:0:files",

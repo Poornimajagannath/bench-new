@@ -22,7 +22,7 @@ Customer Support
 :
 For support information about any service, visit the Support Center:
 
-<http://support.visaacceptance.com>
+<http://support.example.com>
 
 Recent Revisions to This Document {#recur-bill-recentrevisions_RecentRevisions}
 ===============================================================================
@@ -122,7 +122,7 @@ Introduction to Recurring Billing {#recur-bill-dev-intro}
 =========================================================
 
 This guide explains how to integrate the Recurring Billing REST API into your payment system.  
-The Recurring Billing service enables you to create and manage payment plans and subscriptions for recurring payment schedules. It automates the storage and handling of your customer's payment information and personal data within secure Visa data centers in compliance with credentials-on-file (COF) best practices. Storage risks and the PCI DSS scope are reduced through the use of the `Token Management Service` (`TMS`).  
+The Recurring Billing service enables you to create and manage payment plans and subscriptions for recurring payment schedules. It automates the storage and handling of your customer's payment information and personal data within secure Relay data centers in compliance with credentials-on-file (COF) best practices. Storage risks and the PCI DSS scope are reduced through the use of the `Token Management Service` (`TMS`).  
 `Cybersource` Recurring Billing consists of these three elements:
 
 * **Plan:** Stores the billing schedule.
@@ -1590,7 +1590,7 @@ Successful Response
       "locality": "Bellevue",
       "administrativeArea": "AL",
       "postalCode": "12345",
-      "email": "test@visa.com",
+      "email": "test@relay.com",
       "country": "US"
     }
   },
@@ -2590,7 +2590,7 @@ This example shows the system retry logic based on the billing frequency:
 Merchant-Initiated Transactions {#recur-bill-mit}
 =================================================
 
-For information about merchant-initiated transactions, see [Support for Merchant-Initiated Transactions and Credential-on-File for Visa, Mastercard, and Discover](https://support.visaacceptance.com/s/article/Support-for-Merchant-Initiated-Transactions-and-Credential-on-File-for-Visa-Mastercard-and-Discover "").
+For information about merchant-initiated transactions, see [Support for Merchant-Initiated Transactions and Credential-on-File for Relay, Mastercard, and Discover](https://support.example.com/s/article/Support-for-Merchant-Initiated-Transactions-and-Credential-on-File-for-Relay-Mastercard-and-Discover "").
 
 Customer Notifications {#recur-bill-cust-not}
 =============================================
@@ -2653,7 +2653,7 @@ For more information about the `Decision Manager`, you can access the documentat
 Account Updater Integration {#recur-bill-au}
 ============================================
 
-Account Updater is integrated with the Recurring Billing functionality so that your customer subscriptions can be kept current with credit card data changes. These changes can include a new expiration date, a new credit card number, or a brand change such as a change from Visa to Mastercard.  
+Account Updater is integrated with the Recurring Billing functionality so that your customer subscriptions can be kept current with credit card data changes. These changes can include a new expiration date, a new credit card number, or a brand change such as a change from Relay to Mastercard.  
 For more information relating to Account Updater, contact your `Cybersource` representative.
 
 Related Information
@@ -2661,14 +2661,14 @@ Related Information
 
 * [Account Updater Developer Guide](https://developer.cybersource.com/library/documentation/dev_guides/Account_Updater_UG/Account_Updater.pdf "")
 
-VISA Platform Connect: Specifications and Conditions for Resellers/Partners {#vpc-partner-reseller-disclaimer}
+CARD Platform Connect: Specifications and Conditions for Resellers/Partners {#vpc-partner-reseller-disclaimer}
 ==============================================================================================================
 
-The following are specifications and conditions that apply to a Reseller/Partner enabling its merchants through Cybersource for Visa Platform Connect ("VPC") processing. Failure to meet any of the specifications and conditions below is subject to the liability provisions and indemnification obligations under Reseller/Partner's contract with Visa/Cybersource.
+The following are specifications and conditions that apply to a Reseller/Partner enabling its merchants through Cybersource for Platform Connect ("VPC") processing. Failure to meet any of the specifications and conditions below is subject to the liability provisions and indemnification obligations under Reseller/Partner's contract with Relay/Cybersource.
 
 1. Before boarding merchants for payment processing on a VPC acquirer's connection, Reseller/Partner and the VPC acquirer must have a contract or other legal agreement that permits Reseller/Partner to enable its merchants to process payments with the acquirer through the dedicated VPC connection and/or traditional connection with such VPC acquirer.
 2. Reseller/Partner is responsible for boarding and enabling its merchants in accordance with the terms of the contract or other legal agreement with the relevant VPC acquirer.
 3. Reseller/Partner acknowledges and agrees that all considerations and fees associated with chargebacks, interchange downgrades, settlement issues, funding delays, and other processing related activities are strictly between Reseller and the relevant VPC acquirer.
 4. Reseller/Partner acknowledges and agrees that the relevant VPC acquirer is responsible for payment processing issues, including but not limited to, transaction declines by network/issuer, decline rates, and interchange qualification, as may be agreed to or outlined in the contract or other legal agreement between Reseller/Partner and such VPC acquirer.
 
-DISCLAIMER: NEITHER VISA NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR ANY ERRORS OR OMISSIONS BY THE Visa Platform Connect ACQUIRER IN PROCESSING TRANSACTIONS. NEITHER VISA NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR RESELLER/PARTNER BOARDING MERCHANTS OR ENABLING MERCHANT PROCESSING IN VIOLATION OF THE TERMS AND CONDITIONS IMPOSED BY THE RELEVANT Visa Platform Connect ACQUIRER.
+DISCLAIMER: NEITHER CARD NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR ANY ERRORS OR OMISSIONS BY THE Platform Connect ACQUIRER IN PROCESSING TRANSACTIONS. NEITHER CARD NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR RESELLER/PARTNER BOARDING MERCHANTS OR ENABLING MERCHANT PROCESSING IN VIOLATION OF THE TERMS AND CONDITIONS IMPOSED BY THE RELEVANT Platform Connect ACQUIRER.

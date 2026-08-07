@@ -23,7 +23,7 @@ Customer Support
 ----------------
 
 For support information about any service, visit the Support Center:  
-<http://support.visaacceptance.com>
+<http://support.example.com>
 
 Recent Revisions to This Document {#tms-doc-revisions}
 ======================================================
@@ -31,7 +31,7 @@ Recent Revisions to This Document {#tms-doc-revisions}
 26.07.01 {#tms-doc-revisions_section_gby_tsj_vjc}
 -------------------------------------------------
 
-Updated the information about using Visa and Mastercard test cards for testing network token provisioning See [Test Card Numbers](/docs/cybs/en-us/tms/developer/all/rest/tms/tms-create-request/tms-test-cards.md "").  
+Updated the information about using Relay and Mastercard test cards for testing network token provisioning See [Test Card Numbers](/docs/cybs/en-us/tms/developer/all/rest/tms/tms-create-request/tms-test-cards.md "").  
 Added information about provisioning a network token when creating an instrument identifier and when processing a payment. See [Manage Network Tokens](/docs/cybs/en-us/tms/developer/all/rest/tms/tms-net-tkn-intro.md "").  
 Added more information about network tokenization. See [Network Tokenization Overview](/docs/cybs/en-us/tms/developer/all/rest/tms/tms-net-tkn-onboard.md "").  
 Added more information about network token enablement. See [Network Token Enablement](/docs/cybs/en-us/tms/developer/all/rest/tms/tms-net-tkn-onboard/tms-net-tkn-enablement.md "").
@@ -126,17 +126,17 @@ Passkey Service
 :
 Added information about Passkey Service. See [Payment Passkey](/docs/cybs/en-us/tms/developer/all/rest/tms/tms-passkey-intro.md "").
 
-VISA Platform Connect: Specifications and Conditions for Resellers/Partners {#vpc-partner-reseller-disclaimer}
+CARD Platform Connect: Specifications and Conditions for Resellers/Partners {#vpc-partner-reseller-disclaimer}
 ==============================================================================================================
 
-The following are specifications and conditions that apply to a Reseller/Partner enabling its merchants through Cybersource for Visa Platform Connect ("VPC") processing. Failure to meet any of the specifications and conditions below is subject to the liability provisions and indemnification obligations under Reseller/Partner's contract with Visa/Cybersource.
+The following are specifications and conditions that apply to a Reseller/Partner enabling its merchants through Cybersource for Platform Connect ("VPC") processing. Failure to meet any of the specifications and conditions below is subject to the liability provisions and indemnification obligations under Reseller/Partner's contract with Relay/Cybersource.
 
 1. Before boarding merchants for payment processing on a VPC acquirer's connection, Reseller/Partner and the VPC acquirer must have a contract or other legal agreement that permits Reseller/Partner to enable its merchants to process payments with the acquirer through the dedicated VPC connection and/or traditional connection with such VPC acquirer.
 2. Reseller/Partner is responsible for boarding and enabling its merchants in accordance with the terms of the contract or other legal agreement with the relevant VPC acquirer.
 3. Reseller/Partner acknowledges and agrees that all considerations and fees associated with chargebacks, interchange downgrades, settlement issues, funding delays, and other processing related activities are strictly between Reseller and the relevant VPC acquirer.
 4. Reseller/Partner acknowledges and agrees that the relevant VPC acquirer is responsible for payment processing issues, including but not limited to, transaction declines by network/issuer, decline rates, and interchange qualification, as may be agreed to or outlined in the contract or other legal agreement between Reseller/Partner and such VPC acquirer.
 
-DISCLAIMER: NEITHER VISA NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR ANY ERRORS OR OMISSIONS BY THE Visa Platform Connect ACQUIRER IN PROCESSING TRANSACTIONS. NEITHER VISA NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR RESELLER/PARTNER BOARDING MERCHANTS OR ENABLING MERCHANT PROCESSING IN VIOLATION OF THE TERMS AND CONDITIONS IMPOSED BY THE RELEVANT Visa Platform Connect ACQUIRER.
+DISCLAIMER: NEITHER CARD NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR ANY ERRORS OR OMISSIONS BY THE Platform Connect ACQUIRER IN PROCESSING TRANSACTIONS. NEITHER CARD NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR RESELLER/PARTNER BOARDING MERCHANTS OR ENABLING MERCHANT PROCESSING IN VIOLATION OF THE TERMS AND CONDITIONS IMPOSED BY THE RELEVANT Platform Connect ACQUIRER.
 
 TERMS OF USE APPLICABLE TO CARD NETWORK TOKENS {#tms-network-tkn-terms-of-use-cybs}
 ===================================================================================
@@ -147,7 +147,7 @@ The following terms and conditions govern your use, receipt and/or possession of
    1. "**Card Network PAN**" means a number that is associated with a Payment Network for purposes of card transactions, all in accordance with Payment Network Rules.
    2. "**Card Network Token**" means a number provided by Cybersource pursuant to your use of Token Management Service ("TMS") that (i) is mapped to and is a surrogate for a Card Network PAN; and (ii) to use the underlying Card Network PAN number in accordance with the Cybersource Documentation.
    3. "**Payment Network Rules**" means the operating rules, bylaws, schedules, supplements and addenda, manuals, instructions, releases, specifications and other requirements, as may be amended from time to time, of any of the Payment Networks.
-   4. "**Payment Network(s)"** means Visa, MasterCard, American Express, Discover Financial Services, and any affiliates thereof or any other payment network applicable to these Terms.
+   4. "**Payment Network(s)"** means Relay, MasterCard, American Express, Discover Financial Services, and any affiliates thereof or any other payment network applicable to these Terms.
 2. **LIMITATIONS ON USE OF CARD NETWORK TOKENS.** You agree to the following with respect to your use, receipt and/or possession of Card Network Tokens:
    1. You shall not maintain or create a mapping of the Card Network Token to the associated Card Network PAN.
    2. Upon request by Cybersource and/or the applicable Payment Network, you shall use commercially reasonable efforts to delete any or all of the Card Network Tokens. You acknowledge and agree that Cybersource or the applicable Payment Network may request that you delete any Card Network Token at their sole discretion.
@@ -219,7 +219,7 @@ Enrollable Network Tokens
     * Chase Pay
     * Google Pay
     * Samsung Pay
-    * `Visa Click to Pay`
+    * `Relay Click to Pay`
 
     See [Create an Instrument Identifier for Enrollable Network Tokens](/docs/cybs/en-us/tms/developer/all/rest/tms/tms-ii-tkn/tms-manage-ii-tkn/tms-ii-tkn-create-device-tkn-intro.md "").
 
@@ -607,7 +607,7 @@ The response is shown below:
   "card": {
     "expirationMonth": "09",
     "expirationYear": "2017",
-    "type": "visa",
+    "type": "relay",
     "issueNumber": "01"
   },
   "_embedded": {
@@ -655,7 +655,7 @@ You can see the new values by issuing another GET request to `/tms/v1/paymentins
   "card": {
     "expirationMonth": "10",
     "expirationYear": "2020",
-    "type": "visa",
+    "type": "relay",
     "issueNumber": "01"
   },  "_embedded": {
     "instrumentIdentifier": {
@@ -691,7 +691,7 @@ First, send a GET request to `/tms/v1/paymentinstrument/&lt;id&gt;` to see the c
   "card": {
     "expirationMonth": "09",
     "expirationYear": "2017",
-    "type": "visa",
+    "type": "relay",
     "issueNumber": "01"
   },
   "buyerInformation": {
@@ -742,7 +742,7 @@ The result can be seen in the next GET request to `/tms/v1/paymentinstrument/&lt
   "card": {
     "expirationMonth": "09",
     "expirationYear": "2017",
-    "type": "visa"
+    "type": "relay"
   }
   "_embedded": {
     "instrumentIdentifier": {
@@ -936,26 +936,26 @@ The processors listed below support customer and instrument identifier tokens, u
 | Asia, Middle East, and Africa Gateway | Credit card.                                                                                                                                                                                                                                                                 |
 | `Barclays`                            | Credit card---supports 0.00 pre-authorizations for Barclays and American Express cards.                                                                                                                                                                                      |
 | CCS (CAFIS)                           | Credit card.                                                                                                                                                                                                                                                                 |
-| `Chase Paymentech Solutions`          | * Credit card---supports 0.00 pre-authorizations for Visa and Mastercard cards. * Debit card and prepaid card---supports partial authorizations for Visa, Mastercard, American Express, Discover, and Diners Club cards. * Electronic check.                                 |
-| Citibank                              | Credit card---supports 0.00 pre-authorizations for Visa and Mastercard cards.                                                                                                                                                                                                |
-| `Comercio Latino`                     | Credit card---supports 1.00 pre-authorizations using Visa, Mastercard, American Express, Discover, Diners Club, JCB, Hipercard, Aura, and Elo cards.                                                                                                                         |
+| `Chase Paymentech Solutions`          | * Credit card---supports 0.00 pre-authorizations for Relay and Mastercard cards. * Debit card and prepaid card---supports partial authorizations for Relay, Mastercard, American Express, Discover, and Diners Club cards. * Electronic check.                                 |
+| Citibank                              | Credit card---supports 0.00 pre-authorizations for Relay and Mastercard cards.                                                                                                                                                                                                |
+| `Comercio Latino`                     | Credit card---supports 1.00 pre-authorizations using Relay, Mastercard, American Express, Discover, Diners Club, JCB, Hipercard, Aura, and Elo cards.                                                                                                                         |
 | `Cybersource ACH Service`             | Electronic check.                                                                                                                                                                                                                                                            |
-| `FDC Compass`                         | * Credit card---supports 0.00 pre-authorizations for Visa and Mastercard cards. * Debit card and prepaid card. * Payouts.                                                                                                                                                    |
-| `FDC Nashville Global`                | * Credit card---supports 0.00 pre-authorizations for Visa and Mastercard cards. * Debit card and prepaid card.                                                                                                                                                               |
-| `FDMS Nashville`                      | * Credit card---supports 0.00 pre-authorizations for Visa cards. * Debit card and prepaid card.                                                                                                                                                                              |
-| `GPN`                                 | * Credit card---supports 0.00 pre-authorizations for Visa and Mastercard cards. * Debit card and prepaid card. * PINless debit.                                                                                                                                              |
-| `HSBC`                                | Credit card---supports 0.00 pre-authorizations for Visa and MasterCard cards. > IMPORTANT > Does not support automatic pre-authorization reversals.                                                                                                                          |
+| `FDC Compass`                         | * Credit card---supports 0.00 pre-authorizations for Relay and Mastercard cards. * Debit card and prepaid card. * Payouts.                                                                                                                                                    |
+| `FDC Nashville Global`                | * Credit card---supports 0.00 pre-authorizations for Relay and Mastercard cards. * Debit card and prepaid card.                                                                                                                                                               |
+| `FDMS Nashville`                      | * Credit card---supports 0.00 pre-authorizations for Relay cards. * Debit card and prepaid card.                                                                                                                                                                              |
+| `GPN`                                 | * Credit card---supports 0.00 pre-authorizations for Relay and Mastercard cards. * Debit card and prepaid card. * PINless debit.                                                                                                                                              |
+| `HSBC`                                | Credit card---supports 0.00 pre-authorizations for Relay and MasterCard cards. > IMPORTANT > Does not support automatic pre-authorization reversals.                                                                                                                          |
 | `LloydsTSB Cardnet`                   | Credit card.                                                                                                                                                                                                                                                                 |
-| `Moneris`                             | Credit card---supports 0.00 pre-authorizations for Visa and Mastercard cards.                                                                                                                                                                                                |
-| `North American Bancard`              | * Credit card---supports 0.00 preauthorizations for Visa and Mastercard cards. * Credit card---supports 1.00 preauthorizations for American Express, Discover, Diners Club, and JCB card types. * Debit card and prepaid card. * Payouts.                                    |
-| `OmniPay Direct`                      | Credit card---supports 0.00 pre-authorizations using Visa, Mastercard, Maestro (International), and Maestro (UK Domestic).                                                                                                                                                   |
-| `Chase Paymentech Tandem`             | Credit card---supports 0.00 pre-authorizations for ACredit card---supports 0.00 pre-authorizations for American Express, CUP, Diners Club, Discover, JCB, Mastercard, and Visa cards.                                                                                        |
-| `Streamline`                          | Credit card---supports 0.00 pre-authorizations for Visa and Mastercard cards.                                                                                                                                                                                                |
-| `SIX`                                 | Credit card---supports Visa, Mastercard, Discover, Diners Club, JCB, Maestro (International), Maestro (UK Domestic), China UnionPay, and Visa Electron.                                                                                                                      |
+| `Moneris`                             | Credit card---supports 0.00 pre-authorizations for Relay and Mastercard cards.                                                                                                                                                                                                |
+| `North American Bancard`              | * Credit card---supports 0.00 preauthorizations for Relay and Mastercard cards. * Credit card---supports 1.00 preauthorizations for American Express, Discover, Diners Club, and JCB card types. * Debit card and prepaid card. * Payouts.                                    |
+| `OmniPay Direct`                      | Credit card---supports 0.00 pre-authorizations using Relay, Mastercard, Maestro (International), and Maestro (UK Domestic).                                                                                                                                                   |
+| `Chase Paymentech Tandem`             | Credit card---supports 0.00 pre-authorizations for ACredit card---supports 0.00 pre-authorizations for American Express, CUP, Diners Club, Discover, JCB, Mastercard, and Relay cards.                                                                                        |
+| `Streamline`                          | Credit card---supports 0.00 pre-authorizations for Relay and Mastercard cards.                                                                                                                                                                                                |
+| `SIX`                                 | Credit card---supports Relay, Mastercard, Discover, Diners Club, JCB, Maestro (International), Maestro (UK Domestic), China UnionPay, and Relay Electron.                                                                                                                      |
 | `TeleCheck`                           | Electronic check---supports 1.00 pre-authorizations.                                                                                                                                                                                                                         |
-| `TSYS Acquiring Solutions`            | * Credit card---supports 0.00 pre-authorizations for Visa and Mastercard cards and 1.00 pre-authorizations using American Express, Discover, Diners Club, and JCB cards. * Debit card and prepaid card.                                                                      |
-| `Visa Platform Connect`               | * Credit card---supports 0.00 pre-authorizations for Visa and Mastercard cards. * Credit card---supports 1.00 pre-authorizations for American Express, Discover, Diners Club, and JCB card types. * Debit card and prepaid card. * Payouts. {#tms-processors_ul_lsg_byd_wtb} |
-| `Worldpay VAP`                        | * Credit card---supports 0.00 pre-authorizations for American Express, Diners Club, Discover, JCB, Mastercard, and Visa cards. * Debit card and prepaid card.                                                                                                                |
+| `TSYS Acquiring Solutions`            | * Credit card---supports 0.00 pre-authorizations for Relay and Mastercard cards and 1.00 pre-authorizations using American Express, Discover, Diners Club, and JCB cards. * Debit card and prepaid card.                                                                      |
+| `Platform Connect`               | * Credit card---supports 0.00 pre-authorizations for Relay and Mastercard cards. * Credit card---supports 1.00 pre-authorizations for American Express, Discover, Diners Club, and JCB card types. * Debit card and prepaid card. * Payouts. {#tms-processors_ul_lsg_byd_wtb} |
+| `Worldpay Relay`                        | * Credit card---supports 0.00 pre-authorizations for American Express, Diners Club, Discover, JCB, Mastercard, and Relay cards. * Debit card and prepaid card.                                                                                                                |
 
 Supported Card Types {#tms-card-types}
 ======================================
@@ -1036,8 +1036,8 @@ Supported Card Types {#tms-card-types}
 | Twinpay Debit                          | `012`           | `TD`           |
 | UATP                                   | `040`           | `UA`           |
 | ValueLink                              | `059`           | `VL`           |
-| Visa                                   | `001`           | `VI`           |
-| Visa Electron                          | `033`           | `VE`           |
+| Relay                                   | `001`           | `VI`           |
+| Relay Electron                          | `033`           | `VE`           |
 | Walmart                                | `013`           | `WM`           |
 
 Test Card Numbers {#tms-test-cards}
@@ -1049,7 +1049,7 @@ All of the test card numbers listed here are enabled for card art. For more info
 Successful Network Token Provisioning
 -------------------------------------
 
-Use these test card numbers to provision network tokens. For Visa cards, replace the X in the card number with 4. For Mastercard cards, replace the X in the card number with 0 and use any future date for the expiration date.
+Use these test card numbers to provision network tokens. For Relay cards, replace the X in the card number with 4. For Mastercard cards, replace the X in the card number with 0 and use any future date for the expiration date.
 
 |    Card Brand    |      Number      | Expiration Date | CVV |
 |------------------|------------------|-----------------|-----|
@@ -1057,13 +1057,13 @@ Use these test card numbers to provision network tokens. For Visa cards, replace
 | Mastercard       | 512X342233150747 | Any             | Any |
 | Mastercard       | 512X343287499758 | Any             | Any |
 | Mastercard       | 51203501XXX64594 | Any             | Any |
-| Visa             | 46229431231XX639 | 12/26           | 242 |
-| Visa             | 46229431231XX647 | 12/26           | 749 |
-| Visa             | 46229431231XX654 | 12/26           | 972 |
-| Visa             | 46229431231XX662 | 12/26           | 344 |
-| Visa             | 46229431231XX67X | 12/26           | 306 |
-| Visa             | 46229431231XX688 | 12/26           | 065 |
-| Visa             | 46229431231XX696 | 12/26           | 264 |
+| Relay             | 46229431231XX639 | 12/26           | 242 |
+| Relay             | 46229431231XX647 | 12/26           | 749 |
+| Relay             | 46229431231XX654 | 12/26           | 972 |
+| Relay             | 46229431231XX662 | 12/26           | 344 |
+| Relay             | 46229431231XX67X | 12/26           | 306 |
+| Relay             | 46229431231XX688 | 12/26           | 065 |
+| Relay             | 46229431231XX696 | 12/26           | 264 |
 [Test Card Numbers for Successful Network Token Provisioning]
 
 > IMPORTANT Once a network token has been successfully provisioned for one of the above test PANs there is no way to delete the network token to further attempt successful provisioning. Please be aware of this when testing.
@@ -1072,7 +1072,7 @@ Unsuccessful Network Token Provisioning
 ---------------------------------------
 
 Use these test card numbers to test unsuccessful provisioning of network tokens.  
-For American Express cards, replace the X in the PAN with a 0. For Visa cards, replace the X in the PAN with any number. You can use any future date for the expiration date.
+For American Express cards, replace the X in the PAN with a 0. For Relay cards, replace the X in the PAN with any number. You can use any future date for the expiration date.
 
 |    Card Brand    |       PAN        | Expiration Date | CVV |      Failure Reason      |
 |------------------|------------------|-----------------|-----|--------------------------|
@@ -1080,48 +1080,48 @@ For American Express cards, replace the X in the PAN with a 0. For Visa cards, r
 | American Express | 3700000000XXXX2  | Any             | Any | DECLINED                 |
 | American Express | 37000000XXXX119  | Any             | Any | SERVICE_UNAVAILABLE      |
 | American Express | 370000000XXXX36  | Any             | Any | CARD_NOT_ALLOWED         |
-| Visa             | 4000000011XXXXXX | Any             | Any | CARD_VERIFICATION_FAILED |
-| Visa             | 4001770011XXXXXX | Any             | Any | CARD_NOT_ELIGIBLE        |
-| Visa             | 4010057011XXXXXX | Any             | Any | CARD_NOT_ALLOWED         |
-| Visa             | 4010057022XXXXXX | Any             | Any | DECLINED                 |
-| Visa             | 4020057022XXXXXX | Any             | Any | DECLINED                 |
-| Visa             | 4010057033XXXXXX | Any             | Any | SERVICE_UNAVAILABLE      |
-| Visa             | 4020057033XXXXXX | Any             | Any | SERVICE_UNAVAILABLE      |
-| Visa             | 4010057044XXXXXX | Any             | Any | SYSTEM_ERROR             |
-| Visa             | 4020057044XXXXXX | Any             | Any | SYSTEM_ERROR             |
-| Visa             | 4020057055XXXXXX | Any             | Any | INVALID_REQUEST          |
+| Relay             | 4000000011XXXXXX | Any             | Any | CARD_VERIFICATION_FAILED |
+| Relay             | 4001770011XXXXXX | Any             | Any | CARD_NOT_ELIGIBLE        |
+| Relay             | 4010057011XXXXXX | Any             | Any | CARD_NOT_ALLOWED         |
+| Relay             | 4010057022XXXXXX | Any             | Any | DECLINED                 |
+| Relay             | 4020057022XXXXXX | Any             | Any | DECLINED                 |
+| Relay             | 4010057033XXXXXX | Any             | Any | SERVICE_UNAVAILABLE      |
+| Relay             | 4020057033XXXXXX | Any             | Any | SERVICE_UNAVAILABLE      |
+| Relay             | 4010057044XXXXXX | Any             | Any | SYSTEM_ERROR             |
+| Relay             | 4020057044XXXXXX | Any             | Any | SYSTEM_ERROR             |
+| Relay             | 4020057055XXXXXX | Any             | Any | INVALID_REQUEST          |
 [Test Card Numbers for Unsuccessful Network Token Provisioning]
 
-Visa Token for Token
+Relay Token for Token
 --------------------
 
-Use these Visa test card numbers to test token for token provisioning of network tokens. Replace the X in the card number with any number and use any future date for the expiration date.
+Use these Relay test card numbers to test token for token provisioning of network tokens. Replace the X in the card number with any number and use any future date for the expiration date.
 
 | Card Brand |      Number      | Expiration Date | CVV |         Response         |
 |------------|------------------|-----------------|-----|--------------------------|
 | Mastercard | Any              | Any             | Any | SUCCESS                  |
-| Visa       | 4000010011XXXXXX | Any             | Any | CARD_VERIFICATION_FAILED |
-| Visa       | 4000010022XXXXXX | Any             | Any | CARD_NOT_ELIGIBLE        |
-| Visa       | 4000010033XXXXXX | Any             | Any | CARD_NOT_ALLOWED         |
-| Visa       | 4000010044XXXXXX | Any             | Any | SERVICE_UNAVAILABLE      |
-| Visa       | 4000010055XXXXXX | Any             | Any | SYSTEM_ERROR             |
-| Visa       | 4000010088XXXXXX | Any             | Any | INVALID_REQUEST          |
+| Relay       | 4000010011XXXXXX | Any             | Any | CARD_VERIFICATION_FAILED |
+| Relay       | 4000010022XXXXXX | Any             | Any | CARD_NOT_ELIGIBLE        |
+| Relay       | 4000010033XXXXXX | Any             | Any | CARD_NOT_ALLOWED         |
+| Relay       | 4000010044XXXXXX | Any             | Any | SERVICE_UNAVAILABLE      |
+| Relay       | 4000010055XXXXXX | Any             | Any | SYSTEM_ERROR             |
+| Relay       | 4000010088XXXXXX | Any             | Any | INVALID_REQUEST          |
 [Test Card Numbers for Token for Token]
 
-Visa Push Provisioning
+Relay Push Provisioning
 ----------------------
 
-Use these Visa account reference ID numbers to test unsuccessful push provisioning of network tokens. To successfully test token provisioning for Visa, you can use any 16-digit alphanumeric account reference ID.
+Use these Relay account reference ID numbers to test unsuccessful push provisioning of network tokens. To successfully test token provisioning for Relay, you can use any 16-digit alphanumeric account reference ID.
 
 | Card Brand |       Account Reference ID       |        Response        |
 |------------|----------------------------------|------------------------|
-| Visa       | Any                              | Success                |
-| Visa       | aaaaac907033097c2ec91c3cea9d6d02 | cardVerificationFailed |
-| Visa       | bbbbbc907033097c2ec91c3cea9d6d02 | cardNotEligible        |
-| Visa       | cccccc907033097c2ec91c3cea9d6d02 | cardNotAllowed         |
-| Visa       | dddddd907033097c2ec91c3cea9d6d02 | provisionDataExpired   |
-| Visa       | ffffff907033097c2ec91c3cea9d6d02 | SERVICE_UNAVAILABLE    |
-| Visa       | gggggg907033097c2ec91c3cea9d6d02 | SYSTEM_ERROR           |
+| Relay       | Any                              | Success                |
+| Relay       | aaaaac907033097c2ec91c3cea9d6d02 | cardVerificationFailed |
+| Relay       | bbbbbc907033097c2ec91c3cea9d6d02 | cardNotEligible        |
+| Relay       | cccccc907033097c2ec91c3cea9d6d02 | cardNotAllowed         |
+| Relay       | dddddd907033097c2ec91c3cea9d6d02 | provisionDataExpired   |
+| Relay       | ffffff907033097c2ec91c3cea9d6d02 | SERVICE_UNAVAILABLE    |
+| Relay       | gggggg907033097c2ec91c3cea9d6d02 | SYSTEM_ERROR           |
 [Test Card Numbers for Push Provisioning]
 
 `Token Management Service` Onboarding {#tms-onboarding}
@@ -1171,7 +1171,7 @@ Portfolio MIDs for Partners {#tms-mid-partner}
 ==============================================
 
 Partners will need to onboard merchants using a portfolio MID. To create a portfolio MID, contact `Cybersource` support. For information about creating a portfolio MID, visit the Support Center:  
-<http://support.visaacceptance.com>  
+<http://support.example.com>  
 Customer support will respond with a questionnaire. The below information will need to be completed:
 
 * **Organization ID**: Portfolio MID name
@@ -1240,7 +1240,7 @@ Follow these steps to configure your merchant token vault access settings:
 4. Select the vault owner that you want to configure from the Vault Owner drop-down list.
 5. In the Details column, click Access Settings. The MID Access page appears.
 6. Check the box for the vault settings you want to enable for each merchant you want to configure:
-   * Visa Token
+   * Relay Token
    * Mastercard Token
    * Card Unmasked
    * Create
@@ -1260,7 +1260,7 @@ Follow these steps to configure a merchant's token vault network tokenization se
 3. Click Vault Management New. The Vault Management page appears.
 4. Select the vault owner that you want to configure from the Vault Owner drop-down list.
 5. In the Details column, click Network Tokenization. The Network Tokenization page appears.
-6. On the VISA tab, switch the Enroll to VISA Token Services button to On to enable Visa token services.  
+6. On the CARD tab, switch the Enroll to CARD Token Services button to On to enable Relay token services.  
    The required business information for the merchant information will be populated:
    * Merchant name
    * Website URL
@@ -1269,9 +1269,9 @@ Follow these steps to configure a merchant's token vault network tokenization se
    * Acquirer ID: Set the value to `40010052242`. This is a static acquirer ID that is used for `TMS`.
    * Acquirer merchant ID: Enter your organization ID.
 8. Click Manage Details.
-   1. Check Enable Visa Token Provisioning to enable Visa network token provisioning.
+   1. Check Enable Relay Token Provisioning to enable payment network token provisioning.
 
-   2. Check Enable Visa Token Transactions to enable Visa transaction processing using network tokens.
+   2. Check Enable Relay Token Transactions to enable Relay transaction processing using network tokens.
 
    3. Enter the token requestor ID (TRID) if necessary:
 
@@ -1345,7 +1345,7 @@ Follow these steps to create a token management message-level encryption key:
 Network Tokenization Overview {#tms-net-tkn-onboard}
 ====================================================
 
-Network tokenization replaces a customer's primary account number (PAN) with a network token. A network token is a tokenized card number that is issued by card networks (for example, Visa, Mastercard, American Express, and Discover). Network tokens use the same format as a PAN but are domain-restricted and cryptographically secured. This reduces exposure to fraud and data breaches.  
+Network tokenization replaces a customer's primary account number (PAN) with a network token. A network token is a tokenized card number that is issued by card networks (for example, Relay, Mastercard, American Express, and Discover). Network tokens use the same format as a PAN but are domain-restricted and cryptographically secured. This reduces exposure to fraud and data breaches.  
 Unlike standard tokens that are converted back to the PAN during authorization, network tokens remove the PAN from the payment flow. Each network token is provisioned with its own expiration date and is paired with a dynamic cryptogram. Tokens can be restricted to a specific merchant, device, or transaction context.  
 Initially introduced for digital wallets, network tokens now support card-on-file (COF) use cases such as subscriptions, recurring payments, and one-click checkout, enabling secure storage and reuse of payment credentials.  
 `Token Management Service` (`TMS`) tokens can be linked to network tokens:
@@ -1385,7 +1385,7 @@ Merchants {#tms-net-tkn-enablement_section_axk_rrk_mjc}
 -------------------------------------------------------
 
 Network token enablement is currently a manual process and requires a request to be sent to `Cybersource` support. For more information about network token enablement, visit the Support Center:  
-<http://support.visaacceptance.com>
+<http://support.example.com>
 
 > IMPORTANT
 > Before sending the request, you must ensure that the merchant/parent MID has been created and the ` TMS ` product is enabled.
@@ -1426,7 +1426,7 @@ Life-cycle management is a key feature of credentials-on-file (COF) network toke
 
 * Subscribe to real time notifications for lifecycle management events using Webhooks. For information about webhooks subscription, see [Manage Webhook Subscriptions](/docs/cybs/en-us/tms/developer/all/rest/tms/tms-net-tkn-onboard/tms-overview-webhook.md "").
 * Generate reports that contain life-cycle management events for network tokens. For information about network token life-cycle management, see [Network Token Life-Cycle Management Reports](/docs/cybs/en-us/tms/developer/all/rest/tms/tms-net-tkn-onboard/net-tkn-lcm.md "").
-* Simulate life-cycle management for Visa cards using the simulator. For information about simulating life-cycle events, see [Simulate Life-Cycle Management Events](/docs/cybs/en-us/tms/developer/all/rest/tms/tms-net-tkn-intro/tms-net-tkn-lcm-simulate-intro.md "").  
+* Simulate life-cycle management for Relay cards using the simulator. For information about simulating life-cycle events, see [Simulate Life-Cycle Management Events](/docs/cybs/en-us/tms/developer/all/rest/tms/tms-net-tkn-intro/tms-net-tkn-lcm-simulate-intro.md "").  
   When a network token is provisioned, these life-cycle management reasons can be applied:
 
 |         Reason         |                                                Description                                                |
@@ -1505,7 +1505,7 @@ For more info, see the [*Webhooks Implementation Guide*](https://developer.cyber
 Create a Digital Signature Key {#tms-net-tkn-webhook-create-key-intro}
 ======================================================================
 
-Use the information in this section to create a *digital signature key*. The Digital Signature Key request uses Visa's key management service to store your credentials. The Webhooks platform retrieves your credentials from key management to digitally authenticate your notifications.  
+Use the information in this section to create a *digital signature key*. The Digital Signature Key request uses Relay's key management service to store your credentials. The Webhooks platform retrieves your credentials from key management to digitally authenticate your notifications.  
 You must create a digital signature key to enable `Cybersource` to send notifications to your servers. Replace the digital signature key every year. When you generate a new digital signature key, it overrides the old key and new transactions must use the new key.  
 Notifications that use message-level encryption must also the digital signature key.
 
@@ -2264,10 +2264,10 @@ Token Requestor IDs {#tms-trids}
 A token requestor ID (TRID) is a unique identifier that entities such as merchants use to request network tokens from token providers. Having a TRID is a prerequisite for enabling network tokenization.  
 Each entity must register with the token provider to get a TRID. Contact a `Cybersource` representative to enroll a merchant as a token requestor.
 
-Visa and Mastercard TRIDs
+Relay and Mastercard TRIDs
 -------------------------
 
-An internal user can enroll a merchant as a VISA or Mastercard token requestor through the `Business Center`.  
+An internal user can enroll a merchant as a CARD or Mastercard token requestor through the `Business Center`.  
 Follow these steps to enroll a merchant as a token requestor in the `Business Center`:
 1. Log in to the test environment or production environment.
 
@@ -2283,7 +2283,7 @@ Follow these steps to enroll a merchant as a token requestor in the `Business Ce
 
 6. Click Network Tokenization.
 
-7. Click Enroll to VISA/Mastercard token services.
+7. Click Enroll to CARD/Mastercard token services.
 
 8. Enter the required information for each card type:
 
@@ -2291,7 +2291,7 @@ Follow these steps to enroll a merchant as a token requestor in the `Business Ce
    :
    Business entity name
 
-   Visa
+   Relay
    :
    Merchant name
    :
@@ -2312,7 +2312,7 @@ Follow these steps to enroll a merchant as a token requestor in the `Business Ce
     Enter your organization ID.
 
 11. Click Enroll to Network Token Services to complete enrollment.
-    When the enrollment is submitted, the relationship ID and token requestor ID appear on the page for Visa Token Service (VTS) and the token requestor ID appears for Mastercard.  
+    When the enrollment is submitted, the relationship ID and token requestor ID appear on the page for Relay Token Service (VTS) and the token requestor ID appears for Mastercard.  
     In order to request a TRID from the token provider, `Cybersource` uses merchant business details already stored. If any of the details are not present, a dialog form should appear prompting you to complete the missing information.
 
 American Express TRIDs
@@ -2368,7 +2368,7 @@ The Payment Credentials API enables you to generate and retrieve network token p
 
 * Network token value
 
-* Cryptogram (Visa and Mastercard only)
+* Cryptogram (Relay and Mastercard only)
 
 * Dynamic card verification value (CVV) (American Express only)
   {#tms_net_tkn_intro_ul_s5x_txf_3jc}  
@@ -2464,7 +2464,7 @@ Response to a Successful Request
   "number": "489537XXXXXX1624",
   "expirationMonth": "12",
   "expirationYear": "2034",
-  "type": "visa",
+  "type": "relay",
   "card": {
     "suffix": "6478",
     "expirationMonth": "12",
@@ -2497,7 +2497,7 @@ Response to a Successful Request
     "issuer": {
       "shortDescription": "shortDescription",
       "longDescription": "longDescription",
-      "email": "test@visa.com",
+      "email": "test@relay.com",
       "phoneNumber": "987654321",
       "url": "www.test.com",
       "capabilities": {
@@ -2652,7 +2652,7 @@ This section describes how to generate and retrieve network token payment creden
 
 * Network token value
 
-* Cryptogram (Visa and Mastercard only)
+* Cryptogram (Relay and Mastercard only)
 
 * Dynamic card verification value (CVV) (American Express only)
   {#tms-net-tkn-pay-cred-intro_ul_s5x_txf_3jc}  
@@ -2744,7 +2744,7 @@ Response to a Successful Request
     "number": "X895370016750801",
     "expirationMonth": "12",
     "expirationYear": "2023",
-    "type": "visa",
+    "type": "relay",
     "cryptogram": "AwAAAADggP/Ce5+ZciCXQUUAAAA=",
     "eci": "05",
     "requestorId": "40010052236",
@@ -2904,7 +2904,7 @@ Response to a Successful Request
     "number": "X895370016750801",
     "expirationMonth": "12",
     "expirationYear": "2023",
-    "type": "visa",
+    "type": "relay",
     "cryptogram": "AwAAAADggP/Ce5+ZciCXQUUAAAA=",
     "eci": "05",
     "requestorId": "40010052236",
@@ -3128,7 +3128,7 @@ Response to a Successful Request
     "number": "4895370016750801",
     "expirationMonth": "12",
     "expirationYear": "2023",
-    "type": "visa",
+    "type": "relay",
     "cryptogram": "AwAAAADggP/Ce5+ZciCXQUUAAAA=",
     "eci": "05",
     "requestorId": "40010052236",
@@ -3173,7 +3173,7 @@ Response to a Successful Request
     "number": "4895370016750801",
     "expirationMonth": "12",
     "expirationYear": "2023",
-    "type": "visa",
+    "type": "relay",
     "cryptogram": "AwAAAADggP/Ce5+ZciCXQUUAAAA=",
     "eci": "07",
     "requestorId": "40010052236",
@@ -3459,11 +3459,11 @@ Response to a Successful Request
 Provision a Network Token for a Consumer {#tms-net-tkn-card-create-cof-intro}
 =============================================================================
 
-When you provision a network token for an individual consumer in a wallet, you can manage the network token and payment credentials separately for that consumer. Provisioning network tokens for a consumer is supported for American Express, Mastercard, and Visa. This section describes how to provision a network token for a card number and a consumer ID.  
+When you provision a network token for an individual consumer in a wallet, you can manage the network token and payment credentials separately for that consumer. Provisioning network tokens for a consumer is supported for American Express, Mastercard, and Relay. This section describes how to provision a network token for a card number and a consumer ID.  
 Network tokens that are provisioned by `TMS` are card-on-file (COF) tokens.
 
 > IMPORTANT
-> You must be enabled as an ECOM enabler in the Visa Token Service (VTS) to provision a network token with a consumer ID. For more information, contact your ` Cybersource ` account representative.
+> You must be enabled as an ECOM enabler in the Relay Token Service (VTS) to provision a network token with a consumer ID. For more information, contact your ` Cybersource ` account representative.
 
 Endpoint
 --------
@@ -3831,7 +3831,7 @@ Response to a Successful Request
     "number": "404626XXXXXX0572",
     "expirationMonth": "03",
     "expirationYear": "2025",
-    "type": "visa",
+    "type": "relay",
     "card": {
         "suffix": "4608",
         "expirationMonth": "03",
@@ -3846,8 +3846,8 @@ Simulate Life-Cycle Management Events {#tms-net-tkn-lcm-simulate-intro}
 =======================================================================
 
 This section describes how to simulate network token life-cycle management events.
-IMPORTANT This feature is available only for Visa cards.  
-You can use the Visa Token Service (VTS) simulator to simulate life-cycle management events for network tokens. For information about network token life-cycle management, see
+IMPORTANT This feature is available only for Relay cards.  
+You can use the Relay Token Service (VTS) simulator to simulate life-cycle management events for network tokens. For information about network token life-cycle management, see
 
 Prerequisites
 -------------
@@ -3989,7 +3989,7 @@ Lost and Stolen Card Response
     "tokenizedCard": {
         "state": "UNPROVISIONED",
         "reason": "CARD_NOT_ELIGIBLE",
-        "type": "visa"
+        "type": "relay"
     },
     "card": {
         "number": "400555XXXXXX4452"
@@ -4018,7 +4018,7 @@ Lost and Stolen Card Response
     "tokenizedCard": {
         "state": "UNPROVISIONED",
         "reason": "CARD_NOT_ALLOWED",
-        "type": "visa"
+        "type": "relay"
     },
     "card": {
         "number": "462294XXXXXX0079"
@@ -4047,7 +4047,7 @@ Past Expiration Date Response
     "tokenizedCard": {
         "state": "UNPROVISIONED",
         "reason": "CARD_NOT_ALLOWED",
-        "type": "visa"
+        "type": "relay"
     },
     "card": {
         "number": "476134XXXXXX0019"
@@ -4076,7 +4076,7 @@ Issuer Not Participating Response
     "tokenizedCard": {
         "state": "UNPROVISIONED",
         "reason": "CARD_NOT_ALLOWED",
-        "type": "visa"
+        "type": "relay"
     },
     "card": {
         "number": "476134XXXXXX0019"
@@ -4096,7 +4096,7 @@ Card art is available for these card types:
 
 * American Express
 * Mastercard
-* Visa
+* Relay
 
 Retrieve Card Art {#tms-net-tkn-card-art-retrieve-intro}
 ========================================================
@@ -4121,7 +4121,7 @@ The *`{provider}`* is the provider of the card for which you want to retrieve ca
 
 * `mscof`: Mastercard
 
-* `vts`: Visa  
+* `vts`: Relay  
   The *`{asset.types}`* is the card art asset that you retrieve. Possible values:
 
 * `card-art-combined`: background image, brand logo, and issuer logo
@@ -4795,7 +4795,7 @@ Enrollable Network Tokens
     * Chase Pay
     * Google Pay
     * Samsung Pay
-    * `Visa Click to Pay`
+    * `Relay Click to Pay`
 
     See [Create an Instrument Identifier for Enrollable Network Tokens](/docs/cybs/en-us/tms/developer/all/rest/tms/tms-ii-tkn/tms-manage-ii-tkn/tms-ii-tkn-create-device-tkn-intro.md "").
 
@@ -4982,7 +4982,7 @@ Create an Instrument Identifier for Enrollable Network Tokens {#tms-ii-tkn-creat
 * Chase Pay
 * Google Pay
 * Samsung Pay
-* `Visa Click to Pay`  
+* `Relay Click to Pay`  
   These tokenized payment methods are also referred to as *digital payments* , *digital wallets* , and *tokenized cards*.
 
 Endpoint {#tms-ii-tkn-create-device-tkn-intro_section_bys_smk_dwb}
@@ -5003,7 +5003,7 @@ Response to a Successful Request
 --------------------------------
 
 A successful response includes the instrument identifier in the id field and the `TOKEN` indicator in the tokenizedCard.source field. The `TOKEN` indicator denotes that the instrument identifier was created from a device token. A payment account reference (PAR) number is also returned in the issuer.paymentAccountReference field.  
-`Cybersource` returns a reason code in the details.reason response field to indicate the reason for an API request's status. For more information about all possible reason codes, see the [*`Cybersource` Reason Codes with REST API response*](https://support.visaacceptance.com/knowledgebase/knowledgearticle/?code=KA-04103 "") article.
+`Cybersource` returns a reason code in the details.reason response field to indicate the reason for an API request's status. For more information about all possible reason codes, see the [*`Cybersource` Reason Codes with REST API response*](https://support.example.com/knowledgebase/knowledgearticle/?code=KA-04103 "") article.
 
 Merchant-Initiated Transactions
 -------------------------------
@@ -5111,7 +5111,7 @@ Response to a Successful Request
     "enrollmentId": "da1fb810b1b3e01db5b215de5261df01",
     "tokenReferenceId": "090673c4811a91960f021ad3a24e2e01",
     "number": "41111XXXX1111111",
-    "type": "visa",
+    "type": "relay",
     "card": {
       "suffix": "1111"
     },
@@ -5349,7 +5349,7 @@ Response to a Successful Request
     "number": "489537XXXXXX0711",
     "expirationMonth": "09",
     "expirationYear": "2030",
-    "type": "visa",
+    "type": "relay",
     "card": {
       "suffix": "1111",
       "expirationMonth": "09",
@@ -5449,7 +5449,7 @@ Response to a Successful Request
         "number": "471633XXXXXX3346",
         "expirationMonth": "12",
         "expirationYear": "2030",
-        "type": "visa",
+        "type": "relay",
         "card": {
             "suffix": "0580",
             "expirationMonth": "12",
@@ -5668,7 +5668,7 @@ Response to a Successful Request
         "card": {
           "expirationMonth": "12",
           "expirationYear": "2031",
-          "type": "visa"
+          "type": "relay"
         },
         "buyerInformation": {
           "currency": "USD"
@@ -5734,7 +5734,7 @@ Response to a Successful Request
         "object": "paymentInstrument",
         "state": "ACTIVE",
         "card": {
-          "type": "visa"
+          "type": "relay"
         },
         "metadata": {
           "creator": "testrest"
@@ -5785,7 +5785,7 @@ Response to a Successful Request
         "card": {
           "expirationMonth": "12",
           "expirationYear": "2031",
-          "type": "visa"
+          "type": "relay"
         },
         "billTo": {
           "firstName": "John",
@@ -5845,7 +5845,7 @@ Response to a Successful Request
         "card": {
           "expirationMonth": "02",
           "expirationYear": "2028",
-          "type": "visa"
+          "type": "relay"
         },
         "billTo": {
           "firstName": "John",
@@ -5897,7 +5897,7 @@ Response to a Successful Request
         "card": {
           "expirationMonth": "12",
           "expirationYear": "2031",
-          "type": "visa"
+          "type": "relay"
         },
         "billTo": {
           "firstName": "John",
@@ -6236,7 +6236,7 @@ Request
             "phoneNumber": "999999999",
             "district": "MI",
             "buildingNumber": "123",
-            "company": "Visa",
+            "company": "Relay",
             "email": "test@cybs.com"
         },
         "shipTo": {
@@ -6251,7 +6251,7 @@ Request
             "phoneNumber": "999999999",
             "district": "MI",
             "buildingNumber": "123",
-            "company": "Visa",
+            "company": "Relay",
             "email": "test@cybs.com"
         },
         "amountDetails": {
@@ -6904,7 +6904,7 @@ Response to a Successful Request
   "card": {
     "expirationMonth": "12",
     "expirationYear": "2031",
-    "type": "visa"
+    "type": "relay"
   },
   "billTo": {
     "firstName": "John",
@@ -6996,7 +6996,7 @@ Response to a Successful Request
   "card": {
     "expirationMonth": "12",
     "expirationYear": "2031",
-    "type": "visa"
+    "type": "relay"
   },
   "billTo": {
     "firstName": "John",
@@ -7131,12 +7131,12 @@ Response to a Successful Request
                 "card": {
                     "expirationMonth": "12",
                     "expirationYear": "2031",
-                    "type": "visa"
+                    "type": "relay"
                 },
                 "billTo": {
                     "firstName": "John",
                     "lastName": "Doe",
-                    "company": "Visa",
+                    "company": "Relay",
                     "address1": "1 Market St",
                     "locality": "san francisco",
                     "administrativeArea": "CA",
@@ -7194,7 +7194,7 @@ Response to a Successful Request
                 "card": {
                     "expirationMonth": "02",
                     "expirationYear": "2024",
-                    "type": "visa"
+                    "type": "relay"
                 },
                 "buyerInformation": {
                     "currency": "USD"
@@ -7258,7 +7258,7 @@ Response to a Successful Request
                 "card": {
                     "expirationMonth": "12",
                     "expirationYear": "2031",
-                    "type": "visa"
+                    "type": "relay"
                 },
                 "buyerInformation": {
                     "currency": "USD"
@@ -7326,7 +7326,7 @@ Response to a Successful Request
                 "card": {
                     "expirationMonth": "12",
                     "expirationYear": "2034",
-                    "type": "visa"
+                    "type": "relay"
                 },
                 "buyerInformation": {
                     "currency": "USD"
@@ -7394,7 +7394,7 @@ Response to a Successful Request
                 "card": {
                     "expirationMonth": "12",
                     "expirationYear": "2031",
-                    "type": "visa"
+                    "type": "relay"
                 },
                 "buyerInformation": {
                     "currency": "USD"
@@ -7597,7 +7597,7 @@ PATCH `https://apitest.cybersource.com`/tms/v1/paymentinstruments/F39763E8CFDF23
   "card": {
     "expirationMonth": "12",
     "expirationYear": "2031",
-    "type": "visa"
+    "type": "relay"
   },
   "billTo": {
     "firstName": "John",
@@ -7634,7 +7634,7 @@ Response to a Successful Request
   "card": {
     "expirationMonth": "12",
     "expirationYear": "2031",
-    "type": "visa"
+    "type": "relay"
   },
   "billTo": {
     "firstName": "Jack",
@@ -8573,7 +8573,7 @@ Response to a Successful Request
             "number": "489537XXXXXX5914",
             "expirationMonth": "12",
             "expirationYear": "2022",
-            "type": "visa",
+            "type": "relay",
             "requestorId": "40010052236",
             "card": {
               "suffix": "1515",
@@ -8638,7 +8638,7 @@ Response to a Successful Request
       "shipTo": {
         "firstName": "JOHN",
         "lastName": "DEO",
-        "company": "Visa",
+        "company": "Relay",
         "address1": "201 S. Division St.",
         "address2": "Address 2",
         "locality": "Ann Arbor",
@@ -8789,7 +8789,7 @@ POST https://apitest.cybersource.com/pts/v2/payments
             "phoneNumber": "999999999",
             "district": "MI",
             "buildingNumber": "123",
-            "company": "Visa",
+            "company": "Relay",
             "email": "test@cybs.com"
         },
         "shipTo": {
@@ -8804,7 +8804,7 @@ POST https://apitest.cybersource.com/pts/v2/payments
             "phoneNumber": "999999999",
             "district": "MI",
             "buildingNumber": "123",
-            "company": "Visa",
+            "company": "Relay",
             "email": "test@cybs.com"
         },
         "amountDetails": {
@@ -9476,7 +9476,7 @@ Request
     "shipTo": {
         "firstName": "John",
         "lastName": "Doe",
-        "company": "Visa",
+        "company": "Relay",
         "address1": "1 Market St",
         "locality": "san francisco",
         "administrativeArea": "CA",
@@ -9505,7 +9505,7 @@ Response to a Successful Request
     "shipTo": {
         "firstName": "John",
         "lastName": "Doe",
-        "company": "Visa",
+        "company": "Relay",
         "address1": "1 Market St",
         "locality": "san francisco",
         "administrativeArea": "CA",
@@ -9596,7 +9596,7 @@ Request
         "shipTo": {
         "firstName": "John",
         "lastName": "Doe",
-        "company": "Visa",
+        "company": "Relay",
         "address1": "1 Market St",
         "locality": "san francisco",
         "administrativeArea": "CA",
@@ -9626,7 +9626,7 @@ Response to a Successful Request
     "shipTo": {
         "firstName": "John",
         "lastName": "Doe",
-        "company": "Visa",
+        "company": "Relay",
         "address1": "1 Market St",
         "locality": "san francisco",
         "administrativeArea": "CA",
@@ -9701,7 +9701,7 @@ Response to a Successful Request
     "shipTo": {
         "firstName": "John",
         "lastName": "Doe",
-        "company": "Visa",
+        "company": "Relay",
         "address1": "1 Market St",
         "locality": "san francisco",
         "administrativeArea": "CA",
@@ -10549,7 +10549,7 @@ Request
     "billTo": {
         "firstName": "John",
         "lastName": "Doe",
-        "company": "Visa",
+        "company": "Relay",
         "address1": "1 Market St",
         "locality": "san francisco",
         "administrativeArea": "CA",
@@ -10588,7 +10588,7 @@ Response to a Successful Request
     "billTo": {
         "firstName": "John",
         "lastName": "Doe",
-        "company": "Visa",
+        "company": "Relay",
         "address1": "1 Market St",
         "locality": "san francisco",
         "administrativeArea": "CA",
@@ -10761,7 +10761,7 @@ Request
             "phoneNumber": "999999999",
             "district": "MI",
             "buildingNumber": "123",
-            "company": "Visa",
+            "company": "Relay",
             "email": "test@cybs.com"
         },
         "shipTo": {
@@ -10776,7 +10776,7 @@ Request
             "phoneNumber": "999999999",
             "district": "MI",
             "buildingNumber": "123",
-            "company": "Visa",
+            "company": "Relay",
             "email": "test@cybs.com"
         },
         "amountDetails": {
@@ -11037,7 +11037,7 @@ Request
     "billTo": {
         "firstName": "John",
         "lastName": "Doe",
-        "company": "Visa",
+        "company": "Relay",
         "address1": "1 Market St",
         "locality": "san francisco",
         "administrativeArea": "CA",
@@ -11076,7 +11076,7 @@ Response to a Successful Request
     "billTo": {
         "firstName": "John",
         "lastName": "Doe",
-        "company": "Visa",
+        "company": "Relay",
         "address1": "1 Market St",
         "locality": "san francisco",
         "administrativeArea": "CA",
@@ -11250,7 +11250,7 @@ Request
             "phoneNumber": "999999999",
             "district": "MI",
             "buildingNumber": "123",
-            "company": "Visa",
+            "company": "Relay",
             "email": "test@cybs.com"
         },
         "shipTo": {
@@ -11265,7 +11265,7 @@ Request
             "phoneNumber": "999999999",
             "district": "MI",
             "buildingNumber": "123",
-            "company": "Visa",
+            "company": "Relay",
             "email": "test@cybs.com"
         },
         "amountDetails": {
@@ -11436,7 +11436,7 @@ Response to a Successful Request
     "billTo": {
         "firstName": "John",
         "lastName": "Doe",
-        "company": "Visa",
+        "company": "Relay",
         "address1": "1 Market St",
         "locality": "san francisco",
         "administrativeArea": "CA",
@@ -12579,7 +12579,7 @@ This section describes the required credentials and field mappings for your ifra
 Token Requestor --- Token Service Provider Iframe Credentials
 -------------------------------------------------------------
 
-You must use Token Requestor --- Token Service Provider (TR-TSP) keys to communicate with the Visa Token Service (VTS) iframe. You can use these keys to create the session information for VTS and Passkey Service. For information on iframes and the Visa Token Service SDK, you must contact your account manager.
+You must use Token Requestor --- Token Service Provider (TR-TSP) keys to communicate with the Relay Token Service (VTS) iframe. You can use these keys to create the session information for VTS and Passkey Service. For information on iframes and the Relay Token Service SDK, you must contact your account manager.
 
 > IMPORTANT
 > The API key values for the apikey credential will expire in September 2027.
@@ -12595,9 +12595,9 @@ You must use Token Requestor --- Token Service Provider (TR-TSP) keys to communi
 `TMS` Iframe Mapping
 --------------------
 
-When you send tokenized card authentication requests with `TMS`, the fields in your `&lt;iframe&gt;` element must be mapped correctly to the corresponding `TMS` and Visa Token Service fields. This table lists the correct `TMS` to Visa Token Service field mappings.
+When you send tokenized card authentication requests with `TMS`, the fields in your `&lt;iframe&gt;` element must be mapped correctly to the corresponding `TMS` and Relay Token Service fields. This table lists the correct `TMS` to Relay Token Service field mappings.
 
-|                  `TMS` Field                   |   Visa Token Service Iframe Field    |
+|                  `TMS` Field                   |   Relay Token Service Iframe Field    |
 |------------------------------------------------|--------------------------------------|
 | action                                         | type                                 |
 | authenticatedIdentities.data                   | fidoResponse.fidoBlob                |
@@ -12619,7 +12619,7 @@ When you send tokenized card authentication requests with `TMS`, the fields in y
 | deviceInformation.platformType                 | platformType                         |
 | deviceInformation.userAgentBrowserValue        | browserData.userAgent                |
 | sessionInformation.secureToken                 | sessionContext.secureToken           |
-[`TMS` to Visa Token Service Field Mapping]
+[`TMS` to Relay Token Service Field Mapping]
 
 Create Tokenized Card Authentication Options {#tms-net-tkn-card-authenticate-intro}
 ===================================================================================
@@ -12792,14 +12792,14 @@ Response to a Successful Request
                         {
                         "method": "APP_TO_APP",
                         "value": "Verify with Bank",
-                        "source": https://usa.visa.com/app/af801b935f19ae03a718d40,
+                        "source": https://usa.relay.com/app/af801b935f19ae03a718d40,
                         "id": "MGZlY2YwOWQ3MDZmYWZjZGMwN2Y0YjllZWFkODZkMDI=",
                         "requestPayload": "cDkwMjFhZmFkZDVmZ2hqMzQyY2EzNTM2ODk2NWI3YTAy"
                         },
                         {
                         "method": "APP_TO_APP",
                         "value": "Verify with Bank",
-                        "source": https://usa.visa.com/app/af801b935f19ae03a718d40,
+                        "source": https://usa.relay.com/app/af801b935f19ae03a718d40,
                         "id": "ZWY2NTkyZDFiNjZlZTMwZGQyNjg1ZDY3NDY0YTc1MDE=",
                         "requestPayload": "cDkwMjFhZmFkZDVmZ2hqMzQyY2EzNTM2ODk2NWI3YTAy",
                         "platformType": "WEB",
@@ -13033,7 +13033,7 @@ Response to a Successful Request
     "number": "4895370016750801",
     "expirationMonth": "12",
     "expirationYear": "2023",
-    "type": "visa",
+    "type": "relay",
     "cryptogram": "AwAAAADggP/Ce5+ZciCXQUUAAAA=",
     "eci": "05",
     "requestorId": "40010052236",
@@ -13078,7 +13078,7 @@ Response to a Successful Request
     "number": "4895370016750801",
     "expirationMonth": "12",
     "expirationYear": "2023",
-    "type": "visa",
+    "type": "relay",
     "cryptogram": "AwAAAADggP/Ce5+ZciCXQUUAAAA=",
     "eci": "07",
     "requestorId": "40010052236",
@@ -13461,7 +13461,7 @@ Response to a Successful Request
     "number": "4895370016750801",
     "expirationMonth": "12",
     "expirationYear": "2023",
-    "type": "visa",
+    "type": "relay",
     "cryptogram": "AwAAAADggP/Ce5+ZciCXQUUAAAA=",
     "eci": "05",
     "requestorId": "40010052236",
@@ -13506,7 +13506,7 @@ Response to a Successful Request
     "number": "4895370016750801",
     "expirationMonth": "12",
     "expirationYear": "2023",
-    "type": "visa",
+    "type": "relay",
     "cryptogram": "AwAAAADggP/Ce5+ZciCXQUUAAAA=",
     "eci": "07",
     "requestorId": "40010052236",
@@ -13558,7 +13558,7 @@ Issuer Application
 :
 You can authenticate in an issuer application using these methods:
 
-    * **Issuer application with backend Visa integration** : stepUpOptions.method is set to `APP_TO_APP`.
+    * **Issuer application with backend Relay integration** : stepUpOptions.method is set to `APP_TO_APP`.
     * **Issuer application returns issuer authentication code** : stepUpOptions.method is set to `APP_TO_APP`.
     * **Issuer `3-D Secure`** : stepUpOptions.method is set to `APP_TO_APP` and deviceInformation.platformType is set to `WEB`.
 
@@ -13935,7 +13935,7 @@ Response to a Successful Request
     "number": "4895370016750801",
     "expirationMonth": "12",
     "expirationYear": "2023",
-    "type": "visa",
+    "type": "relay",
     "cryptogram": "AwAAAADggP/Ce5+ZciCXQUUAAAA=",
     "eci": "05",
     "requestorId": "40010052236",
@@ -13980,7 +13980,7 @@ Response to a Successful Request
     "number": "4895370016750801",
     "expirationMonth": "12",
     "expirationYear": "2023",
-    "type": "visa",
+    "type": "relay",
     "cryptogram": "AwAAAADggP/Ce5+ZciCXQUUAAAA=",
     "eci": "07",
     "requestorId": "40010052236",
@@ -14012,7 +14012,7 @@ Response to a Successful Request
 Step-up Authentication for External Web Application {#tms-net-tkn-card-stepup-ext-web-app}
 ==========================================================================================
 
-Follow these steps to register a device and network token combination with `Payment Passkey` for a web or application notification from an issuer that is not integrated with Visa.
+Follow these steps to register a device and network token combination with `Payment Passkey` for a web or application notification from an issuer that is not integrated with Relay.
 
 Step 1: Validate the one-time password code {#tms-net-tkn-card-stepup-ext-web-app-step1}
 ========================================================================================
@@ -14421,7 +14421,7 @@ Response to a Successful Request
     "number": "4895370016750801",
     "expirationMonth": "12",
     "expirationYear": "2023",
-    "type": "visa",
+    "type": "relay",
     "cryptogram": "AwAAAADggP/Ce5+ZciCXQUUAAAA=",
     "eci": "05",
     "requestorId": "40010052236",
@@ -14466,7 +14466,7 @@ Response to a Successful Request
     "number": "4895370016750801",
     "expirationMonth": "12",
     "expirationYear": "2023",
-    "type": "visa",
+    "type": "relay",
     "cryptogram": "AwAAAADggP/Ce5+ZciCXQUUAAAA=",
     "eci": "07",
     "requestorId": "40010052236",
@@ -14975,7 +14975,7 @@ Response to a Successful Request
     "number": "4895370016750801",
     "expirationMonth": "12",
     "expirationYear": "2023",
-    "type": "visa",
+    "type": "relay",
     "cryptogram": "AwAAAADggP/Ce5+ZciCXQUUAAAA=",
     "eci": "05",
     "requestorId": "40010052236",
@@ -15020,7 +15020,7 @@ Response to a Successful Request
     "number": "4895370016750801",
     "expirationMonth": "12",
     "expirationYear": "2023",
-    "type": "visa",
+    "type": "relay",
     "cryptogram": "AwAAAADggP/Ce5+ZciCXQUUAAAA=",
     "eci": "07",
     "requestorId": "40010052236",
@@ -15052,7 +15052,7 @@ Response to a Successful Request
 Classic Cloud Token Framework {#tms-ctf-intro}
 ==============================================
 
-The Cloud Token Framework (CTF) is the framework for binding a device and a network token. CTF enables merchants to perform one-time issuer identification and verification and securely binds a user's device to a Visa network token. CTF reduces fraud rates and improves transaction conversion.
+The Cloud Token Framework (CTF) is the framework for binding a device and a network token. CTF enables merchants to perform one-time issuer identification and verification and securely binds a user's device to a payment network token. CTF reduces fraud rates and improves transaction conversion.
 
 > IMPORTANT CTF is supported only in mobile in-app experiences.
 
@@ -15353,7 +15353,7 @@ When authenticatedIdentities.provider is set to `CLIENT_DEVICE_CERT_JWS`, this f
       * `alg` in header set to `"PS256"`
 
 :
-When authenticatedIdentities.provider is set to `VISA_PAYMENT_PASSKEY`, the value of this field is from the iframe.
+When authenticatedIdentities.provider is set to `CARD_PAYMENT_PASSKEY`, the value of this field is from the iframe.
 
 [authenticatedIdentities.provider](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/authenticated-ids-aa/authenticated-ids-provider.md "")
 :
@@ -15639,7 +15639,7 @@ When authenticatedIdentities.provider is set to `CLIENT_DEVICE_CERT_JWS`, this f
       * `alg` in header set to `"PS256"`
 
 :
-When authenticatedIdentities.provider is set to `VISA_PAYMENT_PASSKEY`, the value of this field is from the iframe.
+When authenticatedIdentities.provider is set to `CARD_PAYMENT_PASSKEY`, the value of this field is from the iframe.
 
 [authenticatedIdentities.provider](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/authenticated-ids-aa/authenticated-ids-provider.md "")
 :
@@ -15756,7 +15756,7 @@ Binding Declined
 Step-Up Authentication for External Web Application {#tms-ctf-stepup-ext-webapp}
 ================================================================================
 
-Follow these steps to bind a device and network token combination with a web or application notification from an issuer that is not integrated with Visa.
+Follow these steps to bind a device and network token combination with a web or application notification from an issuer that is not integrated with Relay.
 
 Step 1: Create a device {#tms-ctf-stepup-ext-webapp-step1}
 ==========================================================
@@ -15916,7 +15916,7 @@ When authenticatedIdentities.provider is set to `CLIENT_DEVICE_CERT_JWS`, this f
       * `alg` in header set to `"PS256"`
 
 :
-When authenticatedIdentities.provider is set to `VISA_PAYMENT_PASSKEY`, the value of this field is from the iframe.
+When authenticatedIdentities.provider is set to `CARD_PAYMENT_PASSKEY`, the value of this field is from the iframe.
 
 [authenticatedIdentities.provider](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/authenticated-ids-aa/authenticated-ids-provider.md "")
 :
@@ -16264,7 +16264,7 @@ When authenticatedIdentities.provider is set to `CLIENT_DEVICE_CERT_JWS`, this f
       * `alg` in header set to `"PS256"`
 
 :
-When authenticatedIdentities.provider is set to `VISA_PAYMENT_PASSKEY`, the value of this field is from the iframe.
+When authenticatedIdentities.provider is set to `CARD_PAYMENT_PASSKEY`, the value of this field is from the iframe.
 
 [authenticatedIdentities.provider](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/authenticated-ids-aa/authenticated-ids-provider.md "")
 :
@@ -16813,7 +16813,7 @@ When authenticatedIdentities.provider is set to `CLIENT_DEVICE_CERT_JWS`, this f
       * `alg` in header set to `"PS256"`
 
 :
-When authenticatedIdentities.provider is set to `VISA_PAYMENT_PASSKEY`, the value of this field is from the iframe.
+When authenticatedIdentities.provider is set to `CARD_PAYMENT_PASSKEY`, the value of this field is from the iframe.
 
 [orderInformation.amountDetails.totalAmount](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-amount-details-total-amount.md "")
 :
@@ -16907,7 +16907,7 @@ Tap to Add Card {#tms-tap-intro}
 ================================
 
 The Tap to Add Card feature provides the cardholder with the ability to save their card credentials with you by tapping their contactless card to the back of their compatible device when using your application. You can then send a token provisioning request that contains EMV chip data to `TMS`. This reduces token provisioning fraud, proves possession of the card, and reduces room for manual errors.  
-Tap to Add Card is available for Visa card brands.
+Tap to Add Card is available for Relay card brands.
 
 > IMPORTANT This feature is in pilot phase. You have early access to this feature even though it might contain bugs or unfinished work. Please consider the risk when using this feature.
 
@@ -16943,11 +16943,11 @@ Tap to Add Card Workflow ![](/content/dam/documentation/cybs/en-us/topics/paymen
    1. (Optional) Your application prompts the cardholder to enter their card verification value (CVV2) data.
 6. `TMS` creates a `TMS` token and a network token with EMV tags.
 
-7. Visa performs cryptogram validation on your behalf. When the cryptogram validation is successful, Visa forwards the provision request to the card issuer with PAN Source = 6 and the CVV2 (if available).
+7. Relay performs cryptogram validation on your behalf. When the cryptogram validation is successful, Relay forwards the provision request to the card issuer with PAN Source = 6 and the CVV2 (if available).
 
 8. The card issuer approves or declines the provision request.
 
-9. Visa generates a token upon issuer approval and sends the token to `TMS`.
+9. Relay generates a token upon issuer approval and sends the token to `TMS`.
 
 10. You notify the cardholder that the card-on-file (COF) token was provisioned.
 
@@ -16960,7 +16960,7 @@ Card art is available for these card types:
 
 * American Express
 * Mastercard
-* Visa
+* Relay
 
 Retrieve Card Art {#tms-net-tkn-card-art-retrieve-intro}
 ========================================================
@@ -16985,7 +16985,7 @@ The *`{provider}`* is the provider of the card for which you want to retrieve ca
 
 * `mscof`: Mastercard
 
-* `vts`: Visa  
+* `vts`: Relay  
   The *`{asset.types}`* is the card art asset that you retrieve. Possible values:
 
 * `card-art-combined`: background image, brand logo, and issuer logo
@@ -17119,7 +17119,7 @@ Response to a Successful Request
         "number": "489537XXXXXX5398",
         "expirationMonth": "12",
         "expirationYear": "2030",
-        "type": "visa",
+        "type": "relay",
         "card": {
             "suffix": "7179",
             "expirationMonth": "12",
@@ -17170,9 +17170,9 @@ Response to a Successful Request
             "paymentAccountInformation": {
                 "card": {
                     "type": "001",
-                    "brandName": "VISA",
+                    "brandName": "CARD",
                     "credentialType": "PAN",
-                    "cardType": "VISA"
+                    "cardType": "CARD"
                 }
             }
         }
@@ -17392,7 +17392,7 @@ Encrypt and Decrypt Data {#tms-encrypt-decrypt}
        "number": "4X24XX7118382281",
        "expirationMonth": "11",
        "expirationYear": "2022",
-       "type": "visa",
+       "type": "relay",
        "cryptogram": "AF1ajnoLKKj8AAKhssPUGgADFA==",
        "requestorId": "ABCD",
        "card": {
@@ -17447,7 +17447,7 @@ A request response returns one of the following HTTP status codes:
 * `410`: Token not available The token has been deleted.
 * `424`: Failed Dependency: The profile represented by the profile ID may not exist or the profile ID was entered incorrectly.
 * `500`: Unexpected error.
-* `502`: Bad gateway. There was a token deletion error from the Visa Token Service (VTS).
+* `502`: Bad gateway. There was a token deletion error from the Relay Token Service (VTS).
   {#tms-http-status_ul_zwf_dgk_rwb}
 
 Retrieve Network Token Payment Credentials {#tms-net-tkn-partner-retrieve-pay-cred-intro}
@@ -17456,7 +17456,7 @@ Retrieve Network Token Payment Credentials {#tms-net-tkn-partner-retrieve-pay-cr
 This section describes how to retrieve network token payment credentials such as:
 
 * Network token value
-* Cryptogram (Visa and Mastercard only)
+* Cryptogram (Relay and Mastercard only)
 * Dynamic card verification value (CVV) (American Express only)  
   Network token payment credentials are returned as a JSON web encryption (JWE) response.
 
@@ -17494,13 +17494,13 @@ The *`{tokenId}`* is the identifier of the tokenized card.
 Retrieve Network Token AFT Payment Credentials {#tms-net-tkn-partner-retrieve-aft-pay-cred-intro}
 =================================================================================================
 
-This section describes how to retrieve the payment credentials for a Visa Token Service (VTS) network token that is used for account funding transactions (AFTs). You can retrieve these payment credentials for a VTS network token:
+This section describes how to retrieve the payment credentials for a Relay Token Service (VTS) network token that is used for account funding transactions (AFTs). You can retrieve these payment credentials for a VTS network token:
 
 * VTS network token value
-* AFT cryptogram (Visa only)  
+* AFT cryptogram (Relay only)  
   The VTS network token payment credentials are returned as a JSON Web Encryption (JWE) response.
 
-> IMPORTANT You must contact your Visa representative to ensure that your system is enabled to retrieve an AFT cryptogram.
+> IMPORTANT You must contact your Relay representative to ensure that your system is enabled to retrieve an AFT cryptogram.
 
 Endpoint
 --------
@@ -17515,7 +17515,7 @@ The *`{tokenId}`* is the token ID returned in the id field when you create the c
 Create a Digital Signature Key {#wh-fg-key-dig-sig-intro}
 =========================================================
 
-Use the information in this section to create a *digital signature key*. The Digital Signature Key request uses Visa's key management service to store your credentials. The Webhooks platform retrieves your credentials from key management to digitally authenticate your notifications.  
+Use the information in this section to create a *digital signature key*. The Digital Signature Key request uses Relay's key management service to store your credentials. The Webhooks platform retrieves your credentials from key management to digitally authenticate your notifications.  
 You must create a digital signature key to enable `Cybersource` to send notifications to your servers. Replace the digital signature key every year. When you generate a new digital signature key, it overrides the old key and new transactions must use the new key.  
 Notifications that use message-level encryption must also the digital signature key.
 

@@ -8,7 +8,7 @@ Compatibility Requirements for Android Devices {#tap-to-phone-intro-android-devi
 ========================================================================================
 
 To accept contactless payments, your Android device must be compatible with the Tap to Pay on Android Solution. These are the key requirements for a compatible Android device:
-* Tap to Pay Ready app is installed. You can download the app from the [Google Play Store](https://play.google.com/store/apps/details?id=com.visa.kic.app.kernel "").
+* Tap to Pay Ready app is installed. You can download the app from the [Google Play Store](https://play.google.com/store/apps/details?id=com.relay.kic.app.kernel "").
 * Google Play Integrity API contains `DEVICE_INTEGRITY` verdict. For more information, see the [Android Developer documentation](https://developer.android.com/google/play/integrity/additional-tools#check-device "").
 * Supports Google Mobile Services (GMS) and Google Play Store.
 * Hardware-backed keystore.
@@ -60,7 +60,7 @@ PCI MPoC Standard Compliance {#ttp-comply-pci-mpoc-intro}
 =========================================================
 
 The Tap to Pay on Android Solution complies with the PCI Security Standards Council (PCI SSC) Mobile Payments on COTS (MPoC) standard. This standard is typically referred to as *PCI MPoC*. Compliance with this standard helps ensure secure and reliable payment processing across supported Android devices.  
-The PCI-Certified MPoC Solution uses the Tap to Pay Ready app by Visa to meet PCI MPoC software, attestation, and monitoring requirements. The app uses a transparent overlay during payment processing to preserve the seamless UI experience. For app installation instructions, see [Install the Tap to Pay Ready App](/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone/tap-to-phone-get-started-intro/ttp-comply-pci-mpoc-install-app-intro/ttp-comply-pci-mpoc-install-app-task.md "").  
+The PCI-Certified MPoC Solution uses the Tap to Pay Ready app by Relay to meet PCI MPoC software, attestation, and monitoring requirements. The app uses a transparent overlay during payment processing to preserve the seamless UI experience. For app installation instructions, see [Install the Tap to Pay Ready App](/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone/tap-to-phone-get-started-intro/ttp-comply-pci-mpoc-install-app-intro/ttp-comply-pci-mpoc-install-app-task.md "").  
 Using an app-to-app approach, payment processing is handled independently from your point-of-sale (POS) application. Transactions are started in your POS app, securely passed to the Tap to Pay Ready app for processing, and then returned to the original app. This approach meets compliance requirements and helps you achieve these benefits:
 
 * Reduces PCI compliance complexity

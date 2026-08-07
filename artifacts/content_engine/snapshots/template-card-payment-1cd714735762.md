@@ -51,7 +51,7 @@
 
 | Type | Code |
 |------|------|
-| Visa | 001 |
+| Card brand 001 | 001 |
 | Mastercard | 002 |
 | American Express | 003 |
 | Discover | 004 |

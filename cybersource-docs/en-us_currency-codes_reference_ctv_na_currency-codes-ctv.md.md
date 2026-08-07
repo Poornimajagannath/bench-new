@@ -1,8 +1,8 @@
-Currency Codes for `Visa Platform Connect` {#currency-codes-ctv}
+Currency Codes for `Platform Connect` {#currency-codes-ctv}
 ================================================================
 
-On `Visa Platform Connect`, for amounts in currencies that have three decimal places, `Cybersource` reports show all three decimal places. To comply with Visa formatting requirements, `Cybersource` truncates the values to two decimal places before sending them to the processor. As a result, the values in the processor reports do not match the values in the `Cybersource` reports, which causes minute differences in reconciliation.  
-`Visa Platform Connect` was previously called [Cybersource through VisaNet](# "").  
+On `Platform Connect`, for amounts in currencies that have three decimal places, `Cybersource` reports show all three decimal places. To comply with Relay formatting requirements, `Cybersource` truncates the values to two decimal places before sending them to the processor. As a result, the values in the processor reports do not match the values in the `Cybersource` reports, which causes minute differences in reconciliation.  
+`Platform Connect` was previously called [Cybersource through CardNet](# "").  
 The currencies listed for each acquirer are processing currencies, not funding currencies.  
 See [ISO Standard Currency Codes](https://developer.cybersource.com/library/documentation/sbc/quickref/currencies.pdf "") for the currency name and the number of decimal places for each currency code.
 
@@ -254,11 +254,11 @@ Vietnam Technological and Commercial Joint-stock Bank
 :
 AED, AUD, BHD, CAD, CHF, CNY, DKK, EGP, EUR, FJD, GBP, HKD, IDR, INR, JOD, JPY, KRW, KWD, KZT, LAK, LBP, LKR, MAD, MMK, MRO, MVR, MYR, NOK, NPR, NZD, OMR, PGK, PHP, PKR, QAR, RUB, SAR, SBD, SEK, SGD, SYP, THB, TOP, TRY, USD, VND, VUV, WST, XOF, ZAR
 
-Visa Guatemala
+Relay Guatemala
 :
 GTQ, USD
 
-VisaNet Uruguay
+CardNet Uruguay
 :
 USD, UYU
 
@@ -274,14 +274,14 @@ Wing Lung Bank
 :
 EUR, HKD, USD
 
-VISA Platform Connect: Specifications and Conditions for Resellers/Partners {#vpc-partner-reseller-disclaimer}
+CARD Platform Connect: Specifications and Conditions for Resellers/Partners {#vpc-partner-reseller-disclaimer}
 ==============================================================================================================
 
-The following are specifications and conditions that apply to a Reseller/Partner enabling its merchants through Cybersource for Visa Platform Connect ("VPC") processing. Failure to meet any of the specifications and conditions below is subject to the liability provisions and indemnification obligations under Reseller/Partner's contract with Visa/Cybersource.
+The following are specifications and conditions that apply to a Reseller/Partner enabling its merchants through Cybersource for Platform Connect ("VPC") processing. Failure to meet any of the specifications and conditions below is subject to the liability provisions and indemnification obligations under Reseller/Partner's contract with Relay/Cybersource.
 
 1. Before boarding merchants for payment processing on a VPC acquirer's connection, Reseller/Partner and the VPC acquirer must have a contract or other legal agreement that permits Reseller/Partner to enable its merchants to process payments with the acquirer through the dedicated VPC connection and/or traditional connection with such VPC acquirer.
 2. Reseller/Partner is responsible for boarding and enabling its merchants in accordance with the terms of the contract or other legal agreement with the relevant VPC acquirer.
 3. Reseller/Partner acknowledges and agrees that all considerations and fees associated with chargebacks, interchange downgrades, settlement issues, funding delays, and other processing related activities are strictly between Reseller and the relevant VPC acquirer.
 4. Reseller/Partner acknowledges and agrees that the relevant VPC acquirer is responsible for payment processing issues, including but not limited to, transaction declines by network/issuer, decline rates, and interchange qualification, as may be agreed to or outlined in the contract or other legal agreement between Reseller/Partner and such VPC acquirer.
 
-DISCLAIMER: NEITHER VISA NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR ANY ERRORS OR OMISSIONS BY THE VISA PLATFORM CONNECT ACQUIRER IN PROCESSING TRANSACTIONS. NEITHER VISA NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR RESELLER/PARTNER BOARDING MERCHANTS OR ENABLING MERCHANT PROCESSING IN VIOLATION OF THE TERMS AND CONDITIONS IMPOSED BY THE RELEVANT VISA PLATFORM CONNECT ACQUIRER.
+DISCLAIMER: NEITHER CARD NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR ANY ERRORS OR OMISSIONS BY THE CARD PLATFORM CONNECT ACQUIRER IN PROCESSING TRANSACTIONS. NEITHER CARD NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR RESELLER/PARTNER BOARDING MERCHANTS OR ENABLING MERCHANT PROCESSING IN VIOLATION OF THE TERMS AND CONDITIONS IMPOSED BY THE RELEVANT CARD PLATFORM CONNECT ACQUIRER.

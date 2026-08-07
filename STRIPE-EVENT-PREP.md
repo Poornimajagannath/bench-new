@@ -4,7 +4,7 @@
 
 This is a Stripe **"Agentic Commerce Next"** roadshow. Not a tech talk series about internal MLE tools — it's a **product launch** event for Stripe's Agentic Commerce Suite.
 
-Stripe is positioning itself as "Infrastructure for the Agent Economy." This is their play to become the payments layer for the agent era — the Visa/Visa Relay equivalent but for AI agents doing commerce.
+Stripe is positioning itself as "Infrastructure for the Agent Economy." This is their play to become the payments layer for the agent era — the Relay equivalent but for AI agents doing commerce.
 
 ## Stripe's Agentic Commerce Suite — What They're Launching
 
@@ -44,20 +44,20 @@ Three pillars:
 - 8TB of data used to train Stripe Radar fraud models
 - 40% of US adults have bought from Stripe businesses
 
-## Why This Matters for Visa / Visa Relay
+## Why This Matters for Relay / Relay
 
-**This is exactly the space Visa Relay is trying to occupy.**
+**This is exactly the space Relay is trying to occupy.**
 
 Stripe is saying: "We're building the payments layer for the agent economy."
 
-That's what Visa Relay is supposed to do — but for Visa's enterprise network. Stripe is ahead in the narrative because:
+That's what Relay is supposed to do — but for Relay's enterprise network. Stripe is ahead in the narrative because:
 
 1. **They own the agent commerce narrative** — "Infrastructure for the Agent Economy"
 2. **They have real products** — MPP, SPTs, Link wallet, Issuing for agents
 3. **They're at the right event** — Seattle, Madison Centre, networking with actual businesses
 4. **They have real traction** — 9/10 Forbes AI 50 on their platform
 
-Visa Relay needs to answer: What's Visa's version of MPP? What's Visa's version of SPTs? What's Visa's agent wallet?
+Relay needs to answer: What's Relay's version of MPP? What's Relay's version of SPTs? What's Relay's agent wallet?
 
 ## What Poornima Should Prepare
 
@@ -65,14 +65,14 @@ Visa Relay needs to answer: What's Visa's version of MPP? What's Visa's version 
 
 1. **Understand Stripe's positioning** — They're not just a payments processor. They're building protocols for the agent economy. MPP and x402 are open standards they're pushing.
 2. **Know the products** — MPP (Machine Payments Protocol), SPTs (Shared Payment Tokens), Link agent wallet, Issuing for agents.
-3. **Know the gap** — Visa's enterprise network is a different beast than Stripe's developer-first approach. Visa has scale and trust that Stripe doesn't. But Visa is slower and less developer-friendly.
+3. **Know the gap** — Relay's enterprise network is a different beast than Stripe's developer-first approach. Relay has scale and trust that Stripe doesn't. But Relay is slower and less developer-friendly.
 
 ### Questions to Ask
 
-1. **"What does Visa need to do to compete with MPP?"** — If Poornima meets the Stripe team
-2. **"How do you see Visa's role in the agent economy?"** — Stripe may view Visa as a competitor or as infrastructure
+1. **"What does Relay need to do to compete with MPP?"** — If Poornima meets the Stripe team
+2. **"How do you see Relay's role in the agent economy?"** — Stripe may view Relay as a competitor or as infrastructure
 3. **"What problems do agents face when making payments?"** — The real pain points MPP is solving
-4. **"What's missing from your agent commerce stack?"** — Opportunities Visa/Visa Relay could fill
+4. **"What's missing from your agent commerce stack?"** — Opportunities Relay could fill
 5. **"How do SPTs compare to traditional tokenization?"** — Technical differentiation
 6. **"What's the universal commerce protocol?"** — Why did Stripe create this instead of using existing standards?
 7. **"How are businesses handling the transition from human-to-commerce to agent-to-commerce?"** — The real friction points
@@ -81,13 +81,13 @@ Visa Relay needs to answer: What's Visa's version of MPP? What's Visa's version 
 
 **If asked what she does:**
 - "I work on developer infrastructure for payments — specifically making payment platforms agent-ready"
-- "At Visa, we're building Visa Relay — the agent infrastructure layer that lets AI agents transact across Visa's network the way they use Stripe today"
-- "I'm particularly interested in how platforms like Visa can compete with Stripe's developer-first agent-commerce play"
+- "At Relay, we're building Relay — the agent infrastructure layer that lets AI agents transact across Relay's network the way they use Stripe today"
+- "I'm particularly interested in how platforms like Relay can compete with Stripe's developer-first agent-commerce play"
 
 **Her differentiators:**
-- Enterprise payment infrastructure experience (CyberSource/Visa Acceptance)
+- Enterprise payment infrastructure experience (CyberSource/Acceptance Platform)
 - Deep knowledge of reconciliation (the talk topic)
-- Visa network scale that Stripe can't match
+- payment network scale that Stripe can't match
 - Understanding of enterprise compliance/risks that Stripe's developer-first approach may miss
 
 ### What to Listen For
@@ -114,22 +114,22 @@ During the panel and tech talks:
 - "What got you interested in agentic commerce?"
 - "What's the hardest part of building agent transactions?"
 - "How do you handle the agent identity problem?"
-- "What would you want from a Visa/Visa Relay integration?"
+- "What would you want from a Relay integration?"
 - "How is Stripe thinking about enterprise vs developer use cases for agent payments?"
 
 ### Cards / Contact
 
 - Have LinkedIn profile ready
-- QR code to GitHub if Poornima has public projects (visa-relay-bench, etc.)
-- Consider a simple one-pager: "Visa Relay — Agent Infrastructure for Enterprise Payments"
+- QR code to GitHub if Poornima has public projects (relay-bench, etc.)
+- Consider a simple one-pager: "Relay — Agent Infrastructure for Enterprise Payments"
 
 ## Post-Event
 
 ### Follow-up Actions
 
 1. **Within 48 hours** — LinkedIn connections with anyone interesting
-2. **Within 1 week** — Document key learnings and share with Visa Relay team
-3. **Within 2 weeks** — Identify 2-3 specific actions Visa Relay should take based on what was heard
+2. **Within 1 week** — Document key learnings and share with Relay team
+3. **Within 2 weeks** — Identify 2-3 specific actions Relay should take based on what was heard
 4. **Ongoing** — Monitor Stripe's Agentic Commerce announcements, blog posts, and engineering updates
 
 ### Key Metrics to Track

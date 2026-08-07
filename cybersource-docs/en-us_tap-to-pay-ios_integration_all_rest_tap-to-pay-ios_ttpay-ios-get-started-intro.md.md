@@ -17,7 +17,7 @@ Follow these steps to add the Tap to Pay on iPhone SDK to your Xcode project.
 
 1. In the Xcode app, click File.
 2. Click Add Package Dependencies.
-3. In the search bar, enter this GitHub link: [acceptance-devices-ios-sdk](https://github.com/visa/acceptance-devices-ios-sdk "").
+3. In the search bar, enter this GitHub link: [acceptance-devices-ios-sdk](https://github.com/relay/acceptance-devices-ios-sdk "").
 4. Set the Dependency Rule to Up to Next Major Version.
 5. Open the Add to Target drop-down menu, then choose your app.
 6. Click Add Package.

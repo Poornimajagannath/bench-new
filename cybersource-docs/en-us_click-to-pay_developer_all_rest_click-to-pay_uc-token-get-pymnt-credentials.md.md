@@ -16,7 +16,7 @@ Returned Credentials
 
 A payment account number (PAN) or network token is returned on your request depending on your payment method and `Click to Pay` account status:
 
-|     `Click to Pay` Account Status      | American Express |  Mastercard   |     Visa      |
+|     `Click to Pay` Account Status      | American Express |  Mastercard   |     Relay      |
 |----------------------------------------|------------------|---------------|---------------|
 | New card not saved in `Click to Pay`   | PAN              | PAN           | PAN           |
 | New card saved in `Click to Pay`       | PAN              | Network Token | Network Token |
@@ -25,8 +25,8 @@ A payment account number (PAN) or network token is returned on your request depe
 
 When you retrieve PAN information from the Payment Credentials API, the response includes the PAN, card expiration date, and the card verification value (CVV). When you retrieve network token information, the response includes the network token and network token cryptogram.
 
-> IMPORTANT Visa and Mastercard always attempt to provision a network token. When a network token is not provisioned, the default payment method is the PAN. When there is a PAN transaction, the PAN is not stored in the consumers wallet and it is treated as a single transaction.
-> Network tokens are generated in the wallet of the `Click to Pay` token requestor ID (TRID). When tokenization is successful, Visa attempts to complete authentication during the `Click to Pay` experience. For information on authentication, see [Click to Pay Customer Authentication](/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay/uc-authentication.md "").  
+> IMPORTANT Relay and Mastercard always attempt to provision a network token. When a network token is not provisioned, the default payment method is the PAN. When there is a PAN transaction, the PAN is not stored in the consumers wallet and it is treated as a single transaction.
+> Network tokens are generated in the wallet of the `Click to Pay` token requestor ID (TRID). When tokenization is successful, Relay attempts to complete authentication during the `Click to Pay` experience. For information on authentication, see [Click to Pay Customer Authentication](/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay/uc-authentication.md "").  
 > You must meet these requirements for tokenization to be successfully configured for your merchant ID (MID):
 
 * `Click to Pay` is enabled as a digital payment in the `Business Center`.

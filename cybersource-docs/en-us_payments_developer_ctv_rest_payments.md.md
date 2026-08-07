@@ -25,7 +25,7 @@ Visit the [`Cybersource` documentation hub](https://developer.cybersource.com/do
 Customer Support
 :
 For support information about any service, visit the Support Center:  
-<http://support.visaacceptance.com>
+<http://support.example.com>
 
 Recent Revisions to This Document {#payments-doc-revisions}
 ===========================================================
@@ -35,7 +35,7 @@ Recent Revisions to This Document {#payments-doc-revisions}
 
 Account Name Inquiry
 :
-Updated the feature for `Visa Platform Connect`. See [Account Name Inquiry with a Zero Amount Authorization](/docs/cybs/en-us/payments/developer/ctv/rest/payments/payments-processing-basic-intro/payments-acct-name-inquiry-intro.md "").
+Updated the feature for `Platform Connect`. See [Account Name Inquiry with a Zero Amount Authorization](/docs/cybs/en-us/payments/developer/ctv/rest/payments/payments-processing-basic-intro/payments-acct-name-inquiry-intro.md "").
 
 26.05.01
 --------
@@ -113,17 +113,17 @@ Card Present Connect \| Mass Transit Processing
 :
 Removed content that is available in [*Card Present Connect \| Mass Transit Developer Guide*](https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit/um-intro-overview.md "") .
 
-VISA Platform Connect: Specifications and Conditions for Resellers/Partners {#vpc-partner-reseller-disclaimer}
+CARD Platform Connect: Specifications and Conditions for Resellers/Partners {#vpc-partner-reseller-disclaimer}
 ==============================================================================================================
 
-The following are specifications and conditions that apply to a Reseller/Partner enabling its merchants through Cybersource for Visa Platform Connect ("VPC") processing. Failure to meet any of the specifications and conditions below is subject to the liability provisions and indemnification obligations under Reseller/Partner's contract with Visa/Cybersource.
+The following are specifications and conditions that apply to a Reseller/Partner enabling its merchants through Cybersource for Platform Connect ("VPC") processing. Failure to meet any of the specifications and conditions below is subject to the liability provisions and indemnification obligations under Reseller/Partner's contract with Relay/Cybersource.
 
 1. Before boarding merchants for payment processing on a VPC acquirer's connection, Reseller/Partner and the VPC acquirer must have a contract or other legal agreement that permits Reseller/Partner to enable its merchants to process payments with the acquirer through the dedicated VPC connection and/or traditional connection with such VPC acquirer.
 2. Reseller/Partner is responsible for boarding and enabling its merchants in accordance with the terms of the contract or other legal agreement with the relevant VPC acquirer.
 3. Reseller/Partner acknowledges and agrees that all considerations and fees associated with chargebacks, interchange downgrades, settlement issues, funding delays, and other processing related activities are strictly between Reseller and the relevant VPC acquirer.
 4. Reseller/Partner acknowledges and agrees that the relevant VPC acquirer is responsible for payment processing issues, including but not limited to, transaction declines by network/issuer, decline rates, and interchange qualification, as may be agreed to or outlined in the contract or other legal agreement between Reseller/Partner and such VPC acquirer.
 
-DISCLAIMER: NEITHER VISA NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR ANY ERRORS OR OMISSIONS BY THE Visa Platform Connect ACQUIRER IN PROCESSING TRANSACTIONS. NEITHER VISA NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR RESELLER/PARTNER BOARDING MERCHANTS OR ENABLING MERCHANT PROCESSING IN VIOLATION OF THE TERMS AND CONDITIONS IMPOSED BY THE RELEVANT Visa Platform Connect ACQUIRER.
+DISCLAIMER: NEITHER CARD NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR ANY ERRORS OR OMISSIONS BY THE Platform Connect ACQUIRER IN PROCESSING TRANSACTIONS. NEITHER CARD NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR RESELLER/PARTNER BOARDING MERCHANTS OR ENABLING MERCHANT PROCESSING IN VIOLATION OF THE TERMS AND CONDITIONS IMPOSED BY THE RELEVANT Platform Connect ACQUIRER.
 
 Introduction to Payments {#payments-intro}
 ==========================================
@@ -146,7 +146,7 @@ You can expect to pay these fees:
 
 * Discount rates: your acquirer charges a fee and collects a percentage of every transaction. The combination of the fee and the percentage is called the *discount rate* . These charges can be *bundled* (combined into a single charge) or *unbundled* (charged separately).
 
-* Interchange fees: payment networks, such as Visa or Mastercard, each have a base fee, called the *interchange fee*, for each type of transaction. Your acquirer and processor can show you ways to reduce this fee.
+* Interchange fees: payment networks, such as Relay or Mastercard, each have a base fee, called the *interchange fee*, for each type of transaction. Your acquirer and processor can show you ways to reduce this fee.
 
 * Chargebacks: when cardholders dispute charges, you can incur *chargebacks*. A chargeback occurs when a charge on a customer's account is reversed. Your acquirer removes the money from your account and could charge you a fee for processing the chargeback.  
   Take these precautions to prevent chargebacks:
@@ -178,7 +178,7 @@ Payment Networks {#payments-intro-card-companies}
 =================================================
 
 Payment networks manage communications between acquirers and issuing banks. They also develop industry standards, support their brands, and establish fees for acquiring institutions.  
-Some payment networks, such as Visa and Mastercard, are trade associations that do not issue cards. Issuers are members of these associations, and they issue cards under license from the association.  
+Some payment networks, such as Relay and Mastercard, are trade associations that do not issue cards. Issuers are members of these associations, and they issue cards under license from the association.  
 Other networks, such as Discover and American Express, issue their own cards. Before you process cards from these companies, you must sign agreements with them.
 
 Payment Processors {#payments-intro-processors}
@@ -190,85 +190,85 @@ This table lists the processors and corresponding card types that are supported 
 
 | Payment Processor       | Supported Card Types                                                                                                                                                                                                                                                                                               | Notes                                                                                                                                            |
 |:------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------|
-| `Visa Platform Connect` | Different card types are supported for each `Visa Platform Connect` acquirer. See [Visa Platform Connect Acquirers](/docs/cybs/en-us/payments/developer/ctv/rest/payments/payments-intro/payments-intro-banks-overview/payments-intro-processors/payments-intro-ctv-acqs.md ""). | The Visa Electron card type is processed the same way that the Visa debit card is processed. Use card type value `001` (Visa) for Visa Electron. |
+| `Platform Connect` | Different card types are supported for each `Platform Connect` acquirer. See [Platform Connect Acquirers](/docs/cybs/en-us/payments/developer/ctv/rest/payments/payments-intro/payments-intro-banks-overview/payments-intro-processors/payments-intro-ctv-acqs.md ""). | The Relay Electron card type is processed the same way that the Relay debit card is processed. Use card type value `001` (Relay) for Relay Electron. |
 [Payment Processor and Supported Card Types]
 
 {#payments-intro-processors_supported-cards}
 
-`Visa Platform Connect` Acquirers {#payments-intro-ctv-acqs}
+`Platform Connect` Acquirers {#payments-intro-ctv-acqs}
 ============================================================
 
-The following acquirers and card types are supported for `Visa Platform Connect`:
+The following acquirers and card types are supported for `Platform Connect`:
 
 | Raw Processor Name |                                                      Processor Name                                                      |                                                                                                                                                                   Supported Card Types                                                                                                                                                                    |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| vdcabsa            | Absa Bank on `Visa Platform Connect`                                                                                     | Visa, Mastercard, JCB, Diners Club                                                                                                                                                                                                                                                                                                                        |
-| vdcagbkchina       | Agricultural Bank of China (ABC) on `Visa Platform Connect`                                                              | Visa, Mastercard, American Express, JCB, Diners Club > IMPORTANT > ` Visa Platform Connect ` cannot process domestic transactions in China. ` Visa Platform Connect ` can process only cross-border transactions. A crossborder transaction is a transaction for which the payment card is issued in another country and accepted by a merchant in China. |
-| networkintluae     | Ahli United Bank in Bahrain, BLOM Bank, Network International                                                            | Visa, Mastercard, JCB, Diners Club                                                                                                                                                                                                                                                                                                                        |
-| vdcaaib            | Arab African International Bank (AAIB) on `Visa Platform Connect`                                                        | Visa, Mastercard, JCB                                                                                                                                                                                                                                                                                                                                     |
-| vdcacbvietnam      | Asia Commercial Bank (ACB) on `Visa Platform Connect`                                                                    | Visa, Mastercard, JCB                                                                                                                                                                                                                                                                                                                                     |
-| vdcasb             | Auckland Savings Bank (ASB) on `Visa Platform Connect`                                                                   | Visa, Mastercard                                                                                                                                                                                                                                                                                                                                          |
-| vdcanzbank         | Australia and New Zealand Banking Group Ltd. (ANZ) on `Visa Platform Connect`                                            | Visa, Mastercard                                                                                                                                                                                                                                                                                                                                          |
-| vdcaxis            | Axis Bank Ltd. of India on `Visa Platform Connect`                                                                       | Visa, Mastercard, Diners Club                                                                                                                                                                                                                                                                                                                             |
-| vdcbanamex         | Banco Nacional de México (Banamex) on `Visa Platform Connect`                                                            | Visa, Mastercard, American Express, Discover, JCB, Diners Club                                                                                                                                                                                                                                                                                            |
-| vdcbcosafrabr      | Banco Safra on `Visa Platform Connect`                                                                                   | Visa, Mastercard, American Express                                                                                                                                                                                                                                                                                                                        |
-| vdcbbl             | Bangkok Bank Ltd. on `Visa Platform Connect`                                                                             | Visa, Mastercard, JCB                                                                                                                                                                                                                                                                                                                                     |
-| vdcbankmuscat      | Bank Muscat of Oman on `Visa Platform Connect`                                                                           | Visa, Mastercard, American Express, Diners Club                                                                                                                                                                                                                                                                                                           |
-| vdcbay             | Bank of Ayudhya (BAY) on `Visa Platform Connect`                                                                         | Visa, Mastercard, JCB                                                                                                                                                                                                                                                                                                                                     |
-| vdcbocmacau        | Bank of China in Macau on `Visa Platform Connect`                                                                        | Visa, Mastercard                                                                                                                                                                                                                                                                                                                                          |
-| vdcbocom           | Bank of Communications on `Visa Platform Connect`                                                                        | Visa, Mastercard                                                                                                                                                                                                                                                                                                                                          |
-| vdcbksinarmasid    | Bank Sinarmas (Omise Ltd.) on `Visa Platform Connect`                                                                    | Visa, Mastercard                                                                                                                                                                                                                                                                                                                                          |
-| vdcbcellao         | Banque Pour Le Commerce Exterieur Lao (BCEL) on `Visa Platform Connect`                                                  | Visa, Mastercard, American Express, JCB                                                                                                                                                                                                                                                                                                                   |
-| vdcbarclaysbw      | Barclays Bank Botswana on `Visa Platform Connect`                                                                        | Visa, Mastercard, American Express                                                                                                                                                                                                                                                                                                                        |
-| vdcbarclaysmu      | Barclays Bank Mauritius Ltd. on `Visa Platform Connect`                                                                  | Visa, Mastercard, American Express                                                                                                                                                                                                                                                                                                                        |
-| vdcbarclaysghtzug  | Barclays Bank of Ghana Ltd., Barclays Bank of Tanzania Ltd., and Barclays Bank of Uganda Ltd. on `Visa Platform Connect` | Visa, Mastercard, American Express                                                                                                                                                                                                                                                                                                                        |
-| vdcbarclayske      | Barclays Bank of Kenya on `Visa Platform Connect`                                                                        | Visa, Mastercard, American Express                                                                                                                                                                                                                                                                                                                        |
-| vdcbarclayszm      | Barclays Bank of Zambia on `Visa Platform Connect`                                                                       | Visa, Mastercard, American Express                                                                                                                                                                                                                                                                                                                        |
-| vdcbarclayssc      | Barclays Bank Seychelles on `Visa Platform Connect`                                                                      | Visa, Mastercard, American Express                                                                                                                                                                                                                                                                                                                        |
-| vdcbccardkr        | BC Card Co., Ltd. on `Visa Platform Connect`                                                                             | Visa, Mastercard, American Express, JCB                                                                                                                                                                                                                                                                                                                   |
-| vdccubtw           | Cathay United Bank (CUB) on `Visa Platform Connect`                                                                      | Visa, Mastercard, JCB                                                                                                                                                                                                                                                                                                                                     |
-| vdccitihkmo        | Citibank Hongkong and Macau on `Visa Platform Connect`                                                                   | Visa, Mastercard, Diners Club, JCB                                                                                                                                                                                                                                                                                                                        |
-| vdccitimy          | Citibank Malaysia on `Visa Platform Connect`                                                                             | Visa, Mastercard                                                                                                                                                                                                                                                                                                                                          |
-| vdccitisg          | Citibank Singapore Ltd. on `Visa Platform Connect`                                                                       | Visa, Mastercard, JCB                                                                                                                                                                                                                                                                                                                                     |
-| vdccbq             | Commercial Bank of Qatar on `Visa Platform Connect`                                                                      | Visa, Mastercard, American Express, JCB, Diners Club                                                                                                                                                                                                                                                                                                      |
-| vdccredimax        | CrediMax (Bahrain) on `Visa Platform Connect`                                                                            | Visa, Mastercard, American Express, JCB, Diners Club                                                                                                                                                                                                                                                                                                      |
-| vdcctbc            | CTBC Bank Ltd. on `Visa Platform Connect`                                                                                | Visa, Mastercard, JCB                                                                                                                                                                                                                                                                                                                                     |
-| vdcfdmsbn          | First Data Merchant Solutions in Brunei on `Visa Platform Connect`                                                       | Visa, Mastercard, JCB                                                                                                                                                                                                                                                                                                                                     |
-| vdcfdmshk          | First Data Merchant Solutions in Hong Kong on `Visa Platform Connect`                                                    | Visa, Mastercard, JCB                                                                                                                                                                                                                                                                                                                                     |
-| vdcfdmsmy          | First Data Merchant Solutions in Malaysia on `Visa Platform Connect`                                                     | Visa, Mastercard, JCB                                                                                                                                                                                                                                                                                                                                     |
-| vdcfdmssg          | First Data Merchant Solutions in Singapore on `Visa Platform Connect`                                                    | Visa, Mastercard, JCB                                                                                                                                                                                                                                                                                                                                     |
-| vdcfnb             | FirstRand Bank on `Visa Platform Connect`                                                                                | Visa, Mastercard, American Express, Diners Club                                                                                                                                                                                                                                                                                                           |
-| vdchsbcbank        | Global Payments Asia Pacific on `Visa Platform Connect`                                                                  | Visa, Mastercard, JCB > IMPORTANT > In India, the only supported card types are Visa and Mastercard. All three card types (Visa, Mastercard, JCB) are supported in all other countries that Global Payments Asia Pacific covers.                                                                                                                          |
-| vdchabibltd        | Habib Bank Ltd. (HBL) on `Visa Platform Connect`                                                                         | Visa, Mastercard, American Express, JCB, Diners Club                                                                                                                                                                                                                                                                                                      |
-| vdchdfc            | HDFC Bank Ltd. of India on `Visa Platform Connect`                                                                       | Visa, Mastercard, Diners Club                                                                                                                                                                                                                                                                                                                             |
-| vdcimbank          | I\&M Bank on `Visa Platform Connect`                                                                                     | Visa, Mastercard                                                                                                                                                                                                                                                                                                                                          |
-| vdcicici           | ICICI of India on `Visa Platform Connect`                                                                                | Visa, Mastercard                                                                                                                                                                                                                                                                                                                                          |
-| vdckeb             | Korea Exchange Bank (KEB) on `Visa Platform Connect`                                                                     | Visa, Mastercard, JCB > IMPORTANT > ` Visa Platform Connect ` cannot process domestic transactions in Korea. ` Visa Platform Connect ` can process only cross-border transactions. A crossborder transaction is a transaction for which the payment card is issued in another country and accepted by a merchant in Korea.                                |
-| vdcmashreqbk       | Mashreq on `Visa Platform Connect`                                                                                       | Visa, Mastercard, American Express, JCB, Diners Club                                                                                                                                                                                                                                                                                                      |
-| vdcmaybankmy       | Maybank on `Visa Platform Connect`                                                                                       | Visa, Mastercard, American Express, JCB                                                                                                                                                                                                                                                                                                                   |
-| vdcnbad            | National Bank of Abu Dhabi (NBAD) on `Visa Platform Connect`                                                             | Visa, Mastercard, JCB, Diners Club                                                                                                                                                                                                                                                                                                                        |
-| vdcnbk             | National Bank of Kuwait (NBK) on `Visa Platform Connect`                                                                 | Visa, Mastercard, Diners Club                                                                                                                                                                                                                                                                                                                             |
-| vdcnacombk         | National Commercial Bank on `Visa Platform Connect`                                                                      | Visa, Mastercard, mada                                                                                                                                                                                                                                                                                                                                    |
-| vdcnijo            | Network International (NI) Jordan on `Visa Platform Connect`                                                             | Visa, Mastercard, American Express, JCB, Diners Club                                                                                                                                                                                                                                                                                                      |
-| vdcocbc            | Overseas Chinese Banking Corp (OCBC) on `Visa Platform Connect`                                                          | Visa, Mastercard                                                                                                                                                                                                                                                                                                                                          |
-| vdcpromerica       | Promerica in Honduras and Nicaragua on `Visa Platform Connect`                                                           | Visa, Mastercard                                                                                                                                                                                                                                                                                                                                          |
-| vdcbni             | PT Bank Negara Indonesia on `Visa Platform Connect`                                                                      | Visa, Mastercard                                                                                                                                                                                                                                                                                                                                          |
-| vdcqnbqa           | Qatar National Bank (QNB Group) on `Visa Platform Connect`                                                               | Visa, Mastercard, American Express, JCB, Diners Club                                                                                                                                                                                                                                                                                                      |
-| vdcsacomb          | Sacombank on `Visa Platform Connect`                                                                                     | Visa, Mastercard, JCB                                                                                                                                                                                                                                                                                                                                     |
-| vdcsmcc            | Sumitomo Mitsui Card Co. on `Visa Platform Connect`                                                                      | Visa                                                                                                                                                                                                                                                                                                                                                      |
-| vdctaishintw       | Taishin Bank Ltd. on `Visa Platform Connect`                                                                             | Visa, Mastercard, American Express, JCB                                                                                                                                                                                                                                                                                                                   |
-| vdcuob             | United Overseas Bank (UOB) in Singapore and Vietnam on `Visa Platform Connect`                                           | Visa, Mastercard, JCB                                                                                                                                                                                                                                                                                                                                     |
-| vdcuobth           | United Overseas Bank (UOB) in Thailand on `Visa Platform Connect`                                                        | Visa, Mastercard                                                                                                                                                                                                                                                                                                                                          |
-| vdcvantiv          | Vantiv on `Visa Platform Connect`                                                                                        | Visa, Mastercard, American Express, Discover, JCB, Diners Club                                                                                                                                                                                                                                                                                            |
-| vdcvietcombk       | Vietcombank on `Visa Platform Connect`                                                                                   | Visa, Mastercard, American Express, JCB, Diners Club                                                                                                                                                                                                                                                                                                      |
-| vdcvietin          | VietinBank on `Visa Platform Connect`                                                                                    | Visa, Mastercard, JCB, Diners Club                                                                                                                                                                                                                                                                                                                        |
-| vdctechcomvn       | Vietnam Technological and Commercial Joint Stock Bank (Techcombank) on `Visa Platform Connect`                           | Visa, Mastercard, American Express, JCB, Diners Club                                                                                                                                                                                                                                                                                                      |
-| vdcguatemala       | Visa Guatemala on `Visa Platform Connect`                                                                                | Visa                                                                                                                                                                                                                                                                                                                                                      |
-| vdcvisanetuy       | VisaNet Uruguay on `Visa Platform Connect`                                                                               | Visa                                                                                                                                                                                                                                                                                                                                                      |
-| vdcwestpac         | Westpac on `Visa Platform Connect`                                                                                       | Visa, Mastercard                                                                                                                                                                                                                                                                                                                                          |
-| vdcwhb             | Wing Hang Bank on `Visa Platform Connect`                                                                                | Visa, Mastercard                                                                                                                                                                                                                                                                                                                                          |
-| vdcwinglung        | Wing Lung Bank on `Visa Platform Connect`                                                                                | Visa, Mastercard                                                                                                                                                                                                                                                                                                                                          |
-[Supported `Visa Platform Connect` Acquirers and Card Types]
+| vdcabsa            | Absa Bank on `Platform Connect`                                                                                     | Relay, Mastercard, JCB, Diners Club                                                                                                                                                                                                                                                                                                                        |
+| vdcagbkchina       | Agricultural Bank of China (ABC) on `Platform Connect`                                                              | Relay, Mastercard, American Express, JCB, Diners Club > IMPORTANT > ` Platform Connect ` cannot process domestic transactions in China. ` Platform Connect ` can process only cross-border transactions. A crossborder transaction is a transaction for which the payment card is issued in another country and accepted by a merchant in China. |
+| networkintluae     | Ahli United Bank in Bahrain, BLOM Bank, Network International                                                            | Relay, Mastercard, JCB, Diners Club                                                                                                                                                                                                                                                                                                                        |
+| vdcaaib            | Arab African International Bank (AAIB) on `Platform Connect`                                                        | Relay, Mastercard, JCB                                                                                                                                                                                                                                                                                                                                     |
+| vdcacbvietnam      | Asia Commercial Bank (ACB) on `Platform Connect`                                                                    | Relay, Mastercard, JCB                                                                                                                                                                                                                                                                                                                                     |
+| vdcasb             | Auckland Savings Bank (ASB) on `Platform Connect`                                                                   | Relay, Mastercard                                                                                                                                                                                                                                                                                                                                          |
+| vdcanzbank         | Australia and New Zealand Banking Group Ltd. (ANZ) on `Platform Connect`                                            | Relay, Mastercard                                                                                                                                                                                                                                                                                                                                          |
+| vdcaxis            | Axis Bank Ltd. of India on `Platform Connect`                                                                       | Relay, Mastercard, Diners Club                                                                                                                                                                                                                                                                                                                             |
+| vdcbanamex         | Banco Nacional de México (Banamex) on `Platform Connect`                                                            | Relay, Mastercard, American Express, Discover, JCB, Diners Club                                                                                                                                                                                                                                                                                            |
+| vdcbcosafrabr      | Banco Safra on `Platform Connect`                                                                                   | Relay, Mastercard, American Express                                                                                                                                                                                                                                                                                                                        |
+| vdcbbl             | Bangkok Bank Ltd. on `Platform Connect`                                                                             | Relay, Mastercard, JCB                                                                                                                                                                                                                                                                                                                                     |
+| vdcbankmuscat      | Bank Muscat of Oman on `Platform Connect`                                                                           | Relay, Mastercard, American Express, Diners Club                                                                                                                                                                                                                                                                                                           |
+| vdcbay             | Bank of Ayudhya (BAY) on `Platform Connect`                                                                         | Relay, Mastercard, JCB                                                                                                                                                                                                                                                                                                                                     |
+| vdcbocmacau        | Bank of China in Macau on `Platform Connect`                                                                        | Relay, Mastercard                                                                                                                                                                                                                                                                                                                                          |
+| vdcbocom           | Bank of Communications on `Platform Connect`                                                                        | Relay, Mastercard                                                                                                                                                                                                                                                                                                                                          |
+| vdcbksinarmasid    | Bank Sinarmas (Omise Ltd.) on `Platform Connect`                                                                    | Relay, Mastercard                                                                                                                                                                                                                                                                                                                                          |
+| vdcbcellao         | Banque Pour Le Commerce Exterieur Lao (BCEL) on `Platform Connect`                                                  | Relay, Mastercard, American Express, JCB                                                                                                                                                                                                                                                                                                                   |
+| vdcbarclaysbw      | Barclays Bank Botswana on `Platform Connect`                                                                        | Relay, Mastercard, American Express                                                                                                                                                                                                                                                                                                                        |
+| vdcbarclaysmu      | Barclays Bank Mauritius Ltd. on `Platform Connect`                                                                  | Relay, Mastercard, American Express                                                                                                                                                                                                                                                                                                                        |
+| vdcbarclaysghtzug  | Barclays Bank of Ghana Ltd., Barclays Bank of Tanzania Ltd., and Barclays Bank of Uganda Ltd. on `Platform Connect` | Relay, Mastercard, American Express                                                                                                                                                                                                                                                                                                                        |
+| vdcbarclayske      | Barclays Bank of Kenya on `Platform Connect`                                                                        | Relay, Mastercard, American Express                                                                                                                                                                                                                                                                                                                        |
+| vdcbarclayszm      | Barclays Bank of Zambia on `Platform Connect`                                                                       | Relay, Mastercard, American Express                                                                                                                                                                                                                                                                                                                        |
+| vdcbarclayssc      | Barclays Bank Seychelles on `Platform Connect`                                                                      | Relay, Mastercard, American Express                                                                                                                                                                                                                                                                                                                        |
+| vdcbccardkr        | BC Card Co., Ltd. on `Platform Connect`                                                                             | Relay, Mastercard, American Express, JCB                                                                                                                                                                                                                                                                                                                   |
+| vdccubtw           | Cathay United Bank (CUB) on `Platform Connect`                                                                      | Relay, Mastercard, JCB                                                                                                                                                                                                                                                                                                                                     |
+| vdccitihkmo        | Citibank Hongkong and Macau on `Platform Connect`                                                                   | Relay, Mastercard, Diners Club, JCB                                                                                                                                                                                                                                                                                                                        |
+| vdccitimy          | Citibank Malaysia on `Platform Connect`                                                                             | Relay, Mastercard                                                                                                                                                                                                                                                                                                                                          |
+| vdccitisg          | Citibank Singapore Ltd. on `Platform Connect`                                                                       | Relay, Mastercard, JCB                                                                                                                                                                                                                                                                                                                                     |
+| vdccbq             | Commercial Bank of Qatar on `Platform Connect`                                                                      | Relay, Mastercard, American Express, JCB, Diners Club                                                                                                                                                                                                                                                                                                      |
+| vdccredimax        | CrediMax (Bahrain) on `Platform Connect`                                                                            | Relay, Mastercard, American Express, JCB, Diners Club                                                                                                                                                                                                                                                                                                      |
+| vdcctbc            | CTBC Bank Ltd. on `Platform Connect`                                                                                | Relay, Mastercard, JCB                                                                                                                                                                                                                                                                                                                                     |
+| vdcfdmsbn          | First Data Merchant Solutions in Brunei on `Platform Connect`                                                       | Relay, Mastercard, JCB                                                                                                                                                                                                                                                                                                                                     |
+| vdcfdmshk          | First Data Merchant Solutions in Hong Kong on `Platform Connect`                                                    | Relay, Mastercard, JCB                                                                                                                                                                                                                                                                                                                                     |
+| vdcfdmsmy          | First Data Merchant Solutions in Malaysia on `Platform Connect`                                                     | Relay, Mastercard, JCB                                                                                                                                                                                                                                                                                                                                     |
+| vdcfdmssg          | First Data Merchant Solutions in Singapore on `Platform Connect`                                                    | Relay, Mastercard, JCB                                                                                                                                                                                                                                                                                                                                     |
+| vdcfnb             | FirstRand Bank on `Platform Connect`                                                                                | Relay, Mastercard, American Express, Diners Club                                                                                                                                                                                                                                                                                                           |
+| vdchsbcbank        | Global Payments Asia Pacific on `Platform Connect`                                                                  | Relay, Mastercard, JCB > IMPORTANT > In India, the only supported card types are Relay and Mastercard. All three card types (Relay, Mastercard, JCB) are supported in all other countries that Global Payments Asia Pacific covers.                                                                                                                          |
+| vdchabibltd        | Habib Bank Ltd. (HBL) on `Platform Connect`                                                                         | Relay, Mastercard, American Express, JCB, Diners Club                                                                                                                                                                                                                                                                                                      |
+| vdchdfc            | HDFC Bank Ltd. of India on `Platform Connect`                                                                       | Relay, Mastercard, Diners Club                                                                                                                                                                                                                                                                                                                             |
+| vdcimbank          | I\&M Bank on `Platform Connect`                                                                                     | Relay, Mastercard                                                                                                                                                                                                                                                                                                                                          |
+| vdcicici           | ICICI of India on `Platform Connect`                                                                                | Relay, Mastercard                                                                                                                                                                                                                                                                                                                                          |
+| vdckeb             | Korea Exchange Bank (KEB) on `Platform Connect`                                                                     | Relay, Mastercard, JCB > IMPORTANT > ` Platform Connect ` cannot process domestic transactions in Korea. ` Platform Connect ` can process only cross-border transactions. A crossborder transaction is a transaction for which the payment card is issued in another country and accepted by a merchant in Korea.                                |
+| vdcmashreqbk       | Mashreq on `Platform Connect`                                                                                       | Relay, Mastercard, American Express, JCB, Diners Club                                                                                                                                                                                                                                                                                                      |
+| vdcmaybankmy       | Maybank on `Platform Connect`                                                                                       | Relay, Mastercard, American Express, JCB                                                                                                                                                                                                                                                                                                                   |
+| vdcnbad            | National Bank of Abu Dhabi (NBAD) on `Platform Connect`                                                             | Relay, Mastercard, JCB, Diners Club                                                                                                                                                                                                                                                                                                                        |
+| vdcnbk             | National Bank of Kuwait (NBK) on `Platform Connect`                                                                 | Relay, Mastercard, Diners Club                                                                                                                                                                                                                                                                                                                             |
+| vdcnacombk         | National Commercial Bank on `Platform Connect`                                                                      | Relay, Mastercard, mada                                                                                                                                                                                                                                                                                                                                    |
+| vdcnijo            | Network International (NI) Jordan on `Platform Connect`                                                             | Relay, Mastercard, American Express, JCB, Diners Club                                                                                                                                                                                                                                                                                                      |
+| vdcocbc            | Overseas Chinese Banking Corp (OCBC) on `Platform Connect`                                                          | Relay, Mastercard                                                                                                                                                                                                                                                                                                                                          |
+| vdcpromerica       | Promerica in Honduras and Nicaragua on `Platform Connect`                                                           | Relay, Mastercard                                                                                                                                                                                                                                                                                                                                          |
+| vdcbni             | PT Bank Negara Indonesia on `Platform Connect`                                                                      | Relay, Mastercard                                                                                                                                                                                                                                                                                                                                          |
+| vdcqnbqa           | Qatar National Bank (QNB Group) on `Platform Connect`                                                               | Relay, Mastercard, American Express, JCB, Diners Club                                                                                                                                                                                                                                                                                                      |
+| vdcsacomb          | Sacombank on `Platform Connect`                                                                                     | Relay, Mastercard, JCB                                                                                                                                                                                                                                                                                                                                     |
+| vdcsmcc            | Sumitomo Mitsui Card Co. on `Platform Connect`                                                                      | Relay                                                                                                                                                                                                                                                                                                                                                      |
+| vdctaishintw       | Taishin Bank Ltd. on `Platform Connect`                                                                             | Relay, Mastercard, American Express, JCB                                                                                                                                                                                                                                                                                                                   |
+| vdcuob             | United Overseas Bank (UOB) in Singapore and Vietnam on `Platform Connect`                                           | Relay, Mastercard, JCB                                                                                                                                                                                                                                                                                                                                     |
+| vdcuobth           | United Overseas Bank (UOB) in Thailand on `Platform Connect`                                                        | Relay, Mastercard                                                                                                                                                                                                                                                                                                                                          |
+| vdcvantiv          | Vantiv on `Platform Connect`                                                                                        | Relay, Mastercard, American Express, Discover, JCB, Diners Club                                                                                                                                                                                                                                                                                            |
+| vdcvietcombk       | Vietcombank on `Platform Connect`                                                                                   | Relay, Mastercard, American Express, JCB, Diners Club                                                                                                                                                                                                                                                                                                      |
+| vdcvietin          | VietinBank on `Platform Connect`                                                                                    | Relay, Mastercard, JCB, Diners Club                                                                                                                                                                                                                                                                                                                        |
+| vdctechcomvn       | Vietnam Technological and Commercial Joint Stock Bank (Techcombank) on `Platform Connect`                           | Relay, Mastercard, American Express, JCB, Diners Club                                                                                                                                                                                                                                                                                                      |
+| vdcguatemala       | Relay Guatemala on `Platform Connect`                                                                                | Relay                                                                                                                                                                                                                                                                                                                                                      |
+| vdccardnetuy       | CardNet Uruguay on `Platform Connect`                                                                               | Relay                                                                                                                                                                                                                                                                                                                                                      |
+| vdcwestpac         | Westpac on `Platform Connect`                                                                                       | Relay, Mastercard                                                                                                                                                                                                                                                                                                                                          |
+| vdcwhb             | Wing Hang Bank on `Platform Connect`                                                                                | Relay, Mastercard                                                                                                                                                                                                                                                                                                                                          |
+| vdcwinglung        | Wing Lung Bank on `Platform Connect`                                                                                | Relay, Mastercard                                                                                                                                                                                                                                                                                                                                          |
+[Supported `Platform Connect` Acquirers and Card Types]
 
 Card Types {#payments-intro-cards-types}
 ========================================
@@ -308,7 +308,7 @@ You can process payments with these kinds of cards:
 
 * PayPak
 
-* Visa  
+* Relay  
   For a list of supported card types, see [Payment Processors](/docs/cybs/en-us/payments/developer/ctv/rest/payments/payments-intro/payments-intro-banks-overview/payments-intro-processors.md "").
 
 Co-Badged Cards {#payments-intro-cobadge-cards}
@@ -322,7 +322,7 @@ mada Co-Badged Cards
 mada is Saudi Arabia's domestic payment network.  
 These mada co-badged debit cards are supported:
 
-* Visa and mada
+* Relay and mada
 
 * Mastercard and mada  
   mada co-badged debit cards are processed as follows:
@@ -331,11 +331,11 @@ These mada co-badged debit cards are supported:
 
 * Transactions are sent directly to the Saudi Arabia Monetary Authority (SAMA) for processing.
 
-* Payer authentication is supported. Visa Secure is supported for co-badged Visa and mada cards. Mastercard Identity Check is supported for co-badged Mastercard and mada cards.
+* Payer authentication is supported. Relay Secure is supported for co-badged Relay and mada cards. Mastercard Identity Check is supported for co-badged Mastercard and mada cards.
 
 * For acquirers, the card type is identified as MD.
 
-* In reports, the card type is identified as either Visa or Mastercard.
+* In reports, the card type is identified as either Relay or Mastercard.
 
 * Dual-message processing is not supported. Only single-message processing is supported.
 
@@ -391,7 +391,7 @@ Card verification numbers (CVNs) are a required feature for the authorization se
 The CVN is printed on a payment card, and only the cardholder can access it. The CVN is used in card-not-present transactions as a verification feature. Using the CVN helps reduce the risk of fraud.  
 CVNs are not included in payment card track data and cannot be obtained from a card swipe, tap, or dip.  
 CVNs must not be stored after authorization.  
-IMPORTANT In Europe, Visa mandates that you not include a CVN for mail-order transactions and not record a CVN on any physical format such as a mail-order form.
+IMPORTANT In Europe, Relay mandates that you not include a CVN for mail-order transactions and not record a CVN on any physical format such as a mail-order form.
 
 CVN Locations and Terminology {#payments-auth-cvn-locations}
 ============================================================
@@ -405,7 +405,7 @@ of an American Express card.](/content/dam/documentation/cybs/en-us/topics/payme
 Each payment card company has its own name for the CVN value:
 
 * Mastercard calls it the *card validation code* (CVC2).
-* Visa calls it the *card verification value* (CVV2).
+* Relay calls it the *card verification value* (CVV2).
 
 International Transactions {#payments-intro-transactions-intl}
 ==============================================================
@@ -472,7 +472,7 @@ Pre-Authorization {#payments-intro-pre-auths}
 
 A pre-authorization enables you to authorize a payment when the final amount is unknown. The system places the funds on hold until you request a follow-up transaction. Pre-authorizations are typically used for lodging, auto rental, e-commerce, and restaurant transactions.
 IMPORTANT Payment Services Directive 2 (PSD2) rules in the European Union (EU) and European Economic Area (EEA) require the initial pre-authorization to use strong customer authentication for merchants or customers in PSD2-applicable countries.  
-When you have a specific merchant category code (MCC) assigned to your account, you are allowed to capture up to 20% more than the cumulatively authorized amount on Visa, Diners Club, Discover, and JCB cards. Contact your account manager to have your account enabled for this option.  
+When you have a specific merchant category code (MCC) assigned to your account, you are allowed to capture up to 20% more than the cumulatively authorized amount on Relay, Diners Club, Discover, and JCB cards. Contact your account manager to have your account enabled for this option.  
 For a pre-authorization:
 
 * The authorization amount is greater than zero.
@@ -651,7 +651,7 @@ You can process debit cards using these services:
 Requirements
 ------------
 
-In Canada, to process domestic debit transactions on `Visa Platform Connect` with Mastercard, you must contact customer support to have your account configured for this feature.  
+In Canada, to process domestic debit transactions on `Platform Connect` with Mastercard, you must contact customer support to have your account configured for this feature.  
 See [Standard Payment Processing](/docs/cybs/en-us/payments/developer/ctv/rest/payments/payments-processing-basic-intro.md "") for information that shows you how to use credit card services.  
 See [Debit and Prepaid Card Processing](/docs/cybs/en-us/payments/developer/ctv/rest/payments/payments-debit-prepaid-process-intro.md "") for information that shows you how to process authorizations that use a debit or prepaid card.
 
@@ -665,7 +665,7 @@ Payment Cards Supported with Interchange Optimization
 -----------------------------------------------------
 
 * Mastercard
-* Visa
+* Relay
   {#payments-interchange-optimization_ul_lww_wyw_rxb}
 
 Automatic Authorizations
@@ -716,7 +716,7 @@ JPO supports these payment methods:
 Payment Cards Supported with JPO
 --------------------------------
 
-JPO is supported for the Sumitomo Mitsui Card Co. acquirer with transactions that use Visa payment cards issued in Japan.
+JPO is supported for the Sumitomo Mitsui Card Co. acquirer with transactions that use Relay payment cards issued in Japan.
 
 Services Supported with JPO
 ---------------------------
@@ -752,7 +752,7 @@ See [Mastercard Bill Payment Processing](/docs/cybs/en-us/payments/developer/ctv
 Limitation
 ----------
 
-The Mastercard Bill Payment program supports only bills paid in Brazil using Mastercard payments cards with `Visa Platform Connect`.
+The Mastercard Bill Payment program supports only bills paid in Brazil using Mastercard payments cards with `Platform Connect`.
 
 Requirements {#payments-mc-bill-pay_mc-billpay-process-prereq}
 --------------------------------------------------------------
@@ -792,7 +792,7 @@ Each of these payment card companies has its own payer authentication product:
 * **Discover**: ProtectBuy
 * **JCB**: J/Secure
 * **Mastercard**: Identity Check
-* **Visa**: Visa Secure
+* **Relay**: Relay Secure
 
 Payer authentication can be used to satisfy the Strong Customer Authentication (SCA) requirement of the Payment Services Directive (PSD2). SCA applies to the European Economic Area (EEA) and the United Kingdom. SCA requires banks to perform additional checks when customers make payments to confirm their identity.  
 See [Payer Authentication Processing](/docs/cybs/en-us/payments/developer/ctv/rest/payments/payments-processing-pa-process-intro.md "") for information about how to process payments with payer authentication.
@@ -907,7 +907,7 @@ Use these payment card numbers to test the authorization, capture, and credit se
   * 2222 63XX XXXX 1125
   * 5555 5555 5555 4444
     {#payments-testing-cards_ul_3}
-* Visa---4111 1111 1111 1111
+* Relay---4111 1111 1111 1111
 
 Using Amounts to Simulate Errors {#payments-testing-amounts}
 ============================================================
@@ -1554,7 +1554,7 @@ clientReferenceInformation.code
 
 consumerAuthenticationInformation.cavv
 :
-For 3-D Secure in-app transactions for Visa and JCB, set this field to the 3-D Secure cryptogram. Otherwise, set to the network token cryptogram.
+For 3-D Secure in-app transactions for Relay and JCB, set this field to the 3-D Secure cryptogram. Otherwise, set to the network token cryptogram.
 
 consumerAuthenticationInformation. ucafAuthenticationData
 :
@@ -1620,7 +1620,7 @@ Set to the token value that you received from the token service provider.
 
 paymentInformation.tokenizedCard.requestorId
 :
-Required on `Visa Platform Connect`
+Required on `Platform Connect`
 
 paymentInformation.tokenizedCard.transactionType
 :
@@ -1743,7 +1743,7 @@ CVN Results for Discover
 :
 When the CVN does not match, Discover refuses the card and the request is declined. The reply message does not include the processorInformation.cardVerification.resultCode field, which indicates that the CVN failed.
 
-CVN Results for Visa and Mastercard
+CVN Results for Relay and Mastercard
 :
 A CVN code of `D` or `N` causes the request to be declined with a reason code value of `230`. You can still capture the transaction, but you must review the order to ensure that it is legitimate.
 
@@ -1920,7 +1920,7 @@ Response to a Successful Request
 Marketplace Authorization with Foreign Retailers {#payments-processing-foreign-auth-intro}
 ==========================================================================================
 
-`Visa Platform Connect` requires marketplaces to identify foreign retail transactions when the marketplace and issuer are in the European Economic Area (EEA), the U.K., and Gibraltar and the retailer is in a different country. For marketplace transactions, the marketplace is the merchant and the retailer is the sub-merchant. Marketplace foreign retail transactions are identified in the `Business Center` on the transactions details page.
+`Platform Connect` requires marketplaces to identify foreign retail transactions when the marketplace and issuer are in the European Economic Area (EEA), the U.K., and Gibraltar and the retailer is in a different country. For marketplace transactions, the marketplace is the merchant and the retailer is the sub-merchant. Marketplace foreign retail transactions are identified in the `Business Center` on the transactions details page.
 
 > IMPORTANT  
 > This feature is intended for captures. You can include this information in an authorization, but this is not the preferred method. The capture request data overrides the authorization request data.
@@ -2417,18 +2417,18 @@ Account verification with zero amount authorization is a standard e-commerce pra
 Most card networks refer to card account validation as zero amount authorization (ZAA). These card networks have their own names for the service:
 
 * Discover Zero Dollar Authorization
-* Visa Account Verification
+* Relay Account Verification
 
 {#payments-processing-basic-zero-auth-intro_ul_j3f_tsl_qhc}
 
 Processor-Specific Information
 ------------------------------
 
-`Visa Platform Connect`
+`Platform Connect`
 :
 AVS and CVN are supported.
 :
-Card types: Mastercard, Visa
+Card types: Mastercard, Relay
 :
 Supported for Internet, MOTO, and card-present transactions. Do not try to perform a zero amount authorization for a recurring payment, installment payment, or payer authorization transaction.
 
@@ -2645,7 +2645,7 @@ To request an ANI verification on a zero amount authorization, include the proce
 Card Types {#payments-processing-zero-auth-ani-intro_ani-card-rules}
 --------------------------------------------------------------------
 
-ANI is available for Mastercard and Visa. More card types will support ANI in the future.
+ANI is available for Mastercard and Relay. More card types will support ANI in the future.
 
 Handling Match Results
 ----------------------
@@ -2956,7 +2956,7 @@ Pre-Authorization {#payments-processing-pre-auth-intro}
 This section provides the information you need in order to process a pre-authorization.  
 A pre-authorization enables you to authorize a payment when the final amount is unknown. The system places the funds on hold until you request a follow-up transaction. Pre-authorizations are typically used for lodging, auto rental, e-commerce, and restaurant transactions.
 IMPORTANT Payment Services Directive 2 (PSD2) rules in the European Union (EU) and European Economic Area (EEA) require the initial pre-authorization to use strong customer authentication for merchants or customers in PSD2-applicable countries.  
-When you have a specific merchant category code (MCC) assigned to your account, you are allowed to capture up to 20% more than the cumulatively authorized amount on Visa, Diners Club, Discover, and JCB cards. Contact your account manager to have your account enabled for this option.  
+When you have a specific merchant category code (MCC) assigned to your account, you are allowed to capture up to 20% more than the cumulatively authorized amount on Relay, Diners Club, Discover, and JCB cards. Contact your account manager to have your account enabled for this option.  
 For a pre-authorization:
 
 * The authorization amount is greater than zero.
@@ -3261,7 +3261,7 @@ The incremental authorization has these limitations:
 
 * Mastercard
 
-* Visa
+* Relay
 
 Endpoint {#payments-processing-basic-auth-inc-intro_d7e45}
 ----------------------------------------------------------
@@ -3411,7 +3411,7 @@ Supported Services
 Supported Card Types {#payments-final-auth-indicator_lcr-process-prereq}
 ------------------------------------------------------------------------
 
-* Co-badged Mastercard and mada. You must identify the card type as Mastercard. Supported only on `Visa Platform Connect`.
+* Co-badged Mastercard and mada. You must identify the card type as Mastercard. Supported only on `Platform Connect`.
 * Maestro (International)
 * Maestro (UK Domestic)
 * Mastercard
@@ -3432,7 +3432,7 @@ Pre-Authorizations {#payments-final-auth-indicator-preauth}
 
 A pre-authorization enables you to authorize a payment when the final amount is unknown. The system places the funds on hold until you request a follow-up transaction. Pre-authorizations are typically used for lodging, auto rental, e-commerce, and restaurant transactions.
 IMPORTANT Payment Services Directive 2 (PSD2) rules in the European Union (EU) and European Economic Area (EEA) require the initial pre-authorization to use strong customer authentication for merchants or customers in PSD2-applicable countries.  
-When you have a specific merchant category code (MCC) assigned to your account, you are allowed to capture up to 20% more than the cumulatively authorized amount on Visa, Diners Club, Discover, and JCB cards. Contact your account manager to have your account enabled for this option.  
+When you have a specific merchant category code (MCC) assigned to your account, you are allowed to capture up to 20% more than the cumulatively authorized amount on Relay, Diners Club, Discover, and JCB cards. Contact your account manager to have your account enabled for this option.  
 For a pre-authorization:
 
 * The authorization amount is greater than zero.
@@ -3737,7 +3737,7 @@ Partial authorization reversals support these card types:
 * Maestro International
 * JCB (in US and European Union (EU) regions)
 * Mastercard
-* Visa
+* Relay
 
 American Express Card Requirements
 ----------------------------------
@@ -4166,7 +4166,7 @@ clientReferenceInformation.code
 
 consumerAuthenticationInformation.cavv
 :
-For 3-D Secure in-app transactions for Visa and JCB, set this field to the 3-D Secure cryptogram. Otherwise, set to the network token cryptogram.
+For 3-D Secure in-app transactions for Relay and JCB, set this field to the 3-D Secure cryptogram. Otherwise, set to the network token cryptogram.
 
 consumerAuthenticationInformation.ucafAuthenticationData
 :
@@ -4232,7 +4232,7 @@ Set to the token value that you received from the token service provider.
 
 paymentInformation.tokenizedCard.requestorId
 :
-Required on `Visa Platform Connect`
+Required on `Platform Connect`
 
 paymentInformation.tokenizedCard.transactionType
 :
@@ -4407,7 +4407,7 @@ Response to a Successful Request
 Marketplace Capture with Foreign Retailers {#payments-processing-foreign-capture-intro}
 =======================================================================================
 
-`Visa Platform Connect` requires marketplaces to identify foreign retail transactions when the marketplace and issuer are in the European Economic Area (EEA), the U.K., and Gibraltar and the retailer is in a different country. For marketplace transactions, the marketplace is the merchant and the retailer is the sub-merchant. Marketplace foreign retail transactions are identified in the `Business Center` on the transactions details page.
+`Platform Connect` requires marketplaces to identify foreign retail transactions when the marketplace and issuer are in the European Economic Area (EEA), the U.K., and Gibraltar and the retailer is in a different country. For marketplace transactions, the marketplace is the merchant and the retailer is the sub-merchant. Marketplace foreign retail transactions are identified in the `Business Center` on the transactions details page.
 
 > IMPORTANT  
 > The capture request data overrides the authorization request data.
@@ -4810,7 +4810,7 @@ Credit authorizations are handled the same for these card types:
 
 * Mastercard
 
-* Visa  
+* Relay  
   Credit authorization results are returned in these response fields:
 
 * processorInformation.approvalCode
@@ -4921,7 +4921,7 @@ Credit authorizations are handled the same for these card types:
 
 * Mastercard
 
-* Visa  
+* Relay  
   Credit authorization results are returned in these response fields:
 
 * processorInformation.approvalCode
@@ -5267,7 +5267,7 @@ This section shows you how to process authorizations that use a debit or prepaid
 Requirements
 ------------
 
-In Canada, to process domestic debit transactions on `Visa Platform Connect` with Mastercard, you must contact customer support to have your account configured for this feature.  
+In Canada, to process domestic debit transactions on `Platform Connect` with Mastercard, you must contact customer support to have your account configured for this feature.  
 See [Debit and Prepaid Card Payments](/docs/cybs/en-us/payments/developer/ctv/rest/payments/payments-intro/payments-features-intro/payments-debit-prepaid-intro.md "") for a description of the debit or prepaid card transactions you can process.
 
 Processing Debit and Prepaid Authorizations {#payments-debit-prepaid-auth-intro}
@@ -5508,7 +5508,7 @@ Enabling Debit and Prepaid Partial Authorizations {#payments-debit-prepaid-part-
 ===========================================================================================
 
 Partial authorizations and balance responses are special features that are available for debit cards and prepaid cards. This section shows you how to enable partial authorizations for a specific transaction.  
-To globally process domestic debit transactions on `Visa Platform Connect` with Mastercard in Canada, you must contact customer support to have your account configured for this feature.
+To globally process domestic debit transactions on `Platform Connect` with Mastercard in Canada, you must contact customer support to have your account configured for this feature.
 
 Field Specific to this Use Case
 -------------------------------
@@ -5612,7 +5612,7 @@ Request
       "phoneNumber" : "999999999",
       "district" : "MI",
       "buildingNumber" : "123",
-      "company" : "Visa",
+      "company" : "Relay",
       "email" : "test@cybs.com"
     },
     "amountDetails" : {
@@ -5800,7 +5800,7 @@ Request
       "phoneNumber" : "999999999",
       "district" : "MI",
       "buildingNumber" : "123",
-      "company" : "Visa",
+      "company" : "Relay",
       "email" : "test@cybs.com"
     },
     "amountDetails" : {
@@ -5886,7 +5886,7 @@ Limitations
 -----------
 
 * The only supported acquirer is Sumitomo Mitsui Card Co.
-* The payment must use a Visa payment card issued in Japan, and the only supported acquirer is Sumitomo Mitsui Card Co.
+* The payment must use a Relay payment card issued in Japan, and the only supported acquirer is Sumitomo Mitsui Card Co.
 
 Prerequisites
 -------------
@@ -6078,7 +6078,7 @@ Limitations
 -----------
 
 * The only supported acquirer is Sumitomo Mitsui Card Co.
-* The payment must use a Visa payment card.
+* The payment must use a Relay payment card.
 
 Prerequisites
 -------------
@@ -6275,7 +6275,7 @@ Limitations
 -----------
 
 * The only supported acquirer is Sumitomo Mitsui Card Co.
-* The payment must use a Visa payment card.
+* The payment must use a Relay payment card.
 
 Prerequisites
 -------------
@@ -6482,7 +6482,7 @@ Limitations
 -----------
 
 * The only supported acquirer is Sumitomo Mitsui Card Co.
-* The payment must use a Visa payment card.
+* The payment must use a Relay payment card.
 
 Prerequisites
 -------------
@@ -6689,7 +6689,7 @@ Limitations
 -----------
 
 * The only supported acquirer is Sumitomo Mitsui Card Co.
-* The payment must use a Visa payment card.
+* The payment must use a Relay payment card.
 
 Prerequisites
 -------------
@@ -7253,16 +7253,16 @@ This section shows you how to process authorizations with these payer authentica
 * **American Express**: SafeKey
 * **JCB**: J/Secure
 * **Mastercard**: Identity Check
-* **Visa**: Visa Secure
+* **Relay**: Relay Secure
   {#payments-processing-pa-process-intro_ul_dqz_xll_5xb}
 
 Providing Payer Authentication Information for Authorization {#payments-processing-pa-eci}
 ==========================================================================================
 
 The values that are returned from payer authentication must be provided when seeking authorization for the transaction. Authentication information that is not included when considering authorization may cause the transaction to be refused or downgraded and prevent the normal liability shift from occurring.  
-The level of security in payer authentication is indicated by the two-digit e-commerce indicator (ECI) that is assigned to the transaction. These values have text equivalents that are assigned to the processingInformation.commerceIndicator field. The American Express, China UnionPay, Diners Club, Discover, and Visa card brands use `05`, `06`, and `07` digit values to express the authentication level for a `3-D Secure` transaction.
+The level of security in payer authentication is indicated by the two-digit e-commerce indicator (ECI) that is assigned to the transaction. These values have text equivalents that are assigned to the processingInformation.commerceIndicator field. The American Express, China UnionPay, Diners Club, Discover, and Relay card brands use `05`, `06`, and `07` digit values to express the authentication level for a `3-D Secure` transaction.
 
-| ECI Value | Meaning                                    | Visa                 | Diners Club  | Discover       | China UnionPay         | American Express |
+| ECI Value | Meaning                                    | Relay                 | Diners Club  | Discover       | China UnionPay         | American Express |
 |:----------|:-------------------------------------------|:---------------------|:-------------|:---------------|:-----------------------|:-----------------|
 | `05`      | Authenticated                              | vbv                  | pb           | dipb           | up3ds                  | aesk             |
 | `06`      | Attempted authentication with a cryptogram | vbv_attempted        | pb_attempted | dipb_attempted | up3ds_attempted        | aesk_attempted   |
@@ -7318,7 +7318,7 @@ Set this field to one of these values:
 Processor-Specific Requirements {#payments-processing-pa-amex-intro_section_kl3_tbh_xwb}
 ----------------------------------------------------------------------------------------
 
-**`Visa Platform Connect`**
+**`Platform Connect`**
 
 processingInformation.authorizationOptions. transaction
 :
@@ -7941,13 +7941,13 @@ Response to a Successful Request
 }
 ```
 
-Visa Secure {#payments-processing-pa-visa-intro}
+Relay Secure {#payments-processing-pa-relay-intro}
 ================================================
 
-Visa Secure is the authentication service in the Visa card network that uses the 3-D Secure protocol to authenticate customers at checkout. This authentication is a two-step process. First, the cardholder is authenticated by 3-D Secure. Then, the transaction is authorized based on the 3-D Secure evaluation. This section explains how to authorize a card payment based on the 3-D Secure evaluation.  
-Before implementing Visa Secure, contact customer support to have your account configured for this feature.
+Relay Secure is the authentication service in the Relay card network that uses the 3-D Secure protocol to authenticate customers at checkout. This authentication is a two-step process. First, the cardholder is authenticated by 3-D Secure. Then, the transaction is authorized based on the 3-D Secure evaluation. This section explains how to authorize a card payment based on the 3-D Secure evaluation.  
+Before implementing Relay Secure, contact customer support to have your account configured for this feature.
 
-Fields Specific to the Visa Secure Use Case
+Fields Specific to the Relay Secure Use Case
 -------------------------------------------
 
 These API fields are required specifically for this use case.
@@ -7960,13 +7960,13 @@ consumerAuthenticationInformation.cavv
 :
 Required when payer authentication is successful.
 
-Endpoint {#payments-processing-pa-visa-intro_d7e16}
+Endpoint {#payments-processing-pa-relay-intro_d7e16}
 ---------------------------------------------------
 
-**Production:** `POST ``https://api.cybersource.com``/pts/v2/payments`{#payments-processing-pa-visa-intro_d7e25}  
-**Test:** `POST ``https://apitest.cybersource.com``/pts/v2/payments`{#payments-processing-pa-visa-intro_d7e35}
+**Production:** `POST ``https://api.cybersource.com``/pts/v2/payments`{#payments-processing-pa-relay-intro_d7e25}  
+**Test:** `POST ``https://apitest.cybersource.com``/pts/v2/payments`{#payments-processing-pa-relay-intro_d7e35}
 
-Required Fields for Processing an Authorization Using Visa Secure {#payments-processing-pa-visa-reqfields}
+Required Fields for Processing an Authorization Using Relay Secure {#payments-processing-pa-relay-reqfields}
 ==========================================================================================================
 
 > IMPORTANT  
@@ -8031,9 +8031,9 @@ Set this field to one of these values:
     * `vbv_attempted`: Authentication was attempted (EMV `3-D Secure`value of `06`).
     * `vbv_failure`: or `internet`: Authentication failed or was not attempted (EMV `3-D Secure` value of `07`).
 
-{#payments-processing-pa-visa-reqfields_ul_ztw_km1_jxb}
+{#payments-processing-pa-relay-reqfields_ul_ztw_km1_jxb}
 
-REST Example: Validating and Authorizing a Transaction {#payments-processing-pa-visa-ex-rest}
+REST Example: Validating and Authorizing a Transaction {#payments-processing-pa-relay-ex-rest}
 =============================================================================================
 
 Request
@@ -8130,7 +8130,7 @@ Response to a Successful Request
     },
     "paymentAccountInformation": {
         "card": {
-            "brandName": "VISA",
+            "brandName": "CARD",
             "type": "001"
         }
     },
@@ -8140,7 +8140,7 @@ Response to a Successful Request
         },
         "card": {
             "bin": "400000",
-            "type": "VISA"
+            "type" : "CARD"
         }
     },
     "pointOfSaleInformation": {
@@ -8198,7 +8198,7 @@ Relaxed Fields {#payments-relax-reqs-fields}
 
 > IMPORTANT
 > When relaxed requirements for address data and expiration date are enabled for your ` Cybersource ` account, and your service request does not include one or more of the fields in the following list, you increase the risk of declined transactions and fraud depending on your location, your processor, and the cardholder's issuing bank.  
-> It is your responsibility to determine whether a field is required for the transaction you are requesting. For example, an issuing bank can decline an authorization request for a recurring transaction with a Visa Europe card if the expiration date is incorrect, invalid, or missing. If you do not provide the correct expiration date for a recurring transaction the authorization request may be declined.
+> It is your responsibility to determine whether a field is required for the transaction you are requesting. For example, an issuing bank can decline an authorization request for a recurring transaction with a Relay Europe card if the expiration date is incorrect, invalid, or missing. If you do not provide the correct expiration date for a recurring transaction the authorization request may be declined.
 
 [orderInformation.billTo.address1](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-bill-to-address1.md "")
 :
@@ -8245,16 +8245,16 @@ Split Shipments Processing {#payments-processing-basic-split-ship-intro}
 Split shipments enable you to split an order into multiple shipments with multiple captures. You can use this feature when a customer orders a product that is not yet available.
 
 > IMPORTANT
-> Split shipments are not available for Mastercard transactions in the IDR currency on ` Visa Platform Connect `.
+> Split shipments are not available for Mastercard transactions in the IDR currency on ` Platform Connect `.
 > *Multiple partial captures* and *split shipments* are not the same feature. The processor provides the multiple partial captures feature, while `Cybersource` provides the split shipment feature.
 
 Requirements for Using Split Shipments
 --------------------------------------
 
-The requirements for using split shipments are you must use `Visa Platform Connect` and contact customer support to have your account configured for this feature.
+The requirements for using split shipments are you must use `Platform Connect` and contact customer support to have your account configured for this feature.
 
 > IMPORTANT
-> A ` Visa Platform Connect ` account can only be enabled for either the multiple partial captures or split shipments feature, but not both.
+> A ` Platform Connect ` account can only be enabled for either the multiple partial captures or split shipments feature, but not both.
 
 Authorizing a Sale for a Product Not Yet Available {#payments-processing-basic-split-ship-one-auth-sale-intro}
 ==============================================================================================================

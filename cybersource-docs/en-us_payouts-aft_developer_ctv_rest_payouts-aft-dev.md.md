@@ -1,7 +1,7 @@
 Account Funding Transactions Developer Guide {#payouts-aft-about-guide}
 =======================================================================
 
-This section provides you with information about the `REST API` guide for `Visa Platform Connect`.
+This section provides you with information about the `REST API` guide for `Platform Connect`.
 
 Audience and Purpose
 --------------------
@@ -26,7 +26,7 @@ Customer Support
 ----------------
 
 For support information about any service, visit the Support Center:  
-<http://support.visaacceptance.com>
+<http://support.example.com>
 
 Recent Revisions to This Document {#aft-dev-doc-revs}
 =====================================================
@@ -41,17 +41,17 @@ Added new fields to the list of required fields.
 
 Initial release.
 
-VISA Platform Connect: Specifications and Conditions for Resellers/Partners {#vpc-partner-reseller-disclaimer}
+CARD Platform Connect: Specifications and Conditions for Resellers/Partners {#vpc-partner-reseller-disclaimer}
 ==============================================================================================================
 
-The following are specifications and conditions that apply to a Reseller/Partner enabling its merchants through Cybersource for Visa Platform Connect ("VPC") processing. Failure to meet any of the specifications and conditions below is subject to the liability provisions and indemnification obligations under Reseller/Partner's contract with Visa/Cybersource.
+The following are specifications and conditions that apply to a Reseller/Partner enabling its merchants through Cybersource for Platform Connect ("VPC") processing. Failure to meet any of the specifications and conditions below is subject to the liability provisions and indemnification obligations under Reseller/Partner's contract with Relay/Cybersource.
 
 1. Before boarding merchants for payment processing on a VPC acquirer's connection, Reseller/Partner and the VPC acquirer must have a contract or other legal agreement that permits Reseller/Partner to enable its merchants to process payments with the acquirer through the dedicated VPC connection and/or traditional connection with such VPC acquirer.
 2. Reseller/Partner is responsible for boarding and enabling its merchants in accordance with the terms of the contract or other legal agreement with the relevant VPC acquirer.
 3. Reseller/Partner acknowledges and agrees that all considerations and fees associated with chargebacks, interchange downgrades, settlement issues, funding delays, and other processing related activities are strictly between Reseller and the relevant VPC acquirer.
 4. Reseller/Partner acknowledges and agrees that the relevant VPC acquirer is responsible for payment processing issues, including but not limited to, transaction declines by network/issuer, decline rates, and interchange qualification, as may be agreed to or outlined in the contract or other legal agreement between Reseller/Partner and such VPC acquirer.
 
-DISCLAIMER: NEITHER VISA NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR ANY ERRORS OR OMISSIONS BY THE VISA PLATFORM CONNECT ACQUIRER IN PROCESSING TRANSACTIONS. NEITHER VISA NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR RESELLER/PARTNER BOARDING MERCHANTS OR ENABLING MERCHANT PROCESSING IN VIOLATION OF THE TERMS AND CONDITIONS IMPOSED BY THE RELEVANT VISA PLATFORM CONNECT ACQUIRER.
+DISCLAIMER: NEITHER CARD NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR ANY ERRORS OR OMISSIONS BY THE CARD PLATFORM CONNECT ACQUIRER IN PROCESSING TRANSACTIONS. NEITHER CARD NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR RESELLER/PARTNER BOARDING MERCHANTS OR ENABLING MERCHANT PROCESSING IN VIOLATION OF THE TERMS AND CONDITIONS IMPOSED BY THE RELEVANT CARD PLATFORM CONNECT ACQUIRER.
 
 AFT Transactions {#payouts-services-intro}
 ==========================================
@@ -61,14 +61,14 @@ The Account Funding Transaction (AFT) allows the transfer of funds between a pay
 Dual Message Account Funding Transactions (AFTs) {#payouts-services-auth-dual-message-aft-intro}
 ================================================================================================
 
-Account Funding Transactions allow a payment service provider to debit funds from a cardholder's Mastercard or Visa account to fund a non-merchant account. This is typically used to load funds onto prepaid cards and electronic wallets.  
+Account Funding Transactions allow a payment service provider to debit funds from a cardholder's Mastercard or Relay account to fund a non-merchant account. This is typically used to load funds onto prepaid cards and electronic wallets.  
 Dual Message Account Funding Transactions (AFTs) provide the following benefits:
 
-* Enables customers to identify Mastercard and Visa transactions during the authorization and settlement.
+* Enables customers to identify Mastercard and Relay transactions during the authorization and settlement.
 * Allows acquiring partners to use Dual Message BINs when performing a payout transaction.
 
 > IMPORTANT
-> You must receive prior approval from ` Visa Platform Connect ` before using the AFT services. Contact ` Visa Platform Connect ` to register in the AFT program.
+> You must receive prior approval from ` Platform Connect ` before using the AFT services. Contact ` Platform Connect ` to register in the AFT program.
 
 Endpoint {#payouts-services-auth-dual-message-aft-intro_d7e16}
 --------------------------------------------------------------
@@ -428,13 +428,13 @@ Response
 }
 ```
 
-Dual Message Account Funding Transactions (AFTs) with Visa Secure {#payouts-services-auth-dual-message-aft-vs-intro}
+Dual Message Account Funding Transactions (AFTs) with Relay Secure {#payouts-services-auth-dual-message-aft-vs-intro}
 ====================================================================================================================
 
-Account Funding Transactions allow a payment service provider to debit funds from a cardholder's Mastercard or Visa account to fund a non-merchant account. This is typically used to load funds onto prepaid cards and electronic wallets.  
+Account Funding Transactions allow a payment service provider to debit funds from a cardholder's Mastercard or Relay account to fund a non-merchant account. This is typically used to load funds onto prepaid cards and electronic wallets.  
 Dual Message Account Funding Transactions (AFTs) provide the following benefits:
 
-* Enables customers to identify Mastercard and Visa transactions during the authorization and settlement.
+* Enables customers to identify Mastercard and Relay transactions during the authorization and settlement.
 * Allows acquiring partners to use Dual Message BINs when performing a payout transaction.
 * Enables users to safely validate their identity and safely store their personal identity.
 
@@ -444,10 +444,10 @@ Endpoint {#payouts-services-auth-dual-message-aft-vs-intro_d7e16}
 **Production:** `POST ``https://api.cybersource.com``/pts/v2/payments`{#payouts-services-auth-dual-message-aft-vs-intro_d7e25}  
 **Test:** `POST ``https://apitest.cybersource.com``/pts/v2/payments`{#payouts-services-auth-dual-message-aft-vs-intro_d7e35}
 
-Required Fields for a Dual-Message AFT with Visa Secure Request {#payouts-services-auth-aft-vs-reqfields}
+Required Fields for a Dual-Message AFT with Relay Secure Request {#payouts-services-auth-aft-vs-reqfields}
 =========================================================================================================
 
-These fields are required to process a dual-message AFT with Visa Secure request:
+These fields are required to process a dual-message AFT with Relay Secure request:
 
 [acquirerInformation.merchantId](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/acq-info-aa/acq-info-merchant-id.md "")
 :
@@ -647,7 +647,7 @@ Related Information
 
 * [REST API Field Reference Guide](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/rest-api-fields-intro.md "")
 
-REST Example: Dual-Message AFT with Visa Secure {#payouts-services-auth-dual-message-aft-vs-ex-rest}
+REST Example: Dual-Message AFT with Relay Secure {#payouts-services-auth-dual-message-aft-vs-ex-rest}
 ====================================================================================================
 
 Request
@@ -848,13 +848,13 @@ Response
 }
 ```
 
-Dual Message Account Funding Transactions (AFTs) with Visa Secure for Merchant Aggregators {#payouts-services-auth-dual-message-aft-vs-agg-intro}
+Dual Message Account Funding Transactions (AFTs) with Relay Secure for Merchant Aggregators {#payouts-services-auth-dual-message-aft-vs-agg-intro}
 =================================================================================================================================================
 
-Account Funding Transactions allow a payment service provider to debit funds from a cardholder's Mastercard or Visa account to fund a non-merchant account. This is typically used to load funds onto prepaid cards and electronic wallets.  
+Account Funding Transactions allow a payment service provider to debit funds from a cardholder's Mastercard or Relay account to fund a non-merchant account. This is typically used to load funds onto prepaid cards and electronic wallets.  
 Dual Message Account Funding Transactions (AFTs) provide the following benefits:
 
-* Enables customers to identify Mastercard and Visa transactions during the authorization and settlement.
+* Enables customers to identify Mastercard and Relay transactions during the authorization and settlement.
 * Allows acquiring partners to use Dual Message BINs when performing a payout transaction.
 * Enables users to safely validate their identity and safely store their personal identity.
 
@@ -864,10 +864,10 @@ Endpoint {#payouts-services-auth-dual-message-aft-vs-agg-intro_d7e16}
 **Production:** `POST ``https://api.cybersource.com``/pts/v2/payments`{#payouts-services-auth-dual-message-aft-vs-agg-intro_d7e25}  
 **Test:** `POST ``https://apitest.cybersource.com``/pts/v2/payments`{#payouts-services-auth-dual-message-aft-vs-agg-intro_d7e35}
 
-Required Fields for a Dual-Message AFT with Visa Secure for Merchant Aggregators Request {#payouts-services-auth-dual-message-aft-vs-agg-reqfields}
+Required Fields for a Dual-Message AFT with Relay Secure for Merchant Aggregators Request {#payouts-services-auth-dual-message-aft-vs-agg-reqfields}
 ===================================================================================================================================================
 
-These fields are required to process a dual-message AFT with Visa Secure for merchant aggregators request:
+These fields are required to process a dual-message AFT with Relay Secure for merchant aggregators request:
 
 [acquirerInformation.merchantId](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/acq-info-aa/acq-info-merchant-id.md "")
 :
@@ -1103,7 +1103,7 @@ Related Information
 
 * [REST API Field Reference Guide](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/rest-api-fields-intro.md "")
 
-REST Example: Dual-Message AFT with Visa Secure for Merchant Aggregators {#payouts-services-auth-dual-message-aft-vs-agg-ex-rest}
+REST Example: Dual-Message AFT with Relay Secure for Merchant Aggregators {#payouts-services-auth-dual-message-aft-vs-agg-ex-rest}
 =================================================================================================================================
 
 Request
@@ -1324,10 +1324,10 @@ Response
 Dual Message Account Funding Transactions (AFTs) with Network Tokens {#payouts-services-auth-dual-message-aft-token-intro}
 ==========================================================================================================================
 
-Account Funding Transactions allow a payment service provider to debit funds from a cardholder's Mastercard or Visa account to fund a non-merchant account. This is typically used to load funds onto prepaid cards and electronic wallets.  
+Account Funding Transactions allow a payment service provider to debit funds from a cardholder's Mastercard or Relay account to fund a non-merchant account. This is typically used to load funds onto prepaid cards and electronic wallets.  
 Dual Message Account Funding Transactions (AFTs) with Network Tokens provide the following benefits:
 
-* Enables customers to identify Mastercard and Visa transactions during the authorization and settlement.
+* Enables customers to identify Mastercard and Relay transactions during the authorization and settlement.
 * Allows acquiring partners to use Dual Message BINs when performing a payout transaction.
 * Increases the security with payout transactions.
 * Decreases the chances of fraudulent transactions
@@ -1755,10 +1755,10 @@ Response
 Dual Message Account Funding Transactions (AFTs) to Establish a Recurring Payout Transaction (CIT) {#payouts-services-auth-dual-message-aft-cit-intro}
 ======================================================================================================================================================
 
-Account Funding Transactions allow a payment service provider to debit funds from a cardholder's Mastercard or Visa account to fund a non-merchant account. This is typically used to load funds onto prepaid cards and electronic wallets.  
+Account Funding Transactions allow a payment service provider to debit funds from a cardholder's Mastercard or Relay account to fund a non-merchant account. This is typically used to load funds onto prepaid cards and electronic wallets.  
 Dual Message Account Funding Transactions (AFTs) provide the following benefits:
 
-* Enables customers to identify Mastercard and Visa transactions during the authorization and settlement.
+* Enables customers to identify Mastercard and Relay transactions during the authorization and settlement.
 * Allows acquiring partners to use Dual Message BINs when performing a payout transaction.
 
 Using the credential-on-file transactions, customers can set up recurring transfers, for example transferring $50 to the customer's wallet each month. To set up such a transaction, the customer needs to create a Customer Inititated Transaction (CIT) that establishes the frequency, amount and duration of the recurring transfer. This information is then saved so that follow on Merchant Initiated Transactions (MITs) can occur on the customer's behalf.
@@ -2201,10 +2201,10 @@ Response
 Dual Message Account Funding Transactions (AFTs) for a Recurring Payout Transaction (MIT) {#payouts-services-auth-dual-message-aft-mit-intro}
 =============================================================================================================================================
 
-Account Funding Transactions allow a payment service provider to debit funds from a cardholder's Mastercard or Visa account to fund a non-merchant account. This is typically used to load funds onto prepaid cards and electronic wallets.  
+Account Funding Transactions allow a payment service provider to debit funds from a cardholder's Mastercard or Relay account to fund a non-merchant account. This is typically used to load funds onto prepaid cards and electronic wallets.  
 Dual Message Account Funding Transactions (AFTs) provide the following benefits:
 
-* Enables customers to identify Mastercard and Visa transactions during the authorization and settlement.
+* Enables customers to identify Mastercard and Relay transactions during the authorization and settlement.
 * Allows acquiring partners to use Dual Message BINs when performing a payout transaction.
 
 Using the credential-on-file transactions, customers can set up recurring transfers, for example transferring $50 to the customer's wallet each month. To set up such a transaction, the customer needs to create a Customer Inititated Transaction (CIT) that establishes the frequency, amount and duration of the recurring transfer. This information is then saved so that follow on Merchant Initiated Transactions (MITs) can occur on the customer's behalf.
@@ -2653,7 +2653,7 @@ All acquirers, service providers, and merchants are required to submit a valid B
 | BAI Value | Category                                                                                                                        | Requirements                                                                                                                                                                                                                                                                                                                                                                    |
 |:----------|:--------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `AA`      | Account-to-Account Money Transfer. The funding of the cardholder's own account at the same or a different financial institution | Both accounts must be owned by the same person/entity. > NOTE > If you are funding a prepaid account, use the ` TU ` value. Do not use the ` AA ` value.                                                                                                                                                                                                                        |
-| `BI`      | Financial Institution offered Bank-Initiated P2P Money Transfer                                                                 | P2P (person-to-person) Money Transfer is initiated from an online banking system, making it a bank-initiated transaction. This category is only used for specific scenarios and only available in limited markets. For more information, contact your Visa representative.                                                                                                      |
+| `BI`      | Financial Institution offered Bank-Initiated P2P Money Transfer                                                                 | P2P (person-to-person) Money Transfer is initiated from an online banking system, making it a bank-initiated transaction. This category is only used for specific scenarios and only available in limited markets. For more information, contact your Relay representative.                                                                                                      |
 | `FD`      | Funds Disbursement                                                                                                              |                                                                                                                                                                                                                                                                                                                                                                                 |
 | `FT`      | Funds Transfer                                                                                                                  | If the funds will be used for a high-brand risk transaction, the applicable high-brand risk MCC must be used. If a wallet is used to purchase liquid and cryptocurrency assets, the applicable special condition indicator must be used.                                                                                                                                        |
 | `PD`      | Payroll Disbursement                                                                                                            |                                                                                                                                                                                                                                                                                                                                                                                 |
@@ -2674,19 +2674,19 @@ All acquirers, service providers, and merchants are required to submit a valid s
 | `02`  | Debit Card                                                                                                                                                                                                                              |
 | `03`  | Prepaid Card                                                                                                                                                                                                                            |
 | `04`  | Cash                                                                                                                                                                                                                                    |
-| `05`  | Debit or deposit account that is not linked to a Visa card. This includes checking accounts, savings accounts, proprietary Cybersource `senderInformation.account.fundsSource` debit or ATM card accounts, and digital wallet accounts. |
-| `06`  | Credit account that is not linked to a Visa card. This includes credit cards and proprietary lines of credit.                                                                                                                           |
+| `05`  | Debit or deposit account that is not linked to a Relay card. This includes checking accounts, savings accounts, proprietary Cybersource `senderInformation.account.fundsSource` debit or ATM card accounts, and digital wallet accounts. |
+| `06`  | Credit account that is not linked to a Relay card. This includes credit cards and proprietary lines of credit.                                                                                                                           |
 [Sender Source Values]
 
-Appendix C: Visa BAI to Mastercard TTI Mapping {#payouts-appendix-mapping}
+Appendix C: Relay BAI to Mastercard TTI Mapping {#payouts-appendix-mapping}
 ==========================================================================
 
-These are the Visa BAI to Mastercard TTI mapping and their descriptions for different regions and transaction types.
+These are the Relay BAI to Mastercard TTI mapping and their descriptions for different regions and transaction types.
 
 Handling Wallet Transfer MCC Across All Regions
 -----------------------------------------------
 
-**Visa Business Application Identifier (BAI)** : `WT`: Wallet transfer  
+**Relay Business Application Identifier (BAI)** : `WT`: Wallet transfer  
 **Mastercard Transaction Type Indicator (TTI)** : `F61`  
 **Description**:  
 Mastercard specifies Merchant Category Codes (MCC) to retain Account Funding Wallet Transfers.  
@@ -2714,7 +2714,7 @@ These are the MCCs:
 Handling Account to Account and Funds Transfer MCC for Non-Asia Pacific Region {#payouts-appendix-mapping_section_ltn_y1l_rdc}
 ------------------------------------------------------------------------------------------------------------------------------
 
-**Visa Business Application Identifier (BAI)** : `FT`: Funds Transfer  
+**Relay Business Application Identifier (BAI)** : `FT`: Funds Transfer  
 **Mastercard Transaction Type Indicator (TTI)** : `F52`  
 **Description**:  
 Mastercard specifies MCCs to retain for Account to Account and Funds Transfer for the Non-Asia Pacific region.  
@@ -2731,7 +2731,7 @@ These are the MCCs:
 Handling Account to Account and Funds Transfer MCC for Asia Pacific Region {#payouts-appendix-mapping_section_iwt_gbl_rdc}
 --------------------------------------------------------------------------------------------------------------------------
 
-**Visa Business Application Identifier (BAI)** : `FT`: Funds Transfer  
+**Relay Business Application Identifier (BAI)** : `FT`: Funds Transfer  
 **Mastercard Transaction Type Indicator (TTI)** : `F52`  
 **Description**:  
 Mastercard specifies MCCs to retain for Account to Account and Funds Transfer for the Asia Pacific region.  
@@ -2746,7 +2746,7 @@ These are:
 Handling Person to Person Funding Transactions MCC Across Regions {#payouts-appendix-mapping_section_e5t_kbl_rdc}
 -----------------------------------------------------------------------------------------------------------------
 
-**Visa Business Application Identifier (BAI)** : `PP`: Person-to-Person Money Transfer  
+**Relay Business Application Identifier (BAI)** : `PP`: Person-to-Person Money Transfer  
 **Mastercard Transaction Type Indicator (TTI)** : `F07`  
 **Description**:  
 Mastercard specifies MCCs to retain for general Person to Person funding transactions.  
@@ -2761,7 +2761,7 @@ These are the MCCs:
 Handling Person to Person to Card Account Transactions MCC Across Regions {#payouts-appendix-mapping_section_rfl_pbl_rdc}
 -------------------------------------------------------------------------------------------------------------------------
 
-**Visa Business Application Identifier (BAI)** : `PP`: Person-to-Person Money Transfer  
+**Relay Business Application Identifier (BAI)** : `PP`: Person-to-Person Money Transfer  
 **Mastercard Transaction Type Indicator (TTI)** : `F08`  
 **Description**:  
 Mastercard specifies MCCs to retain for general person-to-person to card account transactions.  
@@ -2782,8 +2782,8 @@ Appendix D: Test Card Numbers {#payouts_aft_app_test_cards}
 | Request                                                                                                                                                                                                                                                                               | Test Card Number |
 |:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------|
 | [Dual Message Account Funding Transactions (AFTs)](/docs/cybs/en-us/payouts-aft/developer/ctv/rest/payouts-aft-dev/payouts-services-intro/payouts-services-auth-dual-message-aft-intro.md "")                                                       | 4111111111111111 |
-| [Dual Message Account Funding Transactions (AFTs) with Visa Secure](/docs/cybs/en-us/payouts-aft/developer/ctv/rest/payouts-aft-dev/payouts-services-intro/payouts-services-auth-dual-message-aft-vs-intro.md "")                                   | 4111111111111111 |
-| [Dual Message Account Funding Transactions (AFTs) with Visa Secure for Merchant Aggregators](/docs/cybs/en-us/payouts-aft/developer/ctv/rest/payouts-aft-dev/payouts-services-intro/payouts-services-auth-dual-message-aft-vs-agg-intr.md "")       | 4111111111111111 |
+| [Dual Message Account Funding Transactions (AFTs) with Relay Secure](/docs/cybs/en-us/payouts-aft/developer/ctv/rest/payouts-aft-dev/payouts-services-intro/payouts-services-auth-dual-message-aft-vs-intro.md "")                                   | 4111111111111111 |
+| [Dual Message Account Funding Transactions (AFTs) with Relay Secure for Merchant Aggregators](/docs/cybs/en-us/payouts-aft/developer/ctv/rest/payouts-aft-dev/payouts-services-intro/payouts-services-auth-dual-message-aft-vs-agg-intr.md "")       | 4111111111111111 |
 | [Dual Message Account Funding Transactions (AFTs) with Network Tokens](/docs/cybs/en-us/payouts-aft/developer/ctv/rest/payouts-aft-dev/payouts-services-intro/payouts-services-auth-dual-message-aft-token-intro.md "")                             | 4111111111111111 |
 | [Dual Message Account Funding Transactions (AFTs) to Establish a Recurring Payout Transaction (CIT)](/docs/cybs/en-us/payouts-aft/developer/ctv/rest/payouts-aft-dev/payouts-services-intro/payouts-services-auth-dual-message-aft-cit-intro.md "") | 4111111111111111 |
 | [Dual Message Account Funding Transactions (AFTs) for a Recurring Payout Transaction (MIT)](/docs/cybs/en-us/payouts-aft/developer/ctv/rest/payouts-aft-dev/payouts-services-intro/payouts-services-auth-dual-message-aft-mit-intro.md "")          | 4111111111111111 |

@@ -99,13 +99,13 @@ def render_markdown(report: BenchReport) -> str:
         ]
     )
 
-    # Highlight VAP CLI descriptor when present
+    # Highlight Relay CLI descriptor when present
     for action in report.classification.actions:
         if action.product_surface == "vap_cli" and action.vap_cli is not None:
             cli = action.vap_cli
             lines.extend(
                 [
-                    "## VAP CLI workflow verifier (recommended)",
+                    "## Relay CLI workflow verifier (recommended)",
                     "",
                     f"- goal: {cli.goal}",
                     f"- command: `{cli.command}`",

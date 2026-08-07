@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# run-scenario.sh — run one Visa Relay benchmark scenario.
+# run-scenario.sh — run one Relay benchmark scenario.
 #
 # Usage:
 #     scripts/run-scenario.sh SCENARIO [RUN_MODE]
@@ -50,7 +50,7 @@ if [ "$RUN_MODE" = "dry" ] || [ "${LAB_DRY_RUN:-0}" = "1" ]; then
 
   # Write placeholder artifacts
   cat > "${RUN_DIR}/findings.md" <<MD
-# Visa Relay Benchmark — Findings
+# Relay Benchmark — Findings
 
 ## Run metadata
 - run_id: ${CYBS_RUN_ID}
@@ -176,7 +176,7 @@ else
 
   # Build the agent prompt with scenario context
   cat > "${RUN_DIR}/agent-prompt.md" <<PROMPT
-You are running inside the Visa Relay Benchmark lab for CyberSource.
+You are running inside the Relay Benchmark lab for CyberSource.
 
 ## Your Task
 Run scenario '${SCENARIO}' in runs/${CYBS_RUN_ID}.

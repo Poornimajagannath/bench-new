@@ -27,7 +27,7 @@ Customer Support
 ----------------
 
 For support information about any service, visit the Support Center:  
-<http://support.visaacceptance.com>
+<http://support.example.com>
 
 Recent Revisions to This Document {#googpay-doc-revisions}
 ==========================================================
@@ -53,17 +53,17 @@ Corrected URL to setting up Sandbox Account.
 
 Fixed typo in Javascript sample. See [Formatting Payment Blobs](/docs/cybs/en-us/google-pay/developer/ctv/rest/googlepay/googpay-pay-data-intro/googpay-pay-data-formatting-blobs.md "").
 
-VISA Platform Connect: Specifications and Conditions for Resellers/Partners {#vpc-partner-reseller-disclaimer}
+CARD Platform Connect: Specifications and Conditions for Resellers/Partners {#vpc-partner-reseller-disclaimer}
 ==============================================================================================================
 
-The following are specifications and conditions that apply to a Reseller/Partner enabling its merchants through Cybersource for Visa Platform Connect ("VPC") processing. Failure to meet any of the specifications and conditions below is subject to the liability provisions and indemnification obligations under Reseller/Partner's contract with Visa/Cybersource.
+The following are specifications and conditions that apply to a Reseller/Partner enabling its merchants through Cybersource for Platform Connect ("VPC") processing. Failure to meet any of the specifications and conditions below is subject to the liability provisions and indemnification obligations under Reseller/Partner's contract with Relay/Cybersource.
 
 1. Before boarding merchants for payment processing on a VPC acquirer's connection, Reseller/Partner and the VPC acquirer must have a contract or other legal agreement that permits Reseller/Partner to enable its merchants to process payments with the acquirer through the dedicated VPC connection and/or traditional connection with such VPC acquirer.
 2. Reseller/Partner is responsible for boarding and enabling its merchants in accordance with the terms of the contract or other legal agreement with the relevant VPC acquirer.
 3. Reseller/Partner acknowledges and agrees that all considerations and fees associated with chargebacks, interchange downgrades, settlement issues, funding delays, and other processing related activities are strictly between Reseller and the relevant VPC acquirer.
 4. Reseller/Partner acknowledges and agrees that the relevant VPC acquirer is responsible for payment processing issues, including but not limited to, transaction declines by network/issuer, decline rates, and interchange qualification, as may be agreed to or outlined in the contract or other legal agreement between Reseller/Partner and such VPC acquirer.
 
-DISCLAIMER: NEITHER VISA NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR ANY ERRORS OR OMISSIONS BY THE VISA PLATFORM CONNECT ACQUIRER IN PROCESSING TRANSACTIONS. NEITHER VISA NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR RESELLER/PARTNER BOARDING MERCHANTS OR ENABLING MERCHANT PROCESSING IN VIOLATION OF THE TERMS AND CONDITIONS IMPOSED BY THE RELEVANT VISA PLATFORM CONNECT ACQUIRER.
+DISCLAIMER: NEITHER CARD NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR ANY ERRORS OR OMISSIONS BY THE CARD PLATFORM CONNECT ACQUIRER IN PROCESSING TRANSACTIONS. NEITHER CARD NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR RESELLER/PARTNER BOARDING MERCHANTS OR ENABLING MERCHANT PROCESSING IN VIOLATION OF THE TERMS AND CONDITIONS IMPOSED BY THE RELEVANT CARD PLATFORM CONNECT ACQUIRER.
 
 Introduction {#googpay-intro}
 =============================
@@ -104,7 +104,7 @@ Supported Processors {#googpay-processors}
 
 |                                                                                                                                                                                                                                                                                        Processor                                                                                                                                                                                                                                                                                         |                        Card Types                        |                     Optional Features                     |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------|-----------------------------------------------------------|
-| `Visa Platform Connect` Supported acquirers: * Advanced Bank of Asia Cambodia (ABA Bank) on Visa Platform Connect * BAC Credomatic Cost Rica and BAC Credomatic Panama on Visa Platform Connect * BAC Credomatic Guatemala on Visa Platform Connect * BAC Credomatic Honduras on Visa Platform Connect * BAC Credomatic Nicaragua on Visa Platform Connect * BAC Credomatic El Salvador on Visa Platform Connect * BC Card Co., Ltd on Visa Platform Connect * Commercial Bank of Qatar on Visa Platform Connect * Maybank on Visa Platform Connect {#googpay-processors_ul_p5b_fgm_zwb} | * Mastercard * Visa {#googpay-processors_ul_jh1_dwq_l4b} | * Recurring Payments {#googpay-processors_ul_qh1_dwq_l4b} |
+| `Platform Connect` Supported acquirers: * Advanced Bank of Asia Cambodia (ABA Bank) on Platform Connect * BAC Credomatic Cost Rica and BAC Credomatic Panama on Platform Connect * BAC Credomatic Guatemala on Platform Connect * BAC Credomatic Honduras on Platform Connect * BAC Credomatic Nicaragua on Platform Connect * BAC Credomatic El Salvador on Platform Connect * BC Card Co., Ltd on Platform Connect * Commercial Bank of Qatar on Platform Connect * Maybank on Platform Connect {#googpay-processors_ul_p5b_fgm_zwb} | * Mastercard * Relay {#googpay-processors_ul_jh1_dwq_l4b} | * Recurring Payments {#googpay-processors_ul_qh1_dwq_l4b} |
 
 How Google Pay Works {#googpay-how-it-works}
 ============================================

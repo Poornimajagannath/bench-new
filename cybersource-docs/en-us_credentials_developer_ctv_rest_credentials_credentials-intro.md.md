@@ -12,8 +12,8 @@ Merchants following the stored credentials framework experience these benefits:
 * Improved authorization success rates.
 * A smoother customer experience.
 * Fewer disputes and customer complaints.
-* Use of Real Time Visa Account Updater for fresher card details.  
-  For more information on the stored credentials framework, see [Improving Authorization Management for Transactions with Stored Credentials](https://usa.visa.com/dam/VCOM/global/support-legal/documents/stored-credential-transaction-framework-vbs-10-may-17.pdf "").
+* Use of Real Time Relay Account Updater for fresher card details.  
+  For more information on the stored credentials framework, see [Improving Authorization Management for Transactions with Stored Credentials](https://usa.relay.com/dam/VCOM/global/support-legal/documents/stored-credential-transaction-framework-vbs-10-may-17.pdf "").
 
 Types of Credentialed Transactions
 ----------------------------------
@@ -176,7 +176,7 @@ processingInformation.authorizationOptions. initiator. merchantInitiatedTransact
 :
 * American Express: Set the value to the transaction ID from the original transaction.
 * Discover: Set the value to the transaction ID from the original transaction.
-* Visa: set the value to the last successful transaction ID.
+* Relay: set the value to the last successful transaction ID.
 
 [processingInformation. authorizationOptions. initiator. merchantInitiatedTransaction.reason](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/processing-info-aa/processing-info-auth-ops-initiator-mit-reason.md "")
 :

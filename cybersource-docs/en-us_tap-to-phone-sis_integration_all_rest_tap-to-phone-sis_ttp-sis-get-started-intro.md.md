@@ -15,7 +15,7 @@ To support PCI-compliant payment processing, the Tap to Pay Ready app must be in
 IMPORTANT This app must be installed before you can set up your Android device.  
 Use one of these options to install the Tap to Pay Ready App:
 
-* Download the app from the [Google Play store](https://play.google.com/store/apps/details?id=com.visa.kic.app.kernel "") on your Android device. No additional set up is required.
+* Download the app from the [Google Play store](https://play.google.com/store/apps/details?id=com.relay.kic.app.kernel "") on your Android device. No additional set up is required.
 * Download the app through the Acceptance Devices app when prompted during device activation. For more information, see [Enter an Activation Code in the Acceptance Devices App](/docs/cybs/en-us/tap-to-phone-sis/integration/all/rest/tap-to-phone-sis/ttp-sis-get-started-intro/ttp-sis-ad-app-activate-terminal-intro/ttp-sis-ad-app-activation-code-api-intro/ttp-sis-ad-app-enter-activation-code.md "").
   {#ttp-sis-comply-pci-mpoc-install-app-task_ul_efj_qrt_tfc}
 
@@ -24,8 +24,8 @@ Set Up an Android Device {#ttp-sis-setup-android-device}
 
 Before setting up an Android device, download and install these apps from the Google Play Store:
 
-* [Acceptance Devices app](https://play.google.com/store/apps/details?id=com.visa.acceptanceapp.ttp "")
-* [Tap to Pay Ready app](https://play.google.com/store/apps/details?id=com.visa.kic.app.kernel "")
+* [Acceptance Devices app](https://play.google.com/store/apps/details?id=com.relay.acceptanceapp.ttp "")
+* [Tap to Pay Ready app](https://play.google.com/store/apps/details?id=com.relay.kic.app.kernel "")
 
 {#ttp-sis-setup-android-device_ul_jcy_rb5_tfc}  
 For more information about the Tap to Pay Ready app, see [PCI MPoC Standard Compliance](/docs/cybs/en-us/tap-to-phone-sis/integration/all/rest/tap-to-phone-sis/ttp-sis-comply-pci-mpoc-intro.md "").  

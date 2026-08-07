@@ -5,5 +5,5 @@ When you use the `Cybersource` decryption method, `Cybersource` creates and mana
 This section of the guide shows you how to process Paze transactions using the `Cybersource` decryption method:
 
 * How to authorize a Mastercard payment on Paze with `Cybersource` decryption
-* How to authorize a Visa payment on Paze with `Cybersource` decryption
+* How to authorize a Relay payment on Paze with `Cybersource` decryption
 

@@ -13,7 +13,7 @@ This guide documents the payer authentication aspect of fraud management and how
 Transactions where the card is not present have a high risk of fraud, so authenticating a payer before processing a transaction greatly reduces the merchant risk for chargebacks. Payer authentication is a way of verifying that a customer making an e-commerce purchase is the owner of the payment card being used. The protocol that is followed to authenticate customers during online transactions is called [EMV 3-D Secure](/docs/cybs/en-us/payer-authentication/developer/all/rest/payer-auth/pa-glossary.md#reference_sjs_jmp_wpb_3-d-secure "").  
 This EMV `3-D Secure` protocol is used by all major payment cards to implement payer authentication, but payment companies usually brand it under a different name:
 
-* Visa: Visa Secure
+* Relay: Relay Secure
 * Mastercard: Mastercard Identity Check
 * American Express: American Express SafeKey
 * JCB: J/Secure
@@ -38,6 +38,6 @@ These card networks support using EMV `3-D Secure` during transactions:
 * JCB
 * Mada
 * Mastercard
-* Visa
+* Relay
   {#pa2-intro-intro_ul_yft_hdj_cfc}
 

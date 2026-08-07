@@ -27,7 +27,7 @@ Recent Revisions to This Document {#cp-doc-revisions}
 ------------------------------------------------
 
 Added global support for clientVersion `1.0`.  
-Updated Visa `Click to Pay` test cards. See [Test Payment Details](/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay/ctp-testing-intro/ctp-reference-test-cards.md "").  
+Updated Relay `Click to Pay` test cards. See [Test Payment Details](/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay/ctp-testing-intro/ctp-reference-test-cards.md "").  
 Added information about handling errors. See [Handle Errors](/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay/ctp-testing-intro/ctp-handle-errors.md "").  
 Added information about enabling `Click to Pay Drop-In UI` using the API. See [Enabling Click to Pay Drop-In UI Using the API](/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay/ctp-uc-getting-started-integration-flow/ctp-enable-digital-pay-intro/boarding-click-to-pay-enable-intro.md "") and [Enable Click to Pay Customer Authentication Using the API](/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay/ctp-configuration-intro/ctp-authentication/boarding-click-to-pay-auth-enable-intro.md "").  
 Added information about adding `Click to Pay` to a merchant account. See [Add Click to Pay to a Merchant Account](/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay/ctp-uc-getting-started-integration-flow/boarding-config-ctp-boarding.md "").  
@@ -72,7 +72,7 @@ Added the JavaScript API reference. See [JavaScript API Reference](/docs/cybs/en
 
 `Unified Checkout` Configuration
 :
-Updated the steps for configuring customer authentication for Visa `Click to Pay`. See [Click to Pay Customer Authentication](/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay/ctp-configuration-intro/ctp-authentication.md "").
+Updated the steps for configuring customer authentication for Relay `Click to Pay`. See [Click to Pay Customer Authentication](/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay/ctp-configuration-intro/ctp-authentication.md "").
 
 Test Your `Click to Pay` Configuration
 :
@@ -101,22 +101,22 @@ Added missing reason codes. See [Reason Codes](/docs/cybs/en-us/click-to-pay/dev
 
 This revision contains only editorial changes and no technical updates.
 
-VISA Platform Connect: Specifications and Conditions for Resellers/Partners {#vpc-partner-reseller-disclaimer}
+CARD Platform Connect: Specifications and Conditions for Resellers/Partners {#vpc-partner-reseller-disclaimer}
 ==============================================================================================================
 
-The following are specifications and conditions that apply to a Reseller/Partner enabling its merchants through Cybersource for Visa Platform Connect ("VPC") processing. Failure to meet any of the specifications and conditions below is subject to the liability provisions and indemnification obligations under Reseller/Partner's contract with Visa/Cybersource.
+The following are specifications and conditions that apply to a Reseller/Partner enabling its merchants through Cybersource for Platform Connect ("VPC") processing. Failure to meet any of the specifications and conditions below is subject to the liability provisions and indemnification obligations under Reseller/Partner's contract with Relay/Cybersource.
 
 1. Before boarding merchants for payment processing on a VPC acquirer's connection, Reseller/Partner and the VPC acquirer must have a contract or other legal agreement that permits Reseller/Partner to enable its merchants to process payments with the acquirer through the dedicated VPC connection and/or traditional connection with such VPC acquirer.
 2. Reseller/Partner is responsible for boarding and enabling its merchants in accordance with the terms of the contract or other legal agreement with the relevant VPC acquirer.
 3. Reseller/Partner acknowledges and agrees that all considerations and fees associated with chargebacks, interchange downgrades, settlement issues, funding delays, and other processing related activities are strictly between Reseller and the relevant VPC acquirer.
 4. Reseller/Partner acknowledges and agrees that the relevant VPC acquirer is responsible for payment processing issues, including but not limited to, transaction declines by network/issuer, decline rates, and interchange qualification, as may be agreed to or outlined in the contract or other legal agreement between Reseller/Partner and such VPC acquirer.
 
-DISCLAIMER: NEITHER VISA NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR ANY ERRORS OR OMISSIONS BY THE Visa Platform Connect ACQUIRER IN PROCESSING TRANSACTIONS. NEITHER VISA NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR RESELLER/PARTNER BOARDING MERCHANTS OR ENABLING MERCHANT PROCESSING IN VIOLATION OF THE TERMS AND CONDITIONS IMPOSED BY THE RELEVANT Visa Platform Connect ACQUIRER.
+DISCLAIMER: NEITHER CARD NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR ANY ERRORS OR OMISSIONS BY THE Platform Connect ACQUIRER IN PROCESSING TRANSACTIONS. NEITHER CARD NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR RESELLER/PARTNER BOARDING MERCHANTS OR ENABLING MERCHANT PROCESSING IN VIOLATION OF THE TERMS AND CONDITIONS IMPOSED BY THE RELEVANT Platform Connect ACQUIRER.
 
 Introduction to the `Click to Pay Drop-In UI` {#ctp-intro}
 ==========================================================
 
-`Click to Pay Drop-In UI` powered by `Unified Checkout` provides an interface for easy acceptance of `Click to Pay` payments from Visa, Mastercard, and American Express cards. The `Click to Pay Drop-In UI` handles manual card entry for the non-`Click to Pay` payment schemes called out in this guide. Throughout this guide we refer to both *`Click to Pay Drop-In UI`* and *`Unified Checkout`.*  
+`Click to Pay Drop-In UI` powered by `Unified Checkout` provides an interface for easy acceptance of `Click to Pay` payments from Relay, Mastercard, and American Express cards. The `Click to Pay Drop-In UI` handles manual card entry for the non-`Click to Pay` payment schemes called out in this guide. Throughout this guide we refer to both *`Click to Pay Drop-In UI`* and *`Unified Checkout`.*  
 `Click to Pay Drop-In UI` consists of a set of server-side APIs and a client-side JavaScript library.  
 The server-side APIs authenticate your merchant identity, instruct the system to act within your payment environment, and provide a way to retrieve the payment data following a successful `Click to Pay Drop-In UI` interaction.  
 The provided JavaScript library enables you to place a payment application within your e-commerce environment. This embedded component offers `Click to Pay` and card entry to your customers.  
@@ -180,7 +180,7 @@ Recognized `Click to Pay` Customer UI ![](/content/dam/documentation/cybs/en-us/
 Unrecognized `Click to Pay` Customer {#ctp-walkthrough-unrecognized}
 ====================================================================
 
-This section provides an overview of the `Click to Pay Drop-In UI` unrecognized experience. This interaction occurs when a customer's device is not recognized by the `Click to Pay Drop-In UI`. This condition occurs when the customer has a `Click to Pay` account but has not opted to have their details stored on the device. In this flow, the customer receives an OTP on their registered mobile device or their email address. The OTP can be received from any of the supported card networks, but will return cards that are stored in `Click to Pay` across all of the user's supported card networks. A Visa cardholder will receive an OTP to their registered email address and phone number to authenticate their identity. A Mastercard cardholder will receive an OTP on their registered phone number. After the user's identity is authenticated, their stored `Click to Pay` credentials are shown:
+This section provides an overview of the `Click to Pay Drop-In UI` unrecognized experience. This interaction occurs when a customer's device is not recognized by the `Click to Pay Drop-In UI`. This condition occurs when the customer has a `Click to Pay` account but has not opted to have their details stored on the device. In this flow, the customer receives an OTP on their registered mobile device or their email address. The OTP can be received from any of the supported card networks, but will return cards that are stored in `Click to Pay` across all of the user's supported card networks. A Relay cardholder will receive an OTP to their registered email address and phone number to authenticate their identity. A Mastercard cardholder will receive an OTP on their registered phone number. After the user's identity is authenticated, their stored `Click to Pay` credentials are shown:
 
 #### Figure: {#ctp-walkthrough-unrecognized_fig-ctp-recog-account}
 
@@ -235,13 +235,13 @@ To begin using the `Click to Pay Drop-In UI` powered by `Unified Checkout`, you 
 
 3. Under Payment Options, click Manage. The Payment Options page appears.
 
-4. Click the checkbox next to each payment method that you want to display in your checkout UI. Click the drag icon ( ![](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/unified-checkout/images/ebc-ui-drag-icon-15x25.svg/jcr:content/renditions/original) ) to rearrange the order of the payment options. The `Click to Pay Drop-In UI` supports Visa, Mastercard, and American express. Other card types are routed through the guest checkout journey.
+4. Click the checkbox next to each payment method that you want to display in your checkout UI. Click the drag icon ( ![](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/unified-checkout/images/ebc-ui-drag-icon-15x25.svg/jcr:content/renditions/original) ) to rearrange the order of the payment options. The `Click to Pay Drop-In UI` supports Relay, Mastercard, and American express. Other card types are routed through the guest checkout journey.
 
 5. Next to `Click to Pay`, click **Manage** and follow the instructions to enroll your business in `Click to Pay`. When `Click to Pay` is enabled, it appears on the payment configuration page.  
    ![Manage Unified Checkout Digital Payments Solutions](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/click-to-pay/images/pmt-config-unified-payments-ctp.png/jcr:content/renditions/original)
 
 6. Click **Manage** to alter your `Click to Pay` enrollment details. For more information on registering for `Click to Pay`, see [Enable Click to Pay](/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay/ctp-configuration-intro/ctp-enable-digital-pay-intro.md "").  
-   After you enable `Click to Pay`, you can enable authentication. For information about enabling authentication for `Click to Pay` in the `Business Center`, see [Set Up Customer Authentication for Visa Click to Pay](/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay/ctp-configuration-intro/ctp-authentication/ctp-authentication-steps.md "").
+   After you enable `Click to Pay`, you can enable authentication. For information about enabling authentication for `Click to Pay` in the `Business Center`, see [Set Up Customer Authentication for Relay Click to Pay](/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay/ctp-configuration-intro/ctp-authentication/ctp-authentication-steps.md "").
 
 Add `Click to Pay` to a Merchant Account {#boarding-config-ctp-boarding}
 ========================================================================
@@ -285,7 +285,7 @@ Follow these steps to add `Click to Pay` to an organization:
 
     * American Express
     * Mastercard
-    * Visa
+    * Relay
       {#boarding-config-ctp-boarding_ul_l2l_fzs_fjc}  
       You can select **Allow All** to enable all card brands for your merchants. When you select **Allow All** , future additions to supported card brands are automatically available. IMPORTANT You must select at least one card brand to support.
       {#boarding-config-ctp-boarding_step-card-brands}
@@ -498,7 +498,7 @@ Enable `Click to Pay Drop-In UI`
 Enabling `Click to Pay` in the `Business Center` {#uc-enable-digital-pay-ctp}
 =============================================================================
 
-To begin your integration, you must first enable `Click to Pay`. `Click to Pay` is a digital payment solution that allows customers to pay with their preferred card network and issuer without entering their card details on every website. Customers can use Visa, Mastercard, and American Express cards to streamline their purchase experience. `Click to Pay` provides a fast, secure, and consistent checkout experience across devices and browsers.  
+To begin your integration, you must first enable `Click to Pay`. `Click to Pay` is a digital payment solution that allows customers to pay with their preferred card network and issuer without entering their card details on every website. Customers can use Relay, Mastercard, and American Express cards to streamline their purchase experience. `Click to Pay` provides a fast, secure, and consistent checkout experience across devices and browsers.  
 Follow these steps to enable in `Click to Pay` on `Unified Checkout`:
 
 1. Log in to the `Business Center`:  
@@ -581,7 +581,7 @@ When you use only the sessions API to generate the capture context, your request
     "https://yourCheckoutPage.com"
   ],
   "allowedCardNetworks": [
-    "VISA",
+    "CARD",
     "MASTERCARD",
     "AMEX"
   ],
@@ -883,7 +883,7 @@ You can supply up to seven origins within the targetOrigins field for nested ifr
 
 Allowed Card Networks
 :
-Use the allowedCardNetworks field to define the card types. `Click to Pay` supports American Express, Mastercard, and Visa. The `Click to Pay Drop-In UI` manually captures the other card types that are listed in the capture context request. This enables you to process the payment through the chosen gateway but the cardholder is not able to enroll these cards in `Click to Pay`.
+Use the allowedCardNetworks field to define the card types. `Click to Pay` supports American Express, Mastercard, and Relay. The `Click to Pay Drop-In UI` manually captures the other card types that are listed in the capture context request. This enables you to process the payment through the chosen gateway but the cardholder is not able to enroll these cards in `Click to Pay`.
 
     These card networks are available for card entry:
 
@@ -904,13 +904,13 @@ Use the allowedCardNetworks field to define the card types. `Click to Pay` suppo
     * Meeza
     * PayPak
     * UATP
-    * Visa
+    * Relay
 
-    To support dual-branded or co-badged cards, you must list your supported card types values for the allowedCardNetworks field based on your preference for processing card numbers. For example, if a card is dual-branded as Visa and EFTPOS and EFTPOS is listed first, the card type is set to EFTPOS after the card number is entered in your `Unified Checkout` card collection form. For information on dual-branded or co-badged cards, see [Dual-Branded Cards](/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay/ctp-tokens-intro/ctp-dual-co-brand-card-support.md "").
+    To support dual-branded or co-badged cards, you must list your supported card types values for the allowedCardNetworks field based on your preference for processing card numbers. For example, if a card is dual-branded as Relay and EFTPOS and EFTPOS is listed first, the card type is set to EFTPOS after the card number is entered in your `Unified Checkout` card collection form. For information on dual-branded or co-badged cards, see [Dual-Branded Cards](/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay/ctp-tokens-intro/ctp-dual-co-brand-card-support.md "").
 
     When a Cartes Bancaires dual-branded card is entered in the `Click to Pay Drop-In UI`, the `Click to Pay Drop-In UI` provides a radio selector button to enable the cardholder to select which scheme they want to use to process the payment. The radio selector defaults to the card scheme that appears first in the allowedCardNetworks field.
 
-    Cartes Bancaires is not supported for `Click to Pay`. If a cardholder selects to process a payment with Cartes Bancaires it is processed as a one-time guest checkout and the user is not enrolled in `Click to Pay`. If a cardholder chooses to process with Visa or Mastercard instead of Cartest Bancaires, they are given the option to enroll their card in `Click to Pay`.
+    Cartes Bancaires is not supported for `Click to Pay`. If a cardholder selects to process a payment with Cartes Bancaires it is processed as a one-time guest checkout and the user is not enrolled in `Click to Pay`. If a cardholder chooses to process with Relay or Mastercard instead of Cartest Bancaires, they are given the option to enroll their card in `Click to Pay`.
 
 :
 > IMPORTANT
@@ -945,7 +945,7 @@ You can control the length of the card number prefix to be received in the respo
 **If you want to receive an 8-digit card number prefix in the response**
 
     * Include the transientTokenResponseOptions.includeCardPrefix field in the capture context request, and set the value to `true`. IMPORTANT
-      > Per PCI DSS requirements, this requirement applies only to card numbers longer than 15 digits and for Discover, JCB, Mastercard, UnionPay, and Visa brands.
+      > Per PCI DSS requirements, this requirement applies only to card numbers longer than 15 digits and for Discover, JCB, Mastercard, UnionPay, and Relay brands.
       > * If the card type entered is not part of these brands, a 6-digit card number prefix is returned instead.
       > * If the card type entered is not part of these brands but is *co-branded* with these brands, an 8-digit card number prefix is returned.
     * This example shows how an 8-digit card prefix `41111102` is returned in the transient token response:
@@ -1015,9 +1015,9 @@ These card networks are available for card entry:
 * Meeza
 * PayPak
 * UATP
-* Visa (supported on `Click to Pay`)
+* Relay (supported on `Click to Pay`)
   {#ctp-cc-allowed-card-networks_ul_cz5_tt1_3jc}  
-  To support dual-branded or co-badged cards, you must list your supported card type values for the allowedCardNetworks field based on your preference for processing card numbers. For example, if a card is dual-branded as Visa and Cartes Bancaires, and Cartes Bancaires is listed first, the card type is set to Cartes Bancaires after the card number is entered in your `Unified Checkout` card collection form. For information on dual-branded or co-badged cards, see [Dual-Branded Cards](/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay/ctp-tokens-intro/ctp-dual-co-brand-card-support.md "").
+  To support dual-branded or co-badged cards, you must list your supported card type values for the allowedCardNetworks field based on your preference for processing card numbers. For example, if a card is dual-branded as Relay and Cartes Bancaires, and Cartes Bancaires is listed first, the card type is set to Cartes Bancaires after the card number is entered in your `Unified Checkout` card collection form. For information on dual-branded or co-badged cards, see [Dual-Branded Cards](/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay/ctp-tokens-intro/ctp-dual-co-brand-card-support.md "").
 
 > IMPORTANT  
 > Some card types, such as KCP and UATP, do not have security codes (CVV or CVN). If you include only card types that do not have security codes in the allowedCardNetworks field, ` Unified Checkout ` does not display the security code field in the UI.  
@@ -1048,7 +1048,7 @@ Use the allowedPaymentTypes field to define the payment type:
 * `PANENTRY`
 
 {#ctp-cc-allowed-pay-type_ul_s5z_4t1_3jc} IMPORTANT
-` Click to Pay ` accepts American Express, Mastercard, and Visa for saved cards. Visa and Mastercard tokenize payment credentials using network tokenization for all ` Click to Pay ` requests. ` Click to Pay ` uses ` Click to Pay ` Token Requester IDs (TRIDs) rather than your existing TRIDs to generate network tokens.  
+` Click to Pay ` accepts American Express, Mastercard, and Relay for saved cards. Relay and Mastercard tokenize payment credentials using network tokenization for all ` Click to Pay ` requests. ` Click to Pay ` uses ` Click to Pay ` Token Requester IDs (TRIDs) rather than your existing TRIDs to generate network tokens.  
 For more information on enabling and managing `Click to Pay`, see [Enabling Click to Pay in the Business Center](/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay/ctp-uc-getting-started-integration-flow/ctp-enable-digital-pay-intro/uc-enable-digital-pay-ctp.md "").
 
 Auto-check Enrollment {#ctp-cc-ctp-enroll-precheck}
@@ -1125,8 +1125,8 @@ The capture mandate enables you to define which fields are captured within `Unif
 captureMandate.comboCard {#ctp-cc-capture-combo-cards}
 ======================================================
 
-A combo card is a single card in Brazil that functions as both a debit and a credit card. `Unified Checkout` enables the cardholder to choose whether to pay for a transaction using a debit or credit card. The cardholder can choose the card that they want to use when they enter their card details or when they choose a stored Visa card from their `Click to Pay` wallet during checkout. While in the card details section of the payment form, the cardholder is prompted for a debit or credit card. Credit is the default option.  
-To enable combo cards during checkout, you must include the comboCard field in your capture context request and set the field value to `true`. When the comboCard field value is set to `true`, the option to use a debit or credit card appears for all Visa cards that are entered in Unified Checkout and for all cards that are already stored in `Click to Pay`. If you do not want to offer a combo card at checkout, do not include the comboCard field in your capture context request:
+A combo card is a single card in Brazil that functions as both a debit and a credit card. `Unified Checkout` enables the cardholder to choose whether to pay for a transaction using a debit or credit card. The cardholder can choose the card that they want to use when they enter their card details or when they choose a stored Relay card from their `Click to Pay` wallet during checkout. While in the card details section of the payment form, the cardholder is prompted for a debit or credit card. Credit is the default option.  
+To enable combo cards during checkout, you must include the comboCard field in your capture context request and set the field value to `true`. When the comboCard field value is set to `true`, the option to use a debit or credit card appears for all Relay cards that are entered in Unified Checkout and for all cards that are already stored in `Click to Pay`. If you do not want to offer a combo card at checkout, do not include the comboCard field in your capture context request:
 
 ```
 "captureMandate" : {
@@ -1234,7 +1234,7 @@ This example shows how a six-digit card number prefix `411111` is returned in th
 To receive an eight-digit card number prefix in the response, follow this step:  
 Include the transientTokenResponseOptions.includeCardPrefix field in the capture context request, and set the value to `true`. IMPORTANT
 
-> This PCI DSS requirement applies only to card numbers longer than 15 digits and only for Discover, JCB, Mastercard, UnionPay, and Visa brands.
+> This PCI DSS requirement applies only to card numbers longer than 15 digits and only for Discover, JCB, Mastercard, UnionPay, and Relay brands.
 >
 > * If the card type entered is not part of these brands, a six-digit card number prefix is returned instead.
 > * If the card type entered is not part of these brands but is *co-branded* with these brands, an eight-digit card number prefix is returned.
@@ -1267,7 +1267,7 @@ When you include `Click to Pay` as an allowedPaymentType, an automatic email loo
 Mobile as Identity for `Click to Pay` {#ctp-cc-mobile-identity}
 ===============================================================
 
-`Click to Pay` supports mobile numbers as way to identify a user. This enables cardholders to use their mobile number instead of their email address in certain markets for Visa and Mastercard transactions.  
+`Click to Pay` supports mobile numbers as way to identify a user. This enables cardholders to use their mobile number instead of their email address in certain markets for Relay and Mastercard transactions.  
 When the requestEmail field is set to `false` and the requestPhone field is set to `true`, the cardholder is identified using the provided mobile number. When the requestEmail field is set to `true` and the requestPhone field is set to `false`, the cardholder is identified using the provided email address. When the requestEmail field is set to `true` and the requestPhone field is also set to `true`, the cardholder is identified using the provided email address first and then the mobile number if there is no match.
 
 UI/UX Customization Look and Feel {#ctp-cc-ui-ux-look-feel}
@@ -1305,7 +1305,7 @@ This is an example sessions capture context request with UI/UX customization:
     "https://yourCheckoutPage.com"
   ],
   "allowedCardNetworks": [
-    "VISA",
+    "CARD",
     "MASTERCARD",
     "AMEX"
   ],
@@ -1551,7 +1551,7 @@ Request
       "https://unified-payments.appspot.com"
     ],
     "allowedCardNetworks": [
-      "VISA",
+      "CARD",
       "MASTERCARD",
       "AMEX"
     ],
@@ -1586,7 +1586,7 @@ Request
           "locality": "New York",
           "postalCode": "00000",
           "company": {
-            "name": "Visa Inc",
+            "name": "Relay Inc",
             "address1": "900 Metro Center Blvd",
             "administrativeArea": "CA",
             "buildingNumber": "1",
@@ -1604,7 +1604,7 @@ Request
           "phoneType": "phoneType"
         },
         "shipTo": {
-          "address1": "Visa",
+          "address1": "Relay",
           "address2": "123 Main Street",
           "address3": "Apartment 102",
           "administrativeArea": "CA",
@@ -1750,7 +1750,7 @@ eyJraWQiOiIwMEl1NWJDT2NINVpPWjFNYldsQktodzFZeFFjSkVlZSIsImFsZyI6IlJTMjU2In0.eyJt
 ```
 
 {#uc-trans-tkn-ex_codeblock_bagt_cfz_hjc}  
-Decoded Transient Token JWT - Visa PAN
+Decoded Transient Token JWT - Relay PAN
 
 ```
 {
@@ -1833,7 +1833,7 @@ Decoded Transient Token JWT - Visa PAN
 ```
 
 {#uc-trans-tkn-ex_codeblock_bgt_cfz_hjc}  
-Decoded Transient Token JWT - Visa Network Token
+Decoded Transient Token JWT - Relay Network Token
 
 ```
 {
@@ -1849,7 +1849,7 @@ Decoded Transient Token JWT - Visa Network Token
     },
     "ccJti": "9M2EooZC767DNhvC",
     "cardholderAuthenticationStatus": false,
-    "paymentType": "SRCVISA"
+    "paymentType": "SRCCARD"
   },
   "iss": "Flex/08",
   "paymentCredentialsReference": {
@@ -1983,13 +1983,13 @@ Dual-Branded Cards {#dual-co-brand-card-support}
 `Unified Checkout` accepts dual-branded cards. To use this feature, you must include the card networks that have overlapping BIN ranges in the capture context request. For example:
 
 ```
-"allowedCardNetworks": ["VISA", "MASTERCARD", "AMEX", "CARTESBANCAIRES"]
+"allowedCardNetworks": ["CARD", "MASTERCARD", "AMEX", "CARTESBANCAIRES"]
 ```
 
-When a card number within an overlapping BIN range is entered, the network that is listed first in the value array for the allowedCardNetworks field is used. Based on the previous example, if the card number 403550XXXXXXXXXX is entered, the payment network for payment processing is Visa.  
+When a card number within an overlapping BIN range is entered, the network that is listed first in the value array for the allowedCardNetworks field is used. Based on the previous example, if the card number 403550XXXXXXXXXX is entered, the payment network for payment processing is Relay.  
 During the transaction, the card type is populated with the first network in the list, and the detectedCardTypes field returned in the transient token includes all of the detected card types in the transient token.  
 The detectedCardTypes field is returned in the transient token response only when more than one card type is detected.  
-If you include Cartes Bancaires as a supported dual-branded card type, `Unified Checkout` displays a radio button with Visa and Mastercard options at checkout. This enables the customer to select which payment scheme they want to use to process the payment. The radio button defaults to the card type that you specify in the capture context request, but the payment is processed using the option that the customer selects during checkout.
+If you include Cartes Bancaires as a supported dual-branded card type, `Unified Checkout` displays a radio button with Relay and Mastercard options at checkout. This enables the customer to select which payment scheme they want to use to process the payment. The radio button defaults to the card type that you specify in the capture context request, but the payment is processed using the option that the customer selects during checkout.
 
 Dual-Branded Cards {#ctp-dual-co-brand-card-support}
 ====================================================
@@ -1997,13 +1997,13 @@ Dual-Branded Cards {#ctp-dual-co-brand-card-support}
 `Unified Checkout` accepts dual-branded cards. To use this feature, you must include the card networks that have overlapping BIN ranges in the capture context request. For example:
 
 ```
-"allowedCardNetworks": ["VISA", "MASTERCARD", "AMEX", "CARTESBANCAIRES"]
+"allowedCardNetworks": ["CARD", "MASTERCARD", "AMEX", "CARTESBANCAIRES"]
 ```
 
-When a card number within an overlapping BIN range is entered, the network that is listed first in the value array for the allowedCardNetworks field is used. Based on the previous example, if the card number 403550XXXXXXXXXX is entered, the payment network for payment processing is Visa.  
+When a card number within an overlapping BIN range is entered, the network that is listed first in the value array for the allowedCardNetworks field is used. Based on the previous example, if the card number 403550XXXXXXXXXX is entered, the payment network for payment processing is Relay.  
 During the transaction, the card type is populated with the first network in the list, and the detectedCardTypes field returned in the transient token includes all of the detected card types in the transient token.  
 The detectedCardTypes field is returned in the transient token response only when more than one card type is detected.  
-If you include Cartes Bancaires as a supported dual-branded card type, `Unified Checkout` displays a radio button with Visa and Mastercard options at checkout. This enables the customer to select which payment scheme they want to use to process the payment. The radio button defaults to the card type that you specify in the capture context request, but the payment is processed using the option that the customer selects during checkout.
+If you include Cartes Bancaires as a supported dual-branded card type, `Unified Checkout` displays a radio button with Relay and Mastercard options at checkout. This enables the customer to select which payment scheme they want to use to process the payment. The radio button defaults to the card type that you specify in the capture context request, but the payment is processed using the option that the customer selects during checkout.
 
 Payment Details API {#uc-token-get-pymnt-details}
 =================================================
@@ -2101,7 +2101,7 @@ Returned Credentials
 
 A payment account number (PAN) or network token is returned on your request depending on your payment method and `Click to Pay` account status:
 
-|     `Click to Pay` Account Status      | American Express |  Mastercard   |     Visa      |
+|     `Click to Pay` Account Status      | American Express |  Mastercard   |     Relay      |
 |----------------------------------------|------------------|---------------|---------------|
 | New card not saved in `Click to Pay`   | PAN              | PAN           | PAN           |
 | New card saved in `Click to Pay`       | PAN              | Network Token | Network Token |
@@ -2111,8 +2111,8 @@ A payment account number (PAN) or network token is returned on your request depe
 When you retrieve PAN information from the Payment Credentials API, the response includes the PAN, card expiration date, and the card verification value (CVV). When you retrieve network token information, the response includes the network token and network token cryptogram.
 
 > IMPORTANT
-> Visa and Mastercard always attempt to provision a network token. A PAN is returned when a network token is not provisioned before checkout or when the cardholder did not request to enroll the card in ` Click to Pay `.
-> Network tokens are generated in the wallet of the `Click to Pay` token requestor ID (TRID). When tokenization is successful, Visa and Mastercard can also complete authentication during the `Click to Pay` experience to acquire a fully authenticated response. For information on authentication, see [Click to Pay Customer Authentication](/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay/ctp-configuration-intro/ctp-authentication.md "").
+> Relay and Mastercard always attempt to provision a network token. A PAN is returned when a network token is not provisioned before checkout or when the cardholder did not request to enroll the card in ` Click to Pay `.
+> Network tokens are generated in the wallet of the `Click to Pay` token requestor ID (TRID). When tokenization is successful, Relay and Mastercard can also complete authentication during the `Click to Pay` experience to acquire a fully authenticated response. For information on authentication, see [Click to Pay Customer Authentication](/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay/ctp-configuration-intro/ctp-authentication.md "").
 
 Endpoint {#ctp-token-get-pymnt-credentials_d14e634}
 ---------------------------------------------------
@@ -2179,7 +2179,7 @@ my-FSZwNRFPkeedl3oHLepeTgwVnmij9ovk0e5Wqq2GVUMe8sLa-4eEnjliIjAVUQ9YNJBeqLf6_wo3H
 4ZgSJTuPHAuP41-D6sYrOcM6WvkCfKRTXw7ue5unri3M0Rpd2TEnzyw.TaLt6G8QyRykbrxb0iV9Jg
 ```
 
-Decrypted Response Payment Credentials JWE - Visa PAN
+Decrypted Response Payment Credentials JWE - Relay PAN
 
 ```
 {
@@ -2239,7 +2239,7 @@ Decrypted Response Payment Credentials JWE - Visa PAN
 ```
 
 {#ctp-token-get-payment-credentials-example-rest_codeblock_bgt_cfzz_hjc}  
-Decrypted Response Payment Credentials JWE - Visa Network Token
+Decrypted Response Payment Credentials JWE - Relay Network Token
 
 ```
 {
@@ -2953,7 +2953,7 @@ Enable `Click to Pay` for `Unified Checkout` in the `Business Center`. `Click to
 Enabling `Click to Pay` {#uc-enable-digital-pay-ctp}
 ====================================================
 
-To begin your integration, you must first enable `Click to Pay`. `Click to Pay` is a digital payment solution that allows customers to pay with their preferred card network and issuer without entering their card details on every website. Customers can use Visa, Mastercard, and American Express cards to streamline their purchase experience. `Click to Pay` provides a fast, secure, and consistent checkout experience across devices and browsers.  
+To begin your integration, you must first enable `Click to Pay`. `Click to Pay` is a digital payment solution that allows customers to pay with their preferred card network and issuer without entering their card details on every website. Customers can use Relay, Mastercard, and American Express cards to streamline their purchase experience. `Click to Pay` provides a fast, secure, and consistent checkout experience across devices and browsers.  
 Follow these steps to enable in `Click to Pay` on `Unified Checkout`:
 
 1. Log in to the `Business Center`:  
@@ -3045,13 +3045,13 @@ Follow these steps to configure and manage user permissions in the `Business Cen
 Click to Pay Customer Authentication {#ctp-authentication}
 ==========================================================
 
-When you enable customer authentication through Click to Pay, you give `Cybersource` permission to request that Visa and Mastercard provide an authenticated payload for each transaction. Authentication takes place within the authentication service of each card type. You must inspect the payload that is returned to you to determine if the transaction is authenticated.  
+When you enable customer authentication through Click to Pay, you give `Cybersource` permission to request that Relay and Mastercard provide an authenticated payload for each transaction. Authentication takes place within the authentication service of each card type. You must inspect the payload that is returned to you to determine if the transaction is authenticated.  
 For information about enabling customer authentication through Click to Pay, see these topics:
 
 * [Enable Click to Pay Customer Authentication Using the API](/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay/ctp-configuration-intro/ctp-authentication/boarding-click-to-pay-auth-enable-intro.md "")
 * [Enable Click to Pay Customer Authentication Using the Business Center](/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay/ctp-configuration-intro/ctp-authentication/ctp-authentication-config-ebc.md "")
   {#ctp-authentication_ul_iyg_v1b_3jc}  
-  When the customer completes a transaction using a Visa or Mastercard Click to Pay credentials, authentication is managed within Click to Pay. When the customer checks out using manual card entry and does not save their card to Click to Pay, the transaction is not processed through Click to Pay and you must complete authentication based on your existing authentication method.
+  When the customer completes a transaction using a Relay or Mastercard Click to Pay credentials, authentication is managed within Click to Pay. When the customer checks out using manual card entry and does not save their card to Click to Pay, the transaction is not processed through Click to Pay and you must complete authentication based on your existing authentication method.
 
 > IMPORTANT
 > American Express cards cannot be authenticated through Click to Pay customer authentication. You must use another authentication method for this card type.
@@ -3095,7 +3095,7 @@ Follow these steps to use the `Business Center` to enable customer authenticatio
 
    #### Step Result
 
-   This completes the authentication setup for the entered acquirer merchant ID and BIN. If you do not know what these values are, you must contact your acquirer. Completing this information enables `Cybersource` to send Visa the information that is required for authentication. IMPORTANT
+   This completes the authentication setup for the entered acquirer merchant ID and BIN. If you do not know what these values are, you must contact your acquirer. Completing this information enables `Cybersource` to send Relay the information that is required for authentication. IMPORTANT
    Charges for ` 3-D Secure ` may apply. You must speak with your acquirer for more information about the charges associated with ` 3-D Secure `.
 
 Authentication Methods {#uc-authentication-methods}
@@ -3107,9 +3107,9 @@ Authentication Methods {#uc-authentication-methods}
 |---------------------------|------------------------------------------------------------------------------------------------|
 | Successful authentication | processingInformation.commerceIndicator.value field value set to `VBV` in the transient token. |
 | No authentication         | No commerce indicator in transient token.                                                      |
-[Responses for Visa `Click to Pay` Transactions for `Unified Checkout`]
+[Responses for Relay `Click to Pay` Transactions for `Unified Checkout`]
 
-For more information about the authentication methods that are supported for Visa, see this page: <https://developer.visa.com/capabilities/visa-secure-remote-commerce/docs-use-cases>
+For more information about the authentication methods that are supported for Relay, see this page: <https://developer.relay.com/capabilities/relay-secure-remote-commerce/docs-use-cases>
 
 Authentication Test Cards
 -------------------------
@@ -3345,7 +3345,7 @@ Follow these steps to use the `Business Center` to enable customer authenticatio
 
    #### Step Result
 
-   This completes the authentication setup for the entered acquirer merchant ID and BIN. If you do not know what these values are, you must contact your acquirer. Completing this information enables `Cybersource` to send Visa and Mastercard the information that is required for authentication. IMPORTANT
+   This completes the authentication setup for the entered acquirer merchant ID and BIN. If you do not know what these values are, you must contact your acquirer. Completing this information enables `Cybersource` to send Relay and Mastercard the information that is required for authentication. IMPORTANT
 
    > Charges for ` 3-D Secure ` may apply. You must speak with your acquirer for more information about the charges associated with ` 3-D Secure `.
    > {#ctp-authentication-config-ebc_steps_fy3_1zs_hjc}
@@ -3403,16 +3403,16 @@ Test Payment Details {#ctp_reference_test_cards}
 Use these test card numbers to test your `Click to Pay` configuration.  
 Combine the BIN with the card number when sending to `Click to Pay`.
 
-Visa `Click to Pay` Test Cards
+Relay `Click to Pay` Test Cards
 ------------------------------
 
-These Visa test cards can be added to your `Click to Pay` wallet.  
+These Relay test cards can be added to your `Click to Pay` wallet.  
 Replace the X in the card number with 4.  
-You can manage your Visa `Click to Pay` test cards and account here:
+You can manage your Relay `Click to Pay` test cards and account here:
 
-* **Production:** [login](https://src.visa.com/login "")
-* **Test:** [login](https://sandbox.src.visa.com/login "")  
-  To manage Visa test cards for customer authentication, contact your implementation consultant or technical account manager. IMPORTANT These test cards are not valid for testing in production. To test in production, you must leverage production credentials.
+* **Production:** [login](https://src.relay.com/login "")
+* **Test:** [login](https://sandbox.src.relay.com/login "")  
+  To manage Relay test cards for customer authentication, contact your implementation consultant or technical account manager. IMPORTANT These test cards are not valid for testing in production. To test in production, you must leverage production credentials.
 
 |   Card Number    | Expiration Date | CVV |
 |------------------|-----------------|-----|
@@ -3427,10 +3427,10 @@ You can manage your Visa `Click to Pay` test cards and account here:
 | x6229x3123123839 | 12/2029         | 114 |
 | x6229x31231238x7 | 12/2029         | 867 |
 | x6229x312312385x | 12/2029         | 301 |
-[Visa Test Card Numbers]
+[Relay Test Card Numbers]
 
-To manage Visa test cards for customer authentication, contact your implementation consultant or technical account manager. IMPORTANT These test cards are not valid for testing in production. To test in production, you must leverage production credentials.  
-These Visa test card numbers can be used to test ECI05 frictionless authentication. Replace the X in the card number with 4.
+To manage Relay test cards for customer authentication, contact your implementation consultant or technical account manager. IMPORTANT These test cards are not valid for testing in production. To test in production, you must leverage production credentials.  
+These Relay test card numbers can be used to test ECI05 frictionless authentication. Replace the X in the card number with 4.
 
 |   Card Number    | Expiration Date | CVV |
 |------------------|-----------------|-----|
@@ -3438,7 +3438,7 @@ These Visa test card numbers can be used to test ECI05 frictionless authenticati
 | X6229X3123113731 | 12/2027         | 217 |
 [ECI05 Authentication Test Card Numbers]
 
-These Visa test card numbers can be used to enroll in Passkey Service. Replace the X in the card number with 4.
+These Relay test card numbers can be used to enroll in Passkey Service. Replace the X in the card number with 4.
 
 |   Card Number    | Expiration Date | CVV |
 |------------------|-----------------|-----|
@@ -4238,8 +4238,8 @@ The `{jti}` is the ID of the JWT within the transient token that is returned by 
 Click to Pay Customer Authentication {#uc-authentication}
 =========================================================
 
-When you enable customer authentication through Click to Pay, you give `Cybersource` permission to send Visa the required authentication information for each transaction. When the customer completes a transaction using a Visa card that is already stored in Click to Pay, authentication is managed within Click to Pay.  
-Click to Pay authentication is only available for Visa branded cards that are tokenized with Click to Pay. If Click to Pay does not authenticate the transaction, but you are using the complete mandate with the consumerAuthentication field set to `true`, authentication is attempted as part of this request. When you do not use the complete mandate, you must check the result of the cardholderAuthenticationStatus field in the transient token and request `Payer Authentication` directly when it is required.
+When you enable customer authentication through Click to Pay, you give `Cybersource` permission to send Relay the required authentication information for each transaction. When the customer completes a transaction using a Relay card that is already stored in Click to Pay, authentication is managed within Click to Pay.  
+Click to Pay authentication is only available for Relay branded cards that are tokenized with Click to Pay. If Click to Pay does not authenticate the transaction, but you are using the complete mandate with the consumerAuthentication field set to `true`, authentication is attempted as part of this request. When you do not use the complete mandate, you must check the result of the cardholderAuthenticationStatus field in the transient token and request `Payer Authentication` directly when it is required.
 
 > IMPORTANT
 > American Express and Mastercard card brands cannot be authenticated through Click to Pay customer authentication.
@@ -4320,7 +4320,7 @@ Support for the complete mandate.
 
 0.28
 :
-Complete mandate enhancement to support `Payer Authentication` for manual card entry for Visa, Mastercard, American Express, Discover, JCB, Cartes Bancaires, China UnionPay, and ELO card brands.
+Complete mandate enhancement to support `Payer Authentication` for manual card entry for Relay, Mastercard, American Express, Discover, JCB, Cartes Bancaires, China UnionPay, and ELO card brands.
 :
 Support for Afterpay as an allowedPaymentType.
 :
@@ -4426,7 +4426,7 @@ Use the targetOrigins and the allowedPaymentTypes fields to define the target or
     "clientVersion": "0.34",
     "buttonType": "CHECKOUT_AND_CONTINUE",
     "allowedCardNetworks": [
-        "VISA",
+        "CARD",
         "MASTERCARD"
     ],
     "allowedPaymentTypes": [
@@ -4529,7 +4529,7 @@ Returned Credentials
 
 A payment account number (PAN) or network token is returned on your request depending on your payment method and `Click to Pay` account status:
 
-|     `Click to Pay` Account Status      | American Express |  Mastercard   |     Visa      |
+|     `Click to Pay` Account Status      | American Express |  Mastercard   |     Relay      |
 |----------------------------------------|------------------|---------------|---------------|
 | New card not saved in `Click to Pay`   | PAN              | PAN           | PAN           |
 | New card saved in `Click to Pay`       | PAN              | Network Token | Network Token |
@@ -4538,8 +4538,8 @@ A payment account number (PAN) or network token is returned on your request depe
 
 When you retrieve PAN information from the Payment Credentials API, the response includes the PAN, card expiration date, and the card verification value (CVV). When you retrieve network token information, the response includes the network token and network token cryptogram.
 
-> IMPORTANT Visa and Mastercard always attempt to provision a network token. When a network token is not provisioned, the default payment method is the PAN. When there is a PAN transaction, the PAN is not stored in the consumers wallet and it is treated as a single transaction.
-> Network tokens are generated in the wallet of the `Click to Pay` token requestor ID (TRID). When tokenization is successful, Visa attempts to complete authentication during the `Click to Pay` experience. For information on authentication, see [Click to Pay Customer Authentication](/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay/uc-authentication.md "").  
+> IMPORTANT Relay and Mastercard always attempt to provision a network token. When a network token is not provisioned, the default payment method is the PAN. When there is a PAN transaction, the PAN is not stored in the consumers wallet and it is treated as a single transaction.
+> Network tokens are generated in the wallet of the `Click to Pay` token requestor ID (TRID). When tokenization is successful, Relay attempts to complete authentication during the `Click to Pay` experience. For information on authentication, see [Click to Pay Customer Authentication](/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay/uc-authentication.md "").  
 > You must meet these requirements for tokenization to be successfully configured for your merchant ID (MID):
 
 * `Click to Pay` is enabled as a digital payment in the `Business Center`.
@@ -4764,15 +4764,15 @@ Dual-Branded Cards {#dual-co-brand-card-support}
 `Unified Checkout` accepts dual-branded cards. To use this feature, you must include the card networks that have overlapping BIN ranges in the capture context request. For example:
 
 ```
-"allowedCardNetworks": ["VISA", "MASTERCARD", "AMEX", "CARTESBANCAIRES"]
+"allowedCardNetworks": ["CARD", "MASTERCARD", "AMEX", "CARTESBANCAIRES"]
 ```
 
-When a card number within an overlapping BIN range is entered, the network that is listed first in the value array for the allowedCardNetworks field is used. Based on the previous example, if the card number 403550XXXXXXXXXX is entered, the payment network for payment processing is Visa.  
+When a card number within an overlapping BIN range is entered, the network that is listed first in the value array for the allowedCardNetworks field is used. Based on the previous example, if the card number 403550XXXXXXXXXX is entered, the payment network for payment processing is Relay.  
 During the transaction, the card type is populated with the first network in the list, and the **detectedCardTypes** field returned in the transient token includes all of the detected card types in the transient token.  
 The detectedCardTypes field is returned in the transient token response only when more than one card type is detected.  
-If you include Cartes Bancaires as a supported dual-branded card type, `Unified Checkout` displays a radio button with Visa and Mastercard options at checkout. This enables the customer to select which payment scheme they want to use to process the payment. The radio button defaults to the card type that you specify in the capture context request, but the payment is processed using the option selected by the customer during checkout.
+If you include Cartes Bancaires as a supported dual-branded card type, `Unified Checkout` displays a radio button with Relay and Mastercard options at checkout. This enables the customer to select which payment scheme they want to use to process the payment. The radio button defaults to the card type that you specify in the capture context request, but the payment is processed using the option selected by the customer during checkout.
 
-Set Up Customer Authentication for Visa Click to Pay {#uc-authentication-steps}
+Set Up Customer Authentication for Relay Click to Pay {#uc-authentication-steps}
 ===============================================================================
 
 Follow these steps to use the `Business Center` to enable customer authentication through Click to Pay. Authentication methods differ in each region and are dependent on the issuer, the cardholder device, and the Click to Pay configuration. These authentication methods are available:
@@ -4783,9 +4783,9 @@ Follow these steps to use the `Business Center` to enable customer authenticatio
 * One-time password (OTP)
 
 > IMPORTANT
-> After you complete these steps, Visa determines which authentication method to use. When Visa determines that they will authenticate, they authenticate each Click to Pay transaction through the appropriate method. This may be a frictionless authentication or the customer may need to provide more information when required by the issuer. This is available only through Visa.
+> After you complete these steps, Relay determines which authentication method to use. When Relay determines that they will authenticate, they authenticate each Click to Pay transaction through the appropriate method. This may be a frictionless authentication or the customer may need to provide more information when required by the issuer. This is available only through Relay.
 > IMPORTANT
-> Visa Click to Pay authentication is not the same as consumer authentication using the complete mandate. See [Test Authentication](/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay/uc-appendix-authentication.md "").
+> Relay Click to Pay authentication is not the same as consumer authentication using the complete mandate. See [Test Authentication](/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay/uc-appendix-authentication.md "").
 
 1. Log in to the `Business Center`:  
    Test URL: ` `<https://businesscentertest.cybersource.com/ebc2>` `  
@@ -4810,7 +4810,7 @@ Follow these steps to use the `Business Center` to enable customer authenticatio
 
    #### Step Result
 
-   This completes the authentication setup for the entered acquirer merchant ID and BIN. If you do not know what these values are, you must contact your acquirer. Completing this information enables `Cybersource` to send Visa the information that is required for authentication. IMPORTANT
+   This completes the authentication setup for the entered acquirer merchant ID and BIN. If you do not know what these values are, you must contact your acquirer. Completing this information enables `Cybersource` to send Relay the information that is required for authentication. IMPORTANT
    Charges for ` 3-D Secure ` may apply. You must speak with your acquirer for more information about the charges associated with ` 3-D Secure `.
 
 `Unified Checkout` Field Reference {#uc_appendix_pass_through_fields}
@@ -4825,7 +4825,7 @@ The following table describes the main configuration fields for `Unified Checkou
 
 |           Field Name            | Data Type | Required? |                        Example                         |                                                                                      Details                                                                                      |
 |---------------------------------|-----------|-----------|--------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| allowedCardNetworks             | Array     | No        | `["VISA","MASTERCARD","AMEX"]`                         |                                                                                                                                                                                   |
+| allowedCardNetworks             | Array     | No        | `["CARD","MASTERCARD","AMEX"]`                         |                                                                                                                                                                                   |
 | allowedPaymentTypes             | Array     | Yes       | `["PANENTRY","CLICKTOPAY","APPLEPAY","GOOGLEPAY"]`     | The field value can be an array of strings or an object with options.                                                                                                             |
 | buttonType                      | Enum      | No        |                                                        | Possible values: * `ADD_CARD` * `SAVE_CARD` * `CARD_PAYMENT` * `CHECKOUT` * `CHECKOUT_AND_CONTINUE` * `DEBIT_CREDIT` * `DONATE` * `PAY` * `PAY_WITH_CARD` * `SUBSCRIBE_WITH_CARD` |
 | clientReferenceInformation.code | String    | No        | `TAGX001`                                              |                                                                                                                                                                                   |
@@ -5217,7 +5217,7 @@ To test `Payer Authentication`, you must use `Payer Authentication` test cards. 
 
 |    Card Brand    |  BIN   | Card Number  | Expiration Date | CVV  |
 |------------------|--------|--------------|-----------------|------|
-| Visa             | 411111 | 1111111111   | 12/2025         | 123  |
+| Relay             | 411111 | 1111111111   | 12/2025         | 123  |
 | Mastercard       | 555555 | 5555554444   | 02/2026         | 265  |
 | American Express | 378282 | 246310005    | 03/2026         | 7890 |
 | Cartes Bancaires | 436000 | 0001000005   | 04/2040         | 123  |
@@ -5236,15 +5236,15 @@ To test `Payer Authentication`, you must use `Payer Authentication` test cards. 
 | Meeza            | 507808 | 3000000002   | 04/2040         | 123  |
 [Test Card Numbers]
 
-Visa `Click to Pay` Test Cards {#uc-reference-test-cards_visa-test-cards}
+Relay `Click to Pay` Test Cards {#uc-reference-test-cards_card-test-cards}
 -------------------------------------------------------------------------
 
-These Visa test cards can be added to your `Click to Pay` wallet. Replace the X in the card number with 0.  
-You can manage your Visa `Click to Pay` test cards and account here:
+These Relay test cards can be added to your `Click to Pay` wallet. Replace the X in the card number with 0.  
+You can manage your Relay `Click to Pay` test cards and account here:
 
-* **Production:** [login](https://src.visa.com/login "")
-* **Test:** [login](https://sandbox.src.visa.com/login "")  
-  To manage Visa test cards for customer authentication, contact your implementation consultant or technical account manager. IMPORTANT These test cards are not valid for testing in production. To test in production, you must leverage production credentials.
+* **Production:** [login](https://src.relay.com/login "")
+* **Test:** [login](https://sandbox.src.relay.com/login "")  
+  To manage Relay test cards for customer authentication, contact your implementation consultant or technical account manager. IMPORTANT These test cards are not valid for testing in production. To test in production, you must leverage production credentials.
 
 |   Card Number    | Expiration Date | CVV |
 |------------------|-----------------|-----|
@@ -5256,14 +5256,14 @@ You can manage your Visa `Click to Pay` test cards and account here:
 | 46229431231X2759 | 12/2026         | 669 |
 | 439584XXX449X11X | 12/2025         | 509 |
 | 439584XXX282X11X | 12/2025         | 693 |
-[Visa Test Card Numbers]
+[Relay Test Card Numbers]
 
 Use these test cards to test when you use a `Click to Pay` card with authentication performed outside `Click to Pay` and the consumerAuthentication field is set to `true` in the capture context.
 
 | Card Brand |   Card Number    | Expiration Date | CVV |
 |------------|------------------|-----------------|-----|
-| Visa       | 46229431231X2X56 | 12/2026         | 432 |
-| Visa       | 46229431231X232X | 12/2026         | 581 |
+| Relay       | 46229431231X2X56 | 12/2026         | 432 |
+| Relay       | 46229431231X232X | 12/2026         | 581 |
 | Mastercard | 512X35X1XXX64578 | Any future date | Any |
 | Mastercard | 512X35X1XXX64552 | Any future date | Any |
 [Test Card Numbers for Authentication Outside `Click to Pay` Flow]
@@ -5272,13 +5272,13 @@ Use these cards when authentication is performed by `Click to Pay` within the `C
 
 | Card Brand |   Card Number    | Expiration Date | CVV |
 |------------|------------------|-----------------|-----|
-| Visa       | 43958XXX0449X11X | 12/2025         | 509 |
-| Visa       | 439584XXX282X11X | 12/2025         | 693 |
-| Visa       | 439584XX91X1XX11 | 12/2025         | 676 |
-| Visa       | 439584XX9119XX11 | 12/2025         | 789 |
+| Relay       | 43958XXX0449X11X | 12/2025         | 509 |
+| Relay       | 439584XXX282X11X | 12/2025         | 693 |
+| Relay       | 439584XX91X1XX11 | 12/2025         | 676 |
+| Relay       | 439584XX9119XX11 | 12/2025         | 789 |
 [`Click to Pay` Test Card Numbers for Authentication in `Click to Pay` Flow]
 
-For information about testing authentication, see[Test Authentication](/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay/uc-appendix-authentication.md ""). For information about enabling Visa customer authentication, see [Set Up Customer Authentication for Visa Click to Pay](/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay/uc-authentication-steps.md "").
+For information about testing authentication, see[Test Authentication](/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay/uc-appendix-authentication.md ""). For information about enabling Relay customer authentication, see [Set Up Customer Authentication for Relay Click to Pay](/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay/uc-authentication-steps.md "").
 
 Mastercard `Click to Pay` Test Cards {#uc-reference-test-cards_mc-test-cards}
 -----------------------------------------------------------------------------
@@ -5520,7 +5520,7 @@ Use this table to determine how to test your authentication method.
 |----------------|---------------------------------------------------|------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | PAN Entry      | `Payer Authentication` through `Unified Checkout` | Authorization and `Payer Authentication` | The transacting MID must be enabled for `Payer Authentication` and the complete mandate is used with the consumerAuthentication field set to `true`.                                                           | See [Testing `Payer Authentication`](https://developer.cybersource.com/docs/cybs/en-us/payer-authentication/developer/all/rest/payer-auth/pa-testing-intro.md "") in the *`Payer Authentication` Developer Guide.* | When the complete mandate is not used, `Unified Checkout` does not initiate authentication and you must perform authentication within your own environment.                                                                                                                                                                                                                                                                              |
 | `Click to Pay` | `Payer Authentication` through `Unified Checkout` | Authorization and `Payer Authentication` | The transacting MID must be enabled for `Payer Authentication` and the complete mandate is used with the consumerAuthentication field set to `true`. Authentication for `Click to Pay` must not be configured. | See [Unified Checkout Test Cards](/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay/uc-reference-test-cards-uc.md "").                                               | When authentication is not enabled for `Click to Pay` or `Click to Pay` is not able to perform authentication for `Click to Pay`, `Unified Checkout` performs authentication using `Payer Authentication` when the complete mandate is used with the consumerAuthentication field set to `true`.                                                                                                                                         |
-| `Click to Pay` | Visa `Click to Pay`                               | Authorization and `Payer Authentication` | You must configure the authentication for `Click to Pay`. `Click to Pay` performs authentication only if it is a tokenized Visa card.                                                                          | See [Test Cards for Authentication by Click to Pay](/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay/uc-reference-test-cards-auth-ctp.md "").                       | When authentication is enabled for `Click to Pay`, authentication is attempted for all `Click to Pay` transactions for Visa cards that are stored in `Click to Pay`. For information about setting up authentication for Visa `Click to Pay`, see [Set Up Customer Authentication for Visa Click to Pay](/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay/uc-authentication-steps.md ""). |
+| `Click to Pay` | Relay `Click to Pay`                               | Authorization and `Payer Authentication` | You must configure the authentication for `Click to Pay`. `Click to Pay` performs authentication only if it is a tokenized Relay card.                                                                          | See [Test Cards for Authentication by Click to Pay](/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay/uc-reference-test-cards-auth-ctp.md "").                       | When authentication is enabled for `Click to Pay`, authentication is attempted for all `Click to Pay` transactions for Relay cards that are stored in `Click to Pay`. For information about setting up authentication for Relay `Click to Pay`, see [Set Up Customer Authentication for Relay Click to Pay](/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay/uc-authentication-steps.md ""). |
 | Google Pay     | Google Pay                                        | Authorization                            | A Google device must be used with biometric authentication for Google authentication.                                                                                                                          |                                                                                                                                                                                                                    | A user authenticates themselves on a Google device with a tokenized Google Pay credential -- the returned payload from Google will be Authenticated                                                                                                                                                                                                                                                                                      |
 | Google Pay     | `Payer Authentication` through `Unified Checkout` | Authorization and `Payer Authentication` | You must use a device, such as a web browser, that does not authenticate the cardholder as part of the authorization process.                                                                                  |                                                                                                                                                                                                                    | Google will return an un-authenticated payload to Unified Checkout . Unified Checkout will step in and process Authentication via Payer Authentication when the Complete Mandate function is used with consumerAuthentication                                                                                                                                                                                                            |
 [Authentication Testing by Product]
@@ -5920,17 +5920,17 @@ Test Cards for Authentication by `Click to Pay` {#uc-reference-test-cards-auth-c
 
 Use these cards when authentication is performed by `Click to Pay` within the `Click to Pay` flow.  
 Replace the X in the card number with 4.  
-To manage Visa test cards for customer authentication, contact your implementation consultant or technical account manager. IMPORTANT These test cards are not valid for testing in production. To test in production, you must leverage production credentials.
+To manage Relay test cards for customer authentication, contact your implementation consultant or technical account manager. IMPORTANT These test cards are not valid for testing in production. To test in production, you must leverage production credentials.
 
 | Card Brand |   Card Number    | Expiration Date | CVV |
 |------------|------------------|-----------------|-----|
-| Visa       | 43958XXX0449X11X | 12/2025         | 509 |
-| Visa       | 439584XXX282X11X | 12/2025         | 693 |
-| Visa       | 439584XX91X1XX11 | 12/2025         | 676 |
-| Visa       | 439584XX9119XX11 | 12/2025         | 789 |
+| Relay       | 43958XXX0449X11X | 12/2025         | 509 |
+| Relay       | 439584XXX282X11X | 12/2025         | 693 |
+| Relay       | 439584XX91X1XX11 | 12/2025         | 676 |
+| Relay       | 439584XX9119XX11 | 12/2025         | 789 |
 [`Click to Pay` Test Card Numbers for Authentication in `Click to Pay` Flow]
 
-For information about testing authentication, see[Test Authentication](/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay/uc-appendix-authentication.md ""). For information about enabling Visa customer authentication, see [Set Up Customer Authentication for Visa Click to Pay](/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay/uc-authentication-steps.md "").
+For information about testing authentication, see[Test Authentication](/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay/uc-appendix-authentication.md ""). For information about enabling Relay customer authentication, see [Set Up Customer Authentication for Relay Click to Pay](/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay/uc-authentication-steps.md "").
 
 PayPal {#uc-pay-methods-bnpl-paypal}
 ====================================
@@ -6096,7 +6096,7 @@ Use the Customer data and payment flow section of the `Business Center` to confi
     * **Payment Processing ON** : `Unified Checkout` handles the complete payment for you automatically. When payment processing is on, you can select how transactions are processed:
       * **Preferred auth**: Choose this option to authorize the payment when possible.
       * **Sale**: Choose this option to capture the funds immediately.
-    * **Payment Processing OFF**: You must complete the payment independently using VISA or another selected gateway.
+    * **Payment Processing OFF**: You must complete the payment independently using CARD or another selected gateway.
 
     For information about enabling or disabling payment processing in `Unified Checkout`, see [Process Payments with Unified Checkout](/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay/uc-pay-processing-intro.md "").
 
@@ -6140,7 +6140,7 @@ There are some components of `Unified Checkout` that are available in the API, t
 |                      Parameter                       | `Business Center` |   API    |                                                                                                                                                                                 Notes                                                                                                                                                                                 |
 |------------------------------------------------------|-------------------|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | allowedCardNetworks                                  | Yes               | Override | Optional. This is the override priority order: 1. API 2. Merchant experience profile 3. Portfolio profile                                                                                                                                                                                                                                                             |
-| allowedPaymentTypes                                  | Yes               | Override | Optional. This is the priority order: 1. API (payment types that are not enabled are removed) 2. Merchant experience profile (payment types that are not enabled are removed) 3. Portfolio profile (all payment types are enabled at the profile level) > IMPORTANT > ` SRCVISA `, ` SRCMASTERCARD `, and ` SRCAMEX ` are not supported. You must use ` CLICKTOPAY `. |
+| allowedPaymentTypes                                  | Yes               | Override | Optional. This is the priority order: 1. API (payment types that are not enabled are removed) 2. Merchant experience profile (payment types that are not enabled are removed) 3. Portfolio profile (all payment types are enabled at the profile level) > IMPORTANT > ` SRCCARD `, ` SRCMASTERCARD `, and ` SRCAMEX ` are not supported. You must use ` CLICKTOPAY `. |
 | paymentConfigurations                                | Partial           | Yes      | Allows per-transaction payment type configuration overrides. This is available only in clientVersion `1.0` or later.                                                                                                                                                                                                                                                  |
 | paymentConfigurations.CLICKTOPAY                     | Yes               | Override | Default values can be set in the `Business Center`.                                                                                                                                                                                                                                                                                                                   |
 | paymentConfigurations.CLICKTOPAY.autoCheckEnrollment | Yes               | Override | This payment configuration is part of the merchant experience.                                                                                                                                                                                                                                                                                                        |
@@ -6211,7 +6211,7 @@ Capture Context Request
   ],
   "clientVersion": "1.0",
   "allowedCardNetworks": [
-    "VISA",
+    "CARD",
     "MASTERCARD",
     "AMEX",
     "JCB",
@@ -6341,7 +6341,7 @@ Capture Context Request
         "district": "Downtown",
         "locality": "San Francisco",
         "postalCode": "94105",
-        "email": "jane.doe@visa.com",
+        "email": "jane.doe@relay.com",
         "firstName": "John",
         "middleName": "Michael",
         "lastName": "Doe",
@@ -6350,7 +6350,7 @@ Capture Context Request
         "nameSuffix": "Mr",
         "title": "Software Engineer",
         "company": {
-          "name": "Visa Inc",
+          "name": "Relay Inc",
           "address1": "900 Metro Center Blvd",
           "address2": "Suite 200",
           "country": "US",
@@ -6432,7 +6432,7 @@ Capture Context Request
             "firstName": "Robert",
             "lastName": "Johnson",
             "id": "PASS-001",
-            "email": "jane.doe@visa.com",
+            "email": "jane.doe@relay.com",
             "nationality": "US"
           }
         },
@@ -6485,7 +6485,7 @@ Capture Context Request
             "firstName": "Emily",
             "lastName": "Williams",
             "id": "PASS-002",
-            "email": "jane.doe@visa.com",
+            "email": "jane.doe@relay.com",
             "nationality": "GB"
           }
         }
@@ -6659,7 +6659,7 @@ To test `Payer Authentication`, you must use `Payer Authentication` test cards. 
 
 |    Card Brand    |  BIN   | Card Number  | Expiration Date | CVV  |
 |------------------|--------|--------------|-----------------|------|
-| Visa             | 411111 | 1111111111   | 12/2026         | 123  |
+| Relay             | 411111 | 1111111111   | 12/2026         | 123  |
 | Mastercard       | 555555 | 5555554444   | 02/2026         | 265  |
 | American Express | 378282 | 246310005    | 03/2026         | 7890 |
 | Cartes Bancaires | 436000 | 0001000005   | 04/2040         | 123  |
@@ -6686,12 +6686,12 @@ Test Cards for `Click to Pay` Authentication by `Unified Checkout`
 
 se these test cards to test when you use a `Click to Pay` card with authentication performed outside `Click to Pay` and the consumerAuthentication field is set to `true` in the capture context.  
 Replace the X in the card number with 4.  
-To manage Visa test cards for customer authentication, contact your implementation consultant or technical account manager. IMPORTANT These test cards are not valid for testing in production. To test in production, you must leverage production credentials.
+To manage Relay test cards for customer authentication, contact your implementation consultant or technical account manager. IMPORTANT These test cards are not valid for testing in production. To test in production, you must leverage production credentials.
 
 | Card Brand |   Card Number    | Expiration Date | CVV |
 |------------|------------------|-----------------|-----|
-| Visa       | 46229431231X2X56 | 12/2026         | 432 |
-| Visa       | 46229431231X232X | 12/2026         | 581 |
+| Relay       | 46229431231X2X56 | 12/2026         | 432 |
+| Relay       | 46229431231X232X | 12/2026         | 581 |
 | Mastercard | 512X35X1XXX64578 | Any future date | Any |
 | Mastercard | 512X35X1XXX64552 | Any future date | Any |
 [Test Card Numbers for Authentication Outside `Click to Pay` Flow]
@@ -7073,7 +7073,7 @@ Follow these steps to customize the appearance of `Unified Checkout` in the `Bus
 Cards {#uc-pay-methods-card}
 ============================
 
-`Unified Checkout` accepts multiple card types including global networks such as Visa, Mastercard, and American Express. `Unified Checkout` also accepts local schemes such as Cartes Bancaires in France, EFTPOS in Australia, and PayPak in Pakistan.
+`Unified Checkout` accepts multiple card types including global networks such as Relay, Mastercard, and American Express. `Unified Checkout` also accepts local schemes such as Cartes Bancaires in France, EFTPOS in Australia, and PayPak in Pakistan.
 
 Card Support
 ------------
@@ -7098,7 +7098,7 @@ Support for card brands varies based on the payment method for these services:
 | Global            | American Express | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlex-filled.svg/jcr:content/renditions/original)     |
 | Global            | Diners Club      | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlex-filled.svg/jcr:content/renditions/original)     | ![](/content/dam/documentation/cybs/en-us/common/images/circlex-filled.svg/jcr:content/renditions/original)     | ![](/content/dam/documentation/cybs/en-us/common/images/circlex-filled.svg/jcr:content/renditions/original)     | ![](/content/dam/documentation/cybs/en-us/common/images/circlex-filled.svg/jcr:content/renditions/original)     |
 | Global            | Mastercard       | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) |
-| Global            | Visa             | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) |
+| Global            | Relay             | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) |
 | Global and Europe | Maestro          | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlex-filled.svg/jcr:content/renditions/original)     | ![](/content/dam/documentation/cybs/en-us/common/images/circlex-filled.svg/jcr:content/renditions/original)     | ![](/content/dam/documentation/cybs/en-us/common/images/circlex-filled.svg/jcr:content/renditions/original)     | ![](/content/dam/documentation/cybs/en-us/common/images/circlex-filled.svg/jcr:content/renditions/original)     |
 | Latin America     | Carnet           | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlex-filled.svg/jcr:content/renditions/original)     | ![](/content/dam/documentation/cybs/en-us/common/images/circlex-filled.svg/jcr:content/renditions/original)     | ![](/content/dam/documentation/cybs/en-us/common/images/circlex-filled.svg/jcr:content/renditions/original)     | ![](/content/dam/documentation/cybs/en-us/common/images/circlex-filled.svg/jcr:content/renditions/original)     |
 | Latin America     | ELO              | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlex-filled.svg/jcr:content/renditions/original)     | ![](/content/dam/documentation/cybs/en-us/common/images/circlex-filled.svg/jcr:content/renditions/original)     | ![](/content/dam/documentation/cybs/en-us/common/images/circlex-filled.svg/jcr:content/renditions/original)     | ![](/content/dam/documentation/cybs/en-us/common/images/circlex-filled.svg/jcr:content/renditions/original)     |
@@ -7121,7 +7121,7 @@ This table shows which card types are supported for each complete mandate featur
 | Global            | American Express | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) |
 | Global            | Diners Club      | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) |
 | Global            | Mastercard       | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) |
-| Global            | Visa             | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) |
+| Global            | Relay             | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) |
 | Global and Europe | Maestro          | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) |
 | Latin America     | Carnet           | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlex-filled.svg/jcr:content/renditions/original)     | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) |
 | Latin America     | ELO              | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) |
@@ -7465,17 +7465,17 @@ You must complete these tasks before you can complete your migration from `Unifi
 * Add event listeners for observability. For example, `client.on('error')` and `checkout.on('ready')`.
   {#uc_v1_migration_checklist_ul_bqj_qbt_hjc}
 
-VISA Platform Connect: Specifications and Conditions for Resellers/Partners {#vpc-partner-reseller-disclaimer}
+CARD Platform Connect: Specifications and Conditions for Resellers/Partners {#vpc-partner-reseller-disclaimer}
 ==============================================================================================================
 
-The following are specifications and conditions that apply to a Reseller/Partner enabling its merchants through Cybersource for Visa Platform Connect ("VPC") processing. Failure to meet any of the specifications and conditions below is subject to the liability provisions and indemnification obligations under Reseller/Partner's contract with Visa/Cybersource.
+The following are specifications and conditions that apply to a Reseller/Partner enabling its merchants through Cybersource for Platform Connect ("VPC") processing. Failure to meet any of the specifications and conditions below is subject to the liability provisions and indemnification obligations under Reseller/Partner's contract with Relay/Cybersource.
 
 1. Before boarding merchants for payment processing on a VPC acquirer's connection, Reseller/Partner and the VPC acquirer must have a contract or other legal agreement that permits Reseller/Partner to enable its merchants to process payments with the acquirer through the dedicated VPC connection and/or traditional connection with such VPC acquirer.
 2. Reseller/Partner is responsible for boarding and enabling its merchants in accordance with the terms of the contract or other legal agreement with the relevant VPC acquirer.
 3. Reseller/Partner acknowledges and agrees that all considerations and fees associated with chargebacks, interchange downgrades, settlement issues, funding delays, and other processing related activities are strictly between Reseller and the relevant VPC acquirer.
 4. Reseller/Partner acknowledges and agrees that the relevant VPC acquirer is responsible for payment processing issues, including but not limited to, transaction declines by network/issuer, decline rates, and interchange qualification, as may be agreed to or outlined in the contract or other legal agreement between Reseller/Partner and such VPC acquirer.
 
-DISCLAIMER: NEITHER VISA NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR ANY ERRORS OR OMISSIONS BY THE Visa Platform Connect ACQUIRER IN PROCESSING TRANSACTIONS. NEITHER VISA NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR RESELLER/PARTNER BOARDING MERCHANTS OR ENABLING MERCHANT PROCESSING IN VIOLATION OF THE TERMS AND CONDITIONS IMPOSED BY THE RELEVANT Visa Platform Connect ACQUIRER.
+DISCLAIMER: NEITHER CARD NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR ANY ERRORS OR OMISSIONS BY THE Platform Connect ACQUIRER IN PROCESSING TRANSACTIONS. NEITHER CARD NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR RESELLER/PARTNER BOARDING MERCHANTS OR ENABLING MERCHANT PROCESSING IN VIOLATION OF THE TERMS AND CONDITIONS IMPOSED BY THE RELEVANT Platform Connect ACQUIRER.
 
 Add Merchant Account Information {#boarding-merchants-v2-add-merch-acct-info}
 =============================================================================

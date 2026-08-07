@@ -44,7 +44,7 @@ Required for VPC transactions.
 Example: DCC Authorization {#dcc-merchant-api-ex-vpc-auth}
 ==========================================================
 
-Request for `Visa Platform Connect`
+Request for `Platform Connect`
 
 ```
 {
@@ -87,7 +87,7 @@ Request for `Visa Platform Connect`
 }
 ```
 
-Response for `Visa Platform Connect`
+Response for `Platform Connect`
 
 ```
 {

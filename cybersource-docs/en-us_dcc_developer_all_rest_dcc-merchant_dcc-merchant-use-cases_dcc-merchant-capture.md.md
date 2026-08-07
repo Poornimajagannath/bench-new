@@ -42,7 +42,7 @@ Required for VPC transactions.
 Example: DCC Capture {#dcc-merchant-api-ex-vpc-capture}
 =======================================================
 
-Request for Visa Platform Connect
+Request for Platform Connect
 
 ```
 {
@@ -61,7 +61,7 @@ Request for Visa Platform Connect
 }
 ```
 
-Response for Visa Platform Connect
+Response for Platform Connect
 
 ```
 {

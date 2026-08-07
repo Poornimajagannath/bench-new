@@ -17,24 +17,24 @@ Testing Guides
 Testing guides  
 We have over 20 processors that you can pick from.  
 Select Processor  
-Select Processor American Express Direct Barclays Chase Paymentech Solutions Comercio Latino Boleto FDC Compass FDC Nashville Global FDMS Nashville Litle Moneris Network International UAE OMNIPAYDIRECT SIX Streamline Visa Platform Connect
+Select Processor American Express Direct Barclays Chase Paymentech Solutions Comercio Latino Boleto FDC Compass FDC Nashville Global FDMS Nashville Litle Moneris Network International UAE OMNIPAYDIRECT SIX Streamline Platform Connect
 This field is required  
 [Go](/hello-world/testing-guide/processor-testing-guide.md)  
 Test in sandbox  
-The sandbox simulates the live payment gateway. The sandbox never processes an actual payment. We do not submit sandbox transactions to financial institutions for processing. The sandbox environment is completely separate from the live production environment, and it requires separate credentials. If you use your production credentials in the sandbox or visa versa, you get a 401 HTTP error.  
+The sandbox simulates the live payment gateway. The sandbox never processes an actual payment. We do not submit sandbox transactions to financial institutions for processing. The sandbox environment is completely separate from the live production environment, and it requires separate credentials. If you use your production credentials in the sandbox or relay versa, you get a 401 HTTP error.  
 [Create sandbox account](/hello-world/sandbox.md)  
 Test card numbers  
-The following test credit card numbers work only in the sandbox. If no expiration date is provided, use any expiration date after today's date. If the card verification code is required and is not provided, use any 3-digit combination for Visa, Mastercard, Discover, Diners Club and JCB; use a 4-digit combination for American Express.
+The following test credit card numbers work only in the sandbox. If no expiration date is provided, use any expiration date after today's date. If the card verification code is required and is not provided, use any 3-digit combination for Relay, Mastercard, Discover, Diners Club and JCB; use a 4-digit combination for American Express.
 
 |       Test card brand       |         Number          | CVV |
 |-----------------------------|-------------------------|-----|
 |                             |
-| **Visa**                    | 4111 1111 1111 1111     |     |
-| **Visa**                    | 4622 9431 2701 3705     | 838 |
-| **Visa**                    | 4622 9431 2701 3713     | 043 |
-| **Visa**                    | 4622 9431 2701 3721     | 258 |
-| **Visa**                    | 4622 9431 2701 3739     | 942 |
-| **Visa**                    | 4622 9431 2701 3747     | 370 |
+| **Relay**                    | 4111 1111 1111 1111     |     |
+| **Relay**                    | 4622 9431 2701 3705     | 838 |
+| **Relay**                    | 4622 9431 2701 3713     | 043 |
+| **Relay**                    | 4622 9431 2701 3721     | 258 |
+| **Relay**                    | 4622 9431 2701 3739     | 942 |
+| **Relay**                    | 4622 9431 2701 3747     | 370 |
 | **Mastercard**              | 2222 4200 0000 1113     |     |
 | **Mastercard**              | 2222 6300 0000 1125     |     |
 | **Mastercard**              | 5555 5555 5555 4444     |     |

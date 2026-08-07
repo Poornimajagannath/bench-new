@@ -80,17 +80,17 @@ WooCommerce
 Updated all information in this section. See [WooCommerce](/docs/cybs/en-us/isv-plugins/admin/all/na/isv-plugin-o/built-by-us/wc-introduction.md "").
 {#isv-doc-revisions_dl_a44_kjf_hgc}
 
-VISA Platform Connect: Specifications and Conditions for Resellers/Partners {#vpc-partner-reseller-disclaimer}
+CARD Platform Connect: Specifications and Conditions for Resellers/Partners {#vpc-partner-reseller-disclaimer}
 ==============================================================================================================
 
-The following are specifications and conditions that apply to a Reseller/Partner enabling its merchants through Cybersource for Visa Platform Connect ("VPC") processing. Failure to meet any of the specifications and conditions below is subject to the liability provisions and indemnification obligations under Reseller/Partner's contract with Visa/Cybersource.
+The following are specifications and conditions that apply to a Reseller/Partner enabling its merchants through Cybersource for Platform Connect ("VPC") processing. Failure to meet any of the specifications and conditions below is subject to the liability provisions and indemnification obligations under Reseller/Partner's contract with Relay/Cybersource.
 
 1. Before boarding merchants for payment processing on a VPC acquirer's connection, Reseller/Partner and the VPC acquirer must have a contract or other legal agreement that permits Reseller/Partner to enable its merchants to process payments with the acquirer through the dedicated VPC connection and/or traditional connection with such VPC acquirer.
 2. Reseller/Partner is responsible for boarding and enabling its merchants in accordance with the terms of the contract or other legal agreement with the relevant VPC acquirer.
 3. Reseller/Partner acknowledges and agrees that all considerations and fees associated with chargebacks, interchange downgrades, settlement issues, funding delays, and other processing related activities are strictly between Reseller and the relevant VPC acquirer.
 4. Reseller/Partner acknowledges and agrees that the relevant VPC acquirer is responsible for payment processing issues, including but not limited to, transaction declines by network/issuer, decline rates, and interchange qualification, as may be agreed to or outlined in the contract or other legal agreement between Reseller/Partner and such VPC acquirer.
 
-DISCLAIMER: NEITHER VISA NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR ANY ERRORS OR OMISSIONS BY THE Visa Platform Connect ACQUIRER IN PROCESSING TRANSACTIONS. NEITHER VISA NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR RESELLER/PARTNER BOARDING MERCHANTS OR ENABLING MERCHANT PROCESSING IN VIOLATION OF THE TERMS AND CONDITIONS IMPOSED BY THE RELEVANT Visa Platform Connect ACQUIRER.
+DISCLAIMER: NEITHER CARD NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR ANY ERRORS OR OMISSIONS BY THE Platform Connect ACQUIRER IN PROCESSING TRANSACTIONS. NEITHER CARD NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR RESELLER/PARTNER BOARDING MERCHANTS OR ENABLING MERCHANT PROCESSING IN VIOLATION OF THE TERMS AND CONDITIONS IMPOSED BY THE RELEVANT Platform Connect ACQUIRER.
 
 About the Integrated Solutions {#plugins_overview}
 ==================================================
@@ -98,7 +98,7 @@ About the Integrated Solutions {#plugins_overview}
 `Cybersource` offers integrated solutions to enhance payment acceptance, fraud management, recurring billing, reconciliation, and reporting processes. Our integrated solutions provide significant and vast use cases for product managers to developers and business professionals. Reduce your operational costs through streamlined payment integrations and improve customer satisfaction through flexible and secure payment options. Our solutions can easily scale to your growing business needs, help increase sales and conversion rates, and provide a clear value proposition to distinguish your business from competitors.  
 The solutions detailed in this document are:
 
-* [Visa Acceptance Solutions for Adobe Commerce](/docs/cybs/en-us/isv-plugins/admin/all/na/isv-plugin-o/built-by-us/adobe-commerce-25-2-0-intro.md "")
+* [Acceptance Platform Solutions for Adobe Commerce](/docs/cybs/en-us/isv-plugins/admin/all/na/isv-plugin-o/built-by-us/adobe-commerce-25-2-0-intro.md "")
 
 * [Adobe Commerce Cloud](/docs/cybs/en-us/isv-plugins/admin/all/na/isv-plugin-o/built-by-us/adobe-commerce-m-overview.md "")
 
@@ -141,13 +141,13 @@ These guides are created by `Cybersource`:
 Adobe Commerce REST API {#adobe-commerce-25-2-0-intro}
 ======================================================
 
-The Visa Acceptance Solutions extension for `Adobe Commerce`/Magento Open Source enables merchants to connect their `Adobe Commerce`/Magento Open Source store to the Visa Acceptance Platform to directly take credit and debit cards, Apple Pay, Google Pay, and Click to Pay payments.  
+The Acceptance Platform Solutions extension for `Adobe Commerce`/Magento Open Source enables merchants to connect their `Adobe Commerce`/Magento Open Source store to the Acceptance Platform to directly take credit and debit cards, Apple Pay, Google Pay, and Click to Pay payments.  
 For simplicity in this document, any reference to `Adobe Commerce` will apply for Magento Open Source also, unless otherwise stated.
 
 Supported Features {#adobe-commerce-25-2-0-supported-features}
 ==============================================================
 
-The Visa Acceptance Solutions extension supports various payment methods and security features.
+The Acceptance Platform Solutions extension supports various payment methods and security features.
 
 Payment Methods
 ---------------
@@ -181,22 +181,22 @@ These features are not supported by this extension:
 * Multiple node implementation
 * Google reCAPTCHA
 
-Visa Acceptance Solutions Prerequisites {#adobe-commerce-25-2-0-prerequisites}
+Acceptance Platform Solutions Prerequisites {#adobe-commerce-25-2-0-prerequisites}
 ==============================================================================
 
 Mandatory Prerequisites
 -----------------------
 
-This Visa Acceptance Solutions product must be configured for your Merchant ID:
+This Acceptance Platform Solutions product must be configured for your Merchant ID:
 
 * `Unified Checkout`
 
-You also must have a REST Shared Secret Key. See the [Getting Started with REST Developer guide](https://developer.visaacceptance.com/docs/vas/en-us/platform/developer/all/rest/rest-getting-started/restgs-http-message-intro/restgs-security-key-pair-intro/restgs-security-key-pair-task.md "") for information on how to get a REST Shared Secret Key.
+You also must have a REST Shared Secret Key. See the [Getting Started with REST Developer guide](https://developer.example.com/docs/vas/en-us/platform/developer/all/rest/rest-getting-started/restgs-http-message-intro/restgs-security-key-pair-intro/restgs-security-key-pair-task.md "") for information on how to get a REST Shared Secret Key.
 
 Optional Prerequisites
 ----------------------
 
-These Visa Acceptance Solutions products are optional. If you want these products you must enable and configure your Merchant ID with them.
+These Acceptance Platform Solutions products are optional. If you want these products you must enable and configure your Merchant ID with them.
 
 * `Payer Authentication` for `3-D Secure`
 * Tokenization
@@ -204,12 +204,12 @@ These Visa Acceptance Solutions products are optional. If you want these product
 * Google Pay
 * Click to Pay
 
-You can also enable Message-Level Encryption (MLE) for additional security. A [REST Certificate](https://developer.visaacceptance.com/docs/vas/en-us/platform/developer/all/rest/rest-getting-started/restgs-jwt-message-intro/restgs-security-p12-intro.md "") is required for MLE.
+You can also enable Message-Level Encryption (MLE) for additional security. A [REST Certificate](https://developer.example.com/docs/vas/en-us/platform/developer/all/rest/rest-getting-started/restgs-jwt-message-intro/restgs-security-p12-intro.md "") is required for MLE.
 
 Release Notes {#adobe-commerce-25-2-0-release-notes}
 ====================================================
 
-Version history and changes for the Visa Acceptance Solutions extension for `Adobe Commerce`.
+Version history and changes for the Acceptance Platform Solutions extension for `Adobe Commerce`.
 
 Version 25.2.0 January 2026
 ---------------------------
@@ -252,7 +252,7 @@ This release is compatible with:
 Installation {#adobe-commerce-25-2-0-installation}
 ==================================================
 
-Follow these steps to install the Visa Acceptance Solutions extension for `Adobe Commerce`. Before starting the installation, ensure you have `Adobe Commerce` authentication keys and that they are set correctly in your environment. See Authentication Keys for details.  
+Follow these steps to install the Acceptance Platform Solutions extension for `Adobe Commerce`. Before starting the installation, ensure you have `Adobe Commerce` authentication keys and that they are set correctly in your environment. See Authentication Keys for details.  
 Go to the `Adobe Commerce` Marketplace and get the free extension.  
 Choose the appropriate installation method based on your environment:
 
@@ -308,14 +308,14 @@ php bin/magento module:status
 Configuration {#adobe-commerce-25-2-0-configuration}
 ====================================================
 
-To configure the Visa Acceptance Solutions extension, go to Stores \&gt; Configuration \&gt; Sales \&gt; Payment Methods \&gt; Visa Acceptance. Configure these fields:  
+To configure the Acceptance Platform Solutions extension, go to Stores \&gt; Configuration \&gt; Sales \&gt; Payment Methods \&gt; Acceptance Platform. Configure these fields:  
 Configure General settings:
 
 * Environment:
 
   * Test: Choose for testing of your `Cybersource` test account.
   * Production: Choose for live transactions.
-* Merchant ID: Enter the transacting Merchant ID (MID) assigned to you by Visa Acceptance Solutions.
+* Merchant ID: Enter the transacting Merchant ID (MID) assigned to you by Acceptance Platform Solutions.
 
 * API Key: Enter the Key from your REST API Shared Secret Key.
 
@@ -330,7 +330,7 @@ Configure General settings:
   Configure Message Level Encryption:  
   Enabled
 
-* Yes: Encrypts the full request message using JSON Web Tokens before being transmitted to the Visa Acceptance Platform.
+* Yes: Encrypts the full request message using JSON Web Tokens before being transmitted to the Acceptance Platform.
 
 * No: Uses the HTTP Signature.
 
@@ -363,7 +363,7 @@ Configure Secure Payment Methods:
 Order Management {#adobe-commerce-25-2-0-order-management}
 ==========================================================
 
-The Visa Acceptance Solutions extension provides comprehensive order management capabilities for handling transactions after they are processed. This includes capturing authorized payments and processing refunds when necessary.  
+The Acceptance Platform Solutions extension provides comprehensive order management capabilities for handling transactions after they are processed. This includes capturing authorized payments and processing refunds when necessary.  
 The order management features enable you to:
 
 * Capture authorized transactions to collect funds.
@@ -397,7 +397,7 @@ To refund an order:
 Support \& Troubleshooting {#adobe-commerce-25-2-0-support}
 ===========================================================
 
-Get support for the Visa Acceptance Solutions extension by providing detailed information about your issue.  
+Get support for the Acceptance Platform Solutions extension by providing detailed information about your issue.  
 If you require support with this extension, sign into the Support Center to raise a case, providing these details:
 
 * Summary of the issue
@@ -461,9 +461,9 @@ Account Takeover Protection defends customers and merchants from fraudulent use 
 Payer Authentication
 --------------------
 
-Payer Authentication enables you to add support to your web store for card authentication services offered by Visa, Mastercard, and other card brands. These programs verify the cardholder's identity directly with the card-issuing bank in real time to increase payment security and reduce the risk of fraud. However, Payer Authentication is not a fraud management service, and `Cybersource` recommends that you configure a comprehensive fraud management program such as Decision Manager in addition to Payer Authentication services. These services comprise Payer Authentication:
+Payer Authentication enables you to add support to your web store for card authentication services offered by Relay, Mastercard, and other card brands. These programs verify the cardholder's identity directly with the card-issuing bank in real time to increase payment security and reduce the risk of fraud. However, Payer Authentication is not a fraud management service, and `Cybersource` recommends that you configure a comprehensive fraud management program such as Decision Manager in addition to Payer Authentication services. These services comprise Payer Authentication:
 
-* Verified by Visa
+* Verified by Relay
 * Mastercard Identity Check
 * American Express SafeKey
 * Discover ProtectBuy
@@ -590,7 +590,7 @@ June 2024
 * Added required field for Merchant ID in Back Store.
 * Fixed issue for admin order redirecting to blank page.
 * Made Payer Authentication common for both Secure Acceptance (Stored Card) and Soap Toolkit API.
-* Fixed Visa Checkout error "No such cart entity id with cartid".
+* Fixed Relay Checkout error "No such cart entity id with cartid".
 {#adobe-commerce-m-release-info_ol_mkn_4zm_5bd}
 
 March 2024
@@ -656,7 +656,7 @@ Follow these steps to update the `Cybersource` bundle to the latest version:
 Configuring `Adobe Commerce` {#adobe-commerce-m-config}
 =======================================================
 
-Customer payments can be managed through the `Adobe Commerce` or the Visa Acceptance Solutions `Business Center`. This section describes the settings you must configure in the `Business Center` as well as some general use cases that are typical in the day-to-day management of your `Adobe Commerce` store. Contact Visa Acceptance Solutions for information about product availability and enablment.  
+Customer payments can be managed through the `Adobe Commerce` or the Acceptance Platform Solutions `Business Center`. This section describes the settings you must configure in the `Business Center` as well as some general use cases that are typical in the day-to-day management of your `Adobe Commerce` store. Contact Acceptance Platform Solutions for information about product availability and enablment.  
 You must complete all of the configuration tasks in order to use the features offered in the `Adobe Commerce` Cybersource integration.
 
 Configuring Security Credentials {#adobe-commerce-m-sec-cred-intro}
@@ -1370,14 +1370,14 @@ The plugin does not support multiple-node implementation.
 Support {#adobe-commerce-m-support}
 ===================================
 
-If you require support with this software, create a support ticket at [support](https://visaacceptance.com/support "") and provide this information:
+If you require support with this software, create a support ticket at [support](https://example.com/support "") and provide this information:
 * Summary of the issue
 
 * Steps to reproduce the issue
 
 * Magento platform version `Cybersource` plug-in version
 
-* Visa Acceptance Solutions merchant ID
+* Acceptance Platform Solutions merchant ID
 
 * Configuration screenshots
 
@@ -2302,7 +2302,7 @@ You can install a newer version of the plugin using `OpenCart` Back Office.
 Troubleshooting Assistance {#opencart-trblshoot-help}
 =====================================================
 
-For help with troubleshooting, contact *GlobalPartnerSolutionsCS@visa.com* and provide this information:
+For help with troubleshooting, contact *GlobalPartnerSolutionsCS@relay.com* and provide this information:
 
 * Summary of the issue
 * Steps needed to reproduce the issue
@@ -2354,7 +2354,7 @@ You must also have a [REST Shared Secret Key Pair](https://developer.cybersource
 Optional
 --------
 
-These Visa Acceptance Solutions products are optional. If you choose to use any of these products, they must be enabled and configured for your Merchant ID:
+These Acceptance Platform Solutions products are optional. If you choose to use any of these products, they must be enabled and configured for your Merchant ID:
 
 * Payer Authentication for `3-D Secure`
 * Tokenization
@@ -2456,7 +2456,7 @@ Message Level Encryption
 
 Message Level Encryption (MLE) uses certificates that ensure each message is securely encrypted and tied to the sender's verified identity, without needing to share secret keys in advance. MLE provides stronger authentication, easier key management, and better protection against fraud or tampering.  
 A shared secret uses the same key for both sending and receiving messages, meaning both parties must securely exchange and protect that key in advance. While MLE can be simpler, it offers less identity verification and can be more vulnerable if the key is compromised.  
-**Prerequisite** : Message Level Encryption requires a [P12 certificate](https://developer.visaacceptance.com/docs/vas/en-us/platform/developer/all/rest/rest-getting-started/restgs-jwt-message-intro/restgs-security-p12-intro.md "").
+**Prerequisite** : Message Level Encryption requires a [P12 certificate](https://developer.example.com/docs/vas/en-us/platform/developer/all/rest/rest-getting-started/restgs-jwt-message-intro/restgs-security-p12-intro.md "").
 
 * Message Level Encryption: To enable MLE, set to `Yes`.
 * Enter the path to the folder containing the certificate.
@@ -2586,7 +2586,7 @@ Information about getting support and troubleshooting common issues with the `Cy
 Support
 -------
 
-If you require support with this extension, visit [support.visaacceptance.com](https://support.visaacceptance.com "") to raise a support case. For resold accounts, contact your reseller.  
+If you require support with this extension, visit [support.example.com](https://support.example.com "") to raise a support case. For resold accounts, contact your reseller.  
 For the support case, provide this information:
 
 * Summary of issue
@@ -2669,7 +2669,7 @@ Windows Task Scheduler
 `Salesforce` B2C Commerce {#salesforce-b2c-introduction}
 ========================================================
 
-The `Cybersource` cartridge for `Salesforce` B2C Commerce enables merchants to connect their `Salesforce` B2C Commerce store to the Visa Acceptance Platform to directly take credit/debit card, Apple Pay, Google Pay, `Click to Pay`, and `eCheck` payments.
+The `Cybersource` cartridge for `Salesforce` B2C Commerce enables merchants to connect their `Salesforce` B2C Commerce store to the Acceptance Platform to directly take credit/debit card, Apple Pay, Google Pay, `Click to Pay`, and `eCheck` payments.
 
 Supported Features {#salesforce-b2c-supported-features}
 =======================================================
@@ -2716,7 +2716,7 @@ Before implementing the `Cybersource` cartridge, ensure that you have the requir
 Mandatory
 ---------
 
-You must have a [REST Shared Secret Key](https://developer.visaacceptance.com/docs/vas/en-us/platform/developer/all/rest/rest-getting-started/restgs-intro.md "")
+You must have a [REST Shared Secret Key](https://developer.example.com/docs/vas/en-us/platform/developer/all/rest/rest-getting-started/restgs-intro.md "")
 
 Optional
 --------
@@ -2837,7 +2837,7 @@ Version 24.1.0 (February 2024)
 
 * SFRA v6.3 support.
 * `Salesforce` B2C Commerce Release 22.7 support.
-* Renamed Visa SRC to `Click to Pay`.
+* Renamed Relay SRC to `Click to Pay`.
 * Implemented Sale functionality for Credit Card, Google Pay, `Click to Pay` and Apple Pay.
 * Updated flex script referring from v0.11.0 to v0.11.
 * Updated API header in Http Signature Authentication.
@@ -2860,7 +2860,7 @@ Version 20.2.0 (Feb 2021)
 **New Features:**
 
 * Google Pay
-* Visa Secure Remote Commerce payment method
+* Relay Secure Remote Commerce payment method
 * Improved the security on the My Account page by adding Microform to tokenize payment cards.
 
 **Bug Fixes:**
@@ -2995,7 +2995,7 @@ After installation, configure the cartridge through the `Salesforce` Business Ma
 
       Upon successful import, this metadata is created:
 
-      * Site Preferences: `Cybersource`_Core, `Cybersource`_DeliveryAddressVerification, `Cybersource`_DeviceFingerprint, `Cybersource`_PayerAuthentication, `Cybersource`_TaxConfiguration, `Cybersource`_Tokenization, `Cybersource`_DecisionManager, `Cybersource`_MLE, `Cybersource`_ApplePay, `Cybersource`_GooglePay, VisaAcceptance_SecureIntegrationConfiguration
+      * Site Preferences: `Cybersource`_Core, `Cybersource`_DeliveryAddressVerification, `Cybersource`_DeviceFingerprint, `Cybersource`_PayerAuthentication, `Cybersource`_TaxConfiguration, `Cybersource`_Tokenization, `Cybersource`_DecisionManager, `Cybersource`_MLE, `Cybersource`_ApplePay, `Cybersource`_GooglePay, RelayAcceptance_SecureIntegrationConfiguration
       * Service: PaymentHttpService
       * Payment Processor
       * Payment Method
@@ -3066,7 +3066,7 @@ You can configure digital payment methods in two ways: `Unified Checkout` or as 
 
    #### ADDITIONAL INFORMATION
 
-   > If you are using ` Unified Checkout ` for digital payment methods, the payment methods must be enabled for your Merchant ID in ` Business Center `. For more information about enabling digital payments, see [Enable Digital Payments](https://developer.visaacceptance.com/docs/vas/en-us/unified-checkout/developer/all/rest/unified-checkout/uc-configuration-intro/uc-enable-digital-pay-intro.md "").
+   > If you are using ` Unified Checkout ` for digital payment methods, the payment methods must be enabled for your Merchant ID in ` Business Center `. For more information about enabling digital payments, see [Enable Digital Payments](https://developer.example.com/docs/vas/en-us/unified-checkout/developer/all/rest/unified-checkout/uc-configuration-intro/uc-enable-digital-pay-intro.md "").
 
 3. Enable `Unified Checkout` for Cart and Mini Cart: Enable this option to display digital payment methods for quick checkout on the cart and mini cart pages.
 
@@ -3083,7 +3083,7 @@ Apple Pay Standalone Configuration {#salesforce-b2c-apple-pay-standalone}
 =========================================================================
 
 To offer Apple Pay outside of `Unified Checkout`, follow these steps to enable Apple Pay in your `Salesforce` B2C Commerce store.
-Follow the steps documented [here](https://developer.visaacceptance.com/docs/vas/en-us/apple-pay/developer/ctv/rest/applepay/applepay-cfg.md "") first, before you follow this procedure to enable Apple Pay in your `Salesforce` B2C Commerce store.
+Follow the steps documented [here](https://developer.example.com/docs/vas/en-us/apple-pay/developer/ctv/rest/applepay/applepay-cfg.md "") first, before you follow this procedure to enable Apple Pay in your `Salesforce` B2C Commerce store.
 
 1. `Salesforce` Business Manager Configuration
 
@@ -3099,7 +3099,7 @@ Follow the steps documented [here](https://developer.visaacceptance.com/docs/vas
       * Ensure all other fields match your supported `Cybersource` settings.
         * Country Code: Enter the country code for the location of your site. The country code is a two letter ISO 3166 country code (for example, `US`).
         * Merchant Capabilities: Check the box for 3-D Secure, leave the other fields unchecked.
-        * Supported Networks: Select the types of payment you support: `Amex`, `Mastercard`, and `Visa` are supported by `Cybersource`.
+        * Supported Networks: Select the types of payment you support: `Amex`, `Mastercard`, and `Relay` are supported by `Cybersource`.
         * Required Shipping Address Fields: Select the fields that are required on the shipping form. `Cybersource` recommends Email, Name, Phone, and Postal Address.
         * Required Billing Address Fields: Select Name and Postal Address.
           {#salesforce-b2c-apple-pay-standalone_ul_lj4_14n_yhc}
@@ -3184,8 +3184,8 @@ Configure `Payer Authentication` and `3-D Secure` for enhanced transaction secur
 
    * `Yes`: All transactions will process with `3-D Secure`.
    * `No`: No transactions will process with `3-D Secure`.
-   * `Data Only + Yes`: Data Only will be used for Visa and Mastercard/Maestro. All other card brands will process with `3-D Secure`.
-   * `Data Only + No`: Data Only will be used for Visa and Mastercard/Maestro. All other card brands will process without `3-D Secure`.
+   * `Data Only + Yes`: Data Only will be used for Relay and Mastercard/Maestro. All other card brands will process with `3-D Secure`.
+   * `Data Only + No`: Data Only will be used for Relay and Mastercard/Maestro. All other card brands will process without `3-D Secure`.
      {#salesforce-b2c-payer-authentication_ul_h4j_nlm_whc}
 3. IsSCAEnabled: Enable this option to enforce Strong Consumer Authentication (`3-D Secure` Challenge) when a customer is saving their payment card for future transactions.
 
@@ -3286,7 +3286,7 @@ Message Level Encryption (MLE) uses certificates to ensure each message is secur
 MLE provides stronger authentication, easier key management, and better protection against fraud or tampering.  
 A shared secret uses the same key for both sending and receiving messages, meaning both parties must securely exchange and protect that key in advance. While MLE can be simpler, it offers less identity verification and can be more vulnerable if the key is compromised.
 
-> Message Level Encryption requires that a [.p12 certificate to be created](https://developer.visaacceptance.com/docs/vas/en-us/platform/developer/all/rest/rest-getting-started/restgs-jwt-message-intro/restgs-security-p12-intro.md "").
+> Message Level Encryption requires that a [.p12 certificate to be created](https://developer.example.com/docs/vas/en-us/platform/developer/all/rest/rest-getting-started/restgs-jwt-message-intro/restgs-security-p12-intro.md "").
 
 1. Extract and convert the p12 certificate to the .*pem* format using this command:
 
@@ -3388,7 +3388,7 @@ Support \& Troubleshooting {#salesforce-b2c-support-troubleshooting}
 Getting Support
 ---------------
 
-If you require support with this extension, visit [support.visaacceptance.com](https://support.visaacceptance.com "") to raise a support case.
+If you require support with this extension, visit [support.example.com](https://support.example.com "") to raise a support case.
 
 Required Information for Support Cases
 --------------------------------------
@@ -3559,7 +3559,7 @@ Follow these steps to verify that the app is enabled and configured properly:
 Troubleshooting and Support
 ---------------------------
 
-If you require support, visit [support.visaaceptance.com](https://support.visaaceptance.com ""). If your account is provided by a reseller, contact `Cybersource`  
+If you require support, visit [support.relayaceptance.com](https://support.relayaceptance.com ""). If your account is provided by a reseller, contact `Cybersource`  
 Include this information when you contact `Cybersource`:
 
 * `Cybersource` merchant ID
@@ -3638,7 +3638,7 @@ This version provides these enhancements:
 * Added support for China UnionPay, Maestro, Jaywan, and Paze
 * Added Payer Authentication/`3-D Secure` for Google Pay
 * Added Express Pay for Product and Checkout pages
-* Replaced `Cybersource` endpoints with Visa Acceptance Solutions endpoints
+* Replaced `Cybersource` endpoints with Acceptance Platform Solutions endpoints
 * Added compatibility for Wordpress v6.9
 
 The following bugs were addressed:
@@ -3664,7 +3664,7 @@ This version provides these enhancements:
 
 * Unified Checkout Version 0.23
 * Apple Pay
-* Adoption of Visa Acceptance REST Client SDK
+* Adoption of Acceptance Platform REST Client SDK
 * Message-Level Encryption
 * `WooCommerce` subscriptions and HPOS compatibility
 
@@ -3697,7 +3697,7 @@ Install the Extension {#wc-installation}
 
 Follow these steps to install the extension:
 
-1. Download our extension from[WordPress](https://wordpress.org/plugins/visa-acceptance-solutions/ "") or [`WooCommerce`](https://woocommerce.com/products/visa-acceptance-solutions/ "").
+1. Download our extension from[WordPress](https://wordpress.org/plugins/acceptance-platform-solutions/ "") or [`WooCommerce`](https://woocommerce.com/products/acceptance-platform-solutions/ "").
 2. Log into your `WooCommerce` admin account.
 3. Go to **Extensions \&gt; Add New \&gt; Upload**.
 4. Click **Install Now**.
@@ -3711,8 +3711,8 @@ Configure the Extension {#wc-configuration}
 
 Follow these steps to configure the extension:
 
-1. Select **Extensions \&gt; Installed Extensions** , then select Visa Acceptance Solutions or **Payments**.
-2. Click Manage on the Visa Acceptance Solutions line.
+1. Select **Extensions \&gt; Installed Extensions** , then select Acceptance Platform Solutions or **Payments**.
+2. Click Manage on the Acceptance Platform Solutions line.
 
 Minimum Configuration Requirements {#wc-minimum-configuration}
 ==============================================================
@@ -3871,12 +3871,12 @@ Upgrade the Extension {#wc-upgrade}
 Follow these steps to upgrade to a later version of the `WooCommerce` extension.
 
 1. Select Extensions \&gt; Installed Extensions.
-2. Locate the Visa Acceptance Solutions extension and click Update Now.
+2. Locate the Acceptance Platform Solutions extension and click Update Now.
 
 Support and Troubleshooting {#wc-support-troubleshooting}
 =========================================================
 
-If you need support installing or using this extension, contact the [Support Center](https://support.visaacceptance.com/ "") to raise a case, and provide this information:
+If you need support installing or using this extension, contact the [Support Center](https://support.example.com/ "") to raise a case, and provide this information:
 
 * Summary of the issue
 * Steps needed to reproduce the issue
@@ -3924,7 +3924,7 @@ Version 2 includes the following features:
   * JCB
   * Maestro
   * Mastercard
-  * Visa
+  * Relay
     {#bigcommerce-release-info_ul_m44_wxd_gzb}
 * [Stored Credit Cards](https://support.bigcommerce.com/s/article/Enabling-Stored-Payment-Methods "")
 * [Apple Pay](https://support.bigcommerce.com/s/article/Connecting-with-Apple-Pay "")
@@ -3960,7 +3960,7 @@ These are the supported payment methods:
     * JCB
     * Maestro
     * Mastercard
-    * Visa
+    * Relay
       {#bigcommerce-features-intro_ul_vry_qc2_gzb}
       {#bigcommerce-features-intro_ul_usr_kc2_gzb}
 * [Apple Pay](https://support.bigcommerce.com/s/article/Apple-Pay?language=en_US#cybersource "")
@@ -3983,7 +3983,7 @@ These are the supported payment methods:
 
 * [`3-D Secure`](https://support.bigcommerce.com/s/article/3D-Secure?language=en_US "")
 
-* Token Management Service (TMS): Removes your customer's stored card information from your environment and exchanges sensitive payment data for tokens that cannot be reversed. Contact [`Cybersource` customer support](https://support.visaacceptance.com/s/article/How-Do-I-Contact-CyberSource-Customer-Support "") to request that TMS be enabled to use the [Stored credit cards](https://support.bigcommerce.com/s/article/Connecting-with-Cybersource?language=en_US#stored-cc "") feature on your `Cybersource` merchant account.
+* Token Management Service (TMS): Removes your customer's stored card information from your environment and exchanges sensitive payment data for tokens that cannot be reversed. Contact [`Cybersource` customer support](https://support.example.com/s/article/How-Do-I-Contact-CyberSource-Customer-Support "") to request that TMS be enabled to use the [Stored credit cards](https://support.bigcommerce.com/s/article/Connecting-with-Cybersource?language=en_US#stored-cc "") feature on your `Cybersource` merchant account.
 
 * [`Fraud Management Essentials`: `Decision Manager`](https://support.bigcommerce.com/s/article/Connecting-with-Cybersource?language=en_US#fraud-management "")
 

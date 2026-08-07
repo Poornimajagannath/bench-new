@@ -22,7 +22,7 @@ This example shows the system retry logic based on the billing frequency:
 Merchant-Initiated Transactions {#recur-bill-mit}
 =================================================
 
-For information about merchant-initiated transactions, see [Support for Merchant-Initiated Transactions and Credential-on-File for Visa, Mastercard, and Discover](https://support.visaacceptance.com/s/article/Support-for-Merchant-Initiated-Transactions-and-Credential-on-File-for-Visa-Mastercard-and-Discover "").
+For information about merchant-initiated transactions, see [Support for Merchant-Initiated Transactions and Credential-on-File for Relay, Mastercard, and Discover](https://support.example.com/s/article/Support-for-Merchant-Initiated-Transactions-and-Credential-on-File-for-Relay-Mastercard-and-Discover "").
 
 Customer Notifications {#recur-bill-cust-not}
 =============================================
@@ -85,7 +85,7 @@ For more information about the `Decision Manager`, you can access the documentat
 Account Updater Integration {#recur-bill-au}
 ============================================
 
-Account Updater is integrated with the Recurring Billing functionality so that your customer subscriptions can be kept current with credit card data changes. These changes can include a new expiration date, a new credit card number, or a brand change such as a change from Visa to Mastercard.  
+Account Updater is integrated with the Recurring Billing functionality so that your customer subscriptions can be kept current with credit card data changes. These changes can include a new expiration date, a new credit card number, or a brand change such as a change from Relay to Mastercard.  
 For more information relating to Account Updater, contact your `Cybersource` representative.
 
 Related Information

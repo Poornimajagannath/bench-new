@@ -7,7 +7,7 @@ Prove that public developer confusion can be reduced into a **Relay-style workfl
 - an agent-visible task (`agent_task`)
 - a hidden verifier/oracle (`verifier_private`)
 - a deterministic catch of known-bad answers
-- a product-surface recommendation (docs / VAP CLI / MCP)
+- a product-surface recommendation (docs / Relay CLI / MCP)
 
 This is a throwaway-but-reviewable local prototype. It is **not** production Relay.
 
@@ -43,4 +43,4 @@ This is a throwaway-but-reviewable local prototype. It is **not** production Rel
 
 ## Out of scope / stop conditions
 
-Ask before: live network, sandbox credentials, raw PAN/secrets, production Relay/VAP CLI edits, or collapsing discovery + verification into one untyped script.
+Ask before: live network, sandbox credentials, raw PAN/secrets, production Relay/Relay CLI edits, or collapsing discovery + verification into one untyped script.

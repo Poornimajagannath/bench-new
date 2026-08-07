@@ -17,7 +17,7 @@ Customer Support
 ----------------
 
 For support information about any service, visit the Support Center:  
-<http://support.visaacceptance.com>
+<http://support.example.com>
 
 Recent Revisions to This Document {#so-conversion-recent-revisions}
 ===================================================================
@@ -57,7 +57,7 @@ Additional Support
 ------------------
 
 If you have additional questions, please contact your `Cybersource` account representative for more information, or submit a support ticket here:  
-<https://support.visaacceptance.com/>
+<https://support.example.com/>
 
 C++ Payment System Upgrade {#so-conversion-cplusplus}
 =====================================================
@@ -221,7 +221,7 @@ Troubleshooting Using Certificates
 If you receive an error message when sending an API request to the HTTPS endpoints, you may need to add certificates to your payment system. Follow these steps to add the Certificate Authority (CA) root certificate and intermediate certificate to your system.
 
 1. Download the certificates from the attachments section in this support article:  
-   <https://support.visaacceptance.com/knowledgebase/knowledgearticle/?code=KA-05544>
+   <https://support.example.com/knowledgebase/knowledgearticle/?code=KA-05544>
 
 2. Import the certificates to your Java truststore.
 

@@ -48,7 +48,7 @@
   ],
   "next_product_improvements": [
     "Clarify Microform + Payer Auth State Machine stage ordering in public docs",
-    "Ship a VAP CLI workflow verifier for this contract"
+    "Ship a Relay CLI workflow verifier for this contract"
   ],
   "classification": {
     "workflow_id": "microform-payer-auth-state-machine",
@@ -75,14 +75,14 @@
         "vap_cli": null
       },
       {
-        "action_id": "microform-payer-auth-state-machine-vap-cli",
+        "action_id": "microform-payer-auth-state-machine-relay-cli",
         "product_surface": "vap_cli",
         "severity": "high",
-        "summary": "Ship a VAP CLI workflow verifier for this contract",
+        "summary": "Ship a Relay CLI workflow verifier for this contract",
         "rationale": "CLI should verify readiness, recovery, and support-safe evidence \u2014 not only wrap an API call.",
         "vap_cli": {
           "goal": "Sequence Microform tokenization with Payer Authentication enrollment, challenge/frictionless handling, and authorization using the authentication result.",
-          "command": "vap workflow verify --id microform-payer-auth-state-machine --fixture local",
+          "command": "relay workflow verify --id microform-payer-auth-state-machine --fixture local",
           "api_sdk_facts": [
             "Microform tokenization is not itself a Payer Auth / 3DS completion",
             "Enrollment may return FRICTIONLESS, CHALLENGE, or UNAVAILABLE paths",
@@ -118,7 +118,7 @@
             "eval:verifier_catch_rate_on_bad_answer"
           ],
           "future_mcp_metadata": {
-            "mcp_tool": "vap.verify_workflow",
+            "mcp_tool": "relay.verify_workflow",
             "inputs": [
               "workflow_id",
               "candidate_answer_ref"

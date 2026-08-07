@@ -375,7 +375,7 @@ These release notes are for the PAX All-in-One and Tap to Phone Android SDKs, ve
 Updated Requirements {#ttp-aio-release-notes-sdk-v2-98-0-updated-rqmnts}
 ========================================================================
 
-Tap to Phone: Added new ProGuard rule for Visa sensory branding. Include this rule in your *proguard-rules.pro* file going forward.
+Tap to Phone: Added new ProGuard rule for Relay sensory branding. Include this rule in your *proguard-rules.pro* file going forward.
 
 New Features {#ttp-aio-release-notes-sdk-v2-98-0-new-features}
 ==============================================================
@@ -590,7 +590,7 @@ General Information {#ttp-aio-release-notes-sdk-v2-87-0-gen-info}
 Updated Requirements {#ttp-aio-release-notes-sdk-v2-87-0-update-requirements}
 =============================================================================
 
-Updated the Visa sensory branding library to version 2.2. Use this version of the branding library with the SDK going forward.
+Updated the Relay sensory branding library to version 2.2. Use this version of the branding library with the SDK going forward.
 
 Fixed Issues {#ttp-aio-release-notes-sdk-v2-87-0-fixed-issues}
 ==============================================================

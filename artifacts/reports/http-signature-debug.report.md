@@ -49,7 +49,7 @@ Local proof only. No network. No live credentials.
 
 - Clarify HTTP Signature Debug stage ordering in public docs
 - Align SDK credential field names with docs (or docs with SDK)
-- Ship a VAP CLI workflow verifier for this contract
+- Ship a Relay CLI workflow verifier for this contract
 
 ## Classification
 
@@ -61,10 +61,10 @@ Local proof only. No network. No live credentials.
 - task pack: `artifacts/task_packs/http-signature-debug.agent_task.json`
 - verifier results: `artifacts/verifier_results/http-signature-debug.result.json`
 
-## VAP CLI workflow verifier (recommended)
+## Relay CLI workflow verifier (recommended)
 
 - goal: Am I using the wrong SDK field names for key id and secret?
-- command: `vap workflow verify --id http-signature-debug --fixture local`
+- command: `relay workflow verify --id http-signature-debug --fixture local`
 - readiness checks:
   - Frozen seeds present under data/seeds/
   - No live credentials exported

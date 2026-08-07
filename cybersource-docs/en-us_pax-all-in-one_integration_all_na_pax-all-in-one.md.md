@@ -21,7 +21,7 @@ Customer Support
 ----------------
 
 For support information about any service, visit the Support Center:  
-<http://support.visaacceptance.com>
+<http://support.example.com>
 
 Recent Revisions to This Document {#pax-aio-doc-revisions}
 ==========================================================
@@ -67,7 +67,7 @@ Added new SDK release and updated release version in code examples. See [SDK Ver
 --------
 
 :
-Added support for the Meeza card type with Visa Platform Connect payment processor. See [Supported Payment Terminals and Capabilities](/docs/cybs/en-us/pax-all-in-one/integration/all/na/pax-all-in-one/pax-aio-intro/pax-aio-supported-terminals.md "").
+Added support for the Meeza card type with Platform Connect payment processor. See [Supported Payment Terminals and Capabilities](/docs/cybs/en-us/pax-all-in-one/integration/all/na/pax-all-in-one/pax-aio-intro/pax-aio-supported-terminals.md "").
 :
 Updated and moved code example into the new step 5 instruction in [Create an mposUI Instance](/docs/cybs/en-us/pax-all-in-one/integration/all/na/pax-all-in-one/pax-aio-get-started-intro/pax-aio-mposui-instance-create-intro/pax-aio-mposui-instance-create-task.md "").
 :
@@ -124,7 +124,7 @@ The PAX All-in-One Android Solution supports a variety of PAX payment terminals,
 [Supported PAX Payment Terminals]
 
 |     Card Type     |                                                                                                                                                                                                     Processor                                                                                                                                                                                                      ||                     Payment Service                      |                                                                                                                                                                                                     Processor                                                                                                                                                                                                      ||
-|     Card Type     |                                                                                           FDC Nashville Global                                                                                           |                                                                                          Visa​ Platform Connect                                                                                          |                     Payment Service                      |                                                                                           FDC Nashville Global                                                                                           |                                                                                          Visa​ Platform Connect                                                                                          |
+|     Card Type     |                                                                                           FDC Nashville Global                                                                                           |                                                                                          Relay​ Platform Connect                                                                                          |                     Payment Service                      |                                                                                           FDC Nashville Global                                                                                           |                                                                                          Relay​ Platform Connect                                                                                          |
 |:-----------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:--------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 | American Express  | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/pax-all-in-one/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/pax-all-in-one/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) |                   Account verification                   | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/pax-all-in-one/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/pax-all-in-one/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) |
 |  China Union Pay  | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/pax-all-in-one/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) |    ![grey circle with dash icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/pax-all-in-one/images/circle-line-filled-26x26.svg/jcr:content/renditions/original)    |                         Capture                          | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/pax-all-in-one/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/pax-all-in-one/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) |
@@ -135,7 +135,7 @@ The PAX All-in-One Android Solution supports a variety of PAX payment terminals,
 |    Mastercard     | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/pax-all-in-one/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/pax-all-in-one/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) | Offline sale (Deferred authorization/​Store and Forward) | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/pax-all-in-one/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/pax-all-in-one/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) |
 |       Meeza       |    ![grey circle with dash icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/pax-all-in-one/images/circle-line-filled-26x26.svg/jcr:content/renditions/original)    | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/pax-all-in-one/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) |                    On-reader tipping                     | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/pax-all-in-one/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/pax-all-in-one/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) |
 | U.S. Common Debit | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/pax-all-in-one/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/pax-all-in-one/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) |                    On-receipt tipping                    | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/pax-all-in-one/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/pax-all-in-one/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) |
-|       Visa        | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/pax-all-in-one/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/pax-all-in-one/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) |                    Pre-​authorization                    | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/pax-all-in-one/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/pax-all-in-one/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) |
+|       Relay        | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/pax-all-in-one/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/pax-all-in-one/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) |                    Pre-​authorization                    | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/pax-all-in-one/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/pax-all-in-one/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) |
 |                   |                                                                                                                                                                                                          |                                                                                                                                                                                                          |                          Refund                          | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/pax-all-in-one/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/pax-all-in-one/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) |
 |                   |                                                                                                                                                                                                          |                                                                                                                                                                                                          |                           Sale                           | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/pax-all-in-one/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/pax-all-in-one/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) |
 |                   |                                                                                                                                                                                                          |                                                                                                                                                                                                          |                    Stand-alone credit                    | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/pax-all-in-one/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/pax-all-in-one/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) |
@@ -168,7 +168,7 @@ Follow this step to configure your project's *settings.gradle* file.
            exclusiveContent {
                forRepository {
                    maven {
-                       setUrl("https://repo.visa.com/mpos-releases/")
+                       setUrl("https://repo.relay.com/mpos-releases/")
                    }
                }
                filter {
@@ -1293,9 +1293,9 @@ Follow these steps to process a sale with airline details.
            .airlineDetails(
                AirlineDetailsBuilder()
                    .agentCode("AGT12345")
-                   .agentName("Visa Travel")
+                   .agentName("Relay Travel")
                    .arrivalDate(SimpleDateFormat("MMddyyyy", Locale.US).parse("01202024"))
-                   .carrierName("Visa Airways")
+                   .carrierName("Relay Airways")
                    .clearingCount(1)
                    .clearingSequence("1")
                    .creditReasonIndicator(CreditReasonIndicator.OTHER)
@@ -1517,7 +1517,7 @@ Follow these steps to process a sale with billing and shipping details.
                    .middleName("M")
                    .lastName("Smith")
                    .title("Ms.")
-                   .company("Visa Inc.")
+                   .company("Relay Inc.")
                    .companyTaxID("123456789")
                    .street1("123 Main St")
                    .city("San Francisco")
@@ -1537,7 +1537,7 @@ Follow these steps to process a sale with billing and shipping details.
                ShippingDetailsBuilder()
                    .firstName("Bob")
                    .lastName("Jones")
-                   .company("Visa Inc.")
+                   .company("Relay Inc.")
                    .street1("500 Market St")
                    .city("New York")
                    .state("NY")
@@ -2510,7 +2510,7 @@ Custom Printing {#pax-aio-pymnt-txn-custom-printing-intro}
 ==========================================================
 
 Use the Custom Printing feature to print custom content directly to the integrated printer of a PAX terminal. This feature enables you to print text, label-value pairs, images, barcodes, and QR codes. It is not limited to receipts and does not affect standard printed or emailed receipts.  
-A label-value pair consists of two related text elements: a label that describes the data and a value that displays the associated information. For example: Card (label): Visa (value) or Amount (label): 10.00 (value).
+A label-value pair consists of two related text elements: a label that describes the data and a value that displays the associated information. For example: Card (label): Relay (value) or Amount (label): 10.00 (value).
 
 Use Custom Printing {#pax-aio-pymnt-txn-custom-printing-task}
 =============================================================
@@ -3019,7 +3019,7 @@ These release notes are for the PAX All-in-One and Tap to Phone Android SDKs, ve
 Updated Requirements {#ttp-aio-release-notes-sdk-v2-98-0-updated-rqmnts}
 ========================================================================
 
-Tap to Phone: Added new ProGuard rule for Visa sensory branding. Include this rule in your *proguard-rules.pro* file going forward.
+Tap to Phone: Added new ProGuard rule for Relay sensory branding. Include this rule in your *proguard-rules.pro* file going forward.
 
 New Features {#ttp-aio-release-notes-sdk-v2-98-0-new-features}
 ==============================================================
@@ -3234,7 +3234,7 @@ General Information {#ttp-aio-release-notes-sdk-v2-87-0-gen-info}
 Updated Requirements {#ttp-aio-release-notes-sdk-v2-87-0-update-requirements}
 =============================================================================
 
-Updated the Visa sensory branding library to version 2.2. Use this version of the branding library with the SDK going forward.
+Updated the Relay sensory branding library to version 2.2. Use this version of the branding library with the SDK going forward.
 
 Fixed Issues {#ttp-aio-release-notes-sdk-v2-87-0-fixed-issues}
 ==============================================================

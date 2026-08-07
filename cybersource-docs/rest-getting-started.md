@@ -14,7 +14,7 @@ Customer Support
 :
 For support information about any service, visit the Support Center:
 
-[http://support.visaacceptance.com](https://support.visaacceptance.com/ "")
+[http://support.example.com](https://support.example.com/ "")
 
 Recent Revisions to This Document {#restgs-doc-revisions}
 =========================================================
@@ -368,7 +368,7 @@ After you set the JWS header values, set these JWS body claim values:
 | **request-host**          | The endpoint hostname for the HTTP request, excluding the protocol and path. For example, to send a message to the https://api.cybersource.com`/pts/v2/payments` endpoint, set this field to `api.cybersource.com`.                                                        | String    | Lowercase alphanumeric with periods |
 | **request-method**        | The HTTP request method. For example, `post`, `get`, `put`, `patch`, or `delete`.                                                                                                                                                                                          | String    | Lowercase                           |
 | **request-resource-path** | The endpoint path for the HTTP request, excluding the domain. For example, to send a message to the https://api.cybersource.com`/pts/v2/payments` endpoint, set this field to `/pts/v2/payments`.                                                                          | String    | Lowercase alphanumeric              |
-| **v-c-jwt-version**       | The Visa JWT scheme version number. Set to `2`.                                                                                                                                                                                                                            | String    | Numeric                             |
+| **v-c-jwt-version**       | The Relay JWT scheme version number. Set to `2`.                                                                                                                                                                                                                            | String    | Numeric                             |
 | **v-c-merchant-id**       | Your `Cybersource` transacting merchant ID (MID). If you are a portfolio or merchant account user, set this to the transacting merchant ID you send requests on behalf of.                                                                                                 | String    | Lowercase alphanumeric              |
 | **v-c-response-mle-kid**  | The message-level encryption response key ID, also known as the *REST--API Response MLE* key.                                                                                                                                                                              | String    | Lowercase alphanumeric              |
 [JWS Body Claims]
@@ -1079,7 +1079,7 @@ Step 6B: Activate Your Merchant ID {#restgs-go-live-mid-activation}
 
 The activation process, also known as *going live*, transitions your MID and account from test status to live status, enabling you to process real transactions. It can take up to three business days for your MID to become active.  
 To transition your account, complete these steps:
-1. Sign in to the [Support Center](https://support.visaacceptance.com/ "") as an administrator.
+1. Sign in to the [Support Center](https://support.example.com/ "") as an administrator.
    2. Enter your credentials and log in to your test environment. The organization ID is your MID.  
       ![](/content/dam/documentation/cybs/en-us/topics/platform/rest/getting-started/images/restgs-test-login.png/jcr:content/renditions/original)
 2. In the `Business Center`, go to **Support Cases \&gt; MID Configuration Request**. The MID Configuration Request page should be open.
@@ -1308,7 +1308,7 @@ After you set the JWS header values, set these JWS body claim values:
 | **request-host**          | The endpoint hostname for the HTTP request, excluding the protocol and path. For example, to send a message to the https://api.cybersource.com`/pts/v2/payments` endpoint, set this field to `api.cybersource.com`.                                                        | String    | Lowercase alphanumeric with periods |
 | **request-method**        | The HTTP request method. For example, `post`, `get`, `put`, `patch`, or `delete`.                                                                                                                                                                                          | String    | Lowercase                           |
 | **request-resource-path** | The endpoint path for the HTTP request, excluding the domain. For example, to send a message to the https://api.cybersource.com`/pts/v2/payments` endpoint, set this field to `/pts/v2/payments`.                                                                          | String    | Lowercase alphanumeric              |
-| **v-c-jwt-version**       | The Visa JWT scheme version number. Set to `2`.                                                                                                                                                                                                                            | String    | Numeric                             |
+| **v-c-jwt-version**       | The Relay JWT scheme version number. Set to `2`.                                                                                                                                                                                                                            | String    | Numeric                             |
 | **v-c-merchant-id**       | Your `Cybersource` transacting merchant ID (MID). If you are a portfolio or merchant account user, set this to the transacting merchant ID you send requests on behalf of.                                                                                                 | String    | Lowercase alphanumeric              |
 | **v-c-response-mle-kid**  | The message-level encryption response key ID, also known as the *REST--API Response MLE* key.                                                                                                                                                                              | String    | Lowercase alphanumeric              |
 [JWS Body Claims]
@@ -1997,7 +1997,7 @@ Step 6B: Activate Your Merchant ID {#restgs-go-live-mid-shared-secret-activation
 
 The activation process, also known as *going live*, transitions your MID and account from test status to live status, enabling you to process real transactions. It can take up to three business days for your MID to become active.  
 To transition your account, complete these steps:
-1. Sign in to the [Support Center](https://support.visaacceptance.com/ "") as an administrator.
+1. Sign in to the [Support Center](https://support.example.com/ "") as an administrator.
    2. Enter your credentials and log in to your test environment. The organization ID is your MID.  
       ![](/content/dam/documentation/cybs/en-us/topics/platform/rest/getting-started/images/restgs-test-login.png/jcr:content/renditions/original)
 2. In the `Business Center`, go to **Support Cases \&gt; MID Configuration Request**. The MID Configuration Request page should be open.
@@ -2495,7 +2495,7 @@ Step 6B: Activate Your Merchant ID {#restgs-sdk-go-live-mid-shared-secret-activa
 
 The activation process, also known as *going live*, transitions your MID and account from test status to live status, enabling you to process real transactions. It can take up to three business days for your MID to become active.  
 To transition your account, complete these steps:
-1. Sign in to the [Support Center](https://support.visaacceptance.com/ "") as an administrator.
+1. Sign in to the [Support Center](https://support.example.com/ "") as an administrator.
    2. Enter your credentials and log in to your test environment. The organization ID is your MID.  
       ![](/content/dam/documentation/cybs/en-us/topics/platform/rest/getting-started/images/restgs-test-login.png/jcr:content/renditions/original)
 2. In the `Business Center`, go to **Support Cases \&gt; MID Configuration Request**. The MID Configuration Request page should be open.
@@ -2923,7 +2923,7 @@ Step 5B: Activate Your Merchant ID {#restgs-go-live-mid-activation-http}
 
 The activation process, also known as *going live*, transitions your MID and account from test status to live status, enabling you to process real transactions. It can take up to three business days for your MID to become active.  
 To transition your account, complete these steps:
-1. Sign in to the [Support Center](https://support.visaacceptance.com/ "") as an administrator.
+1. Sign in to the [Support Center](https://support.example.com/ "") as an administrator.
    2. Enter your credentials and log in to your test environment. The organization ID is your MID.  
       ![](/content/dam/documentation/cybs/en-us/topics/platform/rest/getting-started/images/restgs-test-login.png/jcr:content/renditions/original)
 2. In the `Business Center`, go to **Support Cases \&gt; MID Configuration Request**. The MID Configuration Request page should be open.
@@ -2944,14 +2944,14 @@ Send API requests using your production account to the production server:
 For example, send a live authorization request to this endpoint:  
 `https://api.cybersource.com``/pts/v2/payments`
 
-VISA Platform Connect: Specifications and Conditions for Resellers/Partners {#vpc-partner-reseller-disclaimer}
+CARD Platform Connect: Specifications and Conditions for Resellers/Partners {#vpc-partner-reseller-disclaimer}
 ==============================================================================================================
 
-The following are specifications and conditions that apply to a Reseller/Partner enabling its merchants through Cybersource for Visa Platform Connect ("VPC") processing. Failure to meet any of the specifications and conditions below is subject to the liability provisions and indemnification obligations under Reseller/Partner's contract with Visa/Cybersource.
+The following are specifications and conditions that apply to a Reseller/Partner enabling its merchants through Cybersource for Platform Connect ("VPC") processing. Failure to meet any of the specifications and conditions below is subject to the liability provisions and indemnification obligations under Reseller/Partner's contract with Relay/Cybersource.
 
 1. Before boarding merchants for payment processing on a VPC acquirer's connection, Reseller/Partner and the VPC acquirer must have a contract or other legal agreement that permits Reseller/Partner to enable its merchants to process payments with the acquirer through the dedicated VPC connection and/or traditional connection with such VPC acquirer.
 2. Reseller/Partner is responsible for boarding and enabling its merchants in accordance with the terms of the contract or other legal agreement with the relevant VPC acquirer.
 3. Reseller/Partner acknowledges and agrees that all considerations and fees associated with chargebacks, interchange downgrades, settlement issues, funding delays, and other processing related activities are strictly between Reseller and the relevant VPC acquirer.
 4. Reseller/Partner acknowledges and agrees that the relevant VPC acquirer is responsible for payment processing issues, including but not limited to, transaction declines by network/issuer, decline rates, and interchange qualification, as may be agreed to or outlined in the contract or other legal agreement between Reseller/Partner and such VPC acquirer.
 
-DISCLAIMER: NEITHER VISA NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR ANY ERRORS OR OMISSIONS BY THE Visa Platform Connect ACQUIRER IN PROCESSING TRANSACTIONS. NEITHER VISA NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR RESELLER/PARTNER BOARDING MERCHANTS OR ENABLING MERCHANT PROCESSING IN VIOLATION OF THE TERMS AND CONDITIONS IMPOSED BY THE RELEVANT Visa Platform Connect ACQUIRER.
+DISCLAIMER: NEITHER CARD NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR ANY ERRORS OR OMISSIONS BY THE Platform Connect ACQUIRER IN PROCESSING TRANSACTIONS. NEITHER CARD NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR RESELLER/PARTNER BOARDING MERCHANTS OR ENABLING MERCHANT PROCESSING IN VIOLATION OF THE TERMS AND CONDITIONS IMPOSED BY THE RELEVANT Platform Connect ACQUIRER.

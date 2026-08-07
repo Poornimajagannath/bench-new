@@ -1,7 +1,7 @@
 # Documentation Platform Comparison: Nimbus vs Fumadocs vs Mintlify vs Markdoc+Astro
 
 **Date:** 2025-07-23
-**Evaluator:** Product/Strategy (Visa Relay team)
+**Evaluator:** Product/Strategy (Relay team)
 **Purpose:** Select a documentation platform for product/developer docs with AI/agent-readiness as a first-class requirement.
 
 ---

@@ -48,7 +48,7 @@ The Transaction Details API response contains an applications array that lists t
 | ics_ecp_debit                   | Electronic Check Debit                           |
 | ics_ecp_avs                     | Electronic Check Account Validation              |
 | ics_get_masterpass_data         | Get MasterPass Data                              |
-| ics_get_visa_checkout_data      | Get `Visa Click to Pay`                          |
+| ics_get_card_checkout_data      | Get `Relay Click to Pay`                          |
 | ics_create_isv                  | Gift Certificate Creation                        |
 | ics_get_isv_history             | Gift Certificate History                         |
 | ics_add_value_to_isv            | Gift Certificate Increase                        |
@@ -72,7 +72,7 @@ The Transaction Details API response contains an applications array that lists t
 | ics_pa_setup                    | Payer Authentication Setup                       |
 | ics_pa_enroll                   | Payer Authentication Enrollment                  |
 | ics_pa_validate                 | Payer Authentication Validation                  |
-| ics_authentication_exemptions   | Visa Exemption Service                           |
+| ics_authentication_exemptions   | Relay Exemption Service                           |
 | paypal_mip_agreement_ipn        | PayPal Billing Agreement                         |
 | ics_paypal_button_create        | PayPal Button Create                             |
 | ics_paypal_credit               | PayPal Credit                                    |

@@ -24,7 +24,7 @@ Customer Support
 ----------------
 
 For support information about any service, visit the Support Center:  
-<http://support.visaacceptance.com>
+<http://support.example.com>
 
 Recent Revisions to This Document {#samsungpay-doc-revisions}
 =============================================================
@@ -54,19 +54,19 @@ Removed paymentNetworkToken_requestorID field from list of required fields and c
 
 Deprecated PNT assurance fields replaced with new fields
 :
-For `Visa Platform Connect` only, the deprecated API request and response fields paymentNetworkToken_assuranceLevel are replaced with the new fields named paymentNetworkToken_assuranceMethod.
+For `Platform Connect` only, the deprecated API request and response fields paymentNetworkToken_assuranceLevel are replaced with the new fields named paymentNetworkToken_assuranceMethod.
 
-VISA Platform Connect: Specifications and Conditions for Resellers/Partners {#vpc-partner-reseller-disclaimer}
+CARD Platform Connect: Specifications and Conditions for Resellers/Partners {#vpc-partner-reseller-disclaimer}
 ==============================================================================================================
 
-The following are specifications and conditions that apply to a Reseller/Partner enabling its merchants through Cybersource for Visa Platform Connect ("VPC") processing. Failure to meet any of the specifications and conditions below is subject to the liability provisions and indemnification obligations under Reseller/Partner's contract with Visa/Cybersource.
+The following are specifications and conditions that apply to a Reseller/Partner enabling its merchants through Cybersource for Platform Connect ("VPC") processing. Failure to meet any of the specifications and conditions below is subject to the liability provisions and indemnification obligations under Reseller/Partner's contract with Relay/Cybersource.
 
 1. Before boarding merchants for payment processing on a VPC acquirer's connection, Reseller/Partner and the VPC acquirer must have a contract or other legal agreement that permits Reseller/Partner to enable its merchants to process payments with the acquirer through the dedicated VPC connection and/or traditional connection with such VPC acquirer.
 2. Reseller/Partner is responsible for boarding and enabling its merchants in accordance with the terms of the contract or other legal agreement with the relevant VPC acquirer.
 3. Reseller/Partner acknowledges and agrees that all considerations and fees associated with chargebacks, interchange downgrades, settlement issues, funding delays, and other processing related activities are strictly between Reseller and the relevant VPC acquirer.
 4. Reseller/Partner acknowledges and agrees that the relevant VPC acquirer is responsible for payment processing issues, including but not limited to, transaction declines by network/issuer, decline rates, and interchange qualification, as may be agreed to or outlined in the contract or other legal agreement between Reseller/Partner and such VPC acquirer.
 
-DISCLAIMER: NEITHER VISA NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR ANY ERRORS OR OMISSIONS BY THE VISA PLATFORM CONNECT ACQUIRER IN PROCESSING TRANSACTIONS. NEITHER VISA NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR RESELLER/PARTNER BOARDING MERCHANTS OR ENABLING MERCHANT PROCESSING IN VIOLATION OF THE TERMS AND CONDITIONS IMPOSED BY THE RELEVANT VISA PLATFORM CONNECT ACQUIRER.
+DISCLAIMER: NEITHER CARD NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR ANY ERRORS OR OMISSIONS BY THE CARD PLATFORM CONNECT ACQUIRER IN PROCESSING TRANSACTIONS. NEITHER CARD NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR RESELLER/PARTNER BOARDING MERCHANTS OR ENABLING MERCHANT PROCESSING IN VIOLATION OF THE TERMS AND CONDITIONS IMPOSED BY THE RELEVANT CARD PLATFORM CONNECT ACQUIRER.
 
 Requirements for Using Samsung Pay {#samsungpay-requirements}
 =============================================================
@@ -95,7 +95,7 @@ Supported Card Types and Optional Features {#samsungpay-processors}
 
 |                         Processor                         |                            Card Types                             |           Optional Features            |
 |-----------------------------------------------------------|-------------------------------------------------------------------|----------------------------------------|
-| `Visa Platform Connect` Vantiv is the supported acquirer. | * JCB * Mastercard * Visa {#samsungpay-processors_ul_jh1_dwq_l4b} | * Recurring payments * Split shipments |
+| `Platform Connect` Vantiv is the supported acquirer. | * JCB * Mastercard * Relay {#samsungpay-processors_ul_jh1_dwq_l4b} | * Recurring payments * Split shipments |
 
 Related Information
 -------------------
@@ -322,7 +322,7 @@ Payment Protocol
 
 Permitted Card Brands
 :
-Specify the card brands that are supported such as American Express, JCB, Mastercard, or Visa.
+Specify the card brands that are supported such as American Express, JCB, Mastercard, or Relay.
 
 Merchant ID
 :
@@ -350,8 +350,8 @@ Example: Transaction Request Structure {#samsungpay-ex-txn-req-structure}
 private PaymentInfo makeTransactionDetails() {
 // Supported card brands
 ArrayList&lt;CardInfo.Brand&gt; brandList = new ArrayList&lt;CardInfo.Brand&gt;();
-if (visaBrand.isChecked())
-brandList.add(CardInfo.Brand.VISA);
+if (cardBrand.isChecked())
+brandList.add(CardInfo.Brand.CARD);
 if (mcBrand.isChecked())
 brandList.add(CardInfo.Brand.Mastercard);
 if (amexBrand.isChecked())
@@ -477,7 +477,7 @@ You can authorize a payment for Samsung Pay using two different types of decrypt
 
 |    Payment Processor    |                             Authorization and Capture Information                             |
 |-------------------------|-----------------------------------------------------------------------------------------------|
-| `Visa Platform Connect` | `Visa Platform Connect` limits authorization and capture amounts to 999999999999 (twelve 9s). |
+| `Platform Connect` | `Platform Connect` limits authorization and capture amounts to 999999999999 (twelve 9s). |
 [Processor-Specific Information About Authorizations and Captures]
 
 Authorizing a Payment with JCB Using `Cybersource` Decryption Method {#samsungpay-auth-cybs-jcb-intro}
@@ -677,17 +677,17 @@ Authorization Response
 &lt;/c:replyMessage&gt;
 ```
 
-Authorizing a Payment with Visa Using `Cybersource` Decryption Method {#samsungpay-auth-cybs-visa-intro}
+Authorizing a Payment with Relay Using `Cybersource` Decryption Method {#samsungpay-auth-cybs-relay-intro}
 ========================================================================================================
 
 This section provides the following information:
 
-* [Required Fields for Authorizing a Payment Using Visa and the Cybersource Decryption Method](/docs/cybs/en-us/samsung-pay/developer/ctv/so/samsungpay/samsungpay-services/samsungpay-auth-intro/samsungpay-auth-cybs-visa-intro/samsungpay-auth-cybsdecypt-visa-mandatory.md "")
+* [Required Fields for Authorizing a Payment Using Relay and the Cybersource Decryption Method](/docs/cybs/en-us/samsung-pay/developer/ctv/so/samsungpay/samsungpay-services/samsungpay-auth-intro/samsungpay-auth-cybs-relay-intro/samsungpay-auth-cybsdecypt-relay-mandatory.md "")
 * [Authorizing a Payment](/docs/cybs/en-us/samsung-pay/developer/ctv/so/samsungpay/samsungpay-services/samsungpay-auth-intro/samsungpay-auth-cybs-jcb-intro/samsungpay-auth-procedure.md "")
-* [Example: Cybersource Decryption with Visa Using the Simple Order API](/docs/cybs/en-us/samsung-pay/developer/ctv/so/samsungpay/samsungpay-services/samsungpay-auth-intro/samsungpay-auth-cybs-visa-intro/samsungpay-auth-cybsdecrypt-ex-visa-so.md "")
-  {#samsungpay-auth-cybs-visa-intro_ul_oj3_jtp_npb}
+* [Example: Cybersource Decryption with Relay Using the Simple Order API](/docs/cybs/en-us/samsung-pay/developer/ctv/so/samsungpay/samsungpay-services/samsungpay-auth-intro/samsungpay-auth-cybs-relay-intro/samsungpay-auth-cybsdecrypt-ex-relay-so.md "")
+  {#samsungpay-auth-cybs-relay-intro_ul_oj3_jtp_npb}
 
-Required Fields for Authorizing a Payment Using Visa and the `Cybersource` Decryption Method {#samsungpay-auth-cybsdecypt-visa-mandatory}
+Required Fields for Authorizing a Payment Using Relay and the `Cybersource` Decryption Method {#samsungpay-auth-cybsdecypt-relay-mandatory}
 =========================================================================================================================================
 
 The following fields are required when submitting an authorization request using the `Cybersource` decryption method:
@@ -702,12 +702,12 @@ The following fields are required when submitting an authorization request using
 * paymentNetworkToken_transactionType-set this field to `1`.
 * paymentSolution-set this field to `008`.
 
-Related Information {#samsungpay-auth-cybsdecypt-visa-mandatory_section_abb_khn_b1c}
+Related Information {#samsungpay-auth-cybsdecypt-relay-mandatory_section_abb_khn_b1c}
 ------------------------------------------------------------------------------------
 
 [Simple Order API Field Reference Guide](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/so/api-fields/api-fields-so-intro.md "")
 
-Example: `Cybersource` Decryption with Visa Using the Simple Order API {#samsungpay-auth-cybsdecrypt-ex-visa-so}
+Example: `Cybersource` Decryption with Relay Using the Simple Order API {#samsungpay-auth-cybsdecrypt-ex-relay-so}
 ================================================================================================================
 
 Authorization Request
@@ -1009,17 +1009,17 @@ Authorization Response
 &lt;/c:replyMessage&gt;
 ```
 
-Authorizing a Payment with Visa Using Merchant Decryption Method {#samsungpay-auth-merchant-visa-intro}
+Authorizing a Payment with Relay Using Merchant Decryption Method {#samsungpay-auth-merchant-relay-intro}
 =======================================================================================================
 
 This section provides the following information:
 
-* [Required Fields for Authorizing a Payment Using Visa and the Merchant Decryption Method](/docs/cybs/en-us/samsung-pay/developer/ctv/so/samsungpay/samsungpay-services/samsungpay-auth-intro/samsungpay-auth-merchant-visa-intro/samsungpay-auth-merdecypt-visa-mandatory.md "")
+* [Required Fields for Authorizing a Payment Using Relay and the Merchant Decryption Method](/docs/cybs/en-us/samsung-pay/developer/ctv/so/samsungpay/samsungpay-services/samsungpay-auth-intro/samsungpay-auth-merchant-relay-intro/samsungpay-auth-merdecypt-relay-mandatory.md "")
 * [Authorizing a Payment](/docs/cybs/en-us/samsung-pay/developer/ctv/so/samsungpay/samsungpay-services/samsungpay-auth-intro/samsungpay-auth-cybs-jcb-intro/samsungpay-auth-procedure.md "")
-* [Example: Merchant Decryption with Visa Using the Simple Order API](/docs/cybs/en-us/samsung-pay/developer/ctv/so/samsungpay/samsungpay-services/samsungpay-auth-intro/samsungpay-auth-merchant-visa-intro/samsungpay-auth-merdecrypt-ex-visa-so.md "")
-  {#samsungpay-auth-merchant-visa-intro_ul_pcj_krp_npb}
+* [Example: Merchant Decryption with Relay Using the Simple Order API](/docs/cybs/en-us/samsung-pay/developer/ctv/so/samsungpay/samsungpay-services/samsungpay-auth-intro/samsungpay-auth-merchant-relay-intro/samsungpay-auth-merdecrypt-ex-relay-so.md "")
+  {#samsungpay-auth-merchant-relay-intro_ul_pcj_krp_npb}
 
-Required Fields for Authorizing a Payment Using Visa and the Merchant Decryption Method {#samsungpay-auth-merdecypt-visa-mandatory}
+Required Fields for Authorizing a Payment Using Relay and the Merchant Decryption Method {#samsungpay-auth-merdecypt-relay-mandatory}
 ===================================================================================================================================
 
 The following fields are required when submitting an authorization request using the Merchant decryption method:
@@ -1034,12 +1034,12 @@ The following fields are required when submitting an authorization request using
 * paymentNetworkToken_transactionType-set this field to `1`.
 * paymentSolution-set this field to `008`.
 
-Related Information {#samsungpay-auth-merdecypt-visa-mandatory_section_abb_khn_b1c}
+Related Information {#samsungpay-auth-merdecypt-relay-mandatory_section_abb_khn_b1c}
 -----------------------------------------------------------------------------------
 
 [Simple Order API Field Reference Guide](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/so/api-fields/api-fields-so-intro.md "")
 
-Example: Merchant Decryption with Visa Using the Simple Order API {#samsungpay-auth-merdecrypt-ex-visa-so}
+Example: Merchant Decryption with Relay Using the Simple Order API {#samsungpay-auth-merdecrypt-ex-relay-so}
 ==========================================================================================================
 
 Authorization Request
@@ -1109,7 +1109,7 @@ The authorization reversal service is a follow-on service that uses the request 
 
 |    Payment Processor    |                                                      Authorization Reversal Information                                                      |
 |-------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| `Visa Platform Connect` | Card types supported for full authorization reversals: American Express, China UnionPay, Diners Club, Discover, JCB, mada, Mastercard, Visa. |
+| `Platform Connect` | Card types supported for full authorization reversals: American Express, China UnionPay, Diners Club, Discover, JCB, mada, Mastercard, Relay. |
 [Processor-Specific Information About Authorization Reversals]
 
 Required Fields for Reversing an Authorization {#samsungpay-reversal-mandatory}
@@ -1199,7 +1199,7 @@ The capture service is a follow-on service that uses the request ID returned fro
 
 |    Payment Processor    |                             Authorization and Capture Information                             |
 |-------------------------|-----------------------------------------------------------------------------------------------|
-| `Visa Platform Connect` | `Visa Platform Connect` limits authorization and capture amounts to 999999999999 (twelve 9s). |
+| `Platform Connect` | `Platform Connect` limits authorization and capture amounts to 999999999999 (twelve 9s). |
 [Processor-Specific Information About Authorizations and Captures]
 
 Required Fields for Capturing a Payment {#samsungpay-capture-mandatory}

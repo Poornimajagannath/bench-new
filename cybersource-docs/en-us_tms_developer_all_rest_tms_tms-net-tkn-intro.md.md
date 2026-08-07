@@ -34,7 +34,7 @@ The Payment Credentials API enables you to generate and retrieve network token p
 
 * Network token value
 
-* Cryptogram (Visa and Mastercard only)
+* Cryptogram (Relay and Mastercard only)
 
 * Dynamic card verification value (CVV) (American Express only)
   {#tms_net_tkn_intro_ul_s5x_txf_3jc}  

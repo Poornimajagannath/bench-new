@@ -81,7 +81,7 @@ flowchart TD
     S3 --> U[Agents and Assistants]
     S4 --> U
     S5 --> V[PMs, Support, Partners]
-    S6 --> W[Visa, Cybersource, Other Brands]
+    S6 --> W[Relay, Cybersource, Other Brands]
 
     T --> X[Usage Signals and Feedback]
     U --> X
@@ -197,7 +197,7 @@ It is not the production service mesh.
 ## Implementation disciplines
 
 1. **Lineage end to end** — every quickstart, reference, note, and branded output must trace to snapshots / contract entities / change events.
-2. **Brand rendering stays late** — generate facts once; render Visa / CyberSource / other brands many times.
+2. **Brand rendering stays late** — generate facts once; render Relay / CyberSource / other brands many times.
 3. **Source truth stays upstream** — Relay writes derived artifacts only.
 4. **Evals gate promotion** — structure validity alone is insufficient.
 5. **Specs are high-trust inputs, not sufficient outputs** — contracts anchor correctness; workflow/onboarding meaning still needs synthesis.
@@ -224,7 +224,7 @@ It is not the production service mesh.
 2. What storage backs Knowledge / Contract / Change stores in production?
 3. Which artifact types require human signoff vs automatic promotion?
 4. How are intentional contract-vs-guide exceptions modeled?
-5. Multi-brand inheritance model across shared / Visa / CyberSource layers?
+5. Multi-brand inheritance model across shared / Relay / CyberSource layers?
 
 ## Recommended decision
 

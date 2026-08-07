@@ -6,7 +6,7 @@ This section describes how to use this guide and where to find further informati
 Audience and Purpose
 --------------------
 
-This guide is for application developers integrating the Installments APIs to make use of the Visa Installments product. The Installments product has three `REST API`s that together enable the merchant to make a request for the installment plans available to a cardholder, confirm an installment plan selection by a cardholder, and cancel an active installment plan.
+This guide is for application developers integrating the Installments APIs to make use of the Relay Installments product. The Installments product has three `REST API`s that together enable the merchant to make a request for the installment plans available to a cardholder, confirm an installment plan selection by a cardholder, and cancel an active installment plan.
 
 Conventions
 -----------
@@ -20,7 +20,7 @@ Customer Support
 ----------------
 
 For support information about any service, visit the Support Center:  
-<http://support.visaacceptance.com>
+<http://support.example.com>
 
 Recent Revisions to This Document {#install-plan-doc-revisions}
 ===============================================================
@@ -61,17 +61,17 @@ Updated the cancel installment plan section to include information about the req
 
 Initial release.
 
-VISA Platform Connect: Specifications and Conditions for Resellers/Partners {#vpc-partner-reseller-disclaimer}
+CARD Platform Connect: Specifications and Conditions for Resellers/Partners {#vpc-partner-reseller-disclaimer}
 ==============================================================================================================
 
-The following are specifications and conditions that apply to a Reseller/Partner enabling its merchants through Cybersource for Visa Platform Connect ("VPC") processing. Failure to meet any of the specifications and conditions below is subject to the liability provisions and indemnification obligations under Reseller/Partner's contract with Visa/Cybersource.
+The following are specifications and conditions that apply to a Reseller/Partner enabling its merchants through Cybersource for Platform Connect ("VPC") processing. Failure to meet any of the specifications and conditions below is subject to the liability provisions and indemnification obligations under Reseller/Partner's contract with Relay/Cybersource.
 
 1. Before boarding merchants for payment processing on a VPC acquirer's connection, Reseller/Partner and the VPC acquirer must have a contract or other legal agreement that permits Reseller/Partner to enable its merchants to process payments with the acquirer through the dedicated VPC connection and/or traditional connection with such VPC acquirer.
 2. Reseller/Partner is responsible for boarding and enabling its merchants in accordance with the terms of the contract or other legal agreement with the relevant VPC acquirer.
 3. Reseller/Partner acknowledges and agrees that all considerations and fees associated with chargebacks, interchange downgrades, settlement issues, funding delays, and other processing related activities are strictly between Reseller and the relevant VPC acquirer.
 4. Reseller/Partner acknowledges and agrees that the relevant VPC acquirer is responsible for payment processing issues, including but not limited to, transaction declines by network/issuer, decline rates, and interchange qualification, as may be agreed to or outlined in the contract or other legal agreement between Reseller/Partner and such VPC acquirer.
 
-DISCLAIMER: NEITHER VISA NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR ANY ERRORS OR OMISSIONS BY THE Visa Platform Connect ACQUIRER IN PROCESSING TRANSACTIONS. NEITHER VISA NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR RESELLER/PARTNER BOARDING MERCHANTS OR ENABLING MERCHANT PROCESSING IN VIOLATION OF THE TERMS AND CONDITIONS IMPOSED BY THE RELEVANT Visa Platform Connect ACQUIRER.
+DISCLAIMER: NEITHER CARD NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR ANY ERRORS OR OMISSIONS BY THE Platform Connect ACQUIRER IN PROCESSING TRANSACTIONS. NEITHER CARD NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR RESELLER/PARTNER BOARDING MERCHANTS OR ENABLING MERCHANT PROCESSING IN VIOLATION OF THE TERMS AND CONDITIONS IMPOSED BY THE RELEVANT Platform Connect ACQUIRER.
 
 Introduction to Installments {#installment-plans-overview}
 ==========================================================
@@ -98,11 +98,11 @@ You must complete these requirements before you can begin using the Installments
 
 **`Cybersource` Merchant ID**
 :
-To sign up for a sandbox account, see the [Sandbox Account Sign Up](https://developer.visaacceptance.com/hello-world/sandbox.md "") page.
+To sign up for a sandbox account, see the [Sandbox Account Sign Up](https://developer.example.com/hello-world/sandbox.md "") page.
 
 REST API Key
 :
-To create a REST API key with an existing organization or merchant account, see the [*Creating and Using Security Keys User Guide*](https://developer.visaacceptance.com/docs/vas/en-us/security-keys/user/all/ada/security-keys/keys-intro.md ""). If you sign up for a sandbox account, the sign up process creates a test key.
+To create a REST API key with an existing organization or merchant account, see the [*Creating and Using Security Keys User Guide*](https://developer.example.com/docs/vas/en-us/security-keys/user/all/ada/security-keys/keys-intro.md ""). If you sign up for a sandbox account, the sign up process creates a test key.
 
 Getting Started with the REST API
 :
@@ -218,7 +218,7 @@ Required Fields for Getting Installment Plans with a PAN {#install-plan-get-plan
 
 [processingInformation.installmentServiceProvider](/docs/cybs/en-us/installment-plans/developer/all/rest/installment-plans/install-plan-reference-intro/processing-info-instal-serv-prdr.md "")
 :
-Set to `Visa`.
+Set to `Relay`.
 
 Optional Field for Installment Services {#install-plan-opt-fields}
 ==================================================================
@@ -234,7 +234,7 @@ Request
 ```
 {
   "processingInformation": {
-    "installmentServiceProvider": "Visa"
+    "installmentServiceProvider": "Relay"
   },
   "paymentInformation": {
     "card": {
@@ -307,15 +307,15 @@ Response to Successful Request
         },
         "termsAndConditions": [
           {
-            "tncUrl": https://www.visa.com/,
+            "tncUrl": https://www.relay.com/,
             "version": "1",
-            "text": "بنك الاختبار هذا نص الشروط والأحكام الذي يحكم خدمات تقسيط التأشيرة\n\nالأهلية: لكي تكون مؤهلاً للحصول على مدفوعات التقسيط بالفيزا، يجب أن تمتلك بطاقة ائتمان فيزا صالحة ونشطة صادرة عن بنك معتمد. سيحدد حدك الائتماني وقدرتك على السداد مدى أهليتك لخطط التقسيط\n\nخطة التقسيط: يمكن الاستفادة من الأقساط لمدة ثلاثة أشهر للمشتريات لدى التجار المشاركين، مع مراعاة الحد الأدنى لمبلغ المعاملة. سيتم تحديد تفاصيل خطة التقسيط المحددة في وقت الشراء\n\nالفوائد والرسوم: لا توجد رسوم مطبقة على خطة التقسيط لمدة ثلاثة أشهر. إذا فشلت في سداد أي قسط في الموعد المحدد، لن يتم فرض رسوم التأخر في السداد\n\nالدفع المسبق والإلغاء: يمكنك اختيار الدفع المسبق لكامل المبلغ المستحق في أي وقت دون أي رسوم. يمكن إلغاء خطة التقسيط إذا تم إلغاء بطاقة فيزا الخاصة بك أو إذا تخلفت عن السداد\n\nتغييرات على الشروط: تحتفظ Visa بالحق في تغيير هذه الشروط والأحكام في أي وقت. سيتم إبلاغك بأي تغييرات عبر البريد الإلكتروني أو من خلال موقعنا. تقع على عاتقك مسؤولية إبقاء نفسك على اطلاع بأحدث الشروط والأحكام\n\nيرجى ملاحظة أن هذه الشروط عرضة للتغيير ويوصى دائمًا بقراءة الشروط والأحكام الفعلية المقدمة من جهة إصدار البطاقة\n\n\n\n\n",
+            "text": "بنك الاختبار هذا نص الشروط والأحكام الذي يحكم خدمات تقسيط التأشيرة\n\nالأهلية: لكي تكون مؤهلاً للحصول على مدفوعات التقسيط بالفيزا، يجب أن تمتلك بطاقة ائتمان فيزا صالحة ونشطة صادرة عن بنك معتمد. سيحدد حدك الائتماني وقدرتك على السداد مدى أهليتك لخطط التقسيط\n\nخطة التقسيط: يمكن الاستفادة من الأقساط لمدة ثلاثة أشهر للمشتريات لدى التجار المشاركين، مع مراعاة الحد الأدنى لمبلغ المعاملة. سيتم تحديد تفاصيل خطة التقسيط المحددة في وقت الشراء\n\nالفوائد والرسوم: لا توجد رسوم مطبقة على خطة التقسيط لمدة ثلاثة أشهر. إذا فشلت في سداد أي قسط في الموعد المحدد، لن يتم فرض رسوم التأخر في السداد\n\nالدفع المسبق والإلغاء: يمكنك اختيار الدفع المسبق لكامل المبلغ المستحق في أي وقت دون أي رسوم. يمكن إلغاء خطة التقسيط إذا تم إلغاء بطاقة فيزا الخاصة بك أو إذا تخلفت عن السداد\n\nتغييرات على الشروط: تحتفظ Relay بالحق في تغيير هذه الشروط والأحكام في أي وقت. سيتم إبلاغك بأي تغييرات عبر البريد الإلكتروني أو من خلال موقعنا. تقع على عاتقك مسؤولية إبقاء نفسك على اطلاع بأحدث الشروط والأحكام\n\nيرجى ملاحظة أن هذه الشروط عرضة للتغيير ويوصى دائمًا بقراءة الشروط والأحكام الفعلية المقدمة من جهة إصدار البطاقة\n\n\n\n\n",
             "languageCode": "ara"
           },
           {
-            "tncUrl": https://www.visa.com/,
+            "tncUrl": https://www.relay.com/,
             "version": "1",
-            "text": " [Test Bank] This is a sample T&C text containing Special Ch@racters that govern the Visa Installment services. Refer to https://www.visa.com for more information. 1) Eligibility: To be eligible for \"Visa installment\" payments, you must hold a valid and active Visa credit card issued by an authorized bank. Your credit limit and repayment capacity will determine your eligibility for installment plans. 2) Installment Plan: Installments can be availed for purchases at participating merchants, subject to a minimum transaction amount. The specific installment plan (number of months, interest rate, etc.) will be determined at the time of purchase. 3) Interest &amp; Fees: 20% Interest will be charged on the unpaid principal amount. If you fail to pay any installment by the due date, a late payment fee will be charged. All fees/charges are non-refundable and subject to change. 4) Prepayment &amp; Cancellation: You may choose to prepay the entire outstanding amount at any time. However, prepayment may attract a fee. The installment plan can be cancelled if your Visa card is cancelled &lt;or if you default on payment&gt;. 5) Changes to Terms: Visa reserves the right to change these terms and conditions at any time. Any changes will be communicated to you via email or through our website. It is your responsibility to keep yourself updated with the latest terms and conditions. Please note that these terms are subject to change and it's always recommended to read the actual terms and conditions provided by the card issuer.\n",
+            "text": " [Test Bank] This is a sample T&C text containing Special Ch@racters that govern the Relay Installment services. Refer to https://www.relay.com for more information. 1) Eligibility: To be eligible for \"Relay installment\" payments, you must hold a valid and active Relay credit card issued by an authorized bank. Your credit limit and repayment capacity will determine your eligibility for installment plans. 2) Installment Plan: Installments can be availed for purchases at participating merchants, subject to a minimum transaction amount. The specific installment plan (number of months, interest rate, etc.) will be determined at the time of purchase. 3) Interest &amp; Fees: 20% Interest will be charged on the unpaid principal amount. If you fail to pay any installment by the due date, a late payment fee will be charged. All fees/charges are non-refundable and subject to change. 4) Prepayment &amp; Cancellation: You may choose to prepay the entire outstanding amount at any time. However, prepayment may attract a fee. The installment plan can be cancelled if your Relay card is cancelled &lt;or if you default on payment&gt;. 5) Changes to Terms: Relay reserves the right to change these terms and conditions at any time. Any changes will be communicated to you via email or through our website. It is your responsibility to keep yourself updated with the latest terms and conditions. Please note that these terms are subject to change and it's always recommended to read the actual terms and conditions provided by the card issuer.\n",
             "languageCode": "eng"
           }
         ]
@@ -365,15 +365,15 @@ Response to Successful Request
         },
         "termsAndConditions": [
           {
-            "tncUrl": https://www.visa.com/,
+            "tncUrl": https://www.relay.com/,
             "version": "1",
-            "text": " [Test Bank] This is a sample T&amp;C text containing Special Ch@racters that govern the Visa Installment services. Refer to https://www.visa.com for more information. 1) Eligibility: To be eligible for \"Visa installment\" payments, you must hold a valid and active Visa credit card issued by an authorized bank. Your credit limit and repayment capacity will determine your eligibility for installment plans. 2) Installment Plan: Installments can be availed for purchases at participating merchants, subject to a minimum transaction amount. The specific installment plan (number of months, interest rate, etc.) will be determined at the time of purchase. 3) Interest &amp; Fees: 20% Interest will be charged on the unpaid principal amount. If you fail to pay any installment by the due date, a late payment fee will be charged. All fees/charges are non-refundable and subject to change. 4) Prepayment &amp; Cancellation: You may choose to prepay the entire outstanding amount at any time. However, prepayment may attract a fee. The installment plan can be cancelled if your Visa card is cancelled &lt;or if you default on payment&gt;. 5) Changes to Terms: Visa reserves the right to change these terms and conditions at any time. Any changes will be communicated to you via email or through our website. It is your responsibility to keep yourself updated with the latest terms and conditions. Please note that these terms are subject to change and it's always recommended to read the actual terms and conditions provided by the card issuer.",
+            "text": " [Test Bank] This is a sample T&amp;C text containing Special Ch@racters that govern the Relay Installment services. Refer to https://www.relay.com for more information. 1) Eligibility: To be eligible for \"Relay installment\" payments, you must hold a valid and active Relay credit card issued by an authorized bank. Your credit limit and repayment capacity will determine your eligibility for installment plans. 2) Installment Plan: Installments can be availed for purchases at participating merchants, subject to a minimum transaction amount. The specific installment plan (number of months, interest rate, etc.) will be determined at the time of purchase. 3) Interest &amp; Fees: 20% Interest will be charged on the unpaid principal amount. If you fail to pay any installment by the due date, a late payment fee will be charged. All fees/charges are non-refundable and subject to change. 4) Prepayment &amp; Cancellation: You may choose to prepay the entire outstanding amount at any time. However, prepayment may attract a fee. The installment plan can be cancelled if your Relay card is cancelled &lt;or if you default on payment&gt;. 5) Changes to Terms: Relay reserves the right to change these terms and conditions at any time. Any changes will be communicated to you via email or through our website. It is your responsibility to keep yourself updated with the latest terms and conditions. Please note that these terms are subject to change and it's always recommended to read the actual terms and conditions provided by the card issuer.",
             "languageCode": "eng"
           },
           {
-            "tncUrl": https://www.visa.com/,
+            "tncUrl": https://www.relay.com/,
             "version": "1",
-            "text": " [بنك الاختبار] هذا نموذج لنص الشروط والأحكام الذي يحتوي على فروع خاصة تحكم خدمات تقسيط التأشيرة.\n\n1) الأهلية: لكي تكون مؤهلاً للحصول على مدفوعات \"التقسيط بالفيزا\"، يجب أن تمتلك بطاقة ائتمان فيزا صالحة ونشطة صادرة عن بنك معتمد. سيحدد حدك الائتماني وقدرتك على السداد مدى أهليتك لخطط التقسيط.\n\n2) خطة التقسيط: يمكن الاستفادة من الأقساط للمشتريات لدى التجار المشاركين، مع مراعاة الحد الأدنى لمبلغ المعاملة. سيتم تحديد خطة التقسيط المحددة (عدد الأشهر، وسعر الفائدة، وما إلى ذلك) في وقت الشراء.\n\n3) الفوائد والرسوم: سيتم فرض فائدة بنسبة 20% على المبلغ الأصلي غير المدفوع. إذا فشلت في سداد أي قسط في الموعد المحدد، سيتم فرض رسوم التأخر في السداد. جميع الرسوم/المصاريف غير قابلة للاسترداد وقابلة للتغيير.\n\n4) الدفع المسبق والإلغاء: يمكنك اختيار الدفع المسبق لكامل المبلغ المستحق في أي وقت. ومع ذلك، قد يجذب الدفع المسبق رسومًا. يمكن إلغاء خطة التقسيط إذا تم إلغاء بطاقة فيزا الخاصة بك &lt;أو إذا تخلفت عن السداد&gt;.\n\n5) تغييرات على الشروط: تحتفظ Visa بالحق في تغيير هذه الشروط والأحكام في أي وقت. سيتم إبلاغك بأي تغييرات عبر البريد الإلكتروني أو من خلال موقعنا. تقع على عاتقك مسؤولية إبقاء نفسك على اطلاع بأحدث الشروط والأحكام.\n\nيرجى ملاحظة أن هذه الشروط عرضة للتغيير ويوصى دائمًا بقراءة الشروط والأحكام الفعلية المقدمة من جهة إصدار البطاقة.",
+            "text": " [بنك الاختبار] هذا نموذج لنص الشروط والأحكام الذي يحتوي على فروع خاصة تحكم خدمات تقسيط التأشيرة.\n\n1) الأهلية: لكي تكون مؤهلاً للحصول على مدفوعات \"التقسيط بالفيزا\"، يجب أن تمتلك بطاقة ائتمان فيزا صالحة ونشطة صادرة عن بنك معتمد. سيحدد حدك الائتماني وقدرتك على السداد مدى أهليتك لخطط التقسيط.\n\n2) خطة التقسيط: يمكن الاستفادة من الأقساط للمشتريات لدى التجار المشاركين، مع مراعاة الحد الأدنى لمبلغ المعاملة. سيتم تحديد خطة التقسيط المحددة (عدد الأشهر، وسعر الفائدة، وما إلى ذلك) في وقت الشراء.\n\n3) الفوائد والرسوم: سيتم فرض فائدة بنسبة 20% على المبلغ الأصلي غير المدفوع. إذا فشلت في سداد أي قسط في الموعد المحدد، سيتم فرض رسوم التأخر في السداد. جميع الرسوم/المصاريف غير قابلة للاسترداد وقابلة للتغيير.\n\n4) الدفع المسبق والإلغاء: يمكنك اختيار الدفع المسبق لكامل المبلغ المستحق في أي وقت. ومع ذلك، قد يجذب الدفع المسبق رسومًا. يمكن إلغاء خطة التقسيط إذا تم إلغاء بطاقة فيزا الخاصة بك &lt;أو إذا تخلفت عن السداد&gt;.\n\n5) تغييرات على الشروط: تحتفظ Relay بالحق في تغيير هذه الشروط والأحكام في أي وقت. سيتم إبلاغك بأي تغييرات عبر البريد الإلكتروني أو من خلال موقعنا. تقع على عاتقك مسؤولية إبقاء نفسك على اطلاع بأحدث الشروط والأحكام.\n\nيرجى ملاحظة أن هذه الشروط عرضة للتغيير ويوصى دائمًا بقراءة الشروط والأحكام الفعلية المقدمة من جهة إصدار البطاقة.",
             "languageCode": "ara"
           }
         ]
@@ -431,7 +431,7 @@ Required Fields for Getting Installment Plans with a PAR {#install-plan-get-plan
 
 [processingInformation.installmentServiceProvider](/docs/cybs/en-us/installment-plans/developer/all/rest/installment-plans/install-plan-reference-intro/processing-info-instal-serv-prdr.md "")
 :
-Set to `Visa`.
+Set to `Relay`.
 
 `REST API` Example: Get Installment Plans with a PAR {#install-plan-get-plan-par-ex-rest}
 =========================================================================================
@@ -442,7 +442,7 @@ Request
 ```
 {
   "processingInformation": {
-    "installmentServiceProvider": "Visa"
+    "installmentServiceProvider": "Relay"
   },
   "paymentInformation": {
     "paymentAccountReference": {
@@ -735,7 +735,7 @@ Include these fields to retrieve a list of installment plans.
 
 [processingInformation.installmentServiceProvider](/docs/cybs/en-us/installment-plans/developer/all/rest/installment-plans/install-plan-reference-intro/processing-info-instal-serv-prdr.md "")
 :
-Set to `Visa`.
+Set to `Relay`.
 
 Required Token Fields {#install-plan-get-plan-token-reqfields_token-fields}
 ---------------------------------------------------------------------------
@@ -765,7 +765,7 @@ Request
 ```
 {
   "processingInformation": {
-    "installmentServiceProvider": "Visa"
+    "installmentServiceProvider": "Relay"
   },
   "paymentInformation": {
     "instrumentIdentifier": {
@@ -1074,7 +1074,7 @@ Set to the authorization code shown in the initial authorization response as the
 
 [processingInformation.installmentServiceProvider](/docs/cybs/en-us/installment-plans/developer/all/rest/installment-plans/install-plan-reference-intro/processing-info-instal-serv-prdr.md "")
 :
-Set to `Visa`.
+Set to `Relay`.
 
 `REST API` Example: Select an Installment Plan with a PAN {#install-plan-select-plan-ex-rest}
 =============================================================================================
@@ -1084,7 +1084,7 @@ Request
 ```
 {
   "processingInformation": {
-    "installmentServiceProvider": "Visa",
+    "installmentServiceProvider": "Relay",
     "authorizationOptions": {
       "authorizationCode": "888889",
       "authorizationDateTime": "2020-09-02T16:40:45.827Z"
@@ -1179,7 +1179,7 @@ Set to the identifier from the processorInformation.networkTransactionId field i
 
 [processingInformation.installmentServiceProvider](/docs/cybs/en-us/installment-plans/developer/all/rest/installment-plans/install-plan-reference-intro/processing-info-instal-serv-prdr.md "")
 :
-Set to `Visa`.
+Set to `Relay`.
 {#install-plan-select-plan-ntid-reqfields_dl_l5x_vr4_jyb}
 
 Related Information
@@ -1196,7 +1196,7 @@ Request
 ```
 {
   "processingInformation": {
-    "installmentServiceProvider": "Visa",
+    "installmentServiceProvider": "Relay",
     "authorizationOptions": {
       "networkTransactionId": "178896882917673",
       "authorizationDateTime": "2020-09-02T16:40:45.827Z"
@@ -1291,7 +1291,7 @@ Set to the authorization code shown in the initial authorization response as the
 
 [processingInformation.installmentServiceProvider](/docs/cybs/en-us/installment-plans/developer/all/rest/installment-plans/install-plan-reference-intro/processing-info-instal-serv-prdr.md "")
 :
-Set to `Visa`.
+Set to `Relay`.
 
 Related Information
 -------------------
@@ -1307,7 +1307,7 @@ Request
 ```
 {
   "processingInformation": {
-    "installmentServiceProvider": "Visa",
+    "installmentServiceProvider": "Relay",
     "authorizationOptions": {
       "authorizationCode": "888887",
       "authorizationDateTime": "2020-09-02T16:40:45.827Z"
@@ -1402,7 +1402,7 @@ Set to the identifier from the processorInformation.networkTransactionId field i
 
 [processingInformation.installmentServiceProvider](/docs/cybs/en-us/installment-plans/developer/all/rest/installment-plans/install-plan-reference-intro/processing-info-instal-serv-prdr.md "")
 :
-Set to `Visa`.
+Set to `Relay`.
 {#install-plan-select-par-plan-ntid-reqfields_dl_skg_vr4_jyb}
 
 Related Information
@@ -1419,7 +1419,7 @@ Request
 ```
 {
   "processingInformation": {
-    "installmentServiceProvider": "Visa",
+    "installmentServiceProvider": "Relay",
     "authorizationOptions": {
       "networkTransactionId": "178896882917659",
       "authorizationDateTime": "2020-09-02T16:40:45.827Z"
@@ -1520,7 +1520,7 @@ Set to the authorization code shown in the initial authorization response as the
 
 [processingInformation.installmentServiceProvider](/docs/cybs/en-us/installment-plans/developer/all/rest/installment-plans/install-plan-reference-intro/processing-info-instal-serv-prdr.md "")
 :
-Set to `Visa`.
+Set to `Relay`.
 
 Required Token Fields {#install-plan-select-plan-token-reqfields_section_ug4_qhx_fyb}
 -------------------------------------------------------------------------------------
@@ -1550,7 +1550,7 @@ Request with Authorization Code
 ```
 {
   "processingInformation": {
-    "installmentServiceProvider": "Visa",
+    "installmentServiceProvider": "Relay",
     "authorizationOptions": {
       "authorizationCode": "888884",
       "authorizationDateTime": "2020-09-02T16:40:45.827Z"
@@ -1651,7 +1651,7 @@ Set to the identifier from the processorInformation.networkTransactionId field i
 
 [processingInformation.installmentServiceProvider](/docs/cybs/en-us/installment-plans/developer/all/rest/installment-plans/install-plan-reference-intro/processing-info-instal-serv-prdr.md "")
 :
-Set to `Visa`.
+Set to `Relay`.
 {#install-plan-select-plan-token-ntid-reqfields_dl_ujb_5r4_jyb}
 
 Required Token Fields {#install-plan-select-plan-token-ntid-reqfields_section_ug4_qhx_fyb}
@@ -1688,7 +1688,7 @@ Request
 ```
 {
   "processingInformation": {
-    "installmentServiceProvider": "Visa",
+    "installmentServiceProvider": "Relay",
     "authorizationOptions": {
       "networkTransactionId": "178896882917745",
       "authorizationDateTime": "2020-09-02T16:40:45.827Z"
@@ -1799,7 +1799,7 @@ Set to the authorization code shown in the initial authorization response as the
 
 [processingInformation.installmentServiceProvider](/docs/cybs/en-us/installment-plans/developer/all/rest/installment-plans/install-plan-reference-intro/processing-info-instal-serv-prdr.md "")
 :
-Set to `Visa`.
+Set to `Relay`.
 {#install-plan-cancel-plan-auth-code-reqfields_dl_t5r_lkv_cyb}
 
 Required Field for a Partial Refund {#install-plan-cancel-plan-auth-code-reqfields_section_m1b_fyq_fyb}
@@ -1830,7 +1830,7 @@ Request
 ```
 {
   "processingInformation": {
-    "installmentServiceProvider": "Visa",
+    "installmentServiceProvider": "Relay",
     "authorizationOptions": {
       "authorizationCode": "888888",
       "authorizationDateTime": "2020-09-02T16:40:45.827Z"
@@ -1914,7 +1914,7 @@ Set to the identifier from the processorInformation.networkTransactionId field i
 
 [processingInformation.installmentServiceProvider](/docs/cybs/en-us/installment-plans/developer/all/rest/installment-plans/install-plan-reference-intro/processing-info-instal-serv-prdr.md "")
 :
-Set to `Visa`.
+Set to `Relay`.
 {#install-plan-cancel-net-txn-id-reqfields_dl_bwd_kkv_cyb}
 
 Required Field for a Partial Refund {#install-plan-cancel-net-txn-id-reqfields_partial-refund}
@@ -1934,7 +1934,7 @@ Request
 ```
 {
   "processingInformation": {
-    "installmentServiceProvider": "Visa",
+    "installmentServiceProvider": "Relay",
     "authorizationOptions": {
       "networkTransactionId": "178896882917784",
       "authorizationDateTime": "2020-09-02T16:40:45.827Z"
@@ -2017,7 +2017,7 @@ Set to the authorization code shown in the initial authorization response as the
 
 [processingInformation.installmentServiceProvider](/docs/cybs/en-us/installment-plans/developer/all/rest/installment-plans/install-plan-reference-intro/processing-info-instal-serv-prdr.md "")
 :
-Set to `Visa`.
+Set to `Relay`.
 
 Required Field for a Partial Refund {#install-plan-cancel-plan-auth-code-par-reqfields_section_m1b_fyq_fyb}
 -----------------------------------------------------------------------------------------------------------
@@ -2042,7 +2042,7 @@ Request
 ```
 {
   "processingInformation": {
-    "installmentServiceProvider": "Visa",
+    "installmentServiceProvider": "Relay",
     "authorizationOptions": {
       "authorizationCode": "888881",
       "authorizationDateTime": "2023-07-24T16:42:52Z"
@@ -2127,7 +2127,7 @@ Set to the identifier from the processorInformation.networkTransactionId field i
 
 [processingInformation.installmentServiceProvider](/docs/cybs/en-us/installment-plans/developer/all/rest/installment-plans/install-plan-reference-intro/processing-info-instal-serv-prdr.md "")
 :
-Set to `Visa`.
+Set to `Relay`.
 {#install-plan-cancel-net-txn-id-par-reqfields_dl_btt_lyp_fyb}
 
 Required Field for a Partial Refund {#install-plan-cancel-net-txn-id-par-reqfields_section_m1b_fyq_fyb}
@@ -2153,7 +2153,7 @@ Request
 ```
 {
   "processingInformation": {
-    "installmentServiceProvider": "Visa",
+    "installmentServiceProvider": "Relay",
     "authorizationOptions": {
       "networkTransactionId": "178896882917423",
       "authorizationDateTime": "2023-07-24T16:56:12Z"
@@ -2246,7 +2246,7 @@ Only include this field if the processorInformation.approvalCode response field 
 
 [processingInformation.installmentServiceProvider](/docs/cybs/en-us/installment-plans/developer/all/rest/installment-plans/install-plan-reference-intro/processing-info-instal-serv-prdr.md "")
 :
-Set to `Visa`.
+Set to `Relay`.
 
 Required Token Fields {#install-plan-cancel-plan-auth-code-token-reqfields_section_ug4_qhx_fyb}
 -----------------------------------------------------------------------------------------------
@@ -2285,7 +2285,7 @@ Request
 ```
 {
   "processingInformation": {
-    "installmentServiceProvider": "Visa",
+    "installmentServiceProvider": "Relay",
     "authorizationOptions": {
       "authorizationCode": "888884",
       "authorizationDateTime": "2020-09-02T16:40:45.827Z"
@@ -2373,7 +2373,7 @@ Set to the identifier from the processorInformation.networkTransactionId field i
 
 [processingInformation.installmentServiceProvider](/docs/cybs/en-us/installment-plans/developer/all/rest/installment-plans/install-plan-reference-intro/processing-info-instal-serv-prdr.md "")
 :
-Set to `Visa`.
+Set to `Relay`.
 
 Required Token Fields {#install-plan-cancel-net-txn-id-token-reqfields_section_ug4_qhx_fyb}
 -------------------------------------------------------------------------------------------
@@ -2412,7 +2412,7 @@ Request
 ```
 {
   "processingInformation": {
-    "installmentServiceProvider": "Visa",
+    "installmentServiceProvider": "Relay",
     "authorizationOptions": {
       "networkTransactionId": "178896882917745",
       "authorizationDateTime": "2023-07-25T16:19:14Z"
@@ -2552,10 +2552,10 @@ Mapping {#install-info-plan-details-fund-by_Mapping}
 installmentInformation. planDetails\[\]. identifier {#install-info-plan-details-id}
 ===================================================================================
 
-The *plan registration system identifier* is the unique Visa-generated name of the Installment Plan. It consists of alphanumerical characters and is intended to be easily readable by you and your customers.  
+The *plan registration system identifier* is the unique Relay-generated name of the Installment Plan. It consists of alphanumerical characters and is intended to be easily readable by you and your customers.  
 Some processors and countries require that the plan registration system identifier be included in the initial authorization request for an installment plan. For more information about whether this requirement applies to your organization, contact your `Cybersource` account manager.
 
-`Visa Platform Connect`
+`Platform Connect`
 :
 * Authorizations:
 * Field: 104
@@ -2747,7 +2747,7 @@ Service provider for the installment services.
 
 Possible value:
 :
-`Visa`
+`Relay`
 
 Specifications {#processing-info-instal-serv-prdr_Specifications}
 -----------------------------------------------------------------

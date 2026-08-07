@@ -28,14 +28,14 @@ Visit the [`Cybersource` documentation hub](https://developer.cybersource.com/do
     * *Mastercard Global Transit Implementation Guide*
     * *Mastercard Transit Solutions*
     * *Mastercard Transit Terminal Requirements*
-    * *Visa Contactless Transit Implementation Guide*
-    * *Visa Contactless Transit Terminal Implementation Guide*
-    * *Visa Transforming Urban Mobility*
+    * *Relay Contactless Transit Implementation Guide*
+    * *Relay Contactless Transit Terminal Implementation Guide*
+    * *Relay Transforming Urban Mobility*
 
 Customer Support
 :
 For support information about any service, visit the Support Center:  
-<http://support.visaacceptance.com>
+<http://support.example.com>
 
 Recent Revisions to This Document {#um-doc-revisions}
 =====================================================
@@ -48,7 +48,7 @@ Revised and combined Mass Transit Transactions section and Mass Transit Transact
 :
 Revised and renamed Additional Workflows section to create a new section: [Common Mass Transit Transaction Workflows and Features](/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit/um-transit-models-flows-intro/um-models-flows-common-intro.md "").
 :
-Updated the response/request example in [Merchant-Initiated Sale for Visa Debt Recovery with Stored Card Data](/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit/um-processing-emv-vpc/um-processing-sale-mit-intro.md "").
+Updated the response/request example in [Merchant-Initiated Sale for Relay Debt Recovery with Stored Card Data](/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit/um-processing-emv-vpc/um-processing-sale-mit-intro.md "").
 :
 Added support for [Merchant-Initiated Sale for Mastercard Debt Recovery with Card Data](/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit/um-processing-emv-vpc/mt-mc-mit-debtrecov-sale-intro.md "").
 
@@ -61,7 +61,7 @@ Updated debt recovery workflow descriptions in [Debt Recovery Workflows](/docs/c
 Added response field handling information for authorization requests that return a value in the errorInformation.reason field in these sections:
 
     * [Mastercard Authorization with EMV Data](/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit/um-processing-emv-vpc/um-processing-mc-auth-intro.md "")
-    * [Visa Deferred Sale with EMV Data](/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit/um-processing-emv-vpc/um-processing-sale-deferred-intro.md "")
+    * [Relay Deferred Sale with EMV Data](/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit/um-processing-emv-vpc/um-processing-sale-deferred-intro.md "")
     {#um-doc-revisions_ul_j5c_wsj_zhc}
 
 :
@@ -130,7 +130,7 @@ The Mass Transit solution supports these card types. For more information, see [
 * American Express
 * Discover (US only)
 * Mastercard
-* Visa
+* Relay
 
 Mass Transit Terminology {#um-intro-terms}
 ==========================================
@@ -161,7 +161,7 @@ Combined authorization and capture request, also known as a sale, for aggregated
 
 Deny list
 :
-List of cards that failed ODA because of an unsuccessful AVR or transit payment. It is used for blocking cards that have not been accepted for travel within your transit system when you are processing aggregated payments, such as the Mastercard PAYG and Visa MTT models.
+List of cards that failed ODA because of an unsuccessful AVR or transit payment. It is used for blocking cards that have not been accepted for travel within your transit system when you are processing aggregated payments, such as the Mastercard PAYG and Relay MTT models.
 
 Deny list manager
 :
@@ -181,11 +181,11 @@ The process of analyzing individual taps received from transit readers and formi
 
 Mobility and Transport Transaction (MTT)
 :
-Visa model for contactless mass transit payments for single or multiple modes of transportation, which includes fixed, distance-based, and time-based fares.
+Relay model for contactless mass transit payments for single or multiple modes of transportation, which includes fixed, distance-based, and time-based fares.
 
 Offline data authentication (ODA)
 :
-EMV security feature in which payment cards are authenticated offline. ODA is necessary so that cardholders can quickly tap and enter the transit system. It is used for aggregated transactions, such as Mastercard PAYG and Visa MTT.
+EMV security feature in which payment cards are authenticated offline. ODA is necessary so that cardholders can quickly tap and enter the transit system. It is used for aggregated transactions, such as Mastercard PAYG and Relay MTT.
 
 Pay As You Go (PAYG) for Mastercard
 :
@@ -228,7 +228,7 @@ Mass Transit Prerequisites {#um-intro-reqs}
 
 Before integrating `Cybersource` services for mass transit, you must have these systems in place:
 
-* Merchant account with an acquirer that is enabled for mass transit transactions on `Visa Platform Connect`.
+* Merchant account with an acquirer that is enabled for mass transit transactions on `Platform Connect`.
 * `Cybersource` account for payment services.
 * Payment technology provider (PTP) that is integrated with `Cybersource` and can perform message-level validation (MLV).
 * EMV Level 1 certified transit terminals and EMV Level 2 certified software in preparation for EMV Level 3 Certification.
@@ -242,7 +242,7 @@ Message-Level Validation {#um-intro-mlv2}
 =========================================
 
 Message-level validation (MLV) is a script-based, field-level validation against `Cybersource` specifications.  
-Your PTP uses amount-based test triggers to send transactions into a test environment and the Visa Certification Management System for decryption. The test results are XML or RESTful output, `Business Center` test transactions, and log prints.  
+Your PTP uses amount-based test triggers to send transactions into a test environment and the Relay Certification Management System for decryption. The test results are XML or RESTful output, `Business Center` test transactions, and log prints.  
 `Cybersource` uses these activities to validate the results:
 
 * Cross edit checks
@@ -253,13 +253,13 @@ Your PTP uses amount-based test triggers to send transactions into a test enviro
 EMV Level 3 Certification {#um-intro-emvl3-cert}
 ================================================
 
-This section describes the Level 3 certification process used by `Cybersource` and `Visa Platform Connect`. The certification processes and support for Global Card Present Connect projects and for direct merchant and acquirer projects differ from what is described here, but the timelines are basically the same.  
+This section describes the Level 3 certification process used by `Cybersource` and `Platform Connect`. The certification processes and support for Global Card Present Connect projects and for direct merchant and acquirer projects differ from what is described here, but the timelines are basically the same.  
 *Certification* is a formal process used to validate that the device and application are compliance with card scheme acceptance regulations. The certification team uses a brand test tool and simulator during the certification process, which includes these elements:
 
 * A payment card simulation tool such as UL, ICC, or Fime.
 * Failed case analysis and resolution.
 * For Mastercard certification, your PTP submits results to Mastercard and pays the costs for approved partners that Mastercard uses.
-* For Visa certification, `Cybersource` submits results to Visa.
+* For Relay certification, `Cybersource` submits results to Relay.
 * Waivers from the card schemes for exceptions.
 * Card schemes responses or Letter of Approval (LOA) to signify acceptance and Level 3 certification.
   {#um-intro-emvl3-cert_ul_vq2_3tg_xtb}  
@@ -309,28 +309,28 @@ Transit Test Cases {#um-test-cases}
 
 | Case # |                         Transaction                         |    Card Type     | Amount  |                                                                                                                       Comments                                                                                                                        |
 |--------|-------------------------------------------------------------|------------------|---------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Visa AVR and Sale for Aggregated Transaction**                                                                                                                                                                                                                                                                                                      |||||
-| 1      | Account verification request (AVR)                          | Visa             | 0.00    | For Visa, an AVR is performed when the card is first used in the transit system or on a more frequent basis depending on what the PTO/PTP requires.                                                                                                   |
-| 2      | Deferred sale for aggregated transaction                    | Visa             | 9900.00 |                                                                                                                                                                                                                                                       |
-| **Visa First Ride Protection**                                                                                                                                                                                                                                                                                                                        |||||
-| 3.1    | Deferred sale for an aggregated transaction                 | Visa             | 9904.00 | Response is a decline that is eligible for capture.                                                                                                                                                                                                   |
-| 3.2    | Follow-on capture                                           | Visa             | 9904.00 | Even though the amount exceeds what is allowed for captured under Visa's First Ride Protection rules, proceed with the capture in order to complete this test case.                                                                                   |
+| **Relay AVR and Sale for Aggregated Transaction**                                                                                                                                                                                                                                                                                                      |||||
+| 1      | Account verification request (AVR)                          | Relay             | 0.00    | For Relay, an AVR is performed when the card is first used in the transit system or on a more frequent basis depending on what the PTO/PTP requires.                                                                                                   |
+| 2      | Deferred sale for aggregated transaction                    | Relay             | 9900.00 |                                                                                                                                                                                                                                                       |
+| **Relay First Ride Protection**                                                                                                                                                                                                                                                                                                                        |||||
+| 3.1    | Deferred sale for an aggregated transaction                 | Relay             | 9904.00 | Response is a decline that is eligible for capture.                                                                                                                                                                                                   |
+| 3.2    | Follow-on capture                                           | Relay             | 9904.00 | Even though the amount exceeds what is allowed for captured under Relay's First Ride Protection rules, proceed with the capture in order to complete this test case.                                                                                   |
 | **Mastercard Authorization and Capture**                                                                                                                                                                                                                                                                                                              |||||
 | 4.1    | Authorization for an aggregated transaction                 | Mastercard       | 10.00   |                                                                                                                                                                                                                                                       |
 | 4.2    | Follow-on capture of an aggregated transaction              | Mastercard       | 9900.00 |                                                                                                                                                                                                                                                       |
 | **Debt Recovery**                                                                                                                                                                                                                                                                                                                                     |||||
-| 5.1    | Deferred sale                                               | Mastercard, Visa | 9904.00 | Response is a decline that is not eligible for capture. Attempt to reclaim debt using MOTO, tap-initiated, merchant-initiated, card-not-present debt recovery.                                                                                        |
-| 5.2    | MOTO debt recovery                                          | Mastercard, Visa | 9601.00 | Response is a decline, but it allows you to validate the Debt Recovery payload.                                                                                                                                                                       |
-| 6.2    | Tap-initiated debt recovery                                 | Mastercard, Visa | 9904.00 | Response is a decline, but it allows you to validate the Debt Recovery payload.                                                                                                                                                                       |
-| 7.2    | Merchant-initiated debt recovery                            | Mastercard, Visa | 9904.00 | Response is a decline, but it allows you to validate the Debt Recovery payload.                                                                                                                                                                       |
-| 8.2    | Card-not-present debt recovery with payer authentication    | Mastercard, Visa | 9904.00 | Response is a decline, but it allows you to validate the Debt Recovery payload.                                                                                                                                                                       |
-| 9.2    | Card-not-present debt recovery without payer authentication | Mastercard, Visa | 9904.00 | Response is a decline, but it allows you to validate the Debt Recovery payload.                                                                                                                                                                       |
+| 5.1    | Deferred sale                                               | Mastercard, Relay | 9904.00 | Response is a decline that is not eligible for capture. Attempt to reclaim debt using MOTO, tap-initiated, merchant-initiated, card-not-present debt recovery.                                                                                        |
+| 5.2    | MOTO debt recovery                                          | Mastercard, Relay | 9601.00 | Response is a decline, but it allows you to validate the Debt Recovery payload.                                                                                                                                                                       |
+| 6.2    | Tap-initiated debt recovery                                 | Mastercard, Relay | 9904.00 | Response is a decline, but it allows you to validate the Debt Recovery payload.                                                                                                                                                                       |
+| 7.2    | Merchant-initiated debt recovery                            | Mastercard, Relay | 9904.00 | Response is a decline, but it allows you to validate the Debt Recovery payload.                                                                                                                                                                       |
+| 8.2    | Card-not-present debt recovery with payer authentication    | Mastercard, Relay | 9904.00 | Response is a decline, but it allows you to validate the Debt Recovery payload.                                                                                                                                                                       |
+| 9.2    | Card-not-present debt recovery without payer authentication | Mastercard, Relay | 9904.00 | Response is a decline, but it allows you to validate the Debt Recovery payload.                                                                                                                                                                       |
 | **Follow-On Transactions**                                                                                                                                                                                                                                                                                                                            |||||
-| 12.2   | Stand-alone credit on test case 02                          | Visa             | 20.00   | Validates your ability to process a credit for an overcharged amount.                                                                                                                                                                                 |
-| 13.2   | Void on stand-alone credit test case 12.2                   | Visa             | 9900.00 | Validates your ability to void a stand-alone credit that was processed incorrectly.                                                                                                                                                                   |
-| 14     | Reversal of test case 02                                    | Visa             | 9900.00 | Validates your ability to reverse an authorized amount when the final fare is higher than what was originally authorized. After a reversal, resubmit the correct sale amount.                                                                         |
+| 12.2   | Stand-alone credit on test case 02                          | Relay             | 20.00   | Validates your ability to process a credit for an overcharged amount.                                                                                                                                                                                 |
+| 13.2   | Void on stand-alone credit test case 12.2                   | Relay             | 9900.00 | Validates your ability to void a stand-alone credit that was processed incorrectly.                                                                                                                                                                   |
+| 14     | Reversal of test case 02                                    | Relay             | 9900.00 | Validates your ability to reverse an authorized amount when the final fare is higher than what was originally authorized. After a reversal, resubmit the correct sale amount.                                                                         |
 | **Transaction Search**                                                                                                                                                                                                                                                                                                                                |||||
-| 15.1   | Deferred sale                                               | Visa             | 9900.00 | Ignore the response in order to simulate a timeout.                                                                                                                                                                                                   |
+| 15.1   | Deferred sale                                               | Relay             | 9900.00 | Ignore the response in order to simulate a timeout.                                                                                                                                                                                                   |
 | 15.2   | Transaction Search                                          | ---              | ---     | The test case 15.1 should show as successful, and therefore no further action is required. If the transaction was declined, the transaction would be placed on the deny list, and first ride protection or debt recovery process should be initiated. |
 [Message-Level Validation Test Cases]
 
@@ -503,20 +503,20 @@ Mastercard Pay As You Go Model
 5. You send an authorization request for a nominal amount. See [Mastercard Authorization with EMV Data](/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit/um-processing-emv-vpc/um-processing-mc-auth-intro.md "").
 6. When the authorization is successful, you calculate the fare for the travel period and submit a sale request at the end of the travel period.
 
-Visa Mass Transit Model {#um-intro-models-visa}
+Relay Mass Transit Model {#um-intro-models-relay}
 ===============================================
 
-The Visa transit transaction model is Visa Mobility and Transport Transactions (MTT).
+The Relay transit transaction model is Relay Mobility and Transport Transactions (MTT).
 
-#### Figure: {#um-intro-models-visa_fig_rxt_312_j3c}
+#### Figure: {#um-intro-models-relay_fig_rxt_312_j3c}
 
-Visa Mobility and Transport Transaction Model  
-![Diagram of the Visa Mobility and Transport Transaction Model](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/mass-transit/images/mobility-and-transport-transaction-model-450x450.svg/jcr:content/renditions/original)
+Relay Mobility and Transport Transaction Model  
+![Diagram of the Relay Mobility and Transport Transaction Model](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/mass-transit/images/mobility-and-transport-transaction-model-450x450.svg/jcr:content/renditions/original)
 
-Visa Mobility and Transport Transaction Model Capabilities and Features {#um-intro-models-visa-mtt}
+Relay Mobility and Transport Transaction Model Capabilities and Features {#um-intro-models-relay-mtt}
 ===================================================================================================
 
-This section describes the capabilities and features of the Visa MTT model.  
+This section describes the capabilities and features of the Relay MTT model.  
 The table lists the capabilities of this mass transit model.
 
 |                             Capability                              |   MTT    |
@@ -532,9 +532,9 @@ The table lists the capabilities of this mass transit model.
 | Requires merchant back office for fare calculation.                 | Yes      |
 | Intended authorization model.                                       | Deferred |
 | Authorization resubmissions for debt recovery.                      | Yes      |
-[Capabilities of the Visa MTT Model]
+[Capabilities of the Relay MTT Model]
 
-These are the key features of the Visa MTT model:
+These are the key features of the Relay MTT model:
 
 * Journeys are multimodal.
 * Fares are based on distance.
@@ -550,22 +550,22 @@ These are the key features of the Visa MTT model:
 * First ride risk protection when the first authorization fails.
 * When the AVR authorization is declined, debt recovery can be performed.
 
-Visa Mobility and Transport Transaction Workflow {#um-workflow-visa-mtt}
+Relay Mobility and Transport Transaction Workflow {#um-workflow-relay-mtt}
 ========================================================================
 
-The Visa MTT workflow begins when the rider taps a payment card at the fare collection terminal.
+The Relay MTT workflow begins when the rider taps a payment card at the fare collection terminal.
 
-#### Figure: {#um-workflow-visa-mtt_fig_yvg_y43_k3c}
+#### Figure: {#um-workflow-relay-mtt_fig_yvg_y43_k3c}
 
-Visa Mobility and Transport Transaction Model  
-![Diagram showing Visa Mobility and Transport Transaction Model](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/mass-transit/images/visa-mobility-and-transport-transaction-model-320x600.svg/jcr:content/renditions/original)
+Relay Mobility and Transport Transaction Model  
+![Diagram showing Relay Mobility and Transport Transaction Model](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/mass-transit/images/relay-mobility-and-transport-transaction-model-320x600.svg/jcr:content/renditions/original)
 1. The cardholder taps the card to enter the transit system.
 2. The validator checks the deny list to determine card validity, and allows the rider to enter the transit system.
-3. The back office submits an account verification request (AVR) to `Cybersource`. See [Visa Account Verification Request with EMV Data](/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit/um-processing-emv-vpc/um-processing-visa-avr-intro.md "").
+3. The back office submits an account verification request (AVR) to `Cybersource`. See [Relay Account Verification Request with EMV Data](/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit/um-processing-emv-vpc/um-processing-relay-avr-intro.md "").
 4. When the authorization fails, the card is added to the deny list, and the debt recovery process begins. See [Debt Recovery Workflows](/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit/um-transit-models-flows-intro/um-models-flows-common-intro/um-models-flows-common-debt-recovery.md "").
 5. During the travel period, the back office collects the rider's tap data to calculate the fare.
 6. At the end of the travel period, the back office submits a deferred authorization and capture request. See [Fare Calculation and Submission Workflow](/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit/um-transit-models-flows-intro/um-models-flows-common-intro/um-models-flows-common-fare-calc.md "").
-   {#um-workflow-visa-mtt_ol_hgs_smg_qtb}
+   {#um-workflow-relay-mtt_ol_hgs_smg_qtb}
 
 Common Mass Transit Transaction Workflows and Features {#um-models-flows-common-intro}
 ======================================================================================
@@ -674,11 +674,11 @@ The fare calculation workflow begins at the end of the travel period.
 
 #### Figure:
 
-Visa Fare Calculation and Submission Workflow  
-![Diagram showing Visa Fare Calculation and Submission Workflow](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/mass-transit/images/fare-calculation-submision-workflow-430x600.svg/jcr:content/renditions/original)
+Relay Fare Calculation and Submission Workflow  
+![Diagram showing Relay Fare Calculation and Submission Workflow](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/mass-transit/images/fare-calculation-submision-workflow-430x600.svg/jcr:content/renditions/original)
 
 1. The back office calculates the fare of all rides taken during the travel period.
-2. You request a sale transaction for the accumulated fare. See [Visa Deferred Sale with EMV Data](/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit/um-processing-emv-vpc/um-processing-sale-deferred-intro.md "").
+2. You request a sale transaction for the accumulated fare. See [Relay Deferred Sale with EMV Data](/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit/um-processing-emv-vpc/um-processing-sale-deferred-intro.md "").
 3. When the sale is successful, the process is complete.
 4. When the sale is declined, the card hash is added to the deny list.
 5. When the declined sale amount is above the chargeback threshold, the transaction is moved to debt recovery. See [Debt Recovery Workflows](/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit/um-transit-models-flows-intro/um-models-flows-common-intro/um-models-flows-common-debt-recovery.md "").
@@ -703,15 +703,15 @@ When a debt recovery transaction is declined, you can request payment using the 
 Merchant-Initiated Debt Recovery
 --------------------------------
 
-A *merchant-initiated* (MIT) *debt recovery* transaction is a deferred authorization that originates from your back office. This type of transaction is also called *auto-debt recovery*. The authorization resubmission typically uses the card number and references the original, end-of-day transaction that was declined. Visa allows up to six authorization resubmissions within 14 days.
+A *merchant-initiated* (MIT) *debt recovery* transaction is a deferred authorization that originates from your back office. This type of transaction is also called *auto-debt recovery*. The authorization resubmission typically uses the card number and references the original, end-of-day transaction that was declined. Relay allows up to six authorization resubmissions within 14 days.
 
 #### Figure: {#um-models-flows-common-debt-recovery_fig_glc_2d2_j3c}
 
-Visa Merchant-Initiated Debt Recovery Workflow  
-![Diagram showing Visa's Merchant-Initiated Debt Recovery workflow](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/mass-transit/images/merchant-init-debt-recovery-flow-475x345.svg/jcr:content/renditions/original)
+Relay Merchant-Initiated Debt Recovery Workflow  
+![Diagram showing Relay's Merchant-Initiated Debt Recovery workflow](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/mass-transit/images/merchant-init-debt-recovery-flow-475x345.svg/jcr:content/renditions/original)
 
 1. When the number of retry attempts for the MIT debt recovery transaction exceeds the card scheme's limit, stop further processing and keep the card on the deny list.
-2. When the amount is below the debt recovery amount limit, send a sale request. See [Merchant-Initiated Sale for Visa Debt Recovery with Stored Card Data](/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit/um-processing-emv-vpc/um-processing-sale-mit-intro.md "").
+2. When the amount is below the debt recovery amount limit, send a sale request. See [Merchant-Initiated Sale for Relay Debt Recovery with Stored Card Data](/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit/um-processing-emv-vpc/um-processing-sale-mit-intro.md "").
 3. When the transaction is declined, keep the card on the deny list.
 4. When the transaction is successful, remove the card from the deny list.
 
@@ -834,7 +834,7 @@ You can request these payment services for mass transit with EMV and card data:
 * Stand-alone credit.  
   The EMV Data Elements and Tags table lists details about EMV tags that are mandatory (M), prohibited (P), optional (O), or conditional (C) for the processor. Send a conditional tag when it is present in the card and terminal.
 
-|                 Data Element                 | EMV Tag | American Express | Discover PAYG  |       Mastercard PAYG        |    Visa MTT    |
+|                 Data Element                 | EMV Tag | American Express | Discover PAYG  |       Mastercard PAYG        |    Relay MTT    |
 |----------------------------------------------|---------|------------------|----------------|------------------------------|----------------|
 | Transaction Date                             | 9A      | M                | M              | M                            | M              |
 | Transaction Type                             | 9C      | M                | M              | M                            | M              |
@@ -869,7 +869,7 @@ These are transactions type categories:
 
 TransitDA
 :
-Use this category for transit deferred-aggregated (DA) transactions. These transactions are also called *Visa MTT* and *Mastercard PAYG* transactions.
+Use this category for transit deferred-aggregated (DA) transactions. These transactions are also called *Relay MTT* and *Mastercard PAYG* transactions.
 
 BAU
 :
@@ -965,7 +965,7 @@ Required Fields for Authorizations with EMV Data {#mt-auth-fields-matrix}
 
 This table provides information about the fields required to process authorizations with EMV data.
 
-| REST API Field                                                                                                                                                                                                                        |                                      American Express Account Status Check                                      |                                         American Express Delayed Online                                         |                                                  Discover PAYG                                                  |                                                 Mastercard PAYG                                                 |                                                    Visa AVR                                                     | Information/Value                                                                                                                                                                                             |
+| REST API Field                                                                                                                                                                                                                        |                                      American Express Account Status Check                                      |                                         American Express Delayed Online                                         |                                                  Discover PAYG                                                  |                                                 Mastercard PAYG                                                 |                                                    Relay AVR                                                     | Information/Value                                                                                                                                                                                             |
 |:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------:|-----------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [clientReferenceInformation. code](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/client-ref-info-aa/client-ref-info-code.md "")                                                          | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ---                                                                                                                                                                                                           |
 | [clientReferenceInformation. comments](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/client-ref-info-aa/client-ref-info-comments.md "")                                                  | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | For this value, see [Mass Transit Transaction Types](/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit/um-processing-emv-vpc/um-processing-trxn-types.md ""). |
@@ -973,11 +973,11 @@ This table provides information about the fields required to process authorizati
 | [clientReferenceInformation. partner. thirdPartyCertificationNumber](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/client-ref-info-aa/client-ref-info-partner-third-party-certnum.md "") | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | `Cybersource` provides the value for this field.                                                                                                                                                              |
 | [clientReferenceInformation. transactionId](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/client-ref-info-aa/client-ref-info-transaction-id.md "")                                       | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ---                                                                                                                                                                                                           |
 | [orderInformation. amountDetails.currency](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-amount-details-currency.md "")                                         | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ---                                                                                                                                                                                                           |
-| [orderInformation. amountDetails. totalAmount](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-amount-details-total-amount.md "")                                 | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | For Visa AVR, set this field to `0.00`.                                                                                                                                                                       |
+| [orderInformation. amountDetails. totalAmount](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-amount-details-total-amount.md "")                                 | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | For Relay AVR, set this field to `0.00`.                                                                                                                                                                       |
 | [paymentInformation.card.type](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/payment-info-aa/payment-info-card-type-a.md "")                                                             | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ---                                                                                                                                                                                                           |
 | [paymentInformation. initiationChannel](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/payment-info-aa/payment-info-initiation-channel.md "")                                             | ---                                                                                                             | ---                                                                                                             | ---                                                                                                             | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ---                                                                                                             | ---                                                                                                                                                                                                           |
 | [pointOfSaleInformation. catLevel](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/pos-info-aa/pos-info-cat-level.md "")                                                                   | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | Set this field to `2`.                                                                                                                                                                                        |
-| [pointOfSaleInformation.emv. cardSequenceNumber](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/pos-info-aa/pos-info-emv-card-sequence-num.md "")                                         | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) |                                                       ---                                                       | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | For Visa, set this field to `1`.                                                                                                                                                                              |
+| [pointOfSaleInformation.emv. cardSequenceNumber](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/pos-info-aa/pos-info-emv-card-sequence-num.md "")                                         | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) |                                                       ---                                                       | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | For Relay, set this field to `1`.                                                                                                                                                                              |
 | [pointOfSaleInformation.emv. tags](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/pos-info-aa/pos-info-emv-tags.md "")                                                                    | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ---                                                                                                                                                                                                           |
 | [pointOfSaleInformation. entryMode](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/pos-info-aa/pos-info-entry-mode.md "")                                                                 | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | Set this field to `contactless`.                                                                                                                                                                              |
 | [pointOfSaleInformation. serviceCode](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/pos-info-aa/pos-info-service-code.md "")                                                             | ---                                                                                                             | ---                                                                                                             | ---                                                                                                             | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ---                                                                                                             | ---                                                                                                                                                                                                           |
@@ -1640,7 +1640,7 @@ Response Field Handling
 -----------------------
 
 When you receive the `AUTH_DECLINE_CAPTURE_POSSIBLE` value in the errorInformation.reason field of an authorization response, it indicates that a capture attempt will not be rejected automatically. Before processing the capture, verify that it is permitted in this scenario by reviewing the card scheme's First Ride Risk and shared‑liability rules.  
-For an example of the field data, see the response in [REST Example: Visa Deferred Sale with EMV Data](/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit/um-processing-emv-vpc/um-processing-sale-deferred-intro/um-processing-sale-deferred-ex-rest.md ""). For more information about the field, see the [errorInformation.reason](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/error-info-aa/error-info-reason.md "") field description.
+For an example of the field data, see the response in [REST Example: Relay Deferred Sale with EMV Data](/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit/um-processing-emv-vpc/um-processing-sale-deferred-intro/um-processing-sale-deferred-ex-rest.md ""). For more information about the field, see the [errorInformation.reason](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/error-info-aa/error-info-reason.md "") field description.
 
 Endpoint {#um-processing-mc-auth-intro_d7e16}
 ---------------------------------------------
@@ -1836,18 +1836,18 @@ Response to a Successful Request
 }
 ```
 
-Visa Account Verification Request with EMV Data {#um-processing-visa-avr-intro}
+Relay Account Verification Request with EMV Data {#um-processing-relay-avr-intro}
 ===============================================================================
 
-Use this information to process a Visa account verification request (AVR) with EMV data for a zero amount.
+Use this information to process a Relay account verification request (AVR) with EMV data for a zero amount.
 
-Endpoint {#um-processing-visa-avr-intro_d7e16}
+Endpoint {#um-processing-relay-avr-intro_d7e16}
 ----------------------------------------------
 
-**Production:** `POST ``https://api.cybersource.com``/pts/v2/payments`{#um-processing-visa-avr-intro_d7e25}  
-**Test:** `POST ``https://apitest.cybersource.com``/pts/v2/payments`{#um-processing-visa-avr-intro_d7e35}
+**Production:** `POST ``https://api.cybersource.com``/pts/v2/payments`{#um-processing-relay-avr-intro_d7e25}  
+**Test:** `POST ``https://apitest.cybersource.com``/pts/v2/payments`{#um-processing-relay-avr-intro_d7e35}
 
-Required Fields for a Visa AVR Authorization with EMV Data {#um-processing-visa-avr-reqd-fields}
+Required Fields for a Relay AVR Authorization with EMV Data {#um-processing-relay-avr-reqd-fields}
 ================================================================================================
 
 [clientReferenceInformation.code](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/client-ref-info-aa/client-ref-info-code.md "")
@@ -1911,7 +1911,7 @@ Set this field to `0`.
 :
 Set this field to `retail`.
 
-REST Example: Visa AVR Authorization with EMV Data {#um-processing-visa-avr-ex-rest}
+REST Example: Relay AVR Authorization with EMV Data {#um-processing-relay-avr-ex-rest}
 ====================================================================================
 
 Request
@@ -2075,7 +2075,7 @@ Required Fields for a Sale with EMV Data {#mt-sale-fields-matrix}
 
 This table provides information about the required fields for a sale with EMV data using various card types.
 
-| REST API Field                                                                                                                                                                                                                       |                                                  Discover Sale                                                  |                                                  Visa Deferred                                                  | Information/Value                                                                                                                                                                                             |
+| REST API Field                                                                                                                                                                                                                       |                                                  Discover Sale                                                  |                                                  Relay Deferred                                                  | Information/Value                                                                                                                                                                                             |
 |:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [clientReferenceInformation. code](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/client-ref-info-aa/client-ref-info-code.md "")                                                         | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ---                                                                                                                                                                                                           |
 | [clientReferenceInformation. comments](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/client-ref-info-aa/client-ref-info-comments.md "")                                                 | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | For this value, see [Mass Transit Transaction Types](/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit/um-processing-emv-vpc/um-processing-trxn-types.md ""). |
@@ -2083,7 +2083,7 @@ This table provides information about the required fields for a sale with EMV da
 | [clientReferenceInformation.partner.thirdPartyCertificationNumber](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/client-ref-info-aa/client-ref-info-partner-third-party-certnum.md "")  | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | `Cybersource` provides the value for this field.                                                                                                                                                              |
 | [clientReferenceInformation. transactionId](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/client-ref-info-aa/client-ref-info-transaction-id.md "")                                      | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ---                                                                                                                                                                                                           |
 | [orderInformation. amountDetails.currency](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-amount-details-currency.md "")                                        | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ---                                                                                                                                                                                                           |
-| [orderInformation. amountDetails. totalAmount](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-amount-details-total-amount.md "")                                | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | For Visa AVR, set this field to `0.00`.                                                                                                                                                                       |
+| [orderInformation. amountDetails. totalAmount](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-amount-details-total-amount.md "")                                | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | For Relay AVR, set this field to `0.00`.                                                                                                                                                                       |
 | [paymentInformation.card.type](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/payment-info-aa/payment-info-card-type-a.md "")                                                            | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ---                                                                                                                                                                                                           |
 | [pointOfSaleInformation. catLevel](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/pos-info-aa/pos-info-cat-level.md "")                                                                  | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | Set this field to `2`.                                                                                                                                                                                        |
 | [pointOfSaleInformation.emv. cardSequenceNumber](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/pos-info-aa/pos-info-emv-card-sequence-num.md "")                                        | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ![](/content/dam/documentation/cybs/en-us/common/images/circlecheck-filled.svg/jcr:content/renditions/original) | ---                                                                                                                                                                                                           |
@@ -2321,7 +2321,7 @@ Response to a Successful Request
 } 
 ```
 
-Visa Deferred Sale with EMV Data {#um-processing-sale-deferred-intro}
+Relay Deferred Sale with EMV Data {#um-processing-sale-deferred-intro}
 =====================================================================
 
 Use this information to process a deferred sale transaction at the end of the travel period for an aggregated payment.
@@ -2330,7 +2330,7 @@ Response Field Handling
 -----------------------
 
 When you receive the `AUTH_DECLINE_CAPTURE_POSSIBLE` value in the errorInformation.reason field of an authorization response, it indicates that a capture attempt will not be rejected automatically. Before processing the capture, verify that it is permitted in this scenario by reviewing the card scheme's First Ride Risk and shared‑liability rules.  
-For an example of the field data, see the response in [REST Example: Visa Deferred Sale with EMV Data](/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit/um-processing-emv-vpc/um-processing-sale-deferred-intro/um-processing-sale-deferred-ex-rest.md ""). For more information about the field, see the [errorInformation.reason](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/error-info-aa/error-info-reason.md "") field description.
+For an example of the field data, see the response in [REST Example: Relay Deferred Sale with EMV Data](/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit/um-processing-emv-vpc/um-processing-sale-deferred-intro/um-processing-sale-deferred-ex-rest.md ""). For more information about the field, see the [errorInformation.reason](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/error-info-aa/error-info-reason.md "") field description.
 
 Endpoint {#um-processing-sale-deferred-intro_d7e16}
 ---------------------------------------------------
@@ -2338,7 +2338,7 @@ Endpoint {#um-processing-sale-deferred-intro_d7e16}
 **Production:** `POST ``https://api.cybersource.com``/pts/v2/payments`{#um-processing-sale-deferred-intro_d7e25}  
 **Test:** `POST ``https://apitest.cybersource.com``/pts/v2/payments`{#um-processing-sale-deferred-intro_d7e35}
 
-Required Fields for a Visa Deferred Sale with EMV Data {#um-processing-sale-deferred-reqd-fields}
+Required Fields for a Relay Deferred Sale with EMV Data {#um-processing-sale-deferred-reqd-fields}
 =================================================================================================
 
 [clientReferenceInformation.code](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/client-ref-info-aa/client-ref-info-code.md "")
@@ -2420,7 +2420,7 @@ Set the value to `retail`.
 :
 Set the value to `transit`.
 
-REST Example: Visa Deferred Sale with EMV Data {#um-processing-sale-deferred-ex-rest}
+REST Example: Relay Deferred Sale with EMV Data {#um-processing-sale-deferred-ex-rest}
 =====================================================================================
 
 Request
@@ -3226,18 +3226,18 @@ Response to a Declined Request
 }
 ```
 
-Tap-Initiated Sale for Visa Debt Recovery with EMV Data {#um-processing-sale-debtrecov-intro-visa}
+Tap-Initiated Sale for Relay Debt Recovery with EMV Data {#um-processing-sale-debtrecov-intro-relay}
 ==================================================================================================
 
-Use this information to process a tap-initiated sale for Visa debt recovery. When a cardholder attempts to use a blocked card at the transit reader, create a new debt recovery sale request using the chip data from the new tap, along with the fare amount of the previous declined authorization.
+Use this information to process a tap-initiated sale for Relay debt recovery. When a cardholder attempts to use a blocked card at the transit reader, create a new debt recovery sale request using the chip data from the new tap, along with the fare amount of the previous declined authorization.
 
-Endpoint {#um-processing-sale-debtrecov-intro-visa_d7e16}
+Endpoint {#um-processing-sale-debtrecov-intro-relay_d7e16}
 ---------------------------------------------------------
 
-**Production:** `POST ``https://api.cybersource.com``/pts/v2/payments`{#um-processing-sale-debtrecov-intro-visa_d7e25}  
-**Test:** `POST ``https://apitest.cybersource.com``/pts/v2/payments`{#um-processing-sale-debtrecov-intro-visa_d7e35}
+**Production:** `POST ``https://api.cybersource.com``/pts/v2/payments`{#um-processing-sale-debtrecov-intro-relay_d7e25}  
+**Test:** `POST ``https://apitest.cybersource.com``/pts/v2/payments`{#um-processing-sale-debtrecov-intro-relay_d7e35}
 
-Required Fields for a Tap-Initiated Sale for Visa Debt Recovery with EMV Data {#um-processing-sale-debtrecov-reqd-fields}
+Required Fields for a Tap-Initiated Sale for Relay Debt Recovery with EMV Data {#um-processing-sale-debtrecov-reqd-fields}
 =========================================================================================================================
 
 [clientReferenceInformation.code](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/client-ref-info-aa/client-ref-info-code.md "")
@@ -3329,7 +3329,7 @@ Set this field to `retail`.
 :
 Set this field to `transit`.
 
-REST Example: Tap-Initiated Sale for Visa Debt Recovery with EMV Data {#um-processing-sale-debtrecov-ex-rest}
+REST Example: Tap-Initiated Sale for Relay Debt Recovery with EMV Data {#um-processing-sale-debtrecov-ex-rest}
 =============================================================================================================
 
 Request
@@ -3838,7 +3838,7 @@ Response to a Successful Request
 }
 ```
 
-Merchant-Initiated Sale for Visa Debt Recovery with Stored Card Data {#um-processing-sale-mit-intro}
+Merchant-Initiated Sale for Relay Debt Recovery with Stored Card Data {#um-processing-sale-mit-intro}
 ====================================================================================================
 
 Use this information to process a merchant-initiated sale for debt recovery using stored card data.
@@ -3849,7 +3849,7 @@ Endpoint {#um-processing-sale-mit-intro_d7e16}
 **Production:** `POST ``https://api.cybersource.com``/pts/v2/payments`{#um-processing-sale-mit-intro_d7e25}  
 **Test:** `POST ``https://apitest.cybersource.com``/pts/v2/payments`{#um-processing-sale-mit-intro_d7e35}
 
-Required Fields for a Merchant-Initiated Sale for Visa Debt Recovery with Stored Card Data {#um-processing-sale-mit-reqd-fields}
+Required Fields for a Merchant-Initiated Sale for Relay Debt Recovery with Stored Card Data {#um-processing-sale-mit-reqd-fields}
 ================================================================================================================================
 
 [clientReferenceInformation.code](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/client-ref-info-aa/client-ref-info-code.md "")
@@ -3932,7 +3932,7 @@ Set this field to `moto`.
 Set this field to `transit`.
 {#um-processing-sale-mit-reqd-fields_dl_hy5_wxf_pdc}
 
-REST Example: Merchant-Initiated Sale for Visa Debt Recovery with Stored Card Data {#um-processing-sale-mit-ex-rest}
+REST Example: Merchant-Initiated Sale for Relay Debt Recovery with Stored Card Data {#um-processing-sale-mit-ex-rest}
 ====================================================================================================================
 
 Request
@@ -4290,10 +4290,10 @@ Response to a Successful Request
 }
 ```
 
-Visa Account Verification Request with a Token {#um-processing-visa-avr-tkn-intro}
+Relay Account Verification Request with a Token {#um-processing-relay-avr-tkn-intro}
 ==================================================================================
 
-Use this information to process a zero-amount authorization for a mass transit Visa account verification request (AVR).
+Use this information to process a zero-amount authorization for a mass transit Relay account verification request (AVR).
 
 Endpoint
 --------
@@ -4301,7 +4301,7 @@ Endpoint
 **Test:** `POST ``https://apitest.cybersource.com``/pts/v2/payments`  
 **Production:** `POST ``https://api.cybersource.com``/pts/v2/payments`
 
-Required Fields for a Visa AVR Authorization with a Transient Token {#um-processing-visa-avr-tkn-reqd-fields}
+Required Fields for a Relay AVR Authorization with a Transient Token {#um-processing-relay-avr-tkn-reqd-fields}
 =============================================================================================================
 
 [clientReferenceInformation.partner.thirdPartyCertificationNumber](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/client-ref-info-aa/client-ref-info-partner-third-party-certnum.md "")
@@ -4350,7 +4350,7 @@ Set this field to `retail`.
 [tokenInformation.jti](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/token-info-aa/token-info-jti.md "")
 :
 
-REST Example: Visa AVR Authorization with a Transient Token {#um-processing-visa-avr-tkn-ex-rest}
+REST Example: Relay AVR Authorization with a Transient Token {#um-processing-relay-avr-tkn-ex-rest}
 =================================================================================================
 
 Request
@@ -4454,11 +4454,11 @@ Response to a Successful Request
 }
 ```
 
-Visa Deferred Sale with a Token {#um-processing-sale-deferred-tkn-intro}
+Relay Deferred Sale with a Token {#um-processing-sale-deferred-tkn-intro}
 ========================================================================
 
-Use this information to process a Visa deferred sale.  
-A sale transaction combines an authorization and capture. At the end of the travel period, request a Visa deferred sale with a token for an aggregated payment.
+Use this information to process a Relay deferred sale.  
+A sale transaction combines an authorization and capture. At the end of the travel period, request a Relay deferred sale with a token for an aggregated payment.
 
 Endpoint
 --------
@@ -4466,7 +4466,7 @@ Endpoint
 **Test:** `POST ``https://apitest.cybersource.com``/pts/v2/payments`  
 **Production:** `POST ``https://api.cybersource.com``/pts/v2/payments`
 
-Required Fields for a Visa Deferred Sale with a Token {#um-processing-sale-deferred-tkn-reqd-fields}
+Required Fields for a Relay Deferred Sale with a Token {#um-processing-sale-deferred-tkn-reqd-fields}
 ====================================================================================================
 
 [clientReferenceInformation.partner.thirdPartyCertificationNumber](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/client-ref-info-aa/client-ref-info-partner-third-party-certnum.md "")
@@ -4529,7 +4529,7 @@ Set this field to `transit`.
 [tokenInformation.jti](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/token-info-aa/token-info-jti.md "")
 :
 
-REST Example: Visa Deferred Sale with a Token {#um-processing-sale-deferred-tkn-ex-rest}
+REST Example: Relay Deferred Sale with a Token {#um-processing-sale-deferred-tkn-ex-rest}
 ========================================================================================
 
 Request
@@ -6189,7 +6189,7 @@ Response 200
     "card": {
         "expirationMonth": "12",
         "expirationYear": "2030",
-        "type": "visa",
+        "type": "relay",
         "hash": "7400A4154369E584BA36CA19B50AAA3F9AE97FEAE64B3E87B2B93CF8FBC97777"
     },
     "metadata": {
@@ -6266,7 +6266,7 @@ Response 200
     "card": {
         "expirationMonth": "12",
         "expirationYear": "2030",
-        "type": "visa",
+        "type": "relay",
         "hash": "7400A4154369E584BA36CA19B50AAA3F9AE97FEAE64B3E87B2B93CF8FBC97777"
     },
     "_embedded": {
@@ -6383,7 +6383,7 @@ The `id` is the card.hash value that was returned in the retrieve a payment inst
 "card": {
     "expirationMonth": "12",
     "expirationYear": "2030",
-    "type": "visa",
+    "type": "relay",
     "hash": "7400A4154369E584BA36CA19B50AAA3F9AE97FE93CF8FBC97777"
  }
 ```

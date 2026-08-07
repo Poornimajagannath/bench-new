@@ -9,7 +9,7 @@
   "quickstart_source": "microform-payer-auth-quickstart",
   "openapi_source": "cybersource-payments-core-openapi",
   "guided_quickstart": {
-    "title": "CyberSource / Visa Acceptance guided integration",
+    "title": "CyberSource / Acceptance Platform guided integration",
     "steps": [
       {
         "sequence_number": 1,
@@ -235,13 +235,13 @@
   },
   "compile_results": {
     "quickstart": {
-      "ok": true,
-      "unit_count": 11
+      "ok": null,
+      "unit_count": null
     },
     "specs_to_docs": {
-      "ok": true,
-      "entity_count": 8,
-      "unit_count": 8
+      "ok": null,
+      "entity_count": null,
+      "unit_count": null
     }
   }
 }

@@ -95,14 +95,14 @@
       "vap_cli": null
     },
     {
-      "action_id": "flex-token-lifecycle-vap-cli",
+      "action_id": "flex-token-lifecycle-relay-cli",
       "product_surface": "vap_cli",
       "severity": "high",
-      "summary": "Ship a VAP CLI workflow verifier for this contract",
+      "summary": "Ship a Relay CLI workflow verifier for this contract",
       "rationale": "CLI should verify readiness, recovery, and support-safe evidence \u2014 not only wrap an API call.",
       "vap_cli": {
         "goal": "can I pass it straight into TMS to store a permanent instrument, or do I need another step?",
-        "command": "vap workflow verify --id flex-token-lifecycle --fixture local",
+        "command": "relay workflow verify --id flex-token-lifecycle --fixture local",
         "api_sdk_facts": [
           "Flex Microform returns a short-lived transientTokenJwt",
           "TMS createInstrument accepts a Flex token via a dedicated transient-token path, not as raw pan",
@@ -136,7 +136,7 @@
           "eval:verifier_catch_rate_on_bad_answer"
         ],
         "future_mcp_metadata": {
-          "mcp_tool": "vap.verify_workflow",
+          "mcp_tool": "relay.verify_workflow",
           "inputs": [
             "workflow_id",
             "candidate_answer_ref"

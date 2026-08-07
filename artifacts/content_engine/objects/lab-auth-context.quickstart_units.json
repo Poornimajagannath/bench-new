@@ -12,7 +12,7 @@
       "goal": "Authentication Context",
       "product": [
         "cybersource",
-        "visa-acceptance"
+        "acceptance-platform"
       ],
       "audience": [
         "developer",
@@ -41,7 +41,7 @@
       "goal": "Authentication Context",
       "product": [
         "cybersource",
-        "visa-acceptance"
+        "acceptance-platform"
       ],
       "audience": [
         "developer",
@@ -72,7 +72,7 @@
       "goal": "Authentication Context",
       "product": [
         "cybersource",
-        "visa-acceptance"
+        "acceptance-platform"
       ],
       "audience": [
         "developer",
@@ -104,7 +104,7 @@
       "goal": "Authentication Context",
       "product": [
         "cybersource",
-        "visa-acceptance"
+        "acceptance-platform"
       ],
       "audience": [
         "developer",

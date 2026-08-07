@@ -138,7 +138,7 @@ Support for the complete mandate.
 
 0.28
 :
-Complete mandate enhancement to support `Payer Authentication` for manual card entry for Visa, Mastercard, American Express, Discover, JCB, Cartes Bancaires, China UnionPay, and ELO card brands.
+Complete mandate enhancement to support `Payer Authentication` for manual card entry for Relay, Mastercard, American Express, Discover, JCB, Cartes Bancaires, China UnionPay, and ELO card brands.
 :
 Support for Afterpay as an allowedPaymentType.
 :

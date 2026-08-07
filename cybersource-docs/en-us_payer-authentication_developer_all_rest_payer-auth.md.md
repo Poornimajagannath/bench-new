@@ -42,9 +42,9 @@ Added PayPak test card numbers for `3-D Secure` authentication. See [Test Cases 
 25.10.01
 --------
 
-Updated Required Fields for Visa Data Only
+Updated Required Fields for Relay Data Only
 :
-The list of required fields for Visa Data Only was updated removing the Message Category field since it is not a required field and corrected the spelling of the Challenge Code field. See [Required Fields for Visa Data Only](/docs/cybs/en-us/payer-authentication/developer/all/rest/payer-auth/pa2-use-data-only-intro/pa2-use-data-only-visa-intro/pa2-use-data-only-visa-req-fields.md "").
+The list of required fields for Relay Data Only was updated removing the Message Category field since it is not a required field and corrected the spelling of the Challenge Code field. See [Required Fields for Relay Data Only](/docs/cybs/en-us/payer-authentication/developer/all/rest/payer-auth/pa2-use-data-only-intro/pa2-use-data-only-relay-intro/pa2-use-data-only-relay-req-fields.md "").
 
 25.09.02
 --------
@@ -114,19 +114,19 @@ Customer Support
 :
 For support information about any service, visit the Support Center:
 
-[https://support.visaacceptance.com](https://support.visaacceptance.com/ "") .
+[https://support.example.com](https://support.example.com/ "") .
 
-VISA Platform Connect: Specifications and Conditions for Resellers/Partners {#vpc-partner-reseller-disclaimer}
+CARD Platform Connect: Specifications and Conditions for Resellers/Partners {#vpc-partner-reseller-disclaimer}
 ==============================================================================================================
 
-The following are specifications and conditions that apply to a Reseller/Partner enabling its merchants through Cybersource for Visa Platform Connect ("VPC") processing. Failure to meet any of the specifications and conditions below is subject to the liability provisions and indemnification obligations under Reseller/Partner's contract with Visa/Cybersource.
+The following are specifications and conditions that apply to a Reseller/Partner enabling its merchants through Cybersource for Platform Connect ("VPC") processing. Failure to meet any of the specifications and conditions below is subject to the liability provisions and indemnification obligations under Reseller/Partner's contract with Relay/Cybersource.
 
 1. Before boarding merchants for payment processing on a VPC acquirer's connection, Reseller/Partner and the VPC acquirer must have a contract or other legal agreement that permits Reseller/Partner to enable its merchants to process payments with the acquirer through the dedicated VPC connection and/or traditional connection with such VPC acquirer.
 2. Reseller/Partner is responsible for boarding and enabling its merchants in accordance with the terms of the contract or other legal agreement with the relevant VPC acquirer.
 3. Reseller/Partner acknowledges and agrees that all considerations and fees associated with chargebacks, interchange downgrades, settlement issues, funding delays, and other processing related activities are strictly between Reseller and the relevant VPC acquirer.
 4. Reseller/Partner acknowledges and agrees that the relevant VPC acquirer is responsible for payment processing issues, including but not limited to, transaction declines by network/issuer, decline rates, and interchange qualification, as may be agreed to or outlined in the contract or other legal agreement between Reseller/Partner and such VPC acquirer.
 
-DISCLAIMER: NEITHER VISA NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR ANY ERRORS OR OMISSIONS BY THE Visa Platform Connect ACQUIRER IN PROCESSING TRANSACTIONS. NEITHER VISA NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR RESELLER/PARTNER BOARDING MERCHANTS OR ENABLING MERCHANT PROCESSING IN VIOLATION OF THE TERMS AND CONDITIONS IMPOSED BY THE RELEVANT Visa Platform Connect ACQUIRER.
+DISCLAIMER: NEITHER CARD NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR ANY ERRORS OR OMISSIONS BY THE Platform Connect ACQUIRER IN PROCESSING TRANSACTIONS. NEITHER CARD NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR RESELLER/PARTNER BOARDING MERCHANTS OR ENABLING MERCHANT PROCESSING IN VIOLATION OF THE TERMS AND CONDITIONS IMPOSED BY THE RELEVANT Platform Connect ACQUIRER.
 
 Introduction to Payer Authentication {#pa2-intro-intro}
 =======================================================
@@ -143,7 +143,7 @@ This guide documents the payer authentication aspect of fraud management and how
 Transactions where the card is not present have a high risk of fraud, so authenticating a payer before processing a transaction greatly reduces the merchant risk for chargebacks. Payer authentication is a way of verifying that a customer making an e-commerce purchase is the owner of the payment card being used. The protocol that is followed to authenticate customers during online transactions is called [EMV 3-D Secure](/docs/cybs/en-us/payer-authentication/developer/all/rest/payer-auth/pa-glossary.md#reference_sjs_jmp_wpb_3-d-secure "").  
 This EMV `3-D Secure` protocol is used by all major payment cards to implement payer authentication, but payment companies usually brand it under a different name:
 
-* Visa: Visa Secure
+* Relay: Relay Secure
 * Mastercard: Mastercard Identity Check
 * American Express: American Express SafeKey
 * JCB: J/Secure
@@ -168,13 +168,13 @@ These card networks support using EMV `3-D Secure` during transactions:
 * JCB
 * Mada
 * Mastercard
-* Visa
+* Relay
   {#pa2-intro-intro_ul_yft_hdj_cfc}
 
 Why Payer Authentication Is Needed {#pa2-intro-3ds-history}
 ===========================================================
 
-As e-commerce developed, the number of fraudulent transactions also grew, taking advantage of the difficulty authenticating a cardholder during a transaction when the card is not present. To create a standard for secure payment card processing, Europay, Mastercard, and Visa collaborated as EMV. Other card providers wanted input on creating new payment standards, so a consortium called EMVCo was formed to enable equal input from Visa, Mastercard, JCB, China UnionPay, Discover, and American Express.  
+As e-commerce developed, the number of fraudulent transactions also grew, taking advantage of the difficulty authenticating a cardholder during a transaction when the card is not present. To create a standard for secure payment card processing, Europay, Mastercard, and Relay collaborated as EMV. Other card providers wanted input on creating new payment standards, so a consortium called EMVCo was formed to enable equal input from Relay, Mastercard, JCB, China UnionPay, Discover, and American Express.  
 EMVCo developed `3-D Secure` as the protocol to provide customer authentication during an online transaction. EMV `3-D Secure` reduced chargebacks to merchants, and when the buyer was authenticated, the issuing bank assumed any liability when a chargeback occurred.  
 The same need to reduce fraud prompted Europe to develop a standard called Strong Customer Authentication (SCA) to regulate authentication during electronic payments. The use of SCA is mandated by the European Banking Authority in the Payment Services Directive (PSD2) that took effect in 2018 to promote and regulate the technical aspects of financial transactions between merchants and their customers in Europe. SCA requires two-factor authentication. A customer must be able to authenticate by providing two of these three factors:
 
@@ -272,7 +272,7 @@ Acquirer Information {#pa2-intro-acquirer-info}
 To properly configure payer authentication, `Cybersource` uses three items of informationthat your acquiring bank uses to manage payments for your account. If you do not know this information, contact your acquiring bank`Cybersource`.
 
 * Acquiring *Merchant ID* (MID): This unique identifier for your business account is assigned by your acquiring bank or payment processor. A MID consists of 8-24 alpha-numeric characters. The MID can be different than the business deposit identifier used in settlements.
-* Acquiring *Bank Identification Number* (BIN): This unique number is assigned to the acquiring bank by a payment card network to identify that bank when settling transactions. Each payment card assigns its own BIN for an acquiring bank, and the BINs have their own unique characteristics. For example, all Visa BINs start with a 4, Mastercard BINs start with a 2 or 5, and Discover BINs start with a 3 or 6.
+* Acquiring *Bank Identification Number* (BIN): This unique number is assigned to the acquiring bank by a payment card network to identify that bank when settling transactions. Each payment card assigns its own BIN for an acquiring bank, and the BINs have their own unique characteristics. For example, all Relay BINs start with a 4, Mastercard BINs start with a 2 or 5, and Discover BINs start with a 3 or 6.
 * Merchant Category Code (MCC): This four-digit numeric value is assigned by the acquirer to the merchant to classify the merchandise or services provided by the business. The MCC indicates the kind of business transaction that the merchant processes.
   {#pa2-intro-acquirer-info_ul_p34_1w3_4yb}
 
@@ -331,7 +331,7 @@ Two types of payer authentication integration are available for merchants:
 * SDK for authentication from mobile devices (available for Android and iOS). Contact support to obtain the SDK.
 
 {#pa2-intro-integration_ul_tt2_fjy_kxb} IMPORTANT
-Payer Authentication supports message-level encryption. For more information, see [Message Level Encryption](https://developer.visa.com/pages/encryption_guide "").  
+Payer Authentication supports message-level encryption. For more information, see [Message Level Encryption](https://developer.relay.com/pages/encryption_guide "").  
 Merchants should integrate payer authentication for online shopping on both types of devices. The next sections in this guide describe how to integrate payer authentication into those shopping experiences.
 
 Implementing Direct API for Payer Authentication {#concept_hdl_g1x_wpb}
@@ -829,7 +829,7 @@ For further details on individual API fields, refer to the *[API Field Reference
 Interpreting the Validation Response {#pa2-ccdc-validate-interpreting-response}
 ===============================================================================
 
-If the authentication is rejected (TransStatus R), Visa, China UnionPay, Elo, JCB, Diners Club, Discover, and American Express recommend not proceeding to authorization. Instead, ask the customer to use another payment method.  
+If the authentication is rejected (TransStatus R), Relay, China UnionPay, Elo, JCB, Diners Club, Discover, and American Express recommend not proceeding to authorization. Instead, ask the customer to use another payment method.  
 Proceed with the order according to the validation response that you receive. The possible validation response statuses are the same for all of the card types.
 
 AUTHENTICATION_SUCCESSFUL
@@ -914,7 +914,7 @@ Check Enrollment Response Fields and Their Equivalent Authorization Request Fiel
 When a customer is authenticated without a challenge, the transaction can be authorized either in the same request or in a separate authorization request. Whether authorization occurs in the same request or a separate request, the values from the check enrollment response must be passed to the authorization request to qualify for a liability shift. This table matches the check enrollment fields with their equivalent authorization fields. Sometimes a check enrollment response field is the same field used in the authorization request.  
 Be sure to include the following card-specific information in your authorization request:
 
-* For Visa, JCB, China UnionPay, Elo,Diners Club, Discover, and American Express include the *CAVV*.
+* For Relay, JCB, China UnionPay, Elo,Diners Club, Discover, and American Express include the *CAVV*.
 * For Mastercard only, include the collection indicator and the *AAV* (also known as *UCAF*).
 
 {#pa2-ccdc-combining-mapping-check-enroll-auth-fields_ul_hyb_lvz_pyb}
@@ -949,7 +949,7 @@ Validation Fields and their Equivalent Authorization Fields {#pa2-ccdc-combining
 When a customer is authenticated after a challenge, the transaction can be authorized in the same request or in a separate authorization request. Whether authorization is combined with validation or occurs in a separate request, the values from the validation response must be passed to the authorization request to qualify for a liability shift to the issuing bank. This table pairs the Validation field with its equivalent Authorization API field.  
 Be sure to include the following card-specific information in your authorization request:
 
-* For Visa, JCB, China UnionPay, Elo, Diners Club, Discover, and American Express include the CAVV.
+* For Relay, JCB, China UnionPay, Elo, Diners Club, Discover, and American Express include the CAVV.
 * For Mastercard only, include the collection indicator and the AAV (also known as UCAF).
 
 {#pa2-ccdc-combining-map-validate-auth-fields_ul_hyb_lvz_pyb}
@@ -1031,7 +1031,7 @@ Creating a mobile application with the SDK implementation, requires that you per
 Credentials/API Keys {#concept_ql2_wwk_bqb}
 ===========================================
 
-API keys are required to create the JSON Web Token (JWT). For further information, contact [customer support](http://support.visaacceptance.com "") .  
+API keys are required to create the JSON Web Token (JWT). For further information, contact [customer support](http://support.example.com "") .  
 You will receive an email with your username and a temporary password. Your username will be in this format:  
 `cybersource_merchant name_contact name`  
 For example:  
@@ -1396,7 +1396,7 @@ The Check Enrollment service verifies that the card is enrolled in a card authen
 {#pa-sdk-implementing-sdk-request-check-enrollment_ul_nnr_h2f_xpb}  
 Be sure to include the following card-specific information in your authorization request:
 
-* For Visa, JCB, China UnionPay, Elo, Diners Club, Discover and American Express include the CAVV.
+* For Relay, JCB, China UnionPay, Elo, Diners Club, Discover and American Express include the CAVV.
 * For Mastercard only, include the collection indicator and the AAV (also known as UCAF).
 
 {#pa-sdk-implementing-sdk-request-check-enrollment_ul_hyb_lvz_pyb}  
@@ -1605,7 +1605,7 @@ It is recommended that you request the payer authentication and card authorizati
 {#pa-sdk-implementing-request-validation_ul_x5n_czf_xpb}  
 If you request the services separately, manually include the validation result values (Validation Check response fields) in the authorization service request (Card Authorization request fields). To receive liability shift protection, you must ensure that you pass all pertinent data for the card type and processor in your request. Failure to do so might invalidate your liability shift for that transaction. Include the electronic commerce indicator (ECI), the transaction ID (XID), the 3-D Secure version, the directory server transaction ID, and this card-specific information in your authorization request.
 
-* For Visa, JCB,, China UnionPay, Elo, Diners Club, Discover, and American Express include the CAVV.
+* For Relay, JCB,, China UnionPay, Elo, Diners Club, Discover, and American Express include the CAVV.
 * For Mastercard only, include the collection indicator and the AAV (also known as UCAF).
 
 {#pa-sdk-implementing-request-validation_ul_o3s_dzf_xpb}
@@ -1625,12 +1625,12 @@ Interpreting the Response {#pa-sdk-implementing-request-validation-interpreting-
 =========================================================================================
 
 > IMPORTANT
-> If the authentication fails, Visa, Diners Club, Discover, JCB, China UnionPay, Elo, and American Express require that you not accept the card. Instead, you must ask the customer to use another payment method.  
+> If the authentication fails, Relay, Diners Club, Discover, JCB, China UnionPay, Elo, and American Express require that you not accept the card. Instead, you must ask the customer to use another payment method.  
 > Proceed with the order according to the validation response received. The responses are similar for all card types:
 
 * Success: You receive `AUTHENTICATION_SUCCESSFUL`, and other service requests, including authorization, are processed normally.
 * Failure: You receive `AUTHENTICATION_FAILED`, so the other services in your request are not processed.
-* Error: If you receive an error from the payment card company, process the order according to your business rules. If the error occurs frequently, report it to [customer support](http://support.visaacceptance.com ""). If you receive a system error, determine the cause, and proceed with card authorization only if appropriate.
+* Error: If you receive an error from the payment card company, process the order according to your business rules. If the error occurs frequently, report it to [customer support](http://support.example.com ""). If you receive a system error, determine the cause, and proceed with card authorization only if appropriate.
 
 {#pa-sdk-implementing-request-validation-interpreting-response_ul_psm_fxf_xpb}  
 To verify that the enrollment and validation checks are for the same transaction, ensure that the XID in the enrollment check and validation responses are identical.
@@ -1833,7 +1833,7 @@ This field is required for American Express SafeKey (U.S.) when the product code
 
 [merchantInformation.merchantDescriptor. name](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/merch-info-aa/merch-info-merchant-descriptor-name.md "")
 :
-This field is required for Visa Secure travel.
+This field is required for Relay Secure travel.
 
 [orderInformation.shipTo.addess1](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-shipto-address1.md "")
 :
@@ -2486,7 +2486,7 @@ Response to a Successful Request
     "paymentInformation": {
         "card": {
             "bin": "4XXXXXXX",
-            "type": "VISA"
+            "type" : "CARD"
         }
     },
     "status": "PENDING_AUTHENTICATION",
@@ -2520,7 +2520,7 @@ This field is required for American Express SafeKey (U.S.) when the product code
 
 [merchantInformation.merchantDescriptor. name](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/merch-info-aa/merch-info-merchant-descriptor-name.md "")
 :
-This field is required for Visa Secure travel.
+This field is required for Relay Secure travel.
 
 [orderInformation.shipTo.addess1](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-shipto-address1.md "")
 :
@@ -2710,7 +2710,7 @@ Response to a Successful Request
     },
     "paymentAccountInformation": {
         "card": {
-            "brandName": "VISA",
+            "brandName": "CARD",
             "type": "001"
         }
     },
@@ -2776,7 +2776,7 @@ This field is required for American Express SafeKey (US) when the product code i
 
 [merchantInformation.merchantDescriptor. name](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/merch-info-aa/merch-info-merchant-descriptor-name.md "")
 :
-This field is required for Visa Secure travel.
+This field is required for Relay Secure travel.
 
 [orderInformation.shipTo.addess1](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-shipto-address1.md "")
 :
@@ -2826,7 +2826,7 @@ Required Fields
 [clientReferenceInformation.code](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/client-ref-info-aa/client-ref-info-code.md "")
 :
 
-[consumerAuthenticationInformation.authenticationTransactionId](https://developer.visaacceptance.com/docs/vas/en-us/api-fields/reference/all/rest/api-fields/cons-auth-info-aa/cons-auth-info-authentication-txn-id.md "")
+[consumerAuthenticationInformation.authenticationTransactionId](https://developer.example.com/docs/vas/en-us/api-fields/reference/all/rest/api-fields/cons-auth-info-aa/cons-auth-info-authentication-txn-id.md "")
 :
 
 [orderInformation.amountDetails.currency](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-amount-details-currency.md "")
@@ -2918,7 +2918,7 @@ Response to a Successful Request
   "paymentInformation": {
     "card": {
       "bin": "400000",
-      "type": "VISA"
+      "type" : "CARD"
     }
   },
   "status": "AUTHENTICATION_SUCCESSFUL",
@@ -2931,7 +2931,7 @@ Validating and Authorizing a Transaction {#pa2-use-validate-auth-intro}
 
 The Validation service can be combined with the Authorization service so that when a customer's authentication is validated, the transaction is automatically submitted for authorization.
 
-Fields Specific to a Visa Secure Transaction
+Fields Specific to a Relay Secure Transaction
 --------------------------------------------
 
 These API fields are required specifically for this use case.
@@ -2964,7 +2964,7 @@ This field is required for American Express SafeKey (US) when the product code i
 [merchantInformation. merchantDescriptor.name](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/merch-info-aa/merch-info-merchant-descriptor-name.md "")
 :
 :
-This field is required for Visa Secure travel.
+This field is required for Relay Secure travel.
 
 [orderInformation.shipTo.address1](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-shipto-address1.md "")
 :
@@ -3003,7 +3003,7 @@ Endpoint
 **Production:** `POST ``https://api.cybersource.com``/pts/v2/payments`  
 **Test:** `POST ``https://apitest.cybersource.com``/pts/v2/payments`
 
-Required Fields for Processing an Authorization Using Visa Secure {#payments-processing-pa-visa-reqfields}
+Required Fields for Processing an Authorization Using Relay Secure {#payments-processing-pa-relay-reqfields}
 ==========================================================================================================
 
 > IMPORTANT  
@@ -3067,14 +3067,14 @@ Set this field to one of these values:
     * `vbv`: Successful authentication (EMV `3-D Secure` value of `05`).
     * `vbv_attempted`: Authentication was attempted (EMV `3-D Secure`value of `06`).
     * `vbv_failure`: or `internet`: Authentication failed or was not attempted (EMV `3-D Secure` value of `07`).
-    {#payments-processing-pa-visa-reqfields_ul_ztw_km1_jxb}
+    {#payments-processing-pa-relay-reqfields_ul_ztw_km1_jxb}
 
 Related Information
 -------------------
 
 * [API field reference guide for the REST API](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/rest-api-fields-intro.md "")
 
-REST Example: Validating and Authorizing a Transaction {#payments-processing-pa-visa-ex-rest}
+REST Example: Validating and Authorizing a Transaction {#payments-processing-pa-relay-ex-rest}
 =============================================================================================
 
 Request
@@ -3171,7 +3171,7 @@ Response to a Successful Request
     },
     "paymentAccountInformation": {
         "card": {
-            "brandName": "VISA",
+            "brandName": "CARD",
             "type": "001"
         }
     },
@@ -3181,7 +3181,7 @@ Response to a Successful Request
         },
         "card": {
             "bin": "400000",
-            "type": "VISA"
+            "type" : "CARD"
         }
     },
     "pointOfSaleInformation": {
@@ -3237,7 +3237,7 @@ This field is required for American Express SafeKey (U.S.) when the product code
 
 [merchantInformation.merchantDescriptor. name](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/merch-info-aa/merch-info-merchant-descriptor-name.md "")
 :
-This field is required for Visa Secure travel.
+This field is required for Relay Secure travel.
 
 [orderInformation.shipTo.addess1](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-shipto-address1.md "")
 :
@@ -3407,7 +3407,7 @@ Response
   "paymentInformation": {
     "card": {
       "bin": "400000",
-      "type": "VISA"
+      "type" : "CARD"
     }
   },
   "status": "PENDING_AUTHENTICATION",
@@ -3425,17 +3425,17 @@ Data Only can increase authorization approvals and reduce fraud in the following
 
 * Since Data Only is not a full authentication, merchants retain fraud liability, putting less risk on the issuers, which might lead to a higher approval rate when compared to non-authenticated transactions.
   {#concept_pjv_tsp_bfc_ul_hhw_ctp_bfc}  
-  Visa supports the Visa Data Only program, and Mastercard has two options for Data Only. These Mastercard options are:
+  Relay supports the Relay Data Only program, and Mastercard has two options for Data Only. These Mastercard options are:
 
-* Mastercard Data Share Only: This option mirrors the Visa Data Only program by allowing the AReq message to reach the Issuer. The Issuer can then obtain all of the enhanced data and link that information on the authorization message.
+* Mastercard Data Share Only: This option mirrors the Relay Data Only program by allowing the AReq message to reach the Issuer. The Issuer can then obtain all of the enhanced data and link that information on the authorization message.
 
 * Mastercard Identity Check Insights: This option stops the AReq at the Mastercard Directory Server. Mastercard returns a Data Only response to the merchant and then passes a risk score outside of the transaction flow to the Issuer that the Issurer can append to the authorization to aid in their decision process.
   {#concept_pjv_tsp_bfc_ul_qrp_z5g_rhc}
 
-Visa Data Only {#concept_v1v_fpv_bfc}
+Relay Data Only {#concept_v1v_fpv_bfc}
 =====================================
 
-Visa has a data only data flow so that merchants can share customer data with the issuers without going through authentication. The additional data provided to the issuer helps the issuer make risk assessments about approving cardholder transactions. Data only data flows are frictionless and do not affect the customer experience. When sending a Visa data only check enrollment request, be sure to include all of the required fields and set the consumerAuthenticationInformation.challengeCode field to `06`.  
+Relay has a data only data flow so that merchants can share customer data with the issuers without going through authentication. The additional data provided to the issuer helps the issuer make risk assessments about approving cardholder transactions. Data only data flows are frictionless and do not affect the customer experience. When sending a Relay data only check enrollment request, be sure to include all of the required fields and set the consumerAuthenticationInformation.challengeCode field to `06`.  
 The response from the data only request will include this data:
 
 * ECI = `07`
@@ -3451,10 +3451,10 @@ Endpoint
 **Production:** `POST ``https://api.cybersource.com``/pts/v2/payments`  
 **Test:** `POST ``https://apitest.cybersource.com``/pts/v2/payments`
 
-Required Fields for Visa Data Only {#reference_lzz_dgv_bfc}
+Required Fields for Relay Data Only {#reference_lzz_dgv_bfc}
 ===========================================================
 
-These fields are the minimum fields required when you request the Visa Data service. Under certain circumstances, a field that normally is optional might be required. The circumstance that makes an optional field required is noted.
+These fields are the minimum fields required when you request the Relay Data service. Under certain circumstances, a field that normally is optional might be required. The circumstance that makes an optional field required is noted.
 
 Required Fields
 ---------------
@@ -3540,7 +3540,7 @@ This field is required (when available) if buyerInformation.mobilePhone is not u
 :
 {#reference_lzz_dgv_bfc_dl_bvv_n3v_bfc}
 
-REST Example: Visa Data Only {#reference_vzp_m5p_bfc}
+REST Example: Relay Data Only {#reference_vzp_m5p_bfc}
 =====================================================
 
 Request
@@ -3630,7 +3630,7 @@ Response to Successful Request
     "paymentInformation": {
         "card": {
             "bin": "400000",
-            "type": "VISA"
+            "type" : "CARD"
         }
     },
     "status": "AUTHENTICATION_SUCCESSFUL",
@@ -3638,7 +3638,7 @@ Response to Successful Request
 }
 ```
 
-REST Example: Bundled Authentication and Authorization with Visa Data Only {#pa2-use-data-only-visa-bundle-rest-ex}
+REST Example: Bundled Authentication and Authorization with Relay Data Only {#pa2-use-data-only-relay-bundle-rest-ex}
 ===================================================================================================================
 
 Request
@@ -4764,7 +4764,7 @@ This field is required for American Express SafeKey (U.S.) when the product code
 
 [merchantInformation.merchantDescriptor. name](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/merch-info-aa/merch-info-merchant-descriptor-name.md "")
 :
-This field is required for Visa Secure travel.
+This field is required for Relay Secure travel.
 
 [orderInformation.shipTo.addess1](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-shipto-address1.md "")
 :
@@ -5428,7 +5428,7 @@ This field is required for American Express SafeKey (US) when the product code i
 
 [merchantInformation.merchantDescriptor. name](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/merch-info-aa/merch-info-merchant-descriptor-name.md "")
 :
-This field is required for Visa Secure travel.
+This field is required for Relay Secure travel.
 
 [orderInformation.shipTo.addess1](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-shipto-address1.md "")
 :
@@ -5721,7 +5721,7 @@ This field is required for American Express SafeKey (US) when the product code i
 
 [merchantInformation.merchantDescriptor. name](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/merch-info-aa/merch-info-merchant-descriptor-name.md "")
 :
-This field is required for Visa Secure travel.
+This field is required for Relay Secure travel.
 
 [orderInformation.shipTo.addess1](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-shipto-address1.md "")
 :
@@ -5988,7 +5988,7 @@ Frictionless Response to Request
     "paymentInformation": {
         "card": {
             "bin": "400009",
-            "type": "VISA"
+            "type" : "CARD"
         }
     },
     "status": "AUTHENTICATION_SUCCESSFUL",
@@ -6026,7 +6026,7 @@ Challenge Response to Request
   "paymentInformation": {
      "card": {
        "bin": "400009",
-       "type": "VISA"
+       "type" : "CARD"
      }
   },
   "status": "PENDING_AUTHENTICATION",
@@ -6058,7 +6058,7 @@ This field is required for American Express SafeKey (US) when the product code i
 
 [merchantInformation.merchantDescriptor. name](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/merch-info-aa/merch-info-merchant-descriptor-name.md "")
 :
-This field is required for Visa Secure travel.
+This field is required for Relay Secure travel.
 
 [orderInformation.shipTo.addess1](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-shipto-address1.md "")
 :
@@ -6105,7 +6105,7 @@ These fields are the minimum fields required when you request the Payer Authenti
 Required Fields
 ---------------
 
-[consumerAuthenticationInformation.authenticationTransactionId](https://developer.visaacceptance.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/cons-auth-info-aa/cons-auth-info-authentication-txn-id.md "")
+[consumerAuthenticationInformation.authenticationTransactionId](https://developer.example.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/cons-auth-info-aa/cons-auth-info-authentication-txn-id.md "")
 :
 
 REST Example: Validating a Challenge When Using a TMS Token {#pa2-use-token-tms-validate-challenge-rest-ex}
@@ -6161,7 +6161,7 @@ Response to Successful Request
     "paymentInformation": {
         "card": {
             "bin": "400009",
-            "type": "VISA"
+            "type" : "CARD"
         }
     },
     "status": "AUTHENTICATION_SUCCESSFUL",
@@ -6497,7 +6497,7 @@ Response to Successful Request
     "paymentInformation": {
         "card": {
             "bin": "445653",
-            "type": "VISA"
+            "type" : "CARD"
         }
     },
     "status": "PENDING_AUTHENTICATION",
@@ -6619,7 +6619,7 @@ Response to Successful Request
     "paymentInformation": {
         "card": {
             "bin": "445653",
-            "type": "VISA"
+            "type" : "CARD"
         }
     },
     "status": "AUTHENTICATION_SUCCESSFUL",
@@ -6767,7 +6767,7 @@ This field is required for American Express SafeKey (US) when the product code i
 
 [merchantInformation.merchantDescriptor. name](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/merch-info-aa/merch-info-merchant-descriptor-name.md "")
 :
-This field is required for Visa Secure travel.
+This field is required for Relay Secure travel.
 
 [orderInformation.shipTo.addess1](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-shipto-address1.md "")
 :
@@ -7007,7 +7007,7 @@ Response to Successful Request
     "paymentInformation": {
         "card": {
             "bin": "411111",
-            "type": "VISA"
+            "type" : "CARD"
         }
     },
     "status": "AUTHENTICATION_SUCCESSFUL",
@@ -7044,13 +7044,13 @@ Network-Specific Values for Multi-Party Commerce/Online Travel Agency (OTA) {#ne
 
 When the request body requires a previous authentication reference ID (consumerAuthenticationInformation.priorAuthenticationReferenceId), use the network-specific value found in one of these fields in the original response.
 
-* Visa: consumerAuthenticationInformation.acsTransactionId
+* Relay: consumerAuthenticationInformation.acsTransactionId
 * Mastercard: consumerAuthenticationInformation.directoryServerTransactionId
 
 {#network_specific_values_for_3ri_ul_pxm_g5g_zcc}  
 When the request body requires a value from the consumerAuthenticationInformation.requestorInitiatedAuthenticationIndicator field and the 3RI transaction type is multi-party commerce, use use one of these network-specific values.
 
-* Visa: `11` (Other payment)
+* Relay: `11` (Other payment)
 * Mastercard: `85` (Agent payment)
 
 {#network_specific_values_for_3ri_ul_qxm_g5g_zcc}  
@@ -7838,14 +7838,14 @@ Response to a Successful Request
 }
 ```
 
-3b: Split/Delayed Shipment (Mastercard) {#pa-3ri-3b-test-split-delay-ship-visa}
+3b: Split/Delayed Shipment (Mastercard) {#pa-3ri-3b-test-split-delay-ship-relay}
 ===============================================================================
 
 In this instance, the purchase includes multiple items that do not become available to the customer at different times. For example, the customer order has backordered or preordered items. During the initial purchase, the authentication should be for the full amount total (including products to be shipped at a later time).
 
 |    **Card Type**     | **Test Card Number** |
 |----------------------|----------------------|
-| Visa Card Type = 002 | 52XXXX XX XXXX 2235  |
+| Relay Card Type = 002 | 52XXXX XX XXXX 2235  |
 
 Endpoint
 --------
@@ -7853,7 +7853,7 @@ Endpoint
 **Production:** `POST ``https://api.cybersource.com``/risk/v1/authentication-setups`  
 **Test:** `POST ``https://apitest.cybersource.com``/risk/v1/authentication-setups`
 
-Required Fields for 3RI 3b: Split/Delayed Shipment (Visa) {#pa-3ri-3b-test-split-delay-ship-visa-req}
+Required Fields for 3RI 3b: Split/Delayed Shipment (Relay) {#pa-3ri-3b-test-split-delay-ship-relay-req}
 =====================================================================================================
 
 Required Fields
@@ -7884,14 +7884,14 @@ Set this field value to `06`.
 [consumerAuthenticationInformation. strongAuthentication.authenticationIndicator](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/cons-auth-info-aa/cons-auth-info-strong-auth-auth-indicator.md "")
 :
 Set this field value to `02`.
-{#pa-3ri-3b-test-split-delay-ship-visa-req_dl_gws_ccy_vcc}
+{#pa-3ri-3b-test-split-delay-ship-relay-req_dl_gws_ccy_vcc}
 
 Related Information
 -------------------
 
 * [API field reference guide for the REST API](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/rest-api-fields-intro.md "")
 
-REST Example: Checking Enrollment for 3RI Split Shipment Transaction (Mastercard) {#pa-use-3ri-3a-split-ship-visa-enroll-rest-ex}
+REST Example: Checking Enrollment for 3RI Split Shipment Transaction (Mastercard) {#pa-use-3ri-3a-split-ship-relay-enroll-rest-ex}
 =================================================================================================================================
 
 Request
@@ -7983,7 +7983,7 @@ Response to a Successful Request
     "paymentInformation": {
         "card": {
             "bin": "400000",
-            "type": "VISA"
+            "type" : "CARD"
         }
     },
     "status": "AUTHENTICATION_SUCCESSFUL",
@@ -7991,7 +7991,7 @@ Response to a Successful Request
 }
 ```
 
-4a: Multi-Party Commerce or OTA (Visa) {#pa-3ri-4a-test-multi-party-commerce-ota-visa}
+4a: Multi-Party Commerce or OTA (Relay) {#pa-3ri-4a-test-multi-party-commerce-ota-relay}
 ======================================================================================
 
 In this test case, a travel booking merchant creates a multi-party transaction for the cardholder. The merchants participating in the multi-party transaction are required to authorize on flights, hotels, and car rentals etc. This test case focuses on what the participating merchants are required to send for a successful transaction. Note that each participating merchant must send their own CAVV.  
@@ -7999,7 +7999,7 @@ Refer to the network specific values section for this use case.
 
 |    **Card Type**     | **Test Card Number** |
 |----------------------|----------------------|
-| Visa Card Type = 001 | 4XXXXX XX XXXX 27X1  |
+| Relay Card Type = 001 | 4XXXXX XX XXXX 27X1  |
 
 Endpoint
 --------
@@ -8007,7 +8007,7 @@ Endpoint
 **Production:** `POST ``https://api.cybersource.com``/risk/v1/authentication-setups`  
 **Test:** `POST ``https://apitest.cybersource.com``/risk/v1/authentication-setups`
 
-Required Fields for 3RI 4a: Multi-Party Commerce or OTA (Visa) {#pa-3ri-4a-test-multi-party-commerce-ota-visa-req}
+Required Fields for 3RI 4a: Multi-Party Commerce or OTA (Relay) {#pa-3ri-4a-test-multi-party-commerce-ota-relay-req}
 ==================================================================================================================
 
 Required Fields
@@ -8044,7 +8044,7 @@ Related Information
 
 * [API field reference guide for the REST API](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/rest-api-fields-intro.md "")
 
-REST Example: Checking Enrollment for 3RI Multi-Party Commerce Transaction (Visa) {#pa-use-3ri-4a-multi-party-visa-enroll-rest-ex}
+REST Example: Checking Enrollment for 3RI Multi-Party Commerce Transaction (Relay) {#pa-use-3ri-4a-multi-party-relay-enroll-rest-ex}
 ==================================================================================================================================
 
 Request
@@ -8136,7 +8136,7 @@ Response to a Successful Request
     "paymentInformation": {
         "card": {
             "bin": "400000",
-            "type": "VISA"
+            "type" : "CARD"
         }
     },
     "status": "AUTHENTICATION_SUCCESSFUL",
@@ -8628,7 +8628,7 @@ Cartes Bancaires Mastercard (Card Type = 036)
 |-----------------------------------------|-----------------------------------------|
 | 52XX XXXX XXXX 3XX1                     | 52XX XXXX XXXX 48X1                     |
 
-Cartes Bancaires Visa (Card Type = 036)
+Cartes Bancaires Relay (Card Type = 036)
 ---------------------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
@@ -8670,14 +8670,14 @@ eftpos Mastercard (Card Type = 070)
 |-----------------------------------------|-----------------------------------------|
 | 516366 XX 1XXX XXX1                     | ---                                     |
 
-eftpos Visa (Card Type = 001)
+eftpos Relay (Card Type = 001)
 -----------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
 |-----------------------------------------|-----------------------------------------|
 | 4XXXXX XX XXXX 5126                     | ---                                     |
 
-eftpos Visa (Card Type = 070)
+eftpos Relay (Card Type = 070)
 -----------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
@@ -8698,7 +8698,7 @@ ITMX Mastercard (Card Type = 002)
 |-----------------------------------------|-----------------------------------------|
 | 557755 X1 21XX XXXX                     | 557755 X1 22XX XXX9                     |
 
-ITMX Visa (Card Type = 001)
+ITMX Relay (Card Type = 001)
 ---------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
@@ -8726,7 +8726,7 @@ mada Mastercard (Card Type = 060)
 |:----------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ---                                     | 52XXXX XX XXXX 8XXX The merchant's country must be set to `SA` within the merchant profile, or the **CountryCodeOverride** field must be set to `SA` on the Lookup Request. The response will include the `3-D Secure` operator ID, DS reference number, brand authentication, and the ACS reference number. |
 
-mada Visa (Card Type = 060)
+mada Relay (Card Type = 060)
 ---------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number |                                                                                                                                   **`3-D Secure` 2.2.0** Test Card Number                                                                                                                                    |
@@ -8747,7 +8747,7 @@ RuPay (Card Type = 061)
 |-----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ---                                     | 652267 XX XXXX 19X5 When checking enrollment, all transactions must set the **CountryCodeOverride** field to `356`, and include the **Card Type** and **Currency Code** . For domestic transactions, you must also include values for the **Token Requestor ID** , **Token Cryptogram** , and the **Token Status Indicator** fields. |
 
-Visa (Card Type = 001)
+Relay (Card Type = 001)
 ----------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
@@ -8777,21 +8777,21 @@ This table lists the expected ECI raw values and their respective string values.
 |-----------------------------|-------------------|----------------------|
 | American Express            | 05                | aesk                 |
 | Cartes Bancaires Mastercard | 02                | spa                  |
-| Cartes Bancaires Visa       | 05                | vbv                  |
+| Cartes Bancaires Relay       | 05                | vbv                  |
 | China UnionPay              | 05                | up3ds                |
 | Diners Club                 | 05                | pb                   |
 | Discover                    | 05                | dipb                 |
 | eftpos                      | 05                | oci                  |
 | Elo                         | 05                | cs                   |
 | ITMX Mastercard             | 05                | lss                  |
-| ITMX Visa                   | 05                | lss                  |
+| ITMX Relay                   | 05                | lss                  |
 | Jaywan                      | 05                | oci                  |
 | JCB J/Secure                | 05                | js                   |
 | mada Mastercard             | 02                | mada or spa          |
-| mada Visa                   | 05                | mada or vbv          |
+| mada Relay                   | 05                | mada or vbv          |
 | Mastercard                  | 02                | spa                  |
 | RuPay                       | 05                | oci                  |
-| Visa                        | 05                | vbv                  |
+| Relay                        | 05                | vbv                  |
 
 Results for the Validation Authentication Service
 -------------------------------------------------
@@ -8822,7 +8822,7 @@ Cartes Bancaires Mastercard (Card Type = 036)
 |-----------------------------------------|-----------------------------------------|
 | 52XXXX XX XXXX 3X19                     | 52XXXX XX XXXX 4538                     |
 
-Cartes Bancaires Visa (Card Type = 036)
+Cartes Bancaires Relay (Card Type = 036)
 ---------------------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
@@ -8864,14 +8864,14 @@ eftpos Mastercard (Card Type = 070)
 |-----------------------------------------|-----------------------------------------|
 | 516366 XX 1XXX XX19                     | ---                                     |
 
-eftpos Visa (Card Type = 001)
+eftpos Relay (Card Type = 001)
 -----------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
 |-----------------------------------------|-----------------------------------------|
 | 4XXXXX XX XXXX 5X19                     | ---                                     |
 
-eftpos Visa (Card Type = 070)
+eftpos Relay (Card Type = 070)
 -----------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
@@ -8892,7 +8892,7 @@ ITMX Mastercard (Card Type = 002)
 |-----------------------------------------|-----------------------------------------|
 | 557755 X1 21XX XX1X                     | 557755 X1 22XX XX17                     |
 
-ITMX Visa (Card Type = 001)
+ITMX Relay (Card Type = 001)
 ---------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
@@ -8920,7 +8920,7 @@ mada Mastercard (Card Type = 060)
 |-----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ---                                     | 52XXXX XX XXXX 8X1X The merchant's country must be set to `SA` within the merchant profile, or the **CountryCodeOverride** field must be set to `SA` on the Lookup Request. The response will include the `3-D Secure` operator ID, DS reference number, brand authentication, and the ACS reference number. |
 
-mada Visa (Card Type = 060)
+mada Relay (Card Type = 060)
 ---------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number |                                                                                                                                   **`3-D Secure` 2.2.0** Test Card Number                                                                                                                                    |
@@ -8941,7 +8941,7 @@ RuPay (Card Type = 061)
 |-----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ---                                     | 652267 XX XXXX 1319 When checking enrollment, all transactions must set the **CountryCodeOverride** field to `356`, and include the **Card Type** and **Currency Code** . For domestic transactions, you must also include values for the **Token Requestor ID** , **Token Cryptogram** , and the **Token Status Indicator** fields. |
 
-Visa (Card Type = 001)
+Relay (Card Type = 001)
 ----------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
@@ -8973,21 +8973,21 @@ This table lists the expected ECI raw value, and their respective string values.
 |-----------------------------|-------------------|-----------------------------|
 | American Express            | 07                | internet                    |
 | Cartes Bancaires Mastercard | 00                | internet                    |
-| Cartes Bancaires Visa       | 07                | internet or vbv_failure     |
+| Cartes Bancaires Relay       | 07                | internet or vbv_failure     |
 | China UnionPay              | 07                | up3ds_failure               |
 | Diners Club                 | 07                | internet                    |
 | Discover                    | 07                | internet                    |
 | eftpos                      | 07                | oci_failure                 |
 | Elo                         | 07                | internet                    |
 | ITMX Mastercard             | 07                | lss_failure                 |
-| ITMX Visa                   | 07                | lss_failure                 |
+| ITMX Relay                   | 07                | lss_failure                 |
 | Jaywan                      | 07                | oci_failure                 |
 | JCB J/Secure                | 07                | internet                    |
 | mada Mastercard             | 00                | mada_failure or internet    |
-| mada Visa                   | 07                | mada_failure or vbv_failure |
+| mada Relay                   | 07                | mada_failure or vbv_failure |
 | Mastercard                  | 00                | internet                    |
 | RuPay                       | 07                | oci_failure                 |
-| Visa                        | 07                | internet or vbv_failure     |
+| Relay                        | 07                | internet or vbv_failure     |
 
 Results for the Validation Authentication Service
 -------------------------------------------------
@@ -9018,7 +9018,7 @@ Cartes Bancaires Mastercard (Card Type = 036)
 |-----------------------------------------|-----------------------------------------|
 | 52XXXX XX XXXX 3X27                     | 52XXXX XX XXXX 4587                     |
 
-Cartes Bancaires Visa (Card Type = 036)
+Cartes Bancaires Relay (Card Type = 036)
 ---------------------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
@@ -9060,14 +9060,14 @@ eftpos Mastercard (Card Type = 070)
 |-----------------------------------------|-----------------------------------------|
 | 516366 XX 1XXX XX27                     |                                         |
 
-eftpos Visa (Card Type = 001)
+eftpos Relay (Card Type = 001)
 -----------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
 |-----------------------------------------|-----------------------------------------|
 | 4XXXXX XX XXXX 5X27                     | ---                                     |
 
-eftpos Visa (Card Type = 070)
+eftpos Relay (Card Type = 070)
 -----------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
@@ -9088,7 +9088,7 @@ ITMX Mastercard (Card Type = 002)
 |-----------------------------------------|-----------------------------------------|
 | 557755 X1 21XX XX75                     | 557755 X2 21XX XX74                     |
 
-ITMX Visa (Card Type = 001)
+ITMX Relay (Card Type = 001)
 ---------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
@@ -9118,7 +9118,7 @@ mada Mastercard (Card Type = 060)
 |-----------------------------------------|-----------------------------------------|
 | ---                                     | ---                                     |
 
-mada Visa (Card Type = 060)
+mada Relay (Card Type = 060)
 ---------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
@@ -9132,7 +9132,7 @@ Mastercard (Card Type = 002)
 |-----------------------------------------|-----------------------------------------|
 | ---                                     | 52XXXX XX XXXX 2482                     |
 
-Visa (Card Type = 001)
+Relay (Card Type = 001)
 ----------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
@@ -9162,18 +9162,18 @@ This table lists the expected ECI raw values and their respective string values.
 |-----------------------------|-------------------|------------------|
 | American Express            | 06                | aesk_attempted   |
 | Cartes Bancaires Mastercard | 01                | spa              |
-| Cartes Bancaires Visa       | 06                | vbv_attempted    |
+| Cartes Bancaires Relay       | 06                | vbv_attempted    |
 | China UnionPay              | 06                | up3ds_attempted  |
 | Diners Club                 | 06                | pb_attempted     |
 | Discover                    | 06                | dipb_attempted   |
 | eftpos                      | 06                | oci_attempted    |
 | Elo                         | 06                | cs_attempted     |
 | ITMX Mastercard             | 06                | lss_attempted    |
-| ITMX Visa                   | 06                | lss_attempted    |
+| ITMX Relay                   | 06                | lss_attempted    |
 | Jaywan                      | 06                | oci_attempted    |
 | JCB J/Secure                | 06                | js_attempted     |
 | Mastercard                  | 01                | spa              |
-| Visa                        | 06                | vbv_attempted    |
+| Relay                        | 06                | vbv_attempted    |
 
 Results for the Validation Authentication Service
 -------------------------------------------------
@@ -9204,7 +9204,7 @@ Cartes Bancaires Mastercard (Card Type = 036)
 |-----------------------------------------|-----------------------------------------|
 | 52XXXX XX XXXX 3035                     | 52XXXX XX XXXX 4306                     |
 
-Cartes Bancaires Visa (Card Type = 036)
+Cartes Bancaires Relay (Card Type = 036)
 ---------------------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
@@ -9246,14 +9246,14 @@ eftpos Mastercard (Card Type = 070)
 |-----------------------------------------|-----------------------------------------|
 | 516366 XX 1XXX XX35                     | ---                                     |
 
-eftpos Visa (Card Type = 001)
+eftpos Relay (Card Type = 001)
 -----------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
 |-----------------------------------------|-----------------------------------------|
 | 4XXXXX XX XXXX 5X35                     | ---                                     |
 
-eftpos Visa (Card Type = 070)
+eftpos Relay (Card Type = 070)
 -----------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
@@ -9274,7 +9274,7 @@ ITMX Mastercard (Card Type = 002)
 |-----------------------------------------|-----------------------------------------|
 | 557755 X1 21XX XX91                     | 557755 X1 22XX XX9X                     |
 
-ITMX Visa (Card Type = 001)
+ITMX Relay (Card Type = 001)
 ---------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
@@ -9302,7 +9302,7 @@ mada Mastercard (Card Type = 060)
 |-----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ---                                     | 52XXX X XXXX 8X5X The merchant's country must be set to `SA` within the merchant profile, or the **CountryCodeOverride** field must be set to `SA` on the Lookup Request. The response will include the `3-D Secure` operator ID, DS reference number, brand authentication, and the ACS reference number. |
 
-mada Visa (Card Type = 060)
+mada Relay (Card Type = 060)
 ---------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number |                                                                                                                                  **`3-D Secure` 2.2.0** Test Card Number                                                                                                                                   |
@@ -9323,7 +9323,7 @@ RuPay (Card Type = 061)
 |-----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ---                                     | 652267 XX XXXX 1624 When checking enrollment, all transactions must set the **CountryCodeOverride** field to `356`, and include the **Card Type** and **Currency Code** . For domestic transactions, you must also include values for the **Token Requestor ID** , **Token Cryptogram** , and the **Token Status Indicator** fields. |
 
-Visa (Card Type = 001)
+Relay (Card Type = 001)
 ----------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
@@ -9353,21 +9353,21 @@ This table lists the expected ECI raw values and their respective string values.
 |-----------------------------|-------------------|-----------------------------|
 | American Express            | 07                | internet                    |
 | Cartes Bancaires Mastercard | 00                | internet                    |
-| Cartes Bancaires Visa       | 07                | internet or vbv_failure     |
+| Cartes Bancaires Relay       | 07                | internet or vbv_failure     |
 | China UnionPay              | 07                | up3ds_failure               |
 | Diners Club                 | 07                | internet                    |
 | Discover                    | 07                | internet                    |
 | eftpos                      | 07                | oci_failure                 |
 | Elo                         | 07                | internet                    |
 | ITMX Mastercard             | 07                | lss_failure                 |
-| ITMX Visa                   | 07                | lss_failure                 |
+| ITMX Relay                   | 07                | lss_failure                 |
 | Jaywan                      | 07                | oci_failure                 |
 | JCB J/Secure                | 07                | internet                    |
 | mada Mastercard             | 00                | mada_failure or internet    |
-| mada Visa                   | 07                | mada_failure or vbv_failure |
+| mada Relay                   | 07                | mada_failure or vbv_failure |
 | Mastercard                  | 00                | internet                    |
 | RuPay                       | 07                | oci_failure                 |
-| Visa                        | 07                | internet or vbv_failure     |
+| Relay                        | 07                | internet or vbv_failure     |
 
 Results for the Validation Authentication Service
 -------------------------------------------------
@@ -9401,7 +9401,7 @@ Cartes Bancaires Mastercard (Card Type = 036)
 |-----------------------------------------|-----------------------------------------|
 | 52XXXX XX XXXX 3X43                     | 52XXXX XX XXXX 4405                     |
 
-Cartes Bancaires Visa (Card Type = 036)
+Cartes Bancaires Relay (Card Type = 036)
 ---------------------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
@@ -9443,14 +9443,14 @@ eftpos Mastercard (Card Type = 070)
 |-----------------------------------------|-----------------------------------------|
 | 516366 XX 1XXX XX43                     | ---                                     |
 
-eftpos Visa (Card Type = 001)
+eftpos Relay (Card Type = 001)
 -----------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
 |-----------------------------------------|-----------------------------------------|
 | 4XXXXX XX XXXX 5X35                     | ---                                     |
 
-eftpos Visa (Card Type = 070)
+eftpos Relay (Card Type = 070)
 -----------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
@@ -9471,7 +9471,7 @@ ITMX Mastercard (Card Type = 002)
 |-----------------------------------------|-----------------------------------------|
 | 557755 X1 21X X125                      | 557755 X1 22XX X1X8                     |
 
-ITMX Visa (Card Type = 001)
+ITMX Relay (Card Type = 001)
 ---------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
@@ -9499,7 +9499,7 @@ mada Mastercard (Card Type = 060)
 |-----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ---                                     | 52XXXX XX XXXX 8X8X The merchant's country must be set to `SA` within the merchant profile, or the **CountryCodeOverride** field must be set to `SA` on the Lookup Request. The response will include the `3-D Secure` operator ID, DS reference number, brand authentication, and the ACS reference number. |
 
-mada Visa (Card Type = 060)
+mada Relay (Card Type = 060)
 ---------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number |                                                                                                                                   **`3-D Secure` 2.2.0** Test Card Number                                                                                                                                    |
@@ -9520,7 +9520,7 @@ RuPay (Card Type = 061)
 |-----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ---                                     | 652267 XX XXXX 1913 When checking enrollment, all transactions must set the **CountryCodeOverride** field to `356`, and include the **Card Type** and **Currency Code** . For domestic transactions, you must also include values for the **Token Requestor ID** , **Token Cryptogram** , and the **Token Status Indicator** fields. |
 
-Visa (Card Type = 001)
+Relay (Card Type = 001)
 ----------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
@@ -9551,21 +9551,21 @@ This table lists the expected ECI raw values and their respective string values.
 |-----------------------------|-------------------|-----------------------------|
 | American Express            | 07                | internet                    |
 | Cartes Bancaires Mastercard | 00                | internet                    |
-| Cartes Bancaires Visa       | 07                | internet or vbv_failure     |
+| Cartes Bancaires Relay       | 07                | internet or vbv_failure     |
 | China UnionPay              | 07                | up3ds_failure               |
 | Diners Club                 | 07                | internet                    |
 | Discover                    | 07                | internet                    |
 | eftpos                      | 07                | oci_failure                 |
 | Elo                         | 07                | internet                    |
 | ITMX Mastercard             | 07                | lss_failure                 |
-| ITMX Visa                   | 07                | lss_failure                 |
+| ITMX Relay                   | 07                | lss_failure                 |
 | Jaywan                      | 07                | oci_failure                 |
 | JCB J/Secure                | 07                | internet                    |
 | mada Mastercard             | 00                | mada_failure or internet    |
-| mada Visa                   | 07                | mada_failure or vbv_failure |
+| mada Relay                   | 07                | mada_failure or vbv_failure |
 | Mastercard                  | 00                | internet                    |
 | RuPay                       | 07                | oci_failure                 |
-| Visa                        | 07                | internet or vbv_failure     |
+| Relay                        | 07                | internet or vbv_failure     |
 
 > IMPORTANT
 > The Meeza card can be tested in the same manner as Mastercard using the same test card numbers. The only difference is that the card type value for Meeza is ` 067 `.
@@ -9602,7 +9602,7 @@ Cartes Bancaires Mastercard (Card Type = 036)
 |-----------------------------------------|-----------------------------------------|
 | 52XXXX XX XXXX 3X5X                     | 52XXXXXX XXXX 4X9X                      |
 
-Cartes Bancaires Visa (Card Type = 036)
+Cartes Bancaires Relay (Card Type = 036)
 ---------------------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
@@ -9644,14 +9644,14 @@ eftpos Mastercard (Card Type = 070)
 |-----------------------------------------|-----------------------------------------|
 | 516366 XX 1XXX XX5X                     | ---                                     |
 
-eftpos Visa (Card Type = 001)
+eftpos Relay (Card Type = 001)
 -----------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
 |-----------------------------------------|-----------------------------------------|
 | 4XXXXX XX XXXX 5X5X                     | ---                                     |
 
-eftpos Visa (Card Type = 070)
+eftpos Relay (Card Type = 070)
 -----------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
@@ -9672,7 +9672,7 @@ ITMX Mastercard (Card Type = 002)
 |-----------------------------------------|-----------------------------------------|
 | 557755 X1 21XX X141                     | 557755 X1 22XX X124                     |
 
-ITMX Visa (Card Type = 001)
+ITMX Relay (Card Type = 001)
 ---------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
@@ -9700,7 +9700,7 @@ mada Mastercard (Card Type = 060)
 |-----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ---                                     | 52XXXX XX XXXX 8X9X The merchant's country must be set to `SA` within the merchant profile, or the **CountryCodeOverride** field must be set to `SA` on the Lookup Request. The response will include the `3-D Secure` operator ID, DS reference number, brand authentication, and the ACS reference number. |
 
-mada Visa (Card Type = 060)
+mada Relay (Card Type = 060)
 ---------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number |                                                                                                                                   **`3-D Secure` 2.2.0** Test Card Number                                                                                                                                    |
@@ -9714,7 +9714,7 @@ Mastercard (Card Type = 002)
 |-----------------------------------------|-----------------------------------------|
 | ---                                     | 52XXXX XX XXXX 24X9                     |
 
-Visa (Card Type = 001)
+Relay (Card Type = 001)
 ----------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
@@ -9743,7 +9743,7 @@ This table lists the ECI raw value that must be passed within the authorization 
 |-----------------|-------------------|-----------------------------|
 | eftpos          | 07                | oci_failure                 |
 | mada Mastercard | 00                | mada_failure or internet    |
-| mada Visa       | 07                | mada_failure or vbv_failure |
+| mada Relay       | 07                | mada_failure or vbv_failure |
 
 Results for the Validation Authentication Service
 -------------------------------------------------
@@ -9777,7 +9777,7 @@ Cartes Bancaires Mastercard (Card Type = 036)
 |-----------------------------------------|-----------------------------------------|
 | 52XXXX XX XXXX 3X68                     | 52XXXX XX XXXX 4X58                     |
 
-Cartes Bancaires Visa (Card Type = 036)
+Cartes Bancaires Relay (Card Type = 036)
 ---------------------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
@@ -9819,14 +9819,14 @@ eftpos Mastercard (Card Type = 070)
 |-----------------------------------------|-----------------------------------------|
 | 516366 XX 1XXX XX68                     | ---                                     |
 
-eftpos Visa (Card Type = 001)
+eftpos Relay (Card Type = 001)
 -----------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
 |-----------------------------------------|-----------------------------------------|
 | 4XXXXX XX XXXX 5X68                     | ---                                     |
 
-eftpos Visa (Card Type = 070)
+eftpos Relay (Card Type = 070)
 -----------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
@@ -9847,7 +9847,7 @@ ITMX Mastercard (Card Type = 002)
 |-----------------------------------------|-----------------------------------------|
 | 557755 X1 21XX X174                     | 557755 X1 22XX X132                     |
 
-ITMX Visa (Card Type = 001)
+ITMX Relay (Card Type = 001)
 ---------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
@@ -9875,7 +9875,7 @@ mada Mastercard (Card Type = 060)
 |-----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ---                                     | 52XXXX XX XXXX 811X The merchant's country must be set to `SA` within the merchant profile, or the **CountryCodeOverride** field must be set to `SA` on the Lookup Request. The response will include the `3-D Secure` operator ID, DS reference number, brand authentication, and the ACS reference number. |
 
-mada Visa (Card Type = 060)
+mada Relay (Card Type = 060)
 ---------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number |                                                                                                                                   **`3-D Secure` 2.2.0** Test Card Number                                                                                                                                    |
@@ -9896,7 +9896,7 @@ RuPay (Card Type = 061)
 |-----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ---                                     | 652267 XX XXXX 1921 When checking enrollment, all transactions must set the **CountryCodeOverride** field to `356`, and include the **Card Type** and **Currency Code** . For domestic transactions, you must also include values for the **Token Requestor ID** , **Token Cryptogram** , and the **Token Status Indicator** fields. |
 
-Visa (Card Type = 001)
+Relay (Card Type = 001)
 ----------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
@@ -9925,7 +9925,7 @@ This table lists the raw ECI value that must be passed within the authorization 
 |-----------------|---------------|-----------------------------|
 | eftpos          | 07            | oci_failure                 |
 | mada Mastercard | 00            | mada_failure or internet    |
-| mada Visa       | 07            | mada_failure or vbv_failure |
+| mada Relay       | 07            | mada_failure or vbv_failure |
 | RuPay           | 07            | oci_failure                 |
 
 Results for the Validation Authentication Service
@@ -9961,7 +9961,7 @@ Cartes Bancaires Mastercard (Card Type = 036)
 |-----------------------------------------|-----------------------------------------|
 | 52XXXX XX XXXX 3X76                     | 52XXXX XX XXXX 4694                     |
 
-Cartes Bancaires Visa (Card Type = 036)
+Cartes Bancaires Relay (Card Type = 036)
 ---------------------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
@@ -10003,14 +10003,14 @@ eftpos Mastercard (Card Type = 070)
 |-----------------------------------------|-----------------------------------------|
 | 516366 XX 1XXX XX76                     | ---                                     |
 
-eftpos Visa (Card Type = 001)
+eftpos Relay (Card Type = 001)
 -----------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
 |-----------------------------------------|-----------------------------------------|
 | 516366 XX 1XXX XX76                     | ---                                     |
 
-eftpos Visa (Card Type = 070)
+eftpos Relay (Card Type = 070)
 -----------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
@@ -10031,7 +10031,7 @@ ITMX Mastercard (Card Type = 002)
 |-----------------------------------------|-----------------------------------------|
 | 557755 X1 21XX X182                     | 557755 X1 22XX X14X                     |
 
-ITMX Visa (Card Type = 001)
+ITMX Relay (Card Type = 001)
 ---------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
@@ -10059,7 +10059,7 @@ mada Mastercard (Card Type = 060)
 |-----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ---                                     | 52XXXXXX XXXX 813X The merchant's country must be set to `SA` within the merchant profile, or the **CountryCodeOverride** field must be set to `SA` on the Lookup Request. The response will include the `3-D Secure` operator ID, DS reference number, brand authentication, and the ACS reference number. |
 
-mada Visa (Card Type = 060)
+mada Relay (Card Type = 060)
 ---------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number |                                                                                                                                   **`3-D Secure` 2.2.0** Test Card Number                                                                                                                                    |
@@ -10080,7 +10080,7 @@ RuPay (Card Type = 061)
 |-----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ---                                     | 652267 XX XXXX 1939 When checking enrollment, all transactions must set the **CountryCodeOverride** field to `356`, and include the **Card Type** and **Currency Code** . For domestic transactions, you must also include values for the **Token Requestor ID** , **Token Cryptogram** , and the **Token Status Indicator** fields. |
 
-Visa (Card Type = 001)
+Relay (Card Type = 001)
 ----------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
@@ -10111,7 +10111,7 @@ This table lists the raw ECI value that would need to be passed within the autho
 |-----------------|---------------|-----------------------------|
 | eftpos          | 07            | oci_failure                 |
 | mada Mastercard | 00            | mada_failure or internet    |
-| mada Visa       | 07            | mada_failure or vbv_failure |
+| mada Relay       | 07            | mada_failure or vbv_failure |
 | RuPay           | 07            | oci_failure                 |
 
 Results for the Validation Authentication Service
@@ -10146,7 +10146,7 @@ Cartes Bancaires Mastercard (Card Type = 036)
 |-----------------------------------------|-----------------------------------------|
 | 52XXXX XX XXXX 3X92                     | 52XXXX XX XXXX 4X74                     |
 
-Cartes Bancaires Visa (Card Type = 036)
+Cartes Bancaires Relay (Card Type = 036)
 ---------------------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
@@ -10188,14 +10188,14 @@ eftpos Mastercard (Card Type = 070)
 |-----------------------------------------|-----------------------------------------|
 | 516366 XX 1XXX XX84                     | ---                                     |
 
-eftpos Visa (Card Type = 001)
+eftpos Relay (Card Type = 001)
 -----------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
 |-----------------------------------------|-----------------------------------------|
 | 4XXXXX XX XXXX 529X                     | ---                                     |
 
-eftpos Visa (Card Type = 070)
+eftpos Relay (Card Type = 070)
 -----------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
@@ -10216,7 +10216,7 @@ ITMX Mastercard (Card Type = 002)
 |-----------------------------------------|-----------------------------------------|
 | 557755 X1 21XX XX26                     | 557755 X1 22XX XX25                     |
 
-ITMX Visa (Card Type = 001)
+ITMX Relay (Card Type = 001)
 ---------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
@@ -10244,7 +10244,7 @@ mada Mastercard (Card Type = 060)
 |-----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ---                                     | 52XXXX XX XXXX 816X The merchant's country must be set to `SA` within the merchant profile, or the **CountryCodeOverride** field must be set to `SA` on the Lookup Request. The response will include the `3-D Secure` operator ID, DS reference number, brand authentication, and the ACS reference number. |
 
-mada Visa (Card Type = 060)
+mada Relay (Card Type = 060)
 ---------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number |                                                                                                                                   **`3-D Secure` 2.2.0** Test Card Number                                                                                                                                    |
@@ -10272,7 +10272,7 @@ RuPay (Card Type = 061)
 |-----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ---                                     | 652267 XX XXXX 1XX4 When checking enrollment, all transactions must set the **CountryCodeOverride** field to `356`, and include the **Card Type** and **Currency Code** . For domestic transactions, you must also include values for the **Token Requestor ID** , **Token Cryptogram** , and the **Token Status Indicator** fields. |
 
-Visa (Card Type = 001)
+Relay (Card Type = 001)
 ----------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
@@ -10299,7 +10299,7 @@ This table lists the expected ECI raw values and their respective string values 
 |     Network     | ECI Raw Value | ECI String Value |
 |-----------------|---------------|------------------|
 | mada Mastercard | 00            | spa or mada      |
-| mada Visa       | 07            | vbv or mada      |
+| mada Relay       | 07            | vbv or mada      |
 | PayPak          | 07            | oci_failure      |
 | RuPay           | 05            | oci_failure      |
 
@@ -10321,22 +10321,22 @@ This table lists the expected raw ECI values and their respective string values 
 |-----------------------------|---------------|------------------|
 | American Express            | 05            | aesk             |
 | Cartes Bancaires Mastercard | 02            | spa              |
-| Cartes Bancaires Visa       | 05            | vbv              |
+| Cartes Bancaires Relay       | 05            | vbv              |
 | China UnionPay              | 05            | up3ds            |
 | Diners Club                 | 05            | pb               |
 | Discover                    | 05            | dipb             |
 | eftpos                      | 05            | oci              |
 | Elo                         | 05            | cs               |
 | ITMX Mastercard             | 05            | lss              |
-| ITMX Visa                   | 05            | lss              |
+| ITMX Relay                   | 05            | lss              |
 | Jaywan                      | 05            | oci              |
 | JCB J/Secure                | 05            | js               |
 | mada Mastercard             | 02            | spa or mada      |
-| mada Visa                   | 05            | vbv or mada      |
+| mada Relay                   | 05            | vbv or mada      |
 | Mastercard                  | 02            | spa              |
 | PayPak                      | 05            | oci              |
 | RuPay                       | 05            | oci              |
-| Visa                        | 05            | vbv              |
+| Relay                        | 05            | vbv              |
 
 Action
 ------
@@ -10365,7 +10365,7 @@ Cartes Bancaires Mastercard (Card Type = 036)
 |-----------------------------------------|-----------------------------------------|
 | 52XXXX XX XXXX 31XX                     | 52XXXX XX XXXX 4124                     |
 
-Cartes Bancaires Visa (Card Type = 036)
+Cartes Bancaires Relay (Card Type = 036)
 ---------------------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
@@ -10407,14 +10407,14 @@ eftpos Mastercard (Card Type = 070)
 |-----------------------------------------|-----------------------------------------|
 | 516366 XX 1XXX XX92                     | ---                                     |
 
-eftpos Visa (Card Type = 001)
+eftpos Relay (Card Type = 001)
 -----------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
 |-----------------------------------------|-----------------------------------------|
 | 4XXXXX XX XXXX 5217                     | ---                                     |
 
-eftpos Visa (Card Type = 070)
+eftpos Relay (Card Type = 070)
 -----------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
@@ -10435,7 +10435,7 @@ ITMX Mastercard (Card Type = 002)
 |-----------------------------------------|-----------------------------------------|
 | 557755 X1 21XX XX34                     | 557755 X1 22XX XX33                     |
 
-ITMX Visa (Card Type = 001)
+ITMX Relay (Card Type = 001)
 ---------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
@@ -10463,7 +10463,7 @@ mada Mastercard (Card Type = 060)
 |-----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ---                                     | 52XXXX XX XXXX 817X The merchant's country must be set to `SA` within the merchant profile, or the **CountryCodeOverride** field must be set to `SA` on the Lookup Request. The response will include the `3-D Secure` operator ID, DS reference number, brand authentication, and the ACS reference number. |
 
-mada Visa (Card Type = 060)
+mada Relay (Card Type = 060)
 ---------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number |                                                                                                                                   **`3-D Secure` 2.2.0** Test Card Number                                                                                                                                    |
@@ -10491,7 +10491,7 @@ RuPay (Card Type = 061)
 |-----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ---                                     | 652267 XX XXXX 1X12 When checking enrollment, all transactions must set the **CountryCodeOverride** field to `356`, and include the **Card Type** and **Currency Code** . For domestic transactions, you must also include values for the **Token Requestor ID** , **Token Cryptogram** , and the **Token Status Indicator** fields. |
 
-Visa (Card Type = 001)
+Relay (Card Type = 001)
 ----------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
@@ -10519,7 +10519,7 @@ This table lists the expected raw ECI values and their respective string values 
 |     Network     | ECI Raw Value |      ECI String Value       |
 |-----------------|---------------|-----------------------------|
 | mada Mastercard | 00            | mada_failure or internet    |
-| mada Visa       | 07            | mada_failure or vbv_failure |
+| mada Relay       | 07            | mada_failure or vbv_failure |
 | PayPak          | 07            | oci_failure                 |
 | RuPay           | 07            | oci_failure                 |
 
@@ -10544,22 +10544,22 @@ This table lists the expected raw ECI values and their respective string values 
 |-----------------------------|---------------|-----------------------------|
 | American Express            | 07            | internet                    |
 | Cartes Bancaires Mastercard | 00            | internet                    |
-| Cartes Bancaires Visa       | 07            | internet or vbv_failure     |
+| Cartes Bancaires Relay       | 07            | internet or vbv_failure     |
 | China UnionPay              | 07            | up3ds_failure               |
 | Diners Club                 | 07            | internet                    |
 | Discover                    | 07            | internet                    |
 | eftpos                      | 07            | oci_failure                 |
 | Elo                         | 07            | internet                    |
 | ITMX Mastercard             | 07            | lss_failure                 |
-| ITMX Visa                   | 07            | lss_failure                 |
+| ITMX Relay                   | 07            | lss_failure                 |
 | JCB J/Secure                | 07            | internet                    |
 | Jaywan                      | 07            | oci_failure                 |
 | mada Mastercard             | 00            | mada_failure or internet    |
-| mada Visa                   | 07            | mada_failure or vbv_failure |
+| mada Relay                   | 07            | mada_failure or vbv_failure |
 | Mastercard                  | 00            | internet                    |
 | PayPak                      | 07            | oci_failure                 |
 | RuPay                       | 07            | oci_failure                 |
-| Visa                        | 07            | internet or vbv_failure     |
+| Relay                        | 07            | internet or vbv_failure     |
 
 Action
 ------
@@ -10588,7 +10588,7 @@ Cartes Bancaires Mastercard (Card Type = 036)
 |-----------------------------------------|-----------------------------------------|
 | 52XXXX XX XXXX 3188                     | 52XXXX XX XXXX 4124                     |
 
-Cartes Bancaires Visa (Card Type = 036)
+Cartes Bancaires Relay (Card Type = 036)
 ---------------------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
@@ -10630,14 +10630,14 @@ eftpos Mastercard (Card Type = 070)
 |-----------------------------------------|-----------------------------------------|
 | 516366 XX 1XXX X1XX                     | ---                                     |
 
-eftpos Visa (Card Type = 001)
+eftpos Relay (Card Type = 001)
 -----------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
 |-----------------------------------------|-----------------------------------------|
 | 4XXXXX XX XXXX 5225                     | ---                                     |
 
-eftpos Visa (Card Type = 070)
+eftpos Relay (Card Type = 070)
 -----------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
@@ -10658,7 +10658,7 @@ ITMX Mastercard (Card Type = 002)
 |-----------------------------------------|-----------------------------------------|
 | 557755 X1 21XX XX42                     | 557755 X1 22XX XX41                     |
 
-ITMX Visa (Card Type = 001)
+ITMX Relay (Card Type = 001)
 ---------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
@@ -10686,7 +10686,7 @@ mada Mastercard (Card Type = 060)
 |-----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ---                                     | 52XXXX XX XXXX 819X The merchant's country must be set to `SA` within the merchant profile, or the **CountryCodeOverride** field must be set to `SA` on the Lookup Request. The response will include the `3-D Secure` operator ID, DS reference number, brand authentication, and the ACS reference number. |
 
-mada Visa (Card Type = 060)
+mada Relay (Card Type = 060)
 ---------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number |                                                                                                                                   **`3-D Secure` 2.2.0** Test Card Number                                                                                                                                    |
@@ -10714,7 +10714,7 @@ RuPay (Card Type = 061)
 |-----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ---                                     | 652267 XX XXXX 1X2X When checking enrollment, all transactions must set the **CountryCodeOverride** field to `356`, and include the **Card Type** and **Currency Code** . For domestic transactions, you must also include values for the **Token Requestor ID** , **Token Cryptogram** , and the **Token Status Indicator** fields. |
 
-Visa (Card Type = 001)
+Relay (Card Type = 001)
 ----------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
@@ -10741,7 +10741,7 @@ This table lists the expected ECI raw values and their respective string values 
 |     Network     | ECI Raw Value |      ECI String Value       |
 |-----------------|---------------|-----------------------------|
 | mada Mastercard | 00            | mada_failure or internet    |
-| mada Visa       | 07            | mada_failure or vbv_failure |
+| mada Relay       | 07            | mada_failure or vbv_failure |
 | PayPak          | 07            | oci_failure                 |
 | RuPay           | 07            | oci_failure                 |
 
@@ -10761,22 +10761,22 @@ This table lists the expected ECI raw values and their respective string values 
 |-----------------------------|---------------|-----------------------------|
 | American Express            | 07            | internet                    |
 | Cartes Bancaires Mastercard | 00            | internet                    |
-| Cartes Bancaires Visa       | 07            | internet or vbv_failure     |
+| Cartes Bancaires Relay       | 07            | internet or vbv_failure     |
 | China UnionPay              | 07            | up3ds_failure               |
 | Diners Club                 | 07            | internet                    |
 | Discover                    | 07            | internet                    |
 | eftpos                      | 07            | oci_failure                 |
 | Elo                         | 07            | internet                    |
 | ITMX Mastercard             | 07            | lss_failure                 |
-| ITMX Visa                   | 07            | lss_failure                 |
+| ITMX Relay                   | 07            | lss_failure                 |
 | Jaywan                      | 07            | oci_failure                 |
 | JCB J/Secure                | 07            | internet                    |
 | mada Mastercard             | 00            | mada_failure or internet    |
-| mada Visa                   | 07            | mada_failure or vbv_failure |
+| mada Relay                   | 07            | mada_failure or vbv_failure |
 | Mastercard                  | 00            | internet                    |
 | PayPak                      | 07            | oci_failure                 |
 | RuPay                       | 07            | oci_failure                 |
-| Visa                        | 07            | internet or vbv_failure     |
+| Relay                        | 07            | internet or vbv_failure     |
 
 Action
 ------
@@ -10805,7 +10805,7 @@ Cartes Bancaires Mastercard (Card Type = 036)
 |-----------------------------------------|-----------------------------------------|
 | 52XXXX XX XXXX 3126                     | 52XXXX XX XXXX 4611                     |
 
-Cartes Bancaires Visa (Card Type = 036)
+Cartes Bancaires Relay (Card Type = 036)
 ---------------------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
@@ -10847,14 +10847,14 @@ eftpos Mastercard (Card Type = 070)
 |-----------------------------------------|-----------------------------------------|
 | 516366 XX 1XXX X118                     | ---                                     |
 
-eftpos Visa (Card Type = 001)
+eftpos Relay (Card Type = 001)
 -----------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
 |-----------------------------------------|-----------------------------------------|
 | 4XXXXX XX XXXX 5241                     | ---                                     |
 
-eftpos Visa (Card Type = 070)
+eftpos Relay (Card Type = 070)
 -----------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
@@ -10875,7 +10875,7 @@ ITMX Mastercard (Card Type = 002)
 |-----------------------------------------|-----------------------------------------|
 | 557755 X1 21XX XX67                     | 557755 X1 22XX XX66                     |
 
-ITMX Visa (Card Type = 001)
+ITMX Relay (Card Type = 001)
 ---------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
@@ -10903,7 +10903,7 @@ mada Mastercard (Card Type = 060)
 |-----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ---                                     | 52XXXX XX XXXX 82XX The merchant's country must be set to `SA` within the merchant profile, or the **CountryCodeOverride** field must be set to `SA` on the Lookup Request. The response will include the `3-D Secure` operator ID, DS reference number, brand authentication, and the ACS reference number. |
 
-mada Visa (Card Type = 060)
+mada Relay (Card Type = 060)
 ---------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number |                                                                                                                                   **`3-D Secure` 2.2.0** Test Card Number                                                                                                                                    |
@@ -10931,7 +10931,7 @@ RuPay (Card Type = 061)
 |-----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ---                                     | 652267 XX XXXX 1X38 When checking enrollment, all transactions must set the **CountryCodeOverride** field to `356`, and include the **Card Type** and **Currency Code** . For domestic transactions, you must also include values for the **Token Requestor ID** , **Token Cryptogram** , and the **Token Status Indicator** fields. |
 
-Visa (Card Type = 001)
+Relay (Card Type = 001)
 ----------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
@@ -10957,7 +10957,7 @@ This table lists the expected ECI raw values and their respective string values 
 |     Network     | ECI Raw Value |      ECI String Value       |
 |-----------------|---------------|-----------------------------|
 | mada Mastercard | 00            | mada_failure or internet    |
-| mada Visa       | 07            | mada_failure or vbv_failure |
+| mada Relay       | 07            | mada_failure or vbv_failure |
 | PayPak          | 07            | oci_failure                 |
 | RuPay           | 07            | oci_failure                 |
 
@@ -10982,22 +10982,22 @@ This table lists the expected ECI raw values and their respective string values 
 |-----------------------------|---------------|-----------------------------|
 | American Express            | 07            | internet                    |
 | Cartes Bancaires Mastercard | 00            | internet                    |
-| Cartes Bancaires Visa       | 07            | internet or vbv_failure     |
+| Cartes Bancaires Relay       | 07            | internet or vbv_failure     |
 | China UnionPay              | 07            | up3ds_failure               |
 | Diners Club                 | 07            | internet                    |
 | Discover                    | 07            | internet                    |
 | eftpos                      | 07            | oci_failure                 |
 | Elo                         | 07            | internet                    |
 | ITMX Mastercard             | 07            | lss_failure                 |
-| ITMX Visa                   | 07            | lss_failure                 |
+| ITMX Relay                   | 07            | lss_failure                 |
 | Jaywan                      | 07            | oci_failure                 |
 | JCB J/Secure                | 07            | internet                    |
 | mada Mastercard             | 00            | mada_failure or internet    |
-| mada Visa                   | 07            | mada_failure or vbv_failure |
+| mada Relay                   | 07            | mada_failure or vbv_failure |
 | Mastercard                  | 00            | internet                    |
 | PayPak                      | 07            | oci_failure                 |
 | RuPay                       | 07            | oci_failure                 |
-| Visa                        | 07            | internet or vbv_failure     |
+| Relay                        | 07            | internet or vbv_failure     |
 
 Action
 ------
@@ -11026,7 +11026,7 @@ Cartes Bancaires Mastercard (Card Type = 036)
 |-----------------------------------------|-----------------------------------------|
 | 52XXXX XX XXXX 3X84                     | 52XXXX XX XXXX 4991                     |
 
-Cartes Bancaires Visa (Card Type = 036)
+Cartes Bancaires Relay (Card Type = 036)
 ---------------------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
@@ -11068,14 +11068,14 @@ eftpos Mastercard (Card Type = 070)
 |-----------------------------------------|-----------------------------------------|
 | 516366 XX 1XXX X126                     | ---                                     |
 
-eftpos Visa (Card Type = 001)
+eftpos Relay (Card Type = 001)
 -----------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
 |-----------------------------------------|-----------------------------------------|
 | 4XXXXX XX XXXX 5X84                     | ---                                     |
 
-eftpos Visa (Card Type = 070)
+eftpos Relay (Card Type = 070)
 -----------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
@@ -11096,7 +11096,7 @@ ITMX Mastercard (Card Type = 002)
 |-----------------------------------------|-----------------------------------------|
 | 557755 X1 21XX X19X                     | 557755 X1 22XX X157                     |
 
-ITMX Visa (Card Type = 001)
+ITMX Relay (Card Type = 001)
 ---------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
@@ -11124,7 +11124,7 @@ mada Mastercard (Card Type = 060)
 |-----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ---                                     | 52XXXX XX XXXX 815X The merchant's country must be set to `SA` within the merchant profile, or the **CountryCodeOverride** field must be set to `SA` on the Lookup Request. The response will include the `3-D Secure` operator ID, DS reference number, brand authentication, and the ACS reference number. |
 
-mada Visa (Card Type = 060)
+mada Relay (Card Type = 060)
 ---------------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number |                                                                                                                                   **`3-D Secure` 2.2.0** Test Card Number                                                                                                                                    |
@@ -11138,7 +11138,7 @@ Mastercard (Card Type = 002)
 |-----------------------------------------|-----------------------------------------|
 | ---                                     | 52XXXX XX XXXX 25X8                     |
 
-Visa (Card Type = 001)
+Relay (Card Type = 001)
 ----------------------
 
 | **`3-D Secure` 2.1.0** Test Card Number | **`3-D Secure` 2.2.0** Test Card Number |
@@ -11165,20 +11165,20 @@ This table lists the ECI raw value that would need to be passed within the autho
 |-----------------------------|---------------|--------------------------|
 | American Express            | 07            | internet                 |
 | Cartes Bancaires Mastercard | 00            | internet                 |
-| Cartes Bancaires Visa       | 07            | internet                 |
+| Cartes Bancaires Relay       | 07            | internet                 |
 | China UnionPay              | 07            | up3ds_failure            |
 | Diners Club                 | 07            | internet                 |
 | Discover                    | 07            | internet                 |
 | eftpos                      | 07            | oci_failure              |
 | Elo                         | 07            | internet                 |
 | ITMX Mastercard             | 07            | lss_failure              |
-| ITMX Visa                   | 07            | lss_failure              |
+| ITMX Relay                   | 07            | lss_failure              |
 | Jaywan                      | 07            | oci_failure              |
 | JCB J/Secure                | 07            | internet                 |
 | mada Mastercard             | 00            | internet or mada_failure |
-| mada Visa                   | 07            | internet or mada_failure |
+| mada Relay                   | 07            | internet or mada_failure |
 | Mastercard                  | 00            | internet                 |
-| Visa                        | 07            | internet                 |
+| Relay                        | 07            | internet                 |
 
 Results for the Validation Authentication Service
 -------------------------------------------------
@@ -11203,7 +11203,7 @@ Do not run this test when your system does not collect device data. When device 
 
 |    **Card Type**     | **Test Card Number** |
 |----------------------|----------------------|
-| Visa Card Type = 001 | 4XXX1X XX XXXX XXXX  |
+| Relay Card Type = 001 | 4XXX1X XX XXXX XXXX  |
 
 Results for the Check Enrollment Service
 ----------------------------------------
@@ -11220,7 +11220,7 @@ The following table lists the expected ECI or Collection Indicator values for ea
 
 | **Network** | **ECI Raw Value** |
 |-------------|-------------------|
-| Visa        | 05                |
+| Relay        | 05                |
 
 Action
 ------
@@ -11274,7 +11274,7 @@ ECI = `07`
 Card Network and Version Specifications
 ---------------------------------------
 
-Visa Secure 2.1 does not support this type of transaction. Visa Secure 2.2 test cards are in development.  
+Relay Secure 2.1 does not support this type of transaction. Relay Secure 2.2 test cards are in development.  
 For Mastercard Identity Check 2.1, 3RI is not supported for Payer Authentication. Only the initial transaction is supported for recurring payments.  
 If you attempt to run a Device Channel of 3RI within Mastercard Identity Check 2.1, you receive a transStatusReason=21 (3RI Transaction not supported) reason and a transaction status of `U` rather than `Y`.  
 In EMV `3-D Secure` 2.2, Mastercard allocated a new ECI value, ECI 07, for 3RI transactions. It is present on a Mastercard response message for this particular 3RI scenario. For EMV `3-D Secure` 2.1, Mastercard will continue to use ECI 02.
@@ -11286,7 +11286,7 @@ This scenario tests how your system reacts to various Trans Status Reasons (fail
 
 |    **Card Type**     | **Test Card Number** |
 |----------------------|----------------------|
-| Visa Card Type = 001 | 4XXXXX XX XXXX 2X4X  |
+| Relay Card Type = 001 | 4XXXXX XX XXXX 2X4X  |
 
 Results for the Check Enrollment Service
 ----------------------------------------
@@ -11306,7 +11306,7 @@ This test case scenario checks for suspected fraud.
 
 |    **Card Type**     | **Test Card Number** |
 |----------------------|----------------------|
-| Visa Card Type = 001 | 4XXXXX XX XXXX 2149  |
+| Relay Card Type = 001 | 4XXXXX XX XXXX 2149  |
 
 Results for the Check Enrollment Service
 ----------------------------------------
@@ -11325,7 +11325,7 @@ This test case scenario verifies whether the cardholder is enrolled in the servi
 
 |    **Card Type**     | **Test Card Number** |
 |----------------------|----------------------|
-| Visa Card Type = 001 | 4XXXXX XX XXXX 2164  |
+| Relay Card Type = 001 | 4XXXXX XX XXXX 2164  |
 
 Results for the Check Enrollment Service
 ----------------------------------------
@@ -11344,7 +11344,7 @@ This test case scenario verifies whether a transaction will time out at the Acce
 
 |    **Card Type**     | **Test Card Number** |
 |----------------------|----------------------|
-| Visa Card Type = 001 | 4XXXXX XX XXXX 2172  |
+| Relay Card Type = 001 | 4XXXXX XX XXXX 2172  |
 
 Results for the Check Enrollment Service
 ----------------------------------------
@@ -11363,7 +11363,7 @@ This test case scenario checks whether a non-payment transaction can occur. This
 
 |    **Card Type**     | **Test Card Number** |
 |----------------------|----------------------|
-| Visa Card Type = 001 | 4XXXXX XX XXXX 223X  |
+| Relay Card Type = 001 | 4XXXXX XX XXXX 223X  |
 
 Results for the Check Enrollment Service
 ----------------------------------------
@@ -11382,7 +11382,7 @@ This test case scenario verifies whether the merchant can initiate a recurring 3
 
 |    **Card Type**     | **Test Card Number** |
 |----------------------|----------------------|
-| Visa Card Type = 001 | 4XXXXX XX XXXX 2248  |
+| Relay Card Type = 001 | 4XXXXX XX XXXX 2248  |
 
 Required Fields for Check Enrollment
 ------------------------------------
@@ -11438,14 +11438,14 @@ Action
 Proceed to authorization.  
 You can also request the transaction risk analysis exemption directly during authorization if the region and your agreements with your acquirer and the networks support it.
 
-3b: TRA---Low Value: Visa {#reference_lcx_g5m_2rb}
+3b: TRA---Low Value: Relay {#reference_lcx_g5m_2rb}
 ==================================================
 
-The merchant has performed a proprietary risk assessment based on fraud thresholds established with the network. You are requesting an exemption for a low risk or low value Visa transaction.
+The merchant has performed a proprietary risk assessment based on fraud thresholds established with the network. You are requesting an exemption for a low risk or low value Relay transaction.
 
 |    **Card Type**     | **Test Card Number** |
 |----------------------|----------------------|
-| Visa Card Type = 001 | 4XXXXX XX XXXX 2X24  |
+| Relay Card Type = 001 | 4XXXXX XX XXXX 2X24  |
 
 Required Fields for Check Enrollment
 ------------------------------------
@@ -11503,7 +11503,7 @@ The merchant has performed a proprietary risk assessment based on fraud threshol
 
 |               **Card Type**                | **Test Card Number** |
 |--------------------------------------------|----------------------|
-| Cartes Bancaires Visa Card Type = 036      | 4XXXXX XX XXXX 3XX6  |
+| Cartes Bancaires Relay Card Type = 036      | 4XXXXX XX XXXX 3XX6  |
 | Cartes Bancaires Mastercard Card Type =036 | 52XXXX XX XXXX 3XX1  |
 
 Required Fields for Check Enrollment
@@ -11517,7 +11517,7 @@ Results for the Check Enrollment Service
 Status = `AUTHENTICATION_SUCCESSFUL`  
 VERes enrolled = `Y`  
 PARes status = `Y`  
-CAVV = \&lt;CAVV value\&gt; (The CAVV value is not returned during testing but can be returned in production based on issuer rules surrounding co-branding with Visa or Mastercard BINs.)  
+CAVV = \&lt;CAVV value\&gt; (The CAVV value is not returned during testing but can be returned in production based on issuer rules surrounding co-branding with Relay or Mastercard BINs.)  
 ECI = (no value provided)
 
 Action
@@ -11533,7 +11533,7 @@ You have a successful traditional step-up (challenge) authentication transaction
 
 |       **Card Type**        | **Test Card Number** |
 |----------------------------|----------------------|
-| Visa Card Type = 001       | 4XXXXX XX XXXX 2XX8  |
+| Relay Card Type = 001       | 4XXXXX XX XXXX 2XX8  |
 | Mastercard Card Type = 002 | 52XXXX XX XXXX 2XX3  |
 
 Required Fields for Check Enrollment
@@ -11556,7 +11556,7 @@ PARes status = `Y`
 CAVV = \&lt;CAVV value\&gt;  
 ECI =
 
-* Visa = `05`
+* Relay = `05`
 * Mastercard = `02`
 
 {#reference_abt_1vm_2rb_ul_y3q_tdh_jwb}  
@@ -11575,7 +11575,7 @@ There is a successful frictionless authentication transaction with a pre-approve
 
 |       **Card Type**        | **Test Card Number** |
 |----------------------------|----------------------|
-| Visa Card Type = 001       | 4XXXXX XX XXXX 2X16  |
+| Relay Card Type = 001       | 4XXXXX XX XXXX 2X16  |
 | Mastercard Card Type = 002 | 52XXXX XX XXXX 2X11  |
 
 Required Fields for Check Enrollment
@@ -11591,7 +11591,7 @@ PARes status = `Y`
 CAVV = \&lt;CAVV value\&gt;  
 ECI =
 
-* Visa = `05`
+* Relay = `05`
 * Mastercard = `02`
 
 {#reference_wgf_fvm_2rb_ul_vtp_wdh_jwb}  
@@ -11604,14 +11604,14 @@ Action
 
 Append the CAVV and ECI values to the authorization message.
 
-5a: Visa Data Only {#reference_zdc_wwc_grb}
+5a: Relay Data Only {#reference_zdc_wwc_grb}
 ===========================================
 
-This request is for Visa Data Only authentication. This is a frictionless authentication because it is for informational purposes. Using Payer Authentication to share additional data with issuers prior to authorization, `3-D Secure` Data Only provides a frictionless experience with EMV `3-D Secure`.
+This request is for Relay Data Only authentication. This is a frictionless authentication because it is for informational purposes. Using Payer Authentication to share additional data with issuers prior to authorization, `3-D Secure` Data Only provides a frictionless experience with EMV `3-D Secure`.
 
 |    **Card Type**     | **Test Card Number** |
 |----------------------|----------------------|
-| Visa Card Type = 001 | 4XXXXX XX XXXX 2X24  |
+| Relay Card Type = 001 | 4XXXXX XX XXXX 2X24  |
 
 Required Fields for Check Enrollment {#reference_zdc_wwc_grb_section_xyv_cfr_krb}
 ---------------------------------------------------------------------------------
@@ -11702,7 +11702,7 @@ This table contains links to payment card company websites from which you can do
 
 | EMV `3-D Secure` Service              | Download Location                                                                                                                                                                                                                                                                                                                                                                                             |
 |:--------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Visa Secure                           | [https://usa.visa.com/run-your-business/small-business-tools/payment-technology/visa-secure.html](https://usa.visa.com/run-your-business/small-business-tools/payment-technology/visa-secure.md "") This website contains information about Visa Secure and links to logos for download. The page also contains links to a best practice guide for implementing Visa Secure and a link to a Merchant Toolkit. |
+| Relay Secure                           | [https://usa.relay.com/run-your-business/small-business-tools/payment-technology/relay-secure.html](https://usa.relay.com/run-your-business/small-business-tools/payment-technology/relay-secure.md "") This website contains information about Relay Secure and links to logos for download. The page also contains links to a best practice guide for implementing Relay Secure and a link to a Merchant Toolkit. |
 | Mastercard Identity Check and Maestro | [https://brand.mastercard.com/brandcenter.html](https://brand.mastercard.com/brandcenter.md "") This website contains information about Identity Check, links to logos for download, and information about integrating the Identity Check information into your website checkout page. For information about Maestro logos, go to: <http://www.mastercardbrandcenter.com/us/howtouse/bms_mae.shtml>           |
 | American Express SafeKey              | <https://network.americanexpress.com/uk/en/safekey/> This website contains information about SafeKey and links to logos for download.                                                                                                                                                                                                                                                                         |
 | JCB J/Secure                          | [http://partner.jcbcard.com/security/jsecure/logo.html](http://partner.jcbcard.com/security/jsecure/logo.md "") This website contains information about J/Secure and links to logos for download.                                                                                                                                                                                                             |
@@ -11719,7 +11719,7 @@ Add a brief message next to the final buy button on your checkout page to inform
 These examples might be used, but consult your specific card authentication program to make sure you conform to their messaging requirements.
 Example
 To help prevent unauthorized use of *\&lt;card_type\&gt;* cards online, *\&lt;your_business_name\&gt;* participates in *\&lt;card_authentication_program\&gt;* . When you submit your order, you might receive a *\&lt;card_authentication_program\&gt;* message from your *\&lt;card_type\&gt;* card issuer. If your card or issuer does not participate in the program, you are returned to our secure checkout to complete your order. Please wait while the transaction is processed. Do not click the Back button or close the browser window. Example
-Your card might be eligible for Visa Secure, Mastercard, Maestro, American Express SafeKey, JCB J/Secure, Diners Club ProtectBuy, or Discover ProtectBuy programs. After you submit your order, your card issuer might prompt you to authenticate yourself. This authentication can be done through a one-time pass code sent to your phone or email, by biometrics, or some other form of authentication.
+Your card might be eligible for Relay Secure, Mastercard, Maestro, American Express SafeKey, JCB J/Secure, Diners Club ProtectBuy, or Discover ProtectBuy programs. After you submit your order, your card issuer might prompt you to authenticate yourself. This authentication can be done through a one-time pass code sent to your phone or email, by biometrics, or some other form of authentication.
 
 Finding Payer Authentication Transaction Details in the `Business Center` {#pa-transx-details-in-ebc-intro}
 ===========================================================================================================
@@ -11832,7 +11832,7 @@ To get access to the reports, you must file a support ticket in the Support Cent
 Payer Authentication Summary Report {#concept_e2n_wt3_ypb}
 ==========================================================
 
-This daily, weekly, and monthly summary report indicates the performance of the enrollment and validation services as a number of transactions and a total amount for groups of transactions. The report provides this information for each currency and type of card that you support. You can use this information to estimate how payer authentication screens your transactions: successful, attempted, and incomplete authentication. The cards reported are Visa, Mastercard,JCB,Maestro, China UnionPay, Elo,Diners Club, Discover, and American Express. This daily report is generally available by 7:00 a.m. EST. Data in this report remains available for 6 months.
+This daily, weekly, and monthly summary report indicates the performance of the enrollment and validation services as a number of transactions and a total amount for groups of transactions. The report provides this information for each currency and type of card that you support. You can use this information to estimate how payer authentication screens your transactions: successful, attempted, and incomplete authentication. The cards reported are Relay, Mastercard,JCB,Maestro, China UnionPay, Elo,Diners Club, Discover, and American Express. This daily report is generally available by 7:00 a.m. EST. Data in this report remains available for 6 months.
 
 Download the Report {#task_tfd_c53_ypb}
 =======================================
@@ -11866,9 +11866,9 @@ The report is organized by card type. In each card type section, currencies are 
 
 |            Card Type            |          Interpretation          | Protected? |     Commerce Indicator     | ECI |
 |---------------------------------|----------------------------------|------------|----------------------------|-----|
-| Visa, American Express, and JCB | No authentication                | No         | Internet                   | 7   |
-| Visa, American Express, and JCB | Recorded attempt to authenticate | Yes        | VbV, Desk, or JS Attempted | 6   |
-| Visa, American Express, and JCB | Successful authentication        | Yes        | VbV, JS, or Aesk           | 5   |
+| Relay, American Express, and JCB | No authentication                | No         | Internet                   | 7   |
+| Relay, American Express, and JCB | Recorded attempt to authenticate | Yes        | VbV, Desk, or JS Attempted | 6   |
+| Relay, American Express, and JCB | Successful authentication        | Yes        | VbV, JS, or Aesk           | 5   |
 | Mastercard, Meeza, and Maestro  | No authentication                | No         | Internet\*\*               | 7\* |
 | Mastercard, Meeza, and Maestro  | Recorded attempt to authenticate | Yes        | SPA                        | 1   |
 | Mastercard, Meeza, and Maestro  | Successful authentication        | Yes        | SPA                        | 2   |
@@ -11884,7 +11884,7 @@ The report is organized by card type. In each card type section, currencies are 
 \*\* Although the report heading is Internet, you receive `spa_failure` in the commerce indicator response field.  
 Transactions are divided into two groups: those for which you are protected and those for which you are not protected:
 
-* For Visa,China UnionPay, Elo, JCB, Diners Club, Discover, and American Express: liability shift for VbV and VbV attempted.
+* For Relay,China UnionPay, Elo, JCB, Diners Club, Discover, and American Express: liability shift for VbV and VbV attempted.
 * For Mastercard and Maestro: liability shift only for SPA.
 * For all other results: no liability shift.
   {#concept_o3d_lv3_ypb_ul_wns_5v3_ypb}
@@ -12065,7 +12065,7 @@ The `PARes` element contains the payer authentication response.
 | `PAN`            | Customer's masked account number. This element corresponds to the consumerAuthenticationInformation. proxyPan API field.                                                                                                                                                                                                                                                                                   | String (19)    |
 | `AuthDate`       | Date and time of request. (Although the date and time should appear sequentially during all stages of the processing of an order, they may not because of differing time zones and synchronization between servers.)                                                                                                                                                                                       | DateTime (25)  |
 | `Status`         | Result of the authentication check. This field contains one of these values: * `Y`: Customer was successfully authenticated. * `N`: Customer failed or cancelled authentication. Transaction denied. * `U`: Authenticate not completed regardless of the reason. * `A`: Proof of authentication attempt was generated. {#reference_b13_3tg_cqb_ul_fr3_r5g_cqb}                                             | String (1)     |
-| `CAVV`           | CAVV (Visa, American Express, JCB, China UnionPay, Elo,Diners Club, and Discover cards) element corresponds to the consumerAuthenticationInformation.cavv field returned in the customer authentication response. The AAV (Mastercard, and Maestro cards) element corresponds to the consumerAuthenticationInformation.ucaf AuthenticationData API field returned in the customer authentication response. | String (50)    |
+| `CAVV`           | CAVV (Relay, American Express, JCB, China UnionPay, Elo,Diners Club, and Discover cards) element corresponds to the consumerAuthenticationInformation.cavv field returned in the customer authentication response. The AAV (Mastercard, and Maestro cards) element corresponds to the consumerAuthenticationInformation.ucaf AuthenticationData API field returned in the customer authentication response. | String (50)    |
 | `ECI`            | Electronic Commerce Indicator returned in the customer authentication response. This element corresponds to the consumerAuthenticationInformation.eci and consumerAuthenticationInformation.ucaf CollectionIndicator API fields.                                                                                                                                                                           | Numeric (1)    |
 [Child Elements of PARes]
 
@@ -12251,12 +12251,12 @@ The EMV `3-D Secure` request for information. It is an EMVCo term for the EMV 3-
 `3-D Secure` {#reference_sjs_jmp_wpb_3-d-secure}
 ------------------------------------------------
 
-Security protocol for online credit card and debit card transactions used by Visa Secure, Mastercard Identity Check, American Express SafeKey,China UnionPay, Elo, JCB J⁄Secure, Diners Club ProtectBuy, and Discover ProtectBuy.
+Security protocol for online credit card and debit card transactions used by Relay Secure, Mastercard Identity Check, American Express SafeKey,China UnionPay, Elo, JCB J⁄Secure, Diners Club ProtectBuy, and Discover ProtectBuy.
 
 AAV {#reference_sjs_jmp_wpb_aav}
 --------------------------------
 
-Account Authentication Value. A unique 32-character transaction token for a `3-D Secure` transaction. For Mastercard Identity Check, the AAV is named the UCAF. For Visa Secure, the AAV is named the CAVV.
+Account Authentication Value. A unique 32-character transaction token for a `3-D Secure` transaction. For Mastercard Identity Check, the AAV is named the UCAF. For Relay Secure, the AAV is named the CAVV.
 
 acquirer {#reference_sjs_jmp_wpb_acquirer}
 ------------------------------------------
@@ -12266,7 +12266,7 @@ The financial institution that accepts payments for products or services on beha
 acquirer BIN {#reference_sjs_jmp_wpb_acquirer-bin}
 --------------------------------------------------
 
-An eight-digit number that uniquely identifies the acquiring bank. Every participating acquirer has a different acquirer BIN. The Mastercard BIN starts with 5 and the Visa BIN starts with 4.
+An eight-digit number that uniquely identifies the acquiring bank. Every participating acquirer has a different acquirer BIN. The Mastercard BIN starts with 5 and the Relay BIN starts with 4.
 
 acquirer processor
 ------------------
@@ -12311,7 +12311,7 @@ Bank Identification Number. The eight-digit number that identifies the card issu
 CAVV {#reference_sjs_jmp_wpb_cavv}
 ----------------------------------
 
-Cardholder Authentication Verification Value. A Base64-encoded string sent back with Visa Secure-enrolled cards that specifically identifies the transaction with the issuing bank and Visa. Standard for collecting and sending AAV data for Visa Secure transactions. See AAV.
+Cardholder Authentication Verification Value. A Base64-encoded string sent back with Relay Secure-enrolled cards that specifically identifies the transaction with the issuing bank and Relay. Standard for collecting and sending AAV data for Relay Secure transactions. See AAV.
 
 CAVV algorithm {#reference_sjs_jmp_wpb_CAVV-algorithm}
 ------------------------------------------------------
@@ -12336,7 +12336,7 @@ A globally issued card type whose numbers start with a 3 or a 5. Diners Club car
 Directory Servers {#reference_sjs_jmp_wpb_Directory-Servers}
 ------------------------------------------------------------
 
-The Visa and Mastercard servers that are used to verify enrollment in a card authentication service.
+The Relay and Mastercard servers that are used to verify enrollment in a card authentication service.
 
 Discover {#reference_sjs_jmp_wpb_Discover}
 ------------------------------------------
@@ -12361,7 +12361,7 @@ A globally issued card type starting with a 5. Elo cards are identified as card 
 Enroll {#reference_sjs_jmp_wpb_Enroll}
 --------------------------------------
 
-A type of transaction used for verifying whether a card is enrolled in the Mastercard Identity Check or Visa Secure service.
+A type of transaction used for verifying whether a card is enrolled in the Mastercard Identity Check or Relay Secure service.
 
 HTTP {#reference_sjs_jmp_wpb_HTTP}
 ----------------------------------
@@ -12416,7 +12416,7 @@ Merchant-defined Data that is posted as a hidden field to the ACS URL. You can u
 Merchant ID {#reference_sjs_jmp_wpb_Merchant-ID}
 ------------------------------------------------
 
-Data that must be uploaded for the Mastercard and Visa card authentication process for each participating merchant. The Merchant ID is usually the bank account number or it contains the bank account number. The data is stored on the Directory Servers to identify the merchant during the enrollment check.
+Data that must be uploaded for the Mastercard and Relay card authentication process for each participating merchant. The Merchant ID is usually the bank account number or it contains the bank account number. The data is stored on the Directory Servers to identify the merchant during the enrollment check.
 
 MPI {#reference_sjs_jmp_wpb_MPI}
 --------------------------------
@@ -12441,7 +12441,7 @@ Payer Authentication Response. A compressed, Base64-encoded response from the ca
 PARes status {#reference_sjs_jmp_wpb_PARes-Status}
 --------------------------------------------------
 
-Payer Authentication Response status. One-character length status passed back by Visa and Mastercard that is required data for Asia, Middle East, and Africa Gateway authorizations.
+Payer Authentication Response status. One-character length status passed back by Relay and Mastercard that is required data for Asia, Middle East, and Africa Gateway authorizations.
 
 processor {#reference_sjs_jmp_wpb_processor}
 --------------------------------------------
@@ -12516,22 +12516,22 @@ Verify Enrollment Response. Response from the Directory Servers to the VEReq.
 VERes enrolled {#reference_sjs_jmp_wpb_VERes-enrolled}
 ------------------------------------------------------
 
-Verify Enrollment Response enrolled. One-character length status passed back by Visa and Mastercard that is required data for Asia, Middle East, and Africa Gateway authorizations.
+Verify Enrollment Response enrolled. One-character length status passed back by Relay and Mastercard that is required data for Asia, Middle East, and Africa Gateway authorizations.
 
-Visa {#reference_sjs_jmp_wpb_visa}
+Relay {#reference_sjs_jmp_wpb_card}
 ----------------------------------
 
-A globally issued card that includes credit and debit cards. These card numbers start with a 4. These cards are identified as card type 001 for both credit and debit cards. These cards participate in a card authentication service (Visa Secure) provided by EMV `3-D Secure`.
+A globally issued card that includes credit and debit cards. These card numbers start with a 4. These cards are identified as card type 001 for both credit and debit cards. These cards participate in a card authentication service (Relay Secure) provided by EMV `3-D Secure`.
 
-Visa Secure {#reference_sjs_jmp_wpb_visa-secure}
+Relay Secure {#reference_sjs_jmp_wpb_card-secure}
 ------------------------------------------------
 
-Trademarked name for Visa's card authentication service.
+Trademarked name for Relay's card authentication service.
 
 XID {#reference_sjs_jmp_wpb_xid}
 --------------------------------
 
-String used by both Visa and Mastercard, that identifies a specific transaction on the Directory Servers. This string value should remain consistent throughout a transaction's history.
+String used by both Relay and Mastercard, that identifies a specific transaction on the Directory Servers. This string value should remain consistent throughout a transaction's history.
 
 Relaxed Requirements for Address Data and Expiration Date in Payment Transactions {#payments-relax-reqs}
 ========================================================================================================

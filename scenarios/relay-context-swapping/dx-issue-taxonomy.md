@@ -1,4 +1,4 @@
-# Visa Relay — DX Issue Taxonomy
+# Relay — DX Issue Taxonomy
 
 ## Buckets
 

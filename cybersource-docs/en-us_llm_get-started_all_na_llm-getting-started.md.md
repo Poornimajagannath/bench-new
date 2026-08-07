@@ -46,4 +46,4 @@ To access a specific guide for use in your LLM, change the *.html* in a guide's 
 AI Agent Toolkit {#llm-quick-start-guide_agent-toolkit}
 -------------------------------------------------------
 
-`Cybersource` provides an agent toolkit at [agent-toolkit-intro.html](https://developer.visaacceptance.com/docs/vas/en-us/agent-toolkit/quick-start/all/na/agent-toolkit/agent-toolkit-intro.md ""). Use the agent toolkit to simplify the process of integrating `Cybersource` APIs in your agentic workflows.
+`Cybersource` provides an agent toolkit at [agent-toolkit-intro.html](https://developer.example.com/docs/vas/en-us/agent-toolkit/quick-start/all/na/agent-toolkit/agent-toolkit-intro.md ""). Use the agent toolkit to simplify the process of integrating `Cybersource` APIs in your agentic workflows.

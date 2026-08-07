@@ -40,10 +40,10 @@ Failed checks (full expected set required):
 ## 5. What product surface improves next
 
 - Clarify Microform + Payer Auth stage ordering in public docs
-- Ship a VAP CLI workflow verifier for this contract:
+- Ship a Relay CLI workflow verifier for this contract:
 
 ```bash
-vap workflow verify --id microform-payer-auth-state-machine --fixture local
+relay workflow verify --id microform-payer-auth-state-machine --fixture local
 ```
 
 ## Artifacts

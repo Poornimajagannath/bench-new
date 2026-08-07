@@ -83,4 +83,4 @@ Hidden truth content is intentionally omitted from this bundle.
 - verifier_result_path: `artifacts/verifier_results/microform-payer-auth-state-machine.result.json`
 - improvement_actions:
   - [docs] Clarify Microform + Payer Auth State Machine stage ordering in public docs
-  - [vap_cli] Ship a VAP CLI workflow verifier for this contract
+  - [vap_cli] Ship a Relay CLI workflow verifier for this contract

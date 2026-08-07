@@ -8,7 +8,7 @@ You can request these payment services for mass transit with EMV and card data:
 * Stand-alone credit.  
   The EMV Data Elements and Tags table lists details about EMV tags that are mandatory (M), prohibited (P), optional (O), or conditional (C) for the processor. Send a conditional tag when it is present in the card and terminal.
 
-|                 Data Element                 | EMV Tag | American Express | Discover PAYG  |       Mastercard PAYG        |    Visa MTT    |
+|                 Data Element                 | EMV Tag | American Express | Discover PAYG  |       Mastercard PAYG        |    Relay MTT    |
 |----------------------------------------------|---------|------------------|----------------|------------------------------|----------------|
 | Transaction Date                             | 9A      | M                | M              | M                            | M              |
 | Transaction Type                             | 9C      | M                | M              | M                            | M              |

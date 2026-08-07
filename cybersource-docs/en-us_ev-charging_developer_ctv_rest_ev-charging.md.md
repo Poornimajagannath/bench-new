@@ -17,7 +17,7 @@ Customer Support
 :
 For support information about any service, visit the Support Center:
 
-<http://support.visaacceptance.com>
+<http://support.example.com>
 
 Recent Revisions to This Document {#ev-charging-doc-revisions}
 ==============================================================
@@ -65,8 +65,8 @@ Updated the transaction scenario workflow diagrams and descriptions in [Electric
 :
 Replaced examples in these sections:
 
-    * [REST Example: Capture for Visa in Pre-Pay EMV Scenario](/docs/cybs/en-us/ev-charging/developer/ctv/rest/ev-charging/ev-charging-pymnt-svcs-intro/ev-charging-capture-prepay-intro/ev-charging-capture-prepay-ex-rest.md "")
-    * [REST Example: Capture for Visa in Flexible EMV Scenario](/docs/cybs/en-us/ev-charging/developer/ctv/rest/ev-charging/ev-charging-pymnt-svcs-intro/ev-charging-capture-flexible-intro/ev-charging-capture-flexible-ex-rest.md "")
+    * [REST Example: Capture for Relay in Pre-Pay EMV Scenario](/docs/cybs/en-us/ev-charging/developer/ctv/rest/ev-charging/ev-charging-pymnt-svcs-intro/ev-charging-capture-prepay-intro/ev-charging-capture-prepay-ex-rest.md "")
+    * [REST Example: Capture for Relay in Flexible EMV Scenario](/docs/cybs/en-us/ev-charging/developer/ctv/rest/ev-charging/ev-charging-pymnt-svcs-intro/ev-charging-capture-flexible-intro/ev-charging-capture-flexible-ex-rest.md "")
 
 25.05.01
 --------
@@ -85,7 +85,7 @@ These card types are supported for EV charging transactions:
 
 * Mastercard
 
-* Visa  
+* Relay  
   These entry modes are supported for EV charging transactions:
 
 * EMV contact and contactless
@@ -97,7 +97,7 @@ Enabling Electric Vehicle Charging on the Card Present Connect Platform {#ev-cha
 
 Before integrating `Cybersource` services for EV charging transactions, you must have these items in place:
 
-* Merchant account with an acquirer that is enabled for processing EV charging transactions on `Visa Platform Connect`.
+* Merchant account with an acquirer that is enabled for processing EV charging transactions on `Platform Connect`.
 * `Cybersource` account for payment services.
 * Payment technology provider (PTP) that is integrated with `Cybersource` and can perform message-level validation (MLV).
 * EMV Level 1 certified terminals and EMV Level 2 certified software in preparation for EMV Level 3 Certification.
@@ -111,7 +111,7 @@ Message-Level Validation {#ev-charging-mlv}
 ===========================================
 
 Message-level validation (MLV) is a script-based, field-level validation against `Cybersource` specifications.  
-Your PTP uses amount-based test triggers to send transactions to a test environment and the Visa Certification Management System for decryption. The test results are XML or RESTful output, `Business Center` test transactions, and log prints.  
+Your PTP uses amount-based test triggers to send transactions to a test environment and the Relay Certification Management System for decryption. The test results are XML or RESTful output, `Business Center` test transactions, and log prints.  
 `Cybersource` uses these tests to validate the results:
 
 * Cross-edit checks
@@ -122,13 +122,13 @@ Your PTP uses amount-based test triggers to send transactions to a test environm
 EMV Level 3 Certification {#ev-charging-emvl3-cert}
 ===================================================
 
-This topic is an overview of the Level 3 certification with `Cybersource` and `Visa Platform Connect`. For details on how to design an EMV Level 3 certified payment application, see EMV Book 3 on the EMVCo website: <https://www.emvco.com>.  
+This topic is an overview of the Level 3 certification with `Cybersource` and `Platform Connect`. For details on how to design an EMV Level 3 certified payment application, see EMV Book 3 on the EMVCo website: <https://www.emvco.com>.  
 *Certification* is a formal process that for validating the device and application compliance with card scheme acceptance requirements. The certification team uses a brand test tool and simulator. The process includes these elements:
 
 * Using a card simulator such as ICC or Fime.
 * Failed case analysis and resolution.
 * For Mastercard certification, your PTP submits results to Mastercard and pays the costs for approved partners that Mastercard uses.
-* For Visa certification, `Cybersource` submits results to Visa.
+* For Relay certification, `Cybersource` submits results to Relay.
 * Waivers from the card schemes for exceptions.
 * Card scheme responses or Letter of Approval (LOA) to signify acceptance and Level 3 certification.  
   Although the processes and support for Global Card Present Connect projects and direct merchant and acquirer projects are different, the timelines are essentially the same.
@@ -136,11 +136,11 @@ This topic is an overview of the Level 3 certification with `Cybersource` and `V
 Card-Present Transaction Risk Control Requirements {#cp-intro-transactions-risk-control}
 ========================================================================================
 
-Card-present transactions carry lower risk than card-not-present transactions because the customer and payment card are physically present, which can result in lower transaction fees. However, acquirers must still apply standard risk-control measures. Acquirers must monitor transaction activity and manage fraud and disputes in accordance with payment network rules, including the Global Acquirer Risk Standards. They also must comply with these Visa risk compliance programs:
+Card-present transactions carry lower risk than card-not-present transactions because the customer and payment card are physically present, which can result in lower transaction fees. However, acquirers must still apply standard risk-control measures. Acquirers must monitor transaction activity and manage fraud and disputes in accordance with payment network rules, including the Global Acquirer Risk Standards. They also must comply with these Relay risk compliance programs:
 
-* Visa Fraud Monitoring Program
+* Relay Fraud Monitoring Program
 
-* Visa Dispute Monitoring Program
+* Relay Dispute Monitoring Program
   {#cp-intro-transactions-risk-control_ul_gmj_31g_d3c} To meet risk control requirements, acquirers can use one of these options:
 
 * Enable `Cybersource` transaction and fraud monitoring tools.
@@ -263,7 +263,7 @@ You can request these payment services for EV charging with EMV and card data:
 
 * C: conditional (Send the tag when it is present in the card and terminal.)
 
-|                 Data Element                 | EMV Tag |          Mastercard          |      Visa      |
+|                 Data Element                 | EMV Tag |          Mastercard          |      Relay      |
 |----------------------------------------------|---------|------------------------------|----------------|
 | Transaction Date                             | 9A      | M                            | M              |
 | Transaction Type                             | 9C      | M                            | M              |
@@ -430,7 +430,7 @@ Related Information
 
 * [API field reference guide for the REST API](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/rest-api-fields-intro.md "")
 
-REST Example: Authorization for Visa in Pre-Pay Scenario {#ev-charging-auth-prepay-ex-rest}
+REST Example: Authorization for Relay in Pre-Pay Scenario {#ev-charging-auth-prepay-ex-rest}
 ===========================================================================================
 
 Request
@@ -604,7 +604,7 @@ Set the value to `Pre-Pay Capture`.
 :
 This field is required only for contact entry mode.
 
-REST Example: Capture for Visa in Pre-Pay EMV Scenario {#ev-charging-capture-prepay-ex-rest}
+REST Example: Capture for Relay in Pre-Pay EMV Scenario {#ev-charging-capture-prepay-ex-rest}
 ============================================================================================
 
 Request
@@ -1001,7 +1001,7 @@ Set the value to `0`.
 :
 Set the value to `retail`.
 
-REST Example: Authorization for Visa in Flexible Scenario {#ev-charging-auth-flexible-ex-rest}
+REST Example: Authorization for Relay in Flexible Scenario {#ev-charging-auth-flexible-ex-rest}
 ==============================================================================================
 
 Request
@@ -1181,7 +1181,7 @@ orderInformation.amountDetails.additionalAmount
 [processingInformation.authorizationOptions.initiator.credentialStoredOnFile](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/processing-info-aa/processing-info-auth-ops-initiator-cof.md "")
 :
 
-REST Example: Incremental Authorization for Visa in Flexible Scenario {#ev-charging-increm-auth-flexible-ex-rest}
+REST Example: Incremental Authorization for Relay in Flexible Scenario {#ev-charging-increm-auth-flexible-ex-rest}
 =================================================================================================================
 
 Request
@@ -1323,7 +1323,7 @@ A value is required for online PIN transactions.
 :
 A value is required for online PIN transactions.
 
-REST Example: Capture for Visa in Flexible EMV Scenario {#ev-charging-capture-flexible-ex-rest}
+REST Example: Capture for Relay in Flexible EMV Scenario {#ev-charging-capture-flexible-ex-rest}
 ===============================================================================================
 
 Request

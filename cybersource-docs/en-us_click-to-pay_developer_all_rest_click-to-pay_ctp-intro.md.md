@@ -1,7 +1,7 @@
 Introduction to the `Click to Pay Drop-In UI` {#ctp-intro}
 ==========================================================
 
-`Click to Pay Drop-In UI` powered by `Unified Checkout` provides an interface for easy acceptance of `Click to Pay` payments from Visa, Mastercard, and American Express cards. The `Click to Pay Drop-In UI` handles manual card entry for the non-`Click to Pay` payment schemes called out in this guide. Throughout this guide we refer to both *`Click to Pay Drop-In UI`* and *`Unified Checkout`.*  
+`Click to Pay Drop-In UI` powered by `Unified Checkout` provides an interface for easy acceptance of `Click to Pay` payments from Relay, Mastercard, and American Express cards. The `Click to Pay Drop-In UI` handles manual card entry for the non-`Click to Pay` payment schemes called out in this guide. Throughout this guide we refer to both *`Click to Pay Drop-In UI`* and *`Unified Checkout`.*  
 `Click to Pay Drop-In UI` consists of a set of server-side APIs and a client-side JavaScript library.  
 The server-side APIs authenticate your merchant identity, instruct the system to act within your payment environment, and provide a way to retrieve the payment data following a successful `Click to Pay Drop-In UI` interaction.  
 The provided JavaScript library enables you to place a payment application within your e-commerce environment. This embedded component offers `Click to Pay` and card entry to your customers.  

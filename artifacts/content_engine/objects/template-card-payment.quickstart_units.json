@@ -12,7 +12,7 @@
       "goal": "Card Payment Integration Template",
       "product": [
         "cybersource",
-        "visa-acceptance"
+        "acceptance-platform"
       ],
       "audience": [
         "developer",
@@ -41,7 +41,7 @@
       "goal": "Card Payment Integration Template",
       "product": [
         "cybersource",
-        "visa-acceptance"
+        "acceptance-platform"
       ],
       "audience": [
         "developer",
@@ -70,7 +70,7 @@
       "goal": "Card Payment Integration Template",
       "product": [
         "cybersource",
-        "visa-acceptance"
+        "acceptance-platform"
       ],
       "audience": [
         "developer",
@@ -99,7 +99,7 @@
       "goal": "Card Payment Integration Template",
       "product": [
         "cybersource",
-        "visa-acceptance"
+        "acceptance-platform"
       ],
       "audience": [
         "developer",
@@ -128,7 +128,7 @@
       "goal": "Card Payment Integration Template",
       "product": [
         "cybersource",
-        "visa-acceptance"
+        "acceptance-platform"
       ],
       "audience": [
         "developer",
@@ -157,7 +157,7 @@
       "goal": "Card Payment Integration Template",
       "product": [
         "cybersource",
-        "visa-acceptance"
+        "acceptance-platform"
       ],
       "audience": [
         "developer",
@@ -167,7 +167,7 @@
         "flex-token-lifecycle"
       ],
       "sequence_number": 0,
-      "body_markdown": "| Type | Code |\n|------|------|\n| Visa | 001 |\n| Mastercard | 002 |\n| American Express | 003 |\n| Discover | 004 |\n| Diners Club | 005 |\n| JCB | 007 |",
+      "body_markdown": "| Type | Code |\n|------|------|\n| Card brand 001 | 001 |\n| Mastercard | 002 |\n| American Express | 003 |\n| Discover | 004 |\n| Diners Club | 005 |\n| JCB | 007 |",
       "commands": [],
       "api_entities": [],
       "requires": [],
@@ -175,7 +175,7 @@
       "failure_modes": [],
       "confidence": 0.85,
       "evidence_quotes": [
-        "| Type | Code | |------|------| | Visa | 001 | | Mastercard | 002 | | American Express | 003 | | Discover | 004 | | Diners Club | 005 | | JCB | 007 |"
+        "| Type | Code | |------|------| | Card brand 001 | 001 | | Mastercard | 002 | | American Express | 003 | | Discover | 004 | | Diners Club | 005 | | JCB | 007 |"
       ]
     },
     {
@@ -186,7 +186,7 @@
       "goal": "Card Payment Integration Template",
       "product": [
         "cybersource",
-        "visa-acceptance"
+        "acceptance-platform"
       ],
       "audience": [
         "developer",

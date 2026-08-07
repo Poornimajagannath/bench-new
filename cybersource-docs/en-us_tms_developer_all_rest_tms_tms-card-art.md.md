@@ -7,5 +7,5 @@ Card art is available for these card types:
 
 * American Express
 * Mastercard
-* Visa
+* Relay
 

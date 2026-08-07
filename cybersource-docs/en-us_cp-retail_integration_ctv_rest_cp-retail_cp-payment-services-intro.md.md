@@ -32,7 +32,7 @@ These card-present retail payment services are supported:
   {#cp-payment-services-intro_ul_o1b_lfl_myb}  
   For more information about payment services and processing, see these resources:
 
-* [API field reference guide for the REST API](https://developer.visaacceptance.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/rest-api-fields-intro.md "")
+* [API field reference guide for the REST API](https://developer.example.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/rest-api-fields-intro.md "")
 
 * Github repositories: [Cybersource](https://github.com/Cybersource "")
 

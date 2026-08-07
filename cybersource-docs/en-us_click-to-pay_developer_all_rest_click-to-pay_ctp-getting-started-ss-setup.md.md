@@ -53,7 +53,7 @@ When you use only the sessions API to generate the capture context, your request
     "https://yourCheckoutPage.com"
   ],
   "allowedCardNetworks": [
-    "VISA",
+    "CARD",
     "MASTERCARD",
     "AMEX"
   ],

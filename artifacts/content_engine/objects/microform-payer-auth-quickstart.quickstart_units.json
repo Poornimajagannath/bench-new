@@ -1,7 +1,7 @@
 {
   "stage": "content_engine_extract",
-  "inspired_by": "ucbepic/docetl (imported; Frame.code_map, no LLM)",
-  "extractor_label": "imported-code_map",
+  "inspired_by": "ucbepic/docetl (not imported; heuristic extract)",
+  "extractor_label": "style-only",
   "source_id": "microform-payer-auth-quickstart",
   "units": [
     {
@@ -12,7 +12,7 @@
       "goal": "Sequence Microform tokenization with Payer Authentication enrollment, challenge or frictionless handling, validation, and authorization.",
       "product": [
         "cybersource",
-        "visa-acceptance"
+        "acceptance-platform"
       ],
       "audience": [
         "developer"
@@ -48,7 +48,7 @@
       "goal": "Sequence Microform tokenization with Payer Authentication enrollment, challenge or frictionless handling, validation, and authorization.",
       "product": [
         "cybersource",
-        "visa-acceptance"
+        "acceptance-platform"
       ],
       "audience": [
         "developer"
@@ -79,7 +79,7 @@
       "goal": "Sequence Microform tokenization with Payer Authentication enrollment, challenge or frictionless handling, validation, and authorization.",
       "product": [
         "cybersource",
-        "visa-acceptance"
+        "acceptance-platform"
       ],
       "audience": [
         "developer"
@@ -113,7 +113,7 @@
       "goal": "Sequence Microform tokenization with Payer Authentication enrollment, challenge or frictionless handling, validation, and authorization.",
       "product": [
         "cybersource",
-        "visa-acceptance"
+        "acceptance-platform"
       ],
       "audience": [
         "developer"
@@ -148,7 +148,7 @@
       "goal": "Sequence Microform tokenization with Payer Authentication enrollment, challenge or frictionless handling, validation, and authorization.",
       "product": [
         "cybersource",
-        "visa-acceptance"
+        "acceptance-platform"
       ],
       "audience": [
         "developer"
@@ -186,7 +186,7 @@
       "goal": "Sequence Microform tokenization with Payer Authentication enrollment, challenge or frictionless handling, validation, and authorization.",
       "product": [
         "cybersource",
-        "visa-acceptance"
+        "acceptance-platform"
       ],
       "audience": [
         "developer"
@@ -222,7 +222,7 @@
       "goal": "Sequence Microform tokenization with Payer Authentication enrollment, challenge or frictionless handling, validation, and authorization.",
       "product": [
         "cybersource",
-        "visa-acceptance"
+        "acceptance-platform"
       ],
       "audience": [
         "developer"
@@ -254,7 +254,7 @@
       "goal": "Sequence Microform tokenization with Payer Authentication enrollment, challenge or frictionless handling, validation, and authorization.",
       "product": [
         "cybersource",
-        "visa-acceptance"
+        "acceptance-platform"
       ],
       "audience": [
         "developer"
@@ -293,7 +293,7 @@
       "goal": "Sequence Microform tokenization with Payer Authentication enrollment, challenge or frictionless handling, validation, and authorization.",
       "product": [
         "cybersource",
-        "visa-acceptance"
+        "acceptance-platform"
       ],
       "audience": [
         "developer"
@@ -326,7 +326,7 @@
       "goal": "Sequence Microform tokenization with Payer Authentication enrollment, challenge or frictionless handling, validation, and authorization.",
       "product": [
         "cybersource",
-        "visa-acceptance"
+        "acceptance-platform"
       ],
       "audience": [
         "developer"
@@ -357,7 +357,7 @@
       "goal": "Sequence Microform tokenization with Payer Authentication enrollment, challenge or frictionless handling, validation, and authorization.",
       "product": [
         "cybersource",
-        "visa-acceptance"
+        "acceptance-platform"
       ],
       "audience": [
         "developer"
@@ -366,7 +366,7 @@
         "microform-payer-auth-state-machine"
       ],
       "sequence_number": 7,
-      "body_markdown": "- Add support-safe evidence collection for failed enrollments\n- Wire a VAP CLI workflow verifier for this contract",
+      "body_markdown": "- Add support-safe evidence collection for failed enrollments\n- Wire a Relay CLI workflow verifier for this contract",
       "commands": [],
       "api_entities": [
         "enrollment"
@@ -376,7 +376,7 @@
       "failure_modes": [],
       "confidence": 0.85,
       "evidence_quotes": [
-        "- Add support-safe evidence collection for failed enrollments - Wire a VAP CLI workflow verifier for this contract"
+        "- Add support-safe evidence collection for failed enrollments - Wire a Relay CLI workflow verifier for this contract"
       ]
     }
   ]

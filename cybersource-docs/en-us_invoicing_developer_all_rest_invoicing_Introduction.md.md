@@ -29,7 +29,7 @@ Tokenization for Merchant-Initiated Transactions {#Introduction_mits}
 You can create Token Management Service (TMS) tokens from invoice transactions using Transaction Management in the `Business Center`.
 
 > IMPORTANT
-> If you create and use TMS tokens for merchant-initiated transactions (MITs), you must comply with the **Consent Agreement Provisions** as stated in the [*Improving Authorization Management for Transactions with Stored Credentials*](https://usa.visa.com/dam/VCOM/global/support-legal/documents/stored-credential-transaction-framework-vbs-10-may-17.pdf "") guide.
+> If you create and use TMS tokens for merchant-initiated transactions (MITs), you must comply with the **Consent Agreement Provisions** as stated in the [*Improving Authorization Management for Transactions with Stored Credentials*](https://usa.relay.com/dam/VCOM/global/support-legal/documents/stored-credential-transaction-framework-vbs-10-may-17.pdf "") guide.
 
 Sandbox Testing {#Introduction_invoice-settings-toc}
 ----------------------------------------------------

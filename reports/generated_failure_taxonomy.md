@@ -12,10 +12,10 @@ Routing lives in `relay_bench/routing.py`. Categories are deterministic for the 
 
 - Docs clarification: **high** when stage order is wrong
 - SDK field-name drift (HTTP Signature): **high**
-- VAP CLI workflow verifier recommendation: **high**
+- Relay CLI workflow verifier recommendation: **high**
 - MCP grounding hint: included for Microform/Payer Auth
 
-## VAP CLI descriptor bias
+## Relay CLI descriptor bias
 
 When routing to `vap_cli`, the action carries a workflow-verifier descriptor:
 

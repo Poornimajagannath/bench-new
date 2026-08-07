@@ -1,4 +1,4 @@
-# Visa Relay — Context-Swapping Success Criteria
+# Relay — Context-Swapping Success Criteria
 
 ## What Success Looks Like
 
@@ -35,7 +35,7 @@ The agent successfully generates correct code for a multi-payment method integra
 
 ```json
 {
-  "scenario": "visa-relay-context-swapping",
+  "scenario": "relay-context-swapping",
   "profile": "docs",
   "agent": "claude-sonnet-4",
   "timestamp": "2026-07-21T16:00:00Z",
@@ -58,6 +58,6 @@ The agent successfully generates correct code for a multi-payment method integra
 ## Notes
 
 - The agent should NOT be given the correct SDK model names — they need to discover them via MCP
-- The Visa Relay scenario tests context-swapping ability: can an agent adapt when the merchant changes requirements mid-integration?
+- The Relay scenario tests context-swapping ability: can an agent adapt when the merchant changes requirements mid-integration?
 - Score the agent's ability to handle multiple payment methods, not just card
 - If the agent fails, record which model/field was wrong and which docs the agent consulted

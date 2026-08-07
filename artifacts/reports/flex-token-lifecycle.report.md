@@ -50,7 +50,7 @@ Local proof only. No network. No live credentials.
 ## 5. What product surface improves next
 
 - Clarify Flex Token Lifecycle stage ordering in public docs
-- Ship a VAP CLI workflow verifier for this contract
+- Ship a Relay CLI workflow verifier for this contract
 
 ## Classification
 
@@ -62,10 +62,10 @@ Local proof only. No network. No live credentials.
 - task pack: `artifacts/task_packs/flex-token-lifecycle.agent_task.json`
 - verifier results: `artifacts/verifier_results/flex-token-lifecycle.result.json`
 
-## VAP CLI workflow verifier (recommended)
+## Relay CLI workflow verifier (recommended)
 
 - goal: can I pass it straight into TMS to store a permanent instrument, or do I need another step?
-- command: `vap workflow verify --id flex-token-lifecycle --fixture local`
+- command: `relay workflow verify --id flex-token-lifecycle --fixture local`
 - readiness checks:
   - Frozen seeds present under data/seeds/
   - No live credentials exported

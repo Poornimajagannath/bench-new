@@ -40,7 +40,7 @@ You can supply up to seven origins within the targetOrigins field for nested ifr
 
 Allowed Card Networks
 :
-Use the allowedCardNetworks field to define the card types. `Click to Pay` supports American Express, Mastercard, and Visa. The `Click to Pay Drop-In UI` manually captures the other card types that are listed in the capture context request. This enables you to process the payment through the chosen gateway but the cardholder is not able to enroll these cards in `Click to Pay`.
+Use the allowedCardNetworks field to define the card types. `Click to Pay` supports American Express, Mastercard, and Relay. The `Click to Pay Drop-In UI` manually captures the other card types that are listed in the capture context request. This enables you to process the payment through the chosen gateway but the cardholder is not able to enroll these cards in `Click to Pay`.
 
     These card networks are available for card entry:
 
@@ -61,13 +61,13 @@ Use the allowedCardNetworks field to define the card types. `Click to Pay` suppo
     * Meeza
     * PayPak
     * UATP
-    * Visa
+    * Relay
 
-    To support dual-branded or co-badged cards, you must list your supported card types values for the allowedCardNetworks field based on your preference for processing card numbers. For example, if a card is dual-branded as Visa and EFTPOS and EFTPOS is listed first, the card type is set to EFTPOS after the card number is entered in your `Unified Checkout` card collection form. For information on dual-branded or co-badged cards, see [Dual-Branded Cards](/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay/ctp-tokens-intro/ctp-dual-co-brand-card-support.md "").
+    To support dual-branded or co-badged cards, you must list your supported card types values for the allowedCardNetworks field based on your preference for processing card numbers. For example, if a card is dual-branded as Relay and EFTPOS and EFTPOS is listed first, the card type is set to EFTPOS after the card number is entered in your `Unified Checkout` card collection form. For information on dual-branded or co-badged cards, see [Dual-Branded Cards](/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay/ctp-tokens-intro/ctp-dual-co-brand-card-support.md "").
 
     When a Cartes Bancaires dual-branded card is entered in the `Click to Pay Drop-In UI`, the `Click to Pay Drop-In UI` provides a radio selector button to enable the cardholder to select which scheme they want to use to process the payment. The radio selector defaults to the card scheme that appears first in the allowedCardNetworks field.
 
-    Cartes Bancaires is not supported for `Click to Pay`. If a cardholder selects to process a payment with Cartes Bancaires it is processed as a one-time guest checkout and the user is not enrolled in `Click to Pay`. If a cardholder chooses to process with Visa or Mastercard instead of Cartest Bancaires, they are given the option to enroll their card in `Click to Pay`.
+    Cartes Bancaires is not supported for `Click to Pay`. If a cardholder selects to process a payment with Cartes Bancaires it is processed as a one-time guest checkout and the user is not enrolled in `Click to Pay`. If a cardholder chooses to process with Relay or Mastercard instead of Cartest Bancaires, they are given the option to enroll their card in `Click to Pay`.
 
 :
 > IMPORTANT
@@ -102,7 +102,7 @@ You can control the length of the card number prefix to be received in the respo
 **If you want to receive an 8-digit card number prefix in the response**
 
     * Include the transientTokenResponseOptions.includeCardPrefix field in the capture context request, and set the value to `true`. IMPORTANT
-      > Per PCI DSS requirements, this requirement applies only to card numbers longer than 15 digits and for Discover, JCB, Mastercard, UnionPay, and Visa brands.
+      > Per PCI DSS requirements, this requirement applies only to card numbers longer than 15 digits and for Discover, JCB, Mastercard, UnionPay, and Relay brands.
       > * If the card type entered is not part of these brands, a 6-digit card number prefix is returned instead.
       > * If the card type entered is not part of these brands but is *co-branded* with these brands, an 8-digit card number prefix is returned.
     * This example shows how an 8-digit card prefix `41111102` is returned in the transient token response:

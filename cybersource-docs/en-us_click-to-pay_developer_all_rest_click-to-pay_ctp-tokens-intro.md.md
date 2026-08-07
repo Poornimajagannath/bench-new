@@ -19,7 +19,7 @@ eyJraWQiOiIwMEl1NWJDT2NINVpPWjFNYldsQktodzFZeFFjSkVlZSIsImFsZyI6IlJTMjU2In0.eyJt
 ```
 
 {#uc-trans-tkn-ex_codeblock_bagt_cfz_hjc}  
-Decoded Transient Token JWT - Visa PAN
+Decoded Transient Token JWT - Relay PAN
 
 ```
 {
@@ -102,7 +102,7 @@ Decoded Transient Token JWT - Visa PAN
 ```
 
 {#uc-trans-tkn-ex_codeblock_bgt_cfz_hjc}  
-Decoded Transient Token JWT - Visa Network Token
+Decoded Transient Token JWT - Relay Network Token
 
 ```
 {
@@ -118,7 +118,7 @@ Decoded Transient Token JWT - Visa Network Token
     },
     "ccJti": "9M2EooZC767DNhvC",
     "cardholderAuthenticationStatus": false,
-    "paymentType": "SRCVISA"
+    "paymentType": "SRCCARD"
   },
   "iss": "Flex/08",
   "paymentCredentialsReference": {
@@ -252,13 +252,13 @@ Dual-Branded Cards {#dual-co-brand-card-support}
 `Unified Checkout` accepts dual-branded cards. To use this feature, you must include the card networks that have overlapping BIN ranges in the capture context request. For example:
 
 ```
-"allowedCardNetworks": ["VISA", "MASTERCARD", "AMEX", "CARTESBANCAIRES"]
+"allowedCardNetworks": ["CARD", "MASTERCARD", "AMEX", "CARTESBANCAIRES"]
 ```
 
-When a card number within an overlapping BIN range is entered, the network that is listed first in the value array for the allowedCardNetworks field is used. Based on the previous example, if the card number 403550XXXXXXXXXX is entered, the payment network for payment processing is Visa.  
+When a card number within an overlapping BIN range is entered, the network that is listed first in the value array for the allowedCardNetworks field is used. Based on the previous example, if the card number 403550XXXXXXXXXX is entered, the payment network for payment processing is Relay.  
 During the transaction, the card type is populated with the first network in the list, and the detectedCardTypes field returned in the transient token includes all of the detected card types in the transient token.  
 The detectedCardTypes field is returned in the transient token response only when more than one card type is detected.  
-If you include Cartes Bancaires as a supported dual-branded card type, `Unified Checkout` displays a radio button with Visa and Mastercard options at checkout. This enables the customer to select which payment scheme they want to use to process the payment. The radio button defaults to the card type that you specify in the capture context request, but the payment is processed using the option that the customer selects during checkout.
+If you include Cartes Bancaires as a supported dual-branded card type, `Unified Checkout` displays a radio button with Relay and Mastercard options at checkout. This enables the customer to select which payment scheme they want to use to process the payment. The radio button defaults to the card type that you specify in the capture context request, but the payment is processed using the option that the customer selects during checkout.
 
 Dual-Branded Cards {#ctp-dual-co-brand-card-support}
 ====================================================
@@ -266,10 +266,10 @@ Dual-Branded Cards {#ctp-dual-co-brand-card-support}
 `Unified Checkout` accepts dual-branded cards. To use this feature, you must include the card networks that have overlapping BIN ranges in the capture context request. For example:
 
 ```
-"allowedCardNetworks": ["VISA", "MASTERCARD", "AMEX", "CARTESBANCAIRES"]
+"allowedCardNetworks": ["CARD", "MASTERCARD", "AMEX", "CARTESBANCAIRES"]
 ```
 
-When a card number within an overlapping BIN range is entered, the network that is listed first in the value array for the allowedCardNetworks field is used. Based on the previous example, if the card number 403550XXXXXXXXXX is entered, the payment network for payment processing is Visa.  
+When a card number within an overlapping BIN range is entered, the network that is listed first in the value array for the allowedCardNetworks field is used. Based on the previous example, if the card number 403550XXXXXXXXXX is entered, the payment network for payment processing is Relay.  
 During the transaction, the card type is populated with the first network in the list, and the detectedCardTypes field returned in the transient token includes all of the detected card types in the transient token.  
 The detectedCardTypes field is returned in the transient token response only when more than one card type is detected.  
-If you include Cartes Bancaires as a supported dual-branded card type, `Unified Checkout` displays a radio button with Visa and Mastercard options at checkout. This enables the customer to select which payment scheme they want to use to process the payment. The radio button defaults to the card type that you specify in the capture context request, but the payment is processed using the option that the customer selects during checkout.
+If you include Cartes Bancaires as a supported dual-branded card type, `Unified Checkout` displays a radio button with Relay and Mastercard options at checkout. This enables the customer to select which payment scheme they want to use to process the payment. The radio button defaults to the card type that you specify in the capture context request, but the payment is processed using the option that the customer selects during checkout.

@@ -160,7 +160,7 @@ In this example, the targetOrigins and the allowedPaymentTypes fields define the
   ],
   "clientVersion": "0.26",
   "allowedCardNetworks": [
-    "VISA",
+    "CARD",
     "MASTERCARD",
     "AMEX"
   ],
@@ -387,7 +387,7 @@ For detailed information about `Unified Checkout` and the integration process, s
    |:-----------------|:-----------------|:----------------|:-------------------------|
    | American Express | 378282246310005  | 03/2026         | 7890                     |
    | Mastercard       | 5555555555554444 | 02/2026         | 265                      |
-   | Visa             | 4111111111111111 | 12/2025         | 123                      |
+   | Relay             | 4111111111111111 | 12/2025         | 123                      |
    [Common Card Test Numbers]
 
    For more test payment data, see the Test Payment Details section of the [`Unified Checkout` Developer Guide](https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout/uc-testing-intro/uc-reference-test-cards.md "").
@@ -447,7 +447,7 @@ Additional Resources
   * **REST API Field Reference guide:** provides descriptions and specifications for the REST API fields. Visit [rest-api-fields-intro.html](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/rest-api-fields-intro.md "").
   * **`Unified Checkout` REST API Reference** : Visit [index.html#unified-checkout](https://developer.cybersource.com/api-reference-assets/index.md#unified-checkout "")
 * **Developer Portal:** get access to SDKs, sample code, and integration tools. Visit [CyberSource](https://github.com/CyberSource "").
-* **Knowledge Base:** provides troubleshooting information and frequently asked questions. Visit [](https://support.visaacceptance.com/knowledgebase/ "").
+* **Knowledge Base:** provides troubleshooting information and frequently asked questions. Visit [](https://support.example.com/knowledgebase/ "").
 * **Blog:** stay updated with the latest features, best practices, and industry trends. Visit [](https://community.developer.cybersource.com/ "").
 * **Technical Support:** contact our dedicated support team for assistance. Visit [support.html](https://www.cybersource.com/en-us/support.md "").
 

@@ -78,4 +78,4 @@ Hidden truth content is intentionally omitted from this bundle.
 - verifier_result_path: `artifacts/verifier_results/flex-token-lifecycle.result.json`
 - improvement_actions:
   - [docs] Clarify Flex Token Lifecycle stage ordering in public docs
-  - [vap_cli] Ship a VAP CLI workflow verifier for this contract
+  - [vap_cli] Ship a Relay CLI workflow verifier for this contract

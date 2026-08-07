@@ -79,4 +79,4 @@ Hidden truth content is intentionally omitted from this bundle.
 - improvement_actions:
   - [docs] Clarify HTTP Signature Debug stage ordering in public docs
   - [sdk] Align SDK credential field names with docs (or docs with SDK)
-  - [vap_cli] Ship a VAP CLI workflow verifier for this contract
+  - [vap_cli] Ship a Relay CLI workflow verifier for this contract

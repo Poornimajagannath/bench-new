@@ -1,4 +1,4 @@
-# Visa Relay — Payment Templates
+# Relay — Payment Templates
 
 ## Purpose
 
@@ -8,7 +8,7 @@ These templates show correct CyberSource SDK integration patterns for different 
 
 | Template | Description |
 |----------|-------------|
-| `card-payment/` | Standard Visa/Mastercard/Amex card payments |
+| `card-payment/` | Standard major card brands card payments |
 | `ach-payment/` | Bank account (ACH/EFT) payments |
 | `digital-wallet/` | Google Pay, Apple Pay, PayPal |
 | `multi-currency/` | Multi-currency handling with DCC |

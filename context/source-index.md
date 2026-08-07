@@ -15,11 +15,11 @@
 - Use **Unified Checkout** as default for web card acceptance
 - Use **Token Management Service** for tokenization
 - Always test on **sandbox** at `apitest.cybersource.com`
-- Default processor: **Visa Platform Connect (CTV)**
+- Default processor: **Platform Connect (CTV)**
 
 ## MCP (Agent Toolkit)
 
-- **Visa Acceptance Agent Toolkit:** https://developer.visaacceptance.com/docs/vas/en-us/agent-toolkit/
+- **Acceptance Agent Toolkit:** https://developer.example.com/docs/vas/en-us/agent-toolkit/
 - **CyberSource MCP:** Not yet public — available in private CyberSource GitHub repo or via Google search
 
 ## SDK Installation

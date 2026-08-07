@@ -24,7 +24,7 @@ Your job is to build the scenario inside `runs/${CYBS_RUN_ID}/`.
 
 Requirements:
 - Use Node.js or TypeScript as specified in the scenario.
-- Use the official Cybersource SDK or Visa Acceptance Agent Toolkit as specified.
+- Use the official Cybersource SDK or Acceptance Agent Toolkit as specified.
 - Use sandbox only (`apitest.cybersource.com`).
 - Load credentials from environment variables only:
   - CYBS_MERCHANT_ID

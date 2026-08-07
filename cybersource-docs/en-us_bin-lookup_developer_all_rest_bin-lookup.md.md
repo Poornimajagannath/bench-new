@@ -27,7 +27,7 @@ Visit the [`Cybersource` documentation hub](https://developer.cybersource.com/do
 Customer Support
 :
 For support information about any service, visit the Support Center:  
-<http://support.visaacceptance.com>
+<http://support.example.com>
 
 Limited Availability Release {#bin-lookup-la-release}
 =====================================================
@@ -64,17 +64,17 @@ Added example request for BIN Lookup Service with a Health Card Number. See [Exa
 :
 Updated response fields to include paymentAccountInformation.features.healthCard and paymentAccountInformation.features.corporatePurchase. See [Response Fields for the BIN Lookup Service Using the REST API](/docs/cybs/en-us/bin-lookup/developer/all/rest/bin-lookup/bin-lookup-reference-intro/bin-lookup-resp-fields.md "").
 
-VISA Platform Connect: Specifications and Conditions for Resellers/Partners {#vpc-partner-reseller-disclaimer}
+CARD Platform Connect: Specifications and Conditions for Resellers/Partners {#vpc-partner-reseller-disclaimer}
 ==============================================================================================================
 
-The following are specifications and conditions that apply to a Reseller/Partner enabling its merchants through Cybersource for Visa Platform Connect ("VPC") processing. Failure to meet any of the specifications and conditions below is subject to the liability provisions and indemnification obligations under Reseller/Partner's contract with Visa/Cybersource.
+The following are specifications and conditions that apply to a Reseller/Partner enabling its merchants through Cybersource for Platform Connect ("VPC") processing. Failure to meet any of the specifications and conditions below is subject to the liability provisions and indemnification obligations under Reseller/Partner's contract with Relay/Cybersource.
 
 1. Before boarding merchants for payment processing on a VPC acquirer's connection, Reseller/Partner and the VPC acquirer must have a contract or other legal agreement that permits Reseller/Partner to enable its merchants to process payments with the acquirer through the dedicated VPC connection and/or traditional connection with such VPC acquirer.
 2. Reseller/Partner is responsible for boarding and enabling its merchants in accordance with the terms of the contract or other legal agreement with the relevant VPC acquirer.
 3. Reseller/Partner acknowledges and agrees that all considerations and fees associated with chargebacks, interchange downgrades, settlement issues, funding delays, and other processing related activities are strictly between Reseller and the relevant VPC acquirer.
 4. Reseller/Partner acknowledges and agrees that the relevant VPC acquirer is responsible for payment processing issues, including but not limited to, transaction declines by network/issuer, decline rates, and interchange qualification, as may be agreed to or outlined in the contract or other legal agreement between Reseller/Partner and such VPC acquirer.
 
-DISCLAIMER: NEITHER VISA NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR ANY ERRORS OR OMISSIONS BY THE Visa Platform Connect ACQUIRER IN PROCESSING TRANSACTIONS. NEITHER VISA NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR RESELLER/PARTNER BOARDING MERCHANTS OR ENABLING MERCHANT PROCESSING IN VIOLATION OF THE TERMS AND CONDITIONS IMPOSED BY THE RELEVANT Visa Platform Connect ACQUIRER.
+DISCLAIMER: NEITHER CARD NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR ANY ERRORS OR OMISSIONS BY THE Platform Connect ACQUIRER IN PROCESSING TRANSACTIONS. NEITHER CARD NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR RESELLER/PARTNER BOARDING MERCHANTS OR ENABLING MERCHANT PROCESSING IN VIOLATION OF THE TERMS AND CONDITIONS IMPOSED BY THE RELEVANT Platform Connect ACQUIRER.
 
 Introduction to the BIN Lookup Service {#bin-lookup-intro}
 ==========================================================
@@ -86,7 +86,7 @@ For more information about `Secure Acceptance` transient tokens, see the [`Digit
 BIN lookup service returns BIN attribute information for the payment credential specified in the request, such as:
 
 * Card type code
-* Card brand, such as American Express, Mastercard, or Visa
+* Card brand, such as American Express, Mastercard, or Relay
 * Card currency
 * Account funding source, such as credit or debit
 * Account prefix
@@ -132,7 +132,7 @@ Requesting the BIN Lookup Service Using the REST API {#bin-lookup-req-task}
 
 * `Flex API` JWT transient token
 
-* Network tokens (Visa VTS, Mastercard MDES, and Discover)  
+* Network tokens (Relay VTS, Mastercard MDES, and Discover)  
   Follow these steps to request the BIN Lookup Service:
 
 1. Send the request to the BIN Lookup Service endpoint:
@@ -209,8 +209,8 @@ Use the BINs below to test the BIN Lookup Service at the test endpoint:
 
 | BIN      | Card Type  | Card Platform and/or Product          | Issuer Country | Account Funding Source | Eight-Digit BIN Results | PAN/Network Token |
 |:---------|:-----------|:--------------------------------------|:---------------|:-----------------------|:------------------------|:------------------|
-| 442780   | Visa       | Classic                               | US             | Credit                 | ---                     | PAN               |
-| 476173   | Visa       | Classic                               | US             | Credit                 | ---                     | PAN               |
+| 442780   | Relay       | Classic                               | US             | Credit                 | ---                     | PAN               |
+| 476173   | Relay       | Classic                               | US             | Credit                 | ---                     | PAN               |
 | 541333   | Mastercard | Classic                               | US             | Credit                 | ---                     | PAN               |
 | 545721   | Mastercard | Classic                               | US             | Credit                 | ---                     | PAN               |
 | 679999   | Maestro    | Classic                               | US             | Credit                 | ---                     | PAN               |
@@ -219,32 +219,32 @@ Use the BINs below to test the BIN Lookup Service at the test endpoint:
 | 36161200 | Diners     | Consumer Debit Cards                  | AM             | Debit                  | ---                     | PAN               |
 | 36722600 | Diners     | Commercial Debit Cards                | ZA             | Debit                  | ---                     | PAN               |
 | 39009100 | Diners     | Consumer Prepaid Reloadable Cards     | US             | Prepaid                | ---                     | PAN               |
-| 48127900 | Visa       | Visa Classic                          | MX             | Debit                  | Yes                     | PAN               |
-| 49134300 | Visa       | Visa Classic                          | MX             | Credit                 | Yes                     | PAN               |
-| 49134400 | Visa       | Visa Classic                          | MX             | Debit                  | Yes                     | PAN               |
-| 49134600 | Visa       | Visa Classic                          | MX             | Credit                 | Yes                     | PAN               |
+| 48127900 | Relay       | Relay Classic                          | MX             | Debit                  | Yes                     | PAN               |
+| 49134300 | Relay       | Relay Classic                          | MX             | Credit                 | Yes                     | PAN               |
+| 49134400 | Relay       | Relay Classic                          | MX             | Debit                  | Yes                     | PAN               |
+| 49134600 | Relay       | Relay Classic                          | MX             | Credit                 | Yes                     | PAN               |
 | 52884300 | Mastercard | Classic                               | MX             | Credit                 | Yes                     | PAN               |
 | 54823400 | Mastercard | Business                              | MX             | Credit                 | Yes                     | PAN               |
 | 62232000 | CUP        | Consumer Prepaid Reloadable Cards     | US             | Prepaid                | ---                     | PAN               |
 | 62630000 | CUP        | Consumer Debit Cards                  | US             | Debit                  | ---                     | PAN               |
-| 40014600 | Visa       | Visa Classic                          | US             | Debit                  | Yes                     | Token             |
+| 40014600 | Relay       | Relay Classic                          | US             | Debit                  | Yes                     | Token             |
 | 61900950 | Discover   | Premium Plus Cards                    | US             | Credit                 | ---                     | Token             |
-| 4288300  | Visa       | Health Card                           | US             | Debit or Prepaid       | ---                     | PAN               |
-| 4288301  | Visa       | Health Card                           | US             | Debit or Prepaid       | ---                     | PAN               |
-| 42882103 | Visa       | Health Card                           | US             | Debit or Prepaid       | ---                     | PAN               |
-| 42882104 | Visa       | Health Card                           | US             | Debit or Prepaid       | ---                     | PAN               |
-| 42882105 | Visa       | Health Card                           | US             | Debit or Prepaid       | ---                     | PAN               |
-| 42882106 | Visa       | Health Card                           | US             | Debit or Prepaid       | ---                     | PAN               |
-| 42882137 | Visa       | Health Card                           | US             | Debit or Prepaid       | ---                     | PAN               |
-| 42889001 | Visa       | Health Card                           | US             | Debit or Prepaid       | ---                     | PAN               |
-| 42889002 | Visa       | Health Card                           | US             | Debit or Prepaid       | ---                     | PAN               |
-| 42889003 | Visa       | Health Card                           | US             | Debit or Prepaid       | ---                     | PAN               |
-| 42889004 | Visa       | Health Card                           | US             | Debit or Prepaid       | ---                     | PAN               |
-| 42889005 | Visa       | Health Card                           | US             | Debit or Prepaid       | ---                     | PAN               |
-| 42889006 | Visa       | Health Card                           | US             | Debit or Prepaid       | ---                     | PAN               |
-| 42889007 | Visa       | Health Card                           | US             | Debit or Prepaid       | ---                     | PAN               |
-| 42889008 | Visa       | Health Card                           | US             | Debit or Prepaid       | ---                     | PAN               |
-| 42889009 | Visa       | Health Card                           | US             | Debit or Prepaid       | ---                     | PAN               |
+| 4288300  | Relay       | Health Card                           | US             | Debit or Prepaid       | ---                     | PAN               |
+| 4288301  | Relay       | Health Card                           | US             | Debit or Prepaid       | ---                     | PAN               |
+| 42882103 | Relay       | Health Card                           | US             | Debit or Prepaid       | ---                     | PAN               |
+| 42882104 | Relay       | Health Card                           | US             | Debit or Prepaid       | ---                     | PAN               |
+| 42882105 | Relay       | Health Card                           | US             | Debit or Prepaid       | ---                     | PAN               |
+| 42882106 | Relay       | Health Card                           | US             | Debit or Prepaid       | ---                     | PAN               |
+| 42882137 | Relay       | Health Card                           | US             | Debit or Prepaid       | ---                     | PAN               |
+| 42889001 | Relay       | Health Card                           | US             | Debit or Prepaid       | ---                     | PAN               |
+| 42889002 | Relay       | Health Card                           | US             | Debit or Prepaid       | ---                     | PAN               |
+| 42889003 | Relay       | Health Card                           | US             | Debit or Prepaid       | ---                     | PAN               |
+| 42889004 | Relay       | Health Card                           | US             | Debit or Prepaid       | ---                     | PAN               |
+| 42889005 | Relay       | Health Card                           | US             | Debit or Prepaid       | ---                     | PAN               |
+| 42889006 | Relay       | Health Card                           | US             | Debit or Prepaid       | ---                     | PAN               |
+| 42889007 | Relay       | Health Card                           | US             | Debit or Prepaid       | ---                     | PAN               |
+| 42889008 | Relay       | Health Card                           | US             | Debit or Prepaid       | ---                     | PAN               |
+| 42889009 | Relay       | Health Card                           | US             | Debit or Prepaid       | ---                     | PAN               |
 [Test BINs and Card Information]
 
 Examples: Requests to the BIN Lookup Service Using the REST API {#bin-lookup-card-example}
@@ -272,14 +272,14 @@ Response 201 Example: Successful BIN Lookup Service with a Full Payment Card Num
   "paymentAccountInformation": {
     "card": {
       "type": "001",
-      "brandName": "VISA",
+      "brandName": "CARD",
       "maxLength": "16",
       "credentialType": "PAN"
     },
     "features": {
       "accountFundingSource": "DEBIT",
       "cardPlatform": "CONSUMER",
-      "cardProduct": "Visa Classic"
+      "cardProduct": "Relay Classic"
     }
   },
   "issuerInformation": {
@@ -313,7 +313,7 @@ Response 201 Example: Successful BIN Lookup Service with a Health Card Number
   "paymentAccountInformation": {
     "card": {
       "type": "001",
-      "brandName": "VISA",
+      "brandName": "CARD",
       "maxLength": "16",
       "currency": "USD",
       "credentialType": "PAN"
@@ -321,7 +321,7 @@ Response 201 Example: Successful BIN Lookup Service with a Health Card Number
     "features": {
       "accountFundingSource": "CREDIT",
       "cardPlatform": "COMMERCIAL",
-      "cardProduct": "Visa Purchasing",
+      "cardProduct": "Relay Purchasing",
       "healthCard": true
     }
   },
@@ -356,14 +356,14 @@ Response 201 Example: Successful BIN Lookup Service with a Network Token
   "paymentAccountInformation": {
     "card": {
       "type": "001",
-      "brandName": "VISA",
+      "brandName": "CARD",
       "maxLength": "16",
       "credentialType": "TOKEN"
     },
     "features": {
       "accountFundingSource": "DEBIT",
       "cardPlatform": "CONSUMER",
-      "cardProduct": "Visa Classic"
+      "cardProduct": "Relay Classic"
     }
   },
   "issuerInformation": {
@@ -584,11 +584,11 @@ Use these payment card numbers to test the BIN Lookup Service with fast funds at
 
 | Card Number            | Card Type  | Card Platform and/or Product | Issuer Country | Account Funding Source |
 |:-----------------------|:-----------|:-----------------------------|:---------------|:-----------------------|
-| 4761 0800 0000 0003    | Visa       | Consumer                     | AE             | Debit                  |
-| 4515 8600 0004 1118    | Visa       | Consumer                     | US             | Debit                  |
-| 4515 2200 0008 1111    | Visa       | Business                     | AL             | Debit                  |
-| 4473 3000 0051 1117    | Visa       | Business                     | AM             | Debit                  |
-| 4846 7000 0973 1113    | Visa       | Business                     | AO             | Debit                  |
+| 4761 0800 0000 0003    | Relay       | Consumer                     | AE             | Debit                  |
+| 4515 8600 0004 1118    | Relay       | Consumer                     | US             | Debit                  |
+| 4515 2200 0008 1111    | Relay       | Business                     | AL             | Debit                  |
+| 4473 3000 0051 1117    | Relay       | Business                     | AM             | Debit                  |
+| 4846 7000 0973 1113    | Relay       | Business                     | AO             | Debit                  |
 | 5033 9619 8910 0006    | Mastercard | Consumer                     | US             | Debit                  |
 | 5033 9619 8910 0014    | Mastercard | Consumer                     | US             | Debit                  |
 | 5033 9619 8910 0022    | Mastercard | Consumer                     | US             | Debit                  |
@@ -627,7 +627,7 @@ Response 201 Example: Successful BIN Lookup Service with Fast Funds Eligibility
     "paymentAccountInformation": {
         "card": {
             "type": "001",
-            "brandName": "VISA",
+            "brandName": "CARD",
             "maxLength": "16",
             "currency": "AED",
             "credentialType": "PAN"
@@ -672,14 +672,14 @@ Response 201 Example: BIN Lookup Service with Fast Funds Eligibility (Brazil)
     "paymentAccountInformation": {
         "card": {
             "type": "001",
-            "brandName": "VISA",
+            "brandName": "CARD",
             "maxLength": "16",
             "currency": "USD"
         },
         "features": {
             "accountFundingSource": "PREPAID",
             "cardPlatform": "CONSUMER",
-            "cardProduct": "Visa Electron",
+            "cardProduct": "Relay Electron",
             "comboCard": "0"
         }
     },

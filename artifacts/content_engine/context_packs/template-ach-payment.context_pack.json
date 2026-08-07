@@ -3,7 +3,7 @@
   "source_id": "template-ach-payment",
   "product": [
     "cybersource",
-    "visa-acceptance"
+    "acceptance-platform"
   ],
   "audience": [
     "developer",

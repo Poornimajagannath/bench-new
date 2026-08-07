@@ -9,10 +9,10 @@
       "source_page_id": "doc-templates-index",
       "unit_type": "overview",
       "title": "Purpose",
-      "goal": "Visa Relay \u2014 Payment Templates",
+      "goal": "Relay \u2014 Payment Templates",
       "product": [
         "cybersource",
-        "visa-acceptance"
+        "acceptance-platform"
       ],
       "audience": [
         "developer",
@@ -38,10 +38,10 @@
       "source_page_id": "doc-templates-index",
       "unit_type": "overview",
       "title": "Files",
-      "goal": "Visa Relay \u2014 Payment Templates",
+      "goal": "Relay \u2014 Payment Templates",
       "product": [
         "cybersource",
-        "visa-acceptance"
+        "acceptance-platform"
       ],
       "audience": [
         "developer",
@@ -51,7 +51,7 @@
         "http-signature-debug"
       ],
       "sequence_number": 0,
-      "body_markdown": "| Template | Description |\n|----------|-------------|\n| `card-payment/` | Standard Visa/Mastercard/Amex card payments |\n| `ach-payment/` | Bank account (ACH/EFT) payments |\n| `digital-wallet/` | Google Pay, Apple Pay, PayPal |\n| `multi-currency/` | Multi-currency handling with DCC |\n| `config/` | Authentication and configuration templates |",
+      "body_markdown": "| Template | Description |\n|----------|-------------|\n| `card-payment/` | Standard major card brands card payments |\n| `ach-payment/` | Bank account (ACH/EFT) payments |\n| `digital-wallet/` | Google Pay, Apple Pay, PayPal |\n| `multi-currency/` | Multi-currency handling with DCC |\n| `config/` | Authentication and configuration templates |",
       "commands": [],
       "api_entities": [],
       "requires": [],
@@ -59,7 +59,7 @@
       "failure_modes": [],
       "confidence": 0.85,
       "evidence_quotes": [
-        "| Template | Description | |----------|-------------| | `card-payment/` | Standard Visa/Mastercard/Amex card payments | | `ach-payment/` | Bank account (ACH/..."
+        "| Template | Description | |----------|-------------| | `card-payment/` | Standard major card brands card payments | | `ach-payment/` | Bank account (ACH/..."
       ]
     },
     {
@@ -67,10 +67,10 @@
       "source_page_id": "doc-templates-index",
       "unit_type": "warning",
       "title": "Common Gotchas",
-      "goal": "Visa Relay \u2014 Payment Templates",
+      "goal": "Relay \u2014 Payment Templates",
       "product": [
         "cybersource",
-        "visa-acceptance"
+        "acceptance-platform"
       ],
       "audience": [
         "developer",

@@ -34,7 +34,7 @@ The PAX terminal supports these payment card types:
 * Mastercard
 * JCB
 * UPI
-* Visa
+* Relay
   {#pax-terminal-pymt-schemes_ul_mh4_m2h_3xb}
 
 Supported Payment Card Entry Modes on the PAX Terminal {#pax-terminal-pymt-methods}

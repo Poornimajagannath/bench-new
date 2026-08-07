@@ -23,7 +23,7 @@ Support
 -------
 
 For support information about any service, visit the Support Center:  
-<http://support.visaacceptance.com>
+<http://support.example.com>
 
 Recent Revisions to This Document {#sis-pax-doc-revisions}
 ==========================================================
@@ -49,7 +49,7 @@ Updated Acceptance Devices app to version 1.22.0. See [Acceptance Devices App Ve
 Added support for these items in [Supported Payment Terminals and Capabilities](/docs/cybs/en-us/sis-pax/integration/all/rest/sis-pax/semi-integrated-solution-pax-intro/sis-pax-supported-terminals.md ""):
 
     * PAX terminals A50, A99, A6630, and A6650
-    * Meeza card type with Visa Platform Connect payment processor
+    * Meeza card type with Platform Connect payment processor
     {#sis-pax-doc-revisions_ul_m11_lyb_fjc}
 
 :
@@ -145,7 +145,7 @@ The PAX All-in-One Android Solution supports a variety of PAX payment terminals,
 [Supported PAX Payment Terminals]
 
 |     Card Type     |                                                                                                                                                                                                               Processor                                                                                                                                                                                                                ||                     Payment Service                      |                                                                                                                                                                                                               Processor                                                                                                                                                                                                                ||
-|     Card Type     |                                                                                                FDC Nashville Global                                                                                                |                                                                                               Visa​ Platform Connect                                                                                               |                     Payment Service                      |                                                                                                FDC Nashville Global                                                                                                |                                                                                               Visa​ Platform Connect                                                                                               |
+|     Card Type     |                                                                                                FDC Nashville Global                                                                                                |                                                                                               Relay​ Platform Connect                                                                                               |                     Payment Service                      |                                                                                                FDC Nashville Global                                                                                                |                                                                                               Relay​ Platform Connect                                                                                               |
 |:-----------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:--------------------------------------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 | American Express  | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/semi-integrated-solution/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/semi-integrated-solution/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) |                   Account verification                   | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/semi-integrated-solution/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/semi-integrated-solution/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) |
 |  China Union Pay  | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/semi-integrated-solution/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) |    ![grey circle with dash icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/semi-integrated-solution/images/circle-line-filled-26x26.svg/jcr:content/renditions/original)    |                         Capture                          | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/semi-integrated-solution/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/semi-integrated-solution/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) |
@@ -156,7 +156,7 @@ The PAX All-in-One Android Solution supports a variety of PAX payment terminals,
 |    Mastercard     | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/semi-integrated-solution/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/semi-integrated-solution/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) | Offline sale (Deferred authorization/​Store and Forward) | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/semi-integrated-solution/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/semi-integrated-solution/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) |
 |       Meeza       |    ![grey circle with dash icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/semi-integrated-solution/images/circle-line-filled-26x26.svg/jcr:content/renditions/original)    | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/semi-integrated-solution/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) |                    On-reader tipping                     | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/semi-integrated-solution/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/semi-integrated-solution/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) |
 | U.S. Common Debit | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/semi-integrated-solution/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/semi-integrated-solution/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) |                    On-receipt tipping                    | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/semi-integrated-solution/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/semi-integrated-solution/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) |
-|       Visa        | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/semi-integrated-solution/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/semi-integrated-solution/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) |                    Pre-​authorization                    | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/semi-integrated-solution/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/semi-integrated-solution/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) |
+|       Relay        | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/semi-integrated-solution/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/semi-integrated-solution/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) |                    Pre-​authorization                    | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/semi-integrated-solution/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/semi-integrated-solution/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) |
 |                   |                                                                                                                                                                                                                    |                                                                                                                                                                                                                    |                          Refund                          | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/semi-integrated-solution/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/semi-integrated-solution/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) |
 |                   |                                                                                                                                                                                                                    |                                                                                                                                                                                                                    |                           Sale                           | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/semi-integrated-solution/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/semi-integrated-solution/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) |
 |                   |                                                                                                                                                                                                                    |                                                                                                                                                                                                                    |                    Stand-alone credit                    | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/semi-integrated-solution/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) | ![green circle with checkmark icon](/content/dam/documentation/cybs/en-us/topics/payments-processing/card-processing/semi-integrated-solution/images/circlecheck-filled-26x26.svg/jcr:content/renditions/original) |
@@ -882,7 +882,7 @@ Response to a Successful Request
         "card" : {
           "expirationMonth" : "12",
           "expirationYear" : "2025",
-          "type" : "VISA",
+          "type" : "CARD",
           "maskedPan" : "476173XXXXXX0119",
           "countryCode" : "840"
         }
@@ -894,7 +894,7 @@ Response to a Successful Request
       "linkedOperations" : [ ],
       "receipts" : {
         "merchantReceipt" : {
-          "preformattedReceipt" : "Merchant Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nSale\n£1.00\n\n\nPlease retain receipt!\n\n\nCard: Payworks VISA\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 938238\nMerchant ID: **37599\nTerminal ID: ****0063\n\n1541387b383d456aabb81cdf558b4e8e\n21:24:51: 01/12/2023\n\n\n",
+          "preformattedReceipt" : "Merchant Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nSale\n£1.00\n\n\nPlease retain receipt!\n\n\nCard: Payworks CARD\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 938238\nMerchant ID: **37599\nTerminal ID: ****0063\n\n1541387b383d456aabb81cdf558b4e8e\n21:24:51: 01/12/2023\n\n\n",
           "receiptData" : {
             "lines" : {
               "MERCHANT_DETAILS_PUBLIC_NAME" : {
@@ -927,7 +927,7 @@ Response to a Successful Request
               },
               "PAYMENT_DETAILS_SCHEME_OR_LABEL" : {
                 "label" : "Card",
-                "value" : "Payworks VISA"
+                "value" : "Payworks CARD"
               },
               "PAYMENT_DETAILS_MASKED_ACCOUNT" : {
                 "label" : "Account",
@@ -994,7 +994,7 @@ Response to a Successful Request
           }
         },
         "customerReceipt" : {
-          "preformattedReceipt" : "Cardholder Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nSale\n£1.00\n\n\nPlease retain receipt!\n\n\nCard: Payworks VISA\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 938238\nMerchant ID: **37599\nTerminal ID: ****0063\n\n1541387b383d456aabb81cdf558b4e8e\n21:24:51: 01/12/2023\n\n\n",
+          "preformattedReceipt" : "Cardholder Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nSale\n£1.00\n\n\nPlease retain receipt!\n\n\nCard: Payworks CARD\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 938238\nMerchant ID: **37599\nTerminal ID: ****0063\n\n1541387b383d456aabb81cdf558b4e8e\n21:24:51: 01/12/2023\n\n\n",
           "receiptData" : {
             "lines" : {
               "MERCHANT_DETAILS_PUBLIC_NAME" : {
@@ -1027,7 +1027,7 @@ Response to a Successful Request
               },
               "PAYMENT_DETAILS_SCHEME_OR_LABEL" : {
                 "label" : "Card",
-                "value" : "Payworks VISA"
+                "value" : "Payworks CARD"
               },
               "PAYMENT_DETAILS_MASKED_ACCOUNT" : {
                 "label" : "Account",
@@ -1196,7 +1196,7 @@ Response to a Successful Request
         "card" : {
           "expirationMonth" : "12",
           "expirationYear" : "2025",
-          "type" : "VISA",
+          "type" : "CARD",
           "maskedPan" : "476173XXXXXX0119",
           "countryCode" : "840"
         }
@@ -1214,7 +1214,7 @@ Response to a Successful Request
       } ],
       "receipts" : {
         "merchantReceipt" : {
-          "preformattedReceipt" : "Merchant Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nVoid\n-£1.00\n\n\nReversal accepted.\n\n\nCard: Payworks VISA\nAccount: **** **** **** 0119\nEntry Mode: Keyed\n\nAuthorization: -\nMerchant ID: **37599\nTerminal ID: ****0063\n\nb383db1aecab46d89f1dbec8b0a9aa90\n21:57:50: 01/12/2023\n\n\n",
+          "preformattedReceipt" : "Merchant Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nVoid\n-£1.00\n\n\nReversal accepted.\n\n\nCard: Payworks CARD\nAccount: **** **** **** 0119\nEntry Mode: Keyed\n\nAuthorization: -\nMerchant ID: **37599\nTerminal ID: ****0063\n\nb383db1aecab46d89f1dbec8b0a9aa90\n21:57:50: 01/12/2023\n\n\n",
           "receiptData" : {
             "lines" : {
               "MERCHANT_DETAILS_PUBLIC_NAME" : {
@@ -1247,7 +1247,7 @@ Response to a Successful Request
               },
               "PAYMENT_DETAILS_SCHEME_OR_LABEL" : {
                 "label" : "Card",
-                "value" : "Payworks VISA"
+                "value" : "Payworks CARD"
               },
               "PAYMENT_DETAILS_MASKED_ACCOUNT" : {
                 "label" : "Account",
@@ -1306,7 +1306,7 @@ Response to a Successful Request
           }
         },
         "customerReceipt" : {
-          "preformattedReceipt" : "Cardholder Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nVoid\n-£1.00\n\n\nReversal accepted.\n\n\nCard: Payworks VISA\nAccount: **** **** **** 0119\nEntry Mode: Keyed\n\nAuthorization: -\nMerchant ID: **37599\nTerminal ID: ****0063\n\nb383db1aecab46d89f1dbec8b0a9aa90\n21:57:50: 01/12/2023\n\n\n",
+          "preformattedReceipt" : "Cardholder Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nVoid\n-£1.00\n\n\nReversal accepted.\n\n\nCard: Payworks CARD\nAccount: **** **** **** 0119\nEntry Mode: Keyed\n\nAuthorization: -\nMerchant ID: **37599\nTerminal ID: ****0063\n\nb383db1aecab46d89f1dbec8b0a9aa90\n21:57:50: 01/12/2023\n\n\n",
           "receiptData" : {
             "lines" : {
               "MERCHANT_DETAILS_PUBLIC_NAME" : {
@@ -1339,7 +1339,7 @@ Response to a Successful Request
               },
               "PAYMENT_DETAILS_SCHEME_OR_LABEL" : {
                 "label" : "Card",
-                "value" : "Payworks VISA"
+                "value" : "Payworks CARD"
               },
               "PAYMENT_DETAILS_MASKED_ACCOUNT" : {
                 "label" : "Account",
@@ -1793,7 +1793,7 @@ Response to a Successful Request
         "card" : {
           "expirationMonth" : "12",
           "expirationYear" : "2025",
-          "type" : "VISA",
+          "type" : "CARD",
           "maskedPan" : "476173XXXXXX0119",
           "countryCode" : "840"
         }
@@ -1805,7 +1805,7 @@ Response to a Successful Request
       "linkedOperations" : [ ],
       "receipts" : {
         "merchantReceipt" : {
-          "preformattedReceipt" : "Merchant Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nSale\n£1.00\n\n\nPlease retain receipt!\n\n\nCard: Payworks VISA\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 938238\nMerchant ID: **37599\nTerminal ID: ****0063\n\n1541387b383d456aabb81cdf558b4e8e\n21:24:51: 01/12/2023\n\n\n",
+          "preformattedReceipt" : "Merchant Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nSale\n£1.00\n\n\nPlease retain receipt!\n\n\nCard: Payworks CARD\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 938238\nMerchant ID: **37599\nTerminal ID: ****0063\n\n1541387b383d456aabb81cdf558b4e8e\n21:24:51: 01/12/2023\n\n\n",
           "receiptData" : {
             "lines" : {
               "MERCHANT_DETAILS_PUBLIC_NAME" : {
@@ -1838,7 +1838,7 @@ Response to a Successful Request
               },
               "PAYMENT_DETAILS_SCHEME_OR_LABEL" : {
                 "label" : "Card",
-                "value" : "Payworks VISA"
+                "value" : "Payworks CARD"
               },
               "PAYMENT_DETAILS_MASKED_ACCOUNT" : {
                 "label" : "Account",
@@ -1905,7 +1905,7 @@ Response to a Successful Request
           }
         },
         "customerReceipt" : {
-          "preformattedReceipt" : "Cardholder Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nSale\n£1.00\n\n\nPlease retain receipt!\n\n\nCard: Payworks VISA\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 938238\nMerchant ID: **37599\nTerminal ID: ****0063\n\n1541387b383d456aabb81cdf558b4e8e\n21:24:51: 01/12/2023\n\n\n",
+          "preformattedReceipt" : "Cardholder Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nSale\n£1.00\n\n\nPlease retain receipt!\n\n\nCard: Payworks CARD\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 938238\nMerchant ID: **37599\nTerminal ID: ****0063\n\n1541387b383d456aabb81cdf558b4e8e\n21:24:51: 01/12/2023\n\n\n",
           "receiptData" : {
             "lines" : {
               "MERCHANT_DETAILS_PUBLIC_NAME" : {
@@ -1938,7 +1938,7 @@ Response to a Successful Request
               },
               "PAYMENT_DETAILS_SCHEME_OR_LABEL" : {
                 "label" : "Card",
-                "value" : "Payworks VISA"
+                "value" : "Payworks CARD"
               },
               "PAYMENT_DETAILS_MASKED_ACCOUNT" : {
                 "label" : "Account",
@@ -2347,7 +2347,7 @@ Response to a Successful Request
         "card" : {
           "expirationMonth" : "12",
           "expirationYear" : "2025",
-          "type" : "VISA",
+          "type" : "CARD",
           "maskedPan" : "476173XXXXXX0119",
           "countryCode" : "840"
         }
@@ -2359,7 +2359,7 @@ Response to a Successful Request
       "linkedOperations" : [ ],
       "receipts" : {
         "merchantReceipt" : {
-          "preformattedReceipt" : "Merchant Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nSale\nPurchase Amount: £5.00\nTip Amount: £1.00\nTotal Amount: £6.00\n\n\nPlease retain receipt!\n\n\nCard: Payworks VISA\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 938252\nMerchant ID: **37599\nTerminal ID: ****0063\n\n55678c8b152046f7b1d77fd2286ce392\n22:01:27: 01/12/2023\n\n\n",
+          "preformattedReceipt" : "Merchant Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nSale\nPurchase Amount: £5.00\nTip Amount: £1.00\nTotal Amount: £6.00\n\n\nPlease retain receipt!\n\n\nCard: Payworks CARD\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 938252\nMerchant ID: **37599\nTerminal ID: ****0063\n\n55678c8b152046f7b1d77fd2286ce392\n22:01:27: 01/12/2023\n\n\n",
           "receiptData" : {
             "lines" : {
               "MERCHANT_DETAILS_PUBLIC_NAME" : {
@@ -2392,7 +2392,7 @@ Response to a Successful Request
               },
               "PAYMENT_DETAILS_SCHEME_OR_LABEL" : {
                 "label" : "Card",
-                "value" : "Payworks VISA"
+                "value" : "Payworks CARD"
               },
               "PAYMENT_DETAILS_MASKED_ACCOUNT" : {
                 "label" : "Account",
@@ -2459,7 +2459,7 @@ Response to a Successful Request
           }
         },
         "customerReceipt" : {
-          "preformattedReceipt" : "Cardholder Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nSale\nPurchase Amount: £5.00\nTip Amount: £1.00\nTotal Amount: £6.00\n\n\nPlease retain receipt!\n\n\nCard: Payworks VISA\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 938252\nMerchant ID: **37599\nTerminal ID: ****0063\n\n55678c8b152046f7b1d77fd2286ce392\n22:01:27: 01/12/2023\n\n\n",
+          "preformattedReceipt" : "Cardholder Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nSale\nPurchase Amount: £5.00\nTip Amount: £1.00\nTotal Amount: £6.00\n\n\nPlease retain receipt!\n\n\nCard: Payworks CARD\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 938252\nMerchant ID: **37599\nTerminal ID: ****0063\n\n55678c8b152046f7b1d77fd2286ce392\n22:01:27: 01/12/2023\n\n\n",
           "receiptData" : {
             "lines" : {
               "MERCHANT_DETAILS_PUBLIC_NAME" : {
@@ -2492,7 +2492,7 @@ Response to a Successful Request
               },
               "PAYMENT_DETAILS_SCHEME_OR_LABEL" : {
                 "label" : "Card",
-                "value" : "Payworks VISA"
+                "value" : "Payworks CARD"
               },
               "PAYMENT_DETAILS_MASKED_ACCOUNT" : {
                 "label" : "Account",
@@ -2669,7 +2669,7 @@ Response to a Successful Request
     "card" : {
       "expirationMonth" : "12",
       "expirationYear" : "2025",
-      "type" : "VISA",
+      "type" : "CARD",
       "maskedPan" : "476173XXXXXX0119",
       "countryCode" : "840"
     }
@@ -2682,7 +2682,7 @@ Response to a Successful Request
   "tipAdjustStatus" : "ADJUSTABLE",
   "receipts" : {
     "merchantReceipt" : {
-      "preformattedReceipt" : "Merchant Receipt\nCP Test\nSample Street\n55555 New York\nUnited States\n1234567\n\nSale\n$20.00\nPlease retain receipt!\n\nCard: Payworks VISA\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 002000\nMerchant ID: **37599\nTerminal ID: ****0063\n\n\nc6174c80b81f4413a4b9f2065c5431c7\n\n\n\n10:19:46: 20/03/2024\n\n\n\nTIP:\n___________________\n\nTOTAL:\n___________________\n",
+      "preformattedReceipt" : "Merchant Receipt\nCP Test\nSample Street\n55555 New York\nUnited States\n1234567\n\nSale\n$20.00\nPlease retain receipt!\n\nCard: Payworks CARD\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 002000\nMerchant ID: **37599\nTerminal ID: ****0063\n\n\nc6174c80b81f4413a4b9f2065c5431c7\n\n\n\n10:19:46: 20/03/2024\n\n\n\nTIP:\n___________________\n\nTOTAL:\n___________________\n",
       "receiptData" : {
         "lines" : {
           "MERCHANT_DETAILS_PUBLIC_NAME" : {
@@ -2715,7 +2715,7 @@ Response to a Successful Request
           },
           "PAYMENT_DETAILS_SCHEME_OR_LABEL" : {
             "label" : "Card",
-            "value" : "Payworks VISA"
+            "value" : "Payworks CARD"
           },
           "PAYMENT_DETAILS_MASKED_ACCOUNT" : {
             "label" : "Account",
@@ -2784,7 +2784,7 @@ Response to a Successful Request
       }
     },
     "customerReceipt" : {
-      "preformattedReceipt" : "Cardholder Receipt\nCP Test\nSample Street\n55555 New York\nUnited States\n1234567\n\nSale\n$20.00\nPlease retain receipt!\n\nCard: Payworks VISA\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 002000\nMerchant ID: **37599\nTerminal ID: ****0063\n\n\nc6174c80b81f4413a4b9f2065c5431c7\n\n\n\n10:19:46: 20/03/2024\n\n\n\nTIP:\n___________________\n\nTOTAL:\n___________________\n",
+      "preformattedReceipt" : "Cardholder Receipt\nCP Test\nSample Street\n55555 New York\nUnited States\n1234567\n\nSale\n$20.00\nPlease retain receipt!\n\nCard: Payworks CARD\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 002000\nMerchant ID: **37599\nTerminal ID: ****0063\n\n\nc6174c80b81f4413a4b9f2065c5431c7\n\n\n\n10:19:46: 20/03/2024\n\n\n\nTIP:\n___________________\n\nTOTAL:\n___________________\n",
       "receiptData" : {
         "lines" : {
           "MERCHANT_DETAILS_PUBLIC_NAME" : {
@@ -2817,7 +2817,7 @@ Response to a Successful Request
           },
           "PAYMENT_DETAILS_SCHEME_OR_LABEL" : {
             "label" : "Card",
-            "value" : "Payworks VISA"
+            "value" : "Payworks CARD"
           },
           "PAYMENT_DETAILS_MASKED_ACCOUNT" : {
             "label" : "Account",
@@ -2985,7 +2985,7 @@ Response to a Successful Request
     "card" : {
       "expirationMonth" : "12",
       "expirationYear" : "2025",
-      "type" : "VISA",
+      "type" : "CARD",
       "maskedPan" : "476173XXXXXX0119",
       "countryCode" : "840"
     }
@@ -2998,7 +2998,7 @@ Response to a Successful Request
   "tipAdjustStatus" : "ADJUSTED",
   "receipts" : {
     "merchantReceipt" : {
-      "preformattedReceipt" : "Merchant Receipt\nCP Test\nSample Street\n55555 New York\nUnited States\n1234567\n\nCapture\nPurchase Amount: $20.00\nTip Amount: $4.00\nTotal Amount: $24.00\nPlease retain receipt!\n\nCard: Payworks VISA\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 002000\nMerchant ID: **37599\nTerminal ID: ****7478\n\n\nc6174c80b81f4413a4b9f2065c5431c7\n\n10:23:17: 20/03/2024\n\n\n",
+      "preformattedReceipt" : "Merchant Receipt\nCP Test\nSample Street\n55555 New York\nUnited States\n1234567\n\nCapture\nPurchase Amount: $20.00\nTip Amount: $4.00\nTotal Amount: $24.00\nPlease retain receipt!\n\nCard: Payworks CARD\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 002000\nMerchant ID: **37599\nTerminal ID: ****7478\n\n\nc6174c80b81f4413a4b9f2065c5431c7\n\n10:23:17: 20/03/2024\n\n\n",
       "receiptData" : {
         "lines" : {
           "MERCHANT_DETAILS_PUBLIC_NAME" : {
@@ -3031,7 +3031,7 @@ Response to a Successful Request
           },
           "PAYMENT_DETAILS_SCHEME_OR_LABEL" : {
             "label" : "Card",
-            "value" : "Payworks VISA"
+            "value" : "Payworks CARD"
           },
           "PAYMENT_DETAILS_MASKED_ACCOUNT" : {
             "label" : "Account",
@@ -3100,7 +3100,7 @@ Response to a Successful Request
       }
     },
     "customerReceipt" : {
-      "preformattedReceipt" : "Cardholder Receipt\nCP Test\nSample Street\n55555 New York\nUnited States\n1234567\n\nCapture\nPurchase Amount: $20.00\nTip Amount: $4.00\nTotal Amount: $24.00\nPlease retain receipt!\n\nCard: Payworks VISA\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 002000\nMerchant ID: **37599\nTerminal ID: ****7478\n\n\nc6174c80b81f4413a4b9f2065c5431c7\n\n10:23:17: 20/03/2024\n\n\n",
+      "preformattedReceipt" : "Cardholder Receipt\nCP Test\nSample Street\n55555 New York\nUnited States\n1234567\n\nCapture\nPurchase Amount: $20.00\nTip Amount: $4.00\nTotal Amount: $24.00\nPlease retain receipt!\n\nCard: Payworks CARD\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 002000\nMerchant ID: **37599\nTerminal ID: ****7478\n\n\nc6174c80b81f4413a4b9f2065c5431c7\n\n10:23:17: 20/03/2024\n\n\n",
       "receiptData" : {
         "lines" : {
           "MERCHANT_DETAILS_PUBLIC_NAME" : {
@@ -3133,7 +3133,7 @@ Response to a Successful Request
           },
           "PAYMENT_DETAILS_SCHEME_OR_LABEL" : {
             "label" : "Card",
-            "value" : "Payworks VISA"
+            "value" : "Payworks CARD"
           },
           "PAYMENT_DETAILS_MASKED_ACCOUNT" : {
             "label" : "Account",
@@ -3301,7 +3301,7 @@ Response to a Successful Request
         "card" : {
           "expirationMonth" : "00",
           "expirationYear" : "00",
-          "type" : "VISA",
+          "type" : "CARD",
           "maskedPan" : "703000XXXXXXXXX0119"
         }
       },
@@ -3310,7 +3310,7 @@ Response to a Successful Request
       },
       "receipts" : {
         "merchantReceipt" : {
-          "preformattedReceipt" : "Merchant Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nRefund\n-£1.00\n\n\nPlease retain receipt!\n\n\nCard: VISA\nAccount: *** **** **** **** 0119\nEntry Mode: Keyed\n\nTransaction: -\nAuthorization: -\nMerchant ID: **37599\nTerminal ID: *************L_ID\n\n596b797178fe45e39ce3a8b8fdf432d6\n10:02:50 PM: 12/1/2023\n\n\n",
+          "preformattedReceipt" : "Merchant Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nRefund\n-£1.00\n\n\nPlease retain receipt!\n\n\nCard: CARD\nAccount: *** **** **** **** 0119\nEntry Mode: Keyed\n\nTransaction: -\nAuthorization: -\nMerchant ID: **37599\nTerminal ID: *************L_ID\n\n596b797178fe45e39ce3a8b8fdf432d6\n10:02:50 PM: 12/1/2023\n\n\n",
           "receiptData" : {
             "lines" : {
               "MERCHANT_DETAILS_PUBLIC_NAME" : {
@@ -3343,7 +3343,7 @@ Response to a Successful Request
               },
               "PAYMENT_DETAILS_SCHEME_OR_LABEL" : {
                 "label" : "Card",
-                "value" : "VISA"
+                "value" : "CARD"
               },
               "PAYMENT_DETAILS_MASKED_ACCOUNT" : {
                 "label" : "Account",
@@ -3406,7 +3406,7 @@ Response to a Successful Request
           }
         },
         "customerReceipt" : {
-          "preformattedReceipt" : "Cardholder Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nRefund\n-£1.00\n\n\nPlease retain receipt!\n\n\nCard: VISA\nAccount: *** **** **** **** 0119\nEntry Mode: Keyed\n\nTransaction: -\nAuthorization: -\nMerchant ID: **37599\nTerminal ID: *************L_ID\n\n596b797178fe45e39ce3a8b8fdf432d6\n10:02:50 PM: 12/1/2023\n\n\n",
+          "preformattedReceipt" : "Cardholder Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nRefund\n-£1.00\n\n\nPlease retain receipt!\n\n\nCard: CARD\nAccount: *** **** **** **** 0119\nEntry Mode: Keyed\n\nTransaction: -\nAuthorization: -\nMerchant ID: **37599\nTerminal ID: *************L_ID\n\n596b797178fe45e39ce3a8b8fdf432d6\n10:02:50 PM: 12/1/2023\n\n\n",
           "receiptData" : {
             "lines" : {
               "MERCHANT_DETAILS_PUBLIC_NAME" : {
@@ -3439,7 +3439,7 @@ Response to a Successful Request
               },
               "PAYMENT_DETAILS_SCHEME_OR_LABEL" : {
                 "label" : "Card",
-                "value" : "VISA"
+                "value" : "CARD"
               },
               "PAYMENT_DETAILS_MASKED_ACCOUNT" : {
                 "label" : "Account",
@@ -3605,7 +3605,7 @@ Response to a Successful Request
         "card" : {
           "expirationMonth" : "12",
           "expirationYear" : "2025",
-          "type" : "VISA",
+          "type" : "CARD",
           "maskedPan" : "476173XXXXXX0119",
           "countryCode" : "840"
         }
@@ -3617,7 +3617,7 @@ Response to a Successful Request
       "linkedOperations" : [ ],
       "receipts" : {
         "merchantReceipt" : {
-          "preformattedReceipt" : "Merchant Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nAuth only\n£1.00\n\n\nPlease retain receipt!\n\n\nCard: Payworks VISA\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 938242\nMerchant ID: **37599\nTerminal ID: ****0063\n\ne43069fbf85543659e478edd8d50f244\n21:38:18: 01/12/2023\n\n\n",
+          "preformattedReceipt" : "Merchant Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nAuth only\n£1.00\n\n\nPlease retain receipt!\n\n\nCard: Payworks CARD\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 938242\nMerchant ID: **37599\nTerminal ID: ****0063\n\ne43069fbf85543659e478edd8d50f244\n21:38:18: 01/12/2023\n\n\n",
           "receiptData" : {
             "lines" : {
               "MERCHANT_DETAILS_PUBLIC_NAME" : {
@@ -3650,7 +3650,7 @@ Response to a Successful Request
               },
               "PAYMENT_DETAILS_SCHEME_OR_LABEL" : {
                 "label" : "Card",
-                "value" : "Payworks VISA"
+                "value" : "Payworks CARD"
               },
               "PAYMENT_DETAILS_MASKED_ACCOUNT" : {
                 "label" : "Account",
@@ -3717,7 +3717,7 @@ Response to a Successful Request
           }
         },
         "customerReceipt" : {
-          "preformattedReceipt" : "Cardholder Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nAuth only\n£1.00\n\n\nPlease retain receipt!\n\n\nCard: Payworks VISA\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 938242\nMerchant ID: **37599\nTerminal ID: ****0063\n\ne43069fbf85543659e478edd8d50f244\n21:38:18: 01/12/2023\n\n\n",
+          "preformattedReceipt" : "Cardholder Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nAuth only\n£1.00\n\n\nPlease retain receipt!\n\n\nCard: Payworks CARD\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 938242\nMerchant ID: **37599\nTerminal ID: ****0063\n\ne43069fbf85543659e478edd8d50f244\n21:38:18: 01/12/2023\n\n\n",
           "receiptData" : {
             "lines" : {
               "MERCHANT_DETAILS_PUBLIC_NAME" : {
@@ -3750,7 +3750,7 @@ Response to a Successful Request
               },
               "PAYMENT_DETAILS_SCHEME_OR_LABEL" : {
                 "label" : "Card",
-                "value" : "Payworks VISA"
+                "value" : "Payworks CARD"
               },
               "PAYMENT_DETAILS_MASKED_ACCOUNT" : {
                 "label" : "Account",
@@ -3914,7 +3914,7 @@ Response to a Successful Request
         "card" : {
           "expirationMonth" : "00",
           "expirationYear" : "00",
-          "type" : "VISA",
+          "type" : "CARD",
           "maskedPan" : "476173XXXXXX0119"
         }
       },
@@ -3924,7 +3924,7 @@ Response to a Successful Request
       "linkedOperations" : [ ],
       "receipts" : {
         "merchantReceipt" : {
-          "preformattedReceipt" : "Merchant Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nTop-up\n£2.00\n\n\nPlease retain receipt!\n\n\nCard: Payworks VISA\nAccount: **** **** **** 0119\nEntry Mode: Keyed\nVerification: None\n\nAuthorization: 938243\nMerchant ID: **37599\nTerminal ID: ****0063\n\n6da4aff381e8483ebc65ebf4fbb27ec8\n21:39:45: 01/12/2023\n\n\n",
+          "preformattedReceipt" : "Merchant Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nTop-up\n£2.00\n\n\nPlease retain receipt!\n\n\nCard: Payworks CARD\nAccount: **** **** **** 0119\nEntry Mode: Keyed\nVerification: None\n\nAuthorization: 938243\nMerchant ID: **37599\nTerminal ID: ****0063\n\n6da4aff381e8483ebc65ebf4fbb27ec8\n21:39:45: 01/12/2023\n\n\n",
           "receiptData" : {
             "lines" : {
               "MERCHANT_DETAILS_PUBLIC_NAME" : {
@@ -3957,7 +3957,7 @@ Response to a Successful Request
               },
               "PAYMENT_DETAILS_SCHEME_OR_LABEL" : {
                 "label" : "Card",
-                "value" : "Payworks VISA"
+                "value" : "Payworks CARD"
               },
               "PAYMENT_DETAILS_MASKED_ACCOUNT" : {
                 "label" : "Account",
@@ -4020,7 +4020,7 @@ Response to a Successful Request
           }
         },
         "customerReceipt" : {
-          "preformattedReceipt" : "Cardholder Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nTop-up\n£2.00\n\n\nPlease retain receipt!\n\n\nCard: Payworks VISA\nAccount: **** **** **** 0119\nEntry Mode: Keyed\nVerification: None\n\nAuthorization: 938243\nMerchant ID: **37599\nTerminal ID: ****0063\n\n6da4aff381e8483ebc65ebf4fbb27ec8\n21:39:45: 01/12/2023\n\n\n",
+          "preformattedReceipt" : "Cardholder Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nTop-up\n£2.00\n\n\nPlease retain receipt!\n\n\nCard: Payworks CARD\nAccount: **** **** **** 0119\nEntry Mode: Keyed\nVerification: None\n\nAuthorization: 938243\nMerchant ID: **37599\nTerminal ID: ****0063\n\n6da4aff381e8483ebc65ebf4fbb27ec8\n21:39:45: 01/12/2023\n\n\n",
           "receiptData" : {
             "lines" : {
               "MERCHANT_DETAILS_PUBLIC_NAME" : {
@@ -4053,7 +4053,7 @@ Response to a Successful Request
               },
               "PAYMENT_DETAILS_SCHEME_OR_LABEL" : {
                 "label" : "Card",
-                "value" : "Payworks VISA"
+                "value" : "Payworks CARD"
               },
               "PAYMENT_DETAILS_MASKED_ACCOUNT" : {
                 "label" : "Account",
@@ -4218,7 +4218,7 @@ Response to a Successful Request
         "card" : {
           "expirationMonth" : "12",
           "expirationYear" : "2025",
-          "type" : "VISA",
+          "type" : "CARD",
           "maskedPan" : "476173XXXXXX0119",
           "countryCode" : "840"
         }
@@ -4230,7 +4230,7 @@ Response to a Successful Request
       "linkedOperations" : [ ],
       "receipts" : {
         "merchantReceipt" : {
-          "preformattedReceipt" : "Merchant Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nSale\n£3.00\n\n\nPlease retain receipt!\n\n\nCard: Payworks VISA\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 938244\nMerchant ID: **37599\nTerminal ID: ****0063\n\ncb6475bafbb94d03b0f984629c63c294\n21:43:07: 01/12/2023\n\n\n",
+          "preformattedReceipt" : "Merchant Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nSale\n£3.00\n\n\nPlease retain receipt!\n\n\nCard: Payworks CARD\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 938244\nMerchant ID: **37599\nTerminal ID: ****0063\n\ncb6475bafbb94d03b0f984629c63c294\n21:43:07: 01/12/2023\n\n\n",
           "receiptData" : {
             "lines" : {
               "MERCHANT_DETAILS_PUBLIC_NAME" : {
@@ -4263,7 +4263,7 @@ Response to a Successful Request
               },
               "PAYMENT_DETAILS_SCHEME_OR_LABEL" : {
                 "label" : "Card",
-                "value" : "Payworks VISA"
+                "value" : "Payworks CARD"
               },
               "PAYMENT_DETAILS_MASKED_ACCOUNT" : {
                 "label" : "Account",
@@ -4330,7 +4330,7 @@ Response to a Successful Request
           }
         },
         "customerReceipt" : {
-          "preformattedReceipt" : "Cardholder Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nSale\n£3.00\n\n\nPlease retain receipt!\n\n\nCard: Payworks VISA\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 938244\nMerchant ID: **37599\nTerminal ID: ****0063\n\ncb6475bafbb94d03b0f984629c63c294\n21:43:07: 01/12/2023\n\n\n",
+          "preformattedReceipt" : "Cardholder Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nSale\n£3.00\n\n\nPlease retain receipt!\n\n\nCard: Payworks CARD\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 938244\nMerchant ID: **37599\nTerminal ID: ****0063\n\ncb6475bafbb94d03b0f984629c63c294\n21:43:07: 01/12/2023\n\n\n",
           "receiptData" : {
             "lines" : {
               "MERCHANT_DETAILS_PUBLIC_NAME" : {
@@ -4363,7 +4363,7 @@ Response to a Successful Request
               },
               "PAYMENT_DETAILS_SCHEME_OR_LABEL" : {
                 "label" : "Card",
-                "value" : "Payworks VISA"
+                "value" : "Payworks CARD"
               },
               "PAYMENT_DETAILS_MASKED_ACCOUNT" : {
                 "label" : "Account",
@@ -4550,7 +4550,7 @@ Response to a Successful Request
         "card" : {
           "expirationMonth" : "12",
           "expirationYear" : "2025",
-          "type" : "VISA",
+          "type" : "CARD",
           "maskedPan" : "411111******1111"
         }
       },
@@ -4561,7 +4561,7 @@ Response to a Successful Request
       "linkedOperations" : [ ],
       "receipts" : {
         "merchantReceipt" : {
-          "preformattedReceipt" : "Merchant Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nSale\n£1.00\n\n\nCVV MATCH ONLY\n\n\nCard: VISA\nAccount: **** **** **** 1111\nEntry Mode: Keyed\nVerification: Cardholder Not Present\n\nAuthorization: 938246\nMerchant ID: **37599\nTerminal ID: ****0063\n\n4348c35f258c4f8d8c89b9898e3f1b63\n21:51:27: 01/12/2023\n\n\n",
+          "preformattedReceipt" : "Merchant Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nSale\n£1.00\n\n\nCVV MATCH ONLY\n\n\nCard: CARD\nAccount: **** **** **** 1111\nEntry Mode: Keyed\nVerification: Cardholder Not Present\n\nAuthorization: 938246\nMerchant ID: **37599\nTerminal ID: ****0063\n\n4348c35f258c4f8d8c89b9898e3f1b63\n21:51:27: 01/12/2023\n\n\n",
           "receiptData" : {
             "lines" : {
               "MERCHANT_DETAILS_PUBLIC_NAME" : {
@@ -4594,7 +4594,7 @@ Response to a Successful Request
               },
               "PAYMENT_DETAILS_SCHEME_OR_LABEL" : {
                 "label" : "Card",
-                "value" : "VISA"
+                "value" : "CARD"
               },
               "PAYMENT_DETAILS_MASKED_ACCOUNT" : {
                 "label" : "Account",
@@ -4657,7 +4657,7 @@ Response to a Successful Request
           }
         },
         "customerReceipt" : {
-          "preformattedReceipt" : "Cardholder Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nSale\n£1.00\n\n\nPlease retain receipt!\n\n\nCard: VISA\nAccount: **** **** **** 1111\nEntry Mode: Keyed\nVerification: Cardholder Not Present\n\nAuthorization: 938246\nMerchant ID: **37599\nTerminal ID: ****0063\n\n4348c35f258c4f8d8c89b9898e3f1b63\n21:51:27: 01/12/2023\n\n\n",
+          "preformattedReceipt" : "Cardholder Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nSale\n£1.00\n\n\nPlease retain receipt!\n\n\nCard: CARD\nAccount: **** **** **** 1111\nEntry Mode: Keyed\nVerification: Cardholder Not Present\n\nAuthorization: 938246\nMerchant ID: **37599\nTerminal ID: ****0063\n\n4348c35f258c4f8d8c89b9898e3f1b63\n21:51:27: 01/12/2023\n\n\n",
           "receiptData" : {
             "lines" : {
               "MERCHANT_DETAILS_PUBLIC_NAME" : {
@@ -4690,7 +4690,7 @@ Response to a Successful Request
               },
               "PAYMENT_DETAILS_SCHEME_OR_LABEL" : {
                 "label" : "Card",
-                "value" : "VISA"
+                "value" : "CARD"
               },
               "PAYMENT_DETAILS_MASKED_ACCOUNT" : {
                 "label" : "Account",
@@ -4841,7 +4841,7 @@ Response to a Successful Request
         "card" : {
           "expirationMonth" : "12",
           "expirationYear" : "2025",
-          "type" : "VISA",
+          "type" : "CARD",
           "maskedPan" : "476173XXXXXX0119",
           "countryCode" : "840"
         }
@@ -4852,7 +4852,7 @@ Response to a Successful Request
       },
       "receipts" : {
         "merchantReceipt" : {
-          "preformattedReceipt" : "Merchant Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nAccount Verification\n£0.00\n\n\nAccount Valid.\n\n\nCard: Payworks VISA\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 938239\nMerchant ID: **37599\nTerminal ID: ****0063\n\n2dd6beb00d8d4bb8bf1a4718917a3003\n21:27:07: 01/12/2023\n\n\n",
+          "preformattedReceipt" : "Merchant Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nAccount Verification\n£0.00\n\n\nAccount Valid.\n\n\nCard: Payworks CARD\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 938239\nMerchant ID: **37599\nTerminal ID: ****0063\n\n2dd6beb00d8d4bb8bf1a4718917a3003\n21:27:07: 01/12/2023\n\n\n",
           "receiptData" : {
             "lines" : {
               "MERCHANT_DETAILS_PUBLIC_NAME" : {
@@ -4885,7 +4885,7 @@ Response to a Successful Request
               },
               "PAYMENT_DETAILS_SCHEME_OR_LABEL" : {
                 "label" : "Card",
-                "value" : "Payworks VISA"
+                "value" : "Payworks CARD"
               },
               "PAYMENT_DETAILS_MASKED_ACCOUNT" : {
                 "label" : "Account",
@@ -4952,7 +4952,7 @@ Response to a Successful Request
           }
         },
         "customerReceipt" : {
-          "preformattedReceipt" : "Cardholder Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nAccount Verification\n£0.00\n\n\nAccount Valid.\n\n\nCard: Payworks VISA\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 938239\nMerchant ID: **37599\nTerminal ID: ****0063\n\n2dd6beb00d8d4bb8bf1a4718917a3003\n21:27:07: 01/12/2023\n\n\n",
+          "preformattedReceipt" : "Cardholder Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nAccount Verification\n£0.00\n\n\nAccount Valid.\n\n\nCard: Payworks CARD\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 938239\nMerchant ID: **37599\nTerminal ID: ****0063\n\n2dd6beb00d8d4bb8bf1a4718917a3003\n21:27:07: 01/12/2023\n\n\n",
           "receiptData" : {
             "lines" : {
               "MERCHANT_DETAILS_PUBLIC_NAME" : {
@@ -4985,7 +4985,7 @@ Response to a Successful Request
               },
               "PAYMENT_DETAILS_SCHEME_OR_LABEL" : {
                 "label" : "Card",
-                "value" : "Payworks VISA"
+                "value" : "Payworks CARD"
               },
               "PAYMENT_DETAILS_MASKED_ACCOUNT" : {
                 "label" : "Account",
@@ -5239,7 +5239,7 @@ Response to a Successful Request
         "card" : {
           "expirationMonth" : "12",
           "expirationYear" : "2025",
-          "type" : "VISA",
+          "type" : "CARD",
           "maskedPan" : "476173XXXXXX0119",
           "countryCode" : "840"
         }
@@ -5251,7 +5251,7 @@ Response to a Successful Request
       "linkedOperations" : [ ],
       "receipts" : {
         "merchantReceipt" : {
-          "preformattedReceipt" : "Merchant Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nSale\n£1.00\n\n\nPlease retain receipt!\n\n\nCard: Payworks VISA\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 938238\nMerchant ID: **37599\nTerminal ID: ****0063\n\n1541387b383d456aabb81cdf558b4e8e\n21:24:51: 01/12/2023\n\n\n",
+          "preformattedReceipt" : "Merchant Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nSale\n£1.00\n\n\nPlease retain receipt!\n\n\nCard: Payworks CARD\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 938238\nMerchant ID: **37599\nTerminal ID: ****0063\n\n1541387b383d456aabb81cdf558b4e8e\n21:24:51: 01/12/2023\n\n\n",
           "receiptData" : {
             "lines" : {
               "MERCHANT_DETAILS_PUBLIC_NAME" : {
@@ -5284,7 +5284,7 @@ Response to a Successful Request
               },
               "PAYMENT_DETAILS_SCHEME_OR_LABEL" : {
                 "label" : "Card",
-                "value" : "Payworks VISA"
+                "value" : "Payworks CARD"
               },
               "PAYMENT_DETAILS_MASKED_ACCOUNT" : {
                 "label" : "Account",
@@ -5351,7 +5351,7 @@ Response to a Successful Request
           }
         },
         "customerReceipt" : {
-          "preformattedReceipt" : "Cardholder Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nSale\n£1.00\n\n\nPlease retain receipt!\n\n\nCard: Payworks VISA\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 938238\nMerchant ID: **37599\nTerminal ID: ****0063\n\n1541387b383d456aabb81cdf558b4e8e\n21:24:51: 01/12/2023\n\n\n",
+          "preformattedReceipt" : "Cardholder Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nSale\n£1.00\n\n\nPlease retain receipt!\n\n\nCard: Payworks CARD\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 938238\nMerchant ID: **37599\nTerminal ID: ****0063\n\n1541387b383d456aabb81cdf558b4e8e\n21:24:51: 01/12/2023\n\n\n",
           "receiptData" : {
             "lines" : {
               "MERCHANT_DETAILS_PUBLIC_NAME" : {
@@ -5384,7 +5384,7 @@ Response to a Successful Request
               },
               "PAYMENT_DETAILS_SCHEME_OR_LABEL" : {
                 "label" : "Card",
-                "value" : "Payworks VISA"
+                "value" : "Payworks CARD"
               },
               "PAYMENT_DETAILS_MASKED_ACCOUNT" : {
                 "label" : "Account",
@@ -5909,7 +5909,7 @@ Response to a Successful Request
         "card": {
             "expirationMonth": "12",
             "expirationYear": "2025",
-            "type": "VISA",
+            "type" : "CARD",
             "maskedPan": "476173XXXXXX0119",
             "countryCode": "840"
         }
@@ -5920,7 +5920,7 @@ Response to a Successful Request
     "linkedOperations": [],
     "receipts": {
         "merchantReceipt": {
-            "preformattedReceipt": "Merchant Receipt\nTest\nSample Street 123\n34351 New York\nUnited States\n12345678\n\nPayment\nUSD$20.00\n\nPlease retain receipt!\n\nCard: Payworks VISA\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: No Verification\n\nTransaction: 546712\nAuthorization: 831000\nMerchant ID: ************st051\nTerminal ID: ****7069\n\n\n8ccb150a88bd4c6f9a00a687f39ca97d\n\n4:15:12 AM: 9/20/2024\n\n\n",
+            "preformattedReceipt": "Merchant Receipt\nTest\nSample Street 123\n34351 New York\nUnited States\n12345678\n\nPayment\nUSD$20.00\n\nPlease retain receipt!\n\nCard: Payworks CARD\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: No Verification\n\nTransaction: 546712\nAuthorization: 831000\nMerchant ID: ************st051\nTerminal ID: ****7069\n\n\n8ccb150a88bd4c6f9a00a687f39ca97d\n\n4:15:12 AM: 9/20/2024\n\n\n",
             "receiptData": {
                 "signatureLineRequired": false,
                 "lines": {
@@ -5954,7 +5954,7 @@ Response to a Successful Request
                     },
                     "PAYMENT_DETAILS_SCHEME_OR_LABEL": {
                         "label": "Card",
-                        "value": "Payworks VISA"
+                        "value": "Payworks CARD"
                     },
                     "PAYMENT_DETAILS_MASKED_ACCOUNT": {
                         "label": "Account",
@@ -6026,7 +6026,7 @@ Response to a Successful Request
             }
         },
         "customerReceipt": {
-            "preformattedReceipt": "Cardholder Receipt\nTest\nSample Street 123\n34351 New York\nUnited States\n12345678\n\nPayment\nUSD$20.00\n\nPlease retain receipt!\n\nCard: Payworks VISA\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: No Verification\n\nTransaction: 546712\nAuthorization: 831000\nMerchant ID: ************st051\nTerminal ID: ****7069\n\n\n8ccb150a88bd4c6f9a00a687f39ca97d\n\n4:15:12 AM: 9/20/2024\n\n\n",
+            "preformattedReceipt": "Cardholder Receipt\nTest\nSample Street 123\n34351 New York\nUnited States\n12345678\n\nPayment\nUSD$20.00\n\nPlease retain receipt!\n\nCard: Payworks CARD\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: No Verification\n\nTransaction: 546712\nAuthorization: 831000\nMerchant ID: ************st051\nTerminal ID: ****7069\n\n\n8ccb150a88bd4c6f9a00a687f39ca97d\n\n4:15:12 AM: 9/20/2024\n\n\n",
             "receiptData": {
                 "signatureLineRequired": false,
                 "lines": {
@@ -6060,7 +6060,7 @@ Response to a Successful Request
                     },
                     "PAYMENT_DETAILS_SCHEME_OR_LABEL": {
                         "label": "Card",
-                        "value": "Payworks VISA"
+                        "value": "Payworks CARD"
                     },
                     "PAYMENT_DETAILS_MASKED_ACCOUNT": {
                         "label": "Account",
@@ -6257,7 +6257,7 @@ Response to a Successful Request
         "card": {
             "expirationMonth": "12",
             "expirationYear": "2025",
-            "type": "VISA",
+            "type" : "CARD",
             "maskedPan": "476173XXXXXX0119",
             "countryCode": "840"
         }
@@ -6268,7 +6268,7 @@ Response to a Successful Request
     "linkedOperations": [],
     "receipts": {
         "merchantReceipt": {
-            "preformattedReceipt": "Merchant Receipt\nTest\nSample Street 123\n34351 New York\nUnited States\n12345678\n\nPayment\nUSD$1.00\n\nPlease retain receipt!\n\nCard: Payworks VISA\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: No Verification\n\nTransaction: 545814\nAuthorization: 831000\nMerchant ID: ************st051\nTerminal ID: ****7069\n\n\n940d49ee94444764acb1c898e2254954\n\n3:53:36 AM: 9/20/2024\n\n\n",
+            "preformattedReceipt": "Merchant Receipt\nTest\nSample Street 123\n34351 New York\nUnited States\n12345678\n\nPayment\nUSD$1.00\n\nPlease retain receipt!\n\nCard: Payworks CARD\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: No Verification\n\nTransaction: 545814\nAuthorization: 831000\nMerchant ID: ************st051\nTerminal ID: ****7069\n\n\n940d49ee94444764acb1c898e2254954\n\n3:53:36 AM: 9/20/2024\n\n\n",
             "receiptData": {
                 "signatureLineRequired": false,
                 "lines": {
@@ -6302,7 +6302,7 @@ Response to a Successful Request
                     },
                     "PAYMENT_DETAILS_SCHEME_OR_LABEL": {
                         "label": "Card",
-                        "value": "Payworks VISA"
+                        "value": "Payworks CARD"
                     },
                     "PAYMENT_DETAILS_MASKED_ACCOUNT": {
                         "label": "Account",
@@ -6374,7 +6374,7 @@ Response to a Successful Request
             }
         },
         "customerReceipt": {
-            "preformattedReceipt": "Cardholder Receipt\nTest\nSample Street 123\n34351 New York\nUnited States\n12345678\n\nPayment\nUSD$1.00\n\nPlease retain receipt!\n\nCard: Payworks VISA\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: No Verification\n\nTransaction: 545814\nAuthorization: 831000\nMerchant ID: ************st051\nTerminal ID: ****7069\n\n\n940d49ee94444764acb1c898e2254954\n\n3:53:36 AM: 9/20/2024\n\n\n",
+            "preformattedReceipt": "Cardholder Receipt\nTest\nSample Street 123\n34351 New York\nUnited States\n12345678\n\nPayment\nUSD$1.00\n\nPlease retain receipt!\n\nCard: Payworks CARD\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: No Verification\n\nTransaction: 545814\nAuthorization: 831000\nMerchant ID: ************st051\nTerminal ID: ****7069\n\n\n940d49ee94444764acb1c898e2254954\n\n3:53:36 AM: 9/20/2024\n\n\n",
             "receiptData": {
                 "signatureLineRequired": false,
                 "lines": {
@@ -6408,7 +6408,7 @@ Response to a Successful Request
                     },
                     "PAYMENT_DETAILS_SCHEME_OR_LABEL": {
                         "label": "Card",
-                        "value": "Payworks VISA"
+                        "value": "Payworks CARD"
                     },
                     "PAYMENT_DETAILS_MASKED_ACCOUNT": {
                         "label": "Account",
@@ -6614,7 +6614,7 @@ Response to a Successful Request
         "card": {
             "expirationMonth": "12",
             "expirationYear": "2025",
-            "type": "VISA",
+            "type" : "CARD",
             "maskedPan": "476173XXXXXX0119",
             "countryCode": "840"
         }
@@ -6625,7 +6625,7 @@ Response to a Successful Request
     "linkedOperations": [],
     "receipts": {
         "merchantReceipt": {
-            "preformattedReceipt": "Merchant Receipt\nTest\nSample Street 123\n34351 New York\nUnited States\n12345678\n\nPayment\nUSD$20.00\n\nPlease retain receipt!\n\nCard: Payworks VISA\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: No Verification\n\nTransaction: 129702\nAuthorization: 831000\nMerchant ID: ************st051\nTerminal ID: ****7069\n\n\n4bebd72cf0ff4a9ea212baca0c6d9faf\n\n3:15:25 AM: 9/20/2024\n\n\n",
+            "preformattedReceipt": "Merchant Receipt\nTest\nSample Street 123\n34351 New York\nUnited States\n12345678\n\nPayment\nUSD$20.00\n\nPlease retain receipt!\n\nCard: Payworks CARD\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: No Verification\n\nTransaction: 129702\nAuthorization: 831000\nMerchant ID: ************st051\nTerminal ID: ****7069\n\n\n4bebd72cf0ff4a9ea212baca0c6d9faf\n\n3:15:25 AM: 9/20/2024\n\n\n",
             "receiptData": {
                 "signatureLineRequired": false,
                 "lines": {
@@ -6659,7 +6659,7 @@ Response to a Successful Request
                     },
                     "PAYMENT_DETAILS_SCHEME_OR_LABEL": {
                         "label": "Card",
-                        "value": "Payworks VISA"
+                        "value": "Payworks CARD"
                     },
                     "PAYMENT_DETAILS_MASKED_ACCOUNT": {
                         "label": "Account",
@@ -6731,7 +6731,7 @@ Response to a Successful Request
             }
         },
         "customerReceipt": {
-            "preformattedReceipt": "Cardholder Receipt\nTest\nSample Street 123\n34351 New York\nUnited States\n12345678\n\nPayment\nUSD$20.00\n\nPlease retain receipt!\n\nCard: Payworks VISA\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: No Verification\n\nTransaction: 129702\nAuthorization: 831000\nMerchant ID: ************st051\nTerminal ID: ****7069\n\n\n4bebd72cf0ff4a9ea212baca0c6d9faf\n\n3:15:25 AM: 9/20/2024\n\n\n",
+            "preformattedReceipt": "Cardholder Receipt\nTest\nSample Street 123\n34351 New York\nUnited States\n12345678\n\nPayment\nUSD$20.00\n\nPlease retain receipt!\n\nCard: Payworks CARD\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: No Verification\n\nTransaction: 129702\nAuthorization: 831000\nMerchant ID: ************st051\nTerminal ID: ****7069\n\n\n4bebd72cf0ff4a9ea212baca0c6d9faf\n\n3:15:25 AM: 9/20/2024\n\n\n",
             "receiptData": {
                 "signatureLineRequired": false,
                 "lines": {
@@ -6765,7 +6765,7 @@ Response to a Successful Request
                     },
                     "PAYMENT_DETAILS_SCHEME_OR_LABEL": {
                         "label": "Card",
-                        "value": "Payworks VISA"
+                        "value": "Payworks CARD"
                     },
                     "PAYMENT_DETAILS_MASKED_ACCOUNT": {
                         "label": "Account",
@@ -7203,7 +7203,7 @@ Response to a Successful Request
         "card": {
             "expirationMonth": "12",
             "expirationYear": "2025",
-            "type": "VISA",
+            "type" : "CARD",
             "maskedPan": "476173XXXXXX0119",
             "countryCode": "840"
         }
@@ -7214,7 +7214,7 @@ Response to a Successful Request
     "linkedOperations": [],
     "receipts": {
         "merchantReceipt": {
-            "preformattedReceipt": "Merchant Receipt\nTest\nSample Street 123\n34351 New York\nUnited States\n12345678\n\nPayment\nUSD$500.00\n\nPlease retain receipt!\n\nCard: Payworks VISA\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: No Verification\n\nTransaction: 546712\nAuthorization: 831000\nMerchant ID: ************st051\nTerminal ID: ****7069\n\n\n8ccb150a88bd4c6f9a00a687f39ca97d\n\n4:15:12 AM: 9/20/2024\n\n\n",
+            "preformattedReceipt": "Merchant Receipt\nTest\nSample Street 123\n34351 New York\nUnited States\n12345678\n\nPayment\nUSD$500.00\n\nPlease retain receipt!\n\nCard: Payworks CARD\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: No Verification\n\nTransaction: 546712\nAuthorization: 831000\nMerchant ID: ************st051\nTerminal ID: ****7069\n\n\n8ccb150a88bd4c6f9a00a687f39ca97d\n\n4:15:12 AM: 9/20/2024\n\n\n",
             "receiptData": {
                 "signatureLineRequired": false,
                 "lines": {
@@ -7248,7 +7248,7 @@ Response to a Successful Request
                     },
                     "PAYMENT_DETAILS_SCHEME_OR_LABEL": {
                         "label": "Card",
-                        "value": "Payworks VISA"
+                        "value": "Payworks CARD"
                     },
                     "PAYMENT_DETAILS_MASKED_ACCOUNT": {
                         "label": "Account",
@@ -7320,7 +7320,7 @@ Response to a Successful Request
             }
         },
         "customerReceipt": {
-            "preformattedReceipt": "Cardholder Receipt\nTest\nSample Street 123\n34351 New York\nUnited States\n12345678\n\nPayment\nUSD$500.00\n\nPlease retain receipt!\n\nCard: Payworks VISA\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: No Verification\n\nTransaction: 546712\nAuthorization: 831000\nMerchant ID: ************st051\nTerminal ID: ****7069\n\n\n8ccb150a88bd4c6f9a00a687f39ca97d\n\n4:15:12 AM: 9/20/2024\n\n\n",
+            "preformattedReceipt": "Cardholder Receipt\nTest\nSample Street 123\n34351 New York\nUnited States\n12345678\n\nPayment\nUSD$500.00\n\nPlease retain receipt!\n\nCard: Payworks CARD\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: No Verification\n\nTransaction: 546712\nAuthorization: 831000\nMerchant ID: ************st051\nTerminal ID: ****7069\n\n\n8ccb150a88bd4c6f9a00a687f39ca97d\n\n4:15:12 AM: 9/20/2024\n\n\n",
             "receiptData": {
                 "signatureLineRequired": false,
                 "lines": {
@@ -7354,7 +7354,7 @@ Response to a Successful Request
                     },
                     "PAYMENT_DETAILS_SCHEME_OR_LABEL": {
                         "label": "Card",
-                        "value": "Payworks VISA"
+                        "value": "Payworks CARD"
                     },
                     "PAYMENT_DETAILS_MASKED_ACCOUNT": {
                         "label": "Account",
@@ -8610,7 +8610,7 @@ Response to a Successful Request
         "card" : {
           "expirationMonth" : "12",
           "expirationYear" : "2025",
-          "type" : "VISA",
+          "type" : "CARD",
           "maskedPan" : "476173XXXXXX0119",
           "countryCode" : "840"
         }
@@ -8622,7 +8622,7 @@ Response to a Successful Request
       "linkedOperations" : [ ],
       "receipts" : {
         "merchantReceipt" : {
-          "preformattedReceipt" : "Merchant Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nSale\n£1.00\n\n\nPlease retain receipt!\n\n\nCard: Payworks VISA\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 938238\nMerchant ID: **37599\nTerminal ID: ****0063\n\n1541387b383d456aabb81cdf558b4e8e\n21:24:51: 01/12/2023\n\n\n",
+          "preformattedReceipt" : "Merchant Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nSale\n£1.00\n\n\nPlease retain receipt!\n\n\nCard: Payworks CARD\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 938238\nMerchant ID: **37599\nTerminal ID: ****0063\n\n1541387b383d456aabb81cdf558b4e8e\n21:24:51: 01/12/2023\n\n\n",
           "receiptData" : {
             "lines" : {
               "MERCHANT_DETAILS_PUBLIC_NAME" : {
@@ -8655,7 +8655,7 @@ Response to a Successful Request
               },
               "PAYMENT_DETAILS_SCHEME_OR_LABEL" : {
                 "label" : "Card",
-                "value" : "Payworks VISA"
+                "value" : "Payworks CARD"
               },
               "PAYMENT_DETAILS_MASKED_ACCOUNT" : {
                 "label" : "Account",
@@ -8722,7 +8722,7 @@ Response to a Successful Request
           }
         },
         "customerReceipt" : {
-          "preformattedReceipt" : "Cardholder Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nSale\n£1.00\n\n\nPlease retain receipt!\n\n\nCard: Payworks VISA\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 938238\nMerchant ID: **37599\nTerminal ID: ****0063\n\n1541387b383d456aabb81cdf558b4e8e\n21:24:51: 01/12/2023\n\n\n",
+          "preformattedReceipt" : "Cardholder Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nSale\n£1.00\n\n\nPlease retain receipt!\n\n\nCard: Payworks CARD\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 938238\nMerchant ID: **37599\nTerminal ID: ****0063\n\n1541387b383d456aabb81cdf558b4e8e\n21:24:51: 01/12/2023\n\n\n",
           "receiptData" : {
             "lines" : {
               "MERCHANT_DETAILS_PUBLIC_NAME" : {
@@ -8755,7 +8755,7 @@ Response to a Successful Request
               },
               "PAYMENT_DETAILS_SCHEME_OR_LABEL" : {
                 "label" : "Card",
-                "value" : "Payworks VISA"
+                "value" : "Payworks CARD"
               },
               "PAYMENT_DETAILS_MASKED_ACCOUNT" : {
                 "label" : "Account",
@@ -8920,7 +8920,7 @@ Response to a Successful Request
         "card" : {
           "expirationMonth" : "12",
           "expirationYear" : "2025",
-          "type" : "VISA",
+          "type" : "CARD",
           "maskedPan" : "476173XXXXXX0119",
           "countryCode" : "840"
         }
@@ -8938,7 +8938,7 @@ Response to a Successful Request
       } ],
       "receipts" : {
         "merchantReceipt" : {
-          "preformattedReceipt" : "Merchant Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nVoid\n-£1.00\n\n\nReversal accepted.\n\n\nCard: Payworks VISA\nAccount: **** **** **** 0119\nEntry Mode: Keyed\n\nAuthorization: -\nMerchant ID: **37599\nTerminal ID: ****0063\n\nb383db1aecab46d89f1dbec8b0a9aa90\n21:57:50: 01/12/2023\n\n\n",
+          "preformattedReceipt" : "Merchant Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nVoid\n-£1.00\n\n\nReversal accepted.\n\n\nCard: Payworks CARD\nAccount: **** **** **** 0119\nEntry Mode: Keyed\n\nAuthorization: -\nMerchant ID: **37599\nTerminal ID: ****0063\n\nb383db1aecab46d89f1dbec8b0a9aa90\n21:57:50: 01/12/2023\n\n\n",
           "receiptData" : {
             "lines" : {
               "MERCHANT_DETAILS_PUBLIC_NAME" : {
@@ -8971,7 +8971,7 @@ Response to a Successful Request
               },
               "PAYMENT_DETAILS_SCHEME_OR_LABEL" : {
                 "label" : "Card",
-                "value" : "Payworks VISA"
+                "value" : "Payworks CARD"
               },
               "PAYMENT_DETAILS_MASKED_ACCOUNT" : {
                 "label" : "Account",
@@ -9030,7 +9030,7 @@ Response to a Successful Request
           }
         },
         "customerReceipt" : {
-          "preformattedReceipt" : "Cardholder Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nVoid\n-£1.00\n\n\nReversal accepted.\n\n\nCard: Payworks VISA\nAccount: **** **** **** 0119\nEntry Mode: Keyed\n\nAuthorization: -\nMerchant ID: **37599\nTerminal ID: ****0063\n\nb383db1aecab46d89f1dbec8b0a9aa90\n21:57:50: 01/12/2023\n\n\n",
+          "preformattedReceipt" : "Cardholder Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nVoid\n-£1.00\n\n\nReversal accepted.\n\n\nCard: Payworks CARD\nAccount: **** **** **** 0119\nEntry Mode: Keyed\n\nAuthorization: -\nMerchant ID: **37599\nTerminal ID: ****0063\n\nb383db1aecab46d89f1dbec8b0a9aa90\n21:57:50: 01/12/2023\n\n\n",
           "receiptData" : {
             "lines" : {
               "MERCHANT_DETAILS_PUBLIC_NAME" : {
@@ -9063,7 +9063,7 @@ Response to a Successful Request
               },
               "PAYMENT_DETAILS_SCHEME_OR_LABEL" : {
                 "label" : "Card",
-                "value" : "Payworks VISA"
+                "value" : "Payworks CARD"
               },
               "PAYMENT_DETAILS_MASKED_ACCOUNT" : {
                 "label" : "Account",
@@ -9509,7 +9509,7 @@ Response to a Successful Request
         "card" : {
           "expirationMonth" : "12",
           "expirationYear" : "2025",
-          "type" : "VISA",
+          "type" : "CARD",
           "maskedPan" : "476173XXXXXX0119",
           "countryCode" : "840"
         }
@@ -9521,7 +9521,7 @@ Response to a Successful Request
       "linkedOperations" : [ ],
       "receipts" : {
         "merchantReceipt" : {
-          "preformattedReceipt" : "Merchant Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nSale\n£1.00\n\n\nPlease retain receipt!\n\n\nCard: Payworks VISA\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 938238\nMerchant ID: **37599\nTerminal ID: ****0063\n\n1541387b383d456aabb81cdf558b4e8e\n21:24:51: 01/12/2023\n\n\n",
+          "preformattedReceipt" : "Merchant Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nSale\n£1.00\n\n\nPlease retain receipt!\n\n\nCard: Payworks CARD\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 938238\nMerchant ID: **37599\nTerminal ID: ****0063\n\n1541387b383d456aabb81cdf558b4e8e\n21:24:51: 01/12/2023\n\n\n",
           "receiptData" : {
             "lines" : {
               "MERCHANT_DETAILS_PUBLIC_NAME" : {
@@ -9554,7 +9554,7 @@ Response to a Successful Request
               },
               "PAYMENT_DETAILS_SCHEME_OR_LABEL" : {
                 "label" : "Card",
-                "value" : "Payworks VISA"
+                "value" : "Payworks CARD"
               },
               "PAYMENT_DETAILS_MASKED_ACCOUNT" : {
                 "label" : "Account",
@@ -9621,7 +9621,7 @@ Response to a Successful Request
           }
         },
         "customerReceipt" : {
-          "preformattedReceipt" : "Cardholder Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nSale\n£1.00\n\n\nPlease retain receipt!\n\n\nCard: Payworks VISA\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 938238\nMerchant ID: **37599\nTerminal ID: ****0063\n\n1541387b383d456aabb81cdf558b4e8e\n21:24:51: 01/12/2023\n\n\n",
+          "preformattedReceipt" : "Cardholder Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nSale\n£1.00\n\n\nPlease retain receipt!\n\n\nCard: Payworks CARD\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 938238\nMerchant ID: **37599\nTerminal ID: ****0063\n\n1541387b383d456aabb81cdf558b4e8e\n21:24:51: 01/12/2023\n\n\n",
           "receiptData" : {
             "lines" : {
               "MERCHANT_DETAILS_PUBLIC_NAME" : {
@@ -9654,7 +9654,7 @@ Response to a Successful Request
               },
               "PAYMENT_DETAILS_SCHEME_OR_LABEL" : {
                 "label" : "Card",
-                "value" : "Payworks VISA"
+                "value" : "Payworks CARD"
               },
               "PAYMENT_DETAILS_MASKED_ACCOUNT" : {
                 "label" : "Account",
@@ -10055,7 +10055,7 @@ Response to a Successful Request
         "card" : {
           "expirationMonth" : "12",
           "expirationYear" : "2025",
-          "type" : "VISA",
+          "type" : "CARD",
           "maskedPan" : "476173XXXXXX0119",
           "countryCode" : "840"
         }
@@ -10067,7 +10067,7 @@ Response to a Successful Request
       "linkedOperations" : [ ],
       "receipts" : {
         "merchantReceipt" : {
-          "preformattedReceipt" : "Merchant Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nSale\nPurchase Amount: £5.00\nTip Amount: £1.00\nTotal Amount: £6.00\n\n\nPlease retain receipt!\n\n\nCard: Payworks VISA\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 938252\nMerchant ID: **37599\nTerminal ID: ****0063\n\n55678c8b152046f7b1d77fd2286ce392\n22:01:27: 01/12/2023\n\n\n",
+          "preformattedReceipt" : "Merchant Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nSale\nPurchase Amount: £5.00\nTip Amount: £1.00\nTotal Amount: £6.00\n\n\nPlease retain receipt!\n\n\nCard: Payworks CARD\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 938252\nMerchant ID: **37599\nTerminal ID: ****0063\n\n55678c8b152046f7b1d77fd2286ce392\n22:01:27: 01/12/2023\n\n\n",
           "receiptData" : {
             "lines" : {
               "MERCHANT_DETAILS_PUBLIC_NAME" : {
@@ -10100,7 +10100,7 @@ Response to a Successful Request
               },
               "PAYMENT_DETAILS_SCHEME_OR_LABEL" : {
                 "label" : "Card",
-                "value" : "Payworks VISA"
+                "value" : "Payworks CARD"
               },
               "PAYMENT_DETAILS_MASKED_ACCOUNT" : {
                 "label" : "Account",
@@ -10167,7 +10167,7 @@ Response to a Successful Request
           }
         },
         "customerReceipt" : {
-          "preformattedReceipt" : "Cardholder Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nSale\nPurchase Amount: £5.00\nTip Amount: £1.00\nTotal Amount: £6.00\n\n\nPlease retain receipt!\n\n\nCard: Payworks VISA\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 938252\nMerchant ID: **37599\nTerminal ID: ****0063\n\n55678c8b152046f7b1d77fd2286ce392\n22:01:27: 01/12/2023\n\n\n",
+          "preformattedReceipt" : "Cardholder Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nSale\nPurchase Amount: £5.00\nTip Amount: £1.00\nTotal Amount: £6.00\n\n\nPlease retain receipt!\n\n\nCard: Payworks CARD\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 938252\nMerchant ID: **37599\nTerminal ID: ****0063\n\n55678c8b152046f7b1d77fd2286ce392\n22:01:27: 01/12/2023\n\n\n",
           "receiptData" : {
             "lines" : {
               "MERCHANT_DETAILS_PUBLIC_NAME" : {
@@ -10200,7 +10200,7 @@ Response to a Successful Request
               },
               "PAYMENT_DETAILS_SCHEME_OR_LABEL" : {
                 "label" : "Card",
-                "value" : "Payworks VISA"
+                "value" : "Payworks CARD"
               },
               "PAYMENT_DETAILS_MASKED_ACCOUNT" : {
                 "label" : "Account",
@@ -10373,7 +10373,7 @@ Response to a Successful Request
     "card" : {
       "expirationMonth" : "12",
       "expirationYear" : "2025",
-      "type" : "VISA",
+      "type" : "CARD",
       "maskedPan" : "476173XXXXXX0119",
       "countryCode" : "840"
     }
@@ -10386,7 +10386,7 @@ Response to a Successful Request
   "tipAdjustStatus" : "ADJUSTABLE",
   "receipts" : {
     "merchantReceipt" : {
-      "preformattedReceipt" : "Merchant Receipt\nCP Test\nSample Street\n55555 New York\nUnited States\n1234567\n\nSale\n$20.00\nPlease retain receipt!\n\nCard: Payworks VISA\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 002000\nMerchant ID: **37599\nTerminal ID: ****0063\n\n\nc6174c80b81f4413a4b9f2065c5431c7\n\n\n\n10:19:46: 20/03/2024\n\n\n\nTIP:\n___________________\n\nTOTAL:\n___________________\n",
+      "preformattedReceipt" : "Merchant Receipt\nCP Test\nSample Street\n55555 New York\nUnited States\n1234567\n\nSale\n$20.00\nPlease retain receipt!\n\nCard: Payworks CARD\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 002000\nMerchant ID: **37599\nTerminal ID: ****0063\n\n\nc6174c80b81f4413a4b9f2065c5431c7\n\n\n\n10:19:46: 20/03/2024\n\n\n\nTIP:\n___________________\n\nTOTAL:\n___________________\n",
       "receiptData" : {
         "lines" : {
           "MERCHANT_DETAILS_PUBLIC_NAME" : {
@@ -10419,7 +10419,7 @@ Response to a Successful Request
           },
           "PAYMENT_DETAILS_SCHEME_OR_LABEL" : {
             "label" : "Card",
-            "value" : "Payworks VISA"
+            "value" : "Payworks CARD"
           },
           "PAYMENT_DETAILS_MASKED_ACCOUNT" : {
             "label" : "Account",
@@ -10488,7 +10488,7 @@ Response to a Successful Request
       }
     },
     "customerReceipt" : {
-      "preformattedReceipt" : "Cardholder Receipt\nCP Test\nSample Street\n55555 New York\nUnited States\n1234567\n\nSale\n$20.00\nPlease retain receipt!\n\nCard: Payworks VISA\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 002000\nMerchant ID: **37599\nTerminal ID: ****0063\n\n\nc6174c80b81f4413a4b9f2065c5431c7\n\n\n\n10:19:46: 20/03/2024\n\n\n\nTIP:\n___________________\n\nTOTAL:\n___________________\n",
+      "preformattedReceipt" : "Cardholder Receipt\nCP Test\nSample Street\n55555 New York\nUnited States\n1234567\n\nSale\n$20.00\nPlease retain receipt!\n\nCard: Payworks CARD\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 002000\nMerchant ID: **37599\nTerminal ID: ****0063\n\n\nc6174c80b81f4413a4b9f2065c5431c7\n\n\n\n10:19:46: 20/03/2024\n\n\n\nTIP:\n___________________\n\nTOTAL:\n___________________\n",
       "receiptData" : {
         "lines" : {
           "MERCHANT_DETAILS_PUBLIC_NAME" : {
@@ -10521,7 +10521,7 @@ Response to a Successful Request
           },
           "PAYMENT_DETAILS_SCHEME_OR_LABEL" : {
             "label" : "Card",
-            "value" : "Payworks VISA"
+            "value" : "Payworks CARD"
           },
           "PAYMENT_DETAILS_MASKED_ACCOUNT" : {
             "label" : "Account",
@@ -10684,7 +10684,7 @@ Response to a Successful Request
     "card" : {
       "expirationMonth" : "12",
       "expirationYear" : "2025",
-      "type" : "VISA",
+      "type" : "CARD",
       "maskedPan" : "476173XXXXXX0119",
       "countryCode" : "840"
     }
@@ -10697,7 +10697,7 @@ Response to a Successful Request
   "tipAdjustStatus" : "ADJUSTED",
   "receipts" : {
     "merchantReceipt" : {
-      "preformattedReceipt" : "Merchant Receipt\nCP Test\nSample Street\n55555 New York\nUnited States\n1234567\n\nCapture\nPurchase Amount: $20.00\nTip Amount: $4.00\nTotal Amount: $24.00\nPlease retain receipt!\n\nCard: Payworks VISA\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 002000\nMerchant ID: **37599\nTerminal ID: ****7478\n\n\nc6174c80b81f4413a4b9f2065c5431c7\n\n10:23:17: 20/03/2024\n\n\n",
+      "preformattedReceipt" : "Merchant Receipt\nCP Test\nSample Street\n55555 New York\nUnited States\n1234567\n\nCapture\nPurchase Amount: $20.00\nTip Amount: $4.00\nTotal Amount: $24.00\nPlease retain receipt!\n\nCard: Payworks CARD\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 002000\nMerchant ID: **37599\nTerminal ID: ****7478\n\n\nc6174c80b81f4413a4b9f2065c5431c7\n\n10:23:17: 20/03/2024\n\n\n",
       "receiptData" : {
         "lines" : {
           "MERCHANT_DETAILS_PUBLIC_NAME" : {
@@ -10730,7 +10730,7 @@ Response to a Successful Request
           },
           "PAYMENT_DETAILS_SCHEME_OR_LABEL" : {
             "label" : "Card",
-            "value" : "Payworks VISA"
+            "value" : "Payworks CARD"
           },
           "PAYMENT_DETAILS_MASKED_ACCOUNT" : {
             "label" : "Account",
@@ -10799,7 +10799,7 @@ Response to a Successful Request
       }
     },
     "customerReceipt" : {
-      "preformattedReceipt" : "Cardholder Receipt\nCP Test\nSample Street\n55555 New York\nUnited States\n1234567\n\nCapture\nPurchase Amount: $20.00\nTip Amount: $4.00\nTotal Amount: $24.00\nPlease retain receipt!\n\nCard: Payworks VISA\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 002000\nMerchant ID: **37599\nTerminal ID: ****7478\n\n\nc6174c80b81f4413a4b9f2065c5431c7\n\n10:23:17: 20/03/2024\n\n\n",
+      "preformattedReceipt" : "Cardholder Receipt\nCP Test\nSample Street\n55555 New York\nUnited States\n1234567\n\nCapture\nPurchase Amount: $20.00\nTip Amount: $4.00\nTotal Amount: $24.00\nPlease retain receipt!\n\nCard: Payworks CARD\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 002000\nMerchant ID: **37599\nTerminal ID: ****7478\n\n\nc6174c80b81f4413a4b9f2065c5431c7\n\n10:23:17: 20/03/2024\n\n\n",
       "receiptData" : {
         "lines" : {
           "MERCHANT_DETAILS_PUBLIC_NAME" : {
@@ -10832,7 +10832,7 @@ Response to a Successful Request
           },
           "PAYMENT_DETAILS_SCHEME_OR_LABEL" : {
             "label" : "Card",
-            "value" : "Payworks VISA"
+            "value" : "Payworks CARD"
           },
           "PAYMENT_DETAILS_MASKED_ACCOUNT" : {
             "label" : "Account",
@@ -10996,7 +10996,7 @@ Response to a Successful Request
         "card" : {
           "expirationMonth" : "00",
           "expirationYear" : "00",
-          "type" : "VISA",
+          "type" : "CARD",
           "maskedPan" : "703000XXXXXXXXX0119"
         }
       },
@@ -11005,7 +11005,7 @@ Response to a Successful Request
       },
       "receipts" : {
         "merchantReceipt" : {
-          "preformattedReceipt" : "Merchant Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nRefund\n-£1.00\n\n\nPlease retain receipt!\n\n\nCard: VISA\nAccount: *** **** **** **** 0119\nEntry Mode: Keyed\n\nTransaction: -\nAuthorization: -\nMerchant ID: **37599\nTerminal ID: *************L_ID\n\n596b797178fe45e39ce3a8b8fdf432d6\n10:02:50 PM: 12/1/2023\n\n\n",
+          "preformattedReceipt" : "Merchant Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nRefund\n-£1.00\n\n\nPlease retain receipt!\n\n\nCard: CARD\nAccount: *** **** **** **** 0119\nEntry Mode: Keyed\n\nTransaction: -\nAuthorization: -\nMerchant ID: **37599\nTerminal ID: *************L_ID\n\n596b797178fe45e39ce3a8b8fdf432d6\n10:02:50 PM: 12/1/2023\n\n\n",
           "receiptData" : {
             "lines" : {
               "MERCHANT_DETAILS_PUBLIC_NAME" : {
@@ -11038,7 +11038,7 @@ Response to a Successful Request
               },
               "PAYMENT_DETAILS_SCHEME_OR_LABEL" : {
                 "label" : "Card",
-                "value" : "VISA"
+                "value" : "CARD"
               },
               "PAYMENT_DETAILS_MASKED_ACCOUNT" : {
                 "label" : "Account",
@@ -11101,7 +11101,7 @@ Response to a Successful Request
           }
         },
         "customerReceipt" : {
-          "preformattedReceipt" : "Cardholder Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nRefund\n-£1.00\n\n\nPlease retain receipt!\n\n\nCard: VISA\nAccount: *** **** **** **** 0119\nEntry Mode: Keyed\n\nTransaction: -\nAuthorization: -\nMerchant ID: **37599\nTerminal ID: *************L_ID\n\n596b797178fe45e39ce3a8b8fdf432d6\n10:02:50 PM: 12/1/2023\n\n\n",
+          "preformattedReceipt" : "Cardholder Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nRefund\n-£1.00\n\n\nPlease retain receipt!\n\n\nCard: CARD\nAccount: *** **** **** **** 0119\nEntry Mode: Keyed\n\nTransaction: -\nAuthorization: -\nMerchant ID: **37599\nTerminal ID: *************L_ID\n\n596b797178fe45e39ce3a8b8fdf432d6\n10:02:50 PM: 12/1/2023\n\n\n",
           "receiptData" : {
             "lines" : {
               "MERCHANT_DETAILS_PUBLIC_NAME" : {
@@ -11134,7 +11134,7 @@ Response to a Successful Request
               },
               "PAYMENT_DETAILS_SCHEME_OR_LABEL" : {
                 "label" : "Card",
-                "value" : "VISA"
+                "value" : "CARD"
               },
               "PAYMENT_DETAILS_MASKED_ACCOUNT" : {
                 "label" : "Account",
@@ -11296,7 +11296,7 @@ Response to a Successful Request
         "card" : {
           "expirationMonth" : "12",
           "expirationYear" : "2025",
-          "type" : "VISA",
+          "type" : "CARD",
           "maskedPan" : "476173XXXXXX0119",
           "countryCode" : "840"
         }
@@ -11308,7 +11308,7 @@ Response to a Successful Request
       "linkedOperations" : [ ],
       "receipts" : {
         "merchantReceipt" : {
-          "preformattedReceipt" : "Merchant Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nAuth only\n£1.00\n\n\nPlease retain receipt!\n\n\nCard: Payworks VISA\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 938242\nMerchant ID: **37599\nTerminal ID: ****0063\n\ne43069fbf85543659e478edd8d50f244\n21:38:18: 01/12/2023\n\n\n",
+          "preformattedReceipt" : "Merchant Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nAuth only\n£1.00\n\n\nPlease retain receipt!\n\n\nCard: Payworks CARD\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 938242\nMerchant ID: **37599\nTerminal ID: ****0063\n\ne43069fbf85543659e478edd8d50f244\n21:38:18: 01/12/2023\n\n\n",
           "receiptData" : {
             "lines" : {
               "MERCHANT_DETAILS_PUBLIC_NAME" : {
@@ -11341,7 +11341,7 @@ Response to a Successful Request
               },
               "PAYMENT_DETAILS_SCHEME_OR_LABEL" : {
                 "label" : "Card",
-                "value" : "Payworks VISA"
+                "value" : "Payworks CARD"
               },
               "PAYMENT_DETAILS_MASKED_ACCOUNT" : {
                 "label" : "Account",
@@ -11408,7 +11408,7 @@ Response to a Successful Request
           }
         },
         "customerReceipt" : {
-          "preformattedReceipt" : "Cardholder Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nAuth only\n£1.00\n\n\nPlease retain receipt!\n\n\nCard: Payworks VISA\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 938242\nMerchant ID: **37599\nTerminal ID: ****0063\n\ne43069fbf85543659e478edd8d50f244\n21:38:18: 01/12/2023\n\n\n",
+          "preformattedReceipt" : "Cardholder Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nAuth only\n£1.00\n\n\nPlease retain receipt!\n\n\nCard: Payworks CARD\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 938242\nMerchant ID: **37599\nTerminal ID: ****0063\n\ne43069fbf85543659e478edd8d50f244\n21:38:18: 01/12/2023\n\n\n",
           "receiptData" : {
             "lines" : {
               "MERCHANT_DETAILS_PUBLIC_NAME" : {
@@ -11441,7 +11441,7 @@ Response to a Successful Request
               },
               "PAYMENT_DETAILS_SCHEME_OR_LABEL" : {
                 "label" : "Card",
-                "value" : "Payworks VISA"
+                "value" : "Payworks CARD"
               },
               "PAYMENT_DETAILS_MASKED_ACCOUNT" : {
                 "label" : "Account",
@@ -11601,7 +11601,7 @@ Response to a Successful Request
         "card" : {
           "expirationMonth" : "00",
           "expirationYear" : "00",
-          "type" : "VISA",
+          "type" : "CARD",
           "maskedPan" : "476173XXXXXX0119"
         }
       },
@@ -11611,7 +11611,7 @@ Response to a Successful Request
       "linkedOperations" : [ ],
       "receipts" : {
         "merchantReceipt" : {
-          "preformattedReceipt" : "Merchant Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nTop-up\n£2.00\n\n\nPlease retain receipt!\n\n\nCard: Payworks VISA\nAccount: **** **** **** 0119\nEntry Mode: Keyed\nVerification: None\n\nAuthorization: 938243\nMerchant ID: **37599\nTerminal ID: ****0063\n\n6da4aff381e8483ebc65ebf4fbb27ec8\n21:39:45: 01/12/2023\n\n\n",
+          "preformattedReceipt" : "Merchant Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nTop-up\n£2.00\n\n\nPlease retain receipt!\n\n\nCard: Payworks CARD\nAccount: **** **** **** 0119\nEntry Mode: Keyed\nVerification: None\n\nAuthorization: 938243\nMerchant ID: **37599\nTerminal ID: ****0063\n\n6da4aff381e8483ebc65ebf4fbb27ec8\n21:39:45: 01/12/2023\n\n\n",
           "receiptData" : {
             "lines" : {
               "MERCHANT_DETAILS_PUBLIC_NAME" : {
@@ -11644,7 +11644,7 @@ Response to a Successful Request
               },
               "PAYMENT_DETAILS_SCHEME_OR_LABEL" : {
                 "label" : "Card",
-                "value" : "Payworks VISA"
+                "value" : "Payworks CARD"
               },
               "PAYMENT_DETAILS_MASKED_ACCOUNT" : {
                 "label" : "Account",
@@ -11707,7 +11707,7 @@ Response to a Successful Request
           }
         },
         "customerReceipt" : {
-          "preformattedReceipt" : "Cardholder Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nTop-up\n£2.00\n\n\nPlease retain receipt!\n\n\nCard: Payworks VISA\nAccount: **** **** **** 0119\nEntry Mode: Keyed\nVerification: None\n\nAuthorization: 938243\nMerchant ID: **37599\nTerminal ID: ****0063\n\n6da4aff381e8483ebc65ebf4fbb27ec8\n21:39:45: 01/12/2023\n\n\n",
+          "preformattedReceipt" : "Cardholder Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nTop-up\n£2.00\n\n\nPlease retain receipt!\n\n\nCard: Payworks CARD\nAccount: **** **** **** 0119\nEntry Mode: Keyed\nVerification: None\n\nAuthorization: 938243\nMerchant ID: **37599\nTerminal ID: ****0063\n\n6da4aff381e8483ebc65ebf4fbb27ec8\n21:39:45: 01/12/2023\n\n\n",
           "receiptData" : {
             "lines" : {
               "MERCHANT_DETAILS_PUBLIC_NAME" : {
@@ -11740,7 +11740,7 @@ Response to a Successful Request
               },
               "PAYMENT_DETAILS_SCHEME_OR_LABEL" : {
                 "label" : "Card",
-                "value" : "Payworks VISA"
+                "value" : "Payworks CARD"
               },
               "PAYMENT_DETAILS_MASKED_ACCOUNT" : {
                 "label" : "Account",
@@ -11901,7 +11901,7 @@ Response to a Successful Request
         "card" : {
           "expirationMonth" : "12",
           "expirationYear" : "2025",
-          "type" : "VISA",
+          "type" : "CARD",
           "maskedPan" : "476173XXXXXX0119",
           "countryCode" : "840"
         }
@@ -11913,7 +11913,7 @@ Response to a Successful Request
       "linkedOperations" : [ ],
       "receipts" : {
         "merchantReceipt" : {
-          "preformattedReceipt" : "Merchant Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nSale\n£3.00\n\n\nPlease retain receipt!\n\n\nCard: Payworks VISA\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 938244\nMerchant ID: **37599\nTerminal ID: ****0063\n\ncb6475bafbb94d03b0f984629c63c294\n21:43:07: 01/12/2023\n\n\n",
+          "preformattedReceipt" : "Merchant Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nSale\n£3.00\n\n\nPlease retain receipt!\n\n\nCard: Payworks CARD\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 938244\nMerchant ID: **37599\nTerminal ID: ****0063\n\ncb6475bafbb94d03b0f984629c63c294\n21:43:07: 01/12/2023\n\n\n",
           "receiptData" : {
             "lines" : {
               "MERCHANT_DETAILS_PUBLIC_NAME" : {
@@ -11946,7 +11946,7 @@ Response to a Successful Request
               },
               "PAYMENT_DETAILS_SCHEME_OR_LABEL" : {
                 "label" : "Card",
-                "value" : "Payworks VISA"
+                "value" : "Payworks CARD"
               },
               "PAYMENT_DETAILS_MASKED_ACCOUNT" : {
                 "label" : "Account",
@@ -12013,7 +12013,7 @@ Response to a Successful Request
           }
         },
         "customerReceipt" : {
-          "preformattedReceipt" : "Cardholder Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nSale\n£3.00\n\n\nPlease retain receipt!\n\n\nCard: Payworks VISA\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 938244\nMerchant ID: **37599\nTerminal ID: ****0063\n\ncb6475bafbb94d03b0f984629c63c294\n21:43:07: 01/12/2023\n\n\n",
+          "preformattedReceipt" : "Cardholder Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nSale\n£3.00\n\n\nPlease retain receipt!\n\n\nCard: Payworks CARD\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 938244\nMerchant ID: **37599\nTerminal ID: ****0063\n\ncb6475bafbb94d03b0f984629c63c294\n21:43:07: 01/12/2023\n\n\n",
           "receiptData" : {
             "lines" : {
               "MERCHANT_DETAILS_PUBLIC_NAME" : {
@@ -12046,7 +12046,7 @@ Response to a Successful Request
               },
               "PAYMENT_DETAILS_SCHEME_OR_LABEL" : {
                 "label" : "Card",
-                "value" : "Payworks VISA"
+                "value" : "Payworks CARD"
               },
               "PAYMENT_DETAILS_MASKED_ACCOUNT" : {
                 "label" : "Account",
@@ -12231,7 +12231,7 @@ Response to a Successful Request
         "card" : {
           "expirationMonth" : "12",
           "expirationYear" : "2025",
-          "type" : "VISA",
+          "type" : "CARD",
           "maskedPan" : "411111******1111"
         }
       },
@@ -12242,7 +12242,7 @@ Response to a Successful Request
       "linkedOperations" : [ ],
       "receipts" : {
         "merchantReceipt" : {
-          "preformattedReceipt" : "Merchant Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nSale\n£1.00\n\n\nCVV MATCH ONLY\n\n\nCard: VISA\nAccount: **** **** **** 1111\nEntry Mode: Keyed\nVerification: Cardholder Not Present\n\nAuthorization: 938246\nMerchant ID: **37599\nTerminal ID: ****0063\n\n4348c35f258c4f8d8c89b9898e3f1b63\n21:51:27: 01/12/2023\n\n\n",
+          "preformattedReceipt" : "Merchant Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nSale\n£1.00\n\n\nCVV MATCH ONLY\n\n\nCard: CARD\nAccount: **** **** **** 1111\nEntry Mode: Keyed\nVerification: Cardholder Not Present\n\nAuthorization: 938246\nMerchant ID: **37599\nTerminal ID: ****0063\n\n4348c35f258c4f8d8c89b9898e3f1b63\n21:51:27: 01/12/2023\n\n\n",
           "receiptData" : {
             "lines" : {
               "MERCHANT_DETAILS_PUBLIC_NAME" : {
@@ -12275,7 +12275,7 @@ Response to a Successful Request
               },
               "PAYMENT_DETAILS_SCHEME_OR_LABEL" : {
                 "label" : "Card",
-                "value" : "VISA"
+                "value" : "CARD"
               },
               "PAYMENT_DETAILS_MASKED_ACCOUNT" : {
                 "label" : "Account",
@@ -12338,7 +12338,7 @@ Response to a Successful Request
           }
         },
         "customerReceipt" : {
-          "preformattedReceipt" : "Cardholder Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nSale\n£1.00\n\n\nPlease retain receipt!\n\n\nCard: VISA\nAccount: **** **** **** 1111\nEntry Mode: Keyed\nVerification: Cardholder Not Present\n\nAuthorization: 938246\nMerchant ID: **37599\nTerminal ID: ****0063\n\n4348c35f258c4f8d8c89b9898e3f1b63\n21:51:27: 01/12/2023\n\n\n",
+          "preformattedReceipt" : "Cardholder Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nSale\n£1.00\n\n\nPlease retain receipt!\n\n\nCard: CARD\nAccount: **** **** **** 1111\nEntry Mode: Keyed\nVerification: Cardholder Not Present\n\nAuthorization: 938246\nMerchant ID: **37599\nTerminal ID: ****0063\n\n4348c35f258c4f8d8c89b9898e3f1b63\n21:51:27: 01/12/2023\n\n\n",
           "receiptData" : {
             "lines" : {
               "MERCHANT_DETAILS_PUBLIC_NAME" : {
@@ -12371,7 +12371,7 @@ Response to a Successful Request
               },
               "PAYMENT_DETAILS_SCHEME_OR_LABEL" : {
                 "label" : "Card",
-                "value" : "VISA"
+                "value" : "CARD"
               },
               "PAYMENT_DETAILS_MASKED_ACCOUNT" : {
                 "label" : "Account",
@@ -12518,7 +12518,7 @@ Response to a Successful Request
         "card" : {
           "expirationMonth" : "12",
           "expirationYear" : "2025",
-          "type" : "VISA",
+          "type" : "CARD",
           "maskedPan" : "476173XXXXXX0119",
           "countryCode" : "840"
         }
@@ -12529,7 +12529,7 @@ Response to a Successful Request
       },
       "receipts" : {
         "merchantReceipt" : {
-          "preformattedReceipt" : "Merchant Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nAccount Verification\n£0.00\n\n\nAccount Valid.\n\n\nCard: Payworks VISA\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 938239\nMerchant ID: **37599\nTerminal ID: ****0063\n\n2dd6beb00d8d4bb8bf1a4718917a3003\n21:27:07: 01/12/2023\n\n\n",
+          "preformattedReceipt" : "Merchant Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nAccount Verification\n£0.00\n\n\nAccount Valid.\n\n\nCard: Payworks CARD\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 938239\nMerchant ID: **37599\nTerminal ID: ****0063\n\n2dd6beb00d8d4bb8bf1a4718917a3003\n21:27:07: 01/12/2023\n\n\n",
           "receiptData" : {
             "lines" : {
               "MERCHANT_DETAILS_PUBLIC_NAME" : {
@@ -12562,7 +12562,7 @@ Response to a Successful Request
               },
               "PAYMENT_DETAILS_SCHEME_OR_LABEL" : {
                 "label" : "Card",
-                "value" : "Payworks VISA"
+                "value" : "Payworks CARD"
               },
               "PAYMENT_DETAILS_MASKED_ACCOUNT" : {
                 "label" : "Account",
@@ -12629,7 +12629,7 @@ Response to a Successful Request
           }
         },
         "customerReceipt" : {
-          "preformattedReceipt" : "Cardholder Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nAccount Verification\n£0.00\n\n\nAccount Valid.\n\n\nCard: Payworks VISA\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 938239\nMerchant ID: **37599\nTerminal ID: ****0063\n\n2dd6beb00d8d4bb8bf1a4718917a3003\n21:27:07: 01/12/2023\n\n\n",
+          "preformattedReceipt" : "Cardholder Receipt\nCP Test\nSample Street\nUB3 2EA London\nUnited Kingdom\n1234567\n\nAccount Verification\n£0.00\n\n\nAccount Valid.\n\n\nCard: Payworks CARD\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: None\n\nAuthorization: 938239\nMerchant ID: **37599\nTerminal ID: ****0063\n\n2dd6beb00d8d4bb8bf1a4718917a3003\n21:27:07: 01/12/2023\n\n\n",
           "receiptData" : {
             "lines" : {
               "MERCHANT_DETAILS_PUBLIC_NAME" : {
@@ -12662,7 +12662,7 @@ Response to a Successful Request
               },
               "PAYMENT_DETAILS_SCHEME_OR_LABEL" : {
                 "label" : "Card",
-                "value" : "Payworks VISA"
+                "value" : "Payworks CARD"
               },
               "PAYMENT_DETAILS_MASKED_ACCOUNT" : {
                 "label" : "Account",
@@ -13166,7 +13166,7 @@ Response to a Successful Request
         "card": {
             "expirationMonth": "12",
             "expirationYear": "2025",
-            "type": "VISA",
+            "type" : "CARD",
             "maskedPan": "476173XXXXXX0119",
             "countryCode": "840"
         }
@@ -13177,7 +13177,7 @@ Response to a Successful Request
     "linkedOperations": [],
     "receipts": {
         "merchantReceipt": {
-            "preformattedReceipt": "Merchant Receipt\nTest\nSample Street 123\n34351 New York\nUnited States\n12345678\n\nPayment\nUSD$20.00\n\nPlease retain receipt!\n\nCard: Payworks VISA\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: No Verification\n\nTransaction: 546712\nAuthorization: 831000\nMerchant ID: ************st051\nTerminal ID: ****7069\n\n\n8ccb150a88bd4c6f9a00a687f39ca97d\n\n4:15:12 AM: 9/20/2024\n\n\n",
+            "preformattedReceipt": "Merchant Receipt\nTest\nSample Street 123\n34351 New York\nUnited States\n12345678\n\nPayment\nUSD$20.00\n\nPlease retain receipt!\n\nCard: Payworks CARD\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: No Verification\n\nTransaction: 546712\nAuthorization: 831000\nMerchant ID: ************st051\nTerminal ID: ****7069\n\n\n8ccb150a88bd4c6f9a00a687f39ca97d\n\n4:15:12 AM: 9/20/2024\n\n\n",
             "receiptData": {
                 "signatureLineRequired": false,
                 "lines": {
@@ -13211,7 +13211,7 @@ Response to a Successful Request
                     },
                     "PAYMENT_DETAILS_SCHEME_OR_LABEL": {
                         "label": "Card",
-                        "value": "Payworks VISA"
+                        "value": "Payworks CARD"
                     },
                     "PAYMENT_DETAILS_MASKED_ACCOUNT": {
                         "label": "Account",
@@ -13283,7 +13283,7 @@ Response to a Successful Request
             }
         },
         "customerReceipt": {
-            "preformattedReceipt": "Cardholder Receipt\nTest\nSample Street 123\n34351 New York\nUnited States\n12345678\n\nPayment\nUSD$20.00\n\nPlease retain receipt!\n\nCard: Payworks VISA\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: No Verification\n\nTransaction: 546712\nAuthorization: 831000\nMerchant ID: ************st051\nTerminal ID: ****7069\n\n\n8ccb150a88bd4c6f9a00a687f39ca97d\n\n4:15:12 AM: 9/20/2024\n\n\n",
+            "preformattedReceipt": "Cardholder Receipt\nTest\nSample Street 123\n34351 New York\nUnited States\n12345678\n\nPayment\nUSD$20.00\n\nPlease retain receipt!\n\nCard: Payworks CARD\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: No Verification\n\nTransaction: 546712\nAuthorization: 831000\nMerchant ID: ************st051\nTerminal ID: ****7069\n\n\n8ccb150a88bd4c6f9a00a687f39ca97d\n\n4:15:12 AM: 9/20/2024\n\n\n",
             "receiptData": {
                 "signatureLineRequired": false,
                 "lines": {
@@ -13317,7 +13317,7 @@ Response to a Successful Request
                     },
                     "PAYMENT_DETAILS_SCHEME_OR_LABEL": {
                         "label": "Card",
-                        "value": "Payworks VISA"
+                        "value": "Payworks CARD"
                     },
                     "PAYMENT_DETAILS_MASKED_ACCOUNT": {
                         "label": "Account",
@@ -13510,7 +13510,7 @@ Response to a Successful Request
         "card": {
             "expirationMonth": "12",
             "expirationYear": "2025",
-            "type": "VISA",
+            "type" : "CARD",
             "maskedPan": "476173XXXXXX0119",
             "countryCode": "840"
         }
@@ -13521,7 +13521,7 @@ Response to a Successful Request
     "linkedOperations": [],
     "receipts": {
         "merchantReceipt": {
-            "preformattedReceipt": "Merchant Receipt\nTest\nSample Street 123\n34351 New York\nUnited States\n12345678\n\nPayment\nUSD$1.00\n\nPlease retain receipt!\n\nCard: Payworks VISA\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: No Verification\n\nTransaction: 545814\nAuthorization: 831000\nMerchant ID: ************st051\nTerminal ID: ****7069\n\n\n940d49ee94444764acb1c898e2254954\n\n3:53:36 AM: 9/20/2024\n\n\n",
+            "preformattedReceipt": "Merchant Receipt\nTest\nSample Street 123\n34351 New York\nUnited States\n12345678\n\nPayment\nUSD$1.00\n\nPlease retain receipt!\n\nCard: Payworks CARD\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: No Verification\n\nTransaction: 545814\nAuthorization: 831000\nMerchant ID: ************st051\nTerminal ID: ****7069\n\n\n940d49ee94444764acb1c898e2254954\n\n3:53:36 AM: 9/20/2024\n\n\n",
             "receiptData": {
                 "signatureLineRequired": false,
                 "lines": {
@@ -13555,7 +13555,7 @@ Response to a Successful Request
                     },
                     "PAYMENT_DETAILS_SCHEME_OR_LABEL": {
                         "label": "Card",
-                        "value": "Payworks VISA"
+                        "value": "Payworks CARD"
                     },
                     "PAYMENT_DETAILS_MASKED_ACCOUNT": {
                         "label": "Account",
@@ -13627,7 +13627,7 @@ Response to a Successful Request
             }
         },
         "customerReceipt": {
-            "preformattedReceipt": "Cardholder Receipt\nTest\nSample Street 123\n34351 New York\nUnited States\n12345678\n\nPayment\nUSD$1.00\n\nPlease retain receipt!\n\nCard: Payworks VISA\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: No Verification\n\nTransaction: 545814\nAuthorization: 831000\nMerchant ID: ************st051\nTerminal ID: ****7069\n\n\n940d49ee94444764acb1c898e2254954\n\n3:53:36 AM: 9/20/2024\n\n\n",
+            "preformattedReceipt": "Cardholder Receipt\nTest\nSample Street 123\n34351 New York\nUnited States\n12345678\n\nPayment\nUSD$1.00\n\nPlease retain receipt!\n\nCard: Payworks CARD\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: No Verification\n\nTransaction: 545814\nAuthorization: 831000\nMerchant ID: ************st051\nTerminal ID: ****7069\n\n\n940d49ee94444764acb1c898e2254954\n\n3:53:36 AM: 9/20/2024\n\n\n",
             "receiptData": {
                 "signatureLineRequired": false,
                 "lines": {
@@ -13661,7 +13661,7 @@ Response to a Successful Request
                     },
                     "PAYMENT_DETAILS_SCHEME_OR_LABEL": {
                         "label": "Card",
-                        "value": "Payworks VISA"
+                        "value": "Payworks CARD"
                     },
                     "PAYMENT_DETAILS_MASKED_ACCOUNT": {
                         "label": "Account",
@@ -13863,7 +13863,7 @@ Response to a Successful Request
         "card": {
             "expirationMonth": "12",
             "expirationYear": "2025",
-            "type": "VISA",
+            "type" : "CARD",
             "maskedPan": "476173XXXXXX0119",
             "countryCode": "840"
         }
@@ -13874,7 +13874,7 @@ Response to a Successful Request
     "linkedOperations": [],
     "receipts": {
         "merchantReceipt": {
-            "preformattedReceipt": "Merchant Receipt\nTest\nSample Street 123\n34351 New York\nUnited States\n12345678\n\nPayment\nUSD$20.00\n\nPlease retain receipt!\n\nCard: Payworks VISA\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: No Verification\n\nTransaction: 129702\nAuthorization: 831000\nMerchant ID: ************st051\nTerminal ID: ****7069\n\n\n4bebd72cf0ff4a9ea212baca0c6d9faf\n\n3:15:25 AM: 9/20/2024\n\n\n",
+            "preformattedReceipt": "Merchant Receipt\nTest\nSample Street 123\n34351 New York\nUnited States\n12345678\n\nPayment\nUSD$20.00\n\nPlease retain receipt!\n\nCard: Payworks CARD\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: No Verification\n\nTransaction: 129702\nAuthorization: 831000\nMerchant ID: ************st051\nTerminal ID: ****7069\n\n\n4bebd72cf0ff4a9ea212baca0c6d9faf\n\n3:15:25 AM: 9/20/2024\n\n\n",
             "receiptData": {
                 "signatureLineRequired": false,
                 "lines": {
@@ -13908,7 +13908,7 @@ Response to a Successful Request
                     },
                     "PAYMENT_DETAILS_SCHEME_OR_LABEL": {
                         "label": "Card",
-                        "value": "Payworks VISA"
+                        "value": "Payworks CARD"
                     },
                     "PAYMENT_DETAILS_MASKED_ACCOUNT": {
                         "label": "Account",
@@ -13980,7 +13980,7 @@ Response to a Successful Request
             }
         },
         "customerReceipt": {
-            "preformattedReceipt": "Cardholder Receipt\nTest\nSample Street 123\n34351 New York\nUnited States\n12345678\n\nPayment\nUSD$20.00\n\nPlease retain receipt!\n\nCard: Payworks VISA\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: No Verification\n\nTransaction: 129702\nAuthorization: 831000\nMerchant ID: ************st051\nTerminal ID: ****7069\n\n\n4bebd72cf0ff4a9ea212baca0c6d9faf\n\n3:15:25 AM: 9/20/2024\n\n\n",
+            "preformattedReceipt": "Cardholder Receipt\nTest\nSample Street 123\n34351 New York\nUnited States\n12345678\n\nPayment\nUSD$20.00\n\nPlease retain receipt!\n\nCard: Payworks CARD\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: No Verification\n\nTransaction: 129702\nAuthorization: 831000\nMerchant ID: ************st051\nTerminal ID: ****7069\n\n\n4bebd72cf0ff4a9ea212baca0c6d9faf\n\n3:15:25 AM: 9/20/2024\n\n\n",
             "receiptData": {
                 "signatureLineRequired": false,
                 "lines": {
@@ -14014,7 +14014,7 @@ Response to a Successful Request
                     },
                     "PAYMENT_DETAILS_SCHEME_OR_LABEL": {
                         "label": "Card",
-                        "value": "Payworks VISA"
+                        "value": "Payworks CARD"
                     },
                     "PAYMENT_DETAILS_MASKED_ACCOUNT": {
                         "label": "Account",
@@ -14448,7 +14448,7 @@ Response to a Successful Request
         "card": {
             "expirationMonth": "12",
             "expirationYear": "2025",
-            "type": "VISA",
+            "type" : "CARD",
             "maskedPan": "476173XXXXXX0119",
             "countryCode": "840"
         }
@@ -14459,7 +14459,7 @@ Response to a Successful Request
     "linkedOperations": [],
     "receipts": {
         "merchantReceipt": {
-            "preformattedReceipt": "Merchant Receipt\nTest\nSample Street 123\n34351 New York\nUnited States\n12345678\n\nPayment\nUSD$500.00\n\nPlease retain receipt!\n\nCard: Payworks VISA\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: No Verification\n\nTransaction: 546712\nAuthorization: 831000\nMerchant ID: ************st051\nTerminal ID: ****7069\n\n\n8ccb150a88bd4c6f9a00a687f39ca97d\n\n4:15:12 AM: 9/20/2024\n\n\n",
+            "preformattedReceipt": "Merchant Receipt\nTest\nSample Street 123\n34351 New York\nUnited States\n12345678\n\nPayment\nUSD$500.00\n\nPlease retain receipt!\n\nCard: Payworks CARD\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: No Verification\n\nTransaction: 546712\nAuthorization: 831000\nMerchant ID: ************st051\nTerminal ID: ****7069\n\n\n8ccb150a88bd4c6f9a00a687f39ca97d\n\n4:15:12 AM: 9/20/2024\n\n\n",
             "receiptData": {
                 "signatureLineRequired": false,
                 "lines": {
@@ -14493,7 +14493,7 @@ Response to a Successful Request
                     },
                     "PAYMENT_DETAILS_SCHEME_OR_LABEL": {
                         "label": "Card",
-                        "value": "Payworks VISA"
+                        "value": "Payworks CARD"
                     },
                     "PAYMENT_DETAILS_MASKED_ACCOUNT": {
                         "label": "Account",
@@ -14565,7 +14565,7 @@ Response to a Successful Request
             }
         },
         "customerReceipt": {
-            "preformattedReceipt": "Cardholder Receipt\nTest\nSample Street 123\n34351 New York\nUnited States\n12345678\n\nPayment\nUSD$500.00\n\nPlease retain receipt!\n\nCard: Payworks VISA\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: No Verification\n\nTransaction: 546712\nAuthorization: 831000\nMerchant ID: ************st051\nTerminal ID: ****7069\n\n\n8ccb150a88bd4c6f9a00a687f39ca97d\n\n4:15:12 AM: 9/20/2024\n\n\n",
+            "preformattedReceipt": "Cardholder Receipt\nTest\nSample Street 123\n34351 New York\nUnited States\n12345678\n\nPayment\nUSD$500.00\n\nPlease retain receipt!\n\nCard: Payworks CARD\nAccount: **** **** **** 0119\nEntry Mode: Contactless\nAID: A0000000031010\nVerification: No Verification\n\nTransaction: 546712\nAuthorization: 831000\nMerchant ID: ************st051\nTerminal ID: ****7069\n\n\n8ccb150a88bd4c6f9a00a687f39ca97d\n\n4:15:12 AM: 9/20/2024\n\n\n",
             "receiptData": {
                 "signatureLineRequired": false,
                 "lines": {
@@ -14599,7 +14599,7 @@ Response to a Successful Request
                     },
                     "PAYMENT_DETAILS_SCHEME_OR_LABEL": {
                         "label": "Card",
-                        "value": "Payworks VISA"
+                        "value": "Payworks CARD"
                     },
                     "PAYMENT_DETAILS_MASKED_ACCOUNT": {
                         "label": "Account",

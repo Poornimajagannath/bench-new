@@ -520,9 +520,9 @@ Follow these steps to process a sale with airline details.
            .airlineDetails(
                AirlineDetailsBuilder()
                    .agentCode("AGT12345")
-                   .agentName("Visa Travel")
+                   .agentName("Relay Travel")
                    .arrivalDate(SimpleDateFormat("MMddyyyy", Locale.US).parse("01202024"))
-                   .carrierName("Visa Airways")
+                   .carrierName("Relay Airways")
                    .clearingCount(1)
                    .clearingSequence("1")
                    .creditReasonIndicator(CreditReasonIndicator.OTHER)
@@ -744,7 +744,7 @@ Follow these steps to process a sale with billing and shipping details.
                    .middleName("M")
                    .lastName("Smith")
                    .title("Ms.")
-                   .company("Visa Inc.")
+                   .company("Relay Inc.")
                    .companyTaxID("123456789")
                    .street1("123 Main St")
                    .city("San Francisco")
@@ -764,7 +764,7 @@ Follow these steps to process a sale with billing and shipping details.
                ShippingDetailsBuilder()
                    .firstName("Bob")
                    .lastName("Jones")
-                   .company("Visa Inc.")
+                   .company("Relay Inc.")
                    .street1("500 Market St")
                    .city("New York")
                    .state("NY")
@@ -1737,7 +1737,7 @@ Custom Printing {#pax-aio-pymnt-txn-custom-printing-intro}
 ==========================================================
 
 Use the Custom Printing feature to print custom content directly to the integrated printer of a PAX terminal. This feature enables you to print text, label-value pairs, images, barcodes, and QR codes. It is not limited to receipts and does not affect standard printed or emailed receipts.  
-A label-value pair consists of two related text elements: a label that describes the data and a value that displays the associated information. For example: Card (label): Visa (value) or Amount (label): 10.00 (value).
+A label-value pair consists of two related text elements: a label that describes the data and a value that displays the associated information. For example: Card (label): Relay (value) or Amount (label): 10.00 (value).
 
 Use Custom Printing {#pax-aio-pymnt-txn-custom-printing-task}
 =============================================================

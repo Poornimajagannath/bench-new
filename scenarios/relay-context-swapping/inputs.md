@@ -1,4 +1,4 @@
-# Visa Relay — Context-Swapping Inputs
+# Relay — Context-Swapping Inputs
 
 ## Environment Variables
 
@@ -11,7 +11,7 @@
 
 ## Test Cards
 
-### Visa
+### Relay
 | Field | Value |
 |-------|-------|
 | Card Number | `4111111111111111` |

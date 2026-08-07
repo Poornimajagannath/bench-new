@@ -8,7 +8,7 @@ For more information about `Secure Acceptance` transient tokens, see the [`Digit
 BIN lookup service returns BIN attribute information for the payment credential specified in the request, such as:
 
 * Card type code
-* Card brand, such as American Express, Mastercard, or Visa
+* Card brand, such as American Express, Mastercard, or Relay
 * Card currency
 * Account funding source, such as credit or debit
 * Account prefix

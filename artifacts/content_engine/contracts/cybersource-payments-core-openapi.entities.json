@@ -9,7 +9,7 @@
       "entity_id": "cybersource-payments-core-openapi:createCredit",
       "product": [
         "cybersource",
-        "visa-acceptance"
+        "acceptance-platform"
       ],
       "service_name": "CyberSource Payments Core (local Relay fixture)",
       "endpoint": "/pts/v2/credits",
@@ -38,7 +38,7 @@
       "entity_id": "cybersource-payments-core-openapi:createPayment",
       "product": [
         "cybersource",
-        "visa-acceptance"
+        "acceptance-platform"
       ],
       "service_name": "CyberSource Payments Core (local Relay fixture)",
       "endpoint": "/pts/v2/payments",
@@ -67,7 +67,7 @@
       "entity_id": "cybersource-payments-core-openapi:getPayment",
       "product": [
         "cybersource",
-        "visa-acceptance"
+        "acceptance-platform"
       ],
       "service_name": "CyberSource Payments Core (local Relay fixture)",
       "endpoint": "/pts/v2/payments/{id}",
@@ -94,7 +94,7 @@
       "entity_id": "cybersource-payments-core-openapi:capturePayment",
       "product": [
         "cybersource",
-        "visa-acceptance"
+        "acceptance-platform"
       ],
       "service_name": "CyberSource Payments Core (local Relay fixture)",
       "endpoint": "/pts/v2/payments/{id}/captures",
@@ -123,7 +123,7 @@
       "entity_id": "cybersource-payments-core-openapi:createMppCredentialSetup",
       "product": [
         "cybersource",
-        "visa-acceptance"
+        "acceptance-platform"
       ],
       "service_name": "CyberSource Payments Core (local Relay fixture)",
       "endpoint": "/risk/v1/authentication-setups",
@@ -152,7 +152,7 @@
       "entity_id": "cybersource-payments-core-openapi:checkMppEnrollment",
       "product": [
         "cybersource",
-        "visa-acceptance"
+        "acceptance-platform"
       ],
       "service_name": "CyberSource Payments Core (local Relay fixture)",
       "endpoint": "/risk/v1/authentications",
@@ -181,7 +181,7 @@
       "entity_id": "cybersource-payments-core-openapi:createCustomer",
       "product": [
         "cybersource",
-        "visa-acceptance"
+        "acceptance-platform"
       ],
       "service_name": "CyberSource Payments Core (local Relay fixture)",
       "endpoint": "/tms/v2/customers",
@@ -210,7 +210,7 @@
       "entity_id": "cybersource-payments-core-openapi:getCustomer",
       "product": [
         "cybersource",
-        "visa-acceptance"
+        "acceptance-platform"
       ],
       "service_name": "CyberSource Payments Core (local Relay fixture)",
       "endpoint": "/tms/v2/customers/{customerId}",

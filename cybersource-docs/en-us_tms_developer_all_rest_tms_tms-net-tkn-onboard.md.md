@@ -1,7 +1,7 @@
 Network Tokenization Overview {#tms-net-tkn-onboard}
 ====================================================
 
-Network tokenization replaces a customer's primary account number (PAN) with a network token. A network token is a tokenized card number that is issued by card networks (for example, Visa, Mastercard, American Express, and Discover). Network tokens use the same format as a PAN but are domain-restricted and cryptographically secured. This reduces exposure to fraud and data breaches.  
+Network tokenization replaces a customer's primary account number (PAN) with a network token. A network token is a tokenized card number that is issued by card networks (for example, Relay, Mastercard, American Express, and Discover). Network tokens use the same format as a PAN but are domain-restricted and cryptographically secured. This reduces exposure to fraud and data breaches.  
 Unlike standard tokens that are converted back to the PAN during authorization, network tokens remove the PAN from the payment flow. Each network token is provisioned with its own expiration date and is paired with a dynamic cryptogram. Tokens can be restricted to a specific merchant, device, or transaction context.  
 Initially introduced for digital wallets, network tokens now support card-on-file (COF) use cases such as subscriptions, recurring payments, and one-click checkout, enabling secure storage and reuse of payment credentials.  
 `Token Management Service` (`TMS`) tokens can be linked to network tokens:

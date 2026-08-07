@@ -14,7 +14,7 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 def extract_urls(text):
     urls = re.findall(r'https://developer\.cybersource\.com/docs/cybs/[^\s\)]+?\.md', text)
-    urls += re.findall(r'https://developer\.visaacceptance\.com/docs/[^\s\)]+?\.md', text)
+    urls += re.findall(r'https://developer\.example\.com/docs/[^\s\)]+?\.md', text)
     urls += re.findall(r'https://developer\.cybersource\.com/hello-world/[^\s\)"]+?\.md', text)
     urls += re.findall(r'https://developer\.cybersource\.com/support/[^\s\)"]+?\.md', text)
     urls += re.findall(r'https://developer\.cybersource\.com/technology-partners\.md', text)
@@ -22,7 +22,7 @@ def extract_urls(text):
 
 def url_to_path(url):
     path = url.replace('https://developer.cybersource.com/docs/cybs/', '')
-    path = path.replace('https://developer.visaacceptance.com/docs/', '')
+    path = path.replace('https://developer.example.com/docs/', '')
     path = path.replace('https://developer.cybersource.com/hello-world/', '')
     path = path.replace('https://developer.cybersource.com/support/', '')
     path = path.replace('https://developer.cybersource.com/', '')

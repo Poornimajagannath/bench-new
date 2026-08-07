@@ -22,7 +22,7 @@ Customer Support
 :
 For support information about any service, visit the Support Center:
 
-<http://support.visaacceptance.com>
+<http://support.example.com>
 
 Recent Revisions to This Document {#credentials-doc-revisions}
 ==============================================================
@@ -42,17 +42,17 @@ This revision contains only editorial changes and no technical updates.
 
 Removed Mastercard required field for retrieving customer credentials during a CIT request. See [Using Stored Customer Credentials During a CIT](/docs/cybs/en-us/credentials/developer/ctv/rest/credentials/credentials-cit-intro/credentials-cit-using-intro.md "").
 
-VISA Platform Connect: Specifications and Conditions for Resellers/Partners {#vpc-partner-reseller-disclaimer}
+CARD Platform Connect: Specifications and Conditions for Resellers/Partners {#vpc-partner-reseller-disclaimer}
 ==============================================================================================================
 
-The following are specifications and conditions that apply to a Reseller/Partner enabling its merchants through Cybersource for Visa Platform Connect ("VPC") processing. Failure to meet any of the specifications and conditions below is subject to the liability provisions and indemnification obligations under Reseller/Partner's contract with Visa/Cybersource.
+The following are specifications and conditions that apply to a Reseller/Partner enabling its merchants through Cybersource for Platform Connect ("VPC") processing. Failure to meet any of the specifications and conditions below is subject to the liability provisions and indemnification obligations under Reseller/Partner's contract with Relay/Cybersource.
 
 1. Before boarding merchants for payment processing on a VPC acquirer's connection, Reseller/Partner and the VPC acquirer must have a contract or other legal agreement that permits Reseller/Partner to enable its merchants to process payments with the acquirer through the dedicated VPC connection and/or traditional connection with such VPC acquirer.
 2. Reseller/Partner is responsible for boarding and enabling its merchants in accordance with the terms of the contract or other legal agreement with the relevant VPC acquirer.
 3. Reseller/Partner acknowledges and agrees that all considerations and fees associated with chargebacks, interchange downgrades, settlement issues, funding delays, and other processing related activities are strictly between Reseller and the relevant VPC acquirer.
 4. Reseller/Partner acknowledges and agrees that the relevant VPC acquirer is responsible for payment processing issues, including but not limited to, transaction declines by network/issuer, decline rates, and interchange qualification, as may be agreed to or outlined in the contract or other legal agreement between Reseller/Partner and such VPC acquirer.
 
-DISCLAIMER: NEITHER VISA NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR ANY ERRORS OR OMISSIONS BY THE Visa Platform Connect ACQUIRER IN PROCESSING TRANSACTIONS. NEITHER VISA NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR RESELLER/PARTNER BOARDING MERCHANTS OR ENABLING MERCHANT PROCESSING IN VIOLATION OF THE TERMS AND CONDITIONS IMPOSED BY THE RELEVANT Visa Platform Connect ACQUIRER.
+DISCLAIMER: NEITHER CARD NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR ANY ERRORS OR OMISSIONS BY THE Platform Connect ACQUIRER IN PROCESSING TRANSACTIONS. NEITHER CARD NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR RESELLER/PARTNER BOARDING MERCHANTS OR ENABLING MERCHANT PROCESSING IN VIOLATION OF THE TERMS AND CONDITIONS IMPOSED BY THE RELEVANT Platform Connect ACQUIRER.
 
 Introduction to Credentialed Transactions {#credentials-intro}
 ==============================================================
@@ -68,8 +68,8 @@ Merchants following the stored credentials framework experience these benefits:
 * Improved authorization success rates.
 * A smoother customer experience.
 * Fewer disputes and customer complaints.
-* Use of Real Time Visa Account Updater for fresher card details.  
-  For more information on the stored credentials framework, see [Improving Authorization Management for Transactions with Stored Credentials](https://usa.visa.com/dam/VCOM/global/support-legal/documents/stored-credential-transaction-framework-vbs-10-may-17.pdf "").
+* Use of Real Time Relay Account Updater for fresher card details.  
+  For more information on the stored credentials framework, see [Improving Authorization Management for Transactions with Stored Credentials](https://usa.relay.com/dam/VCOM/global/support-legal/documents/stored-credential-transaction-framework-vbs-10-may-17.pdf "").
 
 Types of Credentialed Transactions
 ----------------------------------
@@ -232,7 +232,7 @@ processingInformation.authorizationOptions. initiator. merchantInitiatedTransact
 :
 * American Express: Set the value to the transaction ID from the original transaction.
 * Discover: Set the value to the transaction ID from the original transaction.
-* Visa: set the value to the last successful transaction ID.
+* Relay: set the value to the last successful transaction ID.
 
 [processingInformation. authorizationOptions. initiator. merchantInitiatedTransaction.reason](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/processing-info-aa/processing-info-auth-ops-initiator-mit-reason.md "")
 :
@@ -902,9 +902,9 @@ These are the supported card types for processing credentialed transactions:
   {#credentials-delay-mit-pan-intro_d7e304}
 * Mastercard{#credentials-delay-mit-pan-intro_d7e307}
   {#credentials-delay-mit-pan-intro_d7e307}
-* Visa{#credentials-delay-mit-pan-intro_d7e310}
+* Relay{#credentials-delay-mit-pan-intro_d7e310}
   {#credentials-delay-mit-pan-intro_d7e310}
-* Visa Electron{#credentials-delay-mit-pan-intro_d7e313}
+* Relay Electron{#credentials-delay-mit-pan-intro_d7e313}
   {#credentials-delay-mit-pan-intro_d7e313}
 
 Endpoint {#credentials-delay-mit-pan-intro_d8e16}
@@ -971,13 +971,13 @@ processingInformation. authorizationOptions.initiator. merchantInitiatedTransact
 :
 * American Express: set to the transaction ID from the original transaction.
 * Discover: set to the transaction ID from the original transaction.
-* Visa: set to the last successful transaction ID.
+* Relay: set to the last successful transaction ID.
 
 processingInformation.authorizationOptions.initiator. merchantInitiatedTransaction.reason
 :
 Set the value to `2`.
 :
-Required only for Discover, Mastercard, and Visa.
+Required only for Discover, Mastercard, and Relay.
 
 [processingInformation. authorizationOptions. initiator. type](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/processing-info-aa/processing-info-auth-ops-initiator-type.md "")
 :
@@ -1199,7 +1199,7 @@ Where \[tokentype\] is the `TMS` token type you are using:
 :
 Set the value to `2`.
 :
-Required only for Discover, Mastercard, and Visa.
+Required only for Discover, Mastercard, and Relay.
 
 Instrument Identifier Required Fields
 -------------------------------------
@@ -1628,9 +1628,9 @@ These are the supported card types for processing credentialed transactions:
   {#credentials-mit-incremental-intro_d7e304}
 * Mastercard{#credentials-mit-incremental-intro_d7e307}
   {#credentials-mit-incremental-intro_d7e307}
-* Visa{#credentials-mit-incremental-intro_d7e310}
+* Relay{#credentials-mit-incremental-intro_d7e310}
   {#credentials-mit-incremental-intro_d7e310}
-* Visa Electron{#credentials-mit-incremental-intro_d7e313}
+* Relay Electron{#credentials-mit-incremental-intro_d7e313}
   {#credentials-mit-incremental-intro_d7e313}
 
 Limitations {#credentials-mit-incremental-intro_limitations}
@@ -1667,7 +1667,7 @@ processingInformation. authorizationOptions. initiator. merchantInitiatedTransac
 :
 Set the value to `5`.
 :
-Required only for Discover and Visa.
+Required only for Discover and Relay.
 
 [processingInformation. authorizationOptions.initiator. type](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/processing-info-aa/processing-info-auth-ops-initiator-type.md "")
 :
@@ -1870,9 +1870,9 @@ These are the supported card types for processing credentialed transactions:
   {#credentials-incremental-mit-tms-intro_d7e304}
 * Mastercard{#credentials-incremental-mit-tms-intro_d7e307}
   {#credentials-incremental-mit-tms-intro_d7e307}
-* Visa{#credentials-incremental-mit-tms-intro_d7e310}
+* Relay{#credentials-incremental-mit-tms-intro_d7e310}
   {#credentials-incremental-mit-tms-intro_d7e310}
-* Visa Electron{#credentials-incremental-mit-tms-intro_d7e313}
+* Relay Electron{#credentials-incremental-mit-tms-intro_d7e313}
   {#credentials-incremental-mit-tms-intro_d7e313}
 
 Limitations
@@ -1911,7 +1911,7 @@ Where \[tokentype\] is the `TMS` token type you are using:
 :
 Set the value to `5`.
 :
-Required only for Discover and Visa.
+Required only for Discover and Relay.
 
 Instrument Identifier Required Fields
 -------------------------------------
@@ -2344,9 +2344,9 @@ These are the supported card types for processing credentialed transactions:
   {#credentials-mit-reauth-intro_d7e304}
 * Mastercard{#credentials-mit-reauth-intro_d7e307}
   {#credentials-mit-reauth-intro_d7e307}
-* Visa{#credentials-mit-reauth-intro_d7e310}
+* Relay{#credentials-mit-reauth-intro_d7e310}
   {#credentials-mit-reauth-intro_d7e310}
-* Visa Electron{#credentials-mit-reauth-intro_d7e313}
+* Relay Electron{#credentials-mit-reauth-intro_d7e313}
   {#credentials-mit-reauth-intro_d7e313}
 
 Endpoint {#credentials-mit-reauth-intro_d8e16}
@@ -2407,13 +2407,13 @@ Required Fields for Processing Merchant-Initiated Reauthorized Transactions {#cr
 :
 * American Express: set to the transaction ID from the original transaction.
 * Discover: set to the transaction ID from the original transaction.
-* Visa: set to the last successful transaction ID.
+* Relay: set to the last successful transaction ID.
 
 [processingInformation. authorizationOptions. initiator. merchantInitiatedTransaction. reason](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/processing-info-aa/processing-info-auth-ops-initiator-mit-reason.md "")
 :
 Set the value to `3`.
 :
-Required only for Discover and Visa.
+Required only for Discover and Relay.
 
 [processingInformation. authorizationOptions. initiator. type](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/processing-info-aa/processing-info-auth-ops-initiator-type.md "")
 :
@@ -2610,9 +2610,9 @@ These are the supported card types for processing credentialed transactions:
   {#credentials-reauth-mit-tms-intro_d7e304}
 * Mastercard{#credentials-reauth-mit-tms-intro_d7e307}
   {#credentials-reauth-mit-tms-intro_d7e307}
-* Visa{#credentials-reauth-mit-tms-intro_d7e310}
+* Relay{#credentials-reauth-mit-tms-intro_d7e310}
   {#credentials-reauth-mit-tms-intro_d7e310}
-* Visa Electron{#credentials-reauth-mit-tms-intro_d7e313}
+* Relay Electron{#credentials-reauth-mit-tms-intro_d7e313}
   {#credentials-reauth-mit-tms-intro_d7e313}
 
 Endpoint {#credentials-reauth-mit-tms-intro_d8e16}
@@ -2645,7 +2645,7 @@ Where \[tokentype\] is the `TMS` token type you are using:
 :
 Set the value to `3`.
 :
-Required only for Discover and Visa.
+Required only for Discover and Relay.
 
 Instrument Identifier Required Fields
 -------------------------------------
@@ -3067,9 +3067,9 @@ These are the supported card types for processing credentialed transactions:
   {#credentials-mit-resub-intro_d7e304}
 * Mastercard{#credentials-mit-resub-intro_d7e307}
   {#credentials-mit-resub-intro_d7e307}
-* Visa{#credentials-mit-resub-intro_d7e310}
+* Relay{#credentials-mit-resub-intro_d7e310}
   {#credentials-mit-resub-intro_d7e310}
-* Visa Electron{#credentials-mit-resub-intro_d7e313}
+* Relay Electron{#credentials-mit-resub-intro_d7e313}
   {#credentials-mit-resub-intro_d7e313}
 
 Endpoint {#credentials-mit-resub-intro_d8e16}
@@ -3127,13 +3127,13 @@ Required Fields for Processing a Merchant-Initiated Resubmitted Transaction {#cr
 :
 * American Express: set to the transaction ID from the original transaction.
 * Discover: set to the transaction ID from the original transaction.
-* Visa: set to the last successful transaction ID.
+* Relay: set to the last successful transaction ID.
 
 [processingInformation. authorizationOptions. initiator. merchantInitiatedTransaction. reason](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/processing-info-aa/processing-info-auth-ops-initiator-mit-reason.md "")
 :
 Set the value to `1`.
 :
-Required only for Discover, Mastercard, and Visa.
+Required only for Discover, Mastercard, and Relay.
 
 [processingInformation. authorizationOptions. initiator. type](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/processing-info-aa/processing-info-auth-ops-initiator-type.md "")
 :
@@ -3327,9 +3327,9 @@ These are the supported card types for processing credentialed transactions:
   {#credentials-resub-mit-tms-intro_d7e304}
 * Mastercard{#credentials-resub-mit-tms-intro_d7e307}
   {#credentials-resub-mit-tms-intro_d7e307}
-* Visa{#credentials-resub-mit-tms-intro_d7e310}
+* Relay{#credentials-resub-mit-tms-intro_d7e310}
   {#credentials-resub-mit-tms-intro_d7e310}
-* Visa Electron{#credentials-resub-mit-tms-intro_d7e313}
+* Relay Electron{#credentials-resub-mit-tms-intro_d7e313}
   {#credentials-resub-mit-tms-intro_d7e313}
 
 Endpoint {#credentials-resub-mit-tms-intro_d8e16}
@@ -3360,7 +3360,7 @@ Where \[tokentype\] is the `TMS` token type you are using:
 :
 Set the value to `1`.
 :
-Required only for Discover, Mastercard, and Visa.
+Required only for Discover, Mastercard, and Relay.
 
 Instrument Identifier Required Fields
 -------------------------------------
@@ -3785,9 +3785,9 @@ These are the supported card types for processing credentialed transactions:
   {#credentials-mit-noshow-intro_d7e304}
 * Mastercard{#credentials-mit-noshow-intro_d7e307}
   {#credentials-mit-noshow-intro_d7e307}
-* Visa{#credentials-mit-noshow-intro_d7e310}
+* Relay{#credentials-mit-noshow-intro_d7e310}
   {#credentials-mit-noshow-intro_d7e310}
-* Visa Electron{#credentials-mit-noshow-intro_d7e313}
+* Relay Electron{#credentials-mit-noshow-intro_d7e313}
   {#credentials-mit-noshow-intro_d7e313}
 
 Endpoint {#credentials-mit-noshow-intro_d8e16}
@@ -3849,13 +3849,13 @@ processingInformation. authorizationOptions. initiator. merchantInitiatedTransac
 :
 * American Express: set to the transaction ID from the original transaction.
 * Discover: set to the transaction ID from the original transaction.
-* Visa: set to the last successful transaction ID.
+* Relay: set to the last successful transaction ID.
 
 [processingInformation. authorizationOptions. initiator. merchantInitiatedTransaction. reason](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/processing-info-aa/processing-info-auth-ops-initiator-mit-reason.md "")
 :
 Set the value to `4`.
 :
-Required only for Discover, Mastercard, and Visa.
+Required only for Discover, Mastercard, and Relay.
 
 [processingInformation. authorizationOptions. initiator. type](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/processing-info-aa/processing-info-auth-ops-initiator-type.md "")
 :
@@ -4061,9 +4061,9 @@ These are the supported card types for processing credentialed transactions:
   {#credentials-noshow-mit-tms-intro_d7e304}
 * Mastercard{#credentials-noshow-mit-tms-intro_d7e307}
   {#credentials-noshow-mit-tms-intro_d7e307}
-* Visa{#credentials-noshow-mit-tms-intro_d7e310}
+* Relay{#credentials-noshow-mit-tms-intro_d7e310}
   {#credentials-noshow-mit-tms-intro_d7e310}
-* Visa Electron{#credentials-noshow-mit-tms-intro_d7e313}
+* Relay Electron{#credentials-noshow-mit-tms-intro_d7e313}
   {#credentials-noshow-mit-tms-intro_d7e313}
 
 Endpoint {#credentials-noshow-mit-tms-intro_d8e16}
@@ -4096,7 +4096,7 @@ Where \[tokentype\] is the `TMS` token type you are using:
 :
 Set the value to `4`.
 :
-Required only for Discover, Mastercard, and Visa.
+Required only for Discover, Mastercard, and Relay.
 
 Instrument Identifier Required Fields
 -------------------------------------
@@ -4508,8 +4508,8 @@ In Brazil, installment payments are also known as *parcelados* and *parcelas*.
 Installment Payment Types
 -------------------------
 
-`Visa Platform Connect` enables you to process installment payments but does not have a role in setting the terms for the installment plan.  
-`Visa Platform Connect` enables you to process these types of installments payments:
+`Platform Connect` enables you to process installment payments but does not have a role in setting the terms for the installment plan.  
+`Platform Connect` enables you to process these types of installments payments:
 
 Issuer-Funded Installment Payments
 :
@@ -4534,7 +4534,7 @@ These are the supported card types for processing credentialed transactions:
 
 * American Express
 * Mastercard
-* Visa
+* Relay
 
 Endpoint {#credentials-mit-cit-install-initial-intro_d8e16}
 -----------------------------------------------------------
@@ -4735,8 +4735,8 @@ In Brazil, installment payments are also known as *parcelados* and *parcelas*.
 Installment Payment Types
 -------------------------
 
-`Visa Platform Connect` enables you to process installment payments but does not have a role in setting the terms for the installment plan.  
-`Visa Platform Connect` enables you to process these types of installments payments:
+`Platform Connect` enables you to process installment payments but does not have a role in setting the terms for the installment plan.  
+`Platform Connect` enables you to process these types of installments payments:
 
 Issuer-Funded Installment Payments
 :
@@ -4777,9 +4777,9 @@ These are the supported card types for processing credentialed transactions:
   {#credentials-install-cit-tms-iid-intro_d7e304}
 * Mastercard{#credentials-install-cit-tms-iid-intro_d7e307}
   {#credentials-install-cit-tms-iid-intro_d7e307}
-* Visa{#credentials-install-cit-tms-iid-intro_d7e310}
+* Relay{#credentials-install-cit-tms-iid-intro_d7e310}
   {#credentials-install-cit-tms-iid-intro_d7e310}
-* Visa Electron{#credentials-install-cit-tms-iid-intro_d7e313}
+* Relay Electron{#credentials-install-cit-tms-iid-intro_d7e313}
   {#credentials-install-cit-tms-iid-intro_d7e313}
 
 Creating a `TMS` Token
@@ -5067,17 +5067,17 @@ In your request, include the processingInformation.paymentSolution field to iden
 * `012`: Google Pay
 * `014`: Mastercard credential-on-file (COF) payment network token{#credentials-install-cit-dw-intro_d13e71}
   {#credentials-install-cit-dw-intro_d13e71}
-* `015`: Visa credential-on-file (COF) payment network token{#credentials-install-cit-dw-intro_d13e76}
+* `015`: Relay credential-on-file (COF) payment network token{#credentials-install-cit-dw-intro_d13e76}
   {#credentials-install-cit-dw-intro_d13e76}
 * `027`: Click to Pay
-* `visacheckout`: `Visa Click to Pay`.
+* `cardcheckout`: `Relay Click to Pay`.
   {#credentials-install-cit-dw-intro_d13e67}
 
 Installment Payment Types
 -------------------------
 
-`Visa Platform Connect` enables you to process installment payments but does not have a role in setting the terms for the installment plan.  
-`Visa Platform Connect` enables you to process these types of installments payments:
+`Platform Connect` enables you to process installment payments but does not have a role in setting the terms for the installment plan.  
+`Platform Connect` enables you to process these types of installments payments:
 
 Issuer-Funded Installment Payments
 :
@@ -5175,10 +5175,10 @@ Set to one of these possible values:
     * `012`: Google Pay
     * `014`: Mastercard credential-on-file (COF) payment network token{#credentials-install-cit-dw-reqfields_d13e71}
     {#credentials-install-cit-dw-reqfields_d13e71}
-    * `015`: Visa credential-on-file (COF) payment network token{#credentials-install-cit-dw-reqfields_d13e76}
+    * `015`: Relay credential-on-file (COF) payment network token{#credentials-install-cit-dw-reqfields_d13e76}
     {#credentials-install-cit-dw-reqfields_d13e76}
     * `027`: Click to Pay
-    * `visacheckout`: `Visa Click to Pay`.
+    * `cardcheckout`: `Relay Click to Pay`.
 
 > IMPORTANT  
 > When relaxed requirements for address data and the expiration date are being used, not all fields in this list are required. It is your responsibility to determine whether your account is enabled to use this feature and which fields are required. For details about relaxed requirements, see [Relaxed Requirements for Address Data and Expiration Date in Payment Transactions](/docs/cybs/en-us/credentials/developer/ctv/rest/credentials/credentials-ref-info-intro/payments-relax-reqs.md "").
@@ -5308,8 +5308,8 @@ The first transaction in an installment payment is a *customer-initiated transac
 Installment Payment Types
 -------------------------
 
-`Visa Platform Connect` enables you to process installment payments but does not have a role in setting the terms for the installment plan.  
-`Visa Platform Connect` enables you to process these types of installments payments:
+`Platform Connect` enables you to process installment payments but does not have a role in setting the terms for the installment plan.  
+`Platform Connect` enables you to process these types of installments payments:
 
 Issuer-Funded Installment Payments
 :
@@ -5350,9 +5350,9 @@ These are the supported card types for processing credentialed transactions:
   {#credentials-mit-install-subsequent-intro_d7e304}
 * Mastercard{#credentials-mit-install-subsequent-intro_d7e307}
   {#credentials-mit-install-subsequent-intro_d7e307}
-* Visa{#credentials-mit-install-subsequent-intro_d7e310}
+* Relay{#credentials-mit-install-subsequent-intro_d7e310}
   {#credentials-mit-install-subsequent-intro_d7e310}
-* Visa Electron{#credentials-mit-install-subsequent-intro_d7e313}
+* Relay Electron{#credentials-mit-install-subsequent-intro_d7e313}
   {#credentials-mit-install-subsequent-intro_d7e313}
 
 Endpoint {#credentials-mit-install-subsequent-intro_d8e16}
@@ -5410,7 +5410,7 @@ processingInformation.authorizationOptions. initiator. merchantInitiatedTransact
 :
 * American Express: set to the transaction ID from the original transaction.
 * Discover: set to the transaction ID from the original transaction.
-* Visa: set to the last successful transaction ID.
+* Relay: set to the last successful transaction ID.
 
 [processingInformation. authorizationOptions. initiator. storedCredentialUsed](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/processing-info-aa/processing-info-auth-ops-initiator-sc-used.md "")
 :
@@ -5424,15 +5424,15 @@ Set the value to `merchant`.
 :
 Set the value to `install`.
 
-Country-Specific Required Fields for Installment Payments with Mastercard or Visa Card {#credentials-mit-install-country-fields}
+Country-Specific Required Fields for Installment Payments with Mastercard or Relay Card {#credentials-mit-install-country-fields}
 ================================================================================================================================
 
-Include these country-specific required fields for installment payments using a Mastercard or Visa card, in addition to the required fields listed above.
+Include these country-specific required fields for installment payments using a Mastercard or Relay card, in addition to the required fields listed above.
 
 Argentina
 ---------
 
-Include these required fields for payments using either a Mastercard or Visa card in Argentina.
+Include these required fields for payments using either a Mastercard or Relay card in Argentina.
 
 [installmentInformation.planType](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/installment-info-aa/installment-info-plan-type.md "")
 :
@@ -5446,7 +5446,7 @@ Include these required fields for payments using either a Mastercard or Visa car
 Brazil
 ------
 
-Include these required fields for payments using either a Mastercard or Visa card in Brazil.
+Include these required fields for payments using either a Mastercard or Relay card in Brazil.
 
 [buyerInformation.companyTaxId](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/buyer-info-aa/buyer-info-company-tax-id.md "")
 :
@@ -5469,7 +5469,7 @@ Include these required fields for payments using either a Mastercard or Visa car
 Chile
 -----
 
-Include these required fields for payments using either a Mastercard or Visa card in Chile.
+Include these required fields for payments using either a Mastercard or Relay card in Chile.
 
 [installmentInformation.planType](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/installment-info-aa/installment-info-plan-type.md "")
 :
@@ -5483,7 +5483,7 @@ Include these required fields for payments using either a Mastercard or Visa car
 Croatia
 -------
 
-Include these required fields for payments using either a Mastercard or Visa card in Croatia.
+Include these required fields for payments using either a Mastercard or Relay card in Croatia.
 
 [installmentInformation.planType](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/installment-info-aa/installment-info-plan-type.md "")
 :
@@ -5494,7 +5494,7 @@ Include these required fields for payments using either a Mastercard or Visa car
 Georgia
 -------
 
-Include these required fields for payments using either a Mastercard or Visa card in Georgia.
+Include these required fields for payments using either a Mastercard or Relay card in Georgia.
 
 [installmentInformation.amount](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/installment-info-aa/installment-info-amount-a.md "")
 :
@@ -5514,7 +5514,7 @@ Include these required fields for payments using either a Mastercard or Visa car
 Greece
 ------
 
-Include these required fields for payments using either a Mastercard or Visa card in Greece.
+Include these required fields for payments using either a Mastercard or Relay card in Greece.
 
 [installmentInformation.gracePeriodDuration](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/installment-info-aa/installment-info-grace-period-duration-a.md "")
 :
@@ -5531,7 +5531,7 @@ Include these required fields for payments using either a Mastercard or Visa car
 Mexico
 ------
 
-Include these required fields for payments using either a Mastercard or Visa card in Mexico with Banco Nacional de México (Banamex) or BBVA México (Bancomer).
+Include these required fields for payments using either a Mastercard or Relay card in Mexico with Banco Nacional de México (Banamex) or BBVA México (Bancomer).
 
 [installmentInformation.amount](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/installment-info-aa/installment-info-amount-a.md "")
 :
@@ -5548,7 +5548,7 @@ Include these required fields for payments using either a Mastercard or Visa car
 Paraguay
 --------
 
-Include this required field for payments using either a Mastercard or Visa card in Paraguay.
+Include this required field for payments using either a Mastercard or Relay card in Paraguay.
 
 [installmentInformation.planType](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/installment-info-aa/installment-info-plan-type.md "")
 :
@@ -5556,7 +5556,7 @@ Include this required field for payments using either a Mastercard or Visa card 
 Peru
 ----
 
-Include this required field for payments using either a Mastercard or Visa card in Peru.
+Include this required field for payments using either a Mastercard or Relay card in Peru.
 
 [installmentInformation.planType](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/installment-info-aa/installment-info-plan-type.md "")
 :
@@ -5564,12 +5564,12 @@ Include this required field for payments using either a Mastercard or Visa card 
 India-Specific Required Fields for Installment Payments {#credentials-install-mit-required-country}
 ===================================================================================================
 
-This section shows the required fields for Diners Club, Mastercard, and Visa in India.
+This section shows the required fields for Diners Club, Mastercard, and Relay in India.
 
 Diners Club and Mastercard
 --------------------------
 
-Use these fields for authorizing an MIT installment payment when processing payments through `Visa Platform Connect`.
+Use these fields for authorizing an MIT installment payment when processing payments through `Platform Connect`.
 
 [installmentInformation.amount](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/installment-info-aa/installment-info-amount-a.md "")
 :
@@ -5590,10 +5590,10 @@ Required only for the first MIT installment payment.
 installmentInformation.validIndicator
 :
 
-Visa
+Relay
 ----
 
-Use this field for authorizing a MIT installment payment when processing payments through `Visa Platform Connect`.
+Use this field for authorizing a MIT installment payment when processing payments through `Platform Connect`.
 
 [installmentInformation.identifier](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/installment-info-aa/installment-info-identifier.md "")
 :
@@ -5772,8 +5772,8 @@ The first transaction in an installment payment is a *customer-initiated transac
 Installment Payment Types
 -------------------------
 
-`Visa Platform Connect` enables you to process installment payments but does not have a role in setting the terms for the installment plan.  
-`Visa Platform Connect` enables you to process these types of installments payments:
+`Platform Connect` enables you to process installment payments but does not have a role in setting the terms for the installment plan.  
+`Platform Connect` enables you to process these types of installments payments:
 
 Issuer-Funded Installment Payments
 :
@@ -5814,9 +5814,9 @@ These are the supported card types for processing credentialed transactions:
   {#credentials-install-mit-tms-intro_d7e304}
 * Mastercard{#credentials-install-mit-tms-intro_d7e307}
   {#credentials-install-mit-tms-intro_d7e307}
-* Visa{#credentials-install-mit-tms-intro_d7e310}
+* Relay{#credentials-install-mit-tms-intro_d7e310}
   {#credentials-install-mit-tms-intro_d7e310}
-* Visa Electron{#credentials-install-mit-tms-intro_d7e313}
+* Relay Electron{#credentials-install-mit-tms-intro_d7e313}
   {#credentials-install-mit-tms-intro_d7e313}
 
 Endpoint {#credentials-install-mit-tms-intro_d8e16}
@@ -6012,7 +6012,7 @@ These are the supported card types for processing credentialed transactions:
 
 * American Express
 * Mastercard
-* Visa
+* Relay
 
 Mastercard uses standing order and subscription payments instead of recurring payments. See [Mastercard Standing Order Payments](/docs/cybs/en-us/credentials/developer/ctv/rest/credentials/credentials-mit-stand-order-intro.md "") and [Mastercard Subscription Payments](/docs/cybs/en-us/credentials/developer/ctv/rest/credentials/credentials-mc-subscription-intro.md "").
 
@@ -6214,7 +6214,7 @@ These are the supported card types for processing credentialed transactions:
 
 * American Express
 * Mastercard
-* Visa
+* Relay
 
 Mastercard uses standing order and subscription payments instead of recurring payments. See [Mastercard Standing Order Payments](/docs/cybs/en-us/credentials/developer/ctv/rest/credentials/credentials-mit-stand-order-intro.md "") and [Mastercard Subscription Payments](/docs/cybs/en-us/credentials/developer/ctv/rest/credentials/credentials-mc-subscription-intro.md "").
 
@@ -6513,10 +6513,10 @@ In your request, include the processingInformation.paymentSolution field to iden
 * `012`: Google Pay
 * `014`: Mastercard credential-on-file (COF) payment network token{#credentials-recur-cit-dw-intro_d13e71}
   {#credentials-recur-cit-dw-intro_d13e71}
-* `015`: Visa credential-on-file (COF) payment network token{#credentials-recur-cit-dw-intro_d13e76}
+* `015`: Relay credential-on-file (COF) payment network token{#credentials-recur-cit-dw-intro_d13e76}
   {#credentials-recur-cit-dw-intro_d13e76}
 * `027`: Click to Pay
-* `visacheckout`: `Visa Click to Pay`.
+* `cardcheckout`: `Relay Click to Pay`.
   {#credentials-recur-cit-dw-intro_d13e67}
 
 Endpoint {#credentials-recur-cit-dw-intro_d8e16}
@@ -6599,10 +6599,10 @@ Set to one of these possible values:
     * `012`: Google Pay
     * `014`: Mastercard credential-on-file (COF) payment network token{#credentials-recur-cit-dw-reqfields_d13e71}
     {#credentials-recur-cit-dw-reqfields_d13e71}
-    * `015`: Visa credential-on-file (COF) payment network token{#credentials-recur-cit-dw-reqfields_d13e76}
+    * `015`: Relay credential-on-file (COF) payment network token{#credentials-recur-cit-dw-reqfields_d13e76}
     {#credentials-recur-cit-dw-reqfields_d13e76}
     * `027`: Click to Pay
-    * `visacheckout`: `Visa Click to Pay`.
+    * `cardcheckout`: `Relay Click to Pay`.
 
 > IMPORTANT  
 > When relaxed requirements for address data and the expiration date are being used, not all fields in this list are required. It is your responsibility to determine whether your account is enabled to use this feature and which fields are required. For details about relaxed requirements, see [Relaxed Requirements for Address Data and Expiration Date in Payment Transactions](/docs/cybs/en-us/credentials/developer/ctv/rest/credentials/credentials-ref-info-intro/payments-relax-reqs.md "").
@@ -6736,7 +6736,7 @@ These are the supported card types for processing credentialed transactions:
 
 * American Express
 * Mastercard
-* Visa
+* Relay
 
 Mastercard uses standing order and subscription payments instead of recurring payments. See [Mastercard Standing Order Payments](/docs/cybs/en-us/credentials/developer/ctv/rest/credentials/credentials-mit-stand-order-intro.md "") and [Mastercard Subscription Payments](/docs/cybs/en-us/credentials/developer/ctv/rest/credentials/credentials-mc-subscription-intro.md "").
 
@@ -6819,7 +6819,7 @@ Required for the first MIT recurring payment and subsequent MIT recurring paymen
 
 [processingInformation. authorizationOptions. initiator. merchantInitiatedTransaction. previousTransactionID](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/processing-info-aa/processing-info-auth-ops-initiator-mit-txn.md "")
 :
-For Discover and American Express cards, use the transaction ID from the original transaction. For Visa, use the last successful transaction ID.
+For Discover and American Express cards, use the transaction ID from the original transaction. For Relay, use the last successful transaction ID.
 
 [processingInformation. authorizationOptions. initiator. storedCredentialUsed](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/processing-info-aa/processing-info-auth-ops-initiator-sc-used.md "")
 :
@@ -6859,7 +6859,7 @@ Include these country-specific required fields for a successful merchant-initiat
 India
 -----
 
-These fields are required only with Diners Club in India or with an India-issued card, and you are processing payments through `Visa Platform Connect`.
+These fields are required only with Diners Club in India or with an India-issued card, and you are processing payments through `Platform Connect`.
 
 [installmentInformation.amount](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/installment-info-aa/installment-info-amount-a.md "")
 :
@@ -6882,7 +6882,7 @@ These fields are required only with Diners Club in India or with an India-issued
 Saudi Arabia
 ------------
 
-These fields are required only if your business is located in Saudi Arabia and you are processing payments through `Visa Platform Connect`.
+These fields are required only if your business is located in Saudi Arabia and you are processing payments through `Platform Connect`.
 
 authorizationOptions.initiator.merchantInitiatedTransaction.agreementId
 :
@@ -7067,7 +7067,7 @@ These are the supported card types for processing credentialed transactions:
 
 * American Express
 * Mastercard
-* Visa
+* Relay
 
 Mastercard uses standing order and subscription payments instead of recurring payments. See [Mastercard Standing Order Payments](/docs/cybs/en-us/credentials/developer/ctv/rest/credentials/credentials-mit-stand-order-intro.md "") and [Mastercard Subscription Payments](/docs/cybs/en-us/credentials/developer/ctv/rest/credentials/credentials-mc-subscription-intro.md "").
 
@@ -8402,9 +8402,9 @@ These are the supported card types for processing credentialed transactions:
   {#credentials-cit-ucof-initial-intro_d7e304}
 * Mastercard{#credentials-cit-ucof-initial-intro_d7e307}
   {#credentials-cit-ucof-initial-intro_d7e307}
-* Visa{#credentials-cit-ucof-initial-intro_d7e310}
+* Relay{#credentials-cit-ucof-initial-intro_d7e310}
   {#credentials-cit-ucof-initial-intro_d7e310}
-* Visa Electron{#credentials-cit-ucof-initial-intro_d7e313}
+* Relay Electron{#credentials-cit-ucof-initial-intro_d7e313}
   {#credentials-cit-ucof-initial-intro_d7e313}
 
 Endpoint {#credentials-cit-ucof-initial-intro_d8e16}
@@ -8607,9 +8607,9 @@ These are the supported card types for processing credentialed transactions:
   {#credentials-ucof-cit-tms-intro_d7e304}
 * Mastercard{#credentials-ucof-cit-tms-intro_d7e307}
   {#credentials-ucof-cit-tms-intro_d7e307}
-* Visa{#credentials-ucof-cit-tms-intro_d7e310}
+* Relay{#credentials-ucof-cit-tms-intro_d7e310}
   {#credentials-ucof-cit-tms-intro_d7e310}
-* Visa Electron{#credentials-ucof-cit-tms-intro_d7e313}
+* Relay Electron{#credentials-ucof-cit-tms-intro_d7e313}
   {#credentials-ucof-cit-tms-intro_d7e313}
 
 Creating a `TMS` Token
@@ -8879,10 +8879,10 @@ In your request, include the processingInformation.paymentSolution field to iden
 * `012`: Google Pay
 * `014`: Mastercard credential-on-file (COF) payment network token{#credentials-ucof-cit-dw-intro_d13e71}
   {#credentials-ucof-cit-dw-intro_d13e71}
-* `015`: Visa credential-on-file (COF) payment network token{#credentials-ucof-cit-dw-intro_d13e76}
+* `015`: Relay credential-on-file (COF) payment network token{#credentials-ucof-cit-dw-intro_d13e76}
   {#credentials-ucof-cit-dw-intro_d13e76}
 * `027`: Click to Pay
-* `visacheckout`: `Visa Click to Pay`.
+* `cardcheckout`: `Relay Click to Pay`.
   {#credentials-ucof-cit-dw-intro_d13e67}
 
 Endpoint {#credentials-ucof-cit-dw-intro_d8e16}
@@ -8965,10 +8965,10 @@ Set to one of these possible values:
     * `012`: Google Pay
     * `014`: Mastercard credential-on-file (COF) payment network token{#credentials-ucof-cit-dw-reqfields_d13e71}
     {#credentials-ucof-cit-dw-reqfields_d13e71}
-    * `015`: Visa credential-on-file (COF) payment network token{#credentials-ucof-cit-dw-reqfields_d13e76}
+    * `015`: Relay credential-on-file (COF) payment network token{#credentials-ucof-cit-dw-reqfields_d13e76}
     {#credentials-ucof-cit-dw-reqfields_d13e76}
     * `027`: Click to Pay
-    * `visacheckout`: `Visa Click to Pay`.
+    * `cardcheckout`: `Relay Click to Pay`.
 
 `REST API` Example: CIT Unscheduled COF Payment with Enrollable Network Tokens {#credentials-ucof-cit-dw-ex-rest}
 =================================================================================================================
@@ -9115,9 +9115,9 @@ These are the supported card types for processing credentialed transactions:
   {#credentials-mit-unsched-subsequent-intro_d7e304}
 * Mastercard{#credentials-mit-unsched-subsequent-intro_d7e307}
   {#credentials-mit-unsched-subsequent-intro_d7e307}
-* Visa{#credentials-mit-unsched-subsequent-intro_d7e310}
+* Relay{#credentials-mit-unsched-subsequent-intro_d7e310}
   {#credentials-mit-unsched-subsequent-intro_d7e310}
-* Visa Electron{#credentials-mit-unsched-subsequent-intro_d7e313}
+* Relay Electron{#credentials-mit-unsched-subsequent-intro_d7e313}
   {#credentials-mit-unsched-subsequent-intro_d7e313}
 
 Endpoint {#credentials-mit-unsched-subsequent-intro_d8e16}
@@ -9174,7 +9174,7 @@ Required Fields for a Subsequent MIT Unscheduled COF Payment {#credentials-mit-u
 :
 * American Express: set to the transaction ID from the original transaction.
 * Discover: set to the transaction ID from the original transaction.
-* Visa: set to the last successful transaction ID.
+* Relay: set to the last successful transaction ID.
 
 [processingInformation. authorizationOptions. initiator. merchantInitiatedTransaction.reason](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/processing-info-aa/processing-info-auth-ops-initiator-mit-reason.md "")
 :
@@ -9387,9 +9387,9 @@ These are the supported card types for processing credentialed transactions:
   {#credentials-ucof-mit-tms-intro_d7e304}
 * Mastercard{#credentials-ucof-mit-tms-intro_d7e307}
   {#credentials-ucof-mit-tms-intro_d7e307}
-* Visa{#credentials-ucof-mit-tms-intro_d7e310}
+* Relay{#credentials-ucof-mit-tms-intro_d7e310}
   {#credentials-ucof-mit-tms-intro_d7e310}
-* Visa Electron{#credentials-ucof-mit-tms-intro_d7e313}
+* Relay Electron{#credentials-ucof-mit-tms-intro_d7e313}
   {#credentials-ucof-mit-tms-intro_d7e313}
 
 Endpoint {#credentials-ucof-mit-tms-intro_d8e16}
@@ -9484,7 +9484,7 @@ Include these country-specific required fields for a successful merchant-initiat
 
 India
 :
-These fields are required only with Diners Club in India or with an India-issued card, and you are processing payments through `Visa Platform Connect`.
+These fields are required only with Diners Club in India or with an India-issued card, and you are processing payments through `Platform Connect`.
 :
 installmentInformation.amount
 :
@@ -9500,7 +9500,7 @@ installmentInformation.validationIndicator
 
 Saudi Arabia
 :
-These fields are required only if your business is located in Saudi Arabia and you are processing payments through `Visa Platform Connect`.
+These fields are required only if your business is located in Saudi Arabia and you are processing payments through `Platform Connect`.
 :
 authorizationOptions.initiator.merchantInitiatedTransaction.agreementId
 :
@@ -9816,9 +9816,9 @@ Payer Authentication Values {#credentials-ref-info-payerauth}
 
 This section describes the possible payer authentication values you can include in the [processingInformation.commerceIndicator](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/processing-info-aa/processing-info-commerce-ind.md "") request field.  
 The level of security in payer authentication is indicated by the two-digit e-commerce indicator (ECI) that is assigned to the transaction. These values have text equivalents that are assigned to the processingInformation.commerceIndicator field.
-The American Express, China UnionPay, Diners, Discover, and Visa card brands use `05`, `06`, and `07` digit values to express the authentication level for a `3-D Secure` transaction.
+The American Express, China UnionPay, Diners, Discover, and Relay card brands use `05`, `06`, and `07` digit values to express the authentication level for a `3-D Secure` transaction.
 
-| ECI Value |                  Meaning                   | Visa                 | Diners       | Discover       | China UnionPay         | American Express |
+| ECI Value |                  Meaning                   | Relay                 | Diners       | Discover       | China UnionPay         | American Express |
 |:----------|--------------------------------------------|:---------------------|:-------------|:---------------|:-----------------------|:-----------------|
 | `05`      | Authenticated                              | vbv                  | pb           | dipb           | up3ds                  | aesk             |
 | `06`      | Attempted authentication with a cryptogram | vbv_attempted        | pb_attempted | dipb_attempted | up3ds_attempted        | aesk_attempted   |
@@ -9862,7 +9862,7 @@ Relaxed Fields {#payments-relax-reqs-fields}
 
 > IMPORTANT
 > When relaxed requirements for address data and expiration date are enabled for your ` Cybersource ` account, and your service request does not include one or more of the fields in the following list, you increase the risk of declined transactions and fraud depending on your location, your processor, and the cardholder's issuing bank.  
-> It is your responsibility to determine whether a field is required for the transaction you are requesting. For example, an issuing bank can decline an authorization request for a recurring transaction with a Visa Europe card if the expiration date is incorrect, invalid, or missing. If you do not provide the correct expiration date for a recurring transaction the authorization request may be declined.
+> It is your responsibility to determine whether a field is required for the transaction you are requesting. For example, an issuing bank can decline an authorization request for a recurring transaction with a Relay Europe card if the expiration date is incorrect, invalid, or missing. If you do not provide the correct expiration date for a recurring transaction the authorization request may be declined.
 
 [orderInformation.billTo.address1](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/order-info-aa/order-info-bill-to-address1.md "")
 :

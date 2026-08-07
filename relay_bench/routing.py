@@ -1,6 +1,6 @@
 """Failure classifier → product-surface improvement actions.
 
-VAP CLI actions treat the CLI as a workflow verifier descriptor, not a wrapper.
+Relay CLI actions treat the CLI as a workflow verifier descriptor, not a wrapper.
 """
 
 from __future__ import annotations
@@ -26,7 +26,7 @@ _CATEGORY_BY_WORKFLOW: Dict[str, str] = {
 def _vap_cli_for(candidate: WorkflowCandidate) -> VapCliDescriptor:
     return VapCliDescriptor(
         goal=candidate.goal,
-        command=f"vap workflow verify --id {candidate.workflow_id} --fixture local",
+        command=f"relay workflow verify --id {candidate.workflow_id} --fixture local",
         api_sdk_facts=list(candidate.api_sdk_facts),
         readiness_checks=[
             "Frozen seeds present under data/seeds/",
@@ -53,7 +53,7 @@ def _vap_cli_for(candidate: WorkflowCandidate) -> VapCliDescriptor:
             "eval:verifier_catch_rate_on_bad_answer",
         ],
         future_mcp_metadata={
-            "mcp_tool": "vap.verify_workflow",
+            "mcp_tool": "relay.verify_workflow",
             "inputs": ["workflow_id", "candidate_answer_ref"],
             "outputs": ["check_results", "improvement_actions"],
             "auth": "none-local-fixture",
@@ -79,10 +79,10 @@ def classify_failure(
             rationale="Developers confused adjacent APIs and skipped required stages.",
         ),
         ImprovementAction(
-            action_id=f"{candidate.workflow_id}-vap-cli",
+            action_id=f"{candidate.workflow_id}-relay-cli",
             product_surface="vap_cli",
             severity="high",
-            summary="Ship a VAP CLI workflow verifier for this contract",
+            summary="Ship a Relay CLI workflow verifier for this contract",
             rationale=(
                 "CLI should verify readiness, recovery, and support-safe evidence — "
                 "not only wrap an API call."

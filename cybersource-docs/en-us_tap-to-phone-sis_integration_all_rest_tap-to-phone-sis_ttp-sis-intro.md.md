@@ -16,7 +16,7 @@ Compatibility Requirements for Android Devices {#ttp-sis-intro-android-device-re
 Your Android device must be compatible with the Tap to Pay on Android Acceptance Devices App to accept contactless payments.  
 These are the requirements for a compatible Android device:
 
-* Tap to Pay Ready app is installed. You can download the app from the [Google Play Store](https://play.google.com/store/apps/details?id=com.visa.kic.app.kernel "").
+* Tap to Pay Ready app is installed. You can download the app from the [Google Play Store](https://play.google.com/store/apps/details?id=com.relay.kic.app.kernel "").
 * Google Play Integrity API contains `DEVICE_INTEGRITY` verdict. For more information, see the [Android Developer documentation](https://developer.android.com/google/play/integrity/additional-tools#check-device "").
 * Supports Google Mobile Services (GMS) and Google Play Store.
 * Android 12 or later operating system (OS), with a security update version of May 2022 or later. Android OS versions that do not receive security updates are not supported.

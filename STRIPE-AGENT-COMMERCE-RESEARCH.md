@@ -7,7 +7,7 @@ Stripe is executing a coordinated push into agent-native payments AND internal A
 **Track 1 — External:** Building the economic infrastructure for AI agents (MPP, SPTs, Link wallet, ACP)
 **Track 2 — Internal:** Building the engineering infrastructure to power agents (Minions coding agents, ML foundation model, Blueprint architecture, Toolshed MCP server)
 
-This is directly relevant to Visa Relay — Stripe is doing to agent-commerce what Visa/Visa Relay aims to do, AND they're building internal systems that let agents autonomously build Stripe integrations (1,300 PRs/week, no human assistance beyond code review).
+This is directly relevant to Relay — Stripe is doing to agent-commerce what Relay aims to do, AND they're building internal systems that let agents autonomously build Stripe integrations (1,300 PRs/week, no human assistance beyond code review).
 
 **The real threat isn't just Stripe's agentic commerce products — it's that Stripe is becoming a self-reinforcing loop:** Their ML foundation model processes 50K transactions/min in <100ms, their internal agents fix Stripe's own code autonomously, their external products enable other agents to transact, and all of this feeds data back into their models.
 
@@ -121,9 +121,9 @@ Centralized Model Context Protocol server providing agents access to ~500 intern
 - **URBN** — "Agentic commerce is another way to make it easier for customers to discover, shop, and connect"
 - **BestBuy, Wix, Etsy, Fanatics, Coach** — Listed as using Agentic Commerce Suite
 
-## How This Compares to Visa/Visa Relay
+## How This Compares to Relay
 
-### What Stripe Has Done That Visa Should Care About
+### What Stripe Has Done That Relay Should Care About
 
 1. **Two-track compound advantage:** Stripe isn't just building agentic commerce products (Track 1) — they're building internal systems that make their platform better autonomously (Track 2). 1,300 PRs/week from Minions agents. This creates a feedback loop no other player has.
 
@@ -135,20 +135,20 @@ Centralized Model Context Protocol server providing agents access to ~500 intern
 
 5. **The self-reinforcing loop:** ML model improves → better fraud detection → more businesses join → more transaction data → better models. Internal agents fix Stripe's code autonomously → platform improves faster → more dev adoption → more data. External products enable thousands of other agents to transact → more data for models. **This is the real competitive moat.**
 
-### Visa's Potential Advantages
+### Relay's Potential Advantages
 
-1. **Enterprise trust:** Visa's brand carries more weight for enterprise transactions where fraud/reconciliation matters
-2. **Network scale:** Visa has more merchants, more issuers, more transaction volume
-3. **Reconciliation expertise:** Visa/CyberSource has deep reconciliation experience that matters for agent transactions
-4. **Compliance infrastructure:** Visa's compliance/PCI infrastructure is battle-tested for enterprise use
+1. **Enterprise trust:** Relay's brand carries more weight for enterprise transactions where fraud/reconciliation matters
+2. **Network scale:** Relay has more merchants, more issuers, more transaction volume
+3. **Reconciliation expertise:** CyberSource has deep reconciliation experience that matters for agent transactions
+4. **Compliance infrastructure:** Relay's compliance/PCI infrastructure is battle-tested for enterprise use
 
-### What Visa/Visa Relay Needs to Answer
+### What Relay Needs to Answer
 
-- What's Visa's version of MPP?
+- What's Relay's version of MPP?
 - How do you handle the "agent identity" problem? (proving an agent is authorized to spend)
 - What's your approach to reconciliation for agent-initiated transactions?
-- How does Visa's version of SPTs work?
-- What's the Visa/Visa Relay version of Link's agent wallet?
+- How does Relay's version of SPTs work?
+- What's the Relay version of Link's agent wallet?
 - How do you measure agent integration quality like Stripe does?
 
 ## Key Questions for Poornima at the Event
@@ -166,22 +166,22 @@ Centralized Model Context Protocol server providing agents access to ~500 intern
 3. "What's the biggest friction point for businesses adopting agentic commerce?"
 
 ### Competitive
-1. "How do you see Visa's role in the agent economy?"
-2. "What would differentiate a Visa-powered agentic commerce experience from Stripe's?"
+1. "How do you see Relay's role in the agent economy?"
+2. "What would differentiate a Relay-powered agentic commerce experience from Stripe's?"
 3. "Are you collaborating with other card networks on agent protocols?"
 
 ## Poornima's Positioning at the Event
 
 ### Her Differentiators
-- Deep CyberSource/Visa Acceptance experience in enterprise payment infrastructure
+- Deep CyberSource/Acceptance Platform experience in enterprise payment infrastructure
 - Reconciliation expertise that matters for agent transactions
-- Understanding of Visa's network advantages vs Stripe's developer-first approach
-- Direct experience with agent-readiness challenges (Visa Relay)
+- Understanding of Relay's network advantages vs Stripe's developer-first approach
+- Direct experience with agent-readiness challenges (Relay)
 
 ### How to Talk About It
-- "I work on making payment platforms agent-ready — at Visa, we're building Visa Relay to let AI agents transact across Visa's network"
-- "Reconciliation is the unsolved problem for agent transactions — here's what we're thinking about at Visa"
-- "Visa's enterprise trust is our advantage — here's how we're thinking about agent commerce for enterprise use cases"
+- "I work on making payment platforms agent-ready — at Relay, we're building Relay to let AI agents transact across Relay's network"
+- "Reconciliation is the unsolved problem for agent transactions — here's what we're thinking about at Relay"
+- "Relay's enterprise trust is our advantage — here's how we're thinking about agent commerce for enterprise use cases"
 
 ## What to Listen For
 
@@ -199,10 +199,10 @@ During panel and tech talks:
 - Document key learnings in a brief
 
 ### Within 1 week
-- Share insights with Visa Relay team
+- Share insights with Relay team
 - Identify 2-3 specific actions based on what was heard
 
 ### Ongoing
 - Monitor Stripe's Agentic Commerce announcements
 - Track MPP adoption metrics
-- Build competitive intelligence on Visa's positioning
+- Build competitive intelligence on Relay's positioning

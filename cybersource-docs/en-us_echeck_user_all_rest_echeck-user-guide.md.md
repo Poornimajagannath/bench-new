@@ -24,7 +24,7 @@ Customer Support
 :
 For support information about any service, visit the Support Center:
 
-[http://support.visaacceptance.com](http://support.cybersource.com "")
+[http://support.example.com](http://support.cybersource.com "")
 
 Recent Revisions to This Document {#devtemp-doc-revisions}
 ==========================================================
@@ -93,7 +93,7 @@ There are two main types of eCheck transactions:
 Requirements for Using the eCheck Service
 -----------------------------------------
 
-The eCheck service is available to eligible Visa Acceptance Solutions merchants that meet one of these two requirements:
+The eCheck service is available to eligible Acceptance Platform Solutions merchants that meet one of these two requirements:
 
 * US citizens or residents who are at least 18 years of age and have been issued a Social Security number.
 * United States or foreign-based corporations that use the eCheck services only for customers using US bank accounts and that hold and maintain a bank account in the United States with a US-based financial institution.
@@ -169,7 +169,7 @@ Getting Started with the eCheck Service {#echeck-gs}
 ====================================================
 
 The eCheck payment service enables merchants to accept electronic check payments using a variety of methods, including mail, telephone, and online orders.  
-The eCheck service is available to eligible Visa Acceptance Solutions merchants that meet one of these two requirements:
+The eCheck service is available to eligible Acceptance Platform Solutions merchants that meet one of these two requirements:
 
 * U.S. citizens or residents who are at least 18 years of age and have been issued a Social Security number.
 * United States or foreign-based corporations that use the eCheck services only for customers using US bank accounts and that hold and maintain a bank account in the United States with a US-based financial institution.
@@ -177,7 +177,7 @@ The eCheck service is available to eligible Visa Acceptance Solutions merchants 
 eCheck Application {#echeck-application-intro}
 ==============================================
 
-To apply for the eCheck service, submit an application that contains information about your business. The Visa Acceptance Solutions Risk Team reviews your eCheck service application and accompanying documentation based on pre-determined underwriting criteria. Visa Acceptance Solutions may request additional information or documentation from you before making a decision about your application. In addition, a risk reserve (the withholding of a percentage of eCheck funds to cover potential costs incurred by high-risk transactions) may be required prior to activation of the service. After your application is reviewed, you will be notified via email of the underwriting decision. If your application is declined, the email will provide the reason(s) for the decline.
+To apply for the eCheck service, submit an application that contains information about your business. The Acceptance Platform Solutions Risk Team reviews your eCheck service application and accompanying documentation based on pre-determined underwriting criteria. Acceptance Platform Solutions may request additional information or documentation from you before making a decision about your application. In addition, a risk reserve (the withholding of a percentage of eCheck funds to cover potential costs incurred by high-risk transactions) may be required prior to activation of the service. After your application is reviewed, you will be notified via email of the underwriting decision. If your application is declined, the email will provide the reason(s) for the decline.
 
 Submitting the eCheck Application {#echeck-application-procedure}
 =================================================================
@@ -424,7 +424,7 @@ For a [fixed risk reserve](# ""), the reserve balance is established by one of t
 eCheck Processing Limits and Settings {#echeck-processing-limits}
 =================================================================
 
-When completing the eCheck application, you can request that a specific monthly and per-transaction limit be considered. However, the eCheck processing limits are determined during the underwriting process for your application. The requested amounts should be based on what you anticipate processing with eCheck. After sufficient processing history is established, you can request a limit increase at the Support Center at [support.visaacceptance.com](https://support.visaacceptance.com ""). At that time, the `Cybersource` Risk Team will review your account history and can approve, modify, or decline the request to increase your processing limits.
+When completing the eCheck application, you can request that a specific monthly and per-transaction limit be considered. However, the eCheck processing limits are determined during the underwriting process for your application. The requested amounts should be based on what you anticipate processing with eCheck. After sufficient processing history is established, you can request a limit increase at the Support Center at [support.example.com](https://support.example.com ""). At that time, the `Cybersource` Risk Team will review your account history and can approve, modify, or decline the request to increase your processing limits.
 IMPORTANT If you exceed the monthly processing limit, a funding hold is applied to your account and you must contact the Support Center to remove the hold and increase your limit, if needed, based upon your account history.  
 Processing settings include:
 
@@ -1456,7 +1456,7 @@ Type of transaction. Possible values for this use case:
 
     * `internet` (default): Order placed from a website.
     * `moto`: Mail order or telephone order.
-    * `recurring`: Recurring payment that is a US transaction or non-US mail order or telephone order (MOTO) transaction. For merchant-initiated transactions on `Visa Platform Connect` with Mastercard in India or with an India-issued card, the recurring value is used for the recurring payment scenario.
+    * `recurring`: Recurring payment that is a US transaction or non-US mail order or telephone order (MOTO) transaction. For merchant-initiated transactions on `Platform Connect` with Mastercard in India or with an India-issued card, the recurring value is used for the recurring payment scenario.
 
 REST Example: Creating an eCheck Token and Processing an eCheck Transaction {#echeck-api-cre-token-with-txn-example}
 ====================================================================================================================
@@ -2510,7 +2510,7 @@ Day 6 {#echeck-reports-use-case-day6}
 On day 6, the merchant processes three debit transactions totaling $8,250 and credit transactions totaling $500. The sum of credit and debit transactions ($7,750) is moved to the settlement account. $490 is funded from days 2 and 3, based on the settlement account balance, minus the debit amounts for days 4, 5, and 6. Reconciliation reports are generated for day 2 and 3 transactions and day 5 and 6 credits.  
 On day 6, the $40,000 monthly transaction limit is reached. Consequently, all funding and all credit transactions are put on hold until the following month or until the limit is raised.  
 To request that the monthly transaction processing limit is raised, visit the Support Center:  
-<http://support.visaacceptance.com>
+<http://support.example.com>
 
 Day 7 {#echeck-reports-use-case-day7}
 =====================================

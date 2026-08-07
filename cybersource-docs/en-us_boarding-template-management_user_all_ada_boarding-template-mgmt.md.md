@@ -41,7 +41,7 @@ Payer Authentication Fields
 :
 The following card types have been updated in [Payer Authentication Templates](/docs/cybs/en-us/boarding-template-management/user/all/ada/boarding-template-mgmt/templates-matrix-intro/templates-matrix-pa.md ""), and configuration information has been updated:
 
-    * Verified by Visa is now Visa Secure
+    * Verified by Relay is now Relay Secure
     * Mastercard SecureCode is now Mastercard Identity Check
     * AMEX SafeKey is now American Express SafeKey
     * JCB Secure is now JCB J/Secure
@@ -73,17 +73,17 @@ Customer Support
 For support information about any service, visit the Support Center:  
 <http://support.cybersource.com>
 
-VISA Platform Connect: Specifications and Conditions for Resellers/Partners {#vpc-partner-reseller-disclaimer}
+CARD Platform Connect: Specifications and Conditions for Resellers/Partners {#vpc-partner-reseller-disclaimer}
 ==============================================================================================================
 
-The following are specifications and conditions that apply to a Reseller/Partner enabling its merchants through Cybersource for Visa Platform Connect ("VPC") processing. Failure to meet any of the specifications and conditions below is subject to the liability provisions and indemnification obligations under Reseller/Partner's contract with Visa/Cybersource.
+The following are specifications and conditions that apply to a Reseller/Partner enabling its merchants through Cybersource for Platform Connect ("VPC") processing. Failure to meet any of the specifications and conditions below is subject to the liability provisions and indemnification obligations under Reseller/Partner's contract with Relay/Cybersource.
 
 1. Before boarding merchants for payment processing on a VPC acquirer's connection, Reseller/Partner and the VPC acquirer must have a contract or other legal agreement that permits Reseller/Partner to enable its merchants to process payments with the acquirer through the dedicated VPC connection and/or traditional connection with such VPC acquirer.
 2. Reseller/Partner is responsible for boarding and enabling its merchants in accordance with the terms of the contract or other legal agreement with the relevant VPC acquirer.
 3. Reseller/Partner acknowledges and agrees that all considerations and fees associated with chargebacks, interchange downgrades, settlement issues, funding delays, and other processing related activities are strictly between Reseller and the relevant VPC acquirer.
 4. Reseller/Partner acknowledges and agrees that the relevant VPC acquirer is responsible for payment processing issues, including but not limited to, transaction declines by network/issuer, decline rates, and interchange qualification, as may be agreed to or outlined in the contract or other legal agreement between Reseller/Partner and such VPC acquirer.
 
-DISCLAIMER: NEITHER VISA NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR ANY ERRORS OR OMISSIONS BY THE VISA PLATFORM CONNECT ACQUIRER IN PROCESSING TRANSACTIONS. NEITHER VISA NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR RESELLER/PARTNER BOARDING MERCHANTS OR ENABLING MERCHANT PROCESSING IN VIOLATION OF THE TERMS AND CONDITIONS IMPOSED BY THE RELEVANT VISA PLATFORM CONNECT ACQUIRER.
+DISCLAIMER: NEITHER CARD NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR ANY ERRORS OR OMISSIONS BY THE CARD PLATFORM CONNECT ACQUIRER IN PROCESSING TRANSACTIONS. NEITHER CARD NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR RESELLER/PARTNER BOARDING MERCHANTS OR ENABLING MERCHANT PROCESSING IN VIOLATION OF THE TERMS AND CONDITIONS IMPOSED BY THE RELEVANT CARD PLATFORM CONNECT ACQUIRER.
 
 Boarding Templates {#templates-about}
 =====================================
@@ -212,7 +212,7 @@ Select configuration options for these fields:
 
 | Field                           | Option 1         | Option 2        | Option 3        | Option 4 | Option 5 | Option 6 |
 |:--------------------------------|:-----------------|:----------------|:----------------|:---------|:---------|:---------|
-| Visa/Mastercard Mode            | Pan Upload       | Token API       | Monthly Harvest |          |          |          |
+| Relay/Mastercard Mode            | Pan Upload       | Token API       | Monthly Harvest |          |          |          |
 | AMEX Mode                       | Token API        | Monthly Harvest |                 |          |          |          |
 | Request Updates from AMEX       | Yes              | No              |                 |          |          |          |
 | AMEX SE Number                  | INPUT SE #       |                 |                 |          |          |          |
@@ -220,9 +220,9 @@ Select configuration options for these fields:
 | Request Updates from Mastercard | Yes              | No              |                 |          |          |          |
 | Mastercard ICA Number           | 10426            | 10427           | 1835            | 1836     | 4845     | 8773     |
 | Mastercard Merchant ID          | INPUT MID #      |                 |                 |          |          |          |
-| Request Updates from Visa       | Yes              | No              |                 |          |          |          |
-| VISA Segment ID                 | 0040             | 0043            | 0044            | 0048     | 0057     | 0088     |
-| VISA Merchant ID                | INPUT Visa MID # |                 |                 |          |          |          |
+| Request Updates from Relay       | Yes              | No              |                 |          |          |          |
+| CARD Segment ID                 | 0040             | 0043            | 0044            | 0048     | 0057     | 0088     |
+| CARD Merchant ID                | INPUT Relay MID # |                 |                 |          |          |          |
 [Account Updater Template Configuration Options]
 
 Card Processing Templates {#templates-matrix-card}
@@ -269,7 +269,7 @@ Select all of the card types that the merchant accepts. The card types listed in
 
     Depending on your payment processor, these are some of the card types you can expect to see listed:
 
-    * Visa
+    * Relay
     * Mastercard
     * American Express
     * Diners Club
@@ -407,9 +407,9 @@ Payer Authentication Templates {#templates-matrix-pa}
 
 `Payer Authentication` templates specify the payer authentication services that a merchant account will accept. To specify a payer authentication service, enter the acquirer ID in the associated field. This template supports the following payer authentication services:
 
-Visa Secure with EMV
+Relay Secure with EMV
 :
-The Visa card type uses Visa Secure with EMV as the authentication service. The acquirer ID is a text string that consists of 6 to 20 digits and starts with the number 4.
+The Relay card type uses Relay Secure with EMV as the authentication service. The acquirer ID is a text string that consists of 6 to 20 digits and starts with the number 4.
 
 Mastercard/Meeza Identity Check
 :
@@ -496,7 +496,7 @@ Select payment method and service configuration options for these fields:
 | Tokens: Token Types                  | Customers                                                                                                                                                                                   | Payment Instrument                                                                                                                                                  | Instrument Identifier                                            |
 |                                      | Click check box; then select from the following formats: - 32-character Hex - 22 Digits - 19 Digits Luhn Check Passing - 16 Digits Luhn Check Passing                                       | Click check box; then select from the following formats: - 32-character Hex - 22 Digits - 19 Digits Luhn Check Passing - 16 Digits Luhn Check Passing               | Format - Card, echeck (ACH) Formats default to 32 Character Hex. |
 | Card Number Masking Format           | Select either First 6 digits OR Last 4 returned clear                                                                                                                                       | Select either First 6 digits OR Last 4 returned clear                                                                                                               |                                                                  |
-| Enable Network Tokenization Services | VISA (Enable/Disable\*) Disabling this option requires the following information for authorization: - TRID, Client ID - API KEY, Post Back API Key - Shared Secret, Post Back Shared Secret | Mastercard (Required) Disabling this option requires the following information for authorization: - Enable Transactions with Mastercard Network Tokens - Enter TRID |                                                                  |
+| Enable Network Tokenization Services | CARD (Enable/Disable\*) Disabling this option requires the following information for authorization: - TRID, Client ID - API KEY, Post Back API Key - Shared Secret, Post Back Shared Secret | Mastercard (Required) Disabling this option requires the following information for authorization: - Enable Transactions with Mastercard Network Tokens - Enter TRID |                                                                  |
 | Push Notification Webhook            | Add Test URL if using Webhook for push notifications.                                                                                                                                       | Push notifications sent when there are updates to tokenized cards, (new card numbers, new expiration date, account closures).                                       |                                                                  |
 [`Token Management Service` Template Configuration Options]
 

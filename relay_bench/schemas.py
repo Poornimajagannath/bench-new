@@ -166,7 +166,7 @@ class VerifierResult:
 
 @dataclass
 class VapCliDescriptor:
-    """VAP CLI as a workflow verifier — not a thin command wrapper."""
+    """Relay CLI as a workflow verifier — not a thin command wrapper."""
 
     goal: str
     command: str

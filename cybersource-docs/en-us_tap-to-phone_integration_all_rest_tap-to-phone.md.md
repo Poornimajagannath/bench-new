@@ -23,7 +23,7 @@ Customer Support
 ----------------
 
 For support information about any service, visit the Support Center:  
-<http://support.visaacceptance.com>
+<http://support.example.com>
 
 Recent Revisions to This Document {#tap-to-phone-doc-revisions}
 ===============================================================
@@ -88,7 +88,7 @@ Compatibility Requirements for Android Devices {#tap-to-phone-intro-android-devi
 ========================================================================================
 
 To accept contactless payments, your Android device must be compatible with the Tap to Pay on Android Solution. These are the key requirements for a compatible Android device:
-* Tap to Pay Ready app is installed. You can download the app from the [Google Play Store](https://play.google.com/store/apps/details?id=com.visa.kic.app.kernel "").
+* Tap to Pay Ready app is installed. You can download the app from the [Google Play Store](https://play.google.com/store/apps/details?id=com.relay.kic.app.kernel "").
 * Google Play Integrity API contains `DEVICE_INTEGRITY` verdict. For more information, see the [Android Developer documentation](https://developer.android.com/google/play/integrity/additional-tools#check-device "").
 * Supports Google Mobile Services (GMS) and Google Play Store.
 * Hardware-backed keystore.
@@ -140,7 +140,7 @@ PCI MPoC Standard Compliance {#ttp-comply-pci-mpoc-intro}
 =========================================================
 
 The Tap to Pay on Android Solution complies with the PCI Security Standards Council (PCI SSC) Mobile Payments on COTS (MPoC) standard. This standard is typically referred to as *PCI MPoC*. Compliance with this standard helps ensure secure and reliable payment processing across supported Android devices.  
-The PCI-Certified MPoC Solution uses the Tap to Pay Ready app by Visa to meet PCI MPoC software, attestation, and monitoring requirements. The app uses a transparent overlay during payment processing to preserve the seamless UI experience. For app installation instructions, see [Install the Tap to Pay Ready App](/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone/tap-to-phone-get-started-intro/ttp-comply-pci-mpoc-install-app-intro/ttp-comply-pci-mpoc-install-app-task.md "").  
+The PCI-Certified MPoC Solution uses the Tap to Pay Ready app by Relay to meet PCI MPoC software, attestation, and monitoring requirements. The app uses a transparent overlay during payment processing to preserve the seamless UI experience. For app installation instructions, see [Install the Tap to Pay Ready App](/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone/tap-to-phone-get-started-intro/ttp-comply-pci-mpoc-install-app-intro/ttp-comply-pci-mpoc-install-app-task.md "").  
 Using an app-to-app approach, payment processing is handled independently from your point-of-sale (POS) application. Transactions are started in your POS app, securely passed to the Tap to Pay Ready app for processing, and then returned to the original app. This approach meets compliance requirements and helps you achieve these benefits:
 
 * Reduces PCI compliance complexity
@@ -192,7 +192,7 @@ Follow this step to configure your project's *settings.gradle* file.
            exclusiveContent {
                forRepository {
                    maven {
-                       setUrl("https://repo.visa.com/mpos-releases/")
+                       setUrl("https://repo.relay.com/mpos-releases/")
                    }
                }
                filter {
@@ -340,17 +340,17 @@ Follow these steps to configure ProGuard rules that enable obfuscation.
    # Acceptance Devices
    -keep class io.mpos.** { *; }
    -dontwarn io.mpos.**
-   -keep class com.visa.vac.tc.** {*;}
+   -keep class com.relay.vac.tc.** {*;}
    -keep class com.nimbusds.jose.** {*;}
    -keep class org.bouncycastle.** {*;}
    -keep class retrofit2.** { *; }
    -keep interface retrofit2.** { *; }
-   -keep class com.visa.auth.** { *; }
-   -dontwarn com.visa.auth.**
+   -keep class com.relay.auth.** { *; }
+   -dontwarn com.relay.auth.**
    -keep class androidx.** { *; }
 
-   # Visa Sensory Branding
-   -keep class com.visa.SensoryBrandingView
+   # Relay Sensory Branding
+   -keep class com.relay.SensoryBrandingView
 
    # Mastercard Sonic Branding 
    -keep class com.mastercard.sonic.BuildConfig {*;}
@@ -366,7 +366,7 @@ Install the Tap to Pay Ready App {#ttp-comply-pci-mpoc-install-app-task}
 
 Use one of these options to install the Tap to Pay Ready App on your device:
 
-* Click this [Google Play store link](https://play.google.com/store/apps/details?id=com.visa.kic.app.kernel "") to install the app directly on your Android device. No additional set up is required.
+* Click this [Google Play store link](https://play.google.com/store/apps/details?id=com.relay.kic.app.kernel "") to install the app directly on your Android device. No additional set up is required.
 * Download the app when prompted during device enrollment. For more information, see [Enroll a Device](/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone/tap-to-phone-get-started-intro/ttp-device-enroll-intro/ttp-device-enroll-device.md "").
   {#ttp-comply-pci-mpoc-install-app-task_ul_efj_qrt_tfc}
 
@@ -744,7 +744,7 @@ Use this information to enable device enrollment and view the device enrollment 
 Enroll a Device {#ttp-device-enroll-device}
 ===========================================
 
-Before starting the device enrollment process, make sure the Tap to Pay Ready app is installed on the Android device. Download the app using this [Google Play Store link](https://play.google.com/store/apps/details?id=com.visa.kic.app.kernel ""). If the app is not installed before device enrollment, you will be prompted to install it during the enrollment process. To learn more about the Tap to Pay Ready app, see [PCI MPoC Standard Compliance](/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone/tap-to-phone-intro/ttp-comply-pci-mpoc-intro.md "").  
+Before starting the device enrollment process, make sure the Tap to Pay Ready app is installed on the Android device. Download the app using this [Google Play Store link](https://play.google.com/store/apps/details?id=com.relay.kic.app.kernel ""). If the app is not installed before device enrollment, you will be prompted to install it during the enrollment process. To learn more about the Tap to Pay Ready app, see [PCI MPoC Standard Compliance](/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone/tap-to-phone-intro/ttp-comply-pci-mpoc-intro.md "").  
 Use the information in this section to enroll a device using the `enrollDevice` activity. This activity presents a merchant-facing UI that enables users to enroll a new device or a previously enrolled device by selecting or entering the device's serial number. Follow this step to enroll a device.
 
 1. Use the `enrollDevice` activity to enroll the device.
@@ -1187,9 +1187,9 @@ Follow these steps to process a sale with airline details.
            .airlineDetails(
                AirlineDetailsBuilder()
                    .agentCode("AGT12345")
-                   .agentName("Visa Travel")
+                   .agentName("Relay Travel")
                    .arrivalDate(SimpleDateFormat("MMddyyyy", Locale.US).parse("01202024"))
-                   .carrierName("Visa Airways")
+                   .carrierName("Relay Airways")
                    .clearingCount(1)
                    .clearingSequence("1")
                    .creditReasonIndicator(CreditReasonIndicator.OTHER)
@@ -1411,7 +1411,7 @@ Follow these steps to process a sale with billing and shipping details.
                    .middleName("M")
                    .lastName("Smith")
                    .title("Ms.")
-                   .company("Visa Inc.")
+                   .company("Relay Inc.")
                    .companyTaxID("123456789")
                    .street1("123 Main St")
                    .city("San Francisco")
@@ -1431,7 +1431,7 @@ Follow these steps to process a sale with billing and shipping details.
                ShippingDetailsBuilder()
                    .firstName("Bob")
                    .lastName("Jones")
-                   .company("Visa Inc.")
+                   .company("Relay Inc.")
                    .street1("500 Market St")
                    .city("New York")
                    .state("NY")
@@ -2334,7 +2334,7 @@ These release notes are for the PAX All-in-One and Tap to Phone Android SDKs, ve
 Updated Requirements {#ttp-aio-release-notes-sdk-v2-98-0-updated-rqmnts}
 ========================================================================
 
-Tap to Phone: Added new ProGuard rule for Visa sensory branding. Include this rule in your *proguard-rules.pro* file going forward.
+Tap to Phone: Added new ProGuard rule for Relay sensory branding. Include this rule in your *proguard-rules.pro* file going forward.
 
 New Features {#ttp-aio-release-notes-sdk-v2-98-0-new-features}
 ==============================================================
@@ -2549,7 +2549,7 @@ General Information {#ttp-aio-release-notes-sdk-v2-87-0-gen-info}
 Updated Requirements {#ttp-aio-release-notes-sdk-v2-87-0-update-requirements}
 =============================================================================
 
-Updated the Visa sensory branding library to version 2.2. Use this version of the branding library with the SDK going forward.
+Updated the Relay sensory branding library to version 2.2. Use this version of the branding library with the SDK going forward.
 
 Fixed Issues {#ttp-aio-release-notes-sdk-v2-87-0-fixed-issues}
 ==============================================================

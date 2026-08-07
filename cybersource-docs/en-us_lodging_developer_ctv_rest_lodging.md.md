@@ -19,7 +19,7 @@ Customer Support
 :
 For support information about any service, visit the Support Center:
 
-<http://support.visaacceptance.com>
+<http://support.example.com>
 
 Recent Revisions to This Document {#lodging-doc-revisions}
 ==========================================================
@@ -59,7 +59,7 @@ Supported Card Types {#lodging-card-types}
 These card types can be used to process lodging transactions:
 
 * Mastercard
-* Visa  
+* Relay  
   PIN debit cards are supported in North America only and can be used to process sales transactions only. Other transaction types, such as refunds or pre-authorizations, are not supported on PIN debit cards.
 
 Prerequisites {#lodging-prereqs}
@@ -67,7 +67,7 @@ Prerequisites {#lodging-prereqs}
 
 Before integrating `Cybersource` services for lodging transactions, you must have these items in place:
 
-* Merchant account with an acquirer that is enabled for processing lodging transactions on `Visa Platform Connect`.
+* Merchant account with an acquirer that is enabled for processing lodging transactions on `Platform Connect`.
 * `Cybersource` account for payment services.
 * Payment technology provider (PTP) that is integrated with `Cybersource` and can perform message-level validation (MLV).
 * EMV Level 1 certified terminals and EMV Level 2 certified software in preparation for EMV Level 3 Certification.
@@ -81,7 +81,7 @@ Message-Level Validation {#lodging-mlv}
 =======================================
 
 Message-level validation (MLV) is a script-based field-level validation against `Cybersource` specifications.  
-Your PTP uses amount-based test triggers to send transactions to a test environment and the Visa Certification Management System for decryption. The test results are XML or RESTful output, `Business Center` test transactions, and log prints.  
+Your PTP uses amount-based test triggers to send transactions to a test environment and the Relay Certification Management System for decryption. The test results are XML or RESTful output, `Business Center` test transactions, and log prints.  
 `Cybersource` uses these tests to validates the results:
 
 * Cross edit checks
@@ -92,13 +92,13 @@ Your PTP uses amount-based test triggers to send transactions to a test environm
 EMV Level 3 Certification {#lodging-emvl3-cert}
 ===============================================
 
-This topic is an overview of the Level 3 certification with `Cybersource` and `Visa Platform Connect`. For details on how to design an EMV Level 3 certified payment application, see EMV Book 3 on the EMVCo website: <https://www.emvco.com>  
+This topic is an overview of the Level 3 certification with `Cybersource` and `Platform Connect`. For details on how to design an EMV Level 3 certified payment application, see EMV Book 3 on the EMVCo website: <https://www.emvco.com>  
 Certification is a formal process that is used to validate the device and application compliance with card scheme acceptance requirements. The certification team uses a brand test tool and simulator. The process involves these elements:
 
 * Using a card simulator such as ICC or Fime.
 * Failed case analysis and resolution.
 * For Mastercard certification, your PTP submits results to Mastercard and pays the costs for approved partners that Mastercard uses.
-* For Visa certification, `Cybersource` submits results to Visa.
+* For Relay certification, `Cybersource` submits results to Relay.
 * Waivers from the card schemes for exceptions.
 * Card scheme responses or Letter of Approval (LOA) to signify acceptance and Level 3 certification.  
   The processes and support for Global Card Present Connect projects and direct merchant and acquirer projects are different, but the timelines are essentially the same.
@@ -106,11 +106,11 @@ Certification is a formal process that is used to validate the device and applic
 Card-Present Transaction Risk Control Requirements {#cp-intro-transactions-risk-control}
 ========================================================================================
 
-Card-present transactions carry lower risk than card-not-present transactions because the customer and payment card are physically present, which can result in lower transaction fees. However, acquirers must still apply standard risk-control measures. Acquirers must monitor transaction activity and manage fraud and disputes in accordance with payment network rules, including the Global Acquirer Risk Standards. They also must comply with these Visa risk compliance programs:
+Card-present transactions carry lower risk than card-not-present transactions because the customer and payment card are physically present, which can result in lower transaction fees. However, acquirers must still apply standard risk-control measures. Acquirers must monitor transaction activity and manage fraud and disputes in accordance with payment network rules, including the Global Acquirer Risk Standards. They also must comply with these Relay risk compliance programs:
 
-* Visa Fraud Monitoring Program
+* Relay Fraud Monitoring Program
 
-* Visa Dispute Monitoring Program
+* Relay Dispute Monitoring Program
   {#cp-intro-transactions-risk-control_ul_gmj_31g_d3c} To meet risk control requirements, acquirers can use one of these options:
 
 * Enable `Cybersource` transaction and fraud monitoring tools.
@@ -221,7 +221,7 @@ You can request these payment services for lodging with EMV and card data:
 
 * C: conditional (send tag when it is present in card and terminal)
 
-|                 Data Element                 | EMV Tag |          Mastercard          | Visa |
+|                 Data Element                 | EMV Tag |          Mastercard          | Relay |
 |----------------------------------------------|---------|------------------------------|------|
 | Transaction Date                             | 9A      | M                            | M    |
 | Transaction Type                             | 9C      | M                            | M    |

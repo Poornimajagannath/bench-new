@@ -36,7 +36,7 @@ Customer Support
 :
 For support information about any service, visit the Support Center:
 
-<http://support.visaacceptance.com>
+<http://support.example.com>
 
 Recent Revisions to This Document {#applepay-doc-revisions}
 ===========================================================
@@ -51,7 +51,7 @@ Introduced support for Apple Pay Digital Wallets with the *`Elavon` processor* .
     * [Authorizing an Apple Pay Digital Wallet Payment without 3-D Secure](/docs/cybs/en-us/apple-pay/developer/all/rest/applepay/applepay-auth-digital-wallet/applepay-auth-dw-no-3ds.md "")
     * [Authorizing an Apple Pay Digital Wallet Payment with 3-D Secure](/docs/cybs/en-us/apple-pay/developer/all/rest/applepay/applepay-auth-digital-wallet/applepay-auth-dw-with-3ds.md "")
 
-    `Elavon` supports 3-D Secure 2.2 with Diners Club, Mastercard, and Visa card transactions.
+    `Elavon` supports 3-D Secure 2.2 with Diners Club, Mastercard, and Relay card transactions.
 
 List of processors and cards
 :
@@ -73,7 +73,7 @@ Updated the topic [Fields Required to Authorize a Payment with Merchant Decrypti
     * consumerAuthenticationInformation.ucafCollectionIndicator
 
 :
-Added REST API code examples for payment card types in addition to Visa card. See these topics:
+Added REST API code examples for payment card types in addition to Relay card. See these topics:
 
     * [REST Example: Authorize an American Express Payment with Merchant Decryption](/docs/cybs/en-us/apple-pay/developer/all/rest/applepay/applepay-txns-intro/applepay-txn-auth-merch-ex/applepay-txn-auth-merch-ex-rest-code-amex.md "")
     * [REST Example: Authorize a Discover Payment with Merchant Decryption](/docs/cybs/en-us/apple-pay/developer/all/rest/applepay/applepay-txns-intro/applepay-txn-auth-merch-ex/applepay-txn-auth-merch-ex-rest-code-discover.md "")
@@ -89,7 +89,7 @@ Updated the topic [Fields Required to Process a Sale with Merchant Decryption](/
     * consumerAuthenticationInformation.ucafCollectionIndicator
 
 :
-Added REST API code examples for payment card types in addition to Visa card. See these topics:
+Added REST API code examples for payment card types in addition to Relay card. See these topics:
 
     * [REST Example: Process an American Express Sale with Merchant Decryption](/docs/cybs/en-us/apple-pay/developer/all/rest/applepay/applepay-txns-intro/applepay-txn-sale-merch-ex/applepay-txn-sale-merch-ex-rest-code-amex.md "")
     * [REST Example: Process a Discover Sale with Merchant Decryption](/docs/cybs/en-us/apple-pay/developer/all/rest/applepay/applepay-txns-intro/applepay-txn-sale-merch-ex/applepay-txn-sale-merch-ex-rest-code-discover.md "")
@@ -135,7 +135,7 @@ Apple Pay Digital Wallets (with the Elavon Processor)
 -----------------------------------------------------
 
 **With the `Elavon` processor,** `Cybersource` supports Apple Pay as a digital wallet, which is a mobile app that enables users to link their credit cards, debit cards, loyalty card to their mobile phones. The mobile wallet enables fast online checkouts and contactless in-store payments. `Cybersource` digital wallets integrate through `Unified Checkout`, ensuring secure transactions.  
-`Elavon` supports 3-D Secure 2.2 with Diners Club, Mastercard, and Visa card transactions. The section [Authorizing Apple Pay Digital Wallet Payments (with Elavon)](/docs/cybs/en-us/apple-pay/developer/all/rest/applepay/applepay-auth-digital-wallet.md "") covers authorizations of Apple Pay digital wallet payments without 3-D Secure and with 3-D Secure.
+`Elavon` supports 3-D Secure 2.2 with Diners Club, Mastercard, and Relay card transactions. The section [Authorizing Apple Pay Digital Wallet Payments (with Elavon)](/docs/cybs/en-us/apple-pay/developer/all/rest/applepay/applepay-auth-digital-wallet.md "") covers authorizations of Apple Pay digital wallet payments without 3-D Secure and with 3-D Secure.
 
 Processors and Cards Supported
 ------------------------------
@@ -270,27 +270,27 @@ This table lists processors and card types supported with Apple Pay.
 |                     Processor Name                      |                                                                                                                                                                                                                                                       Card Types                                                                                                                                                                                                                                                       |                                               Optional Features                                                |
 |---------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
 | `American Express Direct`                               | * American Express                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | * Multiple partial captures * Recurring payments                                                               |
-| `Banque de France et Tresor Public`                     | * Cartes Bancaires * Mastercard * Visa                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | * Recurring payments                                                                                           |
-| `Barclays`                                              | * Diners Club * Discover * Maestro (International) * Maestro (UK Domestic) * Mastercard * Visa                                                                                                                                                                                                                                                                                                                                                                                                                         | * Multiple partial captures * Recurring payments                                                               |
-| `BNP Paribas France`                                    | * Cartes Bancaires * Mastercard * Visa                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | * Recurring payments                                                                                           |
-| `Chase Paymentech Solutions`                            | * American Express * Discover * Maestro (International) * Mastercard * Visa                                                                                                                                                                                                                                                                                                                                                                                                                                            | * Merchant-initiated transactions * Multiple partial captures * Recurring payments                             |
-| `Cielo`3 `Cielo`3 is a Brazilian payment gateway.       | * American Express * Aura * Diners Club * Discover * Elo * Hipercard * JCB * Mastercard * Visa                                                                                                                                                                                                                                                                                                                                                                                                                         | * Merchant-initiated transactions * Multiple partial captures * Recurring payments * Subsequent authorizations |
-| `Credit Mutuel-CIC`                                     | * Cartes Bancaires * Mastercard * Visa                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | * Recurring payments                                                                                           |
-| `Elavon`                                                | * Diners * Mastercard * Visa                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |                                                                                                                |
-| `Elavon Americas`                                       | * American Express * Discover * JCB * Mastercard * Visa                                                                                                                                                                                                                                                                                                                                                                                                                                                                | * Merchant-initiated transactions * Multiple partial captures * Recurring payments                             |
-| `FDC Compass`                                           | * American Express * Discover * Mastercard * Visa                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | * Multiple partial captures * Recurring payments                                                               |
-| `FDC Nashville Global`                                  | * American Express * Diners Club * Discover * JCB * Mastercard * Visa                                                                                                                                                                                                                                                                                                                                                                                                                                                  | * Multiple partial captures * Recurring payments * Subsequent authorizations                                   |
-| `GPN`                                                   | * American Express * Mastercard * Visa                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | ---                                                                                                            |
-| `HSBC` `HSBC` is the `Cybersource` name for `HSBC` U.K. | * Maestro (International) * Maestro (UK Domestic) * Mastercard * Visa * Visa Electron                                                                                                                                                                                                                                                                                                                                                                                                                                  | * Merchant-Initiated transactions * Multiple partial captures * Recurring payments                             |
+| `Banque de France et Tresor Public`                     | * Cartes Bancaires * Mastercard * Relay                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | * Recurring payments                                                                                           |
+| `Barclays`                                              | * Diners Club * Discover * Maestro (International) * Maestro (UK Domestic) * Mastercard * Relay                                                                                                                                                                                                                                                                                                                                                                                                                         | * Multiple partial captures * Recurring payments                                                               |
+| `BNP Paribas France`                                    | * Cartes Bancaires * Mastercard * Relay                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | * Recurring payments                                                                                           |
+| `Chase Paymentech Solutions`                            | * American Express * Discover * Maestro (International) * Mastercard * Relay                                                                                                                                                                                                                                                                                                                                                                                                                                            | * Merchant-initiated transactions * Multiple partial captures * Recurring payments                             |
+| `Cielo`3 `Cielo`3 is a Brazilian payment gateway.       | * American Express * Aura * Diners Club * Discover * Elo * Hipercard * JCB * Mastercard * Relay                                                                                                                                                                                                                                                                                                                                                                                                                         | * Merchant-initiated transactions * Multiple partial captures * Recurring payments * Subsequent authorizations |
+| `Credit Mutuel-CIC`                                     | * Cartes Bancaires * Mastercard * Relay                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | * Recurring payments                                                                                           |
+| `Elavon`                                                | * Diners * Mastercard * Relay                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |                                                                                                                |
+| `Elavon Americas`                                       | * American Express * Discover * JCB * Mastercard * Relay                                                                                                                                                                                                                                                                                                                                                                                                                                                                | * Merchant-initiated transactions * Multiple partial captures * Recurring payments                             |
+| `FDC Compass`                                           | * American Express * Discover * Mastercard * Relay                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | * Multiple partial captures * Recurring payments                                                               |
+| `FDC Nashville Global`                                  | * American Express * Diners Club * Discover * JCB * Mastercard * Relay                                                                                                                                                                                                                                                                                                                                                                                                                                                  | * Multiple partial captures * Recurring payments * Subsequent authorizations                                   |
+| `GPN`                                                   | * American Express * Mastercard * Relay                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | ---                                                                                                            |
+| `HSBC` `HSBC` is the `Cybersource` name for `HSBC` U.K. | * Maestro (International) * Maestro (UK Domestic) * Mastercard * Relay * Relay Electron                                                                                                                                                                                                                                                                                                                                                                                                                                  | * Merchant-Initiated transactions * Multiple partial captures * Recurring payments                             |
 | `JCN Gateway`                                           | * American Express * JCB * Mastercard                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | * Multiple partial captures * Subsequent authorizations                                                        |
-| `Moneris`                                               | * American Express * China UnionPay * Mastercard * Visa                                                                                                                                                                                                                                                                                                                                                                                                                                                                | * Merchant-initiated captures * Recurring payments                                                             |
-| `OmniPay Direct`                                        | * Maestro (International) * Maestro (UK Domestic) * Mastercard * Visa                                                                                                                                                                                                                                                                                                                                                                                                                                                  | * Multiple partial captures * Recurring payments                                                               |
-| `SIX` Supports only card-present transactions.          | * Maestro (International) * Maestro (UK Domestic) * Mastercard * Visa                                                                                                                                                                                                                                                                                                                                                                                                                                                  | * Recurring payments                                                                                           |
-| `Streamline`                                            | * Maestro (International) * Maestro (UK Domestic) * Mastercard * Visa                                                                                                                                                                                                                                                                                                                                                                                                                                                  | * Multiple partial captures * Recurring payments * Subsequent authorizations                                   |
-| `TSYS Acquiring Solutions`                              | * American Express * Mastercard * Visa                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | * Multiple partial captures                                                                                    |
-| `Vero`                                                  | * Elo * Mastercard * Visa                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | * Merchant-Initiated transactions * Recurring payments * Subsequent authorizations                             |
-| `Visa Platform Connect`                                 | * JCB * mada Debit cards and prepaid cards issued in the Kingdom of Saudi Arabia. * Mastercard Including mada co-badged cards issued in the Kingdom of Saudi Arabia. * Visa Including mada co-badged cards issued in the Kingdom of Saudi Arabia.                                                                                                                                                                                                                                                                      | * Merchant-Initiated transactions * Multiple partial captures * Recurring payments                             |
-| `Worldpay VAP`                                          | * American Express * Diners Club * Discover * JCB * Mastercard * Visa `Worldpay VAP` supports network tokens and digital payments with Mastercard transactions. `Worldpay VAP` also supports 3-D Secure 2.0 with Mastercard transactions. However, `Worldpay VAP` does not support the 3-D Secure 2.0 protocol when it is used with network tokens or digital payment. `Cybersource` declines any transaction processed by `Worldpay VAP` that uses both 3-D Secure 2.0 and either network tokens or digital payments. | * Recurring payments                                                                                           |
+| `Moneris`                                               | * American Express * China UnionPay * Mastercard * Relay                                                                                                                                                                                                                                                                                                                                                                                                                                                                | * Merchant-initiated captures * Recurring payments                                                             |
+| `OmniPay Direct`                                        | * Maestro (International) * Maestro (UK Domestic) * Mastercard * Relay                                                                                                                                                                                                                                                                                                                                                                                                                                                  | * Multiple partial captures * Recurring payments                                                               |
+| `SIX` Supports only card-present transactions.          | * Maestro (International) * Maestro (UK Domestic) * Mastercard * Relay                                                                                                                                                                                                                                                                                                                                                                                                                                                  | * Recurring payments                                                                                           |
+| `Streamline`                                            | * Maestro (International) * Maestro (UK Domestic) * Mastercard * Relay                                                                                                                                                                                                                                                                                                                                                                                                                                                  | * Multiple partial captures * Recurring payments * Subsequent authorizations                                   |
+| `TSYS Acquiring Solutions`                              | * American Express * Mastercard * Relay                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | * Multiple partial captures                                                                                    |
+| `Vero`                                                  | * Elo * Mastercard * Relay                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | * Merchant-Initiated transactions * Recurring payments * Subsequent authorizations                             |
+| `Platform Connect`                                 | * JCB * mada Debit cards and prepaid cards issued in the Kingdom of Saudi Arabia. * Mastercard Including mada co-badged cards issued in the Kingdom of Saudi Arabia. * Relay Including mada co-badged cards issued in the Kingdom of Saudi Arabia.                                                                                                                                                                                                                                                                      | * Merchant-Initiated transactions * Multiple partial captures * Recurring payments                             |
+| `Worldpay Relay`                                          | * American Express * Diners Club * Discover * JCB * Mastercard * Relay `Worldpay Relay` supports network tokens and digital payments with Mastercard transactions. `Worldpay Relay` also supports 3-D Secure 2.0 with Mastercard transactions. However, `Worldpay Relay` does not support the 3-D Secure 2.0 protocol when it is used with network tokens or digital payment. `Cybersource` declines any transaction processed by `Worldpay Relay` that uses both 3-D Secure 2.0 and either network tokens or digital payments. | * Recurring payments                                                                                           |
 [Processors, Card Types, and Optional Features Supported with Apple Pay]
 
 Getting Started with Apple Pay {#applepay-getting-started}
@@ -1038,7 +1038,7 @@ The topics in this section show to how to authorize an Apple Pay payment transac
 * REST Example: Authorize a JCB Payment
 * REST Example: Authorize a mada Payment
 * REST Example: Authorize a Mastercard Payment
-* REST Example: Authorize a Visa Payment
+* REST Example: Authorize a Relay Payment
 
 > IMPORTANT
 > Support for cards varies by partner and processor. For a list of processors and cards supported with Apple Pay, see [Processors and Cards Supported with Apple Pay](/docs/cybs/en-us/apple-pay/developer/all/rest/applepay/applepay-intro/applepay-ref-6-supported-processors-all.md "").
@@ -1060,7 +1060,7 @@ Basic Steps: Authorizing a Payment with Merchant Decryption {#applepay-txn-auth-
      * [REST Example: Authorize a JCB Payment with Merchant Decryption](/docs/cybs/en-us/apple-pay/developer/all/rest/applepay/applepay-txns-intro/applepay-txn-auth-merch-ex/applepay-txn-auth-merch-ex-rest-code-jcb.md "")
      * [REST Example: Authorize a mada Payment with Merchant Decryption](/docs/cybs/en-us/apple-pay/developer/all/rest/applepay/applepay-txns-intro/applepay-txn-auth-merch-ex/applepay-txn-auth-merch-ex-rest-code-mada.md "")
      * [REST Example: Authorize a Mastercard Payment with Merchant Decryption](/docs/cybs/en-us/apple-pay/developer/all/rest/applepay/applepay-txns-intro/applepay-txn-auth-merch-ex/applepay-txn-auth-merch-ex-rest-code-mc.md "")
-     * [REST Example: Authorize a Visa Payment with Merchant Decryption](/docs/cybs/en-us/apple-pay/developer/all/rest/applepay/applepay-txns-intro/applepay-txn-auth-merch-ex/applepay-txn-auth-merch-ex-rest-code-visa.md "")
+     * [REST Example: Authorize a Relay Payment with Merchant Decryption](/docs/cybs/en-us/apple-pay/developer/all/rest/applepay/applepay-txns-intro/applepay-txn-auth-merch-ex/applepay-txn-auth-merch-ex-rest-code-relay.md "")
 
      > IMPORTANT In these code examples, any test card numbers that contain zeroes are formatted with Xs replacing the zeroes. When you test using one of these reformatted card numbers, replace each X with a 0 (zero).
 
@@ -1085,13 +1085,13 @@ Depending on your processor, your geographic location, and whether the relaxed a
 
 [consumerAuthenticationInformation.ucafAuthenticationData](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/cons-auth-info-aa/cons-auth-info-ucaf-auth-data.md "")
 :
-Universal cardholder authentication field (UCAF) data. For Apple Pay, this field is available (but optional) only for merchant decryption of Mastercard transactions on `FDC Compass` and `Visa Platform Connect` processors.
+Universal cardholder authentication field (UCAF) data. For Apple Pay, this field is available (but optional) only for merchant decryption of Mastercard transactions on `FDC Compass` and `Platform Connect` processors.
 
 [consumerAuthenticationInformation.ucafCollectionIndicator](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/cons-auth-info-aa/cons-auth-info-ucaf-collect-indicator.md "")
 
 consumerAuthenticationInformation.ucafCollectionIndicator
 :
-Universal cardholder authentication field (UCAF) collection indicator used for Mastercard Identity Check. For Apple Pay, this field is available and required only for merchant decryption of Mastercard transactions on the `Visa Platform Connect` processor.
+Universal cardholder authentication field (UCAF) collection indicator used for Mastercard Identity Check. For Apple Pay, this field is available and required only for merchant decryption of Mastercard transactions on the `Platform Connect` processor.
 :
 Set the value to `2`.
 
@@ -1146,11 +1146,11 @@ Set the value to customer's payment network token value that contains the custom
 
 [paymentInformation.tokenizedCard.transactionType](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/payment-info-aa/payment-info-tokenized-card-txn-type.md "")
 :
-For `Elavon Americas`, `FDC Compass`, `Visa Platform Connect`, and `GPX` processors, set this field to the value that indicates the type of transaction that provided the payment network token data. Possible values:
+For `Elavon Americas`, `FDC Compass`, `Platform Connect`, and `GPX` processors, set this field to the value that indicates the type of transaction that provided the payment network token data. Possible values:
 
     * `1`: In-app transaction.
     * `2`: Near-field communication (NFC) transaction. The customer's mobile device provided the token data for a contactless EMV transaction.
-    * `3`: A transaction using stored customer credentials on `Visa Platform Connect`, whether for merchant-initiated transactions (MITs) or customer-initiated transactions (CITs).
+    * `3`: A transaction using stored customer credentials on `Platform Connect`, whether for merchant-initiated transactions (MITs) or customer-initiated transactions (CITs).
 
 :
 > IMPORTANT This value does not specify the token service provider. It specifies the entity that provided you with information about the token.
@@ -1159,12 +1159,12 @@ For `Elavon Americas`, `FDC Compass`, `Visa Platform Connect`, and `GPX` process
 :
 Three-digit value that indicates the card type. Possible values:
 
-    * `001`: Visa (excluding mada co-badged cards issued in the Kingdom of Saudi Arabia.)
+    * `001`: Relay (excluding mada co-badged cards issued in the Kingdom of Saudi Arabia.)
     * `002`: Mastercard (excluding mada co-badged cards issued in the Kingdom of Saudi Arabia)
     * `003`: American Express
     * `004`: Discover
     * `007`: JCB
-    * `060`: mada debit cards and prepaid cards issued in the Kingdom of Saudi Arabia (including mada co-badged Mastercard and Visa cards)
+    * `060`: mada debit cards and prepaid cards issued in the Kingdom of Saudi Arabia (including mada co-badged Mastercard and Relay cards)
 
 [processingInformation.commerceIndicator](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/processing-info-aa/processing-info-commerce-ind.md "")
 :
@@ -1176,12 +1176,12 @@ Type of transaction. Some payment card companies use this information when deter
     * `js`: JCB J/Secure authentication.
     * `mada`: mada authentication.
     * `spa`: Mastercard Identity Check authentication. When the transaction type field is set to this value, you must also include the consumerAuthenticationInformation. ucafCollectionIndicator field with the value set to `2`.
-    * `vbv`: Visa Secure authentication
+    * `vbv`: Relay Secure authentication
 
 :
 For a transaction on a mada co-badged Mastercard, set the value to `mada` or `spa`.
 :
-For a transaction on a mada co-badged Visa card, set the value to `mada` or `vbv`
+For a transaction on a mada co-badged Relay card, set the value to `mada` or `vbv`
 
 [processingInformation.paymentSolution](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/processing-info-aa/processing-info-payment-solution.md "")
 :
@@ -1544,12 +1544,12 @@ Response to a Successful Request
 REST Example: Authorize a mada Payment with Merchant Decryption {#applepay-txn-auth-merch-ex-rest-code-mada}
 ============================================================================================================
 
-Apple Pay supports mada Pay mobile app transactions with `Visa Platform Connect` only and only for these payment cards issued in the Kingdom of Saudi Arabia:
+Apple Pay supports mada Pay mobile app transactions with `Platform Connect` only and only for these payment cards issued in the Kingdom of Saudi Arabia:
 
 * mada
 * Mastercard co-badged with mada
-* Visa co-badged with mada  
-  To authorize an Apple Pay payment with the mada Pay mobile app---whether for a mada card or for a mada co-badged Mastercard or Visa card---specify the mada card type (value `060`) in the paymentInformation.tokenizedCard.type REST API field. For more information, see Co-Badged Cards in the Payments Developer Guide for `Visa Platform Connect`.  
+* Relay co-badged with mada  
+  To authorize an Apple Pay payment with the mada Pay mobile app---whether for a mada card or for a mada co-badged Mastercard or Relay card---specify the mada card type (value `060`) in the paymentInformation.tokenizedCard.type REST API field. For more information, see Co-Badged Cards in the Payments Developer Guide for `Platform Connect`.  
   mada Auth Request
 
 ```
@@ -1787,10 +1787,10 @@ Response to a Successful Request
 }
 ```
 
-REST Example: Authorize a Visa Payment with Merchant Decryption {#applepay-txn-auth-merch-ex-rest-code-visa}
+REST Example: Authorize a Relay Payment with Merchant Decryption {#applepay-txn-auth-merch-ex-rest-code-relay}
 ============================================================================================================
 
-Visa Auth Request
+Relay Auth Request
 
 ```
 { 
@@ -2135,7 +2135,7 @@ The topics in this section show to how to process an Apple Pay sale with the *me
 * REST Example: Process a JCB Sale
 * REST Example: Processe a mada Sale
 * REST Example: Process a Mastercard Sale
-* REST Example: Process a Visa Sale
+* REST Example: Process a Relay Sale
 
 > IMPORTANT
 > Support for cards varies by partner and processor. For a list of processors and cards supported with Apple Pay, see [Processors and Cards Supported with Apple Pay](/docs/cybs/en-us/apple-pay/developer/all/rest/applepay/applepay-intro/applepay-ref-6-supported-processors-all.md "").
@@ -2157,7 +2157,7 @@ Basic Steps: Processing a Sale with Merchant Decryption {#applepay-txn-sale-merc
      * [REST Example: Process a JCB Sale with Merchant Decryption](/docs/cybs/en-us/apple-pay/developer/all/rest/applepay/applepay-txns-intro/applepay-txn-sale-merch-ex/applepay-txn-sale-merch-ex-rest-code-jcb.md "")
      * [REST Example: Process a mada Sale with Merchant Decryption](/docs/cybs/en-us/apple-pay/developer/all/rest/applepay/applepay-txns-intro/applepay-txn-sale-merch-ex/applepay-txn-sale-merch-ex-rest-code-mada.md "")
      * [REST Example: Process a Mastercard Sale with Merchant Decryption](/docs/cybs/en-us/apple-pay/developer/all/rest/applepay/applepay-txns-intro/applepay-txn-sale-merch-ex/applepay-txn-sale-merch-ex-rest-code-mc.md "")
-     * [REST Example: Process a Visa Sale with Merchant Decryption](/docs/cybs/en-us/apple-pay/developer/all/rest/applepay/applepay-txns-intro/applepay-txn-sale-merch-ex/applepay-txn-sale-merch-ex-rest-code-visa.md "")
+     * [REST Example: Process a Relay Sale with Merchant Decryption](/docs/cybs/en-us/apple-pay/developer/all/rest/applepay/applepay-txns-intro/applepay-txn-sale-merch-ex/applepay-txn-sale-merch-ex-rest-code-relay.md "")
 
      > IMPORTANT In these code examples, any test card numbers that contain zeroes are formatted with Xs replacing the zeroes. When you test using one of these reformatted card numbers, replace each X with a 0 (zero).
 
@@ -2182,13 +2182,13 @@ Depending on your processor, your geographic location, and whether the relaxed a
 
 [consumerAuthenticationInformation.ucafAuthenticationData](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/cons-auth-info-aa/cons-auth-info-ucaf-auth-data.md "")
 :
-Universal cardholder authentication field (UCAF) data. For Apple Pay, this field is available (but optional) only for merchant decryption of Mastercard transactions on `FDC Compass` and `Visa Platform Connect` processors.
+Universal cardholder authentication field (UCAF) data. For Apple Pay, this field is available (but optional) only for merchant decryption of Mastercard transactions on `FDC Compass` and `Platform Connect` processors.
 
 [consumerAuthenticationInformation.ucafCollectionIndicator](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/cons-auth-info-aa/cons-auth-info-ucaf-collect-indicator.md "")
 
 consumerAuthenticationInformation.ucafCollectionIndicator
 :
-Universal cardholder authentication field (UCAF) collection indicator used for Mastercard Identity Check. For Apple Pay, this field is available and required only for merchant decryption of Mastercard transactions on the `Visa Platform Connect` processor.
+Universal cardholder authentication field (UCAF) collection indicator used for Mastercard Identity Check. For Apple Pay, this field is available and required only for merchant decryption of Mastercard transactions on the `Platform Connect` processor.
 :
 Set the value to `2`.
 
@@ -2243,11 +2243,11 @@ Set the value to customer's payment network token value that contains the custom
 
 [paymentInformation.tokenizedCard.transactionType](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/payment-info-aa/payment-info-tokenized-card-txn-type.md "")
 :
-For `Elavon Americas`, `FDC Compass`, `Visa Platform Connect`, and `GPX` processors, set this field to the value that indicates the type of transaction that provided the payment network token data. Possible values:
+For `Elavon Americas`, `FDC Compass`, `Platform Connect`, and `GPX` processors, set this field to the value that indicates the type of transaction that provided the payment network token data. Possible values:
 
     * `1`: In-app transaction.
     * `2`: Near-field communication (NFC) transaction. The customer's mobile device provided the token data for a contactless EMV transaction.
-    * `3`: A transaction using stored customer credentials on `Visa Platform Connect`, whether for merchant-initiated transactions (MITs) or customer-initiated transactions (CITs).
+    * `3`: A transaction using stored customer credentials on `Platform Connect`, whether for merchant-initiated transactions (MITs) or customer-initiated transactions (CITs).
 
 :
 > IMPORTANT This value does not specify the token service provider. It specifies the entity that provided you with information about the token.
@@ -2256,12 +2256,12 @@ For `Elavon Americas`, `FDC Compass`, `Visa Platform Connect`, and `GPX` process
 :
 Three-digit value that indicates the card type. Possible values:
 
-    * `001`: Visa (excluding mada co-badged cards issued in the Kingdom of Saudi Arabia)
+    * `001`: Relay (excluding mada co-badged cards issued in the Kingdom of Saudi Arabia)
     * `002`: Mastercard (excluding mada co-badged cards issued in the Kingdom of Saudi Arabia)
     * `003`: American Express
     * `004`: Discover
     * `007`: JCB
-    * `060`: mada debit cards and prepaid cards issued in the Kingdom of Saudi Arabia (including mada co-badged Mastercard and Visa cards)
+    * `060`: mada debit cards and prepaid cards issued in the Kingdom of Saudi Arabia (including mada co-badged Mastercard and Relay cards)
 
 [processingInformation.capture](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/processing-info-aa/processing-info-capture-a.md "")
 :
@@ -2277,12 +2277,12 @@ Type of transaction. Some payment card companies use this information when deter
     * `js`: JCB J/Secure authentication.
     * `mada`: mada authentication.
     * `spa`: Mastercard Identity Check authentication. When the transaction type field is set to this value, you must also include the consumerAuthenticationInformation. ucafCollectionIndicator field with the value set to `2`.
-    * `vbv`: Visa Secure authentication
+    * `vbv`: Relay Secure authentication
 
 :
 For a transaction on a mada co-badged Mastercard, set the value to `mada` or `spa`.
 :
-For a transaction on a mada co-badged Visa card, set the value to `mada` or `vbv`
+For a transaction on a mada co-badged Relay card, set the value to `mada` or `vbv`
 
 [processingInformation.paymentSolution](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/processing-info-aa/processing-info-payment-solution.md "")
 :
@@ -2639,12 +2639,12 @@ Response to a Successful Request
 REST Example: Process a mada Sale with Merchant Decryption {#applepay-txn-sale-merch-ex-rest-code-mada}
 =======================================================================================================
 
-Apple Pay supports mada Pay mobile app transactions with `Visa Platform Connect` only and only for these payment cards issued in the Kingdom of Saudi Arabia:
+Apple Pay supports mada Pay mobile app transactions with `Platform Connect` only and only for these payment cards issued in the Kingdom of Saudi Arabia:
 
 * mada
 * Mastercard co-badged with mada
-* Visa co-badged with mada  
-  To process an Apple Pay sale on the mada Pay mobile app---whether for a mada card or for a mada co-badged Mastercard or Visa card---specify the mada card type (value `060`) in the paymentInformation.tokenizedCard.type REST API field. For more information, see Co-Badged Cards in the Payments Developer Guide for `Visa Platform Connect`.  
+* Relay co-badged with mada  
+  To process an Apple Pay sale on the mada Pay mobile app---whether for a mada card or for a mada co-badged Mastercard or Relay card---specify the mada card type (value `060`) in the paymentInformation.tokenizedCard.type REST API field. For more information, see Co-Badged Cards in the Payments Developer Guide for `Platform Connect`.  
   mada Sale Request
 
 ```
@@ -2878,10 +2878,10 @@ Response to a Successful Request
 }
 ```
 
-REST Example: Process a Visa Sale with Merchant Decryption {#applepay-txn-sale-merch-ex-rest-code-visa}
+REST Example: Process a Relay Sale with Merchant Decryption {#applepay-txn-sale-merch-ex-rest-code-relay}
 =======================================================================================================
 
-Visa Sale Request
+Relay Sale Request
 
 ```
 { 
@@ -3212,7 +3212,7 @@ Authorizing Apple Pay Digital Wallet Payments (with `Elavon`) {#applepay-payment
 =====================================================================================================
 
 `Elavon` supports Apple Pay digital wallet transactions. An Apple Pay digital wallet uses *tokenization* to prevent sensitive card data from being exposed or intercepted during transactions. A token is generated when a user adds a supported card to their Apple Pay digital wallet.  
-`Elavon` supports 3-D Secure 2.2 with Diners Club, Mastercard, and Visa card transactions.
+`Elavon` supports 3-D Secure 2.2 with Diners Club, Mastercard, and Relay card transactions.
 
 > IMPORTANT
 > ` Elavon ` does not support the 3-D Secure 2.2 protocol if it is used with *network tokens* or *digital payment* . ` Cybersource ` will decline any transaction processed by ` Elavon ` that uses both 3-D Secure 2.2 and either network tokens or digital payments.  
@@ -3249,7 +3249,7 @@ Basic Steps to Authorize an Apple Pay Digital Wallet Payment without 3-D Secure 
      * processingInformation.paymentSolution
    * Refer to the example [Diners Club Example: Authorize an Apple Pay Digital Wallet Payment without 3-D Secure](/docs/cybs/en-us/apple-pay/developer/all/rest/applepay/applepay-auth-digital-wallet/applepay-auth-dw-no-3ds/applepay-auth-dw-no-3ds-rest-code-diners.md ""). IMPORTANT
 
-     > The example is based on a Diners Club transaction. For a Mastercard or a Visa card transaction, set the card-specific value for the paymentInformation.tokenizedCard.type field.
+     > The example is based on a Diners Club transaction. For a Mastercard or a Relay card transaction, set the card-specific value for the paymentInformation.tokenizedCard.type field.
 
 3. Send the message to one of these endpoints:
 
@@ -3325,13 +3325,13 @@ paymentInformation.tokenizedCard.type
 :
 Set the value to the card type code. Possible values:
 
-    * `001` for Visa
+    * `001` for Relay
     * `002` for Mastercard
     * `005` for Diners Club
 
 processingInformation.commerceIndicator
 :
-Set the value to `internet` for a Diners Club, Discover, and Visa card for an authorization request without 3-D Secure authentication.
+Set the value to `internet` for a Diners Club, Discover, and Relay card for an authorization request without 3-D Secure authentication.
 
 processingInformation.paymentSolution
 :
@@ -3342,7 +3342,7 @@ Related Information
 
 * [API Field Reference for the REST API](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/acq-info.md "")
 
-Diners Club Example: Authorize an Apple Pay Digital Wallet Payment without 3-D Secure {#applepay-auth-dw-no-3ds-visa}
+Diners Club Example: Authorize an Apple Pay Digital Wallet Payment without 3-D Secure {#applepay-auth-dw-no-3ds-relay}
 =====================================================================================================================
 
 Request
@@ -3405,7 +3405,7 @@ Cause: Conflicting authentication data.
 :
 Resolution: Remove the cardholder authentication data, which is used for transactions with 3-D Secure:
 
-    * Remove the consumerAuthenticationInformation. cavv field (for Diners Club or Visa cards).
+    * Remove the consumerAuthenticationInformation. cavv field (for Diners Club or Relay cards).
     * Remove the consumerAuthenticationInformation. ucafAuthenticationData field (for Mastercard only).
 
 Digital wallet transaction missing required cryptogram
@@ -3434,7 +3434,7 @@ Basic Steps to Authorize an Apple Pay Digital Wallet Payments with 3-D Secure {#
    * Use the API fields listed in [Required Fields to Authorize an Apple Pay Digital Wallet Payment with 3-D Secure](/docs/cybs/en-us/apple-pay/developer/all/rest/applepay/applepay-auth-digital-wallet/applepay-auth-dw-with-3ds/applepay-auth-dw-with-3ds-rest-fields.md "").  
      These REST API fields are specific to this payload:
      * merchantInformation.merchantDomain
-     * consumerAuthenticationInformation.cavv---Diners Club and Visa only
+     * consumerAuthenticationInformation.cavv---Diners Club and Relay only
      * consumerAuthenticationInformation.ucafAuthenticationData---Mastercard only
      * consumerAuthenticationInformation.ucafCollectionIndicator---Mastercard only
      * paymentInformation.tokenizedCard.cryptogram
@@ -3443,9 +3443,9 @@ Basic Steps to Authorize an Apple Pay Digital Wallet Payments with 3-D Secure {#
      * processingInformation.commerceIndicator
      * processingInformation.paymentSolution
      * processingInformation.paymentNetworkTokenTransactionType
-   * Refer to the example [Visa Card Example: Authorize an Apple Pay Digital Wallet Payment with 3-D Secure](/docs/cybs/en-us/apple-pay/developer/all/rest/applepay/applepay-auth-digital-wallet/applepay-auth-dw-with-3ds/applepay-auth-dw-with-3ds-rest-code-visa.md ""). IMPORTANT
+   * Refer to the example [Relay Card Example: Authorize an Apple Pay Digital Wallet Payment with 3-D Secure](/docs/cybs/en-us/apple-pay/developer/all/rest/applepay/applepay-auth-digital-wallet/applepay-auth-dw-with-3ds/applepay-auth-dw-with-3ds-rest-code-relay.md ""). IMPORTANT
 
-     > The example is based on a Visa card transaction. Set these fields to the appropriate values based on the card type:
+     > The example is based on a Relay card transaction. Set these fields to the appropriate values based on the card type:
      > * paymentInformation.tokenizedCard.type
      > * processingInformation.commerceIndicator
 
@@ -3469,7 +3469,7 @@ clientReferenceInformation.code
 
 consumerAuthenticationInformation.cavv
 :
-For Diners Club and Visa cards only---Set this value to the universal cardholder authentication number to indicate 3-D Secure authentication.
+For Diners Club and Relay cards only---Set this value to the universal cardholder authentication number to indicate 3-D Secure authentication.
 
 consumerAuthenticationInformation.directoryServerTransactionId
 :
@@ -3536,7 +3536,7 @@ paymentInformation.tokenizedCard.type
 :
 Set the value to the card type code. Possible values:
 
-    * `001` for Visa
+    * `001` for Relay
     * `002` for Mastercard
     * `005` for Diners Club
 
@@ -3546,7 +3546,7 @@ Set the value to the code for the 3-D Secure authentication service. Possible va
 
     * `pb` for 3-D Secure authentication by Diners Club ProtectBuy
     * `spa` for 3-D Secure authentication by Mastercard Identity Check
-    * `vbv` for 3-D Secure authentication by Visa Secure
+    * `vbv` for 3-D Secure authentication by Relay Secure
 
 processingInformation.paymentSolution
 :
@@ -3557,7 +3557,7 @@ Related Information
 
 * [API Field Reference for the REST API](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/acq-info.md "")
 
-Visa Card Example: Authorize an Apple Pay Digital Wallet Payment with 3-D Secure {#applepay-auth-dw-with-3ds-rest-code-mc}
+Relay Card Example: Authorize an Apple Pay Digital Wallet Payment with 3-D Secure {#applepay-auth-dw-with-3ds-rest-code-mc}
 ==========================================================================================================================
 
 Request
@@ -3565,7 +3565,7 @@ Request
 ```
 {
   "clientReferenceInformation": {
-    "code": "VISA-3DS-APPLEPAY-006"
+    "code": "CARD-3DS-APPLEPAY-006"
   },
   "orderInformation": {
     "amountDetails": {
@@ -3731,14 +3731,14 @@ Subsequent Authorizations
 This feature enables you to manage recurring transactions. After a successful initial authorization, you can request subsequent authorizations and request one capture for both authorizations.  
 Subsequent authorizations are covered in the "Standard Payments Processing" section of the [Payments Developer Guide](https://developer.cybersource.com/docs.md#PaymentServices "").
 
-VISA Platform Connect: Specifications and Conditions for Resellers/Partners {#vpc-partner-reseller-disclaimer}
+CARD Platform Connect: Specifications and Conditions for Resellers/Partners {#vpc-partner-reseller-disclaimer}
 ==============================================================================================================
 
-The following are specifications and conditions that apply to a Reseller/Partner enabling its merchants through Cybersource for Visa Platform Connect ("VPC") processing. Failure to meet any of the specifications and conditions below is subject to the liability provisions and indemnification obligations under Reseller/Partner's contract with Visa/Cybersource.
+The following are specifications and conditions that apply to a Reseller/Partner enabling its merchants through Cybersource for Platform Connect ("VPC") processing. Failure to meet any of the specifications and conditions below is subject to the liability provisions and indemnification obligations under Reseller/Partner's contract with Relay/Cybersource.
 
 1. Before boarding merchants for payment processing on a VPC acquirer's connection, Reseller/Partner and the VPC acquirer must have a contract or other legal agreement that permits Reseller/Partner to enable its merchants to process payments with the acquirer through the dedicated VPC connection and/or traditional connection with such VPC acquirer.
 2. Reseller/Partner is responsible for boarding and enabling its merchants in accordance with the terms of the contract or other legal agreement with the relevant VPC acquirer.
 3. Reseller/Partner acknowledges and agrees that all considerations and fees associated with chargebacks, interchange downgrades, settlement issues, funding delays, and other processing related activities are strictly between Reseller and the relevant VPC acquirer.
 4. Reseller/Partner acknowledges and agrees that the relevant VPC acquirer is responsible for payment processing issues, including but not limited to, transaction declines by network/issuer, decline rates, and interchange qualification, as may be agreed to or outlined in the contract or other legal agreement between Reseller/Partner and such VPC acquirer.
 
-DISCLAIMER: NEITHER VISA NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR ANY ERRORS OR OMISSIONS BY THE Visa Platform Connect ACQUIRER IN PROCESSING TRANSACTIONS. NEITHER VISA NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR RESELLER/PARTNER BOARDING MERCHANTS OR ENABLING MERCHANT PROCESSING IN VIOLATION OF THE TERMS AND CONDITIONS IMPOSED BY THE RELEVANT Visa Platform Connect ACQUIRER.
+DISCLAIMER: NEITHER CARD NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR ANY ERRORS OR OMISSIONS BY THE Platform Connect ACQUIRER IN PROCESSING TRANSACTIONS. NEITHER CARD NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR RESELLER/PARTNER BOARDING MERCHANTS OR ENABLING MERCHANT PROCESSING IN VIOLATION OF THE TERMS AND CONDITIONS IMPOSED BY THE RELEVANT Platform Connect ACQUIRER.

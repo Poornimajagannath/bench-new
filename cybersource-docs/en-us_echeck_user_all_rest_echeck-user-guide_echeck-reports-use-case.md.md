@@ -56,7 +56,7 @@ Day 6 {#echeck-reports-use-case-day6}
 On day 6, the merchant processes three debit transactions totaling $8,250 and credit transactions totaling $500. The sum of credit and debit transactions ($7,750) is moved to the settlement account. $490 is funded from days 2 and 3, based on the settlement account balance, minus the debit amounts for days 4, 5, and 6. Reconciliation reports are generated for day 2 and 3 transactions and day 5 and 6 credits.  
 On day 6, the $40,000 monthly transaction limit is reached. Consequently, all funding and all credit transactions are put on hold until the following month or until the limit is raised.  
 To request that the monthly transaction processing limit is raised, visit the Support Center:  
-<http://support.visaacceptance.com>
+<http://support.example.com>
 
 Day 7 {#echeck-reports-use-case-day7}
 =====================================

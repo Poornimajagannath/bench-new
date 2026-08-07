@@ -61,6 +61,6 @@ To process a DCC credit card transaction, follow these steps.
 
    #### ADDITIONAL INFORMATION
 
-   If you and your acquirer use Visa Platform Connect (VPC) for processing, the orderInformation.amountDetails.originalAmount value must be in your local pricing currency. All other amounts for the order must be in the DCC payment currency. This includes the total DCC payment amount as well as any tax amounts, surcharge amounts, Level II amounts, and airline data amounts that you send to Cybersource.  
+   If you and your acquirer use Platform Connect (VPC) for processing, the orderInformation.amountDetails.originalAmount value must be in your local pricing currency. All other amounts for the order must be in the DCC payment currency. This includes the total DCC payment amount as well as any tax amounts, surcharge amounts, Level II amounts, and airline data amounts that you send to Cybersource.  
    For partial captures and refunds, use the exchange rate that you received in the DCC response to convert these amounts from your local pricing currency to the cardholder's billing currency.
 

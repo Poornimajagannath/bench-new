@@ -11,7 +11,7 @@ Apple Pay Digital Wallets (with the Elavon Processor)
 -----------------------------------------------------
 
 **With the `Elavon` processor,** `Cybersource` supports Apple Pay as a digital wallet, which is a mobile app that enables users to link their credit cards, debit cards, loyalty card to their mobile phones. The mobile wallet enables fast online checkouts and contactless in-store payments. `Cybersource` digital wallets integrate through `Unified Checkout`, ensuring secure transactions.  
-`Elavon` supports 3-D Secure 2.2 with Diners Club, Mastercard, and Visa card transactions. The section [Authorizing Apple Pay Digital Wallet Payments (with Elavon)](/docs/cybs/en-us/apple-pay/developer/all/rest/applepay/applepay-auth-digital-wallet.md "") covers authorizations of Apple Pay digital wallet payments without 3-D Secure and with 3-D Secure.
+`Elavon` supports 3-D Secure 2.2 with Diners Club, Mastercard, and Relay card transactions. The section [Authorizing Apple Pay Digital Wallet Payments (with Elavon)](/docs/cybs/en-us/apple-pay/developer/all/rest/applepay/applepay-auth-digital-wallet.md "") covers authorizations of Apple Pay digital wallet payments without 3-D Secure and with 3-D Secure.
 
 Processors and Cards Supported
 ------------------------------

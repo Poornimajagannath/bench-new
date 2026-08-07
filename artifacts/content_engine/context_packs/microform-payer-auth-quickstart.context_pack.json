@@ -3,7 +3,7 @@
   "source_id": "microform-payer-auth-quickstart",
   "product": [
     "cybersource",
-    "visa-acceptance"
+    "acceptance-platform"
   ],
   "audience": [
     "developer"
@@ -165,8 +165,8 @@
   ],
   "provenance": {
     "source_id": "microform-payer-auth-quickstart",
-    "snapshot_id": "microform-payer-auth-quickstart-41556b43a776",
-    "content_hash": "41556b43a7766fa5989e0e367b5ccb85bd3cd9830c9fe2ae7d474554c0c33d19",
+    "snapshot_id": "microform-payer-auth-quickstart-23b78ea29328",
+    "content_hash": "23b78ea293289016da0516c7b28b5983ae8c6bbf2b45d48f75d7ec8b4f843fba",
     "canonical_url": "local://fixtures/microform-payer-auth-quickstart.md",
     "doc_id": "doc-microform-payer-auth-quickstart"
   },

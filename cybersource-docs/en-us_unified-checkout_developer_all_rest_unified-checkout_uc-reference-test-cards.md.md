@@ -5,7 +5,7 @@ Use these test payment credentials to test your `Unified Checkout` configuration
 
 * [Unified Checkout Test Cards](/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout/uc-reference-test-cards/uc-reference-test-cards-uc.md "")
 
-* [Visa and Mastercard Click to Pay Test Cards](/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout/uc-reference-test-cards/uc-reference-test-cards-visa-ctp.md "")
+* [Relay and Mastercard Click to Pay Test Cards](/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout/uc-reference-test-cards/uc-reference-test-cards-relay-ctp.md "")
 
 * [Test Cards for Authentication by Click to Pay](/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout/uc-reference-test-cards/uc-reference-test-cards-auth-ctp.md "")
 

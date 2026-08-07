@@ -20,12 +20,12 @@ There is no dependency on `docetl`, `harbor`, or `tempo-evals` in V0.
 
 ## Problem
 
-Developers hit hard, multi-step CyberSource / Visa Acceptance workflows (Flex tokens, HTTP Signature, Microform + Payer Auth) and get stuck. We need a **local, credential-free** pipeline that:
+Developers hit hard, multi-step CyberSource / Acceptance Platform workflows (Flex tokens, HTTP Signature, Microform + Payer Auth) and get stuck. We need a **local, credential-free** pipeline that:
 
 1. Discovers typed workflow candidates from raw forum/docs/support questions (DocETL-inspired).
 2. Emits Relay workflow contracts / agent-visible benchmark task packs.
 3. Verifies answers with a Stable Bench-inspired verifier against simulated fixtures.
-4. Classifies failures and routes product-surface improvement actions (including VAP CLI descriptors).
+4. Classifies failures and routes product-surface improvement actions (including Relay CLI descriptors).
 5. Produces a PM-readable report of the proof.
 
 DocETL-inspired extraction and Stable Bench-inspired verification stay **separate stages** joined by typed artifacts. Do not fuse them into one opaque script.
@@ -67,7 +67,7 @@ Raw questions must not carry a pre-assigned `workflow_id`. Suggestion is produce
 | `pm_gate.py` | PM approve/edit/reject gate; reduce approved seeds by `workflow_id` into one richer `WorkflowCandidate` |
 | `task_pack.py` | Split approved candidate into agent-visible `TaskPack` + verifier-only `HiddenTruth` |
 | `verifiers.py` | Stable Bench-inspired checks against simulated fixtures; return structured `VerifierResult` |
-| `routing.py` | Classify failures → `ImprovementAction` (docs, SDK, VAP CLI workflow verifier, etc.) |
+| `routing.py` | Classify failures → `ImprovementAction` (docs, SDK, Relay CLI workflow verifier, etc.) |
 | `reporting.py` | PM-readable markdown/JSON answering the five proof questions |
 
 ## Workflows (V0 seeds)
@@ -76,9 +76,9 @@ Raw questions must not carry a pre-assigned `workflow_id`. Suggestion is produce
 2. `http-signature-debug` — HTTP Signature header / SDK field-name friction
 3. `microform-payer-auth-state-machine` — Microform capture vs Payer Auth enrollment/challenge states
 
-## VAP CLI Product Bias
+## Relay CLI Product Bias
 
-When routing to VAP CLI, treat the CLI as a **workflow verifier**, not a thin command wrapper. Descriptors should include: goal, command, API/SDK facts, readiness checks, recovery path, support-safe evidence, telemetry/eval hints, future MCP metadata. V0 actions are recommendations or deterministic fixture checks only.
+When routing to Relay CLI, treat the CLI as a **workflow verifier**, not a thin command wrapper. Descriptors should include: goal, command, API/SDK facts, readiness checks, recovery path, support-safe evidence, telemetry/eval hints, future MCP metadata. V0 actions are recommendations or deterministic fixture checks only.
 
 ## Non-Goals (V0)
 

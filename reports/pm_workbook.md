@@ -30,14 +30,14 @@ For Microform + Payer Authentication, the system can say:
 - Developers skip enrollment / challenge / validation
 - Correct stages are the state machine below
 - The bad answer fails these checks
-- Next surface: docs + VAP CLI workflow verifier
+- Next surface: docs + Relay CLI workflow verifier
 
 ## What “good” looks like for PM
 
 | Surface | Improvement |
 |---------|-------------|
 | Docs | Rewrite around the misunderstood workflow order |
-| VAP CLI | `vap workflow verify --id microform-payer-auth-state-machine --fixture local` |
+| Relay CLI | `relay workflow verify --id microform-payer-auth-state-machine --fixture local` |
 | MCP / assistant | Answer from the contract, not generic retrieval |
 | Quality | Measure whether bad answers are still caught after doc/CLI changes |
 

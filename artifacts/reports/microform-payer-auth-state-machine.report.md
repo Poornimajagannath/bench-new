@@ -55,7 +55,7 @@ Local proof only. No network. No live credentials.
 ## 5. What product surface improves next
 
 - Clarify Microform + Payer Auth State Machine stage ordering in public docs
-- Ship a VAP CLI workflow verifier for this contract
+- Ship a Relay CLI workflow verifier for this contract
 
 ## Classification
 
@@ -67,10 +67,10 @@ Local proof only. No network. No live credentials.
 - task pack: `artifacts/task_packs/microform-payer-auth-state-machine.agent_task.json`
 - verifier results: `artifacts/verifier_results/microform-payer-auth-state-machine.result.json`
 
-## VAP CLI workflow verifier (recommended)
+## Relay CLI workflow verifier (recommended)
 
 - goal: Sequence Microform tokenization with Payer Authentication enrollment, challenge/frictionless handling, and authorization using the authentication result.
-- command: `vap workflow verify --id microform-payer-auth-state-machine --fixture local`
+- command: `relay workflow verify --id microform-payer-auth-state-machine --fixture local`
 - readiness checks:
   - Frozen seeds present under data/seeds/
   - No live credentials exported

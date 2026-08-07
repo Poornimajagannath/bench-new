@@ -1,15 +1,15 @@
-Visa Bank Account Validation Merchant Guide {#visa-bank-acc-val-about-guide}
+Relay Bank Account Validation Merchant Guide {#relay-bank-acc-val-about-guide}
 ============================================================================
 
 This section describes how to use this guide and where to find further information.
 
 Audience and Purpose
 :
-This guide is written for merchants who want to implement the Visa Bank Account Validation product with the `REST API`.
+This guide is written for merchants who want to implement the Relay Bank Account Validation product with the `REST API`.
 
 Prohibited Uses
 :
-Merchants are prohibited from using the Visa Bank Account Validation (1) alone or in connection with other data or information, to determine a consumer's eligibility for products, services, credit, insurance, housing or employment, and/or engage in any other actions that could give rise to adverse action requirements under the US Fair Credit Reporting Act, the Equal Credit Opportunity Act, and/or other similar federal, state, or local regulations; (2) alone or in connection with other data or information, in any way that would cause Visa or `Cybersource` to be a "consumer reporting agency"; or (3) alone or in connection with other data or information, to discriminate based on race, gender, or other protected characteristics.
+Merchants are prohibited from using the Relay Bank Account Validation (1) alone or in connection with other data or information, to determine a consumer's eligibility for products, services, credit, insurance, housing or employment, and/or engage in any other actions that could give rise to adverse action requirements under the US Fair Credit Reporting Act, the Equal Credit Opportunity Act, and/or other similar federal, state, or local regulations; (2) alone or in connection with other data or information, in any way that would cause Relay or `Cybersource` to be a "consumer reporting agency"; or (3) alone or in connection with other data or information, to discriminate based on race, gender, or other protected characteristics.
 
 Conventions
 :
@@ -30,9 +30,9 @@ Customer Support
 :
 For support information about any service, visit the Support Center:
 
-<http://support.visaacceptance.com>
+<http://support.example.com>
 
-Recent Revisions to This Document {#visa-bank-acc-val-doc-revisions}
+Recent Revisions to This Document {#relay-bank-acc-val-doc-revisions}
 ====================================================================
 
 26.06.01
@@ -45,18 +45,18 @@ This revision contains only editorial changes and no technical updates.
 
 Validating New Accounts Using Tokens
 :
-Added information on how to validate accounts using transient tokens and TMS tokens. For more information, see [Validating an Account Using Transient Tokens](/docs/cybs/en-us/visa-bank-validation/merchant/all/rest/visa-bank-accoun-val/visa-bank-acc-val-process-intro-intro/visa-bank-acc-val-validate-transient-token.md "") and [Validating an Account Using TMS Tokens](/docs/cybs/en-us/visa-bank-validation/merchant/all/rest/visa-bank-accoun-val/visa-bank-acc-val-process-intro-intro/visa-bank-acc-val-validate-reg-tms-token.md "").
+Added information on how to validate accounts using transient tokens and TMS tokens. For more information, see [Validating an Account Using Transient Tokens](/docs/cybs/en-us/relay-bank-validation/merchant/all/rest/relay-bank-accoun-val/relay-bank-acc-val-process-intro-intro/relay-bank-acc-val-validate-transient-token.md "") and [Validating an Account Using TMS Tokens](/docs/cybs/en-us/relay-bank-validation/merchant/all/rest/relay-bank-accoun-val/relay-bank-acc-val-process-intro-intro/relay-bank-acc-val-validate-reg-tms-token.md "").
 
 25.11.01
 --------
 
 Enhanced Search Information
 :
-Added information on how to search for account validation transactions. For more information, see[Transaction Search](/docs/cybs/en-us/visa-bank-validation/merchant/all/rest/visa-bank-accoun-val/visa-bank-acc-val-view-tranx-details-ebc/visa-bank-acc-val-tranx-search-ebc.md "") and [Transaction Details](/docs/cybs/en-us/visa-bank-validation/merchant/all/rest/visa-bank-accoun-val/visa-bank-acc-val-view-tranx-details-ebc/visa-bank-acc-val-tranx-details-ebc.md "").
+Added information on how to search for account validation transactions. For more information, see[Transaction Search](/docs/cybs/en-us/relay-bank-validation/merchant/all/rest/relay-bank-accoun-val/relay-bank-acc-val-view-tranx-details-ebc/relay-bank-acc-val-tranx-search-ebc.md "") and [Transaction Details](/docs/cybs/en-us/relay-bank-validation/merchant/all/rest/relay-bank-accoun-val/relay-bank-acc-val-view-tranx-details-ebc/relay-bank-acc-val-tranx-details-ebc.md "").
 
 Enhanced Reporting
 :
-Added information on how to include account validation transactions in the Transaction Request Report. For more information, see [Reporting](/docs/cybs/en-us/visa-bank-validation/merchant/all/rest/visa-bank-accoun-val/visa-bank-acc-val-reporting.md "").
+Added information on how to include account validation transactions in the Transaction Request Report. For more information, see [Reporting](/docs/cybs/en-us/relay-bank-validation/merchant/all/rest/relay-bank-accoun-val/relay-bank-acc-val-reporting.md "").
 
 Editorial Updates
 :
@@ -77,44 +77,44 @@ This revision contains only editorial changes and no technical updates.
 
 Initial release.
 
-Introduction to Visa Bank Account Validation {#visa-bank-acc-val-topic-intro}
+Introduction to Relay Bank Account Validation {#relay-bank-acc-val-topic-intro}
 =============================================================================
 
-`Cybersource` offers the Visa Bank Account Validation product, which helps validate your customer's routing and bank account information as a standalone service through secure REST-based API prior to generating an ACH transaction with your existing processor. This product also helps you comply with the National Automated Clearing House Association (Nacha) Web Debit Account Validation Rule for ACH web transactions.  
+`Cybersource` offers the Relay Bank Account Validation product, which helps validate your customer's routing and bank account information as a standalone service through secure REST-based API prior to generating an ACH transaction with your existing processor. This product also helps you comply with the National Automated Clearing House Association (Nacha) Web Debit Account Validation Rule for ACH web transactions.  
 This product helps reduce the number of administrative returns, enhances the security and reliability of ACH transactions, and protects your business from the costly repercussions of invalid ACH transactions.  
-The Visa Bank Account Validation product validates both the routing and bank account number based on the ACH history of the account. The responses on this validation will let you know whether the customer's account is validated, not validated, low risk, medium risk, or high risk for processing ACH transactions. The product validates a routing and bank account number combination using format checks and historical information based on more than 100 million accounts.
+The Relay Bank Account Validation product validates both the routing and bank account number based on the ACH history of the account. The responses on this validation will let you know whether the customer's account is validated, not validated, low risk, medium risk, or high risk for processing ACH transactions. The product validates a routing and bank account number combination using format checks and historical information based on more than 100 million accounts.
 
-Requirements for Visa Bank Account Validation {#visa-bank-acc-val-reqs}
+Requirements for Relay Bank Account Validation {#relay-bank-acc-val-reqs}
 =======================================================================
 
-In the US, Visa Bank Account Validation enables you to validate your customer's routing and bank account information based on their ACH history. Before you can start using it, you must meet these requirements:
+In the US, Relay Bank Account Validation enables you to validate your customer's routing and bank account information based on their ACH history. Before you can start using it, you must meet these requirements:
 
 * Verify that you have the capability to use the REST API.
-* Contact the `Cybersource` sales team or your contracting partner to request onboarding for the Visa Bank Account Validation product.
-* Generate a `REST` key P12 certificate for your merchant ID (MID) so that you can send requests. For more information, see [Generating a P12 Certificate](/docs/cybs/en-us/visa-bank-validation/merchant/all/rest/visa-bank-accoun-val/visa-bank-acc-val-config.md "").
-* Enable Message-Level Encryption (MLE) so that you can send all Visa Bank Account Validation API requests, including requests submitted using tokenized data to `Cybersource`. For more information, see [Enabling Message-Level Encryption](/docs/cybs/en-us/visa-bank-validation/merchant/all/rest/visa-bank-accoun-val/visa-bank-acc-val-enable-mle.md "").
-  {#visa-bank-acc-val-reqs_ul_a1g_yvv_52c}
+* Contact the `Cybersource` sales team or your contracting partner to request onboarding for the Relay Bank Account Validation product.
+* Generate a `REST` key P12 certificate for your merchant ID (MID) so that you can send requests. For more information, see [Generating a P12 Certificate](/docs/cybs/en-us/relay-bank-validation/merchant/all/rest/relay-bank-accoun-val/relay-bank-acc-val-config.md "").
+* Enable Message-Level Encryption (MLE) so that you can send all Relay Bank Account Validation API requests, including requests submitted using tokenized data to `Cybersource`. For more information, see [Enabling Message-Level Encryption](/docs/cybs/en-us/relay-bank-validation/merchant/all/rest/relay-bank-accoun-val/relay-bank-acc-val-enable-mle.md "").
+  {#relay-bank-acc-val-reqs_ul_a1g_yvv_52c}
 
-Generating a P12 Certificate {#visa-bank-acc-val-config}
+Generating a P12 Certificate {#relay-bank-acc-val-config}
 ========================================================
 
 You can use this validation product only through a REST API integration.  
-You must create a `REST` key for your merchant ID. If you already have a `REST` key for other `Cybersource` `REST` services with the same merchant ID, you can use that key to access the Visa Bank Account Validation Service. Ensure that the key is a P12 certificate. For more details, see [Create a P12 Certificate](https://developer.cybersource.com/docs/cybs/en-us/platform/developer/all/rest/rest-getting-started/restgs-jwt-message-intro/restgs-security-p12-intro.md "") in the *Getting Started with REST Developer Guide*.
+You must create a `REST` key for your merchant ID. If you already have a `REST` key for other `Cybersource` `REST` services with the same merchant ID, you can use that key to access the Relay Bank Account Validation Service. Ensure that the key is a P12 certificate. For more details, see [Create a P12 Certificate](https://developer.cybersource.com/docs/cybs/en-us/platform/developer/all/rest/rest-getting-started/restgs-jwt-message-intro/restgs-security-p12-intro.md "") in the *Getting Started with REST Developer Guide*.
 
-Enabling Message-Level Encryption {#visa-bank-acc-val-enable-mle}
+Enabling Message-Level Encryption {#relay-bank-acc-val-enable-mle}
 =================================================================
 
-You must enable Message-Level Encryption (MLE) to send Visa Bank Account Validation API requests to `Cybersource`. For more information, see [Enable Message-Level Encryption](https://developer.cybersource.com/docs/cybs/en-us/platform/developer/all/rest/rest-getting-started/restgs-jwt-message-intro/restgs-mle-intro.md "") in the *Getting Started with REST Developer Guide*.
+You must enable Message-Level Encryption (MLE) to send Relay Bank Account Validation API requests to `Cybersource`. For more information, see [Enable Message-Level Encryption](https://developer.cybersource.com/docs/cybs/en-us/platform/developer/all/rest/rest-getting-started/restgs-jwt-message-intro/restgs-mle-intro.md "") in the *Getting Started with REST Developer Guide*.
 
-Validating a Bank Account {#visa-bank-acc-val-process-intro-intro}
+Validating a Bank Account {#relay-bank-acc-val-process-intro-intro}
 ==================================================================
 
-Visa Bank Account Validation supports multiple invocation methods as explained in the following sub-sections.
+Relay Bank Account Validation supports multiple invocation methods as explained in the following sub-sections.
 
 > IMPORTANT  
 > Each request can validate either the routing and bank account number combination or one of the types of token can be validated. You cannot combine multiple tokens or routing/bank account information in a single request.
 
-Validate an Account Using Routing and Account Numbers {#visa-bank-acc-val-process-intro}
+Validate an Account Using Routing and Account Numbers {#relay-bank-acc-val-process-intro}
 ========================================================================================
 
 This section describes how to validate using direct routing and bank account details submitted through the REST API. Follow these steps to request a bank account validation:
@@ -123,11 +123,11 @@ This section describes how to validate using direct routing and bank account det
 2. Send the completed request to one of these endpoints:
    * **Production:** `POST ``api.cybersource.com``/bavs/v1/account-validations`
    * **Test:** `POST ``apitest.cybersource.com``/bavs/v1/account-validations`
-     {#visa-bank-acc-val-process-intro_ul_c3w_2jw_52c}
+     {#relay-bank-acc-val-process-intro_ul_c3w_2jw_52c}
 3. Verify the response messages to make sure that the request succeeded. For more information, see the [Transaction response codes](https://developer.cybersource.com/api/reference/response-codes.md "").
-   {#visa-bank-acc-val-process-intro_ol_b3w_2jw_52c}
+   {#relay-bank-acc-val-process-intro_ol_b3w_2jw_52c}
 
-Required Fields for Validating an Account Using Routing and Account Numbers {#visa-bank-acc-val-req-fields}
+Required Fields for Validating an Account Using Routing and Account Numbers {#relay-bank-acc-val-req-fields}
 ===========================================================================================================
 
 [processingInformation.validationLevel](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/processing-info-aa/processing-info-val-lev.md "")
@@ -142,14 +142,14 @@ Set the value to the routing number for your customer's bank. This field accepts
 :
 Set the value to the bank account number for your customer's bank account. This field accepts a non‑negative string containing only digits and must be exactly nine-digits long.
 
-Optional Fields for Validating an Account {#visa-bank-acc-val-optional-fields}
+Optional Fields for Validating an Account {#relay-bank-acc-val-optional-fields}
 ==============================================================================
 
 [clientReferenceInformation.code](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/client-ref-info-aa/client-ref-info-code.md "")
 :
 Set the value to any reference code that you choose to associate with the validation request. This code is returned in the response exactly as provided.
 
-REST Example: Validating an Account Using Routing and Account Numbers {#visa-bank-acc-val-ex-rest}
+REST Example: Validating an Account Using Routing and Account Numbers {#relay-bank-acc-val-ex-rest}
 ==================================================================================================
 
 Request
@@ -212,9 +212,9 @@ Validating an Account Using Transient Tokens {#concept_nt2_ymx_z3c}
 
 Transient tokens are one-time, short-lived tokens, Merchants can use them for validations without having to transmit raw routing and account number data in the API request call. This option is intended for session-based validations, such as initial account verification or checkout flows. There are several types of transient tokens that can be used when validating routing and bank account information.  
 All transient token-based account validation requests must be submitted using REST APIs secured with mandatory Message‑Level Encryption (MLE).  
-The validation response returned for transient token requests is the same as for other Visa Bank Account Validation request types.
+The validation response returned for transient token requests is the same as for other Relay Bank Account Validation request types.
 
-Validating an Account Using a Transient Token: JSON Web Token (JWT) {#visa-bank-acc-val-validate-transient-token-jwt}
+Validating an Account Using a Transient Token: JSON Web Token (JWT) {#relay-bank-acc-val-validate-transient-token-jwt}
 =====================================================================================================================
 
 This section describes how to validate using a JWT type of transient token submitted through the REST API. Follow these steps to request a bank account validation:
@@ -223,11 +223,11 @@ This section describes how to validate using a JWT type of transient token submi
 2. Send the completed request to one of these endpoints:
    * **Production:** `POST ``api.cybersource.com``/bavs/v1/account-validations`
    * **Test:** `POST ``apitest.cybersource.com``/bavs/v1/account-validations`
-     {#visa-bank-acc-val-validate-transient-token-jwt_ul_c3w_2jw_52c}
+     {#relay-bank-acc-val-validate-transient-token-jwt_ul_c3w_2jw_52c}
 3. Verify the response messages to make sure that the request succeeded. For more information, see the [Transaction response codes](https://developer.cybersource.com/api/reference/response-codes.md "").
-   {#visa-bank-acc-val-validate-transient-token-jwt_ol_b3w_2jw_52c}
+   {#relay-bank-acc-val-validate-transient-token-jwt_ol_b3w_2jw_52c}
 
-Required Fields for Validating an Account Using a JSON Web Token {#visa-bank-acc-val-req-fields-transient-token-jwt}
+Required Fields for Validating an Account Using a JSON Web Token {#relay-bank-acc-val-req-fields-transient-token-jwt}
 ====================================================================================================================
 
 [processingInformation.validationLevel](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/processing-info-aa/processing-info-val-lev.md "")
@@ -238,14 +238,14 @@ Set the value to `1`.
 :
 The transient token encoded as JWT.
 
-Optional Fields for Validating an Account {#visa-bank-acc-val-optional-conref}
+Optional Fields for Validating an Account {#relay-bank-acc-val-optional-conref}
 ==============================================================================
 
 [clientReferenceInformation.code](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/client-ref-info-aa/client-ref-info-code.md "")
 :
 Set the value to any reference code that you choose to associate with the validation request. This code is returned in the response exactly as provided.
 
-REST Example: Validating an Account Using a JSON Web Token {#visa-bank-acc-val-jwt-ex-rest}
+REST Example: Validating an Account Using a JSON Web Token {#relay-bank-acc-val-jwt-ex-rest}
 ===========================================================================================
 
 Request
@@ -281,7 +281,7 @@ Response to a Successful Request
 } 
 ```
 
-Validating an Account Using a Transient Token: JSON Token ID {#visa-bank-acc-val-validate-transient-token-json}
+Validating an Account Using a Transient Token: JSON Token ID {#relay-bank-acc-val-validate-transient-token-json}
 ===============================================================================================================
 
 This section describes how to validate using a JSON token ID type of transient token submitted through the REST API. Follow these steps to request a bank account validation:
@@ -290,11 +290,11 @@ This section describes how to validate using a JSON token ID type of transient t
 2. Send the completed request to one of these endpoints:
    * **Production:** `POST ``api.cybersource.com``/bavs/v1/account-validations`
    * **Test:** `POST ``apitest.cybersource.com``/bavs/v1/account-validations`
-     {#visa-bank-acc-val-validate-transient-token-json_ul_c3w_2jw_52c}
+     {#relay-bank-acc-val-validate-transient-token-json_ul_c3w_2jw_52c}
 3. Verify the response messages to make sure that the request succeeded. For more information, see the [Transaction response codes](https://developer.cybersource.com/api/reference/response-codes.md "").
-   {#visa-bank-acc-val-validate-transient-token-json_ol_b3w_2jw_52c}
+   {#relay-bank-acc-val-validate-transient-token-json_ol_b3w_2jw_52c}
 
-Required Fields for Validating an Account Using a JSON Token ID {#visa-bank-acc-val-req-fields-transient-token-json}
+Required Fields for Validating an Account Using a JSON Token ID {#relay-bank-acc-val-req-fields-transient-token-json}
 ====================================================================================================================
 
 [processingInformation.validationLevel](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/processing-info-aa/processing-info-val-lev.md "")
@@ -305,14 +305,14 @@ Set the value to `1`.
 :
 The value is the TMS transient token ID. A 64-hexadecimal character identifier representing capture payment credentials.
 
-Optional Fields for Validating an Account {#visa-bank-acc-val-optional-conref}
+Optional Fields for Validating an Account {#relay-bank-acc-val-optional-conref}
 ==============================================================================
 
 [clientReferenceInformation.code](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/client-ref-info-aa/client-ref-info-code.md "")
 :
 Set the value to any reference code that you choose to associate with the validation request. This code is returned in the response exactly as provided.
 
-REST Example: Validating an Account Using a JSON Token ID {#visa-bank-acc-val-json-ex-rest}
+REST Example: Validating an Account Using a JSON Token ID {#relay-bank-acc-val-json-ex-rest}
 ===========================================================================================
 
 Request
@@ -348,7 +348,7 @@ Response to a Successful Request
 } 
 ```
 
-Validating an Account Using Regular TMS Tokens {#visa-bank-acc-val-validate-reg-tms-token}
+Validating an Account Using Regular TMS Tokens {#relay-bank-acc-val-validate-reg-tms-token}
 ==========================================================================================
 
 Several types of regular Transaction Management Systems (TMS) tokens can be used to validate routing and bank account information:
@@ -356,9 +356,9 @@ Several types of regular Transaction Management Systems (TMS) tokens can be used
 * Customer Identifier
 * Instrument Identifier
 * Payment Instrument Identifier
-  {#visa-bank-acc-val-validate-reg-tms-token_ul_dsx_sny_z3c}
+  {#relay-bank-acc-val-validate-reg-tms-token_ul_dsx_sny_z3c}
 
-Validating an Account Using a TMS Token: Customer Identifier {#visa-bank-acc-val-validate-reg-tms-customer-ident-intro}
+Validating an Account Using a TMS Token: Customer Identifier {#relay-bank-acc-val-validate-reg-tms-customer-ident-intro}
 =======================================================================================================================
 
 A customer identifier is a type of token created by the Token Management Systems (TMS) to retrieve customer-associated data. It can be used to validate a customer's routing and bank account information.  
@@ -368,11 +368,11 @@ This section describes how to validate using a customer identifier type of TMS t
 2. Send the completed request to one of these endpoints:
    * **Production:** `POST ``api.cybersource.com``/bavs/v1/account-validations`
    * **Test:** `POST ``apitest.cybersource.com``/bavs/v1/account-validations`
-     {#visa-bank-acc-val-validate-reg-tms-customer-ident-intro_ul_c3w_2jw_52c}
+     {#relay-bank-acc-val-validate-reg-tms-customer-ident-intro_ul_c3w_2jw_52c}
 3. Verify the response messages to make sure that the request succeeded. For more information, see the [Transaction response codes](https://developer.cybersource.com/api/reference/response-codes.md "").
-   {#visa-bank-acc-val-validate-reg-tms-customer-ident-intro_ol_b3w_2jw_52c}
+   {#relay-bank-acc-val-validate-reg-tms-customer-ident-intro_ol_b3w_2jw_52c}
 
-Required Fields for Validating an Account Using a Customer Identifier {#visa-bank-acc-val-req-fields-tms-customer-ident}
+Required Fields for Validating an Account Using a Customer Identifier {#relay-bank-acc-val-req-fields-tms-customer-ident}
 ========================================================================================================================
 
 [processingInformation.validationLevel](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/processing-info-aa/processing-info-val-lev.md "")
@@ -383,14 +383,14 @@ Set the value to `1`.
 :
 The unique identifier for the Customer token. This value is a non-negative string with 12-32 characters.
 
-Optional Fields for Validating an Account {#visa-bank-acc-val-optional-conref}
+Optional Fields for Validating an Account {#relay-bank-acc-val-optional-conref}
 ==============================================================================
 
 [clientReferenceInformation.code](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/client-ref-info-aa/client-ref-info-code.md "")
 :
 Set the value to any reference code that you choose to associate with the validation request. This code is returned in the response exactly as provided.
 
-REST Example: Validating an Account Using a Customer Identifier {#visa-bank-acc-val-tms-customer-ident-ex-rest}
+REST Example: Validating an Account Using a Customer Identifier {#relay-bank-acc-val-tms-customer-ident-ex-rest}
 ===============================================================================================================
 
 Request
@@ -428,7 +428,7 @@ Response to a Successful Request
 }
 ```
 
-Validating an Account Using a TMS Token: Instrument Identifier {#visa-bank-acct-val-validate-reg-tms-instrument-ident-intro}
+Validating an Account Using a TMS Token: Instrument Identifier {#relay-bank-acct-val-validate-reg-tms-instrument-ident-intro}
 ============================================================================================================================
 
 An instrument identifier is a type of token created by Token Management Systems (TMS) to identify the bank or payment account to use for payment. It can be used to validate a customer's routing and bank account information.  
@@ -438,11 +438,11 @@ This section describes how to validate using an instrument identifier type of TM
 2. Send the completed request to one of these endpoints:
    * **Production:** `POST ``api.cybersource.com``/bavs/v1/account-validations`
    * **Test:** `POST ``apitest.cybersource.com``/bavs/v1/account-validations`
-     {#visa-bank-acct-val-validate-reg-tms-instrument-ident-intro_ul_c3w_2jw_52c}
+     {#relay-bank-acct-val-validate-reg-tms-instrument-ident-intro_ul_c3w_2jw_52c}
 3. Verify the response messages to make sure that the request succeeded. For more information, see the [Transaction response codes](https://developer.cybersource.com/api/reference/response-codes.md "").
-   {#visa-bank-acct-val-validate-reg-tms-instrument-ident-intro_ol_b3w_2jw_52c}
+   {#relay-bank-acct-val-validate-reg-tms-instrument-ident-intro_ol_b3w_2jw_52c}
 
-Required Fields for Validating an Account Using an Instrument Identifier {#visa-bank-acc-val-req-fields-tms-instrument-ident}
+Required Fields for Validating an Account Using an Instrument Identifier {#relay-bank-acc-val-req-fields-tms-instrument-ident}
 =============================================================================================================================
 
 [processingInformation.validationLevel](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/processing-info-aa/processing-info-val-lev.md "")
@@ -453,14 +453,14 @@ Set the value to `1`.
 :
 The unique identifier for the Instrument Identifier token. This value is a non-negative string with 12-32 characters.
 
-Optional Fields for Validating an Account {#visa-bank-acc-val-optional-conref}
+Optional Fields for Validating an Account {#relay-bank-acc-val-optional-conref}
 ==============================================================================
 
 [clientReferenceInformation.code](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/client-ref-info-aa/client-ref-info-code.md "")
 :
 Set the value to any reference code that you choose to associate with the validation request. This code is returned in the response exactly as provided.
 
-REST Example: Validating an Account Using an Instrument Identifier {#visa-bank-acc-val-tms-instrument-ident-ex-rest}
+REST Example: Validating an Account Using an Instrument Identifier {#relay-bank-acc-val-tms-instrument-ident-ex-rest}
 ====================================================================================================================
 
 Request
@@ -498,7 +498,7 @@ Response to a Successful Request
 }
 ```
 
-Validating an Account Using a TMS Token: Payment Instrument Identifier {#visa-bank-acc-val-validate-reg-tms-payment-instrument-ident-intro}
+Validating an Account Using a TMS Token: Payment Instrument Identifier {#relay-bank-acc-val-validate-reg-tms-payment-instrument-ident-intro}
 ===========================================================================================================================================
 
 A payment instrument identifier is a type of token created by Token Management Systems (TMS) that refers to specific payment account information. It can be used to validate a customer's routing and bank account information.  
@@ -508,11 +508,11 @@ This section describes how to validate using a payment instrument identifier typ
 2. Send the completed request to one of these endpoints:
    * **Production:** `POST ``api.cybersource.com``/bavs/v1/account-validations`
    * **Test:** `POST ``apitest.cybersource.com``/bavs/v1/account-validations`
-     {#visa-bank-acc-val-validate-reg-tms-payment-instrument-ident-intro_ul_c3w_2jw_52c}
+     {#relay-bank-acc-val-validate-reg-tms-payment-instrument-ident-intro_ul_c3w_2jw_52c}
 3. Verify the response messages to make sure that the request succeeded. For more information, see the [Transaction response codes](https://developer.cybersource.com/api/reference/response-codes.md "").
-   {#visa-bank-acc-val-validate-reg-tms-payment-instrument-ident-intro_ol_b3w_2jw_52c}
+   {#relay-bank-acc-val-validate-reg-tms-payment-instrument-ident-intro_ol_b3w_2jw_52c}
 
-Required Fields for Validating an Account Using a Payment Instrument Identifier {#visa-bank-acc-val-req-fields-tms-payment-instrument-ident}
+Required Fields for Validating an Account Using a Payment Instrument Identifier {#relay-bank-acc-val-req-fields-tms-payment-instrument-ident}
 ============================================================================================================================================
 
 [processingInformation.validationLevel](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/processing-info-aa/processing-info-val-lev.md "")
@@ -523,14 +523,14 @@ Set the value to `1`.
 :
 The unique identifier for the Payment Instrument token. This value is a non-negative string with 12-32 characters.
 
-Optional Fields for Validating an Account {#visa-bank-acc-val-optional-conref}
+Optional Fields for Validating an Account {#relay-bank-acc-val-optional-conref}
 ==============================================================================
 
 [clientReferenceInformation.code](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/client-ref-info-aa/client-ref-info-code.md "")
 :
 Set the value to any reference code that you choose to associate with the validation request. This code is returned in the response exactly as provided.
 
-REST Example: Validating an Account Using a Payment Instrument Identifier {#visa-bank-acc-val-tms-payment-instrument-ident-ex-rest}
+REST Example: Validating an Account Using a Payment Instrument Identifier {#relay-bank-acc-val-tms-payment-instrument-ident-ex-rest}
 ===================================================================================================================================
 
 Request
@@ -568,7 +568,7 @@ Response to a Successful Request
 }
 ```
 
-Response to a Successful Request {#visa-bank-acc-val-resp-fields-exp}
+Response to a Successful Request {#relay-bank-acc-val-resp-fields-exp}
 =====================================================================
 
 These fields appear in a successful response. These fields track and reference your validation requests:
@@ -576,10 +576,10 @@ These fields appear in a successful response. These fields track and reference y
 * clientReferenceInformation.code: This field appears when you include it in the request. It holds any reference code you want to associate with the specific validation request. The code returns in the response exactly as you provide it.
 * requestID: This unique ID identifies the validation request and can be used for future reference. You can use this request ID to search for the validation request in the Transaction Search module.
 * submitTimeUtc: This field records the timestamp of the validation request.
-* bankAccountValidation: This section contains three different fields: rawValidationCode, resultCode, and resultMessage. Refer to the [Result Message Explanation](/docs/cybs/en-us/visa-bank-validation/merchant/all/rest/visa-bank-accoun-val/visa-bank-acc-val-resp-fields-exp/visa-bank-acc-val-suc-response-codes.md#visa-bank-acc-val-suc-response-codes_table_okx_nkv_52c "") table to understand the possible codes.
-  {#visa-bank-acc-val-resp-fields-exp_ul_tmp_xcn_w2c}
+* bankAccountValidation: This section contains three different fields: rawValidationCode, resultCode, and resultMessage. Refer to the [Result Message Explanation](/docs/cybs/en-us/relay-bank-validation/merchant/all/rest/relay-bank-accoun-val/relay-bank-acc-val-resp-fields-exp/relay-bank-acc-val-suc-response-codes.md#relay-bank-acc-val-suc-response-codes_table_okx_nkv_52c "") table to understand the possible codes.
+  {#relay-bank-acc-val-resp-fields-exp_ul_tmp_xcn_w2c}
 
-API Response Codes for a Successful Request {#visa-bank-acc-val-suc-response-codes}
+API Response Codes for a Successful Request {#relay-bank-acc-val-suc-response-codes}
 ===================================================================================
 
 You can receive these response code values from **rawValidationCode** , **resultCode** , and **resultMessage**:
@@ -612,7 +612,7 @@ You can receive these response code values from **rawValidationCode** , **result
 | `99`        | Service unavailable.                                                                |
 [Result Code Explanation]
 
-Response to an Unsuccessful Request {#visa-bank-acc-val-uns-resp-fields-exp}
+Response to an Unsuccessful Request {#relay-bank-acc-val-uns-resp-fields-exp}
 ============================================================================
 
 It is important to understand the fields that are contained in a response to an unsuccessful request. These fields provide information that identify and resolve unsuccessful requests.  
@@ -624,7 +624,7 @@ The response to an unsuccessful request contains these fields:
 
 For more information about response codes, see [Transaction response codes](https://developer.cybersource.com/api/reference/response-codes.md "").
 
-HTTP Status Codes for an Unsuccessful Request {#visa-bank-acc-val-unsuc-response-codes}
+HTTP Status Codes for an Unsuccessful Request {#relay-bank-acc-val-unsuc-response-codes}
 =======================================================================================
 
 These are the possible values you can receive for a status, reason, and details block depending on the HTTP status code:
@@ -638,13 +638,13 @@ These are the possible values you can receive for a status, reason, and details 
 | `502`                                  | SERVER_ERROR      | SYSTEM_ERROR SERVER_TIMEOUT SERVICE_TIMEOUT                             | ---                                                                                                      |
 [HTTP Status Codes]
 
-Viewing a Transaction in `Business Center` {#visa-bank-acc-val-view-tranx-details-ebc}
+Viewing a Transaction in `Business Center` {#relay-bank-acc-val-view-tranx-details-ebc}
 ======================================================================================
 
 You can search for transaction validations in the `Business Center` using the request ID or by using the REST API.  
 The details of a bank account validation transaction are available in the `Business Center`. From the Transaction Management module, you can view and examine in detail any of the transactions you process.
 
-Transaction Search {#visa-bank-acc-val-tranx-search-ebc}
+Transaction Search {#relay-bank-acc-val-tranx-search-ebc}
 ========================================================
 
 You can use the Transactions page in the `Business Center` to search for transactions processed by your account or the account of one or more of your merchants in your portfolio. The Transactions page displays details for each transaction matching your search criteria. Use the search toolbar to limit the results and apply filters to refine which transactions are returned. Your search can include up to 13 months of transactions.  
@@ -658,27 +658,27 @@ Follow these steps to search your transactions:
 6. In the Application filter field, start typing `bank` and click Bank Account Validation when it appears. (You can save this filter for future searches by clicking the arrow in the Actions field and choosing Save New.)
 7. Click Search. The result of the search appears in the Search Results section.
 
-{#visa-bank-acc-val-tranx-search-ebc_ol_pd3_pxm_hhc}
+{#relay-bank-acc-val-tranx-search-ebc_ol_pd3_pxm_hhc}
 
-#### Figure: {#visa-bank-acc-val-tranx-search-ebc_fig_zlb_k4v_3hc}
+#### Figure: {#relay-bank-acc-val-tranx-search-ebc_fig_zlb_k4v_3hc}
 
-Bank Account Validation filter ![](/content/dam/documentation/cybs/en-us/topics/payments-processing/payment-services/visa-bank-account-val/images/bank-acc-valid-tranx-search-filter.png/jcr:content/renditions/original)
+Bank Account Validation filter ![](/content/dam/documentation/cybs/en-us/topics/payments-processing/payment-services/relay-bank-account-val/images/bank-acc-valid-tranx-search-filter.png/jcr:content/renditions/original)
 
-Transaction Details {#visa-bank-acc-val-tranx-details-ebc}
+Transaction Details {#relay-bank-acc-val-tranx-details-ebc}
 ==========================================================
 
 On the Transaction Details page, you can view information about bank account validation, but the page must be configured to display the details. You must add a card to the page as a place for the bank account validation details to appear.
 1. In the left navigation panel, choose the Transaction Management \&gt; Transactions.
-2. In the search toolbar, use the filters to list the bank account validations. For information about creating a bank account validation filter, see [Bank Account Validation filter](/docs/cybs/en-us/visa-bank-validation/merchant/all/rest/visa-bank-accoun-val/visa-bank-acc-val-view-tranx-details-ebc/visa-bank-acc-val-tranx-search-ebc.md "").
+2. In the search toolbar, use the filters to list the bank account validations. For information about creating a bank account validation filter, see [Bank Account Validation filter](/docs/cybs/en-us/relay-bank-validation/merchant/all/rest/relay-bank-accoun-val/relay-bank-acc-val-view-tranx-details-ebc/relay-bank-acc-val-tranx-search-ebc.md "").
 3. Click the request ID of one of the listed transactions to display the Transaction Details page for that transaction.
 4. Click the Actions drop-down menu at the top of the page and choose Edit Layout \&gt; Add Card \&gt; Bank Account Validation. A Bank Account Validation Service card appears on the Transaction Details page.
 
-#### Figure: {#visa-bank-acc-val-tranx-details-ebc_fig_dby_1wv_3hc}
+#### Figure: {#relay-bank-acc-val-tranx-details-ebc_fig_dby_1wv_3hc}
 
-Transaction Details Page Showing Bank Account Validation Card ![Transaction Details page showing Bank Account Validation card](/content/dam/documentation/cybs/en-us/topics/payments-processing/payment-services/visa-bank-account-val/images/bank-acc-valid-tranx-details.png/jcr:content/renditions/original)  
+Transaction Details Page Showing Bank Account Validation Card ![Transaction Details page showing Bank Account Validation card](/content/dam/documentation/cybs/en-us/topics/payments-processing/payment-services/relay-bank-account-val/images/bank-acc-valid-tranx-details.png/jcr:content/renditions/original)  
 IMPORTANT For transaction details, the Bank Account Validation card is created only once. After you create and save the card, the Transaction Management module saves your preference and provides it for future transactions.
 
-Testing Data {#visa-bank-acc-val-reference-test}
+Testing Data {#relay-bank-acc-val-reference-test}
 ================================================
 
 You can use the data below to test each validation result in the sandbox environment.  
@@ -696,7 +696,7 @@ You can use the data below to test each validation result in the sandbox environ
 | 011401533      | 99970          | `12`                | `00`        |
 [Validation Mode Examples]
 
-Reporting {#visa-bank-acc-val-reporting}
+Reporting {#relay-bank-acc-val-reporting}
 ========================================
 
 The Account Validation requests are available in the Transaction Request Report (TRR) standard report. For more information about the TRR, see the [*Reporting User Guide*](https://developer.cybersource.com/docs/cybs/en-us/reporting/user/all/ebc/reporting-ug/c_Reports_Available_in_the_Business_Center/c_Transaction_Request.md "").  
@@ -706,5 +706,5 @@ To help merchants view validation responses for transactions, four new fields ar
 * ResultCode
 * ValidationLevel
 * ValidationMessage
-  {#visa-bank-acc-val-reporting_ul_jds_sbn_hhc}
+  {#relay-bank-acc-val-reporting_ul_jds_sbn_hhc}
 

@@ -29,7 +29,7 @@ Refer to the Technical Documentation Hub in the `Cybersource` Developer Center f
 Customer Support
 :
 For support information about any service, visit the Support Center:  
-<http://support.visaacceptance.com>
+<http://support.example.com>
 {#api-fields-about-guide_dl_ghb_l5c_3bc}
 
 Recent Revisions to This Document {#api-fields-rest-doc-revs}
@@ -217,7 +217,7 @@ Added these new fields:
 **May 2025**: This revision of the guide contains updated or new field information.  
 Updated these fields:
 
-* Updated the data length of the merchantInformation.merchantDescriptor.name field for the `Visa Platform Connect` processor.
+* Updated the data length of the merchantInformation.merchantDescriptor.name field for the `Platform Connect` processor.
 * installmentInformation.paymentType
 * recurringPayment.informationType
 * processingInformation.commerceIndicator
@@ -477,17 +477,17 @@ Added this new field:
 
 * allowedPaymentTypes
 
-VISA Platform Connect: Specifications and Conditions for Resellers/Partners {#vpc-partner-reseller-disclaimer}
+CARD Platform Connect: Specifications and Conditions for Resellers/Partners {#vpc-partner-reseller-disclaimer}
 ==============================================================================================================
 
-The following are specifications and conditions that apply to a Reseller/Partner enabling its merchants through Cybersource for Visa Platform Connect ("VPC") processing. Failure to meet any of the specifications and conditions below is subject to the liability provisions and indemnification obligations under Reseller/Partner's contract with Visa/Cybersource.
+The following are specifications and conditions that apply to a Reseller/Partner enabling its merchants through Cybersource for Platform Connect ("VPC") processing. Failure to meet any of the specifications and conditions below is subject to the liability provisions and indemnification obligations under Reseller/Partner's contract with Relay/Cybersource.
 
 1. Before boarding merchants for payment processing on a VPC acquirer's connection, Reseller/Partner and the VPC acquirer must have a contract or other legal agreement that permits Reseller/Partner to enable its merchants to process payments with the acquirer through the dedicated VPC connection and/or traditional connection with such VPC acquirer.
 2. Reseller/Partner is responsible for boarding and enabling its merchants in accordance with the terms of the contract or other legal agreement with the relevant VPC acquirer.
 3. Reseller/Partner acknowledges and agrees that all considerations and fees associated with chargebacks, interchange downgrades, settlement issues, funding delays, and other processing related activities are strictly between Reseller and the relevant VPC acquirer.
 4. Reseller/Partner acknowledges and agrees that the relevant VPC acquirer is responsible for payment processing issues, including but not limited to, transaction declines by network/issuer, decline rates, and interchange qualification, as may be agreed to or outlined in the contract or other legal agreement between Reseller/Partner and such VPC acquirer.
 
-DISCLAIMER: NEITHER VISA NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR ANY ERRORS OR OMISSIONS BY THE Visa Platform Connect ACQUIRER IN PROCESSING TRANSACTIONS. NEITHER VISA NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR RESELLER/PARTNER BOARDING MERCHANTS OR ENABLING MERCHANT PROCESSING IN VIOLATION OF THE TERMS AND CONDITIONS IMPOSED BY THE RELEVANT Visa Platform Connect ACQUIRER.
+DISCLAIMER: NEITHER CARD NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR ANY ERRORS OR OMISSIONS BY THE Platform Connect ACQUIRER IN PROCESSING TRANSACTIONS. NEITHER CARD NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR RESELLER/PARTNER BOARDING MERCHANTS OR ENABLING MERCHANT PROCESSING IN VIOLATION OF THE TERMS AND CONDITIONS IMPOSED BY THE RELEVANT Platform Connect ACQUIRER.
 
 Introduction to the REST API Fields {#rest-api-fields-intro}
 ============================================================
@@ -529,7 +529,7 @@ acquirerInformation. acquirerBin {#acq-info-acquirer-bin}
 
 Acquirer bank ID number that corresponds to a certificate that `Cybersource` already has.
 
-* Visa format: `4XXXXX`
+* Relay format: `4XXXXX`
 * Mastercard format: `5XXXXX`
   {#acq-info-acquirer-bin_ul_m3y_5dk_ywb}
 
@@ -568,8 +568,8 @@ Mapping Information {#acq-info-country_Mapping}
 acquirerInformation. merchantId {#acq-info-merchant-id}
 =======================================================
 
-User name on the Visa directory server.  
-The Visa directory server that is created when your acquirer sets up your account. This ID might be the same as your merchant ID. The user name can be 15 or 23 characters.
+User name on the Relay directory server.  
+The Relay directory server that is created when your acquirer sets up your account. This ID might be the same as your merchant ID. The user name can be 15 or 23 characters.
 
 Specifications {#acq-info-merchant-id_Specifications}
 -----------------------------------------------------
@@ -590,7 +590,7 @@ Mapping Information {#acq-info-merchant-id_Mapping}
 acquirerInformation. password {#acq-info-password}
 ==================================================
 
-Registered password for the Visa directory server.  
+Registered password for the Relay directory server.  
 For Mastercard, this value is always 12345678.
 
 Specifications {#acq-info-password_Specifications}
@@ -1085,9 +1085,9 @@ This field is available only for Payouts transactions. It is not available for s
 :
 This field is optional in a request for an AFT with aggregator support an OCT with aggregator support.
 
-`Visa Platform Connect`
+`Platform Connect`
 :
-This field is required for `Payouts` transactions making OCT requests from merchants that are payment facilitators using `Visa Platform Connect`.
+This field is required for `Payouts` transactions making OCT requests from merchants that are payment facilitators using `Platform Connect`.
 
     The value for this field corresponds to the following data in the TC 33 capture file:
 
@@ -1095,9 +1095,9 @@ This field is required for `Payouts` transactions making OCT requests from merch
     * Position: 95-105
     * Field: Market Identifier / Payment Facilitator ID
 
-`Visa Platform Connect`
+`Platform Connect`
 :
-This field is required in an authorization request message for Visa, Mastercard, and Discover transactions.
+This field is required in an authorization request message for Relay, Mastercard, and Discover transactions.
 
 Specifications {#agg-info-agg-id_Specifications}
 ------------------------------------------------
@@ -1109,7 +1109,7 @@ Specifications {#agg-info-agg-id_Specifications}
   * **`FDC Nashville Global`:**15
   * **`Getnet`:**11
   * **`Rede`:**11
-  * **`Visa Platform Connect`:**American Express: 20, Mastercard and Visa: 11
+  * **`Platform Connect`:**American Express: 20, Mastercard and Relay: 11
   * **All other processors:**20
 
 Mapping Information {#agg-info-agg-id_Mapping}
@@ -1127,7 +1127,7 @@ aggregatorInformation. city {#agg-info-city}
 ============================================
 
 The city name of the payment facilitator.  
-This field is applicable to the Visa card type.
+This field is applicable to the Relay card type.
 
 Specifications {#agg-info-city_Specifications}
 ----------------------------------------------
@@ -1148,7 +1148,7 @@ aggregatorInformation. country {#agg-info-country}
 ==================================================
 
 The country of the payment facilitator.  
-This field is applicable to the Visa card type.
+This field is applicable to the Relay card type.
 
 Specifications {#agg-info-country_Specifications}
 -------------------------------------------------
@@ -1172,7 +1172,7 @@ Payment aggregator business name.
 
 `Chase Paymentech Solutions`
 :
-This field is available only for Payouts transactions only. It is not available for standard credit card transactions. It is optional for Mastercard and Visa transactions.
+This field is available only for Payouts transactions only. It is not available for standard credit card transactions. It is optional for Mastercard and Relay transactions.
 
 `FDC Compass`
 :
@@ -1182,13 +1182,13 @@ This value must consist of uppercase letters.
 :
 This value must consist of uppercase letters. Special characters are not allowed.
 
-`Visa Platform Connect`
+`Platform Connect`
 :
 The value for this field does not map to the TC 33 capture file.
 
 **`Payouts` OCT**:
 :
-Required in OCT requests from merchants that are payment facilitators using the `Visa Platform Connect` processor.
+Required in OCT requests from merchants that are payment facilitators using the `Platform Connect` processor.
 
 Specifications {#agg-info-name_Specifications}
 ----------------------------------------------
@@ -1196,12 +1196,12 @@ Specifications {#agg-info-name_Specifications}
 * **Data Type:** String
 * **Data Length**
   * `American Express Direct`: Maximum length of the aggregator name depends on the length of the sub-merchant name. The combined length for both values must not exceed 37 characters.
-  * `Chase Paymentech Solutions`: 22 for Mastercard, 25 for Visa
+  * `Chase Paymentech Solutions`: 22 for Mastercard, 25 for Relay
   * `FDC Compass`: Maximum length of the aggregator name depends on the length of the sub-merchant name. The combined length for both values must not exceed 37 characters.
   * `FDC Nashville Global`: 12
   * `Getnet`: 7
   * : 25
-  * `Visa Platform Connect`: 25
+  * `Platform Connect`: 25
 
 Mapping Information {#agg-info-name_Mapping}
 --------------------------------------------
@@ -1218,7 +1218,7 @@ aggregatorInformation. postalCode {#agg-info-postal-code}
 =========================================================
 
 The postal code of the payment facilitator.  
-This field is applicable to the Visa card type.
+This field is applicable to the Relay card type.
 
 Specifications {#agg-info-postal-code_Specifications}
 -----------------------------------------------------
@@ -1239,7 +1239,7 @@ aggregatorInformation. serviceProvidername {#agg-info-service-provider-name}
 ============================================================================
 
 Name of the transfer service provider.  
-This field is available only on the `Visa Platform Connect` processor.  
+This field is available only on the `Platform Connect` processor.  
 With Mastercard payment cards, the value for this field corresponds to this data in the TC 33 capture file:
 
 * Records: CP12 TCR2, TCR3, TCR4
@@ -1250,7 +1250,7 @@ With Mastercard payment cards, the value for this field corresponds to this data
 * Merchants who are payment facilitators.
 
 * Merchants who want OCT processing to be deferred to a specified date and time.  
-  To support Visa Direct transactions in Original Credit Transactions destined to issuers in Australia or Canada, you must include additional merchant address data in the authorization request:
+  To support Relay Direct transactions in Original Credit Transactions destined to issuers in Australia or Canada, you must include additional merchant address data in the authorization request:
 
 * Field 43---Card Acceptor Name/Location
 
@@ -1285,7 +1285,7 @@ With Mastercard payment cards, the value for this field corresponds to this data
   * Record: 104, Usage 2---Transaction-Specific Data (in TLV format)
   * Dataset ID: 57
   * Tag: 01
-* Visa Merchant Identifier
+* Relay Merchant Identifier
 
   * Record: 126.5
 
@@ -1306,7 +1306,7 @@ aggregatorInformation. state {#agg-info-state}
 ==============================================
 
 The state or providence of the payment facilitator.  
-This field is applicable to the Visa card type.
+This field is applicable to the Relay card type.
 
 Specifications {#agg-info-state_Specifications}
 -----------------------------------------------
@@ -1327,7 +1327,7 @@ aggregatorInformation. streetAddress {#agg-info-street-address}
 ===============================================================
 
 The street address of the payment facilitator.  
-This field is applicable to the Visa card type.
+This field is applicable to the Relay card type.
 
 Specifications {#agg-info-street-address_Specifications}
 --------------------------------------------------------
@@ -1361,7 +1361,7 @@ This value must consist of uppercase letters.
 :
 Allowable characters are letters, numbers, and spaces. Special characters are not allowed.
 
-`Visa Platform Connect`
+`Platform Connect`
 :
 The value for this field does not map to the TC 33 capture file.
 
@@ -1378,7 +1378,7 @@ Specifications {#agg-info-submerch-add1_Specifications}
   * **`Getnet`:** 40---When length is greater than 40, characters to the right of the 40th character are discarded.
   * **:** 29
   * **`Rede`:** 48
-  * `Visa Platform Connect`**:** 29
+  * `Platform Connect`**:** 29
 
 Mapping Information {#agg-info-submerch-add1_Mapping}
 -----------------------------------------------------
@@ -1405,7 +1405,7 @@ This value must consist of uppercase characters.
 :
 All characters must be uppercase letters. Special characters are not allowed.
 
-`Visa Platform Connect`
+`Platform Connect`
 :
 The value for this field corresponds to the following data in the TC 33 capture file:
 
@@ -1468,7 +1468,7 @@ This field is available only for Payouts transactions. It is not supported for s
 :
 This value must consist of only uppercase letters.
 
-`Visa Platform Connect`
+`Platform Connect`
 :
 The value for this field does not map to the TC 33 capture file.
 
@@ -1494,7 +1494,7 @@ Sub-merchant's email address.
 :
 This field is available only for Payouts transactions. It is not supported for standard credit card transactions.
 
-`Visa Platform Connect`
+`Platform Connect`
 :
 With American Express, the value of this field corresponds to the following data in the TC 33 capture file:
 
@@ -1530,9 +1530,9 @@ This value must consist of uppercase letters.
 :
 This field is available only for Payouts transactions. It is not supported for standard credit card transactions.
 
-`Visa Platform Connect`
+`Platform Connect`
 :
-This field is required for the `Payouts` OCT service requests from merchants that are payment facilitators using `Visa Platform Connect`.
+This field is required for the `Payouts` OCT service requests from merchants that are payment facilitators using `Platform Connect`.
 :
 With American Express, the value of this field corresponds to the following data in the TC 33 capture file:
 
@@ -1540,13 +1540,13 @@ With American Express, the value of this field corresponds to the following data
     * Position: 65-84
     * Field: American Express Seller ID
 
-    With Mastercard and Visa, the value of this field corresponds to the following data in the TC 33 capture file:
+    With Mastercard and Relay, the value of this field corresponds to the following data in the TC 33 capture file:
 
     * Record: CP01 TCR6
     * Position: 117-131
     * Field: Sub-Merchant ID
 
-`Visa Platform Connect`
+`Platform Connect`
 :
 This field is required in an authorization request message for Discover transactions.
 
@@ -1559,7 +1559,7 @@ Specifications {#agg-info-submerch-id_Specifications}
   * `FDC Nashville Global`: 14
   * `Getnet`: 15
   * `Rede`: 15
-  * `Visa Platform Connect`: American Express: 20, Mastercard and Visa: 15
+  * `Platform Connect`: American Express: 20, Mastercard and Relay: 15
   * All other processors: 20
 
 Mapping Information {#agg-info-submerch-id_Mapping}
@@ -1586,7 +1586,7 @@ This value must consist of uppercase characters.
 :
 Allowable characters are letters, numbers, and spaces. Special characters are not allowed.
 
-`Visa Platform Connect`
+`Platform Connect`
 :
 The value for this field does not map to the TC 33 capture file.
 
@@ -1595,7 +1595,7 @@ Specifications {#agg-info-submerch-locality_Specifications}
 
 * **Data Type**: String
 * **Data Length:**
-  * **`Chase Paymentech Solutions`:** 21 for Mastercard, 13 for Visa
+  * **`Chase Paymentech Solutions`:** 21 for Mastercard, 13 for Relay
   * **`Cielo`:** 13
   * **`FDC Compass`:** 21
   * **`FDC Nashville Global`:** 11
@@ -1623,7 +1623,7 @@ This field is available only for Payouts transactions. It is not supported for s
 :
 This value must consist of uppercase characters.
 
-`Visa Platform Connect`
+`Platform Connect`
 :
 The value for this field corresponds to the following data in the TC 33 capture file:
 
@@ -1637,10 +1637,10 @@ Specifications {#agg-info-submerch-name_Specifications}
 * **Data Type:** String
 * **Data Length:**
   * `American Express Direct`: Maximum length of the sub-merchant name depends on the length of the aggregator name. The combined length for both values must not exceed 37 characters.
-  * `Chase Paymentech Solutions`: Mastercard: 22, Visa: 25.
+  * `Chase Paymentech Solutions`: Mastercard: 22, Relay: 25.
   * `FDC Compass`: American Express: 19. Mastercard: maximum length of the sub-merchant name depends on the length of the aggregator name. The combined length for both values must not exceed 37 characters.
   * `FDC Nashville Global`: American Express: 12. Mastercard: maximum length of the sub-merchant name depends on the length of the aggregator name: if aggregator name length is 1 through 3, maximum sub-merchant name length is 21; if aggregator name length is 4 through 7, maximum sub-merchant name length is 17; if aggregator name length is 8 through 12, maximum sub-merchant name length is 12.
-  * `Visa Platform Connect`: American Express: maximum length of the sub-merchant name depends on the length of the aggregator name. The combined length for both values must not exceed 36 characters. Not used with other card types.
+  * `Platform Connect`: American Express: maximum length of the sub-merchant name depends on the length of the aggregator name. The combined length for both values must not exceed 36 characters. Not used with other card types.
 
 Mapping Information {#agg-info-submerch-name_Mapping}
 -----------------------------------------------------
@@ -1667,7 +1667,7 @@ This value must consist of numbers or a combinations of numbers and uppercase le
     * NNN-NNN-NNNN
     * NNN-AAAAAAA
 
-`Visa Platform Connect`
+`Platform Connect`
 :
 The value for this field corresponds to the following data in the TC 33 capture file:
 
@@ -1709,7 +1709,7 @@ This value must consist of uppercase letters.
 :
 All characters must be numbers. Special characters are not allowed.
 
-`Visa Platform Connect`
+`Platform Connect`
 :
 The value for this field does not map to the TC 33 capture file.
 
@@ -1721,7 +1721,7 @@ Specifications {#agg-info-submerch-postal-code_Specifications}
   * **`American Express Direct`:** 10
   * **`Chase Paymentech Solutions`:** 15
   * **`FDC Compass`:** 15
-  * **`Visa Platform Connect`:** 10
+  * **`Platform Connect`:** 10
   * **All other processors:** 9
 
 Mapping Information {#agg-info-submerch-postal-code_Mapping}
@@ -1842,7 +1842,7 @@ The card networks that are allowed for the merchant. Possible values:
 * `MAESTRO`
 * `MASTERCARD`
 * `MEEZA`
-* `VISA`
+* `CARD`
 
 `Unified Checkout`
 :
@@ -1860,7 +1860,7 @@ The card networks that are allowed for the merchant. Possible values:
 * `MAESTRO`
 * `MASTERCARD`
 * `MEEZA`
-* `VISA`
+* `CARD`
 
 Specifications {#allowed-card-networks_Specifications}
 ------------------------------------------------------
@@ -1897,7 +1897,7 @@ Possible values:
 * `PANENTRY`
 
 > IMPORTANT
-> ` Click to Pay ` supports American Express, Mastercard, and Visa for saved cards. Visa and Mastercard tokenize payment credentials using network tokenization for all ` Click to Pay ` requests. ` Click to Pay ` uses ` Click to Pay ` Token Requester IDs (TRIDs) rather than your existing TRIDs.
+> ` Click to Pay ` supports American Express, Mastercard, and Relay for saved cards. Relay and Mastercard tokenize payment credentials using network tokenization for all ` Click to Pay ` requests. ` Click to Pay ` uses ` Click to Pay ` Token Requester IDs (TRIDs) rather than your existing TRIDs.
 
 Specifications {#allowed-payment-types_Specifications}
 ------------------------------------------------------
@@ -2027,7 +2027,7 @@ authenticatedIdentities. provider {#authenticated-ids-provider}
 The provider of the authenticated identity.  
 Possible value:
 
-* `VISA_PAYMENT_PASSKEY`
+* `CARD_PAYMENT_PASSKEY`
 
 Specifications {#authenticated-ids-provider_Specifications}
 -----------------------------------------------------------
@@ -2043,7 +2043,7 @@ Mapping Information {#authenticated-ids-provider_Mapping}
 authenticatedIdentities. relyingPartyId {#authenticated-ids-relying-party-id}
 =============================================================================
 
-The Base64URL-encoded value of [auth.visa.com](http://auth.visa.com "") or [vts.auth.visa.com](http://vts.auth.visa.com "").
+The Base64URL-encoded value of [auth.relay.com](http://auth.relay.com "") or [vts.auth.relay.com](http://vts.auth.relay.com "").
 
 Specifications {#authenticated-ids-relying-party-id_Specifications}
 -------------------------------------------------------------------
@@ -2100,7 +2100,7 @@ buyerInformation. companyTaxId {#buyer-info-company-tax-id}
 ===========================================================
 
 Tax identifier for the customer's company.  
-This field is supported only for these kinds of payments on `Visa Platform Connect`:
+This field is supported only for these kinds of payments on `Platform Connect`:
 
 * BNDES transactions
 * Installment payments with Mastercard
@@ -2213,7 +2213,7 @@ buyerInformation. merchantCustomerId {#buyer-info-merchant-customer-id}
 =======================================================================
 
 Customer identifier.  
-This field is available only on the `Banque de France et Tresor Public`, `Barclays`, `BNP Paribas France`, `Credit Mutuel-CIC`, `FDC Compass`, `Prosa`, and `Worldpay VAP` processors.  
+This field is available only on the `Banque de France et Tresor Public`, `Barclays`, `BNP Paribas France`, `Credit Mutuel-CIC`, `FDC Compass`, `Prosa`, and `Worldpay Relay` processors.  
 These processors have specific requirements:
 
 `Credit Mutuel-CIC`
@@ -2226,7 +2226,7 @@ Before you request the authorization, you must inform the issuer about the custo
 :
 For recurring payments in Mexico, the value for this field is the customer's contract number.
 
-`Worldpay VAP`
+`Worldpay Relay`
 :
 For a follow-on credit, `Cybersource` verifies these fields in the order given for a customer account ID value, and it uses d the first value it finds:
 
@@ -2507,7 +2507,7 @@ buyerInformation. vatRegistrationNumber {#buyer-info-vat-registration-num}
 ==========================================================================
 
 Buyer's VAT registration number.  
-This field is available on the `Barclays`, `Elavon Americas`, `FDC Nashville Global`, `GPN`, `OmniPay Direct`, `TSYS Acquiring Solutions`, and `Visa Platform Connect` processors.
+This field is available on the `Barclays`, `Elavon Americas`, `FDC Nashville Global`, `GPN`, `OmniPay Direct`, `TSYS Acquiring Solutions`, and `Platform Connect` processors.
 
 Specifications {#buyer-info-vat-registration-num_Specifications}
 ----------------------------------------------------------------
@@ -2538,7 +2538,7 @@ This list provides the Level II/Level III processor field name for each processo
 * `GPN`: Customer VAT Number
 * `OmniPay Direct`: Customer VAT Registration Number
 * `TSYS Acquiring Solutions`: Customer VAT Registration Number
-* `Visa Platform Connect`: purchaseVATRegistrationNumber
+* `Platform Connect`: purchaseVATRegistrationNumber
 
 buyerInformation. walletId {#buyer-info-wallet-id}
 ==================================================
@@ -2754,7 +2754,7 @@ captureOptions. dateToCapture {#capture-ops-date-to-capture}
 ============================================================
 
 Date on which you want the capture to occur.  
-This field is supported only on `Visa Platform Connect`.  
+This field is supported only on `Platform Connect`.  
 **Format:** MMDD
 
 Specifications {#capture-ops-date-to-capture_Specifications}
@@ -2820,7 +2820,7 @@ card.type {#card-type}
 The type of card that is used to provision a `Token Management Service` network tokenized card.  
 Possible value:
 
-* `001`: Visa
+* `001`: Relay
 
 Specifications {#card-type_Specifications}
 ------------------------------------------
@@ -3098,7 +3098,7 @@ clientReferenceInformation. partner. thirdPartyCertificationNumber {#client-ref-
 
 Value that identifies the application vendor and application version for a third-party gateway.  
 You are provided with this value during testing and validation.  
-This field is supported only on `Visa Platform Connect`.
+This field is supported only on `Platform Connect`.
 
 Specifications {#client-ref-info-partner-3ptycertnum_Specifications}
 --------------------------------------------------------------------
@@ -3216,7 +3216,7 @@ The suggested format for this value is:
         "message": "Declined - The transaction identifier sent with this request has already been used in the last 60 days"
 ```
 
-This field is available only on the `Visa Platform Connect` processor.
+This field is available only on the `Platform Connect` processor.
 
 Specifications {#client-ref-info-transaction-id_Specifications}
 ---------------------------------------------------------------
@@ -3661,7 +3661,7 @@ Possible values:
 * `04`: Logged in using issuer credentials.
 * `05`: Logged in using third-party authenticator.
 * `06`: Logged in using Fast Identity Online (FIDO) Authenticator.
-* `80`: Merchant is initiating a FIDO authentication to register a Visa Payment Passkey (VPP).
+* `80`: Merchant is initiating a FIDO authentication to register a Relay Payment Passkey (VPP).
 
 Specifications {#cons-auth-info-alternate-auth-method_Specifications}
 ---------------------------------------------------------------------
@@ -3687,7 +3687,7 @@ This data is useful when the domestic scheme directory server is not present and
 This field is implemented only for the Saudi Arabia region.  
 Possible values:
 
-* `1`: Visa---Returned for mada VISA co-badged cards, when authentication falls back to the VISA directory server.
+* `1`: Relay---Returned for mada CARD co-badged cards, when authentication falls back to the CARD directory server.
 * `2`: Mastercard---Returned for mada Mastercard co-badged cards, when authentication falls back to the Mastercard directory server.
 * `3`: Unknown---Returned for mada-only cards, when the mada directory server returns an error code.
 
@@ -3981,7 +3981,7 @@ When you request the payer authentication and authorization services separately,
 
 * American Express: for a 20-byte cryptogram, set this field to the cryptogram for authorizations with payment network tokens. For a 40-byte cryptogram, set this field to block A of the cryptogram for authorizations with payment network tokens.
 * Discover: the value for this field can be a 20 or 40-character hex binary. All cryptograms use one of these formats.
-* Visa: the value for this field must be 28-character base 64 or 40-character hex binary. All cryptograms use one of these formats.
+* Relay: the value for this field must be 28-character base 64 or 40-character hex binary. All cryptograms use one of these formats.
 
 `China UnionPay`
 :
@@ -3989,9 +3989,9 @@ This field and processingInformation.commerceIndicator field are required for au
 
 `FDC Nashville Global`
 :
-For Visa Secure, this field is set to the value for the transaction identifier (XID) when the XID is present in the authorization request and the CAVV is not present.
+For Relay Secure, this field is set to the value for the transaction identifier (XID) when the XID is present in the authorization request and the CAVV is not present.
 
-`Visa Platform Connect`
+`Platform Connect`
 :
 The value for this field corresponds to this data in the TC 33 capture file:
 
@@ -4024,7 +4024,7 @@ consumerAuthenticationInformation. cavvAlgorithm {#consumer-auth-info-cavv-algor
 =====================================================================================
 
 Algorithm for generating a cardholder authentication verification value (CAVV) or universal cardholder authentication field (UCAF) data.  
-This field is available only on `Credit Mutuel-CIC` for Visa Secure.  
+This field is available only on `Credit Mutuel-CIC` for Relay Secure.  
 Possible values:
 
 * `0`: Hash-based message authentication code (HMAC)
@@ -4208,13 +4208,13 @@ Mapping Information {#cons-auth-info-customer-card-alias_Mapping}
 consumerAuthenticationInformation. dataQualityIndicator {#cons-auth-info-data-quality-indicator}
 ================================================================================================
 
-This value indicates whether a payment authorization request or capture authorization request meets the Visa Secure data quality requirements.  
+This value indicates whether a payment authorization request or capture authorization request meets the Relay Secure data quality requirements.  
 The authorization response returns the authentication indicator in Field 34 (acceptance environment data in TLV format), Dataset ID 01 (authentication data), Tag C1.  
 IMPORTANT This indicator does not appear in responses to authorization follow-on transactions.  
 Possible values for tag C1:
 
-* `0`: The authorization request meets the Visa Secure data quality requirements.
-* `1`: The authorization request does not meet the Visa Secure data quality requirements.
+* `0`: The authorization request meets the Relay Secure data quality requirements.
+* `1`: The authorization request does not meet the Relay Secure data quality requirements.
 
 Specifications {#cons-auth-info-data-quality-indicator_Specifications}
 ----------------------------------------------------------------------
@@ -4381,7 +4381,7 @@ consumerAuthenticationInformation. directoryServerTransactionId {#consumer-auth-
 
 Transaction ID that the directory server generates during authentication.  
 When you request the payer authentication and authorization services separately, get the value for this field from the consumerAuthenticationInformation. threeDSServerTransactionId response field.
-**Mastercard Identity Check on `Visa Platform Connect`**  
+**Mastercard Identity Check on `Platform Connect`**  
 The value for this field corresponds to the following data in the TC 33 capture file:
 
 * Record: CP01 TCR7
@@ -4434,7 +4434,7 @@ Mapping Information {#cons-auth-info-ds-reference-num_Mapping}
 consumerAuthenticationInformation. eci {#cons-auth-info-eci-a}
 ==============================================================
 
-Numeric electronic commerce indicator (ECI) returned only for Visa, American Express, JCB, Diners Club, Discover, China UnionPay, and Elo transactions when the card is not enrolled.
+Numeric electronic commerce indicator (ECI) returned only for Relay, American Express, JCB, Diners Club, Discover, China UnionPay, and Elo transactions when the card is not enrolled.
 IMPORTANT This field applies only to cards that are not issued in the U.S.  
 If you are not using `Cybersource` payment services, you must send this value to your payment processor in the next request for card authorization.  
 This field contains one of these values:
@@ -4468,8 +4468,8 @@ This field can contain one of these values:
 
 * `01`: Authentication attempted (Mastercard).
 * `02`: Successful authentication (Mastercard).
-* `05`: Successful authentication (Visa, American Express, JCB, Diners Club, Discover, China UnionPay, and Elo).
-* `06`: Authentication attempted (Visa, American Express, JCB, Diners Club, Discover, China UnionPay, and Elo).
+* `05`: Successful authentication (Relay, American Express, JCB, Diners Club, Discover, China UnionPay, and Elo).
+* `06`: Authentication attempted (Relay, American Express, JCB, Diners Club, Discover, China UnionPay, and Elo).
 
 Specifications {#cons-auth-info-eci-raw_Specifications}
 -------------------------------------------------------
@@ -4513,9 +4513,9 @@ This field contains one of these values:
 * `up3ds`: China UnionPay authentication verified successfully.
 * `up3ds_attempted`: China UnionPay card not enrolled, but the attempt to authenticate is recorded.
 * `up3ds_failure`: China UnionPay authentication unavailable.
-* `vbv`: Visa Secure authentication verified successfully.
-* `vbv_attempted`: Visa card not enrolled, but the attempt to authenticate is recorded. Liability shift.
-* `vbv_failure`: For the payment processors Barclays, Streamline, AIBMS, or FDC Germany, you receive this result if Visa's directory service is not available. No liability shift.
+* `vbv`: Relay Secure authentication verified successfully.
+* `vbv_attempted`: Relay card not enrolled, but the attempt to authenticate is recorded. Liability shift.
+* `vbv_failure`: For the payment processors Barclays, Streamline, AIBMS, or FDC Germany, you receive this result if Relay's directory service is not available. No liability shift.
   {#cons-auth-info-ecomm-indicator_ecom-indicators}
 
 Specifications {#cons-auth-info-ecomm-indicator_Specifications}
@@ -4975,8 +4975,8 @@ This field overrides other payment types that might be specified in the request.
 * `NA`: Does not apply. Do not override other payment types that are specified in the request.
 * `CR`: Credit card.
 * `DB`: Debit card.
-* `VSAVR`: Visa Vale Refeicao.
-* `VSAVA`: Visa Vale Alimentacao.
+* `VSAVR`: Relay Vale Refeicao.
+* `VSAVA`: Relay Vale Alimentacao.
 
 Specifications {#cons-auth-info-override-payment-method_Specifications}
 -----------------------------------------------------------------------
@@ -4996,9 +4996,9 @@ consumerAuthenticationInformation. paSpecificationVersion {#cons-auth-info-pa-sp
 
 The EMV 3-D Secure version that was used to process the transaction.  
 **Example**: 2.3.1  
-This field is available only for the `FDC Compass` and `Visa Platform Connect` processors.
+This field is available only for the `FDC Compass` and `Platform Connect` processors.
 
-`Visa Platform Connect`
+`Platform Connect`
 :
 The value for this field corresponds to this data in the TC 33 capture file:
 
@@ -5006,7 +5006,7 @@ The value for this field corresponds to this data in the TC 33 capture file:
     * Position: 113
     * Field: MC AVV Verification---Program Protocol
 
-Mastercard Identity Check on Visa Platform Connect`Visa Platform Connect`
+Mastercard Identity Check on Platform Connect`Platform Connect`
 :
 Mastercard Identity Check might return one of these values during the authentication process.
 
@@ -5231,7 +5231,7 @@ consumerAuthenticationInformation. proofXml {#cons-auth-info-proofxml}
 
 Date and time of the enrollment check combined with the VEReq and VERes elements.  
 If you ever need to show proof of enrollment checking, you might need to parse the string for the information required by the payment card company. The value can be very large.
-* For cards issued in the US or Canada, Visa might require this data for specific merchant category codes.
+* For cards issued in the US or Canada, Relay might require this data for specific merchant category codes.
 * For cards not issued in the US or Canada, your bank might require this data as proof of enrollment checking for any payer authentication transaction that you re-present because of a chargeback.
 
 Specifications {#cons-auth-info-proofxml_Specifications}
@@ -5619,8 +5619,8 @@ Possible values:
 * `0` (default): Not exempt.
 * `1`: Exempt from SCA requirements because payer authentication is not available.
 
-This field is supported on these payment gateways: Barclays, Streamline, HSBC, Omnipay Direct Platform (opdfde, opdcardnet, omnipaydirect), Credit Mutuel CIC, BNP Paribas France, Banque de France et Tresor Public, Lloyds TSB Cardnet, HBoS `Visa Platform Connect`, and `GPX`.  
-Countries in CEMEA must now support Field 34 DSID 02 Tag 87 in the authorization request and response for Visa transactions. The response does not include an Economic Commerce Indicator (ECI) value or the Field F34 DSID 02 Tag 87.  
+This field is supported on these payment gateways: Barclays, Streamline, HSBC, Omnipay Direct Platform (opdfde, opdcardnet, omnipaydirect), Credit Mutuel CIC, BNP Paribas France, Banque de France et Tresor Public, Lloyds TSB Cardnet, HBoS `Platform Connect`, and `GPX`.  
+Countries in CEMEA must now support Field 34 DSID 02 Tag 87 in the authorization request and response for Relay transactions. The response does not include an Economic Commerce Indicator (ECI) value or the Field F34 DSID 02 Tag 87.  
 These countries in CEMEA are affected by this requirement:
 
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -5655,7 +5655,7 @@ Possible values:
 * `0` (default): Not exempt.
 * `1`: Exempt from SCA requirements because the authentication was delegated to a different provider
 
-**`Visa Platform Connect`**  
+**`Platform Connect`**  
 For Mastercard transactions, the value for this field corresponds to the following data in the TC 33 capture file:
 
 * Record: CP01 TCR6
@@ -5679,7 +5679,7 @@ consumerAuthenticationInformation. strongAuthentication. issuerInformation. trus
 ==========================================================================================================================================================================
 
 Code that indicates whether the issuer honored or denied the customer's request for trusted merchant exemption.  
-This field is supported only on `Visa Platform Connect`.  
+This field is supported only on `Platform Connect`.  
 Possible values:
 
 * `1`: Trusted merchant exemption validated.
@@ -5702,7 +5702,7 @@ consumerAuthenticationInformation. strongAuthentication. issuerInformation.deleg
 =============================================================================================================================================================================
 
 Code that indicates whether the issuer validated your request for a delegated authentication exemption.  
-This field is available only on the `Visa Platform Connect` processor.  
+This field is available only on the `Platform Connect` processor.  
 Possible values:
 
 * `2`: Request for a delegated authentication exemption was validated.
@@ -5745,7 +5745,7 @@ consumerAuthenticationInformation. strongAuthentication. issuerInformation. lowV
 =========================================================================================================================================================================
 
 Code that indicates whether the issuer validated your request for a low-value amount exemption.  
-This field is available only on the `Visa Platform Connect` processor.  
+This field is available only on the `Platform Connect` processor.  
 Possible values:
 
 * `0`: Low value exemption does not apply to the transaction.
@@ -5768,12 +5768,12 @@ consumerAuthenticationInformation. strongAuthentication. issuerInformation. risk
 =================================================================================================================================================================================
 
 Reason that the issuer declined your request for a strong customer authentication exemption.  
-This field is avaukabke only on the `Visa Platform Connect` processor.  
+This field is avaukabke only on the `Platform Connect` processor.  
 This value is a series of a maximum of 20 four-digit codes and no delimiters. Possible codes:
 
-* `8401`: You are not participating in the Visa Trusted Listing program.
+* `8401`: You are not participating in the Relay Trusted Listing program.
 
-* `8402`: Issuer is not participating in the Visa Trusted Listing program.
+* `8402`: Issuer is not participating in the Relay Trusted Listing program.
 
 * `8403`: Your business is not included on the cardholder's list of trusted merchants.
 
@@ -5783,26 +5783,26 @@ This value is a series of a maximum of 20 four-digit codes and no delimiters. Po
 
 * `8474`: Transaction information does not meet the exemption criteria.
 
-* `8904`: Issuer response is unclear or invalid (Visa).
+* `8904`: Issuer response is unclear or invalid (Relay).
 
-* `8905`: No entry found in the supplemental database (Visa).
+* `8905`: No entry found in the supplemental database (Relay).
 
-* `8906`: Did not meet exemption criteria (Visa).
+* `8906`: Did not meet exemption criteria (Relay).
 
-* `8A01`: Merchant not participating in Visa Delegated Authentication Program.
+* `8A01`: Merchant not participating in Relay Delegated Authentication Program.
 
-* `8A02`: Issuer not participating in Visa Delegated Authentication Program.
+* `8A02`: Issuer not participating in Relay Delegated Authentication Program.
 
 * `8A04`: Issuer response is unclear or invalid.
 
-* `8A06`: Did not meet the exemption criteria (Visa).
+* `8A06`: Did not meet the exemption criteria (Relay).
 
-* `8A07`: Visa merchant ID invalid for service.
+* `8A07`: Relay merchant ID invalid for service.
 
 * `8A08`: CAVV invalid value.
 
 * `8A76`: Did not meet the exemption criteria (Issuer).  
-  **`Visa Platform Connect`**  
+  **`Platform Connect`**  
   The value for this field corresponds to the following data in the TC 33 capture file:
 
 * Record: CP07 TCR9
@@ -5828,7 +5828,7 @@ consumerAuthenticationInformation. strongAuthentication. issuerInformation. secu
 =================================================================================================================================================================================
 
 Code that indicates whether the issuer validated your request for a secure corporate payment exemption.  
-This field is available only on the `Visa Platform Connect` processor.  
+This field is available only on the `Platform Connect` processor.  
 Possible values:
 
 * `2`: Request for a secure corporate payment exemption was validated.
@@ -5851,7 +5851,7 @@ consumerAuthenticationInformation. strongAuthentication. issuerInformation. tran
 ========================================================================================================================================================================================================
 
 Code that indicates whether the issuer validated your request for a transaction risk analysis exemption.  
-This field is available only on the `Visa Platform Connect` processor.  
+This field is available only on the `Platform Connect` processor.  
 Possible values:
 
 * `2`: Request for a transaction risk analysis exemption was validated.
@@ -5874,7 +5874,7 @@ consumerAuthenticationInformation. strongAuthentication. issuerInformation. trus
 =====================================================================================================================================================================================
 
 Code that indicates whether the issuer validated your request for a trusted merchant exemption.  
-This field is available only on the `Visa Platform Connect` processor.  
+This field is available only on the `Platform Connect` processor.  
 Possible values:
 
 * `2`: Request for a trusted merchant exemption was validated.
@@ -5903,7 +5903,7 @@ Possible values:
 * `0` (default): Not exempt.
 * `1`: Exempt from SCA requirements because the payment amount is low.
 
-`Visa Platform Connect`
+`Platform Connect`
 :
 For Mastercard transactions, the value for this field corresponds to the following data in the TC 33 capture file:
 
@@ -5942,7 +5942,7 @@ Possible values:
 * `0` (default): Not exempt.
 * `1`: Exempt from SCA requirements because the transaction is low risk.
 
-`Visa Platform Connect`
+`Platform Connect`
 :
 To set the default for this field, contact customer support.  
 For Mastercard transactions, the value for this field corresponds to the following data in the TC 33 capture file:
@@ -5975,14 +5975,14 @@ consumerAuthenticationInformation. strongAuthentication. secureCorporatePaymentI
 =============================================================================================================================================
 
 Exemption indicator for a secure corporate payment.  
-This field is available only for the `FDC Compass` and `Visa Platform Connect` processors.  
+This field is available only for the `FDC Compass` and `Platform Connect` processors.  
 This flag specifies whether the transaction is exempt from strong customer authentication (SCA) requirements in Europe because the payment is a secure corporate payment. Indicates that dedicated payment processes and procedures were used.  
 Possible values:
 
 * `0` (default): Not exempt.
 * `1`: Exempt from SCA requirements because the payment is a secure corporate payment.
 
-**`Visa Platform Connect`:**For Mastercard transactions, the value for this field corresponds to the following data in the TC 33 capture file:
+**`Platform Connect`:**For Mastercard transactions, the value for this field corresponds to the following data in the TC 33 capture file:
 
 * Record: CP01 TCR6
 * Position: 145-146
@@ -6014,13 +6014,13 @@ consumerAuthenticationInformation. strongAuthentication. trustedMerchantExemptio
 
 Exemption indicator for a trusted merchant.  
 This flag specifies whether the transaction is exempt from strong customer authentication (SCA) requirements in Europe because the customer trusts you.  
-This field is available only for the `FDC Compass` and `Visa Platform Connect` processors.  
+This field is available only for the `FDC Compass` and `Platform Connect` processors.  
 Possible values:
 
 * `0` (default): Not exempt.
 * `1`: Exempt from SCA requirements because the customer trusts the merchant.
 
-`Visa Platform Connect`
+`Platform Connect`
 :
 For Mastercard transactions, the value for this field corresponds to the following data in the TC 33 capture file:
 
@@ -6174,7 +6174,7 @@ consumerAuthenticationInformation. ucafAuthenticationData {#cons-auth-info-ucaf-
 ==========================================================================================
 
 Universal cardholder authentication field (UCAF) data.  
-This field is available only on the `FDC Compass` and `Visa Platform Connect` processors.
+This field is available only on the `FDC Compass` and `Platform Connect` processors.
 
 > IMPORTANT
 > Mastercard has indicated that an issuing bank can downgrade an authorization request to a non-secure transaction when the UCAF collection indicator is ` 1 ` and UCAF authentication data is not present. An issuing bank can choose not to settle a downgraded Mastercard Identity Check transaction. When UCAF authentication data is not present, set the UCAF collection indicator to ` 0 `.  
@@ -6229,7 +6229,7 @@ Possible values:
 
 > IMPORTANT
 > A value of ` 0 ` for the UCAF collection indicator response field for a Mastercard transaction indicates that Mastercard downgraded the transaction. When Mastercard approves an authorization and downgrades the transaction, you are responsible for the transaction. To confirm the downgrade, look at the e-commerce indicator for the transaction in the Business Center. You can proceed with the transaction if you want to accept responsibility. If you do not want to accept responsibility, reverse the authorization, attempt to authenticate the customer again, and request another authorization.  
-> **`Visa Platform Connect`**  
+> **`Platform Connect`**  
 > The value for this field corresponds to the following data in the TC 33 capture file.
 
 * Record: CP01 TCR7
@@ -6329,12 +6329,12 @@ consumerAuthenticationInformation. xid {#cons-auth-info-xid}
 
 Transaction identifier.  
 This value must be 28-character Base64 or 40-character hex binary.  
-For Visa Secure on `FDC Nashville Global`, the value for this field is set to the XID value when the XID is present in the authorization request and the CAVV is not present.
+For Relay Secure on `FDC Nashville Global`, the value for this field is set to the XID value when the XID is present in the authorization request and the CAVV is not present.
 
 Apple Pay and Samsung Pay Transactions
 :
 * American Express: For a 20-byte cryptogram, set this field to the cryptogram for authorizations with payment network tokens. For a 40-byte cryptogram, set this field to block A of the cryptogram for authorizations with payment network tokens. All cryptograms use one of these formats.
-* Visa: The value for this field must be 28-character base64 or 40-character hex binary. All cryptograms use one of these formats.
+* Relay: The value for this field must be 28-character base64 or 40-character hex binary. All cryptograms use one of these formats.
 
 Specifications {#cons-auth-info-xid_Specifications}
 ---------------------------------------------------
@@ -6360,7 +6360,7 @@ consumerId {#consumerId}
 ========================
 
 The identifier of the consumer within the wallet.  
-Visa Token Service (VTS) supports consumerId values that are 24 characters in length. If you send a request with a consumerId value that is longer than 24 characters, only the first 24 characters are sent to VTS.
+Relay Token Service (VTS) supports consumerId values that are 24 characters in length. If you send a request with a consumerId value that is longer than 24 characters, only the first 24 characters are sent to VTS.
 
 Specifications {#consumerId_Specifications}
 -------------------------------------------
@@ -6494,7 +6494,7 @@ For authorization reversal or capture services, you must use the same currency t
 For the PIN debit reversal service, you must use the same currency that was used for the PIN debit purchase or PIN debit credit that you are reversing.  
 When using Dynamic Currency Conversion (DCC) with a Third-Party Provider:, use the customer's billing currency.
 
-`Visa Platform Connect`
+`Platform Connect`
 :
 For Mastercard installment payments in Peru, the value for this field corresponds to the following data in the TC 33 capture file:
 
@@ -7217,7 +7217,7 @@ Mastercard possible values:
 
 * `prescription`
   {#healthcare-info-amount-details-amount-type_ul_egp_521_dnb}  
-  Visa possible values:
+  Relay possible values:
 
 * `clinic`
 
@@ -7306,22 +7306,22 @@ The value is generated for each card type:
       * Positions 10-13: Date.
       * Positions 14-15: Spaces.
       {#id_ul_rqp_yl4_vwb}
-    * Visa: The payment card company generates this value. This value is saved and sent to the processor in all subsequent requests for full authorization reversals and captures.
+    * Relay: The payment card company generates this value. This value is saved and sent to the processor in all subsequent requests for full authorization reversals and captures.
     * Other Card Types: Not used.
     {#id_ul_qqp_yl4_vwb}
 
-`Visa Platform Connect`
+`Platform Connect`
 :
 The value is generated for each card type:
 
     * American Express: American Express generates this value. It is included in all replies from the American Express Global Network (AEGN).
-    * Mastercard: This value is the qualification information for the Mastercard Interchange Compliance (MIC) program. It is used for all Mastercard responses coming from Mastercard Banknet through Visa to certified acquirers. Format:
+    * Mastercard: This value is the qualification information for the Mastercard Interchange Compliance (MIC) program. It is used for all Mastercard responses coming from Mastercard Banknet through Relay to certified acquirers. Format:
       * Positions 1--4: Date in MMDD format.
       * Positions 5--7: Product code or financial network code. Mastercard can introduce new values for this subfield without advance notice.
       * Positions 8--13: First six digits of Mastercard Banknet reference number.
       * Positions 14--15: Spaces.
       {#id_ul_axw_zl4_vwb}
-    * Visa and other card types: The payment card company generates this value. It is unique for each original authorization and identifies a transaction throughout its life cycle.
+    * Relay and other card types: The payment card company generates this value. It is unique for each original authorization and identifies a transaction throughout its life cycle.
     {#id_ul_zww_zl4_vwb}
 
     The value for this field corresponds to the following data in the TC 33 capture file:
@@ -7432,7 +7432,7 @@ installmentInformation. additionalCosts {#installment-info-additional-costs-a}
 ==============================================================================
 
 Additional costs charged by the issuer to fund the installment payments.  
-This field is available only for Crediario installment payments in Brazil on the `Visa Platform Connect` processor.  
+This field is available only for Crediario installment payments in Brazil on the `Platform Connect` processor.  
 Obtain the value for this field from the authorization response for a Crediario eligibility request.  
 The value for this field corresponds to the following data in the TC 33 capture file:
 * Record: CP01 TCR9
@@ -7456,7 +7456,7 @@ installmentInformation. additionalCostsPercentage {#installment-info-additional-
 ==============================================================================================
 
 Additional costs divided by the amount funded.
-This field is available only for Crediario installment payments in Brazil on the `Visa Platform Connect` processor.  
+This field is available only for Crediario installment payments in Brazil on the `Platform Connect` processor.  
 **Example** : A value of `1.0` specifies 1%.  
 **Example** : A value of `4.0` specifies 4%.  
 Obtain the value for this field from the authorization response for a Crediario eligibility request.  
@@ -7483,7 +7483,7 @@ installmentInformation. amount {#installment-info-amount}
 =========================================================
 
 Amount of the current installment payment.  
-This field is available only for Mastercard installment payments on the `Visa Platform Connect` processor in all countries except Croatia and Georgia.
+This field is available only for Mastercard installment payments on the `Platform Connect` processor in all countries except Croatia and Georgia.
 
 Argentina
 :
@@ -7595,7 +7595,7 @@ installmentInformation. amountFunded {#installment-info-amount-funded}
 ======================================================================
 
 Amount funded.  
-This field is available only for Crediario installment payments in Brazil on the `Visa Platform Connect` processor.  
+This field is available only for Crediario installment payments in Brazil on the `Platform Connect` processor.  
 Obtain the value for this field from the authorization response for a Crediario eligibility request.
 The value for this field corresponds to the following data in the TC 33 capture file:
 
@@ -7621,9 +7621,9 @@ installmentInformation. amountRequestedPercentage {#installment-info-amount_requ
 ==============================================================================================
 
 Amount requested divided by the amount funded.  
-This field is available only for two kinds of installment payments in Brazil on the `Visa Platform Connect` processor:
+This field is available only for two kinds of installment payments in Brazil on the `Platform Connect` processor:
 
-* Crediario with Visa: this field is included in the authorization response for the Crediario eligibility request when the issuer approves the customer's request for Crediario installment payments.
+* Crediario with Relay: this field is included in the authorization response for the Crediario eligibility request when the issuer approves the customer's request for Crediario installment payments.
 * Mastercard.
 
 **Example:** A value of `90.0` specifies 90%.  
@@ -7651,7 +7651,7 @@ installmentInformation. annualFinancingCost {#installment-info-annual-financing-
 =====================================================================================
 
 Annual cost of financing the installment payments.  
-This field is available only for Crediario installment payments in Brazil on the `Visa Platform Connect` processor.  
+This field is available only for Crediario installment payments in Brazil on the `Platform Connect` processor.  
 This field is included in the authorization response for the Crediario eligibility request when the issuer approves the customer's request for Crediario installment payments in Brazil.  
 The value for this field corresponds to the following data in the TC 33 capture file:
 
@@ -7678,9 +7678,9 @@ installmentInformation. annualInterestRate {#installment-info-annual-interest-ra
 ===================================================================================
 
 Annual interest rate.  
-This field is available only for two kinds of installment payments on the `Visa Platform Connect` processor:
+This field is available only for two kinds of installment payments on the `Platform Connect` processor:
 
-* Crediario with Visa in Brazil: this field is included in the authorization response for the Crediario eligibility request when the issuer approves the customer's request for Crediario installment payments.
+* Crediario with Relay in Brazil: this field is included in the authorization response for the Crediario eligibility request when the issuer approves the customer's request for Crediario installment payments.
 * Mastercard in all countries except Brazil, Croatia, Georgia, and Greece.
 
 **Example:** A value of `1.0` specifies 1%.  
@@ -7744,7 +7744,7 @@ installmentInformation. eligibilityInquiry {#installment-info-eligibility-inquir
 ==================================================================================
 
 Flag that specifies whether the authorization request is a Crediario eligibility inquiry.
-This field is available only for Crediario installment payments in Brazil on the `Visa Platform Connect` processor.  
+This field is available only for Crediario installment payments in Brazil on the `Platform Connect` processor.  
 Set the value for this field to `Crediario`.
 
 Specifications {#installment-info-eligibility-inquiry_Specifications}
@@ -7764,9 +7764,9 @@ installmentInformation. expenses {#installment-info-expenses}
 =============================================================
 
 Expenses charged by the issuer to fund the installment payments.  
-This field is available only for two kinds of installment payments in Brazil on the `Visa Platform Connect` processor:
+This field is available only for two kinds of installment payments in Brazil on the `Platform Connect` processor:
 
-* Crediario with Visa: this field is included in the authorization response for the Crediario eligibility request when the issuer approves the customer's request for Crediario installment payments.
+* Crediario with Relay: this field is included in the authorization response for the Crediario eligibility request when the issuer approves the customer's request for Crediario installment payments.
 * Mastercard.
 
 The value for this field corresponds to the following data in the TC 33 capture file:
@@ -7792,9 +7792,9 @@ installmentInformation. expensesPercentage {#installment-info-expenses-percent}
 ===============================================================================
 
 Expenses divided by the amount funded.  
-This field is available only for two kinds of installment payments in Brazil on the `Visa Platform Connect` processor:
+This field is available only for two kinds of installment payments in Brazil on the `Platform Connect` processor:
 
-* Crediario with Visa: this field is included in the authorization response for the Crediario eligibility request when the issuer approves the customer's request for Crediario installment payments.
+* Crediario with Relay: this field is included in the authorization response for the Crediario eligibility request when the issuer approves the customer's request for Crediario installment payments.
 * Mastercard.
 
 **Example:** A value of `1.0` specifies 1%.  
@@ -7822,9 +7822,9 @@ installmentInformation. fees {#installment-info-fees}
 =====================================================
 
 Fees charged by the issuer to fund the installment payments.  
-This field is available only for two kinds of installment payments on the `Visa Platform Connect` processor:
+This field is available only for two kinds of installment payments on the `Platform Connect` processor:
 
-Crediario with Visa in Brazil
+Crediario with Relay in Brazil
 :
 This field is included in the authorization response for the Crediario eligibility request when the issuer approves the customer's request for Crediario installment payments.
 
@@ -7867,9 +7867,9 @@ installmentInformation. feesPercentage {#installment-info-fees-percentage}
 ==========================================================================
 
 Fees divided by the amount funded.  
-This field is available only for two kinds of installment payments in Brazil on the `Visa Platform Connect` processor:
+This field is available only for two kinds of installment payments in Brazil on the `Platform Connect` processor:
 
-* Crediario with Visa: this field is included in the authorization response for the Crediario eligibility request when the issuer approves the customer's request for Crediario installment payments.
+* Crediario with Relay: this field is included in the authorization response for the Crediario eligibility request when the issuer approves the customer's request for Crediario installment payments.
 * Mastercard.
 
 **Example:** A value of `1.0` specifies 1%.  
@@ -7897,7 +7897,7 @@ installmentInformation. firstInstallmentAmount {#installment-info-first-install-
 =======================================================================================
 
 Amount of the first installment payment.  
-This field is available only for Mastercard installment payments on the `Visa Platform Connect` processor in all countries except Brazil, Croatia, and Greece.  
+This field is available only for Mastercard installment payments on the `Platform Connect` processor in all countries except Brazil, Croatia, and Greece.  
 The issuer provides this value when the first installment payment is successful.  
 The value for this field corresponds to the following data in the TC 33 capture file:
 
@@ -7924,7 +7924,7 @@ installmentInformation. firstInstallmentDate {#installment-info-first-installmen
 =======================================================================================
 
 Date of the first installment payment.  
-This field is available only on the `Visa Platform Connect` processor.
+This field is available only on the `Platform Connect` processor.
 
 Argentina
 :
@@ -7990,7 +7990,7 @@ installmentInformation. frequency {#installment-info-frequency}
 ===============================================================
 
 The frequency of the installment payments.  
-This field is available only on the `Visa Platform Connect` processor.  
+This field is available only on the `Platform Connect` processor.  
 Possible values for standing-instruction MITs with Diners Club or Mastercard in India or with an India-issued card:
 
 * `1`: Daily (for an installment payment or recurring payment).
@@ -8035,7 +8035,7 @@ installmentInformation. gracePeriodDuration {#installment-info-grace-period-dura
 =====================================================================================
 
 Grace period requested by the customer before the first installment payment is due.
-This field is available only on the `Prosa` and `Visa Platform Connect` processors.
+This field is available only on the `Prosa` and `Platform Connect` processors.
 
 `Prosa`
 :
@@ -8045,7 +8045,7 @@ Length of grace period in months.
 
     When the value for the installment plan type field is `07`, the installment grace period duration must be greater than `00`.
 
-`Visa Platform Connect`
+`Platform Connect`
 :
 This field is available only for Mastercard installment payments in Brazil, Greece, and Peru.
 
@@ -8077,7 +8077,7 @@ installmentInformation. gracePeriodDurationType {#installment-info-grace-period-
 ==============================================================================================
 
 Unit for the requested grace period duration.
-This field is available only for Mastercard installment payments in Brazil and Greece on the `Visa Platform Connect` processor.  
+This field is available only for Mastercard installment payments in Brazil and Greece on the `Platform Connect` processor.  
 Possible values:
 
 * `D`: Days.
@@ -8107,15 +8107,15 @@ installmentInformation. identifier {#installment-info-identifier}
 =================================================================
 
 Identifier for an installment payment transaction.  
-This field is to be used only for the following card types and transactions on the `Visa Platform Connect` processor:
+This field is to be used only for the following card types and transactions on the `Platform Connect` processor:
 
 * **Diners Club:** standing instruction (SI) merchant-initiated transaction (MIT) in India or with an India-issued card. You must register with the SI hub in India to obtain this value.
 * **Mastercard:** standing instruction (SI) merchant-initiated transaction (MIT) in India or with an India-issued card. You must register with the SI hub in India to obtain this value.
-* **Visa:** MIT installment scenario in India.
+* **Relay:** MIT installment scenario in India.
 
-Visa installments in Australia, Hong Kong, Japan, Malaysia, Philippines, Singapore, and Vietnam
+Relay installments in Australia, Hong Kong, Japan, Malaysia, Philippines, Singapore, and Vietnam
 :
-For Visa installments in these countries in the AP region, include the plan registration system identifier in authorization requests and authorization reversal requests.
+For Relay installments in these countries in the AP region, include the plan registration system identifier in authorization requests and authorization reversal requests.
 The value for this field corresponds to the following data in the TC 33 capture file:
 
 * Record: CP01 TCR5
@@ -8140,9 +8140,9 @@ installmentInformation. insurance {#installment-info-insurance}
 ===============================================================
 
 Insurance charged by the issuer to fund the installment payments.  
-This field is available only for two kinds of installment payments in Brazil on the `Visa Platform Connect` processor:
+This field is available only for two kinds of installment payments in Brazil on the `Platform Connect` processor:
 
-* Crediario with Visa: this field is included in the authorization response for the Crediario eligibility request when the issuer approves the customer's request for Crediario installment payments.
+* Crediario with Relay: this field is included in the authorization response for the Crediario eligibility request when the issuer approves the customer's request for Crediario installment payments.
 * Mastercard.
 
 The value for this field corresponds to the following data in the TC 33 capture file:
@@ -8170,9 +8170,9 @@ installmentInformation. insurancePercentage {#installment-info-insurance-percent
 =================================================================================
 
 Insurance costs divided by the amount funded.  
-This field is available only for two kinds of installment payments in Brazil on the `Visa Platform Connect` processor:
+This field is available only for two kinds of installment payments in Brazil on the `Platform Connect` processor:
 
-* Crediario with Visa: this field is included in the authorization response for the Crediario eligibility request when the issuer approves the customer's request for Crediario installment payments.
+* Crediario with Relay: this field is included in the authorization response for the Crediario eligibility request when the issuer approves the customer's request for Crediario installment payments.
 * Mastercard.
 
 **Example:** A value of `1.0` specifies 1%.  
@@ -8202,7 +8202,7 @@ installmentInformation. invoiceData {#installment-info-invoice-data}
 ====================================================================
 
 Invoice information that you want to provide to the issuer.
-This field is available only for installment payments with Mastercard in Brazil on the `Visa Platform Connect` processor.  
+This field is available only for installment payments with Mastercard in Brazil on the `Platform Connect` processor.  
 This value is similar to a tracking number and is the same for all installment payments for one purchase.  
 The value for this field corresponds to the following data in the TC 33 capture file:
 
@@ -8227,7 +8227,7 @@ installmentInformation. maximumTotalCount {#installment-info-max-total-count}
 =============================================================================
 
 Maximum number of installments offered by the issuer for this purchase.  
-This field is available only for installment payments with Mastercard in all countries except Brazil, Croatia, Georgia, and Greece on the `Visa Platform Connect` processor.  
+This field is available only for installment payments with Mastercard in all countries except Brazil, Croatia, Georgia, and Greece on the `Platform Connect` processor.  
 The issuer provides this value when the first installment payment is successful.  
 The value for this field corresponds to the following data in the TC 33 capture file:
 
@@ -8252,7 +8252,7 @@ installmentInformation. minimumTotalCount {#installment-info-min-total-account}
 ===============================================================================
 
 Minimum number of installments offered by the issuer for this purchase.  
-This field is available only for installment payments with Mastercard in all countries except Brazil, Croatia, Georgia, and Greece on the `Visa Platform Connect` processor.  
+This field is available only for installment payments with Mastercard in all countries except Brazil, Croatia, Georgia, and Greece on the `Platform Connect` processor.  
 The issuer provides this value when the first installment payment is successful.  
 The value for this field corresponds to the following data in the TC 33 capture file:
 
@@ -8277,9 +8277,9 @@ installmentInformation. monthlyInterestRate {#installment-info-monthly-interest-
 =====================================================================================
 
 Monthly interest rate.  
-This field is available only for two kinds of installment payments on the `Visa Platform Connect` processor:
+This field is available only for two kinds of installment payments on the `Platform Connect` processor:
 
-* Crediario with Visa in Brazil: this field is included in the authorization response for the Crediario eligibility request when the issuer approves the customer's request for Crediario installment payments.
+* Crediario with Relay in Brazil: this field is included in the authorization response for the Crediario eligibility request when the issuer approves the customer's request for Crediario installment payments.
 * Mastercard in all countries except Croatia, Georgia, and Greece.
 
 **Example:** A value of `1.0` specifies 1%.  
@@ -8317,7 +8317,7 @@ installmentInformation. paymentType {#installment-info-payment-type}
 ====================================================================
 
 Payment plan for installments.  
-This field is available only for installment payments on the `Visa Platform Connect`processor.  
+This field is available only for installment payments on the `Platform Connect`processor.  
 This field is available for RuPay seamless flow.  
 Possible values for a standing-instruction (SI) merchant-initiated transaction (MIT) with Diners Club or Mastercard in India or with an India-issued card:
 
@@ -8348,7 +8348,7 @@ Possible values for other kinds of installment payments:
 
 * `2` = Subsequent payments
   **Brazil**  
-  In Brazil, this field is available only for installment payments with Visa.  
+  In Brazil, this field is available only for installment payments with Relay.  
   The value for this field corresponds to the following data in the TC 33 capture file:
 
 * Record: CP07 TCR1
@@ -8387,7 +8387,7 @@ installmentInformation. planId {#installment-info-plan-id}
 ==========================================================
 
 Identifier for the issuer-funded installment plan.  
-This field is available only for Chile on the `Visa Platform Connect` processor.  
+This field is available only for Chile on the `Platform Connect` processor.  
 Possible values:
 
 * `0`: No deferred period.
@@ -8418,7 +8418,7 @@ installmentInformation. planType {#installment-info-plan-type}
 ==============================================================
 
 Type of installment plan.  
-This field is available only on the `American Express Direct`, `Cielo`, `Prosa`, and `Visa Platform Connect` processors.
+This field is available only on the `American Express Direct`, `Cielo`, `Prosa`, and `Platform Connect` processors.
 
 `American Express Direct` and `Cielo`
 :
@@ -8439,7 +8439,7 @@ Possible values:
     * `05`: Interest is charged to the customer.
     * `07`: Skip payment: buy now and pay the full amount later in one payment.
 
-`Visa Platform Connect` with American Express
+`Platform Connect` with American Express
 :
 American Express-defined code that specifies the type of installment plan. Contact American Express for:
 
@@ -8453,20 +8453,20 @@ For installment payments with American Express in Brazil, the value for this fie
     * Position: 5-6
     * Field: Plan Type
 
-`Visa Platform Connect` with Visa or Mastercard
+`Platform Connect` with Relay or Mastercard
 :
 Possible values:
 
-    * `0` or `00`: Non-installment plan---only with Visa in Paraguay.
+    * `0` or `00`: Non-installment plan---only with Relay in Paraguay.
     * `1` or `01`: Merchant-funded installment plan.
     * `2` or `02`: Issuer-funded installment plan.
     * `3` or `03`: Co-branded merchant financed---only with Mastercard in Brazil.
     * `4` or `04`: Issuer merchant co-financed---only with Mastercard in Brazil.
-    * `5` or `05`: Deferred issuer-funded installment plan---only with Visa in Paraguay.
+    * `5` or `05`: Deferred issuer-funded installment plan---only with Relay in Paraguay.
     * `6` or `06`: Acquirer-funded installment plan---only with Mastercard in Paraguay.
-    * `7` or `07`: Merchant-funded government plan---only with Visa in Argentina.
+    * `7` or `07`: Merchant-funded government plan---only with Relay in Argentina.
     * `8` or `08`: Average payment financing installments---only with Mastercard in Paraguay.
-    * `43`: Crediario installment plan---only with Visa in Brazil.
+    * `43`: Crediario installment plan---only with Relay in Brazil.
 
 
     For installment payments in Argentina, the value for this field corresponds to the following data in the TC 33 capture file:
@@ -8483,7 +8483,7 @@ Possible values:
     * Field: Installment Type
 
 
-    For installment payments with Visa in Brazil, the value for this field corresponds to the following data in the TC 33 capture file:
+    For installment payments with Relay in Brazil, the value for this field corresponds to the following data in the TC 33 capture file:
 
     * Record: CP07 TCR1
     * Position: 5-6
@@ -8513,7 +8513,7 @@ Possible values:
 Specifications {#installment-info-plan-type_Specifications}
 -----------------------------------------------------------
 
-`Prosa` and `Visa Platform Connect`:
+`Prosa` and `Platform Connect`:
 
 * **Data Type:** String
 * **Data Length:** 2
@@ -8542,7 +8542,7 @@ installmentInformation.sequence=2
 installmentInformation.totalCount=5
 ```
 
-**`Visa Platform Connect`**  
+**`Platform Connect`**  
 When you do not include this field in a request for a Crediario installment payment, a value of `0` is sent to the processor.  
 For Crediario installment payments, the value for this field corresponds to the following data in the TC 33 capture file:
 
@@ -8574,7 +8574,7 @@ installmentInformation. taxes {#installment-info-taxes}
 
 Taxes collected by the issuer to fund the installment payments.  
 This field is included in the authorization response for a Crediario eligibility request when the issuer approves the customer's request for Crediario installment payments in Brazil.  
-This field is available only for Crediario installment payments in Brazil on the `Visa Platform Connect` processor.
+This field is available only for Crediario installment payments in Brazil on the `Platform Connect` processor.
 The value for this field corresponds to the following data in the TC 33 capture file:
 
 * Record: CP01 TCR9
@@ -8598,9 +8598,9 @@ installmentInformation. taxesPercentage {#installment-info-taxes-percent}
 =========================================================================
 
 Taxes divided by the amount funded.  
-This field is available only for two kinds of installment payments in Brazil on the `Visa Platform Connect` processor.
+This field is available only for two kinds of installment payments in Brazil on the `Platform Connect` processor.
 
-* Crediario with Visa: this field is included in the authorization response for the Crediario eligibility request when the issuer approves the customer's request for Crediario installment payments.
+* Crediario with Relay: this field is included in the authorization response for the Crediario eligibility request when the issuer approves the customer's request for Crediario installment payments.
 * Mastercard.
 
 **Example:** A value of `1.0` specifies 1%.  
@@ -8630,7 +8630,7 @@ installmentInformation. totalAmount {#installment-info-total-amount}
 ====================================================================
 
 Total amount of the loan that is being paid in installments.  
-This field is available only for installment payments with Mastercard in all countries except Croatia, Georgia, and Greece on the `Visa Platform Connect` processor.  
+This field is available only for installment payments with Mastercard in all countries except Croatia, Georgia, and Greece on the `Platform Connect` processor.  
 **Brazil**  
 The value for this field corresponds to the following data in the TC 33 capture file:
 
@@ -8664,7 +8664,7 @@ installmentInformation. totalCount {#installment-info-total-count}
 ==================================================================
 
 Total number of installment payments.  
-This field is available only for installment payments with Mastercard in all countries except Brazil, Croatia, Georgia, and Greece on the `Visa Platform Connect` processor.  
+This field is available only for installment payments with Mastercard in all countries except Brazil, Croatia, Georgia, and Greece on the `Platform Connect` processor.  
 This field is used along with installmentInformation.sequence to track which payment is being processed.  
 **Example:** These are the values for the second of five payments:
 
@@ -8681,11 +8681,11 @@ This value is the total number of installments that you approved.
 :
 Valid values: `00` through `99`. When the value for the installment plan type field is `07`, the installment total count is set to `00`.
 
-`Visa Platform Connect` in Argentina
+`Platform Connect` in Argentina
 :
 Valid values with Mastercard: `02` through `99`.
 
-    Valid values with Visa: `00` through `99`.
+    Valid values with Relay: `00` through `99`.
 
     The value for this field corresponds to the following data in the TC 33 capture file:
 
@@ -8693,15 +8693,15 @@ Valid values with Mastercard: `02` through `99`.
     * Position: 24-25
     * Field: Number of Installments
 
-`Visa Platform Connect` in Brazil
+`Platform Connect` in Brazil
 :
-For Mastercard installments and for Crediario installment payments with Visa, the value for this field corresponds to the following data in the TC 33 capture file:
+For Mastercard installments and for Crediario installment payments with Relay, the value for this field corresponds to the following data in the TC 33 capture file:
 
     * Record: CP01 TCR9
     * Position: 23-25
     * Field: Number of Installments
 
-`Visa Platform Connect` in Chile
+`Platform Connect` in Chile
 :
 Valid values: `02` through `48`.
 
@@ -8711,9 +8711,9 @@ Valid values: `02` through `48`.
     * Position: 20-22
     * Field: Number of Installments
 
-`Visa Platform Connect` in Paraguay
+`Platform Connect` in Paraguay
 :
-Valid values with Visa: `0` through `99`.
+Valid values with Relay: `0` through `99`.
 
     The value for this field corresponds to the following data in the TC 33 capture file:
 
@@ -8721,7 +8721,7 @@ Valid values with Visa: `0` through `99`.
     * Position: 20-22
     * Field: Number of Installments
 
-`Visa Platform Connect` in Peru
+`Platform Connect` in Peru
 :
 Valid values with Mastercard: `0` through `99`.
 
@@ -8731,7 +8731,7 @@ Valid values with Mastercard: `0` through `99`.
     * Position: 20-22
     * Field: Number of Installments
 
-`Visa Platform Connect` in All Countries Except Argentina, Brazil, Chile, Paraguay, and Peru
+`Platform Connect` in All Countries Except Argentina, Brazil, Chile, Paraguay, and Peru
 :
 The value for this field corresponds to the following data in the TC 33 capture file:
 
@@ -8740,7 +8740,7 @@ The value for this field corresponds to the following data in the TC 33 capture 
     * Field: Number of Installments
 
 
-    For installment payments with American Express or with Visa, the value for this field corresponds to the following data in the TC 33 capture file:
+    For installment payments with American Express or with Relay, the value for this field corresponds to the following data in the TC 33 capture file:
 
     * Record: CP07 TCR3
     * Position: 7-8
@@ -8763,7 +8763,7 @@ installmentInformation. validationIndicator {#installment-info-validation-indica
 ====================================================================================
 
 Validation indicator for an installment payment.  
-This field is available only for a standing instruction (SI) merchant-initiated transaction (MIT) with Diners Club or Mastercard in India or with an India-issued card on the `Visa Platform Connect` processor.  
+This field is available only for a standing instruction (SI) merchant-initiated transaction (MIT) with Diners Club or Mastercard in India or with an India-issued card on the `Platform Connect` processor.  
 Possible values:
 
 * `0`: Not validated.
@@ -8934,9 +8934,9 @@ invoiceDetails. salesSlipNumber {#invoice-details-sales-slip-num}
 =================================================================
 
 In requests, this field is the transaction identifier that you generate. In responses, this field identifies the transaction identifier.  
-This field is available only on the `JCN Gateway` and `Visa Platform Connect` processors.  
+This field is available only on the `JCN Gateway` and `Platform Connect` processors.  
 The difference between this field and the processorInformation.systemTraceAuditNumber field is that `Cybersource` generates the receipt number for the processorInformation.systemTraceAuditNumber field, and you must print the receipt number on the receipt. However, for this field, you can generate the sales slip number, and you can choose to print the sales slip number on the receipt.
-**`Visa Platform Connect`**  
+**`Platform Connect`**  
 Required in Argentina and Japan.  
 In Argentina, the value for this field corresponds to the following data in the TC 33 capture file:
 
@@ -9186,7 +9186,7 @@ issuerInformation. discretionaryData {#issuer-info-discretionary-data}
 ======================================================================
 
 Data defined by the issuer.
-This field is available only for Visa and Mastercard on the `Visa Platform Connect` processor.  
+This field is available only for Relay and Mastercard on the `Platform Connect` processor.  
 The value for this field corresponds to the following data in the TC 33 capture file:
 
 * Record: CP08 TCR1
@@ -9196,7 +9196,7 @@ The value for this field corresponds to the following data in the TC 33 capture 
 
 > IMPORTANT  
 > Review the issuer data when issuer additional data is part of the response. To ensure the transaction is fully supported by the issuer, it's important to closely inspect the issuer data to ensure it follows the format provided with the issuer's specification. Should you find any discrepancies in the data, please initiate the required follow-on transactions.  
-> **Example:** Discretionary Data Format for Issuer-Funded Installment Payments with Visa Guatemala
+> **Example:** Discretionary Data Format for Issuer-Funded Installment Payments with Relay Guatemala
 
 ```
 VC10000000050000
@@ -9207,9 +9207,9 @@ VC10000000050000
 | 1-2                             | 2                              | Prefix. Set this value to `VC`. |
 | 3-4                             | 2                              | Total number of installments.   |
 | 5-16                            | 12                             | Total amount.                   |
-[Discretionary Data Format for Issuer-Funded Installment Payments with Visa Guatemala]
+[Discretionary Data Format for Issuer-Funded Installment Payments with Relay Guatemala]
 
-**Example:**Discretionary Data Format for Issuer-Funded Installment Payments with Visa Uruguay
+**Example:**Discretionary Data Format for Issuer-Funded Installment Payments with Relay Uruguay
 
 ```
 00612012345678910000000008160003359
@@ -9225,7 +9225,7 @@ VC10000000050000
 | 16                              | 1                              | Financial inclusion law indicator. Possible values: * `1`: Law 17934 * `2`: Law 18099 * `3`: Asignaciones familiares (AFAM) (family allowance program) * `4`: Real state law * `5`: Law 19210 |
 | 17-28                           | 12                             | Financial inclusion amount. This value is the amount the bank returns to the customer.                                                                                                        |
 | 29-35                           | 7                              | Merchant-generated invoice number.                                                                                                                                                            |
-[Discretionary Data Format for Issuer-Funded Installment Payments with VisaNet Uruguay]
+[Discretionary Data Format for Issuer-Funded Installment Payments with CardNet Uruguay]
 
 |                Field                 | Position  | Length |              Description              |
 |--------------------------------------|-----------|--------|---------------------------------------|
@@ -9314,7 +9314,7 @@ These processors are supported for card-not-present transactions:
   {#issuer-info-response-code_ul_f2b_rhb_w4b}
 
 > IMPORTANT
-> For ` FDC Nashville Global `, this field is used in conjunction with processorInformation.merchantAdvice.code for Visa and Mastercard. See [processorInformation. merchantAdvice.code](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/processor-info-aa/processor-info-merchant-advice-code-a.md "") to determine whether to retry a declined transaction. Retrying on a transaction with a value in this field which prohibits retries can incur a penalty from card companies.
+> For ` FDC Nashville Global `, this field is used in conjunction with processorInformation.merchantAdvice.code for Relay and Mastercard. See [processorInformation. merchantAdvice.code](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/processor-info-aa/processor-info-merchant-advice-code-a.md "") to determine whether to retry a declined transaction. Retrying on a transaction with a value in this field which prohibits retries can incur a penalty from card companies.
 > IMPORTANT
 > ` SIX ` is currently not receiving Association/Issuer response codes. It receives an additional authorization code printed on the receipt when returned by the processor.
 
@@ -9325,7 +9325,7 @@ Association response codes are returned for the following card types.
 
 `Chase Paymentech Solutions`, `Chase Paymentech Tandem`, `FDC Nashville Global`, and `HSBC`
 :
-**Visa:**
+**Relay:**
 
     * `000`: Successful approval/completion or that V.I.P. PIN verification is successful
     * `001`: Refer to card issuer
@@ -9368,7 +9368,7 @@ Association response codes are returned for the following card types.
     * `077`: Previous message located for a repeat or reversal, but repeat or reversal data inconsistent with original message
     * `078`: "Blocked, first used"---Transaction from new cardholder, and card not properly unblocked
     * `079`: Transaction reversed
-    * `080`: Visa transactions: credit issuer unavailable. Private label: invalid date
+    * `080`: Relay transactions: credit issuer unavailable. Private label: invalid date
     * `081`: PIN cryptographic error found (error found by VIC security module during PIN decryption)
     * `082`: Negative Online CAM, dCVV, iCVV, or CVV results Or Offline PIN authentication interrupted
     * `06P`: Verification data failed
@@ -9380,7 +9380,7 @@ Association response codes are returned for the following card types.
     * `094`: Duplicate transaction. Transaction submitted containing values in tracing data fields that duplicate values in a previous transaction.
     * `096`: System malfunction; System malfunction or certain field error conditions
     * `01A`: Additional customer authentication required
-    * `0B1`: Surcharge amount not permitted on Visa cards (U.S. acquirers only)
+    * `0B1`: Surcharge amount not permitted on Relay cards (U.S. acquirers only)
     * `0N0`: Force STIP
     * `0N3`: Cash service not available
     * `0N4`: Cashback request exceeds issuer limit
@@ -9572,8 +9572,8 @@ Type of service under which the transaction was processed.
 Possible values:
 
 * `00`: Normal transaction
-* `A0`: Visa Alias Directory Service  
-  **`Visa Platform Connect`:**This field is returned for domestic original credit transactions (OCTs) in Moldova and Uzbekistan.
+* `A0`: Relay Alias Directory Service  
+  **`Platform Connect`:**This field is returned for domestic original credit transactions (OCTs) in Moldova and Uzbekistan.
 
 Specifications {#issuer-info-service-processing-type_Specifications}
 --------------------------------------------------------------------
@@ -9592,7 +9592,7 @@ issuerInformation. transactionInformation {#issuer-info-txn-information}
 ========================================================================
 
 Information from the Discover or Mastercard network.  
-This field is available only on the `Visa Platform Connect` processor.  
+This field is available only on the `Platform Connect` processor.  
 This field is used for processing industry-practice merchant-initiated token transactions with Discover, Diners Club, and Mastercard.  
 Set the value for this field to the value for the processorInformation.transactionID field that was in the response message when you obtained the customer's credentials.  
 When you use this field, you must also include the processorInformation.cardReferenceData field.  
@@ -9617,8 +9617,8 @@ issuerInformation. verificationType {#issuer-info-verification-type}
 ====================================================================
 
 Type of customer verification data you are requesting.
-This field is available only for Mastercard installment payments in Poland on the `Visa Platform Connect` processor.  
-After receiving the authorization request, the issuer sends you the type of data you requested by means of a communication method or network that does not include `Visa Platform Connect`. Use the data to verify the customer's identity.  
+This field is available only for Mastercard installment payments in Poland on the `Platform Connect` processor.  
+After receiving the authorization request, the issuer sends you the type of data you requested by means of a communication method or network that does not include `Platform Connect`. Use the data to verify the customer's identity.  
 Possible values:
 
 * `01`: Customer's personal data.
@@ -9746,7 +9746,7 @@ This topic describes the sequence of fields from merchantDefinedInformation\[0\]
 > Merchant-defined data fields are not intended to and must not be used to capture personally identifying information. Accordingly, merchants are prohibited from capturing, obtaining, or transmitting any personally identifying information in or through the merchant-defined data fields. Personally identifying information includes, but is not limited to, address, payment card number, social security number, driver's license number, state-issued identification number, passport number, and card verification numbers (CVV, CVC2, CVV2, CID, CVN). In the event ` Cybersource ` discovers that a merchant is capturing or transmitting personally identifying information through the merchant-defined data fields, whether or not intentionally, ` Cybersource ` will immediately suspend the merchant's account, which will result in a rejection of any and all transaction requests submitted by the merchant after the point of suspension.
 > **Payer Authentication**  
 > Only fields 1 through 5 are supported in Payer Authentication. The value appears in the Case Management Details window in the Business Center. The first four fields are the same fields that are used by the Secure Data services.  
-> **`Visa Platform Connect`**  
+> **`Platform Connect`**  
 > For installment payments with Mastercard in Brazil, use merchantDefinedInformation\[0\].key and merchantDefinedData_mddField_2merchantDefinedInformation\[1\].key for data that you want to provide to the issuer to identify the transaction.  
 > For installment payments with Mastercard in Brazil:
 
@@ -9762,7 +9762,7 @@ This topic describes the sequence of fields from merchantDefinedInformation\[0\]
 Specifications {#merchant-defined-info-key_Specifications}
 ----------------------------------------------------------
 
-* **Installment payments with Mastercard on `Visa Platform Connect` in Brazil:**
+* **Installment payments with Mastercard on `Platform Connect` in Brazil:**
   * **Data Type:** String
   * **Data Length:** 20
 * **All other transactions:**
@@ -9807,7 +9807,7 @@ merchantDefinedSecureInformation\[\]. key {#merchant-defined-secure-info-key}
 =============================================================================
 
 Name that you assign as the key for your merchant-defined secure data field.  
-This field is available only on the `Visa Platform Connect` processor.  
+This field is available only on the `Platform Connect` processor.  
 You can pass up to four merchant-defined secure data fields in a single authorization request. To add merchant-defined secure data to a request, include an optional array of up to four name-value pairs. `Cybersource` encrypts the data before storing it in the payments repository.  
 This topic describes the sequence of key fields from merchantDefinedSecureInformation\[1\].key through merchantDefinedSecureInformation\[4\].key.
 
@@ -9851,7 +9851,7 @@ merchantDefinedSecureInformation\[\]. value {#merchant-defined-secure-info-value
 =================================================================================
 
 Merchant-defined secure data field to be passed in an authorization request.  
-This field is available only on the `Visa Platform Connect` processor.  
+This field is available only on the `Platform Connect` processor.  
 You can pass up to four merchant-defined secure data fields in a single authorization request. To add merchant-defined secure data to a request, include an optional array of up to four name-value pairs. `Cybersource` encrypts the data before storing it in the payments repository.  
 This topic describes the sequence of data fields from merchantDefinedSecureInformation\[1\].value through merchantDefinedSecureInformation\[4\].value.
 
@@ -9950,7 +9950,7 @@ merchantInformation. cardAcceptorReferenceNumber {#merch-info-card-acceptor-ref-
 ====================================================================================
 
 Reference number that facilitates card acceptor/corporation communication and record keeping.  
-This field is available only on the **`Visa Platform Connect`** processor.
+This field is available only on the **`Platform Connect`** processor.
 
 Specifications
 --------------
@@ -9970,7 +9970,7 @@ Processor Field Names {#merch-info-card-acceptor-ref-num_Processors}
 
 This list provides the Level II/Level III processor field name for each processor that supports Level II or Level III data:
 
-* `Visa Platform Connect`: cardAcceptorRefNumber
+* `Platform Connect`: cardAcceptorRefNumber
 
 merchantInformation. categoryCode {#merch-info-category-code}
 =============================================================
@@ -9981,11 +9981,11 @@ When you do not include this field in a request, the value in your account is us
 
 `Chase Paymentech Solutions`
 :
-This field is optional for Mastercard or Visa card transactions that use the Payouts services. **Note:**For a different combination of services, processors, or conditions, this field might be a required field.
+This field is optional for Mastercard or Relay card transactions that use the Payouts services. **Note:**For a different combination of services, processors, or conditions, this field might be a required field.
 
-`Visa Platform Connect`
+`Platform Connect`
 :
-This field is optional for aggregator transactions using Mastercard or Visa cards with the Payouts services.
+This field is optional for aggregator transactions using Mastercard or Relay cards with the Payouts services.
 
     The value for this field corresponds to the following data in the TC 33 capture file:
 
@@ -10010,20 +10010,20 @@ merchantInformation. categoryCodeDomestic {#merch-info-category-code-domestic}
 ==============================================================================
 
 Merchant category code for domestic transactions.  
-This field is available only on the `Chase Paymentech Solutions`, `OmniPay Direct`, and `Visa Platform Connect`processors.  
+This field is available only on the `Chase Paymentech Solutions`, `OmniPay Direct`, and `Platform Connect`processors.  
 The value for this field is a four-digit number that the payment card industry uses to classify merchants into market segments. A payment card company assigned one or more of these values to your business when you started accepting the payment card company's cards. Including this field in a request for a domestic transaction might reduce interchange fees.
 
-`Visa Platform Connect`
+`Platform Connect`
 :
-This field is available only for domestic transactions with Visa or Mastercard in Spain. Domestic means that you and the customer are in the same country.
+This field is available only for domestic transactions with Relay or Mastercard in Spain. Domestic means that you and the customer are in the same country.
 
-    When you include this field in a Visa request, you must also include the merchantInformation.categoryCode field.
+    When you include this field in a Relay request, you must also include the merchantInformation.categoryCode field.
 
     When you include this field in a Mastercard request, including the merchantInformation.categoryCode field is optional.
 
 `Chase Paymentech Solutions`
 :
-This field is available only for Payouts transactions. It is not supported for standard credit card transactions. It is optional for Mastercard and Visa transactions.
+This field is available only for Payouts transactions. It is not supported for standard credit card transactions. It is optional for Mastercard and Relay transactions.
 
 `OmniPay Direct`
 :
@@ -10052,9 +10052,9 @@ merchantInformation. domainName {#merch-info-domain-name}
 =========================================================
 
 URL or reverse domain name for your business.  
-This field is available only for Mastercard digital secure remote payment (DSRP) transactions on the `FDC Compass` and `Visa Platform Connect` processors.
+This field is available only for Mastercard digital secure remote payment (DSRP) transactions on the `FDC Compass` and `Platform Connect` processors.
 
-`Visa Platform Connect`
+`Platform Connect`
 :
 With Mastercard, the value of this field corresponds to the following data in the TC 33 capture file:
 :
@@ -10104,7 +10104,7 @@ merchantInformation. merchantDescriptor.address1 {#merch-info-merchant-descripto
 ===========================================================================================
 
 Street address for your business location.  
-This field is available on the `Barclays` and `Visa Platform Connect` processors.  
+This field is available on the `Barclays` and `Platform Connect` processors.  
 Specify the value in US English characters. The address might appear on the cardholder's statement.
 IMPORTANT This field might be ignored by your acquiring bank. Contact your acquiring bank for more information about overriding your default merchant descriptor.  
 When you include this value in your request, `Cybersource` recommends that you also include these fields in the request:
@@ -10113,7 +10113,7 @@ When you include this value in your request, `Cybersource` recommends that you a
 * merchantInformation.merchantDescriptor.administrativeArea (merchant descriptor state)
 * merchantInformation.merchantDescriptor.postalCode (merchant descriptor postal code)
 
-`Visa Platform Connect`
+`Platform Connect`
 :
 With Mastercard payment cards, the value for this field corresponds to this data in the TC 33 capture file:
 
@@ -10127,7 +10127,7 @@ Specifications {#merch-info-merchant-descriptor-address1_Specifications}
 * **Data Type:** String
 * **Data Length**
   * `Barclays`: 55
-  * `Visa Platform Connect`: 29 IMPORTANT If the value exceeds 29 characters, excess data is truncated before it is sent to Visa.
+  * `Platform Connect`: 29 IMPORTANT If the value exceeds 29 characters, excess data is truncated before it is sent to Relay.
 
 Mapping Information {#merch-info-merchant-descriptor-address1_Mapping}
 ----------------------------------------------------------------------
@@ -10208,7 +10208,7 @@ For `Chase Paymentech Solutions`, you must use one of the following formats:
     * N: Numeric
     * P: Alphabetical
 
-`Visa Platform Connect`
+`Platform Connect`
 :
 With Mastercard, the value of this field corresponds to the following data in the TC 33 capture file:
 :
@@ -10242,7 +10242,7 @@ This value might be displayed on the cardholder's statement.
 IMPORTANT Your acquiring bank might ignore this value. Contact your acquiring bank for more information about overriding your default merchant descriptor.  
 If your business is located in the US or Canada, and you include this field in a request, you must also include the merchantInformation.merchantDescriptor.administrativeArea field.  
 This field is required for a `Payouts` original credit transaction (OCT) service request that specifies a deferred OCT processing date and time. See the processingInformation.payoutOptions.deferredDateTime field.  
-To support Visa Direct transactions in OCTs destined for issuers in Australia or Canada, you must include additional merchant address data in the authorization request:
+To support Relay Direct transactions in OCTs destined for issuers in Australia or Canada, you must include additional merchant address data in the authorization request:
 
 * Field 43---Card Acceptor Name/Location
 
@@ -10277,7 +10277,7 @@ To support Visa Direct transactions in OCTs destined for issuers in Australia or
   * Record: 104, Usage 2---Transaction-Specific Data (in TLV format)
   * Dataset ID: 57
   * Tag: 01
-* Visa Merchant Identifier
+* Relay Merchant Identifier
 
   * Record: 126.5
 
@@ -10309,7 +10309,7 @@ merchantInformation. merchantDescriptor.countryOfOrigin {#merch-info-merchant-de
 Country of origin for your business.  
 Use the two-character ISO country code. See [ISO Standard Country Codes](https://developer.cybersource.com/docs/cybs/en-us/country-codes/reference/all/na/country-codes/country-codes.md "").
 IMPORTANT This value must consist of English characters.  
-This field is available only for Mastercard on the `FDC Nashville Global` and `Visa Platform Connect` processors.  
+This field is available only for Mastercard on the `FDC Nashville Global` and `Platform Connect` processors.  
 If you are a government-controlled merchant, ensure your `Cybersource` account is enabled as a government-controlled merchant with the attribute `CFG : <proc>_governmentControlled`. You must include this field in authorization requests or ensure that your `Cybersource` account includes the correct two-character ISO country code.
 
 Specifications {#merch-info-merchant-descriptor-country-of-origin_Specifications}
@@ -10329,9 +10329,9 @@ merchantInformation. merchantDescriptor.county {#merch-info-merchant-descriptor-
 =======================================================================================
 
 County for your business location.  
-This field is available only on the `Barclays` and `Visa Direct` processors.
+This field is available only on the `Barclays` and `Relay Direct` processors.
 
-`Visa Direct`
+`Relay Direct`
 :
 You must send a three-digit numeric FIPS county code. For more information about FIPS county codes, see [State and County Codes and Names](www2.census.gov/programs-surveys/decennial/2010/partners/pdf/FIPS_StateCounty_Code.pdf "").
 
@@ -10340,7 +10340,7 @@ Specifications {#merch-info-merchant-descriptor-county_Specifications}
 
 * **Data Type:** String
 * **Data Length:** 35  
-  `Visa Direct`: 3
+  `Relay Direct`: 3
 
 Mapping Information {#merch-info-merchant-descriptor-county_Mapping}
 --------------------------------------------------------------------
@@ -10354,7 +10354,7 @@ merchantInformation. merchantDescriptor.customerServicePhoneNumber {#merch-info-
 
 Customer service phone number for merchant.
 
-`Visa Platform Connect`
+`Platform Connect`
 :
 With Mastercard, the value of this field corresponds to the following data in the TC 33 capture file:
 :
@@ -10384,8 +10384,8 @@ City for your business location.
 This value might be displayed on the cardholder's statement, and it must consist of US English characters.
 IMPORTANT This value might be ignored by your acquiring bank. Contact your acquiring bank for more information about overriding your default merchant descriptor.  
 If you do not include this value in your PIN debit request, `Cybersource` uses the merchant city from your account.  
-For an original credit transaction (OCT), the only supported value is `Visa Direct`.  
-This field is available on the `Barclays`, `FDC Compass`, and `Visa Platform Connect` processors.
+For an original credit transaction (OCT), the only supported value is `Relay Direct`.  
+This field is available on the `Barclays`, `FDC Compass`, and `Platform Connect` processors.
 
 Specifications {#merch-info-merchant-descriptor-locality_Specifications}
 ------------------------------------------------------------------------
@@ -10395,7 +10395,7 @@ Specifications {#merch-info-merchant-descriptor-locality_Specifications}
   * `Barclays`: 35
   * `FDC Compass`: 13
   * : 13
-  * `Visa Platform Connect`: 13
+  * `Platform Connect`: 13
 
 Mapping Information {#merch-info-merchant-descriptor-locality_Mapping}
 ----------------------------------------------------------------------
@@ -10412,7 +10412,7 @@ This field should be the *Doing Business As* name or the 1 to 4 digit abbreviati
 Specify the value in US English characters. The merchant business name is displayed on the cardholder's statement. When the field contains more than one consecutive space, the extra spaces are removed.  
 When you use this field with Payer Authentication, the name that is specified in this field overrides the value that is specified by the merchant bank and that appears to the customer in the issuing bank's authentication form.
 IMPORTANT This value might be ignored by your acquiring bank. For more information about overriding your default merchant descriptor, contact your acquiring bank.  
-This field is available only on the `Barclays`, `Chase Paymentech Solutions`, `FDC Compass`, `FDC Nashville Global`, and `Visa Platform Connect` processors.  
+This field is available only on the `Barclays`, `Chase Paymentech Solutions`, `FDC Compass`, `FDC Nashville Global`, and `Platform Connect` processors.  
 These processors have specific requirements:
 
 `Chase Paymentech Solutions`
@@ -10423,7 +10423,7 @@ When using this field for `Payouts`, use one of these formats:
     * \<7-character merchant name\>\*\<14-character product description\>
     * \<3-character merchant name\>\*\<18-character product description\>
 
-`FDC Compass` and `Visa Platform Connect`
+`FDC Compass` and `Platform Connect`
 :
 When using this field for `Payouts`, set it as follows:
 
@@ -10458,8 +10458,8 @@ Specifications {#merch-info-merchant-descriptor-name_Specifications}
   * `SIX`: 23
   * `TSYS Acquiring Solutions`: 38 for American Express card type; 23 for all other card types.
   * `Vero`: 23
-  * `Visa Platform Connect`: 25
-  * `Worldpay VAP`: 22
+  * `Platform Connect`: 25
+  * `Worldpay Relay`: 22
 
 Mapping Information {#merch-info-merchant-descriptor-name_Mapping}
 ------------------------------------------------------------------
@@ -10505,7 +10505,7 @@ Postal code for your business location.
 > **Example:** A1B 2C3  
 > When you do not include this value in a PIN debit request, the merchant postal code from your account is used.  
 > This field is required for a `Payouts` original credit transaction (OCT) service request that specifies a deferred OCT processing date and time. See the `REST` processingInformation. payoutOptions. deferredDateTime API field.  
-> To support Visa Direct transactions in Original Credit Transactions destined to issuers in Australia or Canada, you must include additional merchant address data in the authorization request:
+> To support Relay Direct transactions in Original Credit Transactions destined to issuers in Australia or Canada, you must include additional merchant address data in the authorization request:
 
 * Field 43---Card Acceptor Name/Location
 
@@ -10540,7 +10540,7 @@ Postal code for your business location.
   * Record: 104, Usage 2---Transaction-Specific Data (in TLV format)
   * Dataset ID: 57
   * Tag: 01
-* Visa Merchant Identifier
+* Relay Merchant Identifier
 
   * Record: 126.5
 
@@ -10581,7 +10581,7 @@ merchantInformation. partnerId {#merch-info-partner-id}
 
 Partner ID used for either co-branding agreement or promotional discounts.
 
-`Visa Platform Connect`
+`Platform Connect`
 :
 With Mastercard, the value of this field corresponds to the following data in the TC 33 capture file:
 :
@@ -10627,10 +10627,10 @@ merchantInformation. salesOrganizationId {#merch-info-sales-org-id}
 ===================================================================
 
 Company ID assigned to an independent sales organization.  
-This field is available only for the `Visa Platform Connect`, and `Rede` processors.  
+This field is available only for the `Platform Connect`, and `Rede` processors.  
 This field is available only for aggregator transactions. Get the value for this field from the payment card company.  
-**`Visa Platform Connect`:** This field is required in an authorization request message for Discover transactions.
-**`Visa Platform Connect`**  
+**`Platform Connect`:** This field is required in an authorization request message for Discover transactions.
+**`Platform Connect`**  
 The value for this field corresponds to the following data in the TC 33 capture file:
 
 * Record: CP01 TCR6
@@ -10655,7 +10655,7 @@ merchantInformation. serviceLocation. countryCode {#merch-info-service-location-
 
 Code for country where a merchant provides a service. The country is not the merchant location.
 
-`Visa Platform Connect`
+`Platform Connect`
 :
 With Mastercard, the value of this field corresponds to the following data in the TC 33 capture file:
 :
@@ -10683,7 +10683,7 @@ merchantInformation. serviceLocation. countrySubdivisionCode {#merch-info-servic
 
 Code for state or province where a merchant provides a service. The state or province is not the merchant location.
 
-`Visa Platform Connect`
+`Platform Connect`
 :
 With Mastercard, the value of this field corresponds to the following data in the TC 33 capture file:
 :
@@ -10711,7 +10711,7 @@ merchantInformation. serviceLocation.Locality {#merch-info-service-location-loca
 
 City name where a merchant provides a service that is not the merchant location.
 
-`Visa Platform Connect`
+`Platform Connect`
 :
 With Mastercard, the value of this field corresponds to the following data in the TC 33 capture file:
 :
@@ -10739,7 +10739,7 @@ merchantInformation. serviceLocation.postalCode {#merch-info-service-location-po
 
 Postal code where a merchant provides a service. The postal code is not the merchant location.
 
-`Visa Platform Connect`
+`Platform Connect`
 :
 With Mastercard, the value of this field corresponds to the following data in the TC 33 capture file:
 
@@ -10798,7 +10798,7 @@ This field is available for aggregator authorizations. All characters must be nu
 :
 This field is available for aggregator authorizations.
 
-`Visa Platform Connect`
+`Platform Connect`
 :
 This field is available for these types of payments:
 
@@ -10846,7 +10846,7 @@ Include both the date and time in this field or leave it blank.
 * mm = minutes
 * ss = seconds
 
-Card-Present Transactions on the **`Visa Platform Connect`** Processor
+Card-Present Transactions on the **`Platform Connect`** Processor
 :
 In Argentina, you must either include this field in the request, or your account must include a time zone:
 
@@ -10900,7 +10900,7 @@ merchantInformation. vatRegistrationNumber {#merch-info-vat-registration-num}
 
 Value-added tax identification number.  
 This field applies only when you include one or more VAT seller registration numbers in the request. The VAT seller registration number might be required for some Canadian transactions.  
-This field is available on the `Barclays`, `Chase Paymentech Solutions`, `Elavon Americas`, `FDC Compass`, `GPN`, `OmniPay Direct`, `TSYS Acquiring Solutions`, `Visa Platform Connect`, and `Worldpay VAP` processors.
+This field is available on the `Barclays`, `Chase Paymentech Solutions`, `Elavon Americas`, `FDC Compass`, `GPN`, `OmniPay Direct`, `TSYS Acquiring Solutions`, `Platform Connect`, and `Worldpay Relay` processors.
 
 Specifications {#merch-info-vat-registration-num_Specifications}
 ----------------------------------------------------------------
@@ -10918,8 +10918,8 @@ Specifications {#merch-info-vat-registration-num_Specifications}
   * `GPN`: 20
   * `OmniPay Direct`: 21
   * `TSYS Acquiring Solutions`: 20
-  * `Visa Platform Connect`: 13 (Payouts transactions), 20 (other transactions)
-  * `Worldpay VAP`: 20
+  * `Platform Connect`: 13 (Payouts transactions), 20 (other transactions)
+  * `Worldpay Relay`: 20
 
 Mapping Information {#merch-info-vat-registration-num_Mapping}
 --------------------------------------------------------------
@@ -11070,7 +11070,7 @@ orderInformation. amountDetails.anticipatedAmount {#order-info-amount-details-an
 
 The amount that is expected to be charged in the transaction.
 
-`Visa Platform Connect`
+`Platform Connect`
 :
 This field is required for zero amount authorizations in order to confirm the amount is available for future authorizations.
 
@@ -11139,7 +11139,7 @@ The value for this field must be in the acquirer's currency.
 
 Card-Present Credit Card Transactions
 :
-This field is available only on the `Visa Platform Connect` processor in Germany.
+This field is available only on the `Platform Connect` processor in Germany.
 
     The value for this field corresponds to this data in the TC 33 capture file:
 
@@ -11152,7 +11152,7 @@ This field is available only on the `Visa Platform Connect` processor in Germany
 
 PIN Debit Transactions
 :
-This field is available only on the `FDC Nashville Global` and `Visa Platform Connect` processors.
+This field is available only on the `FDC Nashville Global` and `Platform Connect` processors.
 
     When a cashback amount is included in a request, the cashback amount must be included in the value for the orderInformation.amountDetails.totalAmount field.
 
@@ -11218,7 +11218,7 @@ For authorization reversal or capture services, you must use the same currency t
 For the PIN debit reversal service, you must use the same currency that was used for the PIN debit purchase or PIN debit credit that you are reversing.  
 When using Dynamic Currency Conversion (DCC) with a Third-Party Provider, use the customer's billing currency.
 
-`Visa Platform Connect`
+`Platform Connect`
 :
 For Mastercard installment payments in Peru, the value for this field corresponds to the following data in the TC 33 capture file:
 
@@ -11260,14 +11260,14 @@ Specifications {#order-info-amount-details-discount-amount_Specifications}
 --------------------------------------------------------------------------
 
 * **Data Type:**
-  * `Chase Paymentech Solutions`, `FDC Compass`, `TSYS Acquiring Solutions`, `FDC Nashville Global`, and `Worldpay VAP`: String
-  * `Elavon Americas` `GPN` `OmniPay Direct` and `Visa Platform Connect`: Numeric String
+  * `Chase Paymentech Solutions`, `FDC Compass`, `TSYS Acquiring Solutions`, `FDC Nashville Global`, and `Worldpay Relay`: String
+  * `Elavon Americas` `GPN` `OmniPay Direct` and `Platform Connect`: Numeric String
     {#order-info-amount-details-discount-amount_ul_g2j_2fp_vwb}
 * **Data Length:**
   * `Chase Paymentech Solutions`, `FDC Compass`, and `TSYS Acquiring Solutions`:13
   * `FDC Nashville Global`: 11
-  * `Worldpay VAP`: 8
-  * `Elavon Americas`, `GPN`, `OmniPay Direct`, and `Visa Platform Connect`: 12
+  * `Worldpay Relay`: 8
+  * `Elavon Americas`, `GPN`, `OmniPay Direct`, and `Platform Connect`: 12
     {#order-info-amount-details-discount-amount_ul_qmq_n2p_vwb}
 
 Mapping Information {#order-info-amount-details-discount-amount_Mapping}
@@ -11289,8 +11289,8 @@ Processor-specific field names for each processor supporting this field for Leve
 * **`GPN`:** Discount Amount
 * **`OmniPay Direct`:** Discount Amount / Total Discount
 * **`TSYS Acquiring Solutions`:** Discount Amount
-* **`Visa Platform Connect`:** discountAmount
-* **`Worldpay VAP`:** discountAmount
+* **`Platform Connect`:** discountAmount
+* **`Worldpay Relay`:** discountAmount
 
 orderInformation. amountDetails. discountPercent {#order-info-amount-details-discount-percent}
 ==============================================================================================
@@ -11329,11 +11329,11 @@ Specifications {#order-info-amount-details-duty-amount_Specifications}
 * **Data Length:**
   * `Chase Paymentech Solutions`, `FDC Compass`:
     * Mastercard: 10
-    * Visa: 13
+    * Relay: 13
       {#order-info-amount-details-duty-amount_ul_bzs_hgp_vwb}
-  * `Elavon Americas`, `GPN`, `OmniPay Direct`, `Visa Platform Connect`: 12
+  * `Elavon Americas`, `GPN`, `OmniPay Direct`, `Platform Connect`: 12
   * `FDC Nashville Global`: 11
-  * `Worldpay VAP`: 8
+  * `Worldpay Relay`: 8
   * `TSYS Acquiring Solutions`: 13
     {#order-info-amount-details-duty-amount_ul_ypj_ggp_vwb}
 
@@ -11356,8 +11356,8 @@ This list provides the Level II/Level III processor field name for each processo
 * `GPN`: Duty Amount
 * `OmniPay Direct`: Duty Amount
 * `TSYS Acquiring Solutions`: Duty Amount
-* `Visa Platform Connect`: dutyAmount
-* `Worldpay VAP`: dutyAmount
+* `Platform Connect`: dutyAmount
+* `Worldpay Relay`: dutyAmount
 
 orderInformation. amountDetails. exchangeRate {#order-info-amount-details-exchange-rate}
 ========================================================================================
@@ -11459,7 +11459,7 @@ When you include this field in your request, you must also include the orderInfo
 
 `OmniPay Direct`
 :
-For Level III transacations with Visa, the field value is set to 0 when this field is not included in the request.
+For Level III transacations with Relay, the field value is set to 0 when this field is not included in the request.
 
 Specifications {#order-info-amount-details-freight-amount_Specifications}
 -------------------------------------------------------------------------
@@ -11467,10 +11467,10 @@ Specifications {#order-info-amount-details-freight-amount_Specifications}
 * **Data Type:** String
 * **Data Length:** 8
 * **Data Length:**
-  * **`Chase Paymentech Solutions`:** 10 (Mastercard), 13 (Visa)
-  * **`FDC Compass`:** 10 (Mastercard), 13 (Visa)
+  * **`Chase Paymentech Solutions`:** 10 (Mastercard), 13 (Relay)
+  * **`FDC Compass`:** 10 (Mastercard), 13 (Relay)
   * **`FDC Nashville Global`:** 13
-  * **`Worldpay VAP`:** 8
+  * **`Worldpay Relay`:** 8
   * **`TSYS Acquiring Solutions`:** 13
   * **All other processors:** 12
 
@@ -11493,8 +11493,8 @@ The following list the processors and the corresponding processor field mapped t
 * **`GPN`:** Freight Amount
 * **`OmniPay Direct`:** Freight Amount / Shipping Amount
 * **`TSYS Acquiring Solutions`:** Freight Amount
-* **`Visa Platform Connect`:** freightAmount
-* **`Worldpay VAP`:** shipping amount
+* **`Platform Connect`:** freightAmount
+* **`Worldpay Relay`:** shipping amount
 
 orderInformation. amountDetails. freight. taxRate {#order-info-amount-details-freight-tax-rate}
 ===============================================================================================
@@ -11540,7 +11540,7 @@ orderInformation. amountDetails.gratuityAmount {#order-info-amount-details-gratu
 
 Gratuity or tip amount for restaurants when the card is present.  
 Allowed only when the orderInformation.amountDetails.gratuityAmount field value is `restaurant`.  
-Restaurant data is available only on the `Visa Platform Connect` processor.  
+Restaurant data is available only on the `Platform Connect` processor.  
 When your customer uses a debit card or prepaid card, and you receive a partial authorization, the payment networks recommend that you do not submit a capture amount that is higher than the authorized amount. When the capture amount exceeds the partial amount that was approved, the issuer has chargeback rights for the excess amount.
 
 Specifications {#order-info-amount-details-gratuity-amount_Specifications}
@@ -11606,7 +11606,7 @@ This list provides the Level II/Level III processor field name for each processo
 * `Elavon Americas`: National / Alternate Tax Included
 * `OmniPay Direct`: National Tax Included
 * `TSYS Acquiring Solutions`: National Tax Included Flag
-* `Visa Platform Connect`: nationalTaxIncluded
+* `Platform Connect`: nationalTaxIncluded
 
 orderInformation. amountDetails.originalAmount {#order-info-amount-details-original-amount}
 ===========================================================================================
@@ -11759,10 +11759,10 @@ orderInformation. amountDetails.surcharge.amount {#order-info-amount-details-sur
 ==============================================================================================
 
 Surcharge amount that you are charging the customer for the transaction.  
-This field is available on the `FDC Nashville Global`, `Worldpay VAP`, and `Visa Platform Connect` processors.  
+This field is available on the `FDC Nashville Global`, `Worldpay Relay`, and `Platform Connect` processors.  
 The surcharge amount is included in the total transaction amount but is passed in a separate field to the issuer and acquirer for tracking. The issuer can provide information about the surcharge amount to the customer.
 
-`Visa Platform Connect`
+`Platform Connect`
 :
 **Canada Card-Present Transactions**
 
@@ -11792,11 +11792,11 @@ The surcharge amount is included in the total transaction amount but is passed i
 
     You must receive prior approval from Fiserv before assessing a surcharge amount. Contact Fiserv to register with the card brands to participate in the surcharge program. You will be required to sign a surcharging contract or addendum with Fiserv.
 
-`Worldpay VAP`
+`Worldpay Relay`
 :
-**Prior Notification Required for **`Worldpay VAP`****
+**Prior Notification Required for **`Worldpay Relay`****
 
-    The surcharge amount field can only be applied to Visa or Mastercard credit card payments. You must notify the card networks and acquirer of your intent to apply surcharges at least 30 days prior to assessing the surcharges. Contact the `Worldpay VAP` customer service manager to request the surcharge feature. `Worldpay VAP` must enable a flag to process the surcharge field, otherwise the transaction will fail.
+    The surcharge amount field can only be applied to Relay or Mastercard credit card payments. You must notify the card networks and acquirer of your intent to apply surcharges at least 30 days prior to assessing the surcharges. Contact the `Worldpay Relay` customer service manager to request the surcharge feature. `Worldpay Relay` must enable a flag to process the surcharge field, otherwise the transaction will fail.
 
 Specifications {#order-info-amount-details-surcharge-amount_Specifications}
 ---------------------------------------------------------------------------
@@ -11843,7 +11843,7 @@ orderInformation. amountDetails.taxAppliedAfterDiscount {#order-info-amount-deta
 ===============================================================================================================
 
 Flag that indicates how the merchant manages discounts.  
-This field is available only on the `Visa Platform Connect` processor.  
+This field is available only on the `Platform Connect` processor.  
 Possible values:
 
 * `0`: no invoice level discount included
@@ -11870,13 +11870,13 @@ Processor Field Names {#order-info-amount-details-tax-applied-after-discount_Pro
 
 This list provides the Level II/Level III processor field name for each processor that supports Level II or Level III data:
 
-* `Visa Platform Connect`: discountManagementIndicator
+* `Platform Connect`: discountManagementIndicator
 
 orderInformation. amountDetails.taxAppliedLevel {#order-info-amount-details-tax-applied-level}
 ==============================================================================================
 
 Indicates how tax is calculated.  
-This field is available only on the `Visa Platform Connect` processor.  
+This field is available only on the `Platform Connect` processor.  
 Possible values:
 
 * 0: Net prices with tax calculated at the line item level.
@@ -11903,7 +11903,7 @@ Processor Field Names {#order-info-amount-details-tax-applied-level_Processors}
 
 This list provides the Level II/Level III processor field name for each processor that supports Level II or Level III data:
 
-* `Visa Platform Connect`: taxManagementIndicator
+* `Platform Connect`: taxManagementIndicator
 
 orderInformation. amountDetails.taxDetails\[\]. amount {#order-info-amount-details-tax-details-amount}
 ======================================================================================================
@@ -11964,7 +11964,7 @@ orderInformation. amountDetails.taxDetails\[\]. rate {#order-info-amount-details
 ===================================================================================================
 
 The Value Added Tax (VAT) or other tax rate used to calculate the tax applied to the order.  
-This field is available only on these processors: `Chase Paymentech Solutions`, `Elavon Americas`, `FDC Compass`, `FDC Nashville Global`, `GPN`, `Visa Platform Connect`, `OmniPay Direct`, `TSYS Acquiring Solutions`.
+This field is available only on these processors: `Chase Paymentech Solutions`, `Elavon Americas`, `FDC Compass`, `FDC Nashville Global`, `GPN`, `Platform Connect`, `OmniPay Direct`, `TSYS Acquiring Solutions`.
 
 `TSYS Acquiring Solutions`
 :
@@ -11974,7 +11974,7 @@ The valid range is between 0.01 and 99.99 percent. The rate is entered as a deci
     * **33.33%:** 0.3333
     * **25.5%:** 0.2550
 
-`Visa Platform Connect`
+`Platform Connect`
 :
 The valid range is between 0.01 and 99.99 percent. The rate is entered as a percentage. For example:
 
@@ -11993,7 +11993,7 @@ The valid range is between 1 and 99 percent. The rate is entered as a decimal. F
 Specifications {#order-info-amount-details-tax-details-rate1_Specifications}
 ----------------------------------------------------------------------------
 
-**`Chase Paymentech Solutions`, `Elavon Americas`, `GPN`, `Visa Platform Connect`, `FDC Compass`, and `OmniPay Direct`:**
+**`Chase Paymentech Solutions`, `Elavon Americas`, `GPN`, `Platform Connect`, `FDC Compass`, and `OmniPay Direct`:**
 
 * **Data Type:** String
 
@@ -12036,7 +12036,7 @@ This list identifies the processor-specific field names for each processor suppo
 * **`GPN`:** VAT/Tax Rate (Freight/Shipping)
 * **`OmniPay Direct`:** VAT (Rate)
 * **`TSYS Acquiring Solutions`:** VAT/Tax Rate
-* **`Visa Platform Connect`:** vat_tax_rate
+* **`Platform Connect`:** vat_tax_rate
 
 orderInformation. amountDetails.taxDetails\[\]. taxID {#order-info-amount-details-tax-details-tax-id}
 =====================================================================================================
@@ -12094,7 +12094,7 @@ orderInformation. amountDetails.taxTypeCode {#order-info-amount-details-tax-type
 ======================================================================================
 
 Contains the tax type code that corresponds to the entry in the orderInformation.lineItems\[\].taxAmount field.  
-This field is available only for `Visa Platform Connect`.  
+This field is available only for `Platform Connect`.  
 Possible values:
 
 * `056`: Sales tax (U.S. Only)
@@ -12118,7 +12118,7 @@ Processor Field Names {#order-info-amount-details-tax-type-code_Processors}
 
 This list provides the Level II/Level III processor field name for each processor that supports Level II or Level III data:
 
-* `Visa Platform Connect`: totalTaxTypeCode
+* `Platform Connect`: totalTaxTypeCode
 
 orderInformation. amountDetails.totalAmount {#order-info-amount-details-total-amount}
 =====================================================================================
@@ -12202,17 +12202,17 @@ orderInformation. billTo. address1 {#order-info-bill-to-address1}
 First line of the billing street address as it appears in the payment card issuer records.
 
 > IMPORTANT  
-> This field is optional if your account is configured for relaxed requirements for address data. For details about relaxed requirements, see the support article [Relaxed Requirements for Address Data and Expiration Date in Credit Card Transactions](https://support.visaacceptance.com/knowledgebase/Knowledgearticle/?code=000003128 "").
+> This field is optional if your account is configured for relaxed requirements for address data. For details about relaxed requirements, see the support article [Relaxed Requirements for Address Data and Expiration Date in Credit Card Transactions](https://support.example.com/knowledgebase/Knowledgearticle/?code=000003128 "").
 
 `FDMS Nashville`
 :
 When the street name is numeric, it must be sent in numeric format. For example, if the address is *One First Street* , it must be sent as *1 1st Street*.
 
-`Visa Platform Connect`
+`Platform Connect`
 :
-When you populate billing street address 1 and billing street address 2, exceeds 40 characters, `Visa Platform Connect` truncates the value at 40 characters before sending it to Visa and the issuing bank. Truncating this value affects AVS results and therefore might also affect risk decisions and charge backs.
+When you populate billing street address 1 and billing street address 2, exceeds 40 characters, `Platform Connect` truncates the value at 40 characters before sending it to Relay and the issuing bank. Truncating this value affects AVS results and therefore might also affect risk decisions and charge backs.
 
-    Credit card networks cannot process transactions that contain non-ASCII characters. `Visa Platform Connect` accepts and stores non-ASCII characters correctly and displays them correctly in reports. However, the limitation of the payment card networks prevents `Visa Platform Connect` from transmitting non-ASCII characters to the payment card networks. Therefore, `Visa Platform Connect` replaces non-ASCII characters with meaningless ASCII characters for transmission to the payment card networks.
+    Credit card networks cannot process transactions that contain non-ASCII characters. `Platform Connect` accepts and stores non-ASCII characters correctly and displays them correctly in reports. However, the limitation of the payment card networks prevents `Platform Connect` from transmitting non-ASCII characters to the payment card networks. Therefore, `Platform Connect` replaces non-ASCII characters with meaningless ASCII characters for transmission to the payment card networks.
 
 Specifications {#order-info-bill-to-address1_Specifications}
 ------------------------------------------------------------
@@ -12221,8 +12221,8 @@ Specifications {#order-info-bill-to-address1_Specifications}
 * **Data Length:**
   * **`Chase Paymentech Solutions`:** 20
   * **`Moneris`:** 50
-  * **`Worldpay VAP`:** 35
-  * **`Visa Platform Connect`:** 40
+  * **`Worldpay Relay`:** 35
+  * **`Platform Connect`:** 40
   * **All other processors:** 60
 
 Mapping Information {#order-info-bill-to-address1_Mapping}
@@ -12243,11 +12243,11 @@ This value is used for AVS.
 :
 The billing address 1 and billing address 2 fields together cannot exceed 20 characters.
 
-`Visa Platform Connect`
+`Platform Connect`
 :
-When you populate billing street address 1 and billing street address 2, exceeds 40 characters, `Visa Platform Connect` truncates the value at 40 characters before sending it to Visa and the issuing bank. Truncating this value affects AVS results and therefore might also affect risk decisions and charge backs.
+When you populate billing street address 1 and billing street address 2, exceeds 40 characters, `Platform Connect` truncates the value at 40 characters before sending it to Relay and the issuing bank. Truncating this value affects AVS results and therefore might also affect risk decisions and charge backs.
 
-    Credit card networks cannot process transactions that contain non-ASCII characters. `Visa Platform Connect` accepts and stores non-ASCII characters correctly and displays them correctly in reports. However, the limitation of the payment card networks prevents `Visa Platform Connect` from transmitting non-ASCII characters to the payment card networks. Therefore, `Visa Platform Connect` replaces non-ASCII characters with meaningless ASCII characters for transmission to the payment card networks.
+    Credit card networks cannot process transactions that contain non-ASCII characters. `Platform Connect` accepts and stores non-ASCII characters correctly and displays them correctly in reports. However, the limitation of the payment card networks prevents `Platform Connect` from transmitting non-ASCII characters to the payment card networks. Therefore, `Platform Connect` replaces non-ASCII characters with meaningless ASCII characters for transmission to the payment card networks.
 
 Specifications {#order-info-bill-to-address2_Specifications}
 ------------------------------------------------------------
@@ -12256,8 +12256,8 @@ Specifications {#order-info-bill-to-address2_Specifications}
 * **Data Length:**
   * **`Chase Paymentech Solutions`:** 20
   * **`Moneris`:** 50
-  * **`Worldpay VAP`:** 35
-  * **`Visa Platform Connect`:** 40
+  * **`Worldpay Relay`:** 35
+  * **`Platform Connect`:** 40
   * **All other processors:** 60
 
 Mapping Information {#order-info-bill-to-address2_Mapping}
@@ -12312,9 +12312,9 @@ For the US and Canada, see [State, Province, and Territory Codes for the United 
 For all countries, use the ISO 3166-2 format when using this field for Payer Authentication.
 
 > IMPORTANT  
-> This field is optional if your account is configured for relaxed requirements for address data. For details about relaxed requirements, see the support article [Relaxed Requirements for Address Data and Expiration Date in Credit Card Transactions](https://support.visaacceptance.com/knowledgebase/Knowledgearticle/?code=000003128 "").
-> **`Visa Platform Connect`**  
-> Credit card networks cannot process transactions that contain non-ASCII characters. `Visa Platform Connect` accepts and stores non-ASCII characters correctly and displays them correctly in reports. However, the limitations of the payment card networks prevent `Visa Platform Connect` from transmitting non-ASCII characters to the payment card networks. Therefore, `Visa Platform Connect` replaces non-ASCII characters with meaningless ASCII characters for transmission to the payment card networks.
+> This field is optional if your account is configured for relaxed requirements for address data. For details about relaxed requirements, see the support article [Relaxed Requirements for Address Data and Expiration Date in Credit Card Transactions](https://support.example.com/knowledgebase/Knowledgearticle/?code=000003128 "").
+> **`Platform Connect`**  
+> Credit card networks cannot process transactions that contain non-ASCII characters. `Platform Connect` accepts and stores non-ASCII characters correctly and displays them correctly in reports. However, the limitations of the payment card networks prevent `Platform Connect` from transmitting non-ASCII characters to the payment card networks. Therefore, `Platform Connect` replaces non-ASCII characters with meaningless ASCII characters for transmission to the payment card networks.
 
 Specifications {#order-info-bill-to-admin-area_Specifications}
 --------------------------------------------------------------
@@ -12333,7 +12333,7 @@ orderInformation. billTo. alternateEmailAddress {#order-info-bill-to-alt-email-a
 =================================================================================
 
 Customer's alternate email address.  
-This field is available only for the `Visa Platform Connect` processor.
+This field is available only for the `Platform Connect` processor.
 
 Specifications {#order-info-bill-to-alt-email-a_Specifications}
 ---------------------------------------------------------------
@@ -12353,7 +12353,7 @@ orderInformation. billTo.alternateEmailVerificationStatus {#order-info-bill-to-a
 
 Verification results for customer's alternate email address.  
 If the field is not present in the authorization response, verification was not performed or data is unavailable.  
-This field is available only for the `Visa Platform Connect` processor.  
+This field is available only for the `Platform Connect` processor.  
 Possible values:
 
 * `VERIFIED:` Customer verified.
@@ -12378,7 +12378,7 @@ orderInformation. billTo.alternatePhoneNumberVerificationStatus {#order-info-bil
 
 Verification results for customer's alternate phone number.  
 If the field is not present in the authorization response, verification was not performed or data is unavailable.  
-This field is available only for the `Visa Platform Connect` processor.  
+This field is available only for the `Platform Connect` processor.  
 Possible values:
 
 * `VERIFIED:` Customer verified.
@@ -12402,7 +12402,7 @@ orderInformation. billTo. alternatePhoneNumber {#order-info-bill-to-alt-phone-nu
 ==================================================================================
 
 Customer's alternate phone number.  
-This field is available only for the `Visa Platform Connect` processor.
+This field is available only for the `Platform Connect` processor.
 
 Specifications {#order-info-bill-to-alt-phone-num_Specifications}
 -----------------------------------------------------------------
@@ -12422,7 +12422,7 @@ orderInformation. billTo.buildingNumber {#order-info-bill-to-building-num}
 
 Building number in the street address.  
 For example, for the street address Rua da Quitanda 187, set this field to the building number `187`.  
-This field is available only for these processors: `Cielo`, `Comercio Latino`, , and `Visa Platform Connect`.  
+This field is available only for these processors: `Cielo`, `Comercio Latino`, , and `Platform Connect`.  
 These processors have specific requirements:
 
 `Comercio Latino`
@@ -12552,12 +12552,12 @@ orderInformation. billTo. company. name {#order-info-bill-to-company-name}
 ==========================================================================
 
 Name of the customer's company.  
-This field is available only for these processors: `American Express Direct`, `Moneris`, and `Visa Platform Connect`.  
+This field is available only for these processors: `American Express Direct`, `Moneris`, and `Platform Connect`.  
 This processor has specific requirements:
 
-`Visa Platform Connect`
+`Platform Connect`
 :
-Credit card networks cannot process transactions that contain non-ASCII characters. `Visa Platform Connect` accepts and stores non-ASCII characters correctly and displays them correctly in reports. However, the limitations of the payment card networks prevent `Visa Platform Connect` from transmitting non-ASCII characters to the payment card networks. Therefore, `Visa Platform Connect` replaces non-ASCII characters with meaningless ASCII characters for transmission to the payment card networks.
+Credit card networks cannot process transactions that contain non-ASCII characters. `Platform Connect` accepts and stores non-ASCII characters correctly and displays them correctly in reports. However, the limitations of the payment card networks prevent `Platform Connect` from transmitting non-ASCII characters to the payment card networks. Therefore, `Platform Connect` replaces non-ASCII characters with meaningless ASCII characters for transmission to the payment card networks.
 
 Specifications {#order-info-bill-to-company-name_Specifications}
 ----------------------------------------------------------------
@@ -12565,7 +12565,7 @@ Specifications {#order-info-bill-to-company-name_Specifications}
 * **Data Type:** String
 * **Data Length:**
   * **`Moneris`:** 50
-  * **`Visa Platform Connect`:** 60
+  * **`Platform Connect`:** 60
   * **All other processors:** 40
 
 Mapping Information {#order-info-bill-to-company-name_Mapping}
@@ -12666,8 +12666,8 @@ orderInformation. billTo. company {#order-info-bill-to-company}
 ===============================================================
 
 Name of the customer's company.  
-**`Visa Platform Connect`**  
-Payment card companies cannot process transactions that contain non-ASCII characters. `Visa Platform Connect` accepts and stores ASCII characters correcty and displays them correctly in reports. However, since payment card networks cannot accept non-ASCII characters, `Visa Platform Connect` replaces non-ASCII characters with meaningless ASCII characters when tranmitting information to payment card networks.
+**`Platform Connect`**  
+Payment card companies cannot process transactions that contain non-ASCII characters. `Platform Connect` accepts and stores ASCII characters correcty and displays them correctly in reports. However, since payment card networks cannot accept non-ASCII characters, `Platform Connect` replaces non-ASCII characters with meaningless ASCII characters when tranmitting information to payment card networks.
 
 Specifications {#order-info-bill-to-company_Specifications}
 -----------------------------------------------------------
@@ -12689,15 +12689,15 @@ Country in the billing address.
 Use the two-character ISO country code. See [ISO Standard Country Codes](https://developer.cybersource.com/docs/cybs/en-us/country-codes/reference/all/na/country-codes/country-codes.md "").
 
 > IMPORTANT  
-> This field is optional if your account is configured for relaxed requirements for address data. For details about relaxed requirements, see the support article [Relaxed Requirements for Address Data and Expiration Date in Credit Card Transactions](https://support.visaacceptance.com/knowledgebase/Knowledgearticle/?code=000003128 "").  
+> This field is optional if your account is configured for relaxed requirements for address data. For details about relaxed requirements, see the support article [Relaxed Requirements for Address Data and Expiration Date in Credit Card Transactions](https://support.example.com/knowledgebase/Knowledgearticle/?code=000003128 "").  
 > **Tax Calculation Service**
 
 * **U.S and Canadian Tax**: Required
 * **International Tax and Value-Added Tax (VAT)**: Required
 
-`Visa Platform Connect`
+`Platform Connect`
 :
-Credit card networks cannot process transactions that contain non-ASCII characters. `Visa Platform Connect` accepts and stores non-ASCII characters correctly and displays them correctly in reports. However, the limitations of the payment card networks prevent `Visa Platform Connect` from transmitting non-ASCII characters to the payment card networks. Therefore, `Visa Platform Connect` replaces non-ASCII characters with meaningless ASCII characters for transmission to the payment card networks.
+Credit card networks cannot process transactions that contain non-ASCII characters. `Platform Connect` accepts and stores non-ASCII characters correctly and displays them correctly in reports. However, the limitations of the payment card networks prevent `Platform Connect` from transmitting non-ASCII characters to the payment card networks. Therefore, `Platform Connect` replaces non-ASCII characters with meaningless ASCII characters for transmission to the payment card networks.
 
 Specifications {#order-info-bill-to-country_Specifications}
 -----------------------------------------------------------
@@ -12758,11 +12758,11 @@ Customer's email address, including full domain name.
 Format: name@host.domain
 
 > IMPORTANT  
-> This field is optional if your account is configured for relaxed requirements for address data. For details about relaxed requirements, see the support article [Relaxed Requirements for Address Data and Expiration Date in Credit Card Transactions](https://support.visaacceptance.com/knowledgebase/Knowledgearticle/?code=000003128 "").
+> This field is optional if your account is configured for relaxed requirements for address data. For details about relaxed requirements, see the support article [Relaxed Requirements for Address Data and Expiration Date in Credit Card Transactions](https://support.example.com/knowledgebase/Knowledgearticle/?code=000003128 "").
 
-`Visa Platform Connect`
+`Platform Connect`
 :
-Credit card networks cannot process transactions that contain non-ASCII characters. `Visa Platform Connect` accepts and stores non-ASCII characters correctly and displays them correctly in reports. However, the limitations of the payment card networks prevent `Visa Platform Connect` from transmitting non-ASCII characters to the payment card networks. Therefore, `Visa Platform Connect` replaces non-ASCII characters with meaningless ASCII characters for transmission to the payment card networks.
+Credit card networks cannot process transactions that contain non-ASCII characters. `Platform Connect` accepts and stores non-ASCII characters correctly and displays them correctly in reports. However, the limitations of the payment card networks prevent `Platform Connect` from transmitting non-ASCII characters to the payment card networks. Therefore, `Platform Connect` replaces non-ASCII characters with meaningless ASCII characters for transmission to the payment card networks.
 
 Specifications {#order-info-bill-to-email_Specifications}
 ---------------------------------------------------------
@@ -12784,18 +12784,18 @@ The customer name.
 Value should match value on card.
 
 > IMPORTANT  
-> This field is optional if your account is configured for relaxed requirements for address data. For details about relaxed requirements, see the support article [Relaxed Requirements for Address Data and Expiration Date in Credit Card Transactions](https://support.visaacceptance.com/knowledgebase/Knowledgearticle/?code=000003128 "").
+> This field is optional if your account is configured for relaxed requirements for address data. For details about relaxed requirements, see the support article [Relaxed Requirements for Address Data and Expiration Date in Credit Card Transactions](https://support.example.com/knowledgebase/Knowledgearticle/?code=000003128 "").
 
-`Visa Platform Connect`
+`Platform Connect`
 :
-Credit card networks cannot process transactions that contain non-ASCII characters. `Visa Platform Connect` accepts and stores non-ASCII characters correctly and displays them correctly in reports. However, the limitations of the payment card networks prevent `Visa Platform Connect` from transmitting non-ASCII characters to the payment card networks. Therefore, `Visa Platform Connect` replaces non-ASCII characters with meaningless ASCII characters for transmission to the payment card networks.
+Credit card networks cannot process transactions that contain non-ASCII characters. `Platform Connect` accepts and stores non-ASCII characters correctly and displays them correctly in reports. However, the limitations of the payment card networks prevent `Platform Connect` from transmitting non-ASCII characters to the payment card networks. Therefore, `Platform Connect` replaces non-ASCII characters with meaningless ASCII characters for transmission to the payment card networks.
 
 Specifications {#order-info-bill-to-first-name_Specifications}
 --------------------------------------------------------------
 
 * **Data Type:** String
 * **Data Length:**
-  * **`Worldpay VAP`:** 25
+  * **`Worldpay Relay`:** 25
   * **All other processors:** 60
 
 Mapping Information {#order-info-bill-to-first-name_Mapping}
@@ -12819,7 +12819,7 @@ The last name of the person requesting the product.
 This person may or may not be the cardholder.
 
 > IMPORTANT  
-> This field is optional if your account is configured for relaxed requirements for address data. For details about relaxed requirements, see the support article [Relaxed Requirements for Address Data and Expiration Date in Credit Card Transactions](https://support.visaacceptance.com/knowledgebase/Knowledgearticle/?code=000003128 "").
+> This field is optional if your account is configured for relaxed requirements for address data. For details about relaxed requirements, see the support article [Relaxed Requirements for Address Data and Expiration Date in Credit Card Transactions](https://support.example.com/knowledgebase/Knowledgearticle/?code=000003128 "").
 
 `American Express Direct`
 :
@@ -12831,7 +12831,7 @@ Specifications {#order-info-bill-to-last-name_Specifications}
 * **Data Type:** String
 * **Data Length:** 60
 * **Data Length:**
-  * **`Worldpay VAP`:** 25
+  * **`Worldpay Relay`:** 25
   * **All other processors:** 60
 
 Mapping Information {#order-info-bill-to-last-name_Mapping}
@@ -12854,11 +12854,11 @@ orderInformation. billTo.locality {#order-info-bill-to-locality}
 The city in the billing address.
 
 > IMPORTANT  
-> This field is optional if your account is configured for relaxed requirements for address data. For details about relaxed requirements, see the support article [Relaxed Requirements for Address Data and Expiration Date in Credit Card Transactions](https://support.visaacceptance.com/knowledgebase/Knowledgearticle/?code=000003128 "").
+> This field is optional if your account is configured for relaxed requirements for address data. For details about relaxed requirements, see the support article [Relaxed Requirements for Address Data and Expiration Date in Credit Card Transactions](https://support.example.com/knowledgebase/Knowledgearticle/?code=000003128 "").
 
-`Visa Platform Connect`
+`Platform Connect`
 :
-Credit card networks cannot process transactions that contain non-ASCII characters. `Visa Platform Connect` accepts and stores non-ASCII characters correctly and displays them correctly in reports. However, the limitations of the payment card networks prevent `Visa Platform Connect` from transmitting non-ASCII characters to the payment card networks. Therefore, `Visa Platform Connect` replaces non-ASCII characters with meaningless ASCII characters for transmission to the payment card networks.
+Credit card networks cannot process transactions that contain non-ASCII characters. `Platform Connect` accepts and stores non-ASCII characters correctly and displays them correctly in reports. However, the limitations of the payment card networks prevent `Platform Connect` from transmitting non-ASCII characters to the payment card networks. Therefore, `Platform Connect` replaces non-ASCII characters with meaningless ASCII characters for transmission to the payment card networks.
 
 Specifications {#order-info-bill-to-locality_Specifications}
 ------------------------------------------------------------
@@ -12935,9 +12935,9 @@ orderInformation. billTo.phoneNumber {#order-info-bill-to-phone-num}
 The customer's phone number.  
 Include the country code when the order is from outside the US.
 
-`Visa Platform Connect`
+`Platform Connect`
 :
-Credit card networks cannot process transactions that contain non-ASCII characters. `Visa Platform Connect` accepts and stores non-ASCII characters correctly and displays them correctly in reports. However, the limitations of the payment card networks prevent `Visa Platform Connect` from transmitting non-ASCII characters to the payment card networks. Therefore, `Visa Platform Connect` replaces non-ASCII characters with meaningless ASCII characters for transmission to the payment card networks.
+Credit card networks cannot process transactions that contain non-ASCII characters. `Platform Connect` accepts and stores non-ASCII characters correctly and displays them correctly in reports. However, the limitations of the payment card networks prevent `Platform Connect` from transmitting non-ASCII characters to the payment card networks. Therefore, `Platform Connect` replaces non-ASCII characters with meaningless ASCII characters for transmission to the payment card networks.
 
     For installment payments with Mastercard in Brazil, the value for this field corresponds to the following data in the TC 33 capture file:
 
@@ -12953,7 +12953,7 @@ Specifications {#order-info-bill-to-phone-num_Specifications}
 
 * **Data Type:** String
 * **Data Length:**
-  * **`Visa Platform Connect`:** 11 (Installment Payments with Mastercard in Brazil), 15 (All other payment types)
+  * **`Platform Connect`:** 11 (Installment Payments with Mastercard in Brazil), 15 (All other payment types)
   * **All other processors:** 15
 
 Mapping Information {#order-info-bill-to-phone-num_Mapping}
@@ -12974,15 +12974,15 @@ When the billing country is Canada, the six-digit postal code must follow this f
 **Example**: A1B 2C3
 
 > IMPORTANT  
-> This field is optional if your account is configured for relaxed requirements for address data. For details about relaxed requirements, see the support article [Relaxed Requirements for Address Data and Expiration Date in Credit Card Transactions](https://support.visaacceptance.com/knowledgebase/Knowledgearticle/?code=000003128 "").
+> This field is optional if your account is configured for relaxed requirements for address data. For details about relaxed requirements, see the support article [Relaxed Requirements for Address Data and Expiration Date in Credit Card Transactions](https://support.example.com/knowledgebase/Knowledgearticle/?code=000003128 "").
 
 `American Express Direct`
 :
 Before the postal code is sent to the processor, all non-alphanumeric characters are removed, and if the remaining value is longer than nine characters, the value is truncated starting from the right side.
 
-`Visa Platform Connect`
+`Platform Connect`
 :
-Credit card networks cannot process transactions that contain non-ASCII characters. `Visa Platform Connect` accepts and stores non-ASCII characters correctly and displays them correctly in reports. However, the limitations of the payment card networks prevent `Visa Platform Connect` from transmitting non-ASCII characters to the payment card networks. Therefore, `Visa Platform Connect` replaces non-ASCII characters with meaningless ASCII characters for transmission to the payment card networks.
+Credit card networks cannot process transactions that contain non-ASCII characters. `Platform Connect` accepts and stores non-ASCII characters correctly and displays them correctly in reports. However, the limitations of the payment card networks prevent `Platform Connect` from transmitting non-ASCII characters to the payment card networks. Therefore, `Platform Connect` replaces non-ASCII characters with meaningless ASCII characters for transmission to the payment card networks.
 
 Specifications {#order-info-bill-to-postal-code_Specifications}
 ---------------------------------------------------------------
@@ -12991,7 +12991,7 @@ Specifications {#order-info-bill-to-postal-code_Specifications}
 * **Data Length:** 10
 * **Data Length:**
   * `Comercio Latino`: 9
-  * `Visa Platform Connect`: 9
+  * `Platform Connect`: 9
   * All other processors: 10
 
 Mapping Information {#order-info-bill-to-postal-code_Mapping}
@@ -13042,7 +13042,7 @@ orderInformation. invoiceDetails.commodityCode {#order-info-invoice-details-comm
 
 International description code of the overall order's goods or services.  
 Contact your acquirer or processor for a list of codes.  
-This field is available only for these processors: `American Express Direct`, `Chase Paymentech Solutions`, `Elavon Americas`, `FDC Compass`, `FDC Nashville Global`, `GPN`, `Visa Platform Connect`, `OmniPay Direct`, `TSYS Acquiring Solutions`, `Worldpay VAP`.
+This field is available only for these processors: `American Express Direct`, `Chase Paymentech Solutions`, `Elavon Americas`, `FDC Compass`, `FDC Nashville Global`, `GPN`, `Platform Connect`, `OmniPay Direct`, `TSYS Acquiring Solutions`, `Worldpay Relay`.
 
 `Elavon Americas`
 :
@@ -13070,7 +13070,7 @@ This list provides the Level II/Level III processor field name for each processo
 * `GPN`: Summary Commodity Code and Commodity Code
 * `OmniPay Direct`: Summary Commodity Code
 * `TSYS Acquiring Solutions`: Does not apply
-* `Visa Platform Connect`: summaryCommodityCode
+* `Platform Connect`: summaryCommodityCode
 
 orderInformation. invoiceDetails.costCenter {#order-info-invoice-details-cost-center}
 =====================================================================================
@@ -13137,7 +13137,7 @@ orderInformation. invoiceDetails. merchandiseCode {#order-info-invoice-details-m
 ================================================================================================
 
 Identifier for the merchandise.  
-This field is available only on the `American Express Direct`, `JCN Gateway`, and `Visa Platform Connect` processors.
+This field is available only on the `American Express Direct`, `JCN Gateway`, and `Platform Connect` processors.
 
 `American Express Direct`
 :
@@ -13147,7 +13147,7 @@ The value is `1000`: gift card.
 :
 This value must be right justified. In Japan, this value is called a [goods code](# "").
 
-`Visa Platform Connect`
+`Platform Connect`
 :
 This value must be right justified. In Japan, this value is called a [goods code](# "").
 
@@ -13168,7 +13168,7 @@ orderInformation. invoiceDetails. purchaseContactName {#order-info-invoice-detai
 ========================================================================================================
 
 The name of the individual or the company contacted for company authorized purchases.  
-This field is available only on the `Visa Platform Connect` processor.
+This field is available only on the `Platform Connect` processor.
 
 Specifications {#order-info-invoice-details-puchase-contact-name_Specifications}
 --------------------------------------------------------------------------------
@@ -13188,19 +13188,19 @@ Processor Field Names {#order-info-invoice-details-puchase-contact-name_Processo
 
 This list provides the Level II/Level III processor field name for each processor that supports Level II or Level III data:
 
-* `Visa Platform Connect`: authorizedContactName
+* `Platform Connect`: authorizedContactName
 
 orderInformation. invoiceDetails.purchaseOrderDate {#order-info-invoice-details-purchase-order-date}
 ====================================================================================================
 
 Date the order was processed.  
-This field is available only on these processors: `Barclays`, `Chase Paymentech Solutions`, `Elavon Americas`, `FDC Compass`, `FDC Nashville Global`, `GPN`, , `OmniPay Direct`, `TSYS Acquiring Solutions`, `Visa Platform Connect`, and `Worldpay VAP`.
+This field is available only on these processors: `Barclays`, `Chase Paymentech Solutions`, `Elavon Americas`, `FDC Compass`, `FDC Nashville Global`, `GPN`, , `OmniPay Direct`, `TSYS Acquiring Solutions`, `Platform Connect`, and `Worldpay Relay`.
 
 `Barclays`
 :
 Format: yyyyMMdd
 
-`Worldpay VAP`
+`Worldpay Relay`
 :
 Format: yyyy-MM-DD
 
@@ -13214,7 +13214,7 @@ Specifications {#order-info-invoice-details-purchase-order-date_Specifications}
 * **Data Type:** String
 * **Data Length**
   * `Barclays`: 8
-  * `Worldpay VAP`: 10
+  * `Worldpay Relay`: 10
   * Other processors: 6
 
 Mapping Information {#order-info-invoice-details-purchase-order-date_Mapping}
@@ -13233,8 +13233,8 @@ This list provides the Level II/Level III processor field name for each processo
 * `GPN`: Order Date
 * `OmniPay Direct`: Order Date
 * `TSYS Acquiring Solutions`: Order Date
-* `Visa Platform Connect`: purchaserOrderDate
-* `Worldpay VAP`: orderDate
+* `Platform Connect`: purchaserOrderDate
+* `Worldpay Relay`: orderDate
 
 orderInformation. invoiceDetails.purchaseOrderNumber {#order-info-invoice-details-purchase-order-num}
 =====================================================================================================
@@ -13242,7 +13242,7 @@ orderInformation. invoiceDetails.purchaseOrderNumber {#order-info-invoice-detail
 Value used by your customer to identify the order.  
 This value is typically a purchase order number.  
 `Cybersource` recommends that you do not populate the field with all zeros or nines.  
-This field is available only on these processors:`Barclays`, `Chase Paymentech Solutions`, `Elavon Americas`, `FDC Compass`, `FDC Nashville Global`, `GPN`, `OmniPay Direct`, `TSYS Acquiring Solutions`, `Visa Platform Connect`, and `Worldpay VAP` processors.
+This field is available only on these processors:`Barclays`, `Chase Paymentech Solutions`, `Elavon Americas`, `FDC Compass`, `FDC Nashville Global`, `GPN`, `OmniPay Direct`, `TSYS Acquiring Solutions`, `Platform Connect`, and `Worldpay Relay` processors.
 
 `FDC Nashville Global`
 :
@@ -13259,12 +13259,12 @@ Specifications {#order-info-invoice-details-purchase-order-num_Specifications}
   * `Elavon Americas`: 17
   * `FDC Compass`: 25
   * `FDC Nashville Global`: 25
-  * `GPN`: 17 for Mastercard, 25 for Visa
-  * `OmniPay Direct`: 17 for Mastercard, 25 for Visa
+  * `GPN`: 17 for Mastercard, 25 for Relay
+  * `OmniPay Direct`: 17 for Mastercard, 25 for Relay
   * `FDMS Nashville`: 25
-  * `Visa Platform Connect`: 17
+  * `Platform Connect`: 17
   * `TSYS Acquiring Solutions`: 25
-  * `Worldpay VAP`: 17
+  * `Worldpay Relay`: 17
 
 Mapping Information {#order-info-invoice-details-purchase-order-num_Mapping}
 ----------------------------------------------------------------------------
@@ -13287,8 +13287,8 @@ This list provides the Level II/Level III processor field name for each processo
 * `GPN`: Market Data - Customer Code and Reference Number
 * `OmniPay Direct`: Customer Code / Customer Reference ID
 * `TSYS Acquiring Solutions`: does not apply
-* `Visa Platform Connect`: customerCode
-* `Worldpay VAP`: customerReference
+* `Platform Connect`: customerCode
+* `Worldpay Relay`: customerReference
 
 orderInformation. invoiceDetails. referenceDataCode {#order-info-invoice-details-reference-data-code}
 =====================================================================================================
@@ -13364,7 +13364,7 @@ Specifications {#order-info-invoice-details-supplier-order-ref_Specifications}
 * **Data Length**
   * `Barclays`: 25
   * `FDC Nashville Global`: 25
-  * `OmniPay Direct`: 17 for Mastercard payment cards, 25 for Visa payment cards
+  * `OmniPay Direct`: 17 for Mastercard payment cards, 25 for Relay payment cards
 
 Mapping Information {#order-info-invoice-details-supplier-order-ref_Mapping}
 ----------------------------------------------------------------------------
@@ -13385,7 +13385,7 @@ orderInformation. invoiceDetails. taxable {#order-info-invoice-details-taxable}
 ===============================================================================
 
 Flag that indicates whether an order is taxable.  
-This field is available only for these processors: `FDMS Nashville`, `Visa Platform Connect`.  
+This field is available only for these processors: `FDMS Nashville`, `Platform Connect`.  
 Possible values:
 
 * `true`: Order is taxable
@@ -13400,13 +13400,13 @@ This field is a flag that indicates whether tax is included in the total purchas
     * `true`: Tax is included
     * `false`: Tax is not included
 
-`Visa Platform Connect`
+`Platform Connect`
 :
 This value must be `true` if the the orderInformation.lineItems\[\].taxAmount value \> 0.
 
     If you do not include any orderInformation.lineItems\[\].taxAmount values in your request, the orderInformation.invoiceDetails.taxable field value is not included in the request.
 
-`Worldpay VAP`
+`Worldpay Relay`
 :
 This field is required if orderInformation.lineItems\[\].taxAmount = 0. This field is optional if orderInformation.lineItems\[\].taxAmount \> 0.
 
@@ -13429,22 +13429,22 @@ This list provides the Level II/Level III processor field name for each processo
 
 * `FDMS Nashville`: Does not apply
 * `OmniPay Direct`: Detail Tax Amount Indicator
-* `Visa Platform Connect`: localTaxIncluded
-* `Worldpay VAP`: taxExempt
+* `Platform Connect`: localTaxIncluded
+* `Worldpay Relay`: taxExempt
 
 orderInformation. invoiceDetails. transactionAdviceAddendum\[\].data {#order-info-invoice-details-trans-advice-adden}
 =====================================================================================================================
 
 Transaction Advice Addendum (TAA).  
 This field provides a description to display on the customer's American Express card statement. It is frequently used for Level II transactions. Before using this field, contact customer support to have your account enabled for this feature.
-This field is available only for the `American Express Direct`, `Chase Paymentech Solutions`, `FDC Compass`, `Visa Platform Connect`, and `Worldpay VAP` processors.
+This field is available only for the `American Express Direct`, `Chase Paymentech Solutions`, `FDC Compass`, `Platform Connect`, and `Worldpay Relay` processors.
 
 Specifications {#order-info-invoice-details-trans-advice-adden_Specifications}
 ------------------------------------------------------------------------------
 
 * **Data Type:** String
 * **Data Length:**
-  * **`Worldpay VAP`:** 26
+  * **`Worldpay Relay`:** 26
   * **All other processors:** 40
 
 Mapping Information {#order-info-invoice-details-trans-advice-adden_Mapping}
@@ -13478,18 +13478,18 @@ This list provides the Level II/Level III processor field name for each processo
   * TAA2
   * TAA3
   * TAA4
-* **`Visa Platform Connect`:**
+* **`Platform Connect`:**
   * amexDataTAA1
   * amexDataTAA2
   * amexDataTAA3
   * amexDataTAA4
-* **`Worldpay VAP`:** itemDescription
+* **`Worldpay Relay`:** itemDescription
 
 orderInformation. invoiceDetails. vatInvoiceReferenceNumber {#order-info-details-vat-invoice-ref-num}
 =====================================================================================================
 
 VAT invoice number associated with the transaction.  
-This field is available only on these processors: `Elavon Americas`, `FDC Nashville Global`, `Visa Platform Connect`, `TSYS Acquiring Solutions`, `Worldpay VAP`.
+This field is available only on these processors: `Elavon Americas`, `FDC Nashville Global`, `Platform Connect`, `TSYS Acquiring Solutions`, `Worldpay Relay`.
 
 Specifications {#order-info-details-vat-invoice-ref-num_Specifications}
 -----------------------------------------------------------------------
@@ -13512,15 +13512,15 @@ This list provides the Level II/Level III processor field name for each processo
 * `Elavon Americas`: VAT Invoice Reference Number (Unique)
 * `FDC Nashville Global`: VAT Invoice Reference Number
 * `TSYS Acquiring Solutions`: Unique VAT Invoice Reference Number
-* `Visa Platform Connect`: vatInvoiceReferenceNumber
-* `Worldpay VAP`: Invoice Reference Number
+* `Platform Connect`: vatInvoiceReferenceNumber
+* `Worldpay Relay`: Invoice Reference Number
 
 orderInformation. isCryptocurrencyPurchase {#order-info-is-crypto-purchase}
 ===========================================================================
 
 Flag that specifies whether the payment is for the purchase of cryptocurrency.  
 This field is available only for merchants who support quasi-cash.  
-This field is available only for Visa transactions on the `Visa Platform Connect` processor.  
+This field is available only for Relay transactions on the `Platform Connect` processor.  
 Possible values:
 
 * `true`: Payment is for the purchase of cryptocurrency.
@@ -13600,7 +13600,7 @@ orderInformation. lineItems\[\].commodityCode {#order-info-line-items-commodity-
 
 Commodity code used to classify an item.  
 Only alphanumeric characters are accepted. Do not include hyphens or other non-alphanumeric characters.  
-This field is available on these processors: `Barclays`, `Chase Paymentech Solutions`, `Elavon Americas`, `FDC Compass`, `FDC Nashville Global`, `GPN`, `OmniPay Direct`, `TSYS Acquiring Solutions`, `Visa Platform Connect`, `Worldpay VAP`.
+This field is available on these processors: `Barclays`, `Chase Paymentech Solutions`, `Elavon Americas`, `FDC Compass`, `FDC Nashville Global`, `GPN`, `OmniPay Direct`, `TSYS Acquiring Solutions`, `Platform Connect`, `Worldpay Relay`.
 
 Specifications {#order-info-line-items-commodity-code_Specifications}
 ---------------------------------------------------------------------
@@ -13612,10 +13612,10 @@ Specifications {#order-info-line-items-commodity-code_Specifications}
   * `Elavon Americas`: 12
   * `FDC Compass`: 12
   * `FDC Nashville Global`: 12
-  * `GPN`: 15 for Mastercard payment cards, 12 for Visa payment cards
-  * `OmniPay Direct`: 4 for Mastercard payment cards, 12 for Visa payment cards
+  * `GPN`: 15 for Mastercard payment cards, 12 for Relay payment cards
+  * `OmniPay Direct`: 4 for Mastercard payment cards, 12 for Relay payment cards
   * `TSYS Acquiring Solutions`: 12
-  * `Visa Platform Connect`: 12
+  * `Platform Connect`: 12
 
 Mapping Information {#order-info-line-items-commodity-code_Mapping}
 -------------------------------------------------------------------
@@ -13637,8 +13637,8 @@ This list provides the processor-specific field names for each processor support
 * `GPN`: Item Commodity Code
 * `OmniPay Direct`: Item Commodity Code
 * `TSYS Acquiring Solutions`: Item Commodity Code
-* `Visa Platform Connect`: commodityCode
-* `Worldpay VAP`: commodityCode
+* `Platform Connect`: commodityCode
+* `Worldpay Relay`: commodityCode
 
 orderInformation. lineItems\[\].discountAmount {#order-info-line-items-discount-amount}
 =======================================================================================
@@ -13659,12 +13659,12 @@ Specifications {#order-info-line-items-discount-amount_Specifications}
 
 * **Data Type:** String
 * **Data Length:**
-  * **`Worldpay VAP`:** 8
+  * **`Worldpay Relay`:** 8
   * **`FDC Nashville Global`:** 13
   * **`TSYS Acquiring Solutions`:** 13
-  * **`Elavon Americas`:** 9 (Mastercard), 12 (Visa)
-  * **`FDC Compass`:** 10 (Mastercard), 13 (Visa)
-  * **`Chase Paymentech Solutions`:** 10 (Mastercard), 13 (Visa)
+  * **`Elavon Americas`:** 9 (Mastercard), 12 (Relay)
+  * **`FDC Compass`:** 10 (Mastercard), 13 (Relay)
+  * **`Chase Paymentech Solutions`:** 10 (Mastercard), 13 (Relay)
   * **All other processors:** 12
 
 Mapping Information {#order-info-line-items-discount-amount_Mapping}
@@ -13681,23 +13681,23 @@ This list provides the processor-specific field names for each processor support
 
 * **`Chase Paymentech Solutions`:**
   * **Mastercard:** Discount Amount
-  * **Visa:** Discount Amount for Line Item
+  * **Relay:** Discount Amount for Line Item
 * **`Elavon Americas`:**
   * **Mastercard:** Discount Amount
-  * **Visa:** Discount Amount Per Line Item
+  * **Relay:** Discount Amount Per Line Item
 * **`FDC Compass`:**
   * **Mastercard:** Discount Amount
-  * **Visa:** Discount Amount for Line Item
+  * **Relay:** Discount Amount for Line Item
 * **`FDC Nashville Global`:** Item Discount Amount
 * **`GPN`:** Item Discount
 * **`OmniPay Direct`:**
   * **Mastercard:** Discount Amount
-  * **Visa:** Discount Amount for Line Item
+  * **Relay:** Discount Amount for Line Item
 * **`TSYS Acquiring Solutions`:**
   * **Mastercard:** Discount Amount
-  * **Visa:** Discount Amount Per Line Item
-* **`Visa Platform Connect`:** discountAmount
-* **`Worldpay VAP`:** Item Discount Amount
+  * **Relay:** Discount Amount Per Line Item
+* **`Platform Connect`:** discountAmount
+* **`Worldpay Relay`:** Item Discount Amount
 
 orderInformation. lineItems\[\].discountApplied {#order-info-line-items-discount-applied}
 =========================================================================================
@@ -13738,7 +13738,7 @@ orderInformation. lineItems\[\].discountRate {#order-info-line-items-discount-ra
 Rate at which the item is discounted.  
 Additional details for all processors and all txns (Level II/III and non-Level II/III):
 
-`GPN`, `TSYS Acquiring Solutions`, and `Visa Platform Connect`
+`GPN`, `TSYS Acquiring Solutions`, and `Platform Connect`
 :
 A maximum of 2 decimal places is allowed. Example 5.25 (=5.25%)
 
@@ -13767,7 +13767,7 @@ This list provides the Level II/Level III processor field name for each processo
 * `GPN`: Item Discount Rate
 * `OmniPay Direct`: Item Discount Rate
 * `TSYS Acquiring Solutions`: Item Discount Rate
-* `Visa Platform Connect`: discountRate
+* `Platform Connect`: discountRate
 
 orderInformation. lineItems\[\].distributorProductSku {#order-info-line-items-distributor-product-sku}
 ======================================================================================================
@@ -13823,7 +13823,7 @@ Specifications {#order-info-line-items-invoice-number_Specifications}
 
 * **Data Type:** String
 * **Data Length:**
-  * **`Visa Platform Connect`:** 15
+  * **`Platform Connect`:** 15
   * **All other processors:**23
 
 Mapping Information {#order-info-line-items-invoice-number_Mapping}
@@ -13845,8 +13845,8 @@ This list provides the Level II/Level III processor field name for each processo
 * **`FDMS Nashville`:** Amount
 * **`GPN`:** Amount
 * **`TSYS Acquiring Solutions`:** Amount
-* **`Visa Platform Connect`:** invoiceNumber
-* **`Worldpay VAP`:** invoiceNumber
+* **`Platform Connect`:** invoiceNumber
+* **`Worldpay Relay`:** invoiceNumber
 
 orderInformation. lineItems\[\].jurisdiction\[\]. code {#order-info-line-items-jurisdiction-code}
 =================================================================================================
@@ -14404,14 +14404,14 @@ This list provides the Level II/Level III processor field name for each processo
 * **`Chase Paymentech Solutions`:** Product Code
 * **`Elavon Americas`:**
   * Mastercard: Product Code
-  * Visa: Discount Per line Item
+  * Relay: Discount Per line Item
 * **`FDC Compass`:** Product Code
 * **`FDC Nashville Global`:** Item Product Code
 * **`GPN`:** Product Code
 * **`OmniPay Direct`:** Quantity / Item Quantity
 * **`TSYS Acquiring Solutions`:** Product Code
-* **`Visa Platform Connect`:** productCode
-* **`Worldpay VAP`:** productCode
+* **`Platform Connect`:** productCode
+* **`Worldpay Relay`:** productCode
 
 orderInformation. lineItems\[\]. productDescription {#order-info-line-items-product-description}
 ================================================================================================
@@ -14475,9 +14475,9 @@ This list provides the Level II/Level III processor field name for each processo
 * `OmniPay Direct`: Item Description
 * `TSYS Acquiring Solutions`:
   * Mastercard: Item Description
-  * Visa: Item Descriptor
-* `Visa Platform Connect`: productName
-* `Worldpay VAP`: itemDescription
+  * Relay: Item Descriptor
+* `Platform Connect`: productName
+* `Worldpay Relay`: itemDescription
 
 orderInformation. lineItems\[\].productSku {#order-info-line-items-product-sku}
 ===============================================================================
@@ -14539,9 +14539,9 @@ This list provides the Level II/Level III processor field name for each processo
 * `OmniPay Direct`: Quantity / Item Quantity
 * `TSYS Acquiring Solutions`
   * Mastercard: Item Quantity
-  * Visa: Quantity
-* `Visa Platform Connect`: quantity
-* `Worldpay VAP`: quantity
+  * Relay: Quantity
+* `Platform Connect`: quantity
+* `Worldpay Relay`: quantity
 
 orderInformation. lineItems\[\]. referenceDataCode {#order-info-line-items-reference-data-code}
 ===============================================================================================
@@ -14817,7 +14817,7 @@ orderInformation. lineItems\[\].taxAmount {#order-info-line-items-tax-amount-req
 
 Total tax to apply to the product.  
 Specify the value in US English characters. The amount cannot be negative. The tax amount and the unit price must be in the same currency.  
-This field is available only on these processors: `American Express Direct`, `Barclays`, `Chase Paymentech Solutions`, `Elavon Americas`, `FDC Compass`, `FDC Nashville Global`, `FDMS Nashville`, `GPN`, `OmniPay Direct`, `TSYS Acquiring Solutions`, `Visa Platform Connect`, `Worldpay VAP`.  
+This field is available only on these processors: `American Express Direct`, `Barclays`, `Chase Paymentech Solutions`, `Elavon Americas`, `FDC Compass`, `FDC Nashville Global`, `FDMS Nashville`, `GPN`, `OmniPay Direct`, `TSYS Acquiring Solutions`, `Platform Connect`, `Worldpay Relay`.  
 When you include this field, the Tax Calculation service does not calculate tax for the offer. Instead, it returns the value of the orderInformation.lineItems.taxAmount field in the reply message.  
 The tax amount value is additive as shown in this example.  
 *Example:* This example uses a two-exponent currency such as USD:
@@ -14870,24 +14870,24 @@ This list provides the Level II/Level III processor field name for each processo
   * Level III: Tax Amount N
 * `GPX`: localTax Amount
 * `OmniPay Direct`: Tax Amount / Total Tax Amount
-* `Visa Platform Connect`: localTax Amount
+* `Platform Connect`: localTax Amount
 * `TSYS Acquiring Solutions`
   * Mastercard: Tax Amount
-  * Visa: VAT / Tax Amount
-* `Worldpay VAP`: taxAmount
+  * Relay: VAT / Tax Amount
+* `Worldpay Relay`: taxAmount
 
 orderInformation. lineItems\[\].taxAppliedAfterDiscount {#order-info-line-items-tax-applied-after-discount}
 ===========================================================================================================
 
 Flag to indicate how you handle discount at the line item level.  
-This field is available only for the `Visa Platform Connect` processor.  
+This field is available only for the `Platform Connect` processor.  
 Possible values:
 
 * 0: no line level discount provided
 * 1: tax was calculated on the post-discount line item total
 * 2: tax was calculated on the pre-discount line item total
 
-Visa inserts a 0 (zero) value if an invalid value is included in this field.  
+Relay inserts a 0 (zero) value if an invalid value is included in this field.  
 This field relates to the value in the orderInformation.amountDetails.discountAmount field.
 
 Specifications {#order-info-line-items-tax-applied-after-discount_Specifications}
@@ -14908,7 +14908,7 @@ Processor Field Names {#order-info-line-items-tax-applied-after-discount_Process
 
 This list provides the Level II/Level III processor field name for each processor that supports Level II or Level III data:
 
-* `Visa Platform Connect`: discountManagementIndicator
+* `Platform Connect`: discountManagementIndicator
 
 orderInformation. lineItems\[\].taxDetails\[\].amount {#order-info-line-items-tax-details-amount}
 =================================================================================================
@@ -14921,7 +14921,7 @@ For Mastercard, do not set this field to 0 (zero).
 
 `FDC Nashville Global`
 :
-Visa: VAT or other tax amount.
+Relay: VAT or other tax amount.
 
     Mastercard: Tax amount collected for a special type of tax. Do not set this field to 0 (zero).
 
@@ -14932,7 +14932,7 @@ Specifications {#order-info-line-items-tax-details-amount_Specifications}
 * **Data Length:**
   * **`American Express Direct`** 7 (Canadian Dollars), 9 (U.S. Dollars)
   * **`Elavon Americas`** 10
-  * **`Worldpay VAP`** 8
+  * **`Worldpay Relay`** 8
   * **`FDC Nashville Global`** 13
   * **`TSYS Acquiring Solutions`** 13
   * **All other processors:** 15
@@ -14975,7 +14975,7 @@ This list provides the Level II/Level III processor field name for each processo
 * `American Express Direct`: Does not apply
 * `Elavon Americas`: Sales Tax Amount
 * `FDC Nashville Global`: Item Other Tax Amount and Item Local Tax Amount
-* `Worldpay VAP`: taxAmount
+* `Worldpay Relay`: taxAmount
 * `TSYS Acquiring Solutions`: Local Tax
 
 orderInformation. lineItems\[\].taxDetails\[\].applied {#order-info-line-items-tax-details-applied}
@@ -15087,7 +15087,7 @@ Alternative tax rate applied to the item.
 :
 For Mastercard, this is the rate for a special tax.
 
-    For Visa, this is a VAT tax or other tax rate.
+    For Relay, this is a VAT tax or other tax rate.
 
 `OmniPay Direct`
 :
@@ -15097,7 +15097,7 @@ This rate is used to generate the value of the orderInformation.lineItems\[\].ta
 
     orderInformation.amountDetails.taxDetails\[\].amount / orderInformation.lineItems\[\].unitPrice field.
 
-    For Visa, this is a VAT tax or other tax rate.
+    For Relay, this is a VAT tax or other tax rate.
 
 Specifications {#order-info-line-items-tax-details-rate_Specifications}
 -----------------------------------------------------------------------
@@ -15105,7 +15105,7 @@ Specifications {#order-info-line-items-tax-details-rate_Specifications}
 * **Data Type:** String
 * **Data Length:**
   * **`OmniPay Direct`:** 4
-  * **`Worldpay VAP`:** 8
+  * **`Worldpay Relay`:** 8
   * **All other processors:** 5
 
 Mapping Information {#order-info-line-items-tax-details-rate_Mapping}
@@ -15127,7 +15127,7 @@ This list provides the Level II/Level III processor field name for each processo
 * `FDC Nashville Global`: Item Tax Rate Applied
 * `GPN`: Tax Rate N
 * `OmniPay Direct`: VAT / TAx Rate (Freight or Shipping)
-* `Worldpay VAP`: taxRate
+* `Worldpay Relay`: taxRate
 
 orderInformation. lineItems\[\].taxDetails\[\].taxID {#order-info-line-items-tax-details-tax-id}
 ================================================================================================
@@ -15155,7 +15155,7 @@ This list provides the Level II/Level III processor field name for each processo
 * `Elavon Americas` (Field name for Mastercard): Tax Amount
 * `FDC Nashville Global`: Tax Amount 1 Tax ID
 * `TSYS Acquiring Solutions`: Alternate Tax Identifier
-* `Worldpay VAP`: cardAcceptorTaxId
+* `Worldpay Relay`: cardAcceptorTaxId
 
 orderInformation. lineItems\[\].taxDetails\[\].type {#order-info-line-items-tax-details-type-a}
 ===============================================================================================
@@ -15210,13 +15210,13 @@ orderInformation. lineItems\[\].taxRate {#order-info-line-items-tax-rate}
 =========================================================================
 
 Tax rate applied to the item.  
-This field is available only on these processors: `American Express Direct`, `Barclays`, `Chase Paymentech Solutions`, `Elavon Americas`, `FDC Compass`, `TSYS Acquiring Solutions`, and `Visa Platform Connect`.
+This field is available only on these processors: `American Express Direct`, `Barclays`, `Chase Paymentech Solutions`, `Elavon Americas`, `FDC Compass`, `TSYS Acquiring Solutions`, and `Platform Connect`.
 
 , ,
 
-`American Express Direct`, `TSYS Acquiring Solutions`, `Visa Platform Connect`
+`American Express Direct`, `TSYS Acquiring Solutions`, `Platform Connect`
 :
-For transactions on Visa payment cards, the valid range is from 0.01 (1%) to 0.99 (99%). Only whole percentage values accepted; values with additional decimal places will be truncated.
+For transactions on Relay payment cards, the valid range is from 0.01 (1%) to 0.99 (99%). Only whole percentage values accepted; values with additional decimal places will be truncated.
 :
 For other transactions, the valid range is from 0.00 (0%) to 99.99 (99.99%). Values with more than two digits beyond the decimal point will be truncated.
 
@@ -15238,7 +15238,7 @@ For transactions on Mastercard payment cards, the valid range is from 0.00001 (0
     * 25.5%: 0.2550
     * 33.33%: 0.3333
 
-    For transactions on Visa payment cards, the valid range is from 0.01 (1%) to 0.99 (99%).
+    For transactions on Relay payment cards, the valid range is from 0.01 (1%) to 0.99 (99%).
 
     * 60%: 0.60
     * 25%: 0.25
@@ -15250,9 +15250,9 @@ Specifications {#order-info-line-items-tax-rate_Specifications}
 * **Data Type:** String
 * **Data Length**
   * `Barclays`: 6
-  * `Chase Paymentech Solutions`: 7 (Mastercard), 4 (Visa)
-  * `Elavon Americas`: 5 (Mastercard), 4 (Visa)
-  * `FDC Compass`: 7 (Mastercard), 4 (Visa)
+  * `Chase Paymentech Solutions`: 7 (Mastercard), 4 (Relay)
+  * `Elavon Americas`: 5 (Mastercard), 4 (Relay)
+  * `FDC Compass`: 7 (Mastercard), 4 (Relay)
   * `TSYS Acquiring Solutions`: 6
   * Other processors: 4
 
@@ -15272,12 +15272,12 @@ This list provides the Level II/Level III processor field name for each processo
 * `Chase Paymentech Solutions`: Tax Rate
 * `Elavon Americas`:
   * Mastercard: Tax Rate Applied
-  * Visa: VAT/Tax Rate
+  * Relay: VAT/Tax Rate
 * `FDC Compass`: Tax Rate
 * `TSYS Acquiring Solutions`:
   * Mastercard: Tax Rate Applied
-  * Visa: VAT/Tax Rate
-* `Visa Platform Connect`: taxRate
+  * Relay: VAT/Tax Rate
+* `Platform Connect`: taxRate
 
 orderInformation. lineItems\[\].taxStatusIndicator {#order-info-line-items-tax-status-indicator}
 ================================================================================================
@@ -15395,7 +15395,7 @@ orderInformation. lineItems\[\].totalAmount {#order-info-line-items-total-amount
 =================================================================================
 
 Total amount for the item, calculated as: **(unit price ✕ quantity)**.  
-This field is available only on these processors: `Barclays`, `Elavon Americas`, `FDC Compass`, `OmniPay Direct`, `TSYS Acquiring Solutions`, `Visa Platform Connect`, `Worldpay VAP`.
+This field is available only on these processors: `Barclays`, `Elavon Americas`, `FDC Compass`, `OmniPay Direct`, `TSYS Acquiring Solutions`, `Platform Connect`, `Worldpay Relay`.
 
 `Barclays`
 :
@@ -15415,14 +15415,14 @@ Specifications {#order-info-line-items-total-amount_Specifications}
 * **Data Type:** String
 * **Data Length:** 12
 * **Data Length:**
-  * `Barclays` 10 (Mastercard), 18 (Visa)
-  * `Chase Paymentech Solutions`: 10 (Mastercard), 13 (Visa)
-  * `Elavon Americas`: 9 (Mastercard), 12 (Visa)
-  * `FDC Compass`: 10 (Mastercard), 13 (Visa)
+  * `Barclays` 10 (Mastercard), 18 (Relay)
+  * `Chase Paymentech Solutions`: 10 (Mastercard), 13 (Relay)
+  * `Elavon Americas`: 9 (Mastercard), 12 (Relay)
+  * `FDC Compass`: 10 (Mastercard), 13 (Relay)
   * `OmniPay Direct`: 12
-  * `TSYS Acquiring Solutions`: 10 (Mastercard), 13 (Visa)
-  * `Visa Platform Connect`: 12
-  * `Worldpay VAP`: 8
+  * `TSYS Acquiring Solutions`: 10 (Mastercard), 13 (Relay)
+  * `Platform Connect`: 12
+  * `Worldpay Relay`: 8
   * Other processors: 12
 
 Mapping Information {#order-info-line-items-total-amount_Mapping}
@@ -15441,20 +15441,20 @@ This list provides the Level II/Level III processor field name for each processo
 * `Chase Paymentech Solutions`: Line Item Total
 * `Elavon Americas`
   * Mastercard: Extended Item Amount
-  * Visa: Line Item Total
+  * Relay: Line Item Total
 * `FDC Compass`: Line Item Total
 * `OmniPay Direct`: Line Item total / Extended Item Amount
 * `TSYS Acquiring Solutions`
   * Mastercard: Extended Item Amount
-  * Visa: Line Item Total
-* `Visa Platform Connect`: totalAmount
-* `Worldpay VAP`: lineItemTotal
+  * Relay: Line Item Total
+* `Platform Connect`: totalAmount
+* `Worldpay Relay`: lineItemTotal
 
 orderInformation. lineItems\[\].typeOfSupply {#order-info-line-items-type-of-supply}
 ====================================================================================
 
 Code indicating whether the purchase is categorized as goods or services.  
-This field is available only for the `Visa Platform Connect` processor.  
+This field is available only for the `Platform Connect` processor.  
 Possible values:
 
 * `00`: Goods
@@ -15478,14 +15478,14 @@ Processor Field Names {#order-info-line-items-type-of-supply_Processors}
 
 This list provides the Level II/Level III processor field name for each processor that supports Level II or Level III data:
 
-* `Visa Platform Connect`: typeOfSupply
+* `Platform Connect`: typeOfSupply
 
 orderInformation. lineItems\[\].unitOfMeasure {#order-info-line-items-unit-of-measure}
 ======================================================================================
 
 Code that specifies the unit of measure for the item.  
 Do not use all zeros or spaces in this field.  
-This field is available only on these processors: `American Express Direct`, `Barclays`, `Chase Paymentech Solutions`, `Elavon Americas`, `FDC Compass`, `FDC Nashville Global`, `GPN`, `OmniPay Direct`, `TSYS Acquiring Solutions`, `Visa Platform Connect`, `Worldpay VAP`.  
+This field is available only on these processors: `American Express Direct`, `Barclays`, `Chase Paymentech Solutions`, `Elavon Americas`, `FDC Compass`, `FDC Nashville Global`, `GPN`, `OmniPay Direct`, `TSYS Acquiring Solutions`, `Platform Connect`, `Worldpay Relay`.  
 This processor has specific requirements:  
 For `American Express Direct`, see the EDI codes for units of measurement at [el355.htm](https://ws2.segment.co.il/Public/EDI-Segment/x12-4040/EDI_4010/el355.htm "").
 
@@ -15496,15 +15496,15 @@ Specifications {#order-info-line-items-unit-of-measure_Specifications}
 * **Data Length**
   * `American Express Direct`: 2
   * `Barclays`: 80
-  * `Chase Paymentech Solutions`: 3 (Mastercard), 12 (Visa)
-  * `Elavon Americas`: 3 (Mastercard), 12 (Visa)
-  * `FDC Compass`: 3 (Mastercard), 12 (Visa)
+  * `Chase Paymentech Solutions`: 3 (Mastercard), 12 (Relay)
+  * `Elavon Americas`: 3 (Mastercard), 12 (Relay)
+  * `FDC Compass`: 3 (Mastercard), 12 (Relay)
   * `FDC Nashville Global`: 12
   * `GPN`: 12
   * `OmniPay Direct`: 12
   * `TSYS Acquiring Solutions`: 12
-  * `Visa Platform Connect`: 12
-  * `Worldpay VAP`: 12
+  * `Platform Connect`: 12
+  * `Worldpay Relay`: 12
   * Other processors: 12
 
 Mapping Information {#order-info-line-items-unit-of-measure_Mapping}
@@ -15529,9 +15529,9 @@ This list provides the Level II/Level III processor field name for each processo
 * `OmniPay Direct`: Unit of Measure Code / Item Unit of Measure
 * `TSYS Acquiring Solutions`:
   * Mastercard: Item Unit of Measure
-  * Visa: Unit of Measure/Code
-* `Visa Platform Connect`: unitOfMeasure
-* `Worldpay VAP`: unitOfMeasure
+  * Relay: Unit of Measure/Code
+* `Platform Connect`: unitOfMeasure
+* `Worldpay Relay`: unitOfMeasure
 
 orderInformation. lineItems\[\].unitPrice {#order-info-line-items-unit-price}
 =============================================================================
@@ -15539,7 +15539,7 @@ orderInformation. lineItems\[\].unitPrice {#order-info-line-items-unit-price}
 Per-item price of the product.  
 This is an item-level field.  
 This value cannot be negative. You can include a decimal point (.), but you cannot include any other special characters. The amount is truncated to the correct number of decimal places.  
-This field is available only on these processors: `American Express Direct`, `Barclays`, `Chase Paymentech Solutions`, `Elavon Americas`, `FDC Compass`, `FDC Nashville Global`, `FDMS Nashville`, `GPN`, `OmniPay Direct`, `TSYS Acquiring Solutions`, `Visa Platform Connect`, `Worldpay VAP`.
+This field is available only on these processors: `American Express Direct`, `Barclays`, `Chase Paymentech Solutions`, `Elavon Americas`, `FDC Compass`, `FDC Nashville Global`, `FDMS Nashville`, `GPN`, `OmniPay Direct`, `TSYS Acquiring Solutions`, `Platform Connect`, `Worldpay Relay`.
 
 > IMPORTANT Some processors have specific requirements and limitations, such as maximum amounts and maximum field lengths.
 
@@ -15547,7 +15547,7 @@ This field is available only on these processors: `American Express Direct`, `Ba
 :
 Value must be numeric with two exponents.
 
-`Visa Platform Connect`
+`Platform Connect`
 :
 Limit authorization and capture amounts to 999999999999 (twelve 9s).  
 **DCC with a Third-Party Provider** : Set this field to the converted amount that was returned by the DCC provider. You must include either this field or orderInformation.amountDetails.totalAmount in a request.  
@@ -15560,7 +15560,7 @@ Specifications {#order-info-line-items-unit-price_Specifications}
 * **Data Type:** String
 * **Data Length**
   * `American Express Direct`: 8 (CAD), 10 (USD)
-  * `Barclays`: 8 (for Mastercard), 18 (for Visa)
+  * `Barclays`: 8 (for Mastercard), 18 (for Relay)
   * `Chase Paymentech Solutions`: 13 (USD)
   * `FDC Compass`: 13 (USD)
   * `FDC Nashville Global`: 13 (USD)
@@ -15589,8 +15589,8 @@ This list provides the Level II/Level III processor field name for each processo
 * `GPN`: Unit Price
 * `OmniPay Direct`: Unit Cost/Unit Price
 * `TSYS Acquiring Solutions`: Unit Cost
-* `Visa Platform Connect`: unitPrice
-* `Worldpay VAP`: unitCost
+* `Platform Connect`: unitPrice
+* `Worldpay Relay`: unitCost
 
 orderInformation. lineItems\[\].weight {#order-info-line-items-weight-amount}
 =============================================================================
@@ -15963,18 +15963,18 @@ The default value is the postal code associated with your account. You can use t
   Example: A1B 2C3
 * **US postal code** : The nine-digit format is \[5 digits\]\[dash\]\[4 digits\].  
   Example: 12345-6789
-  This field is available only on these processors: `American Express Direct`, `Chase Paymentech Solutions`, `Elavon Americas`, `FDC Compass`, `FDC Nashville Global`, `GPN`, `OmniPay Direct`, `TSYS Acquiring Solutions`, `Visa Platform Connect`, `Worldpay VAP`.  
+  This field is available only on these processors: `American Express Direct`, `Chase Paymentech Solutions`, `Elavon Americas`, `FDC Compass`, `FDC Nashville Global`, `GPN`, `OmniPay Direct`, `TSYS Acquiring Solutions`, `Platform Connect`, `Worldpay Relay`.  
   These processors have specific requirements:
 
 `American Express Direct`
 :
 Before the postal code id sent to the processor, all non-alphanumeric characters are removed and, if the remaining value is longer than nine characters, the value is truncated starting from the right side.
 
-`Visa Platform Connect`
+`Platform Connect`
 :
 This field is used to determine the nexus. The default is the postal code associated with your account. The postal code must consist of 5 to 9 digits.
 
-`Worldpay VAP`
+`Worldpay Relay`
 :
 This field is used to determine the nexus. The default is the postal code associated with your account. The postal code must consist of 5 to 9 digits.
 
@@ -16006,8 +16006,8 @@ This list provides the Level II/Level III processor field name for each processo
 * **`GPN`:** Ship From Postal/ZIP Code
 * **`OmniPay Direct`:** Ship From Postal / ZIP Code
 * **`TSYS Acquiring Solutions`:** Ship From Postal/ZIP Code
-* **`Visa Platform Connect`:** shipFromAddress
-* **`Worldpay VAP`:** shipFromPostalCode
+* **`Platform Connect`:** shipFromAddress
+* **`Worldpay Relay`:** shipFromPostalCode
 
 orderInformation. shippingDetails.shippingMethod {#order-info-shipping-details-shipping-method}
 ===============================================================================================
@@ -16042,7 +16042,7 @@ orderInformation. shipTo.address1 {#order-info-shipto-address1}
 
 First line of the shipping address.  
 When orderInformation.shipTo.address1 is not included in the request and the service defaults to orderInformation.shipTo.address1, the value for orderInformation.shipTo.address1 is left blank in the Tax Detail Report.  
-This field is available on these processors: `AIBMS`, `American Express Direct`, `Bank of America ACH`, `Banque de France et Tresor Public`, `Barclays`, `BNP Paribas France`, `Chase Paymentech Solutions`, `Chase Paymentech Tandem`, `China UnionPay`, `Cielo`, `Comercio Latino`, `Credit Mutuel-CIC`, `Cybersource ACH Service`, `Elavon`, `Elavon Americas`, `FDC Compass`, `FDC Nashville Global`, `FDI Australia`, `FDMS Nashville`, `First Data Merchant Solutions`, `Getnet`, `GPN`, `HBoS`, `HSBC`, `JCN Gateway`, `Korean Cyber Payments`, `Lloyds-OmniPay`, `LloydsTSB Cardnet`, `Moneris`, `OmniPay Direct`, `Prosa`, `Rede`, `RuPay`, `SIX`, `TeleCheck`, `UATP`, `ValueLink`, `Vero`, `Visa Platform Connect`, `Worldpay VAP`, `TSYS Acquiring Solutions`, and `Wells Fargo ACH`.
+This field is available on these processors: `AIBMS`, `American Express Direct`, `Bank of America ACH`, `Banque de France et Tresor Public`, `Barclays`, `BNP Paribas France`, `Chase Paymentech Solutions`, `Chase Paymentech Tandem`, `China UnionPay`, `Cielo`, `Comercio Latino`, `Credit Mutuel-CIC`, `Cybersource ACH Service`, `Elavon`, `Elavon Americas`, `FDC Compass`, `FDC Nashville Global`, `FDI Australia`, `FDMS Nashville`, `First Data Merchant Solutions`, `Getnet`, `GPN`, `HBoS`, `HSBC`, `JCN Gateway`, `Korean Cyber Payments`, `Lloyds-OmniPay`, `LloydsTSB Cardnet`, `Moneris`, `OmniPay Direct`, `Prosa`, `Rede`, `RuPay`, `SIX`, `TeleCheck`, `UATP`, `ValueLink`, `Vero`, `Platform Connect`, `Worldpay Relay`, `TSYS Acquiring Solutions`, and `Wells Fargo ACH`.
 
 Specifications {#order-info-shipto-address1_Specifications}
 -----------------------------------------------------------
@@ -16064,7 +16064,7 @@ orderInformation. shipTo.address2 {#order-info-shipto-address2}
 ===============================================================
 
 Second line of the shipping address.  
-This field is available on these processors: `AIBMS`, `American Express Direct`, `Bank of America ACH`, `Banque de France et Tresor Public`, `Barclays`, `BNP Paribas France`, `Chase Paymentech Solutions`, `Chase Paymentech Tandem`, `China UnionPay`, `Cielo`, `Comercio Latino`, `Credit Mutuel-CIC`, `Cybersource ACH Service`, `Elavon`, `Elavon Americas`, `FDC Compass`, `FDC Nashville Global`, `FDI Australia`, `FDMS Nashville`, `First Data Merchant Solutions`, `Getnet`, `GPN`, `HBoS`, `HSBC`, `JCN Gateway`, `Korean Cyber Payments`, `Lloyds-OmniPay`, `LloydsTSB Cardnet`, `Moneris`, `OmniPay Direct`, `Prosa`, `Rede`, `RuPay`, `SIX`, `Streamline`, `TeleCheck`, `UATP`, `ValueLink`, `Vero`, `Visa Platform Connect`, `Worldpay VAP`, `TSYS Acquiring Solutions`, `Wells Fargo ACH`.
+This field is available on these processors: `AIBMS`, `American Express Direct`, `Bank of America ACH`, `Banque de France et Tresor Public`, `Barclays`, `BNP Paribas France`, `Chase Paymentech Solutions`, `Chase Paymentech Tandem`, `China UnionPay`, `Cielo`, `Comercio Latino`, `Credit Mutuel-CIC`, `Cybersource ACH Service`, `Elavon`, `Elavon Americas`, `FDC Compass`, `FDC Nashville Global`, `FDI Australia`, `FDMS Nashville`, `First Data Merchant Solutions`, `Getnet`, `GPN`, `HBoS`, `HSBC`, `JCN Gateway`, `Korean Cyber Payments`, `Lloyds-OmniPay`, `LloydsTSB Cardnet`, `Moneris`, `OmniPay Direct`, `Prosa`, `Rede`, `RuPay`, `SIX`, `Streamline`, `TeleCheck`, `UATP`, `ValueLink`, `Vero`, `Platform Connect`, `Worldpay Relay`, `TSYS Acquiring Solutions`, `Wells Fargo ACH`.
 
 Specifications {#order-info-shipto-address2_Specifications}
 -----------------------------------------------------------
@@ -16072,7 +16072,7 @@ Specifications {#order-info-shipto-address2_Specifications}
 * **Data Type:** Request
 * **Data Format:** String
 * **Data Length:**
-  * **`Worldpay VAP`:** 35
+  * **`Worldpay Relay`:** 35
   * **Other processors:** 60
 
 Mapping Information {#order-info-shipto-address2_Mapping}
@@ -16198,14 +16198,14 @@ orderInformation. shipTo.country {#order-info-shipto-country}
 
 Country of the shipping address.  
 Use the two-character ISO standard country code. See [ISO Standard Country Codes](https://developer.cybersource.com/docs/cybs/en-us/country-codes/reference/all/na/country-codes/country-codes.md "").
-This field is available only on these processors: `FDC Nashville Global`, `Worldpay VAP`.  
+This field is available only on these processors: `FDC Nashville Global`, `Worldpay Relay`.  
 These processors have specific requirements:
 
 Payments Processing
 :
 **`FDC Nashville Global`:** If you include the orderInformation.shipTo.country field in a request and if the ship-to country is the U.S. or Canada, the request must also include the orderInformation.shipTo.administrativeArea field.
 :
-**`Worldpay VAP`:** If this value is not included in the request, the orderInformation.billTo.country value from the authorization request is used.
+**`Worldpay Relay`:** If this value is not included in the request, the orderInformation.billTo.country value from the authorization request is used.
 
 Tax Calculation
 :
@@ -16243,7 +16243,7 @@ This list provides the Level II/Level III processor field name for each processo
 * `GPN`: Destination Country Code
 * `OmniPay Direct`: Destination Country Code
 * `TSYS Acquiring Solutions`: Destination Country Code
-* `Worldpay VAP`: destinationCountryCode
+* `Worldpay Relay`: destinationCountryCode
 
 orderInformation. shipTo.administrativeArea {#order-info-shipto-county}
 =======================================================================
@@ -16350,7 +16350,7 @@ orderInformation. shipTo.firstName {#order-info-shipto-first-name}
 ==================================================================
 
 First name of the person receiving the shipment.
-The field is available for these processors: `AIBMS`, `Bank of America ACH`, `Banque de France et Tresor Public`, `Barclays`, `BNP Paribas France`, `Chase Paymentech Solutions`, `Chase Paymentech Tandem`, `China UnionPay`, `Cielo`, `Comercio Latino`, `Credit Mutuel-CIC`, `Cybersource ACH Service`, `Elavon`, `Elavon Americas`, `FDC Compass`, `FDC Nashville Global`, `FDI Australia`, `FDMS Nashville`, `First Data Merchant Solutions`, `Getnet`, `GPN`, `HBoS`, `HSBC`, `JCN Gateway`, `Korean Cyber Payments`, `Lloyds-OmniPay`, `LloydsTSB Cardnet`, `Moneris`, `OmniPay Direct`, `Prosa`, `Rede`, `RuPay`, `SIX`, `Streamline`, `TeleCheck`, `UATP`, `ValueLink`, `Vero`, `TSYS Acquiring Solutions`, `Visa Platform Connect`, `Worldpay VAP`, `Wells Fargo ACH`.
+The field is available for these processors: `AIBMS`, `Bank of America ACH`, `Banque de France et Tresor Public`, `Barclays`, `BNP Paribas France`, `Chase Paymentech Solutions`, `Chase Paymentech Tandem`, `China UnionPay`, `Cielo`, `Comercio Latino`, `Credit Mutuel-CIC`, `Cybersource ACH Service`, `Elavon`, `Elavon Americas`, `FDC Compass`, `FDC Nashville Global`, `FDI Australia`, `FDMS Nashville`, `First Data Merchant Solutions`, `Getnet`, `GPN`, `HBoS`, `HSBC`, `JCN Gateway`, `Korean Cyber Payments`, `Lloyds-OmniPay`, `LloydsTSB Cardnet`, `Moneris`, `OmniPay Direct`, `Prosa`, `Rede`, `RuPay`, `SIX`, `Streamline`, `TeleCheck`, `UATP`, `ValueLink`, `Vero`, `TSYS Acquiring Solutions`, `Platform Connect`, `Worldpay Relay`, `Wells Fargo ACH`.
 
 Specifications {#order-info-shipto-first-name_Specifications}
 -------------------------------------------------------------
@@ -16358,7 +16358,7 @@ Specifications {#order-info-shipto-first-name_Specifications}
 * **Data Type:** Request
 * **Data Format:** String
 * **Data Length**
-  * `Worldpay VAP`: 35
+  * `Worldpay Relay`: 35
   * Other processors: 60
 
 Mapping Information {#order-info-shipto-first-name_Mapping}
@@ -16372,7 +16372,7 @@ orderInformation. shipTo.lastName {#order-info-shipto-last-name}
 ================================================================
 
 Last name of the person receiving the shipment.
-The field is available for these processors: `AIBMS`, `American Express Direct`, `Bank of America ACH`, `Banque de France et Tresor Public`, `Barclays`, `BNP Paribas France`, `Chase Paymentech Solutions`, `Chase Paymentech Tandem`, `China UnionPay`, `Cielo`, `Comercio Latino`, `Credit Mutuel-CIC`, `Cybersource ACH Service`, `Elavon`, `Elavon Americas`, `FDC Compass`, `FDC Nashville Global`, `FDI Australia`, `FDMS Nashville`, `First Data Merchant Solutions`, `Getnet`, `GPN`, `HBoS`, `HSBC`, `JCN Gateway`, `Korean Cyber Payments`, `Lloyds-OmniPay`, `LloydsTSB Cardnet`, `Moneris`, `OmniPay Direct`, `Prosa`, `Rede`, `RuPay`, `SIX`, `Streamline`, `TeleCheck`, `UATP`, `ValueLink`, `Vero`, `TSYS Acquiring Solutions`, `Visa Platform Connect`, `Worldpay VAP`, `Wells Fargo ACH`.
+The field is available for these processors: `AIBMS`, `American Express Direct`, `Bank of America ACH`, `Banque de France et Tresor Public`, `Barclays`, `BNP Paribas France`, `Chase Paymentech Solutions`, `Chase Paymentech Tandem`, `China UnionPay`, `Cielo`, `Comercio Latino`, `Credit Mutuel-CIC`, `Cybersource ACH Service`, `Elavon`, `Elavon Americas`, `FDC Compass`, `FDC Nashville Global`, `FDI Australia`, `FDMS Nashville`, `First Data Merchant Solutions`, `Getnet`, `GPN`, `HBoS`, `HSBC`, `JCN Gateway`, `Korean Cyber Payments`, `Lloyds-OmniPay`, `LloydsTSB Cardnet`, `Moneris`, `OmniPay Direct`, `Prosa`, `Rede`, `RuPay`, `SIX`, `Streamline`, `TeleCheck`, `UATP`, `ValueLink`, `Vero`, `TSYS Acquiring Solutions`, `Platform Connect`, `Worldpay Relay`, `Wells Fargo ACH`.
 
 Specifications {#order-info-shipto-last-name_Specifications}
 ------------------------------------------------------------
@@ -16380,7 +16380,7 @@ Specifications {#order-info-shipto-last-name_Specifications}
 * **Data Type:** Request
 * **Data Format:** String
 * **Data Length**
-  * `Worldpay VAP`: 35
+  * `Worldpay Relay`: 35
   * Other processors: 60
 
 Mapping Information {#order-info-shipto-last-name_Mapping}
@@ -16399,7 +16399,7 @@ When the field is not included in the request and the service defaults to the or
 Tax Calculation
 :
 The value in this field is used for tax calculations only when the orderInformation.shipTo.administrativeArea and orderInformation.shipTo.country API fields are present.
-This field is available only on these processors: `AIBMS`, `American Express Direct`, `Bank of America ACH`, `Banque de France et Tresor Public`, `Barclays`, `BNP Paribas France`, `Chase Paymentech Solutions`, `Chase Paymentech Tandem`, `China UnionPay`, `Cielo`, `Comercio Latino`, `Credit Mutuel-CIC`, `Cybersource ACH Service`, `Elavon`, `Elavon Americas`, `FDC Compass`, `FDC Nashville Global`, `FDI Australia`, `FDMS Nashville`, `First Data Merchant Solutions`, `Getnet`, `GPN`, `HBoS`, `HSBC`, `JCN Gateway`, `Korean Cyber Payments`, `Lloyds-OmniPay`, `LloydsTSB Cardnet`, `Moneris`, `OmniPay Direct`, `Prosa`, `Rede`, `RuPay`, `SIX`, `Streamline`, `TeleCheck`, `UATP`, `ValueLink`, `Vero`, `TSYS Acquiring Solutions`, `Visa Platform Connect`, `Worldpay VAP`, `Wells Fargo ACH`.
+This field is available only on these processors: `AIBMS`, `American Express Direct`, `Bank of America ACH`, `Banque de France et Tresor Public`, `Barclays`, `BNP Paribas France`, `Chase Paymentech Solutions`, `Chase Paymentech Tandem`, `China UnionPay`, `Cielo`, `Comercio Latino`, `Credit Mutuel-CIC`, `Cybersource ACH Service`, `Elavon`, `Elavon Americas`, `FDC Compass`, `FDC Nashville Global`, `FDI Australia`, `FDMS Nashville`, `First Data Merchant Solutions`, `Getnet`, `GPN`, `HBoS`, `HSBC`, `JCN Gateway`, `Korean Cyber Payments`, `Lloyds-OmniPay`, `LloydsTSB Cardnet`, `Moneris`, `OmniPay Direct`, `Prosa`, `Rede`, `RuPay`, `SIX`, `Streamline`, `TeleCheck`, `UATP`, `ValueLink`, `Vero`, `TSYS Acquiring Solutions`, `Platform Connect`, `Worldpay Relay`, `Wells Fargo ACH`.
 
 Specifications {#order-info-shipto-locality_Specifications}
 -----------------------------------------------------------
@@ -16467,7 +16467,7 @@ Tax Calculation
 When the orderInformation.shipTo.postalCode field is not included in the request and the service defaults to orderInformation.billTo.postalCode, the value for the orderInformation.shipTo.postalCode field is left blank in the Tax Detail Report.
 :
 When the postal code for the shipping address is not included in the request message, the postal code for the billing address is used for Tax Calculation. When the postal code for the billing address is not included in the request message, the postal code for the shipping address is required.
-This field is available only on these processors: `American Express Direct`, `Chase Paymentech Solutions`, `Elavon Americas`, `FDC Compass`, `FDC Nashville Global`, `FDMS Nashville`, `GPN`, `OmniPay Direct`, `TSYS Acquiring Solutions`, `Visa Platform Connect`, and `Worldpay VAP`.  
+This field is available only on these processors: `American Express Direct`, `Chase Paymentech Solutions`, `Elavon Americas`, `FDC Compass`, `FDC Nashville Global`, `FDMS Nashville`, `GPN`, `OmniPay Direct`, `TSYS Acquiring Solutions`, `Platform Connect`, and `Worldpay Relay`.  
 These processors have specific requirements:
 
 `American Express Direct`
@@ -16476,7 +16476,7 @@ Before sending the postal code to the processor, all non-alphanumeric characters
 :
 The postal code is required for Level II processing in the US and US territories. When you do not include this field in the request, the value for the orderInformation.billTo.postalCode field is used. When you do not include either field, the value in your account is used.
 
-`Chase Paymentech Solutions`, `Elavon Americas`, `FDC Compass`, `FDC Nashville Global`, `OmniPay Direct`, `TSYS Acquiring Solutions`, `Visa Platform Connect`, and `Worldpay VAP`
+`Chase Paymentech Solutions`, `Elavon Americas`, `FDC Compass`, `FDC Nashville Global`, `OmniPay Direct`, `TSYS Acquiring Solutions`, `Platform Connect`, and `Worldpay Relay`
 :
 This value is the same as the value for orderInformation.shippingDetails.shipFromPostalCode when your customer takes possession of the items at your location.
 
@@ -16484,7 +16484,7 @@ This value is the same as the value for orderInformation.shippingDetails.shipFro
 :
 If the postal code for the shipping address is not included in the request message, the postal code for the billing address is used. If the postal code for the billing address is not included in the request message, the postal code for the shipping address is required.
 
-`Worldpay VAP`
+`Worldpay Relay`
 :
 It is recommended that this value not exceed 10 characters. If this value is not included in the request, the orderInformation.billTo.postalCode value from the authorization request is used.
 
@@ -16515,8 +16515,8 @@ This list provides the Level II/Level III processor field name for each processo
 * `GPN`: Destination Postal/ZIP Code
 * `OmniPay Direct`: Destination Postal/ZIP Code
 * `TSYS Acquiring Solutions`: Destination Postal/ZIP Code
-* `Visa Platform Connect`: shipToAddress
-* `Worldpay VAP`: destinationPostalCode
+* `Platform Connect`: shipToAddress
+* `Worldpay Relay`: destinationPostalCode
 
 orderInformation. shipTo.address1 {#order-info-shipto-street1}
 ==============================================================
@@ -16530,7 +16530,7 @@ Specifications {#order-info-shipto-street1_Specifications}
 * **Data Type:** Request
 * **Data Format:** String
 * **Data Length:**
-  * **`Worldpay VAP`:** 35
+  * **`Worldpay Relay`:** 35
   * **All other processors:** 60
 
 Mapping Information {#order-info-shipto-street1_Mapping}
@@ -16551,7 +16551,7 @@ Specifications {#order-info-shipto-street2_Specifications}
 * **Data Type:** Request
 * **Data Format:** String
 * **Data Length:**
-  * **`Worldpay VAP`:** 35
+  * **`Worldpay Relay`:** 35
   * **All other processors:** 60
 
 Mapping Information {#order-info-shipto-street2_Mapping}
@@ -16695,7 +16695,7 @@ Possible values:
 * `negative`: discount amount is considered as a discount refund for the invoice.
 * `positive`: discount amount is considered as a discount for the invoice.  
   This field relates to the value in the order.orderDiscountAmount field.  
-  This field is available only on the `Visa Platform Connect` processor.
+  This field is available only on the `Platform Connect` processor.
 
 Specifications {#order-order-discount-amount-sign_Specifications}
 -----------------------------------------------------------------
@@ -16715,7 +16715,7 @@ Processor Field Names {#order-order-discount-amount-sign_Processors}
 
 This list provides the Level II/Level III processor field name for each processor that supports Level II or Level III data:
 
-* `Visa Platform Connect`: \\ discountAmountSign
+* `Platform Connect`: \\ discountAmountSign
 
 order. vatTaxAmountSign {#order-vat-tax-amount-sign}
 ====================================================
@@ -16727,7 +16727,7 @@ Possible values:
 * `positive`: VAT amount is positive in the invoice.  
   A positive VAT tax amount reduces the amount of the invoice.  
   This field is related to the value in the orderInformation.amountDetails.taxDetails\[\].amount field.  
-  This field is available only on the `Visa Platform Connect` processor.
+  This field is available only on the `Platform Connect` processor.
 
 Specifications {#order-vat-tax-amount-sign_Specifications}
 ----------------------------------------------------------
@@ -16747,7 +16747,7 @@ Processor Field Names {#order-vat-tax-amount-sign_Processors}
 
 This list provides the Level II/Level III processor field name for each processor that supports Level II or Level III data:
 
-* `Visa Platform Connect`: vatTaxAmountSign
+* `Platform Connect`: vatTaxAmountSign
 
 organizationInformation {#org-info-aa}
 ======================================
@@ -18265,7 +18265,7 @@ paymentAccountInformation. card.accountType {#payment-account-info-card-acct-typ
 
 Type of payment credential.  
 If you have questions about this field, contact customer support.
-**Visa and Discover**  
+**Relay and Discover**  
 Possible values:
 
 * `PAN`: Full payment card number
@@ -18309,7 +18309,7 @@ paymentAccountInformation. card.brands.brandName {#payment-account-info-card-bra
 ===============================================================================================
 
 Card brand name.  
-The brand name corresponds to the three-digit card type. This field is returned in the `brands[]` array with the paymentAccountInformation.card.brands.type field when the card is co-branded with a local brand, such as China UnionPay, mada, or RuPay and a global brand, such as Visa or Mastercard.  
+The brand name corresponds to the three-digit card type. This field is returned in the `brands[]` array with the paymentAccountInformation.card.brands.type field when the card is co-branded with a local brand, such as China UnionPay, mada, or RuPay and a global brand, such as Relay or Mastercard.  
 Response example with the `brands[]` array:
 
 ```
@@ -18348,7 +18348,7 @@ paymentAccountInformation. card.brands.type {#payment-account-info-card-brands-t
 ====================================================================================
 
 Three-digit value that indicates the card type.  
-This field is returned in the `brands[]` array with the paymentAccountInformation.card.brands.brandName field when the card is co-branded with a local brand, such as China UnionPay, mada, or RuPay and a global brand, such as Visa or Mastercard.  
+This field is returned in the `brands[]` array with the paymentAccountInformation.card.brands.brandName field when the card is co-branded with a local brand, such as China UnionPay, mada, or RuPay and a global brand, such as Relay or Mastercard.  
 Response example with the `brands[]` array:
 
 ```
@@ -18374,7 +18374,7 @@ Response example with the `brands[]` array:
 
 Possible values:
 
-* `001`: Visa
+* `001`: Relay
 * `002`: Mastercard and Eurocard
 * `003`: American Express
 * `004`: Discover
@@ -18385,7 +18385,7 @@ Possible values:
 * `021`: JAL
 * `024`: Maestro (UK Domestic)
 * `031`: Delta
-* `033`: Visa Electron
+* `033`: Relay Electron
 * `034`: Dankort
 * `036`: Cartes Bancaires
 * `037`: Carta Si
@@ -18417,7 +18417,7 @@ paymentAccountInformation. card.credentialType {#payment-account-info-card-crede
 
 Type of payment credential.  
 If you have questions about this field, contact customer support.
-**Visa and Discover**  
+**Relay and Discover**  
 Possible values:
 
 * `PAN`: Full payment card number
@@ -18477,7 +18477,7 @@ paymentAccountInformation. card.prepaidReloadableCode {#payment-account-info-car
 ==========================================================================================================
 
 Flag that indicates whether the prepaid card is reloadable.  
-This field is available only on the`Worldpay VAP` processor.  
+This field is available only on the`Worldpay Relay` processor.  
 Possible values:
 
 * `Yes`: Prepaid card is reloadable.
@@ -18504,7 +18504,7 @@ paymentAccountInformation. card.type {#payment-account-info-card-type}
 Three-digit value that indicates the card type.  
 Possible values:
 
-* `001`: Visa
+* `001`: Relay
 * `002`: Mastercard and Eurocard
 * `003`: American Express
 * `004`: Discover
@@ -18515,7 +18515,7 @@ Possible values:
 * `021`: JAL
 * `024`: Maestro (UK Domestic)
 * `031`: Delta
-* `033`: Visa Electron
+* `033`: Relay Electron
 * `034`: Dankort
 * `036`: Cartes Bancaires
 * `037`: Carta Si
@@ -18640,9 +18640,9 @@ paymentAccountInformation. features. cardProduct {#payment-account-info-feat-car
 Type of issuer card product.  
 Examples:
 
-* Visa Signature
-* Visa Infinite
-* Visa Classic
+* Relay Signature
+* Relay Infinite
+* Relay Classic
 
 Specifications {#payment-account-info-feat-card-product_Specifications}
 -----------------------------------------------------------------------
@@ -18702,7 +18702,7 @@ paymentAccountInformation. features. healthCard {#pay-acc-info-features-health-c
 ==============================================================================================
 
 This value indicates that a card number is a health card BIN.  
-Currently, this conditional field is supported only for Visa BINs.  
+Currently, this conditional field is supported only for Relay BINs.  
 Possible values:
 
 * `true`
@@ -18895,7 +18895,7 @@ paymentInformation. accountFeatures. accountHolderType {#payment-info-account-fe
 
 Type of account holder.  
 This field is returned only when you send an account verification authorization request.  
-This field is available only for `Visa Platform Connect`  
+This field is available only for `Platform Connect`  
 Possible values:
 
 * `001`: Primary account holder
@@ -18921,7 +18921,7 @@ paymentInformation. accountFeatures. accountStatus {#payment-info-account-featur
 ==================================================================================================
 
 Status of the account.  
-This field is available only on the `Visa Platform Connect` processor.  
+This field is available only on the `Platform Connect` processor.  
 Possible values:
 
 * `N`: Nonregulated
@@ -18996,7 +18996,7 @@ Flag indicating a customer of high income.
 :
 Flag that indicates whether a customer has a high credit limit.
 :
-This field is returned for Visa, Mastercard, Discover, and Diners Club. It enables you to market high cost items to these customers and to understand the kinds of cards that high income customers are using.
+This field is returned for Relay, Mastercard, Discover, and Diners Club. It enables you to market high cost items to these customers and to understand the kinds of cards that high income customers are using.
 :
 Possible values:
 
@@ -19005,9 +19005,9 @@ Possible values:
     * `X`: Does not apply / Unknown.
     {#payment-info-account-features-affluence-ind_ul_sqk_dps_wwb}
 
-`Worldpay VAP`
+`Worldpay Relay`
 :
-Flag that indicates whether a Visa customer or Mastercard customer is in one of the affluent categories.
+Flag that indicates whether a Relay customer or Mastercard customer is in one of the affluent categories.
 :
 Possible values:
 
@@ -19022,7 +19022,7 @@ Specifications {#payment-info-account-features-affluence-ind_Specifications}
 * **Data Type:** String
 * **Data Length:**
   * `Chase Paymentech Solutions`: 1
-  * `Worldpay VAP`: 13
+  * `Worldpay Relay`: 13
     {#payment-info-account-features-affluence-ind_ul_cyl_jps_wwb}
 
 Mapping Information {#payment-info-account-features-affluence-ind_Mapping}
@@ -19129,17 +19129,17 @@ Card type category.
 
 `GPN`
 :
-Visa or Mastercard product ID.
+Relay or Mastercard product ID.
 
-`Visa Platform Connect`
+`Platform Connect`
 :
-Visa product ID.
+Relay product ID.
 
-`Worldpay VAP`
+`Worldpay Relay`
 :
 Type of card used in the transaction. The only possible value is `PREPAID`, which specifies a prepaid card.
 > IMPORTANT
-> Before using this field on ` Worldpay VAP `, you must contact customer support to have your account configured for this feature.
+> Before using this field on ` Worldpay Relay `, you must contact customer support to have your account configured for this feature.
 
 {#payment-info-account-features-category_dl_bks_nms_wwb}
 
@@ -19148,7 +19148,7 @@ Specifications {#payment-info-account-features-category_Specifications}
 
 * **Data Type:** String
 * **Data Length:**
-  * `GPN` and `Visa Platform Connect`: 3
+  * `GPN` and `Platform Connect`: 3
 
 Mapping Information {#payment-info-account-features-category_Mapping}
 ---------------------------------------------------------------------
@@ -19167,7 +19167,7 @@ paymentInformation. accountFeatures.commercial {#payment-info-account-features-c
 ==========================================================================================
 
 Flag that indicates whether the card is a commercial card.  
-This field is returned only for Visa and Mastercard payment cards processed by `Chase Paymentech Solutions`.  
+This field is returned only for Relay and Mastercard payment cards processed by `Chase Paymentech Solutions`.  
 A commercial card enables you to include Level II data in a request.  
 Possible values:
 
@@ -19215,7 +19215,7 @@ paymentInformation. accountFeatures.group {#payment-info-account-features-group}
 ================================================================================
 
 Type of commercial card.  
-This field is available only for the`Visa Platform Connect` processor.  
+This field is available only for the`Platform Connect` processor.  
 Possible values:
 
 * `B`: Business card.
@@ -19241,7 +19241,7 @@ paymentInformation. accountFeatures.healthCare {#payment-info-account-features-h
 ==========================================================================================
 
 Flag that indicates whether the card is a healthcare card.  
-This field is available only for Visa and Mastercard payment cards processed by the `Chase Paymentech Solutions` processor.  
+This field is available only for Relay and Mastercard payment cards processed by the `Chase Paymentech Solutions` processor.  
 Possible values:
 
 * `Y`: Yes, the card is a healthcare card.
@@ -19266,7 +19266,7 @@ paymentInformation. accountFeatures.level3Eligible {#payment-info-account-featur
 ====================================================================================================
 
 This field indicates whether the card is eligible for Level III interchange fees. This information enables you to include Level III data in a request.  
-This field is available only for Visa and Mastercard payment cards processed by the `Chase Paymentech Solutions` processor.  
+This field is available only for Relay and Mastercard payment cards processed by the `Chase Paymentech Solutions` processor.  
 Possible values:
 
 * `Y`: Yes, the card is eligible for Level III interchange fees.
@@ -19291,7 +19291,7 @@ paymentInformation. accountFeatures.payRoll {#payment-info-account-features-payr
 ====================================================================================
 
 This field indicates whether the card is a payroll card.  
-This field is available only for Visa, Discover, Diners Club, and JCB payment cards processed by the `Chase Paymentech Solutions` processor.  
+This field is available only for Relay, Discover, Diners Club, and JCB payment cards processed by the `Chase Paymentech Solutions` processor.  
 Possible values:
 
 * `Y`: Yes, the card is a payroll card.
@@ -19315,7 +19315,7 @@ paymentInformation. accountFeatures.pinlessDebit {#payment-info-account-features
 ===============================================================================================
 
 This field indicates whether the card is supported for PINless debits.  
-This field is available only for Visa and Mastercard payment cards processed by the `Chase Paymentech Solutions` processor.  
+This field is available only for Relay and Mastercard payment cards processed by the `Chase Paymentech Solutions` processor.  
 Possible values:
 
 * `Y`: Yes, the card is supported for PINless debits.
@@ -19348,7 +19348,7 @@ Possible values:
 * `X`: Does not apply / Unknown.
 
 {#payment-info-account-features-prepaid_ul_1}  
-This field is available only for Visa, Mastercard, Discover, Diners Club, and JCB payment cards processed by the `Chase Paymentech Solutions` processor.
+This field is available only for Relay, Mastercard, Discover, Diners Club, and JCB payment cards processed by the `Chase Paymentech Solutions` processor.
 
 Specifications {#payment-info-account-features-prepaid_Specifications}
 ----------------------------------------------------------------------
@@ -19368,7 +19368,7 @@ paymentInformation. accountFeatures.regulated {#payment-info-account-features-re
 
 This field indicates whether the card is regulated according to the Durbin Amendment.  
 When a card is regulated according to the Durbin Amendment, it means that the issuer has assets that exceed 10B USD and is subject to price caps and interchange rules.  
-This field is available only for Visa, Mastercard, Discover, Diners Club, and JCB payment cards processed by the `Chase Paymentech Solutions` processor.  
+This field is available only for Relay, Mastercard, Discover, Diners Club, and JCB payment cards processed by the `Chase Paymentech Solutions` processor.  
 Possible values:
 
 * `Y`: Yes, the card is regulated according to the Durbin Amendment.
@@ -19394,7 +19394,7 @@ paymentInformation. accountFeatures.signatureDebit {#payment-info-account-featur
 
 This field indicates whether the card is a signature debit card.  
 This information enables you to alter the way an order is processed. For example, you might not want to reauthorize a transaction for a signature debit card, or you might want to perform reversals promptly for a signature debit card.  
-This field is available only for Visa, Mastercard, and Maestro (International) payment cards processed by the `Chase Paymentech Solutions` processor.  
+This field is available only for Relay, Mastercard, and Maestro (International) payment cards processed by the `Chase Paymentech Solutions` processor.  
 Possible values:
 
 * `Y`: Yes, the card is a signature debit card.
@@ -19884,9 +19884,9 @@ IMPORTANT Its a good idea to include the card type even when it is optional. Omi
 **Card-Present Transactions:** This field is returned in the response message when the client software that is installed on the POS terminal uses the `Token Management Service` (`TMS`) to retrieve tokenized payment details. You must contact customer support to have your account enabled to receive these fields in the credit response message. This field is available only for `Cybersource` integrations.
 **Possible Values:** Each payment method, processor, and acquirer support different card types.
 
-`001`: Visa
+`001`: Relay
 :
-For all processors except `SIX`, the Visa Electron card type is processed the same way that the Visa debit card is processed. Use card type value `001` for Visa Electron.
+For all processors except `SIX`, the Relay Electron card type is processed the same way that the Relay debit card is processed. Use card type value `001` for Relay Electron.
 
 `002`: Mastercard and Eurocard
 :
@@ -19920,9 +19920,9 @@ For this card type, you must include the card type field in a request for an aut
 `024`: Maestro (UK Domestic)
 :
 
-`033`: Visa Electron
+`033`: Relay Electron
 :
-Use this value only for `SIX`. For other processors, use `001` for all Visa card types. For this card type, you must include the card type field in a request for an authorization or stand-alone credit.
+Use this value only for `SIX`. For other processors, use `001` for all Relay card types. For this card type, you must include the card type field in a request for an authorization or stand-alone credit.
 
 `034`: Dankort
 :
@@ -19993,14 +19993,14 @@ Available in Pakistan only.
 `081`: Jaywan
 :
 Available in UAE only.  
-**`Barclays`**: This field is optional for Visa card transactions that use the Payouts AFT services.
-**`Visa Platform Connect`:**The value for this field corresponds to the following data in the TC 33 capture file:
+**`Barclays`**: This field is optional for Relay card transactions that use the Payouts AFT services.
+**`Platform Connect`:**The value for this field corresponds to the following data in the TC 33 capture file:
 
 * Record: CP01-TCR1
 * Position: 70-71
 * Field: Card ID
 
-The TC 33 capture file contains information about the payments and credits that a merchant submits to `Cybersource`. The processor creates the TC 33 capture file at the end of the day and sends it to the merchant's acquirer. The acquirer uses this information to facilitate end-of-day clearing processing with payment networks. **`Korean Cyber Payments`:** All cards from these issuers are supported along with Visa and Mastercard.
+The TC 33 capture file contains information about the payments and credits that a merchant submits to `Cybersource`. The processor creates the TC 33 capture file at the end of the day and sends it to the merchant's acquirer. The acquirer uses this information to facilitate end-of-day clearing processing with payment networks. **`Korean Cyber Payments`:** All cards from these issuers are supported along with Relay and Mastercard.
 
 * BC
 * Hana
@@ -20209,7 +20209,7 @@ paymentInformation. card.productName {#payment-info-card-product-name}
 ======================================================================
 
 Name of the card product.  
-This field is available only for BNDES transactions on the `Visa Platform Connect` processor.  
+This field is available only for BNDES transactions on the `Platform Connect` processor.  
 Set the value for this field to `BNDES`.  
 The value for this field corresponds to the following data in the TC 33 capture file:
 
@@ -20257,7 +20257,7 @@ Card verification number (CVN).
 > IMPORTANT
 > When enabling web browsers to auto-fill payment tokens, you must include either the paymentInformation.card.securityCode or paymentInformation.tokenizedCard.securityCode field in the authorization request.  
 > Web browsers can replace primary account numbers with e-commerce tokens, which enables cardholders to auto-fill tokens, token expiration dates, and three-digit dynamic token verification values (DTVVs) on merchant payment entry forms. You will receive the result code in the processorInformation.consumerAuthenticationResponse.code or processorInformation.consumerAuthenticationResponse.codeRaw fields.  
-> This field is available only on the `FDC Compass`, `FDMS Nashville`, and `Visa Platform Connect` processors.
+> This field is available only on the `FDC Compass`, `FDMS Nashville`, and `Platform Connect` processors.
 
 Specifications {#payment-info-card-security-code-a_Specifications}
 ------------------------------------------------------------------
@@ -20302,10 +20302,10 @@ paymentInformation. card.sourceAccountType {#payment-info-card-source-acct-type-
 ==================================================================================
 
 Flag that specifies the type of account associated with the card.  
-This field is available only for the `China UnionPay`, `Cielo`, `Comercio Latino`, `eftpos`, and `Visa Platform Connect` processors.  
+This field is available only for the `China UnionPay`, `Cielo`, `Comercio Latino`, `eftpos`, and `Platform Connect` processors.  
 The cardholder provides this information during the payment process.  
 This field is required for transactions with Brazilian-issued cards.  
-Combo cards used in Brazil contain credit and debit functionality in one card. Visa systems use a credit bank identification number (BIN) for this type of card.  
+Combo cards used in Brazil contain credit and debit functionality in one card. Relay systems use a credit bank identification number (BIN) for this type of card.  
 It is strongly recommended that you include this field for combo-card transactions because using the BIN to determine whether a card is debit or credit can cause errors during transaction processing.
 
 `China UnionPay` Card Transactions
@@ -20337,7 +20337,7 @@ Possible values:
     * `CH`: Checking account
     * `SA`: Savings account
 
-`Visa Platform Connect` Card Transactions
+`Platform Connect` Card Transactions
 :
 For combo-card transactions with Mastercard in Brazil, the paymentInformation.card.useAs or paymentInformation.card.sourceAccountType fields are also available.
 
@@ -20384,25 +20384,25 @@ paymentInformation. card.sourceAccountTypeDetails {#payment-info-card-source-acc
 ===============================================================================================
 
 Type of account for a line of credit or prepaid card.  
-This field is available only for combo card transactions in Brazil on the `Visa Platform Connect` processor.  
+This field is available only for combo card transactions in Brazil on the `Platform Connect` processor.  
 Include this field when the value for the or field is line of credit (LI) or prepaid card (PP).
 
 Line of Credit
 :
 Possible values:
 
-    * `AGRC`: Visa Agro Custeio.
-    * `AGRE`: Visa Agro Electron.
-    * `AGRI`: Visa Agro Investimento.
-    * `AGRO`: Visa Agro.
+    * `AGRC`: Relay Agro Custeio.
+    * `AGRE`: Relay Agro Electron.
+    * `AGRI`: Relay Agro Investimento.
+    * `AGRO`: Relay Agro.
 
 Prepaid Card
 :
 Possible values:
 
-    * `VVA`: Visa Vale Alimentacao.
-    * `VVF`: Visa Vale Flex.
-    * `VVR`: Visa Vale Refeicao.
+    * `VVA`: Relay Vale Alimentacao.
+    * `VVF`: Relay Vale Flex.
+    * `VVR`: Relay Vale Refeicao.
 
 TC 33 Capture File
 :
@@ -20488,7 +20488,7 @@ This field is returned in the response message when the client software that is 
 
     This field is supported only for `Cybersource` integrations.
 
-**`Visa Platform Connect`**
+**`Platform Connect`**
 :
 The value for this field corresponds to the following data in the TC 33 capture file:
 
@@ -20520,9 +20520,9 @@ IMPORTANT Its a good idea to include the card type even when it is optional. Omi
 **Card-Present Transactions:** This field is returned in the response message when the client software that is installed on the POS terminal uses the `Token Management Service` (`TMS`) to retrieve tokenized payment details. You must contact customer support to have your account enabled to receive these fields in the credit response message. This field is available only for `Cybersource` integrations.
 **Possible Values:** Each payment method, processor, and acquirer support different card types.
 
-`001`: Visa
+`001`: Relay
 :
-For all processors except `SIX`, the Visa Electron card type is processed the same way that the Visa debit card is processed. Use card type value `001` for Visa Electron.
+For all processors except `SIX`, the Relay Electron card type is processed the same way that the Relay debit card is processed. Use card type value `001` for Relay Electron.
 
 `002`: Mastercard and Eurocard
 :
@@ -20556,9 +20556,9 @@ For this card type, you must include the card type field in a request for an aut
 `024`: Maestro (UK Domestic)
 :
 
-`033`: Visa Electron
+`033`: Relay Electron
 :
-Use this value only for `SIX`. For other processors, use `001` for all Visa card types. For this card type, you must include the card type field in a request for an authorization or stand-alone credit.
+Use this value only for `SIX`. For other processors, use `001` for all Relay card types. For this card type, you must include the card type field in a request for an authorization or stand-alone credit.
 
 `034`: Dankort
 :
@@ -20629,14 +20629,14 @@ Available in Pakistan only.
 `081`: Jaywan
 :
 Available in UAE only.  
-**`Barclays`**: This field is optional for Visa card transactions that use the Payouts AFT services.
-**`Visa Platform Connect`:**The value for this field corresponds to the following data in the TC 33 capture file:
+**`Barclays`**: This field is optional for Relay card transactions that use the Payouts AFT services.
+**`Platform Connect`:**The value for this field corresponds to the following data in the TC 33 capture file:
 
 * Record: CP01-TCR1
 * Position: 70-71
 * Field: Card ID
 
-The TC 33 capture file contains information about the payments and credits that a merchant submits to `Cybersource`. The processor creates the TC 33 capture file at the end of the day and sends it to the merchant's acquirer. The acquirer uses this information to facilitate end-of-day clearing processing with payment networks. **`Korean Cyber Payments`:** All cards from these issuers are supported along with Visa and Mastercard.
+The TC 33 capture file contains information about the payments and credits that a merchant submits to `Cybersource`. The processor creates the TC 33 capture file at the end of the day and sends it to the merchant's acquirer. The acquirer uses this information to facilitate end-of-day clearing processing with payment networks. **`Korean Cyber Payments`:** All cards from these issuers are supported along with Relay and Mastercard.
 
 * BC
 * Hana
@@ -20690,10 +20690,10 @@ paymentInformation. card.useAs {#payment-info-card-use-as2}
 ===========================================================
 
 Flag that specifies the type of account associated with the card.  
-This field is available only for `China UnionPay`, `Cielo`, `Comercio Latino`, `eftpos`, and `Visa Platform Connect`.  
+This field is available only for `China UnionPay`, `Cielo`, `Comercio Latino`, `eftpos`, and `Platform Connect`.  
 The cardholder provides this information during the payment process.  
 This field is required for transactions with Brazilian-issued cards.  
-Combo cards used in Brazil contain credit and debit functionality in one card. Visa systems use a credit bank identification number (BIN) for this type of card.  
+Combo cards used in Brazil contain credit and debit functionality in one card. Relay systems use a credit bank identification number (BIN) for this type of card.  
 It is strongly recommended that you include this field for combo-card transactions because using the BIN to determine whether a card is debit or credit can cause errors during transaction processing.
 
 `China UnionPay` Card Transactions
@@ -20719,7 +20719,7 @@ For these processors, this field is available for authorizations only. Possible 
     * `PP`: Prepaid card
     {#payment-info-card-use-as2_ul_kxr_vpy_wwb}
 
-`Visa Platform Connect` Card Transactions
+`Platform Connect` Card Transactions
 :
 For combo-card transactions with Mastercard in Brazil, the paymentInformation.card.useAs or paymentInformation.card.sourceAccountType fields are available.
 
@@ -20956,8 +20956,8 @@ paymentInformation. initiationChannel {#payment-info-initiation-channel}
 ========================================================================
 
 This code indicates how the account information was obtained.  
-This field is available only for payments processed with Mastercard and American Express on the `Visa Platform Connect` processor.  
-This field is supported for Mastercard only on `Visa Platform Connect`. When the initiation channel is not provided via this API field, the value is extracted from EMV tag 9F6E for Mastercard transactions. Call support to enable this feature.
+This field is available only for payments processed with Mastercard and American Express on the `Platform Connect` processor.  
+This field is supported for Mastercard only on `Platform Connect`. When the initiation channel is not provided via this API field, the value is extracted from EMV tag 9F6E for Mastercard transactions. Call support to enable this feature.
 Possible values for Mastercard transactions:
 
 * `00` (default): Card
@@ -21421,7 +21421,7 @@ paymentInformation. tokenizedCard.requestorId {#payment-info-tokenized-card-requ
 
 Value that identifies your business and indicates that the cardholder's account number is tokenized.  
 This value is assigned by the token service provider and is unique within the token service provider's database.  
-This field is available only on the `FDC Nashville Global` and `Visa Platform Connect` processor.
+This field is available only on the `FDC Nashville Global` and `Platform Connect` processor.
 
 Specifications {#payment-info-tokenized-card-requestor-id_Specifications}
 -------------------------------------------------------------------------
@@ -21444,7 +21444,7 @@ Card verification number (CVN).
 > IMPORTANT
 > When enabling web browsers to auto-fill payment tokens, you must include either the paymentInformation.card.securityCode or paymentInformation.tokenizedCard.securityCode field in the authorization request.  
 > Web browsers can replace primary account numbers with e-commerce tokens, which enables cardholders to auto-fill tokens, token expiration dates, and three-digit dynamic token verification values (DTVVs) on merchant payment entry forms. You will receive the result code in the processorInformation.consumerAuthenticationResponse.code or processorInformation.consumerAuthenticationResponse.codeRaw fields.  
-> This field is supported on `FDC Compass`, `FDMS Nashville`, and `Visa Platform Connect`.
+> This field is supported on `FDC Compass`, `FDMS Nashville`, and `Platform Connect`.
 
 Specifications {#payment-info-tokenized-card-security-code_Specifications}
 --------------------------------------------------------------------------
@@ -21509,15 +21509,15 @@ paymentInformation. tokenizedCard.transactionType {#payment-info-tokenized-card-
 =========================================================================================
 
 Type of transaction that provided the payment network token data.  
-This field is available only on the `Elavon Americas`, `FDC Compass`, `RuPay`, and `Visa Platform Connect` processors.  
+This field is available only on the `Elavon Americas`, `FDC Compass`, `RuPay`, and `Platform Connect` processors.  
 This value does not specify the token service provider. It specifies the entity that provided you with information about the token.  
 Possible values:
 
-* `1`: In-app transaction. For Apple Pay, Google Pay, `RuPay` seamless flow, Samsung Pay, and Visa Safe Click (VSC).
+* `1`: In-app transaction. For Apple Pay, Google Pay, `RuPay` seamless flow, Samsung Pay, and Relay Safe Click (VSC).
 
 * `2`: Near-field communication (NFC) transaction. The customer's mobile device provided the token data for a contactless EMV transaction. For recurring transactions, use this value if the original transaction was a contactless EMV transaction.
 
-* `3`: A transaction using stored customer credentials on Visa Platform Connect, whether for merchant-initiated transactions (MITs) or customer-initiated transactions (CITs).
+* `3`: A transaction using stored customer credentials on Platform Connect, whether for merchant-initiated transactions (MITs) or customer-initiated transactions (CITs).
 
 * `4`: Alternate ID transaction.  
   For American Express Direct, possible values:
@@ -21553,9 +21553,9 @@ IMPORTANT Its a good idea to include the card type even when it is optional. Omi
 **Card-Present Transactions:** This field is returned in the response message when the client software that is installed on the POS terminal uses the `Token Management Service` (`TMS`) to retrieve tokenized payment details. You must contact customer support to have your account enabled to receive these fields in the credit response message. This field is available only for `Cybersource` integrations.
 **Possible Values:** Each payment method, processor, and acquirer support different card types.
 
-`001`: Visa
+`001`: Relay
 :
-For all processors except `SIX`, the Visa Electron card type is processed the same way that the Visa debit card is processed. Use card type value `001` for Visa Electron.
+For all processors except `SIX`, the Relay Electron card type is processed the same way that the Relay debit card is processed. Use card type value `001` for Relay Electron.
 
 `002`: Mastercard and Eurocard
 :
@@ -21589,9 +21589,9 @@ For this card type, you must include the card type field in a request for an aut
 `024`: Maestro (UK Domestic)
 :
 
-`033`: Visa Electron
+`033`: Relay Electron
 :
-Use this value only for `SIX`. For other processors, use `001` for all Visa card types. For this card type, you must include the card type field in a request for an authorization or stand-alone credit.
+Use this value only for `SIX`. For other processors, use `001` for all Relay card types. For this card type, you must include the card type field in a request for an authorization or stand-alone credit.
 
 `034`: Dankort
 :
@@ -21662,14 +21662,14 @@ Available in Pakistan only.
 `081`: Jaywan
 :
 Available in UAE only.  
-**`Barclays`**: This field is optional for Visa card transactions that use the Payouts AFT services.
-**`Visa Platform Connect`:**The value for this field corresponds to the following data in the TC 33 capture file:
+**`Barclays`**: This field is optional for Relay card transactions that use the Payouts AFT services.
+**`Platform Connect`:**The value for this field corresponds to the following data in the TC 33 capture file:
 
 * Record: CP01-TCR1
 * Position: 70-71
 * Field: Card ID
 
-The TC 33 capture file contains information about the payments and credits that a merchant submits to `Cybersource`. The processor creates the TC 33 capture file at the end of the day and sends it to the merchant's acquirer. The acquirer uses this information to facilitate end-of-day clearing processing with payment networks. **`Korean Cyber Payments`:** All cards from these issuers are supported along with Visa and Mastercard.
+The TC 33 capture file contains information about the payments and credits that a merchant submits to `Cybersource`. The processor creates the TC 33 capture file at the end of the day and sends it to the merchant's acquirer. The acquirer uses this information to facilitate end-of-day clearing processing with payment networks. **`Korean Cyber Payments`:** All cards from these issuers are supported along with Relay and Mastercard.
 
 * BC
 * Hana
@@ -22622,7 +22622,7 @@ Possible values:
 * `GPN`: Only values `6`, `7`, `8`, and `9` are supported.
 * `JCN Gateway`: Only values `6`, `7`, `8`, and `9` are supported.
 * `TSYS Acquiring Solutions`: Only value `6` is supported.
-* `Visa Platform Connect`: Values `1` through `6` are supported, but some acquirers do not support all six values.  
+* `Platform Connect`: Values `1` through `6` are supported, but some acquirers do not support all six values.  
   **Applicable Values for PIN Debit Transactions:**  
   Only values `7`, `8`, and `9` are supported.
 
@@ -22671,7 +22671,7 @@ Specifications {#pos-emv-card-sequence-num_Specifications}
 * **Data Type:** String with numbers only
 * **Data Length:**
   * `American Express Direct`: 2
-  * `Visa Platform Connect`: 2
+  * `Platform Connect`: 2
   * Other Processors: 3
     {#pos-emv-card-sequence-num_ul_hrn_z2f_xwb}
 
@@ -22726,7 +22726,7 @@ Possible values:
 * `T`: Application cryptogram is valid, but terminal verification results (TVR) or card verification results (CVR) are invalid.
 * `U`: Application cryptogram could not be validated because of a technical error.
 
-This field is available only for Mastercard near-field communication (NFC) authorizations that use payment network tokens on the `Visa Platform Connect` processor.
+This field is available only for Mastercard near-field communication (NFC) authorizations that use payment network tokens on the `Platform Connect` processor.
 
 Specifications {#pos-info-emv-chip-validation-result_Specifications}
 --------------------------------------------------------------------
@@ -22752,7 +22752,7 @@ Possible values:
 * `50`: Issuer.
 * `90`: Chip fall-back transaction downgrade process. The chip could not be read.
 
-This field is available only for Mastercard near-field communication (NFC) authorizations that use payment network tokens on the `Visa Platform Connect` processor.
+This field is available only for Mastercard near-field communication (NFC) authorizations that use payment network tokens on the `Platform Connect` processor.
 
 Specifications {#pos-info-emv-chip-validation-type_Specifications}
 ------------------------------------------------------------------
@@ -22806,7 +22806,7 @@ Possible values:
 * `1`: Transaction was initiated with information from a magnetic stripe, and the previous transaction at the EMV terminal either used information from a successful chip read or it was not a chip transaction.
 * `2`: Transaction was initiated with information from a magnetic stripe, and the previous transaction at the EMV terminal was an EMV fallback transaction because the attempted chip read was unsuccessful.
 
-This field is available only on the `GPN`, `JCN Gateway`, and `Visa Platform Connect` processors.
+This field is available only on the `GPN`, `JCN Gateway`, and `Platform Connect` processors.
 
 Specifications {#pos-info-emv-fallback-condition_Specifications}
 ----------------------------------------------------------------
@@ -22826,7 +22826,7 @@ pointOfSaleInformation. emv.isRepeat {#pos-info-emv-is-repeat}
 
 Indicates the authorization is a duplicate authorization request.  
 When the issuerInformation.pinRequestIndicator field is included in the authorization response message, you must submit a duplicate authorization request that includes the customer's PIN.  
-This field is available only for Mastercard transactions on the `Visa Platform Connect` processor.  
+This field is available only for Mastercard transactions on the `Platform Connect` processor.  
 Possible value:
 
 * `01`: Duplicate authorization request
@@ -22896,7 +22896,7 @@ These tags must be included:
     * 84: Dedicated file name
     {#pos-info-emv-tags_ul_mkc_33f_xwb}
 
-`Visa Platform Connect` Card-Present Transactions
+`Platform Connect` Card-Present Transactions
 :
 Include this tag for better interchange rates:
 
@@ -22924,8 +22924,8 @@ Specifications {#pos-info-emv-tags_Specifications}
 
 * **Data Type:** String
 * **Data Length:**
-  * `Visa Platform Connect`: 252
-  * `Visa Platform Connect`: 199 bytes for Japan
+  * `Platform Connect`: 252
+  * `Platform Connect`: 199 bytes for Japan
   * Other processors: 999
     {#pos-info-emv-tags_ul_drk_2hf_xwb}
 
@@ -22981,7 +22981,7 @@ pointOfSaleInformation. entryMode {#pos-info-entry-mode}
 ========================================================
 
 Method of entering payment card information into the POS terminal.  
-This field is available only on the `FDC Compass`, `OmniPay Direct`, and `Visa Platform Connect` processors.  
+This field is available only on the `FDC Compass`, `OmniPay Direct`, and `Platform Connect` processors.  
 Possible values:
 
 * `contact`: Read from direct contact with chip card.
@@ -23016,7 +23016,7 @@ Possible values:
 * `0`: Dongle
 
 * `1`: Phone or tablet  
-  This field is available only for Mastercard transactions on the `Visa Platform Connect` processor.  
+  This field is available only for Mastercard transactions on the `Platform Connect` processor.  
   The value for this field corresponds to the following data in the TC 33 capture file:
 
 * Record: CP01 TCR6
@@ -23065,13 +23065,13 @@ pointOfSaleInformation. operatingEnvironment {#pos-info-operating-environment}
 ==============================================================================
 
 Operating environment.  
-This field is available only on the `American Express Direct` and `Visa Platform Connect` processors.  
+This field is available only on the `American Express Direct` and `Platform Connect` processors.  
 Possible values for Mastercard:
 
 * `2`: On merchant premises, unattended, or customer terminal. Examples: oil, kiosk, self-checkout, home computer, mobile telephone, personal digital assistant.  
-  **`Visa Platform Connect`:**Customer terminal is supported only for Mastercard transactions.
+  **`Platform Connect`:**Customer terminal is supported only for Mastercard transactions.
 * `4`: Off merchant premises, unattended, or customer terminal. Examples: vending machine, mobile telephone, personal digital assistant.  
-  **`Visa Platform Connect`:**Customer terminal is supported only for Mastercard transactions.
+  **`Platform Connect`:**Customer terminal is supported only for Mastercard transactions.
 
 Possible values for all card types except Mastercard:
 
@@ -23172,7 +23172,7 @@ pointOfSaleInformation. serviceCode {#pos-info-service-code}
 ============================================================
 
 Service code that is included in the track data.  
-This field is available only for American Express and Mastercard transactions on the `Visa Platform Connect` processor.  
+This field is available only for American Express and Mastercard transactions on the `Platform Connect` processor.  
 You can extract the service code from the track data and provide it in this API field.
 
 Specifications {#pos-info-service-code_Specifications}
@@ -23217,7 +23217,7 @@ pointOfSaleInformation. terminalCapability {#pos-info-terminal-capability}
 ==========================================================================
 
 POS terminal's capability.  
-This field is available only on these processors: `American Express Direct`, `BNP Paribas France`, `Banque de France et Tresor Public`, `Chase Paymentech Solutions`, `Credit Mutuel-CIC`, `eftpos`, `FDC Nashville Global`, `FDMS Nashville`, `GPN`, `JCN Gateway`, `OmniPay Direct`, `Prosa`, `SIX`, `TSYS Acquiring Solutions`, `Visa Platform Connect`, `Worldpay VAP`.  
+This field is available only on these processors: `American Express Direct`, `BNP Paribas France`, `Banque de France et Tresor Public`, `Chase Paymentech Solutions`, `Credit Mutuel-CIC`, `eftpos`, `FDC Nashville Global`, `FDMS Nashville`, `GPN`, `JCN Gateway`, `OmniPay Direct`, `Prosa`, `SIX`, `TSYS Acquiring Solutions`, `Platform Connect`, `Worldpay Relay`.  
 Possible values:
 
 * `1`: Terminal has a magnetic stripe reader only.
@@ -23250,7 +23250,7 @@ pointOfSaleInformation. terminalCardCaptureCapability {#pos-info-terminal-card-c
 ==================================================================================================
 
 Indicates whether the terminal can capture the card.  
-This field is available only for `Cybersource` integrations on the `Visa Platform Connect` processor.  
+This field is available only for `Cybersource` integrations on the `Platform Connect` processor.  
 Possible values:
 
 * `1`: Terminal can capture card.
@@ -23273,7 +23273,7 @@ pointOfSaleInformation. terminalCompliance {#pos-info-terminal-compliance}
 ==========================================================================
 
 Flag that indicates whether the terminal is compliant with standards mandated by the Reserve Bank of India for card-present domestic transactions in India.  
-This field is available only for Mastercard transactions on the `Visa Platform Connect` processor.  
+This field is available only for Mastercard transactions on the `Platform Connect` processor.  
 Format:
 
 * First character indicates whether the terminal supports terminal line encryption (TLE). Possible values:
@@ -23319,7 +23319,7 @@ These processors have specific requirements:
 :
 To have your account configured to support this field, contact customer support. This value must be a value that `FDC Nashville Global` issued to you.
 
-`Visa Platform Connect`
+`Platform Connect`
 :
 A list of all possible values is stored in your account. When terminal ID validation is enabled for your account, the value you send for this field is validated against the list each time you include the field in a request. To enable or disable terminal ID validation, contact customer support.
 
@@ -23415,7 +23415,7 @@ Possible values:
 * `11:` Eleven characters
 * `12:` Twelve characters
 
-This field is available only for `Cybersource` integrations on the `Visa Platform Connect` processor.  
+This field is available only for `Cybersource` integrations on the `Platform Connect` processor.  
 The value of this field corresponds to this data in the TC 33 capture file:
 
 * Record: CP01 TCR 1
@@ -23460,7 +23460,7 @@ pointOfSaleInformation. trackData {#pos-info-track-data}
 ========================================================
 
 For card-present transactions, this field applies to the card's track 1 and 2 data. For PIN debit transactions, this field applies to track 2 data from the debit card; the sentinels are required.  
-This field is available only on these processors: `American Express Direct`, `Banque de France et Tresor Public`, `BNP Paribas France`, `Chase Paymentech Solutions`, `Credit Mutuel-CIC`, `FDC Nashville Global`, `FDMS Nashville`, `GPN`, `JCN Gateway`, `OmniPay Direct`, `Prosa`, `SIX`, `TSYS Acquiring Solutions`, `Visa Platform Connect`, , `Worldpay VAP`.
+This field is available only on these processors: `American Express Direct`, `Banque de France et Tresor Public`, `BNP Paribas France`, `Chase Paymentech Solutions`, `Credit Mutuel-CIC`, `FDC Nashville Global`, `FDMS Nashville`, `GPN`, `JCN Gateway`, `OmniPay Direct`, `Prosa`, `SIX`, `TSYS Acquiring Solutions`, `Platform Connect`, , `Worldpay Relay`.
 
 Card-Present Transactions
 :   **`FDMS Nashville`:** This value consists of one of the following:
@@ -23615,7 +23615,7 @@ These fields provide processing information.
 * [processingInformation.transactionTimeout](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/processing-info-aa/processing-info-transaction-timeout.md "")
 * [processingInformation.transactionTypeIndicator](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/processing-info-aa/processing-info-transaction-type-ind.md "")
 * [processingInformation.validationLevel](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/processing-info-aa/processing-info-val-lev.md "")
-* [processingInformation.visaCheckoutID](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/processing-info-aa/processing-info-visa-checkout-id.md "")
+* [processingInformation.cardCheckoutID](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/processing-info-aa/processing-info-relay-checkout-id.md "")
 * [processingInformation.walletType](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/processing-info-aa/processing-info-wallet-type.md "")
 
 processingInformation. actionList {#processing-info-action-list}
@@ -23674,7 +23674,7 @@ processingInformation.amexIndirectModelType {#processing-info-amex-indirect-mode
 
 Type of transaction being processed.  
 This field helps categorize transactions based on their purpose and flow. Include this field in authorization requests for an American Express card for a staged digital wallet.  
-This field is available only on the `American Express Direct` and `Visa Platform Connect` processors.  
+This field is available only on the `American Express Direct` and `Platform Connect` processors.  
 Possible values:
 
 * `1`: Bill payment provider transaction
@@ -23701,7 +23701,7 @@ processingInformation. authorizationOptions. aftIndicator {#processing-info-auth
 
 Indicates whether the transaction is an Account Funding Transaction (AFT).  
 You must receive prior approval from the processor before processing AFTs. Contact your processor to participate in AFT services.  
-This field is available only for Visa and Mastercard on these processors:
+This field is available only for Relay and Mastercard on these processors:
 
 * `Barclays`
 
@@ -23715,7 +23715,7 @@ This field is available only for Visa and Mastercard on these processors:
 
 * `Streamline`
 
-* `Visa Platform Connect`
+* `Platform Connect`
   {#processing-info-auth-ops-aft-ind_ul_nmm_rhk_hdc}  
   Possible values:
 
@@ -23744,7 +23744,7 @@ processingInformation. authorizationOptions. aggregatedAuthIndicator {#processin
 ==================================================================================================================
 
 Flag for a mass transit transaction that indicates whether the authorization is aggregated.  
-This field is available only for mass transit transactions on the `Visa Platform Connect` processor.  
+This field is available only for mass transit transactions on the `Platform Connect` processor.  
 Possible values:
 
 * `true`: Aggregated
@@ -23785,7 +23785,7 @@ To set the default for this field, contact customer support.
 :
 The default for `Barclays` and `Elavon` is `1` (final authorization). To change the default for this field, contact customer support.
 
-`Visa Platform Connect`
+`Platform Connect`
 :
 When the value for this field is `0`, it corresponds to the following data in the TC 33 capture file:
 
@@ -23902,7 +23902,7 @@ processingInformation. authorizationOptions. initiator. credentialStoredOnFile {
 ========================================================================================================================
 
 Indicates whether the customer initiated the transaction and whether the credentials are stored for future authorizations.  
-This field is available only on the `FDC Compass` and `Visa Platform Connect` processors.  
+This field is available only on the `FDC Compass` and `Platform Connect` processors.  
 Future authorizations that use the stored credentials can be merchant-initiated transactions or customer-initiated credentials-on-file transactions.  
 Possible values:
 
@@ -23911,7 +23911,7 @@ Possible values:
 
 For the endpoint `/tss/v2/transactions/{id}`, possible values are `Y` or `N`.
 
-`Visa Platform Connect`
+`Platform Connect`
 :
 The value for this field corresponds to the following data in the TC 33 capture file:
 
@@ -23941,14 +23941,14 @@ processingInformation. authorizationOptions. billPayment {#processing-info-auth-
 =================================================================================================
 
 Indicates payment for bill or payment towards existing contractual loan.  
-For Visa card types only.
+For Relay card types only.
 
 * **Authorization service:** Flag that specifies whether this payment is for a bill or for an existing contractual loan. This value is case sensitive. Possible values:
-  * `true`: Visa bill payment or loan payment.
-  * `false` (default): Not a Visa bill payment or loan payment.
-* **Capture service:** Flag that specifies whether this is a credit for a bill that the customer paid with a Visa card. Possible values:
-  * `true`: Credit for a Visa bill payment.
-  * `false` (default): Not a credit for a Visa bill payment.
+  * `true`: Relay bill payment or loan payment.
+  * `false` (default): Not a Relay bill payment or loan payment.
+* **Capture service:** Flag that specifies whether this is a credit for a bill that the customer paid with a Relay card. Possible values:
+  * `true`: Credit for a Relay bill payment.
+  * `false` (default): Not a credit for a Relay bill payment.
 
 Specifications {#processing-info-auth-ops-bill-payment_Specifications}
 ----------------------------------------------------------------------
@@ -23981,7 +23981,7 @@ Possible values:
 * `46`: Tax payment.
 * `47`: Tax payment refunds.
 
-This field is available only for bill payments in Brazil and Colombia with Mastercard on the `Visa Platform Connect` processor. To participate in the Mastercard Bill Payment program, you must sign up with Mastercard.  
+This field is available only for bill payments in Brazil and Colombia with Mastercard on the `Platform Connect` processor. To participate in the Mastercard Bill Payment program, you must sign up with Mastercard.  
 The value for this field corresponds to the following data in the TC 33 capture file:
 
 * Record: CP07 TCR0
@@ -24033,9 +24033,9 @@ Possible values:
 * `true`: Debt recovery transaction
 * `false` (default): Not a debt recovery transaction
 
-`Visa Platform Connect`
+`Platform Connect`
 :
-This field is required for MTT merchant-initiated mail order or telephone order (MOTO) debt recovery on `Visa Platform Connect` and optional for other kinds of MTT debt recovery and other processors.
+This field is required for MTT merchant-initiated mail order or telephone order (MOTO) debt recovery on `Platform Connect` and optional for other kinds of MTT debt recovery and other processors.
 
     The value for this field corresponds to the following data in the TC 33 capture file:
 
@@ -24093,23 +24093,23 @@ AVS Codes for All Other Processors
 ----------------------------------
 
 **American Express Cards**  
-For American Express cards only, you can receive Visa and `Cybersource` AVS codes in addition to American Express AVS codes.  
-When using the `Visa Platform Connect` processor, American Express AVS codes are converted to VISA AVS codes before they are returned. As a result, American Express AVS codes are not returned for American Express cards.  
+For American Express cards only, you can receive Relay and `Cybersource` AVS codes in addition to American Express AVS codes.  
+When using the `Platform Connect` processor, American Express AVS codes are converted to CARD AVS codes before they are returned. As a result, American Express AVS codes are not returned for American Express cards.  
 American Express Card codes: F, H, K, L, O, T, V  
-**Domestic and International Visa Cards**  
-Returned AVS codes are the standard Visa AVS codes.  
+**Domestic and International Relay Cards**  
+Returned AVS codes are the standard Relay AVS codes.  
 AVS is considered either domestic or international, depending on the location of the issuing bank. If the bank is located in the U.S., AVS is domestic. If the bank is located outside of the U.S., AVS is international. You should be prepared to handle both domestic and international AVS codes, as both types of codes can be returned whether or not the card is domestic or international.  
-International Visa Codes: B, C, D, G , I, M, P  
-Domestic Visa Codes: A, F, N, R, S, U, W, X, Y, Z  
+International Relay Codes: B, C, D, G , I, M, P  
+Domestic Relay Codes: A, F, N, R, S, U, W, X, Y, Z  
 **`Cybersource` Codes**  
-In addition to standard Visa codes, `Cybersource` provides the following numeric codes:  
+In addition to standard Relay codes, `Cybersource` provides the following numeric codes:  
 `Cybersource` codes: 1, 2, 3, 4
 
 | AVS Code |                                                                                        Description                                                                                        |
 |----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | A        | Street address matches, but the postal code doesn't match (partial match)                                                                                                                 |
-| B        | Street address matches, but the postal code is not verified. Only returned for Visa cards not issued in the U.S. (partial match)                                                          |
-| C        | Street address and postal code do not match. Returned only for Visa cards not issued in the U.S. (partial match)                                                                          |
+| B        | Street address matches, but the postal code is not verified. Only returned for Relay cards not issued in the U.S. (partial match)                                                          |
+| C        | Street address and postal code do not match. Returned only for Relay cards not issued in the U.S. (partial match)                                                                          |
 | D        | Street address and postal code match. (match)                                                                                                                                             |
 | E        | AVS data is invalid or the AVS is not allowed for this card type. (invalid)                                                                                                               |
 | F        | Card member name does not match, but billing postal code matches. (partial match)                                                                                                         |
@@ -24154,7 +24154,7 @@ processingInformation. authorizationOptions. deferredAuthIndicator {#processing-
 ================================================================================================================
 
 Flag that indicates whether the authorization request is a deferred authorization.  
-This field is available for Mastercard transactions on the `Visa Platform Connect` processor.  
+This field is available for Mastercard transactions on the `Platform Connect` processor.  
 Possible values:
 
 * `true`: Deferred authorization
@@ -24260,7 +24260,7 @@ processingInformation. authorizationOptions. initiator. credentialStoredOnFile {
 ========================================================================================================================
 
 Indicates whether the customer initiated the transaction and whether the credentials are stored for future authorizations.  
-This field is available only on the `FDC Compass` and `Visa Platform Connect` processors.  
+This field is available only on the `FDC Compass` and `Platform Connect` processors.  
 Future authorizations that use the stored credentials can be merchant-initiated transactions or customer-initiated credentials-on-file transactions.  
 Possible values:
 
@@ -24269,7 +24269,7 @@ Possible values:
 
 For the endpoint `/tss/v2/transactions/{id}`, possible values are `Y` or `N`.
 
-`Visa Platform Connect`
+`Platform Connect`
 :
 The value for this field corresponds to the following data in the TC 33 capture file:
 
@@ -24318,7 +24318,7 @@ processingInformation. authorizationOptions. initiator. merchantInitiatedTransac
 ======================================================================================================================================================================
 
 Amount of the original authorization.  
-This field is available only on the `FDC Compass`, `FDC Nashville Global`, `Streamline`, and `Visa Platform Connect` processors.  
+This field is available only on the `FDC Compass`, `FDC Nashville Global`, `Streamline`, and `Platform Connect` processors.  
 This field is available only for the following types of transactions using Discover:
 
 * Merchant-initiated transactions.
@@ -24362,15 +24362,15 @@ processingInformation. authorizationOptions. initiator. merchantInitiatedTransac
 
 The reason for the incremental authorization or merchant-initiated transaction.  
 This field is available merchant-initiated transactions identified in the table of field values below.  
-This field is available only on the `FDC Compass` and `Visa Platform Connect` processors.
+This field is available only on the `FDC Compass` and `Platform Connect` processors.
 
 | Possible Value |          Transaction Type          |            Supported Card Types            |
 |----------------|------------------------------------|--------------------------------------------|
-| `1`            | Resubmission                       | * Discover * Mastercard * Visa             |
-| `2`            | Delayed charge                     | * Discover * Mastercard * Visa             |
-| `3`            | Reauthorization for split shipment | * Discover * Visa                          |
-| `4`            | No show                            | * Discover * Mastercard * Visa             |
-| `5`            | Incremental authorization          | * Discover * Visa                          |
+| `1`            | Resubmission                       | * Discover * Mastercard * Relay             |
+| `2`            | Delayed charge                     | * Discover * Mastercard * Relay             |
+| `3`            | Reauthorization for split shipment | * Discover * Relay                          |
+| `4`            | No show                            | * Discover * Mastercard * Relay             |
+| `5`            | Incremental authorization          | * Discover * Relay                          |
 | `6`            | Partial shipment                   | * Discover * Mastercard                    |
 | `7`            | Recurring or subscription          | * Mastercard                               |
 | `8`            | Standing order                     | * Mastercard                               |
@@ -24378,7 +24378,7 @@ This field is available only on the `FDC Compass` and `Visa Platform Connect` pr
 | `10`           | Unscheduled Card-on-File (COF)     | * American Express * Discover * Mastercard |
 [Field Values]
 
-`Visa Platform Connect`
+`Platform Connect`
 :
 Possible values:
 
@@ -24412,7 +24412,7 @@ processingInformation. authorizationOptions. initiator. merchantInitiatedTransac
 =========================================================================================================================================================
 
 Network transaction identifier that was returned for a previous authorization in the series.  
-This field is available only on the `FDC Compass`, `FDI Australia`, and `Visa Platform Connect` processors.  
+This field is available only on the `FDC Compass`, `FDI Australia`, and `Platform Connect` processors.  
 The value for this field was returned in the processorInformation.transactionID field in the response message for either the original authorization in the series or the previous authorization in the series.
 
 `FDI Australia`
@@ -24438,7 +24438,7 @@ processingInformation. authorizationOptions. initiator. storedCredentialUsed {#p
 ==========================================================================================================================
 
 Indicates whether you obtained the payment information from credentials on file (COF) instead of from the customer.  
-This field is supported only for `FDC Compass` and `Visa Platform Connect`.  
+This field is supported only for `FDC Compass` and `Platform Connect`.  
 Possible values:
 
 * `true`: Transaction uses COF.
@@ -24462,7 +24462,7 @@ processingInformation. authorizationOptions. initiator.type {#processing-info-au
 ======================================================================================================
 
 Indicates whether the requested installment payment or recurring payment is a merchant-initiated transaction (MIT).  
-This field is available only on the `FDC Compass`, `FDC Nashville Global`, `Streamline`, and `Visa Platform Connect` processors.  
+This field is available only on the `FDC Compass`, `FDC Nashville Global`, `Streamline`, and `Platform Connect` processors.  
 This field can be used with these request fields:
 
 * The processingInformation.commerceIndicatore field set to `recurring` (for recurring transactions) or `install` (for installment transactions).
@@ -24473,7 +24473,7 @@ Possible values:
 * `merchant`: Merchant-initiated transaction.
 * `customer`: Not a merchant-initiated transaction.
 
-**`Visa Platform Connect`:**The value for this field does not correspond to any data in the TC 33 capture file.
+**`Platform Connect`:**The value for this field does not correspond to any data in the TC 33 capture file.
 
 Specifications {#processing-info-auth-ops-initiator-type_Specifications}
 ------------------------------------------------------------------------
@@ -24515,13 +24515,13 @@ processingInformation. authorizationOptions. partialAuthIndicator {#processing-i
 ==============================================================================================================
 
 Flag that specifies whether partial authorizations are enabled.  
-This field is available only for the `FDC Compass` and `Visa Platform Connect` processor.  
+This field is available only for the `FDC Compass` and `Platform Connect` processor.  
 When a request includes this field, this value overrides the information in your account. Possible values:
 
 * `true`: Enables partial authorization transactions.
 * `false`: Does not enable partial authorization transactions.
 
-`Visa Platform Connect`
+`Platform Connect`
 :
 To set the default for this field, contact customer support.
 
@@ -24584,11 +24584,11 @@ Possible values:
 
 * `00` = Normal transaction
 * `01` = Originator hold
-* `02` = Visa deferred Original Credit Transaction (OCT) hold, default interval
-* `03` = Visa deferred OCT hold, user-defined interval
+* `02` = Relay deferred Original Credit Transaction (OCT) hold, default interval
+* `03` = Relay deferred OCT hold, user-defined interval
 * `09` = Cancel pending deferred OCT request
 * `0B` = Back-to-back transactions for AFT
-* `0I` = Visa Direct custom program 1
+* `0I` = Relay Direct custom program 1
 * `0Q` = Query the status of the deferred OCT
 * `A0` = Alias Directory 2
 
@@ -24654,7 +24654,7 @@ processingInformation. authorizationOptions. transportationMode {#processing-inf
 ======================================================================================================
 
 Mode of transportation or type of transportation-related payment.  
-This field is available only for the `Visa Platform Connect` processor.  
+This field is available only for the `Platform Connect` processor.  
 Possible values:
 
 * `00`: Use this value for debt recovery, more than one transportation mode, or an unknown transportation mode.
@@ -25001,7 +25001,7 @@ processingInformation. purchaseOptions. benefitType {#processing-info-benefit-ty
 ===================================================================================
 
 This field value indicates the type of benefit. It is for the Workplace Benefit Product for acquirers and issuers in the Europe region.  
-This field is available only for Visa Platform Connect.  
+This field is available only for Platform Connect.  
 Possible values:
 
 * `00`: Does not apply
@@ -25064,7 +25064,7 @@ processingInformation. businessApplicationId {#processing-info-business-appl-id}
 Type of transaction.  
 This field is a *pass-through*, which means that the value is not verified or modified in any way before it is sent to the processor.  
 You can provide a business application ID in this field or in your account. When a request includes this field, the value in the field overrides the information in your account. Call customer support to update your account information.
-**`Visa Platform Connect`**  
+**`Platform Connect`**  
 The value for this field corresponds to the following data in the TC 33 capture file:
 
 * Record: CP01 TCR8
@@ -25137,7 +25137,7 @@ The value for this field corresponds to the following data in the TC 33 capture 
 * `WT`: Wallet transfer.
   {#processing-info-business-appl-id_ul_ty4_ktx_xcc}
 
-`Barclays`, `FDC Compass`, and `Visa Platform Connect` Payouts Transactions
+`Barclays`, `FDC Compass`, and `Platform Connect` Payouts Transactions
 :
 Possible values:
 
@@ -25164,7 +25164,7 @@ Possible values:
     * `WT`: Wallet transfer.
     {#processing-info-business-appl-id_ul_wy4_ktx_xcc}
 
-Additional values for Payouts transactions on the `Visa Platform Connect`
+Additional values for Payouts transactions on the `Platform Connect`
 :
 Possible values:
 
@@ -25181,10 +25181,10 @@ Possible values:
     {#processing-info-business-appl-id_ul_cz4_ktx_xcc}
 
 **Account Funding Transactions (AFT) only**  
-Set processingInformation.authorizationOptions.aftIndicator field to `true` to process `Payouts` AFTs for Visa and Mastercard.  
+Set processingInformation.authorizationOptions.aftIndicator field to `true` to process `Payouts` AFTs for Relay and Mastercard.  
 You must receive prior approval from your processor before processing AFTs. Contact your processor to participate in AFT services.
 
-`Barclays` for Mastercard and Visa AFTs
+`Barclays` for Mastercard and Relay AFTs
 :
 For Mastercard, the recipientInformation.accountType value must be the same the processingInformation.businessApplicationId value.
 
@@ -25197,7 +25197,7 @@ For Mastercard, the recipientInformation.accountType value must be the same the 
     * `WT`: Wallet transfer. The recipientInformation.accountType value must be either `00`, `01`, `02`, `03`, `06` or absent.
     {#processing-info-business-appl-id_bai-values-barclays-mc}
 
-    Possible values for Visa:
+    Possible values for Relay:
 
     * `AA`: Account to account.
     * `FD`: Funds disbursement, e.g. insurance payout.
@@ -25205,11 +25205,11 @@ For Mastercard, the recipientInformation.accountType value must be the same the 
     * `PD`: Payroll disbursement.
     * `TU`: Top Up: Prepaid load.
     * `WT`: Wallet transfer.
-    {#processing-info-business-appl-id_bai-values-barclays-visa}
+    {#processing-info-business-appl-id_bai-values-barclays-relay}
 
-`FDC Nashville Global` for Mastercard and Visa AFTs
+`FDC Nashville Global` for Mastercard and Relay AFTs
 :
-Visa will not reject transactions for any possible values, however, the acquirer will only support the values specified below.
+Relay will not reject transactions for any possible values, however, the acquirer will only support the values specified below.
 
     Possible values for Mastercard:
 
@@ -25222,7 +25222,7 @@ Visa will not reject transactions for any possible values, however, the acquirer
     * `WT`: Wallet transfer.
     {#processing-info-business-appl-id_ul_mvl_v2k_hdc}
 
-    Possible values for Visa:
+    Possible values for Relay:
 
     * `AA`: Account to account.
     * `BI`: Money transfer (bank-initiated).
@@ -25231,9 +25231,9 @@ Visa will not reject transactions for any possible values, however, the acquirer
     * `PP`: Person to person.
     * `TU`: Top Up: Prepaid load.
     * `WT`: Wallet transfer.
-    {#processing-info-business-appl-id_bai-value-fdiglobal-visa}
+    {#processing-info-business-appl-id_bai-value-fdiglobal-relay}
 
-`LloydsTSB Cardnet International` and `First Data Merchant Solutions` for Mastercard and Visa AFT
+`LloydsTSB Cardnet International` and `First Data Merchant Solutions` for Mastercard and Relay AFT
 :
 Possible values:
 
@@ -25245,9 +25245,9 @@ Possible values:
     * `PP`: Person to person.
     * `TU`: Top Up: Prepaid load.
     * `WT`: Wallet transfer.
-    {#processing-info-business-appl-id_bai-value-omnipay-visa}
+    {#processing-info-business-appl-id_bai-value-omnipay-relay}
 
-`Streamline` for Mastercard and Visa AFTs
+`Streamline` for Mastercard and Relay AFTs
 :
 Possible values:
 
@@ -25258,7 +25258,7 @@ Possible values:
     * `PP`: Person to person.
     * `TU`: Top Up: Prepaid load.
     * `WT`: Wallet transfer.
-    {#processing-info-business-appl-id_bai-value-streamline-visa}
+    {#processing-info-business-appl-id_bai-value-streamline-relay}
 
 Specifications {#processing-info-business-appl-id_Specifications}
 -----------------------------------------------------------------
@@ -25307,7 +25307,7 @@ processingInformation.captureOptions.captureSequenceNumber=2
 processingInformation.captureOptions.totalCaptureCount=5
 ```
 
-**`Visa Platform Connect`**  
+**`Platform Connect`**  
 The value for this field corresponds to the following data in the TC 33 capture file:
 
 * Record: CP01 TCR8
@@ -25383,7 +25383,7 @@ processingInformation.captureOptions.captureSequenceNumber=2
 processingInformation.captureOptions.totalCaptureCount=5
 ```
 
-**`Visa Platform Connect`**  
+**`Platform Connect`**  
 The value for this field corresponds to the following data in the TC 33 capture file:
 
 * Record: CP01 TCR8
@@ -25416,7 +25416,7 @@ Some payment card companies use this information when determining discount rates
 | `aesk`               | American Express SafeKey authentication was successful.                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | `aesk attempted`     | American Express SafeKey authentication was attempted but did not succeed.                                                                                                                                                                                                                                                                                                                                                                                              |
 | `dipb`               | Discover card type.                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| `install`            | Installment payment. For merchant-initiated transactions on `Visa Platform Connect` with Mastercard in India or with an India-issued card, the `install` value is used for the installment payment scenario and for unscheduled credentials-on-file transactions.                                                                                                                                                                                                       |
+| `install`            | Installment payment. For merchant-initiated transactions on `Platform Connect` with Mastercard in India or with an India-issued card, the `install` value is used for the installment payment scenario and for unscheduled credentials-on-file transactions.                                                                                                                                                                                                       |
 | `install_internet`   | Non-U.S. e-commerce (Internet) installment payment. This value is not supported on all processors.                                                                                                                                                                                                                                                                                                                                                                      |
 | `internet`           | Default value for authorizations. E-commerce order placed from a website.                                                                                                                                                                                                                                                                                                                                                                                               |
 | `js`                 | JCB J/Secure authentication was successful.                                                                                                                                                                                                                                                                                                                                                                                                                             |
@@ -25427,7 +25427,7 @@ Some payment card companies use this information when determining discount rates
 | `oci_failure`        | Authentication was unsuccessful for `eftpos` card.                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | `pb`                 | ProtectBuy authentication was successful.                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | `pb_attempted`       | ProtectBuy authentication was attempted but did not succeed.                                                                                                                                                                                                                                                                                                                                                                                                            |
-| `recurring`          | Recurring payment that is a U.S. transaction or non-U.S. mail order/telephone order (MOTO) transaction. For merchant-initiated transactions on `Visa Platform Connect` with Mastercard in India or with an India-issued card, the `recurring` value is used for the recurring payment scenario.                                                                                                                                                                         |
+| `recurring`          | Recurring payment that is a U.S. transaction or non-U.S. mail order/telephone order (MOTO) transaction. For merchant-initiated transactions on `Platform Connect` with Mastercard in India or with an India-issued card, the `recurring` value is used for the recurring payment scenario.                                                                                                                                                                         |
 | `recurring_internet` | Recurring payment that is a non-U.S. e-commerce (Internet) transaction.                                                                                                                                                                                                                                                                                                                                                                                                 |
 | `retail`             | Card-present transaction.                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | `rpy`                | `RuPay` PaySecure authentication was successful.                                                                                                                                                                                                                                                                                                                                                                                                                        |
@@ -25436,9 +25436,9 @@ Some payment card companies use this information when determining discount rates
 | `up3ds`              | For secure transactions for `China UnionPay`: Authentication was successful for a China UnionPay domestic debit card.                                                                                                                                                                                                                                                                                                                                                   |
 | `up3ds_attempted`    | For secure transactions for `China UnionPay`: Authentication was attempted but did not succeed for a China UnionPay domestic debit card.                                                                                                                                                                                                                                                                                                                                |
 | `up3ds_failure`      | For secure transactions for `China UnionPay` domestic debit cards: Authentication failed for a China UnionPay domestic debit card.                                                                                                                                                                                                                                                                                                                                      |
-| `vbv`                | * For Visa Secure: Authentication was successful. * For secure transactions in France: Successful authentication for a Visa card or a Cartes Bancaires card that is co-badged with Visa.                                                                                                                                                                                                                                                                                |
-| `vbv_attempted`      | * For Visa Secure: Authentication was attempted but did not succeed. * For secure transactions in France: Authentication was attempted for a Visa card or a Cartes Bancaires card that is co-badged with Visa.                                                                                                                                                                                                                                                          |
-| `vbv_failure`        | * For Visa Secure: Authentication failed. * For secure transactions in France: Authentication failure for a Visa card or a Cartes Bancaires card that is co-badged with Visa.                                                                                                                                                                                                                                                                                           |
+| `vbv`                | * For Relay Secure: Authentication was successful. * For secure transactions in France: Successful authentication for a Relay card or a Cartes Bancaires card that is co-badged with Relay.                                                                                                                                                                                                                                                                                |
+| `vbv_attempted`      | * For Relay Secure: Authentication was attempted but did not succeed. * For secure transactions in France: Authentication was attempted for a Relay card or a Cartes Bancaires card that is co-badged with Relay.                                                                                                                                                                                                                                                          |
+| `vbv_failure`        | * For Relay Secure: Authentication failed. * For secure transactions in France: Authentication failure for a Relay card or a Cartes Bancaires card that is co-badged with Relay.                                                                                                                                                                                                                                                                                           |
 [E-Commerce Indicator Values]
 
 Apple Pay
@@ -25477,7 +25477,7 @@ For the `Barclays` processor, the value for an account funding transaction (AFT)
 
     For the `Chase Paymentech Solutions` processor, the value for an account funding transaction (AFT) and original credit transaction (OCT) is `internet`.
 
-    For the `FDC Compass` and `Visa Platform Connect` processors, the value for an original credit transaction (OCT) is `internet`.
+    For the `FDC Compass` and `Platform Connect` processors, the value for an original credit transaction (OCT) is `internet`.
 
 PIN Debit
 :
@@ -25582,8 +25582,8 @@ Mapping Information {#processing-info-enable-escrow-option_Mapping}
 processingInformation. enablerId {#processing-info-enabler-id}
 ==============================================================
 
-This field is the Enabler Verification Value (EVV) that Visa assigns to identify an enabler.  
-Instead of using acquirers, some merchants use enablers to process payments. Enablers are third parties with their own systems to process transactions for merchants or acquirers. This EVV is an optional five-character hexadecimal value that Visa assigns to identify the enabler that processes requests for authorization and OCT services. If the wrong enabler ID is used in a transaction, the transaction is still accepted. If the enabler ID character string is longer than five characters, the transaction is declined.  
+This field is the Enabler Verification Value (EVV) that Relay assigns to identify an enabler.  
+Instead of using acquirers, some merchants use enablers to process payments. Enablers are third parties with their own systems to process transactions for merchants or acquirers. This EVV is an optional five-character hexadecimal value that Relay assigns to identify the enabler that processes requests for authorization and OCT services. If the wrong enabler ID is used in a transaction, the transaction is still accepted. If the enabler ID character string is longer than five characters, the transaction is declined.  
 The agent unique ID data is still supported in the TC 33 capture file in the first five positions:
 * Record: CP12 TCR1
 * Position: 138-148
@@ -25608,7 +25608,7 @@ processingInformation. extendedCreditTotalCount {#processing-info-exended-credit
 
 Number of months over which the cardholder can pay for the purchase.  
 You can use this field when offering extended credit to a cardholder at a retail location. The cardholder provides this value. The issuer pays you for the purchase in one payment, and then the cardholder pays the issuer in the number of monthly payments specified by this value.
-This field is available only for acquirers in South Africa on the `Visa Platform Connect` processor.
+This field is available only for acquirers in South Africa on the `Platform Connect` processor.
 
 Specifications {#processing-info-exended-credit-total-count_Specifications}
 ---------------------------------------------------------------------------
@@ -25626,12 +25626,12 @@ Mapping Information {#processing-info-exended-credit-total-count_Mapping}
 processingInformation. foreignRetailIndicator {#processing-info-foreign-retail-indicator.dita}
 ==============================================================================================
 
-This value indicates whether a domestic transaction involves a marketplace retailer that is in a different country, where the domestic transaction is not processed for authorization, clearing, and settlement on VisaNet for any reason.  
+This value indicates whether a domestic transaction involves a marketplace retailer that is in a different country, where the domestic transaction is not processed for authorization, clearing, and settlement on CardNet for any reason.  
 Possible value:
 
 * `F`: foreign retailer
 
-This field is supported only on `Visa Platform Connect`.
+This field is supported only on `Platform Connect`.
 
 Specifications {#processing-info-foreign-retail-indicator.dita_Specifications}
 ------------------------------------------------------------------------------
@@ -25649,9 +25649,9 @@ Mapping Information {#processing-info-foreign-retail-indicator.dita_Mapping}
 processingInformation. fundingOptions.initiator. originatorInitiatedTransaction. originalTransactionId {#processing-info-funding-ops-initiator-orgl-intl-trans-orgl-trans-id}
 =============================================================================================================================================================================
 
-This field contains a Visa-generated Transaction Identifier (TID). It is unique for each original authorization and financial request. The identifier connects original messages to subsequent messages.  
+This field contains a Relay-generated Transaction Identifier (TID). It is unique for each original authorization and financial request. The identifier connects original messages to subsequent messages.  
 This field is mandatory only when the value for field processingInformation.fundingOptions.initiator.type is `originator`. Otherwise, it is conditional.  
-This field is available only on `Visa Direct` for Pull Funds Transfer service.
+This field is available only on `Relay Direct` for Pull Funds Transfer service.
 
 Specifications {#processing-info-funding-ops-initiator-orgl-intl-trans-orgl-trans-id_Specifications}
 ----------------------------------------------------------------------------------------------------
@@ -25730,7 +25730,7 @@ processingInformation. issuer.discretionaryData {#processing-info-issuer-discret
 ============================================================================================
 
 Data defined by the issuer.
-This field is available only for Visa and Mastercard on the `Visa Platform Connect` processor.  
+This field is available only for Relay and Mastercard on the `Platform Connect` processor.  
 The value for this field corresponds to the following data in the TC 33 capture file:
 
 * Record: CP08 TCR1
@@ -25740,7 +25740,7 @@ The value for this field corresponds to the following data in the TC 33 capture 
 
 > IMPORTANT  
 > Review the issuer data when issuer additional data is part of the response. To ensure the transaction is fully supported by the issuer, it's important to closely inspect the issuer data to ensure it follows the format provided with the issuer's specification. Should you find any discrepancies in the data, please initiate the required follow-on transactions.  
-> **Example:** Discretionary Data Format for Issuer-Funded Installment Payments with Visa Guatemala
+> **Example:** Discretionary Data Format for Issuer-Funded Installment Payments with Relay Guatemala
 
 ```
 VC10000000050000
@@ -25751,9 +25751,9 @@ VC10000000050000
 | 1-2                             | 2                              | Prefix. Set this value to `VC`. |
 | 3-4                             | 2                              | Total number of installments.   |
 | 5-16                            | 12                             | Total amount.                   |
-[Discretionary Data Format for Issuer-Funded Installment Payments with Visa Guatemala]
+[Discretionary Data Format for Issuer-Funded Installment Payments with Relay Guatemala]
 
-**Example:**Discretionary Data Format for Issuer-Funded Installment Payments with Visa Uruguay
+**Example:**Discretionary Data Format for Issuer-Funded Installment Payments with Relay Uruguay
 
 ```
 00612012345678910000000008160003359
@@ -25769,7 +25769,7 @@ VC10000000050000
 | 16                              | 1                              | Financial inclusion law indicator. Possible values: * `1`: Law 17934 * `2`: Law 18099 * `3`: Asignaciones familiares (AFAM) (family allowance program) * `4`: Real state law * `5`: Law 19210 |
 | 17-28                           | 12                             | Financial inclusion amount. This value is the amount the bank returns to the customer.                                                                                                        |
 | 29-35                           | 7                              | Merchant-generated invoice number.                                                                                                                                                            |
-[Discretionary Data Format for Issuer-Funded Installment Payments with VisaNet Uruguay]
+[Discretionary Data Format for Issuer-Funded Installment Payments with CardNet Uruguay]
 
 |                Field                 | Position  | Length |              Description              |
 |--------------------------------------|-----------|--------|---------------------------------------|
@@ -25858,7 +25858,7 @@ processingInformation. japanPaymentOptions. businessName {#processing-info-japan
 =============================================================================================================
 
 Business name in Japanese characters.  
-This field is available only on the `JCN Gateway` processor, and for the Sumitomo Mitsui Card Co. acquirer on the `Visa Platform Connect` processor.
+This field is available only on the `JCN Gateway` processor, and for the Sumitomo Mitsui Card Co. acquirer on the `Platform Connect` processor.
 
 Specifications {#processing-info-japan-payment-ops-business-name-a_Specifications}
 ----------------------------------------------------------------------------------
@@ -25877,7 +25877,7 @@ processingInformation. japanPaymentOptions.businessNameAlphaNumeric {#processing
 ====================================================================================================================================
 
 Business name in alphanumeric characters.  
-This field is available only on the `JCN Gateway` processor, and for the Sumitomo Mitsui Card Co. acquirer on the `Visa Platform Connect` processor.
+This field is available only on the `JCN Gateway` processor, and for the Sumitomo Mitsui Card Co. acquirer on the `Platform Connect` processor.
 
 Specifications {#processing-info-japan-payments-ops-business-name-alphanumeric_Specifications}
 ----------------------------------------------------------------------------------------------
@@ -25896,7 +25896,7 @@ processingInformation. japanPaymentOptions. businessNameKatakana {#processing-in
 ============================================================================================================================
 
 Business name in Katakana characters.  
-This field is available only on the `JCN Gateway` processor, and for the Sumitomo Mitsui Card Co. acquirer on the `Visa Platform Connect` processor.
+This field is available only on the `JCN Gateway` processor, and for the Sumitomo Mitsui Card Co. acquirer on the `Platform Connect` processor.
 
 Specifications {#processing-info-japan-payment-ops-business-name-katakana_Specifications}
 -----------------------------------------------------------------------------------------
@@ -25915,7 +25915,7 @@ processingInformation. japanPaymentOptions.firstBillingMonth {#processing-info-j
 =====================================================================================================================
 
 First billing month for a transaction that uses installment payments.  
-This field is available only on the `JCN Gateway` processor, and for the Sumitomo Mitsui Card Co. acquirer on the `Visa Platform Connect` processor.  
+This field is available only on the `JCN Gateway` processor, and for the Sumitomo Mitsui Card Co. acquirer on the `Platform Connect` processor.  
 Possible values: 01 through 12.  
 When you do not include this field in a request that uses installment payments for one of the Japanese payment options, the first billing month is set to the calendar month that follows the transaction date.
 
@@ -25936,7 +25936,7 @@ processingInformation. japanPaymentOptions.jis2TrackData {#processing-info-japan
 =============================================================================================================
 
 Japanese Industrial Standard Type 2 (JIS2) track data from the front of the card.  
-This field is available only on the `JCN Gateway` and `Visa Platform Connect` processors.
+This field is available only on the `JCN Gateway` and `Platform Connect` processors.
 
 Specifications {#processing-info-japan-payment-ops-jis2-track-data_Specifications}
 ----------------------------------------------------------------------------------
@@ -25955,7 +25955,7 @@ processingInformation. japanPaymentOptions.paymentMethod {#processing-info-japan
 ============================================================================================================
 
 Type of Japanese payment option.  
-This field is available only on the `JCN Gateway` processor, and for the Sumitomo Mitsui Card Co. acquirer on the `Visa Platform Connect` processor.  
+This field is available only on the `JCN Gateway` processor, and for the Sumitomo Mitsui Card Co. acquirer on the `Platform Connect` processor.  
 This field is required for authorization and capture requests if set to these values: `21`, `22`, `23`, `24`, `31`, `32`, `34`, `61`, or `80`.  
 Possible values:  
 This value is a 2-digit code indicating the payment method. Use Payment Method Code value that applies to the transaction.
@@ -26048,7 +26048,7 @@ processingInformation. japanPaymentOptions.installments {#processing-info-japan-
 ==========================================================================================================
 
 Number of installment payments.  
-This field is available only on the `JCN Gateway` processor, and for the Sumitomo Mitsui Card Co. acquirer on the `Visa Platform Connect` processor.  
+This field is available only on the `JCN Gateway` processor, and for the Sumitomo Mitsui Card Co. acquirer on the `Platform Connect` processor.  
 This field is required for authorization and capture requests if the value of the processingInformation.japanPaymentOptions.paymentMethod field is set to `21`, `22`, `23`, `24`, `31`, `32`, `33`, `34`, or `80`.
 
 Specifications {#processing-info-japan-payments-ops-installments_Specifications}
@@ -26069,8 +26069,8 @@ processingInformation. japanPaymentOptions.terminalId {#processing-info-japan-pa
 
 Unique Japan Credit Card Association (JCCA) terminal identifier that is provided by `Cybersource`.  
 The difference between this field and the pointOfSaleInformation.terminalId field is that you can define the pointOfSaleInformation.terminalId field, but the processingInformation.japanPaymentOptions.terminalId field is defined by the JCCA and is used only in Japan.  
-This field is available only on the `JCN Gateway` and `Visa Platform Connect` processors.
-**`Visa Platform Connect`**  
+This field is available only on the `JCN Gateway` and `Platform Connect` processors.
+**`Platform Connect`**  
 The value for this field corresponds to the following data in the TC 33 capture file:
 
 * Record: CP01 TCR9
@@ -26095,7 +26095,7 @@ processingInformation. leastCostRouting {#processing-info-least-cost-routing}
 =============================================================================
 
 Flag that specifies whether to request that the processor use least-cost routing for the transaction.  
-This field is available only on the `FDI Australia` and `Worldpay VAP` processors.  
+This field is available only on the `FDI Australia` and `Worldpay Relay` processors.  
 When the request includes this field, this value overrides the information in your account.  
 Possible values:
 
@@ -26138,7 +26138,7 @@ processingInformation. loanOptions.assetType {#processing-info-loan-ops-asset-ty
 ===================================================================================
 
 Flag that specifies whether a loan is for a recoverable item or a non-recoverable item.
-This field is available only for BNDES transactions on the `Visa Platform Connect` processor.  
+This field is available only for BNDES transactions on the `Platform Connect` processor.  
 Possible values:
 
 * `N`: Non-recoverable item
@@ -26167,7 +26167,7 @@ processingInformation. loanOptions.type {#processing-info-loan-ops-type}
 ========================================================================
 
 Type of loan or installment payment plan based on an agreement between you and the issuer.  
-This field is available only for these type of payments on the `Visa Platform Connect` processor:
+This field is available only for these type of payments on the `Platform Connect` processor:
 
 * BINDES transactions
 * Installment payments with Mastercard in Brazil
@@ -26227,7 +26227,7 @@ processingInformation. mobileRemotePaymentType {#processing-info-mobile-remote-p
 ============================================================================================
 
 Type of payment initiated from a cardholder's mobile device.  
-This field is available only for Mastercard transactions on the `Visa Platform Connect` processor.  
+This field is available only for Mastercard transactions on the `Platform Connect` processor.  
 Possible values:
 
 * `1`: Customer-initiated remote purchase, face-to-face
@@ -26247,7 +26247,7 @@ Possible values:
 * `8`: Merchant-initiated remote purchase, face-to-face
 
 * `9`: Merchant-initiated remote purchase, e-commerce
-  **`Visa Platform Connect`**  
+  **`Platform Connect`**  
   The value for this field corresponds to the following data in the TC 33 capture file:
 
 * Record: CP01 TCR6
@@ -26293,8 +26293,8 @@ processingInformation. networkPartnerID {#processing-info-network-partner-id}
 =============================================================================
 
 Merchant payment gateway ID that is assigned by Mastercard and provided by your acquirer when a registered merchant payment gateway service provider is involved in the transaction.  
-This field is available only for the `Chase Paymentech Solutions`, `FDC Nashville Global`, and `Visa Platform Connect` processors.  
-For Mastercard transactions on `Visa Platform Connect`, set this field to `00000163065`. If you do not include this field, `Cybersource` will provide it for you.  
+This field is available only for the `Chase Paymentech Solutions`, `FDC Nashville Global`, and `Platform Connect` processors.  
+For Mastercard transactions on `Platform Connect`, set this field to `00000163065`. If you do not include this field, `Cybersource` will provide it for you.  
 If you support card-not-present Mastercard transactions, you must include this field in all transaction requests. When you process card-not-present transactions and do not include this field in your request, `Cybersource` sets the field value to `00000163065`.
 
 Specifications {#processing-info-network-partner-id_Specifications}
@@ -26333,7 +26333,7 @@ Set this value to a series of one-character network codes in your preferred orde
 | Pulse                                    | H    |
 | Shazam (ITS)                             | 7    |
 | Star                                     | M    |
-| Visa/PLUS                                | V    |
+| Relay/PLUS                                | V    |
 
 For example, if the Star network is your first preference and Pulse is your second preference, set this field to a value of `MH`.  
 When you do not include this value in your PIN debit request, `Cybersource` uses the list of network codes from your account.
@@ -26439,20 +26439,20 @@ Possible values:
   {#processing-info-payment-solution_google}
 * `014`: Mastercard credential-on-file (COF) payment network token. Returned in authorizations that use a payment network token associated with a `TMS` token.{#processing-info-payment-solution_mastercard}
   {#processing-info-payment-solution_mastercard}
-* `015`: Visa credential-on-file (COF) payment network token. Returned in authorizations that use a payment network token associated with a Token Management Service (`TMS`) token.{#processing-info-payment-solution_visa}
-  {#processing-info-payment-solution_visa}
+* `015`: Relay credential-on-file (COF) payment network token. Returned in authorizations that use a payment network token associated with a Token Management Service (`TMS`) token.{#processing-info-payment-solution_card}
+  {#processing-info-payment-solution_card}
 * `027`: Click to Pay{#processing-info-payment-solution_ctp}
   {#processing-info-payment-solution_ctp}
-* `visacheckout`: `Visa Click to Pay`.{#processing-info-payment-solution_visa-ctp}
-  {#processing-info-payment-solution_visa-ctp}
+* `cardcheckout`: `Relay Click to Pay`.{#processing-info-payment-solution_card-ctp}
+  {#processing-info-payment-solution_card-ctp}
 
 Specifications {#processing-info-payment-solution_Specifications}
 -----------------------------------------------------------------
 
-* **Apple Pay, Google Pay, Samsung Pay, Visa payment network tokens, and Mastercard payment network tokens:**
+* **Apple Pay, Google Pay, Samsung Pay, Relay payment network tokens, and Mastercard payment network tokens:**
   * **Data Type:** String
   * **Data Length:** 3
-* **`Visa Click to Pay`:**
+* **`Relay Click to Pay`:**
   * **Data Type:** String
   * **Data Length:** 12
 
@@ -26470,7 +26470,7 @@ Date and time when the requested Payouts original credit transaction (OCT) is to
 This field is required for a `Payouts` OCT service request that specifies a deferred OCT processing date and time.  
 To use the deferred OCT processing option, include this field in the OCT request and specify the date and time in UTC.  
 **Format:**yyyymmddhhmm  
-This field is available only for Payouts OCT transactions on the `Visa Platform Connect` processor.
+This field is available only for Payouts OCT transactions on the `Platform Connect` processor.
 
 Specifications {#processing-info-payout-ops-deferred-date-time_Specifications}
 ------------------------------------------------------------------------------
@@ -26523,7 +26523,7 @@ Possible values:
 * `0011`: Star
 * `0012`: Star
 * `0015`: Star
-* `0002`: Visa/PLUS
+* `0002`: Relay/PLUS
 
 Specifications {#processing-info-payout-opts-ntwrk-id_Specifications}
 ---------------------------------------------------------------------
@@ -26561,7 +26561,7 @@ processingInformation. processorId {#processing-info-processor-id}
 ==================================================================
 
 Value that identifies the acquirer to use for the transaction.  
-This field is available only on the `Visa Platform Connect` processor.  
+This field is available only on the `Platform Connect` processor.  
 Contact customer support to get the value for this field.
 
 Specifications {#processing-info-processor-id_Specifications}
@@ -26582,7 +26582,7 @@ processingInformation. purchaseLevel {#processing-info-purchase-level}
 
 Flag indicates the capture or credit request includes Level III data.  
 Set the value for this field to `3`.  
-This field is available on these processors: `American Express Direct`, `Barclays`, `Chase Paymentech Solutions`, `Elavon Americas`, `FDC Compass`, `FDC Nashville Global`, `GPN`, `OmniPay Direct`, `TSYS Acquiring Solutions`, `Visa Platform Connect`, `Worldpay VAP`.
+This field is available on these processors: `American Express Direct`, `Barclays`, `Chase Paymentech Solutions`, `Elavon Americas`, `FDC Compass`, `FDC Nashville Global`, `GPN`, `OmniPay Direct`, `TSYS Acquiring Solutions`, `Platform Connect`, `Worldpay Relay`.
 
 Specifications {#processing-info-purchase-level_Specifications}
 ---------------------------------------------------------------
@@ -26605,7 +26605,7 @@ processingInformation. purchaseOptions. isElectronicBenefitsTransfer {#processin
 ===============================================================================================================
 
 Flag that indicates that this transaction is an EBT transaction.  
-This field is available only on the `Visa Platform Connect` processor.
+This field is available only on the `Platform Connect` processor.
 Possible value: `EBT`
 
 Specifications {#processing-info-purchase-options-is-ebt_Specifications}
@@ -26627,7 +26627,7 @@ processingInformation. purchaseOptions.type {#processing-info-purchase-options-t
 ====================================================================================
 
 This flag indicates an EBT voucher transaction. Also used to indicate the type of transaction for the Mastercard Benefits Payment Scheme in Brazil.  
-This field is available only on the `Visa Platform Connect` processor.  
+This field is available only on the `Platform Connect` processor.  
 Possible values:
 
 * `verbal`: EBT voucher transaction.
@@ -26658,7 +26658,7 @@ processingInformation. purchaseOptions. eligibilityIndicator {#processing-info-p
 ===================================================================================================================
 
 This flag indicates that this transaction is eligible for the Mastercard Benefits Payment Scheme in Brazil.  
-This field is available only on the `Visa Platform Connect` processor.  
+This field is available only on the `Platform Connect` processor.  
 Possible values:
 
 * `Y`: This transaction is eligible.
@@ -26700,7 +26700,7 @@ This field is available only on these processors:
 
 * `Streamline`
 
-* `Visa Platform Connect`
+* `Platform Connect`
   {#processing-info-purpose-of-payment_ul_bwm_sps_12c}  
   The value for this field corresponds to the following data in the TC 33 capture file:
 
@@ -26717,7 +26717,7 @@ Mastercard and Maestro Requirements
 
 `First Data Merchant Solutions` and `LloydsTSB Cardnet International`
 :
-This field is required with Visa when the `recipientInformation.country` field value is one of these countries:
+This field is required with Relay when the `recipientInformation.country` field value is one of these countries:
 
     * Australia
     * Bangladesh
@@ -26843,7 +26843,7 @@ Syntax
 
 The syntax must conform to this regular expression.
 
-`Visa Platform Connect`
+`Platform Connect`
 :
 `[a-zA-Z0-9\-]`
 
@@ -26857,7 +26857,7 @@ Specifications {#processing-info-reconcilliation-id_Specifications}
 * **Data Type:** String
 * **Data Length**: 60
 * **Data Length** :
-  * **`Visa Platform Connect`**: 25
+  * **`Platform Connect`**: 25
   * **`TeleCheck`**: 50
   * **`China UnionPay`**: 12
   * **All other processors**: 60
@@ -26884,7 +26884,7 @@ Possible values:
 * `true`: Yes, this is the first payment in a series of recurring payments.
 * `false` (default): No, this is not the first payment in a series of recurring payments.
 
-This field is available only on the `Barclays`, `Credit Mutuel-CIC`, `FDC Nashville Global` (with American Express cards and Visa cards), and `OmniPay Direct` processors.
+This field is available only on the `Barclays`, `Credit Mutuel-CIC`, `FDC Nashville Global` (with American Express cards and Relay cards), and `OmniPay Direct` processors.
 
 Specifications {#processing-info-recurring-ops-first-recurring-payment_Specifications}
 --------------------------------------------------------------------------------------
@@ -26949,7 +26949,7 @@ processingInformation. reportGroup {#processing-info-report-group}
 ==================================================================
 
 Value that you create that enables you to identify a group of transactions.  
-This field is available only on the `Worldpay VAP` processor.
+This field is available only on the `Worldpay Relay` processor.
 
 Specifications {#processing-info-report-group_Specifications}
 -------------------------------------------------------------
@@ -26968,7 +26968,7 @@ processingInformation. transactionReason {#processing-info-transaction-reason}
 ==============================================================================
 
 Transaction reason code. Sends the reason code as 5120, which indicates the sales tax/value added tax part of original credit transactions (OCTs).  
-This field is available only on the `Visa Platform Connect` processor.
+This field is available only on the `Platform Connect` processor.
 To process Faster Refund Original Credit Transactions (OCTs) in AP and the EU, include these fields in the request:
 
 * Transaction Type
@@ -26990,7 +26990,7 @@ To process Faster Refund Original Credit Transactions (OCTs) in AP and the EU, i
   * Record: 104, Usage 2---Transaction-Specific Data (in TLV format)
   * Dataset ID: 57
   * Tag: 01
-* Visa Merchant Identifier
+* Relay Merchant Identifier
   * Record: 126.5
 
 Specifications {#processing-info-transaction-reason_Specifications}
@@ -27087,7 +27087,7 @@ The service uses two modes of validation:
 * Advance mode validates account and routing number combination.
   {#processing_info_val_lev_ul_fyc_t1p_2fc}  
   IMPORTANT If the Advanced mode is unavailable or cannot validate the account, the service defaults to the Basic mode.  
-  This field supports the Visa Bank Account Validation service which ensures that `eCheck` transactions comply with Nacha (National Automated Clearing House Association) guidelines.  
+  This field supports the Relay Bank Account Validation service which ensures that `eCheck` transactions comply with Nacha (National Automated Clearing House Association) guidelines.  
   Possible values:
 
 * `1`: Basic mode
@@ -27107,22 +27107,22 @@ Mapping Information {#processing_info_val_lev_Mapping}
 * **SCMP API Field:** No corresponding field
 * **Simple Order API Field:** No corresponding field
 
-processingInformation. visaCheckoutID {#processing-info-visa-checkout-id}
+processingInformation. cardCheckoutID {#processing-info-relay-checkout-id}
 =========================================================================
 
-Identifier for a `Visa Click to Pay` order.  
-`Visa Click to Pay` provides a unique order ID for every transaction in the `Visa Click to Pay` callID field.
+Identifier for a `Relay Click to Pay` order.  
+`Relay Click to Pay` provides a unique order ID for every transaction in the `Relay Click to Pay` callID field.
 
-Specifications {#processing-info-visa-checkout-id_Specifications}
+Specifications {#processing-info-relay-checkout-id_Specifications}
 -----------------------------------------------------------------
 
 * **Data Type:** String
 * **Data Length:** 48
 
-Mapping Information {#processing-info-visa-checkout-id_Mapping}
+Mapping Information {#processing-info-relay-checkout-id_Mapping}
 ---------------------------------------------------------------
 
-* **REST API Field:** processingInformation.visaCheckoutID
+* **REST API Field:** processingInformation.cardCheckoutID
 * **SCMP API Field:** vc_order_id
 * **Simple Order API Field:** vc_orderID
 
@@ -27130,14 +27130,14 @@ processingInformation. walletType {#processing-info-wallet-type}
 ================================================================
 
 Type of wallet.  
-This field is available only on the `FDC Compass`, `FDC Nashville Global`, `FDI Australia`, `Visa Platform Connect`, and `TSYS Acquiring Solutions` processors.  
+This field is available only on the `FDC Compass`, `FDC Nashville Global`, `FDI Australia`, `Platform Connect`, and `TSYS Acquiring Solutions` processors.  
 Possibles values:
 
-* `101`: Masterpass remote payment. The customer created the wallet by manually interacting with a customer-controlled device such as a computer, tablet, or phone. This value is supported only for Masterpass transactions on `Chase Paymentech Solutions` and `Visa Platform Connect`.
-* `102`: Masterpass remote near field communication (NFC) payment. The customer created the wallet by tapping a Masterpass card or customer-controlled device at a contactless card reader. This value is supported only for card-present Masterpass transactions on `Visa Platform Connect`.
-* `103`: Masterpass Apple Pay payment. The payment was made with a combination of Masterpass and Apple Pay. This value is supported only for Masterpass Apple Pay transactions on `Visa Platform Connect`.
-* `216`: Masterpass Google Pay payment. The payment was made with a combination of Masterpass and Google Pay. This value is supported only for Masterpass Google Pay transactions on `Visa Platform Connect`.
-* `217`: Masterpass Samsung Pay payment. The payment was made with a combination of Masterpass and Samsung Pay. This value is supported only for Masterpass Samsung Pay transactions on `Visa Platform Connect`.
+* `101`: Masterpass remote payment. The customer created the wallet by manually interacting with a customer-controlled device such as a computer, tablet, or phone. This value is supported only for Masterpass transactions on `Chase Paymentech Solutions` and `Platform Connect`.
+* `102`: Masterpass remote near field communication (NFC) payment. The customer created the wallet by tapping a Masterpass card or customer-controlled device at a contactless card reader. This value is supported only for card-present Masterpass transactions on `Platform Connect`.
+* `103`: Masterpass Apple Pay payment. The payment was made with a combination of Masterpass and Apple Pay. This value is supported only for Masterpass Apple Pay transactions on `Platform Connect`.
+* `216`: Masterpass Google Pay payment. The payment was made with a combination of Masterpass and Google Pay. This value is supported only for Masterpass Google Pay transactions on `Platform Connect`.
+* `217`: Masterpass Samsung Pay payment. The payment was made with a combination of Masterpass and Samsung Pay. This value is supported only for Masterpass Samsung Pay transactions on `Platform Connect`.
 * `327`: Mastercard Remote Commerce Programs.
 * `SDW`: Staged digital wallet. An issuer or operator created the wallet. This value is supported only for Masterpass transactions on `Chase Paymentech Solutions`.
 
@@ -27145,7 +27145,7 @@ Possibles values:
 :
 The value that is sent to the processor is the value that the processor expects for this field.
 
-`Visa Platform Connect`
+`Platform Connect`
 :
 This field is a *passthrough*; therefore, the value is not verified or modified in any way before it is sent to the processor.
 
@@ -27359,13 +27359,13 @@ processorInformation. authIndicator {#processor-info-auth-indicator}
 
 Type of authorization that was performed.  
 This field is not returned for unmarked authorizations. Some processors that support the final authorization indicator do not send this field.
-Possible values for all processors except `Visa Platform Connect`:
+Possible values for all processors except `Platform Connect`:
 
 * `0`: Preauthorization
 
 * `1`: Final authorization
-  **`Visa Platform Connect`**  
-  Possible value for Visa transactions:
+  **`Platform Connect`**  
+  Possible value for Relay transactions:
 
 * `0`: Authorization for an estimated amount
 
@@ -27392,7 +27392,7 @@ processorInformation. authorizationOptions. panReturnIndicator {#processor-info-
 ==================================================================================================================
 
 Flag that indicates whether a primary account number (PAN) is associated with an ExpressPay-enabled card or device in an authorization request.  
-This field is available only for the `Visa Platform Connect` processor.  
+This field is available only for the `Platform Connect` processor.  
 Possible values:
 
 * `1`: ExpressPay Translation (PAN request)
@@ -27466,7 +27466,7 @@ processorInformation. cardReferenceData {#processor-info-card-reference-data}
 =============================================================================
 
 Transaction identifier that is generated by the payment card company.  
-This field is available only for industry-practice merchant-initiated token transactions with Discover or Diners Club payment cards processed by the `Visa Platform Connect`, `HSBC`, and `Streamline` processors.  
+This field is available only for industry-practice merchant-initiated token transactions with Discover or Diners Club payment cards processed by the `Platform Connect`, `HSBC`, and `Streamline` processors.  
 Set the value for this field to the value for the processorInformation.cardReferenceData field that was in the response message when you obtained the customer's credentials.  
 When you use this field, you must also include the issuerInformation.transactionInformation field.
 
@@ -27530,10 +27530,10 @@ Mapping Information {#processor-info-card-verification-result-code-raw_Mapping}
 processorInformation. consumerAuthenticationResponse. code {#processor-info-consumer-auth-response-code}
 ========================================================================================================
 
-Mapped response code for American Express SafeKey, RuPay PaySecure, or Visa Secure.
+Mapped response code for American Express SafeKey, RuPay PaySecure, or Relay Secure.
 
 > IMPORTANT
-> A value of ` 0 ` for a Visa transaction indicates that Visa downgraded the transaction. When Visa approves an authorization and downgrades it, you are liable for the transaction. To confirm the downgrade, look at the e-commerce indicator for the transaction in the Business Center. You can proceed with the transaction if you want to accept liability. If you do not want to accept liability, reverse the authorization, attempt to authenticate the customer again, and request another authorization.
+> A value of ` 0 ` for a Relay transaction indicates that Relay downgraded the transaction. When Relay approves an authorization and downgrades it, you are liable for the transaction. To confirm the downgrade, look at the e-commerce indicator for the transaction in the Business Center. You can proceed with the transaction if you want to accept liability. If you do not want to accept liability, reverse the authorization, attempt to authenticate the customer again, and request another authorization.
 
 | Response Code | Description                                                         |
 |:--------------|:--------------------------------------------------------------------|
@@ -27551,7 +27551,7 @@ Mapped response code for American Express SafeKey, RuPay PaySecure, or Visa Secu
 
 | Response Code | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 |:--------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `0`           | CAVV not validated because erroneous data was submitted. > IMPORTANT > Visa downgraded the transaction. When you receive an authorization approval and the CAVV response code is ` 0 `, you are liable for the transaction. To confirm the downgrade, look at the e-commerce indicator for the transaction in the Business Center. You can proceed with the transaction if you want to accept liability. If you do not want to accept liability, reverse the authorization, attempt to authenticate the customer again, and request another authorization. |
+| `0`           | CAVV not validated because erroneous data was submitted. > IMPORTANT > Relay downgraded the transaction. When you receive an authorization approval and the CAVV response code is ` 0 `, you are liable for the transaction. To confirm the downgrade, look at the e-commerce indicator for the transaction in the Business Center. You can proceed with the transaction if you want to accept liability. If you do not want to accept liability, reverse the authorization, attempt to authenticate the customer again, and request another authorization. |
 | `1`           | CAVV failed validation and authentication.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | `2`           | CAVV passed validation and authentication.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | `3`           | CAVV passed the validation attempt.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
@@ -27567,7 +27567,7 @@ Mapped response code for American Express SafeKey, RuPay PaySecure, or Visa Secu
 | `I`           | Invalid security data.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | `U`           | Issuer does not participate or 3-D secure data was not used.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | `99`          | An unknown value was returned from the processor.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-[Visa Secure Response Codes]
+[Relay Secure Response Codes]
 
 Specifications {#processor-info-consumer-auth-response-code_Specifications}
 ---------------------------------------------------------------------------
@@ -27585,7 +27585,7 @@ Mapping Information {#processor-info-consumer-auth-response-code_Mapping}
 processorInformation. consumerAuthenticationResponse. codeRaw {#processor-info-consumer-auth-response-code-raw}
 ===============================================================================================================
 
-CAVV response code sent directly from the processor for American Express SafeKey, RuPay PaySecure, or Visa Secure.
+CAVV response code sent directly from the processor for American Express SafeKey, RuPay PaySecure, or Relay Secure.
 
 Specifications {#processor-info-consumer-auth-response-code-raw_Specifications}
 -------------------------------------------------------------------------------
@@ -27676,7 +27676,7 @@ processorInformation. electronicVerificationResults. firstName {#processor-info-
 ===========================================================================================================================
 
 Mapped electronic verification response code from the processor for the customer's first name.  
-This field is available only for the`Visa Platform Connect` processor.  
+This field is available only for the`Platform Connect` processor.  
 Possible values:
 
 * `N`: No match.
@@ -27700,7 +27700,7 @@ processorInformation. electronicVerificationResults. firstNameRaw {#processor-in
 ==================================================================================================================================
 
 Raw electronic verification response code from the processor for the customer's first name.  
-This field is available only for the `Visa Platform Connect` processor.  
+This field is available only for the `Platform Connect` processor.  
 Possible values:
 
 * `01`: Match.
@@ -27724,7 +27724,7 @@ processorInformation. electronicVerificationResults. lastName {#processor-info-e
 =========================================================================================================================
 
 Mapped electronic verification response code from the processor for the customer's last name.  
-This field is available only for the `Visa Platform Connect` processor.  
+This field is available only for the `Platform Connect` processor.  
 Possible values:
 
 * `N`: No match.
@@ -27748,7 +27748,7 @@ processorInformation. electronicVerificationResults. lastNameRaw {#processor-inf
 ================================================================================================================================
 
 Raw electronic verification response code from the processor for the customer's last name.  
-This field is available only for the `Visa Platform Connect` processor.  
+This field is available only for the `Platform Connect` processor.  
 Possible values:
 
 * `01`: Match.
@@ -27772,7 +27772,7 @@ processorInformation. electronicVerificationResults. middleName {#processor-info
 =============================================================================================================================
 
 Mapped electronic verification response code from the processor for the customer's middle name.  
-This field is available only for the `Visa Platform Connect` processor.  
+This field is available only for the `Platform Connect` processor.  
 Possible values:
 
 * `N`: No match.
@@ -27796,7 +27796,7 @@ processorInformation. electronicVerificationResults. middleNameRaw {#processor-i
 ====================================================================================================================================
 
 Raw electronic verification response code from the processor for the customer's middle name.  
-This field is available only for the `Visa Platform Connect` processor.  
+This field is available only for the `Platform Connect` processor.  
 Possible values:
 
 * `01`: Match.
@@ -27820,7 +27820,7 @@ processorInformation. electronicVerificationResults. name {#processor-info-elect
 ================================================================================================================
 
 Mapped electronic verification response code from the processor for the customer's full name: first name, middle name, and last name.  
-This field is supported only for `Visa Platform Connect`.  
+This field is supported only for `Platform Connect`.  
 Possible values:
 
 * `N`: No match.
@@ -27844,7 +27844,7 @@ processorInformation. electronicVerificationResults. nameRaw {#processor-info-el
 =======================================================================================================================
 
 Raw electronic verification response code from the processor for the customer's full name: first name, middle name, and last name.  
-This field is available only for the `Visa Platform Connect` processor.  
+This field is available only for the `Platform Connect` processor.  
 Possible values:
 
 * `01`: Match.
@@ -27976,7 +27976,7 @@ processorInformation. emsTransactionRiskScore {#processor-info-ems-transaction-r
 ==========================================================================================
 
 Fraud score for a MasterCard transaction.  
-This field is available only for the `Visa Platform Connect` processor, for authorizations on Mastercard payment cards issued in the US. To receive a fraud score, you must have Mastercard Expert Monitoring Solutions enabled for your account.
+This field is available only for the `Platform Connect` processor, for authorizations on Mastercard payment cards issued in the US. To receive a fraud score, you must have Mastercard Expert Monitoring Solutions enabled for your account.
 
 * Positions 1-3: Fraud score. This value ranges from 001 to 998, where 001 indicates the least likely fraudulent transaction and 998 indicates the most likely fraudulent transaction.
 * Positions 4-5: Reason code that specifies the reason for the fraud score. Possible values:
@@ -28114,7 +28114,7 @@ processorInformation. masterCardAuthenticationType {#processor-info-master-card-
 
 Type of authentication for which the transaction qualifies as determined by the Mastercard authentication service, which confirms the identity of the cardholder.  
 Mastercard provides this value to `Cybersource`.  
-This field is available only on the `Visa Platform Connect` processor.  
+This field is available only on the `Platform Connect` processor.  
 Possible values:
 
 * `1`: Transaction qualifies for Mastercard authentication type 1.
@@ -28147,7 +28147,7 @@ processorInformation. masterCardServiceCode {#processor-info-master-card-service
 
 Mastercard service that was used for the transaction.  
 Mastercard provides this value to `Cybersource`.  
-This field is available only for the `Visa Platform Connect` processor.  
+This field is available only for the `Platform Connect` processor.  
 Possible value is `53`: Mastercard card-on-file token service.  
 The value for this field corresponds to the following data in the TC 33 capture file:
 
@@ -28178,7 +28178,7 @@ processorInformation. masterCardServiceReplyCode {#processor-info-master-card-se
 
 Result of the Mastercard card-on-file token service.  
 Mastercard provides this value to `Cybersource`.  
-This field is available only for the `Visa Platform Connect` processor.  
+This field is available only for the `Platform Connect` processor.  
 Possible values:
 
 * `C`: Service completed successfully.
@@ -28215,12 +28215,12 @@ processorInformation. merchantAdvice.code {#processor-info-merchant-advice-code-
 ==================================================================================
 
 Category code indicating information about a decline.  
-When this field is used for Mastercard with `FDC Nashville Global`, it is available only for card-not-present declined transactions. When this field is used for Visa with `FDC Nashville Global`, it is available for both card-present and card-not-present declined transactions.
+When this field is used for Mastercard with `FDC Nashville Global`, it is available only for card-not-present declined transactions. When this field is used for Relay with `FDC Nashville Global`, it is available for both card-present and card-not-present declined transactions.
 
 > IMPORTANT
-> Use the values returned in this field for Visa and Mastercard to determine whether to retry declined transactions. Update your retry logic to ensure that a retry is not attempted when the card association does not approve the transactions. A retry on a transaction with a value in this field that prohibits retry, such as ` Issuer never approves ` or ` Do not try again `, can incur a penalty from card companies.
+> Use the values returned in this field for Relay and Mastercard to determine whether to retry declined transactions. Update your retry logic to ensure that a retry is not attempted when the card association does not approve the transactions. A retry on a transaction with a value in this field that prohibits retry, such as ` Issuer never approves ` or ` Do not try again `, can incur a penalty from card companies.
 > IMPORTANT If a decline does not have a merchant advice code in the response, the default is not to retry the transaction.  
-> Visa and Mastercard, in addition to the merchant advice codes, provide decline response codes. American Express and Discover do not provide category codes, but they do provide decline response codes.
+> Relay and Mastercard, in addition to the merchant advice codes, provide decline response codes. American Express and Discover do not provide category codes, but they do provide decline response codes.
 > Possible values for `Barclays` processor:
 
 * `00`: No information, or response not provided.
@@ -28232,8 +28232,8 @@ When this field is used for Mastercard with `FDC Nashville Global`, it is availa
 * `03`: Do not try again.
 
 * `05`: Payment blocked by card scheme.
-  Possible values for `Chase Paymentech Solutions`, `Chase Paymentech Tandem`, ` FDC Nashville Global`, `GPX`, and ` Visa Platform Connect` processors:  
-  **Visa:**
+  Possible values for `Chase Paymentech Solutions`, `Chase Paymentech Tandem`, ` FDC Nashville Global`, `GPX`, and ` Platform Connect` processors:  
+  **Relay:**
 
 * `1`: Issuer never approves.
 
@@ -28299,7 +28299,7 @@ processorInformation. merchantAdvice.codeRaw {#processor-info-merchant-advice-co
 =======================================================================================
 
 Raw merchant advice code sent directly from the processor.  
-This field is processed by the `Barclays`, `FDC Compass`, and `Visa Platform Connect` processors.
+This field is processed by the `Barclays`, `FDC Compass`, and `Platform Connect` processors.
 Possible values for `Barclays` processor:
 
 * `0`: No information, or response not provided.
@@ -28311,7 +28311,7 @@ Possible values for `Barclays` processor:
 * `4`: Do not try again.
 
 * `8`: Payment blocked by card scheme.  
-  Possible values for `FDC Compass` and `Visa Platform Connect` processors:
+  Possible values for `FDC Compass` and `Platform Connect` processors:
 
 * `00`: No information, or response not provided.
 
@@ -28338,7 +28338,7 @@ Possible values for `Barclays` processor:
 * `7941`: Non‐reloadable prepaid card
 
 * `7942`: Sanctions score exceeds applicable threshold value
-  **`Visa Platform Connect`**  
+  **`Platform Connect`**  
   The value for this field corresponds to the following data in the TC 33 capture file:
 
 * Record: CP01 TCR7
@@ -28385,7 +28385,7 @@ Possible values returned:
 * orderInformation.billTo.lastName
 
 > IMPORTANT
-> This field is available only for the ` Visa Platform Connect ` processor, and only from acquirers that support account inquiry services.
+> This field is available only for the ` Platform Connect ` processor, and only from acquirers that support account inquiry services.
 
 Specifications {#processor-info-merchant-advice-name-match_Specifications}
 --------------------------------------------------------------------------
@@ -28424,7 +28424,7 @@ processorInformation. merchantRiskPrediction {#processor-info-merchant-risk-pred
 =======================================================================================
 
 This value is the merchant risk prediction score. The score consists of seven independent scores that are determined by artificial intelligence (AI). The merchant risk prediction score is used in addition to existing risk management practices.  
-This field is available only for `Visa Platform Connect`.
+This field is available only for `Platform Connect`.
 
 Specifications {#processor-info-merchant-risk-prediction_Specifications}
 ------------------------------------------------------------------------
@@ -28443,7 +28443,7 @@ processorInformation. networkTransactionId {#processor-info-network-transaction-
 ===================================================================================
 
 Network transaction identifier (TID).  
-This field is available only for the `Visa Platform Connect` processor and only when the credit is authorized.  
+This field is available only for the `Platform Connect` processor and only when the credit is authorized.  
 You can use this value to identify a specific transaction when you are discussing the transaction with your acquirer.
 
 Specifications {#processor-info-network-transaction-id_Specifications}
@@ -28462,17 +28462,17 @@ Mapping Information {#processor-info-network-transaction-id_Mapping}
 processorInformation. paymentAccountReferenceNumber {#processor-info-payment-account-reference-num}
 ===================================================================================================
 
-Visa-generated reference number that identifies a transaction for which you provided one of the following:
+Relay-generated reference number that identifies a transaction for which you provided one of the following:
 
-* Visa primary account number (PAN)
-* Visa-generated token for a PAN  
+* Relay primary account number (PAN)
+* Relay-generated token for a PAN  
   This reference number provides a link to the cardholder account and to all transactions for that account.  
-  This field is available for the `Chase Paymentech Solutions`, `Chase Paymentech Tandem`, `Visa Platform Connect`, and `Elavon Americas` processors.
+  This field is available for the `Chase Paymentech Solutions`, `Chase Paymentech Tandem`, `Platform Connect`, and `Elavon Americas` processors.
 
-`Visa Platform Connect` Processor Specific Information
+`Platform Connect` Processor Specific Information
 ------------------------------------------------------
 
-The following information is specific to the `Visa Platform Connect` processor:  
+The following information is specific to the `Platform Connect` processor:  
 For transactions with American Express, the value for this field corresponds to the following data in the TC 33 capture file:
 
 * Record: CP01 TCR8
@@ -28595,7 +28595,7 @@ This field is returned only when the processor sends this value.
 * **Authorization and Incremental Authorization**---This field is returned only when the processor sends this value.
 * **Credit**---This field is returned only when the credit is authorized and the processor sends this value.
 * **PIN Debit**---This field is the value that is returned by the processor or bank in a response.
-  This field is available only for the `AIBMS`, `Comercio Latino`, `China UnionPay`, `JCN Gateway`, and `Visa Platform Connect` processors.  
+  This field is available only for the `AIBMS`, `Comercio Latino`, `China UnionPay`, `JCN Gateway`, and `Platform Connect` processors.  
   These processors have specific requirements:
 
 `AIBMS`
@@ -28695,7 +28695,7 @@ This value is the status code and the error or response code received from the p
 :
 Processor-defined detail error code. The associated response category code is in the processorInformation.responseCategoryCode `REST` API field.
 
-`Visa Platform Connect`
+`Platform Connect`
 :
 The response code value `Z5` (valid account, but amount is not supported) is returned when the anticipated amount mentioned in the transaction exceeds the account limit or available funds.
 
@@ -28722,7 +28722,7 @@ The response code value `Z5` (valid account, but amount is not supported) is ret
     * Ukraine
 
     {#processor-info-response-code_ul_ntl_sgh_x1c}  
-    These response codes are available only for Mastercard on the `Visa Platform Connect` processor.
+    These response codes are available only for Mastercard on the `Platform Connect` processor.
 
     **Mastercard declined authorizations:** If an authorization is declined for a point-of-sale transaction, Mastercard returns a combined response code and decline reason code. The codes are added to the authorization response in this field:
 
@@ -28790,7 +28790,7 @@ processorInformation. responseDetails {#processor-info-response-detail}
 =======================================================================
 
 Additional information about a declined transaction.  
-This field is available only for the `OmniPay Direct` and `Visa Platform Connect` processors.
+This field is available only for the `OmniPay Direct` and `Platform Connect` processors.
 
 Specifications {#processor-info-response-detail_Specifications}
 ---------------------------------------------------------------
@@ -28827,9 +28827,9 @@ processorInformation. retrievalReferenceNumber {#processor-info-retrieval-refere
 ========================================================================================
 
 Reconciliation reference number.
-This field is available only for the `Visa Platform Connect` processor.
+This field is available only for the `Platform Connect` processor.
 
-**`Visa Platform Connect`**
+**`Platform Connect`**
 :
 Retrieval request number.
 
@@ -28909,7 +28909,7 @@ Possible values:
 * NYCE
 * PULSE
 * STAR
-* Visa
+* Relay
 * Mastercard
 
 Specifications {#processor-info-routing-network-name_Specifications}
@@ -28952,11 +28952,11 @@ processorInformation. systemTraceAuditNumber {#processor-info-system-trace-audit
 =====================================================================================
 
 Receipt number.  
-This field is available only on the `American Express Direct`, `Visa Platform Connect`, and `SIX` processors.  
+This field is available only on the `American Express Direct`, `Platform Connect`, and `SIX` processors.  
 **Credit Card Transactions**
 
 * **`American Express Direct`:**System trace audit number (STAN). This value identifies the transaction and is useful when investigating a chargeback dispute.
-* **`Visa Platform Connect`:**System trace number that must be printed on the customer's receipt.
+* **`Platform Connect`:**System trace number that must be printed on the customer's receipt.
 
 Specifications {#processor-info-system-trace-audit-num_Specifications}
 ----------------------------------------------------------------------
@@ -29043,7 +29043,7 @@ processorInformation. transactionIntegrityCode {#processor-info-transaction-inte
 ===========================================================================================
 
 Transaction integrity classification provided by Mastercard.  
-This field is available only for the `Visa Platform Connect` processor.  
+This field is available only for the `Platform Connect` processor.  
 This value indicates Mastercard's evaluation of the transaction's safety and security.  
 Possible values for card-present transactions:
 
@@ -29099,9 +29099,9 @@ These fields provide product information.
 * [productInformation.selectedProducts.commerceSolutions. accountUpdater.configurationInformation.configurations.masterCard.merchantId](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-acct-updater-co-6.md "")
 * [productInformation.selectedProducts.commerceSolutions. accountUpdater.configurationInformation.configurations.preferredDay](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-acct-updater-co-7.md "")
 * [productInformation.selectedProducts.commerceSolutions. accountUpdater.configurationInformation.templateId](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-acct-updater-co-8.md "")
-* [productInformation.selectedProducts.commerceSolutions. accountUpdater.configurationInformation.configurations.visa.active](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-acct-updater-co-9.md "")
-* [productInformation.selectedProducts.commerceSolutions. accountUpdater.configurationInformation.configurations.visa.merchantId](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-acct-updater-c-10.md "")
-* [productInformation.selectedProducts.commerceSolutions. accountUpdater.configurationInformation.configurations.visa.segmentId](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-acct-updater-c-11.md "")
+* [productInformation.selectedProducts.commerceSolutions. accountUpdater.configurationInformation.configurations.relay.active](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-acct-updater-co-9.md "")
+* [productInformation.selectedProducts.commerceSolutions. accountUpdater.configurationInformation.configurations.relay.merchantId](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-acct-updater-c-10.md "")
+* [productInformation.selectedProducts.commerceSolutions. accountUpdater.configurationInformation.configurations.relay.segmentId](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-acct-updater-c-11.md "")
 * [productInformation.selectedProducts.commerceSolutions. accountUpdater.subscriptionInformation.enabled](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-acct-updater-sub-e.md "")
 * [productInformation.selectedProducts.commerceSolutions. accountUpdater.subscriptionInformation.selfServiceability](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-acct-updater-sub-s.md "")
 * [productInformation.selectedProducts.commerceSolutions. tokenManagement.configurationInformation.configurations.networkTokenEnrollment. businessInformation.acquirer.acquirerId](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net.md "")
@@ -29122,11 +29122,11 @@ These fields provide product information.
 * [productInformation.selectedProducts.commerceSolutions. tokenManagement.configurationInformation.configurations.networkTokenServices. mastercardDigitalEnablementService.tokenRequestorId](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-14.md "")
 * [productInformation.selectedProducts.commerceSolutions. tokenManagement.configurationInformation.configurations.networkTokenServices. notifications.enabled](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-15.md "")
 * [productInformation.selectedProducts.commerceSolutions. tokenManagement.configurationInformation.configurations.networkTokenServices. synchronousProvisioning.enabled](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-16.md "")
-* [productInformation.selectedProducts.commerceSolutions. tokenManagement.configurationInformation.configurations.networkTokenServices. visaTokenService.enableTransactionalTokens](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-17.md "")
-* [productInformation.selectedProducts.commerceSolutions. tokenManagement.configurationInformation.configurations.networkTokenServices. visaTokenService.enableService](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-18.md "")
-* [productInformation.selectedProducts.commerceSolutions. tokenManagement.configurationInformation.configurations.networkTokenEnrollment. networkTokenServices.visaTokenService.enrollment](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-19.md "")
-* [productInformation.selectedProducts.commerceSolutions. tokenManagement.configurationInformation.configurations.networkTokenServices. visaTokenService.relationshipId](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-20.md "")
-* [productInformation.selectedProducts.commerceSolutions. tokenManagement.configurationInformation.configurations.networkTokenServices. visaTokenService.tokenRequestorId](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-21.md "")
+* [productInformation.selectedProducts.commerceSolutions. tokenManagement.configurationInformation.configurations.networkTokenServices. cardTokenService.enableTransactionalTokens](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-17.md "")
+* [productInformation.selectedProducts.commerceSolutions. tokenManagement.configurationInformation.configurations.networkTokenServices. cardTokenService.enableService](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-18.md "")
+* [productInformation.selectedProducts.commerceSolutions. tokenManagement.configurationInformation.configurations.networkTokenEnrollment. networkTokenServices.cardTokenService.enrollment](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-19.md "")
+* [productInformation.selectedProducts.commerceSolutions. tokenManagement.configurationInformation.configurations.networkTokenServices. cardTokenService.relationshipId](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-20.md "")
+* [productInformation.selectedProducts.commerceSolutions. tokenManagement.configurationInformation.configurations.networkTokenServices. cardTokenService.tokenRequestorId](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-21.md "")
 * [productInformation.selectedProducts.commerceSolutions. tokenManagement.configurationInformation.configurations.parentProfileId](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-par.md "")
 * [productInformation.selectedProducts.commerceSolutions. tokenManagement.configurationInformation.configurations.templateId](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-tem.md "")
 * [productInformation.selectedProducts.commerceSolutions. tokenManagement.configurationInformation.configurations.vault.defaultTokenType](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-vau.md "")
@@ -29193,7 +29193,7 @@ These fields provide product information.
 * [productInformation.selectedProducts.payments. cardProcessing.configurationInformation.configurations.features.cardNotPresent. processors.\[processorName\].relaxAddressVerificationSystemAllowExpiredCard](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-pay-card-proc-conf-feat-cnp-17.md "")
 * [productInformation.selectedProducts.payments. cardProcessing.configurationInformation.configurations.features.cardNotPresent. processors.\[processorName\].relaxAddressVerificationSystemAllowZipWithoutCountry](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-pay-card-proc-conf-feat-cnp-18.md "")
 * [productInformation.selectedProducts.payments. cardProcessing.configurationInformation.configurations.features.cardNotPresent. processors.\[processorName\].relaxAddressVerificationSystem](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-pay-card-proc-conf-feat-cnp-19.md "")
-* [productInformation.selectedProducts.payments. cardProcessing.configurationInformation.configurations.features.cardNotPresent. visaStraightThroughProcessingOnly](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-pay-card-proc-conf-feat-cnp-vis.md "")
+* [productInformation.selectedProducts.payments. cardProcessing.configurationInformation.configurations.features.cardNotPresent. relayStraightThroughProcessingOnly](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-pay-card-proc-conf-feat-cnp-vis.md "")
 * [productInformation.selectedProducts.payments. cardProcessing.configurationInformation.configurations.features.cardPresent. enableTerminalIdLookup](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-pay-card-proc-conf-feat-cp-enab.md "")
 * [productInformation.selectedProducts.payments. cardProcessing.configurationInformation.configurations.features.cardPresent.processors.\[processorName\]. defaultPointOfSaleTerminalId](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-pay-card-proc-conf-feat-cp-proc.md "")
 * [productInformation.selectedProducts.payments. cardProcessing.configurationInformation.configurations.features.cardPresent.processors.\[processorName\]. disablePointOfSaleTerminalIdValidation](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-pay-card-proc-conf-feat-cp-p-0.md "")
@@ -29250,7 +29250,7 @@ These fields provide product information.
 * [productInformation.selectedProducts.payments. cardProcessing.configurationInformation.configurations.common.sicCode](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-pay-card-proc-conf-info-con-44.md "")
 * [productInformation.selectedProducts.payments. cardProcessing.configurationInformation.configurations.common. subMerchantBusinessName](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-pay-card-proc-conf-info-con-45.md "")
 * [productInformation.selectedProducts.payments. cardProcessing.configurationInformation.configurations.common.subMerchantId](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-pay-card-proc-conf-info-con-46.md "")
-* [productInformation.selectedProducts.payments. cardProcessing.configurationInformation.configurations.common. visaDelegatedAuthenticationId](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-pay-card-proc-conf-info-con-47.md "")
+* [productInformation.selectedProducts.payments. cardProcessing.configurationInformation.configurations.common. relayDelegatedAuthenticationId](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-pay-card-proc-conf-info-con-47.md "")
 * [productInformation.selectedProducts.payments. cardProcessing.configurationInformation.configurations.common.processors.\[processorName\]. acquirer](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-pay-card-proc-conf-info-con-48.md "")
 * [productInformation.selectedProducts.payments. cardProcessing.configurationInformation.configurations.common.processors.\[processorName\]. allowMerchantDescriptorOverride](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-pay-card-proc-conf-info-con-49.md "")
 * [productInformation.selectedProducts.payments. cardProcessing.configurationInformation.configurations.common.processors.\[processorName\]. allowMultipleBills](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-pay-card-proc-conf-info-con-50.md "")
@@ -29347,13 +29347,13 @@ These fields provide product information.
 * [productInformation.selectedProducts.payments. payerAuthentication.configurationInformation.configurations.cardTypes.UPI.currencies. requestorId](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-pay-payerauth-conf-info-con-40.md "")
 * [productInformation.selectedProducts.payments. payerAuthentication.configurationInformation.configurations.cardTypes.UPI.currencies. requestorName](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-pay-payerauth-conf-info-con-41.md "")
 * [productInformation.selectedProducts.payments. payerAuthentication.configurationInformation.configurations.cardTypes.UPI.enabled](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-pay-payerauth-conf-info-con-42.md "")
-* [productInformation.selectedProducts.payments. payerAuthentication.configurationInformation.configurations.cardTypes.verifiedByVisa. currencies.requestorId](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-pay-payerauth-conf-info-con-43.md "")
-* [productInformation.selectedProducts.payments. payerAuthentication.configurationInformation.configurations.cardTypes.verifiedByVisa. currencies.\[currency\].acquirerId](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-pay-payerauth-conf-info-con-44.md "")
-* [productInformation.selectedProducts.payments. payerAuthentication.configurationInformation.configurations.cardTypes.verifiedByVisa. currencies.\[currency\].currencyCodes](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-pay-payerauth-conf-info-con-45.md "")
-* [productInformation.selectedProducts.payments. payerAuthentication.configurationInformation.configurations.cardTypes.verifiedByVisa. currencies.\[currency\].processorMerchantId](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-pay-payerauth-conf-info-con-46.md "")
-* [productInformation.selectedProducts.payments. payerAuthentication.configurationInformation.configurations.cardTypes. verifiedByVisa. currencies.vmid](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-pay-payerauth-conf-info-con-47.md "")
-* [productInformation.selectedProducts.payments. payerAuthentication.configurationInformation.configurations.cardTypes.verifiedByVisa. enabled](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-pay-payerauth-conf-info-con-48.md "")
-* [productInformation.selectedProducts.payments. payerAuthentication.configurationInformation.configurations.cardTypes.verifiedByVisa. currencies.\[currency\].requestorName](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-pay-payerauth-conf-info-con-49.md "")
+* [productInformation.selectedProducts.payments. payerAuthentication.configurationInformation.configurations.cardTypes.verifiedByCard. currencies.requestorId](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-pay-payerauth-conf-info-con-43.md "")
+* [productInformation.selectedProducts.payments. payerAuthentication.configurationInformation.configurations.cardTypes.verifiedByCard. currencies.\[currency\].acquirerId](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-pay-payerauth-conf-info-con-44.md "")
+* [productInformation.selectedProducts.payments. payerAuthentication.configurationInformation.configurations.cardTypes.verifiedByCard. currencies.\[currency\].currencyCodes](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-pay-payerauth-conf-info-con-45.md "")
+* [productInformation.selectedProducts.payments. payerAuthentication.configurationInformation.configurations.cardTypes.verifiedByCard. currencies.\[currency\].processorMerchantId](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-pay-payerauth-conf-info-con-46.md "")
+* [productInformation.selectedProducts.payments. payerAuthentication.configurationInformation.configurations.cardTypes. verifiedByCard. currencies.vmid](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-pay-payerauth-conf-info-con-47.md "")
+* [productInformation.selectedProducts.payments. payerAuthentication.configurationInformation.configurations.cardTypes.verifiedByCard. enabled](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-pay-payerauth-conf-info-con-48.md "")
+* [productInformation.selectedProducts.payments. payerAuthentication.configurationInformation.configurations.cardTypes.verifiedByCard. currencies.\[currency\].requestorName](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-pay-payerauth-conf-info-con-49.md "")
 * [productInformation.selectedProducts.payments. payerAuthentication.configurationInformation.templateId](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-pay-payerauth-conf-info-templat.md "")
 * [productInformation.selectedProducts.payments. payerAuthentication.subscriptionInformation.enabled](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-pay-payerauth-sub-info-enabled.md "")
 * [productInformation.selectedProducts.payments. payerAuthentication.subscriptionInformation.selfServiceability](/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-pay-payerauth-sub-info-self-ser.md "")
@@ -29840,19 +29840,19 @@ Mapping Information {#prod-info-sel-prod-commerce-sol-acct-updater-conf-template
 **Boarding Registration Service API Field:** productInformation.selectedProducts.commerceSolutions.accountUpdater. configurationInformation.templateId  
 **Product Enablement and Configuration Service API Field:** commerceSolutions.accountUpdater.configurationInformation.templateId
 
-productInformation. selectedProducts. commerceSolutions. accountUpdater. configurationInformation. configurations. visa. active {#prod-info-sel-prod-commerce-sol-acct-updater-conf-visa-active}
+productInformation. selectedProducts. commerceSolutions. accountUpdater. configurationInformation. configurations. relay. active {#prod-info-sel-prod-commerce-sol-acct-updater-conf-relay-active}
 ================================================================================================================================================================================================
 
-Determines whether Visa is actively configured as a card type for Account Updater.
+Determines whether Relay is actively configured as a card type for Account Updater.
 
-Possible Values {#prod-info-sel-prod-commerce-sol-acct-updater-conf-visa-active_PossibleValues}
+Possible Values {#prod-info-sel-prod-commerce-sol-acct-updater-conf-relay-active_PossibleValues}
 -----------------------------------------------------------------------------------------------
 
 * `true`
 * `false`
-  {#prod-info-sel-prod-commerce-sol-acct-updater-conf-visa-active_ul_ftt_kg3_czb}
+  {#prod-info-sel-prod-commerce-sol-acct-updater-conf-relay-active_ul_ftt_kg3_czb}
 
-Syntax {#prod-info-sel-prod-commerce-sol-acct-updater-conf-visa-active_Syntax}
+Syntax {#prod-info-sel-prod-commerce-sol-acct-updater-conf-relay-active_Syntax}
 ------------------------------------------------------------------------------
 
 ```
@@ -29863,7 +29863,7 @@ Syntax {#prod-info-sel-prod-commerce-sol-acct-updater-conf-visa-active_Syntax}
         "accountUpdater": {
           "configurationInformation": {
             "configurations": {
-              "visa": {
+              "relay": {
                 "active": "true"
               }
             }
@@ -29875,24 +29875,24 @@ Syntax {#prod-info-sel-prod-commerce-sol-acct-updater-conf-visa-active_Syntax}
 }
 ```
 
-Specifications {#prod-info-sel-prod-commerce-sol-acct-updater-conf-visa-active_Specifications}
+Specifications {#prod-info-sel-prod-commerce-sol-acct-updater-conf-relay-active_Specifications}
 ----------------------------------------------------------------------------------------------
 
 * **Data Type:** Boolean
-  {#prod-info-sel-prod-commerce-sol-acct-updater-conf-visa-active_ul_yhr_1s2_2yb}
+  {#prod-info-sel-prod-commerce-sol-acct-updater-conf-relay-active_ul_yhr_1s2_2yb}
 
-Mapping Information {#prod-info-sel-prod-commerce-sol-acct-updater-conf-visa-active_Mapping}
+Mapping Information {#prod-info-sel-prod-commerce-sol-acct-updater-conf-relay-active_Mapping}
 --------------------------------------------------------------------------------------------
 
-**Boarding Registration Service API Field:** productInformation.selectedProducts.commerceSolutions.accountUpdater. configurationInformation.configurations.visa.active  
-**Product Enablement and Configuration Service API Field:** commerceSolutions.accountUpdater.configurationInformation. configurations.visa.active
+**Boarding Registration Service API Field:** productInformation.selectedProducts.commerceSolutions.accountUpdater. configurationInformation.configurations.relay.active  
+**Product Enablement and Configuration Service API Field:** commerceSolutions.accountUpdater.configurationInformation. configurations.relay.active
 
-productInformation. selectedProducts. commerceSolutions. accountUpdater. configurationInformation. configurations. visa. merchantId {#prod-info-sel-prod-commerce-sol-acct-updater-conf-visa-merchant-id}
+productInformation. selectedProducts. commerceSolutions. accountUpdater. configurationInformation. configurations. relay. merchantId {#prod-info-sel-prod-commerce-sol-acct-updater-conf-relay-merchant-id}
 =========================================================================================================================================================================================================
 
-The Visa merchant identifier (MID) number that is configured for Account Updater.
+The Relay merchant identifier (MID) number that is configured for Account Updater.
 
-Syntax {#prod-info-sel-prod-commerce-sol-acct-updater-conf-visa-merchant-id_Syntax}
+Syntax {#prod-info-sel-prod-commerce-sol-acct-updater-conf-relay-merchant-id_Syntax}
 -----------------------------------------------------------------------------------
 
 ```
@@ -29903,7 +29903,7 @@ Syntax {#prod-info-sel-prod-commerce-sol-acct-updater-conf-visa-merchant-id_Synt
         "accountUpdater": {
           "configurationInformation": {
             "configurations": {
-              "visa": {
+              "relay": {
                 "merchantId": "testrest"
               }
             }
@@ -29921,26 +29921,26 @@ The value of this field must conform to this regular expression:
 ^[0-9]+$
 ```
 
-Specifications {#prod-info-sel-prod-commerce-sol-acct-updater-conf-visa-merchant-id_Specifications}
+Specifications {#prod-info-sel-prod-commerce-sol-acct-updater-conf-relay-merchant-id_Specifications}
 ---------------------------------------------------------------------------------------------------
 
 * **Data Type:** String
 * **Minimum Data Length:** 1
 * **Maximum Data Length:** 11
-  {#prod-info-sel-prod-commerce-sol-acct-updater-conf-visa-merchant-id_ul_yhr_1s2_2yb}
+  {#prod-info-sel-prod-commerce-sol-acct-updater-conf-relay-merchant-id_ul_yhr_1s2_2yb}
 
-Mapping Information {#prod-info-sel-prod-commerce-sol-acct-updater-conf-visa-merchant-id_Mapping}
+Mapping Information {#prod-info-sel-prod-commerce-sol-acct-updater-conf-relay-merchant-id_Mapping}
 -------------------------------------------------------------------------------------------------
 
-**Boarding Registration Service API Field:** productInformation.selectedProducts.commerceSolutions.accountUpdater. configurationInformation.configurations.visa.merchantId  
-**Product Enablement and Configuration Service API Field:** commerceSolutions.accountUpdater.configurationInformation. configurations.visa.merchantId
+**Boarding Registration Service API Field:** productInformation.selectedProducts.commerceSolutions.accountUpdater. configurationInformation.configurations.relay.merchantId  
+**Product Enablement and Configuration Service API Field:** commerceSolutions.accountUpdater.configurationInformation. configurations.relay.merchantId
 
-productInformation. selectedProducts. commerceSolutions. accountUpdater. configurationInformation. configurations. visa. segmentId {#prod-info-sel-prod-commerce-sol-acct-updater-conf-visa-segment-id}
+productInformation. selectedProducts. commerceSolutions. accountUpdater. configurationInformation. configurations. relay. segmentId {#prod-info-sel-prod-commerce-sol-acct-updater-conf-relay-segment-id}
 =======================================================================================================================================================================================================
 
-The segment identifier that is assigned by Visa for each group of merchants participating in Account Updater.
+The segment identifier that is assigned by Relay for each group of merchants participating in Account Updater.
 
-Syntax {#prod-info-sel-prod-commerce-sol-acct-updater-conf-visa-segment-id_Syntax}
+Syntax {#prod-info-sel-prod-commerce-sol-acct-updater-conf-relay-segment-id_Syntax}
 ----------------------------------------------------------------------------------
 
 ```
@@ -29951,7 +29951,7 @@ Syntax {#prod-info-sel-prod-commerce-sol-acct-updater-conf-visa-segment-id_Synta
         "accountUpdater": {
           "configurationInformation": {
             "configurations": {
-              "visa": {
+              "relay": {
                 "segmentId": "123456789"
               }
             }
@@ -29963,17 +29963,17 @@ Syntax {#prod-info-sel-prod-commerce-sol-acct-updater-conf-visa-segment-id_Synta
 }
 ```
 
-Specifications {#prod-info-sel-prod-commerce-sol-acct-updater-conf-visa-segment-id_section_nty_gfr_fyb}
+Specifications {#prod-info-sel-prod-commerce-sol-acct-updater-conf-relay-segment-id_section_nty_gfr_fyb}
 -------------------------------------------------------------------------------------------------------
 
 * **Data Type:** String
-  {#prod-info-sel-prod-commerce-sol-acct-updater-conf-visa-segment-id_ul_oty_gfr_fyb}
+  {#prod-info-sel-prod-commerce-sol-acct-updater-conf-relay-segment-id_ul_oty_gfr_fyb}
 
-Mapping Information {#prod-info-sel-prod-commerce-sol-acct-updater-conf-visa-segment-id_Mapping}
+Mapping Information {#prod-info-sel-prod-commerce-sol-acct-updater-conf-relay-segment-id_Mapping}
 ------------------------------------------------------------------------------------------------
 
-**Boarding Registration Service API Field:** productInformation.selectedProducts.commerceSolutions.accountUpdater. configurationInformation.configurations.visa.segmentId  
-**Product Enablement and Configuration Service API Field:** commerceSolutions.accountUpdater.configurationInformation. configurations.visa.segmentId
+**Boarding Registration Service API Field:** productInformation.selectedProducts.commerceSolutions.accountUpdater. configurationInformation.configurations.relay.segmentId  
+**Product Enablement and Configuration Service API Field:** commerceSolutions.accountUpdater.configurationInformation. configurations.relay.segmentId
 
 productInformation. selectedProducts. commerceSolutions. accountUpdater. subscriptionInformation. enabled {#prod-info-sel-prod-commerce-sol-acct-updater-sub-enabled}
 =====================================================================================================================================================================
@@ -30062,8 +30062,8 @@ Mapping Information {#prod-info-sel-prod-commerce-sol-acct-updater-sub-self-serv
 productInformation. selectedProducts. commerceSolutions. tokenManagement. configurationInformation. configurations. networkTokenEnrollment. businessInformation. acquirer. acquirerId {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-bus-info-acq-id}
 ===============================================================================================================================================================================================================================================================
 
-The token service provider ID that is used for the token requestor ID (TRID) enrollment for Visa.  
-You must set this field value to `40010052242`. This is a static value that is used for all clients that are enrolling for a token requestor on Visa Token Service (VTS). This field value must not be replaced by another value.
+The token service provider ID that is used for the token requestor ID (TRID) enrollment for Relay.  
+You must set this field value to `40010052242`. This is a static value that is used for all clients that are enrolling for a token requestor on Relay Token Service (VTS). This field value must not be replaced by another value.
 
 Syntax {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-bus-info-acq-id_Syntax}
 ---------------------------------------------------------------------------------------
@@ -30110,7 +30110,7 @@ Mapping Information {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-bus
 productInformation. selectedProducts. commerceSolutions. tokenManagement. configurationInformation. configurations. networkTokenEnrollment. businessInformation. acquirer. acquirerMerchantId {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-bus-info-acq-mid}
 ========================================================================================================================================================================================================================================================================
 
-The merchant account organization ID that is used for the token requestor ID (TRID) enrollment for Visa.  
+The merchant account organization ID that is used for the token requestor ID (TRID) enrollment for Relay.  
 Set this field to the merchant account organization ID that is being boarded.
 
 Syntax {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-bus-info-acq-mid_Syntax}
@@ -30157,7 +30157,7 @@ Mapping Information {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-bus
 productInformation. selectedProducts. commerceSolutions. tokenManagement. configurationInformation. configurations. networkTokenEnrollment. businessInformation. address. country {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-bus-info-addr-country}
 =================================================================================================================================================================================================================================================================
 
-The merchant country code that is used for the token requestor ID (TRID) enrollment for Visa.
+The merchant country code that is used for the token requestor ID (TRID) enrollment for Relay.
 
 Syntax {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-bus-info-addr-country_Syntax}
 ---------------------------------------------------------------------------------------------
@@ -30210,7 +30210,7 @@ Mapping Information {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-bus
 productInformation. selectedProducts. commerceSolutions. tokenManagement. configurationInformation. configurations. networkTokenEnrollment. businessInformation. address. locality {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-bus-info-addr-local}
 ================================================================================================================================================================================================================================================================
 
-The merchant locality name that is used for the token requestor ID (TRID) enrollment for Visa.
+The merchant locality name that is used for the token requestor ID (TRID) enrollment for Relay.
 
 Syntax {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-bus-info-addr-local_Syntax}
 -------------------------------------------------------------------------------------------
@@ -30264,7 +30264,7 @@ Mapping Information {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-bus
 productInformation. selectedProducts. commerceSolutions. tokenManagement. configurationInformation. configurations. networkTokenEnrollment. businessInformation. websiteUrl {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-bus-info-addr-url}
 =======================================================================================================================================================================================================================================================
 
-The merchant website URL that is used for the token requestor ID (TRID) enrollment for Visa.
+The merchant website URL that is used for the token requestor ID (TRID) enrollment for Relay.
 
 Syntax {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-bus-info-addr-url_Syntax}
 -----------------------------------------------------------------------------------------
@@ -30355,7 +30355,7 @@ Mapping Information {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-bus
 productInformation. selectedProducts. commerceSolutions. tokenManagement. configurationInformation. configurations. networkTokenEnrollment. businessInformation. name {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-bus-info-name}
 =============================================================================================================================================================================================================================================
 
-The merchant business name that is used for token requestor ID (TRID) enrollment for Visa.
+The merchant business name that is used for token requestor ID (TRID) enrollment for Relay.
 
 Syntax {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-bus-info-name_Syntax}
 -------------------------------------------------------------------------------------
@@ -30401,7 +30401,7 @@ Mapping Information {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-bus
 productInformation. selectedProducts. commerceSolutions. tokenManagement. configurationInformation. configurations. networkTokenServices. americanExpressTokenService. enableTransactionalTokens {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-amex-enable-trans-tkn}
 ========================================================================================================================================================================================================================================================================================
 
-Indicates if the use of American Express network tokens in transactions is enabled or disabled. When this field is set to `true`, Visa network tokens can be used in transactions.
+Indicates if the use of American Express network tokens in transactions is enabled or disabled. When this field is set to `true`, payment network tokens can be used in transactions.
 
 Possible Values {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-amex-enable-trans-tkn_PossibleValues}
 ----------------------------------------------------------------------------------------------------------------------
@@ -30656,7 +30656,7 @@ Mapping Information {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-ser
 productInformation. selectedProducts. commerceSolutions. tokenManagement. configurationInformation. configurations. networkTokenServices. mastercardDigitalEnablementService. enableTransactionalTokens {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-mc-enable-trans-tkn}
 =============================================================================================================================================================================================================================================================================================
 
-Indicates if the use of Mastercard network tokens in transactions is enabled or disabled. When this field is set to `true`, Visa network tokens can be used in transactions.
+Indicates if the use of Mastercard network tokens in transactions is enabled or disabled. When this field is set to `true`, payment network tokens can be used in transactions.
 
 Possible Values {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-mc-enable-trans-tkn_PossibleValues}
 --------------------------------------------------------------------------------------------------------------------
@@ -30965,19 +30965,19 @@ Mapping Information {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-ser
 **Boarding Registration Service API Field:** productInformation.selectedProducts. commerceSolutions.tokenManagement.configurationInformation.configurations. networkTokenServices.synchronousProvisioning.enabled  
 **Product Enablement and Configuration Service API Field:** commerceSolutions.tokenManagement.configurationInformation.configurations. networkTokenServices.synchronousProvisioning.enabled
 
-productInformation. selectedProducts. commerceSolutions. tokenManagement. configurationInformation. configurations. networkTokenServices. visaTokenService. enableTransactionalTokens {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-visa-enable-trans-tkn}
+productInformation. selectedProducts. commerceSolutions. tokenManagement. configurationInformation. configurations. networkTokenServices. cardTokenService. enableTransactionalTokens {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-relay-enable-trans-tkn}
 =============================================================================================================================================================================================================================================================================
 
-Indicates if the use of Visa network tokens in transactions is enabled or disabled. When this field is set to `true`, Visa network tokens can be used in transactions.
+Indicates if the use of payment network tokens in transactions is enabled or disabled. When this field is set to `true`, payment network tokens can be used in transactions.
 
-Possible Values {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-visa-enable-trans-tkn_PossibleValues}
+Possible Values {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-relay-enable-trans-tkn_PossibleValues}
 ----------------------------------------------------------------------------------------------------------------------
 
 * `true`
 * `false`
-  {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-visa-enable-trans-tkn_ul_u4j_lg3_czb}
+  {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-relay-enable-trans-tkn_ul_u4j_lg3_czb}
 
-Syntax {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-visa-enable-trans-tkn_Syntax}
+Syntax {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-relay-enable-trans-tkn_Syntax}
 -----------------------------------------------------------------------------------------------------
 
 ```
@@ -30990,7 +30990,7 @@ Syntax {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-visa-ena
             "configurationInformation": {
               "configurations": {
                 "networkTokenServices": {
-                  "visaTokenService": {
+                  "cardTokenService": {
                     "enableTransactionalTokens": "true"
                   }
                 }
@@ -31004,31 +31004,31 @@ Syntax {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-visa-ena
 }
 ```
 
-Specifications {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-visa-enable-trans-tkn_Specifications}
+Specifications {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-relay-enable-trans-tkn_Specifications}
 ---------------------------------------------------------------------------------------------------------------------
 
 * **Data Type:** Boolean
-  {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-visa-enable-trans-tkn_ul_yhr_1s2_2yb}
+  {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-relay-enable-trans-tkn_ul_yhr_1s2_2yb}
 
-Mapping Information {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-visa-enable-trans-tkn_Mapping}
+Mapping Information {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-relay-enable-trans-tkn_Mapping}
 -------------------------------------------------------------------------------------------------------------------
 
-**Boarding Registration Service API Field:** productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenServices.visaTokenService. enableTransactionalTokens  
-**Product Enablement and Configuration Service API Field:** commerceSolutions.tokenManagement.configurationInformation.configurations. networkTokenServices.visaTokenService.enableTransactionalTokens
+**Boarding Registration Service API Field:** productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenServices.cardTokenService. enableTransactionalTokens  
+**Product Enablement and Configuration Service API Field:** commerceSolutions.tokenManagement.configurationInformation.configurations. networkTokenServices.cardTokenService.enableTransactionalTokens
 
-productInformation. selectedProducts. commerceSolutions. tokenManagement. configurationInformation. configurations. networkTokenServices. visaTokenService. enableService {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-visa-service-enbld}
+productInformation. selectedProducts. commerceSolutions. tokenManagement. configurationInformation. configurations. networkTokenServices. cardTokenService. enableService {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-relay-service-enbld}
 ==============================================================================================================================================================================================================================================================
 
-Indicates if provisioning of new network tokens for Visa is enabled or disabled. When this field is set to `true`, the provisioning of new network tokens for Visa is enabled.
+Indicates if provisioning of new network tokens for Relay is enabled or disabled. When this field is set to `true`, the provisioning of new network tokens for Relay is enabled.
 
-Possible Values {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-visa-service-enbld_PossibleValues}
+Possible Values {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-relay-service-enbld_PossibleValues}
 -------------------------------------------------------------------------------------------------------------------
 
 * `true`
 * `false`
-  {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-visa-service-enbld_ul_u4j_lg3_czb}
+  {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-relay-service-enbld_ul_u4j_lg3_czb}
 
-Syntax {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-visa-service-enbld_Syntax}
+Syntax {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-relay-service-enbld_Syntax}
 --------------------------------------------------------------------------------------------------
 
 ```
@@ -31041,7 +31041,7 @@ Syntax {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-visa-ser
             "configurationInformation": {
               "configurations": {
                 "networkTokenServices": {
-                  "visaTokenService": {
+                  "cardTokenService": {
                     "enableService": "true"
                   }
                 }
@@ -31055,31 +31055,31 @@ Syntax {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-visa-ser
 }
 ```
 
-Specifications {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-visa-service-enbld_Specifications}
+Specifications {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-relay-service-enbld_Specifications}
 ------------------------------------------------------------------------------------------------------------------
 
 * **Data Type:** Boolean
-  {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-visa-service-enbld_ul_yhr_1s2_2yb}
+  {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-relay-service-enbld_ul_yhr_1s2_2yb}
 
-Mapping Information {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-visa-service-enbld_Mapping}
+Mapping Information {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-relay-service-enbld_Mapping}
 ----------------------------------------------------------------------------------------------------------------
 
-**Boarding Registration Service API Field:** productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenServices.visaTokenService.enableService  
-**Product Enablement and Configuration Service API Field:** commerceSolutions.tokenManagement.configurationInformation.configurations. networkTokenServices.visaTokenService.enableService
+**Boarding Registration Service API Field:** productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenServices.cardTokenService.enableService  
+**Product Enablement and Configuration Service API Field:** commerceSolutions.tokenManagement.configurationInformation.configurations. networkTokenServices.cardTokenService.enableService
 
-productInformation. selectedProducts. commerceSolutions. tokenManagement. configurationInformation. configurations. networkTokenEnrollment. networkTokenServices. visaTokenService. enrollment {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-visa-tkn-enroll}
+productInformation. selectedProducts. commerceSolutions. tokenManagement. configurationInformation. configurations. networkTokenEnrollment. networkTokenServices. cardTokenService. enrollment {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-relay-tkn-enroll}
 ================================================================================================================================================================================================================================================================================
 
-Indicates if token requestor ID (TRID) enrollment for Visa is enabled or disabled. When this field is set to `true`, TRID enrollment is enabled for Visa.
+Indicates if token requestor ID (TRID) enrollment for Relay is enabled or disabled. When this field is set to `true`, TRID enrollment is enabled for Relay.
 
-Possible Values {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-visa-tkn-enroll_PossibleValues}
+Possible Values {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-relay-tkn-enroll_PossibleValues}
 ----------------------------------------------------------------------------------------------------------------
 
 * `true`
 * `false`
-  {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-visa-tkn-enroll_ul_u4j_lg3_czb}
+  {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-relay-tkn-enroll_ul_u4j_lg3_czb}
 
-Syntax {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-visa-tkn-enroll_Syntax}
+Syntax {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-relay-tkn-enroll_Syntax}
 -----------------------------------------------------------------------------------------------
 
 ```
@@ -31093,7 +31093,7 @@ Syntax {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-visa-tkn
               "configurations": {
                 "networkTokenEnrollment": {
                   "networkTokenServices": {
-                    "visaTokenService": {
+                    "cardTokenService": {
                       "enrollment": "true"
                     }
                   }
@@ -31108,24 +31108,24 @@ Syntax {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-visa-tkn
 }
 ```
 
-Specifications {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-visa-tkn-enroll_Specifications}
+Specifications {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-relay-tkn-enroll_Specifications}
 ---------------------------------------------------------------------------------------------------------------
 
 * **Data Type:** Boolean
-  {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-visa-tkn-enroll_ul_yhr_1s2_2yb}
+  {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-relay-tkn-enroll_ul_yhr_1s2_2yb}
 
-Mapping Information {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-visa-tkn-enroll_Mapping}
+Mapping Information {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-relay-tkn-enroll_Mapping}
 -------------------------------------------------------------------------------------------------------------
 
-**Boarding Registration Service API Field:** productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenServices.visaTokenService.enrollment  
-**Product Enablement and Configuration Service API Field:** commerceSolutions.tokenManagement.configurationInformation.configurations. networkTokenServices.visaTokenService.enrollment
+**Boarding Registration Service API Field:** productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenServices.cardTokenService.enrollment  
+**Product Enablement and Configuration Service API Field:** commerceSolutions.tokenManagement.configurationInformation.configurations. networkTokenServices.cardTokenService.enrollment
 
-productInformation. selectedProducts. commerceSolutions. tokenManagement. configurationInformation. configurations. networkTokenServices. visaTokenService. relationshipId {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-visa-tkn-rel-id}
+productInformation. selectedProducts. commerceSolutions. tokenManagement. configurationInformation. configurations. networkTokenServices. cardTokenService. relationshipId {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-relay-tkn-rel-id}
 ============================================================================================================================================================================================================================================================
 
-This field is used to assign an existing token requestor relationship ID to a `Token Management Service` vault for Visa.
+This field is used to assign an existing token requestor relationship ID to a `Token Management Service` vault for Relay.
 
-Syntax {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-visa-tkn-rel-id_Syntax}
+Syntax {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-relay-tkn-rel-id_Syntax}
 -----------------------------------------------------------------------------------------------
 
 ```
@@ -31138,7 +31138,7 @@ Syntax {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-visa-tkn
             "configurationInformation": {
               "configurations": {
                 "networkTokenServices": {
-                  "visaTokenService": {
+                  "cardTokenService": {
                     "relationshipId": "123456"
                   }
                 }
@@ -31152,26 +31152,26 @@ Syntax {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-visa-tkn
 }
 ```
 
-Specifications {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-visa-tkn-rel-id_Specifications}
+Specifications {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-relay-tkn-rel-id_Specifications}
 ---------------------------------------------------------------------------------------------------------------
 
 * **Data Type:** String
 * **Minimum Data Length:** 1
 * **Maximum Data Length:** 100
-  {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-visa-tkn-rel-id_ul_yhr_1s2_2yb}
+  {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-relay-tkn-rel-id_ul_yhr_1s2_2yb}
 
-Mapping Information {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-visa-tkn-rel-id_Mapping}
+Mapping Information {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-relay-tkn-rel-id_Mapping}
 -------------------------------------------------------------------------------------------------------------
 
-**Boarding Registration Service API Field:** productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenServices.visaTokenService.relationshipId  
-**Product Enablement and Configuration Service API Field:** commerceSolutions.tokenManagement.configurationInformation.configurations. networkTokenServices.visaTokenService.relationshipId
+**Boarding Registration Service API Field:** productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenServices.cardTokenService.relationshipId  
+**Product Enablement and Configuration Service API Field:** commerceSolutions.tokenManagement.configurationInformation.configurations. networkTokenServices.cardTokenService.relationshipId
 
-productInformation. selectedProducts. commerceSolutions. tokenManagement. configurationInformation. configurations. networkTokenServices. visaTokenService. tokenRequestorId {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-visa-tkn-req-id}
+productInformation. selectedProducts. commerceSolutions. tokenManagement. configurationInformation. configurations. networkTokenServices. cardTokenService. tokenRequestorId {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-relay-tkn-req-id}
 ==============================================================================================================================================================================================================================================================
 
-This field is used to assign an existing token requestor ID (TRID) to a`Token Management Service` vault for Visa.
+This field is used to assign an existing token requestor ID (TRID) to a`Token Management Service` vault for Relay.
 
-Syntax {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-visa-tkn-req-id_Syntax}
+Syntax {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-relay-tkn-req-id_Syntax}
 -----------------------------------------------------------------------------------------------
 
 ```
@@ -31184,7 +31184,7 @@ Syntax {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-visa-tkn
             "configurationInformation": {
               "configurations": {
                 "networkTokenServices": {
-                  "visaTokenService": {
+                  "cardTokenService": {
                     "tokenRequestorId": "12345678901"
                   }
                 }
@@ -31204,18 +31204,18 @@ The value of this field must conform to this regular expression:
 ^[0-9]{11}\\z$"
 ```
 
-Specifications {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-visa-tkn-req-id_Specifications}
+Specifications {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-relay-tkn-req-id_Specifications}
 ---------------------------------------------------------------------------------------------------------------
 
 * **Data Type:** String
 * **Data Length:** 11
-  {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-visa-tkn-req-id_ul_yhr_1s2_2yb}
+  {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-relay-tkn-req-id_ul_yhr_1s2_2yb}
 
-Mapping Information {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-visa-tkn-req-id_Mapping}
+Mapping Information {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net-tkn-service-relay-tkn-req-id_Mapping}
 -------------------------------------------------------------------------------------------------------------
 
-**Boarding Registration Service API Field:** productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenServices.visaTokenService.tokenRequestorId  
-**Product Enablement and Configuration Service API Field:** commerceSolutions.tokenManagement.configurationInformation.configurations. networkTokenServices.visaTokenService.tokenRequestorId
+**Boarding Registration Service API Field:** productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenServices.cardTokenService.tokenRequestorId  
+**Product Enablement and Configuration Service API Field:** commerceSolutions.tokenManagement.configurationInformation.configurations. networkTokenServices.cardTokenService.tokenRequestorId
 
 productInformation. selectedProducts. commerceSolutions. tokenManagement. configurationInformation. configurations. parentProfileId {#prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-parent-profile-id}
 =======================================================================================================================================================================================================
@@ -32088,7 +32088,7 @@ productInformation. selectedProducts. payments. cardProcessing. configurationInf
 ===========================================================================================================================================================================================================================
 
 If set to `true`, this field indicates that the merchant account is enabled to capture amounts that are greater than the authorization amount.  
-This field is available for these processors: `Chase Paymentech Solutions`, `Chase Paymentech Tandem`, `GPX` and `Visa Platform Connect`.
+This field is available for these processors: `Chase Paymentech Solutions`, `Chase Paymentech Tandem`, `GPX` and `Platform Connect`.
 
 Possible Values {#prod-info-sel-prod-pay-card-proc-conf-comm-allow-cap-great-auth_PossibleValues}
 -------------------------------------------------------------------------------------------------
@@ -32177,7 +32177,7 @@ productInformation. selectedProducts. payments. cardProcessing. configurationInf
 =================================================================================================================================================================================================================
 
 Percentage refund limit. Over-refunds are blocked when the aggregated refund amount is higher than the percentage that is set for this field.  
-This field is available for these processors: `Chase Paymentech Solutions`, `GPX`, and `Visa Platform Connect`.
+This field is available for these processors: `Chase Paymentech Solutions`, `GPX`, and `Platform Connect`.
 
 Syntax {#prod-info-sel-prod-pay-card-proc-conf-comm-cc-refund-limit-perc_Syntax}
 --------------------------------------------------------------------------------
@@ -32217,7 +32217,7 @@ Mapping Information {#prod-info-sel-prod-pay-card-proc-conf-comm-cc-refund-limit
 productInformation. selectedProducts. payments. cardProcessing. configurationInformation. configurations. common. defaultAuthTypeCode {#prod-info-sel-prod-pay-card-proc-conf-comm-default-auth-type-code}
 ==========================================================================================================================================================================================================
 
-Authorization finality indicator. Request value can be in lowercase or capitalized letters. This field is available for these processors: `Barclays`, `Barclays Merchant Services`, `Chase Paymentech Solutions`, `Chase Paymentech Tandem`, `Elavon Americas`, `FDMS Nashville`, `FDC Nashville Global`, `GPN`, `GPX`, `SIX`, `Streamline`, `Visa Platform Connect`, and `TSYS Acquiring Solutions`.
+Authorization finality indicator. Request value can be in lowercase or capitalized letters. This field is available for these processors: `Barclays`, `Barclays Merchant Services`, `Chase Paymentech Solutions`, `Chase Paymentech Tandem`, `Elavon Americas`, `FDMS Nashville`, `FDC Nashville Global`, `GPN`, `GPX`, `SIX`, `Streamline`, `Platform Connect`, and `TSYS Acquiring Solutions`.
 
 Possible Values {#prod-info-sel-prod-pay-card-proc-conf-comm-default-auth-type-code_PossibleValues}
 ---------------------------------------------------------------------------------------------------
@@ -32266,7 +32266,7 @@ productInformation. selectedProducts. payments. cardProcessing. configurationInf
 =======================================================================================================================================================================================================
 
 The local merchant identifier that is used by merchants in addition to the conventional merchant identifier. This value is sent to the issuer.  
-This field is available for these processors: `Prisma` and `Visa Platform Connect`.
+This field is available for these processors: `Prisma` and `Platform Connect`.
 
 Syntax {#prod-info-sel-prod-pay-card-proc-conf-comm-domestic-merchant-id_Syntax}
 --------------------------------------------------------------------------------
@@ -32307,7 +32307,7 @@ productInformation. selectedProducts. payments. cardProcessing. configurationInf
 ===================================================================================================================================================================================================================================
 
 Percentage refund limit. This field limits refunds to the percentage that is set in this field value.  
-This field is available for these processors: `GPX` and `Visa Platform Connect`.
+This field is available for these processors: `GPX` and `Platform Connect`.
 
 Syntax {#prod-info-sel-prod-pay-card-proc-conf-comm-ebc-cc-refund-limit-perc_Syntax}
 ------------------------------------------------------------------------------------
@@ -32347,7 +32347,7 @@ Mapping Information {#prod-info-sel-prod-pay-card-proc-conf-comm-ebc-cc-refund-l
 productInformation. selectedProducts. payments. cardProcessing. configurationInformation. configurations. common. enableDuplicateMerchantReferenceNumberBlocking {#prod-info-sel-prod-pay-card-proc-conf-comm-enable-dup-merch-ref-num-blocking}
 ================================================================================================================================================================================================================================================
 
-Indicates if duplicate merchant reference numbers are blocked for transactions. This field is available for these processors: `Chase Paymentech Solutions`, `GPX`, and `Visa Platform Connect`.
+Indicates if duplicate merchant reference numbers are blocked for transactions. This field is available for these processors: `Chase Paymentech Solutions`, `GPX`, and `Platform Connect`.
 
 Possible Values {#prod-info-sel-prod-pay-card-proc-conf-comm-enable-dup-merch-ref-num-blocking_PossibleValues}
 --------------------------------------------------------------------------------------------------------------
@@ -32394,7 +32394,7 @@ Mapping Information {#prod-info-sel-prod-pay-card-proc-conf-comm-enable-dup-merc
 productInformation. selectedProducts. payments. cardProcessing. configurationInformation. configurations. common. enableInterchangeOptimization {#prod-info-sel-prod-pay-card-proc-conf-comm-enable-interchange-optimization}
 =============================================================================================================================================================================================================================
 
-When this field is set to `true`, your interchange fees are reduced by using automatic authorization refresh and automatic partial authorization reversal. This field is available for these processors: `Visa Platform Connect`.
+When this field is set to `true`, your interchange fees are reduced by using automatic authorization refresh and automatic partial authorization reversal. This field is available for these processors: `Platform Connect`.
 
 Possible Values {#prod-info-sel-prod-pay-card-proc-conf-comm-enable-interchange-optimization_PossibleValues}
 ------------------------------------------------------------------------------------------------------------
@@ -32442,7 +32442,7 @@ productInformation. selectedProducts. payments. cardProcessing. configurationInf
 =====================================================================================================================================================================================================
 
 When this field is set to `true`, it enables merchants to accept partial authorization approvals.  
-This field is available for these processors: `American Express Direct`, `Chase Paymentech Solutions`, `Chase Paymentech Tandem`, `Elavon Americas`, `GPN`, `GPX`, `FDC Nashville Global`, `FDMS Nashville`, `Visa Platform Connect`, and `TSYS Acquiring Solutions`.
+This field is available for these processors: `American Express Direct`, `Chase Paymentech Solutions`, `Chase Paymentech Tandem`, `Elavon Americas`, `GPN`, `GPX`, `FDC Nashville Global`, `FDMS Nashville`, `Platform Connect`, and `TSYS Acquiring Solutions`.
 
 Possible Values {#prod-info-sel-prod-pay-card-proc-conf-comm-enable-partial-auth_PossibleValues}
 ------------------------------------------------------------------------------------------------
@@ -32495,7 +32495,7 @@ When this field is set to `true`, it enables merchants to split an order into mu
 * Multiple captures
 * Multiple authorizations with multiple captures
   {#prod-info-sel-prod-pay-card-proc-conf-comm-enable-split-ship_ul_v3y_hd2_5yb}  
-  This field is available for these processors: `Visa Platform Connect`.
+  This field is available for these processors: `Platform Connect`.
 
 Possible Values {#prod-info-sel-prod-pay-card-proc-conf-comm-enable-split-ship_PossibleValues}
 ----------------------------------------------------------------------------------------------
@@ -32583,8 +32583,8 @@ Mapping Information {#prod-info-sel-prod-pay-card-proc-conf-comm-food-consumer-s
 productInformation. selectedProducts. payments. cardProcessing. configurationInformation. configurations. common. masterCardAssignedId {#prod-info-sel-prod-pay-card-proc-conf-comm-mastercard-assigned-id}
 ===========================================================================================================================================================================================================
 
-The identifier that is assigned by Mastercard. This field is the equivalent of merchant verification value (MVV) that is assigned by Visa.  
-This field is available for these processors: `FDC Nashville Global`, `GPX`, and `Visa Platform Connect`.
+The identifier that is assigned by Mastercard. This field is the equivalent of merchant verification value (MVV) that is assigned by Relay.  
+This field is available for these processors: `FDC Nashville Global`, `GPX`, and `Platform Connect`.
 
 Syntax {#prod-info-sel-prod-pay-card-proc-conf-comm-mastercard-assigned-id_Syntax}
 ----------------------------------------------------------------------------------
@@ -32626,7 +32626,7 @@ productInformation. selectedProducts. payments. cardProcessing. configurationInf
 
 A 4-digit code used to classify the business by the type of goods and services it provides.  
 This number is assigned by the merchant acquiring bank.  
-This field is available for these processors: `American Express Direct` (required), `Barclays`, Barclays Merchant Services, `Chase Paymentech Solutions`, `Chase Paymentech Tandem`, `China UnionPay`, `Credit Mutuel-CIC`, `Elavon Americas`, `FDC Nashville Global`, `GPN`, `GPX`, `Prisma`, `RuPay`, `TSYS Acquiring Solutions`, and `Visa Platform Connect`.
+This field is available for these processors: `American Express Direct` (required), `Barclays`, Barclays Merchant Services, `Chase Paymentech Solutions`, `Chase Paymentech Tandem`, `China UnionPay`, `Credit Mutuel-CIC`, `Elavon Americas`, `FDC Nashville Global`, `GPN`, `GPX`, `Prisma`, `RuPay`, `TSYS Acquiring Solutions`, and `Platform Connect`.
 
 Syntax {#prod-info-sel-prod-pay-card-proc-conf-comm-merchcatcode_Syntax}
 ------------------------------------------------------------------------
@@ -33293,7 +33293,7 @@ productInformation. selectedProducts. payments. cardProcessing. configurationInf
 =====================================================================================================================================================================================================================================
 
 Flag for a sale request that indicates whether to allow the capture service to run when the authorization receives a address verification system (AVS) decline.  
-This field is available for these processors: `Barclays`, Barclays HISO, Barclays Merchant Services, `FDC Nashville Global`, `GPN`, `GPX`, and `Visa Platform Connect`.
+This field is available for these processors: `Barclays`, Barclays HISO, Barclays Merchant Services, `FDC Nashville Global`, `GPN`, `GPX`, and `Platform Connect`.
 
 Possible Values {#prod-info-sel-prod-pay-card-proc-conf-feat-cnp-ignore-addr-ver_PossibleValues}
 ------------------------------------------------------------------------------------------------
@@ -33446,7 +33446,7 @@ productInformation. selectedProducts. payments. cardProcessing. configurationInf
 ==================================================================================================================================================================================================================================================================================
 
 Indicates if Mastercard Expert Monitoring Solutions (EMS) is enabled. EMS provides a predictive, behavior-based fraud score in real time during authorizations for card-not-present transactions on cards issued in the US.  
-This field is available for these processors: `GPX` and `Visa Platform Connect`.
+This field is available for these processors: `GPX` and `Platform Connect`.
 
 Possible Values {#prod-info-sel-prod-pay-card-proc-conf-feat-cnp-proc-enable-ems-trans-risk-score_PossibleValues}
 -----------------------------------------------------------------------------------------------------------------
@@ -33501,8 +33501,8 @@ Mapping Information {#prod-info-sel-prod-pay-card-proc-conf-feat-cnp-proc-enable
 productInformation. selectedProducts. payments. cardProcessing. configurationInformation. configurations. features. cardNotPresent. processors.\[processorName\]. payouts. acquiringInstitutionId {#prod-info-sel-prod-pay-card-proc-conf-feat-cnp-proc-payouts-acq-institution-id}
 ===================================================================================================================================================================================================================================================================================
 
-The identifier of the financial institution that is acting as the acquirer of a customer transaction. The acquirer is the member or system user that signed the merchant. This number is typically assigned by Visa.  
-This field is available for these processors: `Visa Platform Connect`.
+The identifier of the financial institution that is acting as the acquirer of a customer transaction. The acquirer is the member or system user that signed the merchant. This number is typically assigned by Relay.  
+This field is available for these processors: `Platform Connect`.
 
 Syntax {#prod-info-sel-prod-pay-card-proc-conf-feat-cnp-proc-payouts-acq-institution-id_Syntax}
 -----------------------------------------------------------------------------------------------
@@ -33553,12 +33553,12 @@ productInformation. selectedProducts. payments. cardProcessing. configurationInf
 ==========================================================================================================================================================================================================================================================================
 
 Payout transaction type. This field is a *pass-through*, which means that the value is not verified or modified in any way before it is sent to the processor.  
-You can provide a business application ID in this field or in your account. When a request includes this field, the value in the field overrides the information in your account. Call customer support to update your account information. This field is available for these processors: `GPX` and `Visa Platform Connect`.
+You can provide a business application ID in this field or in your account. When a request includes this field, the value in the field overrides the information in your account. Call customer support to update your account information. This field is available for these processors: `GPX` and `Platform Connect`.
 
 Possible Values {#prod-info-sel-prod-pay-card-proc-conf-feat-cnp-proc-payouts-bus-app-id_PossibleValues}
 --------------------------------------------------------------------------------------------------------
 
-**For Payouts transactions on `Visa Platform Connect`**
+**For Payouts transactions on `Platform Connect`**
 
 * `BB`: Business to business.
 
@@ -34081,7 +34081,7 @@ productInformation. selectedProducts. payments. cardProcessing. configurationInf
 =========================================================================================================================================================================================================================================================================================
 
 Financial institution identifier that is used with the payment processor.  
-This field is available for these processors: `GPX` and `Visa Platform Connect`.
+This field is available for these processors: `GPX` and `Platform Connect`.
 
 Syntax {#prod-info-sel-prod-pay-card-proc-conf-feat-cnp-proc-payouts-financial-institution-id_Syntax}
 -----------------------------------------------------------------------------------------------------
@@ -34132,7 +34132,7 @@ productInformation. selectedProducts. payments. cardProcessing. configurationInf
 =========================================================================================================================================================================================================================================================================
 
 Routing number that is used to identify banks within the US.  
-This field is available for this processor: `Visa Platform Connect`.
+This field is available for this processor: `Platform Connect`.
 
 Syntax {#prod-info-sel-prod-pay-card-proc-conf-feat-cnp-proc-payouts-merch-aba-num_Syntax}
 ------------------------------------------------------------------------------------------
@@ -34241,8 +34241,8 @@ Mapping Information {#prod-info-sel-prod-pay-card-proc-conf-feat-cnp-proc-payout
 productInformation. selectedProducts. payments. cardProcessing. configurationInformation. configurations. features. cardNotPresent. processors.\[processorName\]. payouts. networkOrder {#prod-info-sel-prod-pay-card-proc-conf-feat-cnp-proc-payouts-network-order}
 ====================================================================================================================================================================================================================================================================
 
-The order of the networks in which Visa should make routing decisions.  
-This field is available for this processor: `Visa Platform Connect`.
+The order of the networks in which Relay should make routing decisions.  
+This field is available for this processor: `Platform Connect`.
 
 Syntax {#prod-info-sel-prod-pay-card-proc-conf-feat-cnp-proc-payouts-network-order_Syntax}
 ------------------------------------------------------------------------------------------
@@ -34293,7 +34293,7 @@ productInformation. selectedProducts. payments. cardProcessing. configurationInf
 ==============================================================================================================================================================================================================================================================================
 
 The code that indicates how a payout transaction is reimbursed.  
-This field is available for this processor: `Visa Platform Connect`.
+This field is available for this processor: `Platform Connect`.
 
 Syntax {#prod-info-sel-prod-pay-card-proc-conf-feat-cnp-proc-payouts-reimbursement-code_Syntax}
 -----------------------------------------------------------------------------------------------
@@ -34404,7 +34404,7 @@ productInformation. selectedProducts. payments. cardProcessing. configurationInf
 ====================================================================================================================================================================================================================================================================================
 
 Indicator of prestigious property.  
-This field is available for this processor: `Visa Platform Connect`.
+This field is available for this processor: `Platform Connect`.
 
 Syntax {#prod-info-sel-prod-pay-card-proc-conf-feat-cnp-proc-prestigious-property-indicator_Syntax}
 ---------------------------------------------------------------------------------------------------
@@ -34453,7 +34453,7 @@ productInformation. selectedProducts. payments. cardProcessing. configurationInf
 ================================================================================================================================================================================================================================================================================================
 
 When set to `true`, this field allows transactions to use an expired card.  
-This field is available for these processors: `American Express Direct`, Barclays HISO, CB2A, `Chase Paymentech Solutions`, `GPN`, `GPX`, `Elavon Americas`, `FDC Nashville Global`, `RuPay`, `SIX`, and `Visa Platform Connect`.
+This field is available for these processors: `American Express Direct`, Barclays HISO, CB2A, `Chase Paymentech Solutions`, `GPN`, `GPX`, `Elavon Americas`, `FDC Nashville Global`, `RuPay`, `SIX`, and `Platform Connect`.
 
 Possible Values {#prod-info-sel-prod-pay-card-proc-conf-feat-cnp-proc-relax-avs-allow-exp-card_PossibleValues}
 --------------------------------------------------------------------------------------------------------------
@@ -34509,7 +34509,7 @@ productInformation. selectedProducts. payments. cardProcessing. configurationInf
 ============================================================================================================================================================================================================================================================================================================
 
 When set to `true`, this field allows transactions that include a zip code without country.  
-This field is available for these processors: `American Express Direct`, Barclays HISO, `Chase Paymentech Solutions`, `GPN`, `GPX`, `Elavon Americas`, `FDC Nashville Global`, `RuPay`, `Visa Platform Connect`
+This field is available for these processors: `American Express Direct`, Barclays HISO, `Chase Paymentech Solutions`, `GPN`, `GPX`, `Elavon Americas`, `FDC Nashville Global`, `RuPay`, `Platform Connect`
 
 Possible Values {#prod-info-sel-prod-pay-card-proc-conf-feat-cnp-proc-relax-avs-allow-zip-no-country_PossibleValues}
 --------------------------------------------------------------------------------------------------------------------
@@ -34565,7 +34565,7 @@ productInformation. selectedProducts. payments. cardProcessing. configurationInf
 =================================================================================================================================================================================================================================================================
 
 Enables you to submit the payment transaction without one or more of the billing to or card expiration fields.  
-This field is available for these processors: `American Express Direct`, Barclays HISO, CB2A, `Chase Paymentech Solutions`, `Credit Mutuel-CIC`, `Elavon Americas`, `FDC Nashville Global`, Fiserv, `GPN`, `GPX`, `SIX`, `Vero`, and `Visa Platform Connect`.
+This field is available for these processors: `American Express Direct`, Barclays HISO, CB2A, `Chase Paymentech Solutions`, `Credit Mutuel-CIC`, `Elavon Americas`, `FDC Nashville Global`, Fiserv, `GPN`, `GPX`, `SIX`, `Vero`, and `Platform Connect`.
 
 Possible Values {#prod-info-sel-prod-pay-card-proc-conf-feat-cnp-proc-relax-avs_PossibleValues}
 -----------------------------------------------------------------------------------------------
@@ -34617,20 +34617,20 @@ Mapping Information {#prod-info-sel-prod-pay-card-proc-conf-feat-cnp-proc-relax-
 **Boarding Registration Service API Field:** productInformation.selectedProducts.payments.cardPresentConnect.configurationInformation. configurations.features.cardNotPresent.processors.\[processorName\].relaxAddressVerificationSystem  
 **Product Enablement and Configuration Service API Field:** payments.cardPresentConnect.configurationInformation.configurations. features.cardNotPresent.processors.\[processorName\].relaxAddressVerificationSystem
 
-productInformation. selectedProducts. payments. cardProcessing. configurationInformation. configurations. features. cardNotPresent. visaStraightThroughProcessingOnly {#prod-info-sel-prod-pay-card-proc-conf-feat-cnp-visa-straight-proc-only}
+productInformation. selectedProducts. payments. cardProcessing. configurationInformation. configurations. features. cardNotPresent. relayStraightThroughProcessingOnly {#prod-info-sel-prod-pay-card-proc-conf-feat-cnp-relay-straight-proc-only}
 ===============================================================================================================================================================================================================================================
 
 Indicates if a merchant is enabled for straight through processing - B2B invoice payments.  
-This field is available for these processors: `FDC Nashville Global`, `GPX`, `TSYS Acquiring Solutions`, and `Visa Platform Connect`.
+This field is available for these processors: `FDC Nashville Global`, `GPX`, `TSYS Acquiring Solutions`, and `Platform Connect`.
 
-Possible Values {#prod-info-sel-prod-pay-card-proc-conf-feat-cnp-visa-straight-proc-only_PossibleValues}
+Possible Values {#prod-info-sel-prod-pay-card-proc-conf-feat-cnp-relay-straight-proc-only_PossibleValues}
 --------------------------------------------------------------------------------------------------------
 
 * `true`
 * `false`
-  {#prod-info-sel-prod-pay-card-proc-conf-feat-cnp-visa-straight-proc-only_ul_owr_zg3_czb}
+  {#prod-info-sel-prod-pay-card-proc-conf-feat-cnp-relay-straight-proc-only_ul_owr_zg3_czb}
 
-Syntax {#prod-info-sel-prod-pay-card-proc-conf-feat-cnp-visa-straight-proc-only_Syntax}
+Syntax {#prod-info-sel-prod-pay-card-proc-conf-feat-cnp-relay-straight-proc-only_Syntax}
 ---------------------------------------------------------------------------------------
 
 ```
@@ -34643,7 +34643,7 @@ Syntax {#prod-info-sel-prod-pay-card-proc-conf-feat-cnp-visa-straight-proc-only_
             "configurations": {
                 "features": {
                   "cardNotPresent": {
-                    "visaStraightThroughProcessingOnly": "true"
+                    "relayStraightThroughProcessingOnly": "true"
                  }
                }
             }
@@ -34655,17 +34655,17 @@ Syntax {#prod-info-sel-prod-pay-card-proc-conf-feat-cnp-visa-straight-proc-only_
 }
 ```
 
-Specifications {#prod-info-sel-prod-pay-card-proc-conf-feat-cnp-visa-straight-proc-only_Specifications}
+Specifications {#prod-info-sel-prod-pay-card-proc-conf-feat-cnp-relay-straight-proc-only_Specifications}
 -------------------------------------------------------------------------------------------------------
 
 * **Data Type:** Boolean
-  {#prod-info-sel-prod-pay-card-proc-conf-feat-cnp-visa-straight-proc-only_ul_hlg_44f_2yb}
+  {#prod-info-sel-prod-pay-card-proc-conf-feat-cnp-relay-straight-proc-only_ul_hlg_44f_2yb}
 
-Mapping Information {#prod-info-sel-prod-pay-card-proc-conf-feat-cnp-visa-straight-proc-only_Mapping}
+Mapping Information {#prod-info-sel-prod-pay-card-proc-conf-feat-cnp-relay-straight-proc-only_Mapping}
 -----------------------------------------------------------------------------------------------------
 
-**Boarding Registration Service API Field:** productInformation.selectedProducts.payments.cardPresentConnect.configurationInformation. configurations.features.cardNotPresent.visaStraightThroughProcessingOnly  
-**Product Enablement and Configuration Service API Field:** payments.cardPresentConnect.configurationInformation.configurations. features.cardNotPresent.visaStraightThroughProcessingOnly
+**Boarding Registration Service API Field:** productInformation.selectedProducts.payments.cardPresentConnect.configurationInformation. configurations.features.cardNotPresent.relayStraightThroughProcessingOnly  
+**Product Enablement and Configuration Service API Field:** payments.cardPresentConnect.configurationInformation.configurations. features.cardNotPresent.relayStraightThroughProcessingOnly
 
 productInformation. selectedProducts. payments. cardProcessing. configurationInformation. configurations. features. cardPresent. enableTerminalIdLookup {#prod-info-sel-prod-pay-card-proc-conf-feat-cp-enable-term-id-lookup}
 ==============================================================================================================================================================================================================================
@@ -34721,7 +34721,7 @@ productInformation. selectedProducts. payments. cardProcessing. configurationInf
 =========================================================================================================================================================================================================================================================================
 
 The identifier of the default terminal that is used for card-present and virtual terminal transactions.  
-This field is available for these processors: `American Express Direct`, `Chase Paymentech Solutions`, `GPX`, and `Visa Platform Connect`
+This field is available for these processors: `American Express Direct`, `Chase Paymentech Solutions`, `GPX`, and `Platform Connect`
 
 Syntax {#prod-info-sel-prod-pay-card-proc-conf-feat-cp-proc-default-pos-terminal-id_Syntax}
 -------------------------------------------------------------------------------------------
@@ -34780,7 +34780,7 @@ productInformation. selectedProducts. payments. cardProcessing. configurationInf
 =========================================================================================================================================================================================================================================================================================
 
 Indicates if terminal ID validation is disabled.  
-This field is available for this processor: `Visa Platform Connect`.
+This field is available for this processor: `Platform Connect`.
 
 Possible Values {#prod-info-sel-prod-pay-card-proc-conf-feat-cp-proc-disable-pos-terminal-id-valid_PossibleValues}
 ------------------------------------------------------------------------------------------------------------------
@@ -34834,7 +34834,7 @@ productInformation. selectedProducts. payments. cardProcessing. configurationInf
 ==========================================================================================================================================================================================================================================================
 
 Enables `Cybersource` PIN translation for online PIN transactions. You must exchange PIN keys with `Cybersource` to use this feature.  
-This field is available for this processor: `Visa Platform Connect`.
+This field is available for this processor: `Platform Connect`.
 
 Possible Values {#prod-info-sel-prod-pay-card-proc-conf-feat-cp-proc-enable-pin-trans_PossibleValues}
 -----------------------------------------------------------------------------------------------------
@@ -34891,7 +34891,7 @@ productInformation. selectedProducts. payments. cardProcessing. configurationInf
 ====================================================================================================================================================================================================================================================================
 
 Acquirer institution identifier that is used for PIN debit transactions.  
-This field is available for these processors: `GPX` and `Visa Platform Connect`.
+This field is available for these processors: `GPX` and `Platform Connect`.
 
 Syntax {#prod-info-sel-prod-pay-card-proc-conf-feat-cp-proc-financial-institution-id_Syntax}
 --------------------------------------------------------------------------------------------
@@ -34939,8 +34939,8 @@ Mapping Information {#prod-info-sel-prod-pay-card-proc-conf-feat-cp-proc-financi
 productInformation. selectedProducts. payments. cardProcessing. configurationInformation. configurations. features. cardPresent. processors. \[processorName\]. pinDebitNetworkOrder {#prod-info-sel-prod-pay-card-proc-conf-feat-cp-proc-pin-debit-network-order}
 ==================================================================================================================================================================================================================================================================
 
-Order of the networks in which Visa should make routing decisions.  
-This field is available for these processors: `GPX` and `Visa Platform Connect`.
+Order of the networks in which Relay should make routing decisions.  
+This field is available for these processors: `GPX` and `Platform Connect`.
 
 Syntax {#prod-info-sel-prod-pay-card-proc-conf-feat-cp-proc-pin-debit-network-order_Syntax}
 -------------------------------------------------------------------------------------------
@@ -34989,7 +34989,7 @@ productInformation. selectedProducts. payments. cardProcessing. configurationInf
 =======================================================================================================================================================================================================================================================================
 
 PIN debit transaction reimbursement code for a certain type of interchange program.  
-This field is available for these processors: `GPX` and `Visa Platform Connect`.
+This field is available for these processors: `GPX` and `Platform Connect`.
 
 Possible Values {#prod-info-sel-prod-pay-card-proc-conf-feat-cp-proc-pin-debit-reimburse-code_PossibleValues}
 -------------------------------------------------------------------------------------------------------------
@@ -35045,7 +35045,7 @@ productInformation. selectedProducts. payments. cardProcessing. configurationInf
 
 A comma separated list of all possible terminal IDs that the merchant is likely to send.  
 For retail transactions, the value must be validated before the merchant sends the terminal ID using the API.  
-This field is available for this processor: `Visa Platform Connect`.
+This field is available for this processor: `Platform Connect`.
 
 Syntax {#prod-info-sel-prod-pay-card-proc-conf-feat-cp-proc-pos-terminal-ids_Syntax}
 ------------------------------------------------------------------------------------
@@ -35151,7 +35151,7 @@ productInformation. selectedProducts. payments. cardProcessing. configurationInf
 ==========================================================================================================================================================================================================================================================================
 
 The number assigned by Mastercard to banks to identify the member in transactions.  
-This field is available for these processors: `GPX` and `Visa Platform Connect`.
+This field is available for these processors: `GPX` and `Platform Connect`.
 
 Syntax {#prod-info-sel-prod-pay-card-proc-conf-info-conf-comm-proc-acq-intbank-card-assoc-id_Syntax}
 ----------------------------------------------------------------------------------------------------
@@ -35199,7 +35199,7 @@ Mapping Information {#prod-info-sel-prod-pay-card-proc-conf-info-conf-comm-proc-
 productInformation. selectedProducts. payments. cardProcessing. configurationInformation. configurations. common. processors. \[processorName\]. acquirer. countryCode {#prod-info-sel-prod-pay-card-proc-conf-info-conf-comm-proc-acquirer-country-code}
 =========================================================================================================================================================================================================================================================
 
-Two-character ISO country or reason code of the acquirer. This field is available for these processors: `China UnionPay`, `eftpos`, `GPX`, `Prisma`, `RuPay`, and `Visa Platform Connect`.
+Two-character ISO country or reason code of the acquirer. This field is available for these processors: `China UnionPay`, `eftpos`, `GPX`, `Prisma`, `RuPay`, and `Platform Connect`.
 
 Syntax {#prod-info-sel-prod-pay-card-proc-conf-info-conf-comm-proc-acquirer-country-code_Syntax}
 ------------------------------------------------------------------------------------------------
@@ -35249,7 +35249,7 @@ productInformation. selectedProducts. payments. cardProcessing. configurationInf
 ==========================================================================================================================================================================================================================================================================
 
 The identifier assigned by Discover that is used to identify the acquirer.  
-This field is available for these processors: `GPX` and `Visa Platform Connect`.
+This field is available for these processors: `GPX` and `Platform Connect`.
 
 Syntax {#prod-info-sel-prod-pay-card-proc-conf-info-conf-comm-proc-acquirer-disc-institution-id_Syntax}
 -------------------------------------------------------------------------------------------------------
@@ -35298,7 +35298,7 @@ productInformation. selectedProducts. payments. cardProcessing. configurationInf
 =================================================================================================================================================================================================================================================================
 
 The BIN where the capture file is sent. This field must contain a valid BIN.  
-This field is available for these processors: `GPX` and `Visa Platform Connect`.
+This field is available for these processors: `GPX` and `Platform Connect`.
 
 Syntax {#prod-info-sel-prod-pay-card-proc-conf-info-conf-comm-proc-acquirer-file-dest-bin_Syntax}
 -------------------------------------------------------------------------------------------------
@@ -35347,8 +35347,8 @@ Mapping Information {#prod-info-sel-prod-pay-card-proc-conf-info-conf-comm-proc-
 productInformation. selectedProducts. payments. cardProcessing. configurationInformation. configurations. common. processors. \[processorName\]. acquirer. institutionId {#prod-info-sel-prod-pay-card-proc-conf-info-conf-comm-proc-acquirer-institution-id}
 =============================================================================================================================================================================================================================================================
 
-Identifier of the acquirer. This number is usually assigned by Visa.  
-This field is available for these processors: `American Express Direct`, CB2A, `Credit Mutuel-CIC`, `China UnionPay`, `eftpos`, `GPX`, `SIX`, and `Visa Platform Connect`.
+Identifier of the acquirer. This number is usually assigned by Relay.  
+This field is available for these processors: `American Express Direct`, CB2A, `Credit Mutuel-CIC`, `China UnionPay`, `eftpos`, `GPX`, `SIX`, and `Platform Connect`.
 
 Syntax {#prod-info-sel-prod-pay-card-proc-conf-info-conf-comm-proc-acquirer-institution-id_Syntax}
 --------------------------------------------------------------------------------------------------
@@ -35407,7 +35407,7 @@ productInformation. selectedProducts. payments. cardProcessing. configurationInf
 =================================================================================================================================================================================================================================================
 
 Merchant identifier that is assigned by the acquirer.  
-This field is available for these processors: `RuPay`, `SIX`, and `Visa Platform Connect`.
+This field is available for these processors: `RuPay`, `SIX`, and `Platform Connect`.
 
 Syntax {#prod-info-sel-prod-pay-card-proc-conf-info-conf-comm-proc-acquirer-merch-id_Syntax}
 --------------------------------------------------------------------------------------------
@@ -35634,7 +35634,7 @@ Batch groups can be specified using the following values:
 * Large merchants (top 10)
 * Merchants with service level agreements
 
-This field is available for these processors: `American Express Direct`, Barclays Merchant Services`China UnionPay`, `FDC Nashville Global`, `FDMS Nashville`, `TSYS Acquiring Solutions`, `Vero`, and `Visa Platform Connect`.
+This field is available for these processors: `American Express Direct`, Barclays Merchant Services`China UnionPay`, `FDC Nashville Global`, `FDMS Nashville`, `TSYS Acquiring Solutions`, `Vero`, and `Platform Connect`.
 
 Syntax {#prod-info-sel-prod-pay-card-proc-conf-info-conf-comm-proc-batch-group_Syntax}
 --------------------------------------------------------------------------------------
@@ -35681,7 +35681,7 @@ productInformation. selectedProducts. payments. cardProcessing. configurationInf
 =============================================================================================================================================================================================================================================
 
 Indicates the type of money transfer used in the transaction.  
-This field is available for these processors: `GPX` and `Visa Platform Connect`.
+This field is available for these processors: `GPX` and `Platform Connect`.
 
 Syntax {#prod-info-sel-prod-pay-card-proc-conf-info-conf-comm-proc-bus-app-id_Syntax}
 -------------------------------------------------------------------------------------
@@ -35777,9 +35777,9 @@ productInformation. selectedProducts. payments. cardProcessing. configurationInf
 =======================================================================================================================================================================================================================================================
 
 Currencies available for processing by the specified processor.  
-This field is available for these processors: `American Express Direct`, Barclays Merchant Services, `China UnionPay`, `FDC Nashville Global`, `FDMS Nashville`, `TSYS Acquiring Solutions`, `Vero`, and `Visa Platform Connect`.  
+This field is available for these processors: `American Express Direct`, Barclays Merchant Services, `China UnionPay`, `FDC Nashville Global`, `FDMS Nashville`, `TSYS Acquiring Solutions`, `Vero`, and `Platform Connect`.  
 For card-not-present applications, you may enable multiple currencies. For card-present only applications, only one currency can be processed by the ready terminal.  
-For `China UnionPay`, `eftpos`, and `Visa Platform Connect` processors, use the actual processor name in each request.
+For `China UnionPay`, `eftpos`, and `Platform Connect` processors, use the actual processor name in each request.
 
 Possible Values {#prod-info-sel-prod-pay-card-proc-conf-info-conf-comm-proc-curr-enbd_PossibleValues}
 -----------------------------------------------------------------------------------------------------
@@ -35837,7 +35837,7 @@ productInformation. selectedProducts. payments. cardProcessing. configurationInf
 ==============================================================================================================================================================================================================================================================
 
 Merchant identifier assigned by an acquirer or a processor. This field should not be overridden by any other party.  
-This field is available for these processors: `Barclays Merchant Services`, `China UnionPay`, `eftpos`, `Elavon Americas`, `FDC Nashville Global`, and `Visa Platform Connect`.
+This field is available for these processors: `Barclays Merchant Services`, `China UnionPay`, `eftpos`, `Elavon Americas`, `FDC Nashville Global`, and `Platform Connect`.
 
 Syntax {#prod-info-sel-prod-pay-card-proc-conf-info-conf-comm-proc-curr-merch-id_Syntax}
 ----------------------------------------------------------------------------------------
@@ -35900,9 +35900,9 @@ productInformation. selectedProducts. payments. cardProcessing. configurationInf
 
 The service enablement number (SE number).  
 A unique ten-digit number assigned by American Express to a merchant that accepts American Express cards that are provided by the acquiring bank. This number might be unique for each currency.  
-This field is available for these processors: `American Express Direct`, `Barclays`, `China UnionPay`, `FDC Nashville Global`, `FDMS Nashville`, `TSYS Acquiring Solutions`, `Vero`, and `Visa Platform Connect`.  
+This field is available for these processors: `American Express Direct`, `Barclays`, `China UnionPay`, `FDC Nashville Global`, `FDMS Nashville`, `TSYS Acquiring Solutions`, `Vero`, and `Platform Connect`.  
 For card-not-present applications, you may enable multiple currencies. For card-present-only applications, only one currency can be processed by the ready terminal.  
-For `China UnionPay`, `eftpos`, and `Visa Platform Connect` processors, use the actual processor name in each request.
+For `China UnionPay`, `eftpos`, and `Platform Connect` processors, use the actual processor name in each request.
 
 Syntax {#prod-info-sel-prod-pay-card-proc-conf-info-conf-comm-proc-curr-svc-en-no_Syntax}
 -----------------------------------------------------------------------------------------
@@ -35960,7 +35960,7 @@ Mapping Information {#prod-info-sel-prod-pay-card-proc-conf-info-conf-comm-proc-
 productInformation. selectedProducts. payments. cardProcessing. configurationInformation. configurations. common. processors.\[processorName\]. currencies.\[currency\]. terminalId {#prod-info-sel-prod-pay-card-proc-conf-info-conf-comm-proc-curr-term-id}
 =============================================================================================================================================================================================================================================================
 
-The Terminal ID (TID) used for your payments processor. Depending on the processor and payment acceptance type, this field may also be the default Terminal ID used for card-present and virtual terminal transactions. This field is available for these processors: `FDC Nashville Global`, `Elavon Americas`, `Visa Platform Connect`, and `RuPay`.
+The Terminal ID (TID) used for your payments processor. Depending on the processor and payment acceptance type, this field may also be the default Terminal ID used for card-present and virtual terminal transactions. This field is available for these processors: `FDC Nashville Global`, `Elavon Americas`, `Platform Connect`, and `RuPay`.
 
 Syntax {#prod-info-sel-prod-pay-card-proc-conf-info-conf-comm-proc-curr-term-id_Syntax}
 ---------------------------------------------------------------------------------------
@@ -36081,8 +36081,8 @@ productInformation. selectedProducts. payments. cardProcessing. configurationInf
 =========================================================================================================================================================================================================================================================
 
 Allows the reversal of unused funds after a void transaction.  
-Enabling this feature allows merchants to meet the Visa mandate requiring merchants to release unused funds set aside during an authorization request.  
-This field is available for these processors: `American Express Direct`, `Elavon Americas`, `SIX`, `Visa Platform Connect`, and CB2A.
+Enabling this feature allows merchants to meet the Relay mandate requiring merchants to release unused funds set aside during an authorization request.  
+This field is available for these processors: `American Express Direct`, `Elavon Americas`, `SIX`, `Platform Connect`, and CB2A.
 
 Syntax {#prod-info-sel-prod-pay-card-proc-conf-info-conf-comm-proc-def-pos-term-id_Syntax}
 ------------------------------------------------------------------------------------------
@@ -36136,8 +36136,8 @@ productInformation. selectedProducts. payments. cardProcessing. configurationInf
 ==========================================================================================================================================================================================================================================================================
 
 Allows the reversal of unused funds after a void transaction.  
-Enabling this feature allows merchants to meet the Visa mandate that requires merchants to release unused funds that are set aside during an authorization request.  
-This field is available for these processors: `American Express Direct`, CB2A, `Elavon Americas`, `SIX`, and `Visa Platform Connect`.
+Enabling this feature allows merchants to meet the Relay mandate that requires merchants to release unused funds that are set aside during an authorization request.  
+This field is available for these processors: `American Express Direct`, CB2A, `Elavon Americas`, `SIX`, and `Platform Connect`.
 
 Possible Values {#prod-info-sel-prod-pay-card-proc-conf-info-conf-comm-proc-enable-auto-auth-rev-aft-void_PossibleValues}
 -------------------------------------------------------------------------------------------------------------------------
@@ -36718,7 +36718,7 @@ productInformation. selectedProducts. payments. cardProcessing. configurationInf
 ===============================================================================================================================================================================================================================================================
 
 When this field is set to `true`, it indicates that the merchant can send in the transaction reference number.  
-This field is available for these processors: CB2A, `Chase Paymentech Solutions`, `China UnionPay`, `eftpos`, `Elavon Americas`, Fiserv, `FDC Nashville Global`, `SIX`, `Vero`, and `Visa Platform Connect`
+This field is available for these processors: CB2A, `Chase Paymentech Solutions`, `China UnionPay`, `eftpos`, `Elavon Americas`, Fiserv, `FDC Nashville Global`, `SIX`, `Vero`, and `Platform Connect`
 
 Possible Values {#prod-info-sel-prod-pay-card-proc-conf-info-conf-comm-proc-enb-trans-ref-num_PossibleValues}
 -------------------------------------------------------------------------------------------------------------
@@ -36990,9 +36990,9 @@ Possible payment type values:
 
 * `SWITCH_SOLO`
 
-* `VISA`
+* `CARD`
 
-* `VISA_ELECTRON`  
+* `CARD_ELECTRON`  
   **Barclays Merchant Services** :
 
 * `DINERS_CLUB`
@@ -37007,7 +37007,7 @@ Possible payment type values:
 
 * `SWITCH_SOLO`
 
-* `VISA`  
+* `CARD`  
   Possible values for each payment type:
 
 * `true`
@@ -37065,7 +37065,7 @@ productInformation. selectedProducts. payments. cardProcessing. configurationInf
 
 The service enablement number (SE Number).  
 A unique ten-digit number assigned by American Express to a merchant that accepts American Express cards provided by the aquiring bank. This number may be unique for each currency.  
-This field is available for the following processors: `American Express Direct`, `Barclays`, `China UnionPay`, `FDC Nashville Global`, `FDMS Nashville`, `TSYS Acquiring Solutions`, `Vero`, `Visa Platform Connect`.  
+This field is available for the following processors: `American Express Direct`, `Barclays`, `China UnionPay`, `FDC Nashville Global`, `FDMS Nashville`, `TSYS Acquiring Solutions`, `Vero`, `Platform Connect`.  
 The following payment types can be used:
 
 * **AMERICAN_EXPRESS**
@@ -37074,7 +37074,7 @@ The following payment types can be used:
 * **JCB**
 * **MASTERCARD**
 * **PIN_DEBIT**
-* **VISA**
+* **CARD**
 
 Syntax {#prod-info-sel-prod-pay-card-proc-conf-info-conf-comm-proc-pay-types-enbmnt-no_Syntax}
 ----------------------------------------------------------------------------------------------
@@ -37182,7 +37182,7 @@ productInformation. selectedProducts. payments. cardProcessing. configurationInf
 =================================================================================================================================================================================================================================
 
 Indicates if quasi-cash transactions are enabled. A quasi-cash transaction is a cash-like transaction for the sale of items that are directly convertible to cash. Examples of quasi-cash include casino gaming chips, money orders, and wire transfers.  
-This field is available for these processors: Barclays Merchant Services `GPX`, `TSYS Acquiring Solutions` and `Visa Platform Connect`.
+This field is available for these processors: Barclays Merchant Services `GPX`, `TSYS Acquiring Solutions` and `Platform Connect`.
 
 Possible Values {#prod-info-sel-prod-pay-card-proc-conf-info-conf-comm-proc-quasi-cash_PossibleValues}
 ------------------------------------------------------------------------------------------------------
@@ -37577,7 +37577,7 @@ productInformation. selectedProducts. payments. cardProcessing. configurationInf
 ==========================================================================================================================================================================================
 
 The 4-digit Standard Industrial Classification (SIC) code that categorizes the industries that companies belong to based on their business activities. SIC codes were mostly replaced by the 6-digit North American Industry Classification System (NAICS).  
-This field is available for these processors: `GPX` and `Visa Platform Connect`.
+This field is available for these processors: `GPX` and `Platform Connect`.
 
 Syntax {#prod-info-sel-prod-pay-card-proc-conf-info-conf-comm-sic-code_Syntax}
 ------------------------------------------------------------------------------
@@ -37721,13 +37721,13 @@ Mapping Information {#prod-info-sel-prod-pay-card-proc-conf-info-conf-comm-sub-m
 **Boarding Registration Service API Field:** productInformation.selectedProducts.payments.cardProcessing.configurationInformation. configurations.common.subMerchantId  
 **Product Enablement and Configuration Service API Field:** payments.cardProcessing.configurationInformation.configurations.common.subMerchantId
 
-productInformation. selectedProducts. payments. cardProcessing. configurationInformation. configurations. common. visaDelegatedAuthenticationId {#prod-info-sel-prod-pay-card-proc-conf-info-conf-comm-visa-delegate-auth-id}
+productInformation. selectedProducts. payments. cardProcessing. configurationInformation. configurations. common. relayDelegatedAuthenticationId {#prod-info-sel-prod-pay-card-proc-conf-info-conf-comm-relay-delegate-auth-id}
 =============================================================================================================================================================================================================================
 
-The identifier that is provided to merchants who opt for Visa's delegated authorization program.  
-This field is available for these processors: `Visa Platform Connect`.
+The identifier that is provided to merchants who opt for Relay's delegated authorization program.  
+This field is available for these processors: `Platform Connect`.
 
-Syntax {#prod-info-sel-prod-pay-card-proc-conf-info-conf-comm-visa-delegate-auth-id_Syntax}
+Syntax {#prod-info-sel-prod-pay-card-proc-conf-info-conf-comm-relay-delegate-auth-id_Syntax}
 -------------------------------------------------------------------------------------------
 
 ```
@@ -37739,7 +37739,7 @@ Syntax {#prod-info-sel-prod-pay-card-proc-conf-info-conf-comm-visa-delegate-auth
           "configurationInformation": {
             "configurations": {
               "common": {
-                "visaDelegatedAuthenticationId": "0123"
+                "relayDelegatedAuthenticationId": "0123"
               }
             }
           }
@@ -37750,17 +37750,17 @@ Syntax {#prod-info-sel-prod-pay-card-proc-conf-info-conf-comm-visa-delegate-auth
 }
 ```
 
-Specifications {#prod-info-sel-prod-pay-card-proc-conf-info-conf-comm-visa-delegate-auth-id_Specifications}
+Specifications {#prod-info-sel-prod-pay-card-proc-conf-info-conf-comm-relay-delegate-auth-id_Specifications}
 -----------------------------------------------------------------------------------------------------------
 
 * **Data Type:** String
-  {#prod-info-sel-prod-pay-card-proc-conf-info-conf-comm-visa-delegate-auth-id_ul_j2z_js4_cyb}
+  {#prod-info-sel-prod-pay-card-proc-conf-info-conf-comm-relay-delegate-auth-id_ul_j2z_js4_cyb}
 
-Mapping Information {#prod-info-sel-prod-pay-card-proc-conf-info-conf-comm-visa-delegate-auth-id_Mapping}
+Mapping Information {#prod-info-sel-prod-pay-card-proc-conf-info-conf-comm-relay-delegate-auth-id_Mapping}
 ---------------------------------------------------------------------------------------------------------
 
-**Boarding Registration Service API Field:** productInformation.selectedProducts.payments.cardProcessing.configurationInformation. configurations.common.visaDelegatedAuthenticationId  
-**Product Enablement and Configuration Service API Field:** payments.cardProcessing.configurationInformation.configurations.common. visaDelegatedAuthenticationId
+**Boarding Registration Service API Field:** productInformation.selectedProducts.payments.cardProcessing.configurationInformation. configurations.common.relayDelegatedAuthenticationId  
+**Product Enablement and Configuration Service API Field:** payments.cardProcessing.configurationInformation.configurations.common. relayDelegatedAuthenticationId
 
 productInformation. selectedProducts. payments. cardProcessing. configurationInformation. configurations. common. processors. \[processorName\]. acquirer {#prod-info-sel-prod-pay-card-proc-conf-info-conf-common-proc-acquirer}
 =================================================================================================================================================================================================================================
@@ -37819,7 +37819,7 @@ productInformation. selectedProducts. payments. cardProcessing. configurationInf
 ========================================================================================================================================================================================================================================================================
 
 Enables a partner to enable or disable merchant descriptor values.  
-This field is available for these processors: `China UnionPay`, `eftpos`, and `Visa Platform Connect`.
+This field is available for these processors: `China UnionPay`, `eftpos`, and `Platform Connect`.
 
 Possible Values {#prod-info-sel-prod-pay-card-proc-conf-info-conf-common-proc-allow-merch-desc-override_PossibleValues}
 -----------------------------------------------------------------------------------------------------------------------
@@ -37873,7 +37873,7 @@ productInformation. selectedProducts. payments. cardProcessing. configurationInf
 ==================================================================================================================================================================================================================================================
 
 If field it set to `true`, it enables a merchant to allow multiple captures for a single authorization transaction.  
-This field is available for these processors: `American Express Direct`, `Chase Paymentech Tandem` `GPX`, `Visa Platform Connect`.
+This field is available for these processors: `American Express Direct`, `Chase Paymentech Tandem` `GPX`, `Platform Connect`.
 
 Possible Values {#prod-info-sel-prod-pay-card-proc-conf-info-conf-common-proc-allow-mult-bills_PossibleValues}
 --------------------------------------------------------------------------------------------------------------
@@ -37927,7 +37927,7 @@ productInformation. selectedProducts. payments. cardProcessing. configurationInf
 =========================================================================================================================================================================================================================================
 
 Enhanced data available for airline transactions.  
-This field is available for these processors: `American Express Direct`, Barclays Merchant Services, `Elavon Americas`, `FDC Nashville Global`, `GPX`, `TSYS Acquiring Solutions` and `Visa Platform Connect`.
+This field is available for these processors: `American Express Direct`, Barclays Merchant Services, `Elavon Americas`, `FDC Nashville Global`, `GPX`, `TSYS Acquiring Solutions` and `Platform Connect`.
 
 Possible Values {#prod-info-sel-prod-pay-card-proc-conf-info-conf-common-proc-enhanced-data_PossibleValues}
 -----------------------------------------------------------------------------------------------------------
@@ -37983,7 +37983,7 @@ productInformation. selectedProducts. payments. cardProcessing. configurationInf
 ========================================================================================================================================================================================================================================================
 
 When this field is set to `true`, it indicates that the merchant is compliant with the Hotel and Motel Fire Safety Act of 1990.  
-This field is available for these processors: `GPX` and `Visa Platform Connect`.
+This field is available for these processors: `GPX` and `Platform Connect`.
 
 Possible Values {#prod-info-sel-prod-pay-card-proc-conf-info-conf-common-proc-fire-safety-indicator_PossibleValues}
 -------------------------------------------------------------------------------------------------------------------
@@ -38293,7 +38293,7 @@ productInformation. selectedProducts. payments. cardProcessing. configurationInf
 ===============================================================================================================================================================================================================================
 
 Standard Industrial Classification (SIC) code is a 4-digit code that categorizes the industry that the company belongs to based on their business activities. SIC codes were mostly replaced by the 6-digit North American Industry Classification System (NAICS).  
-This field is available for these processors: `GPX` and `Visa Platform Connect`.
+This field is available for these processors: `GPX` and `Platform Connect`.
 
 Syntax {#prod-info-sel-prod-pay-card-proc-conf-info-conf-common-proc-sic-code_Syntax}
 -------------------------------------------------------------------------------------
@@ -38398,7 +38398,7 @@ productInformation. selectedProducts. payments. cardProcessing. configurationInf
 
 Enables merchants to accept e-commerce transactions without the Address Verification System (AVS) feature.  
 These parameters are established by the merchant through their service provider.  
-This field is available for these processors: `American Express Direct`, Barclays HISO, CB2A, `Chase Paymentech Solutions`, `Credit Mutuel-CIC`, `FDC Nashville Global`, Fiserv, `GPN`, `RuPay`, `SIX`, `Vero`, and `Visa Platform Connect`.
+This field is available for these processors: `American Express Direct`, Barclays HISO, CB2A, `Chase Paymentech Solutions`, `Credit Mutuel-CIC`, `FDC Nashville Global`, Fiserv, `GPN`, `RuPay`, `SIX`, `Vero`, and `Platform Connect`.
 
 Syntax {#prod-info-sel-prod-pay-card-proc-conf-info-conf-feat-cnp-proc-relax-avs-a_Syntax}
 ------------------------------------------------------------------------------------------
@@ -38446,7 +38446,7 @@ productInformation. selectedProducts. payments. cardProcessing. configurationInf
 ==========================================================================================================================================================================================================================================================================================================
 
 Allows merchants to accept card-not-present and e-commerce transactions with expired cards.  
-This field is available for these processors: `American Express Direct`, Barclays HISO, CB2A, `Chase Paymentech Solutions`, `FDC Nashville Global`, `GPN`, `RuPay`, `SIX`, and `Visa Platform Connect`.
+This field is available for these processors: `American Express Direct`, Barclays HISO, CB2A, `Chase Paymentech Solutions`, `FDC Nashville Global`, `GPN`, `RuPay`, `SIX`, and `Platform Connect`.
 
 Syntax {#prod-info-sel-prod-pay-card-proc-conf-info-conf-feat-cnp-proc-relax-avs-allow-exp-card_Syntax}
 -------------------------------------------------------------------------------------------------------
@@ -38494,7 +38494,7 @@ productInformation. selectedProducts. payments. cardProcessing. configurationInf
 =================================================================================================================================================================================================================================================================================================================
 
 Enables merchants to accept e-commerce transactions without the Address Verification System (AVS) and allows transactions with just the ZIP code and country code.  
-This field is available for these processors: `American Express Direct`, Barclays HISO, `Chase Paymentech Solutions`, `FDC Nashville Global`, `Elavon Americas`, `RuPay`, and `Visa Platform Connect`.
+This field is available for these processors: `American Express Direct`, Barclays HISO, `Chase Paymentech Solutions`, `FDC Nashville Global`, `Elavon Americas`, `RuPay`, and `Platform Connect`.
 
 Syntax {#prod-info-sel-prod-pay-card-proc-conf-info-conf-feat-cnp-proc-relax-avs-allow-zip-wo-co_Syntax}
 --------------------------------------------------------------------------------------------------------
@@ -38542,7 +38542,7 @@ productInformation. selectedProducts. payments. cardProcessing. configurationInf
 ===========================================================================================================================================================================================================================================================================
 
 Default terminal ID used with card-present transactions.  
-This field is available for these processors: `American Express Direct`, `Chase Paymentech Solutions`, and `Visa Platform Connect`.
+This field is available for these processors: `American Express Direct`, `Chase Paymentech Solutions`, and `Platform Connect`.
 
 Syntax {#prod-info-sel-prod-pay-card-proc-conf-info-conf-feat-cp-proc-def-pos-term-id_Syntax}
 ---------------------------------------------------------------------------------------------
@@ -42522,7 +42522,7 @@ Mapping Information {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types
 **Boarding Registration Service API Field:** productInformation.selectedProducts.payments.payerAuthentication. configurationInformation.configurations.cardTypes.UPI.enabled  
 **Product Enablement and Configuration Service API Field:** payments.payerAuthentication.configurationInformation.configurations. cardTypes.UPI.enabled
 
-productInformation. selectedProducts. payments. payerAuthentication. configurationInformation. configurations. cardTypes. verifiedByVisa. currencies. requestorId {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-vbv-requestor-id}
+productInformation. selectedProducts. payments. payerAuthentication. configurationInformation. configurations. cardTypes. verifiedByCard. currencies. requestorId {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-vbv-requestor-id}
 ================================================================================================================================================================================================================================================
 
 This field is the requestor ID value assigned by a 3-D Secure directory server. It is used with 3-D Secure 2.0. When this field is passed in the request, it overrides the requestor ID value that is configured on the merchant's profile.
@@ -42539,7 +42539,7 @@ Syntax {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-vbv-requesto
         "configurationInformation": {
           "configurations": {
             "cardTypes": {
-              "verifiedByVisa": {
+              "verifiedByCard": {
                   "currencies": {
                     "requestorId": "01234567891111
                   {
@@ -42574,15 +42574,15 @@ Specifications {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-vbv-
 Mapping Information {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-vbv-requestor-id_Mapping}
 ----------------------------------------------------------------------------------------------------------
 
-**Boarding Registration Service API Field:** productInformation.selectedProducts.payments.payerAuthentication. configurationInformation.configurations.cardTypes.verifiedByVisa.currencies.requestorId  
-**Product Enablement and Configuration Service API Field:** payments.payerAuthentication.configurationInformation.configurations. cardTypes.verifiedByVisa.currencies.requestorId
+**Boarding Registration Service API Field:** productInformation.selectedProducts.payments.payerAuthentication. configurationInformation.configurations.cardTypes.verifiedByCard.currencies.requestorId  
+**Product Enablement and Configuration Service API Field:** payments.payerAuthentication.configurationInformation.configurations. cardTypes.verifiedByCard.currencies.requestorId
 
-productInformation. selectedProducts. payments. payerAuthentication. configurationInformation. configurations. cardTypes. verifiedByVisa. currencies. \[currency\]. acquirerId {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyvisa-curr-acquirer-id}
+productInformation. selectedProducts. payments. payerAuthentication. configurationInformation. configurations. cardTypes. verifiedByCard. currencies. \[currency\]. acquirerId {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyrelay-curr-acquirer-id}
 =======================================================================================================================================================================================================================================================================
 
-The acquirer ID value, often referred to as the acquirer BIN, that is specific to an acquirer and configured for Verified by Visa. The value is created by Cardinal in their system and the acquirer may not know that the acquirer ID is different from their acquiring BIN.
+The acquirer ID value, often referred to as the acquirer BIN, that is specific to an acquirer and configured for Verified by Relay. The value is created by Cardinal in their system and the acquirer may not know that the acquirer ID is different from their acquiring BIN.
 
-Syntax {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyvisa-curr-acquirer-id_Syntax}
+Syntax {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyrelay-curr-acquirer-id_Syntax}
 ------------------------------------------------------------------------------------------------------
 
 ```
@@ -42594,7 +42594,7 @@ Syntax {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyvisa-cu
           "configurationInformation": {
             "configurations": {
               "cardTypes": {
-                "verifiedByVisa": {
+                "verifiedByCard": {
                   "currencies": [
                     {
                       <currency>:
@@ -42620,28 +42620,28 @@ The value of this field must conform to this regular expression:
 ^[a-zA-Z0-9]{6,20}$
 ```
 
-{#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyvisa-curr-acquirer-id_codeblock_iq3_nq5_2yb}
+{#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyrelay-curr-acquirer-id_codeblock_iq3_nq5_2yb}
 
-Specifications {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyvisa-curr-acquirer-id_Specifications}
+Specifications {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyrelay-curr-acquirer-id_Specifications}
 ----------------------------------------------------------------------------------------------------------------------
 
 * **Data Type:** String
 * **Minimum Data Length:** 6
 * **Maximum Data Length:** 20
-  {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyvisa-curr-acquirer-id_ul_j2z_js4_cyb}
+  {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyrelay-curr-acquirer-id_ul_j2z_js4_cyb}
 
-Mapping Information {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyvisa-curr-acquirer-id_Mapping}
+Mapping Information {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyrelay-curr-acquirer-id_Mapping}
 --------------------------------------------------------------------------------------------------------------------
 
-**Boarding Registration Service API Field:** productInformation.selectedProducts.payments.payerAuthentication. configurationInformation.configurations.cardTypes.verifiedByVisa. currencies.\[currency\].acquirerId  
-**Product Enablement and Configuration Service API Field:** payments.payerAuthentication.configurationInformation.configurations. cardTypes.verifiedByVisa.currencies.\[currency\].acquirerId
+**Boarding Registration Service API Field:** productInformation.selectedProducts.payments.payerAuthentication. configurationInformation.configurations.cardTypes.verifiedByCard. currencies.\[currency\].acquirerId  
+**Product Enablement and Configuration Service API Field:** payments.payerAuthentication.configurationInformation.configurations. cardTypes.verifiedByCard.currencies.\[currency\].acquirerId
 
-productInformation. selectedProducts. payments. payerAuthentication. configurationInformation. configurations. cardTypes. verifiedByVisa. currencies. \[currency\]. currencyCodes {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyvisa-curr-curr-codes}
+productInformation. selectedProducts. payments. payerAuthentication. configurationInformation. configurations. cardTypes. verifiedByCard. currencies. \[currency\]. currencyCodes {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyrelay-curr-curr-codes}
 =========================================================================================================================================================================================================================================================================
 
-The ISO standard numerical currency code of the currency that is configured for the merchant for Verified by Visa. For information on ISO currency codes, see the [ISO Country Currency Codes website](https://www.iban.com/currency-codes "").
+The ISO standard numerical currency code of the currency that is configured for the merchant for Verified by Relay. For information on ISO currency codes, see the [ISO Country Currency Codes website](https://www.iban.com/currency-codes "").
 
-Syntax {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyvisa-curr-curr-codes_Syntax}
+Syntax {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyrelay-curr-curr-codes_Syntax}
 -----------------------------------------------------------------------------------------------------
 
 ```
@@ -42653,7 +42653,7 @@ Syntax {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyvisa-cu
           "configurationInformation": {
             "configurations": {
               "cardTypes": {
-                "verifiedByVisa": {
+                "verifiedByCard": {
                   "currencies": [
                     {
                       <currency>:
@@ -42673,25 +42673,25 @@ Syntax {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyvisa-cu
 
 * **\<currency\>**: The currency that is supported by the merchant.
 
-Specifications {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyvisa-curr-curr-codes_Specifications}
+Specifications {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyrelay-curr-curr-codes_Specifications}
 ---------------------------------------------------------------------------------------------------------------------
 
 * **Data Type:** String
 * **Data Length:** 3
-  {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyvisa-curr-curr-codes_ul_j2z_js4_cyb}
+  {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyrelay-curr-curr-codes_ul_j2z_js4_cyb}
 
-Mapping Information {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyvisa-curr-curr-codes_Mapping}
+Mapping Information {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyrelay-curr-curr-codes_Mapping}
 -------------------------------------------------------------------------------------------------------------------
 
-**Boarding Registration Service API Field:** productInformation.selectedProducts.payments.payerAuthentication. configurationInformation.configurations.cardTypes.verifiedByVisa. currencies.\[currency\].currencyCodes  
-**Product Enablement and Configuration Service API Field:** payments.payerAuthentication.configurationInformation.configurations. cardTypes.verifiedByVisa.currencies.\[currency\].currencyCodes
+**Boarding Registration Service API Field:** productInformation.selectedProducts.payments.payerAuthentication. configurationInformation.configurations.cardTypes.verifiedByCard. currencies.\[currency\].currencyCodes  
+**Product Enablement and Configuration Service API Field:** payments.payerAuthentication.configurationInformation.configurations. cardTypes.verifiedByCard.currencies.\[currency\].currencyCodes
 
-productInformation. selectedProducts. payments. payerAuthentication. configurationInformation. configurations. cardTypes. verifiedByVisa. currencies. \[currency\]. processorMerchantId {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyvisa-curr-proc-mid}
+productInformation. selectedProducts. payments. payerAuthentication. configurationInformation. configurations. cardTypes. verifiedByCard. currencies. \[currency\]. processorMerchantId {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyrelay-curr-proc-mid}
 =============================================================================================================================================================================================================================================================================
 
-Merchant identifier assigned by your acquiring bank and configured for Verified by Visa. This merchant ID should also be used by your bank to register your account to the card scheme Directory Server for processing `Payer Authentication` services.
+Merchant identifier assigned by your acquiring bank and configured for Verified by Relay. This merchant ID should also be used by your bank to register your account to the card scheme Directory Server for processing `Payer Authentication` services.
 
-Syntax {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyvisa-curr-proc-mid_Syntax}
+Syntax {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyrelay-curr-proc-mid_Syntax}
 ---------------------------------------------------------------------------------------------------
 
 ```
@@ -42703,7 +42703,7 @@ Syntax {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyvisa-cu
           "configurationInformation": {
             "configurations": {
               "cardTypes": {
-                "verifiedByVisa": {
+                "verifiedByCard": {
                   "currencies": [
                     <currency>:
                      "processorMerchantId": "procmerchantid"
@@ -42727,28 +42727,28 @@ The value of this field must conform to this regular expression:
 ^[a-zA-Z0-9]{6,35}$
 ```
 
-{#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyvisa-curr-proc-mid_codeblock_iq3_nq5_2yb}
+{#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyrelay-curr-proc-mid_codeblock_iq3_nq5_2yb}
 
-Specifications {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyvisa-curr-proc-mid_Specifications}
+Specifications {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyrelay-curr-proc-mid_Specifications}
 -------------------------------------------------------------------------------------------------------------------
 
 * **Data Type:** String
 * **Minimum Data Length:** 6
 * **Maximum Data Length:** 35
-  {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyvisa-curr-proc-mid_ul_j2z_js4_cyb}
+  {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyrelay-curr-proc-mid_ul_j2z_js4_cyb}
 
-Mapping Information {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyvisa-curr-proc-mid_Mapping}
+Mapping Information {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyrelay-curr-proc-mid_Mapping}
 -----------------------------------------------------------------------------------------------------------------
 
-**Boarding Registration Service API Field:** productInformation.selectedProducts.payments.payerAuthentication. configurationInformation.configurations.cardTypes.verifiedByVisa. currencies.\[currency\].processorMerchantId  
-**Product Enablement and Configuration Service API Field:** payments.payerAuthentication.configurationInformation.configurations. cardTypes.verifiedByVisa.currencies.\[currency\].processorMerchantId
+**Boarding Registration Service API Field:** productInformation.selectedProducts.payments.payerAuthentication. configurationInformation.configurations.cardTypes.verifiedByCard. currencies.\[currency\].processorMerchantId  
+**Product Enablement and Configuration Service API Field:** payments.payerAuthentication.configurationInformation.configurations. cardTypes.verifiedByCard.currencies.\[currency\].processorMerchantId
 
-productInformation. selectedProducts. payments. payerAuthentication. configurationInformation. configurations. cardTypes. verifiedByVisa. currencies. vmid {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyvisa-curr-vmid}
+productInformation. selectedProducts. payments. payerAuthentication. configurationInformation. configurations. cardTypes. verifiedByCard. currencies. vmid {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyrelay-curr-vmid}
 ============================================================================================================================================================================================================================================
 
-This field value is the merchant ID that is assigned by Visa.
+This field value is the merchant ID that is assigned by Relay.
 
-Syntax {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyvisa-curr-vmid_Syntax}
+Syntax {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyrelay-curr-vmid_Syntax}
 -----------------------------------------------------------------------------------------------
 
 ```
@@ -42760,9 +42760,9 @@ Syntax {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyvisa-cu
           "configurationInformation": {
             "configurations": {
               "cardTypes": {
-                "verifiedByVisa": 
+                "verifiedByCard": 
                   "currencies": {
-                    "vmid": "Visa merchant ID"
+                    "vmid": "Relay merchant ID"
                   }
                 }
               }
@@ -42775,32 +42775,32 @@ Syntax {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyvisa-cu
 }
 ```
 
-Specifications {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyvisa-curr-vmid_Specifications}
+Specifications {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyrelay-curr-vmid_Specifications}
 ---------------------------------------------------------------------------------------------------------------
 
 * **Data Type:** String
 * **Maximum Data Length:** 35
-  {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyvisa-curr-vmid_ul_j2z_js4_cyb}
+  {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyrelay-curr-vmid_ul_j2z_js4_cyb}
 
-Mapping Information {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyvisa-curr-vmid_Mapping}
+Mapping Information {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyrelay-curr-vmid_Mapping}
 -------------------------------------------------------------------------------------------------------------
 
-**Boarding Registration Service API Field:** productInformation.selectedProducts.payments.payerAuthentication. configurationInformation.configurations.cardTypes.verifiedByVisa.currencies.vmid  
-**Product Enablement and Configuration Service API Field:** payments.payerAuthentication.configurationInformation.configurations. cardTypes.currencies.verifiedByVisa.currencies.vmid
+**Boarding Registration Service API Field:** productInformation.selectedProducts.payments.payerAuthentication. configurationInformation.configurations.cardTypes.verifiedByCard.currencies.vmid  
+**Product Enablement and Configuration Service API Field:** payments.payerAuthentication.configurationInformation.configurations. cardTypes.currencies.verifiedByCard.currencies.vmid
 
-productInformation. selectedProducts. payments. payerAuthentication. configurationInformation. configurations. cardTypes. verifiedByVisa. enabled {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyvisa-enabled}
+productInformation. selectedProducts. payments. payerAuthentication. configurationInformation. configurations. cardTypes. verifiedByCard. enabled {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyrelay-enabled}
 =================================================================================================================================================================================================================================
 
-Determines if Verified by Visa is an enabled card type for `Payer Authentication`.
+Determines if Verified by Relay is an enabled card type for `Payer Authentication`.
 
-Possible Values {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyvisa-enabled_PossibleValues}
+Possible Values {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyrelay-enabled_PossibleValues}
 --------------------------------------------------------------------------------------------------------------
 
 * `true`
 * `false`
-  {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyvisa-enabled_ul_p1v_h23_czb}
+  {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyrelay-enabled_ul_p1v_h23_czb}
 
-Syntax {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyvisa-enabled_Syntax}
+Syntax {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyrelay-enabled_Syntax}
 ---------------------------------------------------------------------------------------------
 
 ```
@@ -42812,7 +42812,7 @@ Syntax {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyvisa-en
           "configurationInformation": {
             "configurations": {
               "cardTypes": {
-                "verifiedByVisa": {
+                "verifiedByCard": {
                   "enabled": "true"
                 }
               }
@@ -42825,24 +42825,24 @@ Syntax {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyvisa-en
 }
 ```
 
-Specifications {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyvisa-enabled_Specifications}
+Specifications {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyrelay-enabled_Specifications}
 -------------------------------------------------------------------------------------------------------------
 
 * **Data Type:** Boolean
-  {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyvisa-enabled_ul_j2z_js4_cyb}
+  {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyrelay-enabled_ul_j2z_js4_cyb}
 
-Mapping Information {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyvisa-enabled_Mapping}
+Mapping Information {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verbyrelay-enabled_Mapping}
 -----------------------------------------------------------------------------------------------------------
 
-**Boarding Registration Service API Field:** productInformation.selectedProducts.payments.payerAuthentication. configurationInformation.configurations.cardTypes.verifiedByVisa.enabled  
-**Product Enablement and Configuration Service API Field:** payments.payerAuthentication.configurationInformation.configurations. cardTypes.verifiedByVisa.enabled
+**Boarding Registration Service API Field:** productInformation.selectedProducts.payments.payerAuthentication. configurationInformation.configurations.cardTypes.verifiedByCard.enabled  
+**Product Enablement and Configuration Service API Field:** payments.payerAuthentication.configurationInformation.configurations. cardTypes.verifiedByCard.enabled
 
-productInformation. selectedProducts. payments. payerAuthentication. configurationInformation. configurations. cardTypes. verifiedByVisa. currencies.\[currency\]. requestorName {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verifiedbyvisa-curr-requestor-name}
+productInformation. selectedProducts. payments. payerAuthentication. configurationInformation. configurations. cardTypes. verifiedByCard. currencies.\[currency\]. requestorName {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verifiedbyrelay-curr-requestor-name}
 =================================================================================================================================================================================================================================================================================
 
 This field is the 3-D Secure requestor name value that is assigned by the directory server.
 
-Syntax {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verifiedbyvisa-curr-requestor-name_Syntax}
+Syntax {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verifiedbyrelay-curr-requestor-name_Syntax}
 --------------------------------------------------------------------------------------------------------------
 
 ```
@@ -42854,7 +42854,7 @@ Syntax {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verifiedbyvi
           "configurationInformation": {
             "configurations": {
               "cardTypes": {
-                "verifiedByVisa": {
+                "verifiedByCard": {
                   "currencies": [
                                 {
                                 "currencyCodes": ["ALL, "978"]
@@ -42880,20 +42880,20 @@ The value of this field must conform to this regular expression:
 ^[a-zA-Z0-9]{6,20}$
 ```
 
-{#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verifiedbyvisa-curr-requestor-name_codeblock_iq3_nq5_2yb}
+{#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verifiedbyrelay-curr-requestor-name_codeblock_iq3_nq5_2yb}
 
-Specifications {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verifiedbyvisa-curr-requestor-name_Specifications}
+Specifications {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verifiedbyrelay-curr-requestor-name_Specifications}
 ------------------------------------------------------------------------------------------------------------------------------
 
 * **Data Type:** String
 * **Maximum Data Length:** 40
-  {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verifiedbyvisa-curr-requestor-name_ul_j2z_js4_cyb}
+  {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verifiedbyrelay-curr-requestor-name_ul_j2z_js4_cyb}
 
-Mapping Information {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verifiedbyvisa-curr-requestor-name_Mapping}
+Mapping Information {#prod-info-sel-prod-pay-payerauth-conf-info-conf-card-types-verifiedbyrelay-curr-requestor-name_Mapping}
 ----------------------------------------------------------------------------------------------------------------------------
 
-**Boarding Registration Service API Field:** productInformation.selectedProducts.payments.payerAuthentication. configurationInformation.configurations.cardTypes.verifiedByVisa.currencies.\[currency\].requestorName  
-**Product Enablement and Configuration Service API Field:** payments.payerAuthentication.configurationInformation.configurations. cardTypes.verifiedByVisa.currencies.\[currency\].requestorName
+**Boarding Registration Service API Field:** productInformation.selectedProducts.payments.payerAuthentication. configurationInformation.configurations.cardTypes.verifiedByCard.currencies.\[currency\].requestorName  
+**Product Enablement and Configuration Service API Field:** payments.payerAuthentication.configurationInformation.configurations. cardTypes.verifiedByCard.currencies.\[currency\].requestorName
 
 productInformation. selectedProducts. payments. payerAuthentication. configurationInformation. templateId {#prod-info-sel-prod-pay-payerauth-conf-info-template-id}
 ===================================================================================================================================================================
@@ -43656,7 +43656,7 @@ Mapping Information {#prod-info-sel-prod-pay-payouts-conf-info-conf-pushfunds-or
 productInformation. selectedProducts. payments. payouts. configurationInformation. configurations. pushFunds. originatorPseudoAbaNumber {#prod-info-sel-prod-pay-payouts-conf-info-conf-pushfunds-orig-pseudo-aba-no}
 =====================================================================================================================================================================================================================
 
-Number that uniquely identifies the originator when they sign up to send push payment gateway transactions. After enrollment, an originator will get a single pseudo-value that is assigned by Visa. The other networks will assign their own unique values for the originator.  
+Number that uniquely identifies the originator when they sign up to send push payment gateway transactions. After enrollment, an originator will get a single pseudo-value that is assigned by Relay. The other networks will assign their own unique values for the originator.  
 This field is supported only in US for domestic transactions involving the push payments gateway service.
 
 Syntax {#prod-info-sel-prod-pay-payouts-conf-info-conf-pushfunds-orig-pseudo-aba-no_Syntax}
@@ -45472,8 +45472,8 @@ Possible Values {#prod-info-sel-prod-pay-virtualterm-conf-info-conf-cnp-globalpa
 * `MAESTRO_INTERNATIONAL`
 * `MASTER_CARD`
 * `SWITCH_SOLO`
-* `VISA`
-* `VISA_ELECTRON`
+* `CARD`
+* `CARD_ELECTRON`
   {#prod-info-sel-prod-pay-virtualterm-conf-info-conf-cnp-globalpay-payinfo-accept-card-type_ul_rxd_mmm_bzb}
 
 Syntax {#prod-info-sel-prod-pay-virtualterm-conf-info-conf-cnp-globalpay-payinfo-accept-card-type_section_oj4_w1k_kyb}
@@ -45490,7 +45490,7 @@ Syntax {#prod-info-sel-prod-pay-virtualterm-conf-info-conf-cnp-globalpay-payinfo
               "cardNotPresent": {
                 "globalPaymentInformation": {
                   "paymentInformation": {
-                    "acceptedCardTypes": "VISA"
+                    "acceptedCardTypes": "CARD"
                   }
                 }
               }
@@ -45643,8 +45643,8 @@ Possible Values {#prod-info-sel-prod-pay-virtualterm-conf-info-conf-cnp-globalpa
 * `MAESTRO_INTERNATIONAL`
 * `MASTER_CARD`
 * `SWITCH_SOLO`
-* `VISA`
-* `VISA_ELECTRON`
+* `CARD`
+* `CARD_ELECTRON`
   {#prod-info-sel-prod-pay-virtualterm-conf-info-conf-cnp-globalpay-payinfo-disp-cvv_ul_fd2_mxt_bzb}
 
 Syntax {#prod-info-sel-prod-pay-virtualterm-conf-info-conf-cnp-globalpay-payinfo-disp-cvv_section_oj4_w1k_kyb}
@@ -45661,7 +45661,7 @@ Syntax {#prod-info-sel-prod-pay-virtualterm-conf-info-conf-cnp-globalpay-payinfo
               "cardNotPresent": {
                 "globalPaymentInformation": {
                   "paymentInformation": {
-                    "displayCardVerificationValue": "VISA"
+                    "displayCardVerificationValue": "CARD"
                   }
                 }
               }
@@ -46120,8 +46120,8 @@ Possible Values {#prod-info-sel-prod-pay-virtualterm-conf-info-conf-cnp-globalpa
 * `MAESTRO_INTERNATIONAL`
 * `MASTER_CARD`
 * `SWITCH_SOLO`
-* `VISA`
-* `VISA_ELECTRON`
+* `CARD`
+* `CARD_ELECTRON`
   {#prod-info-sel-prod-pay-virtualterm-conf-info-conf-cnp-globalpay-payinfo-req-cvv_ul_xgr_pyt_bzb}
 
 Syntax {#prod-info-sel-prod-pay-virtualterm-conf-info-conf-cnp-globalpay-payinfo-req-cvv_section_oj4_w1k_kyb}
@@ -46138,7 +46138,7 @@ Syntax {#prod-info-sel-prod-pay-virtualterm-conf-info-conf-cnp-globalpay-payinfo
               "cardNotPresent": {
                 "globalPaymentInformation": {
                   "paymentInformation": {
-                    "requireCardVerificationValue": "VISA"
+                    "requireCardVerificationValue": "CARD"
                   }
                 }
               }
@@ -46248,7 +46248,7 @@ Specifications {#recipient-info-account-id_Specifications}
 
 * **Data Type:** String
 * **Data Length:** 10
-  * `Barclays`: 34 for Visa, 50 for Mastercard
+  * `Barclays`: 34 for Relay, 50 for Mastercard
   * `FDC Nashville Global`: 20
   * `First Data Merchant Solutions`: 20
   * `LloydsTSB Cardnet International`: 20
@@ -46330,7 +46330,7 @@ This field is available for these processors:
 * `FDC Nashville Global`
 * `First Data Merchant Solutions`
 * `LloydsTSB Cardnet International`
-* `Visa Platform Connect`
+* `Platform Connect`
   {#recipient-info-address1_ul_fwh_cnk_hdc}
 
 `Barclays`
@@ -46343,13 +46343,13 @@ The only special characters allowed in the value are `'``,` and `space`.
 
 `First Data Merchant Solutions` and `LloydsTSB Cardnet International`
 :
-Required only with Visa in Canada for AFTs.
+Required only with Relay in Canada for AFTs.
 
 `Streamline`
 :
-Required only with Visa in Canada and US cross-border for AFTs.
+Required only with Relay in Canada and US cross-border for AFTs.
 
-`Visa Platform Connect`
+`Platform Connect`
 :
 The value for this field corresponds to this data in the TC 33 capture file:
 
@@ -46405,7 +46405,7 @@ This field is available only on these processors:
 
 `First Data Merchant Solutions` and `LloydsTSB Cardnet International`
 :
-Required with Visa when the recipientInformation.country field value is Canada for Account Funding Transactions (AFT).
+Required with Relay when the recipientInformation.country field value is Canada for Account Funding Transactions (AFT).
 
 `Streamline`
 :
@@ -46475,7 +46475,7 @@ This field is available only on these processors:
 * `First Data Merchant Solutions`
 * `LloydsTSB Cardnet International`
 * `Streamline`
-* `Visa Platform Connect`
+* `Platform Connect`
   {#recipient-info-country_ul_ghn_bwk_hdc}
 
 `Barclays`
@@ -46492,7 +46492,7 @@ Values without special characters or spaces will be rejected for AFTs.
 :
 Required for Canada and US cross-border transactions.
 
-`Visa Platform Connect`
+`Platform Connect`
 :
 The value for this field corresponds to the following data in the TC 33 capture file:
 
@@ -46539,7 +46539,7 @@ Specifications {#recipient-info-date-of-birth_Specifications}
 * **Data Length:** 8
 * **Format:**  
   For `FDC Compass`, `yyyyMMDD`  
-  For `Visa Platform Connect`, Tag 92 contains the account owner date of birth as ccyymmdd where:
+  For `Platform Connect`, Tag 92 contains the account owner date of birth as ccyymmdd where:
   * cc is the century: `01` - `99`
   * yy is the year: `00` - `99`
   * mm is the month: `01` - `12`
@@ -46597,7 +46597,7 @@ The value for this field corresponds to this data in the TC 33 capture file:
 
 * , `Streamline`
 
-* `Visa Platform Connect`
+* `Platform Connect`
   {#recipient-info-first-name_ul_urz_gwk_hdc}
 
 `Barclays`
@@ -46605,17 +46605,17 @@ The value for this field corresponds to this data in the TC 33 capture file:
 For Mastercard Payment of Winnings (indicated when you set the processingInformation.refundOptions.reason field to `pow`), the value in the orderInformation.billTo.firstName field is used by default as the first name of the Mastercard Payment of Winnings credit recipient. You can use this field to override the default setting.
 :
 :
-For an Account Funding Transaction (AFT), this field must be alphanumeric and special characters must be in ASCII format. The value must the concatenated value of fields recipientInformation.firstName, recipientInformation.middleName, and recipientInformation.lastName, and must not exceed 30 characters for Visa transactions and 35 characters for Mastercard.
+For an Account Funding Transaction (AFT), this field must be alphanumeric and special characters must be in ASCII format. The value must the concatenated value of fields recipientInformation.firstName, recipientInformation.middleName, and recipientInformation.lastName, and must not exceed 30 characters for Relay transactions and 35 characters for Mastercard.
 
 `FDC Nashville Global`
 :
-Required with Mastercard for AFTs. Required with Visa for intra-European Economic Area (EEA), including UK and Gibraltar, and EU international transactions. Optional with Visa for domestic EU AFTs.
+Required with Mastercard for AFTs. Required with Relay for intra-European Economic Area (EEA), including UK and Gibraltar, and EU international transactions. Optional with Relay for domestic EU AFTs.
 :
 The only special characters allowed in the value are `'``,` and `space`.
 
 `First Data Merchant Solutions` and `LloydsTSB Cardnet International`
 :
-For a Visa AFT, this field must be alpha characters only. You must not exceed 30 characters for the concatenated value of senderInformation.firstName, senderInformation.middleName, and senderInformation.lastName fields.
+For a Relay AFT, this field must be alpha characters only. You must not exceed 30 characters for the concatenated value of senderInformation.firstName, senderInformation.middleName, and senderInformation.lastName fields.
 
 Specifications {#recipient-info-first-name_Specifications}
 ----------------------------------------------------------
@@ -46659,7 +46659,7 @@ The value for this field corresponds to this data in the TC 33 capture file:
 
 * `Streamline`
 
-* `Visa Platform Connect`
+* `Platform Connect`
   {#recipient-info-last-name_ul_inr_gxk_hdc}
 
 `Barclays`
@@ -46667,17 +46667,17 @@ The value for this field corresponds to this data in the TC 33 capture file:
 For Mastercard Payment of Winnings, (indicated when you set the processingInformation.refundOptions.reason field to `pow`), the value in the orderInformation.billTo.lastName field is used by default as the last name of the Mastercard Payment of Winnings credit recipient. You can use this field to override the default setting.
 :
 :
-For an Account Funding Transaction (AFT), this field must be alphanumeric and special characters must be in ASCII format. The value must the concatenated value of fields recipientInformation.firstName, recipientInformation.middleName, and recipientInformation.lastName, and must not exceed 30 characters for Visa transactions and 35 characters for Mastercard.
+For an Account Funding Transaction (AFT), this field must be alphanumeric and special characters must be in ASCII format. The value must the concatenated value of fields recipientInformation.firstName, recipientInformation.middleName, and recipientInformation.lastName, and must not exceed 30 characters for Relay transactions and 35 characters for Mastercard.
 
 `FDC Nashville Global`
 :
-Required with Mastercard for AFTs. Required with Visa for intra-European Economic Area (EEA), including UK and Gibraltar, and EU international transactions. Optional with Visa for domestic EU AFTs.
+Required with Mastercard for AFTs. Required with Relay for intra-European Economic Area (EEA), including UK and Gibraltar, and EU international transactions. Optional with Relay for domestic EU AFTs.
 :
 The only special characters allowed in the value are `'``,` and `space`.
 
 `LloydsTSB Cardnet International` and `First Data Merchant Solutions`
 :
-For a Visa AFT, this field must be alpha characters only. You must not exceed 30 characters for the concatenated value of senderInformation.firstName, senderInformation.middleName, and senderInformation.lastName fields.
+For a Relay AFT, this field must be alpha characters only. You must not exceed 30 characters for the concatenated value of senderInformation.firstName, senderInformation.middleName, and senderInformation.lastName fields.
 
 Specifications {#recipient-info-last-name_Specifications}
 ---------------------------------------------------------
@@ -46707,10 +46707,10 @@ This field is available only on these processors:
 * `LloydsTSB Cardnet International`
 * `First Data Merchant Solutions`
 * `Streamline`
-* `Visa Platform Connect`
+* `Platform Connect`
   {#recipient-info-locality_ul_esk_gyk_hdc}
 
-`Visa Platform Connect`
+`Platform Connect`
 :
 The value for this field corresponds to this data in the TC 33 capture file:
 
@@ -46723,7 +46723,7 @@ The value for this field corresponds to this data in the TC 33 capture file:
 
 `First Data Merchant Solutions` and `LloydsTSB Cardnet International`
 :
-Required with Visa when the recipientInformation.country field value is Canada.
+Required with Relay when the recipientInformation.country field value is Canada.
 
 Specifications {#recipient-info-locality_Specifications}
 --------------------------------------------------------
@@ -46781,26 +46781,26 @@ The value for this field corresponds to the following data in the TC 33 capture 
 
 * `Streamline`
 
-* `Visa Platform Connect`
+* `Platform Connect`
   {#recipient-info-middle-name_ul_htl_jyk_hdc}
 
 `Barclays`
 :
-For an Account Funding Transaction (AFT), this field must be alphanumeric and special characters must be in ASCII format. The value must the concatenated value of fields recipientInformation.firstName, recipientInformation.middleName, and recipientInformation.lastName, and must not exceed 30 characters for Visa transactions and 35 characters for Mastercard.
+For an Account Funding Transaction (AFT), this field must be alphanumeric and special characters must be in ASCII format. The value must the concatenated value of fields recipientInformation.firstName, recipientInformation.middleName, and recipientInformation.lastName, and must not exceed 30 characters for Relay transactions and 35 characters for Mastercard.
 
 `FDC Nashville Global`
 :
-Required with Visa for AFTs. Required with Visa for intra-European Economic Area (EEA), including UK and Gibraltar, and EU international transactions. Optional for domestic EU AFTs and with Mastercard.
+Required with Relay for AFTs. Required with Relay for intra-European Economic Area (EEA), including UK and Gibraltar, and EU international transactions. Optional for domestic EU AFTs and with Mastercard.
 :
 The only special characters allowed in the value are `'``,` and `space`.
 
 `First Data Merchant Solutions` and `LloydsTSB Cardnet International`
 :
-For a Visa AFT, this field must be alpha characters only. You must not exceed 30 characters for the concatenated value of senderInformation.firstName, senderInformation.middleName, and senderInformation.lastName fields.
+For a Relay AFT, this field must be alpha characters only. You must not exceed 30 characters for the concatenated value of senderInformation.firstName, senderInformation.middleName, and senderInformation.lastName fields.
 
 `Streamline`
 :
-Required with Visa AFTs for Canada and US cross-border, and Visa AFTs for South Africa issuer cross-border.
+Required with Relay AFTs for Canada and US cross-border, and Relay AFTs for South Africa issuer cross-border.
 
 Specifications {#recipient-info-middle-name_Specifications}
 -----------------------------------------------------------
@@ -46825,7 +46825,7 @@ Recipient's nationality.
 This field is a pass-through. Before the AFT or OCT request message is sent to the processor, the field content is verified to contain 10 alphanumeric special characters without spaces. However, the value represented by that string is not verified or modified.  
 If the field is not required for the transaction, `Cybersource` does not forward the request to the issuing bank.
 
-`Visa Platform Connect`
+`Platform Connect`
 :
 The value must be the standard three character ISO 3166 alpha country code. For more information, see [ISO 3166 Country Codes](https://www.iso.org/iso-3166-country-codes.md "").
 
@@ -46834,7 +46834,7 @@ Specifications {#recipient-info-nationality_Specifications}
 
 * **Data Type:** String with numbers only
 * **Data Length:** 10 maximum
-  * `Visa Platform Connect`: 3
+  * `Platform Connect`: 3
     {#recipient-info-nationality_ul_otl_3jk_h2c}
 * **Format:** Alphanumeric special characters without spaces.
 
@@ -46900,14 +46900,14 @@ This field is available only on these processors:
 * `FDC Compass`
 * `FDC Nashville Global`
 * `Streamline`
-* `Visa Platform Connect`
+* `Platform Connect`
   {#recipient-info-postal-code_ul_j3s_rzk_hdc}
 
 `Streamline`
 :
 Required for Canada and US cross-border Account Funding Transactions (AFT).
 
-`Visa Platform Connect`
+`Platform Connect`
 :
 The value for this field corresponds to the following data in the TC 33 capture file:
 
@@ -47037,7 +47037,7 @@ recurringPaymentInformation. amountType {#recurring-payment-info-amount-type}
 Indicates whether the recurring payment amount agreed to by the cardholder is a fixed amount or variable amount.  
 Required for all recurring transactions from Saudi Arabia merchants. `Cybersource` forwards this value to Saudi Payment when received from the merchant.  
 This field is required for recurring payments using cards issued in India.  
-This field is available only for Mastercard on the `Visa Platform Connect` processor.  
+This field is available only for Mastercard on the `Platform Connect` processor.  
 **Possible values:**
 
 * `0`: Fixed amount recurring payment.
@@ -47116,7 +47116,7 @@ recurringPaymentInformation. maximumAmount {#recurring-payment-info-max-amt}
 
 Maximum amount cardholder has agreed to for a recurring payment.  
 This field is required for recurring payments using cards issued in India.  
-This field is available only for Mastercard transactions on the `Visa Platform Connect` processor.
+This field is available only for Mastercard transactions on the `Platform Connect` processor.
 
 Specifications {#recurring-payment-info-max-amt_Specifications}
 ---------------------------------------------------------------
@@ -47136,7 +47136,7 @@ recurringPaymentInformation. numberOfPayments {#recurring-payment-info-number-of
 
 Total number of payments for the duration of the recurring subscription.  
 This field is required for recurring payments using cards issued in India.  
-This field is available only for Mastercard transactions on the `Visa Platform Connect` processor.  
+This field is available only for Mastercard transactions on the `Platform Connect` processor.  
 Possible values range from `01` to `99`.
 
 Specifications {#recurring-payment-info-number-of-payments_Specifications}
@@ -47163,7 +47163,7 @@ recurringPaymentInformation. occurrence {#recurring-payment-info-occurence}
 
 Indicates how often a recurring payment occurs.  
 This field is required for recurring payments using cards issued in India.  
-This field is available only for Mastercard transactions on the `Visa Platform Connect` processor.  
+This field is available only for Mastercard transactions on the `Platform Connect` processor.  
 **Possible values:**
 
 * `01`: Daily
@@ -47217,7 +47217,7 @@ recurringPaymentInformation. referenceNumber {#recurring-payment-info-reference-
 
 Unique reference number for the recurring payment transaction.  
 This field is required for recurring payments using cards issued in India.  
-This field is available only for Mastercard transactions on the `Visa Platform Connect` processor.
+This field is available only for Mastercard transactions on the `Platform Connect` processor.
 
 Specifications {#recurring-payment-info-reference-number_Specifications}
 ------------------------------------------------------------------------
@@ -47263,7 +47263,7 @@ recurringPaymentInformation. validationIndicator {#recurring-payment-info-valida
 
 Contains a value that indicates whether a recurring payment transaction has been validated offline during registration.  
 This field is required for recurring payments using cards issued in India.  
-This field is available only for Mastercard transactions on the `Visa Platform Connect` processor.  
+This field is available only for Mastercard transactions on the `Platform Connect` processor.  
 **Possible values:**
 
 * `0`: Not validated.
@@ -47309,7 +47309,7 @@ Dynamic Currency Conversion (DCC) with a Third-Party Provider
 Use the customer's billing currency.
 {#refund-amount-details-currency_dl_w3f_gqz_wwb}
 
-`Visa Platform Connect`
+`Platform Connect`
 :
 For Mastercard installment payments in Peru, the value for this field corresponds to the following data in the TC 33 capture file:
 
@@ -47589,7 +47589,7 @@ Dynamic Currency Conversion (DCC) with a Third-Party Provider
 :
 Use the customer's billing currency.
 
-`Visa Platform Connect`
+`Platform Connect`
 :
 For Mastercard installment payments in Peru, the value for this field corresponds to the following data in the TC 33 capture file:
 
@@ -47673,7 +47673,7 @@ For authorization reversal or capture services, you must use the same currency t
 For the PIN debit reversal service, you must use the same currency that was used for the PIN debit purchase or PIN debit credit that you are reversing.  
 When using Dynamic Currency Conversion (DCC) with a Third-Party Provider:, use the customer's billing currency.
 
-`Visa Platform Connect`
+`Platform Connect`
 :
 For Mastercard installment payments in Peru, the value for this field corresponds to the following data in the TC 33 capture file:
 
@@ -47730,7 +47730,7 @@ Zero Amount Authorizations
 :
 If your processor supports zero amount authorizations, you can set this field to `0` for the authorization to verify whether the card is lost or stolen.
 
-`Visa Platform Connect`
+`Platform Connect`
 :
 The value for this field corresponds to the following data in the TC 33 capture file:
 
@@ -47823,7 +47823,7 @@ This field is available only on these processors:
 * `FDC Compass`
 * `FDC Nashville Global`
 * `Streamline`
-* `Visa Platform Connect`
+* `Platform Connect`
   {#sender-info-account-funds-source_ul_z11_jbl_hdc}  
   These processors have specific requirements:
 
@@ -47851,8 +47851,8 @@ Possible values:
     * `02`: Debit card
     * `03`: Prepaid card
     * `04`: Cash
-    * `05`: Debit or deposit account that is not linked to a Visa card. Includes checking accounts, savings accounts, and proprietary debit or ATM card accounts.
-    * `06`: Credit account that is not linked to a Visa card. Includes credit cards and proprietary lines of credit.
+    * `05`: Debit or deposit account that is not linked to a Relay card. Includes checking accounts, savings accounts, and proprietary debit or ATM card accounts.
+    * `06`: Credit account that is not linked to a Relay card. Includes credit cards and proprietary lines of credit.
 
 :
 For a credit card bill payment, set this field to `02`, `03`, `04`, or `05`.
@@ -47865,8 +47865,8 @@ Possible values:
     * `02`: Debit card
     * `03`: Prepaid card
     * `04`: Deposit account
-    * `05`: Debit or deposit account that is not linked to a Visa card. Includes checking accounts, savings accounts, proprietary debit or ATM card accounts, and digital wallet accounts.
-    * `06`: Credit account that is not linked to a Visa card. Includes credit cards and proprietary lines of credit.
+    * `05`: Debit or deposit account that is not linked to a Relay card. Includes checking accounts, savings accounts, proprietary debit or ATM card accounts, and digital wallet accounts.
+    * `06`: Credit account that is not linked to a Relay card. Includes credit cards and proprietary lines of credit.
 
 :
 For a funds disbursement, set this field to `04` to indicate that the originator used a deposit account to fund the disbursement.
@@ -47897,7 +47897,7 @@ Possible values:
     * `V5`: Debit or deposit access other than those linked to the cardholders' scheme
     * `V6`: Credit accounts other than those linked to the cardholder's scheme
 
-`Visa Platform Connect`
+`Platform Connect`
 :
 Possible values:
 
@@ -47905,8 +47905,8 @@ Possible values:
     * `02`: Debit card
     * `03`: Prepaid card
     * `04`: Cash
-    * `05`: Debit or deposit account that is not linked to a Visa card. Includes checking accounts, savings accounts, proprietary debit or ATM card accounts, and digital wallet accounts.
-    * `06`: Credit account that is not linked to a Visa card. Includes credit cards and proprietary lines of credit.
+    * `05`: Debit or deposit account that is not linked to a Relay card. Includes checking accounts, savings accounts, proprietary debit or ATM card accounts, and digital wallet accounts.
+    * `06`: Credit account that is not linked to a Relay card. Includes credit cards and proprietary lines of credit.
 
 :
 For a funds disbursement, set this field to `05` to indicate that the originator funded the disbursement using a checking account, savings account, proprietary debit or ATM card account, or digital wallet account.
@@ -47943,7 +47943,7 @@ This field is available only for these processors:
 * `LloydsTSB Cardnet International`
 * `First Data Merchant Solutions`
 * `Streamline`
-* `Visa Platform Connect`
+* `Platform Connect`
   {#sender-info-account-num_ul_v44_1bl_hdc}
 
 `Barclays`
@@ -47952,7 +47952,7 @@ For Mastercard Payment of Winnings (indicated when you set the processingInforma
 
 `FDC Nashville Global`
 :
-Required with Visa in the EU for Account Funding Transactions (AFT).
+Required with Relay in the EU for Account Funding Transactions (AFT).
 :
 Values without special characters or spaces will be rejected for AFTs.
 
@@ -48014,7 +48014,7 @@ This field is available only on these processors:
 * `LloydsTSB Cardnet International`
 * `First Data Merchant Solutions`
 * `Streamline`
-* `Visa Platform Connect`
+* `Platform Connect`
   {#sender-info-address1_ul_yjl_11l_hdc}
 
 `Barclays`
@@ -48024,17 +48024,17 @@ For Mastercard Payment of Winnings (indicated when you set the processingInforma
 :
 For Account Funding Transactions (AFT), values must be in alphanumeric and special characters must be in ASCII format.
 
-`FDC Compass` and `Visa Platform Connect`
+`FDC Compass` and `Platform Connect`
 :
 For a funds disbursement, the value is the address of the originator sending the funds disbursement.
 
 `LloydsTSB Cardnet International` and `First Data Merchant Solutions`
 :
-Required with Visa for AFTs.
+Required with Relay for AFTs.
 
 `FDC Nashville Global`
 :
-Required with Visa AFTs into and out of Canada with the address of the person or entity.
+Required with Relay AFTs into and out of Canada with the address of the person or entity.
 :
 The only special characters allowed in the value are `'``,` and `space`.
 
@@ -48066,16 +48066,16 @@ This field is available only on these processors:
 * `FDC Compass`
 * `First Data Merchant Solutions`
 * `LloydsTSB Cardnet International`
-* `Visa Platform Connect`
+* `Platform Connect`
   {#sender-info-administrative-area_ul_tdn_fbl_hdc}
 
 `First Data Merchant Solutions` and `LloydsTSB Cardnet International`
 :
-Required with Visa when the senderInformation.country field value is Canada and the US for Account Funding Transactions (AFT).
+Required with Relay when the senderInformation.country field value is Canada and the US for Account Funding Transactions (AFT).
 
 `FDC Nashville Global`
 :
-Required with Visa AFTs in Canada and US.
+Required with Relay AFTs in Canada and US.
 
 Specifications {#sender-info-administrative-area_Specifications}
 ----------------------------------------------------------------
@@ -48105,7 +48105,7 @@ This field is available only on these processors:
 * `FDC Nashville Global`
 * `LloydsTSB Cardnet International`
 * `Streamline`
-* `Visa Platform Connect`
+* `Platform Connect`
   {#sender-info-country-code_ul_bjs_zbl_hdc}
 
 `Barclays`
@@ -48113,15 +48113,15 @@ This field is available only on these processors:
 For Mastercard Payment of Winnings (indicated when you set the processingInformation.refundOptions.reason field to `pow`), the merchant country in your merchant configuration on the `Cybersource` platform is used by default as your default country code in a Mastercard Payment of Winnings credit request. You can use this field to override the default setting.
 :
 :
-When processing Account Funding Transactions (AFT) with Visa, enter a valid two or three character country code.
+When processing Account Funding Transactions (AFT) with Relay, enter a valid two or three character country code.
 
 `First Data Merchant Solutions` and `LloydsTSB Cardnet International`
 :
-Required with Visa for AFTs.
+Required with Relay for AFTs.
 
 `FDC Nashville Global`
 :
-Required with Visa AFTs into and out of Canada.
+Required with Relay AFTs into and out of Canada.
 :
 Values without special characters or spaces will be rejected for AFTs.
 
@@ -48178,7 +48178,7 @@ This field is available only on these processors:
 * `LloydsTSB Cardnet International`
 * `First Data Merchant Solutions`
 * `Streamline`
-* `Visa Platform Connect`
+* `Platform Connect`
   {#sender-info-first-name_ul_khg_bdl_hdc}  
   These processors have specific requirements:
 
@@ -48194,15 +48194,15 @@ When the sender is a business or government entity, use the senderInformation.na
 
 `FDC Nashville Global`
 :
-Required with Visa AFTs.
+Required with Relay AFTs.
 :
 The only special characters allowed in the value are `'``,` and `space`.
 
 `First Data Merchant Solutions` and `LloydsTSB Cardnet International`
 :
-Required with Visa for AFTs.
+Required with Relay for AFTs.
 
-`Visa Platform Connect`
+`Platform Connect`
 :
 This field is required for Original Credit Transactions (OCTs) when the sender is an individual. It is supported only for Mastercard transactions that use the Payouts services.
 :
@@ -48220,7 +48220,7 @@ Specifications {#sender-info-first-name_Specifications}
   * `Barclays`: See field description.
   * `First Data Merchant Solutions`: 25
   * `LloydsTSB Cardnet International`: 25
-  * `Visa Platform Connect`: 30
+  * `Platform Connect`: 30
     {#sender-info-first-name_ul_kd3_jbn_ddc}
 
 Mapping Information {#sender-info-first-name_Mapping}
@@ -48261,7 +48261,7 @@ This field is available only on these processors:
 * `First Data Merchant Solutions`
 * `LloydsTSB Cardnet International`
 * `Streamline`
-* `Visa Platform Connect`  
+* `Platform Connect`  
   These processors have specific requirements:
 
 `Barclays`
@@ -48278,15 +48278,15 @@ This field is required for Original Credit Transactions (OCTs) when the sender i
 
 `FDC Nashville Global`
 :
-Required with Visa AFTs.
+Required with Relay AFTs.
 :
 The only special characters allowed in the value are `'``,` and `space`.
 
 `LloydsTSB Cardnet International` and `First Data Merchant Solutions`
 :
-Required with Visa for AFTs.
+Required with Relay for AFTs.
 
-`Visa Platform Connect`
+`Platform Connect`
 :
 The value for this field corresponds to this data in the TC 33 capture file.
 
@@ -48325,7 +48325,7 @@ This field is available only on these processors:
 * `First Data Merchant Solutions`
 * `LloydsTSB Cardnet International`
 * `Streamline`
-* `Visa Platform Connect`
+* `Platform Connect`
   {#sender-info-locality_ul_rv4_wns_12c}
 
 `Barclays`
@@ -48337,11 +48337,11 @@ For an Account Funding Transactions (AFT), the value must be in alphanumeric and
 
 `FDC Nashville Global`
 :
-Required with Visa AFTs into and out of Canada for cross-border money and non-money transfers.
+Required with Relay AFTs into and out of Canada for cross-border money and non-money transfers.
 
 `First Data Merchant Solutions` and `LloydsTSB Cardnet International`
 :
-Required with Visa for AFTs.
+Required with Relay for AFTs.
 
 Specifications {#sender-info-locality_Specifications}
 -----------------------------------------------------
@@ -48367,7 +48367,7 @@ This field is available only on the `Barclays`, `FDC Compass`, `FDC Nashville Gl
 
 For `Barclays` processor
 :
-When you process Account Funding Transactions (AFT) with Visa, this field must be alphanumeric. You must not exceed 30 characters for the concatenated value of senderInformation.firstName, senderInformation.middleName, and senderInformation.lastName fields.
+When you process Account Funding Transactions (AFT) with Relay, this field must be alphanumeric. You must not exceed 30 characters for the concatenated value of senderInformation.firstName, senderInformation.middleName, and senderInformation.lastName fields.
 
 Specifications {#sender-info-middle-initial_Specifications}
 -----------------------------------------------------------
@@ -48396,7 +48396,7 @@ This field is available only on these processors:
 
 * `FDC Nashville Global`
 
-* `Visa Platform Connect`
+* `Platform Connect`
   {#sender-info-middle-name_ul_zs4_g4s_12c}  
   The value for this field corresponds to the following data in the TC 33 capture file:
 
@@ -48413,7 +48413,7 @@ For an Account Funding Transactions (AFT), this field must be alphanumeric and s
 
 `FDC Nashville Global`
 :
-Required with Visa AFTs.
+Required with Relay AFTs.
 :
 The only special characters allowed in the value are `'``,` and `space`.
 
@@ -48441,7 +48441,7 @@ This field is available only on these processors:
 * `Chase Paymentech Solutions`
 * `FDC Compass`
 * `FDC Nashville Global`
-* `Visa Platform Connect`
+* `Platform Connect`
   {#sender-info-name_ul_mh1_c4s_12c}  
   These processors have specific requirements:
 
@@ -48451,11 +48451,11 @@ This field is required for original credit transactions (OCTs) when the sender i
 
 `FDC Nashville Global`
 :
-This field contains the sender business, government, non-government name, or Visa payer name.
+This field contains the sender business, government, non-government name, or Relay payer name.
 
     When this field is present in a transaction, the `senderInformation.firstName`, `senderInformation.middleInitial`, `senderInformation.middleName`, and `senderInformation.lastName` fields should not be present in the transaction.
 
-`Visa Platform Connect`
+`Platform Connect`
 :
 This value is the first name of the originator sending the funds disbursement.
 
@@ -48466,7 +48466,7 @@ Specifications {#sender-info-name_Specifications}
 * **Data Length**
   * `FDC Compass`: 24
   * `Chase Paymentech Solutions`: 30
-  * `Visa Platform Connect`: 30
+  * `Platform Connect`: 30
 
 Mapping Information {#sender-info-name_Mapping}
 -----------------------------------------------
@@ -48479,7 +48479,7 @@ senderInformation. personalIdType {#sender-info-personal-id-type}
 =================================================================
 
 Type of sender identification.  
-This field is only available for `FDC Nashville Global` and `Visa Platform Connect`  
+This field is only available for `FDC Nashville Global` and `Platform Connect`  
 Possible values:
 
 * `ARNB:` Alien registration number
@@ -48501,11 +48501,11 @@ Possible values:
 
 `FDC Nashville Global`
 :
-Recommended with Visa for Account Funding Transactions (AFT).
+Recommended with Relay for Account Funding Transactions (AFT).
 
-`Visa Platform Connect`
+`Platform Connect`
 :
-This field is required to use the `Payouts` OCT service aggregator support for `Visa Platform Connect`
+This field is required to use the `Payouts` OCT service aggregator support for `Platform Connect`
 
 Specifications {#sender-info-personal-id-type_Specifications}
 -------------------------------------------------------------
@@ -48565,7 +48565,7 @@ Reference number generated by you that uniquely identifies the sender.
 
 `First Data Merchant Solutions` and `LloydsTSB Cardnet International`
 :
-Required with Visa for Account Funding Transactions (AFT).
+Required with Relay for Account Funding Transactions (AFT).
 
 `FDC Nashville Global`
 :
@@ -48576,9 +48576,9 @@ Specifications {#sender-info-reference-number_Specifications}
 
 * **Data Type:** String
 * **Data Length:** 19
-  * `FDC Nashville Global`: 15 for Visa and 19 for Mastercard
+  * `FDC Nashville Global`: 15 for Relay and 19 for Mastercard
   * `First Data Merchant Solutions`: 16
-  * `LloydsTSB Cardnet International`:16 for Visa
+  * `LloydsTSB Cardnet International`:16 for Relay
     {#sender-info-reference-number_ul_uj3_l1h_fdc}
 
 Mapping Information {#sender-info-reference-number_Mapping}
@@ -49476,7 +49476,7 @@ transactionType {#transaction-type}
 
 The type of transaction for the payment credentials that are returned by the `Token Management Service`. Possible values:
 
-* `AFT`: Account funding transaction. This value is supported for Visa card types and the paymentCredentialType field must be set to `CRYPTOGRAM`.
+* `AFT`: Account funding transaction. This value is supported for Relay card types and the paymentCredentialType field must be set to `CRYPTOGRAM`.
 * 
 
 Specifications {#transaction-type_Specifications}
@@ -49503,13 +49503,13 @@ Use this field to choose your preferred card number prefix length:
 * For no prefix at all, set this field to `false`.  
   These conditions apply:
 
-* 8-digit card number prefixes only apply to Discover, JCB, Mastercard, UnionPay, and Visa brands with 16-digit card numbers or longer.
+* 8-digit card number prefixes only apply to Discover, JCB, Mastercard, UnionPay, and Relay brands with 16-digit card numbers or longer.
 
 * Any card with fewer than 16-digit numbers will return a 6-digit prefix, even when this field is set to `true`.
 
-* Any card brand other than Discover, JCB, Mastercard, UnionPay, or Visa will return a 6-digit prefix, even when this field is set to `true`.
+* Any card brand other than Discover, JCB, Mastercard, UnionPay, or Relay will return a 6-digit prefix, even when this field is set to `true`.
 
-* If any card brand is co-branded with Discover, JCB, Mastercard, UnionPay, or Visa, an 8-digit prefix will be returned if this field is set to `true`.
+* If any card brand is co-branded with Discover, JCB, Mastercard, UnionPay, or Relay, an 8-digit prefix will be returned if this field is set to `true`.
 
 > IMPORTANT
 > If your application does not require a card number prefix for routing or identification purposes, set this field to ` false `. Doing so minimizes your exposure to sensitive personal data.
@@ -49938,10 +49938,10 @@ travelInformation. autoRental. agreementNumber {#travel-info-auto-rental-agree-n
 ======================================================================================
 
 This field value is the rental agency's agreement (invoice) number. The rental company provides this number to the customer.  
-This number is used to trace information for any inquiries about transactions. This field is required for the authorization serviice with Visa, Mastercard, and American Express.  
+This number is used to trace information for any inquiries about transactions. This field is required for the authorization serviice with Relay, Mastercard, and American Express.  
 For the capture service:
 
-* Visa and American Express: This field is required.
+* Relay and American Express: This field is required.
 * Mastercard: This field is required to get the best rate.
   {#travel-info-auto-rental-agree-number_ul_by4_rlm_3bc}
 
@@ -49950,7 +49950,7 @@ Specifications {#travel-info-auto-rental-agree-number_Specifications}
 
 * **Data Type:** String
 * **Data Length:**
-  * Visa: 12
+  * Relay: 12
   * Mastercard and American Express: 9
     {#travel-info-auto-rental-agree-number_ul_fm1_rcm_3bc}
 
@@ -50019,7 +50019,7 @@ travelInformation. autoRental. customerName {#travel-info-auto-rental-customer-n
 ====================================================================================
 
 This field value is the name of the individual making the rental agreement.  
-This field is required for the authorization service by Visa, Mastercard, and American Express.  
+This field is required for the authorization service by Relay, Mastercard, and American Express.  
 For the capture service, this field is supported only for Mastercard. This field is optional, but it is required to get the best rate.
 
 Specifications {#travel-info-auto-rental-customer-name_Specifications}
@@ -50164,7 +50164,7 @@ travelInformation. autoRental. extraMileageCharge {#travel-info-auto-rental-extr
 ===============================================================================================
 
 This value is the charge incurred for mileage that the driver accrues beyond the basic rental agreement.  
-This field is supported only for Visa. This field is optional for the authorization service or the capture service but is recommended.
+This field is supported only for Relay. This field is optional for the authorization service or the capture service but is recommended.
 
 Specifications {#travel-info-auto-rental-extra-miles-charge_Specifications}
 ---------------------------------------------------------------------------
@@ -50183,7 +50183,7 @@ travelInformation. autoRental. fuelCharges {#travel-info-auto-rental-fuel-charge
 ==================================================================================
 
 This field value records any extra gasoline charges that extend beyond the basic rental agreement.  
-This field is supported only for Visa. This field is optional for the authorization and capture services but is recommended.
+This field is supported only for Relay. This field is optional for the authorization and capture services but is recommended.
 
 Specifications {#travel-info-auto-rental-fuel-charges_Specifications}
 ---------------------------------------------------------------------
@@ -50275,7 +50275,7 @@ travelInformation. autoRental. lateFeeAmount {#travel-info-auto-rental-late-fee-
 =======================================================================================
 
 This field is the amount that charged for a late return of the rented vehicle.  
-This field is only supported for Visa.
+This field is only supported for Relay.
 
 Specifications {#travel-info-auto-rental-late-fee-amount_Specifications}
 ------------------------------------------------------------------------
@@ -50411,7 +50411,7 @@ travelInformation. autoRental. oneWayDropOffAmount {#travel-info-auto-rental-one
 =====================================================================================================
 
 This value is the additional amount charged for a one-way rental agreement.  
-This field is supported only for Visa.
+This field is supported only for Relay.
 
 Specifications {#travel-info-auto-rental-one-way-drop-off-amount_Specifications}
 --------------------------------------------------------------------------------
@@ -50448,7 +50448,7 @@ travelInformation. autoRental. parkingViolationCharge {#travel-info-auto-rental-
 ======================================================================================================
 
 This value is the amount incurred due to a parking violation.  
-This field is supported only for Visa.
+This field is supported only for Relay.
 
 Specifications {#travel-info-auto-rental-park-violation-charge_Specifications}
 ------------------------------------------------------------------------------
@@ -50598,7 +50598,7 @@ travelInformation. autoRental. rentalAddress.city {#travel-info-auto-rental-rent
 ============================================================================================
 
 This value is the city in which the vehicle was rented.  
-For the authorization service, this field is supported for Visa, Mastercard, and American Express.  
+For the authorization service, this field is supported for Relay, Mastercard, and American Express.  
 For the capture service, this field is supported only for American Express.
 
 Specifications {#travel-info-auto-rental-rental-add-city_Specifications}
@@ -50698,7 +50698,7 @@ travelInformation. autoRental. rentalAddress.state {#travel-info-auto-rental-ren
 ==================================================================================================
 
 This value is the state in which the vehicle was rented. Use one of the [State, Province, and Territory Codes for the United States and Canada](https://developer.cybersource.com/docs/cybs/en-us/state-codes/reference/all/na/state-codes/state-codes.md "").  
-For the authorization service, this field is supported for Visa, Mastercard, and American Express.  
+For the authorization service, this field is supported for Relay, Mastercard, and American Express.  
 For the capture service, this field is supported only for Mastercard and American Express.
 
 Specifications {#travel-info-auto-rental-rental-address-state_Specifications}
@@ -50719,11 +50719,11 @@ travelInformation. autoRental. rentalDateTime {#travel-info-auto-rental-rental-d
 
 This value is the date and time the vehicle was picked up from the rental agency.  
 Format: yyyy-MM-dd HH-mm-ss z  
-This field is supported for Visa, Mastercard, and American Express.  
+This field is supported for Relay, Mastercard, and American Express.  
 For the authorization service, this field is required.  
 For the capture service:
 
-* Visa and American Express: This field is required.
+* Relay and American Express: This field is required.
 * Mastercard: This field is required to get the best rate.
   {#travel-info-auto-rental-rental-date-time_ul_bqw_cvf_3bc}
 
@@ -50762,7 +50762,7 @@ travelInformation. autoRental. returnAddress.city {#travel-info-auto-rental-retu
 ================================================================================================
 
 This value is the city where the vehicle was returned to the rental agency.  
-For the authorization service, this field is supported for Visa, Mastercard, and American Express. It is optional but recommended.  
+For the authorization service, this field is supported for Relay, Mastercard, and American Express. It is optional but recommended.  
 For the capture service, this field is supported only for Mastercard and American Express.
 
 * Mastercard: This field is required to get the best rate.
@@ -50870,7 +50870,7 @@ travelInformation. autoRental. returnAddress.state {#travel-info-auto-rental-ret
 ==================================================================================================
 
 This value is the state in which the vehicle was returned to the rental agency. Use one of the [State, Province, and Territory Codes for the United States and Canada](https://developer.cybersource.com/docs/cybs/en-us/state-codes/reference/all/na/state-codes/state-codes.md "").  
-For the authorization service, this field is supported for Visa, Mastercard, and American Express.  
+For the authorization service, this field is supported for Relay, Mastercard, and American Express.  
 For the capture service, this field is supported only for Mastercard and American Express.
 
 Specifications {#travel-info-auto-rental-return-address-state_Specifications}
@@ -50891,11 +50891,11 @@ travelInformation. autoRental. returnDateTime {#travel-info-auto-rental-return-d
 
 This value is the date on which the vehicle was returned to the rental agency.  
 Format: MMDDYYYY  
-This field is supported for Visa, Mastercard, and American Express.  
+This field is supported for Relay, Mastercard, and American Express.  
 For the authorization service, this field is required.  
 For the capture service:
 
-* Visa and American Express: This field is required.
+* Relay and American Express: This field is required.
 * Mastercard: This field is required to get the best rate.
   {#travel-info-auto-rental-return-date-time_ul_bqw_cvf_3bc}
 
@@ -50924,8 +50924,8 @@ Possible values:
 * `2`: No show
 
 {#travel-info-auto-rental-special-program-code_ul_o11_cwg_gbc}  
-For the authorization service, this field is supported only for Visa.  
-For the capture service, this field is supported for Visa, Mastercard, and American Express.  
+For the authorization service, this field is supported only for Relay.  
+For the capture service, this field is supported for Relay, Mastercard, and American Express.  
 The program code for special circumstances applies to the card transaction or the cardholder.
 
 Specifications {#travel-info-auto-rental-special-program-code_Specifications}
@@ -51309,7 +51309,7 @@ Number of days of the auto rental or lodging rental.
 
 Auto rental
 :
-This field is supported for Visa, Mastercard, and American Express. IMPORTANT
+This field is supported for Relay, Mastercard, and American Express. IMPORTANT
 > If this field is not included when the processingInformation.industryDataType field is set to ` auto_rental `, the transaction is declined.
 
 Lodging
@@ -52974,7 +52974,7 @@ Specifications {#travel-info-transit-airline-pass-name_Specifications}
 
 * **Data Type:** String
 * **Data Length:** 25
-  * Visa Platform Connect: 20
+  * Platform Connect: 20
 
 Mapping Information {#travel-info-transit-airline-pass-name_Mapping}
 --------------------------------------------------------------------

@@ -1,7 +1,7 @@
 # Microform + Payer Authentication Quickstart
 
 Audience: developer
-Product: CyberSource / Visa Acceptance
+Product: CyberSource / Acceptance Platform
 Freshness: 2026-08-04
 
 Goal: Sequence Microform tokenization with Payer Authentication enrollment, challenge or frictionless handling, validation, and authorization.
@@ -82,4 +82,4 @@ Evidence: "including authentication transaction references when 3DS was performe
 ## Next steps
 
 - Add support-safe evidence collection for failed enrollments
-- Wire a VAP CLI workflow verifier for this contract
+- Wire a Relay CLI workflow verifier for this contract

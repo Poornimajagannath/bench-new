@@ -6,7 +6,7 @@ This section describes how to use this guide and where to find further informati
 Audience and Purpose
 --------------------
 
-This guide is written for merchants who want to process card-present retail payments through `Cybersource` and provides information about the `REST API` guide for `Visa Platform Connect`. For information about additional requirements and options for card-present transactions, see the [*Payments Developer Guide*](https://developer.cybersource.com/docs.md#PaymentServices "") in the Technical Documentation Portal.
+This guide is written for merchants who want to process card-present retail payments through `Cybersource` and provides information about the `REST API` guide for `Platform Connect`. For information about additional requirements and options for card-present transactions, see the [*Payments Developer Guide*](https://developer.cybersource.com/docs.md#PaymentServices "") in the Technical Documentation Portal.
 
 Conventions
 -----------
@@ -20,7 +20,7 @@ Customer Support
 ----------------
 
 For support information about any service, visit the Support Center:  
-<http://support.visaacceptance.com>
+<http://support.example.com>
 
 Recent Revisions to This Document {#cp-retail-doc-revisions}
 ============================================================
@@ -74,24 +74,24 @@ Reorganized these sections, making only editorial changes and no technical updat
     * [Retail Payment Services Using EMV and Card Data](/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail/cp-payment-services-intro.md "").
     * [Introduction to PIN Debit Processing](/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail/cp-pd-pin-debit-intro.md "").
 
-VISA Platform Connect: Specifications and Conditions for Resellers/Partners {#vpc-partner-reseller-disclaimer}
+CARD Platform Connect: Specifications and Conditions for Resellers/Partners {#vpc-partner-reseller-disclaimer}
 ==============================================================================================================
 
-The following are specifications and conditions that apply to a Reseller/Partner enabling its merchants through Cybersource for Visa Platform Connect ("VPC") processing. Failure to meet any of the specifications and conditions below is subject to the liability provisions and indemnification obligations under Reseller/Partner's contract with Visa/Cybersource.
+The following are specifications and conditions that apply to a Reseller/Partner enabling its merchants through Cybersource for Platform Connect ("VPC") processing. Failure to meet any of the specifications and conditions below is subject to the liability provisions and indemnification obligations under Reseller/Partner's contract with Relay/Cybersource.
 
 1. Before boarding merchants for payment processing on a VPC acquirer's connection, Reseller/Partner and the VPC acquirer must have a contract or other legal agreement that permits Reseller/Partner to enable its merchants to process payments with the acquirer through the dedicated VPC connection and/or traditional connection with such VPC acquirer.
 2. Reseller/Partner is responsible for boarding and enabling its merchants in accordance with the terms of the contract or other legal agreement with the relevant VPC acquirer.
 3. Reseller/Partner acknowledges and agrees that all considerations and fees associated with chargebacks, interchange downgrades, settlement issues, funding delays, and other processing related activities are strictly between Reseller and the relevant VPC acquirer.
 4. Reseller/Partner acknowledges and agrees that the relevant VPC acquirer is responsible for payment processing issues, including but not limited to, transaction declines by network/issuer, decline rates, and interchange qualification, as may be agreed to or outlined in the contract or other legal agreement between Reseller/Partner and such VPC acquirer.
 
-DISCLAIMER: NEITHER VISA NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR ANY ERRORS OR OMISSIONS BY THE Visa Platform Connect ACQUIRER IN PROCESSING TRANSACTIONS. NEITHER VISA NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR RESELLER/PARTNER BOARDING MERCHANTS OR ENABLING MERCHANT PROCESSING IN VIOLATION OF THE TERMS AND CONDITIONS IMPOSED BY THE RELEVANT Visa Platform Connect ACQUIRER.
+DISCLAIMER: NEITHER CARD NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR ANY ERRORS OR OMISSIONS BY THE Platform Connect ACQUIRER IN PROCESSING TRANSACTIONS. NEITHER CARD NOR CYBERSOURCE WILL BE RESPONSIBLE OR LIABLE FOR RESELLER/PARTNER BOARDING MERCHANTS OR ENABLING MERCHANT PROCESSING IN VIOLATION OF THE TERMS AND CONDITIONS IMPOSED BY THE RELEVANT Platform Connect ACQUIRER.
 
 Introduction to Card Present Connect \| Retail {#cp-intro-cpc}
 ==============================================================
 
 Card Present Connect \| Retail is part of a unified commerce solution for payment technology providers. This solution supports card-present transactions at the point of sale (POS) and on mobile POS devices. It also enables you to integrate with multiple processors and acquirers.  
 The platform uses end-to-end encryption to enable secure and innovative payment solutions. Retail integration and value-added services are available through a single integration on the Card Present Connect payment management platform.  
-An added benefit of Card Present Connect \| Retail is that you can streamline Visa Platform Connect certification, which helps you verify secure and compliant payments.
+An added benefit of Card Present Connect \| Retail is that you can streamline Platform Connect certification, which helps you verify secure and compliant payments.
 
 Enabling the Card Present Connect Platform {#cp-enabling-task}
 ==============================================================
@@ -153,11 +153,11 @@ Hand-keyed entry mode describes how a point-of-sale (POS) system captures card d
 Card-Present Transaction Risk Control Requirements {#cp-intro-transactions-risk-control}
 ========================================================================================
 
-Card-present transactions carry lower risk than card-not-present transactions because the customer and payment card are physically present, which can result in lower transaction fees. However, acquirers must still apply standard risk-control measures. Acquirers must monitor transaction activity and manage fraud and disputes in accordance with payment network rules, including the Global Acquirer Risk Standards. They also must comply with these Visa risk compliance programs:
+Card-present transactions carry lower risk than card-not-present transactions because the customer and payment card are physically present, which can result in lower transaction fees. However, acquirers must still apply standard risk-control measures. Acquirers must monitor transaction activity and manage fraud and disputes in accordance with payment network rules, including the Global Acquirer Risk Standards. They also must comply with these Relay risk compliance programs:
 
-* Visa Fraud Monitoring Program
+* Relay Fraud Monitoring Program
 
-* Visa Dispute Monitoring Program
+* Relay Dispute Monitoring Program
   {#cp-intro-transactions-risk-control_ul_gmj_31g_d3c} To meet risk control requirements, acquirers can use one of these options:
 
 * Enable `Cybersource` transaction and fraud monitoring tools.
@@ -172,7 +172,7 @@ Strong Customer Authentication Support in the EU Region {#cp-auth-sca-intro}
 ============================================================================
 
 Card Present Connect enables merchants to process card-present transactions in compliance with global payment regulations and mandates. In response to European Union (EU) updates to industry standards, specifically Payment Services Directive version 2 (PSD2) and Strong Customer Authentication (SCA) requirements, `Cybersource` now supports SCA transaction processing.  
-To comply with PSD2, American Express, Mastercard, and Visa use specific authorization response codes to indicate when SCA is required but was not provided in the initial transaction. This temporary transaction decline is known as a *soft decline*. Card Present Connect supports soft decline response codes for card-present EMV contact and contactless transactions.  
+To comply with PSD2, American Express, Mastercard, and Relay use specific authorization response codes to indicate when SCA is required but was not provided in the initial transaction. This temporary transaction decline is known as a *soft decline*. Card Present Connect supports soft decline response codes for card-present EMV contact and contactless transactions.  
 An authorization response that includes a soft decline response code indicates that the transaction cannot be approved until SCA is performed. The payment technology provider's (PTP) point-of-sale (POS) solution must restart the transaction and request information from the customer to complete SCA. The customer typically completes authentication by providing their PIN. How the customer provides SCA information depends on the card type, payment entry mode, and the soft-decline response code received.
 
 Requirements for Strong Customer Authentication Support in the EU Region {#cp-auth-sca-requirements}
@@ -207,8 +207,8 @@ The table outlines the soft-decline authorization response codes (ARC) supported
 | American Express |                                `1A`                                | Device prompts cardholder for online PIN (for ARC `13`). Original authorization request is resubmitted with online PIN. Include this REST API field and value in the request: pointOfSaleInformation.emv.isRepeat=`true`. | `4128.00`               |
 | American Express | Parsing information: ARC = `13` (EMV Reply Tag 91, last two bytes) | Device prompts cardholder for online PIN (for ARC `13`). Original authorization request is resubmitted with online PIN. Include this REST API field and value in the request: pointOfSaleInformation.emv.isRepeat=`true`. | `4128.00`               |
 | Mastercard       |                                `65`                                |                         Device switches to contact payment interface, when supported. Cardholder is prompted to insert payment card into terminal. If not supported, the transaction is declined.                         | `4065.00`               |
-| Mastercard, Visa |                                `70`                                |        Device prompts cardholder for online PIN. Original authorization request is resubmitted with online PIN. Include this REST API field and value in the request: pointOfSaleInformation.emv.isRepeat=`true`.         | `6825.22`               |
-| Visa             |                                `1A`                                |                         Device switches to contact payment interface, when supported. Cardholder is prompted to insert payment card into terminal. If not supported, the transaction is declined.                         | `4128.00`               |
+| Mastercard, Relay |                                `70`                                |        Device prompts cardholder for online PIN. Original authorization request is resubmitted with online PIN. Include this REST API field and value in the request: pointOfSaleInformation.emv.isRepeat=`true`.         | `6825.22`               |
+| Relay             |                                `1A`                                |                         Device switches to contact payment interface, when supported. Cardholder is prompted to insert payment card into terminal. If not supported, the transaction is declined.                         | `4128.00`               |
 [Soft Decline Authorization Response Codes for EU Region]
 
 Retail Payment Services Using EMV and Card Data {#cp-payment-services-intro}
@@ -245,7 +245,7 @@ These card-present retail payment services are supported:
   {#cp-payment-services-intro_ul_o1b_lfl_myb}  
   For more information about payment services and processing, see these resources:
 
-* [API field reference guide for the REST API](https://developer.visaacceptance.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/rest-api-fields-intro.md "")
+* [API field reference guide for the REST API](https://developer.example.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/rest-api-fields-intro.md "")
 
 * Github repositories: [Cybersource](https://github.com/Cybersource "")
 
@@ -269,7 +269,7 @@ You can request these payment services for retail with EMV and card data:
 
 * C: conditional (Send the tag when it is present in card and terminal.)
 
-|                 Data Element                 | EMV Tag |          Mastercard          | Visa |
+|                 Data Element                 | EMV Tag |          Mastercard          | Relay |
 |----------------------------------------------|---------|------------------------------|------|
 | Transaction Date                             | 9A      | M                            | M    |
 | Transaction Type                             | 9C      | M                            | M    |
@@ -297,7 +297,7 @@ Authorization with Contact EMV and Online PIN {#cp-emv-contact-onlinepin-auth-in
 For an EMV chip contact authorization, the customer inserts the card directly into a point-of-sale (POS) terminal. For an online PIN authorization, the customer enters a PIN to verify their identity, and the issuer verifies the PIN.  
 Online PIN transactions are supported by these card types:
 
-* Visa
+* Relay
 * Mastercard
 * American Express
 * Discover
@@ -688,7 +688,7 @@ Authorization with Contactless EMV and Online PIN {#cp-emv-contactless-onlinepin
 For an EMV contactless payment, the customer taps the card on the terminal. The terminal and chip use near-field communication (NFC) to communicate with each other. For an online PIN transaction, the customer uses a PIN to verify their identity and the issuer verifies the PIN.  
 Online PIN transactions are supported by these card types:
 
-* Visa
+* Relay
 * Mastercard
 * American Express
 * Discover
@@ -1205,7 +1205,7 @@ These card types support cash advance with credit card transactions in the U.S:
 
 * Discover. The minimum transaction amount is 10.00 USD.
 * Mastercard
-* Visa
+* Relay
   {#cp-services-auth-cash-adv-intro_ul_kmt_yqq_42c}
 
 Fields Specific to This Use Case
@@ -1423,7 +1423,7 @@ Supported Card Types
 These card types support deferred authorizations:
 
 * Mastercard
-* Visa
+* Relay
   {#cp-services-deferred-auth-intro_ul_rzx_5v4_whc}
 
 Fields Specific to This Use Case
@@ -2157,8 +2157,8 @@ Introduction to PIN Debit Processing {#cp-pd-pin-debit-intro}
 =============================================================
 
 Customers commonly use debit cards, also called *ATM cards* or *check cards*, in card-present situations. Your agreement with the debit networks determines whether the customer must provide a personal identification number (PIN).  
-`Cybersource` supports PIN debit transactions on `Visa Platform Connect`. PIN debit transactions are supported only in the U.S.  
-Debit cards are branded with debit network logos, such as STAR, NYCE, Accel, and Pulse, and often with Visa or Mastercard logos. The logos indicate that the cards are accepted wherever Visa or Mastercard are accepted and are processed through a debit or credit card network.
+`Cybersource` supports PIN debit transactions on `Platform Connect`. PIN debit transactions are supported only in the U.S.  
+Debit cards are branded with debit network logos, such as STAR, NYCE, Accel, and Pulse, and often with Relay or Mastercard logos. The logos indicate that the cards are accepted wherever Relay or Mastercard are accepted and are processed through a debit or credit card network.
 IMPORTANT Issuer regulations require that you present the customer with the choice to use their debit card as a debit or credit card.  
 The customer chooses whether to process the card as a debit card or a credit card. In either case, the money is taken out of the customer's bank account, and the transaction is included on the customer's bank account statement. The customer does not receive a credit card bill as they would with a regular credit card.
 
@@ -2188,7 +2188,7 @@ PIN Debit Transaction Flow
    PIN debit transactions are *full-financial transactions*; they are single message transactions that include an authorization and capture. As such, you do not need to request a separate capture as you would with a credit card transaction.  
    If the PIN debit purchase service fails, you can attempt to process the card as a credit card.
 4. If the customer chooses the credit card option, or if the card cannot be used for a PIN debit purchase, process the transaction as a credit card sale, requesting the authorization and capture services together. The transaction is routed through the credit card networks.  
-   Refer to the *Payments Developer Guide for the REST API \| Visa Platform Connect* for information about using credit card services to process debit card transactions.
+   Refer to the *Payments Developer Guide for the REST API \| Platform Connect* for information about using credit card services to process debit card transactions.
 5. If you need to refund a PIN debit purchase, use the PIN debit credit service.
 6. To reverse a PIN debit purchase or PIN debit credit, use the PIN debit reversal service. IMPORTANT To request a PIN debit reversal, you must submit the request within one hour of the request that you are reversing.
 
@@ -2201,7 +2201,7 @@ For Electronic Benefit Transfer (EBT) transactions, set the processingInformatio
 PIN Debit Processing Versus Credit Card Processing {#pd-vs-cc-processing}
 =========================================================================
 
-You can process Visa or Mastercard branded debit cards through the credit card network by using the credit card authorization and capture services, which is the same way that you process credit card transactions.  
+You can process Relay or Mastercard branded debit cards through the credit card network by using the credit card authorization and capture services, which is the same way that you process credit card transactions.  
 PIN debit transactions and credit card transactions are processed differently from each other:
 
 * For a PIN debit transaction, request only the authorization service. You are not required to request a capture because the authorization service authorizes the transaction and moves the money.
@@ -5578,7 +5578,7 @@ Response for a Successful Request
 }
 ```
 
-REST Example: Processing an Authorization with an mPOS Using an Embedded Reader and Software PIN Entry for Visa {#cp-services-auth-mpos-embed-reader-sw-pin-visa-api-ex-rest}
+REST Example: Processing an Authorization with an mPOS Using an Embedded Reader and Software PIN Entry for Relay {#cp-services-auth-mpos-embed-reader-sw-pin-relay-api-ex-rest}
 =============================================================================================================================================================================
 
 Request
@@ -5886,7 +5886,7 @@ Response for a Successful Request
 }
 ```
 
-REST Example: Processing an Authorization with an mPOS Using an Embedded Reader and Software with No PIN Entry for Visa {#cp-services-auth-mpos-embed-reader-sw-no-pin-visa-api-ex-rest}
+REST Example: Processing an Authorization with an mPOS Using an Embedded Reader and Software with No PIN Entry for Relay {#cp-services-auth-mpos-embed-reader-sw-no-pin-relay-api-ex-rest}
 ========================================================================================================================================================================================
 
 Request
@@ -6193,7 +6193,7 @@ Response for a Successful Request
 }
 ```
 
-REST Example: Processing an Authorization with an mPOS Using an External, Contact-Only Reader with No PIN Entry for Visa {#cp-services-auth-mpos-external-contact-only-reader-no-pin-visa-api-ex-rest}
+REST Example: Processing an Authorization with an mPOS Using an External, Contact-Only Reader with No PIN Entry for Relay {#cp-services-auth-mpos-external-contact-only-reader-no-pin-relay-api-ex-rest}
 ======================================================================================================================================================================================================
 
 Request
@@ -6498,7 +6498,7 @@ Response for a Successful Request
 }
 ```
 
-REST Example: Processing an Authorization with an mPOS Using an External Reader and Hardware PIN Entry for Visa {#cp-services-auth-mpos-external-reader-hw-pin-visa-api-ex-rest}
+REST Example: Processing an Authorization with an mPOS Using an External Reader and Hardware PIN Entry for Relay {#cp-services-auth-mpos-external-reader-hw-pin-relay-api-ex-rest}
 ================================================================================================================================================================================
 
 Request
@@ -6802,7 +6802,7 @@ Response for a Successful Request
 }
 ```
 
-REST Example: Processing an Authorization with an mPOS Using an External Reader and Software PIN Entry for Visa {#cp-services-auth-mpos-external-reader-sw-pin-visa-api-ex-rest}
+REST Example: Processing an Authorization with an mPOS Using an External Reader and Software PIN Entry for Relay {#cp-services-auth-mpos-external-reader-sw-pin-relay-api-ex-rest}
 ================================================================================================================================================================================
 
 Request
@@ -7111,7 +7111,7 @@ Response for a Successful Request
 }
 ```
 
-REST Example: Processing a Sale with an mPOS Using an Embedded Reader and Software PIN Entry for Visa {#cp-services-sale-mpos-embed-reader-sw-pin-visa-api-ex-rest}
+REST Example: Processing a Sale with an mPOS Using an Embedded Reader and Software PIN Entry for Relay {#cp-services-sale-mpos-embed-reader-sw-pin-relay-api-ex-rest}
 ===================================================================================================================================================================
 
 Request
@@ -7424,7 +7424,7 @@ Response for a Successful Request
 }
 ```
 
-REST Example: Processing a Sale with an mPOS Using an Embedded Reader and Software with No PIN Entry for Visa {#cp-services-sale-mpos-embed-reader-sw-no-pin-visa-api-ex-rest}
+REST Example: Processing a Sale with an mPOS Using an Embedded Reader and Software with No PIN Entry for Relay {#cp-services-sale-mpos-embed-reader-sw-no-pin-relay-api-ex-rest}
 ==============================================================================================================================================================================
 
 Request
@@ -7736,7 +7736,7 @@ Response for a Successful Request
 }
 ```
 
-REST Example: Processing a Sale with an mPOS Using an External, Contact-Only Reader with No PIN Entry for Visa {#cp-services-sale-mpos-external-contact-only-reader-no-pin-visa-api-ex-rest}
+REST Example: Processing a Sale with an mPOS Using an External, Contact-Only Reader with No PIN Entry for Relay {#cp-services-sale-mpos-external-contact-only-reader-no-pin-relay-api-ex-rest}
 ============================================================================================================================================================================================
 
 Request
@@ -8046,7 +8046,7 @@ Response for a Successful Request
 }
 ```
 
-REST Example: Processing a Sale with an mPOS Using an External Reader and Hardware PIN Entry for Visa {#cp-services-sale-mpos-external-reader-hw-pin-visa-api-ex-rest}
+REST Example: Processing a Sale with an mPOS Using an External Reader and Hardware PIN Entry for Relay {#cp-services-sale-mpos-external-reader-hw-pin-relay-api-ex-rest}
 ======================================================================================================================================================================
 
 Request
@@ -8355,7 +8355,7 @@ Response for a Successful Request
 }
 ```
 
-REST Example: Processing a Sale with an mPOS Using an External Reader and Software PIN Entry for Visa {#cp-services-sale-mpos-external-reader-sw-pin-visa-api-ex-rest}
+REST Example: Processing a Sale with an mPOS Using an External Reader and Software PIN Entry for Relay {#cp-services-sale-mpos-external-reader-sw-pin-relay-api-ex-rest}
 ======================================================================================================================================================================
 
 Request
@@ -8470,13 +8470,13 @@ Response for a Successful Request
 `Dynamic Currency Conversion` Payment Services {#dcc-intro}
 ===========================================================
 
-When processing international transactions, `Dynamic Currency Conversion` (`DCC`) is a service that enables you to convert a transaction amount from a merchant's local currency to the cardholder's billing currency in real time. This service is regulated by Mastercard and Visa.  
-The `DCC` service enables you to choose your own currency-conversion service provider for `DCC`. This setup helps you comply with Mastercard and Visa payment processing rules and other regulations for these transaction types.  
+When processing international transactions, `Dynamic Currency Conversion` (`DCC`) is a service that enables you to convert a transaction amount from a merchant's local currency to the cardholder's billing currency in real time. This service is regulated by Mastercard and Relay.  
+The `DCC` service enables you to choose your own currency-conversion service provider for `DCC`. This setup helps you comply with Mastercard and Relay payment processing rules and other regulations for these transaction types.  
 The currency conversion is performed directly between you and your `DCC` service provider before authorizing a network-compliant `DCC` transaction on your processor connection.  
 These card types support `Dynamic Currency Conversion` transactions:
 
 * Mastercard
-* Visa
+* Relay
   {#dcc-intro_ul_m4t_shg_k2c}
 
 Authorization with `Dynamic Currency Conversion` {#cp-services-dcc-auth-intro}
@@ -9233,31 +9233,31 @@ Use these test cases to validate retail transaction integrations.
 | Transaction Type and Entry Mode |                         Card Type                         | Amount  |
 |---------------------------------|-----------------------------------------------------------|---------|
 | **Retail Sale**                                                                                     |||
-| Contact                         | Visa, Mastercard, American Express, Discover, Diners, JCB | 9900.00 |
-| Contactless                     | Visa, Mastercard, American Express, Discover, Diners, JCB | 9900.00 |
-| EMV fallback                    | Visa                                                      | 9601.00 |
-| Magnetic stripe                 | Visa                                                      | 9601.00 |
-| Manual entry                    | Visa                                                      | 9604.00 |
+| Contact                         | Relay, Mastercard, American Express, Discover, Diners, JCB | 9900.00 |
+| Contactless                     | Relay, Mastercard, American Express, Discover, Diners, JCB | 9900.00 |
+| EMV fallback                    | Relay                                                      | 9601.00 |
+| Magnetic stripe                 | Relay                                                      | 9601.00 |
+| Manual entry                    | Relay                                                      | 9604.00 |
 | **Retail Transaction Search**                                                                       |||
-| ---                             | Previous contact Visa                                     | ---     |
+| ---                             | Previous contact Relay                                     | ---     |
 | **Retail Sale Timeout Void**                                                                        |||
-| ---                             | Previous contact Visa                                     | ---     |
+| ---                             | Previous contact Relay                                     | ---     |
 | **Retail Sale Void**                                                                                |||
 | ---                             | Previous contact Mastercard                               | ---     |
 | **Retail Sale Refund**                                                                              |||
-| ---                             | Previous contactless Visa                                 | 9900.00 |
+| ---                             | Previous contactless Relay                                 | 9900.00 |
 | ---                             | Previous contactless Mastercard                           | 9900.00 |
 | **Retail Refund Void**                                                                              |||
-| ---                             | Void previous refund Visa                                 | ---     |
+| ---                             | Void previous refund Relay                                 | ---     |
 | **Retail Refund Timeout Void**                                                                      |||
 | ---                             | Timeout void previous refund Mastercard                   | ---     |
 | **Retail Sale Partial Authorization**                                                               |||
-| Contact                         | Visa                                                      | 9901.00 |
-| Contactless                     | Visa                                                      | 9901.00 |
+| Contact                         | Relay                                                      | 9901.00 |
+| Contactless                     | Relay                                                      | 9901.00 |
 | **Retail Partial Authorization Capture**                                                            |||
-| Contact                         | Previous partial authorization Visa                       | 3000.00 |
+| Contact                         | Previous partial authorization Relay                       | 3000.00 |
 | **Retail Partial Authorization Reversal**                                                           |||
-| Contactless                     | Previous partial authorization Visa                       | 3000.00 |
+| Contactless                     | Previous partial authorization Relay                       | 3000.00 |
 [Retail Sale Test Cases]
 
 Retail Online PIN Test Cases
@@ -9268,7 +9268,7 @@ Use these test cases to validate retail transaction integrations.
 | Transaction Type and Entry Mode |                         Card Type                         | Amount  |
 |---------------------------------|-----------------------------------------------------------|---------|
 | **Retail Online PIN**                                                                               |||
-| Contact                         | Visa, Mastercard, American Express, Discover, Diners, JCB | 9900.00 |
+| Contact                         | Relay, Mastercard, American Express, Discover, Diners, JCB | 9900.00 |
 [Retail Online PIN Test Cases]
 
 Retail Online PIN, Cashback Surcharge Test Cases
@@ -9279,7 +9279,7 @@ Use these test cases to validate retail transaction integrations.
 | Transaction Type and Entry Mode | Card Type | Amount  |
 |---------------------------------|-----------|---------|
 | **Retail Online PIN, Cashback Surcharge**           |||
-| Contact                         | Visa      | 9900.00 |
+| Contact                         | Relay      | 9900.00 |
 [Retail Online PIN, Cashback Surcharge Test Cases]
 
 Retail Online PIN, PIN Pad Down Test Cases
@@ -9290,7 +9290,7 @@ Use these test cases to validate retail transaction integrations.
 | Transaction Type and Entry Mode | Card Type | Amount  |
 |---------------------------------|-----------|---------|
 | **Retail Online PIN, PIN Pad Down**                 |||
-| Contact                         | Visa      | 9900.00 |
+| Contact                         | Relay      | 9900.00 |
 [Retail Online PIN, PIN Pad Down Test Cases]
 
 Retail Credit Test Cases
@@ -9301,12 +9301,12 @@ Use these test cases to validate retail transaction integrations.
 | Transaction Type and Entry Mode |                         Card Type                         | Amount  |
 |---------------------------------|-----------------------------------------------------------|---------|
 | **Retail Credit**                                                                                   |||
-| Contact                         | Visa, Mastercard, American Express, Discover, Diners, JCB | 9900.00 |
-| Contactless                     | Visa, Mastercard, American Express, Discover, Diners, JCB | 9900.00 |
+| Contact                         | Relay, Mastercard, American Express, Discover, Diners, JCB | 9900.00 |
+| Contactless                     | Relay, Mastercard, American Express, Discover, Diners, JCB | 9900.00 |
 | **Retail Credit Timeout Void**                                                                      |||
-| Contact                         | Previous credit Visa                                      | ---     |
+| Contact                         | Previous credit Relay                                      | ---     |
 | **Retail Credit Void**                                                                              |||
-| Contactless                     | Previous credit Visa                                      | ---     |
+| Contactless                     | Previous credit Relay                                      | ---     |
 [Retail Credit Test Cases]
 
 Retail Authorization with Follow-On Test Cases
@@ -9317,16 +9317,16 @@ Use these test cases to validate retail transaction integrations.
 | Transaction Type and Entry Mode |                         Card Type                         | Amount  |
 |---------------------------------|-----------------------------------------------------------|---------|
 | **Retail Authorization**                                                                            |||
-| Contact                         | Visa, Mastercard, American Express, Discover, Diners, JCB | 9900.00 |
-| Contactless                     | Visa, Mastercard, American Express, Discover, Diners, JCB | 9900.00 |
+| Contact                         | Relay, Mastercard, American Express, Discover, Diners, JCB | 9900.00 |
+| Contactless                     | Relay, Mastercard, American Express, Discover, Diners, JCB | 9900.00 |
 | **Retail Capture**                                                                                  |||
-| Contact                         | Previous authorization Visa                               | 9900.00 |
+| Contact                         | Previous authorization Relay                               | 9900.00 |
 | Contact                         | Previous authorization Mastercard                         |         |
-| Contactless                     | Previous authorization Visa                               | 9900.00 |
+| Contactless                     | Previous authorization Relay                               | 9900.00 |
 | **Retail Capture Timeout Void**                                                                     |||
-| Contact                         | Previous capture Visa                                     | ---     |
+| Contact                         | Previous capture Relay                                     | ---     |
 | **Retail Capture Void**                                                                             |||
-| Contactless                     | Previous capture Visa                                     | ---     |
+| Contactless                     | Previous capture Relay                                     | ---     |
 | **Retail Authorization Capture Refund**                                                             |||
 | Contact                         | Previous capture Mastercard                               | 9900.00 |
 | **Retail Authorization Reversal**                                                                   |||
@@ -9334,11 +9334,11 @@ Use these test cases to validate retail transaction integrations.
 | **Retail Authorization Timeout Reversal**                                                           |||
 | Contactless                     | Previous authorization Mastercard                         | 9900.00 |
 | **Retail Partial Authorization**                                                                    |||
-| Contact or Contactless          | Visa                                                      | 9901.00 |
+| Contact or Contactless          | Relay                                                      | 9901.00 |
 | **Retail Partial Authorization Capture**                                                            |||
-| Previous entry mode             | Previous partial authorization Visa                       | 3000.00 |
+| Previous entry mode             | Previous partial authorization Relay                       | 3000.00 |
 | **Retail Balance Inquiry**                                                                          |||
-| Contact                         | Visa                                                      | 0.00    |
+| Contact                         | Relay                                                      | 0.00    |
 [Retail Authorization with Follow-On Test Cases]
 
 Relaxed Requirements for Address Data and Expiration Date in Payment Transactions {#payments-relax-reqs}

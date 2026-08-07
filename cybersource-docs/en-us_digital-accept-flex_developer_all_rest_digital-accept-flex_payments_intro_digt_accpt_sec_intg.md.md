@@ -7,7 +7,7 @@ The Secure Integration Product Suite consists of three products that can be used
 `Unified Checkout`
 ------------------
 
-`Unified Checkout` is a pre-configured drop-in UI for accepting online payments. It supports multiple payment methods including traditional cards and digital wallets such as Google Pay and Visa Click to Pay. Because it is pre-configured with digital payment support, `Unified Checkout` enables you to go live faster and substantially reduce the development burden of accepting a multitude of payment options. This solution is ideal for sellers looking for a complete payment acceptance technology with support for multiple payment methods.
+`Unified Checkout` is a pre-configured drop-in UI for accepting online payments. It supports multiple payment methods including traditional cards and digital wallets such as Google Pay and Relay Click to Pay. Because it is pre-configured with digital payment support, `Unified Checkout` enables you to go live faster and substantially reduce the development burden of accepting a multitude of payment options. This solution is ideal for sellers looking for a complete payment acceptance technology with support for multiple payment methods.
 
 #### Figure: {#payments_intro_digt_accpt_sec_intg_uc-ui-ux}
 

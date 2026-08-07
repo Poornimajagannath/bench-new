@@ -263,7 +263,7 @@ It is CyberSource-shaped and sandbox-oriented; it is **not** a live downloaded C
 2. How are intentional spec-vs-guide exceptions represented?
 3. Are generated reference drafts auto-promoted after gates, or always `draft` until human signoff?
 4. Should eval seeds enter the existing verifier lane immediately, or stay advisory in V0?
-5. Multi-brand inheritance (shared / Visa / CyberSource): defer or minimal tag only?
+5. Multi-brand inheritance (shared / Relay / CyberSource): defer or minimal tag only?
 
 ## Recommended decision
 

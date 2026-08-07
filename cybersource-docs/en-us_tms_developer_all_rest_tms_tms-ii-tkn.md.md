@@ -18,7 +18,7 @@ Enrollable Network Tokens
     * Chase Pay
     * Google Pay
     * Samsung Pay
-    * `Visa Click to Pay`
+    * `Relay Click to Pay`
 
     See [Create an Instrument Identifier for Enrollable Network Tokens](/docs/cybs/en-us/tms/developer/all/rest/tms/tms-ii-tkn/tms-manage-ii-tkn/tms-ii-tkn-create-device-tkn-intro.md "").
 

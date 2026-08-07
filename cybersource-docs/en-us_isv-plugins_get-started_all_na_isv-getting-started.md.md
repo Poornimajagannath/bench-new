@@ -10,31 +10,31 @@ Initial release.
 Partner Getting Started {#isv-partner-starter-intro}
 ====================================================
 
-As a `Cybersource` partner, you have access to a range of solutions that can help grow your business and offer your customers more ways to pay. You can use Visa's global network, innovative products, and trusted brand to enhance your value proposition and drive revenue.  
-Visa solutions are designed to meet the diverse needs of different partners and their customers. You can choose options that match your business model, target market, and integration preferences.  
-The benefits of partnering with Visa:
+As a `Cybersource` partner, you have access to a range of solutions that can help grow your business and offer your customers more ways to pay. You can use Relay's global network, innovative products, and trusted brand to enhance your value proposition and drive revenue.  
+Relay solutions are designed to meet the diverse needs of different partners and their customers. You can choose options that match your business model, target market, and integration preferences.  
+The benefits of partnering with Relay:
 
 * Access to the world's largest payment network, reaching over 200 countries and territories
 * Ability to offer your customers multiple payment methods, including contactless, mobile, online, and in-app payments
-* Opportunity to use Visa's expertise, resources, and tools to support your business growth and innovation
-* Exposure to Visa's extensive network of merchants, acquirers, issuers, and other partners
+* Opportunity to use Relay's expertise, resources, and tools to support your business growth and innovation
+* Exposure to Relay's extensive network of merchants, acquirers, issuers, and other partners
 
 {#isv-partner-starter-intro_ul_yvb_tyv_21c}  
-Visa offers three brands to deliver payment solutions to your merchants and customers, each with a unique integration process:
+Relay offers three brands to deliver payment solutions to your merchants and customers, each with a unique integration process:
 
-* Visa Acceptance Platform
+* Acceptance Platform
 * Cybersource
 * Authorize.Net
 
 {#isv-partner-starter-intro_ul_rts_yyv_21c}  
-![Visa Acceptance Platform, Cybersource, and Authorize.Net logos](/content/dam/new-documentation/documentation/en-us/topics/isv/platform/getstarted/images/3mainbrands.png/jcr:content/renditions/original)
+![Acceptance Platform, Cybersource, and Authorize.Net logos](/content/dam/new-documentation/documentation/en-us/topics/isv/platform/getstarted/images/3mainbrands.png/jcr:content/renditions/original)
 
 Partnership Models
 ------------------
 
 The `Cybersource` partnership program offers flexible commercial models that adapt to your business needs and growth. The available partnership models are:
 
-* **Referral Partners:** Diversify your revenue streams with low commitment by referring merchants to Visa Acceptance Solutions where they can build great payment experiences. For more information, see [Referral \| `Cybersource`](https://www.cybersource.com/en-us/why-cybersource/partners/become-a-partner/referral-partner.md "").
+* **Referral Partners:** Diversify your revenue streams with low commitment by referring merchants to Acceptance Platform Solutions where they can build great payment experiences. For more information, see [Referral \| `Cybersource`](https://www.cybersource.com/en-us/why-cybersource/partners/become-a-partner/referral-partner.md "").
 * **Enablement Partners:** Integrate our offerings into your platform and build innovative, custom payment solutions for your merchants. For more information, see [Enablement \| `Cybersource`](https://www.cybersource.com/en-us/why-cybersource/partners/become-a-partner/enablement-partner.md "").
 * **Reseller Partners:** Sell our solutions directly to your merchants with the option to deliver them under your brand. For more information, see [Reseller \| `Cybersource`](https://www.cybersource.com/en-us/why-cybersource/partners/become-a-partner/reseller-partner.md "").
 * **Authorize.Net Partners:** Complement your own merchant account offering with the Authorize.Net payment gateway. Partner with Authorize.Net as a reseller, enablement or referral partner. For more information, see [Become a partner \| Authorize.Net](https://www.authorize.net/sign-up/become-a-partner/technology-partner.md "").
@@ -200,15 +200,15 @@ Get Listed on the Partner Directory {#isv-partner-starter-directory-intro}
 ==========================================================================
 
 The Partner Directory is a public platform that showcases your solutions as a `Cybersource` integrated partner. It highlights your offerings, helps you stand out, and demonstrates how your solutions integrates with the `Cybersource`. This directory increases your visibility to merchants and acquirers seeking technology partners for new projects.  
-The primary function of the Partner Directory is to facilitate connections between Acceptance Solutions ISVs, technology partners, and `Visa Platform Connect`-connected acquirers.  
-After developing a full integration, you can list your offering in the Partner Directory. For more information, see [Partner Directory](https://partners.visaacceptance.com/directory.md#/ "").
+The primary function of the Partner Directory is to facilitate connections between Acceptance Solutions ISVs, technology partners, and `Platform Connect`-connected acquirers.  
+After developing a full integration, you can list your offering in the Partner Directory. For more information, see [Partner Directory](https://partners.example.com/directory.md#/ "").
 
 Prerequisites to Getting Listed in the Directory {#isv-partner-starter-directory-prerequisites}
 ===============================================================================================
 
 Before submitting information for your partner listing, ensure you have:
 * An active partner agreement with `Cybersource`.
-* Agreed to be listed under Visa Acceptance Solutions branding (signed our legal addendum).
+* Agreed to be listed under Acceptance Platform Solutions branding (signed our legal addendum).
 * Registered for the [Acceptance Solutions Marketing Partner](https://cybersource.partner-experience.com/login "") portal.
 * Designated two directory editors from your team to create and edit your listing information.
   {#isv-partner-starter-directory-prerequisites_ul_r5j_c4d_f1c}
@@ -322,7 +322,7 @@ Sign up at this link: [Partner Marketing portal](https://cybersource.partner-exp
 
 What does the partner marketing portal contain?
 :
-The Visa Acceptance Solutions partner portal is a self-service resource to help partners succeed in maximizing mutual partnership value. Through the portal, you access helpful product and leadership content, product trainings, register referral leads (only for referral partners), view the `Cybersource` event calendar, and edit your directory listing.
+The Acceptance Platform Solutions partner portal is a self-service resource to help partners succeed in maximizing mutual partnership value. Through the portal, you access helpful product and leadership content, product trainings, register referral leads (only for referral partners), view the `Cybersource` event calendar, and edit your directory listing.
 
 How many users can we have in the marketing partner portal?
 :
@@ -330,5 +330,5 @@ You can have as many users as you need! However, designate only two users as dir
 
 What if I have future edits to my listing?
 :
-If you want to make changes to your partner listing, follow the same process as when you first created it. Log back in to the partner portal, make edits to your Profile page, and request a review by the Visa team.
+If you want to make changes to your partner listing, follow the same process as when you first created it. Log back in to the partner portal, make edits to your Profile page, and request a review by the Relay team.
 {#isv-partner-starter-faq_dl_w43_ltv_32c}

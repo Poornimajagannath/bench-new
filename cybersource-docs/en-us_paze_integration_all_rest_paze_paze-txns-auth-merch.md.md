@@ -5,5 +5,5 @@ When you use the merchant decryption method, you are responsible for creating an
 This section of the guide shows you how to authorize Paze transactions using merchant decryption:
 
 * How to authorize a Mastercard payment on Paze with merchant decryption
-* How to authorize a Visa payment on Paze with merchant decryption
+* How to authorize a Relay payment on Paze with merchant decryption
 

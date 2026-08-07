@@ -85,7 +85,7 @@ Card Present Connect \| Mass Transit {#urban-mobility}
 
     ![](/content/dam/documentation/cybs/en-us/topics/reference/notes/doc-relnotes/images/update-15x75.svg/jcr:content/renditions/original) Revised and renamed Additional Workflows section to create a new section: [Common Mass Transit Transaction Workflows and Features](https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit/um-transit-models-flows-intro/um-models-flows-common-intro.md "").
 
-    ![](/content/dam/documentation/cybs/en-us/topics/reference/notes/doc-relnotes/images/update-15x75.svg/jcr:content/renditions/original) Updated the response/request example in [Merchant-Initiated Sale for Visa Debt Recovery with Stored Card Data](https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit/um-processing-emv-vpc/um-processing-sale-mit-intro.md "").
+    ![](/content/dam/documentation/cybs/en-us/topics/reference/notes/doc-relnotes/images/update-15x75.svg/jcr:content/renditions/original) Updated the response/request example in [Merchant-Initiated Sale for Relay Debt Recovery with Stored Card Data](https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit/um-processing-emv-vpc/um-processing-sale-mit-intro.md "").
 
 ![](/content/dam/documentation/cybs/en-us/topics/reference/notes/doc-relnotes/images/new-15x75.svg/jcr:content/renditions/original) Added support for [Merchant-Initiated Sale for Mastercard Debt Recovery with Card Data](https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit/um-processing-emv-vpc/mt-mc-mit-debtrecov-sale-intro.md "").
 
@@ -235,7 +235,7 @@ Click to Pay Drop-In UI {#click-to-pay}
 --------
 
 ![](/content/dam/documentation/cybs/en-us/topics/reference/notes/doc-relnotes/images/new-15x75.svg/jcr:content/renditions/original) Added global support for clientVersion 1.0 .  
-![](/content/dam/documentation/cybs/en-us/topics/reference/notes/doc-relnotes/images/update-15x75.svg/jcr:content/renditions/original) Updated Visa Click to Pay test cards. See [Test Payment Details](https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay/ctp-testing-intro/ctp-reference-test-cards.md "").  
+![](/content/dam/documentation/cybs/en-us/topics/reference/notes/doc-relnotes/images/update-15x75.svg/jcr:content/renditions/original) Updated Relay Click to Pay test cards. See [Test Payment Details](https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay/ctp-testing-intro/ctp-reference-test-cards.md "").  
 ![](/content/dam/documentation/cybs/en-us/topics/reference/notes/doc-relnotes/images/new-15x75.svg/jcr:content/renditions/original) Added information about handling errors. See [Handle Errors](https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay/ctp-testing-intro/ctp-handle-errors.md "").  
 ![](/content/dam/documentation/cybs/en-us/topics/reference/notes/doc-relnotes/images/new-15x75.svg/jcr:content/renditions/original) Added information about enabling Click to Pay Drop-In UI using the API. See [Enabling Click to Pay Drop-In UI Using the API](https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay/ctp-uc-getting-started-integration-flow/ctp-enable-digital-pay-intro/boarding-click-to-pay-enable-intro.md "") and [Enable Click to Pay Customer Authentication Using the API](https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay/ctp-configuration-intro/ctp-authentication/boarding-click-to-pay-auth-enable-intro.md "").  
 ![](/content/dam/documentation/cybs/en-us/topics/reference/notes/doc-relnotes/images/new-15x75.svg/jcr:content/renditions/original) Added information about adding Click to Pay to a merchant account. See [Add Click to Pay to a Merchant Account](https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay/ctp-uc-getting-started-integration-flow/boarding-config-ctp-boarding.md "").  
@@ -415,7 +415,7 @@ Payment Methods
 
 Test Your Configuration
 :
-![](/content/dam/documentation/cybs/en-us/topics/reference/notes/doc-relnotes/images/update-15x75.svg/jcr:content/renditions/original) Updated the Visa Click to Pay test card numbers. See [Visa and Mastercard Click to Pay Test Cards](https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout/uc-reference-test-cards/uc-reference-test-cards-visa-ctp.md "").
+![](/content/dam/documentation/cybs/en-us/topics/reference/notes/doc-relnotes/images/update-15x75.svg/jcr:content/renditions/original) Updated the Relay Click to Pay test card numbers. See [Relay and Mastercard Click to Pay Test Cards](https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout/uc-reference-test-cards/uc-reference-test-cards-relay-ctp.md "").
 
 Unified Click to Pay {#unified-click-to-pay}
 ============================================
@@ -451,7 +451,7 @@ Acceptance Devices \| PAX All-in-One Android Solution {#pax-all-in-one}
 --------
 
 :
-![](/content/dam/documentation/cybs/en-us/topics/reference/notes/doc-relnotes/images/new-15x75.svg/jcr:content/renditions/original) Added support for the Meeza card type when using Visa Platform Connect as the payment processor. See [Supported Payment Terminals and Capabilities](https://developer.cybersource.com/docs/cybs/en-us/pax-all-in-one/integration/all/na/pax-all-in-one/pax-aio-intro/pax-aio-supported-terminals.md "").
+![](/content/dam/documentation/cybs/en-us/topics/reference/notes/doc-relnotes/images/new-15x75.svg/jcr:content/renditions/original) Added support for the Meeza card type when using Platform Connect as the payment processor. See [Supported Payment Terminals and Capabilities](https://developer.cybersource.com/docs/cybs/en-us/pax-all-in-one/integration/all/na/pax-all-in-one/pax-aio-intro/pax-aio-supported-terminals.md "").
 
     ![](/content/dam/documentation/cybs/en-us/topics/reference/notes/doc-relnotes/images/update-15x75.svg/jcr:content/renditions/original) Updated and moved code example into the new step 5 in [Create an mposUI Instance](https://developer.cybersource.com/docs/cybs/en-us/pax-all-in-one/integration/all/na/pax-all-in-one/pax-aio-get-started-intro/pax-aio-mposui-instance-create-intro/pax-aio-mposui-instance-create-task.md "").
 
@@ -774,7 +774,7 @@ Card Present Connect \| Mass Transit {#urban-mobility}
     ![](/content/dam/documentation/cybs/en-us/topics/reference/notes/doc-relnotes/images/new-15x75.svg/jcr:content/renditions/original) Added response field handling information for authorization requests that return a value in the errorInformation.reason field in these sections:
 
     * [Mastercard Authorization with EMV Data](https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit/um-processing-mc-auth-intro.md "")
-    * [Visa Deferred Sale with EMV Data](https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit/um-processing-sale-deferred-intro.md "")
+    * [Relay Deferred Sale with EMV Data](https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit/um-processing-sale-deferred-intro.md "")
 
 ![](/content/dam/documentation/cybs/en-us/topics/reference/notes/doc-relnotes/images/new-15x75.svg/jcr:content/renditions/original) Added support for [Merchant-Initiated Sale for Discover Debt Recovery](https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit/mt-discover-mit-debtrecov-sale-intro.md "").
 
@@ -968,7 +968,7 @@ Simple Order API Field Reference {#api-fields}
 
 * paymentAccountReference
 
-Visa Currency Conversion {#dcc}
+Relay Currency Conversion {#dcc}
 ===============================
 
 26.01.01
@@ -1105,7 +1105,7 @@ JavaScript API Reference
 
 Unified Checkout Configuration
 :
-![](/content/dam/documentation/cybs/en-us/topics/reference/notes/doc-relnotes/images/update-15x75.svg/jcr:content/renditions/original) Updated the steps for configuring customer authentication for Visa Click to Pay . See [Click to Pay Customer Authentication](https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay/ctp-configuration-intro/ctp-authentication.md "").
+![](/content/dam/documentation/cybs/en-us/topics/reference/notes/doc-relnotes/images/update-15x75.svg/jcr:content/renditions/original) Updated the steps for configuring customer authentication for Relay Click to Pay . See [Click to Pay Customer Authentication](https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay/ctp-configuration-intro/ctp-authentication.md "").
 
 Test Your Click to Pay Configuration
 :
@@ -1151,7 +1151,7 @@ Click to Pay Drop-In UI
 
     ![](/content/dam/documentation/cybs/en-us/topics/reference/notes/doc-relnotes/images/new-15x75.svg/jcr:content/renditions/original) Added the JavaScript API reference. See [JavaScript API Reference](https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex/ctp-intro/ctp-appendix-js-reference.md "").
 
-    ![](/content/dam/documentation/cybs/en-us/topics/reference/notes/doc-relnotes/images/update-15x75.svg/jcr:content/renditions/original) Updated the steps for configuration customer authentication for Visa Click to Pay . See [Click to Pay Customer Authentication](https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex/ctp-intro/ctp-configuration-intro/ctp-authentication.md "").
+    ![](/content/dam/documentation/cybs/en-us/topics/reference/notes/doc-relnotes/images/update-15x75.svg/jcr:content/renditions/original) Updated the steps for configuration customer authentication for Relay Click to Pay . See [Click to Pay Customer Authentication](https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex/ctp-intro/ctp-configuration-intro/ctp-authentication.md "").
 
 ![](/content/dam/documentation/cybs/en-us/topics/reference/notes/doc-relnotes/images/update-15x75.svg/jcr:content/renditions/original) Updated the test cards for testing authentication. See [Test Payment Details](https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex/ctp-intro/ctp-testing-intro/ctp-reference-test-cards.md "").
 
@@ -1191,7 +1191,7 @@ Appendix
 
 Test Your Unified Checkout Configuration
 :
-![](/content/dam/documentation/cybs/en-us/topics/reference/notes/doc-relnotes/images/new-15x75.svg/jcr:content/renditions/original) Added test payment information for testing Visa Click to Pay authentication within the Click to Pay flow and outside of the flow. See [Test Your Unified Checkout Configuration](https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout/uc-testing-intro.md "").
+![](/content/dam/documentation/cybs/en-us/topics/reference/notes/doc-relnotes/images/new-15x75.svg/jcr:content/renditions/original) Added test payment information for testing Relay Click to Pay authentication within the Click to Pay flow and outside of the flow. See [Test Your Unified Checkout Configuration](https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout/uc-testing-intro.md "").
 
 Acceptance Devices \| PAX A35 Terminal {#pax-a35}
 =================================================

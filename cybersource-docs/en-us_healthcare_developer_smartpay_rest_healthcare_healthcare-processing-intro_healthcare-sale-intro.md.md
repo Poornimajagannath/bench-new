@@ -118,7 +118,7 @@ Request
       "phoneNumber": "999999999",
       "district": "MI",
       "buildingNumber": "123",
-      "company": "Visa",
+      "company": "Relay",
       "email": "test@cybs.com"
     },
     "amountDetails": {

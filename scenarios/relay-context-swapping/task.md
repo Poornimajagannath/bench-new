@@ -1,4 +1,4 @@
-# Visa Relay — Context-Swapping Benchmark
+# Relay — Context-Swapping Benchmark
 
 **Date:** 2026-07-21
 **Purpose:** Test whether AI agents can swap CyberSource context between merchants without breaking auth/payment flows.
@@ -9,7 +9,7 @@ Can an agent successfully adapt a CyberSource integration when the merchant cred
 
 ## Context
 
-In production, Visa merchants frequently:
+In production, Relay merchants frequently:
 - Switch between sandbox and production environments
 - Use different payment methods (card, ACH, digital wallet, bank transfer)
 - Handle different currencies and tax jurisdictions
@@ -65,7 +65,7 @@ The agent should:
 
 - CyberSource REST API spec (via MCP `get_model_class_details`)
 - CyberSource SDK templates (via MCP `get_code_template`)
-- Visa Acceptance Agent Toolkit docs (via MCP)
+- Acceptance Agent Toolkit docs (via MCP)
 
 ## Agent Instruction
 
