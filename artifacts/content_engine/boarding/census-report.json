@@ -1,0 +1,194 @@
+{
+  "generated_at": "2026-08-07T06:45:19+00:00",
+  "docs_dir": "data/products/boarding/guides",
+  "doc_count": 9,
+  "counts_by_kind": {
+    "api_reference": 1,
+    "how_to_guide": 2,
+    "release_note": 0,
+    "index_navigation": 6,
+    "legal": 0,
+    "marketing": 0,
+    "other": 0
+  },
+  "quarantine_policy": {
+    "exclude_kinds": [
+      "index_navigation",
+      "legal",
+      "release_note"
+    ],
+    "policy_path": "data/content_engine/corpus_quarantine_policy.json",
+    "notes": "Pre-ingestion policy: release notes, legal, and index/navigation pages are quarantined so they cannot silently enter the claim pipeline. How-to guides, API reference, and marketing remain eligible until a later policy amendment. Amend this file and re-run pipelines/run_corpus_census.py to change the decision record."
+  },
+  "quarantine_count": 6,
+  "eligible_count": 3,
+  "classifications": [
+    {
+      "path": "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt.md.md",
+      "kind": "api_reference",
+      "confidence": "medium",
+      "reasons": [
+        "heading/body indicates field reference"
+      ],
+      "bytes": 45608,
+      "title": "Recent Revisions to This Document",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "long-form product guide shell with audience/purpose framing"
+      ],
+      "bytes": 268904,
+      "title": "Merchant Boarding",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-intro-overview.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 784,
+      "title": "Introduction to the Boarding Registration Service",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-intro-template.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 1906,
+      "title": "Product Templates",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 776,
+      "title": "Manage Organizations",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-reg-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 2443,
+      "title": "Create Organizations",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_templates-matrix-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 282,
+      "title": "Product Boarding Template Reference",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_templates-tasks.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "tiny stub without procedural content"
+      ],
+      "bytes": 130,
+      "title": "Using Templates",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 184102,
+      "title": "Merchant Boarding User Guide",
+      "quarantined": false
+    }
+  ],
+  "quarantine_list": [
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-intro-overview.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 784,
+      "title": "Introduction to the Boarding Registration Service",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-intro-template.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 1906,
+      "title": "Product Templates",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 776,
+      "title": "Manage Organizations",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-reg-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 2443,
+      "title": "Create Organizations",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_templates-matrix-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 282,
+      "title": "Product Boarding Template Reference",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_templates-tasks.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "tiny stub without procedural content"
+      ],
+      "bytes": 130,
+      "title": "Using Templates",
+      "quarantined": true
+    }
+  ]
+}

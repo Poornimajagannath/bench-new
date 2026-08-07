@@ -1,14 +1,14 @@
 {
   "product": "boarding",
   "wave": 2,
-  "note": "Wave 2 \u2014 do not enable until Wave 1 gates pass.",
+  "note": "Wave 2 \u2014 boarding census + ingestion. Pages/gap report later.",
   "docs_dir": "data/products/boarding/guides",
   "sources": [
     {
-      "source_id": "boarding-placeholder",
+      "source_id": "boarding-guide-en-us_boarding-template-management_user_all_ada_boarding-template-mgmt",
       "source_type": "guide",
-      "canonical_url": "local://boarding/placeholder",
-      "repo_path": "data/products/boarding/guides/.gitkeep",
+      "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/boarding/",
+      "repo_path": "data/products/boarding/guides/en-us_boarding-template-management_user_all_ada_boarding-template-mgmt.md.md",
       "owning_team": "boarding-docs",
       "product": [
         "boarding",
@@ -17,10 +17,162 @@
       "audience": [
         "developer"
       ],
-      "refresh_cadence": "deferred",
-      "trust_level": "experimental",
+      "refresh_cadence": "corpus",
+      "trust_level": "trusted",
       "parser_strategy": "markdown_native",
-      "enabled": false,
+      "enabled": true,
+      "linked_workflow_id": null
+    },
+    {
+      "source_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding",
+      "source_type": "guide",
+      "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/boarding/",
+      "repo_path": "data/products/boarding/guides/en-us_boarding_developer_all_rest_boarding.md.md",
+      "owning_team": "boarding-docs",
+      "product": [
+        "boarding",
+        "cybersource"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "refresh_cadence": "corpus",
+      "trust_level": "trusted",
+      "parser_strategy": "markdown_native",
+      "enabled": true,
+      "linked_workflow_id": null
+    },
+    {
+      "source_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding_boarding-intro-overview",
+      "source_type": "guide",
+      "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/boarding/",
+      "repo_path": "data/products/boarding/guides/en-us_boarding_developer_all_rest_boarding_boarding-intro-overview.md.md",
+      "owning_team": "boarding-docs",
+      "product": [
+        "boarding",
+        "cybersource"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "refresh_cadence": "corpus",
+      "trust_level": "trusted",
+      "parser_strategy": "markdown_native",
+      "enabled": true,
+      "linked_workflow_id": null
+    },
+    {
+      "source_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding_boarding-intro-template",
+      "source_type": "guide",
+      "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/boarding/",
+      "repo_path": "data/products/boarding/guides/en-us_boarding_developer_all_rest_boarding_boarding-intro-template.md.md",
+      "owning_team": "boarding-docs",
+      "product": [
+        "boarding",
+        "cybersource"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "refresh_cadence": "corpus",
+      "trust_level": "trusted",
+      "parser_strategy": "markdown_native",
+      "enabled": true,
+      "linked_workflow_id": null
+    },
+    {
+      "source_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro",
+      "source_type": "guide",
+      "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/boarding/",
+      "repo_path": "data/products/boarding/guides/en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro.md.md",
+      "owning_team": "boarding-docs",
+      "product": [
+        "boarding",
+        "cybersource"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "refresh_cadence": "corpus",
+      "trust_level": "trusted",
+      "parser_strategy": "markdown_native",
+      "enabled": true,
+      "linked_workflow_id": null
+    },
+    {
+      "source_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding_boarding-reg-intro",
+      "source_type": "guide",
+      "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/boarding/",
+      "repo_path": "data/products/boarding/guides/en-us_boarding_developer_all_rest_boarding_boarding-reg-intro.md.md",
+      "owning_team": "boarding-docs",
+      "product": [
+        "boarding",
+        "cybersource"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "refresh_cadence": "corpus",
+      "trust_level": "trusted",
+      "parser_strategy": "markdown_native",
+      "enabled": true,
+      "linked_workflow_id": null
+    },
+    {
+      "source_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding_templates-matrix-intro",
+      "source_type": "guide",
+      "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/boarding/",
+      "repo_path": "data/products/boarding/guides/en-us_boarding_developer_all_rest_boarding_templates-matrix-intro.md.md",
+      "owning_team": "boarding-docs",
+      "product": [
+        "boarding",
+        "cybersource"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "refresh_cadence": "corpus",
+      "trust_level": "trusted",
+      "parser_strategy": "markdown_native",
+      "enabled": true,
+      "linked_workflow_id": null
+    },
+    {
+      "source_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding_templates-tasks",
+      "source_type": "guide",
+      "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/boarding/",
+      "repo_path": "data/products/boarding/guides/en-us_boarding_developer_all_rest_boarding_templates-tasks.md.md",
+      "owning_team": "boarding-docs",
+      "product": [
+        "boarding",
+        "cybersource"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "refresh_cadence": "corpus",
+      "trust_level": "trusted",
+      "parser_strategy": "markdown_native",
+      "enabled": true,
+      "linked_workflow_id": null
+    },
+    {
+      "source_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user",
+      "source_type": "guide",
+      "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/boarding/",
+      "repo_path": "data/products/boarding/guides/en-us_boarding_user_all_ebc_boarding-user.md.md",
+      "owning_team": "boarding-docs",
+      "product": [
+        "boarding",
+        "cybersource"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "refresh_cadence": "corpus",
+      "trust_level": "trusted",
+      "parser_strategy": "markdown_native",
+      "enabled": true,
       "linked_workflow_id": null
     }
   ]

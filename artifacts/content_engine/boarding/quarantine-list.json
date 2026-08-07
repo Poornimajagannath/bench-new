@@ -1,0 +1,96 @@
+{
+  "generated_at": "2026-08-07T06:45:19+00:00",
+  "docs_dir": "data/products/boarding/guides",
+  "exclude_kinds": [
+    "index_navigation",
+    "legal",
+    "release_note"
+  ],
+  "quarantine_count": 6,
+  "paths": [
+    "en-us_boarding_developer_all_rest_boarding_boarding-intro-overview.md.md",
+    "en-us_boarding_developer_all_rest_boarding_boarding-intro-template.md.md",
+    "en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro.md.md",
+    "en-us_boarding_developer_all_rest_boarding_boarding-reg-intro.md.md",
+    "en-us_boarding_developer_all_rest_boarding_templates-matrix-intro.md.md",
+    "en-us_boarding_developer_all_rest_boarding_templates-tasks.md.md"
+  ],
+  "by_kind": {
+    "index_navigation": [
+      "en-us_boarding_developer_all_rest_boarding_boarding-intro-overview.md.md",
+      "en-us_boarding_developer_all_rest_boarding_boarding-intro-template.md.md",
+      "en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro.md.md",
+      "en-us_boarding_developer_all_rest_boarding_boarding-reg-intro.md.md",
+      "en-us_boarding_developer_all_rest_boarding_templates-matrix-intro.md.md",
+      "en-us_boarding_developer_all_rest_boarding_templates-tasks.md.md"
+    ]
+  },
+  "entries": [
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-intro-overview.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 784,
+      "title": "Introduction to the Boarding Registration Service",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-intro-template.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 1906,
+      "title": "Product Templates",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 776,
+      "title": "Manage Organizations",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-reg-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 2443,
+      "title": "Create Organizations",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_templates-matrix-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 282,
+      "title": "Product Boarding Template Reference",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_templates-tasks.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "tiny stub without procedural content"
+      ],
+      "bytes": 130,
+      "title": "Using Templates",
+      "quarantined": true
+    }
+  ]
+}

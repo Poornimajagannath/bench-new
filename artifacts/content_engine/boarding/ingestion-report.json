@@ -1,0 +1,55 @@
+{
+  "stamp_date": "2026-08-07-boarding",
+  "docs_fetched": 3,
+  "claims_extracted": 645,
+  "claims_by_schema": {
+    "quickstart_step": 550,
+    "endpoint_fact": 0,
+    "error_case": 34,
+    "prose_claim": 61
+  },
+  "drop_count": 6,
+  "drops": [
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-intro-overview.md.md",
+      "reason": "quarantine_policy",
+      "detail": "excluded by corpus census quarantine list"
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-intro-template.md.md",
+      "reason": "quarantine_policy",
+      "detail": "excluded by corpus census quarantine list"
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro.md.md",
+      "reason": "quarantine_policy",
+      "detail": "excluded by corpus census quarantine list"
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-reg-intro.md.md",
+      "reason": "quarantine_policy",
+      "detail": "excluded by corpus census quarantine list"
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_templates-matrix-intro.md.md",
+      "reason": "quarantine_policy",
+      "detail": "excluded by corpus census quarantine list"
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_templates-tasks.md.md",
+      "reason": "quarantine_policy",
+      "detail": "excluded by corpus census quarantine list"
+    }
+  ],
+  "quarantine_skipped": 6,
+  "quarantine_list": "artifacts/content_engine/boarding/quarantine-list.json",
+  "raw_dir": "raw/2026-08-07-boarding",
+  "normalized_file": "normalized/2026-08-07-boarding.claims.json",
+  "read_contract": [
+    "normalized/",
+    "content/"
+  ],
+  "forbidden_reads": [
+    "raw/"
+  ]
+}

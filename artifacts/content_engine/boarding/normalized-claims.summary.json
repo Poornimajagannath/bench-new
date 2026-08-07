@@ -1,0 +1,20 @@
+{
+  "generated_at": "2026-08-07T06:45:35+00:00",
+  "raw_dir": "raw/2026-08-07-boarding",
+  "claim_count": 645,
+  "schemas": [
+    "error_case",
+    "prose_claim",
+    "quickstart_step"
+  ],
+  "claims_by_schema": {
+    "quickstart_step": 550,
+    "prose_claim": 61,
+    "error_case": 34
+  },
+  "sample_source_pointers": [
+    "2026-08-07-boarding/en-us_boarding-template-management_user_all_ada_boarding-template-mgmt.md.md",
+    "2026-08-07-boarding/en-us_boarding_developer_all_rest_boarding.md.md",
+    "2026-08-07-boarding/en-us_boarding_user_all_ebc_boarding-user.md.md"
+  ]
+}
