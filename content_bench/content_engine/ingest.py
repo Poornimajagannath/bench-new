@@ -61,6 +61,9 @@ class DropRecord:
     path: str
     reason: str
     detail: str = ""
+    # Triage fields — required when reason == "shell"
+    bytes: Optional[int] = None
+    first_heading: Optional[str] = None
 
     def to_dict(self) -> Dict[str, Any]:
         return asdict(self)
@@ -143,14 +146,180 @@ def stamp_copy_to_raw(
     return dest_dir, metas, drops
 
 
+def _first_heading(text: str) -> str:
+    for line in text.splitlines():
+        s = line.strip()
+        if not s:
+            continue
+        if s.startswith("#"):
+            return re.sub(r"\s*\{#[^}]+\}\s*$", "", s.lstrip("#").strip())[:160]
+        # Setext-style title (next line is === or ---) handled by caller reading first non-empty
+        cleaned = re.sub(r"\s*\{#[^}]+\}\s*$", "", s).strip()
+        if cleaned and not cleaned.startswith(("!", "[", "<", ">")):
+            return cleaned[:160]
+    return ""
+
+
 def _should_drop_doc(text: str, path: Path) -> Optional[str]:
     for pattern, reason in _DROP_PATTERNS:
         if pattern.search(text) or pattern.search(path.name):
             return reason
-    # Near-empty
-    if len(text.strip()) < 40:
+    # Near-empty — length alone is not emptiness; only truly blank stubs
+    if len(text.strip()) < 20:
         return "empty_or_stub"
     return None
+
+
+# Constraint-type prose: TTLs, validity, reuse/rate limits, PCI, mandatory headers.
+_CONSTRAINT_PATTERNS = (
+    re.compile(
+        r"(?i)\b("
+        r"\d+\s*(?:minute|minutes|hour|hours|second|seconds|day|days)\b|"
+        r"\bTTL\b|time[- ]to[- ]live|"
+        r"valid(?:ity)?\s+(?:for|until|window)|expires?\b|expir(?:y|ation)\b|"
+        r"limited[- ]use|reuse|multiple times|rate[- ]limit|once only|"
+        r"\bPCI\b|\bSAQ\b|PCI DSS|compliance|"
+        r"requires?\s+header|header information|mandatory header|"
+        r"encrypt(?:ed|ion)? on (?:the )?(?:customer'?s )?device|"
+        r"device[- ]side encryption|end-to-end encryption"
+        r")"
+    ),
+)
+
+
+def _iter_sentences(text: str) -> List[str]:
+    """Split body into sentence-like units (short pages included)."""
+    # Drop pure underline / figure noise
+    cleaned = re.sub(r"(?m)^[=-]{3,}\s*$", " ", text)
+    cleaned = re.sub(r"!\[.*?\]\([^)]+\)", " ", cleaned)
+    cleaned = re.sub(r"\{#[^}]+\}", " ", cleaned)
+    # Normalize whitespace but keep paragraph breaks as spaces for sentence split
+    cleaned = re.sub(r"[ \t]+", " ", cleaned)
+    cleaned = re.sub(r"\n+", "\n", cleaned)
+    sentences: List[str] = []
+    for block in re.split(r"\n+", cleaned):
+        block = block.strip()
+        if not block or block.startswith("#") or set(block) <= {"=", "-", "*", " "}:
+            continue
+        # IMPORTANT callouts
+        if block.startswith(">"):
+            block = re.sub(r"^>\s*", "", block)
+            block = re.sub(r"^IMPORTANT\s*", "", block, flags=re.I)
+        for part in re.split(r"(?<=[.!?])\s+(?=[A-Z`\"'])", block):
+            s = part.strip().strip("`")
+            if len(s) >= 24:
+                sentences.append(s)
+    return sentences
+
+
+def _constraint_kind(sentence: str) -> Optional[str]:
+    s = sentence.lower()
+    # Avoid matching "validate" via bare "valid".
+    ttl = bool(
+        re.search(
+            r"\b\d+\s*(minute|hour|second|day)s?\b|\bttl\b|time[- ]to[- ]live|"
+            r"valid(?:ity)?\s+(?:for|until|window)|expires?\b|expir(?:y|ation)\b",
+            s,
+        )
+    )
+    reuse = bool(
+        re.search(
+            r"reuse|multiple times|rate[- ]limit|once only|limited-use|limited use",
+            s,
+        )
+    )
+    if ttl and reuse:
+        return "ttl_and_reuse"
+    if ttl:
+        return "ttl_or_validity"
+    if reuse:
+        return "reuse_or_rate_limit"
+    if re.search(r"\bpci\b|\bsaq\b|compliance", s):
+        return "pci_compliance"
+    if re.search(r"header information|requires? header|mandatory header", s):
+        return "mandatory_header"
+    if re.search(
+        r"encrypt(?:ed|ion)? on .{0,40}device|device-side encryption|end-to-end encryption",
+        s,
+    ):
+        return "device_encryption"
+    if _CONSTRAINT_PATTERNS[0].search(sentence):
+        return "constraint"
+    return None
+
+
+def _extract_prose_claims(
+    text: str,
+    *,
+    source_pointer: str,
+    doc_stem: str,
+) -> List[NormalizedClaim]:
+    claims: List[NormalizedClaim] = []
+    seen: set[str] = set()
+
+    # 1) Constraint-type claims from any sentence (length is not emptiness).
+    for sentence in _iter_sentences(text):
+        kind = _constraint_kind(sentence)
+        if not kind:
+            continue
+        if re.search(r"revision history|table of contents", sentence, re.I):
+            continue
+        key = hashlib.sha1(sentence.encode()).hexdigest()[:12]
+        if key in seen:
+            continue
+        seen.add(key)
+        claims.append(
+            NormalizedClaim(
+                claim_id=f"{doc_stem}:prose:{key}",
+                schema="prose_claim",
+                title=sentence[:100],
+                text=sentence[:500],
+                source_pointer=source_pointer,
+                extras={"claim_kind": kind},
+            )
+        )
+
+    # 2) Imperative / guidance lines (broader than before: longer sentences OK).
+    for match in re.finditer(
+        r"(?m)^(?:[-*]\s+|(?:You|Developers?|Merchants?|After you)\s+)(.{20,500}[.!?])\s*$",
+        text,
+    ):
+        sentence = match.group(0).strip()
+        if re.search(r"revision history|table of contents", sentence, re.I):
+            continue
+        key = hashlib.sha1(sentence.encode()).hexdigest()[:12]
+        if key in seen:
+            continue
+        seen.add(key)
+        claims.append(
+            NormalizedClaim(
+                claim_id=f"{doc_stem}:prose:{key}",
+                schema="prose_claim",
+                title=sentence[:100],
+                text=sentence[:500],
+                source_pointer=source_pointer,
+                extras={"claim_kind": "guidance"},
+            )
+        )
+
+    return claims
+
+
+def _looks_like_shell(text: str, byte_len: int) -> bool:
+    """Shell = nav/stub with no extractable constraints — not 'short file' alone."""
+    sentences = _iter_sentences(text)
+    if any(_constraint_kind(s) for s in sentences):
+        return False
+    links = len(re.findall(r"\[[^\]]+\]\([^)]+\)", text))
+    words = max(len(re.findall(r"\w+", text)), 1)
+    link_density = links / words
+    if link_density >= 0.05 and byte_len < 2500:
+        return True
+    if byte_len < 80 and not sentences:
+        return True
+    if re.search(r"(?i)see these topics|on this page|jumplink", text) and byte_len < 2000:
+        return True
+    return False
 
 
 def _extract_claims_from_text(
@@ -161,9 +330,22 @@ def _extract_claims_from_text(
 ) -> Tuple[List[NormalizedClaim], List[DropRecord]]:
     claims: List[NormalizedClaim] = []
     drops: List[DropRecord] = []
+    byte_len = len(text.encode("utf-8", errors="replace"))
+    heading = _first_heading(text)
+
     drop_reason = _should_drop_doc(text, Path(doc_stem))
     if drop_reason:
-        drops.append(DropRecord(path=source_pointer, reason=drop_reason))
+        # Map legacy index/empty drops into shell triage when applicable
+        reason = "shell" if drop_reason in {"index_page", "empty_or_stub"} else drop_reason
+        drops.append(
+            DropRecord(
+                path=source_pointer,
+                reason=reason,
+                detail=drop_reason,
+                bytes=byte_len,
+                first_heading=heading or "(no heading)",
+            )
+        )
         return claims, drops
 
     # Quickstart steps: numbered headings or numbered lists
@@ -217,39 +399,33 @@ def _extract_claims_from_text(
             )
         )
 
-    # Prose claims: imperative / guidance sentences with a pointer
-    for match in re.finditer(
-        r"(?m)^(?:[-*]\s+|(?:You|Developers?|Merchants?)\s+)(.{20,220}[.!?])\s*$",
-        text,
-    ):
-        sentence = match.group(0).strip()
-        if re.search(r"revision history|table of contents", sentence, re.I):
+    claims.extend(
+        _extract_prose_claims(
+            text, source_pointer=source_pointer, doc_stem=doc_stem
+        )
+    )
+
+    if not claims:
+        if _looks_like_shell(text, byte_len):
+            drops.append(
+                DropRecord(
+                    path=source_pointer,
+                    reason="shell",
+                    detail="no extractable claims; triage as shell (bytes + heading required)",
+                    bytes=byte_len,
+                    first_heading=heading or "(no heading)",
+                )
+            )
+        else:
             drops.append(
                 DropRecord(
                     path=source_pointer,
                     reason="no_schema_match",
-                    detail="navigation/history sentence",
+                    detail="no quickstart/endpoint/error/prose claim extracted",
+                    bytes=byte_len,
+                    first_heading=heading or "(no heading)",
                 )
             )
-            continue
-        claims.append(
-            NormalizedClaim(
-                claim_id=f"{doc_stem}:prose:{hashlib.sha1(sentence.encode()).hexdigest()[:8]}",
-                schema="prose_claim",
-                title=sentence[:80],
-                text=sentence,
-                source_pointer=source_pointer,
-            )
-        )
-
-    if not claims:
-        drops.append(
-            DropRecord(
-                path=source_pointer,
-                reason="no_schema_match",
-                detail="no quickstart/endpoint/error/prose claim extracted",
-            )
-        )
     return claims, drops
 
 
@@ -501,15 +677,61 @@ def render_ingestion_report(report: Dict[str, Any]) -> str:
     ]
     for schema, count in report["claims_by_schema"].items():
         lines.append(f"| {schema} | {count} |")
+
+    if report.get("recall"):
+        r = report["recall"]
+        lines.extend(
+            [
+                "",
+                "## Extraction recall",
+                "",
+                f"- Prior `no_schema_match` drops in comparison set: {r.get('prior_no_schema_match', '—')}",
+                f"- Of those, now yielding claims: **{r.get('recovered', '—')}**",
+                f"- Still dropped: {r.get('still_dropped', '—')}",
+            ]
+        )
+
     lines.extend(["", "## Drop log", ""])
     if not report["drops"]:
         lines.append("_No drops._")
     else:
-        lines.append("| Path | Reason | Detail |")
-        lines.append("| --- | --- | --- |")
+        lines.append(
+            "| Path | Reason | Bytes | First heading | Detail |"
+        )
+        lines.append("| --- | --- | ---: | --- | --- |")
         for d in report["drops"][:200]:
-            lines.append(f"| {d['path']} | {d['reason']} | {d.get('detail') or '—'} |")
+            heading = (d.get("first_heading") or "—").replace("|", "\\|")
+            b = d.get("bytes")
+            b_s = str(b) if b is not None else "—"
+            # Shell drops MUST carry bytes + heading (triage rule).
+            if d.get("reason") == "shell" and (b is None or not d.get("first_heading")):
+                heading = f"⚠ MISSING TRIAGE FIELDS — {heading}"
+            lines.append(
+                f"| {d['path']} | {d['reason']} | {b_s} | {heading} | {d.get('detail') or '—'} |"
+            )
         if len(report["drops"]) > 200:
-            lines.append(f"| … | … | {len(report['drops']) - 200} more |")
+            lines.append(
+                f"| … | … | … | … | {len(report['drops']) - 200} more |"
+            )
+
+        # Sampled human check — 10 drops, not labels-by-filename
+        sample = report.get("human_check_sample") or report["drops"][:10]
+        lines.extend(
+            [
+                "",
+                "## Sampled human check (10 drops)",
+                "",
+                "Do not triage by filename alone. For each row confirm shell vs missed claim.",
+                "",
+                "| # | Path | Reason | Bytes | First heading |",
+                "| ---: | --- | --- | ---: | --- |",
+            ]
+        )
+        for i, d in enumerate(sample[:10], 1):
+            heading = (d.get("first_heading") or "—").replace("|", "\\|")
+            b = d.get("bytes")
+            lines.append(
+                f"| {i} | `{d['path']}` | {d['reason']} | {b if b is not None else '—'} | {heading} |"
+            )
     lines.append("")
     return "\n".join(lines)

@@ -85,6 +85,38 @@ class CorpusCensusTests(unittest.TestCase):
             c = classify_document(p)
             self.assertEqual(c.kind, "index_navigation")
 
+    def test_short_constraint_page_not_tiny_stub(self) -> None:
+        """TTL/reuse facts keep short pages eligible (length ≠ emptiness)."""
+        with tempfile.TemporaryDirectory() as tmp:
+            p = Path(tmp) / "en-us_flex_da-payments.md.md"
+            p.write_text(
+                "Processing Authorizations with a Transient Token {#da-payments}\n"
+                "==========================================================\n\n"
+                "After you validate the transient token, you can use it in place of "
+                "the PAN with payment services for 15 minutes. The transient token "
+                "can be used multiple times within the 15-minute period.\n",
+                encoding="utf-8",
+            )
+            c = classify_document(p)
+            self.assertNotEqual(c.kind, "index_navigation")
+            self.assertEqual(c.kind, "how_to_guide")
+
+    def test_intro_with_header_requirement_not_index(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            p = Path(tmp) / "en-us_flex_ctp-intro.md.md"
+            p.write_text(
+                "Introduction to Click to Pay {#ctp-intro}\n"
+                "========================================\n\n"
+                "The response contains limited-use public keys used for "
+                "end-to-end encryption.\n\n"
+                "> IMPORTANT\n"
+                "> Each request that you send requires header information.\n",
+                encoding="utf-8",
+            )
+            c = classify_document(p)
+            self.assertNotEqual(c.kind, "index_navigation")
+            self.assertEqual(c.kind, "how_to_guide")
+
     def test_default_policy_excludes_release_legal_index(self) -> None:
         self.assertEqual(
             set(DEFAULT_QUARANTINE_KINDS),
