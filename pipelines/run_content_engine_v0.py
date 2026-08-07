@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Relay Content Engine V0 — local compiled-content prototype.
+"""Content Bench Content Engine V0 — local compiled-content prototype.
 
 source registry
 -> local snapshot
@@ -24,14 +24,14 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from relay_bench.content_engine.docetl_adapter import EXTRACT_MODES
-from relay_bench.content_engine.pipeline import run_content_engine
-from relay_bench.content_engine.registry import list_enabled_sources
+from content_bench.content_engine.docetl_adapter import EXTRACT_MODES
+from content_bench.content_engine.pipeline import run_content_engine
+from content_bench.content_engine.registry import list_enabled_sources
 
 
 def main() -> int:
     enabled = sorted(r.source_id for r in list_enabled_sources())
-    parser = argparse.ArgumentParser(description="Run Relay Content Engine V0")
+    parser = argparse.ArgumentParser(description="Run Content Bench Content Engine V0")
     parser.add_argument(
         "--source",
         required=True,

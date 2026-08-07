@@ -1,0 +1,71 @@
+{
+  "product": "boarding",
+  "source_corpus": "cybersource-docs",
+  "selection_rule": "filename matches (?:^|_)boarding(?:[_.-]|$) \u2014 not TMS onboarding",
+  "doc_count": 9,
+  "docs": [
+    {
+      "filename": "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt.md.md",
+      "path": "data/products/boarding/guides/en-us_boarding-template-management_user_all_ada_boarding-template-mgmt.md.md",
+      "kind": "api_reference",
+      "quarantined_in_full_census": false,
+      "title": "Recent Revisions to This Document"
+    },
+    {
+      "filename": "en-us_boarding_developer_all_rest_boarding.md.md",
+      "path": "data/products/boarding/guides/en-us_boarding_developer_all_rest_boarding.md.md",
+      "kind": "how_to_guide",
+      "quarantined_in_full_census": false,
+      "title": "Merchant Boarding"
+    },
+    {
+      "filename": "en-us_boarding_developer_all_rest_boarding_boarding-intro-overview.md.md",
+      "path": "data/products/boarding/guides/en-us_boarding_developer_all_rest_boarding_boarding-intro-overview.md.md",
+      "kind": "index_navigation",
+      "quarantined_in_full_census": true,
+      "title": "Introduction to the Boarding Registration Service"
+    },
+    {
+      "filename": "en-us_boarding_developer_all_rest_boarding_boarding-intro-template.md.md",
+      "path": "data/products/boarding/guides/en-us_boarding_developer_all_rest_boarding_boarding-intro-template.md.md",
+      "kind": "index_navigation",
+      "quarantined_in_full_census": true,
+      "title": "Product Templates"
+    },
+    {
+      "filename": "en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro.md.md",
+      "path": "data/products/boarding/guides/en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro.md.md",
+      "kind": "index_navigation",
+      "quarantined_in_full_census": true,
+      "title": "Manage Organizations"
+    },
+    {
+      "filename": "en-us_boarding_developer_all_rest_boarding_boarding-reg-intro.md.md",
+      "path": "data/products/boarding/guides/en-us_boarding_developer_all_rest_boarding_boarding-reg-intro.md.md",
+      "kind": "index_navigation",
+      "quarantined_in_full_census": true,
+      "title": "Create Organizations"
+    },
+    {
+      "filename": "en-us_boarding_developer_all_rest_boarding_templates-matrix-intro.md.md",
+      "path": "data/products/boarding/guides/en-us_boarding_developer_all_rest_boarding_templates-matrix-intro.md.md",
+      "kind": "index_navigation",
+      "quarantined_in_full_census": true,
+      "title": "Product Boarding Template Reference"
+    },
+    {
+      "filename": "en-us_boarding_developer_all_rest_boarding_templates-tasks.md.md",
+      "path": "data/products/boarding/guides/en-us_boarding_developer_all_rest_boarding_templates-tasks.md.md",
+      "kind": "index_navigation",
+      "quarantined_in_full_census": true,
+      "title": "Using Templates"
+    },
+    {
+      "filename": "en-us_boarding_user_all_ebc_boarding-user.md.md",
+      "path": "data/products/boarding/guides/en-us_boarding_user_all_ebc_boarding-user.md.md",
+      "kind": "how_to_guide",
+      "quarantined_in_full_census": false,
+      "title": "Merchant Boarding User Guide"
+    }
+  ]
+}

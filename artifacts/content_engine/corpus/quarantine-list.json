@@ -1,0 +1,135 @@
+{
+  "generated_at": "2026-08-07T07:10:41+00:00",
+  "docs_dir": "data/products/payments/guides",
+  "exclude_kinds": [
+    "index_navigation",
+    "legal",
+    "release_note"
+  ],
+  "quarantine_count": 9,
+  "paths": [
+    "en-us_payer-authentication_developer_all_rest_payer-auth_pa-testing-intro.md.md",
+    "en-us_payer-authentication_developer_all_rest_payer-auth_pa2-ccdc-intro.md.md",
+    "en-us_payments_developer_ctv_rest_payments_payments-debit-prepaid-process-intro.md.md",
+    "en-us_payments_developer_ctv_rest_payments_payments-intro.md.md",
+    "en-us_payments_developer_ctv_rest_payments_payments-processing-basic-intro.md.md",
+    "en-us_tms_developer_all_rest_tms_tms-cust-tkn.md.md",
+    "en-us_tms_developer_all_rest_tms_tms-cust-tkn_tms-cust-pi-tkn.md.md",
+    "en-us_tms_developer_all_rest_tms_tms-onboarding.md.md",
+    "en-us_tms_developer_all_rest_tms_tms-pi-tkn.md.md"
+  ],
+  "by_kind": {
+    "index_navigation": [
+      "en-us_payer-authentication_developer_all_rest_payer-auth_pa-testing-intro.md.md",
+      "en-us_payer-authentication_developer_all_rest_payer-auth_pa2-ccdc-intro.md.md",
+      "en-us_payments_developer_ctv_rest_payments_payments-debit-prepaid-process-intro.md.md",
+      "en-us_payments_developer_ctv_rest_payments_payments-intro.md.md",
+      "en-us_payments_developer_ctv_rest_payments_payments-processing-basic-intro.md.md",
+      "en-us_tms_developer_all_rest_tms_tms-cust-tkn.md.md",
+      "en-us_tms_developer_all_rest_tms_tms-cust-tkn_tms-cust-pi-tkn.md.md",
+      "en-us_tms_developer_all_rest_tms_tms-onboarding.md.md",
+      "en-us_tms_developer_all_rest_tms_tms-pi-tkn.md.md"
+    ]
+  },
+  "entries": [
+    {
+      "path": "en-us_payer-authentication_developer_all_rest_payer-auth_pa-testing-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 400,
+      "title": "Testing Payer Authentication",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_payer-authentication_developer_all_rest_payer-auth_pa2-ccdc-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 2452,
+      "title": "Implementing Direct API for Payer Authentication",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_payments_developer_ctv_rest_payments_payments-debit-prepaid-process-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 688,
+      "title": "Debit and Prepaid Card Processing",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_payments_developer_ctv_rest_payments_payments-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 914,
+      "title": "Introduction to Payments",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_payments_developer_ctv_rest_payments_payments-processing-basic-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 229,
+      "title": "Standard Payment Processing",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_tms_developer_all_rest_tms_tms-cust-tkn.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "tiny stub without procedural content"
+      ],
+      "bytes": 230,
+      "title": "Customer Tokens",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_tms_developer_all_rest_tms_tms-cust-tkn_tms-cust-pi-tkn.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "tiny stub without procedural content"
+      ],
+      "bytes": 316,
+      "title": "Customer Payment Instruments",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_tms_developer_all_rest_tms_tms-onboarding.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "short page dominated by links / jumplist"
+      ],
+      "bytes": 783,
+      "title": "`Token Management Service` Onboarding",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_tms_developer_all_rest_tms_tms-pi-tkn.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "tiny stub without procedural content"
+      ],
+      "bytes": 318,
+      "title": "Payment Instrument Tokens",
+      "quarantined": true
+    }
+  ]
+}

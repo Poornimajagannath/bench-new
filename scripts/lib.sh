@@ -16,13 +16,13 @@ load_env() {
   fi
   # Validate required vars
   local missing=()
-  for var in CYBS_MERCHANT_ID CYBS_KEY_ID CYBS_SHARED_SECRET; do
+  for var in PGW_MERCHANT_ID PGW_KEY_ID PGW_SHARED_SECRET; do
     [ -z "${!var:-}" ] && missing+=("$var")
   done
   if [ "${#missing[@]}" -gt 0 ] && ! is_dry_run; then
     die "Missing required environment variables: ${missing[*]}"
   fi
-  export CYBS_ENVIRONMENT="${CYBS_ENVIRONMENT:-sandbox}"
+  export PGW_ENVIRONMENT="${PGW_ENVIRONMENT:-sandbox}"
 }
 
 # ---------------------------------------------------------------------------

@@ -1,0 +1,195 @@
+{
+  "source_id": "cybersource-payments-openapi",
+  "spec_snapshot_id": "cybersource-payments-openapi-d3e9415f5fb6",
+  "compared_against": [
+    "artifacts/content_engine/objects/microform-payer-auth-quickstart.quickstart_units.json"
+  ],
+  "added_entities": [
+    "cybersource-payments-openapi:createPullFundsTransfer",
+    "cybersource-payments-openapi:createPullFundsRefund",
+    "cybersource-payments-openapi:createPullFundsReversal",
+    "cybersource-payments-openapi:getTransactionBatchDetails",
+    "cybersource-payments-openapi:getTransactionBatches",
+    "cybersource-payments-openapi:getTransactionBatchId",
+    "cybersource-payments-openapi:billingAgreementsRegistration",
+    "cybersource-payments-openapi:billingAgreementsDeRegistration",
+    "cybersource-payments-openapi:billingAgreementsIntimation",
+    "cybersource-payments-openapi:refundCapture",
+    "cybersource-payments-openapi:voidCapture",
+    "cybersource-payments-openapi:createCredit",
+    "cybersource-payments-openapi:voidCredit",
+    "cybersource-payments-openapi:createOrder",
+    "cybersource-payments-openapi:updateOrder",
+    "cybersource-payments-openapi:createSessionRequest",
+    "cybersource-payments-openapi:updateSessionRequest",
+    "cybersource-payments-openapi:createOrderRequest",
+    "cybersource-payments-openapi:retrieveOrDeletePaymentToken",
+    "cybersource-payments-openapi:createPayment",
+    "cybersource-payments-openapi:incrementAuth",
+    "cybersource-payments-openapi:capturePayment",
+    "cybersource-payments-openapi:refundPayment",
+    "cybersource-payments-openapi:authReversal",
+    "cybersource-payments-openapi:voidPayment",
+    "cybersource-payments-openapi:octCreatePayment",
+    "cybersource-payments-openapi:refreshPaymentStatus",
+    "cybersource-payments-openapi:voidRefund",
+    "cybersource-payments-openapi:mitReversal",
+    "cybersource-payments-openapi:mitVoid"
+  ],
+  "removed_entities": [],
+  "changed_entities": [],
+  "missing_quickstart_links": [
+    "authReversal",
+    "billingAgreementsDeRegistration",
+    "billingAgreementsIntimation",
+    "billingAgreementsRegistration",
+    "capturePayment",
+    "createCredit",
+    "createOrder",
+    "createOrderRequest",
+    "createPullFundsRefund",
+    "createPullFundsReversal",
+    "createPullFundsTransfer",
+    "createSessionRequest",
+    "getTransactionBatchDetails",
+    "getTransactionBatchId",
+    "getTransactionBatches",
+    "incrementAuth",
+    "mitReversal",
+    "mitVoid",
+    "octCreatePayment",
+    "refreshPaymentStatus",
+    "refundCapture",
+    "refundPayment",
+    "retrieveOrDeletePaymentToken",
+    "updateOrder",
+    "updateSessionRequest",
+    "voidCapture",
+    "voidCredit",
+    "voidPayment",
+    "voidRefund"
+  ],
+  "stale_human_claims": [],
+  "decisions": [
+    {
+      "entity_id": "cybersource-payments-openapi:createPullFundsTransfer",
+      "action": "flag"
+    },
+    {
+      "entity_id": "cybersource-payments-openapi:createPullFundsRefund",
+      "action": "flag"
+    },
+    {
+      "entity_id": "cybersource-payments-openapi:createPullFundsReversal",
+      "action": "flag"
+    },
+    {
+      "entity_id": "cybersource-payments-openapi:getTransactionBatchDetails",
+      "action": "flag"
+    },
+    {
+      "entity_id": "cybersource-payments-openapi:getTransactionBatches",
+      "action": "flag"
+    },
+    {
+      "entity_id": "cybersource-payments-openapi:getTransactionBatchId",
+      "action": "flag"
+    },
+    {
+      "entity_id": "cybersource-payments-openapi:billingAgreementsRegistration",
+      "action": "flag"
+    },
+    {
+      "entity_id": "cybersource-payments-openapi:billingAgreementsDeRegistration",
+      "action": "flag"
+    },
+    {
+      "entity_id": "cybersource-payments-openapi:billingAgreementsIntimation",
+      "action": "flag"
+    },
+    {
+      "entity_id": "cybersource-payments-openapi:refundCapture",
+      "action": "flag"
+    },
+    {
+      "entity_id": "cybersource-payments-openapi:voidCapture",
+      "action": "flag"
+    },
+    {
+      "entity_id": "cybersource-payments-openapi:createCredit",
+      "action": "flag"
+    },
+    {
+      "entity_id": "cybersource-payments-openapi:voidCredit",
+      "action": "flag"
+    },
+    {
+      "entity_id": "cybersource-payments-openapi:createOrder",
+      "action": "flag"
+    },
+    {
+      "entity_id": "cybersource-payments-openapi:updateOrder",
+      "action": "flag"
+    },
+    {
+      "entity_id": "cybersource-payments-openapi:createSessionRequest",
+      "action": "flag"
+    },
+    {
+      "entity_id": "cybersource-payments-openapi:updateSessionRequest",
+      "action": "flag"
+    },
+    {
+      "entity_id": "cybersource-payments-openapi:createOrderRequest",
+      "action": "flag"
+    },
+    {
+      "entity_id": "cybersource-payments-openapi:retrieveOrDeletePaymentToken",
+      "action": "flag"
+    },
+    {
+      "entity_id": "cybersource-payments-openapi:createPayment",
+      "action": "generate"
+    },
+    {
+      "entity_id": "cybersource-payments-openapi:incrementAuth",
+      "action": "flag"
+    },
+    {
+      "entity_id": "cybersource-payments-openapi:capturePayment",
+      "action": "flag"
+    },
+    {
+      "entity_id": "cybersource-payments-openapi:refundPayment",
+      "action": "flag"
+    },
+    {
+      "entity_id": "cybersource-payments-openapi:authReversal",
+      "action": "flag"
+    },
+    {
+      "entity_id": "cybersource-payments-openapi:voidPayment",
+      "action": "flag"
+    },
+    {
+      "entity_id": "cybersource-payments-openapi:octCreatePayment",
+      "action": "flag"
+    },
+    {
+      "entity_id": "cybersource-payments-openapi:refreshPaymentStatus",
+      "action": "flag"
+    },
+    {
+      "entity_id": "cybersource-payments-openapi:voidRefund",
+      "action": "flag"
+    },
+    {
+      "entity_id": "cybersource-payments-openapi:mitReversal",
+      "action": "flag"
+    },
+    {
+      "entity_id": "cybersource-payments-openapi:mitVoid",
+      "action": "flag"
+    }
+  ]
+}

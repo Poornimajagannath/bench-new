@@ -1,0 +1,114 @@
+{
+  "at": "2026-08-07T07:03:16+00:00",
+  "stats": {
+    "score": 100.0,
+    "pass": 12,
+    "partial": 0,
+    "fail": 0,
+    "n_a": 0
+  },
+  "fetched": {
+    "payments_intro": 200,
+    "payments_basic": 200,
+    "rest_getting_started": 200,
+    "llms_index": 200
+  },
+  "checks": [
+    {
+      "id": "create_path",
+      "area": "Payments API",
+      "result": "pass",
+      "ours": "/pts/v2/payments",
+      "upstream": "payments processing docs reference payment services",
+      "notes": "Generated createPayment path must match the registered OpenAPI path."
+    },
+    {
+      "id": "create_auth",
+      "area": "Auth",
+      "result": "pass",
+      "ours": "platform auth guidance (spec declares no schemes)",
+      "upstream": "OpenAPI security section empty for /pts createPayment",
+      "notes": "When the registered spec omits security schemes, the page must say so and point at HTTP Signature / JWT getting-started guidance."
+    },
+    {
+      "id": "flattened_amount",
+      "area": "Request fields",
+      "result": "pass",
+      "ours": "flattened totalAmount field",
+      "upstream": "amountDetails.totalAmount in payments guides",
+      "notes": "A2 flatten: nested amount fields must appear as dotted names."
+    },
+    {
+      "id": "flattened_currency",
+      "area": "Request fields",
+      "result": "pass",
+      "ours": "flattened currency field",
+      "upstream": "currency in amountDetails",
+      "notes": "Currency must be present as a flattened body field."
+    },
+    {
+      "id": "no_raw_pan",
+      "area": "Safety",
+      "result": "pass",
+      "ours": "PAN guard language",
+      "upstream": "sandbox / testing guides discourage raw PAN misuse",
+      "notes": "Sandbox payment pages must not encourage raw PAN in production."
+    },
+    {
+      "id": "ops_coverage",
+      "area": "Coverage",
+      "result": "pass",
+      "ours": "30 pages / 30 ops from cybersource-payments-openapi",
+      "upstream": "registered OpenAPI operations (excluded=[])",
+      "notes": "Every in-scope operation from the registered payments OpenAPI must have a page. Denominator is computed at runtime \u2014 never a hard-coded list."
+    },
+    {
+      "id": "upstream_payments_reachable",
+      "area": "Upstream",
+      "result": "pass",
+      "ours": "local generated pages",
+      "upstream": "developer.cybersource.com payments intro",
+      "notes": "Parity job must fetch live public CS docs."
+    },
+    {
+      "id": "upstream_llms_reachable",
+      "area": "Upstream",
+      "result": "pass",
+      "ours": "corpus from llms.txt ingestion",
+      "upstream": "developer.cybersource.com/llms.txt",
+      "notes": "llms.txt index should remain fetchable for ingestion freshness."
+    },
+    {
+      "id": "rest_getting_started_aligned",
+      "area": "Onboarding",
+      "result": "pass",
+      "ours": "auth + createPayment pages",
+      "upstream": "REST getting started",
+      "notes": "REST getting-started and generated pages both cover auth + first payment."
+    },
+    {
+      "id": "payments_basic_concepts",
+      "area": "Onboarding",
+      "result": "pass",
+      "ours": "capturePayment page present",
+      "upstream": "basic payments processing intro",
+      "notes": "Capture is in the registered spec; page + upstream basic intro should both exist."
+    },
+    {
+      "id": "provenance",
+      "area": "Provenance",
+      "result": "pass",
+      "ours": "lineage_origin / generated flag",
+      "upstream": "n/a",
+      "notes": "Pages must label themselves as generated from the OpenAPI unit."
+    },
+    {
+      "id": "no_raw_dir",
+      "area": "Serve contract",
+      "result": "pass",
+      "ours": "content/ only",
+      "upstream": "n/a",
+      "notes": "Published pages must not point readers at raw/."
+    }
+  ]
+}

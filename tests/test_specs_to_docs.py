@@ -1,4 +1,4 @@
-"""Tests for Specs-to-Docs V0 (CyberSource-shaped local OpenAPI fixture)."""
+"""Tests for Specs-to-Docs V0 (Payment Gateway-shaped local OpenAPI fixture)."""
 
 from __future__ import annotations
 
@@ -6,20 +6,20 @@ import json
 import unittest
 from pathlib import Path
 
-from relay_bench.content_engine.registry import require_source
-from relay_bench.content_engine.snapshot import materialize_snapshot
-from relay_bench.content_engine.specs_compose import compose_reference_units
-from relay_bench.content_engine.specs_parser import parse_openapi_entities
-from relay_bench.content_engine.specs_pipeline import run_specs_to_docs
-from relay_bench.content_engine.specs_validate import (
+from content_bench.content_engine.registry import require_source
+from content_bench.content_engine.snapshot import materialize_snapshot
+from content_bench.content_engine.specs_compose import compose_reference_units
+from content_bench.content_engine.specs_parser import parse_openapi_entities
+from content_bench.content_engine.specs_pipeline import run_specs_to_docs
+from content_bench.content_engine.specs_validate import (
     validate_contract_alignment,
     validate_units_content,
     validate_units_schema,
 )
-from relay_bench.content_engine.schemas import ApiReferenceUnit
+from content_bench.content_engine.schemas import ApiReferenceUnit
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE_ID = "cybersource-payments-core-openapi"
+SOURCE_ID = "payments-core-openapi"
 
 EXPECTED_OPS = {
     "createPayment",
@@ -43,7 +43,7 @@ class SpecsToDocsTests(unittest.TestCase):
             "microform-payer-auth-state-machine",
         )
 
-    def test_parser_emits_eight_cybersource_operations(self):
+    def test_parser_emits_eight_payment_gateway_operations(self):
         record = require_source(SOURCE_ID)
         snapshot = materialize_snapshot(record)
         entities = parse_openapi_entities(record, snapshot)
@@ -51,6 +51,19 @@ class SpecsToDocsTests(unittest.TestCase):
         self.assertEqual(ops, EXPECTED_OPS)
         self.assertTrue(all(e.auth_schemes for e in entities))
         self.assertTrue(all(e.endpoint.startswith("/") for e in entities))
+
+    def test_parser_flattens_nested_request_fields_with_required(self):
+        record = require_source(SOURCE_ID)
+        snapshot = materialize_snapshot(record)
+        entities = parse_openapi_entities(record, snapshot)
+        create = next(e for e in entities if e.operation_id == "createPayment")
+        by_name = {f["name"]: f for f in create.request_fields}
+        self.assertIn("orderInformation.amountDetails.totalAmount", by_name)
+        nested = by_name["orderInformation.amountDetails.totalAmount"]
+        self.assertTrue(nested["required"])
+        self.assertEqual(nested["type"], "string")
+        self.assertIn("clientReferenceInformation.code", by_name)
+        self.assertTrue(by_name["clientReferenceInformation.code"]["required"])
 
     def test_pipeline_promotes_with_contract_alignment(self):
         result = run_specs_to_docs(SOURCE_ID)

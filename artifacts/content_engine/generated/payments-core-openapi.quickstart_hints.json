@@ -1,0 +1,86 @@
+{
+  "stage": "specs_to_docs_quickstart_hints",
+  "source_id": "payments-core-openapi",
+  "hints": [
+    {
+      "operation_id": "createCredit",
+      "endpoint": "/pts/v2/credits",
+      "http_method": "POST",
+      "suggested_workflows": [
+        "microform-payer-auth-state-machine"
+      ],
+      "linked_quickstart_source": "microform-payer-auth-quickstart",
+      "note": "Hint only \u2014 OpenAPI alone does not author a full quickstart"
+    },
+    {
+      "operation_id": "createPayment",
+      "endpoint": "/pts/v2/payments",
+      "http_method": "POST",
+      "suggested_workflows": [
+        "microform-payer-auth-state-machine"
+      ],
+      "linked_quickstart_source": "microform-payer-auth-quickstart",
+      "note": "Hint only \u2014 OpenAPI alone does not author a full quickstart"
+    },
+    {
+      "operation_id": "getPayment",
+      "endpoint": "/pts/v2/payments/{id}",
+      "http_method": "GET",
+      "suggested_workflows": [
+        "microform-payer-auth-state-machine"
+      ],
+      "linked_quickstart_source": "microform-payer-auth-quickstart",
+      "note": "Hint only \u2014 OpenAPI alone does not author a full quickstart"
+    },
+    {
+      "operation_id": "capturePayment",
+      "endpoint": "/pts/v2/payments/{id}/captures",
+      "http_method": "POST",
+      "suggested_workflows": [
+        "microform-payer-auth-state-machine"
+      ],
+      "linked_quickstart_source": "microform-payer-auth-quickstart",
+      "note": "Hint only \u2014 OpenAPI alone does not author a full quickstart"
+    },
+    {
+      "operation_id": "createMppCredentialSetup",
+      "endpoint": "/risk/v1/authentication-setups",
+      "http_method": "POST",
+      "suggested_workflows": [
+        "microform-payer-auth-state-machine"
+      ],
+      "linked_quickstart_source": "microform-payer-auth-quickstart",
+      "note": "Hint only \u2014 OpenAPI alone does not author a full quickstart"
+    },
+    {
+      "operation_id": "checkMppEnrollment",
+      "endpoint": "/risk/v1/authentications",
+      "http_method": "POST",
+      "suggested_workflows": [
+        "microform-payer-auth-state-machine"
+      ],
+      "linked_quickstart_source": "microform-payer-auth-quickstart",
+      "note": "Hint only \u2014 OpenAPI alone does not author a full quickstart"
+    },
+    {
+      "operation_id": "createCustomer",
+      "endpoint": "/tms/v2/customers",
+      "http_method": "POST",
+      "suggested_workflows": [
+        "microform-payer-auth-state-machine"
+      ],
+      "linked_quickstart_source": "microform-payer-auth-quickstart",
+      "note": "Hint only \u2014 OpenAPI alone does not author a full quickstart"
+    },
+    {
+      "operation_id": "getCustomer",
+      "endpoint": "/tms/v2/customers/{customerId}",
+      "http_method": "GET",
+      "suggested_workflows": [
+        "microform-payer-auth-state-machine"
+      ],
+      "linked_quickstart_source": "microform-payer-auth-quickstart",
+      "note": "Hint only \u2014 OpenAPI alone does not author a full quickstart"
+    }
+  ]
+}

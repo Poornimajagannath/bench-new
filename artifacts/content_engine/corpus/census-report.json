@@ -1,0 +1,546 @@
+{
+  "generated_at": "2026-08-07T07:10:41+00:00",
+  "docs_dir": "data/products/payments/guides",
+  "doc_count": 38,
+  "counts_by_kind": {
+    "api_reference": 0,
+    "how_to_guide": 26,
+    "release_note": 0,
+    "index_navigation": 9,
+    "legal": 0,
+    "marketing": 0,
+    "other": 3
+  },
+  "quarantine_policy": {
+    "exclude_kinds": [
+      "index_navigation",
+      "legal",
+      "release_note"
+    ],
+    "policy_path": "/home/badari/workspace/poornima/visa-relay-bench/data/content_engine/corpus_quarantine_policy.json",
+    "notes": "Pre-ingestion policy: release notes, legal, and index/navigation pages are quarantined so they cannot silently enter the claim pipeline. How-to guides, API reference, and marketing remain eligible until a later policy amendment. Amend this file and re-run pipelines/run_corpus_census.py to change the decision record."
+  },
+  "quarantine_count": 9,
+  "eligible_count": 29,
+  "classifications": [
+    {
+      "path": "credentials.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 406054,
+      "title": "Source: https://developer.cybersource.com/docs/cybs/en-us/credentials/developer/ctv/rest/credentials.md",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 794084,
+      "title": "`Digital Accept` Secure Integration Developer Guide",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_ctp-intro.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 2952,
+      "title": "Introduction to the `Click to Pay Drop-In UI`",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_da-payments.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "constraint facts (TTL/PCI/header/reuse/encryption) \u2014 eligible regardless of length"
+      ],
+      "bytes": 340,
+      "title": "Processing Authorizations with a Transient Token",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_flex-api-2.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "constraint facts (TTL/PCI/header/reuse/encryption) \u2014 eligible regardless of length"
+      ],
+      "bytes": 1910,
+      "title": "`Flex API` v2",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_microform-integ-v2.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 1211,
+      "title": "`Microform Integration` v2",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_payments_intro_digt_accpt_sec_intg.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "constraint facts (TTL/PCI/header/reuse/encryption) \u2014 eligible regardless of length"
+      ],
+      "bytes": 4249,
+      "title": "Introducing `Digital Accept` Secure Integration Product Suite",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_uc-intro.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 2432,
+      "title": "Introduction to `Unified Checkout`",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_payer-authentication_developer_all_rest_payer-auth.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 703162,
+      "title": "Recent Revisions to This Document",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_payer-authentication_developer_all_rest_payer-auth_pa-reports-intro.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "constraint facts (TTL/PCI/header/reuse/encryption) \u2014 eligible regardless of length"
+      ],
+      "bytes": 631,
+      "title": "Payer Authentication Reports",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_payer-authentication_developer_all_rest_payer-auth_pa-testing-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 400,
+      "title": "Testing Payer Authentication",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_payer-authentication_developer_all_rest_payer-auth_pa2-ccdc-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 2452,
+      "title": "Implementing Direct API for Payer Authentication",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_payer-authentication_developer_all_rest_payer-auth_pa2-intro-intro.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 4448,
+      "title": "Introduction to Payer Authentication",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_payments_developer_ctv_rest_payments.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 397466,
+      "title": "Payments Developer Guide",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_payments_developer_ctv_rest_payments_payments-debit-prepaid-process-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 688,
+      "title": "Debit and Prepaid Card Processing",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_payments_developer_ctv_rest_payments_payments-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 914,
+      "title": "Introduction to Payments",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_payments_developer_ctv_rest_payments_payments-processing-basic-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 229,
+      "title": "Standard Payment Processing",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_tms_developer_all_rest_tms.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 776173,
+      "title": "`Token Management Service` Developer Guide",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_tms_developer_all_rest_tms_tms-bin-lookup-service.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 3027,
+      "title": "BIN Lookup Service and `TMS`",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_tms_developer_all_rest_tms_tms-card-art.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 547,
+      "title": "Card Art",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_tms_developer_all_rest_tms_tms-create-request.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 2413,
+      "title": "Requesting the `Token Management Service` API",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_tms_developer_all_rest_tms_tms-cust-tkn.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "tiny stub without procedural content"
+      ],
+      "bytes": 230,
+      "title": "Customer Tokens",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_tms_developer_all_rest_tms_tms-cust-tkn_tms-cust-pi-tkn.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "tiny stub without procedural content"
+      ],
+      "bytes": 316,
+      "title": "Customer Payment Instruments",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_tms_developer_all_rest_tms_tms-cust-tkn_tms-ship-tkn.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 448,
+      "title": "Shipping Address Tokens",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_tms_developer_all_rest_tms_tms-ii-tkn.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 1693,
+      "title": "Instrument Identifier Tokens",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_tms_developer_all_rest_tms_tms-net-tkn-intro.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 3708,
+      "title": "Manage Network Tokens",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_tms_developer_all_rest_tms_tms-net-tkn-onboard.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "constraint facts (TTL/PCI/header/reuse/encryption) \u2014 eligible regardless of length"
+      ],
+      "bytes": 3165,
+      "title": "Network Tokenization Overview",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_tms_developer_all_rest_tms_tms-onboarding.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "short page dominated by links / jumplist"
+      ],
+      "bytes": 783,
+      "title": "`Token Management Service` Onboarding",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_tms_developer_all_rest_tms_tms-overview.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 2071,
+      "title": "Introduction to the `Token Management Service`",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_tms_developer_all_rest_tms_tms-pi-tkn.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "tiny stub without procedural content"
+      ],
+      "bytes": 318,
+      "title": "Payment Instrument Tokens",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_tms_developer_all_rest_tms_tms-wallet-tkn.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 210,
+      "title": "Using `Token Management Service` with Wallet Apps",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_tms_developer_ctv_rest_tms.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 453187,
+      "title": "`Token Management Service` Developer Guide",
+      "quarantined": false
+    },
+    {
+      "path": "payer-auth.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 703277,
+      "title": "Source: https://developer.cybersource.com/docs/cybs/en-us/payer-authentication/developer/all/rest/payer-auth.md",
+      "quarantined": false
+    },
+    {
+      "path": "payments.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 397567,
+      "title": "Source: https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.md",
+      "quarantined": false
+    },
+    {
+      "path": "rest-getting-started.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "filename matches how-to / task guide"
+      ],
+      "bytes": 208687,
+      "title": "Source: https://developer.cybersource.com/docs/cybs/en-us/platform/developer/all/rest/rest-getting-started.md",
+      "quarantined": false
+    },
+    {
+      "path": "sandbox.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 622,
+      "title": "Source: https://developer.cybersource.com/hello-world/sandbox.md",
+      "quarantined": false
+    },
+    {
+      "path": "testing-guide.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 5288,
+      "title": "Source: https://developer.cybersource.com/hello-world/testing-guide.md",
+      "quarantined": false
+    },
+    {
+      "path": "tms.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 776264,
+      "title": "Source: https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.md",
+      "quarantined": false
+    }
+  ],
+  "quarantine_list": [
+    {
+      "path": "en-us_payer-authentication_developer_all_rest_payer-auth_pa-testing-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 400,
+      "title": "Testing Payer Authentication",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_payer-authentication_developer_all_rest_payer-auth_pa2-ccdc-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 2452,
+      "title": "Implementing Direct API for Payer Authentication",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_payments_developer_ctv_rest_payments_payments-debit-prepaid-process-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 688,
+      "title": "Debit and Prepaid Card Processing",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_payments_developer_ctv_rest_payments_payments-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 914,
+      "title": "Introduction to Payments",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_payments_developer_ctv_rest_payments_payments-processing-basic-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 229,
+      "title": "Standard Payment Processing",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_tms_developer_all_rest_tms_tms-cust-tkn.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "tiny stub without procedural content"
+      ],
+      "bytes": 230,
+      "title": "Customer Tokens",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_tms_developer_all_rest_tms_tms-cust-tkn_tms-cust-pi-tkn.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "tiny stub without procedural content"
+      ],
+      "bytes": 316,
+      "title": "Customer Payment Instruments",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_tms_developer_all_rest_tms_tms-onboarding.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "short page dominated by links / jumplist"
+      ],
+      "bytes": 783,
+      "title": "`Token Management Service` Onboarding",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_tms_developer_all_rest_tms_tms-pi-tkn.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "tiny stub without procedural content"
+      ],
+      "bytes": 318,
+      "title": "Payment Instrument Tokens",
+      "quarantined": true
+    }
+  ]
+}

@@ -1,0 +1,796 @@
+{
+  "product": "payments",
+  "wave": 1,
+  "docs_dir": "data/products/payments/guides",
+  "openapi_source_id": "cybersource-payments-openapi",
+  "sources": [
+    {
+      "source_id": "cybersource-payments-openapi",
+      "source_type": "openapi",
+      "canonical_url": "https://developer.cybersource.com/api-reference-assets/specs/cybs_merged.json",
+      "repo_path": "data/content_engine/specs/cybersource-payments.openapi.json",
+      "owning_team": "payments-docs",
+      "product": [
+        "payments",
+        "cybersource"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "refresh_cadence": "manual-upstream-snapshot",
+      "trust_level": "trusted",
+      "parser_strategy": "openapi_parser",
+      "enabled": true,
+      "linked_workflow_id": null,
+      "scope": "/pts/",
+      "notes": "Payments Transaction Service paths from public cybs_merged.json; examples stripped."
+    },
+    {
+      "source_id": "payments-core-openapi",
+      "source_type": "openapi",
+      "canonical_url": "local://fixtures/payments-core.openapi.json",
+      "repo_path": "data/content_engine/specs/payments-core.openapi.json",
+      "owning_team": "payments-docs",
+      "product": [
+        "payments",
+        "cybersource",
+        "lab"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "refresh_cadence": "manual-fixture",
+      "trust_level": "experimental",
+      "parser_strategy": "openapi_parser",
+      "enabled": true,
+      "linked_workflow_id": "microform-payer-auth-state-machine",
+      "notes": "Practice fixture (8 ops). Engine unit tests only \u2014 not the Wave 1 denominator.",
+      "fixture": true
+    },
+    {
+      "source_id": "cybersource-payments-core-openapi",
+      "source_type": "openapi",
+      "canonical_url": "local://fixtures/payments-core.openapi.json",
+      "repo_path": "data/content_engine/specs/cybersource-payments-core.openapi.json",
+      "owning_team": "payments-docs",
+      "product": [
+        "payments",
+        "cybersource",
+        "lab"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "refresh_cadence": "manual-fixture",
+      "trust_level": "experimental",
+      "parser_strategy": "openapi_parser",
+      "enabled": false,
+      "linked_workflow_id": null,
+      "notes": "Disabled alias of the practice fixture. Use payments-core-openapi for tests; cybersource-payments-openapi for Wave 1.",
+      "fixture": true
+    },
+    {
+      "source_id": "payments-guide-credentials",
+      "source_type": "guide",
+      "canonical_url": "https://developer.cybersource.com/docs/cybs/credentials.md",
+      "repo_path": "data/products/payments/guides/credentials.md",
+      "owning_team": "payments-docs",
+      "product": [
+        "payments",
+        "cybersource"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "refresh_cadence": "corpus",
+      "trust_level": "trusted",
+      "parser_strategy": "markdown_native",
+      "enabled": true,
+      "linked_workflow_id": null
+    },
+    {
+      "source_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md",
+      "source_type": "guide",
+      "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.md",
+      "repo_path": "data/products/payments/guides/en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md.md",
+      "owning_team": "payments-docs",
+      "product": [
+        "payments",
+        "cybersource"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "refresh_cadence": "corpus",
+      "trust_level": "trusted",
+      "parser_strategy": "markdown_native",
+      "enabled": true,
+      "linked_workflow_id": null
+    },
+    {
+      "source_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_ctp-intro.md",
+      "source_type": "guide",
+      "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex/ctp-intro.md",
+      "repo_path": "data/products/payments/guides/en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_ctp-intro.md.md",
+      "owning_team": "payments-docs",
+      "product": [
+        "payments",
+        "cybersource"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "refresh_cadence": "corpus",
+      "trust_level": "trusted",
+      "parser_strategy": "markdown_native",
+      "enabled": true,
+      "linked_workflow_id": null
+    },
+    {
+      "source_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_da-payments.md",
+      "source_type": "guide",
+      "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex/da-payments.md",
+      "repo_path": "data/products/payments/guides/en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_da-payments.md.md",
+      "owning_team": "payments-docs",
+      "product": [
+        "payments",
+        "cybersource"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "refresh_cadence": "corpus",
+      "trust_level": "trusted",
+      "parser_strategy": "markdown_native",
+      "enabled": true,
+      "linked_workflow_id": null
+    },
+    {
+      "source_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_flex-api-2.md",
+      "source_type": "guide",
+      "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex/flex-api-2.md",
+      "repo_path": "data/products/payments/guides/en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_flex-api-2.md.md",
+      "owning_team": "payments-docs",
+      "product": [
+        "payments",
+        "cybersource"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "refresh_cadence": "corpus",
+      "trust_level": "trusted",
+      "parser_strategy": "markdown_native",
+      "enabled": true,
+      "linked_workflow_id": null
+    },
+    {
+      "source_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_microform-integ",
+      "source_type": "guide",
+      "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex/microform-integ-v2.md",
+      "repo_path": "data/products/payments/guides/en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_microform-integ-v2.md.md",
+      "owning_team": "payments-docs",
+      "product": [
+        "payments",
+        "cybersource"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "refresh_cadence": "corpus",
+      "trust_level": "trusted",
+      "parser_strategy": "markdown_native",
+      "enabled": true,
+      "linked_workflow_id": null
+    },
+    {
+      "source_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_payments_intro_",
+      "source_type": "guide",
+      "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex/payments/intro/digt/accpt/sec/intg.md",
+      "repo_path": "data/products/payments/guides/en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_payments_intro_digt_accpt_sec_intg.md.md",
+      "owning_team": "payments-docs",
+      "product": [
+        "payments",
+        "cybersource"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "refresh_cadence": "corpus",
+      "trust_level": "trusted",
+      "parser_strategy": "markdown_native",
+      "enabled": true,
+      "linked_workflow_id": null
+    },
+    {
+      "source_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_uc-intro.md",
+      "source_type": "guide",
+      "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex/uc-intro.md",
+      "repo_path": "data/products/payments/guides/en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_uc-intro.md.md",
+      "owning_team": "payments-docs",
+      "product": [
+        "payments",
+        "cybersource"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "refresh_cadence": "corpus",
+      "trust_level": "trusted",
+      "parser_strategy": "markdown_native",
+      "enabled": true,
+      "linked_workflow_id": null
+    },
+    {
+      "source_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth.md",
+      "source_type": "guide",
+      "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/payer-authentication/developer/all/rest/payer-auth.md",
+      "repo_path": "data/products/payments/guides/en-us_payer-authentication_developer_all_rest_payer-auth.md.md",
+      "owning_team": "payments-docs",
+      "product": [
+        "payments",
+        "cybersource"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "refresh_cadence": "corpus",
+      "trust_level": "trusted",
+      "parser_strategy": "markdown_native",
+      "enabled": true,
+      "linked_workflow_id": null
+    },
+    {
+      "source_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth_pa-reports-intro.md",
+      "source_type": "guide",
+      "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/payer-authentication/developer/all/rest/payer-auth/pa-reports-intro.md",
+      "repo_path": "data/products/payments/guides/en-us_payer-authentication_developer_all_rest_payer-auth_pa-reports-intro.md.md",
+      "owning_team": "payments-docs",
+      "product": [
+        "payments",
+        "cybersource"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "refresh_cadence": "corpus",
+      "trust_level": "trusted",
+      "parser_strategy": "markdown_native",
+      "enabled": true,
+      "linked_workflow_id": null
+    },
+    {
+      "source_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth_pa-testing-intro.md",
+      "source_type": "guide",
+      "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/payer-authentication/developer/all/rest/payer-auth/pa-testing-intro.md",
+      "repo_path": "data/products/payments/guides/en-us_payer-authentication_developer_all_rest_payer-auth_pa-testing-intro.md.md",
+      "owning_team": "payments-docs",
+      "product": [
+        "payments",
+        "cybersource"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "refresh_cadence": "corpus",
+      "trust_level": "trusted",
+      "parser_strategy": "markdown_native",
+      "enabled": true,
+      "linked_workflow_id": null
+    },
+    {
+      "source_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth_pa2-ccdc-intro.md",
+      "source_type": "guide",
+      "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/payer-authentication/developer/all/rest/payer-auth/pa2-ccdc-intro.md",
+      "repo_path": "data/products/payments/guides/en-us_payer-authentication_developer_all_rest_payer-auth_pa2-ccdc-intro.md.md",
+      "owning_team": "payments-docs",
+      "product": [
+        "payments",
+        "cybersource"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "refresh_cadence": "corpus",
+      "trust_level": "trusted",
+      "parser_strategy": "markdown_native",
+      "enabled": true,
+      "linked_workflow_id": null
+    },
+    {
+      "source_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth_pa2-intro-intro.md",
+      "source_type": "guide",
+      "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/payer-authentication/developer/all/rest/payer-auth/pa2-intro-intro.md",
+      "repo_path": "data/products/payments/guides/en-us_payer-authentication_developer_all_rest_payer-auth_pa2-intro-intro.md.md",
+      "owning_team": "payments-docs",
+      "product": [
+        "payments",
+        "cybersource"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "refresh_cadence": "corpus",
+      "trust_level": "trusted",
+      "parser_strategy": "markdown_native",
+      "enabled": true,
+      "linked_workflow_id": null
+    },
+    {
+      "source_id": "payments-guide-en-us_payments_developer_ctv_rest_payments.md",
+      "source_type": "guide",
+      "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.md",
+      "repo_path": "data/products/payments/guides/en-us_payments_developer_ctv_rest_payments.md.md",
+      "owning_team": "payments-docs",
+      "product": [
+        "payments",
+        "cybersource"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "refresh_cadence": "corpus",
+      "trust_level": "trusted",
+      "parser_strategy": "markdown_native",
+      "enabled": true,
+      "linked_workflow_id": null
+    },
+    {
+      "source_id": "payments-guide-en-us_payments_developer_ctv_rest_payments_payments-debit-prepaid-process-intro.",
+      "source_type": "guide",
+      "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments/payments-debit-prepaid-process-intro.md",
+      "repo_path": "data/products/payments/guides/en-us_payments_developer_ctv_rest_payments_payments-debit-prepaid-process-intro.md.md",
+      "owning_team": "payments-docs",
+      "product": [
+        "payments",
+        "cybersource"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "refresh_cadence": "corpus",
+      "trust_level": "trusted",
+      "parser_strategy": "markdown_native",
+      "enabled": true,
+      "linked_workflow_id": null
+    },
+    {
+      "source_id": "payments-guide-en-us_payments_developer_ctv_rest_payments_payments-intro.md",
+      "source_type": "guide",
+      "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments/payments-intro.md",
+      "repo_path": "data/products/payments/guides/en-us_payments_developer_ctv_rest_payments_payments-intro.md.md",
+      "owning_team": "payments-docs",
+      "product": [
+        "payments",
+        "cybersource"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "refresh_cadence": "corpus",
+      "trust_level": "trusted",
+      "parser_strategy": "markdown_native",
+      "enabled": true,
+      "linked_workflow_id": null
+    },
+    {
+      "source_id": "payments-guide-en-us_payments_developer_ctv_rest_payments_payments-processing-basic-intro.md",
+      "source_type": "guide",
+      "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments/payments-processing-basic-intro.md",
+      "repo_path": "data/products/payments/guides/en-us_payments_developer_ctv_rest_payments_payments-processing-basic-intro.md.md",
+      "owning_team": "payments-docs",
+      "product": [
+        "payments",
+        "cybersource"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "refresh_cadence": "corpus",
+      "trust_level": "trusted",
+      "parser_strategy": "markdown_native",
+      "enabled": true,
+      "linked_workflow_id": null
+    },
+    {
+      "source_id": "payments-guide-en-us_tms_developer_all_rest_tms.md",
+      "source_type": "guide",
+      "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.md",
+      "repo_path": "data/products/payments/guides/en-us_tms_developer_all_rest_tms.md.md",
+      "owning_team": "payments-docs",
+      "product": [
+        "payments",
+        "cybersource"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "refresh_cadence": "corpus",
+      "trust_level": "trusted",
+      "parser_strategy": "markdown_native",
+      "enabled": true,
+      "linked_workflow_id": null
+    },
+    {
+      "source_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-bin-lookup-service.md",
+      "source_type": "guide",
+      "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms/tms-bin-lookup-service.md",
+      "repo_path": "data/products/payments/guides/en-us_tms_developer_all_rest_tms_tms-bin-lookup-service.md.md",
+      "owning_team": "payments-docs",
+      "product": [
+        "payments",
+        "cybersource"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "refresh_cadence": "corpus",
+      "trust_level": "trusted",
+      "parser_strategy": "markdown_native",
+      "enabled": true,
+      "linked_workflow_id": null
+    },
+    {
+      "source_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-card-art.md",
+      "source_type": "guide",
+      "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms/tms-card-art.md",
+      "repo_path": "data/products/payments/guides/en-us_tms_developer_all_rest_tms_tms-card-art.md.md",
+      "owning_team": "payments-docs",
+      "product": [
+        "payments",
+        "cybersource"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "refresh_cadence": "corpus",
+      "trust_level": "trusted",
+      "parser_strategy": "markdown_native",
+      "enabled": true,
+      "linked_workflow_id": null
+    },
+    {
+      "source_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-create-request.md",
+      "source_type": "guide",
+      "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms/tms-create-request.md",
+      "repo_path": "data/products/payments/guides/en-us_tms_developer_all_rest_tms_tms-create-request.md.md",
+      "owning_team": "payments-docs",
+      "product": [
+        "payments",
+        "cybersource"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "refresh_cadence": "corpus",
+      "trust_level": "trusted",
+      "parser_strategy": "markdown_native",
+      "enabled": true,
+      "linked_workflow_id": null
+    },
+    {
+      "source_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-cust-tkn.md",
+      "source_type": "guide",
+      "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms/tms-cust-tkn.md",
+      "repo_path": "data/products/payments/guides/en-us_tms_developer_all_rest_tms_tms-cust-tkn.md.md",
+      "owning_team": "payments-docs",
+      "product": [
+        "payments",
+        "cybersource"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "refresh_cadence": "corpus",
+      "trust_level": "trusted",
+      "parser_strategy": "markdown_native",
+      "enabled": true,
+      "linked_workflow_id": null
+    },
+    {
+      "source_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-cust-tkn_tms-cust-pi-tkn.md",
+      "source_type": "guide",
+      "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms/tms-cust-tkn/tms-cust-pi-tkn.md",
+      "repo_path": "data/products/payments/guides/en-us_tms_developer_all_rest_tms_tms-cust-tkn_tms-cust-pi-tkn.md.md",
+      "owning_team": "payments-docs",
+      "product": [
+        "payments",
+        "cybersource"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "refresh_cadence": "corpus",
+      "trust_level": "trusted",
+      "parser_strategy": "markdown_native",
+      "enabled": true,
+      "linked_workflow_id": null
+    },
+    {
+      "source_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-cust-tkn_tms-ship-tkn.md",
+      "source_type": "guide",
+      "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms/tms-cust-tkn/tms-ship-tkn.md",
+      "repo_path": "data/products/payments/guides/en-us_tms_developer_all_rest_tms_tms-cust-tkn_tms-ship-tkn.md.md",
+      "owning_team": "payments-docs",
+      "product": [
+        "payments",
+        "cybersource"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "refresh_cadence": "corpus",
+      "trust_level": "trusted",
+      "parser_strategy": "markdown_native",
+      "enabled": true,
+      "linked_workflow_id": null
+    },
+    {
+      "source_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-ii-tkn.md",
+      "source_type": "guide",
+      "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms/tms-ii-tkn.md",
+      "repo_path": "data/products/payments/guides/en-us_tms_developer_all_rest_tms_tms-ii-tkn.md.md",
+      "owning_team": "payments-docs",
+      "product": [
+        "payments",
+        "cybersource"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "refresh_cadence": "corpus",
+      "trust_level": "trusted",
+      "parser_strategy": "markdown_native",
+      "enabled": true,
+      "linked_workflow_id": null
+    },
+    {
+      "source_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-net-tkn-intro.md",
+      "source_type": "guide",
+      "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms/tms-net-tkn-intro.md",
+      "repo_path": "data/products/payments/guides/en-us_tms_developer_all_rest_tms_tms-net-tkn-intro.md.md",
+      "owning_team": "payments-docs",
+      "product": [
+        "payments",
+        "cybersource"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "refresh_cadence": "corpus",
+      "trust_level": "trusted",
+      "parser_strategy": "markdown_native",
+      "enabled": true,
+      "linked_workflow_id": null
+    },
+    {
+      "source_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-net-tkn-onboard.md",
+      "source_type": "guide",
+      "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms/tms-net-tkn-onboard.md",
+      "repo_path": "data/products/payments/guides/en-us_tms_developer_all_rest_tms_tms-net-tkn-onboard.md.md",
+      "owning_team": "payments-docs",
+      "product": [
+        "payments",
+        "cybersource"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "refresh_cadence": "corpus",
+      "trust_level": "trusted",
+      "parser_strategy": "markdown_native",
+      "enabled": true,
+      "linked_workflow_id": null
+    },
+    {
+      "source_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-onboarding.md",
+      "source_type": "guide",
+      "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms/tms-onboarding.md",
+      "repo_path": "data/products/payments/guides/en-us_tms_developer_all_rest_tms_tms-onboarding.md.md",
+      "owning_team": "payments-docs",
+      "product": [
+        "payments",
+        "cybersource"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "refresh_cadence": "corpus",
+      "trust_level": "trusted",
+      "parser_strategy": "markdown_native",
+      "enabled": true,
+      "linked_workflow_id": null
+    },
+    {
+      "source_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-overview.md",
+      "source_type": "guide",
+      "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms/tms-overview.md",
+      "repo_path": "data/products/payments/guides/en-us_tms_developer_all_rest_tms_tms-overview.md.md",
+      "owning_team": "payments-docs",
+      "product": [
+        "payments",
+        "cybersource"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "refresh_cadence": "corpus",
+      "trust_level": "trusted",
+      "parser_strategy": "markdown_native",
+      "enabled": true,
+      "linked_workflow_id": null
+    },
+    {
+      "source_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-pi-tkn.md",
+      "source_type": "guide",
+      "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms/tms-pi-tkn.md",
+      "repo_path": "data/products/payments/guides/en-us_tms_developer_all_rest_tms_tms-pi-tkn.md.md",
+      "owning_team": "payments-docs",
+      "product": [
+        "payments",
+        "cybersource"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "refresh_cadence": "corpus",
+      "trust_level": "trusted",
+      "parser_strategy": "markdown_native",
+      "enabled": true,
+      "linked_workflow_id": null
+    },
+    {
+      "source_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-wallet-tkn.md",
+      "source_type": "guide",
+      "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms/tms-wallet-tkn.md",
+      "repo_path": "data/products/payments/guides/en-us_tms_developer_all_rest_tms_tms-wallet-tkn.md.md",
+      "owning_team": "payments-docs",
+      "product": [
+        "payments",
+        "cybersource"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "refresh_cadence": "corpus",
+      "trust_level": "trusted",
+      "parser_strategy": "markdown_native",
+      "enabled": true,
+      "linked_workflow_id": null
+    },
+    {
+      "source_id": "payments-guide-en-us_tms_developer_ctv_rest_tms.md",
+      "source_type": "guide",
+      "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/ctv/rest/tms.md",
+      "repo_path": "data/products/payments/guides/en-us_tms_developer_ctv_rest_tms.md.md",
+      "owning_team": "payments-docs",
+      "product": [
+        "payments",
+        "cybersource"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "refresh_cadence": "corpus",
+      "trust_level": "trusted",
+      "parser_strategy": "markdown_native",
+      "enabled": true,
+      "linked_workflow_id": null
+    },
+    {
+      "source_id": "payments-guide-payer-auth",
+      "source_type": "guide",
+      "canonical_url": "https://developer.cybersource.com/docs/cybs/payer-auth.md",
+      "repo_path": "data/products/payments/guides/payer-auth.md",
+      "owning_team": "payments-docs",
+      "product": [
+        "payments",
+        "cybersource"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "refresh_cadence": "corpus",
+      "trust_level": "trusted",
+      "parser_strategy": "markdown_native",
+      "enabled": true,
+      "linked_workflow_id": null
+    },
+    {
+      "source_id": "payments-guide-payments",
+      "source_type": "guide",
+      "canonical_url": "https://developer.cybersource.com/docs/cybs/payments.md",
+      "repo_path": "data/products/payments/guides/payments.md",
+      "owning_team": "payments-docs",
+      "product": [
+        "payments",
+        "cybersource"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "refresh_cadence": "corpus",
+      "trust_level": "trusted",
+      "parser_strategy": "markdown_native",
+      "enabled": true,
+      "linked_workflow_id": null
+    },
+    {
+      "source_id": "payments-guide-rest-getting-started",
+      "source_type": "guide",
+      "canonical_url": "https://developer.cybersource.com/docs/cybs/rest-getting-started.md",
+      "repo_path": "data/products/payments/guides/rest-getting-started.md",
+      "owning_team": "payments-docs",
+      "product": [
+        "payments",
+        "cybersource"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "refresh_cadence": "corpus",
+      "trust_level": "trusted",
+      "parser_strategy": "markdown_native",
+      "enabled": true,
+      "linked_workflow_id": null
+    },
+    {
+      "source_id": "payments-guide-sandbox",
+      "source_type": "guide",
+      "canonical_url": "https://developer.cybersource.com/docs/cybs/sandbox.md",
+      "repo_path": "data/products/payments/guides/sandbox.md",
+      "owning_team": "payments-docs",
+      "product": [
+        "payments",
+        "cybersource"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "refresh_cadence": "corpus",
+      "trust_level": "trusted",
+      "parser_strategy": "markdown_native",
+      "enabled": true,
+      "linked_workflow_id": null
+    },
+    {
+      "source_id": "payments-guide-testing-guide",
+      "source_type": "guide",
+      "canonical_url": "https://developer.cybersource.com/docs/cybs/testing-guide.md",
+      "repo_path": "data/products/payments/guides/testing-guide.md",
+      "owning_team": "payments-docs",
+      "product": [
+        "payments",
+        "cybersource"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "refresh_cadence": "corpus",
+      "trust_level": "trusted",
+      "parser_strategy": "markdown_native",
+      "enabled": true,
+      "linked_workflow_id": null
+    },
+    {
+      "source_id": "payments-guide-tms",
+      "source_type": "guide",
+      "canonical_url": "https://developer.cybersource.com/docs/cybs/tms.md",
+      "repo_path": "data/products/payments/guides/tms.md",
+      "owning_team": "payments-docs",
+      "product": [
+        "payments",
+        "cybersource"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "refresh_cadence": "corpus",
+      "trust_level": "trusted",
+      "parser_strategy": "markdown_native",
+      "enabled": true,
+      "linked_workflow_id": null
+    }
+  ],
+  "note": "Wave 1 complete: pages generated from real /pts/ OpenAPI extracted from developer.cybersource.com cybs_merged.json. payments-core-openapi remains the local practice fixture for engine unit tests only."
+}

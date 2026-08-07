@@ -1,0 +1,456 @@
+{
+  "stage": "specs_to_docs_eval_seeds",
+  "source_id": "cybersource-payments-openapi",
+  "seeds": [
+    {
+      "seed_id": "createPullFundsTransfer-happy-path",
+      "kind": "happy_path",
+      "operation_id": "createPullFundsTransfer",
+      "user_query": "Call POST /pts/v1/pull-funds-transfer successfully in sandbox",
+      "expected_doc_types": [
+        "api_reference",
+        "quickstart"
+      ],
+      "success_criteria": [
+        "Uses sandbox host only",
+        "Does not include raw PAN or secrets",
+        "Mentions required auth scheme"
+      ]
+    },
+    {
+      "seed_id": "createPullFundsRefund-happy-path",
+      "kind": "happy_path",
+      "operation_id": "createPullFundsRefund",
+      "user_query": "Call POST /pts/v1/pull-funds-transfer/{id}/refund successfully in sandbox",
+      "expected_doc_types": [
+        "api_reference",
+        "quickstart"
+      ],
+      "success_criteria": [
+        "Uses sandbox host only",
+        "Does not include raw PAN or secrets",
+        "Mentions required auth scheme"
+      ]
+    },
+    {
+      "seed_id": "createPullFundsReversal-happy-path",
+      "kind": "happy_path",
+      "operation_id": "createPullFundsReversal",
+      "user_query": "Call POST /pts/v1/pull-funds-transfer/{id}/reversal successfully in sandbox",
+      "expected_doc_types": [
+        "api_reference",
+        "quickstart"
+      ],
+      "success_criteria": [
+        "Uses sandbox host only",
+        "Does not include raw PAN or secrets",
+        "Mentions required auth scheme"
+      ]
+    },
+    {
+      "seed_id": "getTransactionBatchDetails-happy-path",
+      "kind": "happy_path",
+      "operation_id": "getTransactionBatchDetails",
+      "user_query": "Call GET /pts/v1/transaction-batch-details/{id} successfully in sandbox",
+      "expected_doc_types": [
+        "api_reference",
+        "quickstart"
+      ],
+      "success_criteria": [
+        "Uses sandbox host only",
+        "Does not include raw PAN or secrets",
+        "Mentions required auth scheme"
+      ]
+    },
+    {
+      "seed_id": "getTransactionBatches-happy-path",
+      "kind": "happy_path",
+      "operation_id": "getTransactionBatches",
+      "user_query": "Call GET /pts/v1/transaction-batches successfully in sandbox",
+      "expected_doc_types": [
+        "api_reference",
+        "quickstart"
+      ],
+      "success_criteria": [
+        "Uses sandbox host only",
+        "Does not include raw PAN or secrets",
+        "Mentions required auth scheme"
+      ]
+    },
+    {
+      "seed_id": "getTransactionBatchId-happy-path",
+      "kind": "happy_path",
+      "operation_id": "getTransactionBatchId",
+      "user_query": "Call GET /pts/v1/transaction-batches/{id} successfully in sandbox",
+      "expected_doc_types": [
+        "api_reference",
+        "quickstart"
+      ],
+      "success_criteria": [
+        "Uses sandbox host only",
+        "Does not include raw PAN or secrets",
+        "Mentions required auth scheme"
+      ]
+    },
+    {
+      "seed_id": "billingAgreementsRegistration-happy-path",
+      "kind": "happy_path",
+      "operation_id": "billingAgreementsRegistration",
+      "user_query": "Call POST /pts/v2/billing-agreements successfully in sandbox",
+      "expected_doc_types": [
+        "api_reference",
+        "quickstart"
+      ],
+      "success_criteria": [
+        "Uses sandbox host only",
+        "Does not include raw PAN or secrets",
+        "Mentions required auth scheme"
+      ]
+    },
+    {
+      "seed_id": "billingAgreementsDeRegistration-happy-path",
+      "kind": "happy_path",
+      "operation_id": "billingAgreementsDeRegistration",
+      "user_query": "Call PATCH /pts/v2/billing-agreements/{id} successfully in sandbox",
+      "expected_doc_types": [
+        "api_reference",
+        "quickstart"
+      ],
+      "success_criteria": [
+        "Uses sandbox host only",
+        "Does not include raw PAN or secrets",
+        "Mentions required auth scheme"
+      ]
+    },
+    {
+      "seed_id": "billingAgreementsIntimation-happy-path",
+      "kind": "happy_path",
+      "operation_id": "billingAgreementsIntimation",
+      "user_query": "Call POST /pts/v2/billing-agreements/{id}/intimations successfully in sandbox",
+      "expected_doc_types": [
+        "api_reference",
+        "quickstart"
+      ],
+      "success_criteria": [
+        "Uses sandbox host only",
+        "Does not include raw PAN or secrets",
+        "Mentions required auth scheme"
+      ]
+    },
+    {
+      "seed_id": "refundCapture-happy-path",
+      "kind": "happy_path",
+      "operation_id": "refundCapture",
+      "user_query": "Call POST /pts/v2/captures/{id}/refunds successfully in sandbox",
+      "expected_doc_types": [
+        "api_reference",
+        "quickstart"
+      ],
+      "success_criteria": [
+        "Uses sandbox host only",
+        "Does not include raw PAN or secrets",
+        "Mentions required auth scheme"
+      ]
+    },
+    {
+      "seed_id": "voidCapture-happy-path",
+      "kind": "happy_path",
+      "operation_id": "voidCapture",
+      "user_query": "Call POST /pts/v2/captures/{id}/voids successfully in sandbox",
+      "expected_doc_types": [
+        "api_reference",
+        "quickstart"
+      ],
+      "success_criteria": [
+        "Uses sandbox host only",
+        "Does not include raw PAN or secrets",
+        "Mentions required auth scheme"
+      ]
+    },
+    {
+      "seed_id": "createCredit-happy-path",
+      "kind": "happy_path",
+      "operation_id": "createCredit",
+      "user_query": "Call POST /pts/v2/credits successfully in sandbox",
+      "expected_doc_types": [
+        "api_reference",
+        "quickstart"
+      ],
+      "success_criteria": [
+        "Uses sandbox host only",
+        "Does not include raw PAN or secrets",
+        "Mentions required auth scheme"
+      ]
+    },
+    {
+      "seed_id": "voidCredit-happy-path",
+      "kind": "happy_path",
+      "operation_id": "voidCredit",
+      "user_query": "Call POST /pts/v2/credits/{id}/voids successfully in sandbox",
+      "expected_doc_types": [
+        "api_reference",
+        "quickstart"
+      ],
+      "success_criteria": [
+        "Uses sandbox host only",
+        "Does not include raw PAN or secrets",
+        "Mentions required auth scheme"
+      ]
+    },
+    {
+      "seed_id": "createOrder-happy-path",
+      "kind": "happy_path",
+      "operation_id": "createOrder",
+      "user_query": "Call POST /pts/v2/intents successfully in sandbox",
+      "expected_doc_types": [
+        "api_reference",
+        "quickstart"
+      ],
+      "success_criteria": [
+        "Uses sandbox host only",
+        "Does not include raw PAN or secrets",
+        "Mentions required auth scheme"
+      ]
+    },
+    {
+      "seed_id": "updateOrder-happy-path",
+      "kind": "happy_path",
+      "operation_id": "updateOrder",
+      "user_query": "Call PATCH /pts/v2/intents/{id} successfully in sandbox",
+      "expected_doc_types": [
+        "api_reference",
+        "quickstart"
+      ],
+      "success_criteria": [
+        "Uses sandbox host only",
+        "Does not include raw PAN or secrets",
+        "Mentions required auth scheme"
+      ]
+    },
+    {
+      "seed_id": "createSessionRequest-happy-path",
+      "kind": "happy_path",
+      "operation_id": "createSessionRequest",
+      "user_query": "Call POST /pts/v2/payment-references successfully in sandbox",
+      "expected_doc_types": [
+        "api_reference",
+        "quickstart"
+      ],
+      "success_criteria": [
+        "Uses sandbox host only",
+        "Does not include raw PAN or secrets",
+        "Mentions required auth scheme"
+      ]
+    },
+    {
+      "seed_id": "updateSessionRequest-happy-path",
+      "kind": "happy_path",
+      "operation_id": "updateSessionRequest",
+      "user_query": "Call PATCH /pts/v2/payment-references/{id} successfully in sandbox",
+      "expected_doc_types": [
+        "api_reference",
+        "quickstart"
+      ],
+      "success_criteria": [
+        "Uses sandbox host only",
+        "Does not include raw PAN or secrets",
+        "Mentions required auth scheme"
+      ]
+    },
+    {
+      "seed_id": "createOrderRequest-happy-path",
+      "kind": "happy_path",
+      "operation_id": "createOrderRequest",
+      "user_query": "Call POST /pts/v2/payment-references/{id}/intents successfully in sandbox",
+      "expected_doc_types": [
+        "api_reference",
+        "quickstart"
+      ],
+      "success_criteria": [
+        "Uses sandbox host only",
+        "Does not include raw PAN or secrets",
+        "Mentions required auth scheme"
+      ]
+    },
+    {
+      "seed_id": "retrieveOrDeletePaymentToken-happy-path",
+      "kind": "happy_path",
+      "operation_id": "retrieveOrDeletePaymentToken",
+      "user_query": "Call POST /pts/v2/payment-tokens successfully in sandbox",
+      "expected_doc_types": [
+        "api_reference",
+        "quickstart"
+      ],
+      "success_criteria": [
+        "Uses sandbox host only",
+        "Does not include raw PAN or secrets",
+        "Mentions required auth scheme"
+      ]
+    },
+    {
+      "seed_id": "createPayment-happy-path",
+      "kind": "happy_path",
+      "operation_id": "createPayment",
+      "user_query": "Call POST /pts/v2/payments successfully in sandbox",
+      "expected_doc_types": [
+        "api_reference",
+        "quickstart"
+      ],
+      "success_criteria": [
+        "Uses sandbox host only",
+        "Does not include raw PAN or secrets",
+        "Mentions required auth scheme"
+      ]
+    },
+    {
+      "seed_id": "incrementAuth-happy-path",
+      "kind": "happy_path",
+      "operation_id": "incrementAuth",
+      "user_query": "Call PATCH /pts/v2/payments/{id} successfully in sandbox",
+      "expected_doc_types": [
+        "api_reference",
+        "quickstart"
+      ],
+      "success_criteria": [
+        "Uses sandbox host only",
+        "Does not include raw PAN or secrets",
+        "Mentions required auth scheme"
+      ]
+    },
+    {
+      "seed_id": "capturePayment-happy-path",
+      "kind": "happy_path",
+      "operation_id": "capturePayment",
+      "user_query": "Call POST /pts/v2/payments/{id}/captures successfully in sandbox",
+      "expected_doc_types": [
+        "api_reference",
+        "quickstart"
+      ],
+      "success_criteria": [
+        "Uses sandbox host only",
+        "Does not include raw PAN or secrets",
+        "Mentions required auth scheme"
+      ]
+    },
+    {
+      "seed_id": "refundPayment-happy-path",
+      "kind": "happy_path",
+      "operation_id": "refundPayment",
+      "user_query": "Call POST /pts/v2/payments/{id}/refunds successfully in sandbox",
+      "expected_doc_types": [
+        "api_reference",
+        "quickstart"
+      ],
+      "success_criteria": [
+        "Uses sandbox host only",
+        "Does not include raw PAN or secrets",
+        "Mentions required auth scheme"
+      ]
+    },
+    {
+      "seed_id": "authReversal-happy-path",
+      "kind": "happy_path",
+      "operation_id": "authReversal",
+      "user_query": "Call POST /pts/v2/payments/{id}/reversals successfully in sandbox",
+      "expected_doc_types": [
+        "api_reference",
+        "quickstart"
+      ],
+      "success_criteria": [
+        "Uses sandbox host only",
+        "Does not include raw PAN or secrets",
+        "Mentions required auth scheme"
+      ]
+    },
+    {
+      "seed_id": "voidPayment-happy-path",
+      "kind": "happy_path",
+      "operation_id": "voidPayment",
+      "user_query": "Call POST /pts/v2/payments/{id}/voids successfully in sandbox",
+      "expected_doc_types": [
+        "api_reference",
+        "quickstart"
+      ],
+      "success_criteria": [
+        "Uses sandbox host only",
+        "Does not include raw PAN or secrets",
+        "Mentions required auth scheme"
+      ]
+    },
+    {
+      "seed_id": "octCreatePayment-happy-path",
+      "kind": "happy_path",
+      "operation_id": "octCreatePayment",
+      "user_query": "Call POST /pts/v2/payouts successfully in sandbox",
+      "expected_doc_types": [
+        "api_reference",
+        "quickstart"
+      ],
+      "success_criteria": [
+        "Uses sandbox host only",
+        "Does not include raw PAN or secrets",
+        "Mentions required auth scheme"
+      ]
+    },
+    {
+      "seed_id": "refreshPaymentStatus-happy-path",
+      "kind": "happy_path",
+      "operation_id": "refreshPaymentStatus",
+      "user_query": "Call POST /pts/v2/refresh-payment-status/{id} successfully in sandbox",
+      "expected_doc_types": [
+        "api_reference",
+        "quickstart"
+      ],
+      "success_criteria": [
+        "Uses sandbox host only",
+        "Does not include raw PAN or secrets",
+        "Mentions required auth scheme"
+      ]
+    },
+    {
+      "seed_id": "voidRefund-happy-path",
+      "kind": "happy_path",
+      "operation_id": "voidRefund",
+      "user_query": "Call POST /pts/v2/refunds/{id}/voids successfully in sandbox",
+      "expected_doc_types": [
+        "api_reference",
+        "quickstart"
+      ],
+      "success_criteria": [
+        "Uses sandbox host only",
+        "Does not include raw PAN or secrets",
+        "Mentions required auth scheme"
+      ]
+    },
+    {
+      "seed_id": "mitReversal-happy-path",
+      "kind": "happy_path",
+      "operation_id": "mitReversal",
+      "user_query": "Call POST /pts/v2/reversals successfully in sandbox",
+      "expected_doc_types": [
+        "api_reference",
+        "quickstart"
+      ],
+      "success_criteria": [
+        "Uses sandbox host only",
+        "Does not include raw PAN or secrets",
+        "Mentions required auth scheme"
+      ]
+    },
+    {
+      "seed_id": "mitVoid-happy-path",
+      "kind": "happy_path",
+      "operation_id": "mitVoid",
+      "user_query": "Call POST /pts/v2/voids successfully in sandbox",
+      "expected_doc_types": [
+        "api_reference",
+        "quickstart"
+      ],
+      "success_criteria": [
+        "Uses sandbox host only",
+        "Does not include raw PAN or secrets",
+        "Mentions required auth scheme"
+      ]
+    }
+  ]
+}

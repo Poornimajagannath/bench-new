@@ -2,7 +2,7 @@ import json
 import unittest
 from pathlib import Path
 
-from relay_bench.discovery import (
+from content_bench.discovery import (
     catalog_entry,
     discover_suggestions,
     discover_workflows,
@@ -10,12 +10,12 @@ from relay_bench.discovery import (
     load_raw_questions,
     synthesize_candidates_payload,
 )
-from relay_bench.pm_gate import (
+from content_bench.pm_gate import (
     apply_pm_decisions,
     load_pm_decisions,
     require_pm_approved_candidate,
 )
-from relay_bench.schemas import (
+from content_bench.schemas import (
     Extraction,
     PmDecision,
     RawQuestion,
@@ -248,7 +248,7 @@ class DiscoveryTests(unittest.TestCase):
                 "docetl_inspired_extract_goal_symptoms_entities",
                 "suggest_workflow_id_and_stages",
                 "pm_approve_or_edit",
-                "relay_bench_task_pack_and_stable_bench_inspired_verifier",
+                "content_bench_task_pack_and_stable_bench_inspired_verifier",
             ],
         )
         self.assertIn("ucbepic/docetl", payload["inspired_by"]["discovery"])
