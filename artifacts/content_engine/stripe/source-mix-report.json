@@ -1,0 +1,46 @@
+{
+  "openapi_path": "data/stripe/openapi-connect.fixture.json",
+  "docs_sampled": 4,
+  "overall_spec_backed_share": 0.765,
+  "overall_prose_only_share": 0.235,
+  "decision_rule": "spec-primary: generate endpoint pages from OpenAPI; DocETL mines prose only for gaps",
+  "guides": [
+    {
+      "guide": "account-links",
+      "path": "data/stripe/guides/account-links.md",
+      "spec_backed_share": 0.8,
+      "prose_only_share": 0.2,
+      "spec_hits": 4,
+      "prose_hits": 1,
+      "notes": ""
+    },
+    {
+      "guide": "connect-authentication",
+      "path": "data/stripe/guides/connect-authentication.md",
+      "spec_backed_share": 0.7,
+      "prose_only_share": 0.3,
+      "spec_hits": 7,
+      "prose_hits": 3,
+      "notes": ""
+    },
+    {
+      "guide": "how-connect-works",
+      "path": "data/stripe/guides/how-connect-works.md",
+      "spec_backed_share": 0.727,
+      "prose_only_share": 0.273,
+      "spec_hits": 8,
+      "prose_hits": 3,
+      "notes": ""
+    },
+    {
+      "guide": "onboarding-quickstart",
+      "path": "data/stripe/guides/onboarding-quickstart.md",
+      "spec_backed_share": 0.833,
+      "prose_only_share": 0.167,
+      "spec_hits": 5,
+      "prose_hits": 1,
+      "notes": ""
+    }
+  ],
+  "top_prose_sections": []
+}

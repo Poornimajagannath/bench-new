@@ -1,0 +1,17 @@
+{
+  "ok": true,
+  "source_mix_spec_share": 0.765,
+  "ingest": {
+    "docs_fetched": 4,
+    "claims_extracted": 1089
+  },
+  "content_pages": [
+    "connect-postaccounts.md",
+    "connect-getaccounts.md",
+    "connect-getaccountsaccount.md",
+    "connect-postaccountlinks.md",
+    "connect-quickstart.md"
+  ],
+  "quickstart_steps": 4,
+  "artifact_dir": "artifacts/content_engine/stripe"
+}

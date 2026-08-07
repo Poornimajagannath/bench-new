@@ -5,8 +5,13 @@
     "canonical_url": "local://fixtures/microform-payer-auth-quickstart.md",
     "repo_path": "data/content_engine/snapshots/microform-payer-auth-quickstart.md",
     "owning_team": "relay-bench-local",
-    "product": ["cybersource", "visa-acceptance"],
-    "audience": ["developer"],
+    "product": [
+      "cybersource",
+      "visa-acceptance"
+    ],
+    "audience": [
+      "developer"
+    ],
     "refresh_cadence": "manual-fixture",
     "trust_level": "experimental",
     "parser_strategy": "markdown_native",
@@ -19,8 +24,13 @@
     "canonical_url": "local://fixtures/cybersource-payments-core.openapi.json",
     "repo_path": "data/content_engine/specs/cybersource-payments-core.openapi.json",
     "owning_team": "relay-bench-local",
-    "product": ["cybersource", "visa-acceptance"],
-    "audience": ["developer"],
+    "product": [
+      "cybersource",
+      "visa-acceptance"
+    ],
+    "audience": [
+      "developer"
+    ],
     "refresh_cadence": "manual-fixture",
     "trust_level": "experimental",
     "parser_strategy": "openapi_parser",
@@ -33,8 +43,14 @@
     "canonical_url": "local://context/auth.md",
     "repo_path": "context/auth.md",
     "owning_team": "relay-lab",
-    "product": ["cybersource", "visa-acceptance"],
-    "audience": ["developer", "agent"],
+    "product": [
+      "cybersource",
+      "visa-acceptance"
+    ],
+    "audience": [
+      "developer",
+      "agent"
+    ],
     "refresh_cadence": "repo-tracked",
     "trust_level": "lab",
     "parser_strategy": "markdown_native",
@@ -47,8 +63,14 @@
     "canonical_url": "local://context/sandbox-rules.md",
     "repo_path": "context/sandbox-rules.md",
     "owning_team": "relay-lab",
-    "product": ["cybersource", "visa-acceptance"],
-    "audience": ["developer", "agent"],
+    "product": [
+      "cybersource",
+      "visa-acceptance"
+    ],
+    "audience": [
+      "developer",
+      "agent"
+    ],
     "refresh_cadence": "repo-tracked",
     "trust_level": "lab",
     "parser_strategy": "markdown_native",
@@ -61,8 +83,14 @@
     "canonical_url": "local://context/source-index.md",
     "repo_path": "context/source-index.md",
     "owning_team": "relay-lab",
-    "product": ["cybersource", "visa-acceptance"],
-    "audience": ["developer", "agent"],
+    "product": [
+      "cybersource",
+      "visa-acceptance"
+    ],
+    "audience": [
+      "developer",
+      "agent"
+    ],
     "refresh_cadence": "repo-tracked",
     "trust_level": "lab",
     "parser_strategy": "markdown_native",
@@ -75,8 +103,14 @@
     "canonical_url": "local://scenarios/authentication/task.md",
     "repo_path": "scenarios/authentication/task.md",
     "owning_team": "relay-lab",
-    "product": ["cybersource", "visa-acceptance"],
-    "audience": ["developer", "agent"],
+    "product": [
+      "cybersource",
+      "visa-acceptance"
+    ],
+    "audience": [
+      "developer",
+      "agent"
+    ],
     "refresh_cadence": "repo-tracked",
     "trust_level": "lab",
     "parser_strategy": "markdown_native",
@@ -89,8 +123,14 @@
     "canonical_url": "local://scenarios/first-transaction/task.md",
     "repo_path": "scenarios/first-transaction/task.md",
     "owning_team": "relay-lab",
-    "product": ["cybersource", "visa-acceptance"],
-    "audience": ["developer", "agent"],
+    "product": [
+      "cybersource",
+      "visa-acceptance"
+    ],
+    "audience": [
+      "developer",
+      "agent"
+    ],
     "refresh_cadence": "repo-tracked",
     "trust_level": "lab",
     "parser_strategy": "markdown_native",
@@ -103,8 +143,14 @@
     "canonical_url": "local://scenarios/setup-checkout/task.md",
     "repo_path": "scenarios/setup-checkout/task.md",
     "owning_team": "relay-lab",
-    "product": ["cybersource", "visa-acceptance"],
-    "audience": ["developer", "agent"],
+    "product": [
+      "cybersource",
+      "visa-acceptance"
+    ],
+    "audience": [
+      "developer",
+      "agent"
+    ],
     "refresh_cadence": "repo-tracked",
     "trust_level": "lab",
     "parser_strategy": "markdown_native",
@@ -117,8 +163,14 @@
     "canonical_url": "local://scenarios/agent-readiness-testing/task.md",
     "repo_path": "scenarios/agent-readiness-testing/task.md",
     "owning_team": "relay-lab",
-    "product": ["cybersource", "visa-acceptance"],
-    "audience": ["developer", "agent"],
+    "product": [
+      "cybersource",
+      "visa-acceptance"
+    ],
+    "audience": [
+      "developer",
+      "agent"
+    ],
     "refresh_cadence": "repo-tracked",
     "trust_level": "lab",
     "parser_strategy": "markdown_native",
@@ -131,8 +183,14 @@
     "canonical_url": "local://scenarios/visa-relay-context-swapping/task.md",
     "repo_path": "scenarios/visa-relay-context-swapping/task.md",
     "owning_team": "relay-lab",
-    "product": ["cybersource", "visa-acceptance"],
-    "audience": ["developer", "agent"],
+    "product": [
+      "cybersource",
+      "visa-acceptance"
+    ],
+    "audience": [
+      "developer",
+      "agent"
+    ],
     "refresh_cadence": "repo-tracked",
     "trust_level": "lab",
     "parser_strategy": "markdown_native",
@@ -145,8 +203,14 @@
     "canonical_url": "local://templates/card-payment/README.md",
     "repo_path": "templates/card-payment/README.md",
     "owning_team": "relay-lab",
-    "product": ["cybersource", "visa-acceptance"],
-    "audience": ["developer", "agent"],
+    "product": [
+      "cybersource",
+      "visa-acceptance"
+    ],
+    "audience": [
+      "developer",
+      "agent"
+    ],
     "refresh_cadence": "repo-tracked",
     "trust_level": "lab",
     "parser_strategy": "markdown_native",
@@ -159,8 +223,14 @@
     "canonical_url": "local://templates/config/README.md",
     "repo_path": "templates/config/README.md",
     "owning_team": "relay-lab",
-    "product": ["cybersource", "visa-acceptance"],
-    "audience": ["developer", "agent"],
+    "product": [
+      "cybersource",
+      "visa-acceptance"
+    ],
+    "audience": [
+      "developer",
+      "agent"
+    ],
     "refresh_cadence": "repo-tracked",
     "trust_level": "lab",
     "parser_strategy": "markdown_native",
@@ -173,8 +243,14 @@
     "canonical_url": "local://templates/ach-payment/README.md",
     "repo_path": "templates/ach-payment/README.md",
     "owning_team": "relay-lab",
-    "product": ["cybersource", "visa-acceptance"],
-    "audience": ["developer", "agent"],
+    "product": [
+      "cybersource",
+      "visa-acceptance"
+    ],
+    "audience": [
+      "developer",
+      "agent"
+    ],
     "refresh_cadence": "repo-tracked",
     "trust_level": "lab",
     "parser_strategy": "markdown_native",
@@ -187,8 +263,14 @@
     "canonical_url": "local://templates/digital-wallet/README.md",
     "repo_path": "templates/digital-wallet/README.md",
     "owning_team": "relay-lab",
-    "product": ["cybersource", "visa-acceptance"],
-    "audience": ["developer", "agent"],
+    "product": [
+      "cybersource",
+      "visa-acceptance"
+    ],
+    "audience": [
+      "developer",
+      "agent"
+    ],
     "refresh_cadence": "repo-tracked",
     "trust_level": "lab",
     "parser_strategy": "markdown_native",
@@ -201,8 +283,14 @@
     "canonical_url": "local://templates/multi-currency/README.md",
     "repo_path": "templates/multi-currency/README.md",
     "owning_team": "relay-lab",
-    "product": ["cybersource", "visa-acceptance"],
-    "audience": ["developer", "agent"],
+    "product": [
+      "cybersource",
+      "visa-acceptance"
+    ],
+    "audience": [
+      "developer",
+      "agent"
+    ],
     "refresh_cadence": "repo-tracked",
     "trust_level": "lab",
     "parser_strategy": "markdown_native",
@@ -215,12 +303,118 @@
     "canonical_url": "local://templates/README.md",
     "repo_path": "templates/README.md",
     "owning_team": "relay-lab",
-    "product": ["cybersource", "visa-acceptance"],
-    "audience": ["developer", "agent"],
+    "product": [
+      "cybersource",
+      "visa-acceptance"
+    ],
+    "audience": [
+      "developer",
+      "agent"
+    ],
     "refresh_cadence": "repo-tracked",
     "trust_level": "lab",
     "parser_strategy": "markdown_native",
     "enabled": true,
     "linked_workflow_id": "http-signature-debug"
+  },
+  {
+    "source_id": "stripe-connect-openapi",
+    "source_type": "openapi",
+    "canonical_url": "local://fixtures/openapi-connect.fixture.json",
+    "repo_path": "data/stripe/openapi-connect.fixture.json",
+    "owning_team": "relay-lab",
+    "product": [
+      "stripe",
+      "stripe-connect"
+    ],
+    "audience": [
+      "developer",
+      "agent"
+    ],
+    "refresh_cadence": "manual-fixture",
+    "trust_level": "experimental",
+    "parser_strategy": "openapi_parser",
+    "enabled": true,
+    "linked_workflow_id": null
+  },
+  {
+    "source_id": "stripe-connect-guide-how-connect-works",
+    "source_type": "guide",
+    "canonical_url": "https://docs.stripe.com/connect/how-connect-works",
+    "repo_path": "data/stripe/guides/how-connect-works.md",
+    "owning_team": "relay-lab",
+    "product": [
+      "stripe",
+      "stripe-connect"
+    ],
+    "audience": [
+      "developer",
+      "agent"
+    ],
+    "refresh_cadence": "manual-fixture",
+    "trust_level": "experimental",
+    "parser_strategy": "markdown_native",
+    "enabled": true,
+    "linked_workflow_id": null
+  },
+  {
+    "source_id": "stripe-connect-guide-authentication",
+    "source_type": "guide",
+    "canonical_url": "https://docs.stripe.com/connect/authentication",
+    "repo_path": "data/stripe/guides/connect-authentication.md",
+    "owning_team": "relay-lab",
+    "product": [
+      "stripe",
+      "stripe-connect"
+    ],
+    "audience": [
+      "developer",
+      "agent"
+    ],
+    "refresh_cadence": "manual-fixture",
+    "trust_level": "experimental",
+    "parser_strategy": "markdown_native",
+    "enabled": true,
+    "linked_workflow_id": null
+  },
+  {
+    "source_id": "stripe-connect-guide-onboarding",
+    "source_type": "guide",
+    "canonical_url": "https://docs.stripe.com/connect/onboarding/quickstart",
+    "repo_path": "data/stripe/guides/onboarding-quickstart.md",
+    "owning_team": "relay-lab",
+    "product": [
+      "stripe",
+      "stripe-connect"
+    ],
+    "audience": [
+      "developer",
+      "agent"
+    ],
+    "refresh_cadence": "manual-fixture",
+    "trust_level": "experimental",
+    "parser_strategy": "markdown_native",
+    "enabled": true,
+    "linked_workflow_id": null
+  },
+  {
+    "source_id": "stripe-connect-guide-account-links",
+    "source_type": "guide",
+    "canonical_url": "https://docs.stripe.com/api/account_links",
+    "repo_path": "data/stripe/guides/account-links.md",
+    "owning_team": "relay-lab",
+    "product": [
+      "stripe",
+      "stripe-connect"
+    ],
+    "audience": [
+      "developer",
+      "agent"
+    ],
+    "refresh_cadence": "manual-fixture",
+    "trust_level": "experimental",
+    "parser_strategy": "markdown_native",
+    "enabled": true,
+    "linked_workflow_id": null
   }
 ]

@@ -59,6 +59,21 @@ python3 pipelines/run_demo.py --workflow microform-payer-auth-state-machine
 python3 pipelines/run_bench_v0.py --workflow microform-payer-auth-state-machine
 ```
 
+## Stripe Connect proof
+
+Public proof that the content engine works on a real API (Accounts + Account Links). Uses a trimmed local OpenAPI fixture + Connect prose guides — not a Stripe endorsement.
+
+```bash
+python3 pipelines/run_stripe_connect_proof.py
+python3 evals/run_connect_eval.py --mode mock
+# optional live gate (test keys only):
+# STRIPE_TEST_SECRET_KEY=sk_test_... python3 evals/run_connect_eval.py --mode live
+python3 scripts/check_content_render.py
+node portal/server.js   # http://127.0.0.1:8787/connect-quickstart
+```
+
+Artifacts: `artifacts/content_engine/stripe/`, `content/connect-*.md`, `evals/latest.md`.
+
 ## PM entrypoints
 
 - `HANDOFF.md` — intent and acceptance criteria

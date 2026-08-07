@@ -1,0 +1,13 @@
+{
+  "name": "relay-content-portal",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Serves approved content/*.md only — never raw/ or hand-pasted JS modules",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
