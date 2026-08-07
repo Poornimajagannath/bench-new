@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-08-07T06:45:19+00:00",
+  "generated_at": "2026-08-07T07:22:05+00:00",
   "docs_dir": "data/products/boarding/guides",
-  "doc_count": 9,
+  "doc_count": 236,
   "counts_by_kind": {
-    "api_reference": 1,
-    "how_to_guide": 2,
+    "api_reference": 6,
+    "how_to_guide": 75,
     "release_note": 0,
-    "index_navigation": 6,
+    "index_navigation": 54,
     "legal": 0,
     "marketing": 0,
-    "other": 0
+    "other": 101
   },
   "quarantine_policy": {
     "exclude_kinds": [
@@ -17,11 +17,11 @@
       "legal",
       "release_note"
     ],
-    "policy_path": "data/content_engine/corpus_quarantine_policy.json",
+    "policy_path": "/home/badari/workspace/poornima/visa-relay-bench/data/content_engine/corpus_quarantine_policy.json",
     "notes": "Pre-ingestion policy: release notes, legal, and index/navigation pages are quarantined so they cannot silently enter the claim pipeline. How-to guides, API reference, and marketing remain eligible until a later policy amendment. Amend this file and re-run pipelines/run_corpus_census.py to change the decision record."
   },
-  "quarantine_count": 6,
-  "eligible_count": 3,
+  "quarantine_count": 54,
+  "eligible_count": 182,
   "classifications": [
     {
       "path": "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt.md.md",
@@ -32,6 +32,303 @@
       ],
       "bytes": 45608,
       "title": "Recent Revisions to This Document",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-about-guide.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 922,
+      "title": "About This Guide",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-about.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 898,
+      "title": "Boarding Templates",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-about_templates-components.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 1104,
+      "title": "Template Components",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-about_templates-products.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 332,
+      "title": "Products",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-doc-rev.md.md",
+      "kind": "index_navigation",
+      "confidence": "low",
+      "reasons": [
+        "revision/history shell without procedural content"
+      ],
+      "bytes": 1484,
+      "title": "Recent Revisions to This Document",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-matrix-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 282,
+      "title": "Product Boarding Template Reference",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-matrix-intro_templates-matrix-au.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 1809,
+      "title": "Account Updater Templates",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-matrix-intro_templates-matrix-card.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "tiny stub without procedural content"
+      ],
+      "bytes": 314,
+      "title": "Card Processing Templates",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-matrix-intro_templates-matrix-card_templates-matrix-card-config.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 1141,
+      "title": "Configuring a Card Processing Template",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-matrix-intro_templates-matrix-card_templates-matrix-card-fields.md.md",
+      "kind": "api_reference",
+      "confidence": "medium",
+      "reasons": [
+        "heading/body indicates field reference"
+      ],
+      "bytes": 3374,
+      "title": "Processor-Specific Fields",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-matrix-intro_templates-matrix-customer-invoicing.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 1349,
+      "title": "Customer Invoicing",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-matrix-intro_templates-matrix-echeck.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 1877,
+      "title": "ACH Templates",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-matrix-intro_templates-matrix-fme.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "constraint facts (TTL/PCI/header/reuse/encryption) \u2014 eligible regardless of length"
+      ],
+      "bytes": 7346,
+      "title": "`Fraud Management Essentials` Templates",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-matrix-intro_templates-matrix-gift-card.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 1425,
+      "title": "Gift Card Templates",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-matrix-intro_templates-matrix-pa.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 2003,
+      "title": "Payer Authentication Templates",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-matrix-intro_templates-matrix-pay-by-link.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 1253,
+      "title": "Pay By Link",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-matrix-intro_templates-matrix-sa.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 6160,
+      "title": "`Secure Acceptance` Templates",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-matrix-intro_templates-matrix-tms.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 3971,
+      "title": "`Token Management Service` Templates",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-matrix-intro_templates-matrix-unified-checkout.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 778,
+      "title": "`Unified Checkout`",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-matrix-intro_templates-matrix-vt.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 1594,
+      "title": "Virtual Terminal Templates",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-tasks.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "tiny stub without procedural content"
+      ],
+      "bytes": 130,
+      "title": "Using Templates",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-tasks_templates-adding.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 1193,
+      "title": "Add Templates",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-tasks_templates-default.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 653,
+      "title": "Setting the Default Template",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-tasks_templates-deleting.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 580,
+      "title": "Deleting Templates",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-tasks_templates-editing.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 468,
+      "title": "Editing Templates",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-tasks_templates-retrieving.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 1026,
+      "title": "Retrieving Templates",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_vpc-partner-reseller-disclaimer.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 2131,
+      "title": "VISA Platform Connect: Specifications and Conditions for Resellers/Partners",
       "quarantined": false
     },
     {
@@ -46,6 +343,116 @@
       "quarantined": false
     },
     {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-about-guide.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 899,
+      "title": "Merchant Boarding",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-about-guide_boarding-revisions.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 3036,
+      "title": "Recent Revisions to This Document",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-about-guide_vpc-partner-reseller-disclaimer.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 2131,
+      "title": "VISA Platform Connect: Specifications and Conditions for Resellers/Partners",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-currency-codes.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 33076,
+      "title": "ISO Standard Currency Codes",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-error-codes.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 9144,
+      "title": "Reason Codes",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-extend-hierarchy.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 765,
+      "title": "Extending the Hierarchy",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-extend-hierarchy_boarding-extend-hierarchy-diagram.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 934,
+      "title": "Hierarchy Example",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-extend-hierarchy_boarding-reg-create-structural-api.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 620,
+      "title": "Add a Structural Organization to a Merchant Organization",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-extend-hierarchy_boarding-reg-create-structural-api_boarding-reg-create-structural-api-example.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 2121,
+      "title": "REST Example: Creating a Structural Organization",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-extend-hierarchy_boarding-reg-create-structural-api_boarding-reg-create-structural-api-req-fields.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 629,
+      "title": "Required Fields for Boarding a Structural Organization",
+      "quarantined": false
+    },
+    {
       "path": "en-us_boarding_developer_all_rest_boarding_boarding-intro-overview.md.md",
       "kind": "index_navigation",
       "confidence": "high",
@@ -54,6 +461,83 @@
       ],
       "bytes": 784,
       "title": "Introduction to the Boarding Registration Service",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-intro-overview_boarding-intro-ids.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 1230,
+      "title": "Understanding Organization IDs",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-intro-overview_boarding-intro-organizations.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 1805,
+      "title": "Understanding Accounts and Organizations",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-intro-overview_boarding-intro-requirements.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 375,
+      "title": "Requirements",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-intro-overview_boarding-intro-workflow-extend-multi-mid.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 1574,
+      "title": "Configure Multiple Merchants with an Extended Hierarchy",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-intro-overview_boarding-intro-workflow-multi-mid.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 2174,
+      "title": "Configure Multiple Merchants",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-intro-overview_boarding-intro-workflow-single-mid.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 1235,
+      "title": "Configure a Single Merchant",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-intro-templat-0.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 1906,
+      "title": "Product Templates",
       "quarantined": true
     },
     {
@@ -68,6 +552,28 @@
       "quarantined": true
     },
     {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-intro-template_templates-components.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 1179,
+      "title": "Template Components",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-intro-template_templates-products.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 332,
+      "title": "Products",
+      "quarantined": true
+    },
+    {
       "path": "en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro.md.md",
       "kind": "index_navigation",
       "confidence": "high",
@@ -76,6 +582,2351 @@
       ],
       "bytes": 776,
       "title": "Manage Organizations",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro_boarding-change-org-status.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 754,
+      "title": "Change an Organization's Status",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro_boarding-change-org-status_boarding-change-org-status-example.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "tiny stub without procedural content"
+      ],
+      "bytes": 244,
+      "title": "REST Example: Changing an Organization's Status",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro_boarding-retrieve-an-organization.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 1131,
+      "title": "Retrieve Organization Details",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro_boarding-retrieve-an-organization_boarding-retrieve-an-organization-example.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "tiny stub without procedural content"
+      ],
+      "bytes": 282,
+      "title": "REST Example: Retrieving an Organization",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro_boarding-retrieve-organizations.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 753,
+      "title": "Retrieve a List of Organizations",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro_boarding-retrieve-organizations_boarding-retrieve-organizations-example.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "tiny stub without procedural content"
+      ],
+      "bytes": 346,
+      "title": "REST Example: Retrieving a List of Organizations",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro_boarding-retrieve-organizations_boarding-retrieve-organizations-query-parameters.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 2443,
+      "title": "Using Query Parameters to Filter Results",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro_boarding-update-information-api.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 916,
+      "title": "Update an Organization's Information",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro_boarding-update-information-api_boarding-update-information-api-example.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "tiny stub without procedural content"
+      ],
+      "bytes": 375,
+      "title": "REST Example: Updating an Organization's Information",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-products-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 1799,
+      "title": "Product Enablement and Configuration Using the BRS API",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-payer-auth.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 1502,
+      "title": "`Payer Authentication`",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-payer-auth_boarding-payer-auth-enable-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 546,
+      "title": "Enable `Payer Authentication`",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-payer-auth_boarding-payer-auth-enable-intro_boarding-payer-auth-enable-ex-rest.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 4406,
+      "title": "REST Example: Enabling `Payer Authentication`",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-payer-auth_boarding-payer-auth-enable-intro_boarding-payer-auth-enable-reqfields.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 18107,
+      "title": "Required Fields for Enabling `Payer Authentication`",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-tms.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 1138,
+      "title": "`Token Management Service`",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-tms_boarding-tms-enable-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 529,
+      "title": "Enable `Token Management Service` Using a Template",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-tms_boarding-tms-enable-intro_boarding-tms-enable-ex-rest.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 1616,
+      "title": "REST Example: Enabling `TMS` Using a Template",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-tms_boarding-tms-enable-intro_boarding-tms-enable-reqfields.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 4269,
+      "title": "Required Fields for Enabling `TMS` Using a Template",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-tms_boarding-tms-enable-net-tkn-existing-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 748,
+      "title": "Enable `TMS` and Enroll in Network Tokenization for an Existing Merchant",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-tms_boarding-tms-enable-net-tkn-existing-intro_boarding-tms-enable-net-tkn-existing-ex-rest.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 4265,
+      "title": "REST Example: Enabling `TMS` and Enrolling in Network Tokenization for an Existing Merchant",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-tms_boarding-tms-enable-net-tkn-existing-intro_boarding-tms-enable-net-tkn-existing-reqfields.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 11083,
+      "title": "Required Fields for Enabling `TMS` and Enrolling in Network Tokenization for an Existing Merchant",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-tms_boarding-tms-enable-net-tkn-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 663,
+      "title": "Enable `TMS` and Enroll in Network Tokenization for a New Merchant",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-tms_boarding-tms-enable-net-tkn-intro_boarding-tms-enable-net-tkn-ex-rest.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 3837,
+      "title": "REST Example: Enabling `TMS` and Enrolling in Network Tokenization for a New Merchant",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-tms_boarding-tms-enable-net-tkn-intro_boarding-tms-enable-net-tkn-reqfields.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 11044,
+      "title": "Required Fields for Enabling `TMS` and Enrolling in Network Tokenization for a New Merchant",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-tms_tms-vault-hierarchy.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 809,
+      "title": "Token Vault Management",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-tms_tms-vault-hierarchy_tms-trids.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 2301,
+      "title": "Token Requestor IDs",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-tms_tms-vault-hierarchy_tms-vault-mid-access.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 1115,
+      "title": "Configure the Token Vault Access Using the `Business Center`",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-tms_tms-vault-hierarchy_tms-vault-settings.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 1638,
+      "title": "Configure the Token Vault Settings Using the `Business Center`",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-products.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 1728,
+      "title": "Product Enablement and Configuration Using the PECS API",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-products_boarding-pecs-payer-auth.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 1375,
+      "title": "`Payer Authentication`",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-products_boarding-pecs-payer-auth_pecs-config-payerauth.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 529,
+      "title": "Configure `Payer Authentication` Using the PECS API",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-products_boarding-pecs-payer-auth_pecs-config-payerauth_pecs-config-payerauth-ex.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 5590,
+      "title": "Example: Configuring Payer Authentication Using the PECS API",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-products_boarding-pecs-payer-auth_pecs-config-payerauth_pecs-config-payerauth-req-fields.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 7724,
+      "title": "Required Fields for Configuring `Payer Authentication` Using the PECS API",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-products_boarding-pecs-tms.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 1148,
+      "title": "`Token Management Service`",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-products_boarding-pecs-tms_boarding-pecs-tms-enable-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 571,
+      "title": "Enable `TMS` with a Template Using the PECS API",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-products_boarding-pecs-tms_boarding-pecs-tms-enable-intro_boarding-pecs-tms-enable-ex-rest.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 983,
+      "title": "REST Example: Enabling `TMS` with a Template Using the PECS API",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-products_boarding-pecs-tms_boarding-pecs-tms-enable-intro_boarding-pecs-tms-enable-reqfields.md.md",
+      "kind": "api_reference",
+      "confidence": "medium",
+      "reasons": [
+        "heading/body indicates field reference"
+      ],
+      "bytes": 651,
+      "title": "Required Fields for Enabling `TMS` with a Template Using the PECS API",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-products_boarding-pecs-tms_boarding-pecs-tms-enable-net-tkn-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 628,
+      "title": "Enable `TMS` and Enroll in Network Tokenization Using the PECS API",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-products_boarding-pecs-tms_boarding-pecs-tms-enable-net-tkn-intro_boarding-pecs-tms-enable-net-tkn-ex-rest.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 2676,
+      "title": "REST Example: Enabling `TMS` and Enrolling in Network Tokenization Using the PECS API",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-products_boarding-pecs-tms_boarding-pecs-tms-enable-net-tkn-intro_boarding-pecs-tms-enable-net-tkn-reqfields.md.md",
+      "kind": "api_reference",
+      "confidence": "medium",
+      "reasons": [
+        "heading/body indicates field reference"
+      ],
+      "bytes": 3450,
+      "title": "Required Fields for Enabling `TMS` and Enrolling in Network Tokenization Using the PECS API",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-products_boarding-update-product-api.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 3860,
+      "title": "Add a New Product to an Existing Organization",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-products_boarding-update-product-api_boarding-update-product-api-example.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 1017,
+      "title": "Example: Adding a New Product to an Existing Organization Using the PECS API",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-products_boarding-update-product-api_boarding-update-product-api-req-fields.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 412,
+      "title": "Required Fields for Adding a New Products",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-products_pecs-add-delete-processor.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 673,
+      "title": "Add and Delete a Processor Using the PECS API",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-products_pecs-add-delete-processor_pecs-add-delete-processor-ex.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 1883,
+      "title": "Example: Adding and Deleting a Processor Using the PECS API",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-products_pecs-add-delete-processor_pecs-add-delete-processor-req-fields.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 2848,
+      "title": "Required Fields for Adding and Deleting a Processor Using the PECS API",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-products_pecs-add-processor.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 460,
+      "title": "Add a Processor Using the PECS API",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-products_pecs-add-processor_pecs-add-processor-ex.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 2150,
+      "title": "Example: Adding a Processor Using the PECS API",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-products_pecs-add-processor_pecs-add-processor-req-fields.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 2076,
+      "title": "Required Fields for Adding a Processor Using the PECS API",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-products_pecs-delete-processor.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 609,
+      "title": "Delete a Processor Using the PECS API",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-products_pecs-delete-processor_pecs-delete-processor-ex.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 1845,
+      "title": "Example: Deleting a Processor Using the PECS API",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-products_pecs-delete-processor_pecs-delete-processor-req-fields.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 983,
+      "title": "Required Fields for Deleting a Processor Using the PECS API",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-products_pecs-update-batch.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 465,
+      "title": "Update Batch Group Using the PECS API",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-products_pecs-update-batch_pecs-update-batch-ex.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 1354,
+      "title": "Example: Updating a Batch Group Using the API",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-products_pecs-update-batch_pecs-update-batch-req-fields.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 810,
+      "title": "Required Fields for Updating a Batch Group Using the PECS API",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-reg-create-transacting-integ-api-example.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 4765,
+      "title": "REST Example: Creating a Transacting Organization with Integration Information",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-reg-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 2443,
+      "title": "Create Organizations",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-reg-intro_boarding-reg-create-merch-api.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 536,
+      "title": "Create a Merchant Organization",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-reg-intro_boarding-reg-create-merch-api_boarding-reg-create-merch-api-example.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 2102,
+      "title": "REST Example: Creating a Merchant Organization",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-reg-intro_boarding-reg-create-merch-api_boarding-reg-create-merch-api-req-fields.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 2665,
+      "title": "Required Fields for Boarding a Merchant Organization",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-reg-intro_boarding-reg-create-new-transacting-api.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 705,
+      "title": "Add a Transacting Organization to a New Merchant Organization",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-reg-intro_boarding-reg-create-new-transacting-api_boarding-reg-create-new-transacting-api-example.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 3578,
+      "title": "REST Example: Creating a Transacting Organization",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-reg-intro_boarding-reg-create-new-transacting-api_boarding-reg-create-new-transacting-api-req-fields.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 2706,
+      "title": "Required Fields for Adding a Transacting Organization to an Existing Organization",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-reg-intro_boarding-reg-create-transacting-api.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 1091,
+      "title": "Add a Transacting Organization to an Existing Organization",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-reg-intro_boarding-reg-create-transacting-api_boarding-reg-create-transacting-api-example.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 7349,
+      "title": "REST Example: Creating a Transacting Organization",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-reg-intro_boarding-reg-create-transacting-api_boarding-reg-create-transacting-api-req-fields.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 2696,
+      "title": "Required Fields for Adding a Transacting Organization to an Existing Organization",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_templates-matrix-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 282,
+      "title": "Product Boarding Template Reference",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_templates-matrix-intro_templates-matrix-au.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 1809,
+      "title": "Account Updater Templates",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_templates-matrix-intro_templates-matrix-card.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "tiny stub without procedural content"
+      ],
+      "bytes": 314,
+      "title": "Card Processing Templates",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_templates-matrix-intro_templates-matrix-card_templates-matrix-card-config.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 1141,
+      "title": "Configuring a Card Processing Template",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_templates-matrix-intro_templates-matrix-card_templates-matrix-card-fields.md.md",
+      "kind": "api_reference",
+      "confidence": "medium",
+      "reasons": [
+        "heading/body indicates field reference"
+      ],
+      "bytes": 3374,
+      "title": "Processor-Specific Fields",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_templates-matrix-intro_templates-matrix-customer-invoicing.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 2489,
+      "title": "Customer Invoicing",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_templates-matrix-intro_templates-matrix-echeck.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 1877,
+      "title": "ACH Templates",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_templates-matrix-intro_templates-matrix-fme.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "constraint facts (TTL/PCI/header/reuse/encryption) \u2014 eligible regardless of length"
+      ],
+      "bytes": 7346,
+      "title": "`Fraud Management Essentials` Templates",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_templates-matrix-intro_templates-matrix-gift-card.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 1425,
+      "title": "Gift Card Templates",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_templates-matrix-intro_templates-matrix-pa.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 2003,
+      "title": "Payer Authentication Templates",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_templates-matrix-intro_templates-matrix-pay-by-link.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 2352,
+      "title": "Pay By Link",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_templates-matrix-intro_templates-matrix-sa.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 6160,
+      "title": "`Secure Acceptance` Templates",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_templates-matrix-intro_templates-matrix-tms.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 3971,
+      "title": "`Token Management Service` Templates",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_templates-matrix-intro_templates-matrix-unified-checkout.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 1532,
+      "title": "`Unified Checkout`",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_templates-matrix-intro_templates-matrix-vt.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 1594,
+      "title": "Virtual Terminal Templates",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_templates-tasks.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "tiny stub without procedural content"
+      ],
+      "bytes": 130,
+      "title": "Using Templates",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_templates-tasks_templates-adding.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 1165,
+      "title": "Add Templates",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_templates-tasks_templates-default.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 625,
+      "title": "Setting the Default Template",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_templates-tasks_templates-deleting.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 552,
+      "title": "Deleting Templates",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_templates-tasks_templates-editing.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 440,
+      "title": "Editing Templates",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_templates-tasks_templates-retrieving.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 1026,
+      "title": "Retrieving Templates",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 184102,
+      "title": "Merchant Boarding User Guide",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-about-guide.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 888,
+      "title": "Merchant Boarding User Guide",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-about-guide_boarding-revisions.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 932,
+      "title": "Recent Revisions to This Document",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-about-guide_vpc-partner-reseller-disclaimer.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 2131,
+      "title": "VISA Platform Connect: Specifications and Conditions for Resellers/Partners",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-currency-codes.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 33076,
+      "title": "ISO Standard Currency Codes",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-error-codes.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 9144,
+      "title": "Reason Codes",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-extend-hierarchy.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 759,
+      "title": "Extend the Hierarchy",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-extend-hierarchy_boarding-extend-hierarchy-diagram.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 934,
+      "title": "Hierarchy Example",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-extend-hierarchy_merchants-v2-add-structural.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 1238,
+      "title": "Add a Structural Organization to an Existing Merchant",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-extend-hierarchy_merchants-v2-add-structural_merchants-v2-add-structural-hierarchy.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 907,
+      "title": "Add a Structural Organization",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-extend-hierarchy_merchants-v2-add-structural_merchants-v2-add-structural-prod.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 1499,
+      "title": "Create a Transacting Organization and Products",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-overview.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 909,
+      "title": "Introduction to the Boarding Registration Service",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-overview_boarding-intro-ids.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 920,
+      "title": "Understanding Organization IDs",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-overview_boarding-intro-organizations.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 1801,
+      "title": "Understanding Accounts and Organizations",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-overview_boarding-intro-requirements.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 375,
+      "title": "Requirements",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-overview_boarding-intro-workflow-extend-multi-mid.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 1549,
+      "title": "Configure Multiple Merchants with an Extended Hierarchy",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-overview_boarding-intro-workflow-multi-mid.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 1492,
+      "title": "Configure Multiple Merchants",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-overview_boarding-intro-workflow-single-mid.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 1221,
+      "title": "Configure a Single Merchant",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-template.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 1905,
+      "title": "Product Templates",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-template_templates-components.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 1179,
+      "title": "Template Components",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-template_templates-products.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 332,
+      "title": "Products",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-products.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 1623,
+      "title": "Product Enablement and Configuration",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "tiny stub without procedural content"
+      ],
+      "bytes": 195,
+      "title": "Alternative Payments",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay_boarding-config-altpay-add.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 1686,
+      "title": "Add Alternative Payments to an Existing Organization",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay_boarding-config-altpay-boarding-self.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 2545,
+      "title": "Add Alternative Payments with Self-Enablement to an Organization",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay_boarding-config-altpay-boarding.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 4165,
+      "title": "Add Alternative Payments to a Merchant Account",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay_boarding-config-altpay-existing.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 1977,
+      "title": "Modify an Alternative Payment Methods Configuration for an Organization",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-enablement-products-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 127,
+      "title": "Enablement-Only Products",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-enablement-products-intro_boarding-enable-products-task.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "filename matches how-to / task guide"
+      ],
+      "bytes": 1041,
+      "title": "Add an Enablement-Only Product to an Organization",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 1890,
+      "title": "`Payer Authentication`",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-add.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 4451,
+      "title": "Add `Payer Authentication` to an Existing Organization",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-boarding.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 4364,
+      "title": "Add `Payer Authentication` to a Merchant Account",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-existing.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 3273,
+      "title": "Modify a `Payer Authentication` Configuration for an Organization",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-tms.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 930,
+      "title": "`Token Management Service`",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-tms_boarding-config-tms-add.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 1042,
+      "title": "Add `TMS` to an Existing Organization",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-tms_boarding-config-tms-new.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 2019,
+      "title": "Add `TMS` to a Merchant Account",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-tms_tms-vault-hierarchy.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 809,
+      "title": "Token Vault Management",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-tms_tms-vault-hierarchy_tms-trids.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 2301,
+      "title": "Token Requestor IDs",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-tms_tms-vault-hierarchy_tms-vault-mid-access.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 1115,
+      "title": "Configure the Token Vault Access Using the `Business Center`",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-tms_tms-vault-hierarchy_tms-vault-settings.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 1638,
+      "title": "Configure the Token Vault Settings Using the `Business Center`",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-reg-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 1019,
+      "title": "Create Organizations",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-reg-intro_merchants-v2-add-merchant.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 2482,
+      "title": "Create a Merchant Account",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-reg-intro_merchants-v2-add-merchant_merchants-v2-add-merch-acct-info.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 822,
+      "title": "Add Merchant Account Information",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-reg-intro_merchants-v2-add-merchant_merchants-v2-add-merch-trans-org-prod.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 2177,
+      "title": "Set Up the Transacting Organization and Products",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-reg-intro_merchants-v2-add-to-existing.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 2490,
+      "title": "Add an Additional Transacting Organization to an Existing Merchant Organization",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-reg-intro_merchants-v2-add-to-existing_merchants-v2-existing-trans-org-prod.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 1575,
+      "title": "Configure the Transacting Organization and Products",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_mechants-v2-edit-products-add.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 765,
+      "title": "Adding a Product to an Organization (Version 2)",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_mechants-v2-edit-products-modify.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 803,
+      "title": "Modifying a Product for an Organization (Version 2)",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_mechants-v2-edit-products-remove.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 789,
+      "title": "Removing a Product from an Organization (Version 2)",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_merchants-v2-add-merch-acct-info.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 819,
+      "title": "Add Merchant Account Information (Version 2)",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_merchants-v2-add-merch-trans-org-prod.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 2128,
+      "title": "Set Up the Transacting Organization and Products (Version 2)",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_merchants-v2-add-structural-hierarchy.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 894,
+      "title": "Adding the Structural Organization (Version 2)",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_merchants-v2-add-structural-prod.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 1467,
+      "title": "Creating a Transacting Organization and Products (Version 2)",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_merchants-v2-edit-details.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 747,
+      "title": "Viewing and Editing an Organization's Business Details (Version 2)",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_merchants-v2-edit-intr-0.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "short page dominated by links / jumplist"
+      ],
+      "bytes": 695,
+      "title": "Managing Organization Information (Version 2)",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_merchants-v2-edit-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 682,
+      "title": "Manage Organization Information",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_merchants-v2-edit-intro_merchants-v2-edit-details.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 743,
+      "title": "View and Edit an Organization's Business Details",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_merchants-v2-edit-intro_merchants-v2-edit-processor.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 709,
+      "title": "View and Edit an Organization's Processor Details",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_merchants-v2-edit-processor.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 717,
+      "title": "Viewing and Editing an Organization's Processor Details (Version 2)",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_merchants-v2-edit-products-intr-0.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 670,
+      "title": "Updating an Organization's Products (Version 2)",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_merchants-v2-edit-products-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 718,
+      "title": "Update an Organization's Products",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_merchants-v2-edit-products-intro_merchants-v2-edit-products-add.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 1341,
+      "title": "Add a Product to an Organization",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_merchants-v2-edit-products-intro_merchants-v2-edit-products-modify.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 1216,
+      "title": "Modify a Product for an Organization",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_merchants-v2-edit-products-intro_merchants-v2-edit-products-remove.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 822,
+      "title": "Remove a Product from an Organization",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_merchants-v2-email.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 965,
+      "title": "Send a Registration Email",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_merchants-v2-existing-trans-org-prod.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 1540,
+      "title": "Configure the Transacting Organization and Products (Version 2)",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_merchants-v2-searc-0.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 1070,
+      "title": "Searching for Organizations (Version 2)",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_merchants-v2-search-results-sort.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 776,
+      "title": "Sorting and Filtering Search Results (Version 2)",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_merchants-v2-search-results-view-org-hierarchy.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 552,
+      "title": "Viewing an Organization's Hierarchy (Version 2)",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_merchants-v2-search-results.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "short page dominated by links / jumplist"
+      ],
+      "bytes": 1100,
+      "title": "Search Results (Version 2)",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_merchants-v2-search.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 1139,
+      "title": "Search for Organizations",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_merchants-v2-search_merchants-v2-search-results-sort.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 762,
+      "title": "Sort and Filter Search Results",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_merchants-v2-search_merchants-v2-search-results-view-org-hierarchy.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 563,
+      "title": "View an Organization's Hierarchy",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_merchants-v2-search_merchants-v2-search-results.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "short page dominated by links / jumplist"
+      ],
+      "bytes": 1071,
+      "title": "Search Results",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_merchants-v2-status-chang-0.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "tiny stub without procedural content"
+      ],
+      "bytes": 391,
+      "title": "Changing an Organization's Status (Version 2)",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_merchants-v2-status-change.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 408,
+      "title": "Change an Organization's Status",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_merchants-v2-switch.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 1779,
+      "title": "Switch Merchants",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_templates-matrix-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 282,
+      "title": "Product Boarding Template Reference",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_templates-matrix-intro_templates-matrix-au.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 1809,
+      "title": "Account Updater Templates",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_templates-matrix-intro_templates-matrix-card.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "tiny stub without procedural content"
+      ],
+      "bytes": 314,
+      "title": "Card Processing Templates",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_templates-matrix-intro_templates-matrix-card_templates-matrix-card-config.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 1141,
+      "title": "Configuring a Card Processing Template",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_templates-matrix-intro_templates-matrix-card_templates-matrix-card-fields.md.md",
+      "kind": "api_reference",
+      "confidence": "medium",
+      "reasons": [
+        "heading/body indicates field reference"
+      ],
+      "bytes": 3374,
+      "title": "Processor-Specific Fields",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_templates-matrix-intro_templates-matrix-customer-invoicing.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 1320,
+      "title": "Customer Invoicing",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_templates-matrix-intro_templates-matrix-echeck.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 1877,
+      "title": "ACH Templates",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_templates-matrix-intro_templates-matrix-fme.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "constraint facts (TTL/PCI/header/reuse/encryption) \u2014 eligible regardless of length"
+      ],
+      "bytes": 7346,
+      "title": "`Fraud Management Essentials` Templates",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_templates-matrix-intro_templates-matrix-gift-card.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 1425,
+      "title": "Gift Card Templates",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_templates-matrix-intro_templates-matrix-pa.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 2003,
+      "title": "Payer Authentication Templates",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_templates-matrix-intro_templates-matrix-pay-by-link.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 1224,
+      "title": "Pay By Link",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_templates-matrix-intro_templates-matrix-sa.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 6160,
+      "title": "`Secure Acceptance` Templates",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_templates-matrix-intro_templates-matrix-tms.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 3971,
+      "title": "`Token Management Service` Templates",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_templates-matrix-intro_templates-matrix-unified-checkout.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 778,
+      "title": "`Unified Checkout`",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_templates-matrix-intro_templates-matrix-vt.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 1594,
+      "title": "Virtual Terminal Templates",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_templates-tasks.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "tiny stub without procedural content"
+      ],
+      "bytes": 130,
+      "title": "Using Templates",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_templates-tasks_templates-adding.md.md",
+      "kind": "how_to_guide",
+      "confidence": "medium",
+      "reasons": [
+        "procedural how-to signals in content"
+      ],
+      "bytes": 1164,
+      "title": "Add Templates",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_templates-tasks_templates-default.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 624,
+      "title": "Setting the Default Template",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_templates-tasks_templates-deleting.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 551,
+      "title": "Deleting Templates",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_templates-tasks_templates-editing.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 439,
+      "title": "Editing Templates",
+      "quarantined": false
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_templates-tasks_templates-retrieving.md.md",
+      "kind": "other",
+      "confidence": "low",
+      "reasons": [
+        "no strong filename/content signal"
+      ],
+      "bytes": 1026,
+      "title": "Retrieving Templates",
+      "quarantined": false
+    }
+  ],
+  "quarantine_list": [
+    {
+      "path": "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-about-guide.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 922,
+      "title": "About This Guide",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-doc-rev.md.md",
+      "kind": "index_navigation",
+      "confidence": "low",
+      "reasons": [
+        "revision/history shell without procedural content"
+      ],
+      "bytes": 1484,
+      "title": "Recent Revisions to This Document",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-matrix-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 282,
+      "title": "Product Boarding Template Reference",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-matrix-intro_templates-matrix-card.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "tiny stub without procedural content"
+      ],
+      "bytes": 314,
+      "title": "Card Processing Templates",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-tasks.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "tiny stub without procedural content"
+      ],
+      "bytes": 130,
+      "title": "Using Templates",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-about-guide.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 899,
+      "title": "Merchant Boarding",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-about-guide_boarding-revisions.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 3036,
+      "title": "Recent Revisions to This Document",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-about-guide_vpc-partner-reseller-disclaimer.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 2131,
+      "title": "VISA Platform Connect: Specifications and Conditions for Resellers/Partners",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-intro-overview.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 784,
+      "title": "Introduction to the Boarding Registration Service",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-intro-overview_boarding-intro-ids.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 1230,
+      "title": "Understanding Organization IDs",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-intro-overview_boarding-intro-organizations.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 1805,
+      "title": "Understanding Accounts and Organizations",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-intro-overview_boarding-intro-requirements.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 375,
+      "title": "Requirements",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-intro-templat-0.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 1906,
+      "title": "Product Templates",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-intro-template.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 1906,
+      "title": "Product Templates",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-intro-template_templates-components.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 1179,
+      "title": "Template Components",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-intro-template_templates-products.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 332,
+      "title": "Products",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 776,
+      "title": "Manage Organizations",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro_boarding-change-org-status_boarding-change-org-status-example.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "tiny stub without procedural content"
+      ],
+      "bytes": 244,
+      "title": "REST Example: Changing an Organization's Status",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro_boarding-retrieve-an-organization_boarding-retrieve-an-organization-example.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "tiny stub without procedural content"
+      ],
+      "bytes": 282,
+      "title": "REST Example: Retrieving an Organization",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro_boarding-retrieve-organizations_boarding-retrieve-organizations-example.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "tiny stub without procedural content"
+      ],
+      "bytes": 346,
+      "title": "REST Example: Retrieving a List of Organizations",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro_boarding-update-information-api_boarding-update-information-api-example.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "tiny stub without procedural content"
+      ],
+      "bytes": 375,
+      "title": "REST Example: Updating an Organization's Information",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-products-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 1799,
+      "title": "Product Enablement and Configuration Using the BRS API",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-payer-auth_boarding-payer-auth-enable-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 546,
+      "title": "Enable `Payer Authentication`",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-tms_boarding-tms-enable-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 529,
+      "title": "Enable `Token Management Service` Using a Template",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-tms_boarding-tms-enable-net-tkn-existing-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 748,
+      "title": "Enable `TMS` and Enroll in Network Tokenization for an Existing Merchant",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-tms_boarding-tms-enable-net-tkn-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 663,
+      "title": "Enable `TMS` and Enroll in Network Tokenization for a New Merchant",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-products_boarding-pecs-tms_boarding-pecs-tms-enable-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 571,
+      "title": "Enable `TMS` with a Template Using the PECS API",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-products_boarding-pecs-tms_boarding-pecs-tms-enable-net-tkn-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 628,
+      "title": "Enable `TMS` and Enroll in Network Tokenization Using the PECS API",
       "quarantined": true
     },
     {
@@ -98,6 +2949,17 @@
       ],
       "bytes": 282,
       "title": "Product Boarding Template Reference",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_templates-matrix-intro_templates-matrix-card.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "tiny stub without procedural content"
+      ],
+      "bytes": 314,
+      "title": "Card Processing Templates",
       "quarantined": true
     },
     {
@@ -112,64 +2974,216 @@
       "quarantined": true
     },
     {
-      "path": "en-us_boarding_user_all_ebc_boarding-user.md.md",
-      "kind": "how_to_guide",
-      "confidence": "medium",
-      "reasons": [
-        "procedural how-to signals in content"
-      ],
-      "bytes": 184102,
-      "title": "Merchant Boarding User Guide",
-      "quarantined": false
-    }
-  ],
-  "quarantine_list": [
-    {
-      "path": "en-us_boarding_developer_all_rest_boarding_boarding-intro-overview.md.md",
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-about-guide.md.md",
       "kind": "index_navigation",
       "confidence": "high",
       "reasons": [
         "filename looks like intro/index and content is navigation-heavy"
       ],
-      "bytes": 784,
+      "bytes": 888,
+      "title": "Merchant Boarding User Guide",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-about-guide_boarding-revisions.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 932,
+      "title": "Recent Revisions to This Document",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-about-guide_vpc-partner-reseller-disclaimer.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 2131,
+      "title": "VISA Platform Connect: Specifications and Conditions for Resellers/Partners",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-overview.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 909,
       "title": "Introduction to the Boarding Registration Service",
       "quarantined": true
     },
     {
-      "path": "en-us_boarding_developer_all_rest_boarding_boarding-intro-template.md.md",
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-overview_boarding-intro-ids.md.md",
       "kind": "index_navigation",
       "confidence": "medium",
       "reasons": [
         "filename looks like intro/index and content is navigation-heavy"
       ],
-      "bytes": 1906,
-      "title": "Product Templates",
+      "bytes": 920,
+      "title": "Understanding Organization IDs",
       "quarantined": true
     },
     {
-      "path": "en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro.md.md",
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-overview_boarding-intro-organizations.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 1801,
+      "title": "Understanding Accounts and Organizations",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-overview_boarding-intro-requirements.md.md",
       "kind": "index_navigation",
       "confidence": "high",
       "reasons": [
         "filename looks like intro/index and content is navigation-heavy"
       ],
-      "bytes": 776,
-      "title": "Manage Organizations",
+      "bytes": 375,
+      "title": "Requirements",
       "quarantined": true
     },
     {
-      "path": "en-us_boarding_developer_all_rest_boarding_boarding-reg-intro.md.md",
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-template.md.md",
       "kind": "index_navigation",
       "confidence": "medium",
       "reasons": [
         "filename looks like intro/index and content is navigation-heavy"
       ],
-      "bytes": 2443,
+      "bytes": 1905,
+      "title": "Product Templates",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-template_templates-components.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 1179,
+      "title": "Template Components",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-template_templates-products.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 332,
+      "title": "Products",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "tiny stub without procedural content"
+      ],
+      "bytes": 195,
+      "title": "Alternative Payments",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-enablement-products-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 127,
+      "title": "Enablement-Only Products",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-reg-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 1019,
       "title": "Create Organizations",
       "quarantined": true
     },
     {
-      "path": "en-us_boarding_developer_all_rest_boarding_templates-matrix-intro.md.md",
+      "path": "en-us_boarding_user_all_ebc_boarding-user_merchants-v2-edit-intr-0.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "short page dominated by links / jumplist"
+      ],
+      "bytes": 695,
+      "title": "Managing Organization Information (Version 2)",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_merchants-v2-edit-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 682,
+      "title": "Manage Organization Information",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_merchants-v2-edit-products-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 718,
+      "title": "Update an Organization's Products",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_merchants-v2-search-results.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "short page dominated by links / jumplist"
+      ],
+      "bytes": 1100,
+      "title": "Search Results (Version 2)",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_merchants-v2-search_merchants-v2-search-results.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "short page dominated by links / jumplist"
+      ],
+      "bytes": 1071,
+      "title": "Search Results",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_merchants-v2-status-chang-0.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "tiny stub without procedural content"
+      ],
+      "bytes": 391,
+      "title": "Changing an Organization's Status (Version 2)",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_templates-matrix-intro.md.md",
       "kind": "index_navigation",
       "confidence": "high",
       "reasons": [
@@ -180,7 +3194,18 @@
       "quarantined": true
     },
     {
-      "path": "en-us_boarding_developer_all_rest_boarding_templates-tasks.md.md",
+      "path": "en-us_boarding_user_all_ebc_boarding-user_templates-matrix-intro_templates-matrix-card.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "tiny stub without procedural content"
+      ],
+      "bytes": 314,
+      "title": "Card Processing Templates",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_templates-tasks.md.md",
       "kind": "index_navigation",
       "confidence": "medium",
       "reasons": [

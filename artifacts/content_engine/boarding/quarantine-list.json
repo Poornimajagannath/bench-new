@@ -1,31 +1,215 @@
 {
-  "generated_at": "2026-08-07T06:45:19+00:00",
+  "generated_at": "2026-08-07T07:22:05+00:00",
   "docs_dir": "data/products/boarding/guides",
   "exclude_kinds": [
     "index_navigation",
     "legal",
     "release_note"
   ],
-  "quarantine_count": 6,
+  "quarantine_count": 54,
   "paths": [
+    "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-about-guide.md.md",
+    "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-doc-rev.md.md",
+    "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-matrix-intro.md.md",
+    "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-matrix-intro_templates-matrix-card.md.md",
+    "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-tasks.md.md",
+    "en-us_boarding_developer_all_rest_boarding_boarding-about-guide.md.md",
+    "en-us_boarding_developer_all_rest_boarding_boarding-about-guide_boarding-revisions.md.md",
+    "en-us_boarding_developer_all_rest_boarding_boarding-about-guide_vpc-partner-reseller-disclaimer.md.md",
     "en-us_boarding_developer_all_rest_boarding_boarding-intro-overview.md.md",
+    "en-us_boarding_developer_all_rest_boarding_boarding-intro-overview_boarding-intro-ids.md.md",
+    "en-us_boarding_developer_all_rest_boarding_boarding-intro-overview_boarding-intro-organizations.md.md",
+    "en-us_boarding_developer_all_rest_boarding_boarding-intro-overview_boarding-intro-requirements.md.md",
+    "en-us_boarding_developer_all_rest_boarding_boarding-intro-templat-0.md.md",
     "en-us_boarding_developer_all_rest_boarding_boarding-intro-template.md.md",
+    "en-us_boarding_developer_all_rest_boarding_boarding-intro-template_templates-components.md.md",
+    "en-us_boarding_developer_all_rest_boarding_boarding-intro-template_templates-products.md.md",
     "en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro.md.md",
+    "en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro_boarding-change-org-status_boarding-change-org-status-example.md.md",
+    "en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro_boarding-retrieve-an-organization_boarding-retrieve-an-organization-example.md.md",
+    "en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro_boarding-retrieve-organizations_boarding-retrieve-organizations-example.md.md",
+    "en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro_boarding-update-information-api_boarding-update-information-api-example.md.md",
+    "en-us_boarding_developer_all_rest_boarding_boarding-products-intro.md.md",
+    "en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-payer-auth_boarding-payer-auth-enable-intro.md.md",
+    "en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-tms_boarding-tms-enable-intro.md.md",
+    "en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-tms_boarding-tms-enable-net-tkn-existing-intro.md.md",
+    "en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-tms_boarding-tms-enable-net-tkn-intro.md.md",
+    "en-us_boarding_developer_all_rest_boarding_boarding-products_boarding-pecs-tms_boarding-pecs-tms-enable-intro.md.md",
+    "en-us_boarding_developer_all_rest_boarding_boarding-products_boarding-pecs-tms_boarding-pecs-tms-enable-net-tkn-intro.md.md",
     "en-us_boarding_developer_all_rest_boarding_boarding-reg-intro.md.md",
     "en-us_boarding_developer_all_rest_boarding_templates-matrix-intro.md.md",
-    "en-us_boarding_developer_all_rest_boarding_templates-tasks.md.md"
+    "en-us_boarding_developer_all_rest_boarding_templates-matrix-intro_templates-matrix-card.md.md",
+    "en-us_boarding_developer_all_rest_boarding_templates-tasks.md.md",
+    "en-us_boarding_user_all_ebc_boarding-user_boarding-about-guide.md.md",
+    "en-us_boarding_user_all_ebc_boarding-user_boarding-about-guide_boarding-revisions.md.md",
+    "en-us_boarding_user_all_ebc_boarding-user_boarding-about-guide_vpc-partner-reseller-disclaimer.md.md",
+    "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-overview.md.md",
+    "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-overview_boarding-intro-ids.md.md",
+    "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-overview_boarding-intro-organizations.md.md",
+    "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-overview_boarding-intro-requirements.md.md",
+    "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-template.md.md",
+    "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-template_templates-components.md.md",
+    "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-template_templates-products.md.md",
+    "en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay.md.md",
+    "en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-enablement-products-intro.md.md",
+    "en-us_boarding_user_all_ebc_boarding-user_boarding-reg-intro.md.md",
+    "en-us_boarding_user_all_ebc_boarding-user_merchants-v2-edit-intr-0.md.md",
+    "en-us_boarding_user_all_ebc_boarding-user_merchants-v2-edit-intro.md.md",
+    "en-us_boarding_user_all_ebc_boarding-user_merchants-v2-edit-products-intro.md.md",
+    "en-us_boarding_user_all_ebc_boarding-user_merchants-v2-search-results.md.md",
+    "en-us_boarding_user_all_ebc_boarding-user_merchants-v2-search_merchants-v2-search-results.md.md",
+    "en-us_boarding_user_all_ebc_boarding-user_merchants-v2-status-chang-0.md.md",
+    "en-us_boarding_user_all_ebc_boarding-user_templates-matrix-intro.md.md",
+    "en-us_boarding_user_all_ebc_boarding-user_templates-matrix-intro_templates-matrix-card.md.md",
+    "en-us_boarding_user_all_ebc_boarding-user_templates-tasks.md.md"
   ],
   "by_kind": {
     "index_navigation": [
+      "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-about-guide.md.md",
+      "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-doc-rev.md.md",
+      "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-matrix-intro.md.md",
+      "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-matrix-intro_templates-matrix-card.md.md",
+      "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-tasks.md.md",
+      "en-us_boarding_developer_all_rest_boarding_boarding-about-guide.md.md",
+      "en-us_boarding_developer_all_rest_boarding_boarding-about-guide_boarding-revisions.md.md",
+      "en-us_boarding_developer_all_rest_boarding_boarding-about-guide_vpc-partner-reseller-disclaimer.md.md",
       "en-us_boarding_developer_all_rest_boarding_boarding-intro-overview.md.md",
+      "en-us_boarding_developer_all_rest_boarding_boarding-intro-overview_boarding-intro-ids.md.md",
+      "en-us_boarding_developer_all_rest_boarding_boarding-intro-overview_boarding-intro-organizations.md.md",
+      "en-us_boarding_developer_all_rest_boarding_boarding-intro-overview_boarding-intro-requirements.md.md",
+      "en-us_boarding_developer_all_rest_boarding_boarding-intro-templat-0.md.md",
       "en-us_boarding_developer_all_rest_boarding_boarding-intro-template.md.md",
+      "en-us_boarding_developer_all_rest_boarding_boarding-intro-template_templates-components.md.md",
+      "en-us_boarding_developer_all_rest_boarding_boarding-intro-template_templates-products.md.md",
       "en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro.md.md",
+      "en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro_boarding-change-org-status_boarding-change-org-status-example.md.md",
+      "en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro_boarding-retrieve-an-organization_boarding-retrieve-an-organization-example.md.md",
+      "en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro_boarding-retrieve-organizations_boarding-retrieve-organizations-example.md.md",
+      "en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro_boarding-update-information-api_boarding-update-information-api-example.md.md",
+      "en-us_boarding_developer_all_rest_boarding_boarding-products-intro.md.md",
+      "en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-payer-auth_boarding-payer-auth-enable-intro.md.md",
+      "en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-tms_boarding-tms-enable-intro.md.md",
+      "en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-tms_boarding-tms-enable-net-tkn-existing-intro.md.md",
+      "en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-tms_boarding-tms-enable-net-tkn-intro.md.md",
+      "en-us_boarding_developer_all_rest_boarding_boarding-products_boarding-pecs-tms_boarding-pecs-tms-enable-intro.md.md",
+      "en-us_boarding_developer_all_rest_boarding_boarding-products_boarding-pecs-tms_boarding-pecs-tms-enable-net-tkn-intro.md.md",
       "en-us_boarding_developer_all_rest_boarding_boarding-reg-intro.md.md",
       "en-us_boarding_developer_all_rest_boarding_templates-matrix-intro.md.md",
-      "en-us_boarding_developer_all_rest_boarding_templates-tasks.md.md"
+      "en-us_boarding_developer_all_rest_boarding_templates-matrix-intro_templates-matrix-card.md.md",
+      "en-us_boarding_developer_all_rest_boarding_templates-tasks.md.md",
+      "en-us_boarding_user_all_ebc_boarding-user_boarding-about-guide.md.md",
+      "en-us_boarding_user_all_ebc_boarding-user_boarding-about-guide_boarding-revisions.md.md",
+      "en-us_boarding_user_all_ebc_boarding-user_boarding-about-guide_vpc-partner-reseller-disclaimer.md.md",
+      "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-overview.md.md",
+      "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-overview_boarding-intro-ids.md.md",
+      "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-overview_boarding-intro-organizations.md.md",
+      "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-overview_boarding-intro-requirements.md.md",
+      "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-template.md.md",
+      "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-template_templates-components.md.md",
+      "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-template_templates-products.md.md",
+      "en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay.md.md",
+      "en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-enablement-products-intro.md.md",
+      "en-us_boarding_user_all_ebc_boarding-user_boarding-reg-intro.md.md",
+      "en-us_boarding_user_all_ebc_boarding-user_merchants-v2-edit-intr-0.md.md",
+      "en-us_boarding_user_all_ebc_boarding-user_merchants-v2-edit-intro.md.md",
+      "en-us_boarding_user_all_ebc_boarding-user_merchants-v2-edit-products-intro.md.md",
+      "en-us_boarding_user_all_ebc_boarding-user_merchants-v2-search-results.md.md",
+      "en-us_boarding_user_all_ebc_boarding-user_merchants-v2-search_merchants-v2-search-results.md.md",
+      "en-us_boarding_user_all_ebc_boarding-user_merchants-v2-status-chang-0.md.md",
+      "en-us_boarding_user_all_ebc_boarding-user_templates-matrix-intro.md.md",
+      "en-us_boarding_user_all_ebc_boarding-user_templates-matrix-intro_templates-matrix-card.md.md",
+      "en-us_boarding_user_all_ebc_boarding-user_templates-tasks.md.md"
     ]
   },
   "entries": [
+    {
+      "path": "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-about-guide.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 922,
+      "title": "About This Guide",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-doc-rev.md.md",
+      "kind": "index_navigation",
+      "confidence": "low",
+      "reasons": [
+        "revision/history shell without procedural content"
+      ],
+      "bytes": 1484,
+      "title": "Recent Revisions to This Document",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-matrix-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 282,
+      "title": "Product Boarding Template Reference",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-matrix-intro_templates-matrix-card.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "tiny stub without procedural content"
+      ],
+      "bytes": 314,
+      "title": "Card Processing Templates",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-tasks.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "tiny stub without procedural content"
+      ],
+      "bytes": 130,
+      "title": "Using Templates",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-about-guide.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 899,
+      "title": "Merchant Boarding",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-about-guide_boarding-revisions.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 3036,
+      "title": "Recent Revisions to This Document",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-about-guide_vpc-partner-reseller-disclaimer.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 2131,
+      "title": "VISA Platform Connect: Specifications and Conditions for Resellers/Partners",
+      "quarantined": true
+    },
     {
       "path": "en-us_boarding_developer_all_rest_boarding_boarding-intro-overview.md.md",
       "kind": "index_navigation",
@@ -35,6 +219,50 @@
       ],
       "bytes": 784,
       "title": "Introduction to the Boarding Registration Service",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-intro-overview_boarding-intro-ids.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 1230,
+      "title": "Understanding Organization IDs",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-intro-overview_boarding-intro-organizations.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 1805,
+      "title": "Understanding Accounts and Organizations",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-intro-overview_boarding-intro-requirements.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 375,
+      "title": "Requirements",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-intro-templat-0.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 1906,
+      "title": "Product Templates",
       "quarantined": true
     },
     {
@@ -49,6 +277,28 @@
       "quarantined": true
     },
     {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-intro-template_templates-components.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 1179,
+      "title": "Template Components",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-intro-template_templates-products.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 332,
+      "title": "Products",
+      "quarantined": true
+    },
+    {
       "path": "en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro.md.md",
       "kind": "index_navigation",
       "confidence": "high",
@@ -57,6 +307,127 @@
       ],
       "bytes": 776,
       "title": "Manage Organizations",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro_boarding-change-org-status_boarding-change-org-status-example.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "tiny stub without procedural content"
+      ],
+      "bytes": 244,
+      "title": "REST Example: Changing an Organization's Status",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro_boarding-retrieve-an-organization_boarding-retrieve-an-organization-example.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "tiny stub without procedural content"
+      ],
+      "bytes": 282,
+      "title": "REST Example: Retrieving an Organization",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro_boarding-retrieve-organizations_boarding-retrieve-organizations-example.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "tiny stub without procedural content"
+      ],
+      "bytes": 346,
+      "title": "REST Example: Retrieving a List of Organizations",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro_boarding-update-information-api_boarding-update-information-api-example.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "tiny stub without procedural content"
+      ],
+      "bytes": 375,
+      "title": "REST Example: Updating an Organization's Information",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-products-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 1799,
+      "title": "Product Enablement and Configuration Using the BRS API",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-payer-auth_boarding-payer-auth-enable-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 546,
+      "title": "Enable `Payer Authentication`",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-tms_boarding-tms-enable-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 529,
+      "title": "Enable `Token Management Service` Using a Template",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-tms_boarding-tms-enable-net-tkn-existing-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 748,
+      "title": "Enable `TMS` and Enroll in Network Tokenization for an Existing Merchant",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-tms_boarding-tms-enable-net-tkn-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 663,
+      "title": "Enable `TMS` and Enroll in Network Tokenization for a New Merchant",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-products_boarding-pecs-tms_boarding-pecs-tms-enable-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 571,
+      "title": "Enable `TMS` with a Template Using the PECS API",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_developer_all_rest_boarding_boarding-products_boarding-pecs-tms_boarding-pecs-tms-enable-net-tkn-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 628,
+      "title": "Enable `TMS` and Enroll in Network Tokenization Using the PECS API",
       "quarantined": true
     },
     {
@@ -82,7 +453,260 @@
       "quarantined": true
     },
     {
+      "path": "en-us_boarding_developer_all_rest_boarding_templates-matrix-intro_templates-matrix-card.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "tiny stub without procedural content"
+      ],
+      "bytes": 314,
+      "title": "Card Processing Templates",
+      "quarantined": true
+    },
+    {
       "path": "en-us_boarding_developer_all_rest_boarding_templates-tasks.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "tiny stub without procedural content"
+      ],
+      "bytes": 130,
+      "title": "Using Templates",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-about-guide.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 888,
+      "title": "Merchant Boarding User Guide",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-about-guide_boarding-revisions.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 932,
+      "title": "Recent Revisions to This Document",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-about-guide_vpc-partner-reseller-disclaimer.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 2131,
+      "title": "VISA Platform Connect: Specifications and Conditions for Resellers/Partners",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-overview.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 909,
+      "title": "Introduction to the Boarding Registration Service",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-overview_boarding-intro-ids.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 920,
+      "title": "Understanding Organization IDs",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-overview_boarding-intro-organizations.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 1801,
+      "title": "Understanding Accounts and Organizations",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-overview_boarding-intro-requirements.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 375,
+      "title": "Requirements",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-template.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 1905,
+      "title": "Product Templates",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-template_templates-components.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 1179,
+      "title": "Template Components",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-template_templates-products.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 332,
+      "title": "Products",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "tiny stub without procedural content"
+      ],
+      "bytes": 195,
+      "title": "Alternative Payments",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-enablement-products-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 127,
+      "title": "Enablement-Only Products",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-reg-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 1019,
+      "title": "Create Organizations",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_merchants-v2-edit-intr-0.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "short page dominated by links / jumplist"
+      ],
+      "bytes": 695,
+      "title": "Managing Organization Information (Version 2)",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_merchants-v2-edit-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 682,
+      "title": "Manage Organization Information",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_merchants-v2-edit-products-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 718,
+      "title": "Update an Organization's Products",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_merchants-v2-search-results.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "short page dominated by links / jumplist"
+      ],
+      "bytes": 1100,
+      "title": "Search Results (Version 2)",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_merchants-v2-search_merchants-v2-search-results.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "short page dominated by links / jumplist"
+      ],
+      "bytes": 1071,
+      "title": "Search Results",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_merchants-v2-status-chang-0.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "tiny stub without procedural content"
+      ],
+      "bytes": 391,
+      "title": "Changing an Organization's Status (Version 2)",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_templates-matrix-intro.md.md",
+      "kind": "index_navigation",
+      "confidence": "high",
+      "reasons": [
+        "filename looks like intro/index and content is navigation-heavy"
+      ],
+      "bytes": 282,
+      "title": "Product Boarding Template Reference",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_templates-matrix-intro_templates-matrix-card.md.md",
+      "kind": "index_navigation",
+      "confidence": "medium",
+      "reasons": [
+        "tiny stub without procedural content"
+      ],
+      "bytes": 314,
+      "title": "Card Processing Templates",
+      "quarantined": true
+    },
+    {
+      "path": "en-us_boarding_user_all_ebc_boarding-user_templates-tasks.md.md",
       "kind": "index_navigation",
       "confidence": "medium",
       "reasons": [
