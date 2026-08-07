@@ -373,21 +373,61 @@ def normalize_raw_dir(
     return all_claims, all_drops
 
 
-def select_ingest_sources(docs_dir: Path, limit: int = 60) -> List[Path]:
+def load_quarantine_basenames(quarantine_list_path: Optional[Path]) -> set[str]:
+    """Load path/basename set from corpus census quarantine-list.json."""
+    if quarantine_list_path is None or not quarantine_list_path.is_file():
+        return set()
+    data = json.loads(quarantine_list_path.read_text(encoding="utf-8"))
+    out: set[str] = set()
+    for p in data.get("paths") or []:
+        out.add(str(p))
+        out.add(Path(str(p)).name)
+    for row in data.get("entries") or []:
+        p = row.get("path")
+        if p:
+            out.add(str(p))
+            out.add(Path(str(p)).name)
+    return out
+
+
+def select_ingest_sources(
+    docs_dir: Path,
+    limit: int = 60,
+    *,
+    quarantine_names: Optional[set[str]] = None,
+) -> Tuple[List[Path], List[DropRecord]]:
+    """Pick ingest sources, skipping paths on the quarantine list (policy)."""
+    blocked = quarantine_names or set()
     files = sorted(
         p
         for p in docs_dir.iterdir()
-        if p.is_file() and p.suffix == ".md" and not p.name.startswith("_")
+        if p.is_file()
+        and (p.suffix == ".md" or p.name.endswith(".md.md"))
+        and not p.name.startswith("_")
     )
-    if len(files) <= limit:
-        return files
+    drops: List[DropRecord] = []
+    eligible: List[Path] = []
+    for p in files:
+        if p.name in blocked or str(p) in blocked:
+            drops.append(
+                DropRecord(
+                    path=p.name,
+                    reason="quarantine_policy",
+                    detail="excluded by corpus census quarantine list",
+                )
+            )
+            continue
+        eligible.append(p)
+
+    if len(eligible) <= limit:
+        return eligible, drops
     keywords = ("auth", "payment", "getting-started", "microform", "sandbox", "token", "error")
-    preferred = [p for p in files if any(k in p.name.lower() for k in keywords)]
-    rest = [p for p in files if p not in preferred]
+    preferred = [p for p in eligible if any(k in p.name.lower() for k in keywords)]
+    rest = [p for p in eligible if p not in preferred]
     out = preferred[: limit // 2]
     step = max(len(rest) // max(limit - len(out), 1), 1)
     out.extend(rest[::step][: limit - len(out)])
-    return out[:limit]
+    return out[:limit], drops
 
 
 def run_ingestion_snapshot(
@@ -399,8 +439,16 @@ def run_ingestion_snapshot(
     stamp_date: Optional[str] = None,
     sample_limit: int = 60,
     sources: Optional[Sequence[Path]] = None,
+    quarantine_list_path: Optional[Path] = None,
 ) -> Dict[str, Any]:
-    srcs = list(sources) if sources is not None else select_ingest_sources(docs_dir, limit=sample_limit)
+    quarantine_drops: List[DropRecord] = []
+    if sources is not None:
+        srcs = list(sources)
+    else:
+        blocked = load_quarantine_basenames(quarantine_list_path)
+        srcs, quarantine_drops = select_ingest_sources(
+            docs_dir, limit=sample_limit, quarantine_names=blocked
+        )
     raw_dir, metas, copy_drops = stamp_copy_to_raw(
         srcs,
         raw_root=raw_root,
@@ -411,7 +459,7 @@ def run_ingestion_snapshot(
         normalized_root=normalized_root,
         openapi_path=openapi_path if openapi_path.is_file() else None,
     )
-    drops = copy_drops + extract_drops
+    drops = quarantine_drops + copy_drops + extract_drops
     report = {
         "stamp_date": raw_dir.name,
         "docs_fetched": len(metas),
@@ -422,6 +470,8 @@ def run_ingestion_snapshot(
         },
         "drop_count": len(drops),
         "drops": [d.to_dict() for d in drops],
+        "quarantine_skipped": len(quarantine_drops),
+        "quarantine_list": str(quarantine_list_path) if quarantine_list_path else None,
         "raw_dir": str(raw_dir.relative_to(ROOT)) if raw_dir.is_relative_to(ROOT) else str(raw_dir),
         "normalized_file": f"normalized/{raw_dir.name}.claims.json",
         "read_contract": ["normalized/", "content/"],

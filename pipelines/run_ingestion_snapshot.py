@@ -46,8 +46,14 @@ def main() -> int:
         "--json-out",
         default=str(ROOT / "artifacts/content_engine/payments/ingestion-report.json"),
     )
+    parser.add_argument(
+        "--quarantine-list",
+        default=str(ROOT / "artifacts/content_engine/corpus/quarantine-list.json"),
+        help="Census quarantine-list.json; paths listed are skipped (policy)",
+    )
     args = parser.parse_args()
 
+    quar = Path(args.quarantine_list)
     report = run_ingestion_snapshot(
         docs_dir=Path(args.docs_dir),
         raw_root=Path(args.raw_root),
@@ -55,6 +61,7 @@ def main() -> int:
         openapi_path=Path(args.openapi),
         stamp_date=args.stamp_date,
         sample_limit=args.sample_limit,
+        quarantine_list_path=quar if quar.is_file() else None,
     )
     md = render_ingestion_report(report)
     out = Path(args.out)

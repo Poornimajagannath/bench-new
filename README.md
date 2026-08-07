@@ -18,9 +18,24 @@ registry/boarding.json   # Wave 2 stub (disabled)
 registry/lab.json        # local fixtures for unit tests
 ```
 
+## Corpus census (before ingestion)
+
+Classify every downloaded doc, publish counts, and write the quarantine list
+(policy exclusions — release notes, legal, index/navigation by default):
+
+```bash
+python3 pipelines/run_corpus_census.py
+# → artifacts/content_engine/corpus/census-report.md
+# → artifacts/content_engine/corpus/quarantine-list.md
+```
+
+Policy file: `data/content_engine/corpus_quarantine_policy.json`  
+Ingestion reads `quarantine-list.json` and skips those paths (`quarantine_policy`).
+
 ## Wave 1 — payments
 
 ```bash
+python3 pipelines/run_corpus_census.py                   # counts + quarantine first
 python3 pipelines/run_source_mix.py
 python3 pipelines/run_ingestion_snapshot.py --stamp-date YYYY-MM-DD
 python3 pipelines/run_specs_to_docs_v0.py --source cybersource-payments-core-openapi
