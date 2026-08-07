@@ -17,17 +17,41 @@
       "query_params": [],
       "request_fields": [
         {
-          "name": "CreditRequest",
-          "type": "object",
+          "name": "clientReferenceInformation.code",
+          "type": "string",
+          "required": false,
+          "description": "",
+          "constraints": []
+        },
+        {
+          "name": "orderInformation.amountDetails.totalAmount",
+          "type": "string",
           "required": true,
+          "description": "",
+          "constraints": []
+        },
+        {
+          "name": "orderInformation.amountDetails.currency",
+          "type": "string",
+          "required": false,
+          "description": "",
           "constraints": []
         }
       ],
       "response_fields": [
         {
-          "name": "Payment",
-          "type": "object",
-          "description": "Success schema Payment"
+          "name": "id",
+          "type": "string",
+          "required": false,
+          "description": "",
+          "constraints": []
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "required": false,
+          "description": "",
+          "constraints": []
         }
       ],
       "error_cases": [
@@ -61,17 +85,89 @@
       "query_params": [],
       "request_fields": [
         {
-          "name": "CreatePaymentRequest",
-          "type": "object",
+          "name": "clientReferenceInformation.code",
+          "type": "string",
           "required": true,
+          "description": "Merchant reference code for the transaction",
           "constraints": []
+        },
+        {
+          "name": "orderInformation.amountDetails.totalAmount",
+          "type": "string",
+          "required": true,
+          "description": "Order total amount",
+          "constraints": []
+        },
+        {
+          "name": "orderInformation.amountDetails.currency",
+          "type": "string",
+          "required": true,
+          "description": "ISO 4217 currency code",
+          "constraints": []
+        },
+        {
+          "name": "orderInformation.billTo.firstName",
+          "type": "string",
+          "required": false,
+          "description": "",
+          "constraints": []
+        },
+        {
+          "name": "orderInformation.billTo.lastName",
+          "type": "string",
+          "required": false,
+          "description": "",
+          "constraints": []
+        },
+        {
+          "name": "paymentInformation.card.number",
+          "type": "string",
+          "required": false,
+          "description": "Tokenized instrument or test card id \u2014 do not send raw PAN",
+          "constraints": []
+        },
+        {
+          "name": "paymentInformation.card.expirationMonth",
+          "type": "string",
+          "required": false,
+          "description": "",
+          "constraints": []
+        },
+        {
+          "name": "paymentInformation.card.expirationYear",
+          "type": "string",
+          "required": false,
+          "description": "",
+          "constraints": []
+        },
+        {
+          "name": "paymentInformation.card.type",
+          "type": "string",
+          "required": false,
+          "description": "Card type code",
+          "constraints": [
+            "enum: 001, 002"
+          ],
+          "enum": [
+            "001",
+            "002"
+          ]
         }
       ],
       "response_fields": [
         {
-          "name": "Payment",
-          "type": "object",
-          "description": "Success schema Payment"
+          "name": "id",
+          "type": "string",
+          "required": false,
+          "description": "",
+          "constraints": []
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "required": false,
+          "description": "",
+          "constraints": []
         }
       ],
       "error_cases": [
@@ -114,9 +210,18 @@
       "request_fields": [],
       "response_fields": [
         {
-          "name": "Payment",
-          "type": "object",
-          "description": "Success schema Payment"
+          "name": "id",
+          "type": "string",
+          "required": false,
+          "description": "",
+          "constraints": []
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "required": false,
+          "description": "",
+          "constraints": []
         }
       ],
       "error_cases": [
@@ -157,17 +262,41 @@
       "query_params": [],
       "request_fields": [
         {
-          "name": "CaptureRequest",
-          "type": "object",
+          "name": "clientReferenceInformation.code",
+          "type": "string",
+          "required": false,
+          "description": "",
+          "constraints": []
+        },
+        {
+          "name": "orderInformation.amountDetails.totalAmount",
+          "type": "string",
           "required": true,
+          "description": "",
+          "constraints": []
+        },
+        {
+          "name": "orderInformation.amountDetails.currency",
+          "type": "string",
+          "required": false,
+          "description": "",
           "constraints": []
         }
       ],
       "response_fields": [
         {
-          "name": "Payment",
-          "type": "object",
-          "description": "Success schema Payment"
+          "name": "id",
+          "type": "string",
+          "required": false,
+          "description": "",
+          "constraints": []
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "required": false,
+          "description": "",
+          "constraints": []
         }
       ],
       "error_cases": [
@@ -201,17 +330,34 @@
       "query_params": [],
       "request_fields": [
         {
-          "name": "MppCredentialRequest",
+          "name": "clientReferenceInformation",
           "type": "object",
           "required": true,
+          "description": "",
+          "constraints": []
+        },
+        {
+          "name": "processingInformation",
+          "type": "object",
+          "required": false,
+          "description": "",
           "constraints": []
         }
       ],
       "response_fields": [
         {
-          "name": "MppCredential",
-          "type": "object",
-          "description": "Success schema MppCredential"
+          "name": "id",
+          "type": "string",
+          "required": false,
+          "description": "",
+          "constraints": []
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "required": false,
+          "description": "",
+          "constraints": []
         }
       ],
       "error_cases": [
@@ -246,17 +392,34 @@
       "query_params": [],
       "request_fields": [
         {
-          "name": "MppCredentialRequest",
+          "name": "clientReferenceInformation",
           "type": "object",
           "required": true,
+          "description": "",
+          "constraints": []
+        },
+        {
+          "name": "processingInformation",
+          "type": "object",
+          "required": false,
+          "description": "",
           "constraints": []
         }
       ],
       "response_fields": [
         {
-          "name": "MppCredential",
-          "type": "object",
-          "description": "Success schema MppCredential"
+          "name": "id",
+          "type": "string",
+          "required": false,
+          "description": "",
+          "constraints": []
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "required": false,
+          "description": "",
+          "constraints": []
         }
       ],
       "error_cases": [
@@ -291,17 +454,34 @@
       "query_params": [],
       "request_fields": [
         {
-          "name": "CustomerRequest",
+          "name": "buyerInformation",
           "type": "object",
           "required": true,
+          "description": "",
+          "constraints": []
+        },
+        {
+          "name": "clientReferenceInformation",
+          "type": "object",
+          "required": false,
+          "description": "",
           "constraints": []
         }
       ],
       "response_fields": [
         {
-          "name": "Customer",
+          "name": "id",
+          "type": "string",
+          "required": false,
+          "description": "",
+          "constraints": []
+        },
+        {
+          "name": "buyerInformation",
           "type": "object",
-          "description": "Success schema Customer"
+          "required": false,
+          "description": "",
+          "constraints": []
         }
       ],
       "error_cases": [
@@ -343,9 +523,18 @@
       "request_fields": [],
       "response_fields": [
         {
-          "name": "Customer",
+          "name": "id",
+          "type": "string",
+          "required": false,
+          "description": "",
+          "constraints": []
+        },
+        {
+          "name": "buyerInformation",
           "type": "object",
-          "description": "Success schema Customer"
+          "required": false,
+          "description": "",
+          "constraints": []
         }
       ],
       "error_cases": [

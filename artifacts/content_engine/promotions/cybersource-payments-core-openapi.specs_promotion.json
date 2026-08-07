@@ -28,7 +28,7 @@
   "honest_label": {
     "docetl": "not-used",
     "network": "denied",
-    "fixture": "local-cybersource-shaped-openapi",
-    "note": "Local fixture covering Payments/Captures/Credits/Customers/MPP Credential operations. Not a live CyberSource download."
+    "fixture": "local-payment-gateway-shaped-openapi",
+    "note": "Local fixture covering Payments/Captures/Credits/Customers/MPP Credential operations. Not a live Payment Gateway download."
   }
 }

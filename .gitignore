@@ -8,3 +8,25 @@ venv/
 
 .claude/
 
+# Ingestion clean-room
+raw/
+normalized/*.claims.json
+!normalized/.gitkeep
+
+# Regenerable eval scratch
+evals/runs/*.json
+evals/latest.md
+evals/latest-payments.md
+evals/cybersource-docs-compare.md
+evals/manual-runs.jsonl
+
+# Local scratch
+.scratch/
+
+mcp-server/node_modules/
+
+# Compat shims (symlinks recreated by setup)
+# gateway-docs is a symlink to cybersource-docs — track if present as symlink via git
+
+# Legacy registry backup
+data/content_engine/source_registry.json.pre-wave1-bak

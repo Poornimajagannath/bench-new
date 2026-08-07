@@ -1,9 +1,9 @@
 import unittest
 from dataclasses import replace
 
-from relay_bench.discovery import discover_workflows
-from relay_bench.task_pack import build_hidden_truth
-from relay_bench.verifiers import (
+from content_bench.discovery import discover_workflows
+from content_bench.task_pack import build_hidden_truth
+from content_bench.verifiers import (
     bad_answer_probe_passed,
     run_stable_bench_inspired_verification,
     verify_answer,
