@@ -1,0 +1,21 @@
+{
+  "doc_id": "doc-payments-guide-en-us_tms_developer_all_rest_tms_tms-ii-tkn.md",
+  "source_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-ii-tkn.md",
+  "snapshot_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-ii-tkn.md-c15d1ad6bd85",
+  "title": "payments-guide-en-us_tms_developer_all_rest_tms_tms-ii-tkn.md",
+  "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms/tms-ii-tkn.md",
+  "source_format": "markdown",
+  "product": [
+    "payments",
+    "cybersource"
+  ],
+  "audience": [
+    "developer"
+  ],
+  "page_type": "guide",
+  "freshness_date": "unknown",
+  "normalized_markdown": "Instrument Identifier Tokens {#tms-ii-tkn}\n==========================================\n\nInstrument identifier tokens represent tokenized payment account numbers. Tokenized payment account information includes a primary account number (PAN) for card payments, or a US or Canadian bank account number and routing number for an ACH bank account. An instrument identifier token can exist independently, or it can be associated with a payment instrument.\nAn instrument identifier token can also contain an associated network token.\nInstrument identifier tokens are associated with these features:\n\nCard Art\n:\n`TMS` card art helps your customers select a card. See [Card Art](/docs/cybs/en-us/tms/developer/all/rest/tms/tms-net-tkn-intro/tms-card-art.md \"\").\n\nEnrollable Network Tokens\n:\n`TMS` can enroll certain *network tokens* in an instrument identifier token to be used for future payments. Future payments require only the instrument identifier token for the payment information. The types of network tokens you can enroll into an instrument identifier are tokens used for in-app payment methods such as:\n\n    * Android Pay\n    * Apple Pay\n    * Chase Pay\n    * Google Pay\n    * Samsung Pay\n    * `Visa Click to Pay`\n\n    See [Create an Instrument Identifier for Enrollable Network Tokens](/docs/cybs/en-us/tms/developer/all/rest/tms/tms-ii-tkn/tms-manage-ii-tkn/tms-ii-tkn-create-device-tkn-intro.md \"\").\n\nPush Provisioning\n:\nPush provisioning connects you with participating issuers to quickly provide credentials to your customers. See [Provision a Network Token with Push Provisioning](/docs/cybs/en-us/tms/developer/all/rest/tms/tms-net-tkn-intro/tms-net-tkn-card-create-intro.md \"\").\n",
+  "extracted_metadata": {
+    "goal": "payments-guide-en-us_tms_developer_all_rest_tms_tms-ii-tkn.md"
+  }
+}

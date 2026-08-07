@@ -1,0 +1,21 @@
+{
+  "doc_id": "doc-payments-guide-sandbox",
+  "source_id": "payments-guide-sandbox",
+  "snapshot_id": "payments-guide-sandbox-bc3bd453eab7",
+  "title": "Source: https://developer.cybersource.com/hello-world/sandbox.md",
+  "canonical_url": "https://developer.cybersource.com/docs/cybs/sandbox.md",
+  "source_format": "markdown",
+  "product": [
+    "payments",
+    "cybersource"
+  ],
+  "audience": [
+    "developer"
+  ],
+  "page_type": "guide",
+  "freshness_date": "unknown",
+  "normalized_markdown": "# Source: https://developer.cybersource.com/hello-world/sandbox.md\n\nSandbox account sign up\n=======================\n\nAfter completing the evaluation registration process, you will be able to send test transactions. Your information will not be disclosed to third parties.\n![](/hello-world/sandbox/jcr:content/root/container/responsivegrid/columncontrol_196259/par1/contentwell_copy_cop/contentWell/image_copy_copy_copy.img.jpg/1784434197039.jpg) ![](/hello-world/sandbox/jcr:content/root/container/responsivegrid/columncontrol_196259/par1/contentwell_copy_cop/contentWell/image_copy_copy_copy.img.jpg/1784434197039.jpg)\n",
+  "extracted_metadata": {
+    "goal": "Source: https://developer.cybersource.com/hello-world/sandbox.md"
+  }
+}

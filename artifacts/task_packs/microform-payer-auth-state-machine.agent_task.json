@@ -33,7 +33,7 @@
     ],
     "constraints": [
       "No network calls",
-      "No live CyberSource sandbox credentials",
+      "No live Payment Gateway sandbox credentials",
       "No raw PAN, secrets, or credential logging",
       "Public forum/docs seeds are frozen input only"
     ]

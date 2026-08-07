@@ -1,0 +1,7 @@
+{
+  "stage": "content_engine_extract",
+  "inspired_by": "ucbepic/docetl (imported; Frame.code_map, no LLM)",
+  "extractor_label": "imported-code_map",
+  "source_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding_boarding-reg-intro",
+  "units": []
+}

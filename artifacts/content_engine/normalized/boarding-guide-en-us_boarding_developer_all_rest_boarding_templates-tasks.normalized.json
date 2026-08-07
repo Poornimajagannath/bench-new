@@ -1,0 +1,21 @@
+{
+  "doc_id": "doc-boarding-guide-en-us_boarding_developer_all_rest_boarding_templates-tasks",
+  "source_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding_templates-tasks",
+  "snapshot_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding_templates-tasks-5665cb9da7c5",
+  "title": "boarding-guide-en-us_boarding_developer_all_rest_boarding_templates-tasks",
+  "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/boarding/",
+  "source_format": "markdown",
+  "product": [
+    "boarding",
+    "cybersource"
+  ],
+  "audience": [
+    "developer"
+  ],
+  "page_type": "guide",
+  "freshness_date": "unknown",
+  "normalized_markdown": "Using Templates {#templates-tasks}\n==================================\n\nThis section describes the template tasks you can perform.\n",
+  "extracted_metadata": {
+    "goal": "boarding-guide-en-us_boarding_developer_all_rest_boarding_templates-tasks"
+  }
+}

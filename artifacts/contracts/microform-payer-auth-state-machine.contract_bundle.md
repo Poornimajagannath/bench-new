@@ -1,6 +1,6 @@
 # Workflow Contract Bundle — `microform-payer-auth-state-machine`
 
-schema_version: `relay.workflow_contract_bundle.v0`
+schema_version: `content.workflow_contract_bundle.v0`
 
 Local proof only. DocETL-style extraction and Harbor/Tempo-style eval export are inspirations — not live upstream integrations.
 
@@ -83,4 +83,4 @@ Hidden truth content is intentionally omitted from this bundle.
 - verifier_result_path: `artifacts/verifier_results/microform-payer-auth-state-machine.result.json`
 - improvement_actions:
   - [docs] Clarify Microform + Payer Auth State Machine stage ordering in public docs
-  - [vap_cli] Ship a VAP CLI workflow verifier for this contract
+  - [content_cli] Ship a Content CLI workflow verifier for this contract

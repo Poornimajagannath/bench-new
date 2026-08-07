@@ -1,0 +1,194 @@
+{
+  "source_id": "payments-guide-payments",
+  "status": "blocked",
+  "schema_passed": false,
+  "content_passed": false,
+  "agent_use_status": "deferred",
+  "issues": [
+    {
+      "code": "duplicate_unit_id",
+      "severity": "error",
+      "message": "duplicate unit_id payments-guide-payments:overview:0:figure:",
+      "unit_id": "payments-guide-payments:overview:0:figure:"
+    },
+    {
+      "code": "duplicate_unit_id",
+      "severity": "error",
+      "message": "duplicate unit_id payments-guide-payments:overview:0:figure:",
+      "unit_id": "payments-guide-payments:overview:0:figure:"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-payments:step:1:the-customer-reserves-a-hotel-room-for-two-night"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-payments:step:2:the-customer-orders-dinner-through-room-service-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-payments:step:3:the-customer-decides-to-stay-an-extra-night.-you"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-payments:step:4:the-customer-uses-items-from-the-mini-bar.-the-c"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-payments:step:5:when-the-customer-checks-out,-they-sign-a-receip"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-payments:step:6:you-request-a-capture-for-700.00."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-payments:step:7:the-customer-purchases-goods-or-services-from-th"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-payments:step:8:you-send-an-authorization-request-over-secure-in"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-payments:step:9:`cybersource`-validates-the-order-information-th"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-payments:step:10:the-processor-sends-the-transaction-to-the-payme"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-payments:step:11:the-issuing-bank-approves-or-declines-the-reques"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-payments:step:12:`cybersource`-runs-its-own-tests-then-tells-you-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-payments:step:13:the-merchant-sends-a-request-for-a-capture-to-th"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-payments:step:14:for-online-captures,-`cybersource`-validates-the"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-payments:step:15:the-processor-validates-the-request-and-forwards"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-payments:step:16:the-issuing-bank-transfers-funds-to-the-acquirin"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-payments:step:17:the-merchant-sends-the-refund-or-credit-request-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-payments:step:18:for-online-refunds-and-credits,-`cybersource`-va"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-payments:step:19:the-processor-validates-the-request-and-forwards"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-payments:step:20:the-acquiring-bank-transfers-funds-to-the-issuin"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-payments:step:21:contact-customer-support-to-have-your-account-co"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-payments:step:22:test-your-system-in-production-using-a-small-cur"
+    },
+    {
+      "code": "secret_or_pan_material",
+      "severity": "error",
+      "message": "unit appears to contain secret or non-test PAN-like material",
+      "unit_id": "payments-guide-payments:step:22:test-your-system-in-production-using-a-small-cur"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-payments:step:23:send-an-initial-authorization-request-that-place"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-payments:step:24:for-every-anticipated-additional-charge,-send-an"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-payments:step:25:when-the-customer-is-ready-to-complete-the-payme"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-payments:step:26:if-there-are-remaining-authorized-funds-that-are"
+    },
+    {
+      "code": "secret_or_pan_material",
+      "severity": "error",
+      "message": "unit appears to contain secret or non-test PAN-like material",
+      "unit_id": "payments-guide-payments:step:26:if-there-are-remaining-authorized-funds-that-are"
+    }
+  ],
+  "promoted_unit_ids": [],
+  "linked_workflow_id": null,
+  "contract_bundle_path": null,
+  "context_pack_path": null,
+  "objects_path": "artifacts/content_engine/objects/payments-guide-payments.quickstart_units.json"
+}

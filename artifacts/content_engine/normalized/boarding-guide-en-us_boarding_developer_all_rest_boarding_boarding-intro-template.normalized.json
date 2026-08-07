@@ -1,0 +1,21 @@
+{
+  "doc_id": "doc-boarding-guide-en-us_boarding_developer_all_rest_boarding_boarding-intro-template",
+  "source_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding_boarding-intro-template",
+  "snapshot_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding_boarding-intro-template-adacba553da6",
+  "title": "boarding-guide-en-us_boarding_developer_all_rest_boarding_boarding-intro-template",
+  "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/boarding/",
+  "source_format": "markdown",
+  "product": [
+    "boarding",
+    "cybersource"
+  ],
+  "audience": [
+    "developer"
+  ],
+  "page_type": "guide",
+  "freshness_date": "unknown",
+  "normalized_markdown": "Product Templates {#boarding-intro-template}\n============================================\n\nA product template enables and configures a product and is applied to more transacting organizations. Product templates are created in the `Business Center` by an administrator user. Before you board a transacting organization, you must create a product template for each product that you will assign to it. Not every product support templates.\nYou will apply product templates to a transacting organization when you create it. You can also create multiple templates for a product, configured differently, and decide which one to apply to a transacting organization, depending on the organization's needs.\nTemplates can be modified at any time; however, organizations that already have the template applied do not inherit the modifications. Modifying a template only affects new organizations that you apply to it.\nFor product-level boarding information, see the [Product Boarding Template Reference](/docs/cybs/en-us/boarding/developer/all/rest/boarding/templates-matrix-intro.md \"\").\nPartners can use various boarding templates to customize merchant onboarding and meet the business needs of each merchant.\nA boarding template is a collection of predefined attributes and rules that an acquirer (bank), technical partner, or merchant uses to board merchants onto their platform. Boarding templates help automate the entire boarding process by packaging all of the required information needed to board merchants. You can use templates to reduce the manual steps and time it takes for merchant accounts to start processing payments.\nTemplates also allow an acquirer or partner to make configuration changes to individual and multiple merchants in the portfolio.\nYou can use a boarding template to initialize or make changes to any of the following:\n\n* Accounts\n* Transacting nodes\n* Structural nodes\n",
+  "extracted_metadata": {
+    "goal": "boarding-guide-en-us_boarding_developer_all_rest_boarding_boarding-intro-template"
+  }
+}

@@ -1,4 +1,4 @@
-# Relay Bench V0 Report — `http-signature-debug`
+# Content Bench V0 Report — `http-signature-debug`
 
 Local proof only. No network. No live credentials.
 
@@ -10,10 +10,10 @@ Local proof only. No network. No live credentials.
 - entity:Authentication Failed
 - entity:keyId
 - entity:secretKey
-- entity:apitest.cybersource.com
+- entity:apitest.example.com
 - HTTP Signature signed headers include host,date,digest but we still get 401. Do we need request-target and v-c-merchant-id in the signature base on apitest?
 - entity:v-c-merchant-id
-- alt_goal:Resolve developer confusion involving HTTP Signature, v-c-merchant-id, apitest.cybersource.com
+- alt_goal:Resolve developer confusion involving HTTP Signature, v-c-merchant-id, apitest.example.com
 - Authentication Failed every time on sandbox
 - entity:merchantKeyId
 - alt_goal:Resolve developer confusion involving Authentication Failed, keyId, secretKey, merchantKeyId
@@ -24,11 +24,11 @@ Local proof only. No network. No live credentials.
 - Does logging the shared secret in debug headers cause Authentication Failed, or is the issue only field names like keyId vs merchantKeyId on HTTP Signature
 - alt_goal:Resolve developer confusion involving HTTP Signature, Authentication Failed, keyId, merchantKeyId
 
-## 2. What Relay discovered
+## 2. What Content Bench discovered
 
 - Am I using the wrong SDK field names for key id and secret?
 - stages:load_sandbox_env_vars,build_digest,build_signature_base,attach_vc_headers,interpret_auth_failure
-- fact:Sandbox host is apitest.cybersource.com
+- fact:Sandbox host is apitest.example.com
 - fact:SDK expects merchantKeyId and merchantsecretKey (not keyId/secretKey)
 - fact:Signed headers typically include host, date, request-target, digest, v-c-merchant-id
 
@@ -36,7 +36,7 @@ Local proof only. No network. No live credentials.
 
 - Uses doc field names and production host; omits request-target and v-c-merchant-id
 - credential_fields: expected=['merchantKeyId', 'merchantsecretKey'] actual=['keyId', 'secretKey']
-- endpoint_host: expected='apitest.cybersource.com' actual='api.cybersource.com'
+- endpoint_host: expected='apitest.example.com' actual='api.example.com'
 - signed_headers contains_all ['host', 'date', 'request-target', 'digest', 'v-c-merchant-id']: False
 
 ## 4. How the verifier caught it
@@ -49,7 +49,7 @@ Local proof only. No network. No live credentials.
 
 - Clarify HTTP Signature Debug stage ordering in public docs
 - Align SDK credential field names with docs (or docs with SDK)
-- Ship a VAP CLI workflow verifier for this contract
+- Ship a Content CLI workflow verifier for this contract
 
 ## Classification
 
@@ -61,10 +61,10 @@ Local proof only. No network. No live credentials.
 - task pack: `artifacts/task_packs/http-signature-debug.agent_task.json`
 - verifier results: `artifacts/verifier_results/http-signature-debug.result.json`
 
-## VAP CLI workflow verifier (recommended)
+## Content CLI workflow verifier (recommended)
 
 - goal: Am I using the wrong SDK field names for key id and secret?
-- command: `vap workflow verify --id http-signature-debug --fixture local`
+- command: `content workflow verify --id http-signature-debug --fixture local`
 - readiness checks:
   - Frozen seeds present under data/seeds/
   - No live credentials exported

@@ -1,0 +1,7 @@
+{
+  "stage": "content_engine_extract",
+  "inspired_by": "ucbepic/docetl (imported; Frame.code_map, no LLM)",
+  "extractor_label": "imported-code_map",
+  "source_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-pi-tkn.md",
+  "units": []
+}

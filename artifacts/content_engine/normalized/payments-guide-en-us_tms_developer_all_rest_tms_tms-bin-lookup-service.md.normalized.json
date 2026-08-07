@@ -1,0 +1,21 @@
+{
+  "doc_id": "doc-payments-guide-en-us_tms_developer_all_rest_tms_tms-bin-lookup-service.md",
+  "source_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-bin-lookup-service.md",
+  "snapshot_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-bin-lookup-service.md-ca6e365888ff",
+  "title": "payments-guide-en-us_tms_developer_all_rest_tms_tms-bin-lookup-service.md",
+  "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms/tms-bin-lookup-service.md",
+  "source_format": "markdown",
+  "product": [
+    "payments",
+    "cybersource"
+  ],
+  "audience": [
+    "developer"
+  ],
+  "page_type": "guide",
+  "freshness_date": "unknown",
+  "normalized_markdown": "BIN Lookup Service and `TMS` {#tms-bin-lookup-service}\n======================================================\n\nWhen some types of tokens are provisioned, `TMS` returns the BIN details that are provided by the BIN Lookup Service. This section describes how to retrieve the BIN information provided by the BIN Lookup Service for a PAN or network token.\n\n> IMPORTANT\n> You must be enabled for network tokenization to retrieve BIN details using ` TMS `.\n> `TMS` returns BIN data when you send a request to create or retrieve these token types:\n\n* [Payment instrument tokens](/docs/cybs/en-us/tms/developer/all/rest/tms/tms-pi-tkn.md \"\")\n* [Instrument identifier tokens](/docs/cybs/en-us/tms/developer/all/rest/tms/tms-ii-tkn.md \"\")\n  For more information about using the BIN Lookup Service, see the [*BIN Lookup Service Developer Guide*](https://developer.cybersource.com/docs/cybs/en-us/bin-lookup/developer/all/rest/bin-lookup/bin-lookup-about-guide.md \"\")\n\nEndpoints\n---------\n\nInstrument Identifier Tokens\n:\n**Test:** `GET ``https://apitest.cybersource.com``/tms/v1/instrumentidentifiers/{instrumentIdentifierTokenId}?retrieveBinDetails=true`{#tms-bin-lookup-service_restcust-test}\n:\n**Test:** `POST ``https://apitest.cybersource.com``/tms/v1/instrumentidentifiers?retrieveBinDetails=true`{#tms-bin-lookup-service_restcust-test-post}\n:\n**Production:** `GET ``https://api.cybersource.com``/tms/v1/instrumentidentifiers/{instrumentIdentifierTokenId}?retrieveBinDetails=true`\n:\n**Production:** `POST ``https://api.cybersource.com``/tms/v1/instrumentidentifiers?retrieveBinDetails=true`{#tms-bin-lookup-service_restcust-prod-post}\n:\n**Production in India:** `GET ``https://api.in.cybersource.com``/tms/v1/instrumentidentifiers/{instrumentIdentifierTokenId}?retrieveBinDetails=true`{#tms-bin-lookup-service_restcust-prod-india}\n:\n**Production in India:** `POST ``https://api.in.cybersource.com``/tms/v1/instrumentidentifiers?retrieveBinDetails=true`\n\nPayment Instrument Tokens\n:\n**Test:** `GET ``https://apitest.cybersource.com``/tms/v1/paymentinstruments/{paymentInstrumentTokenId}?retrieveBinDetails=true`{#tms-bin-lookup-service_rest-pi-test}\n:\n**Test:** `POST ``https://apitest.cybersource.com``/tms/v1/paymentinstruments?retrieveBinDetails=true`{#tms-bin-lookup-service_rest-pi-test-post}\n:\n**Production:** `GET ``https://api.cybersource.com``/tms/v1/paymentinstruments/{paymentInstrumentTokenId}?retrieveBinDetails=true`{#tms-bin-lookup-service_rest-pi-prod}\n:\n**Production:** `POST ``https://api.cybersource.com``/tms/v1/paymentinstruments?retrieveBinDetails=true`{#tms-bin-lookup-service_rest-pi-prod-post}\n:\n**Production in India:** `GET ``https://api.in.cybersource.com``/tms/v1/paymentinstruments/{paymentInstrumentTokenId}?retrieveBinDetails=true`\n:\n**Production in India:** `POST ``https://api.in.cybersource.com``/tms/v1/paymentinstruments?retrieveBinDetails=true`\n*`{instrumentIdentifierTokenId}`* and *{paymentInstrumentTokenId}* are the token IDs that are returned in the id field when you created the token.\n",
+  "extracted_metadata": {
+    "goal": "payments-guide-en-us_tms_developer_all_rest_tms_tms-bin-lookup-service.md"
+  }
+}

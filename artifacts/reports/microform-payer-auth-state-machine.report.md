@@ -1,4 +1,4 @@
-# Relay Bench V0 Report — `microform-payer-auth-state-machine`
+# Content Bench V0 Report — `microform-payer-auth-state-machine`
 
 Local proof only. No network. No live credentials.
 
@@ -29,7 +29,7 @@ Local proof only. No network. No live credentials.
 - Without it, enrollment fails and authorization has no authentication references
 - alt_goal:Resolve developer confusion involving Microform, enrollment, authorization
 
-## 2. What Relay discovered
+## 2. What Content Bench discovered
 
 - Sequence Microform tokenization with Payer Authentication enrollment, challenge/frictionless handling, and authorization using the authentication result.
 - stages:microform_tokenize,payer_auth_setup,enrollment_check,challenge_or_frictionless,validate_authentication,authorize_with_auth_result
@@ -55,7 +55,7 @@ Local proof only. No network. No live credentials.
 ## 5. What product surface improves next
 
 - Clarify Microform + Payer Auth State Machine stage ordering in public docs
-- Ship a VAP CLI workflow verifier for this contract
+- Ship a Content CLI workflow verifier for this contract
 
 ## Classification
 
@@ -67,10 +67,10 @@ Local proof only. No network. No live credentials.
 - task pack: `artifacts/task_packs/microform-payer-auth-state-machine.agent_task.json`
 - verifier results: `artifacts/verifier_results/microform-payer-auth-state-machine.result.json`
 
-## VAP CLI workflow verifier (recommended)
+## Content CLI workflow verifier (recommended)
 
 - goal: Sequence Microform tokenization with Payer Authentication enrollment, challenge/frictionless handling, and authorization using the authentication result.
-- command: `vap workflow verify --id microform-payer-auth-state-machine --fixture local`
+- command: `content workflow verify --id microform-payer-auth-state-machine --fixture local`
 - readiness checks:
   - Frozen seeds present under data/seeds/
   - No live credentials exported

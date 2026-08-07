@@ -1,0 +1,99 @@
+{
+  "stage": "content_engine_extract",
+  "inspired_by": "ucbepic/docetl (imported; Frame.code_map, no LLM)",
+  "extractor_label": "imported-code_map",
+  "source_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_payments_intro_",
+  "units": [
+    {
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_payments_intro_:overview:0:figure:-{#payments_intro_digt_accpt_sec_intg_uc-",
+      "source_page_id": "doc-payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_payments_intro_",
+      "unit_type": "overview",
+      "title": "Figure: {#payments_intro_digt_accpt_sec_intg_uc-ui-ux}",
+      "goal": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_payments_intro_",
+      "product": [
+        "payments",
+        "cybersource"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "task": [
+        "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_payments_intro_"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "`Unified Checkout` Button Widget Interface ![Example of the button widget interface with various payment options and\ncallouts for features.](/content/dam/new-documentation/documentation/en-us/topics/payments-processing/card-processing/digital-accept/images/uc-ui-ux.png/jcr:content/renditions/original)\n`Unified Checkout` includes these features:\n\n* Leading security technology\n* Simple front-end integration\n* Integrated with emerging digital standards\n* Integrated with a range of payment methods\n* Payment option presentation is optimized\n  For more information, see [Introduction to Unified Checkout](/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex/uc-intro.md \"\").\n\n`Microform Integration`\n-----------------------\n\n`Microform Integration` is a payment card and card verification acceptance solution that can be embedded. Use it to securely accept payment information at your web page and have complete control over the look and feel of your payment form. `Microform Integration` captures the card number and card verification number fields from within your existing user interface. This solution is for sellers looking for a secure way to capture sensitive payment data from within their own customized payment form.",
+      "commands": [],
+      "api_entities": [
+        "Microform",
+        "Flex",
+        "Unified Checkout"
+      ],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "`Unified Checkout` Button Widget Interface ![Example of the button widget interface with various payment options and callouts for features.](/content/dam/new..."
+      ]
+    },
+    {
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_payments_intro_:overview:0:figure:-{#payments_intro_digt_accpt_sec_intg_mic",
+      "source_page_id": "doc-payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_payments_intro_",
+      "unit_type": "overview",
+      "title": "Figure: {#payments_intro_digt_accpt_sec_intg_microform-ui}",
+      "goal": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_payments_intro_",
+      "product": [
+        "payments",
+        "cybersource"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "task": [
+        "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_payments_intro_"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "`Microform Integration` Payment Form Interface ![Example of the Microform payment form Interface with callout that states\nsecure Microform fields can be seamlessly inserted into your payment\npage.](/content/dam/new-documentation/documentation/en-us/topics/payments-processing/card-processing/digital-accept/images/microform-ui.png/jcr:content/renditions/original)\n`Microform Integration` includes these features:\n\n* Leading security technology\n* Seamlessly integrated into existing payment pages\n* Fully customizable\n\nFor more information, see [Microform Integration v2](/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex/microform-integ-v2.md \"\").\n\n`Flex API`\n----------\n\n`Flex API` can be used to securely capture and transport payment data between systems. This solution is ideal for Internet of Things (IoT) and third-party integrations. For more information, see [Flex API](/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex/da-flex-api-intro.md \"\").\n\n`Digital Accept` Product Comparison\n-----------------------------------\n\nThis chart compares `Digital Accept` products and features.",
+      "commands": [],
+      "api_entities": [
+        "Microform",
+        "Flex"
+      ],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "`Microform Integration` Payment Form Interface ![Example of the Microform payment form Interface with callout that states secure Microform fields can be seam..."
+      ]
+    },
+    {
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_payments_intro_:overview:0:figure:-{#payments_intro_digt_accpt_sec_intg_da-",
+      "source_page_id": "doc-payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_payments_intro_",
+      "unit_type": "overview",
+      "title": "Figure: {#payments_intro_digt_accpt_sec_intg_da-prod-chart}",
+      "goal": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_payments_intro_",
+      "product": [
+        "payments",
+        "cybersource"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "task": [
+        "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_payments_intro_"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "Products and Features Comparison Chart ![Comparison chart of Digital Accept products and features.](/content/dam/new-documentation/documentation/en-us/topics/payments-processing/card-processing/digital-accept/images/da-prod-chart.png/jcr:content/renditions/original)",
+      "commands": [],
+      "api_entities": [],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "Products and Features Comparison Chart ![Comparison chart of Digital Accept products and features.](/content/dam/new-documentation/documentation/en-us/topics..."
+      ]
+    }
+  ]
+}

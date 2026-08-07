@@ -1,0 +1,21 @@
+{
+  "doc_id": "doc-payments-guide-en-us_tms_developer_all_rest_tms_tms-cust-tkn_tms-ship-tkn.md",
+  "source_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-cust-tkn_tms-ship-tkn.md",
+  "snapshot_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-cust-tkn_tms-ship-tkn.md-d6bd152abc7b",
+  "title": "payments-guide-en-us_tms_developer_all_rest_tms_tms-cust-tkn_tms-ship-tkn.md",
+  "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms/tms-cust-tkn/tms-ship-tkn.md",
+  "source_format": "markdown",
+  "product": [
+    "payments",
+    "cybersource"
+  ],
+  "audience": [
+    "developer"
+  ],
+  "page_type": "guide",
+  "freshness_date": "unknown",
+  "normalized_markdown": "Shipping Address Tokens {#tms-ship-tkn}\n=======================================\n\nThe shipping address token contains the shipping address information associated with a customer token. This token includes any shipping address details, including the recipient's first and last name, company, shipping address, email, and phone number. A customer can have one or more shipping addresses, with one allocated as the customer's default shipping address.\n",
+  "extracted_metadata": {
+    "goal": "payments-guide-en-us_tms_developer_all_rest_tms_tms-cust-tkn_tms-ship-tkn.md"
+  }
+}

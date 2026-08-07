@@ -1,0 +1,596 @@
+{
+  "source_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding",
+  "status": "blocked",
+  "schema_passed": true,
+  "content_passed": false,
+  "agent_use_status": "deferred",
+  "issues": [
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:1:contact-your-representative-to-have-a-portfolio-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:2:configure-product-templates.-see-[product-templa"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:3:create-a-merchant-organization.-see-[create-a-me"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:4:set-up-your-transacting-organization-and-product"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:5:configure-products.-see-[product-enablement-and-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:6:create-a-merchant-organization.-see-[create-a-me"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:7:configure-product-templates.-see-[product-templa"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:8:set-up-your-transacting-organization-and-product"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:9:extend-the-hierarchy.-see-[add-a-structural-orga"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:10:configure-products.-see-[product-enablement-and-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:11:contact-your-representative-to-have-a-portfolio-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:12:configure-product-templates.-see-[product-templa"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:13:create-a-merchant-organization.-see-[create-a-me"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:14:set-up-your-transacting-organization-and-product"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:15:configure-products.-see-[product-enablement-and-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:16:contact-your-representative-to-have-a-portfolio-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:17:configure-product-templates.-see-[product-templa"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:18:create-a-merchant-organization.-see-[create-a-me"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:19:extend-the-hierarchy.-see-[add-a-structural-orga"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:20:set-up-your-transacting-organization-and-product"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:21:configure-products.-see-[product-enablement-and-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:22:in-the-`business-center`,-go-to-the-left-navigat"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:23:go-to-the-applied-filters-section-and-choose-a-p"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:24:click-**search**-to-filter-the-results-by-produc"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:25:you-can-sort-the-filtered-results-by-the-column-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:26:click-a-template's-name-link-to-open-an-individu"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:27:in-the-`business-center`,-go-to-the-left-navigat"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:28:click-add-new-template-\\|-+."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:29:on-the-template-details-page,-select-a-product-f"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:30:click-apply-selected-product."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:31:enter-a-name-and-description."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:32:set-the-template-as-your-default-template-for-th"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:33:click-next."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:34:set-the-configuration-options-for-the-selected-t"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:35:some-templates-with-multiple-tabs-require-you-to"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:36:when-you-have-configured-all-the-tabs-for-the-pr"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:37:follow-the-steps-to-[retrieve-a-template](/docs/"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:38:next-to-the-template-you-want-to-modify,-click-t"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:39:edit-the-existing-template."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:40:click-**save**."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:41:in-the-`business-center`,-go-to-the-left-navigat"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:42:follow-the-steps-to-[retrieve-a-template](/docs/"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:43:next-to-the-template-you-want-to-delete,-click-t"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:44:in-the-`business-center`,-go-to-the-left-navigat"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:45:follow-the-steps-to-[retrieve-a-template](/docs/"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:46:next-to-the-template-you-want-to-modify,-click-t"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:47:in-the-`business-center`,-go-to-the-left-navigat"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:48:click-**add-new-template**."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:49:select-**card-processing**-from-the-drop-down-me"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:50:click-**apply-selected-product**."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:51:enter-a-unique-name-for-the-new-card-processing-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:52:select-the-type-of-card-processing:-card-present"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:53:click-the-**processor**-field,-and-then-choose-t"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:54:if-an-acceptance-type-field-appears,-click-the-f"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:55:in-the-processor-tab-(labeled-with-the-name-of-t"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:56:in-the-common-settings-tab,-you-can-configure-fi"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:57:navigate-to-the-merchant-details-page-within-por"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:58:click-the-add-products-button."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:59:select-customer-invoicing,-and-click-the-add-but"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:60:on-the-general-settings-page,-select-options-for"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:61:on-the-rule-configuration-page,-configure-the-op"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:62:navigate-to-the-merchant-details-page-within-por"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:63:click-the-add-products-button."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:64:select-`pay-by-link`,-and-click-the-add-button."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:65:navigate-to-the-merchant-details-page-within-por"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:66:click-the-add-products-button."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:67:select-unified-checkout,-and-click-the-add-butto"
+    },
+    {
+      "code": "secret_or_pan_material",
+      "severity": "error",
+      "message": "unit appears to contain secret or non-test PAN-like material",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:67:select-unified-checkout,-and-click-the-add-butto"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:68:navigate-to-token-management."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:69:click-vault-management."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:70:use-the-vault-owner-filter-to-search-for-the-mer"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:71:choose-the-merchant-account-to-view-the-`tms`-va"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:72:click-network-tokenization."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:73:click-enroll-to-visa/mastercard-token-services."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:74:enter-the-required-information-for-each-card-typ"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:75:click-onboard-with-acquirer-id."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:76:enter-the-required-information:"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:77:click-enroll-to-network-token-services-to-comple"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:78:log-in-to-the-`business-center`-test-environment"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:79:in-the-left-navigation-panel,-click-the-token-ma"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:80:click-vault-management-new.-the-vault-management"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:81:from-the-vault-owner-drop-down-list,-select-the-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:82:in-the-details-column,-click-vault-settings.-the"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:83:click-edit."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:84:enter-the-vault-name,-supported-payment-methods,"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:85:click-save."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:86:to-return-to-the-vault-management-page,-click-va"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:87:log-in-to-the-`business-center`-test-environment"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:88:in-the-left-navigation-panel,-click-the-token-ma"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:89:click-vault-management-new.-the-vault-management"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:90:select-the-vault-owner-that-you-want-to-configur"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:91:in-the-details-column,-click-access-settings.-th"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:92:check-the-box-for-the-vault-settings-you-want-to"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:93:click-submit-to-save-your-settings."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:94:in-basic-information,-enter-the-merchant-account"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:95:enter-the-merchant-information-in-the-provided-t"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:96:click-**save**-.-you-are-returned-to-the-add-mer"
+    }
+  ],
+  "promoted_unit_ids": [],
+  "linked_workflow_id": null,
+  "contract_bundle_path": null,
+  "context_pack_path": null,
+  "objects_path": "artifacts/content_engine/objects/boarding-guide-en-us_boarding_developer_all_rest_boarding.quickstart_units.json"
+}

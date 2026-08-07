@@ -1,0 +1,11 @@
+{
+  "snapshot_id": "payments-guide-payer-auth-7b6aa0a20aba",
+  "source_id": "payments-guide-payer-auth",
+  "fetched_at": "2026-08-07T07:43:33Z",
+  "content_hash": "7b6aa0a20aba435feaf748db79ac67134744512c4de3f89c0be2f2d78cc246e6",
+  "version_tag": "7b6aa0a20aba",
+  "mime_type": "text/markdown",
+  "raw_bytes_location": "artifacts/content_engine/snapshots/payments-guide-payer-auth-7b6aa0a20aba.md",
+  "canonical_url": "https://developer.cybersource.com/docs/cybs/payer-auth.md",
+  "upstream_last_modified": ""
+}

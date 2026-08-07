@@ -67,7 +67,7 @@
     "doc_id": "doc-lab-auth-context"
   },
   "constraints": [
-    "Derived Relay context pack \u2014 does not rewrite source docs",
+    "Derived Content Bench context pack \u2014 does not rewrite source docs",
     "No live credentials, PAN, or secrets",
     "Extraction backend recorded in provenance / honest_label (heuristic default; optional real DocETL via --discovery)"
   ],

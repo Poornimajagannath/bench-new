@@ -16,7 +16,7 @@
       "seed:seed-httpsig-06"
     ],
     "allowed_context": [
-      "Sandbox host is apitest.cybersource.com",
+      "Sandbox host is apitest.example.com",
       "SDK expects merchantKeyId and merchantsecretKey (not keyId/secretKey)",
       "Signed headers typically include host, date, request-target, digest, v-c-merchant-id"
     ],
@@ -31,7 +31,7 @@
     ],
     "constraints": [
       "No network calls",
-      "No live CyberSource sandbox credentials",
+      "No live Payment Gateway sandbox credentials",
       "No raw PAN, secrets, or credential logging",
       "Public forum/docs seeds are frozen input only"
     ]

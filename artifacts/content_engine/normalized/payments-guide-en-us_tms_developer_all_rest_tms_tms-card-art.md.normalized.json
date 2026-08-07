@@ -1,0 +1,21 @@
+{
+  "doc_id": "doc-payments-guide-en-us_tms_developer_all_rest_tms_tms-card-art.md",
+  "source_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-card-art.md",
+  "snapshot_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-card-art.md-bf3c4b7c5ce5",
+  "title": "payments-guide-en-us_tms_developer_all_rest_tms_tms-card-art.md",
+  "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms/tms-card-art.md",
+  "source_format": "markdown",
+  "product": [
+    "payments",
+    "cybersource"
+  ],
+  "audience": [
+    "developer"
+  ],
+  "page_type": "guide",
+  "freshness_date": "unknown",
+  "normalized_markdown": "Card Art {#tms-card-art}\n========================\n\nIMPORTANT This feature is in pilot phase. You have early access to this feature even though it might contain bugs or unfinished work. Please consider the risk when using this feature.\nYou can choose to display card art provided by `TMS` to help your customers identify the card that they are selecting. `Cybersource` recommends that card art be shown in all cardholder-facing interactions where it applies.\nCard art is available for these card types:\n\n* American Express\n* Mastercard\n* Visa\n",
+  "extracted_metadata": {
+    "goal": "payments-guide-en-us_tms_developer_all_rest_tms_tms-card-art.md"
+  }
+}
