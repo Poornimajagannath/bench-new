@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Relay Bench V0 staged pipeline runner.
+"""Content Bench V0 staged pipeline runner.
 
 Local prototype inspired by DocETL and Tempo Stable Bench.
 Default discovery is heuristic (no docetl import). Optional --discovery docetl
@@ -10,7 +10,7 @@ raw forum/docs/support questions
 -> extract goal/symptoms/entities (heuristic | DocETL)
 -> suggests workflow_id + stages
 -> PM approves/edits
--> Relay Bench creates task pack + Stable Bench-inspired verifier
+-> Content Bench creates task pack + Stable Bench-inspired verifier
 -> failure classifier
 -> product-surface improvement action
 -> PM-readable report
@@ -29,16 +29,16 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from relay_bench.contract_compiler import compile_and_write
-from relay_bench.docetl_discovery import (
+from content_bench.contract_compiler import compile_and_write
+from content_bench.docetl_discovery import (
     EXTRACT_MODES,
     discover_suggestions_with_backend,
 )
-from relay_bench.pm_gate import require_pm_approved_candidate
-from relay_bench.reporting import build_report, write_report
-from relay_bench.routing import classify_failure
-from relay_bench.task_pack import materialize_contract
-from relay_bench.verifiers import (
+from content_bench.pm_gate import require_pm_approved_candidate
+from content_bench.reporting import build_report, write_report
+from content_bench.routing import classify_failure
+from content_bench.task_pack import materialize_contract
+from content_bench.verifiers import (
     run_stable_bench_inspired_verification,
     write_verifier_results,
 )
@@ -151,7 +151,7 @@ def run_pipeline(
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Run Relay Bench V0 staged pipeline")
+    parser = argparse.ArgumentParser(description="Run Content Bench V0 staged pipeline")
     parser.add_argument(
         "--workflow",
         required=True,

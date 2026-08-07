@@ -1,7 +1,7 @@
 {
   "stage": "docetl_inspired_extract_suggest_pm",
   "inspired_by": {
-    "discovery": "ucbepic/docetl (heuristic default; optional import via relay_bench.docetl_discovery / --discovery docetl)",
+    "discovery": "ucbepic/docetl (heuristic default; optional import via content_bench.docetl_discovery / --discovery docetl)",
     "verifier": "tempoxyz/tempo-evals Stable Bench (not imported in V0)"
   },
   "pipeline": [
@@ -9,7 +9,7 @@
     "docetl_inspired_extract_goal_symptoms_entities",
     "suggest_workflow_id_and_stages",
     "pm_approve_or_edit",
-    "relay_bench_task_pack_and_stable_bench_inspired_verifier"
+    "content_bench_task_pack_and_stable_bench_inspired_verifier"
   ],
   "suggestion_count": 20,
   "suggestions": [
@@ -341,7 +341,7 @@
           "Authentication Failed",
           "keyId",
           "secretKey",
-          "apitest.cybersource.com"
+          "apitest.example.com"
         ],
         "confidence": 0.95
       },
@@ -378,14 +378,14 @@
       },
       "extraction": {
         "seed_id": "seed-httpsig-02",
-        "goal": "Resolve developer confusion involving HTTP Signature, v-c-merchant-id, apitest.cybersource.com",
+        "goal": "Resolve developer confusion involving HTTP Signature, v-c-merchant-id, apitest.example.com",
         "symptoms": [
           "HTTP Signature signed headers include host,date,digest but we still get 401. Do we need request-target and v-c-merchant-id in the signature base on apitest?"
         ],
         "entities": [
           "HTTP Signature",
           "v-c-merchant-id",
-          "apitest.cybersource.com"
+          "apitest.example.com"
         ],
         "confidence": 0.8
       },
@@ -510,7 +510,7 @@
         ],
         "entities": [
           "HTTP Signature",
-          "apitest.cybersource.com"
+          "apitest.example.com"
         ],
         "confidence": 0.7
       },
@@ -936,7 +936,7 @@
       "surface_hints": [
         "docs",
         "sdk",
-        "vap_cli"
+        "content_cli"
       ],
       "pm_decision": "approve",
       "extraction": {
@@ -1015,7 +1015,7 @@
         "interpret_auth_failure"
       ],
       "api_sdk_facts": [
-        "Sandbox host is apitest.cybersource.com",
+        "Sandbox host is apitest.example.com",
         "SDK expects merchantKeyId and merchantsecretKey (not keyId/secretKey)",
         "Signed headers typically include host, date, request-target, digest, v-c-merchant-id"
       ],
@@ -1026,10 +1026,10 @@
         "entity:Authentication Failed",
         "entity:keyId",
         "entity:secretKey",
-        "entity:apitest.cybersource.com",
+        "entity:apitest.example.com",
         "HTTP Signature signed headers include host,date,digest but we still get 401. Do we need request-target and v-c-merchant-id in the signature base on apitest?",
         "entity:v-c-merchant-id",
-        "alt_goal:Resolve developer confusion involving HTTP Signature, v-c-merchant-id, apitest.cybersource.com",
+        "alt_goal:Resolve developer confusion involving HTTP Signature, v-c-merchant-id, apitest.example.com",
         "Authentication Failed every time on sandbox",
         "entity:merchantKeyId",
         "alt_goal:Resolve developer confusion involving Authentication Failed, keyId, secretKey, merchantKeyId",
@@ -1051,7 +1051,7 @@
       "surface_hints": [
         "docs",
         "sdk",
-        "vap_cli"
+        "content_cli"
       ],
       "pm_decision": "approve",
       "extraction": {
@@ -1065,7 +1065,7 @@
         ],
         "goals": [
           "Am I using the wrong SDK field names for key id and secret?",
-          "Resolve developer confusion involving HTTP Signature, v-c-merchant-id, apitest.cybersource.com",
+          "Resolve developer confusion involving HTTP Signature, v-c-merchant-id, apitest.example.com",
           "Resolve developer confusion involving Authentication Failed, keyId, secretKey, merchantKeyId",
           "what host should sandbox use?",
           "How should the digest and signature base string be built for CyberSource HTTP Signature?",
@@ -1085,7 +1085,7 @@
           "Authentication Failed",
           "keyId",
           "secretKey",
-          "apitest.cybersource.com",
+          "apitest.example.com",
           "v-c-merchant-id",
           "merchantKeyId"
         ],
@@ -1173,7 +1173,7 @@
       ],
       "surface_hints": [
         "docs",
-        "vap_cli",
+        "content_cli",
         "mcp"
       ],
       "pm_decision": "edit",

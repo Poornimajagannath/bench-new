@@ -1,0 +1,27 @@
+{
+  "product": "boarding",
+  "wave": 2,
+  "note": "Wave 2 \u2014 do not enable until Wave 1 gates pass.",
+  "docs_dir": "data/products/boarding/guides",
+  "sources": [
+    {
+      "source_id": "boarding-placeholder",
+      "source_type": "guide",
+      "canonical_url": "local://boarding/placeholder",
+      "repo_path": "data/products/boarding/guides/.gitkeep",
+      "owning_team": "boarding-docs",
+      "product": [
+        "boarding",
+        "cybersource"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "refresh_cadence": "deferred",
+      "trust_level": "experimental",
+      "parser_strategy": "markdown_native",
+      "enabled": false,
+      "linked_workflow_id": null
+    }
+  ]
+}

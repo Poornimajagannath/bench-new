@@ -1,4 +1,4 @@
-"""Tests for Relay Content Engine V0 prototype."""
+"""Tests for Content Bench Content Engine V0 prototype."""
 
 from __future__ import annotations
 
@@ -6,14 +6,14 @@ import json
 import unittest
 from pathlib import Path
 
-from relay_bench.content_engine.extract import extract_quickstart_units
-from relay_bench.content_engine.normalize import normalize_document
-from relay_bench.content_engine.pipeline import run_content_engine
-from relay_bench.content_engine.registry import require_source
-from relay_bench.content_engine.segment import segment_document
-from relay_bench.content_engine.snapshot import materialize_snapshot
-from relay_bench.content_engine.validate import validate_content, validate_schema
-from relay_bench.content_engine.schemas import QuickstartUnit
+from content_bench.content_engine.extract import extract_quickstart_units
+from content_bench.content_engine.normalize import normalize_document
+from content_bench.content_engine.pipeline import run_content_engine
+from content_bench.content_engine.registry import require_source
+from content_bench.content_engine.segment import segment_document
+from content_bench.content_engine.snapshot import materialize_snapshot
+from content_bench.content_engine.validate import validate_content, validate_schema
+from content_bench.content_engine.schemas import QuickstartUnit
 
 ROOT = Path(__file__).resolve().parents[1]
 

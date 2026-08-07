@@ -1,0 +1,352 @@
+{
+  "openapi_path": "data/content_engine/specs/cybersource-payments-core.openapi.json",
+  "docs_sampled": 38,
+  "overall_spec_backed_share": 0.856,
+  "overall_prose_only_share": 0.144,
+  "decision_rule": "spec-primary: generate endpoint pages from OpenAPI; DocETL mines prose only for gaps",
+  "guides": [
+    {
+      "guide": "credentials",
+      "path": "data/products/payments/guides/credentials.md",
+      "spec_backed_share": 0.783,
+      "prose_only_share": 0.217,
+      "spec_hits": 18,
+      "prose_hits": 5,
+      "notes": ""
+    },
+    {
+      "guide": "en-us_digital-accept-flex_developer_all_rest_digital-accept-flex",
+      "path": "data/products/payments/guides/en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md.md",
+      "spec_backed_share": 0.811,
+      "prose_only_share": 0.189,
+      "spec_hits": 30,
+      "prose_hits": 7,
+      "notes": "index-like; mostly navigation / revision surface"
+    },
+    {
+      "guide": "en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_ctp-intro",
+      "path": "data/products/payments/guides/en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_ctp-intro.md.md",
+      "spec_backed_share": 0.889,
+      "prose_only_share": 0.111,
+      "spec_hits": 8,
+      "prose_hits": 1,
+      "notes": ""
+    },
+    {
+      "guide": "en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_da-payments",
+      "path": "data/products/payments/guides/en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_da-payments.md.md",
+      "spec_backed_share": 1.0,
+      "prose_only_share": 0.0,
+      "spec_hits": 2,
+      "prose_hits": 0,
+      "notes": ""
+    },
+    {
+      "guide": "en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_flex-api-2",
+      "path": "data/products/payments/guides/en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_flex-api-2.md.md",
+      "spec_backed_share": 0.667,
+      "prose_only_share": 0.333,
+      "spec_hits": 2,
+      "prose_hits": 1,
+      "notes": ""
+    },
+    {
+      "guide": "en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_microform-integ-v2",
+      "path": "data/products/payments/guides/en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_microform-integ-v2.md.md",
+      "spec_backed_share": 1.0,
+      "prose_only_share": 0.0,
+      "spec_hits": 5,
+      "prose_hits": 0,
+      "notes": ""
+    },
+    {
+      "guide": "en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_payments_intro_digt_accpt_sec_intg",
+      "path": "data/products/payments/guides/en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_payments_intro_digt_accpt_sec_intg.md.md",
+      "spec_backed_share": 1.0,
+      "prose_only_share": 0.0,
+      "spec_hits": 4,
+      "prose_hits": 0,
+      "notes": ""
+    },
+    {
+      "guide": "en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_uc-intro",
+      "path": "data/products/payments/guides/en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_uc-intro.md.md",
+      "spec_backed_share": 0.875,
+      "prose_only_share": 0.125,
+      "spec_hits": 7,
+      "prose_hits": 1,
+      "notes": ""
+    },
+    {
+      "guide": "en-us_payer-authentication_developer_all_rest_payer-auth",
+      "path": "data/products/payments/guides/en-us_payer-authentication_developer_all_rest_payer-auth.md.md",
+      "spec_backed_share": 0.773,
+      "prose_only_share": 0.227,
+      "spec_hits": 34,
+      "prose_hits": 10,
+      "notes": "index-like; mostly navigation / revision surface"
+    },
+    {
+      "guide": "en-us_payer-authentication_developer_all_rest_payer-auth_pa-reports-intro",
+      "path": "data/products/payments/guides/en-us_payer-authentication_developer_all_rest_payer-auth_pa-reports-intro.md.md",
+      "spec_backed_share": 0.5,
+      "prose_only_share": 0.5,
+      "spec_hits": 1,
+      "prose_hits": 1,
+      "notes": ""
+    },
+    {
+      "guide": "en-us_payer-authentication_developer_all_rest_payer-auth_pa-testing-intro",
+      "path": "data/products/payments/guides/en-us_payer-authentication_developer_all_rest_payer-auth_pa-testing-intro.md.md",
+      "spec_backed_share": 0.667,
+      "prose_only_share": 0.333,
+      "spec_hits": 2,
+      "prose_hits": 1,
+      "notes": ""
+    },
+    {
+      "guide": "en-us_payer-authentication_developer_all_rest_payer-auth_pa2-ccdc-intro",
+      "path": "data/products/payments/guides/en-us_payer-authentication_developer_all_rest_payer-auth_pa2-ccdc-intro.md.md",
+      "spec_backed_share": 0.4,
+      "prose_only_share": 0.6,
+      "spec_hits": 2,
+      "prose_hits": 3,
+      "notes": "index-like; mostly navigation / revision surface"
+    },
+    {
+      "guide": "en-us_payer-authentication_developer_all_rest_payer-auth_pa2-intro-intro",
+      "path": "data/products/payments/guides/en-us_payer-authentication_developer_all_rest_payer-auth_pa2-intro-intro.md.md",
+      "spec_backed_share": 0.8,
+      "prose_only_share": 0.2,
+      "spec_hits": 4,
+      "prose_hits": 1,
+      "notes": ""
+    },
+    {
+      "guide": "en-us_payments_developer_ctv_rest_payments",
+      "path": "data/products/payments/guides/en-us_payments_developer_ctv_rest_payments.md.md",
+      "spec_backed_share": 0.75,
+      "prose_only_share": 0.25,
+      "spec_hits": 27,
+      "prose_hits": 9,
+      "notes": "index-like; mostly navigation / revision surface"
+    },
+    {
+      "guide": "en-us_payments_developer_ctv_rest_payments_payments-debit-prepaid-process-intro",
+      "path": "data/products/payments/guides/en-us_payments_developer_ctv_rest_payments_payments-debit-prepaid-process-intro.md.md",
+      "spec_backed_share": 1.0,
+      "prose_only_share": 0.0,
+      "spec_hits": 2,
+      "prose_hits": 0,
+      "notes": ""
+    },
+    {
+      "guide": "en-us_payments_developer_ctv_rest_payments_payments-intro",
+      "path": "data/products/payments/guides/en-us_payments_developer_ctv_rest_payments_payments-intro.md.md",
+      "spec_backed_share": 1.0,
+      "prose_only_share": 0.0,
+      "spec_hits": 2,
+      "prose_hits": 0,
+      "notes": ""
+    },
+    {
+      "guide": "en-us_payments_developer_ctv_rest_payments_payments-processing-basic-intro",
+      "path": "data/products/payments/guides/en-us_payments_developer_ctv_rest_payments_payments-processing-basic-intro.md.md",
+      "spec_backed_share": 1.0,
+      "prose_only_share": 0.0,
+      "spec_hits": 2,
+      "prose_hits": 0,
+      "notes": ""
+    },
+    {
+      "guide": "en-us_tms_developer_all_rest_tms",
+      "path": "data/products/payments/guides/en-us_tms_developer_all_rest_tms.md.md",
+      "spec_backed_share": 0.833,
+      "prose_only_share": 0.167,
+      "spec_hits": 35,
+      "prose_hits": 7,
+      "notes": "index-like; mostly navigation / revision surface"
+    },
+    {
+      "guide": "en-us_tms_developer_all_rest_tms_tms-bin-lookup-service",
+      "path": "data/products/payments/guides/en-us_tms_developer_all_rest_tms_tms-bin-lookup-service.md.md",
+      "spec_backed_share": 1.0,
+      "prose_only_share": 0.0,
+      "spec_hits": 7,
+      "prose_hits": 0,
+      "notes": ""
+    },
+    {
+      "guide": "en-us_tms_developer_all_rest_tms_tms-card-art",
+      "path": "data/products/payments/guides/en-us_tms_developer_all_rest_tms_tms-card-art.md.md",
+      "spec_backed_share": 1.0,
+      "prose_only_share": 0.0,
+      "spec_hits": 3,
+      "prose_hits": 0,
+      "notes": ""
+    },
+    {
+      "guide": "en-us_tms_developer_all_rest_tms_tms-create-request",
+      "path": "data/products/payments/guides/en-us_tms_developer_all_rest_tms_tms-create-request.md.md",
+      "spec_backed_share": 0.909,
+      "prose_only_share": 0.091,
+      "spec_hits": 10,
+      "prose_hits": 1,
+      "notes": ""
+    },
+    {
+      "guide": "en-us_tms_developer_all_rest_tms_tms-cust-tkn",
+      "path": "data/products/payments/guides/en-us_tms_developer_all_rest_tms_tms-cust-tkn.md.md",
+      "spec_backed_share": 1.0,
+      "prose_only_share": 0.0,
+      "spec_hits": 2,
+      "prose_hits": 0,
+      "notes": ""
+    },
+    {
+      "guide": "en-us_tms_developer_all_rest_tms_tms-cust-tkn_tms-cust-pi-tkn",
+      "path": "data/products/payments/guides/en-us_tms_developer_all_rest_tms_tms-cust-tkn_tms-cust-pi-tkn.md.md",
+      "spec_backed_share": 1.0,
+      "prose_only_share": 0.0,
+      "spec_hits": 1,
+      "prose_hits": 0,
+      "notes": ""
+    },
+    {
+      "guide": "en-us_tms_developer_all_rest_tms_tms-cust-tkn_tms-ship-tkn",
+      "path": "data/products/payments/guides/en-us_tms_developer_all_rest_tms_tms-cust-tkn_tms-ship-tkn.md.md",
+      "spec_backed_share": 0.5,
+      "prose_only_share": 0.5,
+      "spec_hits": 1,
+      "prose_hits": 1,
+      "notes": ""
+    },
+    {
+      "guide": "en-us_tms_developer_all_rest_tms_tms-ii-tkn",
+      "path": "data/products/payments/guides/en-us_tms_developer_all_rest_tms_tms-ii-tkn.md.md",
+      "spec_backed_share": 1.0,
+      "prose_only_share": 0.0,
+      "spec_hits": 3,
+      "prose_hits": 0,
+      "notes": ""
+    },
+    {
+      "guide": "en-us_tms_developer_all_rest_tms_tms-net-tkn-intro",
+      "path": "data/products/payments/guides/en-us_tms_developer_all_rest_tms_tms-net-tkn-intro.md.md",
+      "spec_backed_share": 0.769,
+      "prose_only_share": 0.231,
+      "spec_hits": 10,
+      "prose_hits": 3,
+      "notes": "index-like; mostly navigation / revision surface"
+    },
+    {
+      "guide": "en-us_tms_developer_all_rest_tms_tms-net-tkn-onboard",
+      "path": "data/products/payments/guides/en-us_tms_developer_all_rest_tms_tms-net-tkn-onboard.md.md",
+      "spec_backed_share": 1.0,
+      "prose_only_share": 0.0,
+      "spec_hits": 4,
+      "prose_hits": 0,
+      "notes": ""
+    },
+    {
+      "guide": "en-us_tms_developer_all_rest_tms_tms-onboarding",
+      "path": "data/products/payments/guides/en-us_tms_developer_all_rest_tms_tms-onboarding.md.md",
+      "spec_backed_share": 1.0,
+      "prose_only_share": 0.0,
+      "spec_hits": 1,
+      "prose_hits": 0,
+      "notes": ""
+    },
+    {
+      "guide": "en-us_tms_developer_all_rest_tms_tms-overview",
+      "path": "data/products/payments/guides/en-us_tms_developer_all_rest_tms_tms-overview.md.md",
+      "spec_backed_share": 0.625,
+      "prose_only_share": 0.375,
+      "spec_hits": 5,
+      "prose_hits": 3,
+      "notes": "index-like; mostly navigation / revision surface"
+    },
+    {
+      "guide": "en-us_tms_developer_all_rest_tms_tms-pi-tkn",
+      "path": "data/products/payments/guides/en-us_tms_developer_all_rest_tms_tms-pi-tkn.md.md",
+      "spec_backed_share": 1.0,
+      "prose_only_share": 0.0,
+      "spec_hits": 1,
+      "prose_hits": 0,
+      "notes": ""
+    },
+    {
+      "guide": "en-us_tms_developer_all_rest_tms_tms-wallet-tkn",
+      "path": "data/products/payments/guides/en-us_tms_developer_all_rest_tms_tms-wallet-tkn.md.md",
+      "spec_backed_share": 1.0,
+      "prose_only_share": 0.0,
+      "spec_hits": 2,
+      "prose_hits": 0,
+      "notes": ""
+    },
+    {
+      "guide": "en-us_tms_developer_ctv_rest_tms",
+      "path": "data/products/payments/guides/en-us_tms_developer_ctv_rest_tms.md.md",
+      "spec_backed_share": 0.81,
+      "prose_only_share": 0.19,
+      "spec_hits": 34,
+      "prose_hits": 8,
+      "notes": "index-like; mostly navigation / revision surface"
+    },
+    {
+      "guide": "payer-auth",
+      "path": "data/products/payments/guides/payer-auth.md",
+      "spec_backed_share": 0.773,
+      "prose_only_share": 0.227,
+      "spec_hits": 34,
+      "prose_hits": 10,
+      "notes": "index-like; mostly navigation / revision surface"
+    },
+    {
+      "guide": "payments",
+      "path": "data/products/payments/guides/payments.md",
+      "spec_backed_share": 0.75,
+      "prose_only_share": 0.25,
+      "spec_hits": 27,
+      "prose_hits": 9,
+      "notes": "index-like; mostly navigation / revision surface"
+    },
+    {
+      "guide": "rest-getting-started",
+      "path": "data/products/payments/guides/rest-getting-started.md",
+      "spec_backed_share": 0.812,
+      "prose_only_share": 0.188,
+      "spec_hits": 26,
+      "prose_hits": 6,
+      "notes": "index-like; mostly navigation / revision surface"
+    },
+    {
+      "guide": "sandbox",
+      "path": "data/products/payments/guides/sandbox.md",
+      "spec_backed_share": 1.0,
+      "prose_only_share": 0.0,
+      "spec_hits": 1,
+      "prose_hits": 0,
+      "notes": ""
+    },
+    {
+      "guide": "testing-guide",
+      "path": "data/products/payments/guides/testing-guide.md",
+      "spec_backed_share": 1.0,
+      "prose_only_share": 0.0,
+      "spec_hits": 9,
+      "prose_hits": 0,
+      "notes": ""
+    },
+    {
+      "guide": "tms",
+      "path": "data/products/payments/guides/tms.md",
+      "spec_backed_share": 0.833,
+      "prose_only_share": 0.167,
+      "spec_hits": 35,
+      "prose_hits": 7,
+      "notes": "index-like; mostly navigation / revision surface"
+    }
+  ],
+  "top_prose_sections": []
+}

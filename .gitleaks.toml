@@ -1,0 +1,16 @@
+# Fail-closed secret scan for this private repo.
+# Vendor CyberSource guides ship published sandbox examples (JWTs, sample
+# signatures, placeholder RSA blocks). Those paths are allowlisted so CI can
+# still block real credentials in engine, evals, workflows, and generated pages.
+title = "bench-new"
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Published CyberSource sandbox documentation corpus (not live secrets)"
+paths = [
+  '''(^|/)cybersource-docs/''',
+  '''(^|/)gateway-docs/''',
+  '''(^|/)data/products/.+/guides/''',
+]
