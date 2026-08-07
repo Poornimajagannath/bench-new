@@ -6,6 +6,7 @@ from __future__ import annotations
 import re
 import subprocess
 import sys
+import tempfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -20,13 +21,16 @@ LEAK_PATTERNS = (
 
 
 def render_via_node(md: str) -> str:
+    """Render via portal/server.js without putting the body on argv (ARG_MAX)."""
     script = f"""
+const fs = require("fs");
 const {{ renderMarkdown }} = require({str(PORTAL)!r});
-const md = {md!r};
+const md = fs.readFileSync(0, "utf8");
 process.stdout.write(renderMarkdown(md));
 """
     proc = subprocess.run(
         ["node", "-e", script],
+        input=md,
         check=True,
         capture_output=True,
         text=True,
