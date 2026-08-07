@@ -6,7 +6,7 @@ import json
 import unittest
 from pathlib import Path
 
-from relay_bench.contract_compiler import (
+from content_bench.contract_compiler import (
     SCHEMA_VERSION,
     assert_receipt_firewall,
     build_harbor_shape_preview,
@@ -15,14 +15,14 @@ from relay_bench.contract_compiler import (
     compile_contract_bundle,
     render_contract_markdown,
 )
-from relay_bench.discovery import discover_workflows
-from relay_bench.routing import classify_failure
-from relay_bench.task_pack import (
+from content_bench.discovery import discover_workflows
+from content_bench.routing import classify_failure
+from content_bench.task_pack import (
     assert_no_verifier_leak,
     build_hidden_truth,
     materialize_contract,
 )
-from relay_bench.verifiers import (
+from content_bench.verifiers import (
     run_stable_bench_inspired_verification,
     write_verifier_results,
 )

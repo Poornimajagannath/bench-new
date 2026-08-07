@@ -6,7 +6,7 @@ import json
 import unittest
 from pathlib import Path
 
-from relay_bench.content_engine.integration_success import (
+from content_bench.content_engine.integration_success import (
     assemble_integration_success_pack,
     render_integration_success_markdown,
 )
@@ -29,7 +29,7 @@ class IntegrationSuccessTests(unittest.TestCase):
         self.assertTrue(md_path.exists())
 
         pack = json.loads(pack_path.read_text(encoding="utf-8"))
-        self.assertEqual(pack["schema_version"], "relay.integration_success_pack.v0")
+        self.assertEqual(pack["schema_version"], "content.integration_success_pack.v0")
         self.assertIn("createPayment", pack["api_reference"]["operation_ids"])
         self.assertIn("checkMppEnrollment", pack["api_reference"]["operation_ids"])
         self.assertTrue(pack["guided_quickstart"]["steps"])

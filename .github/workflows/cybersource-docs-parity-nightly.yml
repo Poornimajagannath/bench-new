@@ -1,0 +1,63 @@
+name: CyberSource docs parity (nightly)
+
+# Live upstream parity — evidence for the improvement loop, never a PR gate.
+# Writes reports to branch evidence/cybersource-docs-parity only (not main).
+on:
+  schedule:
+    - cron: "27 7 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  parity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run parity compare (live upstream, evidence only)
+        run: python3 evals/run_cybersource_docs_compare.py --evidence
+      - name: Upload parity report artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cybersource-docs-parity
+          path: |
+            evals/cybersource-docs-compare.md
+            evals/runs/cybersource-docs-compare.json
+      - name: Push report to evidence branch (not main)
+        if: always()
+        continue-on-error: true
+        run: |
+          set -euo pipefail
+          BRANCH=evidence/cybersource-docs-parity
+          git config user.name "content-bench-parity-bot"
+          git config user.email "parity-bot@users.noreply.github.com"
+
+          mkdir -p /tmp/parity-evidence/evals/runs
+          cp -f evals/cybersource-docs-compare.md /tmp/parity-evidence/evals/ || true
+          cp -f evals/runs/cybersource-docs-compare.json /tmp/parity-evidence/evals/runs/ || true
+
+          git fetch origin "$BRANCH" 2>/dev/null || true
+          if git rev-parse --verify "origin/$BRANCH" >/dev/null 2>&1; then
+            git checkout -B "$BRANCH" "origin/$BRANCH"
+          else
+            git checkout -B "$BRANCH"
+          fi
+
+          mkdir -p evals/runs
+          cp -f /tmp/parity-evidence/evals/cybersource-docs-compare.md evals/ || true
+          cp -f /tmp/parity-evidence/evals/runs/cybersource-docs-compare.json evals/runs/ || true
+
+          git add evals/cybersource-docs-compare.md evals/runs/cybersource-docs-compare.json
+          if git diff --staged --quiet; then
+            echo "No report changes"
+            exit 0
+          fi
+          git commit -m "chore(evals): nightly CyberSource docs parity report"
+          git push -u origin "$BRANCH"

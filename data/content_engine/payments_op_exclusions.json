@@ -1,0 +1,6 @@
+{
+  "version": 1,
+  "exclude_operation_ids": [],
+  "notes": "Deliberate skip list for Wave 1 real-spec run. Empty = generate a page for every /pts/ operation in cybersource-payments.openapi.json. Add operationIds here only with a one-line reason in reasons.",
+  "reasons": {}
+}

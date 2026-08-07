@@ -1,6 +1,6 @@
 {
   "source_id": "cybersource-payments-core-openapi",
-  "spec_snapshot_id": "cybersource-payments-core-openapi-36023ffe0629",
+  "spec_snapshot_id": "cybersource-payments-core-openapi-1e02a8724326",
   "compared_against": [
     "artifacts/contracts/microform-payer-auth-state-machine.contract_bundle.json",
     "artifacts/content_engine/objects/microform-payer-auth-quickstart.quickstart_units.json"

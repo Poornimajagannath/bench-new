@@ -1,15 +1,15 @@
 {
   "stage": "specs_to_docs_parse",
   "source_id": "cybersource-payments-core-openapi",
-  "snapshot_id": "cybersource-payments-core-openapi-36023ffe0629",
-  "content_hash": "36023ffe062937a770aeab0254f23784b84713b367604eb0719a7b9e0df7faf0",
+  "snapshot_id": "cybersource-payments-core-openapi-1e02a8724326",
+  "content_hash": "1e02a87243264d02eb6466e5ba4e1ed1b7467372a0d9dde3ef928ab1211cd26f",
   "entity_count": 8,
   "entities": [
     {
       "entity_id": "cybersource-payments-core-openapi:createCredit",
       "product": [
-        "cybersource",
-        "visa-acceptance"
+        "payments",
+        "cybersource"
       ],
       "service_name": "CyberSource Payments Core (local Relay fixture)",
       "endpoint": "/pts/v2/credits",
@@ -32,13 +32,52 @@
       ],
       "examples": [],
       "summary": "Create a credit",
-      "description": ""
+      "description": "",
+      "request_fields": [
+        {
+          "name": "clientReferenceInformation.code",
+          "type": "string",
+          "required": false,
+          "description": "",
+          "constraints": []
+        },
+        {
+          "name": "orderInformation.amountDetails.totalAmount",
+          "type": "string",
+          "required": true,
+          "description": "",
+          "constraints": []
+        },
+        {
+          "name": "orderInformation.amountDetails.currency",
+          "type": "string",
+          "required": false,
+          "description": "",
+          "constraints": []
+        }
+      ],
+      "response_fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "required": false,
+          "description": "",
+          "constraints": []
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "required": false,
+          "description": "",
+          "constraints": []
+        }
+      ]
     },
     {
       "entity_id": "cybersource-payments-core-openapi:createPayment",
       "product": [
-        "cybersource",
-        "visa-acceptance"
+        "payments",
+        "cybersource"
       ],
       "service_name": "CyberSource Payments Core (local Relay fixture)",
       "endpoint": "/pts/v2/payments",
@@ -61,13 +100,100 @@
       ],
       "examples": [],
       "summary": "Create a payment authorization",
-      "description": "Authorize a payment in sandbox using tokenized or instrument identifiers. Do not send raw PAN."
+      "description": "Authorize a payment in sandbox using tokenized or instrument identifiers. Do not send raw PAN.",
+      "request_fields": [
+        {
+          "name": "clientReferenceInformation.code",
+          "type": "string",
+          "required": true,
+          "description": "Merchant reference code for the transaction",
+          "constraints": []
+        },
+        {
+          "name": "orderInformation.amountDetails.totalAmount",
+          "type": "string",
+          "required": true,
+          "description": "Order total amount",
+          "constraints": []
+        },
+        {
+          "name": "orderInformation.amountDetails.currency",
+          "type": "string",
+          "required": true,
+          "description": "ISO 4217 currency code",
+          "constraints": []
+        },
+        {
+          "name": "orderInformation.billTo.firstName",
+          "type": "string",
+          "required": false,
+          "description": "",
+          "constraints": []
+        },
+        {
+          "name": "orderInformation.billTo.lastName",
+          "type": "string",
+          "required": false,
+          "description": "",
+          "constraints": []
+        },
+        {
+          "name": "paymentInformation.card.number",
+          "type": "string",
+          "required": false,
+          "description": "Tokenized instrument or test card id \u2014 do not send raw PAN",
+          "constraints": []
+        },
+        {
+          "name": "paymentInformation.card.expirationMonth",
+          "type": "string",
+          "required": false,
+          "description": "",
+          "constraints": []
+        },
+        {
+          "name": "paymentInformation.card.expirationYear",
+          "type": "string",
+          "required": false,
+          "description": "",
+          "constraints": []
+        },
+        {
+          "name": "paymentInformation.card.type",
+          "type": "string",
+          "required": false,
+          "description": "Card type code",
+          "constraints": [
+            "enum: 001, 002"
+          ],
+          "enum": [
+            "001",
+            "002"
+          ]
+        }
+      ],
+      "response_fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "required": false,
+          "description": "",
+          "constraints": []
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "required": false,
+          "description": "",
+          "constraints": []
+        }
+      ]
     },
     {
       "entity_id": "cybersource-payments-core-openapi:getPayment",
       "product": [
-        "cybersource",
-        "visa-acceptance"
+        "payments",
+        "cybersource"
       ],
       "service_name": "CyberSource Payments Core (local Relay fixture)",
       "endpoint": "/pts/v2/payments/{id}",
@@ -88,13 +214,30 @@
       ],
       "examples": [],
       "summary": "Retrieve a payment",
-      "description": ""
+      "description": "",
+      "request_fields": [],
+      "response_fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "required": false,
+          "description": "",
+          "constraints": []
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "required": false,
+          "description": "",
+          "constraints": []
+        }
+      ]
     },
     {
       "entity_id": "cybersource-payments-core-openapi:capturePayment",
       "product": [
-        "cybersource",
-        "visa-acceptance"
+        "payments",
+        "cybersource"
       ],
       "service_name": "CyberSource Payments Core (local Relay fixture)",
       "endpoint": "/pts/v2/payments/{id}/captures",
@@ -117,13 +260,52 @@
       ],
       "examples": [],
       "summary": "Capture an authorized payment",
-      "description": ""
+      "description": "",
+      "request_fields": [
+        {
+          "name": "clientReferenceInformation.code",
+          "type": "string",
+          "required": false,
+          "description": "",
+          "constraints": []
+        },
+        {
+          "name": "orderInformation.amountDetails.totalAmount",
+          "type": "string",
+          "required": true,
+          "description": "",
+          "constraints": []
+        },
+        {
+          "name": "orderInformation.amountDetails.currency",
+          "type": "string",
+          "required": false,
+          "description": "",
+          "constraints": []
+        }
+      ],
+      "response_fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "required": false,
+          "description": "",
+          "constraints": []
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "required": false,
+          "description": "",
+          "constraints": []
+        }
+      ]
     },
     {
       "entity_id": "cybersource-payments-core-openapi:createMppCredentialSetup",
       "product": [
-        "cybersource",
-        "visa-acceptance"
+        "payments",
+        "cybersource"
       ],
       "service_name": "CyberSource Payments Core (local Relay fixture)",
       "endpoint": "/risk/v1/authentication-setups",
@@ -146,13 +328,45 @@
       ],
       "examples": [],
       "summary": "Create payer authentication / MPP credential setup",
-      "description": "Payer Authentication setup prerequisite before enrollment. Microform tokenize alone is not 3DS completion."
+      "description": "Payer Authentication setup prerequisite before enrollment. Microform tokenize alone is not 3DS completion.",
+      "request_fields": [
+        {
+          "name": "clientReferenceInformation",
+          "type": "object",
+          "required": true,
+          "description": "",
+          "constraints": []
+        },
+        {
+          "name": "processingInformation",
+          "type": "object",
+          "required": false,
+          "description": "",
+          "constraints": []
+        }
+      ],
+      "response_fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "required": false,
+          "description": "",
+          "constraints": []
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "required": false,
+          "description": "",
+          "constraints": []
+        }
+      ]
     },
     {
       "entity_id": "cybersource-payments-core-openapi:checkMppEnrollment",
       "product": [
-        "cybersource",
-        "visa-acceptance"
+        "payments",
+        "cybersource"
       ],
       "service_name": "CyberSource Payments Core (local Relay fixture)",
       "endpoint": "/risk/v1/authentications",
@@ -175,13 +389,45 @@
       ],
       "examples": [],
       "summary": "Check payer authentication enrollment",
-      "description": "Enrollment may return FRICTIONLESS, CHALLENGE, or UNAVAILABLE paths."
+      "description": "Enrollment may return FRICTIONLESS, CHALLENGE, or UNAVAILABLE paths.",
+      "request_fields": [
+        {
+          "name": "clientReferenceInformation",
+          "type": "object",
+          "required": true,
+          "description": "",
+          "constraints": []
+        },
+        {
+          "name": "processingInformation",
+          "type": "object",
+          "required": false,
+          "description": "",
+          "constraints": []
+        }
+      ],
+      "response_fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "required": false,
+          "description": "",
+          "constraints": []
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "required": false,
+          "description": "",
+          "constraints": []
+        }
+      ]
     },
     {
       "entity_id": "cybersource-payments-core-openapi:createCustomer",
       "product": [
-        "cybersource",
-        "visa-acceptance"
+        "payments",
+        "cybersource"
       ],
       "service_name": "CyberSource Payments Core (local Relay fixture)",
       "endpoint": "/tms/v2/customers",
@@ -204,13 +450,45 @@
       ],
       "examples": [],
       "summary": "Create a TMS customer",
-      "description": ""
+      "description": "",
+      "request_fields": [
+        {
+          "name": "buyerInformation",
+          "type": "object",
+          "required": true,
+          "description": "",
+          "constraints": []
+        },
+        {
+          "name": "clientReferenceInformation",
+          "type": "object",
+          "required": false,
+          "description": "",
+          "constraints": []
+        }
+      ],
+      "response_fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "required": false,
+          "description": "",
+          "constraints": []
+        },
+        {
+          "name": "buyerInformation",
+          "type": "object",
+          "required": false,
+          "description": "",
+          "constraints": []
+        }
+      ]
     },
     {
       "entity_id": "cybersource-payments-core-openapi:getCustomer",
       "product": [
-        "cybersource",
-        "visa-acceptance"
+        "payments",
+        "cybersource"
       ],
       "service_name": "CyberSource Payments Core (local Relay fixture)",
       "endpoint": "/tms/v2/customers/{customerId}",
@@ -231,12 +509,29 @@
       ],
       "examples": [],
       "summary": "Retrieve a TMS customer",
-      "description": ""
+      "description": "",
+      "request_fields": [],
+      "response_fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "required": false,
+          "description": "",
+          "constraints": []
+        },
+        {
+          "name": "buyerInformation",
+          "type": "object",
+          "required": false,
+          "description": "",
+          "constraints": []
+        }
+      ]
     }
   ],
   "honest_label": {
     "network": "denied",
     "fixture": "local-openapi",
-    "note": "Not a live CyberSource OpenAPI download"
+    "note": "Not a live Payment Gateway OpenAPI download"
   }
 }

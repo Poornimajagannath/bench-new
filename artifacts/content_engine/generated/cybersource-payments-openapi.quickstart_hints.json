@@ -1,0 +1,248 @@
+{
+  "stage": "specs_to_docs_quickstart_hints",
+  "source_id": "cybersource-payments-openapi",
+  "hints": [
+    {
+      "operation_id": "createPullFundsTransfer",
+      "endpoint": "/pts/v1/pull-funds-transfer",
+      "http_method": "POST",
+      "suggested_workflows": [],
+      "linked_quickstart_source": null,
+      "note": "Hint only \u2014 OpenAPI alone does not author a full quickstart"
+    },
+    {
+      "operation_id": "createPullFundsRefund",
+      "endpoint": "/pts/v1/pull-funds-transfer/{id}/refund",
+      "http_method": "POST",
+      "suggested_workflows": [],
+      "linked_quickstart_source": null,
+      "note": "Hint only \u2014 OpenAPI alone does not author a full quickstart"
+    },
+    {
+      "operation_id": "createPullFundsReversal",
+      "endpoint": "/pts/v1/pull-funds-transfer/{id}/reversal",
+      "http_method": "POST",
+      "suggested_workflows": [],
+      "linked_quickstart_source": null,
+      "note": "Hint only \u2014 OpenAPI alone does not author a full quickstart"
+    },
+    {
+      "operation_id": "getTransactionBatchDetails",
+      "endpoint": "/pts/v1/transaction-batch-details/{id}",
+      "http_method": "GET",
+      "suggested_workflows": [],
+      "linked_quickstart_source": null,
+      "note": "Hint only \u2014 OpenAPI alone does not author a full quickstart"
+    },
+    {
+      "operation_id": "getTransactionBatches",
+      "endpoint": "/pts/v1/transaction-batches",
+      "http_method": "GET",
+      "suggested_workflows": [],
+      "linked_quickstart_source": null,
+      "note": "Hint only \u2014 OpenAPI alone does not author a full quickstart"
+    },
+    {
+      "operation_id": "getTransactionBatchId",
+      "endpoint": "/pts/v1/transaction-batches/{id}",
+      "http_method": "GET",
+      "suggested_workflows": [],
+      "linked_quickstart_source": null,
+      "note": "Hint only \u2014 OpenAPI alone does not author a full quickstart"
+    },
+    {
+      "operation_id": "billingAgreementsRegistration",
+      "endpoint": "/pts/v2/billing-agreements",
+      "http_method": "POST",
+      "suggested_workflows": [],
+      "linked_quickstart_source": null,
+      "note": "Hint only \u2014 OpenAPI alone does not author a full quickstart"
+    },
+    {
+      "operation_id": "billingAgreementsDeRegistration",
+      "endpoint": "/pts/v2/billing-agreements/{id}",
+      "http_method": "PATCH",
+      "suggested_workflows": [],
+      "linked_quickstart_source": null,
+      "note": "Hint only \u2014 OpenAPI alone does not author a full quickstart"
+    },
+    {
+      "operation_id": "billingAgreementsIntimation",
+      "endpoint": "/pts/v2/billing-agreements/{id}/intimations",
+      "http_method": "POST",
+      "suggested_workflows": [],
+      "linked_quickstart_source": null,
+      "note": "Hint only \u2014 OpenAPI alone does not author a full quickstart"
+    },
+    {
+      "operation_id": "refundCapture",
+      "endpoint": "/pts/v2/captures/{id}/refunds",
+      "http_method": "POST",
+      "suggested_workflows": [],
+      "linked_quickstart_source": null,
+      "note": "Hint only \u2014 OpenAPI alone does not author a full quickstart"
+    },
+    {
+      "operation_id": "voidCapture",
+      "endpoint": "/pts/v2/captures/{id}/voids",
+      "http_method": "POST",
+      "suggested_workflows": [],
+      "linked_quickstart_source": null,
+      "note": "Hint only \u2014 OpenAPI alone does not author a full quickstart"
+    },
+    {
+      "operation_id": "createCredit",
+      "endpoint": "/pts/v2/credits",
+      "http_method": "POST",
+      "suggested_workflows": [],
+      "linked_quickstart_source": null,
+      "note": "Hint only \u2014 OpenAPI alone does not author a full quickstart"
+    },
+    {
+      "operation_id": "voidCredit",
+      "endpoint": "/pts/v2/credits/{id}/voids",
+      "http_method": "POST",
+      "suggested_workflows": [],
+      "linked_quickstart_source": null,
+      "note": "Hint only \u2014 OpenAPI alone does not author a full quickstart"
+    },
+    {
+      "operation_id": "createOrder",
+      "endpoint": "/pts/v2/intents",
+      "http_method": "POST",
+      "suggested_workflows": [],
+      "linked_quickstart_source": null,
+      "note": "Hint only \u2014 OpenAPI alone does not author a full quickstart"
+    },
+    {
+      "operation_id": "updateOrder",
+      "endpoint": "/pts/v2/intents/{id}",
+      "http_method": "PATCH",
+      "suggested_workflows": [],
+      "linked_quickstart_source": null,
+      "note": "Hint only \u2014 OpenAPI alone does not author a full quickstart"
+    },
+    {
+      "operation_id": "createSessionRequest",
+      "endpoint": "/pts/v2/payment-references",
+      "http_method": "POST",
+      "suggested_workflows": [],
+      "linked_quickstart_source": null,
+      "note": "Hint only \u2014 OpenAPI alone does not author a full quickstart"
+    },
+    {
+      "operation_id": "updateSessionRequest",
+      "endpoint": "/pts/v2/payment-references/{id}",
+      "http_method": "PATCH",
+      "suggested_workflows": [],
+      "linked_quickstart_source": null,
+      "note": "Hint only \u2014 OpenAPI alone does not author a full quickstart"
+    },
+    {
+      "operation_id": "createOrderRequest",
+      "endpoint": "/pts/v2/payment-references/{id}/intents",
+      "http_method": "POST",
+      "suggested_workflows": [],
+      "linked_quickstart_source": null,
+      "note": "Hint only \u2014 OpenAPI alone does not author a full quickstart"
+    },
+    {
+      "operation_id": "retrieveOrDeletePaymentToken",
+      "endpoint": "/pts/v2/payment-tokens",
+      "http_method": "POST",
+      "suggested_workflows": [],
+      "linked_quickstart_source": null,
+      "note": "Hint only \u2014 OpenAPI alone does not author a full quickstart"
+    },
+    {
+      "operation_id": "createPayment",
+      "endpoint": "/pts/v2/payments",
+      "http_method": "POST",
+      "suggested_workflows": [
+        "microform-payer-auth-state-machine"
+      ],
+      "linked_quickstart_source": "microform-payer-auth-quickstart",
+      "note": "Hint only \u2014 OpenAPI alone does not author a full quickstart"
+    },
+    {
+      "operation_id": "incrementAuth",
+      "endpoint": "/pts/v2/payments/{id}",
+      "http_method": "PATCH",
+      "suggested_workflows": [],
+      "linked_quickstart_source": null,
+      "note": "Hint only \u2014 OpenAPI alone does not author a full quickstart"
+    },
+    {
+      "operation_id": "capturePayment",
+      "endpoint": "/pts/v2/payments/{id}/captures",
+      "http_method": "POST",
+      "suggested_workflows": [],
+      "linked_quickstart_source": null,
+      "note": "Hint only \u2014 OpenAPI alone does not author a full quickstart"
+    },
+    {
+      "operation_id": "refundPayment",
+      "endpoint": "/pts/v2/payments/{id}/refunds",
+      "http_method": "POST",
+      "suggested_workflows": [],
+      "linked_quickstart_source": null,
+      "note": "Hint only \u2014 OpenAPI alone does not author a full quickstart"
+    },
+    {
+      "operation_id": "authReversal",
+      "endpoint": "/pts/v2/payments/{id}/reversals",
+      "http_method": "POST",
+      "suggested_workflows": [],
+      "linked_quickstart_source": null,
+      "note": "Hint only \u2014 OpenAPI alone does not author a full quickstart"
+    },
+    {
+      "operation_id": "voidPayment",
+      "endpoint": "/pts/v2/payments/{id}/voids",
+      "http_method": "POST",
+      "suggested_workflows": [],
+      "linked_quickstart_source": null,
+      "note": "Hint only \u2014 OpenAPI alone does not author a full quickstart"
+    },
+    {
+      "operation_id": "octCreatePayment",
+      "endpoint": "/pts/v2/payouts",
+      "http_method": "POST",
+      "suggested_workflows": [],
+      "linked_quickstart_source": null,
+      "note": "Hint only \u2014 OpenAPI alone does not author a full quickstart"
+    },
+    {
+      "operation_id": "refreshPaymentStatus",
+      "endpoint": "/pts/v2/refresh-payment-status/{id}",
+      "http_method": "POST",
+      "suggested_workflows": [],
+      "linked_quickstart_source": null,
+      "note": "Hint only \u2014 OpenAPI alone does not author a full quickstart"
+    },
+    {
+      "operation_id": "voidRefund",
+      "endpoint": "/pts/v2/refunds/{id}/voids",
+      "http_method": "POST",
+      "suggested_workflows": [],
+      "linked_quickstart_source": null,
+      "note": "Hint only \u2014 OpenAPI alone does not author a full quickstart"
+    },
+    {
+      "operation_id": "mitReversal",
+      "endpoint": "/pts/v2/reversals",
+      "http_method": "POST",
+      "suggested_workflows": [],
+      "linked_quickstart_source": null,
+      "note": "Hint only \u2014 OpenAPI alone does not author a full quickstart"
+    },
+    {
+      "operation_id": "mitVoid",
+      "endpoint": "/pts/v2/voids",
+      "http_method": "POST",
+      "suggested_workflows": [],
+      "linked_quickstart_source": null,
+      "note": "Hint only \u2014 OpenAPI alone does not author a full quickstart"
+    }
+  ]
+}

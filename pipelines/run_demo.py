@@ -15,8 +15,8 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from relay_bench.pm_gate import require_pm_approved_candidate
-from relay_bench.task_pack import materialize_contract
+from content_bench.pm_gate import require_pm_approved_candidate
+from content_bench.task_pack import materialize_contract
 
 
 SUPPORTED = {
@@ -27,7 +27,7 @@ SUPPORTED = {
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Run a Relay Bench workflow demo")
+    parser = argparse.ArgumentParser(description="Run a Content Bench workflow demo")
     parser.add_argument(
         "--workflow",
         required=True,

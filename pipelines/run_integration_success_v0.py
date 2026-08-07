@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Integration Success OS V0 — assemble guided pack from Relay compile lanes.
+"""Integration Success OS V0 — assemble guided pack from Content Bench compile lanes.
 
 quickstart compile + specs-to-docs
 -> guided steps
@@ -22,7 +22,7 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from relay_bench.content_engine.integration_success import (
+from content_bench.content_engine.integration_success import (
     DEFAULT_OPENAPI_SOURCE,
     DEFAULT_QUICKSTART_SOURCE,
     DEFAULT_WORKFLOW_ID,
