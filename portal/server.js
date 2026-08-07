@@ -15,7 +15,10 @@ function listMarkdown() {
   if (!fs.existsSync(CONTENT_DIR)) return [];
   return fs
     .readdirSync(CONTENT_DIR)
-    .filter((name) => name.endsWith(".md"))
+    .filter(
+      (name) =>
+        name.endsWith(".md") && name.toLowerCase() !== "readme.md"
+    )
     .sort();
 }
 
