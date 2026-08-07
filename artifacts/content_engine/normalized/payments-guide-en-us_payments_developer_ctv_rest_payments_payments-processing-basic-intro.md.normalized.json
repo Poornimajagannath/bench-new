@@ -1,0 +1,21 @@
+{
+  "doc_id": "doc-payments-guide-en-us_payments_developer_ctv_rest_payments_payments-processing-basic-intro.md",
+  "source_id": "payments-guide-en-us_payments_developer_ctv_rest_payments_payments-processing-basic-intro.md",
+  "snapshot_id": "payments-guide-en-us_payments_developer_ctv_rest_payments_payments-processing-basic-intro.md-d04ff5ad9aba",
+  "title": "payments-guide-en-us_payments_developer_ctv_rest_payments_payments-processing-basic-intro.md",
+  "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments/payments-processing-basic-intro.md",
+  "source_format": "markdown",
+  "product": [
+    "payments",
+    "cybersource"
+  ],
+  "audience": [
+    "developer"
+  ],
+  "page_type": "guide",
+  "freshness_date": "unknown",
+  "normalized_markdown": "Standard Payment Processing {#payments-processing-basic-intro}\n==============================================================\n\nThis section shows you how to process various authorization, capture, credit, and sales transactions.\n",
+  "extracted_metadata": {
+    "goal": "payments-guide-en-us_payments_developer_ctv_rest_payments_payments-processing-basic-intro.md"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "source_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-overview.md",
+  "status": "promoted",
+  "schema_passed": true,
+  "content_passed": true,
+  "agent_use_status": "deferred",
+  "issues": [
+    {
+      "code": "no_steps",
+      "severity": "warning",
+      "message": "no step units; promoting reference-style units with evidence",
+      "unit_id": null
+    }
+  ],
+  "promoted_unit_ids": [
+    "payments-guide-en-us_tms_developer_all_rest_tms_tms-overview.md:overview:0:figure:"
+  ],
+  "linked_workflow_id": null,
+  "contract_bundle_path": null,
+  "context_pack_path": "artifacts/content_engine/context_packs/payments-guide-en-us_tms_developer_all_rest_tms_tms-overview.md.context_pack.json",
+  "objects_path": "artifacts/content_engine/objects/payments-guide-en-us_tms_developer_all_rest_tms_tms-overview.md.quickstart_units.json"
+}

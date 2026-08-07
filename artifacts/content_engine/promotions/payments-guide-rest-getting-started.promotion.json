@@ -1,0 +1,2276 @@
+{
+  "source_id": "payments-guide-rest-getting-started",
+  "status": "blocked",
+  "schema_passed": true,
+  "content_passed": false,
+  "agent_use_status": "deferred",
+  "issues": [
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:1:sign-up-for-a-test-account.-see-[sign-up-for-a-s"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:2:create-a-p12-certificate.-see-[create-or-submit-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:3:construct-a-message-using-a-json-web-token.-see-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:4:enable-message-level-encryption-(mle)-to-encrypt"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:5:go-live-by-transitioning-your-sandbox-account-in"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:6:go-to-the-`cybersource`-developer-center-sandbox"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:7:enter-your-information-into-the-sandbox-account-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:8:go-to-your-email-and-find-a-message-titled:-*mer"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:9:enter-the-organization-id-and-contact-email-you-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:10:log-in-to-the-`business-center`."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:11:check-your-email-for-a-message-titled:-*`cyberso"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:12:enter-the-passcode-on-the-*verify-your-identity*"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:13:log-in-to-the-`business-center`:"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:14:on-the-left-navigation-panel,-choose-![](/conten"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:15:click-+-generate-key-on-the-key-management-page."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:16:under-rest-apis,-choose-rest----certificate,-and"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:17:(optional)-you-can-set-the-certificate-expiry-ti"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:18:choose-from-these-two-options:"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:19:if-you-are-a-creating-a-new-p12-certificate,-cli"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:20:if-you-are-submitting-your-own-certificate,-ente"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:21:create-a-password-for-the-certificate-by-enterin"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:22:open-the-command-line-tool-and-navigate-to-the-d"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:23:enter-this-command:"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:24:enter-the-password-for-the-certificate."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:25:go-to-the-developer-center's-api-reference-page:"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:26:on-the-left-navigation-panel,-click-**[api-endpo"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:27:under-authentication-and-sandbox-credentials,-go"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:28:enter-your-organization-id-in-the-**organization"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:29:enter-your-password-in-the-**password**-field."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:30:click-**browse**-and-upload-your-p12-certificate"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:31:click-**update-credentials**."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:32:go-to-the-developer-center's-api-reference-and-n"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:33:click-**send**."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:34:log-in-to-the-`business-center`:"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:35:on-the-left-navigation-panel,-choose-![](/conten"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:36:under-search-results,-verify-that-the-request-id"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:37:generate-the-sha-256-hash-of-the-json-payload-(m"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:38:encode-the-hashed-string-to-base64."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:39:add-the-message-body-hash-to-the-**digest**-jws-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:40:add-the-algorithm-used-to-hash-the-digest-in-the"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:41:concatenate-the-jws-header-and-claim-set-hash-st"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:42:generate-an-encoded-version-of-the-text-file-usi"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:43:base64-encode-the-signature-output.-{#restgs-jwt"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:44:after-calculating-the-signature,-you-can-constru"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:45:log-in-to-the-`business-center`:"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:46:on-the-left-navigation-panel,-choose-![](/conten"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:47:click-+-generate-key-on-the-key-management-page."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:48:under-rest-apis,-choose-**rest----api-response-m"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:49:choose-one-of-these-options-to-download-your-key"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:50:if-you-are-creating-a-certificate,-the-set-a-pas"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:51:click-**cancel**-."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:52:click-the-**key-type**-filter-and-choose-**rest-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:53:click-the-**expires-at**-filter-and-choose-**all"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:54:click-**search**.{#restgs-security-mle-reply_ste"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:55:find-the-rest--api-response-key-that-you-created"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:56:open-and-use-a-terminal-window-to-navigate-to-th"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:57:run-this-command-to-open-the-*.p12*-file:"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:58:enter-the-password-you-set-when-you-created-the-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:59:locate-the-`cybersource_sjc_us`-certificate-in-t"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:60:store-the-sjc-certificate-in-your-system-to-use-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:61:import-the-required-programming-libraries-for-yo"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:62:import-these-three-certificates:"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:63:encrypt-the-json-request-message-using-a-json-we"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:64:create-the-http-body-in-this-format:-`{\"encrypte"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:65:create-the-json-web-signature-(jws)-payload-with"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:66:sign-the-jws-with-your-p12-certificate-and-send-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:67:receive-an-encrypted-response-and-decrypt-it-wit"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:68:import-your-preferred-libraries-to-support-mle.-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:69:import-the-signing,-mle,-and-sjc-certificates.-t"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:70:unpack-your-imported-certificates-into-a-usable-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:71:create-these-methods-as-helpers-for-encrypting-a"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:72:create-a-class-that-uses-the-methods-described-i"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:73:go-to-the-rest-api-reference-page-in-the-`cybers"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:74:on-the-left-navigation-panel,-choose-an-api-that"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:75:choose-the-**mle-configuration**-tab.{#restgs-jw"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:76:in-the-message-level-encryption-credentials-sect"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:77:click-**update-credentials**.{#restgs-jwt-messag"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:78:from-the-**send**-drop-down-menu,-choose-**send-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:79:click-**send**-."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:80:if-a-*success:-http-status-code:-201*-message-di"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:81:authorize-a-payment"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:82:you-send-this-post-request-to-the-`https://apite"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:83:you-receive-a-successful-response-and-store-the-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:84:capture-an-authorized-payment"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:85:you-send-this-post-request-to-the-`https://apite"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:86:you-receive-a-successful-response-and-store-the-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:87:refund-a-captured-payment"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:88:you-send-this-post-request-to-the-`https://apite"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:89:you-receive-a-successful-response,-which-verifie"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:90:sign-up-for-a-merchant-account."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:91:[contact-sales](https://www.cybersource.com/en-u"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:92:submit-a-merchant-id-(mid)-activation-request."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:93:go-to-the-`business-center`-[sandbox-account-sig"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:94:review-your-information-entered,-especially-your"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:95:look-for-an-email-from-customer-support-titled:-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:96:look-for-an-email-titled:-*merchant-registration"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:97:enter-the-organization-id-and-contact-email-you-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:98:log-in-to-the-`business-center`."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:99:look-for-an-email-titled:-*`cybersource`-identif"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:100:enter-the-passcode-on-the-verify-your-identity-p"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:101:sign-in-to-the-[support-center](https://support."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:102:enter-your-credentials-and-log-in-to-your-test-e"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:103:in-the-`business-center`,-go-to-**support-cases-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:104:click-**mid-activation**."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:105:in-the-**description**-field,-enter-the-merchant"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:106:choose-a-processor-configuration,-and-enter-the-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:107:choose-the-environments-to-which-this-change-app"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:108:click-**service-enablement**-and-list-the-produc"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:109:click-**submit**."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:110:sign-up-for-a-test-account.-see-[sign-up-for-a-s"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:111:create-a-shared-secret-key-pair.-see-[create-a-s"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:112:construct-a-message-using-a-json-web-token.-see-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:113:enable-message-level-encryption-(mle)-to-encrypt"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:114:test-your-rest-transaction-messages.-see-[test-y"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:115:go-live-by-transitioning-your-sandbox-account-in"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:116:go-to-the-`cybersource`-developer-center-sandbox"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:117:enter-your-information-into-the-sandbox-account-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:118:go-to-your-email-and-find-a-message-titled:-*mer"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:119:enter-the-organization-id-and-contact-email-you-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:120:log-in-to-the-`business-center`."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:121:check-your-email-for-a-message-titled:-*`cyberso"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:122:enter-the-passcode-on-the-*verify-your-identity*"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:123:log-in-to-the-`business-center`:"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:124:on-the-left-navigation-panel,-choose-![](/conten"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:125:click-+-generate-key-on-the-key-management-page."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:126:under-rest-apis,-choose-**rest----shared-secret*"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:127:click-**download-key**-![](/content/dam/document"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:128:go-to-the-developer-center's-api-reference-page:"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:129:on-the-left-navigation-panel,-click-**[api-endpo"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:130:under-authentication-and-sandbox-credentials,-go"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:131:enter-your-organization-id-in-the-**organization"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:132:enter-your-key-id-in-the-**key**-field."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:133:enter-your-shared-secret-key-in-the-**shared-sec"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:134:click-**update-credentials**."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:135:go-to-the-developer-center's-api-reference-and-n"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:136:click-**send**."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:137:log-in-to-the-`business-center`:"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:138:on-the-left-navigation-panel,-choose-![](/conten"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:139:under-search-results,-verify-that-the-request-id"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:140:generate-the-sha-256-hash-of-the-json-payload-(m"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:141:encode-the-hashed-string-to-base64."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:142:add-the-message-body-hash-to-the-**digest**-jws-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:143:add-the-algorithm-used-to-hash-the-digest-in-the"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:144:concatenate-the-jws-header-and-claim-set-hash-st"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:145:generate-an-encoded-version-of-the-text-file-usi"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:146:base64-encode-the-signature-output."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:147:after-calculating-the-signature,-you-can-constru"
+    },
+    {
+      "code": "secret_or_pan_material",
+      "severity": "error",
+      "message": "unit appears to contain secret or non-test PAN-like material",
+      "unit_id": "payments-guide-rest-getting-started:step:147:after-calculating-the-signature,-you-can-constru"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:148:log-in-to-the-`business-center`:"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:149:on-the-left-navigation-panel,-choose-![](/conten"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:150:click-+-generate-key-on-the-key-management-page."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:151:under-rest-apis,-choose-**rest----api-response-m"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:152:choose-one-of-these-options-to-download-your-key"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:153:if-you-are-creating-a-certificate,-the-set-a-pas"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:154:click-**cancel**-."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:155:click-the-**key-type**-filter-and-choose-**rest-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:156:click-the-**expires-at**-filter-and-choose-**all"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:157:click-**search**."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:158:find-the-rest--api-response-key-that-you-created"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:159:open-and-use-a-terminal-window-to-navigate-to-th"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:160:run-this-command-to-open-the-*.p12*-file:"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:161:enter-the-password-you-set-when-you-created-the-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:162:locate-the-`cybersource_sjc_us`-certificate-in-t"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:163:store-the-sjc-certificate-in-your-system-to-use-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:164:import-the-required-programming-libraries-for-yo"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:165:import-these-three-credentials:"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:166:encrypt-the-json-request-message-using-a-json-we"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:167:create-the-http-body-in-this-format:-`{\"encrypte"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:168:create-the-json-web-signature-(jws)-payload-with"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:169:sign-the-jws-with-your-private-key-from-the-shar"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:170:receive-an-encrypted-response-and-decrypt-it-wit"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:171:import-your-preferred-libraries-to-support-mle.-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:172:import-the-signing,-mle,-and-sjc-certificates.-t"
+    },
+    {
+      "code": "secret_or_pan_material",
+      "severity": "error",
+      "message": "unit appears to contain secret or non-test PAN-like material",
+      "unit_id": "payments-guide-rest-getting-started:step:172:import-the-signing,-mle,-and-sjc-certificates.-t"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:173:unpack-your-imported-certificates-into-a-usable-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:174:create-these-methods-as-helpers-for-encrypting-a"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:175:create-a-class-that-uses-the-methods-described-i"
+    },
+    {
+      "code": "secret_or_pan_material",
+      "severity": "error",
+      "message": "unit appears to contain secret or non-test PAN-like material",
+      "unit_id": "payments-guide-rest-getting-started:step:175:create-a-class-that-uses-the-methods-described-i"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:176:go-to-the-rest-api-reference-page-in-the-`cybers"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:177:on-the-left-navigation-panel,-choose-an-api-that"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:178:choose-the-**mle-configuration**-tab."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:179:in-the-message-level-encryption-credentials-sect"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:180:click-**update-credentials**."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:181:from-the-**send**-drop-down-menu,-choose-**send-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:182:click-**send**-."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:183:if-a-*success:-http-status-code:-201*-message-di"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:184:authorize-a-payment"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:185:you-send-this-post-request-to-the-`https://apite"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:186:you-receive-a-successful-response-and-store-the-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:187:capture-an-authorized-payment"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:188:you-send-this-post-request-to-the-`https://apite"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:189:you-receive-a-successful-response-and-store-the-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:190:refund-a-captured-payment"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:191:you-send-this-post-request-to-the-`https://apite"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:192:you-receive-a-successful-response,-which-verifie"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:193:sign-up-for-a-merchant-account."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:194:[contact-sales](https://www.cybersource.com/en-u"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:195:submit-a-merchant-id-(mid)-activation-request."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:196:go-to-the-`business-center`-[sandbox-account-sig"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:197:review-your-information-entered,-especially-your"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:198:look-for-an-email-from-customer-support-titled:-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:199:look-for-an-email-titled:-*merchant-registration"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:200:enter-the-organization-id-and-contact-email-you-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:201:log-in-to-the-`business-center`."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:202:look-for-an-email-titled:-*`cybersource`-identif"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:203:enter-the-passcode-on-the-verify-your-identity-p"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:204:sign-in-to-the-[support-center](https://support."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:205:enter-your-credentials-and-log-in-to-your-test-e"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:206:in-the-`business-center`,-go-to-**support-cases-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:207:click-**mid-activation**."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:208:in-the-**description**-field,-enter-the-merchant"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:209:choose-a-processor-configuration,-and-enter-the-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:210:choose-the-environments-to-which-this-change-app"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:211:click-**service-enablement**-and-list-the-produc"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:212:click-**submit**."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:213:sign-up-for-a-test-account.-see-[sign-up-for-a-s"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:214:create-an-api-security-key,-such-as-a-p12-certif"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:215:create-a-rest--api-response-key-in-order-to-enab"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:216:install-the-rest-sdk.-see-[install-the-rest-sdk]"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:217:test-your-rest-transaction-messages.-see-[test-y"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:218:go-live-by-transitioning-your-sandbox-account-in"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:219:go-to-the-`cybersource`-developer-center-sandbox"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:220:enter-your-information-into-the-sandbox-account-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:221:go-to-your-email-and-find-a-message-titled:-*mer"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:222:enter-the-organization-id-and-contact-email-you-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:223:log-in-to-the-`business-center`."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:224:check-your-email-for-a-message-titled:-*`cyberso"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:225:enter-the-passcode-on-the-*verify-your-identity*"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:226:log-in-to-the-`business-center`:"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:227:on-the-left-navigation-panel,-choose-![](/conten"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:228:click-+-generate-key-on-the-key-management-page."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:229:under-rest-apis,-choose-rest----certificate,-and"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:230:(optional)-you-can-set-the-certificate-expiry-ti"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:231:choose-from-these-two-options:"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:232:if-you-are-a-creating-a-new-p12-certificate,-cli"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:233:if-you-are-submitting-your-own-certificate,-ente"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:234:create-a-password-for-the-certificate-by-enterin"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:235:go-to-the-developer-center's-api-reference-page:"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:236:on-the-left-navigation-panel,-click-**[api-endpo"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:237:under-authentication-and-sandbox-credentials,-go"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:238:enter-your-organization-id-in-the-**organization"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:239:enter-your-password-in-the-**password**-field."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:240:click-**browse**-and-upload-your-p12-certificate"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:241:click-**update-credentials**."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:242:go-to-the-developer-center's-api-reference-and-n"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:243:click-**send**."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:244:log-in-to-the-`business-center`:"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:245:on-the-left-navigation-panel,-choose-![](/conten"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:246:under-search-results,-verify-that-the-request-id"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:247:log-in-to-the-`business-center`:"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:248:on-the-left-navigation-panel,-choose-![](/conten"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:249:click-+-generate-key-on-the-key-management-page."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:250:under-rest-apis,-choose-**rest----shared-secret*"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:251:click-**download-key**-![](/content/dam/document"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:252:go-to-the-developer-center's-api-reference-page:"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:253:on-the-left-navigation-panel,-click-**[api-endpo"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:254:under-authentication-and-sandbox-credentials,-go"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:255:enter-your-organization-id-in-the-**organization"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:256:enter-your-key-id-in-the-**key**-field."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:257:enter-your-shared-secret-key-in-the-**shared-sec"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:258:click-**update-credentials**."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:259:go-to-the-developer-center's-api-reference-and-n"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:260:click-**send**."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:261:log-in-to-the-`business-center`:"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:262:on-the-left-navigation-panel,-choose-![](/conten"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:263:under-search-results,-verify-that-the-request-id"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:264:log-in-to-the-`business-center`:"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:265:on-the-left-navigation-panel,-choose-![](/conten"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:266:click-+-generate-key-on-the-key-management-page."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:267:under-rest-apis,-choose-**rest----api-response-m"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:268:choose-one-of-these-options-to-download-your-key"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:269:if-you-are-creating-a-certificate,-the-set-a-pas"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:270:click-**cancel**-."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:271:click-the-**key-type**-filter-and-choose-**rest-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:272:click-the-**expires-at**-filter-and-choose-**all"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:273:click-**search**."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:274:find-the-rest--api-response-key-that-you-created"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:275:go-to-the-rest-api-reference-page-in-the-`cybers"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:276:on-the-left-navigation-panel,-choose-an-api-that"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:277:choose-the-**mle-configuration**-tab."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:278:in-the-message-level-encryption-credentials-sect"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:279:click-**update-credentials**."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:280:from-the-**send**-drop-down-menu,-choose-**send-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:281:click-**send**-."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:282:if-a-*success:-http-status-code:-201*-message-di"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:283:authorize-a-payment"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:284:you-send-this-post-request-to-the-`https://apite"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:285:you-receive-a-successful-response-and-store-the-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:286:capture-an-authorized-payment"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:287:you-send-this-post-request-to-the-`https://apite"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:288:you-receive-a-successful-response-and-store-the-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:289:refund-a-captured-payment"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:290:you-send-this-post-request-to-the-`https://apite"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:291:you-receive-a-successful-response,-which-verifie"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:292:sign-up-for-a-merchant-account."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:293:[contact-sales](https://www.cybersource.com/en-u"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:294:submit-a-merchant-id-(mid)-activation-request."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:295:go-to-the-`business-center`-[sandbox-account-sig"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:296:review-your-information-entered,-especially-your"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:297:look-for-an-email-from-customer-support-titled:-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:298:look-for-an-email-titled:-*merchant-registration"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:299:enter-the-organization-id-and-contact-email-you-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:300:log-in-to-the-`business-center`."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:301:look-for-an-email-titled:-*`cybersource`-identif"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:302:enter-the-passcode-on-the-verify-your-identity-p"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:303:sign-in-to-the-[support-center](https://support."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:304:enter-your-credentials-and-log-in-to-your-test-e"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:305:in-the-`business-center`,-go-to-**support-cases-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:306:click-**mid-activation**."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:307:in-the-**description**-field,-enter-the-merchant"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:308:choose-a-processor-configuration,-and-enter-the-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:309:choose-the-environments-to-which-this-change-app"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:310:click-**service-enablement**-and-list-the-produc"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:311:click-**submit**."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:312:sign-up-for-a-test-account.-see-[sign-up-for-a-s"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:313:create-a-shared-secret-key.-see-[create-a-shared"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:314:construct-a-message-using-http-signature-securit"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:315:test-your-rest-transaction-messages.-see-[test-y"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:316:go-live-by-transitioning-your-sandbox-account-in"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:317:go-to-the-`cybersource`-developer-center-sandbox"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:318:enter-your-information-into-the-sandbox-account-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:319:go-to-your-email-and-find-a-message-titled:-*mer"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:320:enter-the-organization-id-and-contact-email-you-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:321:log-in-to-the-`business-center`."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:322:check-your-email-for-a-message-titled:-*`cyberso"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:323:enter-the-passcode-on-the-*verify-your-identity*"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:324:log-in-to-the-`business-center`:"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:325:on-the-left-navigation-panel,-choose-![](/conten"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:326:click-+-generate-key-on-the-key-management-page."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:327:under-rest-apis,-choose-**rest----shared-secret*"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:328:click-**download-key**-![](/content/dam/document"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:329:go-to-the-developer-center's-api-reference-page:"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:330:on-the-left-navigation-panel,-click-**[api-endpo"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:331:under-authentication-and-sandbox-credentials,-go"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:332:enter-your-organization-id-in-the-**organization"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:333:enter-your-key,-also-known-as-your-private-key,-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:334:enter-your-secret-key,-also-known-as-your-public"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:335:click-**update-credentials**."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:336:go-to-the-developer-center's-api-reference-and-n"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:337:click-**send**."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:338:log-in-to-the-`business-center`:"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:339:on-the-left-navigation-panel,-choose-![](/conten"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:340:under-search-results,-verify-that-the-request-id"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:341:generate-the-sha-256-hash-of-the-json-payload-(m"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:342:encode-the-hashed-string-to-base64."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:343:prepend-**sha-256=**-to-the-front-of-the-hash."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:344:add-the-message-body-hash-to-the-digest-http-hea"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:345:generate-a-byte-array-of-the-secret-key-generate"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:346:generate-the-hmac-sha-256-key-object-using-the-b"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:347:concatenate-a-string-of-the-required-information"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:348:generate-a-byte-array-of-the-validation-string."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:349:use-the-hmac-sha-256-key-object-to-create-the-hm"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:350:base64-encode-the-hmac-sha-256-hash."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:351:sign-up-for-a-merchant-account."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:352:[contact-sales](https://www.cybersource.com/en-u"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:353:submit-a-merchant-id-(mid)-activation-request."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:354:go-to-the-`business-center`-[sandbox-account-sig"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:355:review-your-information-entered,-especially-your"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:356:look-for-an-email-from-customer-support-titled:-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:357:look-for-an-email-titled:-*merchant-registration"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:358:enter-the-organization-id-and-contact-email-you-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:359:log-in-to-the-`business-center`."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:360:look-for-an-email-titled:-*`cybersource`-identif"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:361:enter-the-passcode-on-the-verify-your-identity-p"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:362:sign-in-to-the-[support-center](https://support."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:363:enter-your-credentials-and-log-in-to-your-test-e"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:364:in-the-`business-center`,-go-to-**support-cases-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:365:click-**mid-activation**."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:366:in-the-**description**-field,-enter-the-merchant"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:367:choose-a-processor-configuration,-and-enter-the-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:368:choose-the-environments-to-which-this-change-app"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:369:click-**service-enablement**-and-list-the-produc"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:370:click-**submit**."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:371:before-boarding-merchants-for-payment-processing"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:372:reseller/partner-is-responsible-for-boarding-and"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:373:reseller/partner-acknowledges-and-agrees-that-al"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-rest-getting-started:step:374:reseller/partner-acknowledges-and-agrees-that-th"
+    }
+  ],
+  "promoted_unit_ids": [],
+  "linked_workflow_id": null,
+  "contract_bundle_path": null,
+  "context_pack_path": null,
+  "objects_path": "artifacts/content_engine/objects/payments-guide-rest-getting-started.quickstart_units.json"
+}

@@ -1,0 +1,39 @@
+{
+  "stage": "content_engine_extract",
+  "inspired_by": "ucbepic/docetl (imported; Frame.code_map, no LLM)",
+  "extractor_label": "imported-code_map",
+  "source_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_uc-intro.md",
+  "units": [
+    {
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_uc-intro.md:overview:0:figure:-{#uc-intro_fig-1}",
+      "source_page_id": "doc-payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_uc-intro.md",
+      "unit_type": "overview",
+      "title": "Figure: {#uc-intro_fig-1}",
+      "goal": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_uc-intro.md",
+      "product": [
+        "payments",
+        "cybersource"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "task": [
+        "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_uc-intro.md"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "Button Widget ![Example of the button widget interface and flow with various payment\noptions.](/content/dam/new-documentation/documentation/en-us/topics/payments-processing/card-processing/unified-checkout/images/button-widget-flow-865x475.svg/jcr:content/renditions/original)\nFor examples of different payment method UIs through `Unified Checkout`, see [Unified Checkout UI](/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex/uc-intro/uc-appendix/uc-ui-screens.md \"\").\n\n> IMPORTANT\n> Each request that you send to ` Cybersource ` requires header information. For information about constructing the headers for your request, see the [*Getting Started with REST Developer Guide*](https://developer.cybersource.com/docs/cybs/en-us/platform/developer/all/rest/rest-getting-started/restgs-about-guide.md \"\").",
+      "commands": [],
+      "api_entities": [
+        "Flex",
+        "Unified Checkout"
+      ],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "Button Widget ![Example of the button widget interface and flow with various payment options.](/content/dam/new-documentation/documentation/en-us/topics/paym..."
+      ]
+    }
+  ]
+}

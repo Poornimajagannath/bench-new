@@ -1,0 +1,1052 @@
+{
+  "source_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md",
+  "status": "blocked",
+  "schema_passed": false,
+  "content_passed": false,
+  "agent_use_status": "deferred",
+  "issues": [
+    {
+      "code": "duplicate_unit_id",
+      "severity": "error",
+      "message": "duplicate unit_id payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:overview:0:figure:",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:overview:0:figure:"
+    },
+    {
+      "code": "duplicate_unit_id",
+      "severity": "error",
+      "message": "duplicate unit_id payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:overview:0:figure:",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:overview:0:figure:"
+    },
+    {
+      "code": "duplicate_unit_id",
+      "severity": "error",
+      "message": "duplicate unit_id payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:overview:0:figure:",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:overview:0:figure:"
+    },
+    {
+      "code": "duplicate_unit_id",
+      "severity": "error",
+      "message": "duplicate unit_id payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:overview:0:figure:",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:overview:0:figure:"
+    },
+    {
+      "code": "duplicate_unit_id",
+      "severity": "error",
+      "message": "duplicate unit_id payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:overview:0:figure:",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:overview:0:figure:"
+    },
+    {
+      "code": "duplicate_unit_id",
+      "severity": "error",
+      "message": "duplicate unit_id payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:overview:0:figure:",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:overview:0:figure:"
+    },
+    {
+      "code": "duplicate_unit_id",
+      "severity": "error",
+      "message": "duplicate unit_id payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:overview:0:figure:",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:overview:0:figure:"
+    },
+    {
+      "code": "duplicate_unit_id",
+      "severity": "error",
+      "message": "duplicate unit_id payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:overview:0:figure:",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:overview:0:figure:"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:1:use-the-`/sessions`-api-endpoint-to-generate-the"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:2:use-the-`/public-keys{}`-api-endpoint-to-validat"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:3:compile-the-payment-information-in-the-appropria"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:4:use-the-`/tokens`-api-endpoint-to-tokenize-the-p"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:5:validate-the-transient-token"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:6:using-the-transient-token-to-process-a-payment"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:7:construct-the-payment-json-payload."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:8:extract-the-one-time-public-encryption-keys-from"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:9:use-the-keys-to-generate-a-jwe-(json-web-encrypt"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:10:[creating-the-server-side-capture-context](/docs"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:11:[client-side-setup](/docs/cybs/en-us/digital-acc"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:12:[validating-the-transient-token](/docs/cybs/en-u"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:13:send-an-authenticated-post-request-to-the-`/sess"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:14:pass-the-capture-context-response-data-object-to"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:15:decode-the-jwt-from-the-`/microform/v2/sessions`"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:16:use-the-clientlibrary-and-clientlibraryintegrity"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:17:create-the-html-placeholder-objects-to-attach-to"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:18:invoke-the-flex-sdk-by-passing-the-capture-conte"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:19:initiate-the-microform-object-with-styling-to-ma"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:20:create-and-attach-the-microform-fields-to-the-ht"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:21:create-a-function-for-the-customer-to-submit-the"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:22:[creating-the-server-side-capture-context](/docs"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:23:[client-side-setup](/docs/cybs/en-us/digital-acc"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:24:[validating-the-transient-token](/docs/cybs/en-u"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:25:send-an-authenticated-post-request-to-the-`/sess"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:26:pass-the-capture-context-response-data-object-to"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:27:decode-the-jwt-from-the-`/microform/v2/sessions`"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:28:use-the-clientlibrary-and-clientlibraryintegrity"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:29:create-the-html-placeholder-objects-to-attach-to"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:30:invoke-the-flex-sdk-by-passing-the-capture-conte"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:31:initiate-the-microform-object-with-styling-to-ma"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:32:create-and-attach-the-microform-fields-to-the-ht"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:33:create-a-function-for-the-customer-to-submit-the"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:34:call-`microform.createtoken()`."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:35:call-[microform.createtoken()](/docs/cybs/en-us/"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:36:take-the-result-and-add-it-to-a-hidden-input-on-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:37:trigger-submission-of-the-form-containing-the-ne"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:38:you-send-a-server-to-server-api-request-for-a-ca"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:39:you-invoke-the-`unified-checkout`-javascript-lib"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:40:you-process-the-payment-through-the-`unified-che"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:41:**optional:**-`cybersource`-recommends-that-you-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:42:log-in-to-the-`business-center`:"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:43:in-the-`business-center`,-go-to-the-left-navigat"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:44:you-can-configure-various-payment-methods-such-a"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:45:click-manage-to-edit-your-existing-payment-metho"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:46:load-the-javascript-library."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:47:initialize-the-accept-object,-the-capture-contex"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:48:initialize-the-unified-payment-object-with-optio"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:49:show-the-button-list-or-payment-acceptance-page-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:50:process-the-payment-request-using-the-instructio"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:51:from-the-header-of-the-capture-context,-get-the-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:52:send-a-get-request-to-the-`/flex/v2/public-keys`"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:53:the-resource-returns-the-public-key:"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:54:parse-the-jwt-capture-context-to-get-the-kid-fro"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:55:send-a-get-request-to-retrieve-the-public-key-fr"
+    },
+    {
+      "code": "secret_or_pan_material",
+      "severity": "error",
+      "message": "unit appears to contain secret or non-test PAN-like material",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:55:send-a-get-request-to-retrieve-the-public-key-fr"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:56:navigate-to-payment-configuration-\\&gt;-`unified"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:57:in-the-apple-pay-section,-click-**set-up**."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:58:follow-the-link-to-download-the-certificate."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:59:upload-the-*apple-developer-merchantid-domain-as"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:60:click-verify-domain."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:61:enter-the-domain-name-where-you-are-hosting-appl"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:62:follow-these-steps-to-prepare-your-apple-test-de"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:63:make-sure-your-apple-developer-account-is-config"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:64:register-your-apple-pay-test-device-with-apple."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:65:load-apple-pay-test-cards-onto-your-apple-test-d"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:66:follow-the-steps-described-in-create-a-sandbox-t"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:67:follow-the-steps-described-in-adding-a-test-card"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:68:navigate-to-payment-configuration-\\&gt;-`unified"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:69:in-the-click-to-pay-section,-click-**set-up**."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:70:enter-your-business-name-and-website-url."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:71:click-submit."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:72:contact-your-implementation-contact-or-technical"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:73:log-in-to-the-`business-center`:"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:74:in-the-`business-center`,-go-to-the-left-navigat"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:75:click-**set-up**-under-value-added-solutions.-th"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:76:click-**set-up**-to-set-up-`3-d-secure`.-the-3ds"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:77:enter-the-required-information-in-the-merchant-d"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:78:navigate-to-payment-configuration-\\&gt;-`unified"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:79:in-the-google-pay-section,-click-**set-up**."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:80:enter-your-business-name."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:81:click-submit."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:82:on-the-left-navigation-panel,-navigate-to-accoun"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:83:click-roles-to-display-a-list-of-your-user-roles"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:84:click-the-pencil-icon-next-to-the-user-role-that"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:85:click-payment-configuration-permission."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:86:select-the-relevant-permission-for-the-specific-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:87:on-the-left-navigation-panel,-navigate-to-accoun"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:88:click-roles-to-see-a-list-of-your-user-roles.{#u"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:89:click-the-pencil-icon-next-to-the-user-role-that"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:90:click-payment-configuration-permission.-{#uc-man"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:91:select-the-relevant-permission-for-the-specific-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:92:the-customer-chooses-online-bank-transfer-as-the"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:93:the-customer-chooses-their-bank-from-the-list-of"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:94:the-customer-confirms-their-payment-and-complete"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:95:the-customer-is-notified-that-the-payment-is-com"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:96:the-customer-returns-to-your-website-for-payment"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:97:add-bancontact-to-your-integration-by-adding-`ba"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:98:set-the-completemandate.type-field-value-to-`cap"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:99:include-these-required-fields-for-online-bank-tr"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:100:include-this-optional-field-for-online-bank-tran"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:101:add-dragonpay-to-your-integration-by-adding-`dra"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:102:set-the-completemandate.type-field-value-to-`cap"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:103:include-these-required-fields-for-online-bank-tr"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:104:include-this-optional-field-for-online-bank-tran"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:105:add-ideal-to-your-integration-by-adding-`ideal`-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:106:set-the-completemandate.type-field-value-to-`cap"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:107:include-these-required-fields-for-online-bank-tr"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:108:include-this-optional-field-for-online-bank-tran"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:109:add-mybank-to-your-integration-by-adding-`mybank"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:110:set-the-completemandate.type-field-value-to-`cap"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:111:include-these-required-fields-for-online-bank-tr"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:112:include-this-optional-field-for-online-bank-tran"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:113:add-multibanco-to-your-integration-by-adding-`mu"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:114:set-the-completemandate.type-field-value-to-`cap"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:115:include-these-required-fields-for-online-bank-tr"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:116:include-this-optional-field-for-online-bank-tran"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:117:add-przelewy24\\|p24-to-your-integration-by-addin"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:118:set-the-completemandate.type-field-value-to-`cap"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:119:include-these-required-fields-for-online-bank-tr"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:120:include-this-optional-field-for-online-bank-tran"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:121:add-tink-pay-by-bank-to-your-integration-by-addi"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:122:set-the-completemandate.type-field-value-to-`cap"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:123:include-these-required-fields-for-online-bank-tr"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:124:include-this-optional-field-for-online-bank-tran"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:125:the-customer-chooses-their-buy-now,-pay-later-pa"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:126:the-customer-chooses-how-much-they-want-to-pay,-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:127:the-unpaid-amount-is-divided-into-equal-installm"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:128:you-receive-the-full-payment-after-the-customer-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:129:add-afterpay-to-your-integration-by-adding-`afte"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:130:set-the-completemandate.type-field-value-to-`aut"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:131:include-these-required-fields-in-the-capture-con"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:132:include-these-optional-fields-in-the-capture-con"
+    },
+    {
+      "code": "secret_or_pan_material",
+      "severity": "error",
+      "message": "unit appears to contain secret or non-test PAN-like material",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:132:include-these-optional-fields-in-the-capture-con"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:133:the-customer-selects-a-convenience-store/voucher"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:134:the-customer-receives-their-payment-code/voucher"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:135:the-customer-presents-the-payment-code/voucher-o"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:136:the-customer-receives-a-notification-that-the-pa"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:137:add-konbini-to-your-integration-by-adding-`konbi"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:138:set-the-completemandate.type-field-value-to-`aut"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:139:include-these-required-fields-in-the-capture-con"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:140:include-these-optional-fields-in-the-capture-con"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:141:you-send-a-server-to-server-api-request-for-a-ca"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:142:you-invoke-the-`unified-checkout`-javascript-lib"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:143:you-use-the-response-from-the-`click-to-pay-drop"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:144:log-in-to-the-`business-center`:"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:145:in-the-`business-center`,-go-to-the-left-navigat"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:146:click-**setup**-and-follow-the-instructions-to-e"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:147:click-**manage**-to-alter-your-`click-to-pay`-en"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:148:load-the-javascript-library."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:149:initialize-the-accept-object-the-capture-context"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:150:initialize-the-unified-payment-object-with-optio"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:151:show-the-button-list-or-payment-acceptance-page-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:152:navigate-to-payment-configuration-\\&gt;-unified-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:153:click-enabled.-you-can-upload-your-key-in-the-ap"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:154:upload-the-public-encryption-key-in-jwk-format,-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:155:log-in-to-the-`business-center`:"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:156:in-the-`business-center`,-go-to-the-left-navigat"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:157:click-**set-up**-under-value-added-solutions.-th"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:158:click-**set-up**-to-set-up-`3-d-secure`.-the-3ds"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:159:enter-the-required-information-in-the-merchant-d"
+    },
+    {
+      "code": "secret_or_pan_material",
+      "severity": "error",
+      "message": "unit appears to contain secret or non-test PAN-like material",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:159:enter-the-required-information-in-the-merchant-d"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:160:establish-a-payment-session-with-a-predefined-cu"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:161:validate-the-json-web-token."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:162:populate-the-json-web-token-with-customer-inform"
+    }
+  ],
+  "promoted_unit_ids": [],
+  "linked_workflow_id": null,
+  "contract_bundle_path": null,
+  "context_pack_path": null,
+  "objects_path": "artifacts/content_engine/objects/payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md.quickstart_units.json"
+}

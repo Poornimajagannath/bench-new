@@ -1,0 +1,38 @@
+{
+  "stage": "content_engine_extract",
+  "inspired_by": "ucbepic/docetl (imported; Frame.code_map, no LLM)",
+  "extractor_label": "imported-code_map",
+  "source_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-overview.md",
+  "units": [
+    {
+      "unit_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-overview.md:overview:0:figure:",
+      "source_page_id": "doc-payments-guide-en-us_tms_developer_all_rest_tms_tms-overview.md",
+      "unit_type": "overview",
+      "title": "Figure:",
+      "goal": "payments-guide-en-us_tms_developer_all_rest_tms_tms-overview.md",
+      "product": [
+        "payments",
+        "cybersource"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "task": [
+        "payments-guide-en-us_tms_developer_all_rest_tms_tms-overview.md"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "`TMS` Token Types\n![Diagram of the unified token identifier.](/content/dam/documentation/cybs/en-us/topics/payments-processing/payment-services/tms/images/token-types-intro-600x400.svg/jcr:content/renditions/original)",
+      "commands": [],
+      "api_entities": [
+        "TMS"
+      ],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "`TMS` Token Types ![Diagram of the unified token identifier.](/content/dam/documentation/cybs/en-us/topics/payments-processing/payment-services/tms/images/to..."
+      ]
+    }
+  ]
+}

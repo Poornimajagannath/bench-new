@@ -1,9 +1,9 @@
 [full_docetl] start discovery=docetl docetl_available=True
 [full_docetl] stage=synthesize_candidates
 [full_docetl] candidates suggestions=20 approved=3 path=artifacts/candidates.json
-[full_docetl] stage=content_engine sources=15
-[full_docetl] content_engine source=lab-auth-context type=context
-[04:04:48] Checking operations...                                               
+[full_docetl] stage=content_engine sources=64
+[full_docetl] content_engine source=boarding-guide-en-us_boarding-template-management_user_all_ada_boarding-template-mgmt type=guide
+[00:43:33] Checking operations...                                               
                                                                                 
            ✓ Operation 'extract_quickstart_fields' (code_map)                   
            ✓ Operation 'scan_segments' (scan)                                   
@@ -13,7 +13,297 @@
                                                                                 
 ────────────────────────────── Pipeline Execution ──────────────────────────────
            ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
-Processing extract_quickstart_fields (code_map):   0%|          | 0/5 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 5/5 [00:00<00:00, 119156.36it/s]
+Processing extract_quickstart_fields (code_map):   0%|          | 0/1 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 1/1 [00:00<00:00, 55188.21it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.01s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=blocked units=0 docetl=imported-code_map ok=False
+[full_docetl] content_engine source=boarding-guide-en-us_boarding_developer_all_rest_boarding type=guide
+[00:43:33] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/6 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 6/6 [00:00<00:00, 251658.24it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.01s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=blocked units=97 docetl=imported-code_map ok=False
+[full_docetl] content_engine source=boarding-guide-en-us_boarding_developer_all_rest_boarding_boarding-intro-overview type=guide
+[00:43:33] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/1 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 1/1 [00:00<00:00, 89240.51it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.01s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=blocked units=0 docetl=imported-code_map ok=False
+[full_docetl] content_engine source=boarding-guide-en-us_boarding_developer_all_rest_boarding_boarding-intro-template type=guide
+[00:43:33] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/1 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 1/1 [00:00<00:00, 77672.30it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.01s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=blocked units=0 docetl=imported-code_map ok=False
+[full_docetl] content_engine source=boarding-guide-en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro type=guide
+[00:43:33] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/1 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 1/1 [00:00<00:00, 76260.07it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.01s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=blocked units=0 docetl=imported-code_map ok=False
+[full_docetl] content_engine source=boarding-guide-en-us_boarding_developer_all_rest_boarding_boarding-reg-intro type=guide
+[00:43:33] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/1 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 1/1 [00:00<00:00, 83886.08it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.01s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=blocked units=0 docetl=imported-code_map ok=False
+[full_docetl] content_engine source=boarding-guide-en-us_boarding_developer_all_rest_boarding_templates-matrix-intro type=guide
+[00:43:33] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/1 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 1/1 [00:00<00:00, 71089.90it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.01s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=blocked units=0 docetl=imported-code_map ok=False
+[full_docetl] content_engine source=boarding-guide-en-us_boarding_developer_all_rest_boarding_templates-tasks type=guide
+[00:43:33] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/1 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 1/1 [00:00<00:00, 77672.30it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.01s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=blocked units=0 docetl=imported-code_map ok=False
+[full_docetl] content_engine source=boarding-guide-en-us_boarding_user_all_ebc_boarding-user type=guide
+[00:43:33] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/6 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 6/6 [00:00<00:00, 331129.26it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.01s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=promoted units=401 docetl=imported-code_map ok=True
+[full_docetl] content_engine source=cybersource-payments-openapi type=openapi
+[00:43:33] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/1 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 1/1 [00:00<00:00, 69905.07it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.01s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=blocked units=0 docetl=imported-code_map ok=False
+[full_docetl] content_engine source=lab-auth-context type=context
+[00:43:33] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/5 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 5/5 [00:00<00:00, 246723.76it/s]
            ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
            $0.00)                                                               
            Flushing cache to disk...                                            
@@ -32,7 +322,7 @@
            ╰───────────────────────────────────────────────────────────────────╯
 [full_docetl]   status=promoted units=4 docetl=imported-code_map ok=True
 [full_docetl] content_engine source=lab-sandbox-rules type=context
-[04:04:48] Checking operations...                                               
+[00:43:33] Checking operations...                                               
                                                                                 
            ✓ Operation 'extract_quickstart_fields' (code_map)                   
            ✓ Operation 'scan_segments' (scan)                                   
@@ -42,7 +332,7 @@
                                                                                 
 ────────────────────────────── Pipeline Execution ──────────────────────────────
            ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
-Processing extract_quickstart_fields (code_map):   0%|          | 0/5 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 5/5 [00:00<00:00, 169125.16it/s]
+Processing extract_quickstart_fields (code_map):   0%|          | 0/5 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 5/5 [00:00<00:00, 268865.64it/s]
            ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
            $0.00)                                                               
            Flushing cache to disk...                                            
@@ -61,7 +351,7 @@
            ╰───────────────────────────────────────────────────────────────────╯
 [full_docetl]   status=promoted units=4 docetl=imported-code_map ok=True
 [full_docetl] content_engine source=lab-source-index type=context
-[04:04:48] Checking operations...                                               
+[00:43:33] Checking operations...                                               
                                                                                 
            ✓ Operation 'extract_quickstart_fields' (code_map)                   
            ✓ Operation 'scan_segments' (scan)                                   
@@ -71,7 +361,7 @@
                                                                                 
 ────────────────────────────── Pipeline Execution ──────────────────────────────
            ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
-Processing extract_quickstart_fields (code_map):   0%|          | 0/7 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 7/7 [00:00<00:00, 42861.50it/s]
+Processing extract_quickstart_fields (code_map):   0%|          | 0/7 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 7/7 [00:00<00:00, 35848.75it/s]
            ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
            $0.00)                                                               
            Flushing cache to disk...                                            
@@ -90,7 +380,7 @@
            ╰───────────────────────────────────────────────────────────────────╯
 [full_docetl]   status=promoted units=6 docetl=imported-code_map ok=True
 [full_docetl] content_engine source=microform-payer-auth-quickstart type=quickstart
-[04:04:48] Checking operations...                                               
+[00:43:33] Checking operations...                                               
                                                                                 
            ✓ Operation 'extract_quickstart_fields' (code_map)                   
            ✓ Operation 'scan_segments' (scan)                                   
@@ -100,7 +390,7 @@
                                                                                 
 ────────────────────────────── Pipeline Execution ──────────────────────────────
            ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
-Processing extract_quickstart_fields (code_map):   0%|          | 0/13 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 13/13 [00:00<00:00, 315178.91it/s]
+Processing extract_quickstart_fields (code_map):   0%|          | 0/13 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 13/13 [00:00<00:00, 134631.98it/s]
            ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
            $0.00)                                                               
            Flushing cache to disk...                                            
@@ -118,8 +408,8 @@
            │ Output:                                                           │
            ╰───────────────────────────────────────────────────────────────────╯
 [full_docetl]   status=promoted units=11 docetl=imported-code_map ok=True
-[full_docetl] content_engine source=scenario-agent-readiness-testing type=scenario
-[04:04:48] Checking operations...                                               
+[full_docetl] content_engine source=payments-core-openapi type=openapi
+[00:43:33] Checking operations...                                               
                                                                                 
            ✓ Operation 'extract_quickstart_fields' (code_map)                   
            ✓ Operation 'scan_segments' (scan)                                   
@@ -129,7 +419,1138 @@
                                                                                 
 ────────────────────────────── Pipeline Execution ──────────────────────────────
            ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
-Processing extract_quickstart_fields (code_map):   0%|          | 0/10 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 10/10 [00:00<00:00, 52298.05it/s]
+Processing extract_quickstart_fields (code_map):   0%|          | 0/1 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 1/1 [00:00<00:00, 87381.33it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.01s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=blocked units=0 docetl=imported-code_map ok=False
+[full_docetl] content_engine source=payments-guide-credentials type=guide
+[00:43:33] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/1 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 1/1 [00:00<00:00, 82241.25it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.01s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=blocked units=0 docetl=imported-code_map ok=False
+[full_docetl] content_engine source=payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md type=guide
+[00:43:33] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/45 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 45/45 [00:00<00:00, 701649.37it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.04s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=blocked units=190 docetl=imported-code_map ok=False
+[full_docetl] content_engine source=payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_ctp-intro.md type=guide
+[00:43:33] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/2 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 2/2 [00:00<00:00, 129055.51it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.01s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=promoted units=1 docetl=imported-code_map ok=True
+[full_docetl] content_engine source=payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_da-payments.md type=guide
+[00:43:33] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/1 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 1/1 [00:00<00:00, 82241.25it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.01s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=blocked units=0 docetl=imported-code_map ok=False
+[full_docetl] content_engine source=payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_flex-api-2.md type=guide
+[00:43:33] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/1 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 1/1 [00:00<00:00, 91180.52it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.01s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=blocked units=0 docetl=imported-code_map ok=False
+[full_docetl] content_engine source=payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_microform-integ type=guide
+[00:43:33] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/1 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 1/1 [00:00<00:00, 93206.76it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.01s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=blocked units=0 docetl=imported-code_map ok=False
+[full_docetl] content_engine source=payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_payments_intro_ type=guide
+[00:43:33] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/4 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 4/4 [00:00<00:00, 82241.25it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.01s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=promoted units=3 docetl=imported-code_map ok=True
+[full_docetl] content_engine source=payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_uc-intro.md type=guide
+[00:43:33] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/2 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 2/2 [00:00<00:00, 46345.90it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.01s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=promoted units=1 docetl=imported-code_map ok=True
+[full_docetl] content_engine source=payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth.md type=guide
+[00:43:33] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/9 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 9/9 [00:00<00:00, 279620.27it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.03s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=blocked units=49 docetl=imported-code_map ok=False
+[full_docetl] content_engine source=payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth_pa-reports-intro.md type=guide
+[00:43:33] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/1 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 1/1 [00:00<00:00, 72315.59it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.01s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=blocked units=0 docetl=imported-code_map ok=False
+[full_docetl] content_engine source=payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth_pa-testing-intro.md type=guide
+[00:43:33] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/1 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 1/1 [00:00<00:00, 77672.30it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.01s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=blocked units=0 docetl=imported-code_map ok=False
+[full_docetl] content_engine source=payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth_pa2-ccdc-intro.md type=guide
+[00:43:33] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/1 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 1/1 [00:00<00:00, 77672.30it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.01s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=blocked units=0 docetl=imported-code_map ok=False
+[full_docetl] content_engine source=payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth_pa2-intro-intro.md type=guide
+[00:43:33] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/1 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 1/1 [00:00<00:00, 83886.08it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.01s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=blocked units=0 docetl=imported-code_map ok=False
+[full_docetl] content_engine source=payments-guide-en-us_payments_developer_ctv_rest_payments.md type=guide
+[00:43:33] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/6 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 6/6 [00:00<00:00, 226719.14it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.02s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=blocked units=29 docetl=imported-code_map ok=False
+[full_docetl] content_engine source=payments-guide-en-us_payments_developer_ctv_rest_payments_payments-debit-prepaid-process-intro. type=guide
+[00:43:33] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/1 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 1/1 [00:00<00:00, 63550.06it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.01s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=blocked units=0 docetl=imported-code_map ok=False
+[full_docetl] content_engine source=payments-guide-en-us_payments_developer_ctv_rest_payments_payments-intro.md type=guide
+[00:43:33] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/1 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 1/1 [00:00<00:00, 61680.94it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.01s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=blocked units=0 docetl=imported-code_map ok=False
+[full_docetl] content_engine source=payments-guide-en-us_payments_developer_ctv_rest_payments_payments-processing-basic-intro.md type=guide
+[00:43:33] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/1 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 1/1 [00:00<00:00, 76260.07it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.01s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=blocked units=0 docetl=imported-code_map ok=False
+[full_docetl] content_engine source=payments-guide-en-us_tms_developer_all_rest_tms.md type=guide
+[00:43:33] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/23 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 23/23 [00:00<00:00, 472887.22it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.04s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=blocked units=232 docetl=imported-code_map ok=False
+[full_docetl] content_engine source=payments-guide-en-us_tms_developer_all_rest_tms_tms-bin-lookup-service.md type=guide
+[00:43:33] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/1 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 1/1 [00:00<00:00, 69905.07it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.01s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=blocked units=0 docetl=imported-code_map ok=False
+[full_docetl] content_engine source=payments-guide-en-us_tms_developer_all_rest_tms_tms-card-art.md type=guide
+[00:43:33] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/1 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 1/1 [00:00<00:00, 79137.81it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.01s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=blocked units=0 docetl=imported-code_map ok=False
+[full_docetl] content_engine source=payments-guide-en-us_tms_developer_all_rest_tms_tms-create-request.md type=guide
+[00:43:33] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/1 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 1/1 [00:00<00:00, 82241.25it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.01s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=blocked units=0 docetl=imported-code_map ok=False
+[full_docetl] content_engine source=payments-guide-en-us_tms_developer_all_rest_tms_tms-cust-tkn.md type=guide
+[00:43:33] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/1 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 1/1 [00:00<00:00, 83886.08it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.01s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=blocked units=0 docetl=imported-code_map ok=False
+[full_docetl] content_engine source=payments-guide-en-us_tms_developer_all_rest_tms_tms-cust-tkn_tms-cust-pi-tkn.md type=guide
+[00:43:33] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/1 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 1/1 [00:00<00:00, 73584.28it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.01s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=blocked units=0 docetl=imported-code_map ok=False
+[full_docetl] content_engine source=payments-guide-en-us_tms_developer_all_rest_tms_tms-cust-tkn_tms-ship-tkn.md type=guide
+[00:43:33] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/1 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 1/1 [00:00<00:00, 80659.69it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.01s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=blocked units=0 docetl=imported-code_map ok=False
+[full_docetl] content_engine source=payments-guide-en-us_tms_developer_all_rest_tms_tms-ii-tkn.md type=guide
+[00:43:33] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/1 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 1/1 [00:00<00:00, 85598.04it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.01s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=blocked units=0 docetl=imported-code_map ok=False
+[full_docetl] content_engine source=payments-guide-en-us_tms_developer_all_rest_tms_tms-net-tkn-intro.md type=guide
+[00:43:33] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/1 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 1/1 [00:00<00:00, 89240.51it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.01s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=blocked units=0 docetl=imported-code_map ok=False
+[full_docetl] content_engine source=payments-guide-en-us_tms_developer_all_rest_tms_tms-net-tkn-onboard.md type=guide
+[00:43:33] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/1 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 1/1 [00:00<00:00, 89240.51it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.01s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=blocked units=0 docetl=imported-code_map ok=False
+[full_docetl] content_engine source=payments-guide-en-us_tms_developer_all_rest_tms_tms-onboarding.md type=guide
+[00:43:33] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/1 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 1/1 [00:00<00:00, 71089.90it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.01s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=blocked units=0 docetl=imported-code_map ok=False
+[full_docetl] content_engine source=payments-guide-en-us_tms_developer_all_rest_tms_tms-overview.md type=guide
+[00:43:33] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/2 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 2/2 [00:00<00:00, 125203.10it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.01s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=promoted units=1 docetl=imported-code_map ok=True
+[full_docetl] content_engine source=payments-guide-en-us_tms_developer_all_rest_tms_tms-pi-tkn.md type=guide
+[00:43:33] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/1 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 1/1 [00:00<00:00, 59074.70it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.01s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=blocked units=0 docetl=imported-code_map ok=False
+[full_docetl] content_engine source=payments-guide-en-us_tms_developer_all_rest_tms_tms-wallet-tkn.md type=guide
+[00:43:33] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/1 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 1/1 [00:00<00:00, 79137.81it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.01s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=blocked units=0 docetl=imported-code_map ok=False
+[full_docetl] content_engine source=payments-guide-en-us_tms_developer_ctv_rest_tms.md type=guide
+[00:43:33] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/18 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 18/18 [00:00<00:00, 1076.81it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.03s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=blocked units=187 docetl=imported-code_map ok=False
+[full_docetl] content_engine source=payments-guide-payer-auth type=guide
+[00:43:33] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/9 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 9/9 [00:00<00:00, 582.59it/s]
+[00:43:34] ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.04s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=blocked units=49 docetl=imported-code_map ok=False
+[full_docetl] content_engine source=payments-guide-payments type=guide
+[00:43:34] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/6 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 6/6 [00:00<00:00, 15069.36it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.02s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=blocked units=29 docetl=imported-code_map ok=False
+[full_docetl] content_engine source=payments-guide-rest-getting-started type=guide
+[00:43:34] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/10 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 10/10 [00:00<00:00, 6872.53it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.02s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=blocked units=375 docetl=imported-code_map ok=False
+[full_docetl] content_engine source=payments-guide-sandbox type=guide
+[00:43:34] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/1 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 1/1 [00:00<00:00, 56679.78it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.01s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=blocked units=0 docetl=imported-code_map ok=False
+[full_docetl] content_engine source=payments-guide-testing-guide type=guide
+[00:43:34] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/1 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 1/1 [00:00<00:00, 67650.06it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.01s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=blocked units=0 docetl=imported-code_map ok=False
+[full_docetl] content_engine source=payments-guide-tms type=guide
+[00:43:34] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/23 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 23/23 [00:00<00:00, 513132.94it/s]
+           ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
+           $0.00)                                                               
+           Flushing cache to disk...                                            
+           Cache flushed to disk.                                               
+           ╭───── Step Execution: step_extract_quickstart_fields/boundary ─────╮
+           │ ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)      │
+           │ ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost: │
+           │ $0.00)                                                            │
+           │ Step step_extract_quickstart_fields/boundary completed. Cost:     │
+           │ $0.00                                                             │
+           ╰───────────────────────────────────────────────────────────────────╯
+           ╭──────────────────────── Execution Summary ────────────────────────╮
+           │ Cost: $0.00                                                       │
+           │ Time: 0.04s                                                       │
+           │ Output:                                                           │
+           ╰───────────────────────────────────────────────────────────────────╯
+[full_docetl]   status=blocked units=232 docetl=imported-code_map ok=False
+[full_docetl] content_engine source=scenario-agent-readiness-testing type=scenario
+[00:43:34] Checking operations...                                               
+                                                                                
+           ✓ Operation 'extract_quickstart_fields' (code_map)                   
+           ✓ Operation 'scan_segments' (scan)                                   
+           ✓ All operations passed syntax check                                 
+─────────────────────────────── Loading Datasets ───────────────────────────────
+           ✓ Loaded dataset 'segments' from in-memory data                      
+                                                                                
+────────────────────────────── Pipeline Execution ──────────────────────────────
+           ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
+Processing extract_quickstart_fields (code_map):   0%|          | 0/10 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 10/10 [00:00<00:00, 355449.49it/s]
            ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
            $0.00)                                                               
            Flushing cache to disk...                                            
@@ -148,7 +1569,7 @@
            ╰───────────────────────────────────────────────────────────────────╯
 [full_docetl]   status=promoted units=10 docetl=imported-code_map ok=True
 [full_docetl] content_engine source=scenario-authentication type=scenario
-[04:04:48] Checking operations...                                               
+[00:43:34] Checking operations...                                               
                                                                                 
            ✓ Operation 'extract_quickstart_fields' (code_map)                   
            ✓ Operation 'scan_segments' (scan)                                   
@@ -158,7 +1579,7 @@
                                                                                 
 ────────────────────────────── Pipeline Execution ──────────────────────────────
            ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
-Processing extract_quickstart_fields (code_map):   0%|          | 0/9 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 9/9 [00:00<00:00, 314572.80it/s]
+Processing extract_quickstart_fields (code_map):   0%|          | 0/9 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 9/9 [00:00<00:00, 48333.85it/s]
            ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
            $0.00)                                                               
            Flushing cache to disk...                                            
@@ -177,7 +1598,7 @@
            ╰───────────────────────────────────────────────────────────────────╯
 [full_docetl]   status=promoted units=9 docetl=imported-code_map ok=True
 [full_docetl] content_engine source=scenario-first-transaction type=scenario
-[04:04:48] Checking operations...                                               
+[00:43:34] Checking operations...                                               
                                                                                 
            ✓ Operation 'extract_quickstart_fields' (code_map)                   
            ✓ Operation 'scan_segments' (scan)                                   
@@ -187,7 +1608,7 @@
                                                                                 
 ────────────────────────────── Pipeline Execution ──────────────────────────────
            ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
-Processing extract_quickstart_fields (code_map):   0%|          | 0/9 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 9/9 [00:00<00:00, 253347.22it/s]
+Processing extract_quickstart_fields (code_map):   0%|          | 0/9 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 9/9 [00:00<00:00, 81530.75it/s]
            ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
            $0.00)                                                               
            Flushing cache to disk...                                            
@@ -206,7 +1627,7 @@
            ╰───────────────────────────────────────────────────────────────────╯
 [full_docetl]   status=promoted units=10 docetl=imported-code_map ok=True
 [full_docetl] content_engine source=scenario-setup-checkout type=scenario
-[04:04:48] Checking operations...                                               
+[00:43:34] Checking operations...                                               
                                                                                 
            ✓ Operation 'extract_quickstart_fields' (code_map)                   
            ✓ Operation 'scan_segments' (scan)                                   
@@ -216,7 +1637,7 @@
                                                                                 
 ────────────────────────────── Pipeline Execution ──────────────────────────────
            ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
-Processing extract_quickstart_fields (code_map):   0%|          | 0/9 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 9/9 [00:00<00:00, 45208.07it/s]
+Processing extract_quickstart_fields (code_map):   0%|          | 0/9 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 9/9 [00:00<00:00, 340078.70it/s]
            ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
            $0.00)                                                               
            Flushing cache to disk...                                            
@@ -235,7 +1656,7 @@
            ╰───────────────────────────────────────────────────────────────────╯
 [full_docetl]   status=promoted units=10 docetl=imported-code_map ok=True
 [full_docetl] content_engine source=scenario-visa-relay-context-swapping type=scenario
-[04:04:48] Checking operations...                                               
+[00:43:34] Checking operations...                                               
                                                                                 
            ✓ Operation 'extract_quickstart_fields' (code_map)                   
            ✓ Operation 'scan_segments' (scan)                                   
@@ -245,7 +1666,7 @@
                                                                                 
 ────────────────────────────── Pipeline Execution ──────────────────────────────
            ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
-Processing extract_quickstart_fields (code_map):   0%|          | 0/10 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 10/10 [00:00<00:00, 332881.27it/s]
+Processing extract_quickstart_fields (code_map):   0%|          | 0/10 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 10/10 [00:00<00:00, 74104.31it/s]
            ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
            $0.00)                                                               
            Flushing cache to disk...                                            
@@ -264,7 +1685,7 @@
            ╰───────────────────────────────────────────────────────────────────╯
 [full_docetl]   status=promoted units=10 docetl=imported-code_map ok=True
 [full_docetl] content_engine source=template-ach-payment type=template
-[04:04:48] Checking operations...                                               
+[00:43:34] Checking operations...                                               
                                                                                 
            ✓ Operation 'extract_quickstart_fields' (code_map)                   
            ✓ Operation 'scan_segments' (scan)                                   
@@ -274,7 +1695,7 @@
                                                                                 
 ────────────────────────────── Pipeline Execution ──────────────────────────────
            ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
-Processing extract_quickstart_fields (code_map):   0%|          | 0/12 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 12/12 [00:00<00:00, 282762.07it/s]
+Processing extract_quickstart_fields (code_map):   0%|          | 0/12 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 12/12 [00:00<00:00, 461758.24it/s]
            ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
            $0.00)                                                               
            Flushing cache to disk...                                            
@@ -293,7 +1714,7 @@
            ╰───────────────────────────────────────────────────────────────────╯
 [full_docetl]   status=promoted units=15 docetl=imported-code_map ok=True
 [full_docetl] content_engine source=template-card-payment type=template
-[04:04:48] Checking operations...                                               
+[00:43:34] Checking operations...                                               
                                                                                 
            ✓ Operation 'extract_quickstart_fields' (code_map)                   
            ✓ Operation 'scan_segments' (scan)                                   
@@ -303,7 +1724,7 @@
                                                                                 
 ────────────────────────────── Pipeline Execution ──────────────────────────────
            ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
-Processing extract_quickstart_fields (code_map):   0%|          | 0/9 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 9/9 [00:00<00:00, 290374.89it/s]
+Processing extract_quickstart_fields (code_map):   0%|          | 0/9 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 9/9 [00:00<00:00, 362968.62it/s]
            ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
            $0.00)                                                               
            Flushing cache to disk...                                            
@@ -322,7 +1743,7 @@
            ╰───────────────────────────────────────────────────────────────────╯
 [full_docetl]   status=promoted units=7 docetl=imported-code_map ok=True
 [full_docetl] content_engine source=template-config type=template
-[04:04:48] Checking operations...                                               
+[00:43:34] Checking operations...                                               
                                                                                 
            ✓ Operation 'extract_quickstart_fields' (code_map)                   
            ✓ Operation 'scan_segments' (scan)                                   
@@ -332,7 +1753,7 @@
                                                                                 
 ────────────────────────────── Pipeline Execution ──────────────────────────────
            ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
-Processing extract_quickstart_fields (code_map):   0%|          | 0/11 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 11/11 [00:00<00:00, 339245.18it/s]
+Processing extract_quickstart_fields (code_map):   0%|          | 0/11 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 11/11 [00:00<00:00, 397735.72it/s]
            ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
            $0.00)                                                               
            Flushing cache to disk...                                            
@@ -351,7 +1772,7 @@
            ╰───────────────────────────────────────────────────────────────────╯
 [full_docetl]   status=promoted units=12 docetl=imported-code_map ok=True
 [full_docetl] content_engine source=template-digital-wallet type=template
-[04:04:48] Checking operations...                                               
+[00:43:34] Checking operations...                                               
                                                                                 
            ✓ Operation 'extract_quickstart_fields' (code_map)                   
            ✓ Operation 'scan_segments' (scan)                                   
@@ -361,7 +1782,7 @@
                                                                                 
 ────────────────────────────── Pipeline Execution ──────────────────────────────
            ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
-Processing extract_quickstart_fields (code_map):   0%|          | 0/12 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 12/12 [00:00<00:00, 292625.86it/s]
+Processing extract_quickstart_fields (code_map):   0%|          | 0/12 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 12/12 [00:00<00:00, 99469.66it/s]
            ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
            $0.00)                                                               
            Flushing cache to disk...                                            
@@ -380,7 +1801,7 @@
            ╰───────────────────────────────────────────────────────────────────╯
 [full_docetl]   status=promoted units=20 docetl=imported-code_map ok=True
 [full_docetl] content_engine source=template-multi-currency type=template
-[04:04:48] Checking operations...                                               
+[00:43:34] Checking operations...                                               
                                                                                 
            ✓ Operation 'extract_quickstart_fields' (code_map)                   
            ✓ Operation 'scan_segments' (scan)                                   
@@ -390,7 +1811,7 @@
                                                                                 
 ────────────────────────────── Pipeline Execution ──────────────────────────────
            ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
-Processing extract_quickstart_fields (code_map):   0%|          | 0/16 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 16/16 [00:00<00:00, 29279.61it/s]
+Processing extract_quickstart_fields (code_map):   0%|          | 0/16 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 16/16 [00:00<00:00, 559240.53it/s]
            ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
            $0.00)                                                               
            Flushing cache to disk...                                            
@@ -409,7 +1830,7 @@
            ╰───────────────────────────────────────────────────────────────────╯
 [full_docetl]   status=promoted units=23 docetl=imported-code_map ok=True
 [full_docetl] content_engine source=templates-index type=template
-[04:04:48] Checking operations...                                               
+[00:43:34] Checking operations...                                               
                                                                                 
            ✓ Operation 'extract_quickstart_fields' (code_map)                   
            ✓ Operation 'scan_segments' (scan)                                   
@@ -419,7 +1840,7 @@
                                                                                 
 ────────────────────────────── Pipeline Execution ──────────────────────────────
            ✓ step_extract_quickstart_fields/scan_segments (Cost: $0.00)         
-Processing extract_quickstart_fields (code_map):   0%|          | 0/4 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 4/4 [00:00<00:00, 29330.80it/s]
+Processing extract_quickstart_fields (code_map):   0%|          | 0/4 [00:00<?, ?it/s]Processing extract_quickstart_fields (code_map): 100%|██████████| 4/4 [00:00<00:00, 239674.51it/s]
            ✓ step_extract_quickstart_fields/extract_quickstart_fields (Cost:    
            $0.00)                                                               
            Flushing cache to disk...                                            
@@ -440,7 +1861,7 @@
 [full_docetl] stage=bench_v0
 [full_docetl] bench workflow=flex-token-lifecycle
 [bench_v0] stage=raw_questions_extract_suggest
-[04:04:48] Checking operations...                                               
+[00:43:34] Checking operations...                                               
                                                                                 
            ✓ Operation 'extract_goal_symptoms_entities' (code_map)              
            ✓ Operation 'scan_questions' (scan)                                  
@@ -450,7 +1871,7 @@
                                                                                 
 ────────────────────────────── Pipeline Execution ──────────────────────────────
            ✓ step_extract_goal_symptoms_entities/scan_questions (Cost: $0.00)   
-Processing extract_goal_symptoms_entities (code_map):   0%|          | 0/20 [00:00<?, ?it/s]Processing extract_goal_symptoms_entities (code_map): 100%|██████████| 20/20 [00:00<00:00, 367921.40it/s]
+Processing extract_goal_symptoms_entities (code_map):   0%|          | 0/20 [00:00<?, ?it/s]Processing extract_goal_symptoms_entities (code_map): 100%|██████████| 20/20 [00:00<00:00, 94893.76it/s]
            ✓ step_extract_goal_symptoms_entities/extract_goal_symptoms_entities 
            (Cost: $0.00)                                                        
            Flushing cache to disk...                                            
@@ -477,11 +1898,11 @@
 [bench_v0] seed=seed-flex-05 channel=support suggest=flex-token-lifecycle entities=['Flex', 'TMS']
 [bench_v0] seed=seed-flex-06 channel=forum suggest=flex-token-lifecycle entities=['Flex', 'Microform', 'TMS']
 [bench_v0] seed=seed-flex-07 channel=docs suggest=flex-token-lifecycle entities=['Flex', 'Microform', 'TMS', 'transientTokenJwt', 'authorization']
-[bench_v0] seed=seed-httpsig-01 channel=docs suggest=http-signature-debug entities=['HTTP Signature', 'Authentication Failed', 'keyId', 'secretKey', 'apitest.cybersource.com']
-[bench_v0] seed=seed-httpsig-02 channel=forum suggest=http-signature-debug entities=['HTTP Signature', 'v-c-merchant-id', 'apitest.cybersource.com']
+[bench_v0] seed=seed-httpsig-01 channel=docs suggest=http-signature-debug entities=['HTTP Signature', 'Authentication Failed', 'keyId', 'secretKey', 'apitest.example.com']
+[bench_v0] seed=seed-httpsig-02 channel=forum suggest=http-signature-debug entities=['HTTP Signature', 'v-c-merchant-id', 'apitest.example.com']
 [bench_v0] seed=seed-httpsig-03 channel=support suggest=http-signature-debug entities=['Authentication Failed', 'keyId', 'secretKey', 'merchantKeyId']
 [bench_v0] seed=seed-httpsig-04 channel=forum suggest=http-signature-debug entities=['HTTP Signature', 'Authentication Failed']
-[bench_v0] seed=seed-httpsig-05 channel=docs suggest=http-signature-debug entities=['HTTP Signature', 'apitest.cybersource.com']
+[bench_v0] seed=seed-httpsig-05 channel=docs suggest=http-signature-debug entities=['HTTP Signature', 'apitest.example.com']
 [bench_v0] seed=seed-httpsig-06 channel=forum suggest=http-signature-debug entities=['HTTP Signature', 'Authentication Failed', 'keyId', 'merchantKeyId']
 [bench_v0] seed=seed-mpa-01 channel=support suggest=microform-payer-auth-state-machine entities=['Microform', 'Payer Authentication', '3DS', 'enrollment', 'challenge', 'authorization']
 [bench_v0] seed=seed-mpa-02 channel=forum suggest=microform-payer-auth-state-machine entities=['Microform', 'Payer Authentication', 'enrollment', 'challenge', 'frictionless']
@@ -493,32 +1914,32 @@
 [bench_v0] stage=pm_approve_or_edit
 [bench_v0] pm_decision=approve workflow='flex-token-lifecycle' seeds=['seed-flex-01', 'seed-flex-02', 'seed-flex-03', 'seed-flex-04', 'seed-flex-05', 'seed-flex-06', 'seed-flex-07']
 [bench_v0] stage=task_pack_and_verifier
-[bench_v0] agent_task=/workspace/artifacts/task_packs/flex-token-lifecycle.agent_task.json
-[bench_v0] verifier_private=/workspace/artifacts/task_packs/flex-token-lifecycle.verifier_private.json (not agent-facing)
-[bench_v0] verifier_results=/workspace/artifacts/verifier_results/flex-token-lifecycle.result.json
+[bench_v0] agent_task=/home/badari/workspace/poornima/visa-relay-bench/artifacts/task_packs/flex-token-lifecycle.agent_task.json
+[bench_v0] verifier_private=/home/badari/workspace/poornima/visa-relay-bench/artifacts/task_packs/flex-token-lifecycle.verifier_private.json (not agent-facing)
+[bench_v0] verifier_results=/home/badari/workspace/poornima/visa-relay-bench/artifacts/verifier_results/flex-token-lifecycle.result.json
 [bench_v0] oracle_passed=True bad_answer_caught=True
 [bench_v0] stage=failure_classifier
 [bench_v0] category=token-lifecycle-confusion actions=2
 [bench_v0] stage=report
-[bench_v0] report_md=/workspace/artifacts/reports/flex-token-lifecycle.report.md
-[bench_v0] report_json=/workspace/artifacts/reports/flex-token-lifecycle.report.json
+[bench_v0] report_md=/home/badari/workspace/poornima/visa-relay-bench/artifacts/reports/flex-token-lifecycle.report.md
+[bench_v0] report_json=/home/badari/workspace/poornima/visa-relay-bench/artifacts/reports/flex-token-lifecycle.report.json
 [bench_v0] stage=contract_compiler
-[bench_v0] contract_json=/workspace/artifacts/contracts/flex-token-lifecycle.contract_bundle.json
-[bench_v0] contract_md=/workspace/artifacts/contracts/flex-token-lifecycle.contract_bundle.md
+[bench_v0] contract_json=/home/badari/workspace/poornima/visa-relay-bench/artifacts/contracts/flex-token-lifecycle.contract_bundle.json
+[bench_v0] contract_md=/home/badari/workspace/poornima/visa-relay-bench/artifacts/contracts/flex-token-lifecycle.contract_bundle.md
 [bench_v0] harbor_preview_only=True
 {
   "ok": true,
   "workflow_id": "flex-token-lifecycle",
   "pm_decision": "approve",
-  "agent_task": "/workspace/artifacts/task_packs/flex-token-lifecycle.agent_task.json",
-  "verifier_private": "/workspace/artifacts/task_packs/flex-token-lifecycle.verifier_private.json",
-  "verifier_results": "/workspace/artifacts/verifier_results/flex-token-lifecycle.result.json",
-  "report_md": "/workspace/artifacts/reports/flex-token-lifecycle.report.md",
-  "report_json": "/workspace/artifacts/reports/flex-token-lifecycle.report.json",
-  "contract_json": "/workspace/artifacts/contracts/flex-token-lifecycle.contract_bundle.json",
-  "contract_md": "/workspace/artifacts/contracts/flex-token-lifecycle.contract_bundle.md",
+  "agent_task": "/home/badari/workspace/poornima/visa-relay-bench/artifacts/task_packs/flex-token-lifecycle.agent_task.json",
+  "verifier_private": "/home/badari/workspace/poornima/visa-relay-bench/artifacts/task_packs/flex-token-lifecycle.verifier_private.json",
+  "verifier_results": "/home/badari/workspace/poornima/visa-relay-bench/artifacts/verifier_results/flex-token-lifecycle.result.json",
+  "report_md": "/home/badari/workspace/poornima/visa-relay-bench/artifacts/reports/flex-token-lifecycle.report.md",
+  "report_json": "/home/badari/workspace/poornima/visa-relay-bench/artifacts/reports/flex-token-lifecycle.report.json",
+  "contract_json": "/home/badari/workspace/poornima/visa-relay-bench/artifacts/contracts/flex-token-lifecycle.contract_bundle.json",
+  "contract_md": "/home/badari/workspace/poornima/visa-relay-bench/artifacts/contracts/flex-token-lifecycle.contract_bundle.md",
   "hidden_truth_separated": true,
-  "pm_open": "/workspace/artifacts/reports/flex-token-lifecycle.report.md",
+  "pm_open": "/home/badari/workspace/poornima/visa-relay-bench/artifacts/reports/flex-token-lifecycle.report.md",
   "honest_label": {
     "docetl": "imported-code_map",
     "extract_mode": "docetl",
@@ -529,7 +1950,7 @@
 [full_docetl]   bench ok=True exit=0
 [full_docetl] bench workflow=http-signature-debug
 [bench_v0] stage=raw_questions_extract_suggest
-[04:04:48] Checking operations...                                               
+[00:43:34] Checking operations...                                               
                                                                                 
            ✓ Operation 'extract_goal_symptoms_entities' (code_map)              
            ✓ Operation 'scan_questions' (scan)                                  
@@ -539,7 +1960,7 @@
                                                                                 
 ────────────────────────────── Pipeline Execution ──────────────────────────────
            ✓ step_extract_goal_symptoms_entities/scan_questions (Cost: $0.00)   
-Processing extract_goal_symptoms_entities (code_map):   0%|          | 0/20 [00:00<?, ?it/s]Processing extract_goal_symptoms_entities (code_map): 100%|██████████| 20/20 [00:00<00:00, 358487.52it/s]
+Processing extract_goal_symptoms_entities (code_map):   0%|          | 0/20 [00:00<?, ?it/s]Processing extract_goal_symptoms_entities (code_map): 100%|██████████| 20/20 [00:00<00:00, 562993.83it/s]
            ✓ step_extract_goal_symptoms_entities/extract_goal_symptoms_entities 
            (Cost: $0.00)                                                        
            Flushing cache to disk...                                            
@@ -566,11 +1987,11 @@
 [bench_v0] seed=seed-flex-05 channel=support suggest=flex-token-lifecycle entities=['Flex', 'TMS']
 [bench_v0] seed=seed-flex-06 channel=forum suggest=flex-token-lifecycle entities=['Flex', 'Microform', 'TMS']
 [bench_v0] seed=seed-flex-07 channel=docs suggest=flex-token-lifecycle entities=['Flex', 'Microform', 'TMS', 'transientTokenJwt', 'authorization']
-[bench_v0] seed=seed-httpsig-01 channel=docs suggest=http-signature-debug entities=['HTTP Signature', 'Authentication Failed', 'keyId', 'secretKey', 'apitest.cybersource.com']
-[bench_v0] seed=seed-httpsig-02 channel=forum suggest=http-signature-debug entities=['HTTP Signature', 'v-c-merchant-id', 'apitest.cybersource.com']
+[bench_v0] seed=seed-httpsig-01 channel=docs suggest=http-signature-debug entities=['HTTP Signature', 'Authentication Failed', 'keyId', 'secretKey', 'apitest.example.com']
+[bench_v0] seed=seed-httpsig-02 channel=forum suggest=http-signature-debug entities=['HTTP Signature', 'v-c-merchant-id', 'apitest.example.com']
 [bench_v0] seed=seed-httpsig-03 channel=support suggest=http-signature-debug entities=['Authentication Failed', 'keyId', 'secretKey', 'merchantKeyId']
 [bench_v0] seed=seed-httpsig-04 channel=forum suggest=http-signature-debug entities=['HTTP Signature', 'Authentication Failed']
-[bench_v0] seed=seed-httpsig-05 channel=docs suggest=http-signature-debug entities=['HTTP Signature', 'apitest.cybersource.com']
+[bench_v0] seed=seed-httpsig-05 channel=docs suggest=http-signature-debug entities=['HTTP Signature', 'apitest.example.com']
 [bench_v0] seed=seed-httpsig-06 channel=forum suggest=http-signature-debug entities=['HTTP Signature', 'Authentication Failed', 'keyId', 'merchantKeyId']
 [bench_v0] seed=seed-mpa-01 channel=support suggest=microform-payer-auth-state-machine entities=['Microform', 'Payer Authentication', '3DS', 'enrollment', 'challenge', 'authorization']
 [bench_v0] seed=seed-mpa-02 channel=forum suggest=microform-payer-auth-state-machine entities=['Microform', 'Payer Authentication', 'enrollment', 'challenge', 'frictionless']
@@ -582,32 +2003,32 @@
 [bench_v0] stage=pm_approve_or_edit
 [bench_v0] pm_decision=approve workflow='http-signature-debug' seeds=['seed-httpsig-01', 'seed-httpsig-02', 'seed-httpsig-03', 'seed-httpsig-04', 'seed-httpsig-05', 'seed-httpsig-06']
 [bench_v0] stage=task_pack_and_verifier
-[bench_v0] agent_task=/workspace/artifacts/task_packs/http-signature-debug.agent_task.json
-[bench_v0] verifier_private=/workspace/artifacts/task_packs/http-signature-debug.verifier_private.json (not agent-facing)
-[bench_v0] verifier_results=/workspace/artifacts/verifier_results/http-signature-debug.result.json
+[bench_v0] agent_task=/home/badari/workspace/poornima/visa-relay-bench/artifacts/task_packs/http-signature-debug.agent_task.json
+[bench_v0] verifier_private=/home/badari/workspace/poornima/visa-relay-bench/artifacts/task_packs/http-signature-debug.verifier_private.json (not agent-facing)
+[bench_v0] verifier_results=/home/badari/workspace/poornima/visa-relay-bench/artifacts/verifier_results/http-signature-debug.result.json
 [bench_v0] oracle_passed=True bad_answer_caught=True
 [bench_v0] stage=failure_classifier
 [bench_v0] category=auth-mechanism actions=3
 [bench_v0] stage=report
-[bench_v0] report_md=/workspace/artifacts/reports/http-signature-debug.report.md
-[bench_v0] report_json=/workspace/artifacts/reports/http-signature-debug.report.json
+[bench_v0] report_md=/home/badari/workspace/poornima/visa-relay-bench/artifacts/reports/http-signature-debug.report.md
+[bench_v0] report_json=/home/badari/workspace/poornima/visa-relay-bench/artifacts/reports/http-signature-debug.report.json
 [bench_v0] stage=contract_compiler
-[bench_v0] contract_json=/workspace/artifacts/contracts/http-signature-debug.contract_bundle.json
-[bench_v0] contract_md=/workspace/artifacts/contracts/http-signature-debug.contract_bundle.md
+[bench_v0] contract_json=/home/badari/workspace/poornima/visa-relay-bench/artifacts/contracts/http-signature-debug.contract_bundle.json
+[bench_v0] contract_md=/home/badari/workspace/poornima/visa-relay-bench/artifacts/contracts/http-signature-debug.contract_bundle.md
 [bench_v0] harbor_preview_only=True
 {
   "ok": true,
   "workflow_id": "http-signature-debug",
   "pm_decision": "approve",
-  "agent_task": "/workspace/artifacts/task_packs/http-signature-debug.agent_task.json",
-  "verifier_private": "/workspace/artifacts/task_packs/http-signature-debug.verifier_private.json",
-  "verifier_results": "/workspace/artifacts/verifier_results/http-signature-debug.result.json",
-  "report_md": "/workspace/artifacts/reports/http-signature-debug.report.md",
-  "report_json": "/workspace/artifacts/reports/http-signature-debug.report.json",
-  "contract_json": "/workspace/artifacts/contracts/http-signature-debug.contract_bundle.json",
-  "contract_md": "/workspace/artifacts/contracts/http-signature-debug.contract_bundle.md",
+  "agent_task": "/home/badari/workspace/poornima/visa-relay-bench/artifacts/task_packs/http-signature-debug.agent_task.json",
+  "verifier_private": "/home/badari/workspace/poornima/visa-relay-bench/artifacts/task_packs/http-signature-debug.verifier_private.json",
+  "verifier_results": "/home/badari/workspace/poornima/visa-relay-bench/artifacts/verifier_results/http-signature-debug.result.json",
+  "report_md": "/home/badari/workspace/poornima/visa-relay-bench/artifacts/reports/http-signature-debug.report.md",
+  "report_json": "/home/badari/workspace/poornima/visa-relay-bench/artifacts/reports/http-signature-debug.report.json",
+  "contract_json": "/home/badari/workspace/poornima/visa-relay-bench/artifacts/contracts/http-signature-debug.contract_bundle.json",
+  "contract_md": "/home/badari/workspace/poornima/visa-relay-bench/artifacts/contracts/http-signature-debug.contract_bundle.md",
   "hidden_truth_separated": true,
-  "pm_open": "/workspace/artifacts/reports/http-signature-debug.report.md",
+  "pm_open": "/home/badari/workspace/poornima/visa-relay-bench/artifacts/reports/http-signature-debug.report.md",
   "honest_label": {
     "docetl": "imported-code_map",
     "extract_mode": "docetl",
@@ -618,7 +2039,7 @@
 [full_docetl]   bench ok=True exit=0
 [full_docetl] bench workflow=microform-payer-auth-state-machine
 [bench_v0] stage=raw_questions_extract_suggest
-[04:04:48] Checking operations...                                               
+[00:43:34] Checking operations...                                               
                                                                                 
            ✓ Operation 'extract_goal_symptoms_entities' (code_map)              
            ✓ Operation 'scan_questions' (scan)                                  
@@ -628,7 +2049,7 @@
                                                                                 
 ────────────────────────────── Pipeline Execution ──────────────────────────────
            ✓ step_extract_goal_symptoms_entities/scan_questions (Cost: $0.00)   
-Processing extract_goal_symptoms_entities (code_map):   0%|          | 0/20 [00:00<?, ?it/s]Processing extract_goal_symptoms_entities (code_map): 100%|██████████| 20/20 [00:00<00:00, 321402.61it/s]
+Processing extract_goal_symptoms_entities (code_map):   0%|          | 0/20 [00:00<?, ?it/s]Processing extract_goal_symptoms_entities (code_map): 100%|██████████| 20/20 [00:00<00:00, 534306.24it/s]
            ✓ step_extract_goal_symptoms_entities/extract_goal_symptoms_entities 
            (Cost: $0.00)                                                        
            Flushing cache to disk...                                            
@@ -655,11 +2076,11 @@
 [bench_v0] seed=seed-flex-05 channel=support suggest=flex-token-lifecycle entities=['Flex', 'TMS']
 [bench_v0] seed=seed-flex-06 channel=forum suggest=flex-token-lifecycle entities=['Flex', 'Microform', 'TMS']
 [bench_v0] seed=seed-flex-07 channel=docs suggest=flex-token-lifecycle entities=['Flex', 'Microform', 'TMS', 'transientTokenJwt', 'authorization']
-[bench_v0] seed=seed-httpsig-01 channel=docs suggest=http-signature-debug entities=['HTTP Signature', 'Authentication Failed', 'keyId', 'secretKey', 'apitest.cybersource.com']
-[bench_v0] seed=seed-httpsig-02 channel=forum suggest=http-signature-debug entities=['HTTP Signature', 'v-c-merchant-id', 'apitest.cybersource.com']
+[bench_v0] seed=seed-httpsig-01 channel=docs suggest=http-signature-debug entities=['HTTP Signature', 'Authentication Failed', 'keyId', 'secretKey', 'apitest.example.com']
+[bench_v0] seed=seed-httpsig-02 channel=forum suggest=http-signature-debug entities=['HTTP Signature', 'v-c-merchant-id', 'apitest.example.com']
 [bench_v0] seed=seed-httpsig-03 channel=support suggest=http-signature-debug entities=['Authentication Failed', 'keyId', 'secretKey', 'merchantKeyId']
 [bench_v0] seed=seed-httpsig-04 channel=forum suggest=http-signature-debug entities=['HTTP Signature', 'Authentication Failed']
-[bench_v0] seed=seed-httpsig-05 channel=docs suggest=http-signature-debug entities=['HTTP Signature', 'apitest.cybersource.com']
+[bench_v0] seed=seed-httpsig-05 channel=docs suggest=http-signature-debug entities=['HTTP Signature', 'apitest.example.com']
 [bench_v0] seed=seed-httpsig-06 channel=forum suggest=http-signature-debug entities=['HTTP Signature', 'Authentication Failed', 'keyId', 'merchantKeyId']
 [bench_v0] seed=seed-mpa-01 channel=support suggest=microform-payer-auth-state-machine entities=['Microform', 'Payer Authentication', '3DS', 'enrollment', 'challenge', 'authorization']
 [bench_v0] seed=seed-mpa-02 channel=forum suggest=microform-payer-auth-state-machine entities=['Microform', 'Payer Authentication', 'enrollment', 'challenge', 'frictionless']
@@ -671,32 +2092,32 @@
 [bench_v0] stage=pm_approve_or_edit
 [bench_v0] pm_decision=edit workflow='microform-payer-auth-state-machine' seeds=['seed-mpa-01', 'seed-mpa-02', 'seed-mpa-03', 'seed-mpa-04', 'seed-mpa-05', 'seed-mpa-06', 'seed-mpa-07']
 [bench_v0] stage=task_pack_and_verifier
-[bench_v0] agent_task=/workspace/artifacts/task_packs/microform-payer-auth-state-machine.agent_task.json
-[bench_v0] verifier_private=/workspace/artifacts/task_packs/microform-payer-auth-state-machine.verifier_private.json (not agent-facing)
-[bench_v0] verifier_results=/workspace/artifacts/verifier_results/microform-payer-auth-state-machine.result.json
+[bench_v0] agent_task=/home/badari/workspace/poornima/visa-relay-bench/artifacts/task_packs/microform-payer-auth-state-machine.agent_task.json
+[bench_v0] verifier_private=/home/badari/workspace/poornima/visa-relay-bench/artifacts/task_packs/microform-payer-auth-state-machine.verifier_private.json (not agent-facing)
+[bench_v0] verifier_results=/home/badari/workspace/poornima/visa-relay-bench/artifacts/verifier_results/microform-payer-auth-state-machine.result.json
 [bench_v0] oracle_passed=True bad_answer_caught=True
 [bench_v0] stage=failure_classifier
 [bench_v0] category=state-machine-gap actions=2
 [bench_v0] stage=report
-[bench_v0] report_md=/workspace/artifacts/reports/microform-payer-auth-state-machine.report.md
-[bench_v0] report_json=/workspace/artifacts/reports/microform-payer-auth-state-machine.report.json
+[bench_v0] report_md=/home/badari/workspace/poornima/visa-relay-bench/artifacts/reports/microform-payer-auth-state-machine.report.md
+[bench_v0] report_json=/home/badari/workspace/poornima/visa-relay-bench/artifacts/reports/microform-payer-auth-state-machine.report.json
 [bench_v0] stage=contract_compiler
-[bench_v0] contract_json=/workspace/artifacts/contracts/microform-payer-auth-state-machine.contract_bundle.json
-[bench_v0] contract_md=/workspace/artifacts/contracts/microform-payer-auth-state-machine.contract_bundle.md
+[bench_v0] contract_json=/home/badari/workspace/poornima/visa-relay-bench/artifacts/contracts/microform-payer-auth-state-machine.contract_bundle.json
+[bench_v0] contract_md=/home/badari/workspace/poornima/visa-relay-bench/artifacts/contracts/microform-payer-auth-state-machine.contract_bundle.md
 [bench_v0] harbor_preview_only=True
 {
   "ok": true,
   "workflow_id": "microform-payer-auth-state-machine",
   "pm_decision": "edit",
-  "agent_task": "/workspace/artifacts/task_packs/microform-payer-auth-state-machine.agent_task.json",
-  "verifier_private": "/workspace/artifacts/task_packs/microform-payer-auth-state-machine.verifier_private.json",
-  "verifier_results": "/workspace/artifacts/verifier_results/microform-payer-auth-state-machine.result.json",
-  "report_md": "/workspace/artifacts/reports/microform-payer-auth-state-machine.report.md",
-  "report_json": "/workspace/artifacts/reports/microform-payer-auth-state-machine.report.json",
-  "contract_json": "/workspace/artifacts/contracts/microform-payer-auth-state-machine.contract_bundle.json",
-  "contract_md": "/workspace/artifacts/contracts/microform-payer-auth-state-machine.contract_bundle.md",
+  "agent_task": "/home/badari/workspace/poornima/visa-relay-bench/artifacts/task_packs/microform-payer-auth-state-machine.agent_task.json",
+  "verifier_private": "/home/badari/workspace/poornima/visa-relay-bench/artifacts/task_packs/microform-payer-auth-state-machine.verifier_private.json",
+  "verifier_results": "/home/badari/workspace/poornima/visa-relay-bench/artifacts/verifier_results/microform-payer-auth-state-machine.result.json",
+  "report_md": "/home/badari/workspace/poornima/visa-relay-bench/artifacts/reports/microform-payer-auth-state-machine.report.md",
+  "report_json": "/home/badari/workspace/poornima/visa-relay-bench/artifacts/reports/microform-payer-auth-state-machine.report.json",
+  "contract_json": "/home/badari/workspace/poornima/visa-relay-bench/artifacts/contracts/microform-payer-auth-state-machine.contract_bundle.json",
+  "contract_md": "/home/badari/workspace/poornima/visa-relay-bench/artifacts/contracts/microform-payer-auth-state-machine.contract_bundle.md",
   "hidden_truth_separated": true,
-  "pm_open": "/workspace/artifacts/reports/microform-payer-auth-state-machine.report.md",
+  "pm_open": "/home/badari/workspace/poornima/visa-relay-bench/artifacts/reports/microform-payer-auth-state-machine.report.md",
   "honest_label": {
     "docetl": "imported-code_map",
     "extract_mode": "docetl",
@@ -708,8 +2129,8 @@
 [full_docetl] summary=artifacts/full_docetl_run.json
 {
   "discovery": "docetl",
-  "promoted_count": 15,
-  "blocked_count": 0,
+  "promoted_count": 20,
+  "blocked_count": 44,
   "bench_ok_count": 3,
   "honest_labels": [
     "imported-code_map"

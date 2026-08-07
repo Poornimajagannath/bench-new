@@ -1,0 +1,278 @@
+{
+  "source_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth.md",
+  "status": "blocked",
+  "schema_passed": true,
+  "content_passed": false,
+  "agent_use_status": "deferred",
+  "issues": [
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth.md:step:1:the-customer-enters-card-information-at-checkout"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth.md:step:2:the-customer-selects-buy."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth.md:step:3:the-issuing-bank-verifies-the-information-it-rec"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth.md:step:4:the-customer-enters-card-information-at-checkout"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth.md:step:5:the-customer-selects-buy."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth.md:step:6:the-issuing-bank-assesses-risk-by-comparing-the-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth.md:step:7:a-small-window-opens-on-the-checkout-page-where-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth.md:step:8:the-customer-chooses-how-the-password-is-sent."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth.md:step:9:the-issuer-sends-an-otp-to-the-account-on-file-f"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth.md:step:10:a-window-opens-on-the-checkout-page-on-the-custo"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth.md:step:11:the-customer-enters-the-password-that-they-recei"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth.md:step:12:if-the-password-entered-by-the-customer-matches-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth.md:step:13:before-the-buy-button-is-selected-at-checkout,-t"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth.md:step:14:the-merchant-collects-data-about-the-device-and-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth.md:step:15:clicking-buy-triggers-the-check-enrollment-servi"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth.md:step:16:the-jwt-and-the-step-up-url-received-in-the-chec"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth.md:step:17:after-the-cardholder-enters-and-sends-the-passco"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth.md:step:18:the-next-action-depends-on-the-outcome:"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth.md:step:19:contact-customer-support-to-register-for-an-api-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth.md:step:20:download-and-import-the-mobile-sdk-for-either-io"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth.md:step:21:set-up-your-build-environment."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth.md:step:22:configure-your-sdk."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth.md:step:23:setup-the-initial-request-to-cardinal."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth.md:step:24:create-an-api-request-to-your-merchant-server-to"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth.md:step:25:if-the-issuing-bank-does-not-require-authenticat"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth.md:step:26:if-the-issuing-bank-requires-authentication,-you"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth.md:step:27:the-mobile-sdk-displays-an-authentication-window"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth.md:step:28:the-bank-validates-the-customer-credentials-and-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth.md:step:29:create-an-api-call-to-your-merchant-server-to-re"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth.md:step:30:log-in-to-your-jfrog-account."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth.md:step:31:in-the-top-right-of-the-jfrog-platform,-select-t"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth.md:step:32:enter-your-password-and-click-unlock."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth.md:step:33:under-authentication-settings,-click-generate-ap"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth.md:step:34:open-xcode,-and-in-the-source-list-to-the-left-o"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth.md:step:35:under-the-targets-section,-select-your-applicati"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth.md:step:36:expand-the-embedded-binaries-section-and-click-t"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth.md:step:37:from-the-list,-add-the-**cardinalmobile.framewor"
+    },
+    {
+      "code": "secret_or_pan_material",
+      "severity": "error",
+      "message": "unit appears to contain secret or non-test PAN-like material",
+      "unit_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth.md:step:37:from-the-list,-add-the-**cardinalmobile.framewor"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth.md:step:38:checking-for-enrollment."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth.md:step:39:authenticating-the-customer."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth.md:step:40:in-the-left-navigation-panel,-click-the-reports-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth.md:step:41:under-transaction-reports,-click-**payer-auth-su"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth.md:step:42:in-the-search-toolbar,-select-a-date-range-to-in"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth.md:step:43:based-on-the-date-range-you-selected,-choose-the"
+    }
+  ],
+  "promoted_unit_ids": [],
+  "linked_workflow_id": null,
+  "contract_bundle_path": null,
+  "context_pack_path": null,
+  "objects_path": "artifacts/content_engine/objects/payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth.md.quickstart_units.json"
+}

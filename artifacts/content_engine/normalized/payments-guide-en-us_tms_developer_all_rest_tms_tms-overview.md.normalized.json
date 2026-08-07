@@ -1,0 +1,21 @@
+{
+  "doc_id": "doc-payments-guide-en-us_tms_developer_all_rest_tms_tms-overview.md",
+  "source_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-overview.md",
+  "snapshot_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-overview.md-e51263ce8e7c",
+  "title": "payments-guide-en-us_tms_developer_all_rest_tms_tms-overview.md",
+  "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms/tms-overview.md",
+  "source_format": "markdown",
+  "product": [
+    "payments",
+    "cybersource"
+  ],
+  "audience": [
+    "developer"
+  ],
+  "page_type": "guide",
+  "freshness_date": "unknown",
+  "normalized_markdown": "Introduction to the `Token Management Service` {#tms-overview}\n==============================================================\n\nThe `Token Management Service` (`TMS`) enables you to replace personally identifiable information (PII), such as the primary account numbers (PANs), with unique tokens. These tokens do not include the PII data, but act as a placeholder for the personal information that would otherwise need to be shared. By using tokens, businesses can provide a secure payment experience, reduce the risk of fraud, and comply with industry consumer security regulations such as PCI-DSS.\n`TMS` links tokens across service providers, payment types, and channels for sellers, acquirers, and technology partners. `TMS` tokenizes, securely stores, and manages the primary account number (PAN), the payment card expiration date, electronic check details, and customer data. `TMS` also enables you to create a network token of a customer's payment card.\nIMPORTANT Due to mandates from the Reserve Bank of India, merchants based in India cannot store PANs. Use network tokens instead.\nYou can manage sensitive data securely by creating, retrieving, updating, and deleting tokens through the [TMS API](https://developer.cybersource.com/api-reference-assets/index.md#token-management \"\").\n`TMS` simplifies your PCI DSS compliance. `TMS` passes tokens back to you that represent this data. You then store these tokens in your environment and databases instead of storing customer payment details.\n`TMS` protects sensitive payment information through tokenization and secures and manages customer data using these token types:\n\n* Customer tokens\n* Instrument identifier tokens\n* Payment instrument tokens\n* Shipping address tokens\n\nThese `TMS` tokens can be used individually, or they can be associated with one customer token:\n\n#### Figure:\n\n`TMS` Token Types\n![Diagram of the unified token identifier.](/content/dam/documentation/cybs/en-us/topics/payments-processing/payment-services/tms/images/token-types-intro-600x400.svg/jcr:content/renditions/original)\n",
+  "extracted_metadata": {
+    "goal": "payments-guide-en-us_tms_developer_all_rest_tms_tms-overview.md"
+  }
+}

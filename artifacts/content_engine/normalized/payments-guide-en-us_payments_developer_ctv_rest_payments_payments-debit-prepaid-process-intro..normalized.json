@@ -1,0 +1,21 @@
+{
+  "doc_id": "doc-payments-guide-en-us_payments_developer_ctv_rest_payments_payments-debit-prepaid-process-intro.",
+  "source_id": "payments-guide-en-us_payments_developer_ctv_rest_payments_payments-debit-prepaid-process-intro.",
+  "snapshot_id": "payments-guide-en-us_payments_developer_ctv_rest_payments_payments-debit-prepaid-process-intro.-e13b734c3c93",
+  "title": "payments-guide-en-us_payments_developer_ctv_rest_payments_payments-debit-prepaid-process-intro.",
+  "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments/payments-debit-prepaid-process-intro.md",
+  "source_format": "markdown",
+  "product": [
+    "payments",
+    "cybersource"
+  ],
+  "audience": [
+    "developer"
+  ],
+  "page_type": "guide",
+  "freshness_date": "unknown",
+  "normalized_markdown": "Debit and Prepaid Card Processing {#payments-debit-prepaid-process-intro}\n=========================================================================\n\nThis section shows you how to process authorizations that use a debit or prepaid card.\n\nRequirements\n------------\n\nIn Canada, to process domestic debit transactions on `Visa Platform Connect` with Mastercard, you must contact customer support to have your account configured for this feature.\nSee [Debit and Prepaid Card Payments](/docs/cybs/en-us/payments/developer/ctv/rest/payments/payments-intro/payments-features-intro/payments-debit-prepaid-intro.md \"\") for a description of the debit or prepaid card transactions you can process.\n",
+  "extracted_metadata": {
+    "goal": "payments-guide-en-us_payments_developer_ctv_rest_payments_payments-debit-prepaid-process-intro."
+  }
+}

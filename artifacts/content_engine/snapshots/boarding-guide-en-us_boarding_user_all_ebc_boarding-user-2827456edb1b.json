@@ -1,0 +1,11 @@
+{
+  "snapshot_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user-2827456edb1b",
+  "source_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user",
+  "fetched_at": "2026-08-07T07:43:33Z",
+  "content_hash": "2827456edb1b09c8dfc7c10156a25ba799232725b112a2bf9365987dd46d75e9",
+  "version_tag": "2827456edb1b",
+  "mime_type": "text/markdown",
+  "raw_bytes_location": "artifacts/content_engine/snapshots/boarding-guide-en-us_boarding_user_all_ebc_boarding-user-2827456edb1b.md",
+  "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/boarding/",
+  "upstream_last_modified": ""
+}

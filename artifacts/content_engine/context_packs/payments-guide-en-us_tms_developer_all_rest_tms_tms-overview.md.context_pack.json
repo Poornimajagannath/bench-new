@@ -1,0 +1,41 @@
+{
+  "pack_id": "ctx-payments-guide-en-us_tms_developer_all_rest_tms_tms-overview.md",
+  "source_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-overview.md",
+  "product": [
+    "payments",
+    "cybersource"
+  ],
+  "audience": [
+    "developer"
+  ],
+  "title": "payments-guide-en-us_tms_developer_all_rest_tms_tms-overview.md",
+  "goal": "payments-guide-en-us_tms_developer_all_rest_tms_tms-overview.md",
+  "unit_ids": [
+    "payments-guide-en-us_tms_developer_all_rest_tms_tms-overview.md:overview:0:figure:"
+  ],
+  "units_summary": [
+    {
+      "unit_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-overview.md:overview:0:figure:",
+      "unit_type": "overview",
+      "title": "Figure:",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    }
+  ],
+  "provenance": {
+    "source_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-overview.md",
+    "snapshot_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-overview.md-e51263ce8e7c",
+    "content_hash": "e51263ce8e7cbfd530d8c776da0a69a8ff6506262460100cf4012b28cf0eacfc",
+    "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms/tms-overview.md",
+    "doc_id": "doc-payments-guide-en-us_tms_developer_all_rest_tms_tms-overview.md"
+  },
+  "constraints": [
+    "Derived Content Bench context pack \u2014 does not rewrite source docs",
+    "No live credentials, PAN, or secrets",
+    "Extraction backend recorded in provenance / honest_label (heuristic default; optional real DocETL via --discovery)"
+  ],
+  "linked_workflow_id": null
+}

@@ -43,7 +43,7 @@
   ],
   "next_product_improvements": [
     "Clarify Flex Token Lifecycle stage ordering in public docs",
-    "Ship a VAP CLI workflow verifier for this contract"
+    "Ship a Content CLI workflow verifier for this contract"
   ],
   "classification": {
     "workflow_id": "flex-token-lifecycle",
@@ -67,17 +67,17 @@
         "severity": "high",
         "summary": "Clarify Flex Token Lifecycle stage ordering in public docs",
         "rationale": "Developers confused adjacent APIs and skipped required stages.",
-        "vap_cli": null
+        "content_cli": null
       },
       {
-        "action_id": "flex-token-lifecycle-vap-cli",
-        "product_surface": "vap_cli",
+        "action_id": "flex-token-lifecycle-content-cli",
+        "product_surface": "content_cli",
         "severity": "high",
-        "summary": "Ship a VAP CLI workflow verifier for this contract",
+        "summary": "Ship a Content CLI workflow verifier for this contract",
         "rationale": "CLI should verify readiness, recovery, and support-safe evidence \u2014 not only wrap an API call.",
-        "vap_cli": {
+        "content_cli": {
           "goal": "can I pass it straight into TMS to store a permanent instrument, or do I need another step?",
-          "command": "vap workflow verify --id flex-token-lifecycle --fixture local",
+          "command": "content workflow verify --id flex-token-lifecycle --fixture local",
           "api_sdk_facts": [
             "Flex Microform returns a short-lived transientTokenJwt",
             "TMS createInstrument accepts a Flex token via a dedicated transient-token path, not as raw pan",
@@ -111,7 +111,7 @@
             "eval:verifier_catch_rate_on_bad_answer"
           ],
           "future_mcp_metadata": {
-            "mcp_tool": "vap.verify_workflow",
+            "mcp_tool": "content.verify_workflow",
             "inputs": [
               "workflow_id",
               "candidate_answer_ref"

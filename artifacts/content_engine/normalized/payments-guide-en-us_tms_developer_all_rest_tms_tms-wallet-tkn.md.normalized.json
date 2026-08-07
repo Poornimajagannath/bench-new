@@ -1,0 +1,21 @@
+{
+  "doc_id": "doc-payments-guide-en-us_tms_developer_all_rest_tms_tms-wallet-tkn.md",
+  "source_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-wallet-tkn.md",
+  "snapshot_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-wallet-tkn.md-fe6343b3b5ef",
+  "title": "payments-guide-en-us_tms_developer_all_rest_tms_tms-wallet-tkn.md",
+  "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms/tms-wallet-tkn.md",
+  "source_format": "markdown",
+  "product": [
+    "payments",
+    "cybersource"
+  ],
+  "audience": [
+    "developer"
+  ],
+  "page_type": "guide",
+  "freshness_date": "unknown",
+  "normalized_markdown": "Using `Token Management Service` with Wallet Apps {#tms-wallet-tkn}\n===================================================================\n\nUse the `TMS` API features to create an e-wallet app for your customers.\n",
+  "extracted_metadata": {
+    "goal": "payments-guide-en-us_tms_developer_all_rest_tms_tms-wallet-tkn.md"
+  }
+}

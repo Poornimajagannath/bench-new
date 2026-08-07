@@ -1,0 +1,21 @@
+{
+  "doc_id": "doc-payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth_pa-reports-intro.md",
+  "source_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth_pa-reports-intro.md",
+  "snapshot_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth_pa-reports-intro.md-7fcd36cb07b5",
+  "title": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth_pa-reports-intro.md",
+  "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/payer-authentication/developer/all/rest/payer-auth/pa-reports-intro.md",
+  "source_format": "markdown",
+  "product": [
+    "payments",
+    "cybersource"
+  ],
+  "audience": [
+    "developer"
+  ],
+  "page_type": "guide",
+  "freshness_date": "unknown",
+  "normalized_markdown": "Payer Authentication Reports {#concept_db3_ht3_ypb}\n===================================================\n\nThis section describes the Payer Authentication reports that you can download from the `Business Center`.\nAll reports on the production servers are retained for 16 months, but the transaction history is kept in the database for only 12 months. All reports on the test servers are deleted after 60 days. Only transactions that were processed are reported. Those transactions that resulted in a system error or a time-out are not reported.\nTo get access to the reports, you must file a support ticket in the Support Center.\n",
+  "extracted_metadata": {
+    "goal": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth_pa-reports-intro.md"
+  }
+}

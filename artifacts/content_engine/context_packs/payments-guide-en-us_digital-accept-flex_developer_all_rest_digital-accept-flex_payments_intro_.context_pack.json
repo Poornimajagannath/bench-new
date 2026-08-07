@@ -1,0 +1,63 @@
+{
+  "pack_id": "ctx-payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_payments_intro_",
+  "source_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_payments_intro_",
+  "product": [
+    "payments",
+    "cybersource"
+  ],
+  "audience": [
+    "developer"
+  ],
+  "title": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_payments_intro_",
+  "goal": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_payments_intro_",
+  "unit_ids": [
+    "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_payments_intro_:overview:0:figure:-{#payments_intro_digt_accpt_sec_intg_uc-",
+    "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_payments_intro_:overview:0:figure:-{#payments_intro_digt_accpt_sec_intg_mic",
+    "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_payments_intro_:overview:0:figure:-{#payments_intro_digt_accpt_sec_intg_da-"
+  ],
+  "units_summary": [
+    {
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_payments_intro_:overview:0:figure:-{#payments_intro_digt_accpt_sec_intg_uc-",
+      "unit_type": "overview",
+      "title": "Figure: {#payments_intro_digt_accpt_sec_intg_uc-ui-ux}",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_payments_intro_:overview:0:figure:-{#payments_intro_digt_accpt_sec_intg_mic",
+      "unit_type": "overview",
+      "title": "Figure: {#payments_intro_digt_accpt_sec_intg_microform-ui}",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    },
+    {
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_payments_intro_:overview:0:figure:-{#payments_intro_digt_accpt_sec_intg_da-",
+      "unit_type": "overview",
+      "title": "Figure: {#payments_intro_digt_accpt_sec_intg_da-prod-chart}",
+      "sequence_number": 0,
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "evidence_quote_count": 1
+    }
+  ],
+  "provenance": {
+    "source_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_payments_intro_",
+    "snapshot_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_payments_intro_-9970ecb1b206",
+    "content_hash": "9970ecb1b2068599da544f1ac0c8ebd0dd5890f9a669e1406476b5cf02452809",
+    "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex/payments/intro/digt/accpt/sec/intg.md",
+    "doc_id": "doc-payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_payments_intro_"
+  },
+  "constraints": [
+    "Derived Content Bench context pack \u2014 does not rewrite source docs",
+    "No live credentials, PAN, or secrets",
+    "Extraction backend recorded in provenance / honest_label (heuristic default; optional real DocETL via --discovery)"
+  ],
+  "linked_workflow_id": null
+}

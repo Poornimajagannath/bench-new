@@ -1,0 +1,21 @@
+{
+  "doc_id": "doc-payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_da-payments.md",
+  "source_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_da-payments.md",
+  "snapshot_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_da-payments.md-6b6eeb7581dd",
+  "title": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_da-payments.md",
+  "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex/da-payments.md",
+  "source_format": "markdown",
+  "product": [
+    "payments",
+    "cybersource"
+  ],
+  "audience": [
+    "developer"
+  ],
+  "page_type": "guide",
+  "freshness_date": "unknown",
+  "normalized_markdown": "Processing Authorizations with a Transient Token {#da-processing-payments}\n==========================================================================\n\nAfter you validate the transient token, you can use it in place of the PAN with payment services for 15 minutes. The transient token can be used multiple times within the 15-minute period.\n",
+  "extracted_metadata": {
+    "goal": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_da-payments.md"
+  }
+}

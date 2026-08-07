@@ -1,0 +1,38 @@
+{
+  "stage": "content_engine_extract",
+  "inspired_by": "ucbepic/docetl (imported; Frame.code_map, no LLM)",
+  "extractor_label": "imported-code_map",
+  "source_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_ctp-intro.md",
+  "units": [
+    {
+      "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_ctp-intro.md:overview:0:figure:-{#ctp-intro_fig1}",
+      "source_page_id": "doc-payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_ctp-intro.md",
+      "unit_type": "overview",
+      "title": "Figure: {#ctp-intro_fig1}",
+      "goal": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_ctp-intro.md",
+      "product": [
+        "payments",
+        "cybersource"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "task": [
+        "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_ctp-intro.md"
+      ],
+      "sequence_number": 0,
+      "body_markdown": "Embedded Component\n![Example of the payment application with Click to Pay.](/content/dam/new-documentation/documentation/en-us/topics/payments-processing/card-processing/click-to-pay/images/ctp-mobile-ui-400x475.svg/jcr:content/renditions/original)\n\n> IMPORTANT\n> Each request that you send to ` Cybersource ` requires header information. For information about constructing the headers for your request, see the [*Getting Started with REST Developer Guide*](https://developer.cybersource.com/docs/cybs/en-us/platform/developer/all/rest/rest-getting-started/restgs-about-guide.md \"\").\n\nBrowser Support\n---------------\n\n`Unified Checkout` supports these browser versions:\n\n* Firefox 121\n* GoogleChrome/Chium\u2011based browsers 118\n* MicrosoftEdge 118\n* Safari16",
+      "commands": [],
+      "api_entities": [
+        "Unified Checkout"
+      ],
+      "requires": [],
+      "outcomes": [],
+      "failure_modes": [],
+      "confidence": 0.85,
+      "evidence_quotes": [
+        "Embedded Component ![Example of the payment application with Click to Pay.](/content/dam/new-documentation/documentation/en-us/topics/payments-processing/car..."
+      ]
+    }
+  ]
+}
