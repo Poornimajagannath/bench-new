@@ -34,7 +34,10 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 BASE = "https://developer.cybersource.com"
-UA = {"User-Agent": "CyberSource-Relay/1.0 (boarding-toc-fetch)"}
+UA = {
+    "User-Agent": "CyberSource-Relay/1.0 (boarding-toc-fetch)",
+    "Accept": "text/markdown, text/plain;q=0.9, */*;q=0.1",
+}
 
 FAMILY_SEEDS = (
     {
@@ -179,8 +182,13 @@ def _utc_now() -> str:
     return datetime.now(timezone.utc).replace(microsecond=0).isoformat()
 
 
-def _http_get(url: str, *, timeout: int = 30) -> Tuple[int, bytes, str]:
-    req = urllib.request.Request(url, headers=UA)
+def _http_get(
+    url: str,
+    *,
+    timeout: int = 30,
+    headers: Optional[Dict[str, str]] = None,
+) -> Tuple[int, bytes, str]:
+    req = urllib.request.Request(url, headers=headers or UA)
     try:
         with urllib.request.urlopen(req, timeout=timeout) as resp:
             body = resp.read()
@@ -192,6 +200,21 @@ def _http_get(url: str, *, timeout: int = 30) -> Tuple[int, bytes, str]:
         return int(e.code), body, url
     except Exception as e:
         raise RuntimeError(str(e)) from e
+
+
+def _looks_like_markdown(text: str) -> bool:
+    head = text.lstrip()[:400].lower()
+    if head.startswith("<!doctype") or head.startswith("<html"):
+        return False
+    if "skip to login" in head and "skip to content" in head:
+        return False
+    # CyberSource DITA-ish markdown signals
+    if "{#" in text[:500] or re.search(r"(?m)^[=-]{3,}\s*$", text[:800]):
+        return True
+    if text.lstrip().startswith("#") and "<nav" not in head:
+        return True
+    # Short declarative pages without heading markers still count
+    return len(text.strip()) >= 40 and "<html" not in head
 
 
 def _topic_id(path: str) -> str:
@@ -246,41 +269,65 @@ def fetch_topic(
     local_name = url_to_local_name(topic_path)
     dest = out_dir / local_name
     result = FetchResult(topic_path=topic_path, family_id=family_id, status="fail")
+    md_errors: List[str] = []
 
-    try:
-        code, body, final = _http_get(md_url)
-        result.http_status_md = code
-        result.final_url = final
-        if code == 200 and body and not body.strip().lower().startswith(b"error"):
-            text = body.decode("utf-8", errors="replace")
-            # Reject HTML accidentally served as .md
-            if "<html" in text[:200].lower():
-                raise RuntimeError("md endpoint returned HTML")
-            dest.write_text(text if text.endswith("\n") else text + "\n", encoding="utf-8")
-            result.status = "ok_md"
-            result.bytes = len(body)
-            result.local_path = str(dest.relative_to(ROOT))
-            time.sleep(sleep_s)
-            return result
-    except Exception as e:
-        result.error = f"md: {e}"
+    # Prefer .md; retry once on transient failure (rate limits / flaky 5xx).
+    for attempt in range(2):
+        try:
+            code, body, final = _http_get(md_url)
+            result.http_status_md = code
+            result.final_url = final
+            if code == 200 and body and body.strip().lower() not in {b"error", b""}:
+                text = body.decode("utf-8", errors="replace")
+                if not _looks_like_markdown(text):
+                    md_errors.append(f"attempt{attempt+1}: not markdown (HTTP {code})")
+                    time.sleep(0.35)
+                    continue
+                dest.write_text(
+                    text if text.endswith("\n") else text + "\n", encoding="utf-8"
+                )
+                result.status = "ok_md"
+                result.bytes = len(body)
+                result.local_path = str(dest.relative_to(ROOT))
+                result.error = None
+                time.sleep(sleep_s)
+                return result
+            md_errors.append(f"attempt{attempt+1}: HTTP {code}")
+        except Exception as e:
+            md_errors.append(f"attempt{attempt+1}: {e}")
+        time.sleep(0.35)
 
+    result.error = "md: " + "; ".join(md_errors)
+
+    # HTML fallback — only when .md is broken (e.g. merchant-boarding 500).
+    html_headers = {
+        "User-Agent": UA["User-Agent"],
+        "Accept": "text/html,application/xhtml+xml;q=0.9,*/*;q=0.8",
+    }
     try:
-        code, body, final = _http_get(html_url)
+        code, body, final = _http_get(html_url, headers=html_headers)
         result.http_status_html = code
         result.final_url = final
         if code == 200 and body:
-            md = html_to_markdown(body.decode("utf-8", errors="replace"), source_url=final)
-            dest.write_text(md, encoding="utf-8")
-            result.status = "ok_html_fallback"
-            result.bytes = len(md.encode("utf-8"))
-            result.local_path = str(dest.relative_to(ROOT))
-            result.error = None
-            time.sleep(sleep_s)
-            return result
-        result.error = f"html HTTP {code}"
+            md = html_to_markdown(
+                body.decode("utf-8", errors="replace"), source_url=final
+            )
+            # Reject chrome-only conversions (nav shell without topic body).
+            if md.count("\n") < 8 or (
+                "skip to login" in md.lower() and "{#" not in md and len(md) < 2000
+            ):
+                result.error = (result.error or "") + "; html: chrome-only conversion"
+            else:
+                dest.write_text(md, encoding="utf-8")
+                result.status = "ok_html_fallback"
+                result.bytes = len(md.encode("utf-8"))
+                result.local_path = str(dest.relative_to(ROOT))
+                time.sleep(sleep_s)
+                return result
+        else:
+            result.error = (result.error or "") + f"; html HTTP {code}"
     except Exception as e:
-        result.error = f"html: {e}"
+        result.error = (result.error or "") + f"; html: {e}"
 
     time.sleep(sleep_s)
     return result
@@ -360,6 +407,8 @@ def run(
     sleep_s: float = 0.08,
     limit: Optional[int] = None,
 ) -> Dict[str, object]:
+    out_dir = out_dir if out_dir.is_absolute() else (ROOT / out_dir)
+    report_dir = report_dir if report_dir.is_absolute() else (ROOT / report_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
     report_dir.mkdir(parents=True, exist_ok=True)
 
