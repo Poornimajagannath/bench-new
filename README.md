@@ -59,6 +59,18 @@ python3 pipelines/run_demo.py --workflow microform-payer-auth-state-machine
 python3 pipelines/run_bench_v0.py --workflow microform-payer-auth-state-machine
 ```
 
+## Content engine (M0 / M0.5 / A1)
+
+```bash
+python3 pipelines/run_source_mix.py
+python3 pipelines/run_ingestion_snapshot.py
+python3 scripts/check_content_render.py
+node portal/server.js   # http://127.0.0.1:8787 — serves content/*.md only
+```
+
+Reports: `artifacts/content_engine/source-mix-report.md`, `artifacts/content_engine/ingestion-report.md`.
+Serve layers read `normalized/` + `content/` only — never `raw/`.
+
 ## PM entrypoints
 
 - `HANDOFF.md` — intent and acceptance criteria

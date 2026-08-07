@@ -8,3 +8,8 @@ venv/
 
 .claude/
 
+# Ingestion evidence is regenerable; keep reports under artifacts/
+raw/
+normalized/*.claims.json
+!normalized/.gitkeep
+
