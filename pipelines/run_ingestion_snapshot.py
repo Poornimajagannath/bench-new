@@ -105,6 +105,11 @@ def main() -> int:
         }
 
     # Human-check sample: up to 10 drops with triage fields (not filename labels).
+    # Prefer shell, then no_schema_match, then other — always include bytes/heading.
+    drops_all = list(report.get("drops") or [])
+    preferred = [d for d in drops_all if d.get("reason") == "shell"]
+    preferred += [d for d in drops_all if d.get("reason") == "no_schema_match" and d not in preferred]
+    preferred += [d for d in drops_all if d not in preferred]
     report["human_check_sample"] = [
         {
             "path": d.get("path"),
@@ -113,7 +118,7 @@ def main() -> int:
             "first_heading": d.get("first_heading"),
             "detail": d.get("detail"),
         }
-        for d in (report.get("drops") or [])[:10]
+        for d in preferred[:10]
     ]
 
     md = render_ingestion_report(report)
