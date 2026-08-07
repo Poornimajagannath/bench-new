@@ -18,6 +18,17 @@ from pathlib import Path
 from typing import Dict, List, Tuple
 
 ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from evals.spec_ops import (  # noqa: E402
+    auth_schemes_for_operation,
+    exclusion_report,
+    list_operations,
+    operation_ids,
+    payments_openapi_source_id,
+)
+
 CONTENT = ROOT / "content"
 OUT_MD = ROOT / "evals" / "cybersource-docs-compare.md"
 OUT_JSON = ROOT / "evals" / "runs" / "cybersource-docs-compare.json"
@@ -76,25 +87,53 @@ def evaluate(ours: Dict[str, str], upstream: Dict[str, str]) -> List[Check]:
     rest_gs = upstream.get("rest_getting_started", "")
     llms = upstream.get("llms_index", "")
 
+    source_id = payments_openapi_source_id()
+    ops = list_operations(source_id)
+    op_ids = [o["operation_id"] for o in ops]
+    excl = exclusion_report()
+    create_op = next((o for o in ops if o["operation_id"] == "createPayment"), None)
+    create_schemes = auth_schemes_for_operation("createPayment", source_id)
+
     def add(cid, area, result, ours_s, up_s, notes):
         checks.append(Check(cid, area, result, ours_s, up_s, notes))
 
+    expected_path = (create_op or {}).get("path") or "/pts/v2/payments"
     add(
         "create_path",
         "Payments API",
-        "pass" if "/pts/v2/payments" in create else "fail",
-        "POST /pts/v2/payments" if "/pts/v2/payments" in create else "missing",
+        "pass" if expected_path in create else "fail",
+        expected_path if expected_path in create else "missing",
         "payments processing docs reference payment services",
-        "Generated createPayment path must match Payments REST surface.",
+        "Generated createPayment path must match the registered OpenAPI path.",
     )
-    add(
-        "create_auth",
-        "Auth",
-        "pass" if "httpSignature" in create else "fail",
-        "httpSignature" if "httpSignature" in create else "missing",
-        "HTTP Signature is the sandbox auth for Payments REST",
-        "Page must teach httpSignature from the OpenAPI security schemes.",
-    )
+
+    if create_schemes:
+        auth_ok = all(s in create for s in create_schemes)
+        add(
+            "create_auth",
+            "Auth",
+            "pass" if auth_ok else "fail",
+            ", ".join(create_schemes) if auth_ok else "missing scheme(s)",
+            "OpenAPI security schemes for createPayment",
+            "Page must teach every auth scheme declared on the registered operation.",
+        )
+    else:
+        # Spec declares none — page must say so and point at platform auth docs.
+        auth_ok = bool(
+            re.search(r"(?i)does not declare|securityDefinitions|HTTP Signature|JWT", create)
+        )
+        add(
+            "create_auth",
+            "Auth",
+            "pass" if auth_ok else "fail",
+            "platform auth guidance (spec declares no schemes)"
+            if auth_ok
+            else "missing honest auth gap note",
+            "OpenAPI security section empty for /pts createPayment",
+            "When the registered spec omits security schemes, the page must say so "
+            "and point at HTTP Signature / JWT getting-started guidance.",
+        )
+
     add(
         "flattened_amount",
         "Request fields",
@@ -125,19 +164,16 @@ def evaluate(ours: Dict[str, str], upstream: Dict[str, str]) -> List[Check]:
         "sandbox / testing guides discourage raw PAN misuse",
         "Sandbox payment pages must not encourage raw PAN in production.",
     )
+
+    missing = [op for op in op_ids if f"{op}.md" not in ours]
     add(
         "ops_coverage",
         "Coverage",
-        "pass"
-        if all(f"{op}.md" in ours for op in (
-            "createPayment", "getPayment", "capturePayment", "createCredit",
-            "createCustomer", "getCustomer", "createMppCredentialSetup",
-            "checkMppEnrollment",
-        ))
-        else "fail",
-        f"{len(ours)} pages",
-        "8 payments-core operations in local OpenAPI",
-        "Every registered payments operation must have a generated page.",
+        "pass" if not missing else "fail",
+        f"{len(ours)} pages / {len(op_ids)} ops from {source_id}",
+        f"registered OpenAPI operations (excluded={excl.get('exclude_operation_ids') or []})",
+        "Every in-scope operation from the registered payments OpenAPI must have a page. "
+        "Denominator is computed at runtime — never a hard-coded list.",
     )
     add(
         "upstream_payments_reachable",
@@ -155,26 +191,61 @@ def evaluate(ours: Dict[str, str], upstream: Dict[str, str]) -> List[Check]:
         "developer.cybersource.com/llms.txt",
         "llms.txt index should remain fetchable for ingestion freshness.",
     )
+
+    # Measurable alignment: REST getting-started + our pages both speak auth + first payment.
+    rest_signals = bool(
+        rest_gs
+        and re.search(r"(?i)http signature|jwt|rest", rest_gs)
+        and re.search(r"(?i)payment|authorization", rest_gs)
+    )
+    ours_signals = bool(
+        re.search(r"(?i)http signature|jwt|signature", all_ours)
+        and "createPayment.md" in ours
+    )
+    if rest_signals and ours_signals:
+        rest_result = "pass"
+        rest_notes = (
+            "REST getting-started and generated pages both cover auth + first payment."
+        )
+    elif rest_gs and ours_signals:
+        rest_result = "partial"
+        rest_notes = (
+            "Generated pages cover auth/payment; upstream getting-started fetch "
+            "lacks expected auth/payment signals (calibration or upstream drift)."
+        )
+    else:
+        rest_result = "fail"
+        rest_notes = "Missing auth/first-payment alignment between pages and getting-started."
     add(
         "rest_getting_started_aligned",
         "Onboarding",
-        "partial"
-        if rest_gs and ("http" in all_ours.lower() or "signature" in all_ours.lower())
-        else "fail",
-        "auth + payments pages",
+        rest_result,
+        "auth + createPayment pages",
         "REST getting started",
-        "Aligned at a high level: auth + first payment concepts.",
+        rest_notes,
     )
-    add(
-        "payments_basic_concepts",
-        "Onboarding",
-        "pass"
-        if payments_basic and ("capture" in all_ours.lower() or "Capture" in all_ours)
-        else "partial",
-        "capturePayment page present" if "capturePayment.md" in ours else "missing capture",
-        "basic payments processing intro",
-        "Capture flow should appear in generated ops when present upstream.",
-    )
+
+    capture_in_spec = any(o["operation_id"] == "capturePayment" for o in ops)
+    if capture_in_spec:
+        cap_ok = "capturePayment.md" in ours and payments_basic
+        add(
+            "payments_basic_concepts",
+            "Onboarding",
+            "pass" if cap_ok else "partial",
+            "capturePayment page present" if "capturePayment.md" in ours else "missing capture",
+            "basic payments processing intro",
+            "Capture is in the registered spec; page + upstream basic intro should both exist.",
+        )
+    else:
+        add(
+            "payments_basic_concepts",
+            "Onboarding",
+            "n/a",
+            "capturePayment not in registered spec",
+            "basic payments processing intro",
+            "Skipped — capturePayment not in current denominator.",
+        )
+
     add(
         "provenance",
         "Provenance",

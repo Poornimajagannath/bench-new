@@ -2,13 +2,13 @@
   "product": "payments",
   "wave": 1,
   "docs_dir": "data/products/payments/guides",
-  "openapi_source_id": "cybersource-payments-core-openapi",
+  "openapi_source_id": "cybersource-payments-openapi",
   "sources": [
     {
-      "source_id": "cybersource-payments-core-openapi",
+      "source_id": "cybersource-payments-openapi",
       "source_type": "openapi",
-      "canonical_url": "https://developer.cybersource.com/api-reference-assets/api-reference/spec/payments.json",
-      "repo_path": "data/content_engine/specs/cybersource-payments-core.openapi.json",
+      "canonical_url": "https://developer.cybersource.com/api-reference-assets/specs/cybs_merged.json",
+      "repo_path": "data/content_engine/specs/cybersource-payments.openapi.json",
       "owning_team": "payments-docs",
       "product": [
         "payments",
@@ -17,11 +17,13 @@
       "audience": [
         "developer"
       ],
-      "refresh_cadence": "manual-fixture",
+      "refresh_cadence": "manual-upstream-snapshot",
       "trust_level": "trusted",
       "parser_strategy": "openapi_parser",
       "enabled": true,
-      "linked_workflow_id": "microform-payer-auth-state-machine"
+      "linked_workflow_id": null,
+      "scope": "/pts/",
+      "notes": "Payments Transaction Service paths from public cybs_merged.json; examples stripped."
     },
     {
       "source_id": "payments-core-openapi",
@@ -31,7 +33,8 @@
       "owning_team": "payments-docs",
       "product": [
         "payments",
-        "cybersource"
+        "cybersource",
+        "lab"
       ],
       "audience": [
         "developer"
@@ -40,7 +43,31 @@
       "trust_level": "experimental",
       "parser_strategy": "openapi_parser",
       "enabled": true,
-      "linked_workflow_id": "microform-payer-auth-state-machine"
+      "linked_workflow_id": "microform-payer-auth-state-machine",
+      "notes": "Practice fixture (8 ops). Engine unit tests only \u2014 not the Wave 1 denominator.",
+      "fixture": true
+    },
+    {
+      "source_id": "cybersource-payments-core-openapi",
+      "source_type": "openapi",
+      "canonical_url": "local://fixtures/payments-core.openapi.json",
+      "repo_path": "data/content_engine/specs/cybersource-payments-core.openapi.json",
+      "owning_team": "payments-docs",
+      "product": [
+        "payments",
+        "cybersource",
+        "lab"
+      ],
+      "audience": [
+        "developer"
+      ],
+      "refresh_cadence": "manual-fixture",
+      "trust_level": "experimental",
+      "parser_strategy": "openapi_parser",
+      "enabled": false,
+      "linked_workflow_id": null,
+      "notes": "Disabled alias of the practice fixture. Use payments-core-openapi for tests; cybersource-payments-openapi for Wave 1.",
+      "fixture": true
     },
     {
       "source_id": "payments-guide-credentials",
@@ -764,5 +791,6 @@
       "enabled": true,
       "linked_workflow_id": null
     }
-  ]
+  ],
+  "note": "Wave 1 complete: pages generated from real /pts/ OpenAPI extracted from developer.cybersource.com cybs_merged.json. payments-core-openapi remains the local practice fixture for engine unit tests only."
 }

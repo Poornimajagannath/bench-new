@@ -18,16 +18,25 @@ from content_bench.content_engine.reference_pages import (  # noqa: E402
     write_reference_pages,
 )
 
+# Engine unit tests pin the practice fixture — not the Wave 1 production denominator.
+FIXTURE_UNITS = (
+    ROOT
+    / "artifacts"
+    / "content_engine"
+    / "generated"
+    / "payments-core-openapi.api_reference_units.json"
+)
+
 
 class ReferencePagesTests(unittest.TestCase):
     def test_loads_eight_units(self):
-        units = load_reference_units()
+        units = load_reference_units(FIXTURE_UNITS)
         self.assertEqual(len(units), 8)
         ops = {u["operation_id"] for u in units}
         self.assertIn("createPayment", ops)
 
     def test_create_payment_page_carries_spec_facts(self):
-        units = load_reference_units()
+        units = load_reference_units(FIXTURE_UNITS)
         unit = next(u for u in units if u["operation_id"] == "createPayment")
         md = render_reference_page(unit)
         self.assertIn("lineage_origin: generated_from_spec", md)
@@ -38,7 +47,7 @@ class ReferencePagesTests(unittest.TestCase):
         self.assertIn("sandbox only", md.lower())
 
     def test_create_payment_request_table_lists_nested_fields(self):
-        units = load_reference_units()
+        units = load_reference_units(FIXTURE_UNITS)
         unit = next(u for u in units if u["operation_id"] == "createPayment")
         md = render_reference_page(unit)
         # Request table only — real developer-typable dotted names + required flag.
@@ -50,7 +59,7 @@ class ReferencePagesTests(unittest.TestCase):
         )
 
     def test_write_pages_uses_operation_id_filenames(self):
-        units = load_reference_units()
+        units = load_reference_units(FIXTURE_UNITS)
         with tempfile.TemporaryDirectory() as tmp:
             content = Path(tmp) / "content"
             arts = Path(tmp) / "arts"

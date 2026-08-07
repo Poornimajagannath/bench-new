@@ -12,38 +12,21 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional
 
 ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from evals.spec_ops import (  # noqa: E402
+    auth_schemes_for_operation,
+    eval_seeds_path,
+    exclusion_report,
+    list_operations,
+    operation_ids,
+    payments_openapi_source_id,
+)
+
 CONTENT = ROOT / "content"
 RUNS = ROOT / "evals" / "runs"
 LATEST = ROOT / "evals" / "latest-payments.md"
-SEEDS = (
-    ROOT
-    / "artifacts"
-    / "content_engine"
-    / "generated"
-    / "cybersource-payments-core-openapi.eval_seeds.json"
-)
-
-REQUIRED_OPS = (
-    "createPayment",
-    "getPayment",
-    "capturePayment",
-    "createCredit",
-    "createCustomer",
-    "getCustomer",
-    "createMppCredentialSetup",
-    "checkMppEnrollment",
-)
-
-# Markers an agent must be able to read from generated pages to build a sandbox payment.
-CREATE_PAYMENT_MARKERS = (
-    "POST",
-    "/pts/v2/payments",
-    "createPayment",
-    "httpSignature",
-    "orderInformation.amountDetails.totalAmount",
-    "orderInformation.amountDetails.currency",
-    "clientReferenceInformation.code",
-)
 
 
 def _utc_now() -> str:
@@ -61,6 +44,25 @@ def _redact(text: str) -> str:
     return text
 
 
+def _create_payment_markers(page: str) -> List[str]:
+    """Markers derived from the registered createPayment operation + page facts."""
+    ops = {o["operation_id"]: o for o in list_operations()}
+    create = ops.get("createPayment")
+    markers = ["createPayment"]
+    if create:
+        markers.extend([create["method"], create["path"]])
+    # Flattened fields that must appear if present on the page tables
+    for field in (
+        "orderInformation.amountDetails.totalAmount",
+        "orderInformation.amountDetails.currency",
+        "clientReferenceInformation.code",
+    ):
+        markers.append(field)
+    schemes = auth_schemes_for_operation("createPayment")
+    markers.extend(schemes)
+    return markers
+
+
 def _load_create_payment_page() -> str:
     path = CONTENT / "createPayment.md"
     if not path.exists():
@@ -73,7 +75,8 @@ def _load_create_payment_page() -> str:
 def construct_sandbox_payment_from_pages() -> Dict[str, Any]:
     """Agent-shaped mock: build a payment request body using only page facts."""
     page = _load_create_payment_page()
-    missing = [m for m in CREATE_PAYMENT_MARKERS if m not in page]
+    markers = _create_payment_markers(page)
+    missing = [m for m in markers if m not in page]
     if missing:
         return {
             "ok": False,
@@ -81,7 +84,6 @@ def construct_sandbox_payment_from_pages() -> Dict[str, Any]:
             "request": None,
         }
 
-    # Required fields taught by the flattened createPayment page.
     request = {
         "clientReferenceInformation": {"code": "CONTENT_BENCH_MOCK_001"},
         "orderInformation": {
@@ -90,7 +92,6 @@ def construct_sandbox_payment_from_pages() -> Dict[str, Any]:
                 "currency": "USD",
             }
         },
-        # Visa sandbox test PAN (constructed; never commit live card data).
         "paymentInformation": {
             "card": {
                 "number": "4" + ("1" * 15),
@@ -100,30 +101,35 @@ def construct_sandbox_payment_from_pages() -> Dict[str, Any]:
             }
         },
     }
-    # Sanity: page must warn against raw PAN in production language.
     pan_guard = "do not send raw pan" in page.lower() or "tokenized" in page.lower()
     return {
         "ok": True,
         "missing_markers": [],
         "request": request,
-        "auth_scheme": "httpSignature",
+        "auth_scheme": (auth_schemes_for_operation("createPayment") or ["platform-documented"])[0],
         "endpoint": "POST /pts/v2/payments",
         "pan_guard_documented": pan_guard,
-        "seed_file": str(SEEDS.relative_to(ROOT)) if SEEDS.exists() else None,
+        "seed_file": str(eval_seeds_path().relative_to(ROOT))
+        if eval_seeds_path().exists()
+        else None,
     }
 
 
 def run_mock() -> Dict[str, Any]:
     steps: List[Dict[str, Any]] = []
+    source_id = payments_openapi_source_id()
+    required = operation_ids(source_id)
+    excl = exclusion_report()
 
     pages = {p.name: p for p in CONTENT.glob("*.md") if p.name != "README.md"}
-    missing_ops = [op for op in REQUIRED_OPS if f"{op}.md" not in pages]
+    missing_ops = [op for op in required if f"{op}.md" not in pages]
     steps.append(
         {
             "step": "reference_pages_complete",
             "result": "pass" if not missing_ops else "fail",
             "detail": (
-                f"{len(REQUIRED_OPS) - len(missing_ops)}/{len(REQUIRED_OPS)} ops"
+                f"{len(required) - len(missing_ops)}/{len(required)} ops "
+                f"(source={source_id}; excluded={excl.get('exclude_operation_ids') or []})"
                 if not missing_ops
                 else f"missing pages: {missing_ops}"
             ),
@@ -151,15 +157,19 @@ def run_mock() -> Dict[str, Any]:
             }
         )
 
-    # Eval seeds from specs-to-docs (reuse seed pattern).
-    if SEEDS.exists():
-        seeds = json.loads(SEEDS.read_text(encoding="utf-8"))
-        seed_list = seeds if isinstance(seeds, list) else seeds.get("seeds") or seeds.get("items") or []
+    seeds_path = eval_seeds_path(source_id)
+    if seeds_path.exists():
+        seeds = json.loads(seeds_path.read_text(encoding="utf-8"))
+        seed_list = (
+            seeds
+            if isinstance(seeds, list)
+            else seeds.get("seeds") or seeds.get("items") or []
+        )
         steps.append(
             {
                 "step": "eval_seeds_present",
                 "result": "pass" if seed_list else "fail",
-                "detail": f"{len(seed_list)} seeds in {SEEDS.name}",
+                "detail": f"{len(seed_list)} seeds in {seeds_path.name}",
             }
         )
     else:
@@ -167,11 +177,10 @@ def run_mock() -> Dict[str, Any]:
             {
                 "step": "eval_seeds_present",
                 "result": "fail",
-                "detail": "eval seeds missing — run pipelines/run_specs_to_docs_v0.py",
+                "detail": f"eval seeds missing — expected {seeds_path}",
             }
         )
 
-    # Serve contract: no raw/ reads by published pages.
     raw_refs = []
     for name, path in pages.items():
         text = path.read_text(encoding="utf-8")
@@ -189,6 +198,9 @@ def run_mock() -> Dict[str, Any]:
     return {
         "mode": "mock",
         "product": "payments",
+        "source_id": source_id,
+        "operations_in_denominator": len(required),
+        "exclusions": excl.get("exclude_operation_ids") or [],
         "gate": gate,
         "reason": (
             "agent can construct a valid sandbox payment request from generated pages"
@@ -220,6 +232,9 @@ def write_outputs(
         "",
         f"- Mode: `{result['mode']}`",
         f"- Gate: **{result['gate']}**",
+        f"- Source: `{result.get('source_id')}`",
+        f"- Denominator: **{result.get('operations_in_denominator')}** ops",
+        f"- Exclusions: `{result.get('exclusions')}`",
         f"- When: {result.get('at', '')}",
         f"- Reason: {result.get('reason', '')}",
         "",
@@ -244,7 +259,22 @@ def main() -> int:
     args = parser.parse_args()
     result = run_mock()
     write_outputs(result)
-    print(json.dumps({k: result[k] for k in ("mode", "gate", "reason")}, indent=2))
+    print(
+        json.dumps(
+            {
+                k: result[k]
+                for k in (
+                    "mode",
+                    "gate",
+                    "reason",
+                    "source_id",
+                    "operations_in_denominator",
+                    "exclusions",
+                )
+            },
+            indent=2,
+        )
+    )
     print(f"Wrote {LATEST}")
     return 0 if result.get("gate") == "pass" else 1
 

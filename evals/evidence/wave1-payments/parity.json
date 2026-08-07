@@ -1,9 +1,9 @@
 {
-  "at": "2026-08-07T06:25:44+00:00",
+  "at": "2026-08-07T07:03:16+00:00",
   "stats": {
-    "score": 95.8,
-    "pass": 11,
-    "partial": 1,
+    "score": 100.0,
+    "pass": 12,
+    "partial": 0,
     "fail": 0,
     "n_a": 0
   },
@@ -18,17 +18,17 @@
       "id": "create_path",
       "area": "Payments API",
       "result": "pass",
-      "ours": "POST /pts/v2/payments",
+      "ours": "/pts/v2/payments",
       "upstream": "payments processing docs reference payment services",
-      "notes": "Generated createPayment path must match Payments REST surface."
+      "notes": "Generated createPayment path must match the registered OpenAPI path."
     },
     {
       "id": "create_auth",
       "area": "Auth",
       "result": "pass",
-      "ours": "httpSignature",
-      "upstream": "HTTP Signature is the sandbox auth for Payments REST",
-      "notes": "Page must teach httpSignature from the OpenAPI security schemes."
+      "ours": "platform auth guidance (spec declares no schemes)",
+      "upstream": "OpenAPI security section empty for /pts createPayment",
+      "notes": "When the registered spec omits security schemes, the page must say so and point at HTTP Signature / JWT getting-started guidance."
     },
     {
       "id": "flattened_amount",
@@ -58,9 +58,9 @@
       "id": "ops_coverage",
       "area": "Coverage",
       "result": "pass",
-      "ours": "8 pages",
-      "upstream": "8 payments-core operations in local OpenAPI",
-      "notes": "Every registered payments operation must have a generated page."
+      "ours": "30 pages / 30 ops from cybersource-payments-openapi",
+      "upstream": "registered OpenAPI operations (excluded=[])",
+      "notes": "Every in-scope operation from the registered payments OpenAPI must have a page. Denominator is computed at runtime \u2014 never a hard-coded list."
     },
     {
       "id": "upstream_payments_reachable",
@@ -81,10 +81,10 @@
     {
       "id": "rest_getting_started_aligned",
       "area": "Onboarding",
-      "result": "partial",
-      "ours": "auth + payments pages",
+      "result": "pass",
+      "ours": "auth + createPayment pages",
       "upstream": "REST getting started",
-      "notes": "Aligned at a high level: auth + first payment concepts."
+      "notes": "REST getting-started and generated pages both cover auth + first payment."
     },
     {
       "id": "payments_basic_concepts",
@@ -92,7 +92,7 @@
       "result": "pass",
       "ours": "capturePayment page present",
       "upstream": "basic payments processing intro",
-      "notes": "Capture flow should appear in generated ops when present upstream."
+      "notes": "Capture is in the registered spec; page + upstream basic intro should both exist."
     },
     {
       "id": "provenance",

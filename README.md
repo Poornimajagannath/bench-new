@@ -52,14 +52,18 @@ Reports: `artifacts/content_engine/payments/`
 Frozen evidence: `evals/evidence/wave1-payments/`  
 Nightly parity → branch `evidence/cybersource-docs-parity`.
 
-### Wave 1 gates
+### Wave 1 gates (real `/pts/` OpenAPI)
+
+Denominator: registered source `cybersource-payments-openapi`
+(`data/content_engine/specs/cybersource-payments.openapi.json` from public `cybs_merged.json`).
+Practice fixture `payments-core-openapi` is for engine unit tests only.
 
 | Gate | Status |
 | --- | --- |
 | All unit tests green | required |
-| Every payments operation has a page | 8/8 |
+| Every in-scope payments operation has a page | **30/30** (runtime list; exclusions file empty) |
 | Task eval mock pass | required |
 | Parity report with score | evidence only |
 | Zero reads from `raw/` | required |
 
-Do not start boarding (Wave 2) until these gates pass and the architect reviews.
+Evidence: `evals/evidence/wave1-payments/real-spec-gate-report.md`

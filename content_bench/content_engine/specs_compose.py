@@ -70,11 +70,18 @@ def compose_reference_units(
                 }
             ]
 
+        def _scrub(text: str) -> str:
+            import re
+
+            text = re.sub(r"%B\d[^?\n]{0,80}\?", "[REDACTED_TRACK_DATA]", text or "")
+            text = re.sub(r"\b(?:\d[ -]*?){13,19}\b", "[REDACTED_CARD_NUMBER]", text)
+            return text
+
         evidence = []
         if entity.summary:
-            evidence.append(entity.summary)
+            evidence.append(_scrub(entity.summary))
         if entity.description:
-            evidence.append(entity.description[:180])
+            evidence.append(_scrub(entity.description)[:180])
         if not evidence:
             evidence.append(f"{entity.http_method} {entity.endpoint}")
 
@@ -96,7 +103,10 @@ def compose_reference_units(
                 http_method=entity.http_method,
                 summary=entity.summary or entity.operation_id,
                 auth_requirements=list(entity.auth_schemes)
-                or ["httpSignature-via-env-vars"],
+                or [
+                    # Honest default when upstream OpenAPI omits security schemes.
+                    "HTTP-Signature-or-JWT-per-CyberSource-getting-started"
+                ],
                 path_params=path_params,
                 query_params=[],
                 request_fields=request_fields,

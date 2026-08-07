@@ -6,6 +6,7 @@ No network. Local fixtures only.
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 from typing import Any, Dict, List
 
@@ -25,6 +26,19 @@ def _ref_name(ref: str) -> str:
     if not ref:
         return ""
     return ref.rsplit("/", 1)[-1]
+
+
+_PAN_LIKE = re.compile(r"\b(?:\d[ -]*?){13,19}\b")
+_TRACK_EXAMPLE = re.compile(r"%B\d[^?\n]{0,80}\?")
+
+
+def _scrub_secret_material(text: str) -> str:
+    """Strip Visa test PANs / track-data examples from upstream field prose."""
+    if not text:
+        return ""
+    out = _TRACK_EXAMPLE.sub("[REDACTED_TRACK_DATA]", text)
+    out = _PAN_LIKE.sub("[REDACTED_CARD_NUMBER]", out)
+    return out
 
 
 def _schema_refs_from_content(content: Dict[str, Any]) -> List[str]:
@@ -108,8 +122,8 @@ def flatten_schema_fields(
             "name": full_name,
             "type": typ or "string",
             "required": name in required,
-            "description": str(
-                prop_resolved.get("description") or prop.get("description") or ""
+            "description": _scrub_secret_material(
+                str(prop_resolved.get("description") or prop.get("description") or "")
             ),
             "constraints": [],
         }
@@ -146,6 +160,56 @@ def _fields_from_content(
     return unique
 
 
+def _components_from_raw(raw: Dict[str, Any]) -> Dict[str, Any]:
+    """Normalize OAS3 components + Swagger2 definitions into one lookup."""
+    components = dict(raw.get("components") or {})
+    schemas = dict(components.get("schemas") or {})
+    # Swagger 2.0
+    for name, schema in (raw.get("definitions") or {}).items():
+        schemas.setdefault(name, schema)
+    components["schemas"] = schemas
+    if "securitySchemes" not in components and raw.get("securityDefinitions"):
+        components["securitySchemes"] = dict(raw.get("securityDefinitions") or {})
+    return components
+
+
+def _request_schema_payload(
+    op: Dict[str, Any],
+) -> tuple[Dict[str, Any], List[str], Dict[str, Any]]:
+    """Return (content-shaped dict for field extract, refs, primary schema).
+
+    Supports OpenAPI 3 requestBody.content and Swagger 2 in:body parameters.
+    """
+    # OAS3
+    request_content = ((op.get("requestBody") or {}).get("content") or {})
+    if request_content:
+        return request_content, _schema_refs_from_content(request_content), {}
+
+    # Swagger 2 body parameter
+    for param in op.get("parameters") or []:
+        if not isinstance(param, dict) or param.get("in") != "body":
+            continue
+        schema = param.get("schema") or {}
+        refs = [_ref_name(schema["$ref"])] if schema.get("$ref") else []
+        # Shape like OAS3 content so _fields_from_content can reuse
+        fake_content = {"application/json": {"schema": schema}}
+        return fake_content, refs, schema
+    return {}, [], {}
+
+
+def _response_schema_content(resp: Dict[str, Any]) -> Dict[str, Any]:
+    """OAS3 content or Swagger 2 schema → content-shaped dict."""
+    if not isinstance(resp, dict):
+        return {}
+    content = resp.get("content") or {}
+    if content:
+        return content
+    schema = resp.get("schema")
+    if isinstance(schema, dict) and schema:
+        return {"application/json": {"schema": schema}}
+    return {}
+
+
 def parse_openapi_entities(
     record: SourceRecord,
     snapshot: SourceSnapshot,
@@ -156,7 +220,7 @@ def parse_openapi_entities(
         if "paths" not in raw:
             raise ValueError("Fixture is not a recognizable OpenAPI document")
 
-    components = raw.get("components") or {}
+    components = _components_from_raw(raw)
     security_schemes = list(components.get("securitySchemes") or {})
     global_auth = []
     for item in raw.get("security") or []:
@@ -187,16 +251,19 @@ def parse_openapi_entities(
             operation_id = str(op.get("operationId") or f"{method}_{path}").strip()
             entity_id = f"{record.source_id}:{operation_id}"
 
-            request_content = ((op.get("requestBody") or {}).get("content") or {})
-            request_refs = _schema_refs_from_content(request_content)
+            request_content, request_refs, _ = _request_schema_payload(op)
             request_fields = _fields_from_content(request_content, components)
 
             response_refs: List[str] = []
             error_refs: List[str] = []
             response_fields: List[Dict[str, Any]] = []
             for code, resp in (op.get("responses") or {}).items():
-                resp_content = (resp or {}).get("content") or {}
+                resp_content = _response_schema_content(resp or {})
                 refs = _schema_refs_from_content(resp_content)
+                # Also catch Swagger2 top-level $ref on schema
+                schema = (resp or {}).get("schema") or {}
+                if isinstance(schema, dict) and schema.get("$ref"):
+                    refs.append(_ref_name(schema["$ref"]))
                 if str(code).startswith("2"):
                     response_refs.extend(refs)
                     response_fields.extend(_fields_from_content(resp_content, components))
@@ -241,6 +308,7 @@ def write_entities(
 ) -> Path:
     CONTRACT_DIR.mkdir(parents=True, exist_ok=True)
     path = CONTRACT_DIR / f"{source_id}.entities.json"
+    is_fixture = "fixture" in source_id or source_id.endswith("-core-openapi")
     payload = {
         "stage": "specs_to_docs_parse",
         "source_id": source_id,
@@ -249,9 +317,13 @@ def write_entities(
         "entity_count": len(entities),
         "entities": [e.to_dict() for e in entities],
         "honest_label": {
-            "network": "denied",
-            "fixture": "local-openapi",
-            "note": "Not a live Payment Gateway OpenAPI download",
+            "network": "denied-at-parse",
+            "fixture": is_fixture,
+            "note": (
+                "Local OpenAPI practice fixture"
+                if is_fixture
+                else "Upstream snapshot materialized locally (no network at parse time)"
+            ),
         },
     }
     path.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
