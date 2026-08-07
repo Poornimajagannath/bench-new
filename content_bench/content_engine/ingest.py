@@ -146,18 +146,14 @@ def stamp_copy_to_raw(
     return dest_dir, metas, drops
 
 
-def _first_heading(text: str) -> str:
-    for line in text.splitlines():
-        s = line.strip()
-        if not s:
-            continue
-        if s.startswith("#"):
-            return re.sub(r"\s*\{#[^}]+\}\s*$", "", s.lstrip("#").strip())[:160]
-        # Setext-style title (next line is === or ---) handled by caller reading first non-empty
-        cleaned = re.sub(r"\s*\{#[^}]+\}\s*$", "", s).strip()
-        if cleaned and not cleaned.startswith(("!", "[", "<", ">")):
-            return cleaned[:160]
-    return ""
+# Shared triage heuristics live in triage.py — the one definition used by both
+# census and ingest. Do not re-implement locally.
+from content_bench.content_engine.triage import (  # noqa: E402
+    constraint_kind as _constraint_kind,
+    first_heading as _first_heading,
+    iter_sentences as _iter_sentences,
+    looks_like_shell as _looks_like_shell,
+)
 
 
 def _should_drop_doc(text: str, path: Path) -> Optional[str]:
@@ -167,84 +163,6 @@ def _should_drop_doc(text: str, path: Path) -> Optional[str]:
     # Near-empty — length alone is not emptiness; only truly blank stubs
     if len(text.strip()) < 20:
         return "empty_or_stub"
-    return None
-
-
-# Constraint-type prose: TTLs, validity, reuse/rate limits, PCI, mandatory headers.
-_CONSTRAINT_PATTERNS = (
-    re.compile(
-        r"(?i)\b("
-        r"\d+\s*-?\s*(?:minute|minutes|hour|hours|second|seconds|day|days)\b|"
-        r"\bTTL\b|time[- ]to[- ]live|"
-        r"valid(?:ity)?\s+(?:for|until|window)|expires?\s+(?:in|after|within)\b|"
-        r"limited[- ]use|reuse|multiple times|rate[- ]limit|once only|"
-        r"\bPCI\b|\bSAQ\b|PCI DSS|compliance|"
-        r"requires?\s+header|header information|mandatory header|"
-        r"encrypt(?:ed|ion)? on (?:the )?(?:customer'?s )?device|"
-        r"device[- ]side encryption|end-to-end encryption"
-        r")"
-    ),
-)
-
-
-def _iter_sentences(text: str) -> List[str]:
-    """Split body into sentence-like units (short pages included)."""
-    # Drop pure underline / figure noise
-    cleaned = re.sub(r"(?m)^[=-]{3,}\s*$", " ", text)
-    cleaned = re.sub(r"!\[.*?\]\([^)]+\)", " ", cleaned)
-    cleaned = re.sub(r"\{#[^}]+\}", " ", cleaned)
-    # Normalize whitespace but keep paragraph breaks as spaces for sentence split
-    cleaned = re.sub(r"[ \t]+", " ", cleaned)
-    cleaned = re.sub(r"\n+", "\n", cleaned)
-    sentences: List[str] = []
-    for block in re.split(r"\n+", cleaned):
-        block = block.strip()
-        if not block or block.startswith("#") or set(block) <= {"=", "-", "*", " "}:
-            continue
-        # IMPORTANT callouts
-        if block.startswith(">"):
-            block = re.sub(r"^>\s*", "", block)
-            block = re.sub(r"^IMPORTANT\s*", "", block, flags=re.I)
-        for part in re.split(r"(?<=[.!?])\s+(?=[A-Z`\"'])", block):
-            s = part.strip().strip("`")
-            if len(s) >= 24:
-                sentences.append(s)
-    return sentences
-
-
-def _constraint_kind(sentence: str) -> Optional[str]:
-    s = sentence.lower()
-    # Avoid matching "validate" via bare "valid".
-    ttl = bool(
-        re.search(
-            r"\b\d+\s*-?\s*(minute|hour|second|day)s?\b|\bttl\b|time[- ]to[- ]live|"
-            r"valid(?:ity)?\s+(?:for|until|window)|expires?\s+(?:in|after|within)\b",
-            s,
-        )
-    )
-    reuse = bool(
-        re.search(
-            r"reuse|multiple times|rate[- ]limit|once only|limited-use|limited use",
-            s,
-        )
-    )
-    if ttl and reuse:
-        return "ttl_and_reuse"
-    if ttl:
-        return "ttl_or_validity"
-    if reuse:
-        return "reuse_or_rate_limit"
-    if re.search(r"\bpci\b|\bsaq\b|compliance", s):
-        return "pci_compliance"
-    if re.search(r"header information|requires? header|mandatory header", s):
-        return "mandatory_header"
-    if re.search(
-        r"encrypt(?:ed|ion)? on .{0,40}device|device-side encryption|end-to-end encryption",
-        s,
-    ):
-        return "device_encryption"
-    if _CONSTRAINT_PATTERNS[0].search(sentence):
-        return "constraint"
     return None
 
 
@@ -303,23 +221,6 @@ def _extract_prose_claims(
         )
 
     return claims
-
-
-def _looks_like_shell(text: str, byte_len: int) -> bool:
-    """Shell = nav/stub with no extractable constraints — not 'short file' alone."""
-    sentences = _iter_sentences(text)
-    if any(_constraint_kind(s) for s in sentences):
-        return False
-    links = len(re.findall(r"\[[^\]]+\]\([^)]+\)", text))
-    words = max(len(re.findall(r"\w+", text)), 1)
-    link_density = links / words
-    if link_density >= 0.05 and byte_len < 2500:
-        return True
-    if byte_len < 80 and not sentences:
-        return True
-    if re.search(r"(?i)see these topics|on this page|jumplink", text) and byte_len < 2000:
-        return True
-    return False
 
 
 def _extract_claims_from_text(

@@ -105,31 +105,12 @@ def _title_from_text(text: str) -> str:
     return ""
 
 
-def _link_density(text: str) -> float:
-    if not text.strip():
-        return 0.0
-    links = len(re.findall(r"\[[^\]]+\]\([^)]+\)|href\s*=", text, re.I))
-    words = max(len(re.findall(r"\w+", text)), 1)
-    return links / words
-
-
-def _has_constraint_signals(text: str) -> bool:
-    """TTL/reuse/PCI/header/encryption facts — short pages can still be ingestible."""
-    return bool(
-        re.search(
-            r"(?i)\b("
-            r"\d+\s*-?\s*(?:minute|minutes|hour|hours|second|seconds|day|days)\b|"
-            r"\bTTL\b|time[- ]to[- ]live|"
-            r"valid(?:ity)?\s+(?:for|until|window)|expires?\s+(?:in|after|within)\b|"
-            r"limited[- ]use|reuse|multiple times|rate[- ]limit|once only|"
-            r"\bPCI\b|\bSAQ\b|PCI DSS|compliance|"
-            r"requires?\s+header|header information|mandatory header|"
-            r"encrypt(?:ed|ion)? on (?:the )?(?:customer'?s )?device|"
-            r"device[- ]side encryption|end-to-end encryption"
-            r")",
-            text,
-        )
-    )
+# Shared triage heuristics live in triage.py — the one definition used by both
+# census and ingest. Do not re-implement locally.
+from content_bench.content_engine.triage import (  # noqa: E402
+    has_constraint_signals as _has_constraint_signals,
+    link_density as _link_density,
+)
 
 
 def classify_document(
