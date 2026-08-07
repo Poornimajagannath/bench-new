@@ -8,9 +8,11 @@ title = "bench-new"
 useDefault = true
 
 [allowlist]
-description = "Published CyberSource sandbox documentation corpus (not live secrets)"
+description = "Published CyberSource sandbox documentation corpus + upstream OpenAPI snapshots (not live secrets)"
 paths = [
   '''(^|/)cybersource-docs/''',
   '''(^|/)gateway-docs/''',
   '''(^|/)data/products/.+/guides/''',
+  # Public cybs_merged /pts/ snapshot — field prose includes sample processor tokens.
+  '''(^|/)data/content_engine/specs/cybersource-payments\.openapi\.json$''',
 ]
