@@ -4,7 +4,7 @@
 messy sources
 -> DocETL-style extraction
 -> PM-approved workflow contract
--> Relay task pack + hidden truth
+-> Content Bench task pack + hidden truth
 -> Tempo/Harbor-shaped eval export (preview)
 -> verifier receipt
 -> failure class / product action
@@ -25,8 +25,8 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from relay_bench.contract_compiler import compile_and_write
-from relay_bench.pm_gate import require_pm_approved_candidate
+from content_bench.contract_compiler import compile_and_write
+from content_bench.pm_gate import require_pm_approved_candidate
 
 
 SUPPORTED = {
@@ -38,7 +38,7 @@ SUPPORTED = {
 
 def main() -> int:
     parser = argparse.ArgumentParser(
-        description="Compile a Relay workflow contract bundle"
+        description="Compile a Content Bench workflow contract bundle"
     )
     parser.add_argument(
         "--workflow",

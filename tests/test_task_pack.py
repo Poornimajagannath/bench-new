@@ -1,8 +1,8 @@
 import json
 import unittest
 
-from relay_bench.discovery import discover_workflows
-from relay_bench.task_pack import (
+from content_bench.discovery import discover_workflows
+from content_bench.task_pack import (
     assert_no_verifier_leak,
     build_hidden_truth,
     build_task_pack,

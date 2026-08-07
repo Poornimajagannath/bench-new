@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "exclude_kinds": [
+    "release_note",
+    "legal",
+    "index_navigation"
+  ],
+  "notes": "Pre-ingestion policy: release notes, legal, and index/navigation pages are quarantined so they cannot silently enter the claim pipeline. How-to guides, API reference, and marketing remain eligible until a later policy amendment. Amend this file and re-run pipelines/run_corpus_census.py to change the decision record."
+}

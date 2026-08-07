@@ -1,0 +1,16 @@
+{
+  "ok": true,
+  "pages_written": [
+    "createCredit.md",
+    "createPayment.md",
+    "getPayment.md",
+    "capturePayment.md",
+    "createMppCredentialSetup.md",
+    "checkMppEnrollment.md",
+    "createCustomer.md",
+    "getCustomer.md"
+  ],
+  "count": 8,
+  "lineage_origin": "generated_from_spec",
+  "artifact_dir": "artifacts/content_engine/a2"
+}

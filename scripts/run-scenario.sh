@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# run-scenario.sh — run one Visa Relay benchmark scenario.
+# run-scenario.sh — run one Content Bench benchmark scenario.
 #
 # Usage:
 #     scripts/run-scenario.sh SCENARIO [RUN_MODE]
@@ -9,7 +9,7 @@
 #     RUN_MODE   "dry" or "live" (default: "dry")
 #
 # Environment:
-#     CYBS_MERCHANT_ID, CYBS_KEY_ID, CYBS_SHARED_SECRET — required for live runs
+#     PGW_MERCHANT_ID, PGW_KEY_ID, PGW_SHARED_SECRET — required for live runs
 #     LAB_DRY_RUN=1 — simulate run without calling Hermes Agent
 #
 # Outputs:
@@ -26,22 +26,22 @@ RUN_MODE="${2:-dry}"
 [ -d "${LAB_ROOT}/scenarios/${SCENARIO}" ] || die "Unknown scenario: ${SCENARIO}"
 
 # Generate run ID
-export CYBS_RUN_ID
-CYBS_RUN_ID="$(next_run_id "$SCENARIO")"
-export CYBS_SCENARIO="$SCENARIO"
+export PGW_RUN_ID
+PGW_RUN_ID="$(next_run_id "$SCENARIO")"
+export PGW_SCENARIO="$SCENARIO"
 
-RUN_DIR="${LAB_ROOT}/runs/${CYBS_RUN_ID}"
+RUN_DIR="${LAB_ROOT}/runs/${PGW_RUN_ID}"
 
-log "Starting run: run_id=${CYBS_RUN_ID} scenario=${SCENARIO} mode=${RUN_MODE}"
+log "Starting run: run_id=${PGW_RUN_ID} scenario=${SCENARIO} mode=${RUN_MODE}"
 
 # Create run directory structure
 mkdir -p "${RUN_DIR}/app" "${RUN_DIR}/logs"
 
 # Write initial log banner
 cat >> "${RUN_DIR}/logs/run.log" <<LOG
-[$(ts)] run_id=${CYBS_RUN_ID}
+[$(ts)] run_id=${PGW_RUN_ID}
 [$(ts)] scenario=${SCENARIO} mode=${RUN_MODE} agent=hermes-spark
-[$(ts)] env_check=checking vars=[CYBS_MERCHANT_ID,CYBS_KEY_ID,CYBS_SHARED_SECRET,CYBS_ENVIRONMENT]
+[$(ts)] env_check=checking vars=[PGW_MERCHANT_ID,PGW_KEY_ID,PGW_SHARED_SECRET,PGW_ENVIRONMENT]
 LOG
 
 if [ "$RUN_MODE" = "dry" ] || [ "${LAB_DRY_RUN:-0}" = "1" ]; then
@@ -50,10 +50,10 @@ if [ "$RUN_MODE" = "dry" ] || [ "${LAB_DRY_RUN:-0}" = "1" ]; then
 
   # Write placeholder artifacts
   cat > "${RUN_DIR}/findings.md" <<MD
-# Visa Relay Benchmark — Findings
+# Content Benchmark — Findings
 
 ## Run metadata
-- run_id: ${CYBS_RUN_ID}
+- run_id: ${PGW_RUN_ID}
 - scenario: ${SCENARIO}
 - mode: dry-run
 - date_utc: $(ts)
@@ -91,7 +91,7 @@ MD
 
   cat > "${RUN_DIR}/scorecard.json" <<JSON
 {
-  "run_id": "${CYBS_RUN_ID}",
+  "run_id": "${PGW_RUN_ID}",
   "scenario": "${SCENARIO}",
   "agent": "hermes-spark",
   "sdk_language": "node",
@@ -129,7 +129,7 @@ JSON
 
   cat > "${RUN_DIR}/manifest.json" <<JSON
 {
-  "run_id": "${CYBS_RUN_ID}",
+  "run_id": "${PGW_RUN_ID}",
   "scenario": "${SCENARIO}",
   "started_at_utc": "$(ts)",
   "finished_at_utc": "$(ts)",
@@ -139,7 +139,7 @@ JSON
   "sdk_language": "node",
   "sdk_version": "unknown",
   "lockfile_present": false,
-  "env_var_names_used": ["CYBS_MERCHANT_ID","CYBS_KEY_ID","CYBS_SHARED_SECRET","CYBS_ENVIRONMENT"],
+  "env_var_names_used": ["PGW_MERCHANT_ID","PGW_KEY_ID","PGW_SHARED_SECRET","PGW_ENVIRONMENT"],
   "files_read": [],
   "commands_run": [],
   "exit_codes": [],
@@ -148,7 +148,7 @@ JSON
 JSON
 
   echo "[$(ts)] dry_run=complete" >> "${RUN_DIR}/logs/run.log"
-  log "Dry run complete: run_id=${CYBS_RUN_ID}"
+  log "Dry run complete: run_id=${PGW_RUN_ID}"
 
 else
   # Live execution using Hermes Agent
@@ -176,10 +176,10 @@ else
 
   # Build the agent prompt with scenario context
   cat > "${RUN_DIR}/agent-prompt.md" <<PROMPT
-You are running inside the Visa Relay Benchmark lab for CyberSource.
+You are running inside the Content Benchmark lab for Payment Gateway.
 
 ## Your Task
-Run scenario '${SCENARIO}' in runs/${CYBS_RUN_ID}.
+Run scenario '${SCENARIO}' in runs/${PGW_RUN_ID}.
 
 ## Read These Files in Order
 1. ${TASK_FILE} — what to build
@@ -190,17 +190,17 @@ Run scenario '${SCENARIO}' in runs/${CYBS_RUN_ID}.
 6. ${CONTEXT_DIR}/sandbox-rules.md — test cards, constraints, sandbox behavior
 
 ## Output Contract
-Create these files inside runs/${CYBS_RUN_ID}/:
+Create these files inside runs/${PGW_RUN_ID}/:
 - app/ — Generated integration code (if successful)
 - findings.md — Human-readable analysis
 - logs/run.log — Timestamped structured log (continue appending)
 
-Follow the task exactly. If you succeed, create runs/${CYBS_RUN_ID}/app/README.md describing what you built. If you fail, explain why in findings.md.
+Follow the task exactly. If you succeed, create runs/${PGW_RUN_ID}/app/README.md describing what you built. If you fail, explain why in findings.md.
 
 ## Sandbox Rules
 - Use test card: 4111111111111111, expiry 12/2031, CVV 123
-- Sandbox endpoint: https://apitest.cybersource.com
-- Load credentials from env vars only: CYBS_MERCHANT_ID, CYBS_KEY_ID, CYBS_SHARED_SECRET
+- Sandbox endpoint: https://apitest.example.com
+- Load credentials from env vars only: PGW_MERCHANT_ID, PGW_KEY_ID, PGW_SHARED_SECRET
 - Never print or hardcode secrets
 
 ## SDK Field Names (Known Gap)
@@ -230,8 +230,8 @@ PROMPT
   fi
 
   echo "[$(ts)] live_run=complete" >> "${RUN_DIR}/logs/run.log"
-  log "Live run complete: run_id=${CYBS_RUN_ID}"
+  log "Live run complete: run_id=${PGW_RUN_ID}"
 fi
 
 # Echo run ID as last line (consumed by lab-loop.sh)
-echo "${CYBS_RUN_ID}"
+echo "${PGW_RUN_ID}"

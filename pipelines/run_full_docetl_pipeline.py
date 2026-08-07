@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Run the whole Relay Bench + Content Engine pipeline with real DocETL.
+"""Run the whole Content Bench + Content Engine pipeline with real DocETL.
 
-Uses repo-tracked CyberSource lab docs from context/, scenarios/, templates/
+Uses repo-tracked Payment Gateway lab docs from context/, scenarios/, templates/
 plus the Microform quickstart fixture.
 
 Stages:
@@ -26,11 +26,11 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from relay_bench.content_engine.docetl_adapter import docetl_available
-from relay_bench.content_engine.pipeline import run_content_engine
-from relay_bench.content_engine.registry import list_enabled_sources
-from relay_bench.discovery import synthesize_candidates_payload
-from relay_bench.reporting import repo_relative
+from content_bench.content_engine.docetl_adapter import docetl_available
+from content_bench.content_engine.pipeline import run_content_engine
+from content_bench.content_engine.registry import list_enabled_sources
+from content_bench.discovery import synthesize_candidates_payload
+from content_bench.reporting import repo_relative
 
 
 def _load_bench_module():
@@ -50,7 +50,7 @@ def _write_json(path: Path, payload: Dict[str, Any]) -> Path:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Full DocETL-backed Relay pipeline")
+    parser = argparse.ArgumentParser(description="Full DocETL-backed Content Bench pipeline")
     parser.add_argument(
         "--discovery",
         default="docetl",
