@@ -235,13 +235,13 @@
   },
   "compile_results": {
     "quickstart": {
-      "ok": null,
-      "unit_count": null
+      "ok": true,
+      "unit_count": 11
     },
     "specs_to_docs": {
-      "ok": null,
-      "entity_count": null,
-      "unit_count": null
+      "ok": true,
+      "entity_count": 8,
+      "unit_count": 8
     }
   }
 }
