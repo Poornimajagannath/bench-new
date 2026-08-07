@@ -13,23 +13,29 @@ ARTIFACT_DIR = ROOT / "artifacts" / "content_engine" / "a2"
 
 
 def default_units_path() -> Path:
-    """Units for the registered (non-fixture) payments OpenAPI source."""
+    """Prefer registered payments OpenAPI units; fall back to local fixture units."""
+    generated = ROOT / "artifacts" / "content_engine" / "generated"
+    candidates: List[Path] = []
     payments = ROOT / "registry" / "payments.json"
-    source_id = "cybersource-payments-openapi"
     if payments.is_file():
         try:
-            source_id = json.loads(payments.read_text(encoding="utf-8")).get(
+            sid = json.loads(payments.read_text(encoding="utf-8")).get(
                 "openapi_source_id"
-            ) or source_id
+            )
+            if sid:
+                candidates.append(generated / f"{sid}.api_reference_units.json")
         except json.JSONDecodeError:
             pass
-    return (
-        ROOT
-        / "artifacts"
-        / "content_engine"
-        / "generated"
-        / f"{source_id}.api_reference_units.json"
+    candidates.extend(
+        [
+            generated / "payments-core-openapi.api_reference_units.json",
+            generated / "cybersource-payments-core-openapi.api_reference_units.json",
+        ]
     )
+    for path in candidates:
+        if path.is_file():
+            return path
+    return candidates[0]
 
 
 DEFAULT_UNITS_PATH = default_units_path()
