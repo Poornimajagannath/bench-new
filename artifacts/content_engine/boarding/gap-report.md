@@ -60,6 +60,19 @@ Artifacts: `toc-fetch-report.md`, `census-report.md`, `quarantine-list.md`.
 
 ---
 
+## Additions from composition (step 4)
+
+6. **Field semantics documented only in the mega-guide.** `boardingFlow`
+   (`ENTERPRISE` creates one organization; `SMB` behavior), `mode` ("not
+   currently supported"), and `configurable` (`true` for merchant orgs,
+   `false` for transacting) are specified nowhere in the per-topic child
+   pages — only in the family compendium. A partner reading topic pages never
+   sees them; an agent deep-linking anchors cannot cite them.
+7. **Expected outcomes are largely unstated.** Across the six composed
+   workflows, 220 of 257 steps have no stated outcome ("what should I see if
+   it worked") in the source prose — visible as explicit gaps in the
+   generated pages.
+
 ## Next (not done in this pass)
 
 - Boarding workflow schema + portal pages against the 182 eligible docs

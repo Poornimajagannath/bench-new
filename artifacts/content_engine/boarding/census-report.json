@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-08-07T22:40:34+00:00",
+  "generated_at": "2026-08-07T22:56:28+00:00",
   "docs_dir": "data/products/boarding/guides",
   "doc_count": 236,
   "counts_by_kind": {
     "api_reference": 6,
-    "how_to_guide": 75,
+    "how_to_guide": 93,
     "release_note": 0,
-    "index_navigation": 54,
+    "index_navigation": 46,
     "legal": 0,
     "marketing": 0,
-    "other": 101
+    "other": 91
   },
   "quarantine_policy": {
     "exclude_kinds": [
@@ -20,8 +20,8 @@
     "policy_path": "/home/badari/workspace/poornima/visa-relay-bench/data/content_engine/corpus_quarantine_policy.json",
     "notes": "Pre-ingestion policy: release notes, legal, and index/navigation pages are quarantined so they cannot silently enter the claim pipeline. How-to guides, API reference, and marketing remain eligible until a later policy amendment. Amend this file and re-run pipelines/run_corpus_census.py to change the decision record."
   },
-  "quarantine_count": 54,
-  "eligible_count": 182,
+  "quarantine_count": 46,
+  "eligible_count": 190,
   "classifications": [
     {
       "path": "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt.md.md",
@@ -322,10 +322,10 @@
     },
     {
       "path": "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_vpc-partner-reseller-disclaimer.md.md",
-      "kind": "other",
-      "confidence": "low",
+      "kind": "how_to_guide",
+      "confidence": "medium",
       "reasons": [
-        "no strong filename/content signal"
+        "constraint facts (TTL/PCI/header/reuse/encryption) \u2014 eligible regardless of length"
       ],
       "bytes": 2131,
       "title": "VISA Platform Connect: Specifications and Conditions for Resellers/Partners",
@@ -336,7 +336,7 @@
       "kind": "how_to_guide",
       "confidence": "medium",
       "reasons": [
-        "long-form product guide shell with audience/purpose framing"
+        "constraint facts (TTL/PCI/header/reuse/encryption) \u2014 eligible regardless of length"
       ],
       "bytes": 268904,
       "title": "Merchant Boarding",
@@ -366,14 +366,14 @@
     },
     {
       "path": "en-us_boarding_developer_all_rest_boarding_boarding-about-guide_vpc-partner-reseller-disclaimer.md.md",
-      "kind": "index_navigation",
+      "kind": "how_to_guide",
       "confidence": "medium",
       "reasons": [
-        "filename looks like intro/index and content is navigation-heavy"
+        "constraint facts (TTL/PCI/header/reuse/encryption) \u2014 eligible regardless of length"
       ],
       "bytes": 2131,
       "title": "VISA Platform Connect: Specifications and Conditions for Resellers/Partners",
-      "quarantined": true
+      "quarantined": false
     },
     {
       "path": "en-us_boarding_developer_all_rest_boarding_boarding-currency-codes.md.md",
@@ -399,10 +399,10 @@
     },
     {
       "path": "en-us_boarding_developer_all_rest_boarding_boarding-extend-hierarchy.md.md",
-      "kind": "other",
-      "confidence": "low",
+      "kind": "how_to_guide",
+      "confidence": "medium",
       "reasons": [
-        "no strong filename/content signal"
+        "constraint facts (TTL/PCI/header/reuse/encryption) \u2014 eligible regardless of length"
       ],
       "bytes": 765,
       "title": "Extending the Hierarchy",
@@ -465,36 +465,36 @@
     },
     {
       "path": "en-us_boarding_developer_all_rest_boarding_boarding-intro-overview_boarding-intro-ids.md.md",
-      "kind": "index_navigation",
+      "kind": "how_to_guide",
       "confidence": "medium",
       "reasons": [
-        "filename looks like intro/index and content is navigation-heavy"
+        "constraint facts (TTL/PCI/header/reuse/encryption) \u2014 eligible regardless of length"
       ],
       "bytes": 1230,
       "title": "Understanding Organization IDs",
-      "quarantined": true
+      "quarantined": false
     },
     {
       "path": "en-us_boarding_developer_all_rest_boarding_boarding-intro-overview_boarding-intro-organizations.md.md",
-      "kind": "index_navigation",
+      "kind": "how_to_guide",
       "confidence": "medium",
       "reasons": [
-        "filename looks like intro/index and content is navigation-heavy"
+        "constraint facts (TTL/PCI/header/reuse/encryption) \u2014 eligible regardless of length"
       ],
       "bytes": 1805,
       "title": "Understanding Accounts and Organizations",
-      "quarantined": true
+      "quarantined": false
     },
     {
       "path": "en-us_boarding_developer_all_rest_boarding_boarding-intro-overview_boarding-intro-requirements.md.md",
-      "kind": "index_navigation",
-      "confidence": "high",
+      "kind": "how_to_guide",
+      "confidence": "medium",
       "reasons": [
-        "filename looks like intro/index and content is navigation-heavy"
+        "constraint facts (TTL/PCI/header/reuse/encryption) \u2014 eligible regardless of length"
       ],
       "bytes": 375,
       "title": "Requirements",
-      "quarantined": true
+      "quarantined": false
     },
     {
       "path": "en-us_boarding_developer_all_rest_boarding_boarding-intro-overview_boarding-intro-workflow-extend-multi-mid.md.md",
@@ -652,10 +652,10 @@
     },
     {
       "path": "en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro_boarding-retrieve-organizations_boarding-retrieve-organizations-query-parameters.md.md",
-      "kind": "other",
-      "confidence": "low",
+      "kind": "how_to_guide",
+      "confidence": "medium",
       "reasons": [
-        "no strong filename/content signal"
+        "constraint facts (TTL/PCI/header/reuse/encryption) \u2014 eligible regardless of length"
       ],
       "bytes": 2443,
       "title": "Using Query Parameters to Filter Results",
@@ -696,10 +696,10 @@
     },
     {
       "path": "en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-payer-auth.md.md",
-      "kind": "other",
-      "confidence": "low",
+      "kind": "how_to_guide",
+      "confidence": "medium",
       "reasons": [
-        "no strong filename/content signal"
+        "constraint facts (TTL/PCI/header/reuse/encryption) \u2014 eligible regardless of length"
       ],
       "bytes": 1502,
       "title": "`Payer Authentication`",
@@ -729,10 +729,10 @@
     },
     {
       "path": "en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-payer-auth_boarding-payer-auth-enable-intro_boarding-payer-auth-enable-reqfields.md.md",
-      "kind": "other",
-      "confidence": "low",
+      "kind": "how_to_guide",
+      "confidence": "medium",
       "reasons": [
-        "no strong filename/content signal"
+        "constraint facts (TTL/PCI/header/reuse/encryption) \u2014 eligible regardless of length"
       ],
       "bytes": 18107,
       "title": "Required Fields for Enabling `Payer Authentication`",
@@ -905,10 +905,10 @@
     },
     {
       "path": "en-us_boarding_developer_all_rest_boarding_boarding-products_boarding-pecs-payer-auth.md.md",
-      "kind": "other",
-      "confidence": "low",
+      "kind": "how_to_guide",
+      "confidence": "medium",
       "reasons": [
-        "no strong filename/content signal"
+        "constraint facts (TTL/PCI/header/reuse/encryption) \u2014 eligible regardless of length"
       ],
       "bytes": 1375,
       "title": "`Payer Authentication`",
@@ -1081,10 +1081,10 @@
     },
     {
       "path": "en-us_boarding_developer_all_rest_boarding_boarding-products_pecs-add-delete-processor_pecs-add-delete-processor-req-fields.md.md",
-      "kind": "other",
-      "confidence": "low",
+      "kind": "how_to_guide",
+      "confidence": "medium",
       "reasons": [
-        "no strong filename/content signal"
+        "constraint facts (TTL/PCI/header/reuse/encryption) \u2014 eligible regardless of length"
       ],
       "bytes": 2848,
       "title": "Required Fields for Adding and Deleting a Processor Using the PECS API",
@@ -1147,10 +1147,10 @@
     },
     {
       "path": "en-us_boarding_developer_all_rest_boarding_boarding-products_pecs-delete-processor_pecs-delete-processor-req-fields.md.md",
-      "kind": "other",
-      "confidence": "low",
+      "kind": "how_to_guide",
+      "confidence": "medium",
       "reasons": [
-        "no strong filename/content signal"
+        "constraint facts (TTL/PCI/header/reuse/encryption) \u2014 eligible regardless of length"
       ],
       "bytes": 983,
       "title": "Required Fields for Deleting a Processor Using the PECS API",
@@ -1576,14 +1576,14 @@
     },
     {
       "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-about-guide_vpc-partner-reseller-disclaimer.md.md",
-      "kind": "index_navigation",
+      "kind": "how_to_guide",
       "confidence": "medium",
       "reasons": [
-        "filename looks like intro/index and content is navigation-heavy"
+        "constraint facts (TTL/PCI/header/reuse/encryption) \u2014 eligible regardless of length"
       ],
       "bytes": 2131,
       "title": "VISA Platform Connect: Specifications and Conditions for Resellers/Partners",
-      "quarantined": true
+      "quarantined": false
     },
     {
       "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-currency-codes.md.md",
@@ -1609,10 +1609,10 @@
     },
     {
       "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-extend-hierarchy.md.md",
-      "kind": "other",
-      "confidence": "low",
+      "kind": "how_to_guide",
+      "confidence": "medium",
       "reasons": [
-        "no strong filename/content signal"
+        "constraint facts (TTL/PCI/header/reuse/encryption) \u2014 eligible regardless of length"
       ],
       "bytes": 759,
       "title": "Extend the Hierarchy",
@@ -1675,36 +1675,36 @@
     },
     {
       "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-overview_boarding-intro-ids.md.md",
-      "kind": "index_navigation",
+      "kind": "how_to_guide",
       "confidence": "medium",
       "reasons": [
-        "filename looks like intro/index and content is navigation-heavy"
+        "constraint facts (TTL/PCI/header/reuse/encryption) \u2014 eligible regardless of length"
       ],
       "bytes": 920,
       "title": "Understanding Organization IDs",
-      "quarantined": true
+      "quarantined": false
     },
     {
       "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-overview_boarding-intro-organizations.md.md",
-      "kind": "index_navigation",
+      "kind": "how_to_guide",
       "confidence": "medium",
       "reasons": [
-        "filename looks like intro/index and content is navigation-heavy"
+        "constraint facts (TTL/PCI/header/reuse/encryption) \u2014 eligible regardless of length"
       ],
       "bytes": 1801,
       "title": "Understanding Accounts and Organizations",
-      "quarantined": true
+      "quarantined": false
     },
     {
       "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-overview_boarding-intro-requirements.md.md",
-      "kind": "index_navigation",
-      "confidence": "high",
+      "kind": "how_to_guide",
+      "confidence": "medium",
       "reasons": [
-        "filename looks like intro/index and content is navigation-heavy"
+        "constraint facts (TTL/PCI/header/reuse/encryption) \u2014 eligible regardless of length"
       ],
       "bytes": 375,
       "title": "Requirements",
-      "quarantined": true
+      "quarantined": false
     },
     {
       "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-overview_boarding-intro-workflow-extend-multi-mid.md.md",
@@ -1862,10 +1862,10 @@
     },
     {
       "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth.md.md",
-      "kind": "other",
-      "confidence": "low",
+      "kind": "how_to_guide",
+      "confidence": "medium",
       "reasons": [
-        "no strong filename/content signal"
+        "constraint facts (TTL/PCI/header/reuse/encryption) \u2014 eligible regardless of length"
       ],
       "bytes": 1890,
       "title": "`Payer Authentication`",
@@ -2699,17 +2699,6 @@
       "quarantined": true
     },
     {
-      "path": "en-us_boarding_developer_all_rest_boarding_boarding-about-guide_vpc-partner-reseller-disclaimer.md.md",
-      "kind": "index_navigation",
-      "confidence": "medium",
-      "reasons": [
-        "filename looks like intro/index and content is navigation-heavy"
-      ],
-      "bytes": 2131,
-      "title": "VISA Platform Connect: Specifications and Conditions for Resellers/Partners",
-      "quarantined": true
-    },
-    {
       "path": "en-us_boarding_developer_all_rest_boarding_boarding-intro-overview.md.md",
       "kind": "index_navigation",
       "confidence": "high",
@@ -2718,39 +2707,6 @@
       ],
       "bytes": 784,
       "title": "Introduction to the Boarding Registration Service",
-      "quarantined": true
-    },
-    {
-      "path": "en-us_boarding_developer_all_rest_boarding_boarding-intro-overview_boarding-intro-ids.md.md",
-      "kind": "index_navigation",
-      "confidence": "medium",
-      "reasons": [
-        "filename looks like intro/index and content is navigation-heavy"
-      ],
-      "bytes": 1230,
-      "title": "Understanding Organization IDs",
-      "quarantined": true
-    },
-    {
-      "path": "en-us_boarding_developer_all_rest_boarding_boarding-intro-overview_boarding-intro-organizations.md.md",
-      "kind": "index_navigation",
-      "confidence": "medium",
-      "reasons": [
-        "filename looks like intro/index and content is navigation-heavy"
-      ],
-      "bytes": 1805,
-      "title": "Understanding Accounts and Organizations",
-      "quarantined": true
-    },
-    {
-      "path": "en-us_boarding_developer_all_rest_boarding_boarding-intro-overview_boarding-intro-requirements.md.md",
-      "kind": "index_navigation",
-      "confidence": "high",
-      "reasons": [
-        "filename looks like intro/index and content is navigation-heavy"
-      ],
-      "bytes": 375,
-      "title": "Requirements",
       "quarantined": true
     },
     {
@@ -2996,17 +2952,6 @@
       "quarantined": true
     },
     {
-      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-about-guide_vpc-partner-reseller-disclaimer.md.md",
-      "kind": "index_navigation",
-      "confidence": "medium",
-      "reasons": [
-        "filename looks like intro/index and content is navigation-heavy"
-      ],
-      "bytes": 2131,
-      "title": "VISA Platform Connect: Specifications and Conditions for Resellers/Partners",
-      "quarantined": true
-    },
-    {
       "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-overview.md.md",
       "kind": "index_navigation",
       "confidence": "high",
@@ -3015,39 +2960,6 @@
       ],
       "bytes": 909,
       "title": "Introduction to the Boarding Registration Service",
-      "quarantined": true
-    },
-    {
-      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-overview_boarding-intro-ids.md.md",
-      "kind": "index_navigation",
-      "confidence": "medium",
-      "reasons": [
-        "filename looks like intro/index and content is navigation-heavy"
-      ],
-      "bytes": 920,
-      "title": "Understanding Organization IDs",
-      "quarantined": true
-    },
-    {
-      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-overview_boarding-intro-organizations.md.md",
-      "kind": "index_navigation",
-      "confidence": "medium",
-      "reasons": [
-        "filename looks like intro/index and content is navigation-heavy"
-      ],
-      "bytes": 1801,
-      "title": "Understanding Accounts and Organizations",
-      "quarantined": true
-    },
-    {
-      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-overview_boarding-intro-requirements.md.md",
-      "kind": "index_navigation",
-      "confidence": "high",
-      "reasons": [
-        "filename looks like intro/index and content is navigation-heavy"
-      ],
-      "bytes": 375,
-      "title": "Requirements",
       "quarantined": true
     },
     {

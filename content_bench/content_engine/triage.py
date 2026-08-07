@@ -57,6 +57,28 @@ _ENCRYPTION_PATTERN = re.compile(
     r"end-to-end encryption"
 )
 
+# Boarding's own constraint classes — organization/ID format rules, hierarchy
+# limits, status transitions, and prerequisites. Same loss class as TTLs:
+# facts an integrating partner gets wrong without docs.
+_ID_FORMAT_PATTERN = re.compile(
+    r"\b(id|identifier)s?\b[^.]{0,80}\bmust be\b|"
+    r"\bmust be unique\b|"
+    r"\b(?:from\s+)?\d+\s*to\s*\d+\s*(?:alphanumeric\s+)?characters\b"
+)
+_HIERARCHY_PATTERN = re.compile(
+    r"only\s+(?:be\s+)?one\b[^.]{0,60}\b(?:branch|hierarchy)\b|"
+    r"levels? of (?:the )?hierarchy|"
+    r"\bhierarchy\b[^.]{0,60}\b(?:cannot|must|only)\b"
+)
+_STATUS_TRANSITION_PATTERN = re.compile(
+    r"\bstatus\b[^.]{0,60}\b(?:can only|cannot|must be|transition)\b|"
+    r"\b(?:can only|cannot) (?:be )?(?:change|revert|move)\w*[^.]{0,40}\bstatus\b"
+)
+_PREREQUISITE_PATTERN = re.compile(
+    r"\bprerequisite\b|\bmust have\b|\byou must include\b|"
+    r"\brequires that\b|\bmust be in the format\b"
+)
+
 
 def constraint_kind(sentence: str) -> Optional[str]:
     """Classify one sentence's constraint type, or None.
@@ -79,14 +101,35 @@ def constraint_kind(sentence: str) -> Optional[str]:
         return "mandatory_header"
     if _ENCRYPTION_PATTERN.search(s):
         return "device_encryption"
+    if _ID_FORMAT_PATTERN.search(s):
+        return "id_format_rule"
+    if _HIERARCHY_PATTERN.search(s):
+        return "hierarchy_limit"
+    if _STATUS_TRANSITION_PATTERN.search(s):
+        return "status_transition"
+    if _PREREQUISITE_PATTERN.search(s):
+        return "prerequisite"
     if CONSTRAINT_PAGE_PATTERN.search(sentence):
         return "constraint"
     return None
 
 
 def has_constraint_signals(text: str) -> bool:
-    """Page-level: TTL/reuse/PCI/header/encryption facts anywhere in the body."""
-    return bool(CONSTRAINT_PAGE_PATTERN.search(text))
+    """Page-level detector — must agree with the sentence-level classes.
+
+    TTL/reuse/PCI/header/encryption plus boarding's own constraint classes
+    (ID format rules, hierarchy limits, status transitions, prerequisites).
+    A page carrying any of these is substantive regardless of size.
+    """
+    if CONSTRAINT_PAGE_PATTERN.search(text):
+        return True
+    s = text.lower()
+    return bool(
+        _ID_FORMAT_PATTERN.search(s)
+        or _HIERARCHY_PATTERN.search(s)
+        or _STATUS_TRANSITION_PATTERN.search(s)
+        or _PREREQUISITE_PATTERN.search(s)
+    )
 
 
 # --- Sentence / heading helpers --------------------------------------------

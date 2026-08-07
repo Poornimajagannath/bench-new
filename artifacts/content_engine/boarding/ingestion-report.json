@@ -1,14 +1,14 @@
 {
   "stamp_date": "2026-08-08-boarding",
-  "docs_fetched": 182,
-  "claims_extracted": 1160,
+  "docs_fetched": 190,
+  "claims_extracted": 1248,
   "claims_by_schema": {
-    "quickstart_step": 961,
+    "quickstart_step": 969,
     "endpoint_fact": 0,
     "error_case": 65,
-    "prose_claim": 134
+    "prose_claim": 214
   },
-  "drop_count": 131,
+  "drop_count": 114,
   "drops": [
     {
       "path": "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-about-guide.md.md",
@@ -60,39 +60,11 @@
       "first_heading": "Recent Revisions to This Document"
     },
     {
-      "path": "en-us_boarding_developer_all_rest_boarding_boarding-about-guide_vpc-partner-reseller-disclaimer.md.md",
-      "reason": "quarantine_policy",
-      "detail": "census kind=index_navigation \u2014 excluded by policy",
-      "bytes": 2131,
-      "first_heading": "VISA Platform Connect: Specifications and Conditions for Resellers/Partners"
-    },
-    {
       "path": "en-us_boarding_developer_all_rest_boarding_boarding-intro-overview.md.md",
       "reason": "quarantine_policy",
       "detail": "census kind=index_navigation \u2014 excluded by policy",
       "bytes": 784,
       "first_heading": "Introduction to the Boarding Registration Service"
-    },
-    {
-      "path": "en-us_boarding_developer_all_rest_boarding_boarding-intro-overview_boarding-intro-ids.md.md",
-      "reason": "quarantine_policy",
-      "detail": "census kind=index_navigation \u2014 excluded by policy",
-      "bytes": 1230,
-      "first_heading": "Understanding Organization IDs"
-    },
-    {
-      "path": "en-us_boarding_developer_all_rest_boarding_boarding-intro-overview_boarding-intro-organizations.md.md",
-      "reason": "quarantine_policy",
-      "detail": "census kind=index_navigation \u2014 excluded by policy",
-      "bytes": 1805,
-      "first_heading": "Understanding Accounts and Organizations"
-    },
-    {
-      "path": "en-us_boarding_developer_all_rest_boarding_boarding-intro-overview_boarding-intro-requirements.md.md",
-      "reason": "quarantine_policy",
-      "detail": "census kind=index_navigation \u2014 excluded by policy",
-      "bytes": 375,
-      "first_heading": "Requirements"
     },
     {
       "path": "en-us_boarding_developer_all_rest_boarding_boarding-intro-templat-0.md.md",
@@ -249,39 +221,11 @@
       "first_heading": "Recent Revisions to This Document"
     },
     {
-      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-about-guide_vpc-partner-reseller-disclaimer.md.md",
-      "reason": "quarantine_policy",
-      "detail": "census kind=index_navigation \u2014 excluded by policy",
-      "bytes": 2131,
-      "first_heading": "VISA Platform Connect: Specifications and Conditions for Resellers/Partners"
-    },
-    {
       "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-overview.md.md",
       "reason": "quarantine_policy",
       "detail": "census kind=index_navigation \u2014 excluded by policy",
       "bytes": 909,
       "first_heading": "Introduction to the Boarding Registration Service"
-    },
-    {
-      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-overview_boarding-intro-ids.md.md",
-      "reason": "quarantine_policy",
-      "detail": "census kind=index_navigation \u2014 excluded by policy",
-      "bytes": 920,
-      "first_heading": "Understanding Organization IDs"
-    },
-    {
-      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-overview_boarding-intro-organizations.md.md",
-      "reason": "quarantine_policy",
-      "detail": "census kind=index_navigation \u2014 excluded by policy",
-      "bytes": 1801,
-      "first_heading": "Understanding Accounts and Organizations"
-    },
-    {
-      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-overview_boarding-intro-requirements.md.md",
-      "reason": "quarantine_policy",
-      "detail": "census kind=index_navigation \u2014 excluded by policy",
-      "bytes": 375,
-      "first_heading": "Requirements"
     },
     {
       "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-template.md.md",
@@ -459,13 +403,6 @@
       "first_heading": "ISO Standard Currency Codes"
     },
     {
-      "path": "2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-extend-hierarchy.md.md",
-      "reason": "no_schema_match",
-      "detail": "no quickstart/endpoint/error/prose claim extracted",
-      "bytes": 765,
-      "first_heading": "Extending the Hierarchy"
-    },
-    {
       "path": "2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-extend-hierarchy_boarding-extend-hierarchy-diagram.md.md",
       "reason": "no_schema_match",
       "detail": "no quickstart/endpoint/error/prose claim extracted",
@@ -513,20 +450,6 @@
       "detail": "no quickstart/endpoint/error/prose claim extracted",
       "bytes": 4406,
       "first_heading": "REST Example: Enabling `Payer Authentication`"
-    },
-    {
-      "path": "2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-payer-auth_boarding-payer-auth-enable-intro_boarding-payer-auth-enable-reqfields.md.md",
-      "reason": "no_schema_match",
-      "detail": "no quickstart/endpoint/error/prose claim extracted",
-      "bytes": 18107,
-      "first_heading": "Required Fields for Enabling `Payer Authentication`"
-    },
-    {
-      "path": "2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-tms.md.md",
-      "reason": "no_schema_match",
-      "detail": "no quickstart/endpoint/error/prose claim extracted",
-      "bytes": 1138,
-      "first_heading": "`Token Management Service`"
     },
     {
       "path": "2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-tms_boarding-tms-enable-intro_boarding-tms-enable-ex-rest.md.md",
@@ -585,20 +508,6 @@
       "first_heading": "Configure `Payer Authentication` Using the PECS API"
     },
     {
-      "path": "2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products_boarding-pecs-payer-auth_pecs-config-payerauth_pecs-config-payerauth-req-fields.md.md",
-      "reason": "no_schema_match",
-      "detail": "no quickstart/endpoint/error/prose claim extracted",
-      "bytes": 7724,
-      "first_heading": "Required Fields for Configuring `Payer Authentication` Using the PECS API"
-    },
-    {
-      "path": "2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products_boarding-pecs-tms.md.md",
-      "reason": "no_schema_match",
-      "detail": "no quickstart/endpoint/error/prose claim extracted",
-      "bytes": 1148,
-      "first_heading": "`Token Management Service`"
-    },
-    {
       "path": "2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products_boarding-pecs-tms_boarding-pecs-tms-enable-intro_boarding-pecs-tms-enable-ex-rest.md.md",
       "reason": "no_schema_match",
       "detail": "no quickstart/endpoint/error/prose claim extracted",
@@ -655,13 +564,6 @@
       "first_heading": "Example: Adding and Deleting a Processor Using the PECS API"
     },
     {
-      "path": "2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products_pecs-add-delete-processor_pecs-add-delete-processor-req-fields.md.md",
-      "reason": "no_schema_match",
-      "detail": "no quickstart/endpoint/error/prose claim extracted",
-      "bytes": 2848,
-      "first_heading": "Required Fields for Adding and Deleting a Processor Using the PECS API"
-    },
-    {
       "path": "2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products_pecs-add-processor.md.md",
       "reason": "no_schema_match",
       "detail": "no quickstart/endpoint/error/prose claim extracted",
@@ -695,13 +597,6 @@
       "detail": "no quickstart/endpoint/error/prose claim extracted",
       "bytes": 1845,
       "first_heading": "Example: Deleting a Processor Using the PECS API"
-    },
-    {
-      "path": "2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products_pecs-delete-processor_pecs-delete-processor-req-fields.md.md",
-      "reason": "no_schema_match",
-      "detail": "no quickstart/endpoint/error/prose claim extracted",
-      "bytes": 983,
-      "first_heading": "Required Fields for Deleting a Processor Using the PECS API"
     },
     {
       "path": "2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products_pecs-update-batch.md.md",
@@ -844,25 +739,11 @@
       "first_heading": "ISO Standard Currency Codes"
     },
     {
-      "path": "2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_boarding-extend-hierarchy.md.md",
-      "reason": "no_schema_match",
-      "detail": "no quickstart/endpoint/error/prose claim extracted",
-      "bytes": 759,
-      "first_heading": "Extend the Hierarchy"
-    },
-    {
       "path": "2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_boarding-extend-hierarchy_boarding-extend-hierarchy-diagram.md.md",
       "reason": "no_schema_match",
       "detail": "no quickstart/endpoint/error/prose claim extracted",
       "bytes": 934,
       "first_heading": "Hierarchy Example"
-    },
-    {
-      "path": "2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-tms.md.md",
-      "reason": "no_schema_match",
-      "detail": "no quickstart/endpoint/error/prose claim extracted",
-      "bytes": 930,
-      "first_heading": "`Token Management Service`"
     },
     {
       "path": "2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-tms_tms-vault-hierarchy.md.md",
@@ -928,10 +809,10 @@
       "first_heading": "Virtual Terminal Templates"
     }
   ],
-  "quarantine_skipped": 54,
+  "quarantine_skipped": 46,
   "quarantine_list": null,
   "census_report": "artifacts/content_engine/boarding/census-report.json",
-  "ingest_input_count": 182,
+  "ingest_input_count": 190,
   "raw_dir": "raw/2026-08-08-boarding",
   "normalized_file": "normalized/2026-08-08-boarding.claims.json",
   "read_contract": [

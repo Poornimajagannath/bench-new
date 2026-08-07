@@ -53,6 +53,31 @@ class ConstraintDetectorTests(unittest.TestCase):
         s = "After you validate the request payload you can submit the form data."
         self.assertIsNone(triage.constraint_kind(s))
 
+    def test_id_format_rule(self):
+        s = "The acquirer merchant ID must be from 1 to 35 alphanumeric characters."
+        self.assertEqual(triage.constraint_kind(s), "id_format_rule")
+        s2 = "Organization IDs must be unique, not just within the portfolio, but across the system."
+        self.assertEqual(triage.constraint_kind(s2), "id_format_rule")
+
+    def test_hierarchy_limit(self):
+        s = "There can only be one merchant in any branch of the hierarchy."
+        self.assertEqual(triage.constraint_kind(s), "hierarchy_limit")
+
+    def test_prerequisite(self):
+        s = "Having a TRID is a prerequisite for enabling network tokenization."
+        self.assertEqual(triage.constraint_kind(s), "prerequisite")
+        s2 = "You must have a portfolio account on our platform."
+        self.assertEqual(triage.constraint_kind(s2), "prerequisite")
+
+    def test_page_and_sentence_detectors_agree_on_boarding_classes(self):
+        page = (
+            "Requirements\n============\n\n"
+            "You must have a portfolio account on our platform.\n"
+        )
+        self.assertTrue(triage.has_constraint_signals(page))
+        page2 = "Hierarchy\n=========\n\nThere can only be one merchant in any branch of the hierarchy.\n"
+        self.assertTrue(triage.has_constraint_signals(page2))
+
     def test_page_level_signals(self):
         self.assertTrue(
             triage.has_constraint_signals("Tokens expire after 15 minutes.")

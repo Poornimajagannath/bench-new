@@ -1,47 +1,42 @@
 {
-  "generated_at": "2026-08-07T22:43:07+00:00",
+  "generated_at": "2026-08-07T22:56:28+00:00",
   "raw_dir": "raw/2026-08-08-boarding",
-  "claim_count": 1160,
-  "schemas": [
-    "error_case",
-    "prose_claim",
-    "quickstart_step"
-  ],
+  "claim_count": 1248,
   "claims_by_schema": {
-    "quickstart_step": 961,
-    "prose_claim": 134,
+    "quickstart_step": 969,
+    "prose_claim": 214,
     "error_case": 65
   },
-  "docs_with_claims": 105,
-  "docs_ingested_denominator": 182,
+  "docs_with_claims": 122,
+  "docs_ingested_denominator": 190,
   "denominator_source": "census-report.json eligible_count (corpus: site HTML TOC, 236 files)",
-  "sample_source_pointers": [
-    "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt.md.md",
-    "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-about_templates-products.md.md",
-    "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-matrix-intro_templates-matrix-card_templates-matrix-card-config.md.md",
-    "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-matrix-intro_templates-matrix-card_templates-matrix-card-fields.md.md",
-    "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-matrix-intro_templates-matrix-customer-invoicing.md.md"
-  ],
+  "prose_constraint_kinds": {
+    "guidance": 124,
+    "prerequisite": 38,
+    "id_format_rule": 22,
+    "ttl_or_validity": 18,
+    "hierarchy_limit": 12
+  },
   "top_docs_by_claims": [
     [
       "en-us_boarding_user_all_ebc_boarding-user.md.md",
-      414
+      428
     ],
     [
       "en-us_boarding_developer_all_rest_boarding.md.md",
-      131
+      145
     ],
     [
       "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt.md.md",
-      55
+      56
     ],
     [
       "en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-boarding.md.md",
-      24
+      26
     ],
     [
       "en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-add.md.md",
-      17
+      19
     ]
   ]
 }

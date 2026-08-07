@@ -3,8 +3,8 @@
 Milestone 0.5: corpus cleaned at the door. `raw/` is immutable evidence; serve layers read only `normalized/` and `content/`.
 
 - Stamp date: `2026-08-08-boarding`
-- Docs fetched into raw: 182
-- Claims extracted: 1160
+- Docs fetched into raw: 190
+- Claims extracted: 1248
 - Raw dir: `raw/2026-08-08-boarding`
 - Normalized file: `normalized/2026-08-08-boarding.claims.json`
 - Read contract: normalized/, content/
@@ -14,10 +14,10 @@ Milestone 0.5: corpus cleaned at the door. `raw/` is immutable evidence; serve l
 
 | Schema | Count |
 | --- | ---: |
-| quickstart_step | 961 |
+| quickstart_step | 969 |
 | endpoint_fact | 0 |
 | error_case | 65 |
-| prose_claim | 134 |
+| prose_claim | 214 |
 
 ## Drop log
 
@@ -30,11 +30,7 @@ Milestone 0.5: corpus cleaned at the door. `raw/` is immutable evidence; serve l
 | en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-tasks.md.md | quarantine_policy | 130 | Using Templates | census kind=index_navigation — excluded by policy |
 | en-us_boarding_developer_all_rest_boarding_boarding-about-guide.md.md | quarantine_policy | 899 | Merchant Boarding | census kind=index_navigation — excluded by policy |
 | en-us_boarding_developer_all_rest_boarding_boarding-about-guide_boarding-revisions.md.md | quarantine_policy | 3036 | Recent Revisions to This Document | census kind=index_navigation — excluded by policy |
-| en-us_boarding_developer_all_rest_boarding_boarding-about-guide_vpc-partner-reseller-disclaimer.md.md | quarantine_policy | 2131 | VISA Platform Connect: Specifications and Conditions for Resellers/Partners | census kind=index_navigation — excluded by policy |
 | en-us_boarding_developer_all_rest_boarding_boarding-intro-overview.md.md | quarantine_policy | 784 | Introduction to the Boarding Registration Service | census kind=index_navigation — excluded by policy |
-| en-us_boarding_developer_all_rest_boarding_boarding-intro-overview_boarding-intro-ids.md.md | quarantine_policy | 1230 | Understanding Organization IDs | census kind=index_navigation — excluded by policy |
-| en-us_boarding_developer_all_rest_boarding_boarding-intro-overview_boarding-intro-organizations.md.md | quarantine_policy | 1805 | Understanding Accounts and Organizations | census kind=index_navigation — excluded by policy |
-| en-us_boarding_developer_all_rest_boarding_boarding-intro-overview_boarding-intro-requirements.md.md | quarantine_policy | 375 | Requirements | census kind=index_navigation — excluded by policy |
 | en-us_boarding_developer_all_rest_boarding_boarding-intro-templat-0.md.md | quarantine_policy | 1906 | Product Templates | census kind=index_navigation — excluded by policy |
 | en-us_boarding_developer_all_rest_boarding_boarding-intro-template.md.md | quarantine_policy | 1906 | Product Templates | census kind=index_navigation — excluded by policy |
 | en-us_boarding_developer_all_rest_boarding_boarding-intro-template_templates-components.md.md | quarantine_policy | 1179 | Template Components | census kind=index_navigation — excluded by policy |
@@ -57,11 +53,7 @@ Milestone 0.5: corpus cleaned at the door. `raw/` is immutable evidence; serve l
 | en-us_boarding_developer_all_rest_boarding_templates-tasks.md.md | quarantine_policy | 130 | Using Templates | census kind=index_navigation — excluded by policy |
 | en-us_boarding_user_all_ebc_boarding-user_boarding-about-guide.md.md | quarantine_policy | 888 | Merchant Boarding User Guide | census kind=index_navigation — excluded by policy |
 | en-us_boarding_user_all_ebc_boarding-user_boarding-about-guide_boarding-revisions.md.md | quarantine_policy | 932 | Recent Revisions to This Document | census kind=index_navigation — excluded by policy |
-| en-us_boarding_user_all_ebc_boarding-user_boarding-about-guide_vpc-partner-reseller-disclaimer.md.md | quarantine_policy | 2131 | VISA Platform Connect: Specifications and Conditions for Resellers/Partners | census kind=index_navigation — excluded by policy |
 | en-us_boarding_user_all_ebc_boarding-user_boarding-intro-overview.md.md | quarantine_policy | 909 | Introduction to the Boarding Registration Service | census kind=index_navigation — excluded by policy |
-| en-us_boarding_user_all_ebc_boarding-user_boarding-intro-overview_boarding-intro-ids.md.md | quarantine_policy | 920 | Understanding Organization IDs | census kind=index_navigation — excluded by policy |
-| en-us_boarding_user_all_ebc_boarding-user_boarding-intro-overview_boarding-intro-organizations.md.md | quarantine_policy | 1801 | Understanding Accounts and Organizations | census kind=index_navigation — excluded by policy |
-| en-us_boarding_user_all_ebc_boarding-user_boarding-intro-overview_boarding-intro-requirements.md.md | quarantine_policy | 375 | Requirements | census kind=index_navigation — excluded by policy |
 | en-us_boarding_user_all_ebc_boarding-user_boarding-intro-template.md.md | quarantine_policy | 1905 | Product Templates | census kind=index_navigation — excluded by policy |
 | en-us_boarding_user_all_ebc_boarding-user_boarding-intro-template_templates-components.md.md | quarantine_policy | 1179 | Template Components | census kind=index_navigation — excluded by policy |
 | en-us_boarding_user_all_ebc_boarding-user_boarding-intro-template_templates-products.md.md | quarantine_policy | 332 | Products | census kind=index_navigation — excluded by policy |
@@ -87,7 +79,6 @@ Milestone 0.5: corpus cleaned at the door. `raw/` is immutable evidence; serve l
 | 2026-08-08-boarding/en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-matrix-intro_templates-matrix-tms.md.md | no_schema_match | 3971 | `Token Management Service` Templates | no quickstart/endpoint/error/prose claim extracted |
 | 2026-08-08-boarding/en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-matrix-intro_templates-matrix-vt.md.md | no_schema_match | 1594 | Virtual Terminal Templates | no quickstart/endpoint/error/prose claim extracted |
 | 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-currency-codes.md.md | no_schema_match | 33076 | ISO Standard Currency Codes | no quickstart/endpoint/error/prose claim extracted |
-| 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-extend-hierarchy.md.md | no_schema_match | 765 | Extending the Hierarchy | no quickstart/endpoint/error/prose claim extracted |
 | 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-extend-hierarchy_boarding-extend-hierarchy-diagram.md.md | no_schema_match | 934 | Hierarchy Example | no quickstart/endpoint/error/prose claim extracted |
 | 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-extend-hierarchy_boarding-reg-create-structural-api.md.md | no_schema_match | 620 | Add a Structural Organization to a Merchant Organization | no quickstart/endpoint/error/prose claim extracted |
 | 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-extend-hierarchy_boarding-reg-create-structural-api_boarding-reg-create-structural-api-example.md.md | no_schema_match | 2121 | REST Example: Creating a Structural Organization | no quickstart/endpoint/error/prose claim extracted |
@@ -95,8 +86,6 @@ Milestone 0.5: corpus cleaned at the door. `raw/` is immutable evidence; serve l
 | 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro_boarding-retrieve-organizations.md.md | no_schema_match | 753 | Retrieve a List of Organizations | no quickstart/endpoint/error/prose claim extracted |
 | 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro_boarding-update-information-api.md.md | no_schema_match | 916 | Update an Organization's Information | no quickstart/endpoint/error/prose claim extracted |
 | 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-payer-auth_boarding-payer-auth-enable-intro_boarding-payer-auth-enable-ex-rest.md.md | no_schema_match | 4406 | REST Example: Enabling `Payer Authentication` | no quickstart/endpoint/error/prose claim extracted |
-| 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-payer-auth_boarding-payer-auth-enable-intro_boarding-payer-auth-enable-reqfields.md.md | no_schema_match | 18107 | Required Fields for Enabling `Payer Authentication` | no quickstart/endpoint/error/prose claim extracted |
-| 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-tms.md.md | no_schema_match | 1138 | `Token Management Service` | no quickstart/endpoint/error/prose claim extracted |
 | 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-tms_boarding-tms-enable-intro_boarding-tms-enable-ex-rest.md.md | no_schema_match | 1616 | REST Example: Enabling `TMS` Using a Template | no quickstart/endpoint/error/prose claim extracted |
 | 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-tms_boarding-tms-enable-intro_boarding-tms-enable-reqfields.md.md | no_schema_match | 4269 | Required Fields for Enabling `TMS` Using a Template | no quickstart/endpoint/error/prose claim extracted |
 | 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-tms_boarding-tms-enable-net-tkn-existing-intro_boarding-tms-enable-net-tkn-existing-ex-rest.md.md | no_schema_match | 4265 | REST Example: Enabling `TMS` and Enrolling in Network Tokenization for an Existing Merchant | no quickstart/endpoint/error/prose claim extracted |
@@ -105,8 +94,6 @@ Milestone 0.5: corpus cleaned at the door. `raw/` is immutable evidence; serve l
 | 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-tms_boarding-tms-enable-net-tkn-intro_boarding-tms-enable-net-tkn-reqfields.md.md | no_schema_match | 11044 | Required Fields for Enabling `TMS` and Enrolling in Network Tokenization for a New Merchant | no quickstart/endpoint/error/prose claim extracted |
 | 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-tms_tms-vault-hierarchy.md.md | no_schema_match | 809 | Token Vault Management | no quickstart/endpoint/error/prose claim extracted |
 | 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products_boarding-pecs-payer-auth_pecs-config-payerauth.md.md | no_schema_match | 529 | Configure `Payer Authentication` Using the PECS API | no quickstart/endpoint/error/prose claim extracted |
-| 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products_boarding-pecs-payer-auth_pecs-config-payerauth_pecs-config-payerauth-req-fields.md.md | no_schema_match | 7724 | Required Fields for Configuring `Payer Authentication` Using the PECS API | no quickstart/endpoint/error/prose claim extracted |
-| 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products_boarding-pecs-tms.md.md | no_schema_match | 1148 | `Token Management Service` | no quickstart/endpoint/error/prose claim extracted |
 | 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products_boarding-pecs-tms_boarding-pecs-tms-enable-intro_boarding-pecs-tms-enable-ex-rest.md.md | no_schema_match | 983 | REST Example: Enabling `TMS` with a Template Using the PECS API | no quickstart/endpoint/error/prose claim extracted |
 | 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products_boarding-pecs-tms_boarding-pecs-tms-enable-intro_boarding-pecs-tms-enable-reqfields.md.md | no_schema_match | 651 | Required Fields for Enabling `TMS` with a Template Using the PECS API | no quickstart/endpoint/error/prose claim extracted |
 | 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products_boarding-pecs-tms_boarding-pecs-tms-enable-net-tkn-intro_boarding-pecs-tms-enable-net-tkn-ex-rest.md.md | no_schema_match | 2676 | REST Example: Enabling `TMS` and Enrolling in Network Tokenization Using the PECS API | no quickstart/endpoint/error/prose claim extracted |
@@ -115,13 +102,11 @@ Milestone 0.5: corpus cleaned at the door. `raw/` is immutable evidence; serve l
 | 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products_boarding-update-product-api_boarding-update-product-api-req-fields.md.md | no_schema_match | 412 | Required Fields for Adding a New Products | no quickstart/endpoint/error/prose claim extracted |
 | 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products_pecs-add-delete-processor.md.md | no_schema_match | 673 | Add and Delete a Processor Using the PECS API | no quickstart/endpoint/error/prose claim extracted |
 | 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products_pecs-add-delete-processor_pecs-add-delete-processor-ex.md.md | no_schema_match | 1883 | Example: Adding and Deleting a Processor Using the PECS API | no quickstart/endpoint/error/prose claim extracted |
-| 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products_pecs-add-delete-processor_pecs-add-delete-processor-req-fields.md.md | no_schema_match | 2848 | Required Fields for Adding and Deleting a Processor Using the PECS API | no quickstart/endpoint/error/prose claim extracted |
 | 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products_pecs-add-processor.md.md | no_schema_match | 460 | Add a Processor Using the PECS API | no quickstart/endpoint/error/prose claim extracted |
 | 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products_pecs-add-processor_pecs-add-processor-ex.md.md | no_schema_match | 2150 | Example: Adding a Processor Using the PECS API | no quickstart/endpoint/error/prose claim extracted |
 | 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products_pecs-add-processor_pecs-add-processor-req-fields.md.md | no_schema_match | 2076 | Required Fields for Adding a Processor Using the PECS API | no quickstart/endpoint/error/prose claim extracted |
 | 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products_pecs-delete-processor.md.md | no_schema_match | 609 | Delete a Processor Using the PECS API | no quickstart/endpoint/error/prose claim extracted |
 | 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products_pecs-delete-processor_pecs-delete-processor-ex.md.md | no_schema_match | 1845 | Example: Deleting a Processor Using the PECS API | no quickstart/endpoint/error/prose claim extracted |
-| 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products_pecs-delete-processor_pecs-delete-processor-req-fields.md.md | no_schema_match | 983 | Required Fields for Deleting a Processor Using the PECS API | no quickstart/endpoint/error/prose claim extracted |
 | 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products_pecs-update-batch.md.md | no_schema_match | 465 | Update Batch Group Using the PECS API | no quickstart/endpoint/error/prose claim extracted |
 | 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products_pecs-update-batch_pecs-update-batch-ex.md.md | no_schema_match | 1354 | Example: Updating a Batch Group Using the API | no quickstart/endpoint/error/prose claim extracted |
 | 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products_pecs-update-batch_pecs-update-batch-req-fields.md.md | no_schema_match | 810 | Required Fields for Updating a Batch Group Using the PECS API | no quickstart/endpoint/error/prose claim extracted |
@@ -142,9 +127,7 @@ Milestone 0.5: corpus cleaned at the door. `raw/` is immutable evidence; serve l
 | 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_templates-matrix-intro_templates-matrix-tms.md.md | no_schema_match | 3971 | `Token Management Service` Templates | no quickstart/endpoint/error/prose claim extracted |
 | 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_templates-matrix-intro_templates-matrix-vt.md.md | no_schema_match | 1594 | Virtual Terminal Templates | no quickstart/endpoint/error/prose claim extracted |
 | 2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_boarding-currency-codes.md.md | no_schema_match | 33076 | ISO Standard Currency Codes | no quickstart/endpoint/error/prose claim extracted |
-| 2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_boarding-extend-hierarchy.md.md | no_schema_match | 759 | Extend the Hierarchy | no quickstart/endpoint/error/prose claim extracted |
 | 2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_boarding-extend-hierarchy_boarding-extend-hierarchy-diagram.md.md | no_schema_match | 934 | Hierarchy Example | no quickstart/endpoint/error/prose claim extracted |
-| 2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-tms.md.md | no_schema_match | 930 | `Token Management Service` | no quickstart/endpoint/error/prose claim extracted |
 | 2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-tms_tms-vault-hierarchy.md.md | no_schema_match | 809 | Token Vault Management | no quickstart/endpoint/error/prose claim extracted |
 | 2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_merchants-v2-edit-products-intr-0.md.md | no_schema_match | 670 | Updating an Organization's Products (Version 2) | no quickstart/endpoint/error/prose claim extracted |
 | 2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_templates-matrix-intro_templates-matrix-au.md.md | no_schema_match | 1809 | Account Updater Templates | no quickstart/endpoint/error/prose claim extracted |
