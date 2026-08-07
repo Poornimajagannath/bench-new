@@ -113,6 +113,25 @@ def _link_density(text: str) -> float:
     return links / words
 
 
+def _has_constraint_signals(text: str) -> bool:
+    """TTL/reuse/PCI/header/encryption facts — short pages can still be ingestible."""
+    return bool(
+        re.search(
+            r"(?i)\b("
+            r"\d+\s*-?\s*(?:minute|minutes|hour|hours|second|seconds|day|days)\b|"
+            r"\bTTL\b|time[- ]to[- ]live|"
+            r"valid(?:ity)?\s+(?:for|until|window)|expires?\s+(?:in|after|within)\b|"
+            r"limited[- ]use|reuse|multiple times|rate[- ]limit|once only|"
+            r"\bPCI\b|\bSAQ\b|PCI DSS|compliance|"
+            r"requires?\s+header|header information|mandatory header|"
+            r"encrypt(?:ed|ion)? on (?:the )?(?:customer'?s )?device|"
+            r"device[- ]side encryption|end-to-end encryption"
+            r")",
+            text,
+        )
+    )
+
+
 def classify_document(
     path: Path,
     *,
@@ -202,9 +221,14 @@ def classify_document(
             body,
         )
     )
+    # Constraint facts (TTL, PCI, headers, reuse) count as substantive content.
+    # Length alone is not emptiness — short constraint pages must stay eligible.
+    constraint_rich = _has_constraint_signals(body)
+    substantive = procedural or constraint_rich
     link_d = _link_density(head)
     mostly_nav = (
         size < 4000
+        and not constraint_rich
         and (
             link_d >= 0.035
             or "on this page" in head_l
@@ -217,18 +241,18 @@ def classify_document(
     intro_stub = (
         size < 3500
         and bool(re.search(r"\bintroduction to\b", head_l))
-        and not procedural
+        and not substantive
     )
     revision_only = bool(
         re.search(r"recent revisions to this document", head_l)
-    ) and size < 4000 and not procedural
-    if index_name and not procedural and (mostly_nav or size < 3500 or intro_stub):
+    ) and size < 4000 and not substantive
+    if index_name and not substantive and (mostly_nav or size < 3500 or intro_stub):
         return hit(
             "index_navigation",
             "filename looks like intro/index and content is navigation-heavy",
             "high" if mostly_nav or size < 800 else "medium",
         )
-    if (mostly_nav or intro_stub) and not procedural:
+    if (mostly_nav or intro_stub) and not substantive:
         return hit(
             "index_navigation",
             "short page dominated by links / jumplist",
@@ -244,7 +268,7 @@ def classify_document(
     # --- API reference ---
     if re.search(r"(_reference_|api-fields|field-reference|-ref-intro|codes[-_])", name):
         # *-ref-intro without procedure already handled above; catalogs stay here
-        if not (index_name and not procedural and size < 3500):
+        if not (index_name and not substantive and size < 3500):
             return hit("api_reference", "filename matches API reference pattern")
     if re.search(
         r"(?i)\b(rest api field reference|api field reference|request and reply fields|"
@@ -268,6 +292,12 @@ def classify_document(
         body,
     ):
         return hit("how_to_guide", "procedural how-to signals in content", "medium")
+    if constraint_rich:
+        return hit(
+            "how_to_guide",
+            "constraint facts (TTL/PCI/header/reuse/encryption) — eligible regardless of length",
+            "medium",
+        )
     if re.search(
         r"(?i)\bthis (section|guide) (describes|is for|explains|provides)\b",
         head,
@@ -281,7 +311,8 @@ def classify_document(
         return hit("how_to_guide", "contains HTTP API call patterns", "low")
 
     # Tiny stubs are navigation placeholders, not ingestible guides.
-    if size < 400 and not procedural:
+    # Constraint-rich short pages are not stubs (length is not emptiness).
+    if size < 400 and not substantive:
         return hit(
             "index_navigation",
             "tiny stub without procedural content",
