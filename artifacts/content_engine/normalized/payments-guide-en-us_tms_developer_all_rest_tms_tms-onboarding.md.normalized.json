@@ -1,0 +1,21 @@
+{
+  "doc_id": "doc-payments-guide-en-us_tms_developer_all_rest_tms_tms-onboarding.md",
+  "source_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-onboarding.md",
+  "snapshot_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-onboarding.md-7667219b480d",
+  "title": "payments-guide-en-us_tms_developer_all_rest_tms_tms-onboarding.md",
+  "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms/tms-onboarding.md",
+  "source_format": "markdown",
+  "product": [
+    "payments",
+    "cybersource"
+  ],
+  "audience": [
+    "developer"
+  ],
+  "page_type": "guide",
+  "freshness_date": "unknown",
+  "normalized_markdown": "`Token Management Service` Onboarding {#tms-onboarding}\n=======================================================\n\nThis section contains information necessary to onboard merchants and `TMS` vault management:\n\n* [Merchant ID Hierarchy](/docs/cybs/en-us/tms/developer/all/rest/tms/tms-onboarding/tms-mid-hierarchy.md \"\")\n* [Merchant ID Registration](/docs/cybs/en-us/tms/developer/all/rest/tms/tms-onboarding/tms-mid-reg.md \"\")\n* [Portfolio MIDs for Partners](/docs/cybs/en-us/tms/developer/all/rest/tms/tms-onboarding/tms-mid-partner.md \"\")\n* [Token Vault Management](/docs/cybs/en-us/tms/developer/all/rest/tms/tms-onboarding/tms-vault-hierarchy.md \"\")\n* [Token Management Message-Level Encryption Keys](/docs/cybs/en-us/tms/developer/all/rest/tms/tms-onboarding/tms-mle-setup.md \"\")\n",
+  "extracted_metadata": {
+    "goal": "payments-guide-en-us_tms_developer_all_rest_tms_tms-onboarding.md"
+  }
+}

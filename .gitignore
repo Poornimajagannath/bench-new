@@ -30,3 +30,5 @@ mcp-server/node_modules/
 
 # Legacy registry backup
 data/content_engine/source_registry.json.pre-wave1-bak
+
+.venv-docetl/

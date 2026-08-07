@@ -1,5 +1,5 @@
 {
-  "schema_version": "relay.workflow_contract_bundle.v0",
+  "schema_version": "content.workflow_contract_bundle.v0",
   "workflow_id": "http-signature-debug",
   "title": "HTTP Signature Debug",
   "goal": "Am I using the wrong SDK field names for key id and secret?",
@@ -11,7 +11,7 @@
     "interpret_auth_failure"
   ],
   "api_sdk_facts": [
-    "Sandbox host is apitest.cybersource.com",
+    "Sandbox host is apitest.example.com",
     "SDK expects merchantKeyId and merchantsecretKey (not keyId/secretKey)",
     "Signed headers typically include host, date, request-target, digest, v-c-merchant-id"
   ],
@@ -22,10 +22,10 @@
     "entity:Authentication Failed",
     "entity:keyId",
     "entity:secretKey",
-    "entity:apitest.cybersource.com",
+    "entity:apitest.example.com",
     "HTTP Signature signed headers include host,date,digest but we still get 401. Do we need request-target and v-c-merchant-id in the signature base on apitest?",
     "entity:v-c-merchant-id",
-    "alt_goal:Resolve developer confusion involving HTTP Signature, v-c-merchant-id, apitest.cybersource.com",
+    "alt_goal:Resolve developer confusion involving HTTP Signature, v-c-merchant-id, apitest.example.com",
     "Authentication Failed every time on sandbox",
     "entity:merchantKeyId",
     "alt_goal:Resolve developer confusion involving Authentication Failed, keyId, secretKey, merchantKeyId",
@@ -58,8 +58,8 @@
     "oracle_field_count": 4,
     "bad_answer_field_count": 5,
     "private_check_count": 4,
-    "hidden_truth_sha256": "0318a7735e7f495c8233af7050d680dbb520ddc40049c1d944f4cb91b2909184",
-    "agent_visible_sha256": "873caea15261b3ff435bc3636d2901c6b0fadae67154519fdf32540879e7de06"
+    "hidden_truth_sha256": "7a1324965f49d0bca6d4214d00bedf090e0f5271dbaea78b88f7bd406f5e9a59",
+    "agent_visible_sha256": "bfc3f6288f93a33df1f5919703054be24e60c4eea6d154fd90255a041db49355"
   },
   "harbor_shape_preview": {
     "preview_only": true,
@@ -92,7 +92,7 @@
       "severity": "high",
       "summary": "Clarify HTTP Signature Debug stage ordering in public docs",
       "rationale": "Developers confused adjacent APIs and skipped required stages.",
-      "vap_cli": null
+      "content_cli": null
     },
     {
       "action_id": "http-signature-debug-sdk",
@@ -100,19 +100,19 @@
       "severity": "high",
       "summary": "Align SDK credential field names with docs (or docs with SDK)",
       "rationale": "keyId/secretKey vs merchantKeyId/merchantsecretKey drift causes auth failures.",
-      "vap_cli": null
+      "content_cli": null
     },
     {
-      "action_id": "http-signature-debug-vap-cli",
-      "product_surface": "vap_cli",
+      "action_id": "http-signature-debug-content-cli",
+      "product_surface": "content_cli",
       "severity": "high",
-      "summary": "Ship a VAP CLI workflow verifier for this contract",
+      "summary": "Ship a Content CLI workflow verifier for this contract",
       "rationale": "CLI should verify readiness, recovery, and support-safe evidence \u2014 not only wrap an API call.",
-      "vap_cli": {
+      "content_cli": {
         "goal": "Am I using the wrong SDK field names for key id and secret?",
-        "command": "vap workflow verify --id http-signature-debug --fixture local",
+        "command": "content workflow verify --id http-signature-debug --fixture local",
         "api_sdk_facts": [
-          "Sandbox host is apitest.cybersource.com",
+          "Sandbox host is apitest.example.com",
           "SDK expects merchantKeyId and merchantsecretKey (not keyId/secretKey)",
           "Signed headers typically include host, date, request-target, digest, v-c-merchant-id"
         ],
@@ -145,7 +145,7 @@
           "eval:verifier_catch_rate_on_bad_answer"
         ],
         "future_mcp_metadata": {
-          "mcp_tool": "vap.verify_workflow",
+          "mcp_tool": "content.verify_workflow",
           "inputs": [
             "workflow_id",
             "candidate_answer_ref"

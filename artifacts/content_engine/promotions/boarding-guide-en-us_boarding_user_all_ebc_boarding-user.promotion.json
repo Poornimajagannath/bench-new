@@ -1,0 +1,2816 @@
+{
+  "source_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user",
+  "status": "promoted",
+  "schema_passed": true,
+  "content_passed": true,
+  "agent_use_status": "deferred",
+  "issues": [
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:1:contact-your-representative-to-have-a-portfolio-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:2:configure-product-templates.-see-[product-templa"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:3:create-a-merchant-organization.-see-[create-a-me"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:4:set-up-your-transacting-organization-and-product"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:5:configure-products.-see-[product-enablement-and-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:6:contact-your-representative-to-have-a-portfolio-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:7:create-a-merchant-organization.-see-[create-a-me"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:8:configure-product-templates.-see-[product-templa"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:9:set-up-your-transacting-organization-and-product"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:10:add-an-additional-transacting-organization-to-an"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:11:configure-products.-see-[product-enablement-and-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:12:contact-your-representative-to-have-a-portfolio-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:13:configure-product-templates.-see-[product-templa"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:14:create-a-merchant-organization.-see-[create-a-me"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:15:extend-the-hierarchy.-see-[add-a-structural-orga"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:16:set-up-your-transacting-organization-and-product"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:17:configure-products.-see-[product-enablement-and-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:18:in-the-`business-center`,-go-to-the-left-navigat"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:19:go-to-the-applied-filters-section-and-choose-a-p"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:20:click-**search**-to-filter-the-results-by-produc"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:21:you-can-sort-the-filtered-results-by-the-column-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:22:click-a-template's-name-link-to-open-an-individu"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:23:in-the-`business-center`,-go-to-the-left-navigat"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:24:click-add-new-template-\\|-+."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:25:on-the-template-details-page,-select-a-product-f"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:26:click-apply-selected-product."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:27:enter-a-name-and-description."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:28:set-the-template-as-your-default-template-for-th"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:29:click-next."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:30:set-the-configuration-options-for-the-selected-t"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:31:some-templates-with-multiple-tabs-require-you-to"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:32:when-you-have-configured-all-the-tabs-for-the-pr"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:33:follow-the-steps-to-[retrieve-a-template](/docs/"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:34:next-to-the-template-you-want-to-modify,-click-t"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:35:edit-the-existing-template."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:36:click-**save**."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:37:in-the-`business-center`,-go-to-the-left-navigat"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:38:follow-the-steps-to-[retrieve-a-template](/docs/"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:39:next-to-the-template-you-want-to-delete,-click-t"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:40:in-the-`business-center`,-go-to-the-left-navigat"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:41:follow-the-steps-to-[retrieve-a-template](/docs/"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:42:next-to-the-template-you-want-to-modify,-click-t"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:43:in-the-`business-center`,-go-to-the-left-navigat"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:44:click-**add-new-template**."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:45:select-**card-processing**-from-the-drop-down-me"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:46:click-**apply-selected-product**."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:47:enter-a-unique-name-for-the-new-card-processing-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:48:select-the-type-of-card-processing:-card-present"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:49:click-the-**processor**-field,-and-then-choose-t"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:50:if-an-acceptance-type-field-appears,-click-the-f"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:51:in-the-processor-tab-(labeled-with-the-name-of-t"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:52:in-the-common-settings-tab,-you-can-configure-fi"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:53:navigate-to-the-merchant-details-page-within-por"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:54:click-the-add-products-button."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:55:select-customer-invoicing,-and-click-the-add-but"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:56:on-the-general-settings-page,-select-options-for"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:57:on-the-rule-configuration-page,-configure-the-op"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:58:navigate-to-the-merchant-details-page-within-por"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:59:click-the-add-products-button."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:60:select-`pay-by-link`,-and-click-the-add-button."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:61:navigate-to-the-merchant-details-page-within-por"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:62:click-the-add-products-button."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:63:select-unified-checkout,-and-click-the-add-butto"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:64:click-**+-add-merchant**.{#merchants-v2-add-merc"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:65:select-**board-a-new-merchant-account**-and-clic"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:66:if-you-have-more-than-one-boarding-package,-choo"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:67:click-**start**-in-the-merchant-account-informat"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:68:optional:-click-**skip**-in-the-hierarchy-detail"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:69:click-**start**-in-the-transacting-organization-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:70:in-basic-information,-enter-the-merchant-account"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:71:enter-the-merchant-information-in-the-provided-t"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:72:click-**save**-.-you-are-returned-to-the-add-mer"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:73:click-**start**-in-the-transacting-organization-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:74:optional:-modify-the-name-and-id-of-the-organiza"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:75:optional:-by-default,-the-organization-informati"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:76:to-enable-a-product-in-the-product-enablement-se"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:77:to-modify-the-configuration,-click-the-**edit**-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:78:to-confirm-the-configuration,-click-**apply**."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:79:to-save-all-product-configurations,-click-**save"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:80:to-continue-working-with-this-organization,-clic"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:81:under-merchants,-click-**manage-merchants**.-the"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:82:in-the-left-navigation-panel,-click-**portfolio-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:83:age-merchants-page-appears."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:84:click-**+-add-merchant**.{#boarding-merchants-v2"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:85:select-**add-to-an-existing-account**-and-then-c"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:86:if-you-have-more-than-one-boarding-package,-the-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:87:optional:-add-additional-organizations-by-clicki"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:88:enable-and-configure-products.-see-[configure-th"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:89:click-**start**-in-the-transacting-organization-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:90:optional:-modify-the-name-and-id-of-the-organiza"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:91:optional:-to-edit-the-organization-information,-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:92:to-enable-a-product-in-the-product-enablement-se"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:93:to-modify-the-configuration,-click-the-**edit**-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:94:to-confirm-the-configuration,-click-**apply**."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:95:to-save-all-product-configurations,-click-**save"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:96:to-continue-working-with-this-organization,-clic"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:97:in-the-left-navigation-panel,-click-the-**portfo"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:98:under-merchants,-click-**manage-merchants**.-the"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:99:click-**search**-to-search-for-all-merchants-or-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:100:to-add-a-filter,-click-**+-add-filter**.-select-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:101:click-**search**-when-you-finish-adding-filters."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:102:to-reset-the-search-filters-and-start-over,-clic"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:103:find-the-merchant-in-search-results-and-click-th"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:104:select-**view-organization-hierarchy**.-the-orga"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:105:find-the-organization-in-the-search-results-tabl"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:106:click-**edit**-in-the-merchant-information-secti"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:107:use-the-text-fields-to-change-information.-for-t"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:108:when-you-finish,-click-**save**."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:109:find-the-organization-in-the-search-results-tabl"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:110:click-**edit**-in-the-processor-section."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:111:make-the-changes-and-click-**save**."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:112:search-for-the-organization-on-the-manage-mercha"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:113:find-the-organization-in-the-search-results-tabl"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:114:in-the-products-section,-click-+-add-products.-t"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:115:select-a-product-and-click-add.{#boarding-mercha"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:116:if-there-are-configuration-steps-for-the-product"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:117:search-for-the-organization-in-the-manage-mercha"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:118:find-the-organization-in-the-search-results-tabl"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:119:click-modify-next-to-the-product-you-want-to-mod"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:120:search-for-the-organization-in-the-manage-mercha"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:121:find-the-organization-in-the-search-results-tabl"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:122:find-the-product-you-want-to-remove-in-the-remov"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:123:click-**confirm**."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:124:find-the-merchant-in-the-search-results-and-clic"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:125:click-the-**status**-drop-down-menu-in-the-upper"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:126:click-**confirm**."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:127:search-for-the-organization-on-the-manage-mercha"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:128:find-the-organization-in-the-search-results-tabl"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:129:in-the-products-section,-click-+-add-products.-t"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:130:select-the-product-you-want-to-enable.-click-add"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:131:in-the-left-navigation-panel,-click-**portfolio-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:132:under-merchants,-click-**manage-merchants**.-the"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:133:click-**+-add-merchant**."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:134:select-where-you-want-to-board-your-merchant:"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:135:if-you-are-adding-a-transacting-organization-to-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:136:if-you-have-more-than-one-boarding-package,-choo"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:137:click-**start**-in-the-merchant-account-informat"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:138:optional:-click-**skip**-in-the-hierarchy-detail"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:139:click-start-in-the-transacting-organization-and-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:140:under-transacting-organization-details,-enter-th"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:141:under-product-enablement,-find-alternative-payme"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:142:click-configure.-the-configure-alternative-payme"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:143:check-the-box-next-to-each-alternative-payment-m"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:144:click-continue.-the-product-configuration-page-a"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:145:enter-the-required-details-for-each-alternative-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:146:click-continue-to-return-to-the-merchant-details"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:147:in-the-left-navigation-pane,-click-the-portfolio"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:148:under-merchants,-click-manage-merchants.-the-man"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:149:click-**+-add-merchant**."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:150:select-where-you-want-to-board-your-merchant:"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:151:if-you-are-adding-a-transacting-organization-to-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:152:if-you-have-more-than-one-boarding-package,-choo"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:153:click-**start**-in-the-merchant-account-informat"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:154:optional:-click-**skip**-in-the-hierarchy-detail"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:155:click-start-in-the-transacting-organization-and-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:156:under-transacting-organization-details,-enter-th"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:157:under-product-enablement,-find-alternative-payme"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:158:click-save.-alternative-payments-is-now-availabl"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:159:in-the-left-navigation-pane,-click-the-portfolio"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:160:under-merchants,-click-manage-merchants.-the-man"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:161:search-for-the-organization-on-the-manage-mercha"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:162:find-the-organization-in-the-search-results-tabl"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:163:in-the-products-section,-click-+-add-products.-t"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:164:under-payments,-select-alternative-payments-and-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:165:check-the-box-next-to-each-alternative-payment-m"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:166:click-continue.-the-product-configuration-page-a"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:167:enter-the-required-details-for-each-alternative-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:168:click-continue-to-return-to-the-merchant-details"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:169:in-the-left-navigation-pane,-click-the-portfolio"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:170:under-merchants,-click-manage-merchants.-the-man"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:171:search-for-the-organization-in-the-manage-mercha"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:172:find-the-organization-in-the-search-results-tabl"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:173:under-products,-click-edit-next-to-alternative-p"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:174:if-you-want-to-add-an-available-alternative-paym"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:175:if-you-want-to-configure-an-enabled-alternative-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:176:check-the-box-next-to-each-alternative-payment-m"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:177:click-continue.-the-product-configuration-page-a"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:178:enter-the-required-details-for-each-alternative-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:179:click-continue-to-return-to-the-merchant-details"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:180:in-the-left-navigation-pane,-click-the-portfolio"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:181:under-merchants,-click-manage-merchants.-the-man"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:182:click-**+-add-merchant**."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:183:choose-a-location-to-board-your-merchant:"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:184:if-you-are-adding-a-transacting-organization-to-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:185:if-you-have-more-than-one-boarding-package,-choo"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:186:click-**start**-in-the-merchant-account-informat"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:187:optional:-click-**skip**-in-the-hierarchy-detail"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:188:click-start-in-the-transacting-organization-and-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:189:under-transacting-organization-details,-enter-th"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:190:under-product-enablement,-find-`payer-authentica"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:191:click-configure-to-configure-`payer-authenticati"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:192:in-the-payer-authentication-set-up-drop-down-men"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:193:click-configure-for-each-`payer-authentication`-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:194:click-enable-on-the-enable/disable-slider-to-con"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:195:optional:-click-disable-to-disable-acquirer-curr"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:196:enter-the-acquirer-merchant-id-and-acquirer-id.-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:197:from-the-currency-drop-down-menu,-select-the-cur"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:198:click-add-more-currency-to-configure-another-cur"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:199:check-the-box-next-to-**copy-last-acquirer-merch"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:200:click-the-trash-can-icon-to-delete-a-configurati"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:201:click-view-all-currencies-to-collapse-or-expand-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:202:click-save-to-save-your-configuration-and-return"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:203:if-you-do-not-want-to-save-your-changes,-click-c"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:204:a-warning-box-appears-and-states-that-you-have-u"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:205:in-the-left-navigation-pane,-click-the-portfolio"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:206:under-merchants,-click-manage-merchants.-the-man"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:207:search-for-the-organization-on-the-manage-mercha"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:208:find-the-organization-in-the-search-results-tabl"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:209:in-the-products-section,-click-+-add-products.-t"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:210:select-payer-authentication-and-click-add."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:211:in-the-payer-authentication-set-up-drop-down-men"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:212:click-configure-for-each-`payer-authentication`-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:213:click-enable-on-the-enable/disable-slider-to-con"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:214:optional:-click-disable-to-disable-acquirer-curr"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:215:enter-the-acquirer-merchant-id-and-acquirer-id.-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:216:from-the-currency-drop-down-menu,-select-the-cur"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:217:click-add-more-currency-to-configure-another-cur"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:218:check-the-box-next-to-**copy-last-acquirer-merch"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:219:click-the-trash-can-icon-to-delete-a-configurati"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:220:click-view-all-currencies-to-collapse-or-expand-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:221:click-save-to-save-your-configuration-and-return"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:222:if-you-do-not-want-to-save-your-changes,-click-c"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:223:a-warning-box-appears-and-states-that-you-have-u"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:224:in-the-left-navigation-pane,-click-the-portfolio"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:225:under-merchants,-click-manage-merchants.-the-man"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:226:search-for-the-organization-in-the-manage-mercha"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:227:find-the-organization-in-the-search-results-tabl"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:228:under-products,-click-modify-next-to-payer-authe"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:229:in-the-payer-authentication-set-up-drop-down-men"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:230:click-configure-for-each-`payer-authentication`-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:231:click-enable-on-the-enable/disable-slider-to-con"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:232:optional:-click-disable-to-disable-acquirer-curr"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:233:enter-the-acquirer-merchant-id-and-acquirer-id.-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:234:from-the-currency-drop-down-menu,-select-the-cur"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:235:click-add-more-currency-to-configure-another-cur"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:236:check-the-box-next-to-**copy-last-acquirer-merch"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:237:click-the-trash-can-icon-to-delete-a-configurati"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:238:click-view-all-currencies-to-collapse-or-expand-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:239:click-save-to-save-your-configuration-and-return"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:240:if-you-do-not-want-to-save-your-changes,-click-c"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:241:a-warning-box-appears-and-states-that-you-have-u"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:242:navigate-to-token-management."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:243:click-vault-management."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:244:use-the-vault-owner-filter-to-search-for-the-mer"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:245:choose-the-merchant-account-to-view-the-`tms`-va"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:246:click-network-tokenization."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:247:click-enroll-to-visa/mastercard-token-services."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:248:enter-the-required-information-for-each-card-typ"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:249:click-onboard-with-acquirer-id."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:250:enter-the-required-information:"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:251:click-enroll-to-network-token-services-to-comple"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:252:log-in-to-the-`business-center`-test-environment"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:253:in-the-left-navigation-panel,-click-the-token-ma"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:254:click-vault-management-new.-the-vault-management"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:255:from-the-vault-owner-drop-down-list,-select-the-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:256:in-the-details-column,-click-vault-settings.-the"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:257:click-edit."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:258:enter-the-vault-name,-supported-payment-methods,"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:259:click-save."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:260:to-return-to-the-vault-management-page,-click-va"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:261:log-in-to-the-`business-center`-test-environment"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:262:in-the-left-navigation-panel,-click-the-token-ma"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:263:click-vault-management-new.-the-vault-management"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:264:select-the-vault-owner-that-you-want-to-configur"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:265:in-the-details-column,-click-access-settings.-th"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:266:check-the-box-for-the-vault-settings-you-want-to"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:267:click-submit-to-save-your-settings."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:268:in-the-left-navigation-pane,-click-the-portfolio"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:269:under-merchants,-click-manage-merchants.-the-man"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:270:click-**+-add-merchant**."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:271:select-where-you-want-to-board-your-merchant:"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:272:if-you-are-adding-a-transacting-organization-to-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:273:if-you-have-more-than-one-boarding-package,-choo"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:274:click-**start**-in-the-merchant-account-informat"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:275:optional:-click-**skip**-in-the-hierarchy-detail"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:276:click-start-in-the-transacting-organization-and-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:277:under-transacting-organization-details,-enter-th"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:278:under-product-enablement,-find-`token-management"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:279:click-configure-to-configure-`token-management-s"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:280:in-the-product-configuration-template-drop-down-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:281:click-apply-to-save-your-configuration."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:282:in-the-left-navigation-pane,-click-the-portfolio"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:283:under-merchants,-click-manage-merchants.-the-man"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:284:search-for-the-organization-on-the-manage-mercha"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:285:find-the-organization-in-the-search-results-tabl"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:286:in-the-products-section,-click-+-add-products.-t"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:287:under-commerce-solutions,-select-token-managemen"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:288:in-the-product-configuration-template-drop-down-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:289:click-apply-to-save-your-configuration."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:290:select-the-merchant-account-to-which-you-want-to"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:291:at-the-top-of-the-screen,-click-the-switch-view-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:292:click-**quick**-to-simply-enter-the-name-of-the-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:293:if-you-chose-a-custom-search,-begin-by-selecting"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:294:if-you-know-the-exact-organization-id-or-name,-e"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:295:if-you-do-not-know-the-exact-name-or-organizatio"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:296:search-for-the-merchant.-see-[search-for-organiz"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:297:click-the-eyeball-icon-for-the-merchant-to-view-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:298:click-the-**send-email**-drop-down-menu.-select-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:299:click-**+-add-merchant**."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:300:select-**add-to-an-existing-account**-and-then-c"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:301:if-you-have-more-than-one-boarding-package,-choo"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:302:click-**start**-to-begin-the-hierarchy-step.-see"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:303:optional:-click-**start**-in-the-transacting-org"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:304:in-the-hierarchy-details-page,-select-the-organi"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:305:click-the-**+-add**-button.-the-add-organization"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:306:select-**structural-organization**-from-the-orga"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:307:to-choose-the-placement-of-the-structural-organi"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:308:optional:-edit-the-name-and-organization-id-of-t"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:309:optional:-click-the-**add-optional-details**-but"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:310:click-**close**-to-return-to-the-add-merchant-pa"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:311:click-**start**-in-the-transacting-organization-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:312:optional:-modify-the-name-and-id-of-the-organiza"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:313:optional:-to-edit-the-organization-information,-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:314:to-enable-a-product-in-the-product-enablement-se"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:315:to-modify-the-configuration,-click-the-**edit**-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:316:to-confirm-the-configuration,-click-**apply**."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:317:to-save-all-product-configurations,-click-**save"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:318:to-continue-working-with-this-organization,-clic"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:319:search-for-the-organization-in-the-manage-mercha"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:320:find-the-organization-in-the-search-results-tabl"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:321:find-the-product-you-want-to-remove-in-the-remov"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:322:click-confirm."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:323:search-for-the-organization-in-the-manage-mercha"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:324:find-the-organization-in-the-search-results-tabl"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:325:click-modify-next-to-the-product-you-want-to-mod"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:326:search-for-the-organization-in-the-manage-mercha"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:327:find-the-organization-in-the-search-results-tabl"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:328:click-+-add-products.-the-add-a-product-screen-d"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:329:select-a-product-and-click-add."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:330:if-there-are-configuration-steps-for-the-product"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:331:find-the-organization-in-the-search-results-tabl"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:332:click-edit-in-the-processor-section."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:333:make-the-changes-and-click-save."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:334:find-the-merchant-in-the-search-results-and-clic"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:335:click-the-status-drop-down-menu-in-the-upper-rig"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:336:click-confirm."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:337:find-the-merchant-in-search-results-and-click-th"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:338:select-view-organization-hierarchy.-the-organiza"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:339:in-the-left-navigation-pane,-click-the-portfolio"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:340:under-merchants,-click-manage-merchants.-the-man"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:341:click-+-add-merchant.{#merchants-v2-transacting_"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:342:select-add-to-an-existing-account-and-then-click"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:343:if-you-have-more-than-one-boarding-package,-the-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:344:optional:-add-additional-organizations-by-clicki"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:345:enable-and-configure-products.-see-[configure-th"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:346:click-start-in-the-transacting-organization-and-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:347:optional:-modify-the-name-and-id-of-the-organiza"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:348:optional:-by-default,-the-organization-informati"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:349:to-enable-a-product-in-the-product-enablement-se"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:350:to-modify-the-configuration,-click-the-edit-or-c"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:351:to-confirm-the-configuration,-click-apply."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:352:to-save-all-product-configurations,-click-save.-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:353:to-continue-working-with-this-organization,-clic"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:354:in-basic-information,-enter-the-merchant-account"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:355:enter-the-merchant-information-in-the-provided-t"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:356:click-save.-you-are-returned-to-the-add-merchant"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:357:click-+-add-merchant."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:358:select-add-to-an-existing-account-and-then-click"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:359:if-you-have-more-than-one-boarding-package,-choo"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:360:click-start-to-begin-the-hierarchy-step.-see-[ad"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:361:optional:-click-start-in-the-transacting-organiz"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:362:click-start-in-the-transacting-organization-and-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:363:optional:-modify-the-name-and-id-of-the-organiza"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:364:optional:-to-edit-the-organization-information,-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:365:to-enable-a-product-in-the-product-enablement-se"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:366:to-modify-the-configuration,-click-the-edit-or-c"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:367:to-confirm-the-configuration,-click-apply."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:368:to-save-all-product-configurations,-click-save.-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:369:to-continue-working-with-this-organization,-clic"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:370:click-start-in-the-transacting-organization-and-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:371:optional:-modify-the-name-and-id-of-the-organiza"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:372:optional:-to-edit-the-organization-information,-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:373:to-enable-a-product-in-the-product-enablement-se"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:374:to-modify-the-configuration,-click-the-edit-or-c"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:375:to-confirm-the-configuration,-click-apply."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:376:to-save-all-product-configurations,-click-save.-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:377:to-continue-working-with-this-organization,-clic"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:378:in-the-hierarchy-details-page,-select-the-organi"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:379:click-the-+-add-button.-the-add-organization-pop"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:380:select-structural-organization-from-the-organiza"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:381:to-choose-the-placement-of-the-structural-organi"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:382:optional:-edit-the-name-and-organization-id-of-t"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:383:optional:-click-the-add-optional-details-button-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:384:click-close-to-return-to-the-add-merchant-page."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:385:find-the-organization-in-the-search-results-tabl"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:386:click-edit-in-the-merchant-information-section."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:387:use-the-text-fields-to-change-information.-for-t"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:388:when-you-finish,-click-save."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:389:in-the-left-navigation-panel,-click-the-portfoli"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:390:under-merchants,-click-manage-merchants.-the-man"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:391:click-search-to-search-for-all-merchants-or-use-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:392:to-add-a-filter,-click-+-add-filter.-select-a-fi"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:393:click-search-when-you-finish-adding-filters."
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:394:to-reset-the-search-filters-and-start-over,-clic"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:395:click-+-add-merchant.{#merchants-v2-add-merchant"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:396:select-board-a-new-merchant-account-and-click-ne"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:397:if-you-have-more-than-one-boarding-package,-choo"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:398:click-start-in-the-merchant-account-information-"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:399:optional:-click-skip-in-the-hierarchy-details-se"
+    },
+    {
+      "code": "missing_requires",
+      "severity": "warning",
+      "message": "step has no requires dependencies",
+      "unit_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:400:click-start-in-the-transacting-organization-and-"
+    }
+  ],
+  "promoted_unit_ids": [
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:overview:0:figure:-{#boarding-intro-ids_fig_ut4_p5f_q5b}",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:1:contact-your-representative-to-have-a-portfolio-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:2:configure-product-templates.-see-[product-templa",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:3:create-a-merchant-organization.-see-[create-a-me",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:4:set-up-your-transacting-organization-and-product",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:5:configure-products.-see-[product-enablement-and-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:6:contact-your-representative-to-have-a-portfolio-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:7:create-a-merchant-organization.-see-[create-a-me",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:8:configure-product-templates.-see-[product-templa",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:9:set-up-your-transacting-organization-and-product",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:10:add-an-additional-transacting-organization-to-an",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:11:configure-products.-see-[product-enablement-and-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:12:contact-your-representative-to-have-a-portfolio-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:13:configure-product-templates.-see-[product-templa",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:14:create-a-merchant-organization.-see-[create-a-me",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:15:extend-the-hierarchy.-see-[add-a-structural-orga",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:16:set-up-your-transacting-organization-and-product",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:17:configure-products.-see-[product-enablement-and-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:18:in-the-`business-center`,-go-to-the-left-navigat",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:19:go-to-the-applied-filters-section-and-choose-a-p",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:20:click-**search**-to-filter-the-results-by-produc",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:21:you-can-sort-the-filtered-results-by-the-column-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:22:click-a-template's-name-link-to-open-an-individu",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:23:in-the-`business-center`,-go-to-the-left-navigat",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:24:click-add-new-template-\\|-+.",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:25:on-the-template-details-page,-select-a-product-f",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:26:click-apply-selected-product.",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:27:enter-a-name-and-description.",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:28:set-the-template-as-your-default-template-for-th",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:29:click-next.",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:30:set-the-configuration-options-for-the-selected-t",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:31:some-templates-with-multiple-tabs-require-you-to",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:32:when-you-have-configured-all-the-tabs-for-the-pr",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:33:follow-the-steps-to-[retrieve-a-template](/docs/",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:34:next-to-the-template-you-want-to-modify,-click-t",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:35:edit-the-existing-template.",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:36:click-**save**.",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:37:in-the-`business-center`,-go-to-the-left-navigat",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:38:follow-the-steps-to-[retrieve-a-template](/docs/",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:39:next-to-the-template-you-want-to-delete,-click-t",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:40:in-the-`business-center`,-go-to-the-left-navigat",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:41:follow-the-steps-to-[retrieve-a-template](/docs/",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:42:next-to-the-template-you-want-to-modify,-click-t",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:43:in-the-`business-center`,-go-to-the-left-navigat",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:44:click-**add-new-template**.",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:45:select-**card-processing**-from-the-drop-down-me",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:46:click-**apply-selected-product**.",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:47:enter-a-unique-name-for-the-new-card-processing-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:48:select-the-type-of-card-processing:-card-present",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:49:click-the-**processor**-field,-and-then-choose-t",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:50:if-an-acceptance-type-field-appears,-click-the-f",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:51:in-the-processor-tab-(labeled-with-the-name-of-t",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:52:in-the-common-settings-tab,-you-can-configure-fi",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:53:navigate-to-the-merchant-details-page-within-por",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:54:click-the-add-products-button.",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:55:select-customer-invoicing,-and-click-the-add-but",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:56:on-the-general-settings-page,-select-options-for",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:57:on-the-rule-configuration-page,-configure-the-op",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:58:navigate-to-the-merchant-details-page-within-por",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:59:click-the-add-products-button.",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:60:select-`pay-by-link`,-and-click-the-add-button.",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:61:navigate-to-the-merchant-details-page-within-por",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:62:click-the-add-products-button.",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:63:select-unified-checkout,-and-click-the-add-butto",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:64:click-**+-add-merchant**.{#merchants-v2-add-merc",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:65:select-**board-a-new-merchant-account**-and-clic",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:66:if-you-have-more-than-one-boarding-package,-choo",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:67:click-**start**-in-the-merchant-account-informat",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:68:optional:-click-**skip**-in-the-hierarchy-detail",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:69:click-**start**-in-the-transacting-organization-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:70:in-basic-information,-enter-the-merchant-account",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:71:enter-the-merchant-information-in-the-provided-t",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:72:click-**save**-.-you-are-returned-to-the-add-mer",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:73:click-**start**-in-the-transacting-organization-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:74:optional:-modify-the-name-and-id-of-the-organiza",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:75:optional:-by-default,-the-organization-informati",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:76:to-enable-a-product-in-the-product-enablement-se",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:77:to-modify-the-configuration,-click-the-**edit**-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:78:to-confirm-the-configuration,-click-**apply**.",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:79:to-save-all-product-configurations,-click-**save",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:80:to-continue-working-with-this-organization,-clic",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:81:under-merchants,-click-**manage-merchants**.-the",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:82:in-the-left-navigation-panel,-click-**portfolio-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:83:age-merchants-page-appears.",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:84:click-**+-add-merchant**.{#boarding-merchants-v2",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:85:select-**add-to-an-existing-account**-and-then-c",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:86:if-you-have-more-than-one-boarding-package,-the-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:87:optional:-add-additional-organizations-by-clicki",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:88:enable-and-configure-products.-see-[configure-th",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:89:click-**start**-in-the-transacting-organization-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:90:optional:-modify-the-name-and-id-of-the-organiza",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:91:optional:-to-edit-the-organization-information,-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:92:to-enable-a-product-in-the-product-enablement-se",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:93:to-modify-the-configuration,-click-the-**edit**-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:94:to-confirm-the-configuration,-click-**apply**.",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:95:to-save-all-product-configurations,-click-**save",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:96:to-continue-working-with-this-organization,-clic",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:97:in-the-left-navigation-panel,-click-the-**portfo",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:98:under-merchants,-click-**manage-merchants**.-the",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:99:click-**search**-to-search-for-all-merchants-or-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:100:to-add-a-filter,-click-**+-add-filter**.-select-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:101:click-**search**-when-you-finish-adding-filters.",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:102:to-reset-the-search-filters-and-start-over,-clic",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:103:find-the-merchant-in-search-results-and-click-th",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:104:select-**view-organization-hierarchy**.-the-orga",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:105:find-the-organization-in-the-search-results-tabl",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:106:click-**edit**-in-the-merchant-information-secti",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:107:use-the-text-fields-to-change-information.-for-t",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:108:when-you-finish,-click-**save**.",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:109:find-the-organization-in-the-search-results-tabl",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:110:click-**edit**-in-the-processor-section.",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:111:make-the-changes-and-click-**save**.",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:112:search-for-the-organization-on-the-manage-mercha",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:113:find-the-organization-in-the-search-results-tabl",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:114:in-the-products-section,-click-+-add-products.-t",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:115:select-a-product-and-click-add.{#boarding-mercha",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:116:if-there-are-configuration-steps-for-the-product",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:117:search-for-the-organization-in-the-manage-mercha",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:118:find-the-organization-in-the-search-results-tabl",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:119:click-modify-next-to-the-product-you-want-to-mod",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:120:search-for-the-organization-in-the-manage-mercha",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:121:find-the-organization-in-the-search-results-tabl",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:122:find-the-product-you-want-to-remove-in-the-remov",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:123:click-**confirm**.",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:124:find-the-merchant-in-the-search-results-and-clic",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:125:click-the-**status**-drop-down-menu-in-the-upper",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:126:click-**confirm**.",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:127:search-for-the-organization-on-the-manage-mercha",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:128:find-the-organization-in-the-search-results-tabl",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:129:in-the-products-section,-click-+-add-products.-t",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:130:select-the-product-you-want-to-enable.-click-add",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:131:in-the-left-navigation-panel,-click-**portfolio-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:132:under-merchants,-click-**manage-merchants**.-the",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:133:click-**+-add-merchant**.",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:134:select-where-you-want-to-board-your-merchant:",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:135:if-you-are-adding-a-transacting-organization-to-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:136:if-you-have-more-than-one-boarding-package,-choo",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:137:click-**start**-in-the-merchant-account-informat",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:138:optional:-click-**skip**-in-the-hierarchy-detail",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:139:click-start-in-the-transacting-organization-and-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:140:under-transacting-organization-details,-enter-th",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:141:under-product-enablement,-find-alternative-payme",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:142:click-configure.-the-configure-alternative-payme",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:143:check-the-box-next-to-each-alternative-payment-m",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:144:click-continue.-the-product-configuration-page-a",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:145:enter-the-required-details-for-each-alternative-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:146:click-continue-to-return-to-the-merchant-details",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:147:in-the-left-navigation-pane,-click-the-portfolio",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:148:under-merchants,-click-manage-merchants.-the-man",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:149:click-**+-add-merchant**.",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:150:select-where-you-want-to-board-your-merchant:",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:151:if-you-are-adding-a-transacting-organization-to-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:152:if-you-have-more-than-one-boarding-package,-choo",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:153:click-**start**-in-the-merchant-account-informat",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:154:optional:-click-**skip**-in-the-hierarchy-detail",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:155:click-start-in-the-transacting-organization-and-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:156:under-transacting-organization-details,-enter-th",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:157:under-product-enablement,-find-alternative-payme",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:158:click-save.-alternative-payments-is-now-availabl",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:159:in-the-left-navigation-pane,-click-the-portfolio",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:160:under-merchants,-click-manage-merchants.-the-man",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:161:search-for-the-organization-on-the-manage-mercha",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:162:find-the-organization-in-the-search-results-tabl",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:163:in-the-products-section,-click-+-add-products.-t",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:164:under-payments,-select-alternative-payments-and-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:165:check-the-box-next-to-each-alternative-payment-m",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:166:click-continue.-the-product-configuration-page-a",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:167:enter-the-required-details-for-each-alternative-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:168:click-continue-to-return-to-the-merchant-details",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:169:in-the-left-navigation-pane,-click-the-portfolio",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:170:under-merchants,-click-manage-merchants.-the-man",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:171:search-for-the-organization-in-the-manage-mercha",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:172:find-the-organization-in-the-search-results-tabl",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:173:under-products,-click-edit-next-to-alternative-p",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:174:if-you-want-to-add-an-available-alternative-paym",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:175:if-you-want-to-configure-an-enabled-alternative-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:176:check-the-box-next-to-each-alternative-payment-m",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:177:click-continue.-the-product-configuration-page-a",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:178:enter-the-required-details-for-each-alternative-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:179:click-continue-to-return-to-the-merchant-details",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:180:in-the-left-navigation-pane,-click-the-portfolio",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:181:under-merchants,-click-manage-merchants.-the-man",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:182:click-**+-add-merchant**.",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:183:choose-a-location-to-board-your-merchant:",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:184:if-you-are-adding-a-transacting-organization-to-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:185:if-you-have-more-than-one-boarding-package,-choo",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:186:click-**start**-in-the-merchant-account-informat",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:187:optional:-click-**skip**-in-the-hierarchy-detail",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:188:click-start-in-the-transacting-organization-and-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:189:under-transacting-organization-details,-enter-th",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:190:under-product-enablement,-find-`payer-authentica",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:191:click-configure-to-configure-`payer-authenticati",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:192:in-the-payer-authentication-set-up-drop-down-men",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:193:click-configure-for-each-`payer-authentication`-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:194:click-enable-on-the-enable/disable-slider-to-con",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:195:optional:-click-disable-to-disable-acquirer-curr",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:196:enter-the-acquirer-merchant-id-and-acquirer-id.-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:197:from-the-currency-drop-down-menu,-select-the-cur",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:198:click-add-more-currency-to-configure-another-cur",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:199:check-the-box-next-to-**copy-last-acquirer-merch",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:200:click-the-trash-can-icon-to-delete-a-configurati",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:201:click-view-all-currencies-to-collapse-or-expand-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:202:click-save-to-save-your-configuration-and-return",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:203:if-you-do-not-want-to-save-your-changes,-click-c",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:204:a-warning-box-appears-and-states-that-you-have-u",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:205:in-the-left-navigation-pane,-click-the-portfolio",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:206:under-merchants,-click-manage-merchants.-the-man",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:207:search-for-the-organization-on-the-manage-mercha",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:208:find-the-organization-in-the-search-results-tabl",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:209:in-the-products-section,-click-+-add-products.-t",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:210:select-payer-authentication-and-click-add.",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:211:in-the-payer-authentication-set-up-drop-down-men",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:212:click-configure-for-each-`payer-authentication`-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:213:click-enable-on-the-enable/disable-slider-to-con",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:214:optional:-click-disable-to-disable-acquirer-curr",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:215:enter-the-acquirer-merchant-id-and-acquirer-id.-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:216:from-the-currency-drop-down-menu,-select-the-cur",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:217:click-add-more-currency-to-configure-another-cur",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:218:check-the-box-next-to-**copy-last-acquirer-merch",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:219:click-the-trash-can-icon-to-delete-a-configurati",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:220:click-view-all-currencies-to-collapse-or-expand-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:221:click-save-to-save-your-configuration-and-return",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:222:if-you-do-not-want-to-save-your-changes,-click-c",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:223:a-warning-box-appears-and-states-that-you-have-u",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:224:in-the-left-navigation-pane,-click-the-portfolio",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:225:under-merchants,-click-manage-merchants.-the-man",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:226:search-for-the-organization-in-the-manage-mercha",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:227:find-the-organization-in-the-search-results-tabl",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:228:under-products,-click-modify-next-to-payer-authe",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:229:in-the-payer-authentication-set-up-drop-down-men",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:230:click-configure-for-each-`payer-authentication`-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:231:click-enable-on-the-enable/disable-slider-to-con",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:232:optional:-click-disable-to-disable-acquirer-curr",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:233:enter-the-acquirer-merchant-id-and-acquirer-id.-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:234:from-the-currency-drop-down-menu,-select-the-cur",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:235:click-add-more-currency-to-configure-another-cur",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:236:check-the-box-next-to-**copy-last-acquirer-merch",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:237:click-the-trash-can-icon-to-delete-a-configurati",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:238:click-view-all-currencies-to-collapse-or-expand-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:239:click-save-to-save-your-configuration-and-return",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:240:if-you-do-not-want-to-save-your-changes,-click-c",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:241:a-warning-box-appears-and-states-that-you-have-u",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:242:navigate-to-token-management.",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:243:click-vault-management.",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:244:use-the-vault-owner-filter-to-search-for-the-mer",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:245:choose-the-merchant-account-to-view-the-`tms`-va",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:246:click-network-tokenization.",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:247:click-enroll-to-visa/mastercard-token-services.",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:248:enter-the-required-information-for-each-card-typ",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:249:click-onboard-with-acquirer-id.",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:250:enter-the-required-information:",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:251:click-enroll-to-network-token-services-to-comple",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:252:log-in-to-the-`business-center`-test-environment",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:253:in-the-left-navigation-panel,-click-the-token-ma",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:254:click-vault-management-new.-the-vault-management",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:255:from-the-vault-owner-drop-down-list,-select-the-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:256:in-the-details-column,-click-vault-settings.-the",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:257:click-edit.",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:258:enter-the-vault-name,-supported-payment-methods,",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:259:click-save.",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:260:to-return-to-the-vault-management-page,-click-va",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:261:log-in-to-the-`business-center`-test-environment",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:262:in-the-left-navigation-panel,-click-the-token-ma",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:263:click-vault-management-new.-the-vault-management",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:264:select-the-vault-owner-that-you-want-to-configur",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:265:in-the-details-column,-click-access-settings.-th",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:266:check-the-box-for-the-vault-settings-you-want-to",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:267:click-submit-to-save-your-settings.",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:268:in-the-left-navigation-pane,-click-the-portfolio",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:269:under-merchants,-click-manage-merchants.-the-man",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:270:click-**+-add-merchant**.",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:271:select-where-you-want-to-board-your-merchant:",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:272:if-you-are-adding-a-transacting-organization-to-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:273:if-you-have-more-than-one-boarding-package,-choo",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:274:click-**start**-in-the-merchant-account-informat",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:275:optional:-click-**skip**-in-the-hierarchy-detail",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:276:click-start-in-the-transacting-organization-and-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:277:under-transacting-organization-details,-enter-th",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:278:under-product-enablement,-find-`token-management",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:279:click-configure-to-configure-`token-management-s",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:280:in-the-product-configuration-template-drop-down-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:281:click-apply-to-save-your-configuration.",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:282:in-the-left-navigation-pane,-click-the-portfolio",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:283:under-merchants,-click-manage-merchants.-the-man",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:284:search-for-the-organization-on-the-manage-mercha",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:285:find-the-organization-in-the-search-results-tabl",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:286:in-the-products-section,-click-+-add-products.-t",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:287:under-commerce-solutions,-select-token-managemen",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:288:in-the-product-configuration-template-drop-down-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:289:click-apply-to-save-your-configuration.",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:290:select-the-merchant-account-to-which-you-want-to",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:291:at-the-top-of-the-screen,-click-the-switch-view-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:292:click-**quick**-to-simply-enter-the-name-of-the-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:293:if-you-chose-a-custom-search,-begin-by-selecting",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:294:if-you-know-the-exact-organization-id-or-name,-e",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:295:if-you-do-not-know-the-exact-name-or-organizatio",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:296:search-for-the-merchant.-see-[search-for-organiz",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:297:click-the-eyeball-icon-for-the-merchant-to-view-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:298:click-the-**send-email**-drop-down-menu.-select-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:299:click-**+-add-merchant**.",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:300:select-**add-to-an-existing-account**-and-then-c",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:301:if-you-have-more-than-one-boarding-package,-choo",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:302:click-**start**-to-begin-the-hierarchy-step.-see",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:303:optional:-click-**start**-in-the-transacting-org",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:304:in-the-hierarchy-details-page,-select-the-organi",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:305:click-the-**+-add**-button.-the-add-organization",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:306:select-**structural-organization**-from-the-orga",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:307:to-choose-the-placement-of-the-structural-organi",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:308:optional:-edit-the-name-and-organization-id-of-t",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:309:optional:-click-the-**add-optional-details**-but",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:310:click-**close**-to-return-to-the-add-merchant-pa",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:311:click-**start**-in-the-transacting-organization-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:312:optional:-modify-the-name-and-id-of-the-organiza",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:313:optional:-to-edit-the-organization-information,-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:314:to-enable-a-product-in-the-product-enablement-se",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:315:to-modify-the-configuration,-click-the-**edit**-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:316:to-confirm-the-configuration,-click-**apply**.",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:317:to-save-all-product-configurations,-click-**save",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:318:to-continue-working-with-this-organization,-clic",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:319:search-for-the-organization-in-the-manage-mercha",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:320:find-the-organization-in-the-search-results-tabl",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:321:find-the-product-you-want-to-remove-in-the-remov",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:322:click-confirm.",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:323:search-for-the-organization-in-the-manage-mercha",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:324:find-the-organization-in-the-search-results-tabl",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:325:click-modify-next-to-the-product-you-want-to-mod",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:326:search-for-the-organization-in-the-manage-mercha",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:327:find-the-organization-in-the-search-results-tabl",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:328:click-+-add-products.-the-add-a-product-screen-d",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:329:select-a-product-and-click-add.",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:330:if-there-are-configuration-steps-for-the-product",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:331:find-the-organization-in-the-search-results-tabl",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:332:click-edit-in-the-processor-section.",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:333:make-the-changes-and-click-save.",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:334:find-the-merchant-in-the-search-results-and-clic",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:335:click-the-status-drop-down-menu-in-the-upper-rig",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:336:click-confirm.",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:337:find-the-merchant-in-search-results-and-click-th",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:338:select-view-organization-hierarchy.-the-organiza",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:339:in-the-left-navigation-pane,-click-the-portfolio",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:340:under-merchants,-click-manage-merchants.-the-man",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:341:click-+-add-merchant.{#merchants-v2-transacting_",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:342:select-add-to-an-existing-account-and-then-click",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:343:if-you-have-more-than-one-boarding-package,-the-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:344:optional:-add-additional-organizations-by-clicki",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:345:enable-and-configure-products.-see-[configure-th",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:346:click-start-in-the-transacting-organization-and-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:347:optional:-modify-the-name-and-id-of-the-organiza",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:348:optional:-by-default,-the-organization-informati",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:349:to-enable-a-product-in-the-product-enablement-se",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:350:to-modify-the-configuration,-click-the-edit-or-c",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:351:to-confirm-the-configuration,-click-apply.",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:352:to-save-all-product-configurations,-click-save.-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:353:to-continue-working-with-this-organization,-clic",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:354:in-basic-information,-enter-the-merchant-account",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:355:enter-the-merchant-information-in-the-provided-t",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:356:click-save.-you-are-returned-to-the-add-merchant",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:357:click-+-add-merchant.",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:358:select-add-to-an-existing-account-and-then-click",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:359:if-you-have-more-than-one-boarding-package,-choo",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:360:click-start-to-begin-the-hierarchy-step.-see-[ad",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:361:optional:-click-start-in-the-transacting-organiz",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:362:click-start-in-the-transacting-organization-and-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:363:optional:-modify-the-name-and-id-of-the-organiza",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:364:optional:-to-edit-the-organization-information,-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:365:to-enable-a-product-in-the-product-enablement-se",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:366:to-modify-the-configuration,-click-the-edit-or-c",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:367:to-confirm-the-configuration,-click-apply.",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:368:to-save-all-product-configurations,-click-save.-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:369:to-continue-working-with-this-organization,-clic",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:370:click-start-in-the-transacting-organization-and-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:371:optional:-modify-the-name-and-id-of-the-organiza",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:372:optional:-to-edit-the-organization-information,-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:373:to-enable-a-product-in-the-product-enablement-se",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:374:to-modify-the-configuration,-click-the-edit-or-c",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:375:to-confirm-the-configuration,-click-apply.",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:376:to-save-all-product-configurations,-click-save.-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:377:to-continue-working-with-this-organization,-clic",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:378:in-the-hierarchy-details-page,-select-the-organi",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:379:click-the-+-add-button.-the-add-organization-pop",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:380:select-structural-organization-from-the-organiza",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:381:to-choose-the-placement-of-the-structural-organi",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:382:optional:-edit-the-name-and-organization-id-of-t",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:383:optional:-click-the-add-optional-details-button-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:384:click-close-to-return-to-the-add-merchant-page.",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:385:find-the-organization-in-the-search-results-tabl",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:386:click-edit-in-the-merchant-information-section.",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:387:use-the-text-fields-to-change-information.-for-t",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:388:when-you-finish,-click-save.",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:389:in-the-left-navigation-panel,-click-the-portfoli",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:390:under-merchants,-click-manage-merchants.-the-man",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:391:click-search-to-search-for-all-merchants-or-use-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:392:to-add-a-filter,-click-+-add-filter.-select-a-fi",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:393:click-search-when-you-finish-adding-filters.",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:394:to-reset-the-search-filters-and-start-over,-clic",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:395:click-+-add-merchant.{#merchants-v2-add-merchant",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:396:select-board-a-new-merchant-account-and-click-ne",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:397:if-you-have-more-than-one-boarding-package,-choo",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:398:click-start-in-the-merchant-account-information-",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:399:optional:-click-skip-in-the-hierarchy-details-se",
+    "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:400:click-start-in-the-transacting-organization-and-"
+  ],
+  "linked_workflow_id": null,
+  "contract_bundle_path": null,
+  "context_pack_path": "artifacts/content_engine/context_packs/boarding-guide-en-us_boarding_user_all_ebc_boarding-user.context_pack.json",
+  "objects_path": "artifacts/content_engine/objects/boarding-guide-en-us_boarding_user_all_ebc_boarding-user.quickstart_units.json"
+}

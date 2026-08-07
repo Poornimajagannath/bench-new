@@ -7,10 +7,10 @@
     "entity:Authentication Failed",
     "entity:keyId",
     "entity:secretKey",
-    "entity:apitest.cybersource.com",
+    "entity:apitest.example.com",
     "HTTP Signature signed headers include host,date,digest but we still get 401. Do we need request-target and v-c-merchant-id in the signature base on apitest?",
     "entity:v-c-merchant-id",
-    "alt_goal:Resolve developer confusion involving HTTP Signature, v-c-merchant-id, apitest.cybersource.com",
+    "alt_goal:Resolve developer confusion involving HTTP Signature, v-c-merchant-id, apitest.example.com",
     "Authentication Failed every time on sandbox",
     "entity:merchantKeyId",
     "alt_goal:Resolve developer confusion involving Authentication Failed, keyId, secretKey, merchantKeyId",
@@ -24,14 +24,14 @@
   "relay_discovered": [
     "Am I using the wrong SDK field names for key id and secret?",
     "stages:load_sandbox_env_vars,build_digest,build_signature_base,attach_vc_headers,interpret_auth_failure",
-    "fact:Sandbox host is apitest.cybersource.com",
+    "fact:Sandbox host is apitest.example.com",
     "fact:SDK expects merchantKeyId and merchantsecretKey (not keyId/secretKey)",
     "fact:Signed headers typically include host, date, request-target, digest, v-c-merchant-id"
   ],
   "bad_answer_errors": [
     "Uses doc field names and production host; omits request-target and v-c-merchant-id",
     "credential_fields: expected=['merchantKeyId', 'merchantsecretKey'] actual=['keyId', 'secretKey']",
-    "endpoint_host: expected='apitest.cybersource.com' actual='api.cybersource.com'",
+    "endpoint_host: expected='apitest.example.com' actual='api.example.com'",
     "signed_headers contains_all ['host', 'date', 'request-target', 'digest', 'v-c-merchant-id']: False"
   ],
   "verifier_caught": [
@@ -42,7 +42,7 @@
   "next_product_improvements": [
     "Clarify HTTP Signature Debug stage ordering in public docs",
     "Align SDK credential field names with docs (or docs with SDK)",
-    "Ship a VAP CLI workflow verifier for this contract"
+    "Ship a Content CLI workflow verifier for this contract"
   ],
   "classification": {
     "workflow_id": "http-signature-debug",
@@ -65,7 +65,7 @@
         "severity": "high",
         "summary": "Clarify HTTP Signature Debug stage ordering in public docs",
         "rationale": "Developers confused adjacent APIs and skipped required stages.",
-        "vap_cli": null
+        "content_cli": null
       },
       {
         "action_id": "http-signature-debug-sdk",
@@ -73,19 +73,19 @@
         "severity": "high",
         "summary": "Align SDK credential field names with docs (or docs with SDK)",
         "rationale": "keyId/secretKey vs merchantKeyId/merchantsecretKey drift causes auth failures.",
-        "vap_cli": null
+        "content_cli": null
       },
       {
-        "action_id": "http-signature-debug-vap-cli",
-        "product_surface": "vap_cli",
+        "action_id": "http-signature-debug-content-cli",
+        "product_surface": "content_cli",
         "severity": "high",
-        "summary": "Ship a VAP CLI workflow verifier for this contract",
+        "summary": "Ship a Content CLI workflow verifier for this contract",
         "rationale": "CLI should verify readiness, recovery, and support-safe evidence \u2014 not only wrap an API call.",
-        "vap_cli": {
+        "content_cli": {
           "goal": "Am I using the wrong SDK field names for key id and secret?",
-          "command": "vap workflow verify --id http-signature-debug --fixture local",
+          "command": "content workflow verify --id http-signature-debug --fixture local",
           "api_sdk_facts": [
-            "Sandbox host is apitest.cybersource.com",
+            "Sandbox host is apitest.example.com",
             "SDK expects merchantKeyId and merchantsecretKey (not keyId/secretKey)",
             "Signed headers typically include host, date, request-target, digest, v-c-merchant-id"
           ],
@@ -118,7 +118,7 @@
             "eval:verifier_catch_rate_on_bad_answer"
           ],
           "future_mcp_metadata": {
-            "mcp_tool": "vap.verify_workflow",
+            "mcp_tool": "content.verify_workflow",
             "inputs": [
               "workflow_id",
               "candidate_answer_ref"

@@ -1,0 +1,21 @@
+{
+  "doc_id": "doc-boarding-guide-en-us_boarding_developer_all_rest_boarding_boarding-intro-overview",
+  "source_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding_boarding-intro-overview",
+  "snapshot_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding_boarding-intro-overview-f4caee613049",
+  "title": "boarding-guide-en-us_boarding_developer_all_rest_boarding_boarding-intro-overview",
+  "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/boarding/",
+  "source_format": "markdown",
+  "product": [
+    "boarding",
+    "cybersource"
+  ],
+  "audience": [
+    "developer"
+  ],
+  "page_type": "guide",
+  "freshness_date": "unknown",
+  "normalized_markdown": "Introduction to the Boarding Registration Service {#boarding-intro-overview}\n============================================================================\n\nBoarding Registration streamlines and automates the boarding of merchant accounts using the `Cybersource` `REST API`. You can create a simple or complex hierarchy of accounts that represents merchant business units, and configure payment products for those accounts. To understand accounts, organizations, their hierarchy, and status, see these topics:\n\n* [Understanding Accounts and Organizations](/docs/cybs/en-us/boarding/developer/all/rest/boarding/boarding-intro-overview/boarding-intro-organizations.md \"\")\n* [Extending the Hierarchy](/docs/cybs/en-us/boarding/developer/all/rest/boarding/boarding-extend-hierarchy.md \"\")\n",
+  "extracted_metadata": {
+    "goal": "boarding-guide-en-us_boarding_developer_all_rest_boarding_boarding-intro-overview"
+  }
+}

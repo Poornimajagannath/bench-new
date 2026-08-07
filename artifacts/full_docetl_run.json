@@ -1,10 +1,753 @@
 {
-  "started_at": "2026-08-05T04:04:48.005705+00:00",
-  "finished_at": "2026-08-05T04:04:48.447412+00:00",
+  "started_at": "2026-08-07T07:43:32.999837+00:00",
+  "finished_at": "2026-08-07T07:43:34.409054+00:00",
   "discovery": "docetl",
   "docetl_available": true,
   "candidates_path": "artifacts/candidates.json",
   "content_engine": [
+    {
+      "ok": false,
+      "source_id": "boarding-guide-en-us_boarding-template-management_user_all_ada_boarding-template-mgmt",
+      "snapshot_id": "boarding-guide-en-us_boarding-template-management_user_all_ada_boarding-template-mgmt-73b96eac6947",
+      "content_hash": "73b96eac6947969db262d06e0fab800890dc3244ab4e994720ba851eabd25587",
+      "segment_count": 1,
+      "unit_count": 0,
+      "promotion_status": "blocked",
+      "schema_passed": false,
+      "content_passed": false,
+      "agent_use_status": "deferred",
+      "promoted_unit_ids": [],
+      "context_pack_path": null,
+      "contract_bundle_path": null,
+      "issue_count": 2,
+      "issues": [
+        {
+          "code": "no_units",
+          "severity": "error",
+          "message": "Extractor produced zero quickstart units",
+          "unit_id": null
+        },
+        {
+          "code": "no_steps",
+          "severity": "error",
+          "message": "must include at least one step unit or grounded reference unit",
+          "unit_id": null
+        }
+      ],
+      "honest_label": {
+        "docetl": "imported-code_map",
+        "extract_mode": "docetl",
+        "tempo_harbor": "preview-via-linked-contract-if-present",
+        "network": "denied"
+      }
+    },
+    {
+      "ok": false,
+      "source_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding",
+      "snapshot_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding-1840920aea22",
+      "content_hash": "1840920aea2213d9c64f41d62fd319bd26e9b68e614bc302e3a8c5da9258eb4b",
+      "segment_count": 6,
+      "unit_count": 97,
+      "promotion_status": "blocked",
+      "schema_passed": true,
+      "content_passed": false,
+      "agent_use_status": "deferred",
+      "promoted_unit_ids": [],
+      "context_pack_path": null,
+      "contract_bundle_path": null,
+      "issue_count": 97,
+      "issues": [
+        {
+          "code": "secret_or_pan_material",
+          "severity": "error",
+          "message": "unit appears to contain secret or non-test PAN-like material",
+          "unit_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding:step:67:select-unified-checkout,-and-click-the-add-butto"
+        }
+      ],
+      "honest_label": {
+        "docetl": "imported-code_map",
+        "extract_mode": "docetl",
+        "tempo_harbor": "preview-via-linked-contract-if-present",
+        "network": "denied"
+      }
+    },
+    {
+      "ok": false,
+      "source_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding_boarding-intro-overview",
+      "snapshot_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding_boarding-intro-overview-f4caee613049",
+      "content_hash": "f4caee6130492ac98475880280603608afeed4d119c2ca8ba5398d37edda3af3",
+      "segment_count": 1,
+      "unit_count": 0,
+      "promotion_status": "blocked",
+      "schema_passed": false,
+      "content_passed": false,
+      "agent_use_status": "deferred",
+      "promoted_unit_ids": [],
+      "context_pack_path": null,
+      "contract_bundle_path": null,
+      "issue_count": 2,
+      "issues": [
+        {
+          "code": "no_units",
+          "severity": "error",
+          "message": "Extractor produced zero quickstart units",
+          "unit_id": null
+        },
+        {
+          "code": "no_steps",
+          "severity": "error",
+          "message": "must include at least one step unit or grounded reference unit",
+          "unit_id": null
+        }
+      ],
+      "honest_label": {
+        "docetl": "imported-code_map",
+        "extract_mode": "docetl",
+        "tempo_harbor": "preview-via-linked-contract-if-present",
+        "network": "denied"
+      }
+    },
+    {
+      "ok": false,
+      "source_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding_boarding-intro-template",
+      "snapshot_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding_boarding-intro-template-adacba553da6",
+      "content_hash": "adacba553da6be9bbc493d7b67d5988796762e0b4ba16bbba3d275f4c2555181",
+      "segment_count": 1,
+      "unit_count": 0,
+      "promotion_status": "blocked",
+      "schema_passed": false,
+      "content_passed": false,
+      "agent_use_status": "deferred",
+      "promoted_unit_ids": [],
+      "context_pack_path": null,
+      "contract_bundle_path": null,
+      "issue_count": 2,
+      "issues": [
+        {
+          "code": "no_units",
+          "severity": "error",
+          "message": "Extractor produced zero quickstart units",
+          "unit_id": null
+        },
+        {
+          "code": "no_steps",
+          "severity": "error",
+          "message": "must include at least one step unit or grounded reference unit",
+          "unit_id": null
+        }
+      ],
+      "honest_label": {
+        "docetl": "imported-code_map",
+        "extract_mode": "docetl",
+        "tempo_harbor": "preview-via-linked-contract-if-present",
+        "network": "denied"
+      }
+    },
+    {
+      "ok": false,
+      "source_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro",
+      "snapshot_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro-e362a544051a",
+      "content_hash": "e362a544051ab7e002795dc3762fdfdd5d44198092f5779e877559a6ae746d15",
+      "segment_count": 1,
+      "unit_count": 0,
+      "promotion_status": "blocked",
+      "schema_passed": false,
+      "content_passed": false,
+      "agent_use_status": "deferred",
+      "promoted_unit_ids": [],
+      "context_pack_path": null,
+      "contract_bundle_path": null,
+      "issue_count": 2,
+      "issues": [
+        {
+          "code": "no_units",
+          "severity": "error",
+          "message": "Extractor produced zero quickstart units",
+          "unit_id": null
+        },
+        {
+          "code": "no_steps",
+          "severity": "error",
+          "message": "must include at least one step unit or grounded reference unit",
+          "unit_id": null
+        }
+      ],
+      "honest_label": {
+        "docetl": "imported-code_map",
+        "extract_mode": "docetl",
+        "tempo_harbor": "preview-via-linked-contract-if-present",
+        "network": "denied"
+      }
+    },
+    {
+      "ok": false,
+      "source_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding_boarding-reg-intro",
+      "snapshot_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding_boarding-reg-intro-a55b77bd4efe",
+      "content_hash": "a55b77bd4efe07a51070af3e92f94c0df195adb4e369d95223a257311962f9bc",
+      "segment_count": 1,
+      "unit_count": 0,
+      "promotion_status": "blocked",
+      "schema_passed": false,
+      "content_passed": false,
+      "agent_use_status": "deferred",
+      "promoted_unit_ids": [],
+      "context_pack_path": null,
+      "contract_bundle_path": null,
+      "issue_count": 2,
+      "issues": [
+        {
+          "code": "no_units",
+          "severity": "error",
+          "message": "Extractor produced zero quickstart units",
+          "unit_id": null
+        },
+        {
+          "code": "no_steps",
+          "severity": "error",
+          "message": "must include at least one step unit or grounded reference unit",
+          "unit_id": null
+        }
+      ],
+      "honest_label": {
+        "docetl": "imported-code_map",
+        "extract_mode": "docetl",
+        "tempo_harbor": "preview-via-linked-contract-if-present",
+        "network": "denied"
+      }
+    },
+    {
+      "ok": false,
+      "source_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding_templates-matrix-intro",
+      "snapshot_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding_templates-matrix-intro-f10637e41918",
+      "content_hash": "f10637e41918e8a04cec654b05e298ce8f2b901779f9d27c66a0298b10df2a8f",
+      "segment_count": 1,
+      "unit_count": 0,
+      "promotion_status": "blocked",
+      "schema_passed": false,
+      "content_passed": false,
+      "agent_use_status": "deferred",
+      "promoted_unit_ids": [],
+      "context_pack_path": null,
+      "contract_bundle_path": null,
+      "issue_count": 2,
+      "issues": [
+        {
+          "code": "no_units",
+          "severity": "error",
+          "message": "Extractor produced zero quickstart units",
+          "unit_id": null
+        },
+        {
+          "code": "no_steps",
+          "severity": "error",
+          "message": "must include at least one step unit or grounded reference unit",
+          "unit_id": null
+        }
+      ],
+      "honest_label": {
+        "docetl": "imported-code_map",
+        "extract_mode": "docetl",
+        "tempo_harbor": "preview-via-linked-contract-if-present",
+        "network": "denied"
+      }
+    },
+    {
+      "ok": false,
+      "source_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding_templates-tasks",
+      "snapshot_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding_templates-tasks-5665cb9da7c5",
+      "content_hash": "5665cb9da7c5173786ceedd231997ed24f44502772e506abcb1391b0a078acfe",
+      "segment_count": 1,
+      "unit_count": 0,
+      "promotion_status": "blocked",
+      "schema_passed": false,
+      "content_passed": false,
+      "agent_use_status": "deferred",
+      "promoted_unit_ids": [],
+      "context_pack_path": null,
+      "contract_bundle_path": null,
+      "issue_count": 2,
+      "issues": [
+        {
+          "code": "no_units",
+          "severity": "error",
+          "message": "Extractor produced zero quickstart units",
+          "unit_id": null
+        },
+        {
+          "code": "no_steps",
+          "severity": "error",
+          "message": "must include at least one step unit or grounded reference unit",
+          "unit_id": null
+        }
+      ],
+      "honest_label": {
+        "docetl": "imported-code_map",
+        "extract_mode": "docetl",
+        "tempo_harbor": "preview-via-linked-contract-if-present",
+        "network": "denied"
+      }
+    },
+    {
+      "ok": true,
+      "source_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user",
+      "snapshot_id": "boarding-guide-en-us_boarding_user_all_ebc_boarding-user-2827456edb1b",
+      "content_hash": "2827456edb1b09c8dfc7c10156a25ba799232725b112a2bf9365987dd46d75e9",
+      "segment_count": 6,
+      "unit_count": 401,
+      "promotion_status": "promoted",
+      "schema_passed": true,
+      "content_passed": true,
+      "agent_use_status": "deferred",
+      "promoted_unit_ids": [
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:overview:0:figure:-{#boarding-intro-ids_fig_ut4_p5f_q5b}",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:1:contact-your-representative-to-have-a-portfolio-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:2:configure-product-templates.-see-[product-templa",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:3:create-a-merchant-organization.-see-[create-a-me",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:4:set-up-your-transacting-organization-and-product",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:5:configure-products.-see-[product-enablement-and-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:6:contact-your-representative-to-have-a-portfolio-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:7:create-a-merchant-organization.-see-[create-a-me",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:8:configure-product-templates.-see-[product-templa",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:9:set-up-your-transacting-organization-and-product",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:10:add-an-additional-transacting-organization-to-an",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:11:configure-products.-see-[product-enablement-and-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:12:contact-your-representative-to-have-a-portfolio-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:13:configure-product-templates.-see-[product-templa",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:14:create-a-merchant-organization.-see-[create-a-me",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:15:extend-the-hierarchy.-see-[add-a-structural-orga",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:16:set-up-your-transacting-organization-and-product",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:17:configure-products.-see-[product-enablement-and-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:18:in-the-`business-center`,-go-to-the-left-navigat",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:19:go-to-the-applied-filters-section-and-choose-a-p",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:20:click-**search**-to-filter-the-results-by-produc",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:21:you-can-sort-the-filtered-results-by-the-column-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:22:click-a-template's-name-link-to-open-an-individu",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:23:in-the-`business-center`,-go-to-the-left-navigat",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:24:click-add-new-template-\\|-+.",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:25:on-the-template-details-page,-select-a-product-f",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:26:click-apply-selected-product.",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:27:enter-a-name-and-description.",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:28:set-the-template-as-your-default-template-for-th",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:29:click-next.",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:30:set-the-configuration-options-for-the-selected-t",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:31:some-templates-with-multiple-tabs-require-you-to",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:32:when-you-have-configured-all-the-tabs-for-the-pr",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:33:follow-the-steps-to-[retrieve-a-template](/docs/",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:34:next-to-the-template-you-want-to-modify,-click-t",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:35:edit-the-existing-template.",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:36:click-**save**.",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:37:in-the-`business-center`,-go-to-the-left-navigat",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:38:follow-the-steps-to-[retrieve-a-template](/docs/",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:39:next-to-the-template-you-want-to-delete,-click-t",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:40:in-the-`business-center`,-go-to-the-left-navigat",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:41:follow-the-steps-to-[retrieve-a-template](/docs/",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:42:next-to-the-template-you-want-to-modify,-click-t",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:43:in-the-`business-center`,-go-to-the-left-navigat",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:44:click-**add-new-template**.",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:45:select-**card-processing**-from-the-drop-down-me",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:46:click-**apply-selected-product**.",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:47:enter-a-unique-name-for-the-new-card-processing-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:48:select-the-type-of-card-processing:-card-present",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:49:click-the-**processor**-field,-and-then-choose-t",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:50:if-an-acceptance-type-field-appears,-click-the-f",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:51:in-the-processor-tab-(labeled-with-the-name-of-t",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:52:in-the-common-settings-tab,-you-can-configure-fi",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:53:navigate-to-the-merchant-details-page-within-por",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:54:click-the-add-products-button.",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:55:select-customer-invoicing,-and-click-the-add-but",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:56:on-the-general-settings-page,-select-options-for",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:57:on-the-rule-configuration-page,-configure-the-op",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:58:navigate-to-the-merchant-details-page-within-por",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:59:click-the-add-products-button.",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:60:select-`pay-by-link`,-and-click-the-add-button.",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:61:navigate-to-the-merchant-details-page-within-por",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:62:click-the-add-products-button.",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:63:select-unified-checkout,-and-click-the-add-butto",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:64:click-**+-add-merchant**.{#merchants-v2-add-merc",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:65:select-**board-a-new-merchant-account**-and-clic",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:66:if-you-have-more-than-one-boarding-package,-choo",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:67:click-**start**-in-the-merchant-account-informat",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:68:optional:-click-**skip**-in-the-hierarchy-detail",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:69:click-**start**-in-the-transacting-organization-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:70:in-basic-information,-enter-the-merchant-account",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:71:enter-the-merchant-information-in-the-provided-t",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:72:click-**save**-.-you-are-returned-to-the-add-mer",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:73:click-**start**-in-the-transacting-organization-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:74:optional:-modify-the-name-and-id-of-the-organiza",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:75:optional:-by-default,-the-organization-informati",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:76:to-enable-a-product-in-the-product-enablement-se",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:77:to-modify-the-configuration,-click-the-**edit**-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:78:to-confirm-the-configuration,-click-**apply**.",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:79:to-save-all-product-configurations,-click-**save",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:80:to-continue-working-with-this-organization,-clic",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:81:under-merchants,-click-**manage-merchants**.-the",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:82:in-the-left-navigation-panel,-click-**portfolio-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:83:age-merchants-page-appears.",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:84:click-**+-add-merchant**.{#boarding-merchants-v2",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:85:select-**add-to-an-existing-account**-and-then-c",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:86:if-you-have-more-than-one-boarding-package,-the-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:87:optional:-add-additional-organizations-by-clicki",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:88:enable-and-configure-products.-see-[configure-th",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:89:click-**start**-in-the-transacting-organization-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:90:optional:-modify-the-name-and-id-of-the-organiza",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:91:optional:-to-edit-the-organization-information,-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:92:to-enable-a-product-in-the-product-enablement-se",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:93:to-modify-the-configuration,-click-the-**edit**-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:94:to-confirm-the-configuration,-click-**apply**.",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:95:to-save-all-product-configurations,-click-**save",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:96:to-continue-working-with-this-organization,-clic",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:97:in-the-left-navigation-panel,-click-the-**portfo",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:98:under-merchants,-click-**manage-merchants**.-the",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:99:click-**search**-to-search-for-all-merchants-or-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:100:to-add-a-filter,-click-**+-add-filter**.-select-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:101:click-**search**-when-you-finish-adding-filters.",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:102:to-reset-the-search-filters-and-start-over,-clic",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:103:find-the-merchant-in-search-results-and-click-th",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:104:select-**view-organization-hierarchy**.-the-orga",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:105:find-the-organization-in-the-search-results-tabl",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:106:click-**edit**-in-the-merchant-information-secti",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:107:use-the-text-fields-to-change-information.-for-t",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:108:when-you-finish,-click-**save**.",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:109:find-the-organization-in-the-search-results-tabl",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:110:click-**edit**-in-the-processor-section.",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:111:make-the-changes-and-click-**save**.",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:112:search-for-the-organization-on-the-manage-mercha",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:113:find-the-organization-in-the-search-results-tabl",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:114:in-the-products-section,-click-+-add-products.-t",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:115:select-a-product-and-click-add.{#boarding-mercha",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:116:if-there-are-configuration-steps-for-the-product",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:117:search-for-the-organization-in-the-manage-mercha",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:118:find-the-organization-in-the-search-results-tabl",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:119:click-modify-next-to-the-product-you-want-to-mod",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:120:search-for-the-organization-in-the-manage-mercha",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:121:find-the-organization-in-the-search-results-tabl",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:122:find-the-product-you-want-to-remove-in-the-remov",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:123:click-**confirm**.",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:124:find-the-merchant-in-the-search-results-and-clic",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:125:click-the-**status**-drop-down-menu-in-the-upper",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:126:click-**confirm**.",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:127:search-for-the-organization-on-the-manage-mercha",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:128:find-the-organization-in-the-search-results-tabl",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:129:in-the-products-section,-click-+-add-products.-t",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:130:select-the-product-you-want-to-enable.-click-add",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:131:in-the-left-navigation-panel,-click-**portfolio-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:132:under-merchants,-click-**manage-merchants**.-the",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:133:click-**+-add-merchant**.",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:134:select-where-you-want-to-board-your-merchant:",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:135:if-you-are-adding-a-transacting-organization-to-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:136:if-you-have-more-than-one-boarding-package,-choo",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:137:click-**start**-in-the-merchant-account-informat",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:138:optional:-click-**skip**-in-the-hierarchy-detail",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:139:click-start-in-the-transacting-organization-and-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:140:under-transacting-organization-details,-enter-th",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:141:under-product-enablement,-find-alternative-payme",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:142:click-configure.-the-configure-alternative-payme",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:143:check-the-box-next-to-each-alternative-payment-m",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:144:click-continue.-the-product-configuration-page-a",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:145:enter-the-required-details-for-each-alternative-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:146:click-continue-to-return-to-the-merchant-details",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:147:in-the-left-navigation-pane,-click-the-portfolio",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:148:under-merchants,-click-manage-merchants.-the-man",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:149:click-**+-add-merchant**.",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:150:select-where-you-want-to-board-your-merchant:",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:151:if-you-are-adding-a-transacting-organization-to-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:152:if-you-have-more-than-one-boarding-package,-choo",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:153:click-**start**-in-the-merchant-account-informat",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:154:optional:-click-**skip**-in-the-hierarchy-detail",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:155:click-start-in-the-transacting-organization-and-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:156:under-transacting-organization-details,-enter-th",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:157:under-product-enablement,-find-alternative-payme",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:158:click-save.-alternative-payments-is-now-availabl",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:159:in-the-left-navigation-pane,-click-the-portfolio",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:160:under-merchants,-click-manage-merchants.-the-man",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:161:search-for-the-organization-on-the-manage-mercha",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:162:find-the-organization-in-the-search-results-tabl",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:163:in-the-products-section,-click-+-add-products.-t",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:164:under-payments,-select-alternative-payments-and-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:165:check-the-box-next-to-each-alternative-payment-m",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:166:click-continue.-the-product-configuration-page-a",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:167:enter-the-required-details-for-each-alternative-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:168:click-continue-to-return-to-the-merchant-details",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:169:in-the-left-navigation-pane,-click-the-portfolio",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:170:under-merchants,-click-manage-merchants.-the-man",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:171:search-for-the-organization-in-the-manage-mercha",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:172:find-the-organization-in-the-search-results-tabl",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:173:under-products,-click-edit-next-to-alternative-p",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:174:if-you-want-to-add-an-available-alternative-paym",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:175:if-you-want-to-configure-an-enabled-alternative-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:176:check-the-box-next-to-each-alternative-payment-m",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:177:click-continue.-the-product-configuration-page-a",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:178:enter-the-required-details-for-each-alternative-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:179:click-continue-to-return-to-the-merchant-details",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:180:in-the-left-navigation-pane,-click-the-portfolio",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:181:under-merchants,-click-manage-merchants.-the-man",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:182:click-**+-add-merchant**.",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:183:choose-a-location-to-board-your-merchant:",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:184:if-you-are-adding-a-transacting-organization-to-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:185:if-you-have-more-than-one-boarding-package,-choo",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:186:click-**start**-in-the-merchant-account-informat",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:187:optional:-click-**skip**-in-the-hierarchy-detail",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:188:click-start-in-the-transacting-organization-and-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:189:under-transacting-organization-details,-enter-th",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:190:under-product-enablement,-find-`payer-authentica",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:191:click-configure-to-configure-`payer-authenticati",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:192:in-the-payer-authentication-set-up-drop-down-men",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:193:click-configure-for-each-`payer-authentication`-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:194:click-enable-on-the-enable/disable-slider-to-con",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:195:optional:-click-disable-to-disable-acquirer-curr",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:196:enter-the-acquirer-merchant-id-and-acquirer-id.-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:197:from-the-currency-drop-down-menu,-select-the-cur",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:198:click-add-more-currency-to-configure-another-cur",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:199:check-the-box-next-to-**copy-last-acquirer-merch",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:200:click-the-trash-can-icon-to-delete-a-configurati",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:201:click-view-all-currencies-to-collapse-or-expand-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:202:click-save-to-save-your-configuration-and-return",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:203:if-you-do-not-want-to-save-your-changes,-click-c",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:204:a-warning-box-appears-and-states-that-you-have-u",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:205:in-the-left-navigation-pane,-click-the-portfolio",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:206:under-merchants,-click-manage-merchants.-the-man",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:207:search-for-the-organization-on-the-manage-mercha",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:208:find-the-organization-in-the-search-results-tabl",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:209:in-the-products-section,-click-+-add-products.-t",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:210:select-payer-authentication-and-click-add.",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:211:in-the-payer-authentication-set-up-drop-down-men",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:212:click-configure-for-each-`payer-authentication`-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:213:click-enable-on-the-enable/disable-slider-to-con",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:214:optional:-click-disable-to-disable-acquirer-curr",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:215:enter-the-acquirer-merchant-id-and-acquirer-id.-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:216:from-the-currency-drop-down-menu,-select-the-cur",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:217:click-add-more-currency-to-configure-another-cur",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:218:check-the-box-next-to-**copy-last-acquirer-merch",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:219:click-the-trash-can-icon-to-delete-a-configurati",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:220:click-view-all-currencies-to-collapse-or-expand-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:221:click-save-to-save-your-configuration-and-return",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:222:if-you-do-not-want-to-save-your-changes,-click-c",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:223:a-warning-box-appears-and-states-that-you-have-u",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:224:in-the-left-navigation-pane,-click-the-portfolio",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:225:under-merchants,-click-manage-merchants.-the-man",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:226:search-for-the-organization-in-the-manage-mercha",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:227:find-the-organization-in-the-search-results-tabl",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:228:under-products,-click-modify-next-to-payer-authe",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:229:in-the-payer-authentication-set-up-drop-down-men",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:230:click-configure-for-each-`payer-authentication`-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:231:click-enable-on-the-enable/disable-slider-to-con",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:232:optional:-click-disable-to-disable-acquirer-curr",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:233:enter-the-acquirer-merchant-id-and-acquirer-id.-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:234:from-the-currency-drop-down-menu,-select-the-cur",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:235:click-add-more-currency-to-configure-another-cur",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:236:check-the-box-next-to-**copy-last-acquirer-merch",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:237:click-the-trash-can-icon-to-delete-a-configurati",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:238:click-view-all-currencies-to-collapse-or-expand-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:239:click-save-to-save-your-configuration-and-return",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:240:if-you-do-not-want-to-save-your-changes,-click-c",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:241:a-warning-box-appears-and-states-that-you-have-u",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:242:navigate-to-token-management.",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:243:click-vault-management.",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:244:use-the-vault-owner-filter-to-search-for-the-mer",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:245:choose-the-merchant-account-to-view-the-`tms`-va",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:246:click-network-tokenization.",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:247:click-enroll-to-visa/mastercard-token-services.",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:248:enter-the-required-information-for-each-card-typ",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:249:click-onboard-with-acquirer-id.",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:250:enter-the-required-information:",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:251:click-enroll-to-network-token-services-to-comple",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:252:log-in-to-the-`business-center`-test-environment",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:253:in-the-left-navigation-panel,-click-the-token-ma",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:254:click-vault-management-new.-the-vault-management",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:255:from-the-vault-owner-drop-down-list,-select-the-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:256:in-the-details-column,-click-vault-settings.-the",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:257:click-edit.",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:258:enter-the-vault-name,-supported-payment-methods,",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:259:click-save.",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:260:to-return-to-the-vault-management-page,-click-va",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:261:log-in-to-the-`business-center`-test-environment",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:262:in-the-left-navigation-panel,-click-the-token-ma",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:263:click-vault-management-new.-the-vault-management",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:264:select-the-vault-owner-that-you-want-to-configur",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:265:in-the-details-column,-click-access-settings.-th",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:266:check-the-box-for-the-vault-settings-you-want-to",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:267:click-submit-to-save-your-settings.",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:268:in-the-left-navigation-pane,-click-the-portfolio",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:269:under-merchants,-click-manage-merchants.-the-man",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:270:click-**+-add-merchant**.",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:271:select-where-you-want-to-board-your-merchant:",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:272:if-you-are-adding-a-transacting-organization-to-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:273:if-you-have-more-than-one-boarding-package,-choo",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:274:click-**start**-in-the-merchant-account-informat",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:275:optional:-click-**skip**-in-the-hierarchy-detail",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:276:click-start-in-the-transacting-organization-and-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:277:under-transacting-organization-details,-enter-th",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:278:under-product-enablement,-find-`token-management",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:279:click-configure-to-configure-`token-management-s",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:280:in-the-product-configuration-template-drop-down-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:281:click-apply-to-save-your-configuration.",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:282:in-the-left-navigation-pane,-click-the-portfolio",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:283:under-merchants,-click-manage-merchants.-the-man",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:284:search-for-the-organization-on-the-manage-mercha",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:285:find-the-organization-in-the-search-results-tabl",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:286:in-the-products-section,-click-+-add-products.-t",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:287:under-commerce-solutions,-select-token-managemen",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:288:in-the-product-configuration-template-drop-down-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:289:click-apply-to-save-your-configuration.",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:290:select-the-merchant-account-to-which-you-want-to",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:291:at-the-top-of-the-screen,-click-the-switch-view-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:292:click-**quick**-to-simply-enter-the-name-of-the-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:293:if-you-chose-a-custom-search,-begin-by-selecting",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:294:if-you-know-the-exact-organization-id-or-name,-e",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:295:if-you-do-not-know-the-exact-name-or-organizatio",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:296:search-for-the-merchant.-see-[search-for-organiz",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:297:click-the-eyeball-icon-for-the-merchant-to-view-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:298:click-the-**send-email**-drop-down-menu.-select-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:299:click-**+-add-merchant**.",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:300:select-**add-to-an-existing-account**-and-then-c",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:301:if-you-have-more-than-one-boarding-package,-choo",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:302:click-**start**-to-begin-the-hierarchy-step.-see",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:303:optional:-click-**start**-in-the-transacting-org",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:304:in-the-hierarchy-details-page,-select-the-organi",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:305:click-the-**+-add**-button.-the-add-organization",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:306:select-**structural-organization**-from-the-orga",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:307:to-choose-the-placement-of-the-structural-organi",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:308:optional:-edit-the-name-and-organization-id-of-t",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:309:optional:-click-the-**add-optional-details**-but",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:310:click-**close**-to-return-to-the-add-merchant-pa",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:311:click-**start**-in-the-transacting-organization-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:312:optional:-modify-the-name-and-id-of-the-organiza",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:313:optional:-to-edit-the-organization-information,-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:314:to-enable-a-product-in-the-product-enablement-se",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:315:to-modify-the-configuration,-click-the-**edit**-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:316:to-confirm-the-configuration,-click-**apply**.",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:317:to-save-all-product-configurations,-click-**save",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:318:to-continue-working-with-this-organization,-clic",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:319:search-for-the-organization-in-the-manage-mercha",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:320:find-the-organization-in-the-search-results-tabl",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:321:find-the-product-you-want-to-remove-in-the-remov",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:322:click-confirm.",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:323:search-for-the-organization-in-the-manage-mercha",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:324:find-the-organization-in-the-search-results-tabl",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:325:click-modify-next-to-the-product-you-want-to-mod",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:326:search-for-the-organization-in-the-manage-mercha",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:327:find-the-organization-in-the-search-results-tabl",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:328:click-+-add-products.-the-add-a-product-screen-d",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:329:select-a-product-and-click-add.",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:330:if-there-are-configuration-steps-for-the-product",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:331:find-the-organization-in-the-search-results-tabl",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:332:click-edit-in-the-processor-section.",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:333:make-the-changes-and-click-save.",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:334:find-the-merchant-in-the-search-results-and-clic",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:335:click-the-status-drop-down-menu-in-the-upper-rig",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:336:click-confirm.",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:337:find-the-merchant-in-search-results-and-click-th",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:338:select-view-organization-hierarchy.-the-organiza",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:339:in-the-left-navigation-pane,-click-the-portfolio",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:340:under-merchants,-click-manage-merchants.-the-man",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:341:click-+-add-merchant.{#merchants-v2-transacting_",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:342:select-add-to-an-existing-account-and-then-click",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:343:if-you-have-more-than-one-boarding-package,-the-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:344:optional:-add-additional-organizations-by-clicki",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:345:enable-and-configure-products.-see-[configure-th",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:346:click-start-in-the-transacting-organization-and-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:347:optional:-modify-the-name-and-id-of-the-organiza",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:348:optional:-by-default,-the-organization-informati",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:349:to-enable-a-product-in-the-product-enablement-se",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:350:to-modify-the-configuration,-click-the-edit-or-c",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:351:to-confirm-the-configuration,-click-apply.",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:352:to-save-all-product-configurations,-click-save.-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:353:to-continue-working-with-this-organization,-clic",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:354:in-basic-information,-enter-the-merchant-account",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:355:enter-the-merchant-information-in-the-provided-t",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:356:click-save.-you-are-returned-to-the-add-merchant",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:357:click-+-add-merchant.",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:358:select-add-to-an-existing-account-and-then-click",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:359:if-you-have-more-than-one-boarding-package,-choo",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:360:click-start-to-begin-the-hierarchy-step.-see-[ad",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:361:optional:-click-start-in-the-transacting-organiz",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:362:click-start-in-the-transacting-organization-and-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:363:optional:-modify-the-name-and-id-of-the-organiza",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:364:optional:-to-edit-the-organization-information,-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:365:to-enable-a-product-in-the-product-enablement-se",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:366:to-modify-the-configuration,-click-the-edit-or-c",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:367:to-confirm-the-configuration,-click-apply.",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:368:to-save-all-product-configurations,-click-save.-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:369:to-continue-working-with-this-organization,-clic",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:370:click-start-in-the-transacting-organization-and-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:371:optional:-modify-the-name-and-id-of-the-organiza",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:372:optional:-to-edit-the-organization-information,-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:373:to-enable-a-product-in-the-product-enablement-se",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:374:to-modify-the-configuration,-click-the-edit-or-c",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:375:to-confirm-the-configuration,-click-apply.",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:376:to-save-all-product-configurations,-click-save.-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:377:to-continue-working-with-this-organization,-clic",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:378:in-the-hierarchy-details-page,-select-the-organi",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:379:click-the-+-add-button.-the-add-organization-pop",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:380:select-structural-organization-from-the-organiza",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:381:to-choose-the-placement-of-the-structural-organi",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:382:optional:-edit-the-name-and-organization-id-of-t",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:383:optional:-click-the-add-optional-details-button-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:384:click-close-to-return-to-the-add-merchant-page.",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:385:find-the-organization-in-the-search-results-tabl",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:386:click-edit-in-the-merchant-information-section.",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:387:use-the-text-fields-to-change-information.-for-t",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:388:when-you-finish,-click-save.",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:389:in-the-left-navigation-panel,-click-the-portfoli",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:390:under-merchants,-click-manage-merchants.-the-man",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:391:click-search-to-search-for-all-merchants-or-use-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:392:to-add-a-filter,-click-+-add-filter.-select-a-fi",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:393:click-search-when-you-finish-adding-filters.",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:394:to-reset-the-search-filters-and-start-over,-clic",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:395:click-+-add-merchant.{#merchants-v2-add-merchant",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:396:select-board-a-new-merchant-account-and-click-ne",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:397:if-you-have-more-than-one-boarding-package,-choo",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:398:click-start-in-the-merchant-account-information-",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:399:optional:-click-skip-in-the-hierarchy-details-se",
+        "boarding-guide-en-us_boarding_user_all_ebc_boarding-user:step:400:click-start-in-the-transacting-organization-and-"
+      ],
+      "context_pack_path": "artifacts/content_engine/context_packs/boarding-guide-en-us_boarding_user_all_ebc_boarding-user.context_pack.json",
+      "contract_bundle_path": null,
+      "issue_count": 400,
+      "issues": [],
+      "honest_label": {
+        "docetl": "imported-code_map",
+        "extract_mode": "docetl",
+        "tempo_harbor": "preview-via-linked-contract-if-present",
+        "network": "denied"
+      }
+    },
+    {
+      "ok": false,
+      "source_id": "cybersource-payments-openapi",
+      "snapshot_id": "cybersource-payments-openapi-d3e9415f5fb6",
+      "content_hash": "d3e9415f5fb6b0cf089f3fbfe8c2aa4930584958584fc22dbae3183fe7dd1b27",
+      "segment_count": 1,
+      "unit_count": 0,
+      "promotion_status": "blocked",
+      "schema_passed": false,
+      "content_passed": false,
+      "agent_use_status": "deferred",
+      "promoted_unit_ids": [],
+      "context_pack_path": null,
+      "contract_bundle_path": null,
+      "issue_count": 2,
+      "issues": [
+        {
+          "code": "no_units",
+          "severity": "error",
+          "message": "Extractor produced zero quickstart units",
+          "unit_id": null
+        },
+        {
+          "code": "no_steps",
+          "severity": "error",
+          "message": "must include at least one step unit or grounded reference unit",
+          "unit_id": null
+        }
+      ],
+      "honest_label": {
+        "docetl": "imported-code_map",
+        "extract_mode": "docetl",
+        "tempo_harbor": "preview-via-linked-contract-if-present",
+        "network": "denied"
+      }
+    },
     {
       "ok": true,
       "source_id": "lab-auth-context",
@@ -119,6 +862,1494 @@
       "contract_bundle_path": "artifacts/contracts/microform-payer-auth-state-machine.contract_bundle.json",
       "issue_count": 0,
       "issues": [],
+      "honest_label": {
+        "docetl": "imported-code_map",
+        "extract_mode": "docetl",
+        "tempo_harbor": "preview-via-linked-contract-if-present",
+        "network": "denied"
+      }
+    },
+    {
+      "ok": false,
+      "source_id": "payments-core-openapi",
+      "snapshot_id": "payments-core-openapi-1e02a8724326",
+      "content_hash": "1e02a87243264d02eb6466e5ba4e1ed1b7467372a0d9dde3ef928ab1211cd26f",
+      "segment_count": 1,
+      "unit_count": 0,
+      "promotion_status": "blocked",
+      "schema_passed": false,
+      "content_passed": false,
+      "agent_use_status": "passed",
+      "promoted_unit_ids": [],
+      "context_pack_path": null,
+      "contract_bundle_path": "artifacts/contracts/microform-payer-auth-state-machine.contract_bundle.json",
+      "issue_count": 2,
+      "issues": [
+        {
+          "code": "no_units",
+          "severity": "error",
+          "message": "Extractor produced zero quickstart units",
+          "unit_id": null
+        },
+        {
+          "code": "no_steps",
+          "severity": "error",
+          "message": "must include at least one step unit or grounded reference unit",
+          "unit_id": null
+        }
+      ],
+      "honest_label": {
+        "docetl": "imported-code_map",
+        "extract_mode": "docetl",
+        "tempo_harbor": "preview-via-linked-contract-if-present",
+        "network": "denied"
+      }
+    },
+    {
+      "ok": false,
+      "source_id": "payments-guide-credentials",
+      "snapshot_id": "payments-guide-credentials-96a7abed1c72",
+      "content_hash": "96a7abed1c72ff856afd4323057910cd52673c4c5bd8314195e16dd6609a2da0",
+      "segment_count": 1,
+      "unit_count": 0,
+      "promotion_status": "blocked",
+      "schema_passed": false,
+      "content_passed": false,
+      "agent_use_status": "deferred",
+      "promoted_unit_ids": [],
+      "context_pack_path": null,
+      "contract_bundle_path": null,
+      "issue_count": 2,
+      "issues": [
+        {
+          "code": "no_units",
+          "severity": "error",
+          "message": "Extractor produced zero quickstart units",
+          "unit_id": null
+        },
+        {
+          "code": "no_steps",
+          "severity": "error",
+          "message": "must include at least one step unit or grounded reference unit",
+          "unit_id": null
+        }
+      ],
+      "honest_label": {
+        "docetl": "imported-code_map",
+        "extract_mode": "docetl",
+        "tempo_harbor": "preview-via-linked-contract-if-present",
+        "network": "denied"
+      }
+    },
+    {
+      "ok": false,
+      "source_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md",
+      "snapshot_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md-3d4d17b9a62c",
+      "content_hash": "3d4d17b9a62c0b91101491f89c17bd5725eb6a39c347f6f3582b64094e8ca7e7",
+      "segment_count": 45,
+      "unit_count": 190,
+      "promotion_status": "blocked",
+      "schema_passed": false,
+      "content_passed": false,
+      "agent_use_status": "deferred",
+      "promoted_unit_ids": [],
+      "context_pack_path": null,
+      "contract_bundle_path": null,
+      "issue_count": 173,
+      "issues": [
+        {
+          "code": "duplicate_unit_id",
+          "severity": "error",
+          "message": "duplicate unit_id payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:overview:0:figure:",
+          "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:overview:0:figure:"
+        },
+        {
+          "code": "duplicate_unit_id",
+          "severity": "error",
+          "message": "duplicate unit_id payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:overview:0:figure:",
+          "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:overview:0:figure:"
+        },
+        {
+          "code": "duplicate_unit_id",
+          "severity": "error",
+          "message": "duplicate unit_id payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:overview:0:figure:",
+          "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:overview:0:figure:"
+        },
+        {
+          "code": "duplicate_unit_id",
+          "severity": "error",
+          "message": "duplicate unit_id payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:overview:0:figure:",
+          "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:overview:0:figure:"
+        },
+        {
+          "code": "duplicate_unit_id",
+          "severity": "error",
+          "message": "duplicate unit_id payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:overview:0:figure:",
+          "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:overview:0:figure:"
+        },
+        {
+          "code": "duplicate_unit_id",
+          "severity": "error",
+          "message": "duplicate unit_id payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:overview:0:figure:",
+          "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:overview:0:figure:"
+        },
+        {
+          "code": "duplicate_unit_id",
+          "severity": "error",
+          "message": "duplicate unit_id payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:overview:0:figure:",
+          "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:overview:0:figure:"
+        },
+        {
+          "code": "duplicate_unit_id",
+          "severity": "error",
+          "message": "duplicate unit_id payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:overview:0:figure:",
+          "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:overview:0:figure:"
+        },
+        {
+          "code": "secret_or_pan_material",
+          "severity": "error",
+          "message": "unit appears to contain secret or non-test PAN-like material",
+          "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:55:send-a-get-request-to-retrieve-the-public-key-fr"
+        },
+        {
+          "code": "secret_or_pan_material",
+          "severity": "error",
+          "message": "unit appears to contain secret or non-test PAN-like material",
+          "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:132:include-these-optional-fields-in-the-capture-con"
+        },
+        {
+          "code": "secret_or_pan_material",
+          "severity": "error",
+          "message": "unit appears to contain secret or non-test PAN-like material",
+          "unit_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md:step:159:enter-the-required-information-in-the-merchant-d"
+        }
+      ],
+      "honest_label": {
+        "docetl": "imported-code_map",
+        "extract_mode": "docetl",
+        "tempo_harbor": "preview-via-linked-contract-if-present",
+        "network": "denied"
+      }
+    },
+    {
+      "ok": true,
+      "source_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_ctp-intro.md",
+      "snapshot_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_ctp-intro.md-0efef349a94a",
+      "content_hash": "0efef349a94a38beb8a8f7f829412b496865b87af9a8b634226cee8518f8705f",
+      "segment_count": 2,
+      "unit_count": 1,
+      "promotion_status": "promoted",
+      "schema_passed": true,
+      "content_passed": true,
+      "agent_use_status": "deferred",
+      "promoted_unit_ids": [
+        "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_ctp-intro.md:overview:0:figure:-{#ctp-intro_fig1}"
+      ],
+      "context_pack_path": "artifacts/content_engine/context_packs/payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_ctp-intro.md.context_pack.json",
+      "contract_bundle_path": null,
+      "issue_count": 1,
+      "issues": [],
+      "honest_label": {
+        "docetl": "imported-code_map",
+        "extract_mode": "docetl",
+        "tempo_harbor": "preview-via-linked-contract-if-present",
+        "network": "denied"
+      }
+    },
+    {
+      "ok": false,
+      "source_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_da-payments.md",
+      "snapshot_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_da-payments.md-6b6eeb7581dd",
+      "content_hash": "6b6eeb7581ddb45ee3e2f96a701114c45a361c5067dc1bfba167c5acc199bd50",
+      "segment_count": 1,
+      "unit_count": 0,
+      "promotion_status": "blocked",
+      "schema_passed": false,
+      "content_passed": false,
+      "agent_use_status": "deferred",
+      "promoted_unit_ids": [],
+      "context_pack_path": null,
+      "contract_bundle_path": null,
+      "issue_count": 2,
+      "issues": [
+        {
+          "code": "no_units",
+          "severity": "error",
+          "message": "Extractor produced zero quickstart units",
+          "unit_id": null
+        },
+        {
+          "code": "no_steps",
+          "severity": "error",
+          "message": "must include at least one step unit or grounded reference unit",
+          "unit_id": null
+        }
+      ],
+      "honest_label": {
+        "docetl": "imported-code_map",
+        "extract_mode": "docetl",
+        "tempo_harbor": "preview-via-linked-contract-if-present",
+        "network": "denied"
+      }
+    },
+    {
+      "ok": false,
+      "source_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_flex-api-2.md",
+      "snapshot_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_flex-api-2.md-1f45adaa17a8",
+      "content_hash": "1f45adaa17a82ed7e311ea3632e34d5f130f843eead10d26ae7a80855cb0491b",
+      "segment_count": 1,
+      "unit_count": 0,
+      "promotion_status": "blocked",
+      "schema_passed": false,
+      "content_passed": false,
+      "agent_use_status": "deferred",
+      "promoted_unit_ids": [],
+      "context_pack_path": null,
+      "contract_bundle_path": null,
+      "issue_count": 2,
+      "issues": [
+        {
+          "code": "no_units",
+          "severity": "error",
+          "message": "Extractor produced zero quickstart units",
+          "unit_id": null
+        },
+        {
+          "code": "no_steps",
+          "severity": "error",
+          "message": "must include at least one step unit or grounded reference unit",
+          "unit_id": null
+        }
+      ],
+      "honest_label": {
+        "docetl": "imported-code_map",
+        "extract_mode": "docetl",
+        "tempo_harbor": "preview-via-linked-contract-if-present",
+        "network": "denied"
+      }
+    },
+    {
+      "ok": false,
+      "source_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_microform-integ",
+      "snapshot_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_microform-integ-4b948653be86",
+      "content_hash": "4b948653be867a73af4fd8d7fcb30f25c5017eff2a8eb982fd291bb505659ac1",
+      "segment_count": 1,
+      "unit_count": 0,
+      "promotion_status": "blocked",
+      "schema_passed": false,
+      "content_passed": false,
+      "agent_use_status": "deferred",
+      "promoted_unit_ids": [],
+      "context_pack_path": null,
+      "contract_bundle_path": null,
+      "issue_count": 2,
+      "issues": [
+        {
+          "code": "no_units",
+          "severity": "error",
+          "message": "Extractor produced zero quickstart units",
+          "unit_id": null
+        },
+        {
+          "code": "no_steps",
+          "severity": "error",
+          "message": "must include at least one step unit or grounded reference unit",
+          "unit_id": null
+        }
+      ],
+      "honest_label": {
+        "docetl": "imported-code_map",
+        "extract_mode": "docetl",
+        "tempo_harbor": "preview-via-linked-contract-if-present",
+        "network": "denied"
+      }
+    },
+    {
+      "ok": true,
+      "source_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_payments_intro_",
+      "snapshot_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_payments_intro_-9970ecb1b206",
+      "content_hash": "9970ecb1b2068599da544f1ac0c8ebd0dd5890f9a669e1406476b5cf02452809",
+      "segment_count": 4,
+      "unit_count": 3,
+      "promotion_status": "promoted",
+      "schema_passed": true,
+      "content_passed": true,
+      "agent_use_status": "deferred",
+      "promoted_unit_ids": [
+        "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_payments_intro_:overview:0:figure:-{#payments_intro_digt_accpt_sec_intg_uc-",
+        "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_payments_intro_:overview:0:figure:-{#payments_intro_digt_accpt_sec_intg_mic",
+        "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_payments_intro_:overview:0:figure:-{#payments_intro_digt_accpt_sec_intg_da-"
+      ],
+      "context_pack_path": "artifacts/content_engine/context_packs/payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_payments_intro_.context_pack.json",
+      "contract_bundle_path": null,
+      "issue_count": 1,
+      "issues": [],
+      "honest_label": {
+        "docetl": "imported-code_map",
+        "extract_mode": "docetl",
+        "tempo_harbor": "preview-via-linked-contract-if-present",
+        "network": "denied"
+      }
+    },
+    {
+      "ok": true,
+      "source_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_uc-intro.md",
+      "snapshot_id": "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_uc-intro.md-b15910b3d21d",
+      "content_hash": "b15910b3d21d70fa7d3dd7c943fa3b1f6e1e3af2977a6a17db1d94140cabf205",
+      "segment_count": 2,
+      "unit_count": 1,
+      "promotion_status": "promoted",
+      "schema_passed": true,
+      "content_passed": true,
+      "agent_use_status": "deferred",
+      "promoted_unit_ids": [
+        "payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_uc-intro.md:overview:0:figure:-{#uc-intro_fig-1}"
+      ],
+      "context_pack_path": "artifacts/content_engine/context_packs/payments-guide-en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_uc-intro.md.context_pack.json",
+      "contract_bundle_path": null,
+      "issue_count": 1,
+      "issues": [],
+      "honest_label": {
+        "docetl": "imported-code_map",
+        "extract_mode": "docetl",
+        "tempo_harbor": "preview-via-linked-contract-if-present",
+        "network": "denied"
+      }
+    },
+    {
+      "ok": false,
+      "source_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth.md",
+      "snapshot_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth.md-7093810f5708",
+      "content_hash": "7093810f570858323a8aef4e3f54dc162e865c224691b47c82f6f53127698907",
+      "segment_count": 9,
+      "unit_count": 49,
+      "promotion_status": "blocked",
+      "schema_passed": true,
+      "content_passed": false,
+      "agent_use_status": "deferred",
+      "promoted_unit_ids": [],
+      "context_pack_path": null,
+      "contract_bundle_path": null,
+      "issue_count": 44,
+      "issues": [
+        {
+          "code": "secret_or_pan_material",
+          "severity": "error",
+          "message": "unit appears to contain secret or non-test PAN-like material",
+          "unit_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth.md:step:37:from-the-list,-add-the-**cardinalmobile.framewor"
+        }
+      ],
+      "honest_label": {
+        "docetl": "imported-code_map",
+        "extract_mode": "docetl",
+        "tempo_harbor": "preview-via-linked-contract-if-present",
+        "network": "denied"
+      }
+    },
+    {
+      "ok": false,
+      "source_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth_pa-reports-intro.md",
+      "snapshot_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth_pa-reports-intro.md-7fcd36cb07b5",
+      "content_hash": "7fcd36cb07b5e3ee1ebbd81a3dc3f011f35e73c3448268890deb70d9c2f0c502",
+      "segment_count": 1,
+      "unit_count": 0,
+      "promotion_status": "blocked",
+      "schema_passed": false,
+      "content_passed": false,
+      "agent_use_status": "deferred",
+      "promoted_unit_ids": [],
+      "context_pack_path": null,
+      "contract_bundle_path": null,
+      "issue_count": 2,
+      "issues": [
+        {
+          "code": "no_units",
+          "severity": "error",
+          "message": "Extractor produced zero quickstart units",
+          "unit_id": null
+        },
+        {
+          "code": "no_steps",
+          "severity": "error",
+          "message": "must include at least one step unit or grounded reference unit",
+          "unit_id": null
+        }
+      ],
+      "honest_label": {
+        "docetl": "imported-code_map",
+        "extract_mode": "docetl",
+        "tempo_harbor": "preview-via-linked-contract-if-present",
+        "network": "denied"
+      }
+    },
+    {
+      "ok": false,
+      "source_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth_pa-testing-intro.md",
+      "snapshot_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth_pa-testing-intro.md-305ef78fc865",
+      "content_hash": "305ef78fc8652a59a7e642711b2adcf422c5b2bfb9caf4f85e74daa24ee03494",
+      "segment_count": 1,
+      "unit_count": 0,
+      "promotion_status": "blocked",
+      "schema_passed": false,
+      "content_passed": false,
+      "agent_use_status": "deferred",
+      "promoted_unit_ids": [],
+      "context_pack_path": null,
+      "contract_bundle_path": null,
+      "issue_count": 2,
+      "issues": [
+        {
+          "code": "no_units",
+          "severity": "error",
+          "message": "Extractor produced zero quickstart units",
+          "unit_id": null
+        },
+        {
+          "code": "no_steps",
+          "severity": "error",
+          "message": "must include at least one step unit or grounded reference unit",
+          "unit_id": null
+        }
+      ],
+      "honest_label": {
+        "docetl": "imported-code_map",
+        "extract_mode": "docetl",
+        "tempo_harbor": "preview-via-linked-contract-if-present",
+        "network": "denied"
+      }
+    },
+    {
+      "ok": false,
+      "source_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth_pa2-ccdc-intro.md",
+      "snapshot_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth_pa2-ccdc-intro.md-2c188e672aac",
+      "content_hash": "2c188e672aacb4f5d3b8cea730ad09e85ad95eb88628c4c91365912a83537bd3",
+      "segment_count": 1,
+      "unit_count": 0,
+      "promotion_status": "blocked",
+      "schema_passed": false,
+      "content_passed": false,
+      "agent_use_status": "deferred",
+      "promoted_unit_ids": [],
+      "context_pack_path": null,
+      "contract_bundle_path": null,
+      "issue_count": 2,
+      "issues": [
+        {
+          "code": "no_units",
+          "severity": "error",
+          "message": "Extractor produced zero quickstart units",
+          "unit_id": null
+        },
+        {
+          "code": "no_steps",
+          "severity": "error",
+          "message": "must include at least one step unit or grounded reference unit",
+          "unit_id": null
+        }
+      ],
+      "honest_label": {
+        "docetl": "imported-code_map",
+        "extract_mode": "docetl",
+        "tempo_harbor": "preview-via-linked-contract-if-present",
+        "network": "denied"
+      }
+    },
+    {
+      "ok": false,
+      "source_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth_pa2-intro-intro.md",
+      "snapshot_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth_pa2-intro-intro.md-68636bdc1d4d",
+      "content_hash": "68636bdc1d4ded4a1c340befddd55a631f5d0dad53cfac2ea24837890e1eb8e4",
+      "segment_count": 1,
+      "unit_count": 0,
+      "promotion_status": "blocked",
+      "schema_passed": false,
+      "content_passed": false,
+      "agent_use_status": "deferred",
+      "promoted_unit_ids": [],
+      "context_pack_path": null,
+      "contract_bundle_path": null,
+      "issue_count": 2,
+      "issues": [
+        {
+          "code": "no_units",
+          "severity": "error",
+          "message": "Extractor produced zero quickstart units",
+          "unit_id": null
+        },
+        {
+          "code": "no_steps",
+          "severity": "error",
+          "message": "must include at least one step unit or grounded reference unit",
+          "unit_id": null
+        }
+      ],
+      "honest_label": {
+        "docetl": "imported-code_map",
+        "extract_mode": "docetl",
+        "tempo_harbor": "preview-via-linked-contract-if-present",
+        "network": "denied"
+      }
+    },
+    {
+      "ok": false,
+      "source_id": "payments-guide-en-us_payments_developer_ctv_rest_payments.md",
+      "snapshot_id": "payments-guide-en-us_payments_developer_ctv_rest_payments.md-529ef17b80e7",
+      "content_hash": "529ef17b80e73e726d6d8de79e428d946d195abb847ee33405cbe18edd8e4b90",
+      "segment_count": 6,
+      "unit_count": 29,
+      "promotion_status": "blocked",
+      "schema_passed": false,
+      "content_passed": false,
+      "agent_use_status": "deferred",
+      "promoted_unit_ids": [],
+      "context_pack_path": null,
+      "contract_bundle_path": null,
+      "issue_count": 30,
+      "issues": [
+        {
+          "code": "duplicate_unit_id",
+          "severity": "error",
+          "message": "duplicate unit_id payments-guide-en-us_payments_developer_ctv_rest_payments.md:overview:0:figure:",
+          "unit_id": "payments-guide-en-us_payments_developer_ctv_rest_payments.md:overview:0:figure:"
+        },
+        {
+          "code": "duplicate_unit_id",
+          "severity": "error",
+          "message": "duplicate unit_id payments-guide-en-us_payments_developer_ctv_rest_payments.md:overview:0:figure:",
+          "unit_id": "payments-guide-en-us_payments_developer_ctv_rest_payments.md:overview:0:figure:"
+        },
+        {
+          "code": "secret_or_pan_material",
+          "severity": "error",
+          "message": "unit appears to contain secret or non-test PAN-like material",
+          "unit_id": "payments-guide-en-us_payments_developer_ctv_rest_payments.md:step:22:test-your-system-in-production-using-a-small-cur"
+        },
+        {
+          "code": "secret_or_pan_material",
+          "severity": "error",
+          "message": "unit appears to contain secret or non-test PAN-like material",
+          "unit_id": "payments-guide-en-us_payments_developer_ctv_rest_payments.md:step:26:if-there-are-remaining-authorized-funds-that-are"
+        }
+      ],
+      "honest_label": {
+        "docetl": "imported-code_map",
+        "extract_mode": "docetl",
+        "tempo_harbor": "preview-via-linked-contract-if-present",
+        "network": "denied"
+      }
+    },
+    {
+      "ok": false,
+      "source_id": "payments-guide-en-us_payments_developer_ctv_rest_payments_payments-debit-prepaid-process-intro.",
+      "snapshot_id": "payments-guide-en-us_payments_developer_ctv_rest_payments_payments-debit-prepaid-process-intro.-e13b734c3c93",
+      "content_hash": "e13b734c3c93ec63efe584a2738f426152d7134097d6b6c24ec3b866454f84f0",
+      "segment_count": 1,
+      "unit_count": 0,
+      "promotion_status": "blocked",
+      "schema_passed": false,
+      "content_passed": false,
+      "agent_use_status": "deferred",
+      "promoted_unit_ids": [],
+      "context_pack_path": null,
+      "contract_bundle_path": null,
+      "issue_count": 2,
+      "issues": [
+        {
+          "code": "no_units",
+          "severity": "error",
+          "message": "Extractor produced zero quickstart units",
+          "unit_id": null
+        },
+        {
+          "code": "no_steps",
+          "severity": "error",
+          "message": "must include at least one step unit or grounded reference unit",
+          "unit_id": null
+        }
+      ],
+      "honest_label": {
+        "docetl": "imported-code_map",
+        "extract_mode": "docetl",
+        "tempo_harbor": "preview-via-linked-contract-if-present",
+        "network": "denied"
+      }
+    },
+    {
+      "ok": false,
+      "source_id": "payments-guide-en-us_payments_developer_ctv_rest_payments_payments-intro.md",
+      "snapshot_id": "payments-guide-en-us_payments_developer_ctv_rest_payments_payments-intro.md-e7a8ba8970ee",
+      "content_hash": "e7a8ba8970ee262a0aa981edc1eafc656b2052d58fcc44b1d599f1cf51846c05",
+      "segment_count": 1,
+      "unit_count": 0,
+      "promotion_status": "blocked",
+      "schema_passed": false,
+      "content_passed": false,
+      "agent_use_status": "deferred",
+      "promoted_unit_ids": [],
+      "context_pack_path": null,
+      "contract_bundle_path": null,
+      "issue_count": 2,
+      "issues": [
+        {
+          "code": "no_units",
+          "severity": "error",
+          "message": "Extractor produced zero quickstart units",
+          "unit_id": null
+        },
+        {
+          "code": "no_steps",
+          "severity": "error",
+          "message": "must include at least one step unit or grounded reference unit",
+          "unit_id": null
+        }
+      ],
+      "honest_label": {
+        "docetl": "imported-code_map",
+        "extract_mode": "docetl",
+        "tempo_harbor": "preview-via-linked-contract-if-present",
+        "network": "denied"
+      }
+    },
+    {
+      "ok": false,
+      "source_id": "payments-guide-en-us_payments_developer_ctv_rest_payments_payments-processing-basic-intro.md",
+      "snapshot_id": "payments-guide-en-us_payments_developer_ctv_rest_payments_payments-processing-basic-intro.md-d04ff5ad9aba",
+      "content_hash": "d04ff5ad9aba57b585dc4758aa1b8d4061f86c303e04a136f3849e1a904ba4ef",
+      "segment_count": 1,
+      "unit_count": 0,
+      "promotion_status": "blocked",
+      "schema_passed": false,
+      "content_passed": false,
+      "agent_use_status": "deferred",
+      "promoted_unit_ids": [],
+      "context_pack_path": null,
+      "contract_bundle_path": null,
+      "issue_count": 2,
+      "issues": [
+        {
+          "code": "no_units",
+          "severity": "error",
+          "message": "Extractor produced zero quickstart units",
+          "unit_id": null
+        },
+        {
+          "code": "no_steps",
+          "severity": "error",
+          "message": "must include at least one step unit or grounded reference unit",
+          "unit_id": null
+        }
+      ],
+      "honest_label": {
+        "docetl": "imported-code_map",
+        "extract_mode": "docetl",
+        "tempo_harbor": "preview-via-linked-contract-if-present",
+        "network": "denied"
+      }
+    },
+    {
+      "ok": false,
+      "source_id": "payments-guide-en-us_tms_developer_all_rest_tms.md",
+      "snapshot_id": "payments-guide-en-us_tms_developer_all_rest_tms.md-87701ecb1843",
+      "content_hash": "87701ecb1843847e61afeaa5c78ba5f7a55fe403014ccf330621287c919e1715",
+      "segment_count": 23,
+      "unit_count": 232,
+      "promotion_status": "blocked",
+      "schema_passed": false,
+      "content_passed": false,
+      "agent_use_status": "deferred",
+      "promoted_unit_ids": [],
+      "context_pack_path": null,
+      "contract_bundle_path": null,
+      "issue_count": 235,
+      "issues": [
+        {
+          "code": "duplicate_unit_id",
+          "severity": "error",
+          "message": "duplicate unit_id payments-guide-en-us_tms_developer_all_rest_tms.md:overview:0:figure:",
+          "unit_id": "payments-guide-en-us_tms_developer_all_rest_tms.md:overview:0:figure:"
+        },
+        {
+          "code": "duplicate_unit_id",
+          "severity": "error",
+          "message": "duplicate unit_id payments-guide-en-us_tms_developer_all_rest_tms.md:overview:0:figure:",
+          "unit_id": "payments-guide-en-us_tms_developer_all_rest_tms.md:overview:0:figure:"
+        },
+        {
+          "code": "secret_or_pan_material",
+          "severity": "error",
+          "message": "unit appears to contain secret or non-test PAN-like material",
+          "unit_id": "payments-guide-en-us_tms_developer_all_rest_tms.md:step:143:the-partner-completes-merchant-setup."
+        },
+        {
+          "code": "secret_or_pan_material",
+          "severity": "error",
+          "message": "unit appears to contain secret or non-test PAN-like material",
+          "unit_id": "payments-guide-en-us_tms_developer_all_rest_tms.md:step:154:click-enroll-to-network-token-services-to-comple"
+        },
+        {
+          "code": "secret_or_pan_material",
+          "severity": "error",
+          "message": "unit appears to contain secret or non-test PAN-like material",
+          "unit_id": "payments-guide-en-us_tms_developer_all_rest_tms.md:step:195:you-notify-the-cardholder-that-the-card-on-file-"
+        },
+        {
+          "code": "secret_or_pan_material",
+          "severity": "error",
+          "message": "unit appears to contain secret or non-test PAN-like material",
+          "unit_id": "payments-guide-en-us_tms_developer_all_rest_tms.md:step:226:decrypt-the-jwe-encrypted-payload.-the-response-"
+        }
+      ],
+      "honest_label": {
+        "docetl": "imported-code_map",
+        "extract_mode": "docetl",
+        "tempo_harbor": "preview-via-linked-contract-if-present",
+        "network": "denied"
+      }
+    },
+    {
+      "ok": false,
+      "source_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-bin-lookup-service.md",
+      "snapshot_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-bin-lookup-service.md-ca6e365888ff",
+      "content_hash": "ca6e365888ff1f5aaa6286e410c3dcee8ffd57493326fcd5d3b3f02c4fa47aa2",
+      "segment_count": 1,
+      "unit_count": 0,
+      "promotion_status": "blocked",
+      "schema_passed": false,
+      "content_passed": false,
+      "agent_use_status": "deferred",
+      "promoted_unit_ids": [],
+      "context_pack_path": null,
+      "contract_bundle_path": null,
+      "issue_count": 2,
+      "issues": [
+        {
+          "code": "no_units",
+          "severity": "error",
+          "message": "Extractor produced zero quickstart units",
+          "unit_id": null
+        },
+        {
+          "code": "no_steps",
+          "severity": "error",
+          "message": "must include at least one step unit or grounded reference unit",
+          "unit_id": null
+        }
+      ],
+      "honest_label": {
+        "docetl": "imported-code_map",
+        "extract_mode": "docetl",
+        "tempo_harbor": "preview-via-linked-contract-if-present",
+        "network": "denied"
+      }
+    },
+    {
+      "ok": false,
+      "source_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-card-art.md",
+      "snapshot_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-card-art.md-bf3c4b7c5ce5",
+      "content_hash": "bf3c4b7c5ce5fa4ee96e5f144c4855f08c93a5ce63420628f7bb80d3db49c646",
+      "segment_count": 1,
+      "unit_count": 0,
+      "promotion_status": "blocked",
+      "schema_passed": false,
+      "content_passed": false,
+      "agent_use_status": "deferred",
+      "promoted_unit_ids": [],
+      "context_pack_path": null,
+      "contract_bundle_path": null,
+      "issue_count": 2,
+      "issues": [
+        {
+          "code": "no_units",
+          "severity": "error",
+          "message": "Extractor produced zero quickstart units",
+          "unit_id": null
+        },
+        {
+          "code": "no_steps",
+          "severity": "error",
+          "message": "must include at least one step unit or grounded reference unit",
+          "unit_id": null
+        }
+      ],
+      "honest_label": {
+        "docetl": "imported-code_map",
+        "extract_mode": "docetl",
+        "tempo_harbor": "preview-via-linked-contract-if-present",
+        "network": "denied"
+      }
+    },
+    {
+      "ok": false,
+      "source_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-create-request.md",
+      "snapshot_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-create-request.md-d634ade71cc9",
+      "content_hash": "d634ade71cc9caaa5338b5e1aa652c5f0fa75e20e9e10365002dd3893fbb2235",
+      "segment_count": 1,
+      "unit_count": 0,
+      "promotion_status": "blocked",
+      "schema_passed": false,
+      "content_passed": false,
+      "agent_use_status": "deferred",
+      "promoted_unit_ids": [],
+      "context_pack_path": null,
+      "contract_bundle_path": null,
+      "issue_count": 2,
+      "issues": [
+        {
+          "code": "no_units",
+          "severity": "error",
+          "message": "Extractor produced zero quickstart units",
+          "unit_id": null
+        },
+        {
+          "code": "no_steps",
+          "severity": "error",
+          "message": "must include at least one step unit or grounded reference unit",
+          "unit_id": null
+        }
+      ],
+      "honest_label": {
+        "docetl": "imported-code_map",
+        "extract_mode": "docetl",
+        "tempo_harbor": "preview-via-linked-contract-if-present",
+        "network": "denied"
+      }
+    },
+    {
+      "ok": false,
+      "source_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-cust-tkn.md",
+      "snapshot_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-cust-tkn.md-f281e7798dee",
+      "content_hash": "f281e7798deef9ab4e858e58f38f3f6f3de8a8302aa3e1c25e3fe5d426fc2cf2",
+      "segment_count": 1,
+      "unit_count": 0,
+      "promotion_status": "blocked",
+      "schema_passed": false,
+      "content_passed": false,
+      "agent_use_status": "deferred",
+      "promoted_unit_ids": [],
+      "context_pack_path": null,
+      "contract_bundle_path": null,
+      "issue_count": 2,
+      "issues": [
+        {
+          "code": "no_units",
+          "severity": "error",
+          "message": "Extractor produced zero quickstart units",
+          "unit_id": null
+        },
+        {
+          "code": "no_steps",
+          "severity": "error",
+          "message": "must include at least one step unit or grounded reference unit",
+          "unit_id": null
+        }
+      ],
+      "honest_label": {
+        "docetl": "imported-code_map",
+        "extract_mode": "docetl",
+        "tempo_harbor": "preview-via-linked-contract-if-present",
+        "network": "denied"
+      }
+    },
+    {
+      "ok": false,
+      "source_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-cust-tkn_tms-cust-pi-tkn.md",
+      "snapshot_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-cust-tkn_tms-cust-pi-tkn.md-dc41e4572268",
+      "content_hash": "dc41e45722687755c55faf3d0a6b8977fe23ae0c09f1bcdad6b130b6e5953903",
+      "segment_count": 1,
+      "unit_count": 0,
+      "promotion_status": "blocked",
+      "schema_passed": false,
+      "content_passed": false,
+      "agent_use_status": "deferred",
+      "promoted_unit_ids": [],
+      "context_pack_path": null,
+      "contract_bundle_path": null,
+      "issue_count": 2,
+      "issues": [
+        {
+          "code": "no_units",
+          "severity": "error",
+          "message": "Extractor produced zero quickstart units",
+          "unit_id": null
+        },
+        {
+          "code": "no_steps",
+          "severity": "error",
+          "message": "must include at least one step unit or grounded reference unit",
+          "unit_id": null
+        }
+      ],
+      "honest_label": {
+        "docetl": "imported-code_map",
+        "extract_mode": "docetl",
+        "tempo_harbor": "preview-via-linked-contract-if-present",
+        "network": "denied"
+      }
+    },
+    {
+      "ok": false,
+      "source_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-cust-tkn_tms-ship-tkn.md",
+      "snapshot_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-cust-tkn_tms-ship-tkn.md-d6bd152abc7b",
+      "content_hash": "d6bd152abc7bf23fe8d47fc3e5a1ffdfc63b053fbe5439b891ed789c7742b372",
+      "segment_count": 1,
+      "unit_count": 0,
+      "promotion_status": "blocked",
+      "schema_passed": false,
+      "content_passed": false,
+      "agent_use_status": "deferred",
+      "promoted_unit_ids": [],
+      "context_pack_path": null,
+      "contract_bundle_path": null,
+      "issue_count": 2,
+      "issues": [
+        {
+          "code": "no_units",
+          "severity": "error",
+          "message": "Extractor produced zero quickstart units",
+          "unit_id": null
+        },
+        {
+          "code": "no_steps",
+          "severity": "error",
+          "message": "must include at least one step unit or grounded reference unit",
+          "unit_id": null
+        }
+      ],
+      "honest_label": {
+        "docetl": "imported-code_map",
+        "extract_mode": "docetl",
+        "tempo_harbor": "preview-via-linked-contract-if-present",
+        "network": "denied"
+      }
+    },
+    {
+      "ok": false,
+      "source_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-ii-tkn.md",
+      "snapshot_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-ii-tkn.md-c15d1ad6bd85",
+      "content_hash": "c15d1ad6bd8590e103403e9177973fb136219e3b86e37f688ea2605ddde287bd",
+      "segment_count": 1,
+      "unit_count": 0,
+      "promotion_status": "blocked",
+      "schema_passed": false,
+      "content_passed": false,
+      "agent_use_status": "deferred",
+      "promoted_unit_ids": [],
+      "context_pack_path": null,
+      "contract_bundle_path": null,
+      "issue_count": 2,
+      "issues": [
+        {
+          "code": "no_units",
+          "severity": "error",
+          "message": "Extractor produced zero quickstart units",
+          "unit_id": null
+        },
+        {
+          "code": "no_steps",
+          "severity": "error",
+          "message": "must include at least one step unit or grounded reference unit",
+          "unit_id": null
+        }
+      ],
+      "honest_label": {
+        "docetl": "imported-code_map",
+        "extract_mode": "docetl",
+        "tempo_harbor": "preview-via-linked-contract-if-present",
+        "network": "denied"
+      }
+    },
+    {
+      "ok": false,
+      "source_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-net-tkn-intro.md",
+      "snapshot_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-net-tkn-intro.md-f6581f6a8afd",
+      "content_hash": "f6581f6a8afd21bb3b18bb38ae5ca29c487ee08d44752da80a271f050086fe9c",
+      "segment_count": 1,
+      "unit_count": 0,
+      "promotion_status": "blocked",
+      "schema_passed": false,
+      "content_passed": false,
+      "agent_use_status": "deferred",
+      "promoted_unit_ids": [],
+      "context_pack_path": null,
+      "contract_bundle_path": null,
+      "issue_count": 2,
+      "issues": [
+        {
+          "code": "no_units",
+          "severity": "error",
+          "message": "Extractor produced zero quickstart units",
+          "unit_id": null
+        },
+        {
+          "code": "no_steps",
+          "severity": "error",
+          "message": "must include at least one step unit or grounded reference unit",
+          "unit_id": null
+        }
+      ],
+      "honest_label": {
+        "docetl": "imported-code_map",
+        "extract_mode": "docetl",
+        "tempo_harbor": "preview-via-linked-contract-if-present",
+        "network": "denied"
+      }
+    },
+    {
+      "ok": false,
+      "source_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-net-tkn-onboard.md",
+      "snapshot_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-net-tkn-onboard.md-09b6ceabe6da",
+      "content_hash": "09b6ceabe6dae10945d34895844d6910b4b49cf79262920d6857bc32bd7bfa54",
+      "segment_count": 1,
+      "unit_count": 0,
+      "promotion_status": "blocked",
+      "schema_passed": false,
+      "content_passed": false,
+      "agent_use_status": "deferred",
+      "promoted_unit_ids": [],
+      "context_pack_path": null,
+      "contract_bundle_path": null,
+      "issue_count": 2,
+      "issues": [
+        {
+          "code": "no_units",
+          "severity": "error",
+          "message": "Extractor produced zero quickstart units",
+          "unit_id": null
+        },
+        {
+          "code": "no_steps",
+          "severity": "error",
+          "message": "must include at least one step unit or grounded reference unit",
+          "unit_id": null
+        }
+      ],
+      "honest_label": {
+        "docetl": "imported-code_map",
+        "extract_mode": "docetl",
+        "tempo_harbor": "preview-via-linked-contract-if-present",
+        "network": "denied"
+      }
+    },
+    {
+      "ok": false,
+      "source_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-onboarding.md",
+      "snapshot_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-onboarding.md-7667219b480d",
+      "content_hash": "7667219b480df9934e774797d108c44d87fdb98653ec89558befaaaa6c7a7918",
+      "segment_count": 1,
+      "unit_count": 0,
+      "promotion_status": "blocked",
+      "schema_passed": false,
+      "content_passed": false,
+      "agent_use_status": "deferred",
+      "promoted_unit_ids": [],
+      "context_pack_path": null,
+      "contract_bundle_path": null,
+      "issue_count": 2,
+      "issues": [
+        {
+          "code": "no_units",
+          "severity": "error",
+          "message": "Extractor produced zero quickstart units",
+          "unit_id": null
+        },
+        {
+          "code": "no_steps",
+          "severity": "error",
+          "message": "must include at least one step unit or grounded reference unit",
+          "unit_id": null
+        }
+      ],
+      "honest_label": {
+        "docetl": "imported-code_map",
+        "extract_mode": "docetl",
+        "tempo_harbor": "preview-via-linked-contract-if-present",
+        "network": "denied"
+      }
+    },
+    {
+      "ok": true,
+      "source_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-overview.md",
+      "snapshot_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-overview.md-e51263ce8e7c",
+      "content_hash": "e51263ce8e7cbfd530d8c776da0a69a8ff6506262460100cf4012b28cf0eacfc",
+      "segment_count": 2,
+      "unit_count": 1,
+      "promotion_status": "promoted",
+      "schema_passed": true,
+      "content_passed": true,
+      "agent_use_status": "deferred",
+      "promoted_unit_ids": [
+        "payments-guide-en-us_tms_developer_all_rest_tms_tms-overview.md:overview:0:figure:"
+      ],
+      "context_pack_path": "artifacts/content_engine/context_packs/payments-guide-en-us_tms_developer_all_rest_tms_tms-overview.md.context_pack.json",
+      "contract_bundle_path": null,
+      "issue_count": 1,
+      "issues": [],
+      "honest_label": {
+        "docetl": "imported-code_map",
+        "extract_mode": "docetl",
+        "tempo_harbor": "preview-via-linked-contract-if-present",
+        "network": "denied"
+      }
+    },
+    {
+      "ok": false,
+      "source_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-pi-tkn.md",
+      "snapshot_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-pi-tkn.md-cc4092f3de2b",
+      "content_hash": "cc4092f3de2b26f75cbf1f09d4a945e17d36aac3263f6ce993f96d4eaa28be61",
+      "segment_count": 1,
+      "unit_count": 0,
+      "promotion_status": "blocked",
+      "schema_passed": false,
+      "content_passed": false,
+      "agent_use_status": "deferred",
+      "promoted_unit_ids": [],
+      "context_pack_path": null,
+      "contract_bundle_path": null,
+      "issue_count": 2,
+      "issues": [
+        {
+          "code": "no_units",
+          "severity": "error",
+          "message": "Extractor produced zero quickstart units",
+          "unit_id": null
+        },
+        {
+          "code": "no_steps",
+          "severity": "error",
+          "message": "must include at least one step unit or grounded reference unit",
+          "unit_id": null
+        }
+      ],
+      "honest_label": {
+        "docetl": "imported-code_map",
+        "extract_mode": "docetl",
+        "tempo_harbor": "preview-via-linked-contract-if-present",
+        "network": "denied"
+      }
+    },
+    {
+      "ok": false,
+      "source_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-wallet-tkn.md",
+      "snapshot_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-wallet-tkn.md-fe6343b3b5ef",
+      "content_hash": "fe6343b3b5ef995bbd493be22e4469b620251ccac7ebdb3ef78441c455bc4b28",
+      "segment_count": 1,
+      "unit_count": 0,
+      "promotion_status": "blocked",
+      "schema_passed": false,
+      "content_passed": false,
+      "agent_use_status": "deferred",
+      "promoted_unit_ids": [],
+      "context_pack_path": null,
+      "contract_bundle_path": null,
+      "issue_count": 2,
+      "issues": [
+        {
+          "code": "no_units",
+          "severity": "error",
+          "message": "Extractor produced zero quickstart units",
+          "unit_id": null
+        },
+        {
+          "code": "no_steps",
+          "severity": "error",
+          "message": "must include at least one step unit or grounded reference unit",
+          "unit_id": null
+        }
+      ],
+      "honest_label": {
+        "docetl": "imported-code_map",
+        "extract_mode": "docetl",
+        "tempo_harbor": "preview-via-linked-contract-if-present",
+        "network": "denied"
+      }
+    },
+    {
+      "ok": false,
+      "source_id": "payments-guide-en-us_tms_developer_ctv_rest_tms.md",
+      "snapshot_id": "payments-guide-en-us_tms_developer_ctv_rest_tms.md-d554d3af3e68",
+      "content_hash": "d554d3af3e685d1dbba3937bd56c4c5b2020e7525ca80ad16da46a1f72e139dd",
+      "segment_count": 18,
+      "unit_count": 187,
+      "promotion_status": "blocked",
+      "schema_passed": false,
+      "content_passed": false,
+      "agent_use_status": "deferred",
+      "promoted_unit_ids": [],
+      "context_pack_path": null,
+      "contract_bundle_path": null,
+      "issue_count": 188,
+      "issues": [
+        {
+          "code": "duplicate_unit_id",
+          "severity": "error",
+          "message": "duplicate unit_id payments-guide-en-us_tms_developer_ctv_rest_tms.md:overview:0:figure:",
+          "unit_id": "payments-guide-en-us_tms_developer_ctv_rest_tms.md:overview:0:figure:"
+        },
+        {
+          "code": "secret_or_pan_material",
+          "severity": "error",
+          "message": "unit appears to contain secret or non-test PAN-like material",
+          "unit_id": "payments-guide-en-us_tms_developer_ctv_rest_tms.md:step:143:the-partner-completes-merchant-setup."
+        },
+        {
+          "code": "secret_or_pan_material",
+          "severity": "error",
+          "message": "unit appears to contain secret or non-test PAN-like material",
+          "unit_id": "payments-guide-en-us_tms_developer_ctv_rest_tms.md:step:154:click-enroll-to-network-token-services-to-comple"
+        }
+      ],
+      "honest_label": {
+        "docetl": "imported-code_map",
+        "extract_mode": "docetl",
+        "tempo_harbor": "preview-via-linked-contract-if-present",
+        "network": "denied"
+      }
+    },
+    {
+      "ok": false,
+      "source_id": "payments-guide-payer-auth",
+      "snapshot_id": "payments-guide-payer-auth-7b6aa0a20aba",
+      "content_hash": "7b6aa0a20aba435feaf748db79ac67134744512c4de3f89c0be2f2d78cc246e6",
+      "segment_count": 9,
+      "unit_count": 49,
+      "promotion_status": "blocked",
+      "schema_passed": true,
+      "content_passed": false,
+      "agent_use_status": "deferred",
+      "promoted_unit_ids": [],
+      "context_pack_path": null,
+      "contract_bundle_path": null,
+      "issue_count": 44,
+      "issues": [
+        {
+          "code": "secret_or_pan_material",
+          "severity": "error",
+          "message": "unit appears to contain secret or non-test PAN-like material",
+          "unit_id": "payments-guide-payer-auth:step:37:from-the-list,-add-the-**cardinalmobile.framewor"
+        }
+      ],
+      "honest_label": {
+        "docetl": "imported-code_map",
+        "extract_mode": "docetl",
+        "tempo_harbor": "preview-via-linked-contract-if-present",
+        "network": "denied"
+      }
+    },
+    {
+      "ok": false,
+      "source_id": "payments-guide-payments",
+      "snapshot_id": "payments-guide-payments-d34dfa99eae7",
+      "content_hash": "d34dfa99eae7db280178d15b0243e9e51dffde77cb9317639ede7e702ecb8503",
+      "segment_count": 6,
+      "unit_count": 29,
+      "promotion_status": "blocked",
+      "schema_passed": false,
+      "content_passed": false,
+      "agent_use_status": "deferred",
+      "promoted_unit_ids": [],
+      "context_pack_path": null,
+      "contract_bundle_path": null,
+      "issue_count": 30,
+      "issues": [
+        {
+          "code": "duplicate_unit_id",
+          "severity": "error",
+          "message": "duplicate unit_id payments-guide-payments:overview:0:figure:",
+          "unit_id": "payments-guide-payments:overview:0:figure:"
+        },
+        {
+          "code": "duplicate_unit_id",
+          "severity": "error",
+          "message": "duplicate unit_id payments-guide-payments:overview:0:figure:",
+          "unit_id": "payments-guide-payments:overview:0:figure:"
+        },
+        {
+          "code": "secret_or_pan_material",
+          "severity": "error",
+          "message": "unit appears to contain secret or non-test PAN-like material",
+          "unit_id": "payments-guide-payments:step:22:test-your-system-in-production-using-a-small-cur"
+        },
+        {
+          "code": "secret_or_pan_material",
+          "severity": "error",
+          "message": "unit appears to contain secret or non-test PAN-like material",
+          "unit_id": "payments-guide-payments:step:26:if-there-are-remaining-authorized-funds-that-are"
+        }
+      ],
+      "honest_label": {
+        "docetl": "imported-code_map",
+        "extract_mode": "docetl",
+        "tempo_harbor": "preview-via-linked-contract-if-present",
+        "network": "denied"
+      }
+    },
+    {
+      "ok": false,
+      "source_id": "payments-guide-rest-getting-started",
+      "snapshot_id": "payments-guide-rest-getting-started-1e7df3cca0de",
+      "content_hash": "1e7df3cca0de6d7cbc008ddd61d3ec9a892fa5e5643a44f926235345bbc8b047",
+      "segment_count": 10,
+      "unit_count": 375,
+      "promotion_status": "blocked",
+      "schema_passed": true,
+      "content_passed": false,
+      "agent_use_status": "deferred",
+      "promoted_unit_ids": [],
+      "context_pack_path": null,
+      "contract_bundle_path": null,
+      "issue_count": 377,
+      "issues": [
+        {
+          "code": "secret_or_pan_material",
+          "severity": "error",
+          "message": "unit appears to contain secret or non-test PAN-like material",
+          "unit_id": "payments-guide-rest-getting-started:step:147:after-calculating-the-signature,-you-can-constru"
+        },
+        {
+          "code": "secret_or_pan_material",
+          "severity": "error",
+          "message": "unit appears to contain secret or non-test PAN-like material",
+          "unit_id": "payments-guide-rest-getting-started:step:172:import-the-signing,-mle,-and-sjc-certificates.-t"
+        },
+        {
+          "code": "secret_or_pan_material",
+          "severity": "error",
+          "message": "unit appears to contain secret or non-test PAN-like material",
+          "unit_id": "payments-guide-rest-getting-started:step:175:create-a-class-that-uses-the-methods-described-i"
+        }
+      ],
+      "honest_label": {
+        "docetl": "imported-code_map",
+        "extract_mode": "docetl",
+        "tempo_harbor": "preview-via-linked-contract-if-present",
+        "network": "denied"
+      }
+    },
+    {
+      "ok": false,
+      "source_id": "payments-guide-sandbox",
+      "snapshot_id": "payments-guide-sandbox-bc3bd453eab7",
+      "content_hash": "bc3bd453eab7875c6687de9b5e9fb9dba5d7a9c604778e1717fe7c84e5578914",
+      "segment_count": 1,
+      "unit_count": 0,
+      "promotion_status": "blocked",
+      "schema_passed": false,
+      "content_passed": false,
+      "agent_use_status": "deferred",
+      "promoted_unit_ids": [],
+      "context_pack_path": null,
+      "contract_bundle_path": null,
+      "issue_count": 2,
+      "issues": [
+        {
+          "code": "no_units",
+          "severity": "error",
+          "message": "Extractor produced zero quickstart units",
+          "unit_id": null
+        },
+        {
+          "code": "no_steps",
+          "severity": "error",
+          "message": "must include at least one step unit or grounded reference unit",
+          "unit_id": null
+        }
+      ],
+      "honest_label": {
+        "docetl": "imported-code_map",
+        "extract_mode": "docetl",
+        "tempo_harbor": "preview-via-linked-contract-if-present",
+        "network": "denied"
+      }
+    },
+    {
+      "ok": false,
+      "source_id": "payments-guide-testing-guide",
+      "snapshot_id": "payments-guide-testing-guide-6635e53e814d",
+      "content_hash": "6635e53e814d38119396279402d330e31bd763d1dace792b5aa949ea59a4f9fd",
+      "segment_count": 1,
+      "unit_count": 0,
+      "promotion_status": "blocked",
+      "schema_passed": false,
+      "content_passed": false,
+      "agent_use_status": "deferred",
+      "promoted_unit_ids": [],
+      "context_pack_path": null,
+      "contract_bundle_path": null,
+      "issue_count": 2,
+      "issues": [
+        {
+          "code": "no_units",
+          "severity": "error",
+          "message": "Extractor produced zero quickstart units",
+          "unit_id": null
+        },
+        {
+          "code": "no_steps",
+          "severity": "error",
+          "message": "must include at least one step unit or grounded reference unit",
+          "unit_id": null
+        }
+      ],
+      "honest_label": {
+        "docetl": "imported-code_map",
+        "extract_mode": "docetl",
+        "tempo_harbor": "preview-via-linked-contract-if-present",
+        "network": "denied"
+      }
+    },
+    {
+      "ok": false,
+      "source_id": "payments-guide-tms",
+      "snapshot_id": "payments-guide-tms-ef691bbf42a1",
+      "content_hash": "ef691bbf42a1a005c71c87194b606a4633849702e604854fafdc41eb5429c5fb",
+      "segment_count": 23,
+      "unit_count": 232,
+      "promotion_status": "blocked",
+      "schema_passed": false,
+      "content_passed": false,
+      "agent_use_status": "deferred",
+      "promoted_unit_ids": [],
+      "context_pack_path": null,
+      "contract_bundle_path": null,
+      "issue_count": 235,
+      "issues": [
+        {
+          "code": "duplicate_unit_id",
+          "severity": "error",
+          "message": "duplicate unit_id payments-guide-tms:overview:0:figure:",
+          "unit_id": "payments-guide-tms:overview:0:figure:"
+        },
+        {
+          "code": "duplicate_unit_id",
+          "severity": "error",
+          "message": "duplicate unit_id payments-guide-tms:overview:0:figure:",
+          "unit_id": "payments-guide-tms:overview:0:figure:"
+        },
+        {
+          "code": "secret_or_pan_material",
+          "severity": "error",
+          "message": "unit appears to contain secret or non-test PAN-like material",
+          "unit_id": "payments-guide-tms:step:143:the-partner-completes-merchant-setup."
+        },
+        {
+          "code": "secret_or_pan_material",
+          "severity": "error",
+          "message": "unit appears to contain secret or non-test PAN-like material",
+          "unit_id": "payments-guide-tms:step:154:click-enroll-to-network-token-services-to-comple"
+        },
+        {
+          "code": "secret_or_pan_material",
+          "severity": "error",
+          "message": "unit appears to contain secret or non-test PAN-like material",
+          "unit_id": "payments-guide-tms:step:195:you-notify-the-cardholder-that-the-card-on-file-"
+        },
+        {
+          "code": "secret_or_pan_material",
+          "severity": "error",
+          "message": "unit appears to contain secret or non-test PAN-like material",
+          "unit_id": "payments-guide-tms:step:226:decrypt-the-jwe-encrypted-payload.-the-response-"
+        }
+      ],
       "honest_label": {
         "docetl": "imported-code_map",
         "extract_mode": "docetl",
@@ -537,8 +2768,8 @@
       "ok": true
     }
   ],
-  "promoted_count": 15,
-  "blocked_count": 0,
+  "promoted_count": 20,
+  "blocked_count": 44,
   "bench_ok_count": 3,
   "honest_labels": [
     "imported-code_map"

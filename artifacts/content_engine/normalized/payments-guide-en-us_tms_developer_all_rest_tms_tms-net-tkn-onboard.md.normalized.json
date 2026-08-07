@@ -1,0 +1,21 @@
+{
+  "doc_id": "doc-payments-guide-en-us_tms_developer_all_rest_tms_tms-net-tkn-onboard.md",
+  "source_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-net-tkn-onboard.md",
+  "snapshot_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-net-tkn-onboard.md-09b6ceabe6da",
+  "title": "payments-guide-en-us_tms_developer_all_rest_tms_tms-net-tkn-onboard.md",
+  "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms/tms-net-tkn-onboard.md",
+  "source_format": "markdown",
+  "product": [
+    "payments",
+    "cybersource"
+  ],
+  "audience": [
+    "developer"
+  ],
+  "page_type": "guide",
+  "freshness_date": "unknown",
+  "normalized_markdown": "Network Tokenization Overview {#tms-net-tkn-onboard}\n====================================================\n\nNetwork tokenization replaces a customer's primary account number (PAN) with a network token. A network token is a tokenized card number that is issued by card networks (for example, Visa, Mastercard, American Express, and Discover). Network tokens use the same format as a PAN but are domain-restricted and cryptographically secured. This reduces exposure to fraud and data breaches.\nUnlike standard tokens that are converted back to the PAN during authorization, network tokens remove the PAN from the payment flow. Each network token is provisioned with its own expiration date and is paired with a dynamic cryptogram. Tokens can be restricted to a specific merchant, device, or transaction context.\nInitially introduced for digital wallets, network tokens now support card-on-file (COF) use cases such as subscriptions, recurring payments, and one-click checkout, enabling secure storage and reuse of payment credentials.\n`Token Management Service` (`TMS`) tokens can be linked to network tokens:\n\n* Instrument identifier tokens represent the underlying account\n* Payment instrument tokens represent a stored payment method\n* Customer tokens represent a stored customer profile\n\n{#tms-net-tkn-onboard_ul_dwq_54k_mjc}\n\nKey Benefits and Features {#tms-net-tkn-onboard_section_ecn_4qk_mjc}\n--------------------------------------------------------------------\n\nNetwork tokenization helps improve payment security, performance, and customer experience:\n\n* **Enhanced security**: Tokens are domain-restricted and tied to your Token Requestor ID (TRID), so they can only be used in your environment. Tokens cannot be reused outside that domain and can be deactivated without reissuing cards.\n* **Higher authorization rates**: Each transaction includes a dynamic cryptogram. This provides additional assurance to issuers and helping improve authorization performance.\n* **Automatic updates**: Card life-cycle changes, such as reissues or expirations, are updated automatically. You receive updates without handling new card numbers, reducing payment disruptions.\n* **Reduced PCI scope**: By storing tokens instead of raw card data, you can lower PCI compliance requirements and the associated costs.\n* **Simplified checkout**: Cardholders can complete transactions without re-entering CVV, reducing friction and improving conversion.\n* **Enhanced checkout experiences**: Support for card art and push provisioning enables seamless onboarding and enhanced checkout or wallet interactions.\n  {#tms-net-tkn-onboard_ul_j5w_4qk_mjc}\n\nIntegration Models {#tms-net-tkn-onboard_section_ypk_crk_mjc}\n-------------------------------------------------------------\n\nYou can tokenize payment credentials using `TMS` or when you process payments:\n\n* **`TMS` tokenization** : Use `TMS` as a standalone service for token provisioning, cryptogram generation, and lifecycle updates.\n* **Tokenization with payments** : Extend existing payment flows with minimal changes, while `TMS` manages token life-cycle and transaction handling.\n  {#tms-net-tkn-onboard_ul_ms5_2rk_mjc}\n",
+  "extracted_metadata": {
+    "goal": "payments-guide-en-us_tms_developer_all_rest_tms_tms-net-tkn-onboard.md"
+  }
+}

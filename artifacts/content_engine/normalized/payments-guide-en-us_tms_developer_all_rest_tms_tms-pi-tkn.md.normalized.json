@@ -1,0 +1,21 @@
+{
+  "doc_id": "doc-payments-guide-en-us_tms_developer_all_rest_tms_tms-pi-tkn.md",
+  "source_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-pi-tkn.md",
+  "snapshot_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-pi-tkn.md-cc4092f3de2b",
+  "title": "payments-guide-en-us_tms_developer_all_rest_tms_tms-pi-tkn.md",
+  "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms/tms-pi-tkn.md",
+  "source_format": "markdown",
+  "product": [
+    "payments",
+    "cybersource"
+  ],
+  "audience": [
+    "developer"
+  ],
+  "page_type": "guide",
+  "freshness_date": "unknown",
+  "normalized_markdown": "Payment Instrument Tokens {#tms-pi-tkn}\n=======================================\n\nThe payment instrument token contains the complete billing details for the payment type including cardholder name, expiration date, and billing address. These are standalone payment instruments that cannot be associated with a customer.\n",
+  "extracted_metadata": {
+    "goal": "payments-guide-en-us_tms_developer_all_rest_tms_tms-pi-tkn.md"
+  }
+}

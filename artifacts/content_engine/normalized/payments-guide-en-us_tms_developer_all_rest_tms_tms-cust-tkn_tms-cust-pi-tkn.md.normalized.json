@@ -1,0 +1,21 @@
+{
+  "doc_id": "doc-payments-guide-en-us_tms_developer_all_rest_tms_tms-cust-tkn_tms-cust-pi-tkn.md",
+  "source_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-cust-tkn_tms-cust-pi-tkn.md",
+  "snapshot_id": "payments-guide-en-us_tms_developer_all_rest_tms_tms-cust-tkn_tms-cust-pi-tkn.md-dc41e4572268",
+  "title": "payments-guide-en-us_tms_developer_all_rest_tms_tms-cust-tkn_tms-cust-pi-tkn.md",
+  "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms/tms-cust-tkn/tms-cust-pi-tkn.md",
+  "source_format": "markdown",
+  "product": [
+    "payments",
+    "cybersource"
+  ],
+  "audience": [
+    "developer"
+  ],
+  "page_type": "guide",
+  "freshness_date": "unknown",
+  "normalized_markdown": "Customer Payment Instruments {#tms-cust-pi-tkn}\n===============================================\n\nCustomer payment instruments are payment instruments that are linked to a specific customer token. Supported payment instruments include payment cards, tokenized cards (Apple Pay and Android Pay), or ACH bank accounts.\n",
+  "extracted_metadata": {
+    "goal": "payments-guide-en-us_tms_developer_all_rest_tms_tms-cust-tkn_tms-cust-pi-tkn.md"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "stage": "content_engine_extract",
+  "inspired_by": "ucbepic/docetl (imported; Frame.code_map, no LLM)",
+  "extractor_label": "imported-code_map",
+  "source_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth_pa-reports-intro.md",
+  "units": []
+}

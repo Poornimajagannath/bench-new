@@ -1,4 +1,4 @@
-# Relay Bench V0 Report — `flex-token-lifecycle`
+# Content Bench V0 Report — `flex-token-lifecycle`
 
 Local proof only. No network. No live credentials.
 
@@ -24,7 +24,7 @@ Local proof only. No network. No live credentials.
 - entity:authorization
 - alt_goal:What is the correct lifecycle from Flex Microform capture to permanent TMS instrument before authorization?
 
-## 2. What Relay discovered
+## 2. What Content Bench discovered
 
 - can I pass it straight into TMS to store a permanent instrument, or do I need another step?
 - stages:capture_transient_token,validate_token_type,create_permanent_instrument,authorize_with_instrument
@@ -50,7 +50,7 @@ Local proof only. No network. No live credentials.
 ## 5. What product surface improves next
 
 - Clarify Flex Token Lifecycle stage ordering in public docs
-- Ship a VAP CLI workflow verifier for this contract
+- Ship a Content CLI workflow verifier for this contract
 
 ## Classification
 
@@ -62,10 +62,10 @@ Local proof only. No network. No live credentials.
 - task pack: `artifacts/task_packs/flex-token-lifecycle.agent_task.json`
 - verifier results: `artifacts/verifier_results/flex-token-lifecycle.result.json`
 
-## VAP CLI workflow verifier (recommended)
+## Content CLI workflow verifier (recommended)
 
 - goal: can I pass it straight into TMS to store a permanent instrument, or do I need another step?
-- command: `vap workflow verify --id flex-token-lifecycle --fixture local`
+- command: `content workflow verify --id flex-token-lifecycle --fixture local`
 - readiness checks:
   - Frozen seeds present under data/seeds/
   - No live credentials exported

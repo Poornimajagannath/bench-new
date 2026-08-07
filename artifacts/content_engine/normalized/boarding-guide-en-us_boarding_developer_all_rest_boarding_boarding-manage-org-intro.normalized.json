@@ -1,0 +1,21 @@
+{
+  "doc_id": "doc-boarding-guide-en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro",
+  "source_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro",
+  "snapshot_id": "boarding-guide-en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro-e362a544051a",
+  "title": "boarding-guide-en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro",
+  "canonical_url": "https://developer.cybersource.com/docs/cybs/en-us/boarding/",
+  "source_format": "markdown",
+  "product": [
+    "boarding",
+    "cybersource"
+  ],
+  "audience": [
+    "developer"
+  ],
+  "page_type": "guide",
+  "freshness_date": "unknown",
+  "normalized_markdown": "Manage Organizations {#boarding-manage-org-intro}\n=================================================\n\nThis section describes how to manage organizations:\n\n* [Retrieve a List of Organizations](/docs/cybs/en-us/boarding/developer/all/rest/boarding/boarding-manage-org-intro/boarding-retrieve-organizations.md \"\")\n* [Retrieve Organization Details](/docs/cybs/en-us/boarding/developer/all/rest/boarding/boarding-manage-org-intro/boarding-retrieve-an-organization.md \"\")\n* [Update an Organization's Information](/docs/cybs/en-us/boarding/developer/all/rest/boarding/boarding-manage-org-intro/boarding-update-information-api.md \"\")\n* [Change an Organization's Status](/docs/cybs/en-us/boarding/developer/all/rest/boarding/boarding-manage-org-intro/boarding-change-org-status.md \"\")\n",
+  "extracted_metadata": {
+    "goal": "boarding-guide-en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro"
+  }
+}

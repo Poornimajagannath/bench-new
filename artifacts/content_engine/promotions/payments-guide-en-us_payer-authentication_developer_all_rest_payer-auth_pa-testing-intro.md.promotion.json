@@ -1,0 +1,26 @@
+{
+  "source_id": "payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth_pa-testing-intro.md",
+  "status": "blocked",
+  "schema_passed": false,
+  "content_passed": false,
+  "agent_use_status": "deferred",
+  "issues": [
+    {
+      "code": "no_units",
+      "severity": "error",
+      "message": "Extractor produced zero quickstart units",
+      "unit_id": null
+    },
+    {
+      "code": "no_steps",
+      "severity": "error",
+      "message": "must include at least one step unit or grounded reference unit",
+      "unit_id": null
+    }
+  ],
+  "promoted_unit_ids": [],
+  "linked_workflow_id": null,
+  "contract_bundle_path": null,
+  "context_pack_path": null,
+  "objects_path": "artifacts/content_engine/objects/payments-guide-en-us_payer-authentication_developer_all_rest_payer-auth_pa-testing-intro.md.quickstart_units.json"
+}
