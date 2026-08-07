@@ -1,0 +1,203 @@
+{
+  "stamp_date": "2026-08-07",
+  "docs_fetched": 4,
+  "claims_extracted": 1089,
+  "claims_by_schema": {
+    "quickstart_step": 496,
+    "endpoint_fact": 6,
+    "error_case": 135,
+    "prose_claim": 452
+  },
+  "drop_count": 36,
+  "drops": [
+    {
+      "path": "2026-08-07/account-links.md",
+      "reason": "no_schema_match",
+      "detail": "no quickstart/endpoint/error/prose claim extracted"
+    },
+    {
+      "path": "2026-08-07/en-us_apple-pay_developer_all_rest_applepay_applepay-getting-started.md.md",
+      "reason": "no_schema_match",
+      "detail": "no quickstart/endpoint/error/prose claim extracted"
+    },
+    {
+      "path": "2026-08-07/en-us_click-to-pay_developer_all_rest_click-to-pay_ctp-tokens-intro.md.md",
+      "reason": "no_schema_match",
+      "detail": "no quickstart/endpoint/error/prose claim extracted"
+    },
+    {
+      "path": "2026-08-07/en-us_click-to-pay_developer_all_rest_click-to-pay_uc-token-get-pymnt-details.md.md",
+      "reason": "no_schema_match",
+      "detail": "no quickstart/endpoint/error/prose claim extracted"
+    },
+    {
+      "path": "2026-08-07/en-us_cp-retail_integration_ctv_rest_cp-retail_cp-intro-cpc.md.md",
+      "reason": "no_schema_match",
+      "detail": "no quickstart/endpoint/error/prose claim extracted"
+    },
+    {
+      "path": "2026-08-07/en-us_cp-retail_integration_ctv_rest_cp-retail_cp-payment-services-intro.md.md",
+      "reason": "no_schema_match",
+      "detail": "no quickstart/endpoint/error/prose claim extracted"
+    },
+    {
+      "path": "2026-08-07/en-us_credentials_developer_ctv_rest_credentials_credentials-reauth-intro.md.md",
+      "reason": "no_schema_match",
+      "detail": "no quickstart/endpoint/error/prose claim extracted"
+    },
+    {
+      "path": "2026-08-07/en-us_dcc_developer_all_rest_dcc-merchant_dcc-merchant-use-cases_dcc-merchant-refund.md.md",
+      "reason": "no_schema_match",
+      "detail": "no quickstart/endpoint/error/prose claim extracted"
+    },
+    {
+      "path": "2026-08-07/en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_da-payments.md.md",
+      "reason": "no_schema_match",
+      "detail": "no quickstart/endpoint/error/prose claim extracted"
+    },
+    {
+      "path": "2026-08-07/en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_microform-integ-v2.md.md",
+      "reason": "no_schema_match",
+      "detail": "no quickstart/endpoint/error/prose claim extracted"
+    },
+    {
+      "path": "2026-08-07/en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_payments_intro_digt_accpt_sec_intg.md.md",
+      "reason": "no_schema_match",
+      "detail": "no quickstart/endpoint/error/prose claim extracted"
+    },
+    {
+      "path": "2026-08-07/en-us_ev-charging_developer_ctv_rest_ev-charging_home.md.md",
+      "reason": "no_schema_match",
+      "detail": "no quickstart/endpoint/error/prose claim extracted"
+    },
+    {
+      "path": "2026-08-07/en-us_google-pay_developer_ctv_rest_googlepay_googpay-pay-auth-intro.md.md",
+      "reason": "no_schema_match",
+      "detail": "no quickstart/endpoint/error/prose claim extracted"
+    },
+    {
+      "path": "2026-08-07/en-us_invoicing_developer_all_rest_invoicing_invoicing-ebc.md.md",
+      "reason": "no_schema_match",
+      "detail": "no quickstart/endpoint/error/prose claim extracted"
+    },
+    {
+      "path": "2026-08-07/en-us_lodging_developer_ctv_rest_lodging_lodging-intro.md.md",
+      "reason": "no_schema_match",
+      "detail": "no quickstart/endpoint/error/prose claim extracted"
+    },
+    {
+      "path": "2026-08-07/en-us_lodging_developer_ctv_rest_lodging_lodging-payment-services.md.md",
+      "reason": "no_schema_match",
+      "detail": "no quickstart/endpoint/error/prose claim extracted"
+    },
+    {
+      "path": "2026-08-07/en-us_paybylink_developer_all_rest_paybylink_paybylink-services.md.md",
+      "reason": "no_schema_match",
+      "detail": "no quickstart/endpoint/error/prose claim extracted"
+    },
+    {
+      "path": "2026-08-07/en-us_payer-authentication_developer_all_rest_payer-auth_pa-testing-intro.md.md",
+      "reason": "no_schema_match",
+      "detail": "no quickstart/endpoint/error/prose claim extracted"
+    },
+    {
+      "path": "2026-08-07/en-us_payer-authentication_developer_all_rest_payer-auth_pa2-ccdc-intro.md.md",
+      "reason": "no_schema_match",
+      "detail": "no quickstart/endpoint/error/prose claim extracted"
+    },
+    {
+      "path": "2026-08-07/en-us_payer-authentication_developer_all_rest_payer-auth_pa2-intro-intro.md.md",
+      "reason": "no_schema_match",
+      "detail": "no quickstart/endpoint/error/prose claim extracted"
+    },
+    {
+      "path": "2026-08-07/en-us_payments_developer_ctv_rest_payments_payments-debit-prepaid-process-intro.md.md",
+      "reason": "no_schema_match",
+      "detail": "no quickstart/endpoint/error/prose claim extracted"
+    },
+    {
+      "path": "2026-08-07/en-us_payments_developer_ctv_rest_payments_payments-intro.md.md",
+      "reason": "no_schema_match",
+      "detail": "no quickstart/endpoint/error/prose claim extracted"
+    },
+    {
+      "path": "2026-08-07/en-us_payments_developer_ctv_rest_payments_payments-processing-basic-intro.md.md",
+      "reason": "no_schema_match",
+      "detail": "no quickstart/endpoint/error/prose claim extracted"
+    },
+    {
+      "path": "2026-08-07/en-us_paze_integration_all_rest_paze_paze-gs.md.md",
+      "reason": "no_schema_match",
+      "detail": "no quickstart/endpoint/error/prose claim extracted"
+    },
+    {
+      "path": "2026-08-07/en-us_paze_integration_all_rest_paze_paze-txns-auth-merch.md.md",
+      "reason": "no_schema_match",
+      "detail": "no quickstart/endpoint/error/prose claim extracted"
+    },
+    {
+      "path": "2026-08-07/en-us_paze_integration_all_rest_paze_paze-txns-auth-pgw.md.md",
+      "reason": "no_schema_match",
+      "detail": "no quickstart/endpoint/error/prose claim extracted"
+    },
+    {
+      "path": "2026-08-07/en-us_platform_relnote_all_na_rn-2025-07-18_rn-general.md.md",
+      "reason": "no_schema_match",
+      "detail": "no quickstart/endpoint/error/prose claim extracted"
+    },
+    {
+      "path": "2026-08-07/en-us_platform_relnote_all_na_rn-2025-09-26_rn-general.md.md",
+      "reason": "no_schema_match",
+      "detail": "no quickstart/endpoint/error/prose claim extracted"
+    },
+    {
+      "path": "2026-08-07/en-us_platform_relnote_all_na_rn-2025-12-12_rn-general.md.md",
+      "reason": "no_schema_match",
+      "detail": "no quickstart/endpoint/error/prose claim extracted"
+    },
+    {
+      "path": "2026-08-07/en-us_platform_relnote_all_na_rn-2026-03-06_rn-general.md.md",
+      "reason": "no_schema_match",
+      "detail": "no quickstart/endpoint/error/prose claim extracted"
+    },
+    {
+      "path": "2026-08-07/en-us_reporting_user_all_ebc_reporting-ug_c_Viewing_On-Demand_Reports.md.md",
+      "reason": "no_schema_match",
+      "detail": "no quickstart/endpoint/error/prose claim extracted"
+    },
+    {
+      "path": "2026-08-07/en-us_tms_developer_all_rest_tms_tms-bin-lookup-service.md.md",
+      "reason": "no_schema_match",
+      "detail": "no quickstart/endpoint/error/prose claim extracted"
+    },
+    {
+      "path": "2026-08-07/en-us_txn-search_developer_all_rest_txn-search_time-zones.md.md",
+      "reason": "no_schema_match",
+      "detail": "no quickstart/endpoint/error/prose claim extracted"
+    },
+    {
+      "path": "2026-08-07/en-us_unified-checkout_developer_all_rest_unified-checkout_uc-reference-test-cards.md.md",
+      "reason": "no_schema_match",
+      "detail": "no quickstart/endpoint/error/prose claim extracted"
+    },
+    {
+      "path": "2026-08-07/openapi-connect.fixture.json",
+      "reason": "no_schema_match",
+      "detail": "no quickstart/endpoint/error/prose claim extracted"
+    },
+    {
+      "path": "2026-08-07/payments-core.openapi.json",
+      "reason": "no_schema_match",
+      "detail": "no quickstart/endpoint/error/prose claim extracted"
+    }
+  ],
+  "raw_dir": "raw/2026-08-07",
+  "normalized_file": "normalized/2026-08-07.claims.json",
+  "read_contract": [
+    "normalized/",
+    "content/"
+  ],
+  "forbidden_reads": [
+    "raw/"
+  ]
+}

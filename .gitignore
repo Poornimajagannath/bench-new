@@ -8,3 +8,9 @@ venv/
 
 .claude/
 
+# Ingestion evidence / eval traces (regenerable)
+raw/
+normalized/*.claims.json
+!normalized/.gitkeep
+evals/runs/*.json
+
