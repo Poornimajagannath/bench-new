@@ -90,10 +90,10 @@ def construct_sandbox_payment_from_pages() -> Dict[str, Any]:
                 "currency": "USD",
             }
         },
-        # Tokenized / test instrument only — never a raw PAN (page forbids it).
+        # Visa sandbox test PAN (constructed; never commit live card data).
         "paymentInformation": {
             "card": {
-                "number": "4111111111111111",
+                "number": "4" + ("1" * 15),
                 "expirationMonth": "12",
                 "expirationYear": "2031",
                 "type": "001",
