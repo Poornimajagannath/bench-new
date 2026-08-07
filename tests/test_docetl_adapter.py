@@ -7,20 +7,20 @@ import unittest
 from pathlib import Path
 from unittest import mock
 
-from relay_bench.content_engine.docetl_adapter import (
+from content_bench.content_engine.docetl_adapter import (
     DocETLUnavailableError,
     docetl_available,
     extract_quickstart_units_with_backend,
     llm_api_key_present,
     normalize_extract_mode,
 )
-from relay_bench.content_engine.normalize import normalize_document
-from relay_bench.content_engine.pipeline import run_content_engine
-from relay_bench.content_engine.registry import require_source
-from relay_bench.content_engine.segment import segment_document
-from relay_bench.content_engine.snapshot import materialize_snapshot
-from relay_bench.docetl_discovery import discover_suggestions_with_backend
-from relay_bench.discovery import load_raw_questions
+from content_bench.content_engine.normalize import normalize_document
+from content_bench.content_engine.pipeline import run_content_engine
+from content_bench.content_engine.registry import require_source
+from content_bench.content_engine.segment import segment_document
+from content_bench.content_engine.snapshot import materialize_snapshot
+from content_bench.docetl_discovery import discover_suggestions_with_backend
+from content_bench.discovery import load_raw_questions
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -122,7 +122,7 @@ class DocETLAdapterTests(unittest.TestCase):
         with mock.patch.dict("sys.modules", {"docetl": None}):
             # Force import failure inside adapter by patching import path.
             with mock.patch(
-                "relay_bench.content_engine.docetl_adapter._extract_via_code_map",
+                "content_bench.content_engine.docetl_adapter._extract_via_code_map",
                 side_effect=DocETLUnavailableError("docetl package is not installed"),
             ):
                 with self.assertRaises(DocETLUnavailableError):

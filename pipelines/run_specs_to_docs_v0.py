@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Relay Specs-to-Docs V0 — local contract compile lane.
+"""Content Bench Specs-to-Docs V0 — local contract compile lane.
 
 openapi fixture
 -> snapshot
@@ -24,8 +24,8 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from relay_bench.content_engine.registry import list_enabled_sources
-from relay_bench.content_engine.specs_pipeline import run_specs_to_docs
+from content_bench.content_engine.registry import list_enabled_sources
+from content_bench.content_engine.specs_pipeline import run_specs_to_docs
 
 
 def main() -> int:
@@ -34,7 +34,7 @@ def main() -> int:
         for r in list_enabled_sources()
         if r.source_type == "openapi" or r.parser_strategy == "openapi_parser"
     )
-    parser = argparse.ArgumentParser(description="Run Relay Specs-to-Docs V0")
+    parser = argparse.ArgumentParser(description="Run Content Bench Specs-to-Docs V0")
     parser.add_argument(
         "--source",
         required=True,
