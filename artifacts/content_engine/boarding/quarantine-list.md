@@ -1,6 +1,6 @@
 # Quarantine list — excluded from ingestion by policy
 
-- When: `2026-08-07T07:22:05+00:00`
+- When: `2026-08-07T22:40:34+00:00`
 - Corpus: `data/products/boarding/guides`
 - Excluded kinds: `index_navigation`, `legal`, `release_note`
 - Quarantined docs: **54** of 236
