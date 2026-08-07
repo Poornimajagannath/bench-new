@@ -118,9 +118,9 @@ def _has_constraint_signals(text: str) -> bool:
     return bool(
         re.search(
             r"(?i)\b("
-            r"\d+\s*(?:minute|minutes|hour|hours|second|seconds|day|days)\b|"
+            r"\d+\s*-?\s*(?:minute|minutes|hour|hours|second|seconds|day|days)\b|"
             r"\bTTL\b|time[- ]to[- ]live|"
-            r"valid(?:ity)?\s+(?:for|until|window)|expires?\b|expir(?:y|ation)\b|"
+            r"valid(?:ity)?\s+(?:for|until|window)|expires?\s+(?:in|after|within)\b|"
             r"limited[- ]use|reuse|multiple times|rate[- ]limit|once only|"
             r"\bPCI\b|\bSAQ\b|PCI DSS|compliance|"
             r"requires?\s+header|header information|mandatory header|"

@@ -19,8 +19,29 @@
 
 ## 3. Re-ingest results
 
-_Filled after re-run._
+Stamp: `2026-08-08` · docs fetched **29** · claims **2690** · drops **14**  
+Baseline: prior Wave 1 top-20 `no_schema_match` (`evals/evidence/wave1-payments/top-20-drops.md`).
+
+| Metric | Value |
+| --- | ---: |
+| Prior empty (`no_schema_match`) pages | 20 |
+| Now yielding claims | **6** |
+| Still empty / quarantined | 14 |
+
+**All three target pages now yield claims:**
+
+| Page | Claims | Kinds captured |
+| --- | ---: | --- |
+| da-payments | 3 | `ttl_or_validity`, `ttl_and_reuse`, `guidance` (15-minute TTL + reuse) |
+| microform-integ-v2 | 3 | `pci_compliance`, `device_encryption`, `mandatory_header` |
+| ctp-intro | 3 | `reuse_or_rate_limit` (limited-use keys), `device_encryption`, `mandatory_header` |
+
+Also recovered (same prior set): `payments_intro_digt_accpt_sec_intg`, `uc-intro`, `pa2-intro-intro`.
 
 ## 4. Shell triage rule
 
-Enforced in `render_ingestion_report`: every `shell` row includes Bytes and First heading; missing fields flagged. Sampled human check lists 10 drops per run.
+Enforced in `render_ingestion_report`: every `shell` row includes **Bytes** and **First heading**; missing fields flagged.  
+Quarantine skips also carry bytes + heading for triage.  
+**Sampled human check (10 drops)** is required in every report — confirm shell vs missed claim; do not triage by filename alone.
+
+Artifacts: `artifacts/content_engine/payments/ingestion-report.md`, `top-drops.md`.

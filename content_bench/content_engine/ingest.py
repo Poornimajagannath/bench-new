@@ -174,9 +174,9 @@ def _should_drop_doc(text: str, path: Path) -> Optional[str]:
 _CONSTRAINT_PATTERNS = (
     re.compile(
         r"(?i)\b("
-        r"\d+\s*(?:minute|minutes|hour|hours|second|seconds|day|days)\b|"
+        r"\d+\s*-?\s*(?:minute|minutes|hour|hours|second|seconds|day|days)\b|"
         r"\bTTL\b|time[- ]to[- ]live|"
-        r"valid(?:ity)?\s+(?:for|until|window)|expires?\b|expir(?:y|ation)\b|"
+        r"valid(?:ity)?\s+(?:for|until|window)|expires?\s+(?:in|after|within)\b|"
         r"limited[- ]use|reuse|multiple times|rate[- ]limit|once only|"
         r"\bPCI\b|\bSAQ\b|PCI DSS|compliance|"
         r"requires?\s+header|header information|mandatory header|"
@@ -217,8 +217,8 @@ def _constraint_kind(sentence: str) -> Optional[str]:
     # Avoid matching "validate" via bare "valid".
     ttl = bool(
         re.search(
-            r"\b\d+\s*(minute|hour|second|day)s?\b|\bttl\b|time[- ]to[- ]live|"
-            r"valid(?:ity)?\s+(?:for|until|window)|expires?\b|expir(?:y|ation)\b",
+            r"\b\d+\s*-?\s*(minute|hour|second|day)s?\b|\bttl\b|time[- ]to[- ]live|"
+            r"valid(?:ity)?\s+(?:for|until|window)|expires?\s+(?:in|after|within)\b",
             s,
         )
     )
@@ -487,12 +487,18 @@ def normalize_raw_dir(
     for path in sorted(raw_dir.iterdir()):
         if not path.is_file() or path.name.endswith(".meta.json"):
             continue
-        if path.suffix not in {".md", ".txt", ".json"}:
+        # OpenAPI JSON is handled below via extract_openapi_endpoint_facts —
+        # do not run prose extractors on raw JSON (heading would be "{").
+        if path.suffix == ".json":
+            continue
+        if path.suffix not in {".md", ".txt"} and not path.name.endswith(".md.md"):
             all_drops.append(
                 DropRecord(
                     path=str(path.relative_to(raw_dir.parent)),
                     reason="no_schema_match",
                     detail=f"unsupported extension {path.suffix}",
+                    bytes=path.stat().st_size,
+                    first_heading="(no heading)",
                 )
             )
             continue
@@ -585,11 +591,17 @@ def select_ingest_sources(
     eligible: List[Path] = []
     for p in files:
         if p.name in blocked or str(p) in blocked:
+            try:
+                text = p.read_text(encoding="utf-8", errors="replace")
+            except OSError:
+                text = ""
             drops.append(
                 DropRecord(
                     path=p.name,
                     reason="quarantine_policy",
                     detail="excluded by corpus census quarantine list",
+                    bytes=p.stat().st_size if p.is_file() else 0,
+                    first_heading=_first_heading(text) or "(no heading)",
                 )
             )
             continue
