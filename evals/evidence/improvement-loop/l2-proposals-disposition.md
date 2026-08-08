@@ -28,7 +28,11 @@ quote 222/277.
 
 ---
 
-## Required Fields augment — HOLD (derivation answer)
+## Required Fields augment — CLEARED and shipped
+
+See `l2-required-fields-shipped.md` for post-merge counts (57 → 30 missing RF).
+
+### Derivation answer (pre-clear)
 
 **Question:** where would the fields come from for the 57 soft gaps?
 
@@ -83,4 +87,5 @@ example-JSON inference.
 - If none of those exist for an endpoint, leave `required_fields` empty and
   keep the soft-gap finding — never populate from example JSON keys.
 
-Contract is now in `api_reference.py` and enforced by tests; fields are tagged.
+Until that contract is in the implementation plan, **do not merge** the
+required-fields augment.
