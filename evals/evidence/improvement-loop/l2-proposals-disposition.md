@@ -60,6 +60,20 @@ quote 222/277.
    examples would invent obligations. The no-invention prose guard would not
    catch that.
 
+**Scan of all 57 soft gaps against product roots:**
+
+| Bucket | Count |
+| --- | ---: |
+| Soft gaps flagged missing RF | 57 |
+| Have a nearby `Required Fields` heading in product root | 21 |
+| Of those, plain DL terms (name + `:`) — current parser yields 0 | 17 |
+| Of those, link-style `[field](url)` DL terms | 0 |
+| No RF heading found near the operation in product root | 36 |
+
+So ~21/57 are **extractor false gaps** (section exists; parser too narrow).
+The remaining ~36 need sibling-page join or stay as real gaps — still not
+example-JSON inference.
+
 **Condition to clear this proposal later:**
 
 - State derivation source per field: `required_fields_section` (same-page
