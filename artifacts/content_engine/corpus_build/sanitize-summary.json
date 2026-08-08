@@ -1,0 +1,1463 @@
+{
+  "totals": {
+    "sections_total": 20661,
+    "sections_clean": 20433,
+    "code_blocks": 2382,
+    "quarantined_by_kind": {
+      "about_guide_boilerplate": 137,
+      "revision_history": 81,
+      "support_center": 10
+    }
+  },
+  "products": [
+    {
+      "product_id": "additional-amount-types",
+      "fetched": true,
+      "bytes": 17461,
+      "sections_total": 2,
+      "sections_clean": 2,
+      "quarantined_by_kind": {},
+      "code_blocks": 0
+    },
+    {
+      "product_id": "additional-amount-types",
+      "fetched": true,
+      "bytes": 15330,
+      "sections_total": 1,
+      "sections_clean": 1,
+      "quarantined_by_kind": {},
+      "code_blocks": 0
+    },
+    {
+      "product_id": "airline",
+      "fetched": true,
+      "bytes": 161840,
+      "sections_total": 118,
+      "sections_clean": 116,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 1
+      },
+      "code_blocks": 44
+    },
+    {
+      "product_id": "api-fields",
+      "fetched": true,
+      "bytes": 2638061,
+      "sections_total": 5522,
+      "sections_clean": 5520,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 1
+      },
+      "code_blocks": 200
+    },
+    {
+      "product_id": "api-fields",
+      "fetched": true,
+      "bytes": 3181637,
+      "sections_total": 7731,
+      "sections_clean": 7729,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 1
+      },
+      "code_blocks": 26
+    },
+    {
+      "product_id": "applepay",
+      "fetched": true,
+      "bytes": 191492,
+      "sections_total": 82,
+      "sections_clean": 80,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 1
+      },
+      "code_blocks": 34
+    },
+    {
+      "product_id": "avs-codes",
+      "fetched": true,
+      "bytes": 20343,
+      "sections_total": 5,
+      "sections_clean": 5,
+      "quarantined_by_kind": {},
+      "code_blocks": 0
+    },
+    {
+      "product_id": "batch-upload",
+      "fetched": true,
+      "bytes": 486586,
+      "sections_total": 83,
+      "sections_clean": 81,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 1
+      },
+      "code_blocks": 40
+    },
+    {
+      "product_id": "bin-lookup",
+      "fetched": true,
+      "bytes": 47644,
+      "sections_total": 22,
+      "sections_clean": 20,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 1
+      },
+      "code_blocks": 18
+    },
+    {
+      "product_id": "boarding",
+      "fetched": true,
+      "bytes": 268904,
+      "sections_total": 137,
+      "sections_clean": 135,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 1
+      },
+      "code_blocks": 57
+    },
+    {
+      "product_id": "boarding-user",
+      "fetched": true,
+      "bytes": 184102,
+      "sections_total": 102,
+      "sections_clean": 100,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 1
+      },
+      "code_blocks": 2
+    },
+    {
+      "product_id": "click-to-pay",
+      "fetched": true,
+      "bytes": 523897,
+      "sections_total": 314,
+      "sections_clean": 309,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 4
+      },
+      "code_blocks": 86
+    },
+    {
+      "product_id": "country-codes",
+      "fetched": true,
+      "bytes": 33820,
+      "sections_total": 8,
+      "sections_clean": 8,
+      "quarantined_by_kind": {},
+      "code_blocks": 0
+    },
+    {
+      "product_id": "country-codes",
+      "fetched": true,
+      "bytes": 14148,
+      "sections_total": 1,
+      "sections_clean": 1,
+      "quarantined_by_kind": {},
+      "code_blocks": 0
+    },
+    {
+      "product_id": "cp-retail",
+      "fetched": true,
+      "bytes": 387909,
+      "sections_total": 226,
+      "sections_clean": 224,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 1
+      },
+      "code_blocks": 108
+    },
+    {
+      "product_id": "credentials",
+      "fetched": true,
+      "bytes": 405947,
+      "sections_total": 179,
+      "sections_clean": 177,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 1
+      },
+      "code_blocks": 94
+    },
+    {
+      "product_id": "currency-codes",
+      "fetched": true,
+      "bytes": 26692,
+      "sections_total": 1,
+      "sections_clean": 1,
+      "quarantined_by_kind": {},
+      "code_blocks": 0
+    },
+    {
+      "product_id": "dcc-merchant",
+      "fetched": true,
+      "bytes": 37111,
+      "sections_total": 30,
+      "sections_clean": 27,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 2
+      },
+      "code_blocks": 14
+    },
+    {
+      "product_id": "dcc-merchant-errors",
+      "fetched": true,
+      "bytes": 167,
+      "sections_total": 1,
+      "sections_clean": 1,
+      "quarantined_by_kind": {},
+      "code_blocks": 0
+    },
+    {
+      "product_id": "dcc-merchant-use-cases",
+      "fetched": true,
+      "bytes": 488,
+      "sections_total": 1,
+      "sections_clean": 1,
+      "quarantined_by_kind": {},
+      "code_blocks": 0
+    },
+    {
+      "product_id": "digital-accept-flex",
+      "fetched": true,
+      "bytes": 989174,
+      "sections_total": 503,
+      "sections_clean": 499,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 3
+      },
+      "code_blocks": 207
+    },
+    {
+      "product_id": "echeck-user-guide",
+      "fetched": true,
+      "bytes": 124021,
+      "sections_total": 77,
+      "sections_clean": 74,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 1,
+        "support_center": 1
+      },
+      "code_blocks": 10
+    },
+    {
+      "product_id": "endpoints",
+      "fetched": true,
+      "bytes": 14353,
+      "sections_total": 3,
+      "sections_clean": 2,
+      "quarantined_by_kind": {
+        "revision_history": 1
+      },
+      "code_blocks": 0
+    },
+    {
+      "product_id": "endpoints",
+      "fetched": true,
+      "bytes": 11998,
+      "sections_total": 1,
+      "sections_clean": 1,
+      "quarantined_by_kind": {},
+      "code_blocks": 0
+    },
+    {
+      "product_id": "ev-charging",
+      "fetched": true,
+      "bytes": 71598,
+      "sections_total": 43,
+      "sections_clean": 41,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 1
+      },
+      "code_blocks": 12
+    },
+    {
+      "product_id": "googlepay",
+      "fetched": true,
+      "bytes": 36096,
+      "sections_total": 33,
+      "sections_clean": 31,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 1
+      },
+      "code_blocks": 15
+    },
+    {
+      "product_id": "healthcare",
+      "fetched": true,
+      "bytes": 11777,
+      "sections_total": 11,
+      "sections_clean": 9,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 1
+      },
+      "code_blocks": 2
+    },
+    {
+      "product_id": "healthcare-processing-intro",
+      "fetched": true,
+      "bytes": 186,
+      "sections_total": 1,
+      "sections_clean": 1,
+      "quarantined_by_kind": {},
+      "code_blocks": 0
+    },
+    {
+      "product_id": "installment-plans",
+      "fetched": true,
+      "bytes": 135069,
+      "sections_total": 136,
+      "sections_clean": 134,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 1
+      },
+      "code_blocks": 24
+    },
+    {
+      "product_id": "invoicing",
+      "fetched": true,
+      "bytes": 242256,
+      "sections_total": 95,
+      "sections_clean": 93,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 1
+      },
+      "code_blocks": 42
+    },
+    {
+      "product_id": "built-by-them",
+      "fetched": true,
+      "bytes": 1006,
+      "sections_total": 1,
+      "sections_clean": 1,
+      "quarantined_by_kind": {},
+      "code_blocks": 0
+    },
+    {
+      "product_id": "built-by-us",
+      "fetched": true,
+      "bytes": 1490,
+      "sections_total": 1,
+      "sections_clean": 1,
+      "quarantined_by_kind": {},
+      "code_blocks": 0
+    },
+    {
+      "product_id": "isv-getting-started",
+      "fetched": true,
+      "bytes": 23871,
+      "sections_total": 18,
+      "sections_clean": 17,
+      "quarantined_by_kind": {
+        "revision_history": 1
+      },
+      "code_blocks": 2
+    },
+    {
+      "product_id": "klarna",
+      "fetched": true,
+      "bytes": 132264,
+      "sections_total": 68,
+      "sections_clean": 66,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 1
+      },
+      "code_blocks": 23
+    },
+    {
+      "product_id": "language-codes",
+      "fetched": true,
+      "bytes": 3425,
+      "sections_total": 2,
+      "sections_clean": 2,
+      "quarantined_by_kind": {},
+      "code_blocks": 0
+    },
+    {
+      "product_id": "language-codes",
+      "fetched": true,
+      "bytes": 1294,
+      "sections_total": 1,
+      "sections_clean": 1,
+      "quarantined_by_kind": {},
+      "code_blocks": 0
+    },
+    {
+      "product_id": "level-2-3",
+      "fetched": true,
+      "bytes": 121897,
+      "sections_total": 58,
+      "sections_clean": 56,
+      "quarantined_by_kind": {
+        "revision_history": 1,
+        "about_guide_boilerplate": 1
+      },
+      "code_blocks": 12
+    },
+    {
+      "product_id": "lodging",
+      "fetched": true,
+      "bytes": 70290,
+      "sections_total": 41,
+      "sections_clean": 39,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 1
+      },
+      "code_blocks": 10
+    },
+    {
+      "product_id": "mandates-april-2024",
+      "fetched": true,
+      "bytes": 20146,
+      "sections_total": 19,
+      "sections_clean": 17,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 1
+      },
+      "code_blocks": 0
+    },
+    {
+      "product_id": "oauth",
+      "fetched": true,
+      "bytes": 39139,
+      "sections_total": 16,
+      "sections_clean": 14,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 1
+      },
+      "code_blocks": 11
+    },
+    {
+      "product_id": "pax-a35",
+      "fetched": true,
+      "bytes": 63261,
+      "sections_total": 58,
+      "sections_clean": 56,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 1
+      },
+      "code_blocks": 0
+    },
+    {
+      "product_id": "pax-a3700",
+      "fetched": true,
+      "bytes": 48450,
+      "sections_total": 47,
+      "sections_clean": 45,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 1
+      },
+      "code_blocks": 0
+    },
+    {
+      "product_id": "pax-a77",
+      "fetched": true,
+      "bytes": 50446,
+      "sections_total": 49,
+      "sections_clean": 47,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 1
+      },
+      "code_blocks": 0
+    },
+    {
+      "product_id": "pax-a920",
+      "fetched": true,
+      "bytes": 51487,
+      "sections_total": 49,
+      "sections_clean": 47,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 1
+      },
+      "code_blocks": 0
+    },
+    {
+      "product_id": "pax-a920max",
+      "fetched": true,
+      "bytes": 51810,
+      "sections_total": 49,
+      "sections_clean": 47,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 1
+      },
+      "code_blocks": 0
+    },
+    {
+      "product_id": "pax-a920pro",
+      "fetched": true,
+      "bytes": 51982,
+      "sections_total": 49,
+      "sections_clean": 47,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 1
+      },
+      "code_blocks": 0
+    },
+    {
+      "product_id": "pax-all-in-one",
+      "fetched": true,
+      "bytes": 204530,
+      "sections_total": 187,
+      "sections_clean": 185,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 1
+      },
+      "code_blocks": 1
+    },
+    {
+      "product_id": "pax-im30",
+      "fetched": true,
+      "bytes": 49766,
+      "sections_total": 47,
+      "sections_clean": 45,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 1
+      },
+      "code_blocks": 0
+    },
+    {
+      "product_id": "pay-by-bank-payto",
+      "fetched": true,
+      "bytes": 58580,
+      "sections_total": 47,
+      "sections_clean": 45,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 1
+      },
+      "code_blocks": 9
+    },
+    {
+      "product_id": "pay-by-bank-payto-process-trxn",
+      "fetched": true,
+      "bytes": 188,
+      "sections_total": 1,
+      "sections_clean": 1,
+      "quarantined_by_kind": {},
+      "code_blocks": 0
+    },
+    {
+      "product_id": "pay-by-bank",
+      "fetched": true,
+      "bytes": 48051,
+      "sections_total": 28,
+      "sections_clean": 26,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 1
+      },
+      "code_blocks": 10
+    },
+    {
+      "product_id": "paybybank-intro-services",
+      "fetched": true,
+      "bytes": 466,
+      "sections_total": 1,
+      "sections_clean": 1,
+      "quarantined_by_kind": {},
+      "code_blocks": 0
+    },
+    {
+      "product_id": "paybylink",
+      "fetched": true,
+      "bytes": 52427,
+      "sections_total": 37,
+      "sections_clean": 35,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 1
+      },
+      "code_blocks": 16
+    },
+    {
+      "product_id": "payer-auth",
+      "fetched": true,
+      "bytes": 703162,
+      "sections_total": 333,
+      "sections_clean": 331,
+      "quarantined_by_kind": {
+        "revision_history": 1,
+        "about_guide_boilerplate": 1
+      },
+      "code_blocks": 108
+    },
+    {
+      "product_id": "payments",
+      "fetched": true,
+      "bytes": 397466,
+      "sections_total": 266,
+      "sections_clean": 264,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 1
+      },
+      "code_blocks": 82
+    },
+    {
+      "product_id": "payouts-dev",
+      "fetched": true,
+      "bytes": 219718,
+      "sections_total": 59,
+      "sections_clean": 57,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 1
+      },
+      "code_blocks": 18
+    },
+    {
+      "product_id": "paypal",
+      "fetched": true,
+      "bytes": 126421,
+      "sections_total": 77,
+      "sections_clean": 75,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 1
+      },
+      "code_blocks": 27
+    },
+    {
+      "product_id": "paze",
+      "fetched": true,
+      "bytes": 53098,
+      "sections_total": 30,
+      "sections_clean": 27,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 2
+      },
+      "code_blocks": 9
+    },
+    {
+      "product_id": "pin-debit",
+      "fetched": true,
+      "bytes": 133352,
+      "sections_total": 89,
+      "sections_clean": 87,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 1
+      },
+      "code_blocks": 35
+    },
+    {
+      "product_id": "rest-getting-started",
+      "fetched": true,
+      "bytes": 208574,
+      "sections_total": 97,
+      "sections_clean": 91,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 1,
+        "support_center": 4
+      },
+      "code_blocks": 22
+    },
+    {
+      "product_id": "rn-2025-06-13",
+      "fetched": true,
+      "bytes": 8283,
+      "sections_total": 10,
+      "sections_clean": 8,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 2
+      },
+      "code_blocks": 0
+    },
+    {
+      "product_id": "rn-2025-06-20",
+      "fetched": true,
+      "bytes": 6319,
+      "sections_total": 5,
+      "sections_clean": 3,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 2
+      },
+      "code_blocks": 0
+    },
+    {
+      "product_id": "rn-2025-07-03",
+      "fetched": true,
+      "bytes": 7313,
+      "sections_total": 6,
+      "sections_clean": 5,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1
+      },
+      "code_blocks": 0
+    },
+    {
+      "product_id": "rn-2025-07-11",
+      "fetched": true,
+      "bytes": 9210,
+      "sections_total": 6,
+      "sections_clean": 4,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 2
+      },
+      "code_blocks": 0
+    },
+    {
+      "product_id": "rn-2025-07-18",
+      "fetched": true,
+      "bytes": 6726,
+      "sections_total": 5,
+      "sections_clean": 3,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 2
+      },
+      "code_blocks": 0
+    },
+    {
+      "product_id": "rn-2025-07-25",
+      "fetched": true,
+      "bytes": 9517,
+      "sections_total": 6,
+      "sections_clean": 4,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 2
+      },
+      "code_blocks": 0
+    },
+    {
+      "product_id": "rn-2025-08-01",
+      "fetched": true,
+      "bytes": 8816,
+      "sections_total": 6,
+      "sections_clean": 5,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1
+      },
+      "code_blocks": 0
+    },
+    {
+      "product_id": "rn-2025-08-08",
+      "fetched": true,
+      "bytes": 9865,
+      "sections_total": 6,
+      "sections_clean": 4,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 2
+      },
+      "code_blocks": 0
+    },
+    {
+      "product_id": "rn-2025-08-15",
+      "fetched": true,
+      "bytes": 11445,
+      "sections_total": 6,
+      "sections_clean": 4,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 2
+      },
+      "code_blocks": 0
+    },
+    {
+      "product_id": "rn-2025-08-22",
+      "fetched": true,
+      "bytes": 7310,
+      "sections_total": 6,
+      "sections_clean": 4,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 2
+      },
+      "code_blocks": 0
+    },
+    {
+      "product_id": "rn-2025-08-29",
+      "fetched": true,
+      "bytes": 11114,
+      "sections_total": 6,
+      "sections_clean": 4,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 2
+      },
+      "code_blocks": 0
+    },
+    {
+      "product_id": "rn-2025-09-05",
+      "fetched": true,
+      "bytes": 4468,
+      "sections_total": 6,
+      "sections_clean": 4,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 2
+      },
+      "code_blocks": 0
+    },
+    {
+      "product_id": "rn-2025-09-12",
+      "fetched": true,
+      "bytes": 8688,
+      "sections_total": 7,
+      "sections_clean": 6,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1
+      },
+      "code_blocks": 0
+    },
+    {
+      "product_id": "rn-2025-09-19",
+      "fetched": true,
+      "bytes": 12659,
+      "sections_total": 8,
+      "sections_clean": 6,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 2
+      },
+      "code_blocks": 0
+    },
+    {
+      "product_id": "rn-2025-09-26",
+      "fetched": true,
+      "bytes": 2499,
+      "sections_total": 6,
+      "sections_clean": 5,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1
+      },
+      "code_blocks": 0
+    },
+    {
+      "product_id": "rn-2025-10-03",
+      "fetched": true,
+      "bytes": 4300,
+      "sections_total": 5,
+      "sections_clean": 3,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 2
+      },
+      "code_blocks": 0
+    },
+    {
+      "product_id": "rn-2025-10-10",
+      "fetched": true,
+      "bytes": 3309,
+      "sections_total": 6,
+      "sections_clean": 4,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 2
+      },
+      "code_blocks": 0
+    },
+    {
+      "product_id": "rn-2025-10-17",
+      "fetched": true,
+      "bytes": 8506,
+      "sections_total": 7,
+      "sections_clean": 5,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 2
+      },
+      "code_blocks": 0
+    },
+    {
+      "product_id": "rn-2025-10-31",
+      "fetched": true,
+      "bytes": 6181,
+      "sections_total": 6,
+      "sections_clean": 4,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 2
+      },
+      "code_blocks": 0
+    },
+    {
+      "product_id": "rn-2025-11-07",
+      "fetched": true,
+      "bytes": 4592,
+      "sections_total": 6,
+      "sections_clean": 3,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 3
+      },
+      "code_blocks": 0
+    },
+    {
+      "product_id": "rn-2025-11-14",
+      "fetched": true,
+      "bytes": 3458,
+      "sections_total": 6,
+      "sections_clean": 3,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 3
+      },
+      "code_blocks": 0
+    },
+    {
+      "product_id": "rn-2025-11-21",
+      "fetched": true,
+      "bytes": 5387,
+      "sections_total": 6,
+      "sections_clean": 3,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 3
+      },
+      "code_blocks": 0
+    },
+    {
+      "product_id": "rn-2025-12-05",
+      "fetched": true,
+      "bytes": 927,
+      "sections_total": 6,
+      "sections_clean": 6,
+      "quarantined_by_kind": {},
+      "code_blocks": 0
+    },
+    {
+      "product_id": "rn-2025-12-12",
+      "fetched": true,
+      "bytes": 3440,
+      "sections_total": 6,
+      "sections_clean": 4,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 2
+      },
+      "code_blocks": 0
+    },
+    {
+      "product_id": "rn-2026-01-02",
+      "fetched": true,
+      "bytes": 2218,
+      "sections_total": 6,
+      "sections_clean": 5,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1
+      },
+      "code_blocks": 0
+    },
+    {
+      "product_id": "rn-2026-01-16",
+      "fetched": true,
+      "bytes": 3695,
+      "sections_total": 6,
+      "sections_clean": 4,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 2
+      },
+      "code_blocks": 0
+    },
+    {
+      "product_id": "rn-2026-01-23",
+      "fetched": true,
+      "bytes": 3337,
+      "sections_total": 6,
+      "sections_clean": 4,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 2
+      },
+      "code_blocks": 0
+    },
+    {
+      "product_id": "rn-2026-01-30",
+      "fetched": true,
+      "bytes": 5464,
+      "sections_total": 6,
+      "sections_clean": 3,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 3
+      },
+      "code_blocks": 0
+    },
+    {
+      "product_id": "rn-2026-02-06",
+      "fetched": true,
+      "bytes": 5825,
+      "sections_total": 6,
+      "sections_clean": 4,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 2
+      },
+      "code_blocks": 0
+    },
+    {
+      "product_id": "rn-2026-02-13",
+      "fetched": true,
+      "bytes": 2355,
+      "sections_total": 6,
+      "sections_clean": 5,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1
+      },
+      "code_blocks": 0
+    },
+    {
+      "product_id": "rn-2026-02-20",
+      "fetched": true,
+      "bytes": 3309,
+      "sections_total": 6,
+      "sections_clean": 3,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 3
+      },
+      "code_blocks": 0
+    },
+    {
+      "product_id": "rn-2026-02-27",
+      "fetched": true,
+      "bytes": 4863,
+      "sections_total": 7,
+      "sections_clean": 5,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 2
+      },
+      "code_blocks": 0
+    },
+    {
+      "product_id": "rn-2026-03-06",
+      "fetched": true,
+      "bytes": 5710,
+      "sections_total": 7,
+      "sections_clean": 4,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 3
+      },
+      "code_blocks": 0
+    },
+    {
+      "product_id": "rn-2026-03-13",
+      "fetched": true,
+      "bytes": 6942,
+      "sections_total": 7,
+      "sections_clean": 6,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1
+      },
+      "code_blocks": 0
+    },
+    {
+      "product_id": "rn-2026-03-20",
+      "fetched": true,
+      "bytes": 8427,
+      "sections_total": 7,
+      "sections_clean": 4,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 3
+      },
+      "code_blocks": 0
+    },
+    {
+      "product_id": "rn-2026-03-27",
+      "fetched": true,
+      "bytes": 1611,
+      "sections_total": 5,
+      "sections_clean": 3,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 2
+      },
+      "code_blocks": 0
+    },
+    {
+      "product_id": "rn-2026-04-02",
+      "fetched": true,
+      "bytes": 9575,
+      "sections_total": 8,
+      "sections_clean": 6,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 2
+      },
+      "code_blocks": 0
+    },
+    {
+      "product_id": "rn-2026-04-10",
+      "fetched": true,
+      "bytes": 9782,
+      "sections_total": 10,
+      "sections_clean": 9,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1
+      },
+      "code_blocks": 0
+    },
+    {
+      "product_id": "rn-2026-04-17",
+      "fetched": true,
+      "bytes": 15185,
+      "sections_total": 18,
+      "sections_clean": 16,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 2
+      },
+      "code_blocks": 0
+    },
+    {
+      "product_id": "rn-2026-04-24",
+      "fetched": true,
+      "bytes": 15798,
+      "sections_total": 18,
+      "sections_clean": 15,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 3
+      },
+      "code_blocks": 0
+    },
+    {
+      "product_id": "processor-names",
+      "fetched": true,
+      "bytes": 49730,
+      "sections_total": 2,
+      "sections_clean": 2,
+      "quarantined_by_kind": {},
+      "code_blocks": 0
+    },
+    {
+      "product_id": "reason-codes-so-ap",
+      "fetched": true,
+      "bytes": 13218,
+      "sections_total": 1,
+      "sections_clean": 1,
+      "quarantined_by_kind": {},
+      "code_blocks": 0
+    },
+    {
+      "product_id": "reason-codes-so",
+      "fetched": true,
+      "bytes": 15988,
+      "sections_total": 1,
+      "sections_clean": 1,
+      "quarantined_by_kind": {},
+      "code_blocks": 0
+    },
+    {
+      "product_id": "recurring-billing-dev",
+      "fetched": true,
+      "bytes": 103589,
+      "sections_total": 80,
+      "sections_clean": 78,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 1
+      },
+      "code_blocks": 53
+    },
+    {
+      "product_id": "recurring-billing-user",
+      "fetched": true,
+      "bytes": 37705,
+      "sections_total": 23,
+      "sections_clean": 21,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 1
+      },
+      "code_blocks": 0
+    },
+    {
+      "product_id": "reporting",
+      "fetched": true,
+      "bytes": 211920,
+      "sections_total": 59,
+      "sections_clean": 58,
+      "quarantined_by_kind": {
+        "revision_history": 1
+      },
+      "code_blocks": 22
+    },
+    {
+      "product_id": "reporting-ug",
+      "fetched": true,
+      "bytes": 471158,
+      "sections_total": 149,
+      "sections_clean": 147,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 1
+      },
+      "code_blocks": 0
+    },
+    {
+      "product_id": "secure-acceptance",
+      "fetched": true,
+      "bytes": 305496,
+      "sections_total": 91,
+      "sections_clean": 89,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 1
+      },
+      "code_blocks": 17
+    },
+    {
+      "product_id": "secure-acceptance",
+      "fetched": true,
+      "bytes": 373573,
+      "sections_total": 129,
+      "sections_clean": 127,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 1
+      },
+      "code_blocks": 17
+    },
+    {
+      "product_id": "samsungpay",
+      "fetched": true,
+      "bytes": 69061,
+      "sections_total": 71,
+      "sections_clean": 68,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 2
+      },
+      "code_blocks": 27
+    },
+    {
+      "product_id": "security-keys",
+      "fetched": true,
+      "bytes": 101843,
+      "sections_total": 49,
+      "sections_clean": 47,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 1
+      },
+      "code_blocks": 5
+    },
+    {
+      "product_id": "sis-pax",
+      "fetched": true,
+      "bytes": 651334,
+      "sections_total": 323,
+      "sections_clean": 321,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 1
+      },
+      "code_blocks": 191
+    },
+    {
+      "product_id": "state-codes",
+      "fetched": true,
+      "bytes": 8759,
+      "sections_total": 2,
+      "sections_clean": 2,
+      "quarantined_by_kind": {},
+      "code_blocks": 0
+    },
+    {
+      "product_id": "state-codes",
+      "fetched": true,
+      "bytes": 6628,
+      "sections_total": 1,
+      "sections_clean": 1,
+      "quarantined_by_kind": {},
+      "code_blocks": 0
+    },
+    {
+      "product_id": "tap-to-pay-ios",
+      "fetched": true,
+      "bytes": 59198,
+      "sections_total": 66,
+      "sections_clean": 64,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 1
+      },
+      "code_blocks": 3
+    },
+    {
+      "product_id": "tap-to-phone-sis",
+      "fetched": true,
+      "bytes": 428988,
+      "sections_total": 240,
+      "sections_clean": 238,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 1
+      },
+      "code_blocks": 114
+    },
+    {
+      "product_id": "tap-to-phone",
+      "fetched": true,
+      "bytes": 134915,
+      "sections_total": 170,
+      "sections_clean": 168,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 1
+      },
+      "code_blocks": 4
+    },
+    {
+      "product_id": "tax-calculation",
+      "fetched": true,
+      "bytes": 94315,
+      "sections_total": 56,
+      "sections_clean": 54,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 1
+      },
+      "code_blocks": 12
+    },
+    {
+      "product_id": "test-data",
+      "fetched": true,
+      "bytes": 155387,
+      "sections_total": 39,
+      "sections_clean": 39,
+      "quarantined_by_kind": {},
+      "code_blocks": 4
+    },
+    {
+      "product_id": "time-zones",
+      "fetched": true,
+      "bytes": 9462,
+      "sections_total": 1,
+      "sections_clean": 1,
+      "quarantined_by_kind": {},
+      "code_blocks": 0
+    },
+    {
+      "product_id": "tms",
+      "fetched": true,
+      "bytes": 776173,
+      "sections_total": 538,
+      "sections_clean": 531,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 4,
+        "support_center": 2
+      },
+      "code_blocks": 178
+    },
+    {
+      "product_id": "tms-cust-tkn",
+      "fetched": true,
+      "bytes": 230,
+      "sections_total": 1,
+      "sections_clean": 1,
+      "quarantined_by_kind": {},
+      "code_blocks": 0
+    },
+    {
+      "product_id": "tms",
+      "fetched": true,
+      "bytes": 453187,
+      "sections_total": 361,
+      "sections_clean": 357,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 1,
+        "support_center": 2
+      },
+      "code_blocks": 102
+    },
+    {
+      "product_id": "txn-batch",
+      "fetched": true,
+      "bytes": 8915,
+      "sections_total": 11,
+      "sections_clean": 11,
+      "quarantined_by_kind": {},
+      "code_blocks": 3
+    },
+    {
+      "product_id": "txn_batch_api_intro",
+      "fetched": true,
+      "bytes": 211,
+      "sections_total": 1,
+      "sections_clean": 1,
+      "quarantined_by_kind": {},
+      "code_blocks": 0
+    },
+    {
+      "product_id": "txn-search",
+      "fetched": true,
+      "bytes": 43732,
+      "sections_total": 16,
+      "sections_clean": 15,
+      "quarantined_by_kind": {
+        "revision_history": 1
+      },
+      "code_blocks": 3
+    },
+    {
+      "product_id": "unified-checkout",
+      "fetched": true,
+      "bytes": 509657,
+      "sections_total": 220,
+      "sections_clean": 215,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 4
+      },
+      "code_blocks": 72
+    },
+    {
+      "product_id": "unified-click-to-pay",
+      "fetched": true,
+      "bytes": 324160,
+      "sections_total": 92,
+      "sections_clean": 87,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 4
+      },
+      "code_blocks": 36
+    },
+    {
+      "product_id": "mass-transit",
+      "fetched": true,
+      "bytes": 401764,
+      "sections_total": 171,
+      "sections_clean": 169,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 1
+      },
+      "code_blocks": 53
+    },
+    {
+      "product_id": "user_management_api_intro",
+      "fetched": true,
+      "bytes": 649,
+      "sections_total": 1,
+      "sections_clean": 1,
+      "quarantined_by_kind": {},
+      "code_blocks": 0
+    },
+    {
+      "product_id": "webhooks",
+      "fetched": true,
+      "bytes": 146916,
+      "sections_total": 124,
+      "sections_clean": 122,
+      "quarantined_by_kind": {
+        "support_center": 1,
+        "revision_history": 1
+      },
+      "code_blocks": 36
+    }
+  ]
+}

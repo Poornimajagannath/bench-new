@@ -1,0 +1,58 @@
+{
+  "checked": 5,
+  "anchors_found": 4,
+  "anchors_missing": 1,
+  "pass": false,
+  "results": [
+    {
+      "product_id": "boarding",
+      "root_path": "/docs/cybs/en-us/boarding/developer/all/rest/boarding.md",
+      "anchor": "boarding-intro-overview",
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-intro-overview",
+      "html_url": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html",
+      "html_status": 200,
+      "anchor_found_in_html": true,
+      "matched_attr": "id"
+    },
+    {
+      "product_id": "payments",
+      "root_path": "/docs/cybs/en-us/payments/developer/ctv/rest/payments.md",
+      "anchor": "payments-intro",
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-intro",
+      "html_url": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html",
+      "html_status": 200,
+      "anchor_found_in_html": true,
+      "matched_attr": "id"
+    },
+    {
+      "product_id": "tms",
+      "root_path": "/docs/cybs/en-us/tms/developer/all/rest/tms.md",
+      "anchor": "tms-overview",
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-overview",
+      "html_url": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html",
+      "html_status": 200,
+      "anchor_found_in_html": true,
+      "matched_attr": "id"
+    },
+    {
+      "product_id": "security-keys",
+      "root_path": "/docs/cybs/en-us/security-keys/user/all/ada/security-keys.md",
+      "anchor": "keys-intro",
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/security-keys/user/all/ada/security-keys.html#keys-intro",
+      "html_url": "https://developer.cybersource.com/docs/cybs/en-us/security-keys/user/all/ada/security-keys.html",
+      "html_status": 200,
+      "anchor_found_in_html": true,
+      "matched_attr": "id"
+    },
+    {
+      "product_id": "unified-checkout",
+      "root_path": "/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.md",
+      "anchor": "uc-getting-started",
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-getting-started",
+      "html_url": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html",
+      "html_status": 200,
+      "anchor_found_in_html": false,
+      "matched_attr": null
+    }
+  ]
+}

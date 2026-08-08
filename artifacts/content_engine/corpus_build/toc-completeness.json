@@ -1,0 +1,26 @@
+{
+  "generated_at": "2026-08-08T06:15:45+00:00",
+  "denominator_source": "site_html_toc_per_family",
+  "totals": {
+    "products": 1,
+    "done": 1,
+    "failed": 0,
+    "toc_topics": 109,
+    "toc_covered": 109,
+    "toc_missed": 0
+  },
+  "products": [
+    {
+      "product_id": "boarding",
+      "root_path": "/docs/cybs/en-us/boarding/developer/all/rest/boarding.md",
+      "toc_topics": 109,
+      "toc_covered": 109,
+      "toc_missed": [],
+      "status": "done",
+      "error": null,
+      "cache_hits": 0,
+      "live_fetches": 0
+    }
+  ],
+  "checkpoint_dir": "/home/badari/workspace/poornima/visa-relay-bench/artifacts/content_engine/corpus_build/toc-checkpoint"
+}

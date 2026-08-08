@@ -1,0 +1,34 @@
+{
+  "completed": [
+    "additional-amount-types",
+    "airline",
+    "boarding"
+  ],
+  "products": {
+    "boarding": {
+      "root_path": "/docs/cybs/en-us/boarding/developer/all/rest/boarding.md",
+      "toc_topics": 109,
+      "toc_covered": 109,
+      "toc_missed": [],
+      "cache_hits": 0,
+      "live_fetches": 0
+    },
+    "additional-amount-types": {
+      "root_path": "/docs/cybs/en-us/additional-amount-types/reference/all/na/additional-amount-types.md",
+      "toc_topics": 1,
+      "toc_covered": 1,
+      "toc_missed": [],
+      "cache_hits": 0,
+      "live_fetches": 0
+    },
+    "airline": {
+      "root_path": "/docs/cybs/en-us/airline/developer/all/rest/airline.md",
+      "toc_topics": 31,
+      "toc_covered": 31,
+      "toc_missed": [],
+      "cache_hits": 0,
+      "live_fetches": 0
+    }
+  },
+  "updated_at": "2026-08-08T15:23:25+00:00"
+}
