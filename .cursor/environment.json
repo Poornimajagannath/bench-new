@@ -1,0 +1,6 @@
+{
+  "name": "CyberSource developer corpus",
+  "install": "python3 -m unittest discover -s tests -k corpus -q",
+  "start": "true",
+  "terminals": []
+}
