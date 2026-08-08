@@ -1,0 +1,81 @@
+{
+  "generated_at": "2026-08-08T02:32:38+00:00",
+  "mode": "deterministic",
+  "llm_key_present": false,
+  "spend_usd": 0.0,
+  "budget_usd": 2.0,
+  "max_prs": 3,
+  "candidates": [
+    {
+      "id": "C1-endpoint-url-style",
+      "proposal": "Extend endpoint_fact extraction to match CyberSource's backticked full-URL endpoint style (`POST ``https://host``/path`), not only bare 'VERB /path'.",
+      "evidence": [
+        "evals/evidence/WAVE2-CLOSEOUT.md \u2014 remaining-48 shape list",
+        "artifacts/content_engine/boarding/ingestion-report.json \u2014 drop log",
+        "data/products/boarding/guides/en-us_boarding_developer_all_rest_boarding_boarding-reg-intro_boarding-reg-create-merch-api.md.md"
+      ],
+      "recheck": "pass: page contains a backticked full-URL endpoint line and the current extractor yields 0 endpoint_fact claims",
+      "status": "proposed"
+    },
+    {
+      "id": "C2-step-anchor-noise",
+      "proposal": "Strip trailing {#anchor} tokens from quickstart_step titles/text at extraction so identical steps match across mega-guide and child pages.",
+      "evidence": [
+        "artifacts/content_engine/boarding/composition-report.json \u2014 mega_residual_samples"
+      ],
+      "recheck": "pass: 4 residual step samples still carry {#anchor} tokens in claim text",
+      "status": "proposed"
+    },
+    {
+      "id": "C3-payments-still-dropped",
+      "proposal": "Re-run payments ingestion: extractor upgrades since Wave 1 close (constraint classes, field_table) may recover still-dropped pages.",
+      "evidence": [
+        "evals/evidence/wave1-payments/extraction-recall-fix.md \u2014 still-dropped names"
+      ],
+      "recheck_detail": {
+        "would_now_claim": [],
+        "still_zero": [
+          "en-us_payer-authentication_developer_all_rest_payer-auth_pa2-ccdc-intro.md.md",
+          "en-us_payments_developer_ctv_rest_payments_payments-debit-prepaid-process-intro.md.md",
+          "en-us_payments_developer_ctv_rest_payments_payments-intro.md.md",
+          "en-us_payments_developer_ctv_rest_payments_payments-processing-basic-intro.md.md",
+          "en-us_tms_developer_all_rest_tms_tms-bin-lookup-service.md.md",
+          "en-us_tms_developer_all_rest_tms_tms-cust-tkn.md.md",
+          "en-us_tms_developer_all_rest_tms_tms-cust-tkn_tms-cust-pi-tkn.md.md",
+          "en-us_tms_developer_all_rest_tms_tms-cust-tkn_tms-ship-tkn.md.md",
+          "en-us_tms_developer_all_rest_tms_tms-ii-tkn.md.md",
+          "en-us_tms_developer_all_rest_tms_tms-onboarding.md.md",
+          "en-us_tms_developer_all_rest_tms_tms-wallet-tkn.md.md",
+          "sandbox.md"
+        ]
+      },
+      "recheck": "fail: no previously dropped page yields claims",
+      "status": "discarded"
+    },
+    {
+      "id": "C4-missing-outcomes",
+      "proposal": "Author expected outcomes for 220 steps",
+      "evidence": [
+        "artifacts/content_engine/boarding/gap-report.md \u2014 headline 1"
+      ],
+      "recheck": "n/a",
+      "status": "discarded",
+      "why_discarded": "Outcomes are facts about the product; generating them without a source would invent facts. Upstream docs-team work, tracked in the gap report."
+    },
+    {
+      "id": "C5-llms-txt-defect",
+      "proposal": "Fix llms.txt omission and merchant-boarding.md HTTP 500",
+      "evidence": [
+        "artifacts/content_engine/boarding/gap-report.md \u2014 headline 3",
+        "artifacts/content_engine/boarding/toc-fetch-report.md \u2014 probe"
+      ],
+      "recheck": "n/a",
+      "status": "discarded",
+      "why_discarded": "Production docs-site defect; not fixable from this repo. Bug already raised externally."
+    }
+  ],
+  "proposed_within_cap": [
+    "C1-endpoint-url-style",
+    "C2-step-anchor-noise"
+  ]
+}
