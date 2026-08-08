@@ -8,11 +8,13 @@ INVARIANTS
 2) content/ only via human-approved PR
 3) Doc agent answers from generated docs only; else say gap
 4) Keep evidence/failures; no silent drops
-5) Denominators from product root at runtime (not TOC alone; not llms.txt)
+5) Denominators from the product root at runtime — the only honest corpus
+   denominator, because the root contains every subtopic. Family TOC is a
+   cross-check only. llms.txt is a hint only, never a denominator.
 6) No invention: assemble claims only; never author missing facts
 7) Corpus never leaves the machine (loopback-only generative prompts)
 
-PLAN STATUS — every original piece executed at least once
+PLAN STATUS — every piece of the original PRD/plan as specified executed at least once
 - Wave1 payments: CLOSED 30/30 vs cybersource-payments.openapi.json
 - Wave2 boarding engine+composition: CLOSED
 - Template matrix: CLOSED → field_table schema
@@ -24,13 +26,20 @@ PLAN STATUS — every original piece executed at least once
 - outcome_missing flag: SHIPPED
 - Required Fields derivation contract: SHIPPED
 
+Not in that list (original vision, not the written plan checklist) — see NEXT:
+- Cross-product correlation was never built
+- No live agent integration test against our own sandbox (only Stripe)
+
 QUOTE ONLY THESE (name the source)
 - Outcome gaps: 215/278 (21 API + 257 UI)
   Source: artifacts/content_engine/boarding/composition-report.json → sequence_totals.ratio
   Per-step: outcome_missing true|false on content/boarding/workflows/*.md
   DO NOT QUOTE: 222/277 or 220/257 (superseded; gap-report.md updated)
-- Soft gaps: missing RF 30/176; missing REST example 17/176; missing both 10/176; with RF 146/176
+- Soft gaps (POST Required-Fields derivation fix; recounted live):
+  missing RF 30/176; missing REST example 17/176; missing both 10/176; with RF 146/176
   Source: artifacts/content_engine/wave_rerun/soft-gap-findings.json
+  Note: missing both was 16/176 before the RF fix; 10 is the post-fix settled figure
+  (RF recovery removed endpoints from the both bucket; REST-example-only gaps unchanged at 17)
 - Wave1: 30/30 OpenAPI — evals/evidence/wave1-payments/denominator-and-gaps.md
 - Product roots: 16/17; TOC gaps 2/1423
 
@@ -43,6 +52,13 @@ DECISIONS
 LOOP JUDGMENT (sound)
 C1/C2 discarded (already fixed). C3 merged (reingest; safest class). C4 refused inventing outcomes. C5 refused upstream site bug. Qwen then drafted outcome_missing + RF augment; both shipped under contracts above.
 
+MANUAL-TEST CHANNEL (not live)
+evals/manual-runs.jsonl is gitignored by design. Nobody has hand-tested through the
+doc agent (mcp-server) into that log as an operating practice, so the improvement
+loop has been running on partial evidence its whole life (eval traces, gap reports,
+closeouts — not a live hand-test stream). Do not assume that channel is populated
+or feeding the loop until someone actually uses the agent and logs verdicts.
+
 KEY PATHS
 - api_reference.py — RF derivation contract
 - workflow_pages.py — outcome_missing
@@ -51,11 +67,15 @@ KEY PATHS
 - pipelines/run_improvement_loop.py — local Qwen, honest code_path
 - artifacts/content_engine/boarding/gap-report.md — headline 215/278
 - evals/evidence/improvement-loop/ — L1/L2 evidence
-- mcp-server/ → evals/manual-runs.jsonl (gitignored)
+- mcp-server/ → evals/manual-runs.jsonl (gitignored; channel not yet operated)
 
 TRAPS
 1) Wrong denominator (fixture OpenAPI, llms.txt, TOC alone, stale headlines)
-2) Soft gap ≠ missing docs (plain DL parser bug looked like 57 missing RF; now 30)
+2) Soft gap ≠ missing docs — a measured gap can be your parser's blind spot,
+   not a defect in their documentation. 57 "missing Required Fields" looked like
+   a finding about CyberSource docs and was partly a finding about our code
+   (plain DL terms ignored). The 30 that survived after the parser fix are the
+   ones worth trusting. Check every future measurement against this trap.
 3) Example JSON keys ≠ required fields
 4) Inventing step outcomes
 5) Fake mode=llm without llm_called
@@ -63,7 +83,18 @@ TRAPS
 7) Shipping private corpus to public content-bench
 
 NEXT (spec v3 — not engine)
-Measurement-first wiki/portal phase consuming outcome_missing + soft gaps + composition ratios; corrected fetch rule; local model defaults; trap list above.
+- Measurement-first wiki/portal phase consuming outcome_missing + soft gaps + composition ratios
+- Corrected fetch rule; local model defaults; trap list above
+- Cross-product correlation: never built — a question spanning payments and
+  tokenization still has no single answer
+- Live agent integration test against our own CyberSource sandbox: never run —
+  only Stripe was exercised, so the strongest possible proof is still borrowed
+- Operate the doc-agent hand-test loop for real so manual-runs.jsonl feeds improvements
 
 THESIS
-A model that can lie and is tested to refuse (gap markers + derivation tags + loopback corpus) is the product. Gap report is ready to show. Spec v3 can be written from this handoff.
+A system that can lie (local Qwen fully capable of writing 220 plausible outcomes
+or inventing required fields from examples) and chooses not to — with tests and
+derivation contracts proving it — is the difference between this and every other
+AI documentation tool. Gap report is ready to show. Spec v3 can be written from
+the corrected fetch rule, extraction patterns, measurement-first wiki phase,
+local model setup, and trap list above.
