@@ -76,7 +76,14 @@ _STATUS_TRANSITION_PATTERN = re.compile(
 )
 _PREREQUISITE_PATTERN = re.compile(
     r"\bprerequisite\b|\bmust have\b|\byou must include\b|"
-    r"\brequires that\b|\bmust be in the format\b"
+    r"\brequires that\b|\bmust be in the format\b|"
+    # Soft-gap shapes from still-dropped intros (C3 sibling triage):
+    # "Before you can…", "must contact …", "This implementation requires…"
+    r"\bbefore you can\b|"
+    r"\bmust contact\b|"
+    r"\bthis implementation requires\b|"
+    r"\brequires the use of\b|"
+    r"\bnotify your account representative\b"
 )
 
 
