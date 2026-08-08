@@ -63,7 +63,8 @@ def render_corpus_report_md(payload: Dict[str, Any]) -> str:
         "",
         "404 on a constructed URL is **derivation_error** (ours). "
         "500 on an exposed URL is **site_defect** (theirs). "
-        "**empty_200** is its own diagnosis.",
+        "**empty_200** and **html_only** are distinct diagnoses. "
+        "**hub_page** paths are structural, not family guides.",
         "",
         "| Bucket | Count |",
         "|---|---:|",

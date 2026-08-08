@@ -24,6 +24,7 @@ from urllib.parse import urlparse
 from content_bench.content_engine.product_roots import (
     DEFAULT_BASE,
     DEFAULT_DOCS_MD,
+    base_url_for_path,
     derive_product_root,
     family_from_path,
     parse_docs_md_products,
@@ -46,8 +47,17 @@ REASON_PDF = "pdf"
 REASON_UNRESOLVED = "unresolved_derivation"
 REASON_EMPTY_200 = "empty_200"
 REASON_DERIVATION_ERROR = "derivation_error"  # 404 on URL we constructed — ours
-REASON_DERIVATION_MISS = REASON_DERIVATION_ERROR  # alias; plan name is derivation_error
+REASON_DERIVATION_MISS = REASON_DERIVATION_ERROR  # alias
 REASON_SITE_DEFECT = "site_defect"  # 500 / broken on URL the site exposes — theirs
+REASON_HUB_PAGE = "hub_page"  # top-level hub, not a family mega-guide
+REASON_HTML_ONLY = "html_only"  # .md URL returns HTML — markdown twin missing
+
+# Top-level paths that are hubs, not compendium guides.
+_HUB_PATHS = frozenset({
+    "/accept-payments.md",
+    "/api/reference.md",
+    "/technology-partners.md",
+})
 
 
 @dataclass
@@ -107,11 +117,12 @@ def extract_llms_urls(text: str) -> Tuple[List[str], List[str]]:
     return sorted(md), sorted(pdf)
 
 
-def _probe_html(root_path: str, *, base_url: str, user_agent: str) -> int:
+def _probe_html(root_path: str, *, user_agent: str) -> int:
     html_path = root_path[:-3] + ".html" if root_path.endswith(".md") else root_path + ".html"
+    base = base_url_for_path(root_path)
     try:
         code, body, _ = http_get(
-            f"{base_url.rstrip('/')}{html_path}",
+            f"{base.rstrip('/')}{html_path}",
             user_agent=user_agent,
             headers={"User-Agent": user_agent, "Accept": "text/html,*/*"},
         )
@@ -128,16 +139,27 @@ def classify_unfetchable(
     html_status: Optional[int],
     listed_as_root_in_llms: bool,
     derivation: str,
+    body_sample: str = "",
 ) -> Tuple[str, str]:
     """Return (reason_code, bucket) where bucket is ours|theirs|structural."""
     if root_path.lower().endswith(".pdf"):
         return REASON_PDF, "structural"
 
+    if root_path in _HUB_PATHS or (
+        not root_path.startswith("/docs/") and root_path.count("/") <= 1
+    ):
+        return REASON_HUB_PAGE, "structural"
+
     if derivation in ("unresolved", "not_md"):
         return REASON_UNRESOLVED, "ours"
 
-    if md_status == 200 and (md_bytes == 0 or not _body_is_markdown(md_bytes, md_status)):
-        # Empty or non-markdown 200 — URL may be valid, content served elsewhere.
+    head = body_sample.lstrip()[:400].lower()
+    if md_status == 200 and (head.startswith("<!doctype") or head.startswith("<html")):
+        return REASON_HTML_ONLY, "theirs"
+
+    if md_status == 200 and (md_bytes == 0 or not looks_like_markdown(body_sample)):
+        if md_bytes == 0:
+            return REASON_EMPTY_200, "theirs" if listed_as_root_in_llms else "ours"
         return REASON_EMPTY_200, "theirs" if (html_status == 200 or listed_as_root_in_llms) else "ours"
 
     if md_status == 500:
@@ -147,7 +169,6 @@ def classify_unfetchable(
         if listed_as_root_in_llms:
             return REASON_SITE_DEFECT, "theirs"
         if html_status == 200:
-            # HTML exists at sibling path but derived .md 404 — likely wrong derivation.
             return REASON_DERIVATION_MISS, "ours"
         return REASON_DERIVATION_MISS, "ours"
 
@@ -157,10 +178,6 @@ def classify_unfetchable(
         return REASON_DERIVATION_MISS, "ours"
 
     return REASON_UNRESOLVED, "ours"
-
-
-def _body_is_markdown(md_bytes: int, md_status: int) -> bool:
-    return md_status == 200 and md_bytes > 100
 
 
 def discover_roots_from_llms(
@@ -250,23 +267,24 @@ def probe_roots(
             rec.unfetchable_bucket = "structural"
             continue
 
-        md_status, md_bytes = probe_root(rec.root_path, base_url=base_url, user_agent=user_agent)
-        html_status = _probe_html(rec.root_path, base_url=base_url, user_agent=user_agent)
+        base = base_url_for_path(rec.root_path)
+        md_status, md_bytes = probe_root(rec.root_path, base_url=base, user_agent=user_agent)
+        html_status = _probe_html(rec.root_path, user_agent=user_agent)
         time.sleep(sleep_s)
 
         rec.http_status = md_status
         rec.html_status = html_status
         rec.bytes = md_bytes
 
-        if md_status == 200 and md_bytes > 100:
-            # Verify markdown-ish
+        body_text = ""
+        if md_status == 200 and md_bytes > 0:
             try:
                 _, body, _ = http_get(
-                    f"{base_url.rstrip('/')}{rec.root_path}",
+                    f"{base.rstrip('/')}{rec.root_path}",
                     user_agent=user_agent,
                 )
-                text = body.decode("utf-8", errors="replace")
-                if looks_like_markdown(text):
+                body_text = body.decode("utf-8", errors="replace")
+                if looks_like_markdown(body_text):
                     rec.fetch_status = "ok"
                     rec.bytes = len(body)
                     time.sleep(sleep_s)
@@ -281,6 +299,7 @@ def probe_roots(
             html_status=html_status,
             listed_as_root_in_llms=rec.listed_as_root_in_llms,
             derivation=rec.derivation,
+            body_sample=body_text,
         )
         rec.fetch_status = "unfetchable"
         rec.unfetchable_reason = reason

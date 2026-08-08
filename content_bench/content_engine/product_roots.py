@@ -39,6 +39,18 @@ from content_bench.content_engine.toc_fetch import (
 DEFAULT_UA = "Content-Bench/1.0 (product-roots)"
 DEFAULT_DOCS_MD = "https://developer.cybersource.com/docs.md"
 DEFAULT_BASE = "https://developer.cybersource.com"
+DEFAULT_VAS_BASE = "https://developer.visaacceptance.com"
+
+# Path segments that are layout folders, not guide compendium names. Promoting
+# ``…/rest/{leaf}.md`` to ``…/rest.md`` was the dominant derivation miss.
+GENERIC_GUIDE_PARENTS = frozenset({
+    "rest", "ebc", "ada", "na", "all", "ctv", "so", "acq", "admin",
+    "developer", "user", "integration", "implementation", "reference",
+    "overview", "get-started", "gettingstarted", "quick-start", "relnote",
+    "doc-rel", "platform", "hosted-fields", "agent-toolkit", "auto-fueling",
+    "accept-devices-acq", "products", "resources", "hello-world", "support",
+    "fiservrc", "payto", "payto-process-trxn", "intro-services",
+})
 
 # Underline (DITA) or ATX heading carrying a {#anchor}.
 _ANCHORED_HEADING = re.compile(
@@ -133,8 +145,29 @@ def derive_family_repeat_root(intro_path: str) -> Optional[str]:
     return "/" + "/".join(parts[:last] + [f"{family}.md"])
 
 
+def base_url_for_path(path: str) -> str:
+    """Pick API host for a docs path (CyberSource vs Visa Acceptance)."""
+    if path.startswith("/docs/vas/") or path.startswith("/docs/barclays/"):
+        return DEFAULT_VAS_BASE
+    return DEFAULT_BASE
+
+
+def derive_compendium_root(intro_path: str) -> Optional[str]:
+    """Collapse release-note subtrees to the compendium mega-guide."""
+    marker = "/doc-release-notes"
+    if marker not in intro_path:
+        return None
+    idx = intro_path.find(marker)
+    return intro_path[: idx + len(marker)] + ".md"
+
+
 def derive_guide_dir_root(intro_path: str) -> Optional[str]:
-    """…/{guide_dir}/{leaf}.md → …/{guide_dir}.md (general form of family-repeat)."""
+    """…/{guide_dir}/{leaf}.md → …/{guide_dir}.md (general form of family-repeat).
+
+    When the parent directory is a generic layout segment (``rest``, ``ada``,
+    ``na``, …) the leaf path *is* the mega-guide — do not promote to
+    ``…/rest.md``.
+    """
     if not intro_path.endswith(".md") or intro_path.startswith("/content/"):
         return None
     parts = intro_path.strip("/").split("/")
@@ -142,6 +175,8 @@ def derive_guide_dir_root(intro_path: str) -> Optional[str]:
         return None
     guide_dir = parts[-2]
     if parts[-1] == f"{guide_dir}.md":
+        return "/" + "/".join(parts)
+    if guide_dir in GENERIC_GUIDE_PARENTS:
         return "/" + "/".join(parts)
     return "/" + "/".join(parts[:-2] + [f"{guide_dir}.md"])
 
@@ -154,13 +189,19 @@ def derive_product_root(intro_path: str) -> Tuple[Optional[str], str, Optional[s
         return None, "not_md", None, None
     family_repeat = derive_family_repeat_root(intro_path)
     guide_dir = derive_guide_dir_root(intro_path)
+    compendium = derive_compendium_root(intro_path)
     parts = intro_path.strip("/").split("/")
     family = family_from_path(intro_path)
+    normalized = "/" + "/".join(parts)
     if family and parts[-1] == f"{family}.md":
-        return intro_path if intro_path.startswith("/") else "/" + intro_path, "already_root", family_repeat, guide_dir
+        return normalized, "already_root", family_repeat, guide_dir
+    if compendium:
+        return compendium, "compendium", family_repeat, guide_dir
     if family_repeat:
         return family_repeat, "family_repeat", family_repeat, guide_dir
     if guide_dir:
+        if guide_dir == normalized and len(parts) >= 2 and parts[-2] in GENERIC_GUIDE_PARENTS:
+            return guide_dir, "listed_root", family_repeat, guide_dir
         return guide_dir, "guide_dir", family_repeat, guide_dir
     return None, "unresolved", family_repeat, guide_dir
 

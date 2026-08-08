@@ -7,9 +7,9 @@ import unittest
 from content_bench.content_engine.corpus_discovery import (
     REASON_DERIVATION_ERROR,
     REASON_EMPTY_200,
+    REASON_HUB_PAGE,
     REASON_PDF,
     REASON_SITE_DEFECT,
-    REASON_UNRESOLVED,
     classify_unfetchable,
     discover_roots_from_llms,
     extract_llms_urls,
@@ -108,7 +108,7 @@ class ClassifyUnfetchableTests(unittest.TestCase):
         self.assertEqual(reason, REASON_EMPTY_200)
         self.assertNotEqual(reason, REASON_DERIVATION_ERROR)
 
-    def test_unresolved_derivation(self):
+    def test_hub_page(self):
         reason, bucket = classify_unfetchable(
             "/accept-payments.md",
             md_status=404,
@@ -117,8 +117,8 @@ class ClassifyUnfetchableTests(unittest.TestCase):
             listed_as_root_in_llms=False,
             derivation="unresolved",
         )
-        self.assertEqual(reason, REASON_UNRESOLVED)
-        self.assertEqual(bucket, "ours")
+        self.assertEqual(reason, REASON_HUB_PAGE)
+        self.assertEqual(bucket, "structural")
 
 
 if __name__ == "__main__":

@@ -69,6 +69,34 @@ class DerivationTests(unittest.TestCase):
         self.assertEqual(how, "guide_dir")
         self.assertTrue(chosen.endswith("/echeck-user-guide.md"))
 
+    def test_listed_root_when_parent_is_generic_rest(self):
+        """llms lists …/rest/applepay.md — must not promote to …/rest.md."""
+        intro = "/docs/cybs/en-us/apple-pay/developer/all/rest/applepay.md"
+        chosen, how, _, _ = derive_product_root(intro)
+        self.assertEqual(chosen, intro)
+        self.assertEqual(how, "listed_root")
+
+    def test_listed_root_template_mgmt(self):
+        intro = (
+            "/docs/cybs/en-us/boarding-template-management/user/all/ada/"
+            "boarding-template-mgmt.md"
+        )
+        chosen, how, _, _ = derive_product_root(intro)
+        self.assertEqual(chosen, intro)
+        self.assertEqual(how, "listed_root")
+
+    def test_compendium_collapse_release_notes(self):
+        intro = (
+            "/docs/cybs/en-us/doc-rel/relnote/all/na/doc-release-notes/"
+            "doc-release-notes-intro/April-2025.md"
+        )
+        chosen, how, _, _ = derive_product_root(intro)
+        self.assertEqual(
+            chosen,
+            "/docs/cybs/en-us/doc-rel/relnote/all/na/doc-release-notes.md",
+        )
+        self.assertEqual(how, "compendium")
+
     def test_pdf_not_md(self):
         chosen, how, _, _ = derive_product_root(
             "/content/dam/new-documentation/documentation/en/e-checks/developer/all/so/e-checks-so.pdf"

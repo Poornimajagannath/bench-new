@@ -110,11 +110,36 @@ def phase_discover(args: argparse.Namespace) -> dict:
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
     print(f"wrote {out}")
+    ok = sum(1 for r in report.roots if r.fetch_status == "ok")
+    ours = report.unfetchable_by_bucket.get("ours", 0)
+    theirs = report.unfetchable_by_bucket.get("theirs", 0)
     print(
-        f"discovered {report.roots_discovered} roots "
-        f"({sum(1 for r in report.roots if r.fetch_status == 'ok')} fetchable)"
+        f"discovered {report.roots_discovered} roots ({ok} fetchable); "
+        f"unfetchable ours={ours} theirs={theirs}"
     )
+    for rule, stats in sorted((payload.get("derivation_stats") or {}).items()):
+        d = stats.get("discovered", 0)
+        ok_r = stats.get("fetched_ok", 0)
+        rate = f"{100 * ok_r / d:.1f}%" if d else "—"
+        print(f"  {rule}: {ok_r}/{d} ({rate})")
     return payload
+
+
+def check_derive_gate(discovery: dict, args: argparse.Namespace) -> int:
+    """Block fetch/sanitize/toc until derivation ours count is under 15."""
+    if args.skip_derive_gate or args.force_fetch:
+        return 0
+    ours = (discovery.get("unfetchable_by_bucket") or {}).get("ours", 0)
+    total = discovery.get("roots_discovered", 0)
+    if ours >= 15:
+        print(
+            f"ERROR: derivation gate — ours={ours}/{total} (need <15). "
+            "Fix derivation before fetch. Use --skip-derive-gate to override.",
+            file=sys.stderr,
+        )
+        return 1
+    print(f"derivation gate PASS: ours={ours}/{total} < 15")
+    return 0
 
 
 def phase_fetch(discovery: dict, args: argparse.Namespace) -> dict:
@@ -430,6 +455,11 @@ def main() -> int:
     ap.add_argument("--require-deep-links", action="store_true", default=True)
     ap.add_argument("--no-require-deep-links", action="store_false", dest="require_deep_links")
     ap.add_argument("--force-fetch", action="store_true", help="Attempt fetch even if probe failed")
+    ap.add_argument(
+        "--skip-derive-gate",
+        action="store_true",
+        help="Proceed past discover even when ours unfetchable >= 15",
+    )
     ap.add_argument("--strict", action="store_true", help="Exit non-zero on validation failures")
     ap.add_argument("--toc-limit", type=int, default=None, help="Cap TOC topics per product (debug)")
     ap.add_argument(
@@ -440,15 +470,18 @@ def main() -> int:
     args = ap.parse_args()
 
     discovery: dict = {}
-    if args.phase in ("all", "discover", "fetch", "report") and not args.skip_probe:
+    if args.phase in ("all", "discover", "fetch", "sanitize", "toc", "deep-links", "report"):
         disc_path = ARTIFACTS / "discovery.json"
-        if args.phase != "discover" and disc_path.is_file() and args.phase == "all":
+        if args.phase == "discover" or (args.phase == "all" and not args.skip_probe):
+            discovery = phase_discover(args)
+        elif disc_path.is_file():
             discovery = json.loads(disc_path.read_text(encoding="utf-8"))
             print(f"loaded {disc_path}")
-        else:
-            discovery = phase_discover(args)
-    elif (ARTIFACTS / "discovery.json").is_file():
-        discovery = json.loads((ARTIFACTS / "discovery.json").read_text(encoding="utf-8"))
+
+    if discovery and args.phase in ("all", "fetch", "sanitize", "toc", "deep-links"):
+        rc = check_derive_gate(discovery, args)
+        if rc != 0:
+            return rc
 
     fetch_manifest: dict = {"fetched": [], "unfetchable": [], "roots_fetched": 0, "total_bytes": 0}
     if args.phase in ("all", "fetch", "sanitize", "toc", "report") and not args.skip_fetch:
@@ -485,6 +518,8 @@ def main() -> int:
         toc_report = json.loads(toc_path.read_text(encoding="utf-8"))
 
     if args.phase in ("all", "report"):
+        if not discovery and (ARTIFACTS / "discovery.json").is_file():
+            discovery = json.loads((ARTIFACTS / "discovery.json").read_text(encoding="utf-8"))
         phase_report(discovery, fetch_manifest, deep_check, sanitize_summary, toc_report, args)
 
     return 0
