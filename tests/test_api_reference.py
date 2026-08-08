@@ -185,6 +185,11 @@ class RenderDeepLinkTests(unittest.TestCase):
         self.assertIn("cybersource.com", page)
         self.assertIn("#boarding-reg-create-merch-api", page)
         self.assertIn("#merchants-v2-add-merchant_step1", page)
+        # One continuous sequence: API then UI, numbering does not restart.
+        self.assertIn("**API:**", page)
+        self.assertIn("1. **API:**", page)
+        self.assertRegex(page, r"2\. \*\*Action:\*\*")
+        self.assertIn("sequence_stats:", page)
 
 
 if __name__ == "__main__":

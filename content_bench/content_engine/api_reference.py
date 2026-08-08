@@ -74,6 +74,27 @@ class ApiRefSkip:
 
 
 @dataclass
+class SoftGapFinding:
+    """Matched Endpoint section missing Required Fields and/or REST Example.
+
+    A finding, not a warning: the developer can see the verb+URL and still
+    cannot call the endpoint without fields or an example payload.
+    """
+
+    product_id: str
+    method: str
+    path: str
+    operation_title: str
+    deep_link: Optional[str]
+    missing_required_fields: bool
+    missing_rest_example: bool
+    line: int = 0
+
+    def to_dict(self) -> Dict[str, Any]:
+        return asdict(self)
+
+
+@dataclass
 class ApiRefReport:
     """Per-document scan of the API-reference pattern."""
 
@@ -84,6 +105,7 @@ class ApiRefReport:
     matched_with_example: int = 0
     claims_emitted: int = 0
     skipped: List[ApiRefSkip] = field(default_factory=list)
+    soft_gaps: List[SoftGapFinding] = field(default_factory=list)
 
     def to_dict(self) -> Dict[str, Any]:
         return {
@@ -94,7 +116,19 @@ class ApiRefReport:
             "matched_with_example": self.matched_with_example,
             "claims_emitted": self.claims_emitted,
             "skipped": [asdict(s) for s in self.skipped],
+            "soft_gaps": [g.to_dict() for g in self.soft_gaps],
         }
+
+
+def _product_id_from_pointer(source_pointer: str, doc_stem: str) -> str:
+    name = source_pointer.rsplit("/", 1)[-1]
+    if name.endswith(".md.md"):
+        name = name[: -len(".md.md")]
+    elif name.endswith(".md"):
+        name = name[: -len(".md")]
+    if "_" in name:
+        return name.rsplit("_", 1)[-1]
+    return doc_stem.rsplit("_", 1)[-1] if "_" in doc_stem else doc_stem
 
 
 def _heading_end(match: re.Match) -> int:
@@ -318,6 +352,27 @@ def extract_api_reference_claims(
 
         # Prefer the operation anchor for deep links; fall back to Endpoint.
         primary_anchor = op_anchor or ep_anchor or f"ep-{block_start}"
+
+        # Soft-gap findings (per matched Endpoint section, not per host line).
+        missing_rf = not bool(req_fields)
+        missing_ex = example_request is None and example_response is None
+        if missing_rf or missing_ex:
+            # Representative verb+path from the first env line.
+            _env, method0, _host0, path0 = env_endpoints[0]
+            from content_bench.content_engine.source_noise import deep_link_for
+
+            report.soft_gaps.append(
+                SoftGapFinding(
+                    product_id=_product_id_from_pointer(source_pointer, doc_stem),
+                    method=method0,
+                    path=path0,
+                    operation_title=op_title or f"{method0} {path0}",
+                    deep_link=deep_link_for(source_pointer, primary_anchor),
+                    missing_required_fields=missing_rf,
+                    missing_rest_example=missing_ex,
+                    line=line_no,
+                )
+            )
 
         # One claim per host/env line, sharing fields + examples.
         # Distinct operations often reuse the same verb+path (e.g. several

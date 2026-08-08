@@ -1,0 +1,2136 @@
+{
+  "product_id": "payments",
+  "root_path": "/docs/cybs/en-us/payments/developer/ctv/rest/payments.md",
+  "root_url": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.md",
+  "bytes": 397466,
+  "sections": [
+    {
+      "anchor": "payments-about-guide",
+      "title": "Payments Developer Guide",
+      "byte_start": 0,
+      "byte_end": 1324,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-about-guide",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-doc-revisions",
+      "title": "Recent Revisions to This Document",
+      "byte_start": 1324,
+      "byte_end": 5669,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-doc-revisions",
+      "heading_level": 1
+    },
+    {
+      "anchor": "vpc-partner-reseller-disclaimer",
+      "title": "VISA Platform Connect: Specifications and Conditions for Resellers/Partners",
+      "byte_start": 5669,
+      "byte_end": 7801,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#vpc-partner-reseller-disclaimer",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-intro",
+      "title": "Introduction to Payments",
+      "byte_start": 7801,
+      "byte_end": 8716,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-intro-banks-overview",
+      "title": "Financial Institutions and Payment Networks",
+      "byte_start": 8716,
+      "byte_end": 9018,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-intro-banks-overview",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-intro-banks-acquiring",
+      "title": "Merchant Financial Institutions (Acquirers)",
+      "byte_start": 9018,
+      "byte_end": 11158,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-intro-banks-acquiring",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-intro-banks-issuing",
+      "title": "Customer Financial Institutions (Issuers)",
+      "byte_start": 11158,
+      "byte_end": 11595,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-intro-banks-issuing",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-intro-card-companies",
+      "title": "Payment Networks",
+      "byte_start": 11595,
+      "byte_end": 12245,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-intro-card-companies",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-intro-processors",
+      "title": "Payment Processors",
+      "byte_start": 12245,
+      "byte_end": 14404,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-intro-processors",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-intro-ctv-acqs",
+      "title": "`Visa Platform Connect` Acquirers",
+      "byte_start": 14404,
+      "byte_end": 48265,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-intro-ctv-acqs",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-intro-cards-types",
+      "title": "Card Types",
+      "byte_start": 48265,
+      "byte_end": 48920,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-intro-cards-types",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-intro-cobadge-cards",
+      "title": "Co-Badged Cards",
+      "byte_start": 48920,
+      "byte_end": 49894,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-intro-cobadge-cards",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-intro-cobrand-cards",
+      "title": "Co-Branded Cards",
+      "byte_start": 49894,
+      "byte_end": 50252,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-intro-cobrand-cards",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-intro-credit-cards",
+      "title": "Credit Cards",
+      "byte_start": 50252,
+      "byte_end": 50483,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-intro-credit-cards",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-intro-debit-cards",
+      "title": "Debit Cards",
+      "byte_start": 50483,
+      "byte_end": 50834,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-intro-debit-cards",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-intro-prepaid-cards",
+      "title": "Prepaid Cards",
+      "byte_start": 50834,
+      "byte_end": 51032,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-intro-prepaid-cards",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-intro-private-cards",
+      "title": "Private Label Cards",
+      "byte_start": 51032,
+      "byte_end": 51293,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-intro-private-cards",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-intro-cash-cards",
+      "title": "Quasi-Cash",
+      "byte_start": 51293,
+      "byte_end": 51533,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-intro-cash-cards",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-intro-transactions-overview",
+      "title": "Transaction Types",
+      "byte_start": 51533,
+      "byte_end": 51745,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-intro-transactions-overview",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-intro-transactions-card-not-present",
+      "title": "Card-Not-Present Transactions",
+      "byte_start": 51745,
+      "byte_end": 52585,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-intro-transactions-card-not-present",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-intro-transactions-card-present",
+      "title": "Card-Present Transactions",
+      "byte_start": 52585,
+      "byte_end": 53265,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-intro-transactions-card-present",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-auth-cvn-intro",
+      "title": "Authorizations with Card Verification Numbers",
+      "byte_start": 53265,
+      "byte_end": 54017,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-auth-cvn-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-auth-cvn-locations",
+      "title": "CVN Locations and Terminology",
+      "byte_start": 54017,
+      "byte_end": 54832,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-auth-cvn-locations",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-intro-transactions-intl",
+      "title": "International Transactions",
+      "byte_start": 54832,
+      "byte_end": 55056,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-intro-transactions-intl",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-intro-compliance",
+      "title": "Compliance",
+      "byte_start": 55056,
+      "byte_end": 56326,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-intro-compliance",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-intro-transactions-intl-remittance",
+      "title": "Merchant Remittance Funding",
+      "byte_start": 56326,
+      "byte_end": 56946,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-intro-transactions-intl-remittance",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-services-intro",
+      "title": "Payment Services",
+      "byte_start": 56946,
+      "byte_end": 57273,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-services-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-intro-processing-auth",
+      "title": "Authorization",
+      "byte_start": 57273,
+      "byte_end": 57513,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-intro-processing-auth",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-intro-processing-auth-online",
+      "title": "Online Authorization",
+      "byte_start": 57513,
+      "byte_end": 58686,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-intro-processing-auth-online",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-intro-processing-auth-offline",
+      "title": "Offline Authorization",
+      "byte_start": 58686,
+      "byte_end": 59536,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-intro-processing-auth-offline",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-intro-processing-auth-incremental",
+      "title": "Incremental Authorization",
+      "byte_start": 59536,
+      "byte_end": 60088,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-intro-processing-auth-incremental",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-basic-auth-inc-scenario",
+      "title": "Scenario for an Incremental Authorization",
+      "byte_start": 60088,
+      "byte_end": 61042,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-basic-auth-inc-scenario",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-intro-pre-auths",
+      "title": "Pre-Authorization",
+      "byte_start": 61042,
+      "byte_end": 62483,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-intro-pre-auths",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-intro-processing-auth-pnt",
+      "title": "Payment Network Token Authorization",
+      "byte_start": 62483,
+      "byte_end": 62984,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-intro-processing-auth-pnt",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-intro-processing-auth-workflow",
+      "title": "Authorization Workflow",
+      "byte_start": 62984,
+      "byte_end": 64552,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-intro-processing-auth-workflow",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-intro-processing-sales",
+      "title": "Sale",
+      "byte_start": 64552,
+      "byte_end": 65078,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-intro-processing-sales",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-intro-processing-sales-dual",
+      "title": "Dual-Message Processing",
+      "byte_start": 65078,
+      "byte_end": 65580,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-intro-processing-sales-dual",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-intro-processing-sales-dual-partialauth",
+      "title": "Partial Authorizations",
+      "byte_start": 65580,
+      "byte_end": 66242,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-intro-processing-sales-dual-partialauth",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-intro-processing-sales-single",
+      "title": "Single-Message Processing",
+      "byte_start": 66242,
+      "byte_end": 66881,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-intro-processing-sales-single",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-intro-processing-reversal",
+      "title": "Authorization Reversal",
+      "byte_start": 66881,
+      "byte_end": 68750,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-intro-processing-reversal",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-auth-reversal-automatic-partial-overview",
+      "title": "Automatic Partial Authorization Reversal",
+      "byte_start": 68750,
+      "byte_end": 69691,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-auth-reversal-automatic-partial-overview",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-intro-processing-capture",
+      "title": "Capture",
+      "byte_start": 69691,
+      "byte_end": 71051,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-intro-processing-capture",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-intro-processing-capture-workflow",
+      "title": "Capture Workflow",
+      "byte_start": 71051,
+      "byte_end": 72146,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-intro-processing-capture-workflow",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-intro-processing-credit",
+      "title": "Refund",
+      "byte_start": 72146,
+      "byte_end": 74324,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-intro-processing-credit",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-intro-processing-credit-workflow",
+      "title": "Refund and Credit Workflow",
+      "byte_start": 74324,
+      "byte_end": 75564,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-intro-processing-credit-workflow",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-intro-processing-void",
+      "title": "Void",
+      "byte_start": 75564,
+      "byte_end": 76772,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-intro-processing-void",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-features-intro",
+      "title": "Payment Features",
+      "byte_start": 76772,
+      "byte_end": 78461,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-features-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-debit-prepaid-intro",
+      "title": "Debit and Prepaid Card Payments",
+      "byte_start": 78461,
+      "byte_end": 79746,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-debit-prepaid-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-interchange-optimization",
+      "title": "Interchange Optimization",
+      "byte_start": 79746,
+      "byte_end": 81950,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-interchange-optimization",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-jpo",
+      "title": "Japanese Payment Options",
+      "byte_start": 81950,
+      "byte_end": 83538,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-jpo",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-jpo_jpo-process-prereq",
+      "title": "Requirements",
+      "byte_start": 83538,
+      "byte_end": 84045,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-jpo_jpo-process-prereq",
+      "heading_level": 2
+    },
+    {
+      "anchor": "payments-micro",
+      "title": "Micropayments",
+      "byte_start": 84045,
+      "byte_end": 84245,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-micro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-mc-bill-pay",
+      "title": "Mastercard Bill Payments",
+      "byte_start": 84245,
+      "byte_end": 85238,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-mc-bill-pay",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-mc-bill-pay_mc-billpay-process-prereq",
+      "title": "Requirements",
+      "byte_start": 85238,
+      "byte_end": 85436,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-mc-bill-pay_mc-billpay-process-prereq",
+      "heading_level": 2
+    },
+    {
+      "anchor": "payments-mc-ems",
+      "title": "Mastercard Expert Monitoring Solutions",
+      "byte_start": 85436,
+      "byte_end": 86506,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-mc-ems",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-mc-ems_mc-ems-process-prereq",
+      "title": "Requirement",
+      "byte_start": 86506,
+      "byte_end": 86897,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-mc-ems_mc-ems-process-prereq",
+      "heading_level": 2
+    },
+    {
+      "anchor": "payments-processing-pa-intro",
+      "title": "Payer Authentication",
+      "byte_start": 86897,
+      "byte_end": 88806,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-pa-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-relax-reqs-intro",
+      "title": "Relaxed Requirements for Address Data and Expiration Date in Payment Transactions",
+      "byte_start": 88806,
+      "byte_end": 89544,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-relax-reqs-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-split-ship-intro",
+      "title": "Split Shipment",
+      "byte_start": 89544,
+      "byte_end": 92459,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-split-ship-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-split-ship-intro_section_zdn_ssn_xwb",
+      "title": "Additional Authorizations",
+      "byte_start": 92459,
+      "byte_end": 93302,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-split-ship-intro_section_zdn_ssn_xwb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "payments-split-ship-intro_section_a2n_ssn_xwb",
+      "title": "Additional Captures",
+      "byte_start": 93302,
+      "byte_end": 94692,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-split-ship-intro_section_a2n_ssn_xwb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "payment-tms-intro",
+      "title": "Token Management Service",
+      "byte_start": 94692,
+      "byte_end": 96917,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payment-tms-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-testing-services",
+      "title": "Testing the Payment Services",
+      "byte_start": 96917,
+      "byte_end": 97171,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-testing-services",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-testing-requirements",
+      "title": "Requirements for Testing",
+      "byte_start": 97171,
+      "byte_end": 99054,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-testing-requirements",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-testing-cards",
+      "title": "Test Card Numbers",
+      "byte_start": 99054,
+      "byte_end": 100373,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-testing-cards",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-testing-amounts",
+      "title": "Using Amounts to Simulate Errors",
+      "byte_start": 100373,
+      "byte_end": 100889,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-testing-amounts",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-testing-amex",
+      "title": "Test American Express Card Verification",
+      "byte_start": 100889,
+      "byte_end": 101589,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-testing-amex",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-basic-intro",
+      "title": "Standard Payment Processing",
+      "byte_start": 101589,
+      "byte_end": 101819,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-basic-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-basic-auth-intro",
+      "title": "Basic Authorization",
+      "byte_start": 101819,
+      "byte_end": 102084,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-basic-auth-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-basic-auth-intro_d7e16",
+      "title": "Endpoint",
+      "byte_start": 102084,
+      "byte_end": 102428,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-basic-auth-intro_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "payments-intro-processing-auth-decline",
+      "title": "Declined Authorization",
+      "byte_start": 102428,
+      "byte_end": 103578,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-intro-processing-auth-decline",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-basic-auth-required",
+      "title": "Required Fields for Processing a Basic Authorization",
+      "byte_start": 103578,
+      "byte_end": 106614,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-basic-auth-required",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-basic-auth-required-country",
+      "title": "Country-Specific Required Fields for Processing a Basic Authorization",
+      "byte_start": 106614,
+      "byte_end": 109529,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-basic-auth-required-country",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-basic-auth-ex-rest",
+      "title": "REST Example: Processing a Basic Authorization",
+      "byte_start": 109529,
+      "byte_end": 112703,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-basic-auth-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-basic-auth-lineitem-intro",
+      "title": "Authorization with Line Items",
+      "byte_start": 112703,
+      "byte_end": 114600,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-basic-auth-lineitem-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-basic-auth-lineitem-intro_d7e16",
+      "title": "Endpoint",
+      "byte_start": 114600,
+      "byte_end": 114980,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-basic-auth-lineitem-intro_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "payments-processing-basic-auth-lineitem-required",
+      "title": "Required Fields for Processing an Authorization with Line Items",
+      "byte_start": 114980,
+      "byte_end": 117855,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-basic-auth-lineitem-required",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-basic-auth-lineitem-req-country",
+      "title": "Country-Specific Required Fields for Processing an Authorization with Line Items",
+      "byte_start": 117855,
+      "byte_end": 119053,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-basic-auth-lineitem-req-country",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-basic-auth-lineitem-ex-rest",
+      "title": "REST Example: Processing an Authorization with Line Items",
+      "byte_start": 119053,
+      "byte_end": 121695,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-basic-auth-lineitem-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pnt-auth-intro",
+      "title": "Authorization with Payment Network Tokens",
+      "byte_start": 121695,
+      "byte_end": 122266,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#pnt-auth-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pnt-auth-intro_d16e16",
+      "title": "Endpoint",
+      "byte_start": 122266,
+      "byte_end": 122526,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#pnt-auth-intro_d16e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "pnt-req-fields",
+      "title": "Required Fields for Authorizations with Payment Network Tokens",
+      "byte_start": 122526,
+      "byte_end": 123585,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#pnt-req-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pnt-optional-fields",
+      "title": "Optional Fields for Authorizations with Payment Network Tokens",
+      "byte_start": 123585,
+      "byte_end": 125732,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#pnt-optional-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pnt-ex-rest",
+      "title": "REST Example: Authorizations with Payment Network Tokens",
+      "byte_start": 125732,
+      "byte_end": 127954,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#pnt-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-auth-cvn-procedure",
+      "title": "Authorization with a Card Verification Number",
+      "byte_start": 127954,
+      "byte_end": 130577,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-auth-cvn-procedure",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-auth-cvn-procedure_d7e16",
+      "title": "Endpoint",
+      "byte_start": 130577,
+      "byte_end": 130885,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-auth-cvn-procedure_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "payments-auth-cvn-required",
+      "title": "Required Fields for Processing an Authorization with a Card Verification Number",
+      "byte_start": 130885,
+      "byte_end": 134500,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-auth-cvn-required",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-auth-cvn-optional",
+      "title": "Optional Fields for Processing an Authorization with a Card Verification Number",
+      "byte_start": 134500,
+      "byte_end": 135279,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-auth-cvn-optional",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-auth-cvn-ex-rest",
+      "title": "REST Example: Processing an Authorization with a Card Verification Number",
+      "byte_start": 135279,
+      "byte_end": 137604,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-auth-cvn-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-foreign-auth-intro",
+      "title": "Marketplace Authorization with Foreign Retailers",
+      "byte_start": 137604,
+      "byte_end": 138735,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-foreign-auth-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-foreign-auth-intro_d7e16",
+      "title": "Endpoint",
+      "byte_start": 138735,
+      "byte_end": 139087,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-foreign-auth-intro_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "payments-processing-foreign-auth-required",
+      "title": "Required Fields for Processing a Marketplace Authorization with a Foreign Retailer",
+      "byte_start": 139087,
+      "byte_end": 142658,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-foreign-auth-required",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-foreign-auth-ex-rest",
+      "title": "REST Example: Processing an Marketplace Authorization with a Foreign Retailer",
+      "byte_start": 142658,
+      "byte_end": 146129,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-foreign-auth-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-pa-sca-exempts-intro",
+      "title": "Authorization with Strong Customer Authentication Exemption",
+      "byte_start": 146129,
+      "byte_end": 148539,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-pa-sca-exempts-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-pa-sca-exempts-intro_fields-specific-to-auth",
+      "title": "Fields Specific to the Strong Customer Authentication Exemptions",
+      "byte_start": 148539,
+      "byte_end": 150611,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-pa-sca-exempts-intro_fields-specific-to-auth",
+      "heading_level": 2
+    },
+    {
+      "anchor": "payments-processing-pa-sca-exempts-intro_d7e16",
+      "title": "Endpoint",
+      "byte_start": 150611,
+      "byte_end": 150971,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-pa-sca-exempts-intro_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "payments-processing-pa-sca-exempts-required",
+      "title": "Required Fields for Processing an Authorization with an SCA Exemption",
+      "byte_start": 150971,
+      "byte_end": 154220,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-pa-sca-exempts-required",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-pa-sca-exampts-ex-rest",
+      "title": "REST Example: Processing an Authorization with an SCA Exemption for Low-Value Transactions",
+      "byte_start": 154220,
+      "byte_end": 156619,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-pa-sca-exampts-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-basic-zero-auth-intro",
+      "title": "Account Verification with a Zero Amount Authorization",
+      "byte_start": 156619,
+      "byte_end": 157678,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-basic-zero-auth-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-basic-zero-auth-intro_d7e16",
+      "title": "Endpoint",
+      "byte_start": 157678,
+      "byte_end": 158042,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-basic-zero-auth-intro_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "payments-processing-basic-zero-auth-required",
+      "title": "Required Fields for Account Verification with Zero Amount Authorization",
+      "byte_start": 158042,
+      "byte_end": 161244,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-basic-zero-auth-required",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-basic-zero-auth-required-country",
+      "title": "Country-Specific Required Fields for Account Verification with Zero Amount Authorization",
+      "byte_start": 161244,
+      "byte_end": 162228,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-basic-zero-auth-required-country",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-basic-zero-auth-ex-rest",
+      "title": "REST Example: Account Verification with a Zero Amount Authorization",
+      "byte_start": 162228,
+      "byte_end": 164471,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-basic-zero-auth-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-zero-auth-ani-intro",
+      "title": "Account Name Inquiry with a Zero Amount Authorization",
+      "byte_start": 164471,
+      "byte_end": 165463,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-zero-auth-ani-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-zero-auth-ani-intro_ani-card-rules",
+      "title": "Card Types",
+      "byte_start": 165463,
+      "byte_end": 167300,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-zero-auth-ani-intro_ani-card-rules",
+      "heading_level": 2
+    },
+    {
+      "anchor": "payments-processing-zero-auth-ani-intro_d7e16",
+      "title": "Endpoint",
+      "byte_start": 167300,
+      "byte_end": 167656,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-zero-auth-ani-intro_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "payments-acct-name-inquiry-req-fields",
+      "title": "Required Fields for Account Name Inquiry",
+      "byte_start": 167656,
+      "byte_end": 171208,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-acct-name-inquiry-req-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-acct-name-inquiry-country-fields",
+      "title": "Country-Specific Required Fields for Account Name Inquiry with Zero Amount Authorization",
+      "byte_start": 171208,
+      "byte_end": 172197,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-acct-name-inquiry-country-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-acct-name-inquiry-opt-fields",
+      "title": "Optional Fields for Account Name Inquiry",
+      "byte_start": 172197,
+      "byte_end": 173161,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-acct-name-inquiry-opt-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-porcesing-zero-auth-ani-ex-rest",
+      "title": "REST Example: Account Verification with Account Name Inquiry",
+      "byte_start": 173161,
+      "byte_end": 175945,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-porcesing-zero-auth-ani-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-pre-auth-intro",
+      "title": "Pre-Authorization",
+      "byte_start": 175945,
+      "byte_end": 177555,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-pre-auth-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-pre-auth-intro_d7e16",
+      "title": "Endpoint",
+      "byte_start": 177555,
+      "byte_end": 177891,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-pre-auth-intro_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "payments-processing-pre-auth-required",
+      "title": "Required Fields for a Pre-Authorization",
+      "byte_start": 177891,
+      "byte_end": 180732,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-pre-auth-required",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-pre-auth-required-country",
+      "title": "Country-Specific Required Fields for Processing a Pre-Authorization",
+      "byte_start": 180732,
+      "byte_end": 183635,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-pre-auth-required-country",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-pre-auth-ex-rest",
+      "title": "REST Example: Processing a Pre-Authorization",
+      "byte_start": 183635,
+      "byte_end": 186863,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-pre-auth-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-basic-auth-inc-intro",
+      "title": "Incremental Authorization",
+      "byte_start": 186863,
+      "byte_end": 187746,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-basic-auth-inc-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-basic-auth-inc-intro_d7e45",
+      "title": "Endpoint",
+      "byte_start": 187746,
+      "byte_end": 188206,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-basic-auth-inc-intro_d7e45",
+      "heading_level": 2
+    },
+    {
+      "anchor": "payments-processing-basic-auth-inc-required",
+      "title": "Required Fields for an Incremental Authorization",
+      "byte_start": 188206,
+      "byte_end": 189036,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-basic-auth-inc-required",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-basic-auth-inc-required-country",
+      "title": "Country-Specific Required Field for an Incremental Authorization",
+      "byte_start": 189036,
+      "byte_end": 189663,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-basic-auth-inc-required-country",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-basic-auth-inc-optional",
+      "title": "Optional Field for Processing an Incremental Authorization",
+      "byte_start": 189663,
+      "byte_end": 190168,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-basic-auth-inc-optional",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-basic-auth-inc-ex-rest",
+      "title": "REST Example: Incremental Authorization",
+      "byte_start": 190168,
+      "byte_end": 192194,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-basic-auth-inc-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-final-auth-indicator",
+      "title": "Final Authorization Indicator",
+      "byte_start": 192194,
+      "byte_end": 192944,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-final-auth-indicator",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-final-auth-indicator_lcr-process-prereq",
+      "title": "Supported Card Types",
+      "byte_start": 192944,
+      "byte_end": 193278,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-final-auth-indicator_lcr-process-prereq",
+      "heading_level": 2
+    },
+    {
+      "anchor": "payments-final-auth-indicator-final-auth",
+      "title": "Requirements for Final Authorizations",
+      "byte_start": 193278,
+      "byte_end": 193899,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-final-auth-indicator-final-auth",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-final-auth-indicator-preauth",
+      "title": "Pre-Authorizations",
+      "byte_start": 193899,
+      "byte_end": 195368,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-final-auth-indicator-preauth",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-final-auth-indicator-unmarked-auth",
+      "title": "Unmarked Authorizations",
+      "byte_start": 195368,
+      "byte_end": 196305,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-final-auth-indicator-unmarked-auth",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-final-auth-indicator-unmarked-auth2",
+      "title": "Requirements for Unmarked Authorizations",
+      "byte_start": 196305,
+      "byte_end": 196650,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-final-auth-indicator-unmarked-auth2",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-final-auth-indicator-undef-auth",
+      "title": "Undefined Authorizations",
+      "byte_start": 196650,
+      "byte_end": 197291,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-final-auth-indicator-undef-auth",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-final-auth-indicator-undef-auth2",
+      "title": "Requirements for Undefined Authorizations",
+      "byte_start": 197291,
+      "byte_end": 197963,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-final-auth-indicator-undef-auth2",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-final-auth-indicator-required",
+      "title": "Required Fields for Final Authorizations",
+      "byte_start": 197963,
+      "byte_end": 201043,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-final-auth-indicator-required",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-final-auth-indicator-ex-rest",
+      "title": "REST Example: Final Authorizations",
+      "byte_start": 201043,
+      "byte_end": 203262,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-final-auth-indicator-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-basic-auth-reversal-intro",
+      "title": "Authorization Reversal",
+      "byte_start": 203262,
+      "byte_end": 203888,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-basic-auth-reversal-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-basic-auth-reversal-intro_d7e85",
+      "title": "Endpoint",
+      "byte_start": 203888,
+      "byte_end": 204382,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-basic-auth-reversal-intro_d7e85",
+      "heading_level": 2
+    },
+    {
+      "anchor": "payments-processing-basic-auth-reversal-required-fields",
+      "title": "Required Fields for Processing an Authorization Reversal",
+      "byte_start": 204382,
+      "byte_end": 205687,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-basic-auth-reversal-required-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-basic-auth-reversal-ex-rest",
+      "title": "REST Example: Processing an Authorization Reversal",
+      "byte_start": 205687,
+      "byte_end": 206822,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-basic-auth-reversal-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-basic-inc-auth-reversal-intro",
+      "title": "Partial Authorization Reversal",
+      "byte_start": 206822,
+      "byte_end": 211018,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-basic-inc-auth-reversal-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-basic-inc-auth-reversal-intro_d7e85",
+      "title": "Endpoint",
+      "byte_start": 211018,
+      "byte_end": 211528,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-basic-inc-auth-reversal-intro_d7e85",
+      "heading_level": 2
+    },
+    {
+      "anchor": "payments-processing-basic-inc-auth-reversal-required-fields",
+      "title": "Required Fields for Partial Authorization Reversal",
+      "byte_start": 211528,
+      "byte_end": 212438,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-basic-inc-auth-reversal-required-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-basic-inc-auth-reversal-ex-rest",
+      "title": "REST Example: Partial Authorization Reversal",
+      "byte_start": 212438,
+      "byte_end": 213584,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-basic-inc-auth-reversal-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-timeout-auth-reversals-intro",
+      "title": "Time-Out Authorization Reversal",
+      "byte_start": 213584,
+      "byte_end": 214709,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-timeout-auth-reversals-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-timeout-auth-reversal-required-fields",
+      "title": "Required Fields for a Time-Out Authorization Reversal",
+      "byte_start": 214709,
+      "byte_end": 215798,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-timeout-auth-reversal-required-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-timeout-auth-reversal-ex-rest",
+      "title": "REST Example: Time-Out Authorization Reversal",
+      "byte_start": 215798,
+      "byte_end": 216835,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-timeout-auth-reversal-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-basic-sale-intro",
+      "title": "Sale",
+      "byte_start": 216835,
+      "byte_end": 217134,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-basic-sale-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-basic-sale-intro_d7e240",
+      "title": "Endpoint",
+      "byte_start": 217134,
+      "byte_end": 217482,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-basic-sale-intro_d7e240",
+      "heading_level": 2
+    },
+    {
+      "anchor": "payments-processing-basic-sale-reqfields",
+      "title": "Required Fields for a Sale",
+      "byte_start": 217482,
+      "byte_end": 220618,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-basic-sale-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-basic-sale-ex-rest",
+      "title": "REST Example: Sale",
+      "byte_start": 220618,
+      "byte_end": 222843,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-basic-sale-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pnt-sale-intro",
+      "title": "Sale with Payment Network Tokens",
+      "byte_start": 222843,
+      "byte_end": 223386,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#pnt-sale-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pnt-sale-intro_d16e16",
+      "title": "Endpoint",
+      "byte_start": 223386,
+      "byte_end": 223646,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#pnt-sale-intro_d16e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "pnt-sale-req-fields",
+      "title": "Required Fields for Sales with Payment Network Tokens",
+      "byte_start": 223646,
+      "byte_end": 224900,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#pnt-sale-req-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pnt-sale-optional-fields",
+      "title": "Optional Fields for Sales with Payment Network Tokens",
+      "byte_start": 224900,
+      "byte_end": 227027,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#pnt-sale-optional-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pnt-sale-ex-rest",
+      "title": "REST Example: Sale with a Payment Network Token",
+      "byte_start": 227027,
+      "byte_end": 229217,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#pnt-sale-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-basic-capture-intro",
+      "title": "Capture",
+      "byte_start": 229217,
+      "byte_end": 229433,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-basic-capture-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-basic-capture-intro_d7e127",
+      "title": "Endpoint",
+      "byte_start": 229433,
+      "byte_end": 229904,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-basic-capture-intro_d7e127",
+      "heading_level": 2
+    },
+    {
+      "anchor": "payments-processing-basic-capture-required-fields",
+      "title": "Required Fields for Capturing an Authorization",
+      "byte_start": 229904,
+      "byte_end": 230753,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-basic-capture-required-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-basic-capture-ex-rest",
+      "title": "REST Example: Capturing an Authorization",
+      "byte_start": 230753,
+      "byte_end": 231819,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-basic-capture-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-foreign-capture-intro",
+      "title": "Marketplace Capture with Foreign Retailers",
+      "byte_start": 231819,
+      "byte_end": 232813,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-foreign-capture-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-foreign-capture-intro_d7e127",
+      "title": "Endpoint",
+      "byte_start": 232813,
+      "byte_end": 233292,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-foreign-capture-intro_d7e127",
+      "heading_level": 2
+    },
+    {
+      "anchor": "payments-processing-foreign-capture-required-fields",
+      "title": "Required Fields for Capturing an Authorization with a Foreign Retailer",
+      "byte_start": 233292,
+      "byte_end": 234946,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-foreign-capture-required-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-foreign-capture-ex-rest",
+      "title": "REST Example: Capturing a Marketplace Authorization with a Foreign Retailer",
+      "byte_start": 234946,
+      "byte_end": 236397,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-foreign-capture-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-capture-multi-intro",
+      "title": "Multiple Partial Capture",
+      "byte_start": 236397,
+      "byte_end": 237716,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-capture-multi-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-capture-multi-intro_d7e127",
+      "title": "Endpoint",
+      "byte_start": 237716,
+      "byte_end": 238187,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-capture-multi-intro_d7e127",
+      "heading_level": 2
+    },
+    {
+      "anchor": "payments-processing-capture-multi-reqfields",
+      "title": "Required Fields for Processing Multiple Partial Captures",
+      "byte_start": 238187,
+      "byte_end": 239989,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-capture-multi-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-multi-capture-ex-rest",
+      "title": "REST Example: Processing Multiple Partial Captures",
+      "byte_start": 239989,
+      "byte_end": 241103,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-multi-capture-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-forced-capture",
+      "title": "Forced Capture",
+      "byte_start": 241103,
+      "byte_end": 241883,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-forced-capture",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-forced-capture-required",
+      "title": "Required Fields for Forced Captures",
+      "byte_start": 241883,
+      "byte_end": 245099,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-forced-capture-required",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-forced-capture-ex-rest",
+      "title": "REST Example: Forced Captures",
+      "byte_start": 245099,
+      "byte_end": 247184,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-forced-capture-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-basic-refund-intro",
+      "title": "Follow-On Refund",
+      "byte_start": 247184,
+      "byte_end": 248405,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-basic-refund-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-basic-refund-intro_d7e199",
+      "title": "Endpoint",
+      "byte_start": 248405,
+      "byte_end": 248872,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-basic-refund-intro_d7e199",
+      "heading_level": 2
+    },
+    {
+      "anchor": "payments-processing-basic-refund-required-fields",
+      "title": "Required Fields for Processing a Refund",
+      "byte_start": 248872,
+      "byte_end": 249448,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-basic-refund-required-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-basic-refund-ex-rest",
+      "title": "REST Example: Processing a Refund",
+      "byte_start": 249448,
+      "byte_end": 250898,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-basic-refund-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-basic-credit-intro",
+      "title": "Stand-Alone Credit",
+      "byte_start": 250898,
+      "byte_end": 251998,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-basic-credit-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-basic-credit-intro_d7e169",
+      "title": "Endpoint",
+      "byte_start": 251998,
+      "byte_end": 252354,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-basic-credit-intro_d7e169",
+      "heading_level": 2
+    },
+    {
+      "anchor": "payments-processing-basic-credit-required-fields",
+      "title": "Required Fields for Processing a Credit",
+      "byte_start": 252354,
+      "byte_end": 255449,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-basic-credit-required-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-basic-credit-ex-rest",
+      "title": "REST Example: Processing a Stand-Alone Credit",
+      "byte_start": 255449,
+      "byte_end": 257342,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-basic-credit-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-sale-void-intro",
+      "title": "Void a Payment",
+      "byte_start": 257342,
+      "byte_end": 257724,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-sale-void-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-sale-void-intro_d7e429",
+      "title": "Endpoint",
+      "byte_start": 257724,
+      "byte_end": 258164,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-sale-void-intro_d7e429",
+      "heading_level": 2
+    },
+    {
+      "anchor": "payments-processing-sale-void-required-fields",
+      "title": "Required Fields for Voiding a Payment",
+      "byte_start": 258164,
+      "byte_end": 258514,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-sale-void-required-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-sale-void-ex-rest",
+      "title": "REST Example: Voiding a Payment",
+      "byte_start": 258514,
+      "byte_end": 259507,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-sale-void-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-basic-void-intro",
+      "title": "Void for a Capture or Credit",
+      "byte_start": 259507,
+      "byte_end": 259761,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-basic-void-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-basic-void-intro_d7e268",
+      "title": "Endpoints",
+      "byte_start": 259761,
+      "byte_end": 260518,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-basic-void-intro_d7e268",
+      "heading_level": 2
+    },
+    {
+      "anchor": "payments-processing-basic-void-required-fields",
+      "title": "Required Fields for Voiding a Capture or Credit",
+      "byte_start": 260518,
+      "byte_end": 260945,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-basic-void-required-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-basic-void-ex-rest",
+      "title": "REST Example: Voiding a Capture or Credit",
+      "byte_start": 260945,
+      "byte_end": 261757,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-basic-void-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-timeout-void-intro",
+      "title": "Time-Out Void for a Capture, Sale, Refund, or Credit",
+      "byte_start": 261757,
+      "byte_end": 262478,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-timeout-void-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-timeout-void-intro_d7e585",
+      "title": "Endpoint",
+      "byte_start": 262478,
+      "byte_end": 262786,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-timeout-void-intro_d7e585",
+      "heading_level": 2
+    },
+    {
+      "anchor": "payments-timeout-void-required-fields",
+      "title": "Required Fields for a Time-Out Void for a Capture, Sale, Refund, or Credit",
+      "byte_start": 262786,
+      "byte_end": 263213,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-timeout-void-required-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-timeout-void-ex-rest-ctv",
+      "title": "REST Example: Time-Out Void for a Capture, Sale, Refund, or Credit",
+      "byte_start": 263213,
+      "byte_end": 264006,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-timeout-void-ex-rest-ctv",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-debit-prepaid-process-intro",
+      "title": "Debit and Prepaid Card Processing",
+      "byte_start": 264006,
+      "byte_end": 264695,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-debit-prepaid-process-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-debit-prepaid-auth-intro",
+      "title": "Processing Debit and Prepaid Authorizations",
+      "byte_start": 264695,
+      "byte_end": 264972,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-debit-prepaid-auth-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-debit-prepaid-auth-intro_d7e16",
+      "title": "Endpoint",
+      "byte_start": 264972,
+      "byte_end": 265304,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-debit-prepaid-auth-intro_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "payments-debit-prepaid-auth-required",
+      "title": "Required Fields for Processing Debit and Prepaid Authorizations",
+      "byte_start": 265304,
+      "byte_end": 268702,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-debit-prepaid-auth-required",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-debit-prepaid-auth-required-country",
+      "title": "Country Specific Required Fields to Process Debit and Prepaid Authorizations",
+      "byte_start": 268702,
+      "byte_end": 271005,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-debit-prepaid-auth-required-country",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-debit-prepaid-auth-optional",
+      "title": "Optional Field for Processing Debit and Prepaid Authorizations",
+      "byte_start": 271005,
+      "byte_end": 271620,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-debit-prepaid-auth-optional",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-debit-prepaid-auth-ex-rest",
+      "title": "REST Example: Processing Debit and Prepaid Authorizations",
+      "byte_start": 271620,
+      "byte_end": 274076,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-debit-prepaid-auth-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-debit-prepaid-part-auth-intro",
+      "title": "Enabling Debit and Prepaid Partial Authorizations",
+      "byte_start": 274076,
+      "byte_end": 274961,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-debit-prepaid-part-auth-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-debit-prepaid-part-auth-intro_d7e16",
+      "title": "Endpoint",
+      "byte_start": 274961,
+      "byte_end": 275313,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-debit-prepaid-part-auth-intro_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "payments-debit-prepaid-part-auth-required",
+      "title": "Required Fields for Enabling Debit and Prepaid Partial Authorizations",
+      "byte_start": 275313,
+      "byte_end": 279068,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-debit-prepaid-part-auth-required",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-debit-prepaid-part-auth-optional",
+      "title": "Optional Field for Enabling Debit and Prepaid Partial Authorizations",
+      "byte_start": 279068,
+      "byte_end": 279713,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-debit-prepaid-part-auth-optional",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-debit-prepaid-part-auth-ex-rest",
+      "title": "REST Example: Enabling Debit and Prepaid Partial Authorizations",
+      "byte_start": 279713,
+      "byte_end": 281963,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-debit-prepaid-part-auth-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-debit-prepaid-disable-part-auth-intro",
+      "title": "Disabling Debit and Prepaid Partial Authorizations",
+      "byte_start": 281963,
+      "byte_end": 282266,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-debit-prepaid-disable-part-auth-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-debit-prepaid-disable-part-auth-intro_section_brd_jvn_sxb",
+      "title": "Field Specific to this Use Case",
+      "byte_start": 282266,
+      "byte_end": 282783,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-debit-prepaid-disable-part-auth-intro_section_brd_jvn_sxb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "payments-debit-prepaid-disable-part-auth-intro_d7e16",
+      "title": "Endpoint",
+      "byte_start": 282783,
+      "byte_end": 283167,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-debit-prepaid-disable-part-auth-intro_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "payments-debit-prepaid-disable-part-auth-required",
+      "title": "Required Field for Disabling Debit and Prepaid Partial Authorizations",
+      "byte_start": 283167,
+      "byte_end": 287062,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-debit-prepaid-disable-part-auth-required",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-debit-prepaid-disable-part-auth-optional",
+      "title": "Optional Field for Disabling Debit and Prepaid Partial Authorizations",
+      "byte_start": 287062,
+      "byte_end": 287724,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-debit-prepaid-disable-part-auth-optional",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-debit-prepaid-disable-part-auth-ex-rest",
+      "title": "REST Example: Disabling Debit and Prepaid Partial Authorizations",
+      "byte_start": 287724,
+      "byte_end": 289745,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-debit-prepaid-disable-part-auth-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-jpo-intro",
+      "title": "Japanese Payment Options Processing",
+      "byte_start": 289745,
+      "byte_end": 290340,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-jpo-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-jpo-intro_section_b4l_14s_5xb",
+      "title": "Requirements",
+      "byte_start": 290340,
+      "byte_end": 290861,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-jpo-intro_section_b4l_14s_5xb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "payments-jpo-auth-single",
+      "title": "Authorize a Single Payment with Japanese Payment Options",
+      "byte_start": 290861,
+      "byte_end": 291788,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-jpo-auth-single",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-jpo-auth-single_d7e16",
+      "title": "Endpoint",
+      "byte_start": 291788,
+      "byte_end": 292084,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-jpo-auth-single_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "payments-jpo-auth-single-reqfields",
+      "title": "Required Fields for Authorizing a Single Payment Using the JPO Method",
+      "byte_start": 292084,
+      "byte_end": 296498,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-jpo-auth-single-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-jpo-auth-single-ex-rest",
+      "title": "REST Example: Authorizing a JPO Single Payment",
+      "byte_start": 296498,
+      "byte_end": 298886,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-jpo-auth-single-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-jpo-auth-bonus",
+      "title": "Authorize a Bonus Payment with Japanese Payment Options",
+      "byte_start": 298886,
+      "byte_end": 299732,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-jpo-auth-bonus",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-jpo-auth-bonus_d7e16",
+      "title": "Endpoint",
+      "byte_start": 299732,
+      "byte_end": 300024,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-jpo-auth-bonus_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "payments-jpo-auth-bonus-reqfields",
+      "title": "Required Fields for Authorizing a JPO Bonus Payment",
+      "byte_start": 300024,
+      "byte_end": 304654,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-jpo-auth-bonus-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-jpo-auth-bonus-ex-rest",
+      "title": "REST Example: Authorizing a JPO Bonus Payment",
+      "byte_start": 304654,
+      "byte_end": 307073,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-jpo-auth-bonus-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-jpo-auth-installment",
+      "title": "Authorize an Installment Payment with Japanese Payment Options",
+      "byte_start": 307073,
+      "byte_end": 307952,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-jpo-auth-installment",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-jpo-auth-installment_d7e16",
+      "title": "Endpoint",
+      "byte_start": 307952,
+      "byte_end": 308268,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-jpo-auth-installment_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "payments-jpo-auth-installment-reqfields",
+      "title": "Required Fields for Authorizing a JPO Installment Payment",
+      "byte_start": 308268,
+      "byte_end": 313480,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-jpo-auth-installment-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-jpo-auth-installment-ex-rest",
+      "title": "REST Example: Authorizing a JPO Installment Payment",
+      "byte_start": 313480,
+      "byte_end": 315997,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-jpo-auth-installment-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-jpo-auth-revolving",
+      "title": "Authorize a Revolving Payment with Japanese Payment Options",
+      "byte_start": 315997,
+      "byte_end": 316863,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-jpo-auth-revolving",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-jpo-auth-revolving_d7e16",
+      "title": "Endpoint",
+      "byte_start": 316863,
+      "byte_end": 317171,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-jpo-auth-revolving_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "payments-jpo-auth-revolving-reqfields",
+      "title": "Required Fields for Authorizing a Revolving Payment Using the JPO Method",
+      "byte_start": 317171,
+      "byte_end": 322499,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-jpo-auth-revolving-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-jpo-auth-revolving-ex-rest",
+      "title": "REST Example: Authorizing a JPO Revolving Payment",
+      "byte_start": 322499,
+      "byte_end": 325008,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-jpo-auth-revolving-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-jpo-auth-combo",
+      "title": "Authorize a Combination Payment with Japanese Payment Options",
+      "byte_start": 325008,
+      "byte_end": 325895,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-jpo-auth-combo",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-jpo-auth-combo_d7e16",
+      "title": "Endpoint",
+      "byte_start": 325895,
+      "byte_end": 326187,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-jpo-auth-combo_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "payments-jpo-auth-combo-reqfields",
+      "title": "Required Fields for Authorizing a Combination Payment Using the JPO Method",
+      "byte_start": 326187,
+      "byte_end": 331398,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-jpo-auth-combo-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-jpo-auth-combo-ex-rest",
+      "title": "REST Example: Authorizing a JPO Combination Payment",
+      "byte_start": 331398,
+      "byte_end": 333903,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-jpo-auth-combo-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-mastercard-intro",
+      "title": "Mastercard Processing",
+      "byte_start": 333903,
+      "byte_end": 334084,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-mastercard-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-mc-bill-pay-intro",
+      "title": "Mastercard Bill Payment Processing",
+      "byte_start": 334084,
+      "byte_end": 334835,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-mc-bill-pay-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-mc-bill-pay-intro_section_mmj_t4s_5xb",
+      "title": "Requirements",
+      "byte_start": 334835,
+      "byte_end": 335033,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-mc-bill-pay-intro_section_mmj_t4s_5xb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "payments-mc-bill-pay-intro_d7e16",
+      "title": "Endpoint",
+      "byte_start": 335033,
+      "byte_end": 335337,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-mc-bill-pay-intro_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "payments-mc-bill-pay-all-fields",
+      "title": "Required Fields for Authorizing a Mastercard Bill Payment",
+      "byte_start": 335337,
+      "byte_end": 338782,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-mc-bill-pay-all-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-mc-bill-pay-ex-rest",
+      "title": "REST Example: Authorizing a Mastercard Bill Payment",
+      "byte_start": 338782,
+      "byte_end": 341054,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-mc-bill-pay-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-mc-ems-intro",
+      "title": "Mastercard Expert Monitoring Solutions Processing",
+      "byte_start": 341054,
+      "byte_end": 341587,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-mc-ems-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-mc-ems-intro_section_f35_1ps_5xb",
+      "title": "Requirement",
+      "byte_start": 341587,
+      "byte_end": 341986,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-mc-ems-intro_section_f35_1ps_5xb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "payments-mc-ems-intro_d7e16",
+      "title": "Endpoint",
+      "byte_start": 341986,
+      "byte_end": 342270,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-mc-ems-intro_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "payments-mc-ems-required",
+      "title": "Required Fields for Processing an Authorization with Mastercard Expert Monitoring Solutions",
+      "byte_start": 342270,
+      "byte_end": 345455,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-mc-ems-required",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-mc-ems-response-field",
+      "title": "Response Field for Authorizations with Mastercard Expert Monitoring Solutions",
+      "byte_start": 345455,
+      "byte_end": 346038,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-mc-ems-response-field",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-mc-ems-ex-rest",
+      "title": "REST Example: Obtaining the Mastercard Fraud Score for an Authorization",
+      "byte_start": 346038,
+      "byte_end": 348813,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-mc-ems-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-pa-process-intro",
+      "title": "Payer Authentication Processing",
+      "byte_start": 348813,
+      "byte_end": 349220,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-pa-process-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-pa-eci",
+      "title": "Providing Payer Authentication Information for Authorization",
+      "byte_start": 349220,
+      "byte_end": 352561,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-pa-eci",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-pa-amex-intro",
+      "title": "American Express SafeKey",
+      "byte_start": 352561,
+      "byte_end": 353790,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-pa-amex-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-pa-amex-intro_section_kl3_tbh_xwb",
+      "title": "Processor-Specific Requirements",
+      "byte_start": 353790,
+      "byte_end": 354102,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-pa-amex-intro_section_kl3_tbh_xwb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "payments-processing-pa-amex-intro_d7e16",
+      "title": "Endpoint",
+      "byte_start": 354102,
+      "byte_end": 354434,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-pa-amex-intro_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "payments-processing-pa-amex-reqfields",
+      "title": "Required Fields for Processing an Authorization Using American Express SafeKey",
+      "byte_start": 354434,
+      "byte_end": 356600,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-pa-amex-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-pa-amex-optfields",
+      "title": "Optional Field for Processing an Authorization Using American Express SafeKey",
+      "byte_start": 356600,
+      "byte_end": 357213,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-pa-amex-optfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-pa-amex-ex-rest",
+      "title": "REST Example: Processing an Authorization Using American Express SafeKey",
+      "byte_start": 357213,
+      "byte_end": 359669,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-pa-amex-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-pa-jcb-intro",
+      "title": "JCB J/Secure",
+      "byte_start": 359669,
+      "byte_end": 361235,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-pa-jcb-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-pa-jcb-intro_d7e16",
+      "title": "Endpoint",
+      "byte_start": 361235,
+      "byte_end": 361563,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-pa-jcb-intro_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "payments-processing-pa-jcb-reqfields",
+      "title": "Required Fields for Processing an Authorization Using JCB J/Secure Authentication",
+      "byte_start": 361563,
+      "byte_end": 363391,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-pa-jcb-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-pa-jcb-ex-rest",
+      "title": "REST Example: Processing an Authorization Using JCB J/Secure Authentication",
+      "byte_start": 363391,
+      "byte_end": 365814,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-pa-jcb-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-pa-mc-intro",
+      "title": "Mastercard Identity Check",
+      "byte_start": 365814,
+      "byte_end": 367785,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-pa-mc-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-pa-mc-intro_d7e16",
+      "title": "Endpoint",
+      "byte_start": 367785,
+      "byte_end": 368109,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-pa-mc-intro_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "payments-processing-pa-mc-reqfields",
+      "title": "Required Fields for Processing an Authorization Using Mastercard Identity Check",
+      "byte_start": 368109,
+      "byte_end": 369994,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-pa-mc-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-pa-mc-ex-rest",
+      "title": "REST Example: Processing an Authorization Using Mastercard Identity Check",
+      "byte_start": 369994,
+      "byte_end": 372537,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-pa-mc-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-pa-visa-intro",
+      "title": "Visa Secure",
+      "byte_start": 372537,
+      "byte_end": 373682,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-pa-visa-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-pa-visa-intro_d7e16",
+      "title": "Endpoint",
+      "byte_start": 373682,
+      "byte_end": 374014,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-pa-visa-intro_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "payments-processing-pa-visa-reqfields",
+      "title": "Required Fields for Processing an Authorization Using Visa Secure",
+      "byte_start": 374014,
+      "byte_end": 378428,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-pa-visa-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-pa-visa-ex-rest",
+      "title": "REST Example: Validating and Authorizing a Transaction",
+      "byte_start": 378428,
+      "byte_end": 382299,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-pa-visa-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-relax-reqs",
+      "title": "Relaxed Requirements for Address Data and Expiration Date in a Payment",
+      "byte_start": 382299,
+      "byte_end": 382733,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-relax-reqs",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-relax-reqs-reqs",
+      "title": "Requirements",
+      "byte_start": 382733,
+      "byte_end": 382929,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-relax-reqs-reqs",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-relax-reqs-services",
+      "title": "Services",
+      "byte_start": 382929,
+      "byte_end": 383197,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-relax-reqs-services",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-relax-reqs-fields",
+      "title": "Relaxed Fields",
+      "byte_start": 383197,
+      "byte_end": 386582,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-relax-reqs-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-basic-split-ship-intro",
+      "title": "Split Shipments Processing",
+      "byte_start": 386582,
+      "byte_end": 387629,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-basic-split-ship-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-basic-split-ship-one-auth-sale-intro",
+      "title": "Authorizing a Sale for a Product Not Yet Available",
+      "byte_start": 387629,
+      "byte_end": 390947,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-basic-split-ship-one-auth-sale-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-basic-split-ship-two-auth-cap-intro",
+      "title": "Processing Two Authorizations and a Capture for Multiple Products",
+      "byte_start": 390947,
+      "byte_end": 394294,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-basic-split-ship-two-auth-cap-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-basic-split-ship-one-auth-two-cap-intro",
+      "title": "Processing an Authorization and Two Captures for Multiple Products",
+      "byte_start": 394294,
+      "byte_end": 397466,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-basic-split-ship-one-auth-two-cap-intro",
+      "heading_level": 1
+    }
+  ]
+}

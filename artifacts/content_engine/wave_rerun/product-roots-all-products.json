@@ -1,0 +1,205 @@
+{
+  "generated_at": "2026-08-08T03:06:34+00:00",
+  "denominator_source": "product_root",
+  "totals": {
+    "products_listed": 17,
+    "roots_resolved": 16,
+    "roots_fetched": 16,
+    "bytes": 5355992,
+    "sections_split": 3050,
+    "toc_topics": 1423,
+    "toc_covered": 1421,
+    "toc_uncovered": 2
+  },
+  "resolved": [
+    {
+      "title": "Accept Payments",
+      "product_id": "payments",
+      "root_path": "/docs/cybs/en-us/payments/developer/ctv/rest/payments.md",
+      "bytes": 397466,
+      "sections_split": 266,
+      "toc_topics": 82,
+      "toc_covered": 82,
+      "toc_gaps": 0,
+      "toc_uncovered": []
+    },
+    {
+      "title": "Authentication",
+      "product_id": "security-keys",
+      "root_path": "/docs/cybs/en-us/security-keys/user/all/ada/security-keys.md",
+      "bytes": 101843,
+      "sections_split": 49,
+      "toc_topics": 39,
+      "toc_covered": 39,
+      "toc_gaps": 0,
+      "toc_uncovered": []
+    },
+    {
+      "title": "Pay by Link",
+      "product_id": "paybylink",
+      "root_path": "/docs/cybs/en-us/paybylink/developer/all/rest/paybylink.md",
+      "bytes": 52427,
+      "sections_split": 37,
+      "toc_topics": 14,
+      "toc_covered": 14,
+      "toc_gaps": 0,
+      "toc_uncovered": []
+    },
+    {
+      "title": "Token Management",
+      "product_id": "tms",
+      "root_path": "/docs/cybs/en-us/tms/developer/all/rest/tms.md",
+      "bytes": 776173,
+      "sections_split": 538,
+      "toc_topics": 216,
+      "toc_covered": 216,
+      "toc_gaps": 0,
+      "toc_uncovered": []
+    },
+    {
+      "title": "eCheck",
+      "product_id": "echeck-user-guide",
+      "root_path": "/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.md",
+      "bytes": 124021,
+      "sections_split": 77,
+      "toc_topics": 53,
+      "toc_covered": 53,
+      "toc_gaps": 0,
+      "toc_uncovered": []
+    },
+    {
+      "title": "Recurring Billing",
+      "product_id": "recurring-billing-dev",
+      "root_path": "/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.md",
+      "bytes": 103589,
+      "sections_split": 80,
+      "toc_topics": 49,
+      "toc_covered": 49,
+      "toc_gaps": 0,
+      "toc_uncovered": []
+    },
+    {
+      "title": "Invoicing",
+      "product_id": "invoicing",
+      "root_path": "/docs/cybs/en-us/invoicing/developer/all/rest/invoicing.md",
+      "bytes": 242256,
+      "sections_split": 95,
+      "toc_topics": 40,
+      "toc_covered": 40,
+      "toc_gaps": 0,
+      "toc_uncovered": []
+    },
+    {
+      "title": "Payouts",
+      "product_id": "payouts-dev",
+      "root_path": "/docs/cybs/en-us/payouts/developer/ctv/rest/payouts-dev.md",
+      "bytes": 219718,
+      "sections_split": 59,
+      "toc_topics": 46,
+      "toc_covered": 46,
+      "toc_gaps": 0,
+      "toc_uncovered": []
+    },
+    {
+      "title": "Webhooks",
+      "product_id": "webhooks",
+      "root_path": "/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.md",
+      "bytes": 146916,
+      "sections_split": 124,
+      "toc_topics": 44,
+      "toc_covered": 44,
+      "toc_gaps": 0,
+      "toc_uncovered": []
+    },
+    {
+      "title": "Click to Pay",
+      "product_id": "click-to-pay",
+      "root_path": "/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.md",
+      "bytes": 499260,
+      "sections_split": 298,
+      "toc_topics": 137,
+      "toc_covered": 135,
+      "toc_gaps": 2,
+      "toc_uncovered": [
+        "/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay/ctp-uc-integration-methods-intro",
+        "/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay/ctp-uc-integration-methods-intro/uc-integration-methods-components"
+      ]
+    },
+    {
+      "title": "Microform",
+      "product_id": "digital-accept-flex",
+      "root_path": "/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.md",
+      "bytes": 989174,
+      "sections_split": 503,
+      "toc_topics": 274,
+      "toc_covered": 274,
+      "toc_gaps": 0,
+      "toc_uncovered": []
+    },
+    {
+      "title": "Unified Checkout",
+      "product_id": "unified-checkout",
+      "root_path": "/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.md",
+      "bytes": 509657,
+      "sections_split": 220,
+      "toc_topics": 146,
+      "toc_covered": 146,
+      "toc_gaps": 0,
+      "toc_uncovered": []
+    },
+    {
+      "title": "Retail",
+      "product_id": "cp-retail",
+      "root_path": "/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.md",
+      "bytes": 387909,
+      "sections_split": 226,
+      "toc_topics": 75,
+      "toc_covered": 75,
+      "toc_gaps": 0,
+      "toc_uncovered": []
+    },
+    {
+      "title": "Transit",
+      "product_id": "mass-transit",
+      "root_path": "/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.md",
+      "bytes": 401764,
+      "sections_split": 171,
+      "toc_topics": 66,
+      "toc_covered": 66,
+      "toc_gaps": 0,
+      "toc_uncovered": []
+    },
+    {
+      "title": "Tap to Pay",
+      "product_id": "tap-to-phone",
+      "root_path": "/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.md",
+      "bytes": 134915,
+      "sections_split": 170,
+      "toc_topics": 33,
+      "toc_covered": 33,
+      "toc_gaps": 0,
+      "toc_uncovered": []
+    },
+    {
+      "title": "Boarding REST",
+      "product_id": "boarding",
+      "root_path": "/docs/cybs/en-us/boarding/developer/all/rest/boarding.md",
+      "bytes": 268904,
+      "sections_split": 137,
+      "toc_topics": 109,
+      "toc_covered": 109,
+      "toc_gaps": 0,
+      "toc_uncovered": []
+    }
+  ],
+  "failed_derivation": [
+    {
+      "title": "ACH",
+      "intro_path": "/content/dam/new-documentation/documentation/en/e-checks/developer/all/so/e-checks-so.pdf",
+      "derivation": "not_md",
+      "family_repeat_root": null,
+      "guide_dir_root": null
+    }
+  ],
+  "source": "artifacts/content_engine/product_roots/product-roots-report.json"
+}
