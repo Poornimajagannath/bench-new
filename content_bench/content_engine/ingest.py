@@ -421,8 +421,24 @@ def _extract_claims_from_text(
         clean_claim_text,
     )
 
+    from content_bench.content_engine.api_reference import (  # noqa: WPS433
+        load_sibling_req_field_pages,
+    )
+
+    sibling_pages = None
+    src_path = Path(source_pointer)
+    if not src_path.is_file():
+        candidate = ROOT / source_pointer
+        if candidate.is_file():
+            src_path = candidate
+    if src_path.is_file():
+        sibling_pages = load_sibling_req_field_pages(src_path) or None
+
     api_claims, _api_report, covered_endpoints = extract_api_reference_claims(
-        text, source_pointer=source_pointer, doc_stem=doc_stem
+        text,
+        source_pointer=source_pointer,
+        doc_stem=doc_stem,
+        sibling_pages=sibling_pages,
     )
     claims.extend(api_claims)
 

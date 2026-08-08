@@ -4,12 +4,24 @@ Shape (boarding.md and siblings):
   * Operation heading
   * ``Endpoint`` section with Production / Test lines
     ``POST https://apitest.cybersource.com/boarding/v1/registrations``
-  * ``Required Fields`` definition list — each term links to api-fields;
-    some carry instructions like ``Set the value to MERCHANT``
+  * ``Required Fields`` definition list — link-style ``[field](url)`` or
+    plain ``field.name`` terms with a following ``:``
   * ``REST Example`` with fenced JSON request and response
 
 Emits ``endpoint_fact`` (not quickstart_step). UI procedures stay on the
 step extractor; a page can yield both.
+
+Required-fields derivation contract (L2 — cleared):
+  Recover fields only from authoritative sources, and tag every field with
+  exactly one of:
+    * ``api_fields_link`` — term is a markdown link (usually into api-fields)
+    * ``required_fields_section`` — plain DL term under a same-document
+      Required Fields heading
+    * ``sibling_req_fields_page`` — Required Fields page joined by operation
+      anchor (``{op}-req-fields``)
+  If none of those exist, leave ``required_fields`` empty and keep the soft
+  gap. Never infer required-ness from REST Example JSON keys — a key in an
+  example is not a required field.
 """
 
 from __future__ import annotations
@@ -62,8 +74,24 @@ _OPERATION_HEADING = re.compile(
 _DL_TERM = re.compile(
     r"^\[([^\]]+)\]\(([^)]+)\)\s*$"
 )
+# Plain definition-list term: dotted field path, optional backticks, then `:`.
+_PLAIN_DL_TERM = re.compile(
+    r"^`?([A-Za-z][A-Za-z0-9_.]*)`?\s*$"
+)
 
 _FENCE = re.compile(r"(?m)^```([^\n]*)\n(.*?)^```\s*$", re.S)
+
+# Authoritative derivation sources — never example JSON.
+DERIVATION_API_FIELDS_LINK = "api_fields_link"
+DERIVATION_REQUIRED_FIELDS_SECTION = "required_fields_section"
+DERIVATION_SIBLING_REQ_FIELDS_PAGE = "sibling_req_fields_page"
+DERIVATION_SOURCES = frozenset(
+    {
+        DERIVATION_API_FIELDS_LINK,
+        DERIVATION_REQUIRED_FIELDS_SECTION,
+        DERIVATION_SIBLING_REQ_FIELDS_PAGE,
+    }
+)
 
 
 @dataclass
@@ -146,53 +174,194 @@ def _next_major_heading(text: str, start: int) -> int:
     return start + m.start()
 
 
-def _parse_required_fields(block: str) -> List[Dict[str, str]]:
+def _is_field_term_line(line: str) -> bool:
+    s = line.strip()
+    return bool(_DL_TERM.match(s) or _PLAIN_DL_TERM.match(s))
+
+
+def _parse_required_fields(
+    block: str,
+    *,
+    default_derivation: str = DERIVATION_REQUIRED_FIELDS_SECTION,
+) -> List[Dict[str, str]]:
+    """Parse Required Fields definition-list body into tagged field dicts.
+
+    Accepts link-style ``[name](url)`` and plain ``name`` / ``:`` terms.
+    Every emitted field carries ``derivation_source`` ∈ DERIVATION_SOURCES.
+    Does not read JSON examples.
+    """
+    if default_derivation not in DERIVATION_SOURCES:
+        raise ValueError(f"invalid derivation_source: {default_derivation}")
     fields: List[Dict[str, str]] = []
     lines = block.splitlines()
     i = 0
     while i < len(lines):
-        m = _DL_TERM.match(lines[i].strip())
-        if not m:
+        raw = lines[i].strip()
+        # Skip setext underlines left over after the heading match.
+        if raw and set(raw) <= {"=", "-"}:
             i += 1
             continue
-        name = m.group(1).strip()
-        raw_url = m.group(2).strip()
-        # Drop empty title from the URL side: 'url ""' → 'url'
-        url = re.sub(r'\s+""\s*$', "", raw_url).strip()
-        i += 1
-        # Optional lone ':' line
-        if i < len(lines) and lines[i].strip() == ":":
+        link_m = _DL_TERM.match(raw)
+        plain_m = _PLAIN_DL_TERM.match(raw) if not link_m else None
+        if not link_m and not plain_m:
             i += 1
+            continue
+        # Plain terms must be followed by a definition ``:`` (alone or inline).
+        if plain_m:
+            nxt = lines[i + 1].strip() if i + 1 < len(lines) else ""
+            if not (nxt == ":" or nxt.startswith(":")):
+                i += 1
+                continue
+            name = plain_m.group(1).strip()
+            url = ""
+            derivation = default_derivation
+        else:
+            assert link_m is not None
+            name = link_m.group(1).strip()
+            url = re.sub(r'\s+""\s*$', "", link_m.group(2).strip()).strip()
+            # Link into api-fields (or any field URL) is the api_fields_link source.
+            derivation = (
+                DERIVATION_API_FIELDS_LINK
+                if url
+                else default_derivation
+            )
+        i += 1
+        if i < len(lines) and lines[i].strip() in {":", ""}:
+            if lines[i].strip() == ":":
+                i += 1
+            elif i + 1 < len(lines) and lines[i + 1].strip() == ":":
+                i += 2
+        # Inline ": instruction" on the term line is rare; handle ": foo" next.
         instr_parts: List[str] = []
         while i < len(lines):
             s = lines[i]
-            if _DL_TERM.match(s.strip()):
+            st = s.strip()
+            if _is_field_term_line(st):
+                # Peek: plain term without following ":" is not a new field.
+                if _PLAIN_DL_TERM.match(st) and not _DL_TERM.match(st):
+                    nxt = lines[i + 1].strip() if i + 1 < len(lines) else ""
+                    if nxt != ":" and not nxt.startswith(":"):
+                        if st:
+                            instr_parts.append(st)
+                        i += 1
+                        continue
                 break
-            if re.match(r"^(?:#{1,6}\s+|\S.+\n[=-]{3,})", s):
+            if re.match(r"^(?:Endpoint|Required Fields|REST Example)\b", st):
                 break
-            if re.match(r"^(?:Endpoint|Required Fields|REST Example)\b", s):
+            if st and set(st) <= {"=", "-"}:
                 break
-            if s.strip() == ":":
+            if st == ":":
                 i += 1
                 continue
-            if s.strip():
-                instr_parts.append(s.strip())
+            if st.startswith(":") and len(st) > 1:
+                instr_parts.append(st.lstrip(":").strip())
+                i += 1
+                continue
+            if st:
+                instr_parts.append(st)
             elif instr_parts:
-                # blank after instruction ends this term
                 i += 1
                 break
             i += 1
         instruction = " ".join(instr_parts).strip()
-        # Clean anchors / empty titles out of instruction text.
         instruction, _ = clean_claim_text(instruction)
-        fields.append(
-            {
-                "name": name,
-                "instruction": instruction,
-                "field_url": url,
-            }
-        )
+        field: Dict[str, str] = {
+            "name": name,
+            "instruction": instruction,
+            "field_url": url,
+            "derivation_source": derivation,
+        }
+        fields.append(field)
     return fields
+
+
+def _rf_body_after_heading(text: str, heading_match: re.Match) -> str:
+    """Slice Required Fields body until REST Example / next Endpoint / EOF."""
+    start = heading_match.end()
+    rest_m = _REST_EXAMPLE_HEADING.search(text, start)
+    next_ep = _ENDPOINT_HEADING.search(text, start)
+    end = len(text)
+    if rest_m:
+        end = min(end, rest_m.start())
+    if next_ep:
+        end = min(end, next_ep.start())
+    return text[start:end]
+
+
+def load_sibling_req_field_pages(near: Path) -> Dict[str, str]:
+    """Load ``*req-fields*`` markdown siblings next to ``near`` (file or dir)."""
+    folder = near if near.is_dir() else near.parent
+    if not folder.is_dir():
+        return {}
+    out: Dict[str, str] = {}
+    for path in folder.glob("*req-fields*"):
+        if not path.is_file():
+            continue
+        try:
+            out[path.name] = path.read_text(encoding="utf-8", errors="replace")
+        except OSError:
+            continue
+    return out
+
+
+def _resolve_required_fields(
+    text: str,
+    block: str,
+    *,
+    op_anchor: Optional[str],
+    sibling_pages: Optional[Dict[str, str]] = None,
+) -> List[Dict[str, str]]:
+    """Resolve required fields under the derivation contract.
+
+    Order: same-block RF section → same-document RF by op anchor → sibling
+    ``*-req-fields*`` page. Refuse (return []) if none yield fields.
+    """
+    req_m = _REQ_FIELDS_HEADING.search(block)
+    if req_m:
+        fields = _parse_required_fields(
+            _rf_body_after_heading(block, req_m),
+            default_derivation=DERIVATION_REQUIRED_FIELDS_SECTION,
+        )
+        if fields:
+            return fields
+
+    # Same document, outside the Endpoint block (setext sibling section).
+    if op_anchor:
+        for rm in _REQ_FIELDS_HEADING.finditer(text):
+            rf_anchor = rm.group(1) or ""
+            if op_anchor in rf_anchor or rf_anchor.startswith(op_anchor):
+                fields = _parse_required_fields(
+                    _rf_body_after_heading(text, rm),
+                    default_derivation=DERIVATION_REQUIRED_FIELDS_SECTION,
+                )
+                if fields:
+                    return fields
+
+    # Sibling Required Fields page joined by operation anchor.
+    if op_anchor and sibling_pages:
+        needle = f"{op_anchor}-req-fields"
+        for key, page_text in sibling_pages.items():
+            key_l = key.lower()
+            if op_anchor not in key_l and needle not in key_l:
+                continue
+            rm = _REQ_FIELDS_HEADING.search(page_text)
+            body = _rf_body_after_heading(page_text, rm) if rm else page_text
+            fields = _parse_required_fields(
+                body,
+                default_derivation=DERIVATION_SIBLING_REQ_FIELDS_PAGE,
+            )
+            if not fields:
+                fields = _parse_required_fields(
+                    page_text,
+                    default_derivation=DERIVATION_SIBLING_REQ_FIELDS_PAGE,
+                )
+            if fields:
+                # Join path is the sibling page; keep field_url, retag source.
+                for f in fields:
+                    f["derivation_source"] = DERIVATION_SIBLING_REQ_FIELDS_PAGE
+                return fields
+
+    return []
 
 
 def _parse_examples(block: str) -> Tuple[Optional[str], Optional[str]]:
@@ -273,12 +442,16 @@ def extract_api_reference_claims(
     *,
     source_pointer: str,
     doc_stem: str,
+    sibling_pages: Optional[Dict[str, str]] = None,
 ) -> Tuple[List[Any], ApiRefReport, set]:
     """Extract rich endpoint_fact claims from the API-reference pattern.
 
     Returns (claims, report, covered_endpoint_keys) where covered keys are
     ``METHOD:host:path`` strings already emitted — the thin C1 scanner should
     skip them to avoid duplicates.
+
+    ``sibling_pages`` maps a page key (filename or anchor) to markdown text for
+    ``{op}-req-fields`` joins. Example JSON is never consulted for fields.
     """
     # Late import to avoid circular typing with NormalizedClaim.
     from content_bench.content_engine.ingest import NormalizedClaim
@@ -328,15 +501,6 @@ def extract_api_reference_claims(
             )
             continue
 
-        # Required Fields block inside this span (if any).
-        req_fields: List[Dict[str, str]] = []
-        req_m = _REQ_FIELDS_HEADING.search(block)
-        if req_m:
-            req_start = req_m.end()
-            rest_m = _REST_EXAMPLE_HEADING.search(block, req_start)
-            req_end = rest_m.start() if rest_m else len(block)
-            req_fields = _parse_required_fields(block[req_start:req_end])
-
         example_request: Optional[str] = None
         example_response: Optional[str] = None
         rest_m = _REST_EXAMPLE_HEADING.search(block)
@@ -344,6 +508,14 @@ def extract_api_reference_claims(
             example_request, example_response = _parse_examples(block[rest_m.start() :])
 
         op_title, op_anchor = _operation_context(text, match.start())
+        # Derivation contract: RF section / sibling page / api-fields link only.
+        # example_request is intentionally not passed into field resolution.
+        req_fields = _resolve_required_fields(
+            text,
+            block,
+            op_anchor=op_anchor or ep_anchor or None,
+            sibling_pages=sibling_pages,
+        )
         report.matched += 1
         if req_fields:
             report.matched_with_required_fields += 1

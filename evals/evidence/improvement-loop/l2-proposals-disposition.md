@@ -4,7 +4,7 @@
 
 | ID | Status | Proposal |
 | --- | --- | --- |
-| L2-endpoint-required-fields-augment | **HOLD** | Capture Required Fields next to matched endpoints (57/176 soft gap). |
+| L2-endpoint-required-fields-augment | **CLEARED → shipped** | Capture Required Fields next to matched endpoints (57/176 soft gap). |
 | L2-boarding-step-outcome-gap-marker | **APPROVED → merged** | Flag steps with no stated outcome as `outcome_missing` (not invent results). |
 | L2-prerequisite-prose-extractor | discarded | Stale — L1 already expanded `_PREREQUISITE_PATTERN`. |
 
@@ -28,7 +28,11 @@ quote 222/277.
 
 ---
 
-## Required Fields augment — HOLD (derivation answer)
+## Required Fields augment — CLEARED and shipped
+
+See `l2-required-fields-shipped.md` for post-merge counts (57 → 30 missing RF).
+
+### Derivation answer (pre-clear)
 
 **Question:** where would the fields come from for the 57 soft gaps?
 
