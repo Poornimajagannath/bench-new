@@ -236,9 +236,14 @@ def probe_roots(
     base_url: str = DEFAULT_BASE,
     user_agent: str = DEFAULT_UA,
     sleep_s: float = 0.08,
+    only_product_ids: Optional[Set[str]] = None,
 ) -> None:
     """HTTP-probe each root in place; set fetch_status and unfetchable fields."""
     for rec in roots.values():
+        if only_product_ids and rec.product_id not in only_product_ids:
+            if rec.fetch_status == "pending":
+                rec.fetch_status = "skipped"
+            continue
         if rec.root_path.lower().endswith(".pdf"):
             rec.fetch_status = "unfetchable"
             rec.unfetchable_reason = REASON_PDF
@@ -305,6 +310,7 @@ def run_discovery(
     user_agent: str = DEFAULT_UA,
     probe: bool = True,
     sleep_s: float = 0.08,
+    only_product_ids: Optional[Set[str]] = None,
 ) -> DiscoveryReport:
     code, body, _ = http_get(llms_url, user_agent=user_agent)
     if code != 200:
@@ -320,7 +326,13 @@ def run_discovery(
     docs_only = [r.root_path for r in roots_map.values() if r.source == "docs.md"]
 
     if probe:
-        probe_roots(roots_map, base_url=base_url, user_agent=user_agent, sleep_s=sleep_s)
+        probe_roots(
+            roots_map,
+            base_url=base_url,
+            user_agent=user_agent,
+            sleep_s=sleep_s,
+            only_product_ids=only_product_ids,
+        )
 
     roots = sorted(roots_map.values(), key=lambda r: r.root_path)
     by_reason: Dict[str, int] = {}

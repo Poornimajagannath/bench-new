@@ -8,7 +8,7 @@ Phases:
   4. Sanitize + section split → cleaned/<date>/ + quarantine/<date>/
   5. Resumable TOC cross-check (hours; uses local guides cache)
 
-Unfetchable roots stay in the denominator. Reasons split derivation_error
+Unfetchable roots stay in the denominator. Reasons split derivation_miss
 (ours) from site_defect (theirs). empty_200 is its own code.
 """
 
@@ -97,19 +97,15 @@ def _local_guides_dirs() -> List[Path]:
 
 
 def phase_discover(args: argparse.Namespace) -> dict:
+    only_ids = set(args.only) if args.only else None
     report = run_discovery(
         base_url=args.base_url,
         user_agent=UA,
         probe=not args.skip_probe,
         sleep_s=args.sleep,
+        only_product_ids=only_ids,
     )
     payload = discovery_to_dict(report)
-    if args.only:
-        only = set(args.only)
-        payload["roots"] = [
-            r for r in payload["roots"] if r.get("product_id") in only
-        ]
-        payload["roots_discovered"] = len(payload["roots"])
     out = ARTIFACTS / "discovery.json"
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
@@ -232,7 +228,11 @@ def phase_sanitize(fetch_manifest: dict, args: argparse.Namespace) -> dict:
         pid = item["product_id"]
         if args.only and pid not in args.only:
             continue
-        local = raw_dir / item["local_path"]
+        local = ROOT / item["local_path"]
+        if not local.is_file():
+            # Fallback: file may be recorded relative to raw_dir only
+            alt = raw_dir / Path(item["local_path"]).name
+            local = alt if alt.is_file() else local
         if not local.is_file():
             continue
         text = local.read_text(encoding="utf-8", errors="replace")
@@ -298,11 +298,25 @@ def phase_toc(fetch_manifest: dict, args: argparse.Namespace) -> dict:
 
     checkpoint_dir = ARTIFACTS / "toc-checkpoint"
     raw_dir = ROOT / "raw" / args.stamp_date
-    products = [
-        {"root_path": item["root_path"], "local_path": item["local_path"]}
-        for item in (fetch_manifest.get("fetched") or [])
-        if not args.only or item["product_id"] in args.only
-    ]
+    products: List[dict] = []
+    for item in fetch_manifest.get("fetched") or []:
+        pid = item["product_id"]
+        if args.only and pid not in args.only:
+            continue
+        local_path = item["local_path"]
+        local_file = ROOT / local_path
+        if not local_file.is_file():
+            local_file = raw_dir / Path(local_path).name
+        root_text = None
+        if local_file.is_file():
+            root_text = local_file.read_text(encoding="utf-8", errors="replace")
+        products.append(
+            {
+                "root_path": item["root_path"],
+                "local_path": str(local_file.relative_to(ROOT)) if local_file.is_relative_to(ROOT) else str(local_file),
+                "text": root_text,
+            }
+        )
     report = cross_check_toc_resumable(
         products,
         base_url=args.base_url,
@@ -328,16 +342,21 @@ def _merge_product_rows(
     fetch_manifest: dict,
     sanitize_summary: dict,
     toc_report: dict,
+    *,
+    only: Optional[set] = None,
 ) -> List[dict]:
     by_id: Dict[str, dict] = {}
     for rec in discovery.get("roots") or []:
         pid = rec.get("product_id") or product_id_from_root(rec["root_path"])
+        if only and pid not in only:
+            continue
         by_id[pid] = {
             "product_id": pid,
             "root_path": rec["root_path"],
             "fetched": False,
             "derivation": rec.get("derivation"),
             "unfetchable_reason": rec.get("unfetchable_reason"),
+            "unfetchable_bucket": rec.get("unfetchable_bucket"),
         }
     for item in fetch_manifest.get("fetched") or []:
         pid = item["product_id"]
@@ -379,9 +398,14 @@ def phase_report(
         },
         "deep_link_spot_check": deep_check,
         "sanitize": sanitize_summary.get("totals", {}),
+        "sanitize_products": sanitize_summary.get("products", []),
         "toc": toc_report,
         "products": _merge_product_rows(
-            discovery, fetch_manifest, sanitize_summary, toc_report
+            discovery,
+            fetch_manifest,
+            sanitize_summary,
+            toc_report,
+            only=set(args.only) if args.only else None,
         ),
     }
     ARTIFACTS.mkdir(parents=True, exist_ok=True)
@@ -447,16 +471,18 @@ def main() -> int:
         )
 
     sanitize_summary: dict = {"totals": {}, "products": []}
+    sanitize_path = ARTIFACTS / "sanitize-summary.json"
     if args.phase in ("all", "sanitize") and not args.skip_sanitize:
         sanitize_summary = phase_sanitize(fetch_manifest, args)
+    elif sanitize_path.is_file():
+        sanitize_summary = json.loads(sanitize_path.read_text(encoding="utf-8"))
 
     toc_report: dict = {}
+    toc_path = ARTIFACTS / "toc-completeness.json"
     if args.phase in ("all", "toc"):
         toc_report = phase_toc(fetch_manifest, args)
-    elif (ARTIFACTS / "toc-completeness.json").is_file():
-        toc_report = json.loads(
-            (ARTIFACTS / "toc-completeness.json").read_text(encoding="utf-8")
-        )
+    elif toc_path.is_file():
+        toc_report = json.loads(toc_path.read_text(encoding="utf-8"))
 
     if args.phase in ("all", "report"):
         phase_report(discovery, fetch_manifest, deep_check, sanitize_summary, toc_report, args)
