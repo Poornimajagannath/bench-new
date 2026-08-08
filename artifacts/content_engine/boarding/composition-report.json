@@ -2,6 +2,16 @@
   "claims_total": 2436,
   "claims_after_prefer_child": 1251,
   "mega_residuals": 19,
+  "sequence_totals": {
+    "steps": 278,
+    "outcome_gaps": 215,
+    "outcome_missing": 215,
+    "api_ops": 21,
+    "ui_steps": 257,
+    "ratio": "215/278",
+    "denominator_source": "composed workflow sequence (API ops + UI steps); recounted each compose from outcome_missing flags \u2014 not the stale 222/277 headline in gap-report.md",
+    "note": "LLM proposal cited 222/277 from gap-report.md headline; wave-rerun measured 215/278. Live number is recomputed here."
+  },
   "mega_residual_samples": [
     {
       "claim_id": "en-us_boarding_developer_all_rest_boarding:prose:e3e8d8a94090",
@@ -83,43 +93,67 @@
     {
       "workflow_id": "create-merchant-organization",
       "path": "content/boarding/workflows/create-merchant-organization.md",
-      "steps": 31,
+      "steps": 34,
+      "outcome_gaps": 27,
+      "outcome_missing": 27,
+      "api_ops": 3,
+      "ui_steps": 31,
       "gaps": 29,
       "fact_hash_guard": "pass"
     },
     {
       "workflow_id": "extend-hierarchy",
       "path": "content/boarding/workflows/extend-hierarchy.md",
-      "steps": 33,
-      "gaps": 31,
+      "steps": 34,
+      "outcome_gaps": 29,
+      "outcome_missing": 29,
+      "api_ops": 1,
+      "ui_steps": 33,
+      "gaps": 32,
       "fact_hash_guard": "pass"
     },
     {
       "workflow_id": "enable-configure-products",
       "path": "content/boarding/workflows/enable-configure-products.md",
-      "steps": 178,
-      "gaps": 139,
+      "steps": 189,
+      "outcome_gaps": 145,
+      "outcome_missing": 145,
+      "api_ops": 11,
+      "ui_steps": 178,
+      "gaps": 158,
       "fact_hash_guard": "pass"
     },
     {
       "workflow_id": "search-organizations",
       "path": "content/boarding/workflows/search-organizations.md",
-      "steps": 10,
-      "gaps": 11,
+      "steps": 15,
+      "outcome_gaps": 9,
+      "outcome_missing": 9,
+      "api_ops": 5,
+      "ui_steps": 10,
+      "gaps": 16,
       "fact_hash_guard": "pass"
     },
     {
       "workflow_id": "change-organization-status",
       "path": "content/boarding/workflows/change-organization-status.md",
-      "steps": 3,
-      "gaps": 6,
+      "steps": 4,
+      "outcome_gaps": 3,
+      "outcome_missing": 3,
+      "api_ops": 1,
+      "ui_steps": 3,
+      "gaps": 7,
       "fact_hash_guard": "pass"
     },
     {
       "workflow_id": "send-registration-email",
       "path": "content/boarding/workflows/send-registration-email.md",
       "steps": 2,
-      "gaps": 5,
+      "outcome_gaps": 2,
+      "outcome_missing": 2,
+      "api_ops": 0,
+      "ui_steps": 2,
+      "gaps": 4,
       "fact_hash_guard": "pass"
     }
   ]

@@ -355,8 +355,11 @@ def _render_sequence_api_step(step_no: int, claim: Dict[str, Any]) -> List[str]:
     outcome = _endpoint_outcome(claim)
     if outcome:
         lines.append(f"   - Expected outcome: {outcome}")
+        lines.append("   - outcome_missing: false")
     else:
         lines.append("   - Expected outcome: **Gap:** not stated in source.")
+        # Machine-readable flag for portal/eval (L2 gap-marker proposal).
+        lines.append("   - outcome_missing: true")
     if resp is not None and outcome:
         lines.append("   - Example response:")
         lines.append("     ```json")
@@ -456,17 +459,22 @@ def compose_workflow_page(
                     outcome_gaps += 1
                 lines.append(f"{step_no}. **Action:** {action}")
                 lines.append(f"   - Actor: {_actor_for_doc(doc)}")
-                lines.append(
-                    f"   - Expected outcome: {outcome}"
-                    if outcome
-                    else "   - Expected outcome: **Gap:** not stated in source."
-                )
+                if outcome:
+                    lines.append(f"   - Expected outcome: {outcome}")
+                    lines.append("   - outcome_missing: false")
+                else:
+                    lines.append(
+                        "   - Expected outcome: **Gap:** not stated in source."
+                    )
+                    lines.append("   - outcome_missing: true")
                 lines.append(f"   - {_citation(c)}")
                 lines.append("")
 
     # Stash counts for composition report consumers (HTML comment, machine-readable).
+    # Denominator = this page's continuous API+UI sequence (recomputed each run).
     lines.append(
         f"<!-- sequence_stats: steps={sequence_len} outcome_gaps={outcome_gaps} "
+        f"outcome_missing={outcome_gaps} "
         f"api_ops={len(endpoints)} ui_steps={len(steps_sorted)} -->"
     )
 
@@ -520,16 +528,22 @@ def compose_all(
         path.write_text(md, encoding="utf-8")
         m = re.search(
             r"<!-- sequence_stats: steps=(\d+) outcome_gaps=(\d+) "
+            r"(?:outcome_missing=(\d+) )?"
             r"api_ops=(\d+) ui_steps=(\d+) -->",
             md,
         )
         if m:
-            n_steps, n_og, n_api, n_ui = (int(m.group(i)) for i in range(1, 5))
+            n_steps = int(m.group(1))
+            n_og = int(m.group(2))
+            # groups: 1 steps, 2 outcome_gaps, 3 outcome_missing?, 4 api, 5 ui
+            n_api = int(m.group(4))
+            n_ui = int(m.group(5))
         else:
             n_steps = md.count("**Action:**") + md.count("**API:**")
-            n_og = md.count("Expected outcome: **Gap:**")
+            n_og = md.count("outcome_missing: true")
             n_api = md.count("**API:**")
             n_ui = md.count("**Action:**")
+        n_flag = md.count("outcome_missing: true")
         total_steps += n_steps
         total_outcome_gaps += n_og
         total_api += n_api
@@ -540,6 +554,7 @@ def compose_all(
                 "path": str(path.relative_to(ROOT) if path.is_relative_to(ROOT) else path),
                 "steps": n_steps,
                 "outcome_gaps": n_og,
+                "outcome_missing": n_flag,
                 "api_ops": n_api,
                 "ui_steps": n_ui,
                 "gaps": md.count("**Gap:**"),
@@ -553,9 +568,21 @@ def compose_all(
         "sequence_totals": {
             "steps": total_steps,
             "outcome_gaps": total_outcome_gaps,
+            "outcome_missing": sum(p["outcome_missing"] for p in pages),
             "api_ops": total_api,
             "ui_steps": total_ui,
-            "denominator_source": "composed workflow sequence (API ops + UI steps)",
+            "ratio": (
+                f"{total_outcome_gaps}/{total_steps}" if total_steps else "0/0"
+            ),
+            "denominator_source": (
+                "composed workflow sequence (API ops + UI steps); "
+                "recounted each compose from outcome_missing flags — "
+                "not the stale 222/277 headline in gap-report.md"
+            ),
+            "note": (
+                "LLM proposal cited 222/277 from gap-report.md headline; "
+                "wave-rerun measured 215/278. Live number is recomputed here."
+            ),
         },
         "mega_residual_samples": [
             {

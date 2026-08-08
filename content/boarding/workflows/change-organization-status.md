@@ -25,6 +25,7 @@ _Generated from `normalized/2026-08-08-boarding.claims.json`; do not hand-edit. 
      {}
      ```
    - Expected outcome: HTTP 200 OK (see example response).
+   - outcome_missing: false
    - Example response:
      ```json
      200 OK
@@ -36,19 +37,22 @@ _Generated from `normalized/2026-08-08-boarding.claims.json`; do not hand-edit. 
 2. **Action:** Find the merchant in the search results and click the eyeball icon in the More column.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
+   - outcome_missing: true
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_merchants-v2-status-change:step:1:6739b4df`</sub>
 
 3. **Action:** Click the **Status** drop-down menu in the upper-right side of the page and select a status.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
+   - outcome_missing: true
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_merchants-v2-status-change:step:2:780c8902`</sub>
 
 4. **Action:** Click **Confirm**.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
+   - outcome_missing: true
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_merchants-v2-status-change:step:3:86078fe2`</sub>
 
-<!-- sequence_stats: steps=4 outcome_gaps=3 api_ops=1 ui_steps=3 -->
+<!-- sequence_stats: steps=4 outcome_gaps=3 outcome_missing=3 api_ops=1 ui_steps=3 -->
 
 ## Constraints
 
