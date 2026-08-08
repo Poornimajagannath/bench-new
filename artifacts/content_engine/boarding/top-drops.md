@@ -1,10 +1,10 @@
 # Ingestion top drops (skim)
 
-Total drops: 114
+Total drops: 94
 
 ## Reason counts
 
-- `no_schema_match`: 68
+- `no_schema_match`: 48
 - `quarantine_policy`: 46
 
 ## Drops

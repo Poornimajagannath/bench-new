@@ -21,6 +21,7 @@ CLAIM_SCHEMAS = (
     "endpoint_fact",
     "error_case",
     "prose_claim",
+    "field_table",
 )
 
 _DROP_PATTERNS = (
@@ -223,6 +224,94 @@ def _extract_prose_claims(
     return claims
 
 
+def _extract_field_table_claims(
+    text: str,
+    *,
+    source_pointer: str,
+    doc_stem: str,
+) -> List[NormalizedClaim]:
+    """One claim per field-table row.
+
+    Template-matrix reference pages are markdown tables (Field | Value or
+    Option). They are the product boarding template reference — load-bearing
+    for partners — and previously yielded zero claims (68 of 190 eligible
+    boarding docs). Each data row becomes a `field_table` claim carrying the
+    nearest heading as table context.
+    """
+    claims: List[NormalizedClaim] = []
+    lines = text.splitlines()
+    current_heading = ""
+    header_cells: Optional[List[str]] = None
+    pending_header: Optional[List[str]] = None
+    prev_nontable = ""
+
+    def cells_of(line: str) -> List[str]:
+        return [c.strip() for c in line.strip().strip("|").split("|")]
+
+    def clean_heading(raw: str) -> str:
+        return re.sub(r"\s*\{#[^}]+\}\s*$", "", raw.lstrip("#").strip())
+
+    for line in lines:
+        stripped = line.strip()
+        if stripped.startswith("#"):
+            current_heading = clean_heading(stripped)
+            header_cells = None
+            pending_header = None
+            prev_nontable = ""
+            continue
+        if not stripped.startswith("|"):
+            # Setext heading: underline row under the previous text line
+            if (
+                stripped
+                and set(stripped) <= {"=", "-"}
+                and len(stripped) >= 3
+                and prev_nontable
+            ):
+                current_heading = clean_heading(prev_nontable)
+                prev_nontable = ""
+                continue
+            if stripped:
+                header_cells = None
+                pending_header = None
+                prev_nontable = stripped
+            continue
+        # Table line
+        if re.match(r"^\|?[\s:|-]+\|?$", stripped):
+            # separator row: promote pending header
+            header_cells = pending_header
+            pending_header = None
+            continue
+        row = cells_of(stripped)
+        if header_cells is None:
+            pending_header = row
+            continue
+        if len(row) < 2 or not row[0]:
+            continue
+        field = row[0]
+        value = " | ".join(c for c in row[1:] if c)
+        if not value:
+            continue
+        snippet = f"{field}: {value}"
+        digest = hashlib.sha1(
+            f"{current_heading}|{snippet}".encode()
+        ).hexdigest()[:10]
+        claims.append(
+            NormalizedClaim(
+                claim_id=f"{doc_stem}:field:{digest}",
+                schema="field_table",
+                title=f"{field} — {current_heading}"[:120] if current_heading else field[:120],
+                text=snippet[:500],
+                source_pointer=source_pointer,
+                extras={
+                    "table": current_heading,
+                    "field": field,
+                    "columns": header_cells,
+                },
+            )
+        )
+    return claims
+
+
 def _extract_claims_from_text(
     text: str,
     *,
@@ -320,6 +409,12 @@ def _extract_claims_from_text(
 
     claims.extend(
         _extract_prose_claims(
+            text, source_pointer=source_pointer, doc_stem=doc_stem
+        )
+    )
+
+    claims.extend(
+        _extract_field_table_claims(
             text, source_pointer=source_pointer, doc_stem=doc_stem
         )
     )

@@ -4,7 +4,7 @@ Milestone 0.5: corpus cleaned at the door. `raw/` is immutable evidence; serve l
 
 - Stamp date: `2026-08-08-boarding`
 - Docs fetched into raw: 190
-- Claims extracted: 1248
+- Claims extracted: 2360
 - Raw dir: `raw/2026-08-08-boarding`
 - Normalized file: `normalized/2026-08-08-boarding.claims.json`
 - Read contract: normalized/, content/
@@ -18,6 +18,7 @@ Milestone 0.5: corpus cleaned at the door. `raw/` is immutable evidence; serve l
 | endpoint_fact | 0 |
 | error_case | 65 |
 | prose_claim | 214 |
+| field_table | 1112 |
 
 ## Drop log
 
@@ -71,14 +72,7 @@ Milestone 0.5: corpus cleaned at the door. `raw/` is immutable evidence; serve l
 | en-us_boarding_user_all_ebc_boarding-user_templates-tasks.md.md | quarantine_policy | 130 | Using Templates | census kind=index_navigation — excluded by policy |
 | 2026-08-08-boarding/en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-about.md.md | no_schema_match | 898 | Boarding Templates | no quickstart/endpoint/error/prose claim extracted |
 | 2026-08-08-boarding/en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-about_templates-components.md.md | no_schema_match | 1104 | Template Components | no quickstart/endpoint/error/prose claim extracted |
-| 2026-08-08-boarding/en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-matrix-intro_templates-matrix-au.md.md | no_schema_match | 1809 | Account Updater Templates | no quickstart/endpoint/error/prose claim extracted |
-| 2026-08-08-boarding/en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-matrix-intro_templates-matrix-echeck.md.md | no_schema_match | 1877 | ACH Templates | no quickstart/endpoint/error/prose claim extracted |
-| 2026-08-08-boarding/en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-matrix-intro_templates-matrix-gift-card.md.md | no_schema_match | 1425 | Gift Card Templates | no quickstart/endpoint/error/prose claim extracted |
 | 2026-08-08-boarding/en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-matrix-intro_templates-matrix-pa.md.md | no_schema_match | 2003 | Payer Authentication Templates | no quickstart/endpoint/error/prose claim extracted |
-| 2026-08-08-boarding/en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-matrix-intro_templates-matrix-sa.md.md | no_schema_match | 6160 | `Secure Acceptance` Templates | no quickstart/endpoint/error/prose claim extracted |
-| 2026-08-08-boarding/en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-matrix-intro_templates-matrix-tms.md.md | no_schema_match | 3971 | `Token Management Service` Templates | no quickstart/endpoint/error/prose claim extracted |
-| 2026-08-08-boarding/en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-matrix-intro_templates-matrix-vt.md.md | no_schema_match | 1594 | Virtual Terminal Templates | no quickstart/endpoint/error/prose claim extracted |
-| 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-currency-codes.md.md | no_schema_match | 33076 | ISO Standard Currency Codes | no quickstart/endpoint/error/prose claim extracted |
 | 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-extend-hierarchy_boarding-extend-hierarchy-diagram.md.md | no_schema_match | 934 | Hierarchy Example | no quickstart/endpoint/error/prose claim extracted |
 | 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-extend-hierarchy_boarding-reg-create-structural-api.md.md | no_schema_match | 620 | Add a Structural Organization to a Merchant Organization | no quickstart/endpoint/error/prose claim extracted |
 | 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-extend-hierarchy_boarding-reg-create-structural-api_boarding-reg-create-structural-api-example.md.md | no_schema_match | 2121 | REST Example: Creating a Structural Organization | no quickstart/endpoint/error/prose claim extracted |
@@ -119,24 +113,11 @@ Milestone 0.5: corpus cleaned at the door. `raw/` is immutable evidence; serve l
 | 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-reg-intro_boarding-reg-create-new-transacting-api_boarding-reg-create-new-transacting-api-req-fields.md.md | no_schema_match | 2706 | Required Fields for Adding a Transacting Organization to an Existing Organization | no quickstart/endpoint/error/prose claim extracted |
 | 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-reg-intro_boarding-reg-create-transacting-api_boarding-reg-create-transacting-api-example.md.md | no_schema_match | 7349 | REST Example: Creating a Transacting Organization | no quickstart/endpoint/error/prose claim extracted |
 | 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-reg-intro_boarding-reg-create-transacting-api_boarding-reg-create-transacting-api-req-fields.md.md | no_schema_match | 2696 | Required Fields for Adding a Transacting Organization to an Existing Organization | no quickstart/endpoint/error/prose claim extracted |
-| 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_templates-matrix-intro_templates-matrix-au.md.md | no_schema_match | 1809 | Account Updater Templates | no quickstart/endpoint/error/prose claim extracted |
-| 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_templates-matrix-intro_templates-matrix-echeck.md.md | no_schema_match | 1877 | ACH Templates | no quickstart/endpoint/error/prose claim extracted |
-| 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_templates-matrix-intro_templates-matrix-gift-card.md.md | no_schema_match | 1425 | Gift Card Templates | no quickstart/endpoint/error/prose claim extracted |
 | 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_templates-matrix-intro_templates-matrix-pa.md.md | no_schema_match | 2003 | Payer Authentication Templates | no quickstart/endpoint/error/prose claim extracted |
-| 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_templates-matrix-intro_templates-matrix-sa.md.md | no_schema_match | 6160 | `Secure Acceptance` Templates | no quickstart/endpoint/error/prose claim extracted |
-| 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_templates-matrix-intro_templates-matrix-tms.md.md | no_schema_match | 3971 | `Token Management Service` Templates | no quickstart/endpoint/error/prose claim extracted |
-| 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_templates-matrix-intro_templates-matrix-vt.md.md | no_schema_match | 1594 | Virtual Terminal Templates | no quickstart/endpoint/error/prose claim extracted |
-| 2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_boarding-currency-codes.md.md | no_schema_match | 33076 | ISO Standard Currency Codes | no quickstart/endpoint/error/prose claim extracted |
 | 2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_boarding-extend-hierarchy_boarding-extend-hierarchy-diagram.md.md | no_schema_match | 934 | Hierarchy Example | no quickstart/endpoint/error/prose claim extracted |
 | 2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-tms_tms-vault-hierarchy.md.md | no_schema_match | 809 | Token Vault Management | no quickstart/endpoint/error/prose claim extracted |
 | 2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_merchants-v2-edit-products-intr-0.md.md | no_schema_match | 670 | Updating an Organization's Products (Version 2) | no quickstart/endpoint/error/prose claim extracted |
-| 2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_templates-matrix-intro_templates-matrix-au.md.md | no_schema_match | 1809 | Account Updater Templates | no quickstart/endpoint/error/prose claim extracted |
-| 2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_templates-matrix-intro_templates-matrix-echeck.md.md | no_schema_match | 1877 | ACH Templates | no quickstart/endpoint/error/prose claim extracted |
-| 2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_templates-matrix-intro_templates-matrix-gift-card.md.md | no_schema_match | 1425 | Gift Card Templates | no quickstart/endpoint/error/prose claim extracted |
 | 2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_templates-matrix-intro_templates-matrix-pa.md.md | no_schema_match | 2003 | Payer Authentication Templates | no quickstart/endpoint/error/prose claim extracted |
-| 2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_templates-matrix-intro_templates-matrix-sa.md.md | no_schema_match | 6160 | `Secure Acceptance` Templates | no quickstart/endpoint/error/prose claim extracted |
-| 2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_templates-matrix-intro_templates-matrix-tms.md.md | no_schema_match | 3971 | `Token Management Service` Templates | no quickstart/endpoint/error/prose claim extracted |
-| 2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_templates-matrix-intro_templates-matrix-vt.md.md | no_schema_match | 1594 | Virtual Terminal Templates | no quickstart/endpoint/error/prose claim extracted |
 
 ## Sampled human check (10 drops)
 
@@ -146,11 +127,11 @@ Do not triage by filename alone. For each row confirm shell vs missed claim.
 | ---: | --- | --- | ---: | --- |
 | 1 | `2026-08-08-boarding/en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-about.md.md` | no_schema_match | 898 | Boarding Templates |
 | 2 | `2026-08-08-boarding/en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-about_templates-components.md.md` | no_schema_match | 1104 | Template Components |
-| 3 | `2026-08-08-boarding/en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-matrix-intro_templates-matrix-au.md.md` | no_schema_match | 1809 | Account Updater Templates |
-| 4 | `2026-08-08-boarding/en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-matrix-intro_templates-matrix-echeck.md.md` | no_schema_match | 1877 | ACH Templates |
-| 5 | `2026-08-08-boarding/en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-matrix-intro_templates-matrix-gift-card.md.md` | no_schema_match | 1425 | Gift Card Templates |
-| 6 | `2026-08-08-boarding/en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-matrix-intro_templates-matrix-pa.md.md` | no_schema_match | 2003 | Payer Authentication Templates |
-| 7 | `2026-08-08-boarding/en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-matrix-intro_templates-matrix-sa.md.md` | no_schema_match | 6160 | `Secure Acceptance` Templates |
-| 8 | `2026-08-08-boarding/en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-matrix-intro_templates-matrix-tms.md.md` | no_schema_match | 3971 | `Token Management Service` Templates |
-| 9 | `2026-08-08-boarding/en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-matrix-intro_templates-matrix-vt.md.md` | no_schema_match | 1594 | Virtual Terminal Templates |
-| 10 | `2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-currency-codes.md.md` | no_schema_match | 33076 | ISO Standard Currency Codes |
+| 3 | `2026-08-08-boarding/en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-matrix-intro_templates-matrix-pa.md.md` | no_schema_match | 2003 | Payer Authentication Templates |
+| 4 | `2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-extend-hierarchy_boarding-extend-hierarchy-diagram.md.md` | no_schema_match | 934 | Hierarchy Example |
+| 5 | `2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-extend-hierarchy_boarding-reg-create-structural-api.md.md` | no_schema_match | 620 | Add a Structural Organization to a Merchant Organization |
+| 6 | `2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-extend-hierarchy_boarding-reg-create-structural-api_boarding-reg-create-structural-api-example.md.md` | no_schema_match | 2121 | REST Example: Creating a Structural Organization |
+| 7 | `2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-extend-hierarchy_boarding-reg-create-structural-api_boarding-reg-create-structural-api-req-fields.md.md` | no_schema_match | 629 | Required Fields for Boarding a Structural Organization |
+| 8 | `2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro_boarding-retrieve-organizations.md.md` | no_schema_match | 753 | Retrieve a List of Organizations |
+| 9 | `2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro_boarding-update-information-api.md.md` | no_schema_match | 916 | Update an Organization's Information |
+| 10 | `2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-payer-auth_boarding-payer-auth-enable-intro_boarding-payer-auth-enable-ex-rest.md.md` | no_schema_match | 4406 | REST Example: Enabling `Payer Authentication` |

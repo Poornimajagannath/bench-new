@@ -1,13 +1,14 @@
 {
-  "generated_at": "2026-08-07T22:56:28+00:00",
+  "generated_at": "2026-08-08T02:28:05+00:00",
   "raw_dir": "raw/2026-08-08-boarding",
-  "claim_count": 1248,
+  "claim_count": 2360,
   "claims_by_schema": {
     "quickstart_step": 969,
     "prose_claim": 214,
+    "field_table": 1112,
     "error_case": 65
   },
-  "docs_with_claims": 122,
+  "docs_with_claims": 142,
   "docs_ingested_denominator": 190,
   "denominator_source": "census-report.json eligible_count (corpus: site HTML TOC, 236 files)",
   "prose_constraint_kinds": {
@@ -20,23 +21,23 @@
   "top_docs_by_claims": [
     [
       "en-us_boarding_user_all_ebc_boarding-user.md.md",
-      428
+      672
     ],
     [
       "en-us_boarding_developer_all_rest_boarding.md.md",
-      145
+      389
+    ],
+    [
+      "en-us_boarding_developer_all_rest_boarding_boarding-currency-codes.md.md",
+      166
+    ],
+    [
+      "en-us_boarding_user_all_ebc_boarding-user_boarding-currency-codes.md.md",
+      166
     ],
     [
       "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt.md.md",
-      56
-    ],
-    [
-      "en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-boarding.md.md",
-      26
-    ],
-    [
-      "en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-add.md.md",
-      19
+      124
     ]
   ]
 }
