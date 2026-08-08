@@ -10,6 +10,8 @@ venv/
 
 # Ingestion clean-room
 raw/
+cleaned/
+quarantine/
 normalized/*.claims.json
 !normalized/.gitkeep
 
