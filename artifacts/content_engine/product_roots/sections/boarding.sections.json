@@ -1,0 +1,1104 @@
+{
+  "product_id": "boarding",
+  "root_path": "/docs/cybs/en-us/boarding/developer/all/rest/boarding.md",
+  "root_url": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.md",
+  "bytes": 268904,
+  "sections": [
+    {
+      "anchor": "boarding-about-guide",
+      "title": "Merchant Boarding",
+      "byte_start": 0,
+      "byte_end": 900,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-about-guide",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-revisions",
+      "title": "Recent Revisions to This Document",
+      "byte_start": 900,
+      "byte_end": 3937,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-revisions",
+      "heading_level": 1
+    },
+    {
+      "anchor": "vpc-partner-reseller-disclaimer",
+      "title": "VISA Platform Connect: Specifications and Conditions for Resellers/Partners",
+      "byte_start": 3937,
+      "byte_end": 6069,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#vpc-partner-reseller-disclaimer",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-intro-overview",
+      "title": "Introduction to the Boarding Registration Service",
+      "byte_start": 6069,
+      "byte_end": 6853,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-intro-overview",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-intro-requirements",
+      "title": "Requirements",
+      "byte_start": 6853,
+      "byte_end": 7228,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-intro-requirements",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-intro-organizations",
+      "title": "Understanding Accounts and Organizations",
+      "byte_start": 7228,
+      "byte_end": 9033,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-intro-organizations",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-intro-ids",
+      "title": "Understanding Organization IDs",
+      "byte_start": 9033,
+      "byte_end": 9697,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-intro-ids",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-intro-ids_fig_ut4_p5f_q5b",
+      "title": "Figure:",
+      "byte_start": 9697,
+      "byte_end": 10264,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-intro-ids_fig_ut4_p5f_q5b",
+      "heading_level": 4
+    },
+    {
+      "anchor": "boarding-intro-workflow-single-mid",
+      "title": "Configure a Single Merchant",
+      "byte_start": 10264,
+      "byte_end": 11499,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-intro-workflow-single-mid",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-intro-workflow-multi-mid",
+      "title": "Configure Multiple Merchants",
+      "byte_start": 11499,
+      "byte_end": 13673,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-intro-workflow-multi-mid",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-intro-workflow-extend-multi-mid",
+      "title": "Configure Multiple Merchants with an Extended Hierarchy",
+      "byte_start": 13673,
+      "byte_end": 15247,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-intro-workflow-extend-multi-mid",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-intro-template",
+      "title": "Product Templates",
+      "byte_start": 15247,
+      "byte_end": 17153,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-intro-template",
+      "heading_level": 1
+    },
+    {
+      "anchor": "templates-components",
+      "title": "Template Components",
+      "byte_start": 17153,
+      "byte_end": 18333,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#templates-components",
+      "heading_level": 1
+    },
+    {
+      "anchor": "templates-products",
+      "title": "Products",
+      "byte_start": 18333,
+      "byte_end": 18665,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#templates-products",
+      "heading_level": 1
+    },
+    {
+      "anchor": "templates-tasks",
+      "title": "Using Templates",
+      "byte_start": 18665,
+      "byte_end": 18796,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#templates-tasks",
+      "heading_level": 1
+    },
+    {
+      "anchor": "templates-retrieving",
+      "title": "Retrieving Templates",
+      "byte_start": 18796,
+      "byte_end": 19822,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#templates-retrieving",
+      "heading_level": 1
+    },
+    {
+      "anchor": "templates-adding",
+      "title": "Add Templates",
+      "byte_start": 19822,
+      "byte_end": 20987,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#templates-adding",
+      "heading_level": 1
+    },
+    {
+      "anchor": "templates-editing",
+      "title": "Editing Templates",
+      "byte_start": 20987,
+      "byte_end": 21427,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#templates-editing",
+      "heading_level": 1
+    },
+    {
+      "anchor": "templates-deleting",
+      "title": "Deleting Templates",
+      "byte_start": 21427,
+      "byte_end": 21979,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#templates-deleting",
+      "heading_level": 1
+    },
+    {
+      "anchor": "templates-default",
+      "title": "Setting the Default Template",
+      "byte_start": 21979,
+      "byte_end": 22604,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#templates-default",
+      "heading_level": 1
+    },
+    {
+      "anchor": "templates-matrix-intro",
+      "title": "Product Boarding Template Reference",
+      "byte_start": 22604,
+      "byte_end": 22887,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#templates-matrix-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "templates-matrix-au",
+      "title": "Account Updater Templates",
+      "byte_start": 22887,
+      "byte_end": 24696,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#templates-matrix-au",
+      "heading_level": 1
+    },
+    {
+      "anchor": "templates-matrix-card",
+      "title": "Card Processing Templates",
+      "byte_start": 24696,
+      "byte_end": 25011,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#templates-matrix-card",
+      "heading_level": 1
+    },
+    {
+      "anchor": "templates-matrix-card-config",
+      "title": "Configuring a Card Processing Template",
+      "byte_start": 25011,
+      "byte_end": 26152,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#templates-matrix-card-config",
+      "heading_level": 1
+    },
+    {
+      "anchor": "templates-matrix-card-fields",
+      "title": "Processor-Specific Fields",
+      "byte_start": 26152,
+      "byte_end": 29527,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#templates-matrix-card-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "templates-matrix-customer-invoicing",
+      "title": "Customer Invoicing",
+      "byte_start": 29527,
+      "byte_end": 32016,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#templates-matrix-customer-invoicing",
+      "heading_level": 1
+    },
+    {
+      "anchor": "templates-matrix-echeck",
+      "title": "ACH Templates",
+      "byte_start": 32016,
+      "byte_end": 33893,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#templates-matrix-echeck",
+      "heading_level": 1
+    },
+    {
+      "anchor": "templates-matrix-fme",
+      "title": "`Fraud Management Essentials` Templates",
+      "byte_start": 33893,
+      "byte_end": 41240,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#templates-matrix-fme",
+      "heading_level": 1
+    },
+    {
+      "anchor": "templates-matrix-gift-card",
+      "title": "Gift Card Templates",
+      "byte_start": 41240,
+      "byte_end": 42665,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#templates-matrix-gift-card",
+      "heading_level": 1
+    },
+    {
+      "anchor": "templates-matrix-pa",
+      "title": "Payer Authentication Templates",
+      "byte_start": 42665,
+      "byte_end": 44669,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#templates-matrix-pa",
+      "heading_level": 1
+    },
+    {
+      "anchor": "templates-matrix-pay-by-link",
+      "title": "Pay By Link",
+      "byte_start": 44669,
+      "byte_end": 47021,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#templates-matrix-pay-by-link",
+      "heading_level": 1
+    },
+    {
+      "anchor": "templates-matrix-sa",
+      "title": "`Secure Acceptance` Templates",
+      "byte_start": 47021,
+      "byte_end": 53181,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#templates-matrix-sa",
+      "heading_level": 1
+    },
+    {
+      "anchor": "templates-matrix-tms",
+      "title": "`Token Management Service` Templates",
+      "byte_start": 53181,
+      "byte_end": 57152,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#templates-matrix-tms",
+      "heading_level": 1
+    },
+    {
+      "anchor": "templates-matrix-unified-checkout",
+      "title": "`Unified Checkout`",
+      "byte_start": 57152,
+      "byte_end": 58684,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#templates-matrix-unified-checkout",
+      "heading_level": 1
+    },
+    {
+      "anchor": "templates-matrix-vt",
+      "title": "Virtual Terminal Templates",
+      "byte_start": 58684,
+      "byte_end": 60278,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#templates-matrix-vt",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-reg-intro",
+      "title": "Create Organizations",
+      "byte_start": 60278,
+      "byte_end": 62721,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-reg-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-reg-create-merch-api",
+      "title": "Create a Merchant Organization",
+      "byte_start": 62721,
+      "byte_end": 62918,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-reg-create-merch-api",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-reg-create-merch-api_d7e665",
+      "title": "Endpoint",
+      "byte_start": 62918,
+      "byte_end": 63258,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-reg-create-merch-api_d7e665",
+      "heading_level": 2
+    },
+    {
+      "anchor": "boarding-reg-create-merch-api-req-fields",
+      "title": "Required Fields for Boarding a Merchant Organization",
+      "byte_start": 63258,
+      "byte_end": 65924,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-reg-create-merch-api-req-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-reg-create-merch-api-example",
+      "title": "REST Example: Creating a Merchant Organization",
+      "byte_start": 65924,
+      "byte_end": 68026,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-reg-create-merch-api-example",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-reg-create-new-transacting-api",
+      "title": "Add a Transacting Organization to a New Merchant Organization",
+      "byte_start": 68026,
+      "byte_end": 68352,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-reg-create-new-transacting-api",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-reg-create-new-transacting-api_d7e665",
+      "title": "Endpoint",
+      "byte_start": 68352,
+      "byte_end": 68732,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-reg-create-new-transacting-api_d7e665",
+      "heading_level": 2
+    },
+    {
+      "anchor": "boarding-reg-create-new-transacting-api-req-fields",
+      "title": "Required Fields for Adding a Transacting Organization to an Existing Organization",
+      "byte_start": 68732,
+      "byte_end": 71439,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-reg-create-new-transacting-api-req-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-reg-create-new-transacting-api-example",
+      "title": "REST Example: Creating a Transacting Organization",
+      "byte_start": 71439,
+      "byte_end": 75017,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-reg-create-new-transacting-api-example",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-reg-create-transacting-api",
+      "title": "Add a Transacting Organization to an Existing Organization",
+      "byte_start": 75017,
+      "byte_end": 75745,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-reg-create-transacting-api",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-reg-create-transacting-api_d7e665",
+      "title": "Endpoint",
+      "byte_start": 75745,
+      "byte_end": 76109,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-reg-create-transacting-api_d7e665",
+      "heading_level": 2
+    },
+    {
+      "anchor": "boarding-reg-create-transacting-api-req-fields",
+      "title": "Required Fields for Adding a Transacting Organization to an Existing Organization",
+      "byte_start": 76109,
+      "byte_end": 78806,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-reg-create-transacting-api-req-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-reg-create-transacting-api-example",
+      "title": "REST Example: Creating a Transacting Organization",
+      "byte_start": 78806,
+      "byte_end": 86155,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-reg-create-transacting-api-example",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-manage-org-intro",
+      "title": "Manage Organizations",
+      "byte_start": 86155,
+      "byte_end": 86931,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-manage-org-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-retrieve-organizations",
+      "title": "Retrieve a List of Organizations",
+      "byte_start": 86931,
+      "byte_end": 87349,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-retrieve-organizations",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-retrieve-organizations_d7e717",
+      "title": "Endpoint",
+      "byte_start": 87349,
+      "byte_end": 87685,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-retrieve-organizations_d7e717",
+      "heading_level": 2
+    },
+    {
+      "anchor": "boarding-retrieve-organizations-query-parameters",
+      "title": "Using Query Parameters to Filter Results",
+      "byte_start": 87685,
+      "byte_end": 89085,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-retrieve-organizations-query-parameters",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-retrieve-organizations-query-parameters_hierarchyQuery",
+      "title": "Using the hierarchyQuery Parameter",
+      "byte_start": 89085,
+      "byte_end": 90128,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-retrieve-organizations-query-parameters_hierarchyQuery",
+      "heading_level": 2
+    },
+    {
+      "anchor": "boarding-retrieve-organizations-example",
+      "title": "REST Example: Retrieving a List of Organizations",
+      "byte_start": 90128,
+      "byte_end": 90474,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-retrieve-organizations-example",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-retrieve-an-organization",
+      "title": "Retrieve Organization Details",
+      "byte_start": 90474,
+      "byte_end": 91087,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-retrieve-an-organization",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-retrieve-an-organization_d7e743",
+      "title": "Endpoint",
+      "byte_start": 91087,
+      "byte_end": 91606,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-retrieve-an-organization_d7e743",
+      "heading_level": 2
+    },
+    {
+      "anchor": "boarding-retrieve-an-organization-example",
+      "title": "REST Example: Retrieving an Organization",
+      "byte_start": 91606,
+      "byte_end": 91888,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-retrieve-an-organization-example",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-update-information-api",
+      "title": "Update an Organization's Information",
+      "byte_start": 91888,
+      "byte_end": 92294,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-update-information-api",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-update-information-api_d7e743",
+      "title": "Endpoint",
+      "byte_start": 92294,
+      "byte_end": 92805,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-update-information-api_d7e743",
+      "heading_level": 2
+    },
+    {
+      "anchor": "boarding-update-information-api-example",
+      "title": "REST Example: Updating an Organization's Information",
+      "byte_start": 92805,
+      "byte_end": 93180,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-update-information-api-example",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-change-org-status",
+      "title": "Change an Organization's Status",
+      "byte_start": 93180,
+      "byte_end": 93444,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-change-org-status",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-change-org-status_d7e743",
+      "title": "Endpoint",
+      "byte_start": 93444,
+      "byte_end": 93935,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-change-org-status_d7e743",
+      "heading_level": 2
+    },
+    {
+      "anchor": "boarding-change-org-status-example",
+      "title": "REST Example: Changing an Organization's Status",
+      "byte_start": 93935,
+      "byte_end": 94179,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-change-org-status-example",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-products-intro",
+      "title": "Product Enablement and Configuration Using the BRS API",
+      "byte_start": 94179,
+      "byte_end": 95979,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-products-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-payer-auth",
+      "title": "`Payer Authentication`",
+      "byte_start": 95979,
+      "byte_end": 96368,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-payer-auth",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-payer-auth_pa-prereqs",
+      "title": "Prerequisites",
+      "byte_start": 96368,
+      "byte_end": 96983,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-payer-auth_pa-prereqs",
+      "heading_level": 2
+    },
+    {
+      "anchor": "boarding-payer-auth_pa-status",
+      "title": "Status",
+      "byte_start": 96983,
+      "byte_end": 97481,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-payer-auth_pa-status",
+      "heading_level": 2
+    },
+    {
+      "anchor": "boarding-payer-auth-enable-intro",
+      "title": "Enable `Payer Authentication`",
+      "byte_start": 97481,
+      "byte_end": 97676,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-payer-auth-enable-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-payer-auth-enable-intro_d7e665",
+      "title": "Endpoint",
+      "byte_start": 97676,
+      "byte_end": 98028,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-payer-auth-enable-intro_d7e665",
+      "heading_level": 2
+    },
+    {
+      "anchor": "boarding-payer-auth-enable-reqfields",
+      "title": "Required Fields for Enabling `Payer Authentication`",
+      "byte_start": 98028,
+      "byte_end": 116135,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-payer-auth-enable-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-payer-auth-enable-ex-rest",
+      "title": "REST Example: Enabling `Payer Authentication`",
+      "byte_start": 116135,
+      "byte_end": 120541,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-payer-auth-enable-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-tms",
+      "title": "`Token Management Service`",
+      "byte_start": 120541,
+      "byte_end": 121679,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-tms",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-vault-hierarchy",
+      "title": "Token Vault Management",
+      "byte_start": 121679,
+      "byte_end": 122489,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#tms-vault-hierarchy",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-trids",
+      "title": "Token Requestor IDs",
+      "byte_start": 122489,
+      "byte_end": 124790,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#tms-trids",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-vault-settings",
+      "title": "Configure the Token Vault Settings Using the `Business Center`",
+      "byte_start": 124790,
+      "byte_end": 126428,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#tms-vault-settings",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-vault-mid-access",
+      "title": "Configure the Token Vault Access Using the `Business Center`",
+      "byte_start": 126428,
+      "byte_end": 127543,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#tms-vault-mid-access",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-tms-enable-intro",
+      "title": "Enable `Token Management Service` Using a Template",
+      "byte_start": 127543,
+      "byte_end": 127749,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-tms-enable-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-tms-enable-intro_d7e665",
+      "title": "Endpoint",
+      "byte_start": 127749,
+      "byte_end": 128073,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-tms-enable-intro_d7e665",
+      "heading_level": 2
+    },
+    {
+      "anchor": "boarding-tms-enable-reqfields",
+      "title": "Required Fields for Enabling `TMS` Using a Template",
+      "byte_start": 128073,
+      "byte_end": 132342,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-tms-enable-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-tms-enable-ex-rest",
+      "title": "REST Example: Enabling `TMS` Using a Template",
+      "byte_start": 132342,
+      "byte_end": 133958,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-tms-enable-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-tms-enable-net-tkn-intro",
+      "title": "Enable `TMS` and Enroll in Network Tokenization for a New Merchant",
+      "byte_start": 133958,
+      "byte_end": 134266,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-tms-enable-net-tkn-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-tms-enable-net-tkn-intro_d7e665",
+      "title": "Endpoint",
+      "byte_start": 134266,
+      "byte_end": 134622,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-tms-enable-net-tkn-intro_d7e665",
+      "heading_level": 2
+    },
+    {
+      "anchor": "boarding-tms-enable-net-tkn-reqfields",
+      "title": "Required Fields for Enabling `TMS` and Enrolling in Network Tokenization for a New Merchant",
+      "byte_start": 134622,
+      "byte_end": 145666,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-tms-enable-net-tkn-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-tms-enable-net-tkn-ex-rest",
+      "title": "REST Example: Enabling `TMS` and Enrolling in Network Tokenization for a New Merchant",
+      "byte_start": 145666,
+      "byte_end": 149503,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-tms-enable-net-tkn-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-tms-enable-net-tkn-existing-intro",
+      "title": "Enable `TMS` and Enroll in Network Tokenization for an Existing Merchant",
+      "byte_start": 149503,
+      "byte_end": 149860,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-tms-enable-net-tkn-existing-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-tms-enable-net-tkn-existing-intro_d7e665",
+      "title": "Endpoint",
+      "byte_start": 149860,
+      "byte_end": 150252,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-tms-enable-net-tkn-existing-intro_d7e665",
+      "heading_level": 2
+    },
+    {
+      "anchor": "boarding-tms-enable-net-tkn-existing-reqfields",
+      "title": "Required Fields for Enabling `TMS` and Enrolling in Network Tokenization for an Existing Merchant",
+      "byte_start": 150252,
+      "byte_end": 161335,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-tms-enable-net-tkn-existing-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-tms-enable-net-tkn-existing-ex-rest",
+      "title": "REST Example: Enabling `TMS` and Enrolling in Network Tokenization for an Existing Merchant",
+      "byte_start": 161335,
+      "byte_end": 165600,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-tms-enable-net-tkn-existing-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-products",
+      "title": "Product Enablement and Configuration Using the PECS API",
+      "byte_start": 165600,
+      "byte_end": 167329,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-products",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-update-product-api",
+      "title": "Add a New Product to an Existing Organization",
+      "byte_start": 167329,
+      "byte_end": 167586,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-update-product-api",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-update-product-api_d7e638",
+      "title": "Endpoint",
+      "byte_start": 167586,
+      "byte_end": 167920,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-update-product-api_d7e638",
+      "heading_level": 2
+    },
+    {
+      "anchor": "boarding-update-product-api_section_r3n_f3r_y5b",
+      "title": "Subscribing to a Product",
+      "byte_start": 167920,
+      "byte_end": 168612,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-update-product-api_section_r3n_f3r_y5b",
+      "heading_level": 2
+    },
+    {
+      "anchor": "boarding-update-product-api_section_s3n_f3r_y5b",
+      "title": "Configuring a Product",
+      "byte_start": 168612,
+      "byte_end": 171189,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-update-product-api_section_s3n_f3r_y5b",
+      "heading_level": 2
+    },
+    {
+      "anchor": "boarding-update-product-api-req-fields",
+      "title": "Required Fields for Adding a New Products",
+      "byte_start": 171189,
+      "byte_end": 171602,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-update-product-api-req-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-update-product-api-example",
+      "title": "Example: Adding a New Product to an Existing Organization Using the PECS API",
+      "byte_start": 171602,
+      "byte_end": 172619,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-update-product-api-example",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pecs-update-batch",
+      "title": "Update Batch Group Using the PECS API",
+      "byte_start": 172619,
+      "byte_end": 172791,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#pecs-update-batch",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pecs-update-batch_d7e638",
+      "title": "Endpoint",
+      "byte_start": 172791,
+      "byte_end": 173085,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#pecs-update-batch_d7e638",
+      "heading_level": 2
+    },
+    {
+      "anchor": "pecs-update-batch-req-fields",
+      "title": "Required Fields for Updating a Batch Group Using the PECS API",
+      "byte_start": 173085,
+      "byte_end": 173896,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#pecs-update-batch-req-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pecs-update-batch-ex",
+      "title": "Example: Updating a Batch Group Using the API",
+      "byte_start": 173896,
+      "byte_end": 175251,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#pecs-update-batch-ex",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pecs-add-processor",
+      "title": "Add a Processor Using the PECS API",
+      "byte_start": 175251,
+      "byte_end": 175414,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#pecs-add-processor",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pecs-add-processor_d7e638",
+      "title": "Endpoint",
+      "byte_start": 175414,
+      "byte_end": 175712,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#pecs-add-processor_d7e638",
+      "heading_level": 2
+    },
+    {
+      "anchor": "pecs-add-processor-req-fields",
+      "title": "Required Fields for Adding a Processor Using the PECS API",
+      "byte_start": 175712,
+      "byte_end": 177789,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#pecs-add-processor-req-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pecs-add-processor-ex",
+      "title": "Example: Adding a Processor Using the PECS API",
+      "byte_start": 177789,
+      "byte_end": 179940,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#pecs-add-processor-ex",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pecs-delete-processor",
+      "title": "Delete a Processor Using the PECS API",
+      "byte_start": 179940,
+      "byte_end": 180240,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#pecs-delete-processor",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pecs-delete-processor_d7e638",
+      "title": "Endpoint",
+      "byte_start": 180240,
+      "byte_end": 180550,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#pecs-delete-processor_d7e638",
+      "heading_level": 2
+    },
+    {
+      "anchor": "pecs-delete-processor-req-fields",
+      "title": "Required Fields for Deleting a Processor Using the PECS API",
+      "byte_start": 180550,
+      "byte_end": 181534,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#pecs-delete-processor-req-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pecs-delete-processor-ex",
+      "title": "Example: Deleting a Processor Using the PECS API",
+      "byte_start": 181534,
+      "byte_end": 183380,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#pecs-delete-processor-ex",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pecs-add-delete-processor",
+      "title": "Add and Delete a Processor Using the PECS API",
+      "byte_start": 183380,
+      "byte_end": 183728,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#pecs-add-delete-processor",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pecs-add-delete-processor_d7e638",
+      "title": "Endpoint",
+      "byte_start": 183728,
+      "byte_end": 184054,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#pecs-add-delete-processor_d7e638",
+      "heading_level": 2
+    },
+    {
+      "anchor": "pecs-add-delete-processor-req-fields",
+      "title": "Required Fields for Adding and Deleting a Processor Using the PECS API",
+      "byte_start": 184054,
+      "byte_end": 186903,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#pecs-add-delete-processor-req-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pecs-add-delete-processor-ex",
+      "title": "Example: Adding and Deleting a Processor Using the PECS API",
+      "byte_start": 186903,
+      "byte_end": 188787,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#pecs-add-delete-processor-ex",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-pecs-payer-auth",
+      "title": "`Payer Authentication`",
+      "byte_start": 188787,
+      "byte_end": 190162,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-pecs-payer-auth",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pecs-config-payerauth",
+      "title": "Configure `Payer Authentication` Using the PECS API",
+      "byte_start": 190162,
+      "byte_end": 190382,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#pecs-config-payerauth",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pecs-config-payerauth_d7e638",
+      "title": "Endpoint",
+      "byte_start": 190382,
+      "byte_end": 190692,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#pecs-config-payerauth_d7e638",
+      "heading_level": 2
+    },
+    {
+      "anchor": "pecs-config-payerauth-req-fields",
+      "title": "Required Fields for Configuring `Payer Authentication` Using the PECS API",
+      "byte_start": 190692,
+      "byte_end": 198417,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#pecs-config-payerauth-req-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pecs-config-payerauth-ex",
+      "title": "Example: Configuring Payer Authentication Using the PECS API",
+      "byte_start": 198417,
+      "byte_end": 204008,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#pecs-config-payerauth-ex",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-pecs-tms",
+      "title": "`Token Management Service`",
+      "byte_start": 204008,
+      "byte_end": 205156,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-pecs-tms",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-pecs-tms-enable-intro",
+      "title": "Enable `TMS` with a Template Using the PECS API",
+      "byte_start": 205156,
+      "byte_end": 205382,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-pecs-tms-enable-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-pecs-tms-enable-intro_d7e638",
+      "title": "Endpoint",
+      "byte_start": 205382,
+      "byte_end": 205728,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-pecs-tms-enable-intro_d7e638",
+      "heading_level": 2
+    },
+    {
+      "anchor": "boarding-pecs-tms-enable-reqfields",
+      "title": "Required Fields for Enabling `TMS` with a Template Using the PECS API",
+      "byte_start": 205728,
+      "byte_end": 206379,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-pecs-tms-enable-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-pecs-tms-enable-ex-rest",
+      "title": "REST Example: Enabling `TMS` with a Template Using the PECS API",
+      "byte_start": 206379,
+      "byte_end": 207362,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-pecs-tms-enable-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-pecs-tms-enable-intro",
+      "title": "Enable `TMS` and Enroll in Network Tokenization Using the PECS API",
+      "byte_start": 207362,
+      "byte_end": 207645,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-pecs-tms-enable-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-pecs-tms-enable-intro_d7e638",
+      "title": "Endpoint",
+      "byte_start": 207645,
+      "byte_end": 207991,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-pecs-tms-enable-intro_d7e638",
+      "heading_level": 2
+    },
+    {
+      "anchor": "boarding-tms-enable-net-tkn-reqfields",
+      "title": "Required Fields for Enabling `TMS` and Enrolling in Network Tokenization Using the PECS API",
+      "byte_start": 207991,
+      "byte_end": 211441,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-tms-enable-net-tkn-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-pecs-tms-enable-ex-rest",
+      "title": "REST Example: Enabling `TMS` and Enrolling in Network Tokenization Using the PECS API",
+      "byte_start": 211441,
+      "byte_end": 214117,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-pecs-tms-enable-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-extend-hierarchy",
+      "title": "Extending the Hierarchy",
+      "byte_start": 214117,
+      "byte_end": 214883,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-extend-hierarchy",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-extend-hierarchy-diagram",
+      "title": "Hierarchy Example",
+      "byte_start": 214883,
+      "byte_end": 215573,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-extend-hierarchy-diagram",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-extend-hierarchy-diagram_fig_zgk_hgy_r5b",
+      "title": "Figure:",
+      "byte_start": 215573,
+      "byte_end": 215818,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-extend-hierarchy-diagram_fig_zgk_hgy_r5b",
+      "heading_level": 4
+    },
+    {
+      "anchor": "boarding-reg-create-structural-api",
+      "title": "Add a Structural Organization to a Merchant Organization",
+      "byte_start": 215818,
+      "byte_end": 216079,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-reg-create-structural-api",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-reg-create-structural-api_d7e665",
+      "title": "Endpoint",
+      "byte_start": 216079,
+      "byte_end": 216439,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-reg-create-structural-api_d7e665",
+      "heading_level": 2
+    },
+    {
+      "anchor": "boarding-reg-create-structural-api-req-fields",
+      "title": "Required Fields for Boarding a Structural Organization",
+      "byte_start": 216439,
+      "byte_end": 217069,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-reg-create-structural-api-req-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-reg-create-structural-api-example",
+      "title": "REST Example: Creating a Structural Organization",
+      "byte_start": 217069,
+      "byte_end": 219190,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-reg-create-structural-api-example",
+      "heading_level": 1
+    },
+    {
+      "anchor": "currency-codes",
+      "title": "ISO Standard Currency Codes",
+      "byte_start": 219190,
+      "byte_end": 252266,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#currency-codes",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-error-codes",
+      "title": "Reason Codes",
+      "byte_start": 252266,
+      "byte_end": 261411,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-error-codes",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-merchants-v2-add-merch-acct-info",
+      "title": "Add Merchant Account Information",
+      "byte_start": 261411,
+      "byte_end": 262233,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-merchants-v2-add-merch-acct-info",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-reg-create-transacting-integ-api-example",
+      "title": "REST Example: Creating a Transacting Organization with Integration Information",
+      "byte_start": 262233,
+      "byte_end": 266998,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-reg-create-transacting-integ-api-example",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-intro-template",
+      "title": "Product Templates",
+      "byte_start": 266998,
+      "byte_end": 268904,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-intro-template",
+      "heading_level": 1
+    }
+  ]
+}

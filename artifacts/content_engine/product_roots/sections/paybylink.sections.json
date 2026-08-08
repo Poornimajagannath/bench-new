@@ -1,0 +1,304 @@
+{
+  "product_id": "paybylink",
+  "root_path": "/docs/cybs/en-us/paybylink/developer/all/rest/paybylink.md",
+  "root_url": "https://developer.cybersource.com/docs/cybs/en-us/paybylink/developer/all/rest/paybylink.md",
+  "bytes": 52427,
+  "sections": [
+    {
+      "anchor": "paybylink-about-guide",
+      "title": "`Pay by Link` Developer Guide",
+      "byte_start": 0,
+      "byte_end": 983,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/paybylink/developer/all/rest/paybylink.html#paybylink-about-guide",
+      "heading_level": 1
+    },
+    {
+      "anchor": "paybylink-revisions",
+      "title": "Recent Revisions to This Document",
+      "byte_start": 983,
+      "byte_end": 2478,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/paybylink/developer/all/rest/paybylink.html#paybylink-revisions",
+      "heading_level": 1
+    },
+    {
+      "anchor": "vpc-partner-reseller-disclaimer",
+      "title": "VISA Platform Connect: Specifications and Conditions for Resellers/Partners",
+      "byte_start": 2478,
+      "byte_end": 4610,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/paybylink/developer/all/rest/paybylink.html#vpc-partner-reseller-disclaimer",
+      "heading_level": 1
+    },
+    {
+      "anchor": "paybylink-intro",
+      "title": "Introduction to `Pay by Link`",
+      "byte_start": 4610,
+      "byte_end": 8010,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/paybylink/developer/all/rest/paybylink.html#paybylink-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "paybylink-services",
+      "title": "`Pay by Link` API Requests",
+      "byte_start": 8010,
+      "byte_end": 8194,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/paybylink/developer/all/rest/paybylink.html#paybylink-services",
+      "heading_level": 1
+    },
+    {
+      "anchor": "paybylink-create-intro",
+      "title": "Create a Fixed-Price Link",
+      "byte_start": 8194,
+      "byte_end": 8750,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/paybylink/developer/all/rest/paybylink.html#paybylink-create-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "paybylink-create-intro_partner-info",
+      "title": "Partner Information",
+      "byte_start": 8750,
+      "byte_end": 9171,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/paybylink/developer/all/rest/paybylink.html#paybylink-create-intro_partner-info",
+      "heading_level": 2
+    },
+    {
+      "anchor": "paybylink-create-intro_endpoint",
+      "title": "Endpoints",
+      "byte_start": 9171,
+      "byte_end": 9644,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/paybylink/developer/all/rest/paybylink.html#paybylink-create-intro_endpoint",
+      "heading_level": 2
+    },
+    {
+      "anchor": "paybylink-create-req-fields",
+      "title": "Required Fields for Creating a Fixed-Price Link",
+      "byte_start": 9644,
+      "byte_end": 10768,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/paybylink/developer/all/rest/paybylink.html#paybylink-create-req-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "paybylink-create-opt-fields",
+      "title": "Optional Fields for Creating a Fixed-Price Link",
+      "byte_start": 10768,
+      "byte_end": 12203,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/paybylink/developer/all/rest/paybylink.html#paybylink-create-opt-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "paybylink-create-ex-rest",
+      "title": "`REST` Example: Creating a Fixed-Price Link",
+      "byte_start": 12203,
+      "byte_end": 13775,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/paybylink/developer/all/rest/paybylink.html#paybylink-create-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "paybylink-create-customer-intro",
+      "title": "Create a Customer-Set Link",
+      "byte_start": 13775,
+      "byte_end": 15083,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/paybylink/developer/all/rest/paybylink.html#paybylink-create-customer-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "paybylink-create-customer-req-fields",
+      "title": "Required Fields for Creating a Customer-Set Link",
+      "byte_start": 15083,
+      "byte_end": 16299,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/paybylink/developer/all/rest/paybylink.html#paybylink-create-customer-req-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "paybylink-create-opt-customer-fields",
+      "title": "Optional Fields for Creating a Customer-Set Link",
+      "byte_start": 16299,
+      "byte_end": 17711,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/paybylink/developer/all/rest/paybylink.html#paybylink-create-opt-customer-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "paybylink-create-don-ex-rest",
+      "title": "`REST` Example: Creating a Customer-Set Price Link",
+      "byte_start": 17711,
+      "byte_end": 19326,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/paybylink/developer/all/rest/paybylink.html#paybylink-create-don-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "paybylink-update-intro",
+      "title": "Update a Fixed-Price Link",
+      "byte_start": 19326,
+      "byte_end": 19811,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/paybylink/developer/all/rest/paybylink.html#paybylink-update-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "paybylink-update-intro_deactive",
+      "title": "Deactivate a Payment Link",
+      "byte_start": 19811,
+      "byte_end": 20226,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/paybylink/developer/all/rest/paybylink.html#paybylink-update-intro_deactive",
+      "heading_level": 2
+    },
+    {
+      "anchor": "paybylink-update-intro_endpoint",
+      "title": "Endpoints",
+      "byte_start": 20226,
+      "byte_end": 20670,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/paybylink/developer/all/rest/paybylink.html#paybylink-update-intro_endpoint",
+      "heading_level": 2
+    },
+    {
+      "anchor": "paybylink-update-req-fields",
+      "title": "Required Fields for Updating a Fixed-Price Link",
+      "byte_start": 20670,
+      "byte_end": 21659,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/paybylink/developer/all/rest/paybylink.html#paybylink-update-req-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "paybylink-update-opt-fields",
+      "title": "Optional Fields for Updating a Fixed-Price Link",
+      "byte_start": 21659,
+      "byte_end": 23255,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/paybylink/developer/all/rest/paybylink.html#paybylink-update-opt-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "paybylink-update-ex-rest",
+      "title": "`REST` Example: Updating a Fixed-Price Link",
+      "byte_start": 23255,
+      "byte_end": 24748,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/paybylink/developer/all/rest/paybylink.html#paybylink-update-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "paybylink-update-customer-intro",
+      "title": "Update a Customer-Set Link",
+      "byte_start": 24748,
+      "byte_end": 25950,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/paybylink/developer/all/rest/paybylink.html#paybylink-update-customer-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "paybylink-update-customer-req-fields",
+      "title": "Required Fields for Updating a Customer-Set Link",
+      "byte_start": 25950,
+      "byte_end": 27101,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/paybylink/developer/all/rest/paybylink.html#paybylink-update-customer-req-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "paybylink-update-customer-opt-fields",
+      "title": "Optional Fields for Updating a Customer-Set Link",
+      "byte_start": 27101,
+      "byte_end": 28862,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/paybylink/developer/all/rest/paybylink.html#paybylink-update-customer-opt-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "paybylink-update-don-ex-rest",
+      "title": "`REST` Example: Updating a Customer-Set Price Link",
+      "byte_start": 28862,
+      "byte_end": 30397,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/paybylink/developer/all/rest/paybylink.html#paybylink-update-don-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "paybylink-get-intro",
+      "title": "Get Link",
+      "byte_start": 30397,
+      "byte_end": 31082,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/paybylink/developer/all/rest/paybylink.html#paybylink-get-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "paybylink-get-ex-rest",
+      "title": "`REST` Example: Retrieving a Payment Link",
+      "byte_start": 31082,
+      "byte_end": 32223,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/paybylink/developer/all/rest/paybylink.html#paybylink-get-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "paybylink-all-intro",
+      "title": "Get All Links",
+      "byte_start": 32223,
+      "byte_end": 32907,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/paybylink/developer/all/rest/paybylink.html#paybylink-all-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "paybylink-all-ex-rest",
+      "title": "`REST` Example: Retrieving All Payment Links",
+      "byte_start": 32907,
+      "byte_end": 38106,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/paybylink/developer/all/rest/paybylink.html#paybylink-all-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "paybylink-services-update-settings-intro",
+      "title": "Update Payment Link Settings",
+      "byte_start": 38106,
+      "byte_end": 38821,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/paybylink/developer/all/rest/paybylink.html#paybylink-services-update-settings-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "paybylink-services-update-settings-intro_reset-settings",
+      "title": "Reset to Default Settings",
+      "byte_start": 38821,
+      "byte_end": 39520,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/paybylink/developer/all/rest/paybylink.html#paybylink-services-update-settings-intro_reset-settings",
+      "heading_level": 2
+    },
+    {
+      "anchor": "paybylink-services-update-settings-req-fields",
+      "title": "Required Fields for Update Settings",
+      "byte_start": 39520,
+      "byte_end": 44871,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/paybylink/developer/all/rest/paybylink.html#paybylink-services-update-settings-req-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "paybylink-services-update-settings-ex-rest",
+      "title": "Example: Update Payment Link Settings",
+      "byte_start": 44871,
+      "byte_end": 46823,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/paybylink/developer/all/rest/paybylink.html#paybylink-services-update-settings-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "paybylink-services-update-settings-resp-status",
+      "title": "Response Statuses for Updating Payment Link Settings",
+      "byte_start": 46823,
+      "byte_end": 47471,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/paybylink/developer/all/rest/paybylink.html#paybylink-services-update-settings-resp-status",
+      "heading_level": 1
+    },
+    {
+      "anchor": "paybylink-webhooks-intro",
+      "title": "Webhook Subscriptions for `Pay by Link`",
+      "byte_start": 47471,
+      "byte_end": 49741,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/paybylink/developer/all/rest/paybylink.html#paybylink-webhooks-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "paybylink-webhooks-ex-rest",
+      "title": "`REST` Example: Create `Pay by Link` Webhook Subscription",
+      "byte_start": 49741,
+      "byte_end": 51534,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/paybylink/developer/all/rest/paybylink.html#paybylink-webhooks-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "paybylink-ebc-intro",
+      "title": "Using the `Business Center`",
+      "byte_start": 51534,
+      "byte_end": 52427,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/paybylink/developer/all/rest/paybylink.html#paybylink-ebc-intro",
+      "heading_level": 1
+    }
+  ]
+}

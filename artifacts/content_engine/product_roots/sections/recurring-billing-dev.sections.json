@@ -1,0 +1,648 @@
+{
+  "product_id": "recurring-billing-dev",
+  "root_path": "/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.md",
+  "root_url": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.md",
+  "bytes": 103589,
+  "sections": [
+    {
+      "anchor": "recur-bill-about-guide",
+      "title": "Recurring Billing Developer Guide",
+      "byte_start": 0,
+      "byte_end": 877,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#recur-bill-about-guide",
+      "heading_level": 1
+    },
+    {
+      "anchor": "recur-bill-recentrevisions_RecentRevisions",
+      "title": "Recent Revisions to This Document",
+      "byte_start": 877,
+      "byte_end": 7369,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#recur-bill-recentrevisions_RecentRevisions",
+      "heading_level": 1
+    },
+    {
+      "anchor": "recur-bill-dev-intro",
+      "title": "Introduction to Recurring Billing",
+      "byte_start": 7369,
+      "byte_end": 10505,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#recur-bill-dev-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "recurr-bill-acct-valid",
+      "title": "Account Validation (Pre-Authorization)",
+      "byte_start": 10505,
+      "byte_end": 11824,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#recurr-bill-acct-valid",
+      "heading_level": 1
+    },
+    {
+      "anchor": "recur-bill-plans-intro",
+      "title": "Plans",
+      "byte_start": 11824,
+      "byte_end": 12667,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#recur-bill-plans-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "recur-bill-plans-intro_bill-indef",
+      "title": "Bill Indefinitely",
+      "byte_start": 12667,
+      "byte_end": 13126,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#recur-bill-plans-intro_bill-indef",
+      "heading_level": 2
+    },
+    {
+      "anchor": "recur-bill-plans-intro_fixed-num",
+      "title": "Fixed Number of Payments",
+      "byte_start": 13126,
+      "byte_end": 13634,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#recur-bill-plans-intro_fixed-num",
+      "heading_level": 2
+    },
+    {
+      "anchor": "recur-bill-plan-statuses",
+      "title": "Plan Statuses",
+      "byte_start": 13634,
+      "byte_end": 13754,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#recur-bill-plan-statuses",
+      "heading_level": 1
+    },
+    {
+      "anchor": "recur-bill-plan-statuses_fig_zst_vwr_mwb",
+      "title": "Figure:",
+      "byte_start": 13754,
+      "byte_end": 14946,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#recur-bill-plan-statuses_fig_zst_vwr_mwb",
+      "heading_level": 4
+    },
+    {
+      "anchor": "recurr-bill-assign-plan-code",
+      "title": "Assigning a Plan Code",
+      "byte_start": 14946,
+      "byte_end": 15394,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#recurr-bill-assign-plan-code",
+      "heading_level": 1
+    },
+    {
+      "anchor": "recur-bill-creating-a-plan",
+      "title": "Creating a Plan",
+      "byte_start": 15394,
+      "byte_end": 16622,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#recur-bill-creating-a-plan",
+      "heading_level": 1
+    },
+    {
+      "anchor": "recur-bill-create-plan-reqd-fields",
+      "title": "Required Fields for Creating a Plan",
+      "byte_start": 16622,
+      "byte_end": 17316,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#recur-bill-create-plan-reqd-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "recur-bill-create-plan-opt-fields",
+      "title": "Optional Fields for Creating a Plan",
+      "byte_start": 17316,
+      "byte_end": 17796,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#recur-bill-create-plan-opt-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "recur-bill-create-a-plan-examples",
+      "title": "REST Example: Creating a Plan",
+      "byte_start": 17796,
+      "byte_end": 19254,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#recur-bill-create-a-plan-examples",
+      "heading_level": 1
+    },
+    {
+      "anchor": "recur-bill-getting-all-plans",
+      "title": "Retrieving a List of Plans",
+      "byte_start": 19254,
+      "byte_end": 20595,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#recur-bill-getting-all-plans",
+      "heading_level": 1
+    },
+    {
+      "anchor": "recur-bill-get-all-plans-examples",
+      "title": "REST Example: Retrieving a List of Plans",
+      "byte_start": 20595,
+      "byte_end": 23678,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#recur-bill-get-all-plans-examples",
+      "heading_level": 1
+    },
+    {
+      "anchor": "recur-bill-getting-a-plan",
+      "title": "Retrieving a Plan",
+      "byte_start": 23678,
+      "byte_end": 24663,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#recur-bill-getting-a-plan",
+      "heading_level": 1
+    },
+    {
+      "anchor": "reference_i4k_3sz_n4b",
+      "title": "REST Example: Retrieving a Plan",
+      "byte_start": 24663,
+      "byte_end": 25807,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#reference_i4k_3sz_n4b",
+      "heading_level": 1
+    },
+    {
+      "anchor": "recur-bill-getting-a-plan-code",
+      "title": "Retrieving a Plan Code",
+      "byte_start": 25807,
+      "byte_end": 26705,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#recur-bill-getting-a-plan-code",
+      "heading_level": 1
+    },
+    {
+      "anchor": "recur-bill-get-a-plan-code-examples",
+      "title": "REST Example: Retrieving a Plan Code",
+      "byte_start": 26705,
+      "byte_end": 27012,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#recur-bill-get-a-plan-code-examples",
+      "heading_level": 1
+    },
+    {
+      "anchor": "recur-bill-amending-a-plan",
+      "title": "Amending a Plan",
+      "byte_start": 27012,
+      "byte_end": 28571,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#recur-bill-amending-a-plan",
+      "heading_level": 1
+    },
+    {
+      "anchor": "recur-bill-amend-plan-opt-fields",
+      "title": "Optional Fields for Amending a Plan",
+      "byte_start": 28571,
+      "byte_end": 29326,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#recur-bill-amend-plan-opt-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "recur-bill-amend-a-plan-examples",
+      "title": "REST Example: Amending a Plan",
+      "byte_start": 29326,
+      "byte_end": 30948,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#recur-bill-amend-a-plan-examples",
+      "heading_level": 1
+    },
+    {
+      "anchor": "recur-bill-activating-a-plan",
+      "title": "Activating a Plan",
+      "byte_start": 30948,
+      "byte_end": 31794,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#recur-bill-activating-a-plan",
+      "heading_level": 1
+    },
+    {
+      "anchor": "recur-bill-activate-a-plan-examples",
+      "title": "REST Example: Activating a Plan",
+      "byte_start": 31794,
+      "byte_end": 32775,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#recur-bill-activate-a-plan-examples",
+      "heading_level": 1
+    },
+    {
+      "anchor": "recur-bill-deactivating-a-plan",
+      "title": "Deactivating a Plan",
+      "byte_start": 32775,
+      "byte_end": 33584,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#recur-bill-deactivating-a-plan",
+      "heading_level": 1
+    },
+    {
+      "anchor": "recur-bill-deactivate-a-plan-examples",
+      "title": "REST Example: Deactivating a Plan",
+      "byte_start": 33584,
+      "byte_end": 34463,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#recur-bill-deactivate-a-plan-examples",
+      "heading_level": 1
+    },
+    {
+      "anchor": "recur-bill-deleting-a-plan",
+      "title": "Deleting a Plan",
+      "byte_start": 34463,
+      "byte_end": 35339,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#recur-bill-deleting-a-plan",
+      "heading_level": 1
+    },
+    {
+      "anchor": "recur-bill-delete-a-plan-examples",
+      "title": "REST Example: Deleting a Plan",
+      "byte_start": 35339,
+      "byte_end": 35838,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#recur-bill-delete-a-plan-examples",
+      "heading_level": 1
+    },
+    {
+      "anchor": "recur-bill-subscriptions",
+      "title": "Subscriptions",
+      "byte_start": 35838,
+      "byte_end": 36503,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#recur-bill-subscriptions",
+      "heading_level": 1
+    },
+    {
+      "anchor": "recur-bill-subscription-prereq",
+      "title": "Subscription Prerequisites",
+      "byte_start": 36503,
+      "byte_end": 38755,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#recur-bill-subscription-prereq",
+      "heading_level": 1
+    },
+    {
+      "anchor": "recur-bill-subscriptions-statuses",
+      "title": "Subscription Statuses",
+      "byte_start": 38755,
+      "byte_end": 41034,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#recur-bill-subscriptions-statuses",
+      "heading_level": 1
+    },
+    {
+      "anchor": "recur-bill-zero-auths",
+      "title": "Zero-Amount Authorizations",
+      "byte_start": 41034,
+      "byte_end": 41784,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#recur-bill-zero-auths",
+      "heading_level": 1
+    },
+    {
+      "anchor": "recur-bill-assign-sub-code",
+      "title": "Assigning a Subscription Code",
+      "byte_start": 41784,
+      "byte_end": 42273,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#recur-bill-assign-sub-code",
+      "heading_level": 1
+    },
+    {
+      "anchor": "recur-bill-sub-id",
+      "title": "Subscription ID",
+      "byte_start": 42273,
+      "byte_end": 42721,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#recur-bill-sub-id",
+      "heading_level": 1
+    },
+    {
+      "anchor": "recur-bill-plan-overrides",
+      "title": "Overriding a Plan",
+      "byte_start": 42721,
+      "byte_end": 43209,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#recur-bill-plan-overrides",
+      "heading_level": 1
+    },
+    {
+      "anchor": "rb-cre-subs-w-exist-plan",
+      "title": "Creating a Subscription with an Existing Plan",
+      "byte_start": 43209,
+      "byte_end": 43358,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#rb-cre-subs-w-exist-plan",
+      "heading_level": 1
+    },
+    {
+      "anchor": "rb-cre-subs-w-exist-plan_section_ghg_vxq_fdc",
+      "title": "Basic Steps",
+      "byte_start": 43358,
+      "byte_end": 44014,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#rb-cre-subs-w-exist-plan_section_ghg_vxq_fdc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "rb-cre-subs-w-exist-plan-reqd-fields",
+      "title": "Required Fields",
+      "byte_start": 44014,
+      "byte_end": 45209,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#rb-cre-subs-w-exist-plan-reqd-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "rb-cre-subs-w-exist-plan-ex",
+      "title": "REST Example: Creating a Subscription with an Existing Plan",
+      "byte_start": 45209,
+      "byte_end": 46770,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#rb-cre-subs-w-exist-plan-ex",
+      "heading_level": 1
+    },
+    {
+      "anchor": "rb-cre-subs-w-subs-overrides",
+      "title": "Creating a Subscription with Plan Overrides",
+      "byte_start": 46770,
+      "byte_end": 46977,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#rb-cre-subs-w-subs-overrides",
+      "heading_level": 1
+    },
+    {
+      "anchor": "rb-cre-subs-w-subs-overrides_section_ghg_vxq_fdc",
+      "title": "Basic Steps",
+      "byte_start": 46977,
+      "byte_end": 47641,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#rb-cre-subs-w-subs-overrides_section_ghg_vxq_fdc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "rb-cre-subs-w-subs-overrides-reqd-fields",
+      "title": "Required Fields",
+      "byte_start": 47641,
+      "byte_end": 48769,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#rb-cre-subs-w-subs-overrides-reqd-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "rb-cre-subs-w-subs-overrides-ex",
+      "title": "REST Example: Creating a Subscription with Plan Overrides",
+      "byte_start": 48769,
+      "byte_end": 50649,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#rb-cre-subs-w-subs-overrides-ex",
+      "heading_level": 1
+    },
+    {
+      "anchor": "rb-cre-subs-fully-cust-w-otp",
+      "title": "Creating a Fully Customized Subscription with a One-Time Plan",
+      "byte_start": 50649,
+      "byte_end": 51670,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#rb-cre-subs-fully-cust-w-otp",
+      "heading_level": 1
+    },
+    {
+      "anchor": "rb-cre-subs-fully-cust-w-otp_section_ghg_vxq_fdc",
+      "title": "Basic Steps",
+      "byte_start": 51670,
+      "byte_end": 52334,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#rb-cre-subs-fully-cust-w-otp_section_ghg_vxq_fdc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "rb-cre-subs-fully-cust-w-otp-reqd-fields",
+      "title": "Required Fields",
+      "byte_start": 52334,
+      "byte_end": 53652,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#rb-cre-subs-fully-cust-w-otp-reqd-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "rb-cre-subs-fully-cust-w-otp-ex",
+      "title": "REST Example: Creating a Fully Customized Subscription with a One-Time Plan",
+      "byte_start": 53652,
+      "byte_end": 55493,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#rb-cre-subs-fully-cust-w-otp-ex",
+      "heading_level": 1
+    },
+    {
+      "anchor": "rb-cre-follow-on-subs-w-exist-trans",
+      "title": "Creating a Follow-on Subscription from an Existing Transaction",
+      "byte_start": 55493,
+      "byte_end": 56968,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#rb-cre-follow-on-subs-w-exist-trans",
+      "heading_level": 1
+    },
+    {
+      "anchor": "rb-cre-follow-on-subs-w-exist-trans-reqd-fields",
+      "title": "Required Fields",
+      "byte_start": 56968,
+      "byte_end": 57659,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#rb-cre-follow-on-subs-w-exist-trans-reqd-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "rb-cre-follow-on-subs-w-exist-trans-ex",
+      "title": "REST Example: Creating a Follow-on Subscription from an Existing Transaction",
+      "byte_start": 57659,
+      "byte_end": 58804,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#rb-cre-follow-on-subs-w-exist-trans-ex",
+      "heading_level": 1
+    },
+    {
+      "anchor": "recur_bill_getting_dets_fo_subscriptions",
+      "title": "Retrieving the Details of a Follow-on Subscription Based on an Existing Transaction",
+      "byte_start": 58804,
+      "byte_end": 59956,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#recur_bill_getting_dets_fo_subscriptions",
+      "heading_level": 1
+    },
+    {
+      "anchor": "recur_bill_get_dets_fo_subscriptions_examples",
+      "title": "REST Examples: Retrieving Details for Follow-on Subscription Creation based on Existing Transaction",
+      "byte_start": 59956,
+      "byte_end": 61421,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#recur_bill_get_dets_fo_subscriptions_examples",
+      "heading_level": 1
+    },
+    {
+      "anchor": "recur-bill-getting-all-subscriptions",
+      "title": "Retrieving a List of Subscriptions",
+      "byte_start": 61421,
+      "byte_end": 63347,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#recur-bill-getting-all-subscriptions",
+      "heading_level": 1
+    },
+    {
+      "anchor": "recur-bill-get-all-subscriptions-examples",
+      "title": "REST Examples: Retrieving a List of Subscriptions",
+      "byte_start": 63347,
+      "byte_end": 68022,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#recur-bill-get-all-subscriptions-examples",
+      "heading_level": 1
+    },
+    {
+      "anchor": "recur-bill-getting-a-subscription",
+      "title": "Retrieving a Subscription",
+      "byte_start": 68022,
+      "byte_end": 69395,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#recur-bill-getting-a-subscription",
+      "heading_level": 1
+    },
+    {
+      "anchor": "recur-bill-update-a-subscription-examples",
+      "title": "REST Examples: Retrieving a Subscription",
+      "byte_start": 69395,
+      "byte_end": 71221,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#recur-bill-update-a-subscription-examples",
+      "heading_level": 1
+    },
+    {
+      "anchor": "recur-bill-getting-a-subscription-code",
+      "title": "Retrieving the Next Subscription Code",
+      "byte_start": 71221,
+      "byte_end": 72218,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#recur-bill-getting-a-subscription-code",
+      "heading_level": 1
+    },
+    {
+      "anchor": "recur-bill-get-a-subscription-code-examples",
+      "title": "REST Examples: Retrieving the Next Subscription Code",
+      "byte_start": 72218,
+      "byte_end": 72569,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#recur-bill-get-a-subscription-code-examples",
+      "heading_level": 1
+    },
+    {
+      "anchor": "rb-amend-subs",
+      "title": "Amending a Subscription",
+      "byte_start": 72569,
+      "byte_end": 74004,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#rb-amend-subs",
+      "heading_level": 1
+    },
+    {
+      "anchor": "rb-amend-subs_section_ht1_mjt_fdc",
+      "title": "Basic Steps",
+      "byte_start": 74004,
+      "byte_end": 74818,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#rb-amend-subs_section_ht1_mjt_fdc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "rb-amend-subs-amend-fields",
+      "title": "Amendable Fields",
+      "byte_start": 74818,
+      "byte_end": 76248,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#rb-amend-subs-amend-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "rb-amend-subs-ex",
+      "title": "REST Example: Switching a Subscription to a Different Plan",
+      "byte_start": 76248,
+      "byte_end": 77612,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#rb-amend-subs-ex",
+      "heading_level": 1
+    },
+    {
+      "anchor": "recur-bill-activating-a-subscription",
+      "title": "Reactivating a Suspended Subscription",
+      "byte_start": 77612,
+      "byte_end": 80062,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#recur-bill-activating-a-subscription",
+      "heading_level": 1
+    },
+    {
+      "anchor": "recur-bill-activate-a-subscription-examples",
+      "title": "REST Examples: Reactivating a Suspended Subscription",
+      "byte_start": 80062,
+      "byte_end": 81342,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#recur-bill-activate-a-subscription-examples",
+      "heading_level": 1
+    },
+    {
+      "anchor": "recur-bill-suspending-a-subscription",
+      "title": "Suspending a Subscription",
+      "byte_start": 81342,
+      "byte_end": 82303,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#recur-bill-suspending-a-subscription",
+      "heading_level": 1
+    },
+    {
+      "anchor": "recur-bill-suspend-a-subscription-examples",
+      "title": "REST Examples: Suspending a Subscription",
+      "byte_start": 82303,
+      "byte_end": 83352,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#recur-bill-suspend-a-subscription-examples",
+      "heading_level": 1
+    },
+    {
+      "anchor": "recur-bill-canceling-a-subscription",
+      "title": "Canceling a Subscription",
+      "byte_start": 83352,
+      "byte_end": 84321,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#recur-bill-canceling-a-subscription",
+      "heading_level": 1
+    },
+    {
+      "anchor": "recur-bill-cancel-a-subscription-examples",
+      "title": "REST Examples: Canceling a Subscription",
+      "byte_start": 84321,
+      "byte_end": 85356,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#recur-bill-cancel-a-subscription-examples",
+      "heading_level": 1
+    },
+    {
+      "anchor": "retrieve-list-payments-in-sub",
+      "title": "Retrieving a List of Payments in a Subscription",
+      "byte_start": 85356,
+      "byte_end": 88346,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#retrieve-list-payments-in-sub",
+      "heading_level": 1
+    },
+    {
+      "anchor": "retrieve-list-payments-in-sub-ex",
+      "title": "REST Examples: Retrieving a List of Payments in a Subscription",
+      "byte_start": 88346,
+      "byte_end": 92911,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#retrieve-list-payments-in-sub-ex",
+      "heading_level": 1
+    },
+    {
+      "anchor": "skip-restore-payment",
+      "title": "Skipping or Restoring Payments Within a Subscription",
+      "byte_start": 92911,
+      "byte_end": 94308,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#skip-restore-payment",
+      "heading_level": 1
+    },
+    {
+      "anchor": "skip-restore-payment-ex",
+      "title": "REST Example: Skipping or Restoring a Payment in a Subscription",
+      "byte_start": 94308,
+      "byte_end": 95509,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#skip-restore-payment-ex",
+      "heading_level": 1
+    },
+    {
+      "anchor": "recur-bill-addl-feat",
+      "title": "Additional Features",
+      "byte_start": 95509,
+      "byte_end": 95653,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#recur-bill-addl-feat",
+      "heading_level": 1
+    },
+    {
+      "anchor": "recur-bill-sys-retry",
+      "title": "System Retry Logic",
+      "byte_start": 95653,
+      "byte_end": 97288,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#recur-bill-sys-retry",
+      "heading_level": 1
+    },
+    {
+      "anchor": "recur-bill-mit",
+      "title": "Merchant-Initiated Transactions",
+      "byte_start": 97288,
+      "byte_end": 97703,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#recur-bill-mit",
+      "heading_level": 1
+    },
+    {
+      "anchor": "recur-bill-cust-not",
+      "title": "Customer Notifications",
+      "byte_start": 97703,
+      "byte_end": 100283,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#recur-bill-cust-not",
+      "heading_level": 1
+    },
+    {
+      "anchor": "recur-bill-dm-int",
+      "title": "`Decision Manager` Integration",
+      "byte_start": 100283,
+      "byte_end": 100790,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#recur-bill-dm-int",
+      "heading_level": 1
+    },
+    {
+      "anchor": "recur-bill-au",
+      "title": "Account Updater Integration",
+      "byte_start": 100790,
+      "byte_end": 101458,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#recur-bill-au",
+      "heading_level": 1
+    },
+    {
+      "anchor": "vpc-partner-reseller-disclaimer",
+      "title": "VISA Platform Connect: Specifications and Conditions for Resellers/Partners",
+      "byte_start": 101458,
+      "byte_end": 103589,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/recurring-billing/developer/all/rest/recurring-billing-dev.html#vpc-partner-reseller-disclaimer",
+      "heading_level": 1
+    }
+  ]
+}

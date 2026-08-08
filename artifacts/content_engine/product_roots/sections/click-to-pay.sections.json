@@ -1,0 +1,2392 @@
+{
+  "product_id": "click-to-pay",
+  "root_path": "/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.md",
+  "root_url": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.md",
+  "bytes": 499260,
+  "sections": [
+    {
+      "anchor": "ctp-about-guide",
+      "title": "`Click to Pay Drop-In UI` Developer Guide",
+      "byte_start": 0,
+      "byte_end": 716,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-about-guide",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-doc-revisions",
+      "title": "Recent Revisions to This Document",
+      "byte_start": 716,
+      "byte_end": 825,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#cp-doc-revisions",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-doc-revisions_section_x5n_whk_cjc",
+      "title": "26.05.01",
+      "byte_start": 825,
+      "byte_end": 5981,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#cp-doc-revisions_section_x5n_whk_cjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "vpc-partner-reseller-disclaimer",
+      "title": "VISA Platform Connect: Specifications and Conditions for Resellers/Partners",
+      "byte_start": 5981,
+      "byte_end": 8113,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#vpc-partner-reseller-disclaimer",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-intro",
+      "title": "Introduction to the `Click to Pay Drop-In UI`",
+      "byte_start": 8113,
+      "byte_end": 10026,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-intro_fig1",
+      "title": "Figure:",
+      "byte_start": 10026,
+      "byte_end": 10325,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-intro_fig1",
+      "heading_level": 4
+    },
+    {
+      "anchor": "ctp-intro_fig_dwv_t41_3jc",
+      "title": "Figure:",
+      "byte_start": 10325,
+      "byte_end": 11139,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-intro_fig_dwv_t41_3jc",
+      "heading_level": 4
+    },
+    {
+      "anchor": "ctp-walkthrough-intro",
+      "title": "`Click to Pay` Customer Workflows",
+      "byte_start": 11139,
+      "byte_end": 12365,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-walkthrough-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-walkthrough-recognized",
+      "title": "Recognized `Click to Pay` Customer",
+      "byte_start": 12365,
+      "byte_end": 13094,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-walkthrough-recognized",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-walkthrough-recognized_fig-ctp-recog-device",
+      "title": "Figure:",
+      "byte_start": 13094,
+      "byte_end": 13369,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-walkthrough-recognized_fig-ctp-recog-device",
+      "heading_level": 4
+    },
+    {
+      "anchor": "ctp-walkthrough-unrecognized",
+      "title": "Unrecognized `Click to Pay` Customer",
+      "byte_start": 13369,
+      "byte_end": 14399,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-walkthrough-unrecognized",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-walkthrough-unrecognized_fig-ctp-recog-account",
+      "title": "Figure:",
+      "byte_start": 14399,
+      "byte_end": 14703,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-walkthrough-unrecognized_fig-ctp-recog-account",
+      "heading_level": 4
+    },
+    {
+      "anchor": "ctp-walkthrough-guest",
+      "title": "Guest Customer",
+      "byte_start": 14703,
+      "byte_end": 15611,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-walkthrough-guest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-walkthrough-guest_fig-ctp-no-account",
+      "title": "Figure:",
+      "byte_start": 15611,
+      "byte_end": 15848,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-walkthrough-guest_fig-ctp-no-account",
+      "heading_level": 4
+    },
+    {
+      "anchor": "ctp_uc_getting_started_integration_flow",
+      "title": "`Click to Pay Drop-In UI` Flow",
+      "byte_start": 15848,
+      "byte_end": 17162,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp_uc_getting_started_integration_flow",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp_uc_getting_started_integration_flow_fig_uc-payment-flow",
+      "title": "Figure:",
+      "byte_start": 17162,
+      "byte_end": 17969,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp_uc_getting_started_integration_flow_fig_uc-payment-flow",
+      "heading_level": 4
+    },
+    {
+      "anchor": "ctp-uc-enabling-ebc",
+      "title": "Enabling `Click to Pay` in the `Business Center`",
+      "byte_start": 17969,
+      "byte_end": 20613,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-uc-enabling-ebc",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-config-ctp-boarding",
+      "title": "Add `Click to Pay` to a Merchant Account",
+      "byte_start": 20613,
+      "byte_end": 23661,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#boarding-config-ctp-boarding",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp_enable_digital_pay_intro",
+      "title": "Enable `Click to Pay`",
+      "byte_start": 23661,
+      "byte_end": 24194,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp_enable_digital_pay_intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-click-to-pay-enable-intro",
+      "title": "Enabling `Click to Pay Drop-In UI` Using the API",
+      "byte_start": 24194,
+      "byte_end": 25214,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#boarding-click-to-pay-enable-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-click-to-pay-enable-intro_d11e752",
+      "title": "Endpoint",
+      "byte_start": 25214,
+      "byte_end": 25578,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#boarding-click-to-pay-enable-intro_d11e752",
+      "heading_level": 2
+    },
+    {
+      "anchor": "boarding-click-to-pay-enable-reqfields",
+      "title": "Required Fields for Enabling `Click to Pay Drop-In UI`",
+      "byte_start": 25578,
+      "byte_end": 27097,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#boarding-click-to-pay-enable-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-click-to-pay-enable-reqfields_section_dgl_c11_3jc",
+      "title": "Related Information",
+      "byte_start": 27097,
+      "byte_end": 27484,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#boarding-click-to-pay-enable-reqfields_section_dgl_c11_3jc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "boarding-click-to-pay-enable-optfields",
+      "title": "Optional Fields for Enabling `Click to Pay Drop-In UI`",
+      "byte_start": 27484,
+      "byte_end": 28860,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#boarding-click-to-pay-enable-optfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-click-to-pay-enable-optfields_section_dgl_c11_3jc",
+      "title": "Related Information",
+      "byte_start": 28860,
+      "byte_end": 29247,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#boarding-click-to-pay-enable-optfields_section_dgl_c11_3jc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "boarding-click-to-pay-enable-ex-rest",
+      "title": "REST Example: Enabling `Click to Pay Drop-In UI`",
+      "byte_start": 29247,
+      "byte_end": 31199,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#boarding-click-to-pay-enable-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-enable-digital-pay-ctp",
+      "title": "Enabling `Click to Pay` in the `Business Center`",
+      "byte_start": 31199,
+      "byte_end": 33175,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-enable-digital-pay-ctp",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-getting-started-ss-setup",
+      "title": "Server-Side Set Up",
+      "byte_start": 33175,
+      "byte_end": 34352,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-getting-started-ss-setup",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-capture-context-intro",
+      "title": "Capture Context Using the Sessions API",
+      "byte_start": 34352,
+      "byte_end": 37930,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-capture-context-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-getting-started-cs-setup-intro",
+      "title": "Client-Side Set Up",
+      "byte_start": 37930,
+      "byte_end": 39280,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-getting-started-cs-setup-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-getting-started-cs-js-library-intro",
+      "title": "Loading the JavaScript Library and Invoking the Accept Function",
+      "byte_start": 39280,
+      "byte_end": 41087,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-getting-started-cs-js-library-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-getting-started-cs-js-library-example",
+      "title": "JavaScript Example: Initializing the SDK",
+      "byte_start": 41087,
+      "byte_end": 41972,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-getting-started-cs-js-library-example",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-getting-started-cs-js-button-example",
+      "title": "JavaScript Example: Displaying the Button List",
+      "byte_start": 41972,
+      "byte_end": 42769,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-getting-started-cs-js-button-example",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-getting-started-cs-js-trigger-ctp-pan-example",
+      "title": "JavaScript Example: Client-Defined Trigger for `Click to Pay` or PAN Entry",
+      "byte_start": 42769,
+      "byte_end": 43827,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-getting-started-cs-js-trigger-ctp-pan-example",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-getting-started-button-widget-intro",
+      "title": "Adding the Payment Application and Payment Acceptance",
+      "byte_start": 43827,
+      "byte_end": 44514,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-getting-started-button-widget-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-getting-started-button-widget-sidebar",
+      "title": "JavaScript Example: Setting Up with Full Sidebar",
+      "byte_start": 44514,
+      "byte_end": 45870,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-getting-started-button-widget-sidebar",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-getting-started-button-widget-embedded",
+      "title": "JavaScript Example: Setting Up with the Embedded Component",
+      "byte_start": 45870,
+      "byte_end": 47758,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-getting-started-button-widget-embedded",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-setup-capture-context",
+      "title": "Sessions API - Capture Context",
+      "byte_start": 47758,
+      "byte_end": 56410,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-setup-capture-context",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-capture-context-features",
+      "title": "Features",
+      "byte_start": 56410,
+      "byte_end": 56582,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-capture-context-features",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-cc-allowed-card-networks",
+      "title": "Allowed Card Networks",
+      "byte_start": 56582,
+      "byte_end": 58328,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-cc-allowed-card-networks",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-cc-target-origin",
+      "title": "Target Origins",
+      "byte_start": 58328,
+      "byte_end": 59271,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-cc-target-origin",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-cc-allowed-pay-type",
+      "title": "Allowed Payment Types",
+      "byte_start": 59271,
+      "byte_end": 60235,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-cc-allowed-pay-type",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-cc-ctp-enroll-precheck",
+      "title": "Auto-check Enrollment",
+      "byte_start": 60235,
+      "byte_end": 61179,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-cc-ctp-enroll-precheck",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-cc-button-type",
+      "title": "Button Type",
+      "byte_start": 61179,
+      "byte_end": 62063,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-cc-button-type",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-session-button-text",
+      "title": "Customize Button Text",
+      "byte_start": 62063,
+      "byte_end": 62875,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-session-button-text",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-cc-capture-mandate",
+      "title": "Capture Mandate",
+      "byte_start": 62875,
+      "byte_end": 63788,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-cc-capture-mandate",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-cc-capture-combo-cards",
+      "title": "captureMandate.comboCard",
+      "byte_start": 63788,
+      "byte_end": 65069,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-cc-capture-combo-cards",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-cc-capture-cpf",
+      "title": "captureMandate.CPF",
+      "byte_start": 65069,
+      "byte_end": 65671,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-cc-capture-cpf",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-cc-capture-save-card",
+      "title": "captureMandate.requestSaveCredentials",
+      "byte_start": 65671,
+      "byte_end": 66324,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-cc-capture-save-card",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-cc-capture-rem-confirm-screen",
+      "title": "captureMandate.showConfirmationStep",
+      "byte_start": 66324,
+      "byte_end": 66873,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-cc-capture-rem-confirm-screen",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-cc-capture-billing-type",
+      "title": "captureMandate.billingType",
+      "byte_start": 66873,
+      "byte_end": 68130,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-cc-capture-billing-type",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-cc-capture-req-email",
+      "title": "captureMandate.requestEmail",
+      "byte_start": 68130,
+      "byte_end": 68630,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-cc-capture-req-email",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-cc-capture-req-phone",
+      "title": "captureMandate.requestPhone",
+      "byte_start": 68630,
+      "byte_end": 68861,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-cc-capture-req-phone",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-cc-capture-req-ship",
+      "title": "captureMandate.requestShipping",
+      "byte_start": 68861,
+      "byte_end": 69452,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-cc-capture-req-ship",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-cc-capture-ship-to",
+      "title": "captureMandate.shipToCountries",
+      "byte_start": 69452,
+      "byte_end": 69730,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-cc-capture-ship-to",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-cc-include-prefix",
+      "title": "Include Card Prefix",
+      "byte_start": 69730,
+      "byte_end": 72616,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-cc-include-prefix",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-cc-email-autolookup",
+      "title": "Email Autolookup",
+      "byte_start": 72616,
+      "byte_end": 73224,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-cc-email-autolookup",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-cc-mobile-identity",
+      "title": "Mobile as Identity for `Click to Pay`",
+      "byte_start": 73224,
+      "byte_end": 74082,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-cc-mobile-identity",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-cc-ui-ux-look-feel",
+      "title": "UI/UX Customization Look and Feel",
+      "byte_start": 74082,
+      "byte_end": 78655,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-cc-ui-ux-look-feel",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-capture-context-versions",
+      "title": "Client Version History",
+      "byte_start": 78655,
+      "byte_end": 80700,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-capture-context-versions",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-setup-capture-context-intro",
+      "title": "Requesting the Capture Context Using the Sessions API",
+      "byte_start": 80700,
+      "byte_end": 80939,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-setup-capture-context-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-setup-capture-context-intro_d14e1021",
+      "title": "Endpoint",
+      "byte_start": 80939,
+      "byte_end": 81539,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-setup-capture-context-intro_d14e1021",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-setup-capture-context-req-fields",
+      "title": "Required Fields for Requesting the Capture Context",
+      "byte_start": 81539,
+      "byte_end": 81781,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-setup-capture-context-req-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-setup-capture-context-req-fields_req-fields-uc-capture-ctx",
+      "title": "Required Fields for Requesting the Capture Context",
+      "byte_start": 81781,
+      "byte_end": 83058,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-setup-capture-context-req-fields_req-fields-uc-capture-ctx",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-setup-capture-context-req-fields_section_ybj_nzz_sxb",
+      "title": "Related Information",
+      "byte_start": 83058,
+      "byte_end": 83444,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-setup-capture-context-req-fields_section_ybj_nzz_sxb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-setup-capture-context-example",
+      "title": "REST Example: Requesting the Capture Context",
+      "byte_start": 83444,
+      "byte_end": 98069,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-setup-capture-context-example",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-validate-capture-context-intro",
+      "title": "Validating the Capture Context",
+      "byte_start": 98069,
+      "byte_end": 101923,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-validate-capture-context-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-session-validate",
+      "title": "Session Validation",
+      "byte_start": 101923,
+      "byte_end": 102785,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-session-validate",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-tokens-intro",
+      "title": "Transient Tokens",
+      "byte_start": 102785,
+      "byte_end": 103541,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-tokens-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-tokens-format",
+      "title": "Transient Token Format",
+      "byte_start": 103541,
+      "byte_end": 103979,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-tokens-format",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-trans-tkn-ex",
+      "title": "Example: Transient Token Format",
+      "byte_start": 103979,
+      "byte_end": 111075,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-trans-tkn-ex",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-tokens-verification",
+      "title": "Token Verification",
+      "byte_start": 111075,
+      "byte_end": 112714,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-tokens-verification",
+      "heading_level": 1
+    },
+    {
+      "anchor": "dual-co-brand-card-support",
+      "title": "Dual-Branded Cards",
+      "byte_start": 112714,
+      "byte_end": 114146,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#dual-co-brand-card-support",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-dual-co-brand-card-support",
+      "title": "Dual-Branded Cards",
+      "byte_start": 114146,
+      "byte_end": 115586,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-dual-co-brand-card-support",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-token-get-pymnt-details",
+      "title": "Payment Details API",
+      "byte_start": 115586,
+      "byte_end": 117212,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-token-get-pymnt-details",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-token-get-pymnt-details_d14e1140",
+      "title": "Endpoint",
+      "byte_start": 117212,
+      "byte_end": 118001,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-token-get-pymnt-details_d14e1140",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-token-get-pymnt-details-required",
+      "title": "Required Field for Retrieving Transient Token Payment Details",
+      "byte_start": 118001,
+      "byte_end": 118375,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-token-get-pymnt-details-required",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-token-get-pymnt-details-ex-rest",
+      "title": "REST Example: Retrieving Transient Token Payment Details",
+      "byte_start": 118375,
+      "byte_end": 119420,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-token-get-pymnt-details-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-token-get-pymnt-credentials",
+      "title": "Payment Credentials API",
+      "byte_start": 119420,
+      "byte_end": 122992,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-token-get-pymnt-credentials",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-token-get-pymnt-credentials_d14e634",
+      "title": "Endpoint",
+      "byte_start": 122992,
+      "byte_end": 123805,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-token-get-pymnt-credentials_d14e634",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-token-get-payment-credentials-required",
+      "title": "Required Field for Retrieving Payment Credentials",
+      "byte_start": 123805,
+      "byte_end": 124547,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-token-get-payment-credentials-required",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-token-get-payment-credentials-example-rest",
+      "title": "REST Example: Retrieving Payment Credentials",
+      "byte_start": 124547,
+      "byte_end": 130247,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-token-get-payment-credentials-example-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-appendix-js-reference_api_reference",
+      "title": "JavaScript API Reference",
+      "byte_start": 130247,
+      "byte_end": 130499,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-appendix-js-reference_api_reference",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-appendix-js-class-accept",
+      "title": "Class: Accept",
+      "byte_start": 130499,
+      "byte_end": 133354,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-appendix-js-class-accept",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-appendix-js-class-accept-error",
+      "title": "Class: AcceptError",
+      "byte_start": 133354,
+      "byte_end": 138156,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-appendix-js-class-accept-error",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-appendix-js-class-unified-payments",
+      "title": "Class: UnifiedPayments",
+      "byte_start": 138156,
+      "byte_end": 138516,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-appendix-js-class-unified-payments",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-appendix-js-class-unified-payments_section_n1t_k5v_ncc",
+      "title": "Methods",
+      "byte_start": 138516,
+      "byte_end": 143192,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-appendix-js-class-unified-payments_section_n1t_k5v_ncc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp_appendix_js_initialize",
+      "title": "VAS.UnifiedCheckout(sessionJWT)",
+      "byte_start": 143192,
+      "byte_end": 144149,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp_appendix_js_initialize",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-appendix-js-interface",
+      "title": "UnifiedCheckoutInterface",
+      "byte_start": 144149,
+      "byte_end": 144372,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-appendix-js-interface",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-appendix-js-interface_section_zcx_g1s_hjc",
+      "title": "client.createCheckout(options?)",
+      "byte_start": 144372,
+      "byte_end": 145461,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-appendix-js-interface_section_zcx_g1s_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-appendix-js-interface_section_fdx_g1s_hjc",
+      "title": "client.createTrigger(paymentType, options?)",
+      "byte_start": 145461,
+      "byte_end": 146362,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-appendix-js-interface_section_fdx_g1s_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-appendix-js-interface_section_qdx_g1s_hjc",
+      "title": "client.on(event, callback)",
+      "byte_start": 146362,
+      "byte_end": 147794,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-appendix-js-interface_section_qdx_g1s_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-appendix-js-interface_section_wdx_g1s_hjc",
+      "title": "client.off(event, callback?)",
+      "byte_start": 147794,
+      "byte_end": 148660,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-appendix-js-interface_section_wdx_g1s_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-appendix-js-interface_section_ydx_g1s_hjc",
+      "title": "client.destroy()",
+      "byte_start": 148660,
+      "byte_end": 148964,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-appendix-js-interface_section_ydx_g1s_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-appendix-js-interface_section_zdx_g1s_hjc",
+      "title": "client.isDestroyed()",
+      "byte_start": 148964,
+      "byte_end": 149163,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-appendix-js-interface_section_zdx_g1s_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-appendix-js-checkout",
+      "title": "Checkout",
+      "byte_start": 149163,
+      "byte_end": 149335,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-appendix-js-checkout",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-appendix-js-checkout_section_c32_hbs_hjc",
+      "title": "checkout.mount(target)",
+      "byte_start": 149335,
+      "byte_end": 151443,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-appendix-js-checkout_section_c32_hbs_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-appendix-js-checkout_section_h32_hbs_hjc",
+      "title": "checkout.unmount()",
+      "byte_start": 151443,
+      "byte_end": 151681,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-appendix-js-checkout_section_h32_hbs_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-appendix-js-checkout_section_n32_hbs_hjc",
+      "title": "checkout.isMounted()",
+      "byte_start": 151681,
+      "byte_end": 151869,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-appendix-js-checkout_section_n32_hbs_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-appendix-js-checkout_section_o32_hbs_hjc",
+      "title": "checkout.isDestroyed()",
+      "byte_start": 151869,
+      "byte_end": 152056,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-appendix-js-checkout_section_o32_hbs_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-appendix-js-checkout_section_p32_hbs_hjc",
+      "title": "checkout.on(event, handler)",
+      "byte_start": 152056,
+      "byte_end": 152502,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-appendix-js-checkout_section_p32_hbs_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-appendix-js-checkout_section_r32_hbs_hjc",
+      "title": "checkout.off(event, handler?)",
+      "byte_start": 152502,
+      "byte_end": 152694,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-appendix-js-checkout_section_r32_hbs_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-appendix-js-checkout_section_s32_hbs_hjc",
+      "title": "checkout.destroy()",
+      "byte_start": 152694,
+      "byte_end": 152950,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-appendix-js-checkout_section_s32_hbs_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-appendix-js-trigger",
+      "title": "Trigger",
+      "byte_start": 152950,
+      "byte_end": 153131,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-appendix-js-trigger",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-appendix-js-trigger_section_nmc_sbs_hjc",
+      "title": "trigger.mount(target?)",
+      "byte_start": 153131,
+      "byte_end": 153938,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-appendix-js-trigger_section_nmc_sbs_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-appendix-js-trigger_section_tmc_sbs_hjc",
+      "title": "trigger.unmount()",
+      "byte_start": 153938,
+      "byte_end": 154129,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-appendix-js-trigger_section_tmc_sbs_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-appendix-js-trigger_section_vmc_sbs_hjc",
+      "title": "trigger.isMounted()",
+      "byte_start": 154129,
+      "byte_end": 154290,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-appendix-js-trigger_section_vmc_sbs_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-appendix-js-trigger_section_wmc_sbs_hjc",
+      "title": "trigger.isDestroyed()",
+      "byte_start": 154290,
+      "byte_end": 154455,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-appendix-js-trigger_section_wmc_sbs_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-appendix-js-trigger_section_xmc_sbs_hjc",
+      "title": "trigger.on(event, handler)",
+      "byte_start": 154455,
+      "byte_end": 154685,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-appendix-js-trigger_section_xmc_sbs_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-appendix-js-trigger_section_ymc_sbs_hjc",
+      "title": "trigger.off(event, handler?)",
+      "byte_start": 154685,
+      "byte_end": 154872,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-appendix-js-trigger_section_ymc_sbs_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-appendix-js-trigger_section_zmc_sbs_hjc",
+      "title": "trigger.destroy()",
+      "byte_start": 154872,
+      "byte_end": 155038,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-appendix-js-trigger_section_zmc_sbs_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp_appendix_js_events",
+      "title": "Events",
+      "byte_start": 155038,
+      "byte_end": 155250,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp_appendix_js_events",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp_appendix_js_events_section_r13_l2n_djc",
+      "title": "Subscribe to Events",
+      "byte_start": 155250,
+      "byte_end": 155787,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp_appendix_js_events_section_r13_l2n_djc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-configuration-intro",
+      "title": "`Unified Checkout` Configuration",
+      "byte_start": 155787,
+      "byte_end": 156471,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-configuration-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-upload-encrypt-key-intro",
+      "title": "Upload Your Encryption Key",
+      "byte_start": 156471,
+      "byte_end": 157063,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-upload-encrypt-key-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-generate-keypair",
+      "title": "Generate a Public Private Key Pair",
+      "byte_start": 157063,
+      "byte_end": 158078,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-generate-keypair",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-upload-key",
+      "title": "Uploading Your Key Pair",
+      "byte_start": 158078,
+      "byte_end": 159123,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-upload-key",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp_enable_digital_pay_intro",
+      "title": "Enable `Click to Pay`",
+      "byte_start": 159123,
+      "byte_end": 159609,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp_enable_digital_pay_intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-enable-digital-pay-ctp",
+      "title": "Enabling `Click to Pay`",
+      "byte_start": 159609,
+      "byte_end": 161849,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-enable-digital-pay-ctp",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-manage-permissions-intro",
+      "title": "Manage Permissions",
+      "byte_start": 161849,
+      "byte_end": 163308,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-manage-permissions-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-manage-permissions-merch",
+      "title": "Managing Permissions as a Direct Merchant",
+      "byte_start": 163308,
+      "byte_end": 164486,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-manage-permissions-merch",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-manage-permissions-port",
+      "title": "Managing Permissions as a Portfolio Administrator",
+      "byte_start": 164486,
+      "byte_end": 166224,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-manage-permissions-port",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-authentication",
+      "title": "Click to Pay Customer Authentication",
+      "byte_start": 166224,
+      "byte_end": 167834,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-authentication",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-authentication_section_rkj_xcs_hjc",
+      "title": "Authentication Flow",
+      "byte_start": 167834,
+      "byte_end": 168188,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-authentication_section_rkj_xcs_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-authentication-steps",
+      "title": "Set Up Customer Authentication for Click to Pay",
+      "byte_start": 168188,
+      "byte_end": 171135,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-authentication-steps",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-authentication-methods",
+      "title": "Authentication Methods",
+      "byte_start": 171135,
+      "byte_end": 173121,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-authentication-methods",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-click-to-pay-auth-enable-intro",
+      "title": "Enable `Click to Pay` Customer Authentication Using the API",
+      "byte_start": 173121,
+      "byte_end": 173447,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#boarding-click-to-pay-auth-enable-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-click-to-pay-auth-enable-intro_d11e752",
+      "title": "Endpoint",
+      "byte_start": 173447,
+      "byte_end": 173831,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#boarding-click-to-pay-auth-enable-intro_d11e752",
+      "heading_level": 2
+    },
+    {
+      "anchor": "boarding-click-to-pay-auth-enable-reqfields",
+      "title": "Required Fields for Enabling `Click to Pay` Authentication",
+      "byte_start": 173831,
+      "byte_end": 175814,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#boarding-click-to-pay-auth-enable-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-click-to-pay-auth-enable-reqfields_section_dgl_c11_3jc",
+      "title": "Related Information",
+      "byte_start": 175814,
+      "byte_end": 176216,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#boarding-click-to-pay-auth-enable-reqfields_section_dgl_c11_3jc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "boarding-click-to-pay-auth-enable-optfields",
+      "title": "Optional Fields for Enabling `Click to Pay` Authentication",
+      "byte_start": 176216,
+      "byte_end": 177210,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#boarding-click-to-pay-auth-enable-optfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-click-to-pay-auth-enable-optfields_section_dgl_c11_3jc",
+      "title": "Related Information",
+      "byte_start": 177210,
+      "byte_end": 177612,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#boarding-click-to-pay-auth-enable-optfields_section_dgl_c11_3jc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "boarding-click-to-pay-auth-enable-ex-rest",
+      "title": "REST Example: Enabling `Click to Pay` Authentication",
+      "byte_start": 177612,
+      "byte_end": 179587,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#boarding-click-to-pay-auth-enable-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-authentication-config-ebc",
+      "title": "Enable Click to Pay Customer Authentication Using the `Business Center`",
+      "byte_start": 179587,
+      "byte_end": 182742,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-authentication-config-ebc",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-upload-encrypt-key-intro",
+      "title": "Upload Your Encryption Key",
+      "byte_start": 182742,
+      "byte_end": 183929,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-upload-encrypt-key-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-generate-keypair",
+      "title": "Generate a Public Private Key Pair",
+      "byte_start": 183929,
+      "byte_end": 184984,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-generate-keypair",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-upload-key",
+      "title": "Uploading Your Key Pair",
+      "byte_start": 184984,
+      "byte_end": 186353,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-upload-key",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-testing-intro",
+      "title": "Test Your `Click to Pay` Configuration",
+      "byte_start": 186353,
+      "byte_end": 186558,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-testing-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp_reference_test_cards",
+      "title": "Test Payment Details",
+      "byte_start": 186558,
+      "byte_end": 190225,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp_reference_test_cards",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_appendix_handle_errors",
+      "title": "Handle Errors",
+      "byte_start": 190225,
+      "byte_end": 190514,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc_appendix_handle_errors",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_handle_errors_uc_checkout",
+      "title": "UnifiedCheckoutError",
+      "byte_start": 190514,
+      "byte_end": 191713,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc_handle_errors_uc_checkout",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_handle_errors_detect",
+      "title": "Detect Errors",
+      "byte_start": 191713,
+      "byte_end": 192414,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc_handle_errors_detect",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_handle_errors_pattern",
+      "title": "Error Handling Patterns",
+      "byte_start": 192414,
+      "byte_end": 193601,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc_handle_errors_pattern",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-handle-errors-codes",
+      "title": "Error Codes",
+      "byte_start": 193601,
+      "byte_end": 193680,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-handle-errors-codes",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-handle-errors-codes_section_kw4_czg_3jc",
+      "title": "Initialization Errors",
+      "byte_start": 193680,
+      "byte_end": 194715,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-handle-errors-codes_section_kw4_czg_3jc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-handle-errors-codes_section_ow4_czg_3jc",
+      "title": "Mount Errors",
+      "byte_start": 194715,
+      "byte_end": 196859,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-handle-errors-codes_section_ow4_czg_3jc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-handle-errors-codes_section_sw4_czg_3jc",
+      "title": "Checkout Errors",
+      "byte_start": 196859,
+      "byte_end": 197477,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-handle-errors-codes_section_sw4_czg_3jc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-handle-errors-codes_section_vw4_czg_3jc",
+      "title": "Trigger Errors",
+      "byte_start": 197477,
+      "byte_end": 198095,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-handle-errors-codes_section_vw4_czg_3jc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-handle-errors-codes_section_xw4_czg_3jc",
+      "title": "**Payment-Specific Errors**",
+      "byte_start": 198095,
+      "byte_end": 198973,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-handle-errors-codes_section_xw4_czg_3jc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-handle-errors-codes_section_zw4_czg_3jc",
+      "title": "General Errors",
+      "byte_start": 198973,
+      "byte_end": 199258,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-handle-errors-codes_section_zw4_czg_3jc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-appendix-jwts",
+      "title": "JSON Web Tokens",
+      "byte_start": 199258,
+      "byte_end": 200896,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-appendix-jwts",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-appendix-reason-codes",
+      "title": "Reason Codes",
+      "byte_start": 200896,
+      "byte_end": 220817,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-appendix-reason-codes",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_appendix_supp_countries",
+      "title": "Supported Countries for `Click to Pay`",
+      "byte_start": 220817,
+      "byte_end": 221615,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc_appendix_supp_countries",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-appendix-languages",
+      "title": "Supported Locales",
+      "byte_start": 221615,
+      "byte_end": 222392,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-appendix-languages",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-capture-context-versions",
+      "title": "Client Version History",
+      "byte_start": 222392,
+      "byte_end": 224500,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-capture-context-versions",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-appendix-cust-matrix",
+      "title": "Customization Matrix",
+      "byte_start": 224500,
+      "byte_end": 232734,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-appendix-cust-matrix",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-appendix-jwts",
+      "title": "JSON Web Tokens",
+      "byte_start": 232734,
+      "byte_end": 234514,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-appendix-jwts",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-appendix-reason-codes",
+      "title": "Reason Codes",
+      "byte_start": 234514,
+      "byte_end": 250815,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-appendix-reason-codes",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-getting-started-cs-js-library-intro",
+      "title": "Loading the JavaScript Library",
+      "byte_start": 250815,
+      "byte_end": 252727,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-getting-started-cs-js-library-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-token-get-pymnt-details",
+      "title": "Payment Details API",
+      "byte_start": 252727,
+      "byte_end": 254306,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-token-get-pymnt-details",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-token-get-pymnt-details_d14e1140",
+      "title": "Endpoint",
+      "byte_start": 254306,
+      "byte_end": 255095,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-token-get-pymnt-details_d14e1140",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-authentication",
+      "title": "Click to Pay Customer Authentication",
+      "byte_start": 255095,
+      "byte_end": 256382,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-authentication",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-getting-started-cs-js-trigger-ctp-pan-example",
+      "title": "JavaScript Example: Client-Defined Trigger for `Click to Pay` or PAN Entry",
+      "byte_start": 256382,
+      "byte_end": 257322,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-getting-started-cs-js-trigger-ctp-pan-example",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-capture-context-versions",
+      "title": "Client Version History",
+      "byte_start": 257322,
+      "byte_end": 260541,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-capture-context-versions",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-capture-context-intro",
+      "title": "Capture Context",
+      "byte_start": 260541,
+      "byte_end": 262317,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-capture-context-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-capture-context-intro_uc-capture-context-codeblock",
+      "title": "Capture Context Example",
+      "byte_start": 262317,
+      "byte_end": 264809,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-capture-context-intro_uc-capture-context-codeblock",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-capture-context-intro_uc-capture-context-diagram",
+      "title": "Card Entry Form",
+      "byte_start": 264809,
+      "byte_end": 265387,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-capture-context-intro_uc-capture-context-diagram",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-token-get-pymnt-credentials",
+      "title": "Payment Credentials API",
+      "byte_start": 265387,
+      "byte_end": 269711,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-token-get-pymnt-credentials",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-token-get-pymnt-credentials_d14e634",
+      "title": "Endpoint",
+      "byte_start": 269711,
+      "byte_end": 270440,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-token-get-pymnt-credentials_d14e634",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-enable-digital-pay-applepay",
+      "title": "Enrolling in Apple Pay",
+      "byte_start": 270440,
+      "byte_end": 272264,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-enable-digital-pay-applepay",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-ui-screens",
+      "title": "`Click to Pay` UI Guidelines",
+      "byte_start": 272264,
+      "byte_end": 274108,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-ui-screens",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-ui-screens_section_ih5_35s_hjc",
+      "title": "Recognized `Click to Pay` Customer",
+      "byte_start": 274108,
+      "byte_end": 274371,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-ui-screens_section_ih5_35s_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-ui-screens_fig-ctp-recog-device",
+      "title": "Figure:",
+      "byte_start": 274371,
+      "byte_end": 274634,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-ui-screens_fig-ctp-recog-device",
+      "heading_level": 4
+    },
+    {
+      "anchor": "ctp-ui-screens_section_kh5_35s_hjc",
+      "title": "Unrecognized `Click to Pay` Customer",
+      "byte_start": 274634,
+      "byte_end": 275043,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-ui-screens_section_kh5_35s_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-ui-screens_fig-ctp-recog-account",
+      "title": "Figure:",
+      "byte_start": 275043,
+      "byte_end": 275333,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-ui-screens_fig-ctp-recog-account",
+      "heading_level": 4
+    },
+    {
+      "anchor": "ctp-ui-screens_section_mh5_35s_hjc",
+      "title": "No `Click to Pay` Account",
+      "byte_start": 275333,
+      "byte_end": 275770,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-ui-screens_section_mh5_35s_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-ui-screens_fig-ctp-no-account",
+      "title": "Figure:",
+      "byte_start": 275770,
+      "byte_end": 276020,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-ui-screens_fig-ctp-no-account",
+      "heading_level": 4
+    },
+    {
+      "anchor": "uc-appendix-ui-ux-ex",
+      "title": "`Click to Pay` UI Examples",
+      "byte_start": 276020,
+      "byte_end": 276543,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-appendix-ui-ux-ex",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-appendix-ui-ux-ex_fig-ctp-ex1",
+      "title": "Figure:",
+      "byte_start": 276543,
+      "byte_end": 276805,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-appendix-ui-ux-ex_fig-ctp-ex1",
+      "heading_level": 4
+    },
+    {
+      "anchor": "uc-appendix-ui-ux-ex_fig-ctp-ex2",
+      "title": "Figure:",
+      "byte_start": 276805,
+      "byte_end": 277502,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-appendix-ui-ux-ex_fig-ctp-ex2",
+      "heading_level": 4
+    },
+    {
+      "anchor": "uc-appendix-ui-ux-ex_fig-ctp-ex3",
+      "title": "Figure:",
+      "byte_start": 277502,
+      "byte_end": 278288,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-appendix-ui-ux-ex_fig-ctp-ex3",
+      "heading_level": 4
+    },
+    {
+      "anchor": "uc-appendix-ui-ux-ex_fig-ctp-ex4",
+      "title": "Figure:",
+      "byte_start": 278288,
+      "byte_end": 279229,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-appendix-ui-ux-ex_fig-ctp-ex4",
+      "heading_level": 4
+    },
+    {
+      "anchor": "uc-appendix-ui-ux-ex_fig-ctp-ex5",
+      "title": "Figure:",
+      "byte_start": 279229,
+      "byte_end": 280001,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-appendix-ui-ux-ex_fig-ctp-ex5",
+      "heading_level": 4
+    },
+    {
+      "anchor": "uc-appendix-ui-ux-ex_fig-ctp-ex6",
+      "title": "Figure:",
+      "byte_start": 280001,
+      "byte_end": 280260,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-appendix-ui-ux-ex_fig-ctp-ex6",
+      "heading_level": 4
+    },
+    {
+      "anchor": "uc-appendix-ui-ux-ex_fig-ctp-ex7",
+      "title": "Figure:",
+      "byte_start": 280260,
+      "byte_end": 280519,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-appendix-ui-ux-ex_fig-ctp-ex7",
+      "heading_level": 4
+    },
+    {
+      "anchor": "uc-appendix-ui-ux-ex_fig-ctp-ex8",
+      "title": "Figure:",
+      "byte_start": 280519,
+      "byte_end": 280778,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-appendix-ui-ux-ex_fig-ctp-ex8",
+      "heading_level": 4
+    },
+    {
+      "anchor": "ctp-appendix-ui-ux-ex",
+      "title": "`Click to Pay` UI Examples",
+      "byte_start": 280778,
+      "byte_end": 281153,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-appendix-ui-ux-ex",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-appendix-ui-ux-ex_section_gxs_2tz_hjc",
+      "title": "`Click to Pay` Replaces PAN Capture",
+      "byte_start": 281153,
+      "byte_end": 281391,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-appendix-ui-ux-ex_section_gxs_2tz_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-appendix-ui-ux-ex_fig-ctp-ex1",
+      "title": "Figure:",
+      "byte_start": 281391,
+      "byte_end": 281654,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-appendix-ui-ux-ex_fig-ctp-ex1",
+      "heading_level": 4
+    },
+    {
+      "anchor": "ctp-appendix-ui-ux-ex_fig-ctp-ex2",
+      "title": "Figure:",
+      "byte_start": 281654,
+      "byte_end": 282180,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-appendix-ui-ux-ex_fig-ctp-ex2",
+      "heading_level": 4
+    },
+    {
+      "anchor": "ctp-appendix-ui-ux-ex_section_jxs_2tz_hjc",
+      "title": "`Click to Pay` as Radio Button",
+      "byte_start": 282180,
+      "byte_end": 282511,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-appendix-ui-ux-ex_section_jxs_2tz_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-appendix-ui-ux-ex_fig-ctp-ex3",
+      "title": "Figure:",
+      "byte_start": 282511,
+      "byte_end": 282764,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-appendix-ui-ux-ex_fig-ctp-ex3",
+      "heading_level": 4
+    },
+    {
+      "anchor": "ctp-appendix-ui-ux-ex_section_lxs_2tz_hjc",
+      "title": "`Click to Pay` Icon on Radio Button",
+      "byte_start": 282764,
+      "byte_end": 283464,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-appendix-ui-ux-ex_section_lxs_2tz_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-appendix-ui-ux-ex_fig-ctp-ex4",
+      "title": "Figure:",
+      "byte_start": 283464,
+      "byte_end": 283725,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-appendix-ui-ux-ex_fig-ctp-ex4",
+      "heading_level": 4
+    },
+    {
+      "anchor": "ctp-appendix-ui-ux-ex_section_nxs_2tz_hjc",
+      "title": "Load `Click to Pay` Automatically From Trigger",
+      "byte_start": 283725,
+      "byte_end": 284578,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-appendix-ui-ux-ex_section_nxs_2tz_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-appendix-ui-ux-ex_fig-ctp-ex5",
+      "title": "Figure:",
+      "byte_start": 284578,
+      "byte_end": 284844,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-appendix-ui-ux-ex_fig-ctp-ex5",
+      "heading_level": 4
+    },
+    {
+      "anchor": "ctp-appendix-ui-ux-ex_section_pxs_2tz_hjc",
+      "title": "Card Payment Options with `Click to Pay` in UI",
+      "byte_start": 284844,
+      "byte_end": 285441,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-appendix-ui-ux-ex_section_pxs_2tz_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-appendix-ui-ux-ex_fig-ctp-ex6",
+      "title": "Figure:",
+      "byte_start": 285441,
+      "byte_end": 285701,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-appendix-ui-ux-ex_fig-ctp-ex6",
+      "heading_level": 4
+    },
+    {
+      "anchor": "ctp-appendix-ui-ux-ex_fig-ctp-ex7",
+      "title": "Figure:",
+      "byte_start": 285701,
+      "byte_end": 285961,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-appendix-ui-ux-ex_fig-ctp-ex7",
+      "heading_level": 4
+    },
+    {
+      "anchor": "ctp-appendix-ui-ux-ex_fig-ctp-ex8",
+      "title": "Figure:",
+      "byte_start": 285961,
+      "byte_end": 286221,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#ctp-appendix-ui-ux-ex_fig-ctp-ex8",
+      "heading_level": 4
+    },
+    {
+      "anchor": "uc-getting-started-cs-js-library-example",
+      "title": "JavaScript Example: Initializing the SDK",
+      "byte_start": 286221,
+      "byte_end": 286521,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-getting-started-cs-js-library-example",
+      "heading_level": 1
+    },
+    {
+      "anchor": "dual-co-brand-card-support",
+      "title": "Dual-Branded Cards",
+      "byte_start": 286521,
+      "byte_end": 287956,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#dual-co-brand-card-support",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-authentication-steps",
+      "title": "Set Up Customer Authentication for Visa Click to Pay",
+      "byte_start": 287956,
+      "byte_end": 291537,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-authentication-steps",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_appendix_pass_through_fields",
+      "title": "`Unified Checkout` Field Reference",
+      "byte_start": 291537,
+      "byte_end": 291749,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc_appendix_pass_through_fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_appendix_pass_through_fields_main_fields",
+      "title": "Main Configuration Fields",
+      "byte_start": 291749,
+      "byte_end": 294980,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc_appendix_pass_through_fields_main_fields",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc_appendix_pass_through_fields_order_information_fields",
+      "title": "Order Information Fields",
+      "byte_start": 294980,
+      "byte_end": 309420,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc_appendix_pass_through_fields_order_information_fields",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc_appendix_pass_through_fields_capture_mandate_fields",
+      "title": "Capture Mandate Fields",
+      "byte_start": 309420,
+      "byte_end": 310795,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc_appendix_pass_through_fields_capture_mandate_fields",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc_appendix_pass_through_fields_complete_mandate_fields",
+      "title": "Complete Mandate Fields",
+      "byte_start": 310795,
+      "byte_end": 313596,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc_appendix_pass_through_fields_complete_mandate_fields",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc_appendix_pass_through_fields_buyer_information_fields",
+      "title": "Buyer Information Fields",
+      "byte_start": 313596,
+      "byte_end": 314576,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc_appendix_pass_through_fields_buyer_information_fields",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc_appendix_pass_through_fields_client_reference_information_fields",
+      "title": "Client Reference Information Fields",
+      "byte_start": 314576,
+      "byte_end": 315329,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc_appendix_pass_through_fields_client_reference_information_fields",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc_appendix_pass_through_fields_consumer_authentication_fields",
+      "title": "Consumer Authentication Information Fields",
+      "byte_start": 315329,
+      "byte_end": 316150,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc_appendix_pass_through_fields_consumer_authentication_fields",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc_appendix_pass_through_fields_merchant_information_fields",
+      "title": "Merchant Information Fields",
+      "byte_start": 316150,
+      "byte_end": 317483,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc_appendix_pass_through_fields_merchant_information_fields",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc_appendix_pass_through_fields_processing_information_fields",
+      "title": "Processing Information Fields",
+      "byte_start": 317483,
+      "byte_end": 319670,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc_appendix_pass_through_fields_processing_information_fields",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc_appendix_pass_through_fields_recipient_information_fields",
+      "title": "Recipient Information Fields",
+      "byte_start": 319670,
+      "byte_end": 322022,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc_appendix_pass_through_fields_recipient_information_fields",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc_appendix_pass_through_fields_merchant_defined_information_fields",
+      "title": "Payment Information Fields",
+      "byte_start": 322022,
+      "byte_end": 325059,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc_appendix_pass_through_fields_merchant_defined_information_fields",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc_appendix_pass_through_fields_section_ybj_nzz_sxb",
+      "title": "Related Information",
+      "byte_start": 325059,
+      "byte_end": 325430,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc_appendix_pass_through_fields_section_ybj_nzz_sxb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-enable-digital-pay-google",
+      "title": "Enrolling in Google Pay",
+      "byte_start": 325430,
+      "byte_end": 326301,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-enable-digital-pay-google",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-appendix-languages",
+      "title": "Supported Locales",
+      "byte_start": 326301,
+      "byte_end": 329719,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-appendix-languages",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-tokens-intro",
+      "title": "Transient Tokens",
+      "byte_start": 329719,
+      "byte_end": 330473,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-tokens-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-reference-test-cards",
+      "title": "Test Payment Details",
+      "byte_start": 330473,
+      "byte_end": 332448,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-reference-test-cards",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-reference-test-cards_visa-test-cards",
+      "title": "Visa `Click to Pay` Test Cards",
+      "byte_start": 332448,
+      "byte_end": 335151,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-reference-test-cards_visa-test-cards",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-reference-test-cards_mc-test-cards",
+      "title": "Mastercard `Click to Pay` Test Cards",
+      "byte_start": 335151,
+      "byte_end": 336382,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-reference-test-cards_mc-test-cards",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-reference-test-cards_echeck-test-vals",
+      "title": "Echeck Test Values",
+      "byte_start": 336382,
+      "byte_end": 336701,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-reference-test-cards_echeck-test-vals",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-enable-altpay",
+      "title": "Enrolling in Alternative Payment Methods",
+      "byte_start": 336701,
+      "byte_end": 337024,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-enable-altpay",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-enable-digital-pay-googlepay-manage-authentication",
+      "title": "Managing Google Pay Authentication Types",
+      "byte_start": 337024,
+      "byte_end": 339335,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-enable-digital-pay-googlepay-manage-authentication",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-appendix-js-reference_api_reference",
+      "title": "JavaScript API Reference",
+      "byte_start": 339335,
+      "byte_end": 339578,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-appendix-js-reference_api_reference",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-enable-digital-pay-applepay-prep-test-device",
+      "title": "Preparing a Device for Testing Apple Pay on `Unified Checkout`",
+      "byte_start": 339578,
+      "byte_end": 340556,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-enable-digital-pay-applepay-prep-test-device",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-getting-started-cs-js-button-example",
+      "title": "JavaScript Example: Displaying the Button List",
+      "byte_start": 340556,
+      "byte_end": 341284,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-getting-started-cs-js-button-example",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-appendix-ui-ux-ex",
+      "title": "`Click to Pay` UI Examples",
+      "byte_start": 341284,
+      "byte_end": 341804,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-appendix-ui-ux-ex",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-appendix-ui-ux-ex_fig-ctp-ex1",
+      "title": "Figure:",
+      "byte_start": 341804,
+      "byte_end": 342079,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-appendix-ui-ux-ex_fig-ctp-ex1",
+      "heading_level": 4
+    },
+    {
+      "anchor": "uc-appendix-ui-ux-ex_fig-ctp-ex2",
+      "title": "Figure:",
+      "byte_start": 342079,
+      "byte_end": 342822,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-appendix-ui-ux-ex_fig-ctp-ex2",
+      "heading_level": 4
+    },
+    {
+      "anchor": "uc-appendix-ui-ux-ex_fig-ctp-ex3",
+      "title": "Figure:",
+      "byte_start": 342822,
+      "byte_end": 343621,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-appendix-ui-ux-ex_fig-ctp-ex3",
+      "heading_level": 4
+    },
+    {
+      "anchor": "uc-appendix-ui-ux-ex_fig-ctp-ex4",
+      "title": "Figure:",
+      "byte_start": 343621,
+      "byte_end": 344575,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-appendix-ui-ux-ex_fig-ctp-ex4",
+      "heading_level": 4
+    },
+    {
+      "anchor": "uc-appendix-ui-ux-ex_fig-ctp-ex5",
+      "title": "Figure:",
+      "byte_start": 344575,
+      "byte_end": 345360,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-appendix-ui-ux-ex_fig-ctp-ex5",
+      "heading_level": 4
+    },
+    {
+      "anchor": "uc-appendix-ui-ux-ex_fig-ctp-ex6",
+      "title": "Figure:",
+      "byte_start": 345360,
+      "byte_end": 345632,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-appendix-ui-ux-ex_fig-ctp-ex6",
+      "heading_level": 4
+    },
+    {
+      "anchor": "uc-appendix-ui-ux-ex_fig-ctp-ex7",
+      "title": "Figure:",
+      "byte_start": 345632,
+      "byte_end": 345904,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-appendix-ui-ux-ex_fig-ctp-ex7",
+      "heading_level": 4
+    },
+    {
+      "anchor": "uc-appendix-ui-ux-ex_fig-ctp-ex8",
+      "title": "Figure:",
+      "byte_start": 345904,
+      "byte_end": 346176,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-appendix-ui-ux-ex_fig-ctp-ex8",
+      "heading_level": 4
+    },
+    {
+      "anchor": "uc-appendix-ui-ux",
+      "title": "`Click to Pay` UI Guidelines",
+      "byte_start": 346176,
+      "byte_end": 348102,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-appendix-ui-ux",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-appendix-ui-ux_fig-ctp-recog-device",
+      "title": "Figure:",
+      "byte_start": 348102,
+      "byte_end": 348701,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-appendix-ui-ux_fig-ctp-recog-device",
+      "heading_level": 4
+    },
+    {
+      "anchor": "uc-appendix-ui-ux_fig-ctp-recog-account",
+      "title": "Figure:",
+      "byte_start": 348701,
+      "byte_end": 349355,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-appendix-ui-ux_fig-ctp-recog-account",
+      "heading_level": 4
+    },
+    {
+      "anchor": "uc-appendix-ui-ux_fig-ctp-no-account",
+      "title": "Figure:",
+      "byte_start": 349355,
+      "byte_end": 349608,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-appendix-ui-ux_fig-ctp-no-account",
+      "heading_level": 4
+    },
+    {
+      "anchor": "uc_appendix_authentication",
+      "title": "Test Authentication",
+      "byte_start": 349608,
+      "byte_end": 356454,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc_appendix_authentication",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-dig-wallets-googlepay",
+      "title": "Google Pay",
+      "byte_start": 356454,
+      "byte_end": 356741,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-pay-methods-dig-wallets-googlepay",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-obt-mybank",
+      "title": "MyBank",
+      "byte_start": 356741,
+      "byte_end": 358471,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-pay-methods-obt-mybank",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-enable-digital-pay-echeck",
+      "title": "Enrolling in eCheck/ACH Services",
+      "byte_start": 358471,
+      "byte_end": 359655,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-enable-digital-pay-echeck",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-obt-multibanco",
+      "title": "Multibanco",
+      "byte_start": 359655,
+      "byte_end": 361399,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-pay-methods-obt-multibanco",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-obt-ideal",
+      "title": "iDeal",
+      "byte_start": 361399,
+      "byte_end": 363248,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-pay-methods-obt-ideal",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-dig-wallets-ctp",
+      "title": "`Click to Pay`",
+      "byte_start": 363248,
+      "byte_end": 363614,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-pay-methods-dig-wallets-ctp",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_pay_processing_intro",
+      "title": "Process Payments with `Unified Checkout`",
+      "byte_start": 363614,
+      "byte_end": 366983,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc_pay_processing_intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-appendix-js-reference-v1_api_reference",
+      "title": "JavaScript API Reference",
+      "byte_start": 366983,
+      "byte_end": 367235,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-appendix-js-reference-v1_api_reference",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-intro",
+      "title": "Payment Methods",
+      "byte_start": 367235,
+      "byte_end": 368842,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-pay-methods-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-obt",
+      "title": "Online Bank Transfers",
+      "byte_start": 368842,
+      "byte_end": 373752,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-pay-methods-obt",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-obt-bancontact",
+      "title": "Bancontact",
+      "byte_start": 373752,
+      "byte_end": 375455,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-pay-methods-obt-bancontact",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-wallet-captures",
+      "title": "Captures",
+      "byte_start": 375455,
+      "byte_end": 375720,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-pay-methods-wallet-captures",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-wallet-captures_d9e147",
+      "title": "Endpoint",
+      "byte_start": 375720,
+      "byte_end": 377263,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-pay-methods-wallet-captures_d9e147",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-pay-methods-bnpl-afterpay",
+      "title": "Afterpay",
+      "byte_start": 377263,
+      "byte_end": 380370,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-pay-methods-bnpl-afterpay",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-obt-dragonpay",
+      "title": "DragonPay",
+      "byte_start": 380370,
+      "byte_end": 382113,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-pay-methods-obt-dragonpay",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_ui_config_examples",
+      "title": "Look and Feel UI Examples",
+      "byte_start": 382113,
+      "byte_end": 382313,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc_ui_config_examples",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-reference-test-cards-auth-ctp",
+      "title": "Test Cards for Authentication by `Click to Pay`",
+      "byte_start": 382313,
+      "byte_end": 383693,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-reference-test-cards-auth-ctp",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-bnpl-paypal",
+      "title": "PayPal",
+      "byte_start": 383693,
+      "byte_end": 388565,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-pay-methods-bnpl-paypal",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-bnpl-paypal_section_zfp_mv3_cjc",
+      "title": "Example: Multiple Line-Items",
+      "byte_start": 388565,
+      "byte_end": 389608,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-pay-methods-bnpl-paypal_section_zfp_mv3_cjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc_ui_config_ex_button_list",
+      "title": "Button List",
+      "byte_start": 389608,
+      "byte_end": 390015,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc_ui_config_ex_button_list",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_intro_customer_data",
+      "title": "Configure Customer Data and Payment Flow",
+      "byte_start": 390015,
+      "byte_end": 396258,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc_intro_customer_data",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_cc_complete_mandate",
+      "title": "Complete Mandate",
+      "byte_start": 396258,
+      "byte_end": 397500,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc_cc_complete_mandate",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_ebc_api_info",
+      "title": "Capture Context Fields in the `Business Center`",
+      "byte_start": 397500,
+      "byte_end": 405164,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc_ebc_api_info",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-appendix-uc-auth-ex",
+      "title": "Example: `Unified Checkout` Complete Capture Context",
+      "byte_start": 405164,
+      "byte_end": 415194,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-appendix-uc-auth-ex",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-bnpl-captures",
+      "title": "Captures",
+      "byte_start": 415194,
+      "byte_end": 415455,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-pay-methods-bnpl-captures",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-bnpl-captures_d9e147",
+      "title": "Endpoint",
+      "byte_start": 415455,
+      "byte_end": 416990,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-pay-methods-bnpl-captures_d9e147",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-pay-methods-echeck",
+      "title": "eCheck/ACH Service",
+      "byte_start": 416990,
+      "byte_end": 417789,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-pay-methods-echeck",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-reference-test-cards-uc",
+      "title": "`Unified Checkout` Test Cards",
+      "byte_start": 417789,
+      "byte_end": 420984,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-reference-test-cards-uc",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-obt-venmo",
+      "title": "Venmo",
+      "byte_start": 420984,
+      "byte_end": 425271,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-pay-methods-obt-venmo",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-obt-venmo_section_ar5_zbj_cjc",
+      "title": "Example: Multiple Line-Items",
+      "byte_start": 425271,
+      "byte_end": 426308,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-pay-methods-obt-venmo_section_ar5_zbj_cjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-pay-methods-bnpl",
+      "title": "Buy Now, Pay Later",
+      "byte_start": 426308,
+      "byte_end": 430742,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-pay-methods-bnpl",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-obt-tink",
+      "title": "Tink Pay By Bank",
+      "byte_start": 430742,
+      "byte_end": 435674,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-pay-methods-obt-tink",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-dig-wallets-paze",
+      "title": "Paze",
+      "byte_start": 435674,
+      "byte_end": 436003,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-pay-methods-dig-wallets-paze",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-dig-wallets-applepay",
+      "title": "Apple Pay",
+      "byte_start": 436003,
+      "byte_end": 436398,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-pay-methods-dig-wallets-applepay",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_intro_payment_options",
+      "title": "Configure Payment Options",
+      "byte_start": 436398,
+      "byte_end": 440970,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc_intro_payment_options",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_intro_look_and_feel",
+      "title": "Customize the `Unified Checkout` Look and Feel",
+      "byte_start": 440970,
+      "byte_end": 446515,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc_intro_look_and_feel",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-card",
+      "title": "Cards",
+      "byte_start": 446515,
+      "byte_end": 468311,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-pay-methods-card",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-obt-p24",
+      "title": "Przelewy24\\|P24",
+      "byte_start": 468311,
+      "byte_end": 470064,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-pay-methods-obt-p24",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-ppr-konbini",
+      "title": "Konbini",
+      "byte_start": 470064,
+      "byte_end": 472415,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-pay-methods-ppr-konbini",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-ppr",
+      "title": "Post-Pay Reference Payments",
+      "byte_start": 472415,
+      "byte_end": 474614,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-pay-methods-ppr",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-intro-setup-ebc",
+      "title": "Configure the `Unified Checkout` Merchant Experience",
+      "byte_start": 474614,
+      "byte_end": 476639,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-intro-setup-ebc",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_v1_migration_intro",
+      "title": "Update to `Click to Pay Drop-In UI` Version 1",
+      "byte_start": 476639,
+      "byte_end": 477044,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc_v1_migration_intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_v1_migration_intro_section_nzp_pbt_hjc",
+      "title": "Summary of Changes",
+      "byte_start": 477044,
+      "byte_end": 484123,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc_v1_migration_intro_section_nzp_pbt_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc_v1_migration_intro_section_xzp_pbt_hjc",
+      "title": "Initialization",
+      "byte_start": 484123,
+      "byte_end": 484755,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc_v1_migration_intro_section_xzp_pbt_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc_v1_migration_intro_section_d1q_pbt_hjc",
+      "title": "Display the Payment UI",
+      "byte_start": 484755,
+      "byte_end": 485556,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc_v1_migration_intro_section_d1q_pbt_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc_v1_migration_intro_section_n1q_pbt_hjc",
+      "title": "Events",
+      "byte_start": 485556,
+      "byte_end": 486427,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc_v1_migration_intro_section_n1q_pbt_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc_v1_migration_intro_section_q1q_pbt_hjc",
+      "title": "Cleanup",
+      "byte_start": 486427,
+      "byte_end": 487092,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc_v1_migration_intro_section_q1q_pbt_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc_v1_migration_intro_section_v1q_pbt_hjc",
+      "title": "Handle Errors",
+      "byte_start": 487092,
+      "byte_end": 487760,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc_v1_migration_intro_section_v1q_pbt_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc_v1_migration_intro_section_abq_pbt_hjc",
+      "title": "Migrate Triggers",
+      "byte_start": 487760,
+      "byte_end": 488489,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc_v1_migration_intro_section_abq_pbt_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc_v1_migrate_reason_codes",
+      "title": "Update Reason Codes",
+      "byte_start": 488489,
+      "byte_end": 489997,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc_v1_migrate_reason_codes",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_v1_migration_checklist",
+      "title": "Version 1 Update Checklist",
+      "byte_start": 489997,
+      "byte_end": 490936,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc_v1_migration_checklist",
+      "heading_level": 1
+    },
+    {
+      "anchor": "vpc-partner-reseller-disclaimer",
+      "title": "VISA Platform Connect: Specifications and Conditions for Resellers/Partners",
+      "byte_start": 490936,
+      "byte_end": 493068,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#vpc-partner-reseller-disclaimer",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-merchants-v2-add-merch-acct-info",
+      "title": "Add Merchant Account Information",
+      "byte_start": 493068,
+      "byte_end": 493890,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#boarding-merchants-v2-add-merch-acct-info",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-appendix-jwts",
+      "title": "JSON Web Tokens",
+      "byte_start": 493890,
+      "byte_end": 495528,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-appendix-jwts",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-merchants-v2-add-merch-trans-org-prod",
+      "title": "Set Up the Transacting Organization and Products",
+      "byte_start": 495528,
+      "byte_end": 497693,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#boarding-merchants-v2-add-merch-trans-org-prod",
+      "heading_level": 1
+    },
+    {
+      "anchor": "merchants-v2-existing-trans-org-prod",
+      "title": "Configure the Transacting Organization and Products",
+      "byte_start": 497693,
+      "byte_end": 499260,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#merchants-v2-existing-trans-org-prod",
+      "heading_level": 1
+    }
+  ]
+}

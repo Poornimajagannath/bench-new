@@ -1,0 +1,4032 @@
+{
+  "product_id": "digital-accept-flex",
+  "root_path": "/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.md",
+  "root_url": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.md",
+  "bytes": 989174,
+  "sections": [
+    {
+      "anchor": "da-about-guide",
+      "title": "`Digital Accept` Secure Integration Developer Guide",
+      "byte_start": 0,
+      "byte_end": 860,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#da-about-guide",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-doc-revisions",
+      "title": "Recent Revisions to This Document",
+      "byte_start": 860,
+      "byte_end": 969,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-doc-revisions",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-doc-revisions_section_n1p_t5t_dkc",
+      "title": "26.08.01",
+      "byte_start": 969,
+      "byte_end": 2428,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-doc-revisions_section_n1p_t5t_dkc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-doc-revisions_section_dts_jj3_njc",
+      "title": "26.06.01",
+      "byte_start": 2428,
+      "byte_end": 22827,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-doc-revisions_section_dts_jj3_njc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "vpc-partner-reseller-disclaimer",
+      "title": "Visa Platform Connect: Specifications and Conditions for Resellers/Partners",
+      "byte_start": 22827,
+      "byte_end": 24959,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#vpc-partner-reseller-disclaimer",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments_intro_digt_accpt_sec_intg",
+      "title": "Introducing `Digital Accept` Secure Integration Product Suite",
+      "byte_start": 24959,
+      "byte_end": 26351,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#payments_intro_digt_accpt_sec_intg",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments_intro_digt_accpt_sec_intg_uc-ui-ux",
+      "title": "Figure:",
+      "byte_start": 26351,
+      "byte_end": 27654,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#payments_intro_digt_accpt_sec_intg_uc-ui-ux",
+      "heading_level": 4
+    },
+    {
+      "anchor": "payments_intro_digt_accpt_sec_intg_microform-ui",
+      "title": "Figure:",
+      "byte_start": 27654,
+      "byte_end": 28845,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#payments_intro_digt_accpt_sec_intg_microform-ui",
+      "heading_level": 4
+    },
+    {
+      "anchor": "payments_intro_digt_accpt_sec_intg_da-prod-chart",
+      "title": "Figure:",
+      "byte_start": 28845,
+      "byte_end": 29166,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#payments_intro_digt_accpt_sec_intg_da-prod-chart",
+      "heading_level": 4
+    },
+    {
+      "anchor": "flex-api-2_FlexAPI",
+      "title": "`Flex API` v2",
+      "byte_start": 29166,
+      "byte_end": 31076,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#flex-api-2_FlexAPI",
+      "heading_level": 1
+    },
+    {
+      "anchor": "flex-api-2-task-list",
+      "title": "`Flex API` v2 Integration Task List",
+      "byte_start": 31076,
+      "byte_end": 32679,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#flex-api-2-task-list",
+      "heading_level": 1
+    },
+    {
+      "anchor": "flex-api-2-generate-capture-context",
+      "title": "Generating the Capture Context",
+      "byte_start": 32679,
+      "byte_end": 33952,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#flex-api-2-generate-capture-context",
+      "heading_level": 1
+    },
+    {
+      "anchor": "flex-api-2-generate-capture-context_payment-api-fields",
+      "title": "Payment API Fields",
+      "byte_start": 33952,
+      "byte_end": 36579,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#flex-api-2-generate-capture-context_payment-api-fields",
+      "heading_level": 2
+    },
+    {
+      "anchor": "flex-api-2-generate-capture-context-example",
+      "title": "REST Example: Generating the Capture Context",
+      "byte_start": 36579,
+      "byte_end": 41926,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#flex-api-2-generate-capture-context-example",
+      "heading_level": 1
+    },
+    {
+      "anchor": "validate-capture-context-flexv2",
+      "title": "Validating the Capture Context",
+      "byte_start": 41926,
+      "byte_end": 45776,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#validate-capture-context-flexv2",
+      "heading_level": 1
+    },
+    {
+      "anchor": "flex-api-2-secure-payment-info",
+      "title": "Securing Payment Information",
+      "byte_start": 45776,
+      "byte_end": 53056,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#flex-api-2-secure-payment-info",
+      "heading_level": 1
+    },
+    {
+      "anchor": "flex-api-2-tokenize-payment-info",
+      "title": "Tokenizing Payment Information",
+      "byte_start": 53056,
+      "byte_end": 61121,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#flex-api-2-tokenize-payment-info",
+      "heading_level": 1
+    },
+    {
+      "anchor": "flex-api-2-validate-token",
+      "title": "Validate the Transient Token",
+      "byte_start": 61121,
+      "byte_end": 63924,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#flex-api-2-validate-token",
+      "heading_level": 1
+    },
+    {
+      "anchor": "flex-api-2-payment",
+      "title": "Using the Transient Token to Process a Payment",
+      "byte_start": 63924,
+      "byte_end": 65539,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#flex-api-2-payment",
+      "heading_level": 1
+    },
+    {
+      "anchor": "flex-api-2-jwts",
+      "title": "JSON Web Tokens",
+      "byte_start": 65539,
+      "byte_end": 67166,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#flex-api-2-jwts",
+      "heading_level": 1
+    },
+    {
+      "anchor": "microform-integ-v2",
+      "title": "`Microform Integration` v2",
+      "byte_start": 67166,
+      "byte_end": 68377,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#microform-integ-v2",
+      "heading_level": 1
+    },
+    {
+      "anchor": "microform-integ-how-works-v2",
+      "title": "How It Works",
+      "byte_start": 68377,
+      "byte_end": 70851,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#microform-integ-how-works-v2",
+      "heading_level": 1
+    },
+    {
+      "anchor": "microform-integ-pci-comp-v2",
+      "title": "PCI Compliance",
+      "byte_start": 70851,
+      "byte_end": 71637,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#microform-integ-pci-comp-v2",
+      "heading_level": 1
+    },
+    {
+      "anchor": "microform-integ-getting-started-v2",
+      "title": "Getting Started",
+      "byte_start": 71637,
+      "byte_end": 72339,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#microform-integ-getting-started-v2",
+      "heading_level": 1
+    },
+    {
+      "anchor": "micro-getting-started-pay-card",
+      "title": "Accept Card Information",
+      "byte_start": 72339,
+      "byte_end": 73693,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#micro-getting-started-pay-card",
+      "heading_level": 1
+    },
+    {
+      "anchor": "micro-getting-started-pay-card-ss-setup",
+      "title": "Server-Side Setup",
+      "byte_start": 73693,
+      "byte_end": 74940,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#micro-getting-started-pay-card-ss-setup",
+      "heading_level": 1
+    },
+    {
+      "anchor": "micro-capture-context-card-intro",
+      "title": "Capture Context",
+      "byte_start": 74940,
+      "byte_end": 76105,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#micro-capture-context-card-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "creating-server-side-context-v2-card",
+      "title": "Creating the Server-Side Capture Context",
+      "byte_start": 76105,
+      "byte_end": 81005,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#creating-server-side-context-v2-card",
+      "heading_level": 1
+    },
+    {
+      "anchor": "validate-capture-context-microv2-card",
+      "title": "Validating the Server-Side Capture Context",
+      "byte_start": 81005,
+      "byte_end": 82408,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#validate-capture-context-microv2-card",
+      "heading_level": 1
+    },
+    {
+      "anchor": "validate-capture-context-microv2-card_section_ggg_h3m_djc",
+      "title": "Resource",
+      "byte_start": 82408,
+      "byte_end": 82942,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#validate-capture-context-microv2-card_section_ggg_h3m_djc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "validate-capture-context-microv2-card_validate-capture-context-example",
+      "title": "Example",
+      "byte_start": 82942,
+      "byte_end": 85989,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#validate-capture-context-microv2-card_validate-capture-context-example",
+      "heading_level": 2
+    },
+    {
+      "anchor": "micro-getting-started-pay-card-cs-setup",
+      "title": "Client-Side Setup",
+      "byte_start": 85989,
+      "byte_end": 86223,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#micro-getting-started-pay-card-cs-setup",
+      "heading_level": 1
+    },
+    {
+      "anchor": "setting-up-client-side-v2-web-card-task1",
+      "title": "Web Page",
+      "byte_start": 86223,
+      "byte_end": 92175,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#setting-up-client-side-v2-web-card-task1",
+      "heading_level": 2
+    },
+    {
+      "anchor": "setting-up-client-side-v2-web-mobile-task2",
+      "title": "Mobile Application",
+      "byte_start": 92175,
+      "byte_end": 92811,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#setting-up-client-side-v2-web-mobile-task2",
+      "heading_level": 2
+    },
+    {
+      "anchor": "micro-getting-started-pay-card-trans-tkn",
+      "title": "Transient Tokens for Accepting Card Information",
+      "byte_start": 92811,
+      "byte_end": 93495,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#micro-getting-started-pay-card-trans-tkn",
+      "heading_level": 1
+    },
+    {
+      "anchor": "transient-token-time-limit-pay-card_time-limit",
+      "title": "Transient Token Time Limit",
+      "byte_start": 93495,
+      "byte_end": 97743,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#transient-token-time-limit-pay-card_time-limit",
+      "heading_level": 1
+    },
+    {
+      "anchor": "transient-token-response-format-pay-card",
+      "title": "Transient Token Response Format",
+      "byte_start": 97743,
+      "byte_end": 99797,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#transient-token-response-format-pay-card",
+      "heading_level": 1
+    },
+    {
+      "anchor": "validating-the-transient-token-pay-card",
+      "title": "Validating the Transient Token",
+      "byte_start": 99797,
+      "byte_end": 101312,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#validating-the-transient-token-pay-card",
+      "heading_level": 1
+    },
+    {
+      "anchor": "using-transient-token-pay-card",
+      "title": "Using the Transient Token to Process a Payment",
+      "byte_start": 101312,
+      "byte_end": 108589,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#using-transient-token-pay-card",
+      "heading_level": 1
+    },
+    {
+      "anchor": "micro-use-cases",
+      "title": "Transient Token Use Cases",
+      "byte_start": 108589,
+      "byte_end": 108680,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#micro-use-cases",
+      "heading_level": 1
+    },
+    {
+      "anchor": "micro-use-case-add-card",
+      "title": "Use Case 1: Add a New Credit Card",
+      "byte_start": 108680,
+      "byte_end": 109079,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#micro-use-case-add-card",
+      "heading_level": 1
+    },
+    {
+      "anchor": "micro-use-case-add-card_section_p4d_tjg_njc",
+      "title": "Overview",
+      "byte_start": 109079,
+      "byte_end": 109192,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#micro-use-case-add-card_section_p4d_tjg_njc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "micro-use-case-add-card_fig_ixz_zjg_njc",
+      "title": "Figure:",
+      "byte_start": 109192,
+      "byte_end": 109947,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#micro-use-case-add-card_fig_ixz_zjg_njc",
+      "heading_level": 4
+    },
+    {
+      "anchor": "micro-use-case-add-card_section_pld_hkg_njc",
+      "title": "Transient Token Contents",
+      "byte_start": 109947,
+      "byte_end": 111006,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#micro-use-case-add-card_section_pld_hkg_njc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-appendix-uc-auth-ex",
+      "title": "Example: Add a New Card",
+      "byte_start": 111006,
+      "byte_end": 112638,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-appendix-uc-auth-ex",
+      "heading_level": 1
+    },
+    {
+      "anchor": "micro-use-case-add-card",
+      "title": "Use Case 2: Checkout with a Saved Card",
+      "byte_start": 112638,
+      "byte_end": 112898,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#micro-use-case-add-card",
+      "heading_level": 1
+    },
+    {
+      "anchor": "micro-use-case-add-card_section_p4d_tjg_njc",
+      "title": "Overview",
+      "byte_start": 112898,
+      "byte_end": 113011,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#micro-use-case-add-card_section_p4d_tjg_njc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "micro-use-case-add-card_fig_ixz_zjg_njc",
+      "title": "Figure:",
+      "byte_start": 113011,
+      "byte_end": 113596,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#micro-use-case-add-card_fig_ixz_zjg_njc",
+      "heading_level": 4
+    },
+    {
+      "anchor": "micro-use-case-add-card_section_pld_hkg_njc",
+      "title": "Transient Token Contents",
+      "byte_start": 113596,
+      "byte_end": 114055,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#micro-use-case-add-card_section_pld_hkg_njc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-appendix-uc-auth-ex",
+      "title": "Example: Checkout with a Saved Card",
+      "byte_start": 114055,
+      "byte_end": 115515,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-appendix-uc-auth-ex",
+      "heading_level": 1
+    },
+    {
+      "anchor": "micro-use-case-add-card",
+      "title": "Use Case 3: Edit a Credit Card",
+      "byte_start": 115515,
+      "byte_end": 115823,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#micro-use-case-add-card",
+      "heading_level": 1
+    },
+    {
+      "anchor": "micro-use-case-add-card_section_p4d_tjg_njc",
+      "title": "Overview",
+      "byte_start": 115823,
+      "byte_end": 115936,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#micro-use-case-add-card_section_p4d_tjg_njc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "micro-use-case-add-card_fig_ixz_zjg_njc",
+      "title": "Figure:",
+      "byte_start": 115936,
+      "byte_end": 116525,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#micro-use-case-add-card_fig_ixz_zjg_njc",
+      "heading_level": 4
+    },
+    {
+      "anchor": "micro-use-case-add-card_section_pld_hkg_njc",
+      "title": "Transient Token Contents",
+      "byte_start": 116525,
+      "byte_end": 117085,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#micro-use-case-add-card_section_pld_hkg_njc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-appendix-uc-auth-ex",
+      "title": "Example: Edit a Card",
+      "byte_start": 117085,
+      "byte_end": 118528,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-appendix-uc-auth-ex",
+      "heading_level": 1
+    },
+    {
+      "anchor": "micro-getting-started-pay-bank",
+      "title": "Accept `eCheck` Information",
+      "byte_start": 118528,
+      "byte_end": 119894,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#micro-getting-started-pay-bank",
+      "heading_level": 1
+    },
+    {
+      "anchor": "micro-getting-started-pay-bank-ss-setup",
+      "title": "Server-Side Setup",
+      "byte_start": 119894,
+      "byte_end": 121141,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#micro-getting-started-pay-bank-ss-setup",
+      "heading_level": 1
+    },
+    {
+      "anchor": "micro-capture-context-bank-intro",
+      "title": "Capture Context",
+      "byte_start": 121141,
+      "byte_end": 122292,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#micro-capture-context-bank-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "creating-server-side-context-v2-bank",
+      "title": "Creating the Server-Side Capture Context",
+      "byte_start": 122292,
+      "byte_end": 127024,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#creating-server-side-context-v2-bank",
+      "heading_level": 1
+    },
+    {
+      "anchor": "validate-capture-context-microv2-bank",
+      "title": "Validating the Server-Side Capture Context",
+      "byte_start": 127024,
+      "byte_end": 128427,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#validate-capture-context-microv2-bank",
+      "heading_level": 1
+    },
+    {
+      "anchor": "validate-capture-context-microv2-bank_section_ggg_h3m_djc",
+      "title": "Resource",
+      "byte_start": 128427,
+      "byte_end": 128961,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#validate-capture-context-microv2-bank_section_ggg_h3m_djc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "validate-capture-context-microv2-bank_validate-capture-context-example",
+      "title": "Example",
+      "byte_start": 128961,
+      "byte_end": 131865,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#validate-capture-context-microv2-bank_validate-capture-context-example",
+      "heading_level": 2
+    },
+    {
+      "anchor": "micro-getting-started-pay-bank-cs-setup",
+      "title": "Client-Side Setup",
+      "byte_start": 131865,
+      "byte_end": 132099,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#micro-getting-started-pay-bank-cs-setup",
+      "heading_level": 1
+    },
+    {
+      "anchor": "setting-up-client-side-v2-web-bank-task1",
+      "title": "Web Page",
+      "byte_start": 132099,
+      "byte_end": 137459,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#setting-up-client-side-v2-web-bank-task1",
+      "heading_level": 2
+    },
+    {
+      "anchor": "setting-up-client-side-v2-web-bank-task2",
+      "title": "Mobile Application",
+      "byte_start": 137459,
+      "byte_end": 138141,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#setting-up-client-side-v2-web-bank-task2",
+      "heading_level": 2
+    },
+    {
+      "anchor": "micro-getting-started-pay-bank-trans-tkn",
+      "title": "Transient Tokens for Accepting `eCheck` Information",
+      "byte_start": 138141,
+      "byte_end": 138833,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#micro-getting-started-pay-bank-trans-tkn",
+      "heading_level": 1
+    },
+    {
+      "anchor": "transient-token-time-limit-pay-bank_time-limit",
+      "title": "Transient Token Time Limit",
+      "byte_start": 138833,
+      "byte_end": 143108,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#transient-token-time-limit-pay-bank_time-limit",
+      "heading_level": 1
+    },
+    {
+      "anchor": "transient-token-response-format-pay-bank",
+      "title": "Transient Token Response Format",
+      "byte_start": 143108,
+      "byte_end": 145053,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#transient-token-response-format-pay-bank",
+      "heading_level": 1
+    },
+    {
+      "anchor": "validating-the-transient-token-pay-bank",
+      "title": "Validating the Transient Token",
+      "byte_start": 145053,
+      "byte_end": 146568,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#validating-the-transient-token-pay-bank",
+      "heading_level": 1
+    },
+    {
+      "anchor": "microform-integ-next-steps",
+      "title": "Next Steps",
+      "byte_start": 146568,
+      "byte_end": 147344,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#microform-integ-next-steps",
+      "heading_level": 1
+    },
+    {
+      "anchor": "styling-v2",
+      "title": "Styling",
+      "byte_start": 147344,
+      "byte_end": 147488,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#styling-v2",
+      "heading_level": 1
+    },
+    {
+      "anchor": "styling-v2_id18AB90TB05Z",
+      "title": "General Appearance",
+      "byte_start": 147488,
+      "byte_end": 147983,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#styling-v2_id18AB90TB05Z",
+      "heading_level": 2
+    },
+    {
+      "anchor": "styling-v2_id18AB90UF0Y4",
+      "title": "Explicitly Setting Container Height",
+      "byte_start": 147983,
+      "byte_end": 148365,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#styling-v2_id18AB90UF0Y4",
+      "heading_level": 2
+    },
+    {
+      "anchor": "styling-v2_id18AB90W0LHS",
+      "title": "Managed Classes",
+      "byte_start": 148365,
+      "byte_end": 150253,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#styling-v2_id18AB90W0LHS",
+      "heading_level": 2
+    },
+    {
+      "anchor": "styling-v2_id18AB90000UI",
+      "title": "Input Field Text",
+      "byte_start": 150253,
+      "byte_end": 151267,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#styling-v2_id18AB90000UI",
+      "heading_level": 2
+    },
+    {
+      "anchor": "styling-v2_id18AB9A005YK",
+      "title": "Supported Properties",
+      "byte_start": 151267,
+      "byte_end": 152093,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#styling-v2_id18AB9A005YK",
+      "heading_level": 2
+    },
+    {
+      "anchor": "events-v2_Events",
+      "title": "Events",
+      "byte_start": 152093,
+      "byte_end": 154555,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#events-v2_Events",
+      "heading_level": 1
+    },
+    {
+      "anchor": "events-v2_id18ABA0R07HT",
+      "title": "Subscribing to Events",
+      "byte_start": 154555,
+      "byte_end": 155441,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#events-v2_id18ABA0R07HT",
+      "heading_level": 2
+    },
+    {
+      "anchor": "events-v2_id18ABA0UC0PF",
+      "title": "Card Detection",
+      "byte_start": 155441,
+      "byte_end": 158071,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#events-v2_id18ABA0UC0PF",
+      "heading_level": 2
+    },
+    {
+      "anchor": "events-v2_section_d35_1tt_dkc",
+      "title": "Domestic Scheme Rules",
+      "byte_start": 158071,
+      "byte_end": 160547,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#events-v2_section_d35_1tt_dkc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "events-v2_id18ABA0X05PN",
+      "title": "Autocomplete",
+      "byte_start": 160547,
+      "byte_end": 161664,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#events-v2_id18ABA0X05PN",
+      "heading_level": 2
+    },
+    {
+      "anchor": "security-recommendations-v2_SecurityRecommendations",
+      "title": "Security Recommendations",
+      "byte_start": 161664,
+      "byte_end": 162612,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#security-recommendations-v2_SecurityRecommendations",
+      "heading_level": 1
+    },
+    {
+      "anchor": "micro-v2-reference",
+      "title": "Reference",
+      "byte_start": 162612,
+      "byte_end": 162773,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#micro-v2-reference",
+      "heading_level": 1
+    },
+    {
+      "anchor": "api-reference-v2_api_reference",
+      "title": "JavaScript API Reference",
+      "byte_start": 162773,
+      "byte_end": 162998,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#api-reference-v2_api_reference",
+      "heading_level": 1
+    },
+    {
+      "anchor": "class--field-v2",
+      "title": "Class: Field",
+      "byte_start": 162998,
+      "byte_end": 173151,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#class--field-v2",
+      "heading_level": 1
+    },
+    {
+      "anchor": "module-flex-v2_module_flex_v044",
+      "title": "Module: FLEX",
+      "byte_start": 173151,
+      "byte_end": 174324,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#module-flex-v2_module_flex_v044",
+      "heading_level": 1
+    },
+    {
+      "anchor": "module-flex-v2_id1949GM0705Z",
+      "title": "Methods",
+      "byte_start": 174324,
+      "byte_end": 175709,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#module-flex-v2_id1949GM0705Z",
+      "heading_level": 2
+    },
+    {
+      "anchor": "class-microform-v2_Id18AFA4004NW",
+      "title": "Class: Microform",
+      "byte_start": 175709,
+      "byte_end": 176158,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#class-microform-v2_Id18AFA4004NW",
+      "heading_level": 1
+    },
+    {
+      "anchor": "class-microform-v2_id1949H00N0HT",
+      "title": "Methods",
+      "byte_start": 176158,
+      "byte_end": 184665,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#class-microform-v2_id1949H00N0HT",
+      "heading_level": 2
+    },
+    {
+      "anchor": "class-microform-error-v2_Id18AFA0Z01BI",
+      "title": "Class: MicroformError",
+      "byte_start": 184665,
+      "byte_end": 185122,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#class-microform-error-v2_Id18AFA0Z01BI",
+      "heading_level": 1
+    },
+    {
+      "anchor": "class-microform-error-v2_id1949H0V0BYK",
+      "title": "Members",
+      "byte_start": 185122,
+      "byte_end": 192744,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#class-microform-error-v2_id1949H0V0BYK",
+      "heading_level": 2
+    },
+    {
+      "anchor": "global-v2_Id18AFF0N0A8T",
+      "title": "Global",
+      "byte_start": 192744,
+      "byte_end": 192813,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#global-v2_Id18AFF0N0A8T",
+      "heading_level": 1
+    },
+    {
+      "anchor": "global-v2_TypeDefinitions",
+      "title": "Type Definitions",
+      "byte_start": 192813,
+      "byte_end": 198020,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#global-v2_TypeDefinitions",
+      "heading_level": 2
+    },
+    {
+      "anchor": "flex-capture-context-api-intro",
+      "title": "Capture Context API",
+      "byte_start": 198020,
+      "byte_end": 204581,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#flex-capture-context-api-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "flex-capture-context-api-intro_req-fields-uc-capture-ctx",
+      "title": "Required Fields for Requesting the Capture Context",
+      "byte_start": 204581,
+      "byte_end": 205825,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#flex-capture-context-api-intro_req-fields-uc-capture-ctx",
+      "heading_level": 2
+    },
+    {
+      "anchor": "flex-capture-context-api-ex-rest",
+      "title": "REST Example: Requesting the Capture Context",
+      "byte_start": 205825,
+      "byte_end": 217620,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#flex-capture-context-api-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "flex-getting-started-examples-v2",
+      "title": "Getting Started Examples",
+      "byte_start": 217620,
+      "byte_end": 235067,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#flex-getting-started-examples-v2",
+      "heading_level": 1
+    },
+    {
+      "anchor": "micro-appendix-jwts",
+      "title": "JSON Web Tokens",
+      "byte_start": 235067,
+      "byte_end": 236706,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#micro-appendix-jwts",
+      "heading_level": 1
+    },
+    {
+      "anchor": "microform-integ-browsers-v2",
+      "title": "Browser Support",
+      "byte_start": 236706,
+      "byte_end": 236976,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#microform-integ-browsers-v2",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pcidss-guidance-v2_PCIDSSGuidance",
+      "title": "PCI DSS Guidance",
+      "byte_start": 236976,
+      "byte_end": 237314,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#pcidss-guidance-v2_PCIDSSGuidance",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pcidss-guidance-v2_id18ABAB0M030",
+      "title": "Self-Assessment Questionnaire",
+      "byte_start": 237314,
+      "byte_end": 237847,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#pcidss-guidance-v2_id18ABAB0M030",
+      "heading_level": 2
+    },
+    {
+      "anchor": "pcidss-guidance-v2_id18ABAC0B0RO",
+      "title": "Storing Returned Data",
+      "byte_start": 237847,
+      "byte_end": 238347,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#pcidss-guidance-v2_id18ABAC0B0RO",
+      "heading_level": 2
+    },
+    {
+      "anchor": "WCAG_compliance_v2",
+      "title": "WCAG 2.2 Compliance",
+      "byte_start": 238347,
+      "byte_end": 242602,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#WCAG_compliance_v2",
+      "heading_level": 1
+    },
+    {
+      "anchor": "da-reference-test-cards",
+      "title": "Test Card Numbers",
+      "byte_start": 242602,
+      "byte_end": 244275,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#da-reference-test-cards",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-intro",
+      "title": "Introduction to `Unified Checkout`",
+      "byte_start": 244275,
+      "byte_end": 245857,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-intro_fig-1",
+      "title": "Figure:",
+      "byte_start": 245857,
+      "byte_end": 248378,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-intro_fig-1",
+      "heading_level": 4
+    },
+    {
+      "anchor": "uc-qs-intro",
+      "title": "`Unified Checkout` Quick Start",
+      "byte_start": 248378,
+      "byte_end": 248691,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-qs-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-qs-intro_section_tkt_rgg_gfc",
+      "title": "Key Features",
+      "byte_start": 248691,
+      "byte_end": 249028,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-qs-intro_section_tkt_rgg_gfc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-qs-intro_section_vkt_rgg_gfc",
+      "title": "Benefits",
+      "byte_start": 249028,
+      "byte_end": 249644,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-qs-intro_section_vkt_rgg_gfc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-qsg-step1",
+      "title": "Step 1: Enable `Unified Checkout`",
+      "byte_start": 249644,
+      "byte_end": 252460,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-qsg-step1",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-qsg-step2",
+      "title": "Step 2: Set Up the Server-Side Component",
+      "byte_start": 252460,
+      "byte_end": 255038,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-qsg-step2",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-qsg-step3",
+      "title": "Step 3: Set Up the Client-Side Component",
+      "byte_start": 255038,
+      "byte_end": 260361,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-qsg-step3",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-qsg-step4",
+      "title": "Step 4: Configure Unified Checkout",
+      "byte_start": 260361,
+      "byte_end": 262663,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-qsg-step4",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-qsg-step5",
+      "title": "Step 5: Test Your Unified Checkout Integration",
+      "byte_start": 262663,
+      "byte_end": 264836,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-qsg-step5",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-getting-started-integration-flow",
+      "title": "`Unified Checkout` Flow",
+      "byte_start": 264836,
+      "byte_end": 265531,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-getting-started-integration-flow",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-getting-started-integration-flow_fig_uc-payment-flow",
+      "title": "Figure:",
+      "byte_start": 265531,
+      "byte_end": 266586,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-getting-started-integration-flow_fig_uc-payment-flow",
+      "heading_level": 4
+    },
+    {
+      "anchor": "uc-pay-methods-intro",
+      "title": "Payment Methods",
+      "byte_start": 266586,
+      "byte_end": 268951,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-pay-methods-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-card",
+      "title": "Cards",
+      "byte_start": 268951,
+      "byte_end": 290747,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-pay-methods-card",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_pay_methods_pay_tkn",
+      "title": "Pay with Token",
+      "byte_start": 290747,
+      "byte_end": 294475,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_pay_methods_pay_tkn",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-echeck",
+      "title": "eCheck/ACH Service",
+      "byte_start": 294475,
+      "byte_end": 295274,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-pay-methods-echeck",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-enable-digital-pay-echeck",
+      "title": "Enrolling in eCheck/ACH Services",
+      "byte_start": 295274,
+      "byte_end": 296458,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-enable-digital-pay-echeck",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-ui-echeck",
+      "title": "Pay with eCheck/ACH Service UI",
+      "byte_start": 296458,
+      "byte_end": 297369,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-ui-echeck",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-dig-wallets",
+      "title": "Digital Wallets",
+      "byte_start": 297369,
+      "byte_end": 298877,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-pay-methods-dig-wallets",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-dig-wallets-applepay",
+      "title": "Apple Pay",
+      "byte_start": 298877,
+      "byte_end": 299272,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-pay-methods-dig-wallets-applepay",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-enable-digital-pay-applepay",
+      "title": "Enrolling in Apple Pay",
+      "byte_start": 299272,
+      "byte_end": 301203,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-enable-digital-pay-applepay",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-enable-digital-pay-applepay-prep-test-device",
+      "title": "Preparing a Device for Testing Apple Pay on `Unified Checkout`",
+      "byte_start": 301203,
+      "byte_end": 302181,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-enable-digital-pay-applepay-prep-test-device",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-ui-applepay",
+      "title": "Apple Pay UI",
+      "byte_start": 302181,
+      "byte_end": 302362,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-ui-applepay",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-ui-applepay_fig-uc-ui-applepay",
+      "title": "Figure:",
+      "byte_start": 302362,
+      "byte_end": 302594,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-ui-applepay_fig-uc-ui-applepay",
+      "heading_level": 4
+    },
+    {
+      "anchor": "uc-pay-methods-dig-wallets-googlepay",
+      "title": "Google Pay",
+      "byte_start": 302594,
+      "byte_end": 302881,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-pay-methods-dig-wallets-googlepay",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-enable-digital-pay-google",
+      "title": "Enrolling in Google Pay",
+      "byte_start": 302881,
+      "byte_end": 303860,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-enable-digital-pay-google",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-enable-digital-pay-googlepay-manage-authentication",
+      "title": "Managing Google Pay Authentication Types",
+      "byte_start": 303860,
+      "byte_end": 306228,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-enable-digital-pay-googlepay-manage-authentication",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-ui-googlepay",
+      "title": "Google Pay UI",
+      "byte_start": 306228,
+      "byte_end": 306611,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-ui-googlepay",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-dig-wallets-ctp",
+      "title": "`Click to Pay`",
+      "byte_start": 306611,
+      "byte_end": 306977,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-pay-methods-dig-wallets-ctp",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-enable-digital-pay-ctp",
+      "title": "Enabling `Click to Pay` in the `Business Center`",
+      "byte_start": 306977,
+      "byte_end": 308953,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-enable-digital-pay-ctp",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-authentication-steps",
+      "title": "Set Up Customer Authentication for Click to Pay",
+      "byte_start": 308953,
+      "byte_end": 312943,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-authentication-steps",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-authentication",
+      "title": "Click to Pay Customer Authentication",
+      "byte_start": 312943,
+      "byte_end": 314252,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-authentication",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-ui-ctp",
+      "title": "`Click to Pay` UI",
+      "byte_start": 314252,
+      "byte_end": 314438,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-ui-ctp",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-ui-ctp_fig-uc-ui-ctp",
+      "title": "Figure:",
+      "byte_start": 314438,
+      "byte_end": 314659,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-ui-ctp_fig-uc-ui-ctp",
+      "heading_level": 4
+    },
+    {
+      "anchor": "uc-appendix-ui-ux",
+      "title": "`Click to Pay` UI Guidelines",
+      "byte_start": 314659,
+      "byte_end": 316681,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-appendix-ui-ux",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-appendix-ui-ux_fig-ctp-recog-device",
+      "title": "Figure:",
+      "byte_start": 316681,
+      "byte_end": 317280,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-appendix-ui-ux_fig-ctp-recog-device",
+      "heading_level": 4
+    },
+    {
+      "anchor": "uc-appendix-ui-ux_fig-ctp-recog-account",
+      "title": "Figure:",
+      "byte_start": 317280,
+      "byte_end": 317934,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-appendix-ui-ux_fig-ctp-recog-account",
+      "heading_level": 4
+    },
+    {
+      "anchor": "uc-appendix-ui-ux_fig-ctp-no-account",
+      "title": "Figure:",
+      "byte_start": 317934,
+      "byte_end": 318187,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-appendix-ui-ux_fig-ctp-no-account",
+      "heading_level": 4
+    },
+    {
+      "anchor": "uc-appendix-ui-ux-ex",
+      "title": "`Click to Pay` UI Examples",
+      "byte_start": 318187,
+      "byte_end": 318733,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-appendix-ui-ux-ex",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-appendix-ui-ux-ex_fig-ctp-ex1",
+      "title": "Figure:",
+      "byte_start": 318733,
+      "byte_end": 318995,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-appendix-ui-ux-ex_fig-ctp-ex1",
+      "heading_level": 4
+    },
+    {
+      "anchor": "uc-appendix-ui-ux-ex_fig-ctp-ex2",
+      "title": "Figure:",
+      "byte_start": 318995,
+      "byte_end": 319749,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-appendix-ui-ux-ex_fig-ctp-ex2",
+      "heading_level": 4
+    },
+    {
+      "anchor": "uc-appendix-ui-ux-ex_fig-ctp-ex3",
+      "title": "Figure:",
+      "byte_start": 319749,
+      "byte_end": 320600,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-appendix-ui-ux-ex_fig-ctp-ex3",
+      "heading_level": 4
+    },
+    {
+      "anchor": "uc-appendix-ui-ux-ex_fig-ctp-ex4",
+      "title": "Figure:",
+      "byte_start": 320600,
+      "byte_end": 321640,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-appendix-ui-ux-ex_fig-ctp-ex4",
+      "heading_level": 4
+    },
+    {
+      "anchor": "uc-appendix-ui-ux-ex_fig-ctp-ex5",
+      "title": "Figure:",
+      "byte_start": 321640,
+      "byte_end": 322426,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-appendix-ui-ux-ex_fig-ctp-ex5",
+      "heading_level": 4
+    },
+    {
+      "anchor": "uc-appendix-ui-ux-ex_fig-ctp-ex6",
+      "title": "Figure:",
+      "byte_start": 322426,
+      "byte_end": 322685,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-appendix-ui-ux-ex_fig-ctp-ex6",
+      "heading_level": 4
+    },
+    {
+      "anchor": "uc-appendix-ui-ux-ex_fig-ctp-ex7",
+      "title": "Figure:",
+      "byte_start": 322685,
+      "byte_end": 322944,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-appendix-ui-ux-ex_fig-ctp-ex7",
+      "heading_level": 4
+    },
+    {
+      "anchor": "uc-appendix-ui-ux-ex_fig-ctp-ex8",
+      "title": "Figure:",
+      "byte_start": 322944,
+      "byte_end": 323203,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-appendix-ui-ux-ex_fig-ctp-ex8",
+      "heading_level": 4
+    },
+    {
+      "anchor": "uc-pay-methods-dig-wallets-paze",
+      "title": "Paze",
+      "byte_start": 323203,
+      "byte_end": 323532,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-pay-methods-dig-wallets-paze",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-ui-paze",
+      "title": "Paze UI",
+      "byte_start": 323532,
+      "byte_end": 323870,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-ui-paze",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-altpay-methods-intro",
+      "title": "Alternative Payment Methods",
+      "byte_start": 323870,
+      "byte_end": 324984,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-altpay-methods-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-obt",
+      "title": "Online Bank Transfers",
+      "byte_start": 324984,
+      "byte_end": 329894,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-pay-methods-obt",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-obt-bancontact",
+      "title": "Bancontact",
+      "byte_start": 329894,
+      "byte_end": 331597,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-pay-methods-obt-bancontact",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-obt-dragonpay",
+      "title": "DragonPay",
+      "byte_start": 331597,
+      "byte_end": 333340,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-pay-methods-obt-dragonpay",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-obt-tink",
+      "title": "Tink Pay By Bank",
+      "byte_start": 333340,
+      "byte_end": 337122,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-pay-methods-obt-tink",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-obt-ideal",
+      "title": "iDeal",
+      "byte_start": 337122,
+      "byte_end": 338971,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-pay-methods-obt-ideal",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-obt-mybank",
+      "title": "MyBank",
+      "byte_start": 338971,
+      "byte_end": 340701,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-pay-methods-obt-mybank",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-obt-multibanco",
+      "title": "Multibanco",
+      "byte_start": 340701,
+      "byte_end": 342445,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-pay-methods-obt-multibanco",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-obt-p24",
+      "title": "Przelewy24\\|P24",
+      "byte_start": 342445,
+      "byte_end": 344198,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-pay-methods-obt-p24",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-obt-status-ppro",
+      "title": "Verify Status for Online Bank Transfers",
+      "byte_start": 344198,
+      "byte_end": 345518,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-pay-methods-obt-status-ppro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-obt-status-non-ppro",
+      "title": "Verify Status for Online Bank Transfers (Tink Pay By Bank)",
+      "byte_start": 345518,
+      "byte_end": 347364,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-pay-methods-obt-status-non-ppro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-obt-handle-response",
+      "title": "Handle Responses",
+      "byte_start": 347364,
+      "byte_end": 349198,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-pay-methods-obt-handle-response",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-bnpl",
+      "title": "Buy Now, Pay Later",
+      "byte_start": 349198,
+      "byte_end": 353632,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-pay-methods-bnpl",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-bnpl-afterpay",
+      "title": "Afterpay",
+      "byte_start": 353632,
+      "byte_end": 356827,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-pay-methods-bnpl-afterpay",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-bnpl-afterpay-status",
+      "title": "Verify Status for Afterpay",
+      "byte_start": 356827,
+      "byte_end": 358756,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-pay-methods-bnpl-afterpay-status",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-bnpl-handle-response",
+      "title": "Handle Responses",
+      "byte_start": 358756,
+      "byte_end": 360024,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-pay-methods-bnpl-handle-response",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-bnpl-captures",
+      "title": "Captures",
+      "byte_start": 360024,
+      "byte_end": 360285,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-pay-methods-bnpl-captures",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-bnpl-captures_d7e147",
+      "title": "Endpoint",
+      "byte_start": 360285,
+      "byte_end": 361820,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-pay-methods-bnpl-captures_d7e147",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-pay-methods-ppr",
+      "title": "Post-Pay Reference Payments",
+      "byte_start": 361820,
+      "byte_end": 364019,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-pay-methods-ppr",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-ppr-konbini",
+      "title": "Konbini",
+      "byte_start": 364019,
+      "byte_end": 366370,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-pay-methods-ppr-konbini",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-ppr-status-ppro",
+      "title": "Verify Status for Post-Pay Reference",
+      "byte_start": 366370,
+      "byte_end": 367681,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-pay-methods-ppr-status-ppro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-ppr-handle-response",
+      "title": "Handle Responses",
+      "byte_start": 367681,
+      "byte_end": 369314,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-pay-methods-ppr-handle-response",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-wallets",
+      "title": "Alternative Payment Wallets",
+      "byte_start": 369314,
+      "byte_end": 371968,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-pay-methods-wallets",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-bnpl-paypal",
+      "title": "PayPal",
+      "byte_start": 371968,
+      "byte_end": 376988,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-pay-methods-bnpl-paypal",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-bnpl-paypal_section_zfp_mv3_cjc",
+      "title": "Example: Multiple Line-Items",
+      "byte_start": 376988,
+      "byte_end": 378031,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-pay-methods-bnpl-paypal_section_zfp_mv3_cjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-pay-methods-obt-venmo",
+      "title": "Venmo",
+      "byte_start": 378031,
+      "byte_end": 382375,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-pay-methods-obt-venmo",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-obt-venmo_section_ar5_zbj_cjc",
+      "title": "Example: Multiple Line-Items",
+      "byte_start": 382375,
+      "byte_end": 383412,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-pay-methods-obt-venmo_section_ar5_zbj_cjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-pay-methods-paypal-venmo-status",
+      "title": "Verify Status for PayPal and Venmo",
+      "byte_start": 383412,
+      "byte_end": 386330,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-pay-methods-paypal-venmo-status",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-wallet-handle-response",
+      "title": "Handle Responses",
+      "byte_start": 386330,
+      "byte_end": 388096,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-pay-methods-wallet-handle-response",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-wallet-captures",
+      "title": "Captures",
+      "byte_start": 388096,
+      "byte_end": 388361,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-pay-methods-wallet-captures",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-wallet-captures_d7e147",
+      "title": "Endpoint",
+      "byte_start": 388361,
+      "byte_end": 389904,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-pay-methods-wallet-captures_d7e147",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc_pay_methods_pay_tkn",
+      "title": "Pay with Token",
+      "byte_start": 389904,
+      "byte_end": 394060,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_pay_methods_pay_tkn",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-getting-started-ss-setup",
+      "title": "Server-Side Set Up",
+      "byte_start": 394060,
+      "byte_end": 395251,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-getting-started-ss-setup",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-capture-context-intro",
+      "title": "Capture Context",
+      "byte_start": 395251,
+      "byte_end": 396907,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-capture-context-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-capture-context-intro_uc-capture-context-codeblock",
+      "title": "Capture Context Example",
+      "byte_start": 396907,
+      "byte_end": 398505,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-capture-context-intro_uc-capture-context-codeblock",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-capture-context-intro_uc-capture-context-diagram",
+      "title": "Card Entry Form",
+      "byte_start": 398505,
+      "byte_end": 399070,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-capture-context-intro_uc-capture-context-diagram",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc_versioning",
+      "title": "Versioning",
+      "byte_start": 399070,
+      "byte_end": 401179,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_versioning",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-capture-context-versions",
+      "title": "Client Version History",
+      "byte_start": 401179,
+      "byte_end": 404398,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-capture-context-versions",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-getting-started-cs-setup-intro",
+      "title": "Client-Side Set Up",
+      "byte_start": 404398,
+      "byte_end": 405933,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-getting-started-cs-setup-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-getting-started-cs-js-library-intro",
+      "title": "Loading the JavaScript Library",
+      "byte_start": 405933,
+      "byte_end": 407868,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-getting-started-cs-js-library-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-getting-started-cs-js-library-example",
+      "title": "JavaScript Example: Initializing the SDK",
+      "byte_start": 407868,
+      "byte_end": 408168,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-getting-started-cs-js-library-example",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-getting-started-cs-js-button-example",
+      "title": "JavaScript Example: Displaying the Button List",
+      "byte_start": 408168,
+      "byte_end": 408896,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-getting-started-cs-js-button-example",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-getting-started-cs-js-trigger-ctp-pan-example",
+      "title": "JavaScript Example: Client-Defined Trigger for `Click to Pay` or PAN Entry",
+      "byte_start": 408896,
+      "byte_end": 409938,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-getting-started-cs-js-trigger-ctp-pan-example",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-getting-started-cs-js-payment-example",
+      "title": "JavaScript Example: Processing a Payment",
+      "byte_start": 409938,
+      "byte_end": 411041,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-getting-started-cs-js-payment-example",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-session-integrate-ex-auth",
+      "title": "JavaScript Example: Authorization",
+      "byte_start": 411041,
+      "byte_end": 412030,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-session-integrate-ex-auth",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-session-integrate-ex-sale",
+      "title": "JavaScript Example: Sale",
+      "byte_start": 412030,
+      "byte_end": 412823,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-session-integrate-ex-sale",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-session-integrate-ex-sale-dm",
+      "title": "JavaScript Example: Sale with `Decision Manager`",
+      "byte_start": 412823,
+      "byte_end": 413686,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-session-integrate-ex-sale-dm",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-session-integrate-ex-manual-tkn",
+      "title": "JavaScript Example: No Service Orchestration",
+      "byte_start": 413686,
+      "byte_end": 415001,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-session-integrate-ex-manual-tkn",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-getting-started-button-widget-sidebar",
+      "title": "JavaScript Example: Setting Up with Full Sidebar",
+      "byte_start": 415001,
+      "byte_end": 416355,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-getting-started-button-widget-sidebar",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-getting-started-button-widget-embedded",
+      "title": "JavaScript Example: Setting Up with the Embedded Component",
+      "byte_start": 416355,
+      "byte_end": 418172,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-getting-started-button-widget-embedded",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-getting-started-button-widget-intro",
+      "title": "Complete Integration Examples",
+      "byte_start": 418172,
+      "byte_end": 418660,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-getting-started-button-widget-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_intro_setup",
+      "title": "Configuration",
+      "byte_start": 418660,
+      "byte_end": 418806,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_intro_setup",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-intro-setup-ebc",
+      "title": "Configure the `Unified Checkout` Merchant Experience",
+      "byte_start": 418806,
+      "byte_end": 421073,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-intro-setup-ebc",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-enabling-ebc",
+      "title": "Enable `Unified Checkout`",
+      "byte_start": 421073,
+      "byte_end": 423706,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-enabling-ebc",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_intro_payment_options",
+      "title": "Configure Payment Options",
+      "byte_start": 423706,
+      "byte_end": 429742,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_intro_payment_options",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_intro_look_and_feel",
+      "title": "Customize the `Unified Checkout` Look and Feel",
+      "byte_start": 429742,
+      "byte_end": 435839,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_intro_look_and_feel",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_ui_config_examples",
+      "title": "Look and Feel UI Examples",
+      "byte_start": 435839,
+      "byte_end": 436039,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_ui_config_examples",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_ui_config_ex_button_list",
+      "title": "Button List",
+      "byte_start": 436039,
+      "byte_end": 436446,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_ui_config_ex_button_list",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_ui_config_ex_contact",
+      "title": "Contact Details",
+      "byte_start": 436446,
+      "byte_end": 436897,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_ui_config_ex_contact",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_ui_config_ex_saved_cards",
+      "title": "Saved Cards",
+      "byte_start": 436897,
+      "byte_end": 437354,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_ui_config_ex_saved_cards",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_ui_config_ex_card_entry",
+      "title": "Card Entry",
+      "byte_start": 437354,
+      "byte_end": 437814,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_ui_config_ex_card_entry",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_ui_config_ex_review",
+      "title": "Review Details",
+      "byte_start": 437814,
+      "byte_end": 438273,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_ui_config_ex_review",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_intro_customer_data",
+      "title": "Configure Customer Data and Payment Flow",
+      "byte_start": 438273,
+      "byte_end": 445397,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_intro_customer_data",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_ebc_api_info",
+      "title": "Capture Context Fields in the `Business Center`",
+      "byte_start": 445397,
+      "byte_end": 453070,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_ebc_api_info",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-manage-permissions-intro",
+      "title": "Manage Permissions",
+      "byte_start": 453070,
+      "byte_end": 454595,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-manage-permissions-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-manage-permissions-merch",
+      "title": "Managing Permissions as a Direct Merchant",
+      "byte_start": 454595,
+      "byte_end": 455773,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-manage-permissions-merch",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-manage-permissions-port",
+      "title": "Managing Permissions as a Portfolio Administrator",
+      "byte_start": 455773,
+      "byte_end": 457511,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-manage-permissions-port",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_pay_processing_intro",
+      "title": "Process Payments with `Unified Checkout`",
+      "byte_start": 457511,
+      "byte_end": 460980,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_pay_processing_intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-appendix-webhooks",
+      "title": "Webhooks Support",
+      "byte_start": 460980,
+      "byte_end": 461708,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-appendix-webhooks",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-appendix-webhooks_section_zg3_yvq_ljc",
+      "title": "Integration",
+      "byte_start": 461708,
+      "byte_end": 464638,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-appendix-webhooks_section_zg3_yvq_ljc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-appendix-webhooks_opt-tasks",
+      "title": "Optional Set Up Tasks",
+      "byte_start": 464638,
+      "byte_end": 467633,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-appendix-webhooks_opt-tasks",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-setup-capture-context",
+      "title": "Sessions API",
+      "byte_start": 467633,
+      "byte_end": 467924,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-setup-capture-context",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-capture-context-features",
+      "title": "Capture Context",
+      "byte_start": 467924,
+      "byte_end": 471649,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-capture-context-features",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-capture-context-features_section_ybj_nzz_sxb",
+      "title": "Related Information",
+      "byte_start": 471649,
+      "byte_end": 472348,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-capture-context-features_section_ybj_nzz_sxb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc_cc_allowed_card_networks",
+      "title": "Allowed Card Networks",
+      "byte_start": 472348,
+      "byte_end": 473971,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_cc_allowed_card_networks",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_cc_allowed_card_networks_section_bwj_5qt_dkc",
+      "title": "Domestic Scheme Rules",
+      "byte_start": 473971,
+      "byte_end": 474857,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_cc_allowed_card_networks_section_bwj_5qt_dkc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc_cc_target_origin",
+      "title": "Target Origins",
+      "byte_start": 474857,
+      "byte_end": 475757,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_cc_target_origin",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_cc_allowed_pay_type",
+      "title": "Allowed Payment Types",
+      "byte_start": 475757,
+      "byte_end": 477546,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_cc_allowed_pay_type",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_cc_client_version",
+      "title": "Client Version",
+      "byte_start": 477546,
+      "byte_end": 478453,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_cc_client_version",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_cc_ctp_enroll_precheck",
+      "title": "Auto-check Enrollment",
+      "byte_start": 478453,
+      "byte_end": 479295,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_cc_ctp_enroll_precheck",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_cc_button_type",
+      "title": "Button Type",
+      "byte_start": 479295,
+      "byte_end": 480138,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_cc_button_type",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-session-button-text",
+      "title": "Customize Button Text",
+      "byte_start": 480138,
+      "byte_end": 480948,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-session-button-text",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_cc_complete_mandate",
+      "title": "Complete Mandate",
+      "byte_start": 480948,
+      "byte_end": 482190,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_cc_complete_mandate",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_cc_complete_type",
+      "title": "completeMandate.type",
+      "byte_start": 482190,
+      "byte_end": 482746,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_cc_complete_type",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_cc_complete_dm",
+      "title": "completeMandate.decisionManager",
+      "byte_start": 482746,
+      "byte_end": 483328,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_cc_complete_dm",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_cc_complete_auth",
+      "title": "completeMandate.consumerAuthentication",
+      "byte_start": 483328,
+      "byte_end": 486208,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_cc_complete_auth",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_cc_complete_tms",
+      "title": "completeMandate.tms",
+      "byte_start": 486208,
+      "byte_end": 491068,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_cc_complete_tms",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_cc_capture_mandate",
+      "title": "Capture Mandate",
+      "byte_start": 491068,
+      "byte_end": 492001,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_cc_capture_mandate",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_cc_combo_cards",
+      "title": "captureMandate.comboCard",
+      "byte_start": 492001,
+      "byte_end": 493212,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_cc_combo_cards",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_cc_cpf",
+      "title": "captureMandate.CPF",
+      "byte_start": 493212,
+      "byte_end": 493752,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_cc_cpf",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_cc_save_card",
+      "title": "captureMandate.requestSaveCredentials",
+      "byte_start": 493752,
+      "byte_end": 494524,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_cc_save_card",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_cc_rem_confirm_screen",
+      "title": "captureMandate.showConfirmationStep",
+      "byte_start": 494524,
+      "byte_end": 494995,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_cc_rem_confirm_screen",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_cc_capture_billing_type",
+      "title": "captureMandate.billingType",
+      "byte_start": 494995,
+      "byte_end": 496250,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_cc_capture_billing_type",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_cc_capture_req_email",
+      "title": "captureMandate.requestEmail",
+      "byte_start": 496250,
+      "byte_end": 496748,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_cc_capture_req_email",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_cc_capture_req_phone",
+      "title": "captureMandate.requestPhone",
+      "byte_start": 496748,
+      "byte_end": 496977,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_cc_capture_req_phone",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_cc_capture_req_ship",
+      "title": "captureMandate.requestShipping",
+      "byte_start": 496977,
+      "byte_end": 497566,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_cc_capture_req_ship",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_cc_capture_ship_to",
+      "title": "captureMandate.shipToCountries",
+      "byte_start": 497566,
+      "byte_end": 497842,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_cc_capture_ship_to",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_cc_include_prefix",
+      "title": "Include Card Prefix",
+      "byte_start": 497842,
+      "byte_end": 500498,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_cc_include_prefix",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_cc_email_autolookup",
+      "title": "Email Autolookup",
+      "byte_start": 500498,
+      "byte_end": 501398,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_cc_email_autolookup",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_cc_mobile_identity",
+      "title": "Mobile as Identity for `Click to Pay`",
+      "byte_start": 501398,
+      "byte_end": 502254,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_cc_mobile_identity",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-appendix-uc-auth-ex",
+      "title": "Example: `Unified Checkout` Complete Capture Context",
+      "byte_start": 502254,
+      "byte_end": 512284,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-appendix-uc-auth-ex",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-validate-capture-context-intro",
+      "title": "Validating the Capture Context",
+      "byte_start": 512284,
+      "byte_end": 516138,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-validate-capture-context-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-session-validate",
+      "title": "Session Validation",
+      "byte_start": 516138,
+      "byte_end": 517000,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-session-validate",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-tokens-intro",
+      "title": "Transient Tokens",
+      "byte_start": 517000,
+      "byte_end": 517754,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-tokens-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-tokens-format",
+      "title": "Transient Token Format",
+      "byte_start": 517754,
+      "byte_end": 518397,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-tokens-format",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-trans-tkn-ex",
+      "title": "Example: Transient Token Format",
+      "byte_start": 518397,
+      "byte_end": 521640,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-trans-tkn-ex",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-tokens-verification",
+      "title": "Token Verification",
+      "byte_start": 521640,
+      "byte_end": 522377,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-tokens-verification",
+      "heading_level": 1
+    },
+    {
+      "anchor": "dual-co-brand-card-support",
+      "title": "Dual-Branded Cards",
+      "byte_start": 522377,
+      "byte_end": 523812,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#dual-co-brand-card-support",
+      "heading_level": 1
+    },
+    {
+      "anchor": "dual-co-brand-card-support_section_jm1_vyt_dkc",
+      "title": "Domestic Scheme Rules",
+      "byte_start": 523812,
+      "byte_end": 524696,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#dual-co-brand-card-support_section_jm1_vyt_dkc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-auth-tokens",
+      "title": "Authorizations with a Transient Token",
+      "byte_start": 524696,
+      "byte_end": 527377,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-auth-tokens",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-auth-tokens_endpt-auth",
+      "title": "Endpoint",
+      "byte_start": 527377,
+      "byte_end": 527836,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-auth-tokens_endpt-auth",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-auth-tokens_auth-reqfields-rest",
+      "title": "Required Field for an Authorization with a Transient Token",
+      "byte_start": 527836,
+      "byte_end": 528214,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-auth-tokens_auth-reqfields-rest",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-auth-tokens-ex-rest",
+      "title": "REST Example: Requesting an Authorization with a Transient Token",
+      "byte_start": 528214,
+      "byte_end": 529660,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-auth-tokens-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-reference-test-cards",
+      "title": "Test Your Configuration",
+      "byte_start": 529660,
+      "byte_end": 530984,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-reference-test-cards",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-reference-test-cards-uc",
+      "title": "`Unified Checkout` Test Cards",
+      "byte_start": 530984,
+      "byte_end": 534191,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-reference-test-cards-uc",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-reference-test-cards-visa-ctp",
+      "title": "Visa and Mastercard `Click to Pay` Test Cards",
+      "byte_start": 534191,
+      "byte_end": 534356,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-reference-test-cards-visa-ctp",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-reference-test-cards-visa-ctp_uc-reference-test-cards-visa-ctp",
+      "title": "Visa Test Cards",
+      "byte_start": 534356,
+      "byte_end": 535820,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-reference-test-cards-visa-ctp_uc-reference-test-cards-visa-ctp",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-reference-test-cards-visa-ctp_uc-reference-test-cards-visa-ctp-mc",
+      "title": "Mastercard Test Cards",
+      "byte_start": 535820,
+      "byte_end": 537539,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-reference-test-cards-visa-ctp_uc-reference-test-cards-visa-ctp-mc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-reference-test-cards-auth-ctp",
+      "title": "Test Cards for Authentication by `Click to Pay`",
+      "byte_start": 537539,
+      "byte_end": 540027,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-reference-test-cards-auth-ctp",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-reference-test-cards-auth-echeck",
+      "title": "Echeck Test Values",
+      "byte_start": 540027,
+      "byte_end": 540336,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-reference-test-cards-auth-echeck",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_appendix_authentication",
+      "title": "Test Authentication",
+      "byte_start": 540336,
+      "byte_end": 550248,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_appendix_authentication",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_appendix_handle_errors",
+      "title": "Handle Errors",
+      "byte_start": 550248,
+      "byte_end": 550537,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_appendix_handle_errors",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_handle_errors_uc_checkout",
+      "title": "UnifiedCheckoutError",
+      "byte_start": 550537,
+      "byte_end": 551736,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_handle_errors_uc_checkout",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_handle_errors_detect",
+      "title": "Detect Errors",
+      "byte_start": 551736,
+      "byte_end": 552437,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_handle_errors_detect",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_handle_errors_pattern",
+      "title": "Error Handling Patterns",
+      "byte_start": 552437,
+      "byte_end": 553624,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_handle_errors_pattern",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_handle_errors_codes",
+      "title": "Error Codes",
+      "byte_start": 553624,
+      "byte_end": 560255,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_handle_errors_codes",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_appendix_v1_reason_codes",
+      "title": "Reason Codes",
+      "byte_start": 560255,
+      "byte_end": 566110,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_appendix_v1_reason_codes",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-token-get-pymnt-details",
+      "title": "Payment Details API",
+      "byte_start": 566110,
+      "byte_end": 567689,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-token-get-pymnt-details",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-token-get-pymnt-details_d7e1140",
+      "title": "Endpoint",
+      "byte_start": 567689,
+      "byte_end": 568474,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-token-get-pymnt-details_d7e1140",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-token-get-pymnt-details-ex-rest",
+      "title": "REST Example: Retrieving Transient Token Payment Details",
+      "byte_start": 568474,
+      "byte_end": 569458,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-token-get-pymnt-details-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-appendix-js-reference-v1_api_reference",
+      "title": "JavaScript API Reference",
+      "byte_start": 569458,
+      "byte_end": 569710,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-appendix-js-reference-v1_api_reference",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_appendix_js_initialize",
+      "title": "VAS.UnifiedCheckout(sessionJWT)",
+      "byte_start": 569710,
+      "byte_end": 570665,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_appendix_js_initialize",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_appendix_js_interface",
+      "title": "UnifiedCheckoutInterface",
+      "byte_start": 570665,
+      "byte_end": 576915,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_appendix_js_interface",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_appendix_js_checkout",
+      "title": "Checkout",
+      "byte_start": 576915,
+      "byte_end": 581569,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_appendix_js_checkout",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_appendix_js_trigger",
+      "title": "Trigger",
+      "byte_start": 581569,
+      "byte_end": 582999,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_appendix_js_trigger",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_appendix_js_pay_button",
+      "title": "PaymentButton",
+      "byte_start": 582999,
+      "byte_end": 584600,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_appendix_js_pay_button",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-appendix-js-events",
+      "title": "Events",
+      "byte_start": 584600,
+      "byte_end": 584814,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-appendix-js-events",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-appendix-js-events_uc-appendix-js-events-subscribe",
+      "title": "Subscribe to Events",
+      "byte_start": 584814,
+      "byte_end": 585373,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-appendix-js-events_uc-appendix-js-events-subscribe",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc_v1_migration_intro",
+      "title": "Update to `Unified Checkout` Version 1",
+      "byte_start": 585373,
+      "byte_end": 600019,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_v1_migration_intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_v1_migrate_reason_codes",
+      "title": "Update Reason Codes",
+      "byte_start": 600019,
+      "byte_end": 601555,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_v1_migrate_reason_codes",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_v1_migration_checklist",
+      "title": "Version 1 Update Checklist",
+      "byte_start": 601555,
+      "byte_end": 602448,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_v1_migration_checklist",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-appendix",
+      "title": "Appendix",
+      "byte_start": 602448,
+      "byte_end": 602570,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-appendix",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-appendix-jwts",
+      "title": "JSON Web Tokens",
+      "byte_start": 602570,
+      "byte_end": 604208,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-appendix-jwts",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-appendix-supp-countries",
+      "title": "Supported Countries for Digital Payments",
+      "byte_start": 604208,
+      "byte_end": 604351,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-appendix-supp-countries",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-appendix-supp-countries-a-d",
+      "title": "Supported Countries for Digital Payments A-D",
+      "byte_start": 604351,
+      "byte_end": 629198,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-appendix-supp-countries-a-d",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-appendix-supp-countries-e-k",
+      "title": "Supported Countries for Digital Payments E-K",
+      "byte_start": 629198,
+      "byte_end": 646866,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-appendix-supp-countries-e-k",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-appendix-supp-countries-l-r",
+      "title": "Supported Countries for Digital Payments L-R",
+      "byte_start": 646866,
+      "byte_end": 667852,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-appendix-supp-countries-l-r",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-appendix-supp-countries-s-z",
+      "title": "Supported Countries for Digital Payments S-Z",
+      "byte_start": 667852,
+      "byte_end": 700826,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-appendix-supp-countries-s-z",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-appendix-languages",
+      "title": "Supported Locales",
+      "byte_start": 700826,
+      "byte_end": 704810,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-appendix-languages",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_security_recs",
+      "title": "Security Recommendations",
+      "byte_start": 704810,
+      "byte_end": 708660,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_security_recs",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_pci_compliance",
+      "title": "PCI Compliance",
+      "byte_start": 708660,
+      "byte_end": 711083,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_pci_compliance",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-intro",
+      "title": "Introduction to the `Click to Pay Drop-In UI`",
+      "byte_start": 711083,
+      "byte_end": 713020,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-intro_fig1",
+      "title": "Figure:",
+      "byte_start": 713020,
+      "byte_end": 713319,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-intro_fig1",
+      "heading_level": 4
+    },
+    {
+      "anchor": "ctp-intro_fig_dwv_t41_3jc",
+      "title": "Figure:",
+      "byte_start": 713319,
+      "byte_end": 714133,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-intro_fig_dwv_t41_3jc",
+      "heading_level": 4
+    },
+    {
+      "anchor": "ctp-walkthrough-intro",
+      "title": "`Click to Pay` Customer Workflows",
+      "byte_start": 714133,
+      "byte_end": 715401,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-walkthrough-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-walkthrough-recognized",
+      "title": "Recognized `Click to Pay` Customer",
+      "byte_start": 715401,
+      "byte_end": 716130,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-walkthrough-recognized",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-walkthrough-recognized_fig-ctp-recog-device",
+      "title": "Figure:",
+      "byte_start": 716130,
+      "byte_end": 716405,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-walkthrough-recognized_fig-ctp-recog-device",
+      "heading_level": 4
+    },
+    {
+      "anchor": "ctp-walkthrough-unrecognized",
+      "title": "Unrecognized `Click to Pay` Customer",
+      "byte_start": 716405,
+      "byte_end": 717435,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-walkthrough-unrecognized",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-walkthrough-unrecognized_fig-ctp-recog-account",
+      "title": "Figure:",
+      "byte_start": 717435,
+      "byte_end": 717739,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-walkthrough-unrecognized_fig-ctp-recog-account",
+      "heading_level": 4
+    },
+    {
+      "anchor": "ctp-walkthrough-guest",
+      "title": "Guest Customer",
+      "byte_start": 717739,
+      "byte_end": 718647,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-walkthrough-guest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-walkthrough-guest_fig-ctp-no-account",
+      "title": "Figure:",
+      "byte_start": 718647,
+      "byte_end": 718884,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-walkthrough-guest_fig-ctp-no-account",
+      "heading_level": 4
+    },
+    {
+      "anchor": "ctp_uc_getting_started_integration_flow",
+      "title": "`Click to Pay Drop-In UI` Flow",
+      "byte_start": 718884,
+      "byte_end": 720246,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp_uc_getting_started_integration_flow",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp_uc_getting_started_integration_flow_fig_uc-payment-flow",
+      "title": "Figure:",
+      "byte_start": 720246,
+      "byte_end": 721125,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp_uc_getting_started_integration_flow_fig_uc-payment-flow",
+      "heading_level": 4
+    },
+    {
+      "anchor": "ctp-uc-enabling-ebc",
+      "title": "Enabling `Click to Pay` in the `Business Center`",
+      "byte_start": 721125,
+      "byte_end": 722844,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-uc-enabling-ebc",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-config-ctp-boarding",
+      "title": "Add `Click to Pay` to a Merchant Account",
+      "byte_start": 722844,
+      "byte_end": 725906,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#boarding-config-ctp-boarding",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp_enable_digital_pay_intro",
+      "title": "Enable `Click to Pay`",
+      "byte_start": 725906,
+      "byte_end": 726439,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp_enable_digital_pay_intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-click-to-pay-enable-intro",
+      "title": "Enabling `Click to Pay Drop-In UI` Using the API",
+      "byte_start": 726439,
+      "byte_end": 727483,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#boarding-click-to-pay-enable-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-click-to-pay-enable-intro_d9e752",
+      "title": "Endpoint",
+      "byte_start": 727483,
+      "byte_end": 727843,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#boarding-click-to-pay-enable-intro_d9e752",
+      "heading_level": 2
+    },
+    {
+      "anchor": "boarding-click-to-pay-enable-reqfields",
+      "title": "Required Fields for Enabling `Click to Pay Drop-In UI`",
+      "byte_start": 727843,
+      "byte_end": 729362,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#boarding-click-to-pay-enable-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-click-to-pay-enable-reqfields_section_dgl_c11_3jc",
+      "title": "Related Information",
+      "byte_start": 729362,
+      "byte_end": 729749,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#boarding-click-to-pay-enable-reqfields_section_dgl_c11_3jc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "boarding-click-to-pay-enable-optfields",
+      "title": "Optional Fields for Enabling `Click to Pay Drop-In UI`",
+      "byte_start": 729749,
+      "byte_end": 731125,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#boarding-click-to-pay-enable-optfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-click-to-pay-enable-optfields_section_dgl_c11_3jc",
+      "title": "Related Information",
+      "byte_start": 731125,
+      "byte_end": 731512,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#boarding-click-to-pay-enable-optfields_section_dgl_c11_3jc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "boarding-click-to-pay-enable-ex-rest",
+      "title": "REST Example: Enabling `Click to Pay Drop-In UI`",
+      "byte_start": 731512,
+      "byte_end": 733464,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#boarding-click-to-pay-enable-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-getting-started-ss-setup",
+      "title": "Server-Side Set Up",
+      "byte_start": 733464,
+      "byte_end": 734665,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-getting-started-ss-setup",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-capture-context-intro",
+      "title": "Capture Context Using the Sessions API",
+      "byte_start": 734665,
+      "byte_end": 738302,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-capture-context-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-getting-started-cs-setup-intro",
+      "title": "Client-Side Set Up",
+      "byte_start": 738302,
+      "byte_end": 739676,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-getting-started-cs-setup-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-getting-started-cs-js-library-intro",
+      "title": "Loading the JavaScript Library and Invoking the Accept Function",
+      "byte_start": 739676,
+      "byte_end": 741483,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-getting-started-cs-js-library-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-getting-started-cs-js-library-example",
+      "title": "JavaScript Example: Initializing the SDK",
+      "byte_start": 741483,
+      "byte_end": 742368,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-getting-started-cs-js-library-example",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-getting-started-cs-js-button-example",
+      "title": "JavaScript Example: Displaying the Button List",
+      "byte_start": 742368,
+      "byte_end": 743165,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-getting-started-cs-js-button-example",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-getting-started-cs-js-trigger-ctp-pan-example",
+      "title": "JavaScript Example: Client-Defined Trigger for `Click to Pay` or PAN Entry",
+      "byte_start": 743165,
+      "byte_end": 744247,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-getting-started-cs-js-trigger-ctp-pan-example",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-getting-started-button-widget-intro",
+      "title": "Adding the Payment Application and Payment Acceptance",
+      "byte_start": 744247,
+      "byte_end": 744934,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-getting-started-button-widget-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-getting-started-button-widget-sidebar",
+      "title": "JavaScript Example: Setting Up with Full Sidebar",
+      "byte_start": 744934,
+      "byte_end": 746290,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-getting-started-button-widget-sidebar",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-getting-started-button-widget-embedded",
+      "title": "JavaScript Example: Setting Up with the Embedded Component",
+      "byte_start": 746290,
+      "byte_end": 748178,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-getting-started-button-widget-embedded",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-setup-capture-context",
+      "title": "Sessions API - Capture Context",
+      "byte_start": 748178,
+      "byte_end": 749648,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-setup-capture-context",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-capture-context-features",
+      "title": "Features",
+      "byte_start": 749648,
+      "byte_end": 749820,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-capture-context-features",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-cc-allowed-card-networks",
+      "title": "Allowed Card Networks",
+      "byte_start": 749820,
+      "byte_end": 751590,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-cc-allowed-card-networks",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-cc-allowed-card-networks_section_jf1_syt_dkc",
+      "title": "Domestic Scheme Rules",
+      "byte_start": 751590,
+      "byte_end": 752478,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-cc-allowed-card-networks_section_jf1_syt_dkc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-cc-target-origin",
+      "title": "Target Origins",
+      "byte_start": 752478,
+      "byte_end": 753421,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-cc-target-origin",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-cc-allowed-pay-type",
+      "title": "Allowed Payment Types",
+      "byte_start": 753421,
+      "byte_end": 754418,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-cc-allowed-pay-type",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-cc-ctp-enroll-precheck",
+      "title": "Auto-check Enrollment",
+      "byte_start": 754418,
+      "byte_end": 755362,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-cc-ctp-enroll-precheck",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-cc-button-type",
+      "title": "Button Type",
+      "byte_start": 755362,
+      "byte_end": 756246,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-cc-button-type",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-session-button-text",
+      "title": "Customize Button Text",
+      "byte_start": 756246,
+      "byte_end": 757058,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-session-button-text",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-cc-capture-mandate",
+      "title": "Capture Mandate",
+      "byte_start": 757058,
+      "byte_end": 757995,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-cc-capture-mandate",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-cc-capture-combo-cards",
+      "title": "captureMandate.comboCard",
+      "byte_start": 757995,
+      "byte_end": 759276,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-cc-capture-combo-cards",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-cc-capture-cpf",
+      "title": "captureMandate.CPF",
+      "byte_start": 759276,
+      "byte_end": 759878,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-cc-capture-cpf",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-cc-capture-save-card",
+      "title": "captureMandate.requestSaveCredentials",
+      "byte_start": 759878,
+      "byte_end": 760531,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-cc-capture-save-card",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-cc-capture-rem-confirm-screen",
+      "title": "captureMandate.showConfirmationStep",
+      "byte_start": 760531,
+      "byte_end": 761080,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-cc-capture-rem-confirm-screen",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-cc-capture-billing-type",
+      "title": "captureMandate.billingType",
+      "byte_start": 761080,
+      "byte_end": 762337,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-cc-capture-billing-type",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-cc-capture-req-email",
+      "title": "captureMandate.requestEmail",
+      "byte_start": 762337,
+      "byte_end": 762837,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-cc-capture-req-email",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-cc-capture-req-phone",
+      "title": "captureMandate.requestPhone",
+      "byte_start": 762837,
+      "byte_end": 763068,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-cc-capture-req-phone",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-cc-capture-req-ship",
+      "title": "captureMandate.requestShipping",
+      "byte_start": 763068,
+      "byte_end": 763659,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-cc-capture-req-ship",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-cc-capture-ship-to",
+      "title": "captureMandate.shipToCountries",
+      "byte_start": 763659,
+      "byte_end": 763937,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-cc-capture-ship-to",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-cc-include-prefix",
+      "title": "Include Card Prefix",
+      "byte_start": 763937,
+      "byte_end": 766823,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-cc-include-prefix",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-cc-email-autolookup",
+      "title": "Email Autolookup",
+      "byte_start": 766823,
+      "byte_end": 767431,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-cc-email-autolookup",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-cc-mobile-identity",
+      "title": "Mobile as Identity for `Click to Pay`",
+      "byte_start": 767431,
+      "byte_end": 768289,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-cc-mobile-identity",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-cc-ui-ux-look-feel",
+      "title": "UI/UX Customization Look and Feel",
+      "byte_start": 768289,
+      "byte_end": 772852,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-cc-ui-ux-look-feel",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-capture-context-versions",
+      "title": "Client Version History",
+      "byte_start": 772852,
+      "byte_end": 774899,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-capture-context-versions",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-setup-capture-context-intro",
+      "title": "Requesting the Capture Context Using the Sessions API",
+      "byte_start": 774899,
+      "byte_end": 775138,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-setup-capture-context-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-setup-capture-context-intro_d18e1021",
+      "title": "Endpoint",
+      "byte_start": 775138,
+      "byte_end": 775738,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-setup-capture-context-intro_d18e1021",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-setup-capture-context-req-fields",
+      "title": "Required Fields for Requesting the Capture Context",
+      "byte_start": 775738,
+      "byte_end": 775980,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-setup-capture-context-req-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-setup-capture-context-req-fields_req-fields-uc-capture-ctx",
+      "title": "Required Fields for Requesting the Capture Context",
+      "byte_start": 775980,
+      "byte_end": 777320,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-setup-capture-context-req-fields_req-fields-uc-capture-ctx",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-setup-capture-context-req-fields_section_ybj_nzz_sxb",
+      "title": "Related Information",
+      "byte_start": 777320,
+      "byte_end": 777706,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-setup-capture-context-req-fields_section_ybj_nzz_sxb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-setup-capture-context-example",
+      "title": "REST Example: Requesting the Capture Context",
+      "byte_start": 777706,
+      "byte_end": 792331,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-setup-capture-context-example",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-tokens-intro",
+      "title": "Transient Tokens",
+      "byte_start": 792331,
+      "byte_end": 793087,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-tokens-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-tokens-format",
+      "title": "Transient Token Format",
+      "byte_start": 793087,
+      "byte_end": 793549,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-tokens-format",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-trans-tkn-ex",
+      "title": "Example: Transient Token Format",
+      "byte_start": 793549,
+      "byte_end": 800645,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-trans-tkn-ex",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-tokens-verification",
+      "title": "Token Verification",
+      "byte_start": 800645,
+      "byte_end": 802284,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-tokens-verification",
+      "heading_level": 1
+    },
+    {
+      "anchor": "dual-co-brand-card-support",
+      "title": "Dual-Branded Cards",
+      "byte_start": 802284,
+      "byte_end": 803716,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#dual-co-brand-card-support",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-dual-co-brand-card-support",
+      "title": "Dual-Branded Cards",
+      "byte_start": 803716,
+      "byte_end": 805156,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-dual-co-brand-card-support",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-dual-co-brand-card-support_section_jf1_syt_dkc",
+      "title": "Domestic Scheme Rules",
+      "byte_start": 805156,
+      "byte_end": 806048,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-dual-co-brand-card-support_section_jf1_syt_dkc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-token-get-pymnt-details",
+      "title": "Payment Details API",
+      "byte_start": 806048,
+      "byte_end": 807674,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-token-get-pymnt-details",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-token-get-pymnt-details_d18e1140",
+      "title": "Endpoint",
+      "byte_start": 807674,
+      "byte_end": 808463,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-token-get-pymnt-details_d18e1140",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-token-get-pymnt-details-required",
+      "title": "Required Field for Retrieving Transient Token Payment Details",
+      "byte_start": 808463,
+      "byte_end": 808837,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-token-get-pymnt-details-required",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-token-get-pymnt-details-ex-rest",
+      "title": "REST Example: Retrieving Transient Token Payment Details",
+      "byte_start": 808837,
+      "byte_end": 809882,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-token-get-pymnt-details-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-token-get-pymnt-credentials",
+      "title": "Payment Credentials API",
+      "byte_start": 809882,
+      "byte_end": 813502,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-token-get-pymnt-credentials",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-token-get-pymnt-credentials_d18e634",
+      "title": "Endpoint",
+      "byte_start": 813502,
+      "byte_end": 814315,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-token-get-pymnt-credentials_d18e634",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-token-get-payment-credentials-required",
+      "title": "Required Field for Retrieving Payment Credentials",
+      "byte_start": 814315,
+      "byte_end": 815057,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-token-get-payment-credentials-required",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-token-get-payment-credentials-example-rest",
+      "title": "REST Example: Retrieving Payment Credentials",
+      "byte_start": 815057,
+      "byte_end": 820757,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-token-get-payment-credentials-example-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-appendix-js-reference_api_reference",
+      "title": "JavaScript API Reference",
+      "byte_start": 820757,
+      "byte_end": 821009,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-appendix-js-reference_api_reference",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-appendix-js-class-accept",
+      "title": "Class: Accept",
+      "byte_start": 821009,
+      "byte_end": 823864,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-appendix-js-class-accept",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-appendix-js-class-accept-error",
+      "title": "Class: AcceptError",
+      "byte_start": 823864,
+      "byte_end": 828666,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-appendix-js-class-accept-error",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-appendix-js-class-unified-payments",
+      "title": "Class: UnifiedPayments",
+      "byte_start": 828666,
+      "byte_end": 829026,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-appendix-js-class-unified-payments",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-appendix-js-class-unified-payments_section_n1t_k5v_ncc",
+      "title": "Methods",
+      "byte_start": 829026,
+      "byte_end": 833702,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-appendix-js-class-unified-payments_section_n1t_k5v_ncc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp_appendix_js_initialize",
+      "title": "VAS.UnifiedCheckout(sessionJWT)",
+      "byte_start": 833702,
+      "byte_end": 834659,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp_appendix_js_initialize",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-appendix-js-interface",
+      "title": "UnifiedCheckoutInterface",
+      "byte_start": 834659,
+      "byte_end": 834882,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-appendix-js-interface",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-appendix-js-interface_section_zcx_g1s_hjc",
+      "title": "client.createCheckout(options?)",
+      "byte_start": 834882,
+      "byte_end": 835971,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-appendix-js-interface_section_zcx_g1s_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-appendix-js-interface_section_fdx_g1s_hjc",
+      "title": "client.createTrigger(paymentType, options?)",
+      "byte_start": 835971,
+      "byte_end": 836872,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-appendix-js-interface_section_fdx_g1s_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-appendix-js-interface_section_qdx_g1s_hjc",
+      "title": "client.on(event, callback)",
+      "byte_start": 836872,
+      "byte_end": 838304,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-appendix-js-interface_section_qdx_g1s_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-appendix-js-interface_section_wdx_g1s_hjc",
+      "title": "client.off(event, callback?)",
+      "byte_start": 838304,
+      "byte_end": 839170,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-appendix-js-interface_section_wdx_g1s_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-appendix-js-interface_section_ydx_g1s_hjc",
+      "title": "client.destroy()",
+      "byte_start": 839170,
+      "byte_end": 839474,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-appendix-js-interface_section_ydx_g1s_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-appendix-js-interface_section_zdx_g1s_hjc",
+      "title": "client.isDestroyed()",
+      "byte_start": 839474,
+      "byte_end": 839673,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-appendix-js-interface_section_zdx_g1s_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-appendix-js-checkout",
+      "title": "Checkout",
+      "byte_start": 839673,
+      "byte_end": 839845,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-appendix-js-checkout",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-appendix-js-checkout_section_c32_hbs_hjc",
+      "title": "checkout.mount(target)",
+      "byte_start": 839845,
+      "byte_end": 841977,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-appendix-js-checkout_section_c32_hbs_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-appendix-js-checkout_section_h32_hbs_hjc",
+      "title": "checkout.unmount()",
+      "byte_start": 841977,
+      "byte_end": 842215,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-appendix-js-checkout_section_h32_hbs_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-appendix-js-checkout_section_n32_hbs_hjc",
+      "title": "checkout.isMounted()",
+      "byte_start": 842215,
+      "byte_end": 842403,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-appendix-js-checkout_section_n32_hbs_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-appendix-js-checkout_section_o32_hbs_hjc",
+      "title": "checkout.isDestroyed()",
+      "byte_start": 842403,
+      "byte_end": 842590,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-appendix-js-checkout_section_o32_hbs_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-appendix-js-checkout_section_p32_hbs_hjc",
+      "title": "checkout.on(event, handler)",
+      "byte_start": 842590,
+      "byte_end": 843036,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-appendix-js-checkout_section_p32_hbs_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-appendix-js-checkout_section_r32_hbs_hjc",
+      "title": "checkout.off(event, handler?)",
+      "byte_start": 843036,
+      "byte_end": 843228,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-appendix-js-checkout_section_r32_hbs_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-appendix-js-checkout_section_s32_hbs_hjc",
+      "title": "checkout.destroy()",
+      "byte_start": 843228,
+      "byte_end": 843484,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-appendix-js-checkout_section_s32_hbs_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-appendix-js-trigger",
+      "title": "Trigger",
+      "byte_start": 843484,
+      "byte_end": 843665,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-appendix-js-trigger",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-appendix-js-trigger_section_nmc_sbs_hjc",
+      "title": "trigger.mount(target?)",
+      "byte_start": 843665,
+      "byte_end": 844472,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-appendix-js-trigger_section_nmc_sbs_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-appendix-js-trigger_section_tmc_sbs_hjc",
+      "title": "trigger.unmount()",
+      "byte_start": 844472,
+      "byte_end": 844663,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-appendix-js-trigger_section_tmc_sbs_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-appendix-js-trigger_section_vmc_sbs_hjc",
+      "title": "trigger.isMounted()",
+      "byte_start": 844663,
+      "byte_end": 844824,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-appendix-js-trigger_section_vmc_sbs_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-appendix-js-trigger_section_wmc_sbs_hjc",
+      "title": "trigger.isDestroyed()",
+      "byte_start": 844824,
+      "byte_end": 844989,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-appendix-js-trigger_section_wmc_sbs_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-appendix-js-trigger_section_xmc_sbs_hjc",
+      "title": "trigger.on(event, handler)",
+      "byte_start": 844989,
+      "byte_end": 845219,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-appendix-js-trigger_section_xmc_sbs_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-appendix-js-trigger_section_ymc_sbs_hjc",
+      "title": "trigger.off(event, handler?)",
+      "byte_start": 845219,
+      "byte_end": 845406,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-appendix-js-trigger_section_ymc_sbs_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-appendix-js-trigger_section_zmc_sbs_hjc",
+      "title": "trigger.destroy()",
+      "byte_start": 845406,
+      "byte_end": 845572,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-appendix-js-trigger_section_zmc_sbs_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp_appendix_js_events",
+      "title": "Events",
+      "byte_start": 845572,
+      "byte_end": 845784,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp_appendix_js_events",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp_appendix_js_events_section_r13_l2n_djc",
+      "title": "Subscribe to Events",
+      "byte_start": 845784,
+      "byte_end": 846321,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp_appendix_js_events_section_r13_l2n_djc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-configuration-intro",
+      "title": "`Unified Checkout` Configuration",
+      "byte_start": 846321,
+      "byte_end": 847086,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-configuration-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-upload-encrypt-key-intro",
+      "title": "Upload Your Encryption Key",
+      "byte_start": 847086,
+      "byte_end": 847678,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-upload-encrypt-key-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-generate-keypair",
+      "title": "Generate a Public Private Key Pair",
+      "byte_start": 847678,
+      "byte_end": 848693,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-generate-keypair",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-upload-key",
+      "title": "Uploading Your Key Pair",
+      "byte_start": 848693,
+      "byte_end": 849738,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-upload-key",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp_enable_digital_pay_intro",
+      "title": "Enable `Click to Pay`",
+      "byte_start": 849738,
+      "byte_end": 850224,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp_enable_digital_pay_intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-authentication",
+      "title": "Click to Pay Customer Authentication",
+      "byte_start": 850224,
+      "byte_end": 851882,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-authentication",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-authentication_section_rkj_xcs_hjc",
+      "title": "Authentication Flow",
+      "byte_start": 851882,
+      "byte_end": 852236,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-authentication_section_rkj_xcs_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-authentication-steps",
+      "title": "Set Up Customer Authentication for Click to Pay",
+      "byte_start": 852236,
+      "byte_end": 855183,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-authentication-steps",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-authentication-methods",
+      "title": "Authentication Methods",
+      "byte_start": 855183,
+      "byte_end": 857192,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-authentication-methods",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-click-to-pay-auth-enable-intro",
+      "title": "Enable `Click to Pay` Customer Authentication Using the API",
+      "byte_start": 857192,
+      "byte_end": 857518,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#boarding-click-to-pay-auth-enable-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-click-to-pay-auth-enable-intro_d9e752",
+      "title": "Endpoint",
+      "byte_start": 857518,
+      "byte_end": 857898,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#boarding-click-to-pay-auth-enable-intro_d9e752",
+      "heading_level": 2
+    },
+    {
+      "anchor": "boarding-click-to-pay-auth-enable-reqfields",
+      "title": "Required Fields for Enabling `Click to Pay` Authentication",
+      "byte_start": 857898,
+      "byte_end": 859881,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#boarding-click-to-pay-auth-enable-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-click-to-pay-auth-enable-reqfields_section_dgl_c11_3jc",
+      "title": "Related Information",
+      "byte_start": 859881,
+      "byte_end": 860283,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#boarding-click-to-pay-auth-enable-reqfields_section_dgl_c11_3jc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "boarding-click-to-pay-auth-enable-optfields",
+      "title": "Optional Fields for Enabling `Click to Pay` Authentication",
+      "byte_start": 860283,
+      "byte_end": 861277,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#boarding-click-to-pay-auth-enable-optfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-click-to-pay-auth-enable-optfields_section_dgl_c11_3jc",
+      "title": "Related Information",
+      "byte_start": 861277,
+      "byte_end": 861679,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#boarding-click-to-pay-auth-enable-optfields_section_dgl_c11_3jc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "boarding-click-to-pay-auth-enable-ex-rest",
+      "title": "REST Example: Enabling `Click to Pay` Authentication",
+      "byte_start": 861679,
+      "byte_end": 863654,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#boarding-click-to-pay-auth-enable-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-authentication-config-ebc",
+      "title": "Enable Click to Pay Customer Authentication Using the `Business Center`",
+      "byte_start": 863654,
+      "byte_end": 866809,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-authentication-config-ebc",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-upload-encrypt-key-intro",
+      "title": "Upload Your Encryption Key",
+      "byte_start": 866809,
+      "byte_end": 867996,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-upload-encrypt-key-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-generate-keypair",
+      "title": "Generate a Public Private Key Pair",
+      "byte_start": 867996,
+      "byte_end": 869051,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-generate-keypair",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-upload-key",
+      "title": "Uploading Your Key Pair",
+      "byte_start": 869051,
+      "byte_end": 870420,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-upload-key",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-testing-intro",
+      "title": "Test Your `Click to Pay` Configuration",
+      "byte_start": 870420,
+      "byte_end": 870625,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-testing-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp_reference_test_cards",
+      "title": "Test Payment Details",
+      "byte_start": 870625,
+      "byte_end": 874615,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp_reference_test_cards",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_appendix_handle_errors",
+      "title": "Handle Errors",
+      "byte_start": 874615,
+      "byte_end": 874904,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_appendix_handle_errors",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-handle-errors-codes",
+      "title": "Error Codes",
+      "byte_start": 874904,
+      "byte_end": 874983,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-handle-errors-codes",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-handle-errors-codes_section_kw4_czg_3jc",
+      "title": "Initialization Errors",
+      "byte_start": 874983,
+      "byte_end": 876018,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-handle-errors-codes_section_kw4_czg_3jc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-handle-errors-codes_section_ow4_czg_3jc",
+      "title": "Mount Errors",
+      "byte_start": 876018,
+      "byte_end": 878162,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-handle-errors-codes_section_ow4_czg_3jc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-handle-errors-codes_section_sw4_czg_3jc",
+      "title": "Checkout Errors",
+      "byte_start": 878162,
+      "byte_end": 878780,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-handle-errors-codes_section_sw4_czg_3jc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-handle-errors-codes_section_vw4_czg_3jc",
+      "title": "Trigger Errors",
+      "byte_start": 878780,
+      "byte_end": 879398,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-handle-errors-codes_section_vw4_czg_3jc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-handle-errors-codes_section_xw4_czg_3jc",
+      "title": "**Payment-Specific Errors**",
+      "byte_start": 879398,
+      "byte_end": 880276,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-handle-errors-codes_section_xw4_czg_3jc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-handle-errors-codes_section_zw4_czg_3jc",
+      "title": "General Errors",
+      "byte_start": 880276,
+      "byte_end": 880561,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-handle-errors-codes_section_zw4_czg_3jc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-appendix-reason-codes",
+      "title": "Reason Codes",
+      "byte_start": 880561,
+      "byte_end": 900482,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-appendix-reason-codes",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_appendix_supp_countries",
+      "title": "Supported Countries for `Click to Pay`",
+      "byte_start": 900482,
+      "byte_end": 901280,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_appendix_supp_countries",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-appendix-languages",
+      "title": "Supported Locales",
+      "byte_start": 901280,
+      "byte_end": 905090,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-appendix-languages",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-capture-context-versions",
+      "title": "Client Version History",
+      "byte_start": 905090,
+      "byte_end": 907198,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-capture-context-versions",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-appendix-cust-matrix",
+      "title": "Customization Matrix",
+      "byte_start": 907198,
+      "byte_end": 915432,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-appendix-cust-matrix",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-appendix-jwts",
+      "title": "JSON Web Tokens",
+      "byte_start": 915432,
+      "byte_end": 917212,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-appendix-jwts",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-appendix-reason-codes",
+      "title": "Reason Codes",
+      "byte_start": 917212,
+      "byte_end": 933513,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-appendix-reason-codes",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_v1_migration_intro",
+      "title": "Update to `Click to Pay Drop-In UI` Version 1",
+      "byte_start": 933513,
+      "byte_end": 940885,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_v1_migration_intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_v1_migration_intro_section_xzp_pbt_hjc",
+      "title": "Initialization",
+      "byte_start": 940885,
+      "byte_end": 941517,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_v1_migration_intro_section_xzp_pbt_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc_v1_migration_intro_section_d1q_pbt_hjc",
+      "title": "Display the Payment UI",
+      "byte_start": 941517,
+      "byte_end": 942318,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_v1_migration_intro_section_d1q_pbt_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc_v1_migration_intro_section_n1q_pbt_hjc",
+      "title": "Events",
+      "byte_start": 942318,
+      "byte_end": 943189,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_v1_migration_intro_section_n1q_pbt_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc_v1_migration_intro_section_q1q_pbt_hjc",
+      "title": "Cleanup",
+      "byte_start": 943189,
+      "byte_end": 943854,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_v1_migration_intro_section_q1q_pbt_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc_v1_migration_intro_section_v1q_pbt_hjc",
+      "title": "Handle Errors",
+      "byte_start": 943854,
+      "byte_end": 944522,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_v1_migration_intro_section_v1q_pbt_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc_v1_migration_intro_section_abq_pbt_hjc",
+      "title": "Migrate Triggers",
+      "byte_start": 944522,
+      "byte_end": 945251,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_v1_migration_intro_section_abq_pbt_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc_v1_migrate_reason_codes",
+      "title": "Update Reason Codes",
+      "byte_start": 945251,
+      "byte_end": 946783,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_v1_migrate_reason_codes",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_v1_migration_checklist",
+      "title": "Version 1 Update Checklist",
+      "byte_start": 946783,
+      "byte_end": 947722,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_v1_migration_checklist",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-ui-screens",
+      "title": "`Click to Pay` UI Guidelines",
+      "byte_start": 947722,
+      "byte_end": 949590,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-ui-screens",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-ui-screens_section_ih5_35s_hjc",
+      "title": "Recognized `Click to Pay` Customer",
+      "byte_start": 949590,
+      "byte_end": 949853,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-ui-screens_section_ih5_35s_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-ui-screens_fig-ctp-recog-device",
+      "title": "Figure:",
+      "byte_start": 949853,
+      "byte_end": 950116,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-ui-screens_fig-ctp-recog-device",
+      "heading_level": 4
+    },
+    {
+      "anchor": "ctp-ui-screens_section_kh5_35s_hjc",
+      "title": "Unrecognized `Click to Pay` Customer",
+      "byte_start": 950116,
+      "byte_end": 950525,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-ui-screens_section_kh5_35s_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-ui-screens_fig-ctp-recog-account",
+      "title": "Figure:",
+      "byte_start": 950525,
+      "byte_end": 950815,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-ui-screens_fig-ctp-recog-account",
+      "heading_level": 4
+    },
+    {
+      "anchor": "ctp-ui-screens_section_mh5_35s_hjc",
+      "title": "No `Click to Pay` Account",
+      "byte_start": 950815,
+      "byte_end": 951252,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-ui-screens_section_mh5_35s_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-ui-screens_fig-ctp-no-account",
+      "title": "Figure:",
+      "byte_start": 951252,
+      "byte_end": 951502,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-ui-screens_fig-ctp-no-account",
+      "heading_level": 4
+    },
+    {
+      "anchor": "ctp-appendix-ui-ux-ex",
+      "title": "`Click to Pay` UI Examples",
+      "byte_start": 951502,
+      "byte_end": 951901,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-appendix-ui-ux-ex",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ctp-appendix-ui-ux-ex_section_gxs_2tz_hjc",
+      "title": "`Click to Pay` Replaces PAN Capture",
+      "byte_start": 951901,
+      "byte_end": 952139,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-appendix-ui-ux-ex_section_gxs_2tz_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-appendix-ui-ux-ex_fig-ctp-ex1",
+      "title": "Figure:",
+      "byte_start": 952139,
+      "byte_end": 952402,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-appendix-ui-ux-ex_fig-ctp-ex1",
+      "heading_level": 4
+    },
+    {
+      "anchor": "ctp-appendix-ui-ux-ex_fig-ctp-ex2",
+      "title": "Figure:",
+      "byte_start": 952402,
+      "byte_end": 952952,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-appendix-ui-ux-ex_fig-ctp-ex2",
+      "heading_level": 4
+    },
+    {
+      "anchor": "ctp-appendix-ui-ux-ex_section_jxs_2tz_hjc",
+      "title": "`Click to Pay` as Radio Button",
+      "byte_start": 952952,
+      "byte_end": 953283,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-appendix-ui-ux-ex_section_jxs_2tz_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-appendix-ui-ux-ex_fig-ctp-ex3",
+      "title": "Figure:",
+      "byte_start": 953283,
+      "byte_end": 953536,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-appendix-ui-ux-ex_fig-ctp-ex3",
+      "heading_level": 4
+    },
+    {
+      "anchor": "ctp-appendix-ui-ux-ex_section_lxs_2tz_hjc",
+      "title": "`Click to Pay` Icon on Radio Button",
+      "byte_start": 953536,
+      "byte_end": 954260,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-appendix-ui-ux-ex_section_lxs_2tz_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-appendix-ui-ux-ex_fig-ctp-ex4",
+      "title": "Figure:",
+      "byte_start": 954260,
+      "byte_end": 954521,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-appendix-ui-ux-ex_fig-ctp-ex4",
+      "heading_level": 4
+    },
+    {
+      "anchor": "ctp-appendix-ui-ux-ex_section_nxs_2tz_hjc",
+      "title": "Load `Click to Pay` Automatically From Trigger",
+      "byte_start": 954521,
+      "byte_end": 955398,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-appendix-ui-ux-ex_section_nxs_2tz_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-appendix-ui-ux-ex_fig-ctp-ex5",
+      "title": "Figure:",
+      "byte_start": 955398,
+      "byte_end": 955664,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-appendix-ui-ux-ex_fig-ctp-ex5",
+      "heading_level": 4
+    },
+    {
+      "anchor": "ctp-appendix-ui-ux-ex_section_pxs_2tz_hjc",
+      "title": "Card Payment Options with `Click to Pay` in UI",
+      "byte_start": 955664,
+      "byte_end": 956261,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-appendix-ui-ux-ex_section_pxs_2tz_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "ctp-appendix-ui-ux-ex_fig-ctp-ex6",
+      "title": "Figure:",
+      "byte_start": 956261,
+      "byte_end": 956521,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-appendix-ui-ux-ex_fig-ctp-ex6",
+      "heading_level": 4
+    },
+    {
+      "anchor": "ctp-appendix-ui-ux-ex_fig-ctp-ex7",
+      "title": "Figure:",
+      "byte_start": 956521,
+      "byte_end": 956781,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-appendix-ui-ux-ex_fig-ctp-ex7",
+      "heading_level": 4
+    },
+    {
+      "anchor": "ctp-appendix-ui-ux-ex_fig-ctp-ex8",
+      "title": "Figure:",
+      "byte_start": 956781,
+      "byte_end": 957041,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-appendix-ui-ux-ex_fig-ctp-ex8",
+      "heading_level": 4
+    },
+    {
+      "anchor": "da-processing-payments",
+      "title": "Processing Authorizations with a Transient Token",
+      "byte_start": 957041,
+      "byte_end": 957382,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#da-processing-payments",
+      "heading_level": 1
+    },
+    {
+      "anchor": "da-processing-auth-token-task",
+      "title": "Authorization with a Transient Token",
+      "byte_start": 957382,
+      "byte_end": 958017,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#da-processing-auth-token-task",
+      "heading_level": 1
+    },
+    {
+      "anchor": "da-processing-auth-token-task_d51e16",
+      "title": "Endpoint",
+      "byte_start": 958017,
+      "byte_end": 958519,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#da-processing-auth-token-task_d51e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "da-auth-token-required",
+      "title": "Required Field for an Authorization with a Transient Token",
+      "byte_start": 958519,
+      "byte_end": 958873,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#da-auth-token-required",
+      "heading_level": 1
+    },
+    {
+      "anchor": "da-auth-token-ex-rest-live",
+      "title": "REST Interactive Example: Authorization with a Transient Token",
+      "byte_start": 958873,
+      "byte_end": 959419,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#da-auth-token-ex-rest-live",
+      "heading_level": 1
+    },
+    {
+      "anchor": "da-auth-token-ex-rest",
+      "title": "REST Example: Authorization with a Transient Token",
+      "byte_start": 959419,
+      "byte_end": 961980,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#da-auth-token-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "da-processing-auth-token-create-tms-task",
+      "title": "Authorization and Creating TMS Tokens with a Transient Token",
+      "byte_start": 961980,
+      "byte_end": 962730,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#da-processing-auth-token-create-tms-task",
+      "heading_level": 1
+    },
+    {
+      "anchor": "da-processing-auth-token-create-tms-task_d51e16",
+      "title": "Endpoint",
+      "byte_start": 962730,
+      "byte_end": 963276,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#da-processing-auth-token-create-tms-task_d51e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "da-auth-token-create-tms-required",
+      "title": "Required Fields for an Authorization and Creating TMS Tokens with a Transient Token",
+      "byte_start": 963276,
+      "byte_end": 967379,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#da-auth-token-create-tms-required",
+      "heading_level": 1
+    },
+    {
+      "anchor": "da-auth-token-create-tms-ex-rest-live",
+      "title": "REST Interactive Example: Authorization and Creating TMS Tokens with a Transient Token",
+      "byte_start": 967379,
+      "byte_end": 968077,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#da-auth-token-create-tms-ex-rest-live",
+      "heading_level": 1
+    },
+    {
+      "anchor": "da-auth-token-create-tms-ex-rest",
+      "title": "REST Example: Authorization and Creating TMS Tokens with a Transient Token",
+      "byte_start": 968077,
+      "byte_end": 971738,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#da-auth-token-create-tms-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_ui_screens",
+      "title": "`Click to Pay` UI Guidelines",
+      "byte_start": 971738,
+      "byte_end": 972074,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_ui_screens",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_ui_screens_fig-uc-ui-ctp",
+      "title": "Figure:",
+      "byte_start": 972074,
+      "byte_end": 972299,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc_ui_screens_fig-uc-ui-ctp",
+      "heading_level": 4
+    },
+    {
+      "anchor": "boarding-merchants-v2-add-merch-trans-org-prod",
+      "title": "Set Up the Transacting Organization and Products",
+      "byte_start": 972299,
+      "byte_end": 974464,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#boarding-merchants-v2-add-merch-trans-org-prod",
+      "heading_level": 1
+    },
+    {
+      "anchor": "boarding-merchants-v2-add-merch-acct-info",
+      "title": "Add Merchant Account Information",
+      "byte_start": 974464,
+      "byte_end": 975286,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#boarding-merchants-v2-add-merch-acct-info",
+      "heading_level": 1
+    },
+    {
+      "anchor": "merchants-v2-existing-trans-org-prod",
+      "title": "Configure the Transacting Organization and Products",
+      "byte_start": 975286,
+      "byte_end": 976853,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#merchants-v2-existing-trans-org-prod",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-integration-methods-components",
+      "title": "Components",
+      "byte_start": 976853,
+      "byte_end": 976950,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-integration-methods-components",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-integration-methods-components_section_rrx_wlh_njc",
+      "title": "Components UI",
+      "byte_start": 976950,
+      "byte_end": 977149,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-integration-methods-components_section_rrx_wlh_njc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-integration-methods-components_fig_tvf_2qh_njc",
+      "title": "Figure:",
+      "byte_start": 977149,
+      "byte_end": 977422,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-integration-methods-components_fig_tvf_2qh_njc",
+      "heading_level": 4
+    },
+    {
+      "anchor": "uc-integration-methods-components_section_iqk_xlh_njc",
+      "title": "Components Integration JavaScript Example",
+      "byte_start": 977422,
+      "byte_end": 982950,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-integration-methods-components_section_iqk_xlh_njc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-integration-methods-trigger",
+      "title": "Trigger",
+      "byte_start": 982950,
+      "byte_end": 983035,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-integration-methods-trigger",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-integration-methods-trigger_section_rrx_wlh_njc",
+      "title": "Trigger UI",
+      "byte_start": 983035,
+      "byte_end": 983219,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-integration-methods-trigger_section_rrx_wlh_njc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-integration-methods-trigger_fig_unb_2qh_njc",
+      "title": "Figure:",
+      "byte_start": 983219,
+      "byte_end": 983483,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-integration-methods-trigger_fig_unb_2qh_njc",
+      "heading_level": 4
+    },
+    {
+      "anchor": "uc-integration-methods-trigger_section_iqk_xlh_njc",
+      "title": "Trigger Integration JavaScript Example",
+      "byte_start": 983483,
+      "byte_end": 989174,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-integration-methods-trigger_section_iqk_xlh_njc",
+      "heading_level": 2
+    }
+  ]
+}
