@@ -39,13 +39,15 @@ def render_corpus_report_md(payload: Dict[str, Any]) -> str:
             lines.append(f"- `{r}`")
         lines.append("")
 
-    # Derivation accuracy
+    # Derivation accuracy (winning candidate shape per family)
     lines += [
-        "## Derivation rule accuracy",
+        "## Probe-and-pick winning shapes",
         "",
-        "Separate success rates for family-repeat vs guide-dir fallback.",
+        "Per family, candidate roots (family-repeat, guide-dir, bare family path) "
+        "were probed; the winner is the response with the most `{#anchor}` headings "
+        "(bytes as tiebreak).",
         "",
-        "| Rule | Discovered | Fetched OK | Unfetchable | Success rate |",
+        "| Winning shape | Families | Fetched OK | Unfetchable | Success rate |",
         "|---|---:|---:|---:|---:|",
     ]
     stats = disc.get("derivation_stats") or {}
@@ -80,9 +82,10 @@ def render_corpus_report_md(payload: Dict[str, Any]) -> str:
     if unfetchable:
         lines += ["### Unfetchable detail", ""]
         for row in unfetchable[:30]:
+            shape = row.get("winning_shape") or row.get("derivation")
             lines.append(
                 f"- `{row.get('root_path')}` — **{row.get('unfetchable_reason')}** "
-                f"({row.get('unfetchable_bucket')}) derivation=`{row.get('derivation')}` "
+                f"({row.get('unfetchable_bucket')}) winning_shape=`{shape}` "
                 f"HTTP {row.get('http_status')}"
             )
         if len(unfetchable) > 30:

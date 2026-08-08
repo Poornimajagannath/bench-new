@@ -38,13 +38,14 @@ class ExtractUrlsTests(unittest.TestCase):
 
 class DeriveRootsTests(unittest.TestCase):
     def test_dedupes_subtopics_to_family_root(self):
-        roots, md, pdf = discover_roots_from_llms(LLMS_SNIPPET)
+        roots, md, pdf, docs_only = discover_roots_from_llms(LLMS_SNIPPET)
         self.assertEqual(len(pdf), 1)
         payment_root = "/docs/cybs/en-us/payments/developer/ctv/rest/payments.md"
         boarding_root = "/docs/cybs/en-us/boarding/developer/all/rest/boarding.md"
         self.assertIn(payment_root, roots)
         self.assertIn(boarding_root, roots)
         self.assertGreaterEqual(roots[payment_root].sample_urls, 1)
+        self.assertEqual(roots[payment_root].winning_shape, "family_repeat")
 
     def test_docs_md_supplements_missing_families(self):
         docs = """
@@ -54,10 +55,36 @@ Merchant onboarding
 <br />
 <br />](/docs/cybs/en-us/boarding/developer/all/rest/boarding/boarding-intro.md)
 """
-        roots, _, _ = discover_roots_from_llms("", docs_text=docs)
+        roots, _, _, docs_only = discover_roots_from_llms("", docs_text=docs)
         self.assertIn(
             "/docs/cybs/en-us/boarding/developer/all/rest/boarding.md", roots
         )
+        self.assertIn(
+            "/docs/cybs/en-us/boarding/developer/all/rest/boarding.md", docs_only
+        )
+
+    def test_candidates_include_guide_dir_and_bare_family(self):
+        intro = (
+            "/docs/cybs/en-us/echeck/user/all/rest/"
+            "echeck-user-guide/echeck-txnprocess-intro.md"
+        )
+        from content_bench.content_engine.product_roots import generate_root_candidates
+
+        cands = generate_root_candidates(intro)
+        shapes = {s for _, s in cands}
+        self.assertIn("guide_dir", shapes)
+        self.assertIn("bare_family", shapes)
+
+    def test_candidates_family_repeat_for_boarding(self):
+        intro = (
+            "/docs/cybs/en-us/boarding/developer/all/rest/boarding/boarding-intro.md"
+        )
+        from content_bench.content_engine.product_roots import generate_root_candidates
+
+        cands = generate_root_candidates(intro)
+        shapes = {s for _, s in cands}
+        self.assertIn("family_repeat", shapes)
+        self.assertIn("bare_family", shapes)
 
 
 class ClassifyUnfetchableTests(unittest.TestCase):

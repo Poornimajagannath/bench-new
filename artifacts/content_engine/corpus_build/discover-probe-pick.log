@@ -1,0 +1,7 @@
+wrote /home/badari/workspace/poornima/visa-relay-bench/artifacts/content_engine/corpus_build/discovery.json
+discovered 100 roots (95 fetchable); unfetchable ours=0 theirs=5
+  compendium: 2/2 (100.0%)
+  family_repeat: 54/54 (100.0%)
+  guide_dir: 35/35 (100.0%)
+  listed: 4/4 (100.0%)
+  unresolved: 0/5 (0.0%)

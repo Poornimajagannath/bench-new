@@ -9,13 +9,11 @@ lists, and JSON examples that live only in the family mega-guide root
 and tms.md). The root is the denominator; the site TOC is a cross-check
 that reports pages whose content does not appear in the root.
 
-Derivation: docs.md links point at intro *subtopics*, not roots. The root
-is the guide directory promoted to a sibling ``.md`` file — which is the
-family name repeated when the guide folder matches the family
-(``…/boarding/developer/all/rest/boarding.md``). When the guide folder is
-named differently (``echeck-user-guide``, ``mass-transit``, …), that folder
-name is used. Strict family-name-repeat is tried first and recorded; the
-guide-dir form is the resolving fallback.
+Derivation: docs.md / llms.txt links point at intro *subtopics*, not roots.
+For each product family we generate candidate root URLs (family-repeat,
+guide-dir, bare family path), HTTP-probe each, discard 404s and empty 200s,
+and keep whichever returns the most ``{#anchor}`` headings (bytes as tiebreak).
+The winning candidate shape is recorded per family.
 """
 
 from __future__ import annotations
@@ -26,7 +24,7 @@ import time
 from dataclasses import asdict, dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Dict, List, Optional, Sequence, Tuple
+from typing import Dict, List, Optional, Sequence, Set, Tuple
 from urllib.parse import urljoin
 
 from content_bench.content_engine.toc_fetch import (
@@ -69,6 +67,17 @@ class ProductLink:
 
 
 @dataclass
+class CandidateProbe:
+    path: str
+    shape: str  # family_repeat | guide_dir | bare_family | compendium | listed | already_root
+    http_status: int = 0
+    bytes: int = 0
+    anchor_count: int = 0
+    valid: bool = False
+    discard_reason: Optional[str] = None  # 404 | empty_200 | not_markdown | error
+
+
+@dataclass
 class RootDerivation:
     title: str
     intro_path: str
@@ -76,10 +85,11 @@ class RootDerivation:
     family_repeat_root: Optional[str]
     guide_dir_root: Optional[str]
     chosen_root: Optional[str]
-    derivation: str  # family_repeat | guide_dir | already_root | not_md | unresolved
+    derivation: str  # winning candidate shape, or not_md | unresolved
     http_status: Optional[int] = None
     bytes: int = 0
     resolves: bool = False
+    candidate_probes: List[CandidateProbe] = field(default_factory=list)
 
 
 @dataclass
@@ -159,6 +169,182 @@ def derive_compendium_root(intro_path: str) -> Optional[str]:
         return None
     idx = intro_path.find(marker)
     return intro_path[: idx + len(marker)] + ".md"
+
+
+def derive_bare_family_root(intro_path: str) -> Optional[str]:
+    """Shortest family-named root: ``/…/en-us/{family}/{family}.md``."""
+    if not intro_path.endswith(".md") or intro_path.startswith("/content/"):
+        return None
+    family = family_from_path(intro_path)
+    if not family:
+        return None
+    parts = intro_path.strip("/").split("/")
+    try:
+        i = parts.index("en-us")
+    except ValueError:
+        return None
+    prefix = "/" + "/".join(parts[: i + 1])
+    return f"{prefix}/{family}/{family}.md"
+
+
+def family_group_key(path: str) -> str:
+    """Stable key for grouping llms subtopics into one product family."""
+    family = family_from_path(path)
+    if family:
+        parts = path.strip("/").split("/")
+        try:
+            i = parts.index("en-us")
+            return "/" + "/".join(parts[: i + 2])
+        except ValueError:
+            pass
+    return path
+
+
+def count_anchors(text: str) -> int:
+    return len(re.findall(r"\{#([^}]+)\}", text))
+
+
+_CANDIDATE_SHAPE_PRIORITY = (
+    "family_repeat",
+    "guide_dir",
+    "bare_family",
+    "compendium",
+    "listed",
+    "already_root",
+)
+
+
+def generate_root_candidates(
+    intro_path: str,
+    *,
+    listed_roots: Optional[Set[str]] = None,
+) -> List[Tuple[str, str]]:
+    """Return deduped ``(path, shape)`` candidate roots for probe-and-pick."""
+    if not intro_path.endswith(".md") or intro_path.startswith("/content/"):
+        return []
+
+    candidates: List[Tuple[str, str]] = []
+    seen: Set[str] = set()
+
+    def add(path: Optional[str], shape: str) -> None:
+        if path and path not in seen:
+            seen.add(path)
+            candidates.append((path, shape))
+
+    compendium = derive_compendium_root(intro_path)
+    if compendium:
+        add(compendium, "compendium")
+
+    add(derive_family_repeat_root(intro_path), "family_repeat")
+    add(derive_guide_dir_root(intro_path), "guide_dir")
+    add(derive_bare_family_root(intro_path), "bare_family")
+
+    parts = intro_path.strip("/").split("/")
+    family = family_from_path(intro_path)
+    if family and parts[-1] == f"{family}.md":
+        add(intro_path, "already_root")
+    elif len(parts) >= 2 and parts[-2] in GENERIC_GUIDE_PARENTS:
+        add(intro_path, "listed")
+
+    if listed_roots and intro_path in listed_roots:
+        add(intro_path, "listed")
+
+    return candidates
+
+
+def pick_candidate_offline(
+    candidates: Sequence[Tuple[str, str]],
+) -> Tuple[Optional[str], str]:
+    """Choose a root without HTTP — shape priority for tests and dry runs."""
+    if not candidates:
+        return None, "unresolved"
+    by_shape = {shape: path for path, shape in candidates}
+    for shape in _CANDIDATE_SHAPE_PRIORITY:
+        if shape in by_shape:
+            return by_shape[shape], shape
+    return candidates[0][0], candidates[0][1]
+
+
+def probe_candidate_full(
+    root_path: str,
+    *,
+    base_url: Optional[str] = None,
+    user_agent: str = DEFAULT_UA,
+) -> CandidateProbe:
+    """Fetch one candidate; score by anchor count and bytes."""
+    base = base_url or base_url_for_path(root_path)
+    url = urljoin(base, root_path)
+    try:
+        code, body, _ = http_get(url, user_agent=user_agent)
+    except Exception as e:  # noqa: BLE001
+        return CandidateProbe(
+            path=root_path,
+            shape="",
+            http_status=0,
+            discard_reason=f"error:{e}",
+        )
+
+    nbytes = len(body) if body else 0
+    if code == 404:
+        return CandidateProbe(
+            path=root_path, shape="", http_status=code, bytes=nbytes, discard_reason="404"
+        )
+    if code == 200 and nbytes == 0:
+        return CandidateProbe(
+            path=root_path,
+            shape="",
+            http_status=code,
+            bytes=0,
+            discard_reason="empty_200",
+        )
+
+    text = body.decode("utf-8", errors="replace") if body else ""
+    if code != 200 or not looks_like_markdown(text):
+        reason = "not_markdown" if code == 200 else f"http_{code}"
+        return CandidateProbe(
+            path=root_path,
+            shape="",
+            http_status=code,
+            bytes=nbytes,
+            discard_reason=reason,
+        )
+
+    anchors = count_anchors(text)
+    return CandidateProbe(
+        path=root_path,
+        shape="",
+        http_status=code,
+        bytes=nbytes,
+        anchor_count=anchors,
+        valid=True,
+    )
+
+
+def probe_and_pick_root(
+    candidates: Sequence[Tuple[str, str]],
+    *,
+    base_url: Optional[str] = None,
+    user_agent: str = DEFAULT_UA,
+    sleep_s: float = 0.08,
+) -> Tuple[Optional[str], str, List[CandidateProbe]]:
+    """Probe each candidate; return (chosen_path, winning_shape, probes)."""
+    probes: List[CandidateProbe] = []
+    valid: List[CandidateProbe] = []
+
+    for path, shape in candidates:
+        probe = probe_candidate_full(path, base_url=base_url, user_agent=user_agent)
+        probe.path = path
+        probe.shape = shape
+        probes.append(probe)
+        if probe.valid:
+            valid.append(probe)
+        time.sleep(sleep_s)
+
+    if not valid:
+        return None, "unresolved", probes
+
+    best = max(valid, key=lambda p: (p.anchor_count, p.bytes))
+    return best.path, best.shape, probes
 
 
 def derive_guide_dir_root(intro_path: str) -> Optional[str]:
@@ -255,49 +441,50 @@ def resolve_products(
     sleep_s: float = 0.05,
     probe: bool = True,
 ) -> List[RootDerivation]:
-    """Derive roots; optionally HTTP-probe. Family-repeat first; guide-dir fallback on miss."""
+    """Derive roots via probe-and-pick over candidate shapes per product."""
     out: List[RootDerivation] = []
     for p in products:
-        chosen, how, fam_r, guide_r = derive_product_root(p.intro_path)
+        fam_r = derive_family_repeat_root(p.intro_path)
+        guide_r = derive_guide_dir_root(p.intro_path)
+        candidates = generate_root_candidates(p.intro_path)
         d = RootDerivation(
             title=p.title,
             intro_path=p.intro_path,
             family=family_from_path(p.intro_path),
             family_repeat_root=fam_r,
             guide_dir_root=guide_r,
-            chosen_root=chosen,
-            derivation=how,
+            chosen_root=None,
+            derivation="unresolved",
         )
-        if chosen is None:
+        if not candidates:
+            d.derivation = "not_md"
             out.append(d)
             continue
-        if not probe:
-            d.resolves = True
-            out.append(d)
-            continue
-        status, nbytes = probe_root(chosen, base_url=base_url, user_agent=user_agent)
-        d.http_status = status
-        d.bytes = nbytes
-        if status == 200 and nbytes > 0:
-            d.resolves = True
-        elif guide_r and guide_r != chosen:
-            # Family-repeat 404/empty — fall back to guide-dir form.
-            status2, nbytes2 = probe_root(guide_r, base_url=base_url, user_agent=user_agent)
-            time.sleep(sleep_s)
-            if status2 == 200 and nbytes2 > 0:
-                d.chosen_root = guide_r
-                d.derivation = "guide_dir_fallback"
-                d.http_status = status2
-                d.bytes = nbytes2
-                d.resolves = True
-            else:
-                d.derivation = "unresolved"
-                d.chosen_root = None
-                d.resolves = False
+
+        if probe:
+            chosen, shape, probes = probe_and_pick_root(
+                candidates,
+                base_url=base_url_for_path(candidates[0][0]),
+                user_agent=user_agent,
+                sleep_s=sleep_s,
+            )
+            d.candidate_probes = probes
         else:
-            d.derivation = "unresolved"
+            chosen, shape = pick_candidate_offline(candidates)
+
+        d.chosen_root = chosen
+        d.derivation = shape
+        if chosen and probe:
+            winning = next((pr for pr in d.candidate_probes if pr.path == chosen), None)
+            if winning:
+                d.http_status = winning.http_status
+                d.bytes = winning.bytes
+                d.resolves = winning.valid
+        elif chosen:
+            d.resolves = True
+        else:
             d.resolves = False
-        time.sleep(sleep_s)
+
         out.append(d)
     return out
 

@@ -3,12 +3,17 @@
 from __future__ import annotations
 
 import unittest
+import unittest.mock
 
 from content_bench.content_engine.product_roots import (
+    derive_bare_family_root,
     derive_family_repeat_root,
     derive_guide_dir_root,
     derive_product_root,
+    generate_root_candidates,
     parse_docs_md_products,
+    pick_candidate_offline,
+    probe_and_pick_root,
     split_root_sections,
     toc_page_covered_by_root,
 )
@@ -96,6 +101,64 @@ class DerivationTests(unittest.TestCase):
             "/docs/cybs/en-us/doc-rel/relnote/all/na/doc-release-notes.md",
         )
         self.assertEqual(how, "compendium")
+
+    def test_bare_family_root(self):
+        intro = (
+            "/docs/cybs/en-us/boarding/developer/all/rest/boarding/boarding-intro.md"
+        )
+        self.assertEqual(
+            derive_bare_family_root(intro),
+            "/docs/cybs/en-us/boarding/boarding.md",
+        )
+
+    def test_pick_candidate_offline_prefers_family_repeat(self):
+        intro = (
+            "/docs/cybs/en-us/payments/developer/ctv/rest/payments/payments-intro.md"
+        )
+        cands = generate_root_candidates(intro)
+        chosen, shape = pick_candidate_offline(cands)
+        self.assertEqual(shape, "family_repeat")
+        self.assertTrue(chosen.endswith("/payments.md"))
+
+    def test_probe_and_pick_prefers_most_anchors(self):
+        intro = "/docs/cybs/en-us/foo/developer/all/rest/foo/sub.md"
+        cands = generate_root_candidates(intro)
+        bodies = {
+            "/docs/cybs/en-us/foo/foo.md": "A {#a1}\n\n" + "x" * 100,
+            "/docs/cybs/en-us/foo/developer/all/rest/foo.md": (
+                "A {#a1}\n\nB {#a2}\n\nC {#a3}\n\n" + "y" * 50
+            ),
+        }
+
+        def fake_probe(path, **kwargs):
+            from content_bench.content_engine.product_roots import CandidateProbe
+
+            text = bodies.get(path, "")
+            if not text:
+                return CandidateProbe(path=path, shape="", http_status=404, discard_reason="404")
+            anchors = text.count("{#")
+            return CandidateProbe(
+                path=path,
+                shape="",
+                http_status=200,
+                bytes=len(text.encode()),
+                anchor_count=anchors,
+                valid=True,
+            )
+
+        with unittest.mock.patch(
+            "content_bench.content_engine.product_roots.probe_candidate_full",
+            side_effect=fake_probe,
+        ):
+            chosen, shape, probes = probe_and_pick_root(cands, sleep_s=0)
+        self.assertEqual(
+            chosen,
+            "/docs/cybs/en-us/foo/developer/all/rest/foo.md",
+        )
+        self.assertGreater(
+            next(p for p in probes if p.path == chosen).anchor_count,
+            1,
+        )
 
     def test_pdf_not_md(self):
         chosen, how, _, _ = derive_product_root(
