@@ -1,8 +1,13 @@
 {
-  "claims_total": 1248,
-  "claims_after_prefer_child": 619,
-  "mega_residuals": 19,
+  "claims_total": 2403,
+  "claims_after_prefer_child": 1209,
+  "mega_residuals": 20,
   "mega_residual_samples": [
+    {
+      "claim_id": "en-us_boarding_developer_all_rest_boarding:endpoint:get:8366008e",
+      "schema": "endpoint_fact",
+      "text": "GET https://api.cybersource.com/oms/v1/organizations/org1"
+    },
     {
       "claim_id": "en-us_boarding_developer_all_rest_boarding:prose:e3e8d8a94090",
       "schema": "prose_claim",
@@ -34,22 +39,22 @@
       "text": "Click the Status drop-down menu in the upper-right side of the page and select a status."
     },
     {
-      "claim_id": "en-us_boarding_user_all_ebc_boarding-user:step:3:fd1cf8ce",
+      "claim_id": "en-us_boarding_user_all_ebc_boarding-user:step:3:1a823f2c",
       "schema": "quickstart_step",
-      "text": "Click + Add Merchant.{#merchants-v2-transacting_merchants-v2-add-existing-step3}"
+      "text": "Click + Add Merchant."
     },
     {
-      "claim_id": "en-us_boarding_user_all_ebc_boarding-user:step:4:e9ff5ab3",
+      "claim_id": "en-us_boarding_user_all_ebc_boarding-user:step:4:c7436968",
       "schema": "quickstart_step",
-      "text": "Select Add to an existing account and then click Next.{#merchants-v2-transacting_merchants-v2-add-existing-step4}"
+      "text": "Select Add to an existing account and then click Next."
     },
     {
-      "claim_id": "en-us_boarding_user_all_ebc_boarding-user:step:5:29f9fd60",
+      "claim_id": "en-us_boarding_user_all_ebc_boarding-user:step:5:c96f0e64",
       "schema": "quickstart_step",
       "text": "If you have more than one boarding package, the Boarding Presets section is displayed. Enter the name of the merchant or"
     },
     {
-      "claim_id": "en-us_boarding_user_all_ebc_boarding-user:step:6:c95678cf",
+      "claim_id": "en-us_boarding_user_all_ebc_boarding-user:step:6:f0655fa9",
       "schema": "quickstart_step",
       "text": "Optional: add additional organizations by clicking Start in the Hierarchy Details section. Or skip this step by clicking"
     },
@@ -69,14 +74,9 @@
       "text": "If you have more than one boarding package, choose a boarding package from the drop-down menu, or enter text in the sear"
     },
     {
-      "claim_id": "en-us_boarding_user_all_ebc_boarding-user:step:1:2698d0b4",
+      "claim_id": "en-us_boarding_user_all_ebc_boarding-user:step:1:c5aeeb05",
       "schema": "quickstart_step",
-      "text": "Click + Add Merchant.{#merchants-v2-add-merchant_merchants-v2-add-merchant-step1}"
-    },
-    {
-      "claim_id": "en-us_boarding_user_all_ebc_boarding-user:step:2:4f0bd8b0",
-      "schema": "quickstart_step",
-      "text": "Select Board a new merchant account and click Next.{#merchants-v2-add-merchant_merchants-v2-add-merchant-step2}"
+      "text": "Click + Add Merchant."
     }
   ],
   "pages": [

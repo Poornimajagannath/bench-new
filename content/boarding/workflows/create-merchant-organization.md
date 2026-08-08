@@ -16,26 +16,26 @@ _Generated from `normalized/2026-08-08-boarding.claims.json`; do not hand-edit. 
 
 ### Via Partner admin (Business Center) — `en-us_boarding_user_all_ebc_boarding-user_boarding-reg-intro_merchants-v2-add-merchant.md.md`
 
-1. **Action:** Click **+ Add Merchant**.{#merchants-v2-add-merchant_merchants-v2-add-merchant-step1}
+1. **Action:** Click **+ Add Merchant**.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
-   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-reg-intro_merchants-v2-add-merchant:step:1:a2927090`</sub>
-2. **Action:** Select **Board a new merchant account** and click **Next**.{#merchants-v2-add-merchant_merchants-v2-add-merchant-step2}
+   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-reg-intro_merchants-v2-add-merchant:step:1:f88781f9`</sub>
+2. **Action:** Select **Board a new merchant account** and click **Next**.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
-   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-reg-intro_merchants-v2-add-merchant:step:2:fc857832`</sub>
-3. **Action:** If you have more than one boarding package, choose a boarding package from the drop-down menu, or enter text in the search field to find one. Click **Next**. If you have only one boarding package, the Boarding Package section does not display.{#merchants-v2-add-merchant_merchants-v2-add-merchant-step3}
+   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-reg-intro_merchants-v2-add-merchant:step:2:40240e95`</sub>
+3. **Action:** If you have more than one boarding package, choose a boarding package from the drop-down menu, or enter text in the search field to find one. Click **Next**. If you have only one boarding package, the Boarding Package section does not display.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
-   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-reg-intro_merchants-v2-add-merchant:step:3:d1e63b7c`</sub>
-4. **Action:** Click **Start** in the Merchant Account Information section to enter account information. For more information, see [Add Merchant Account Information](/docs/cybs/en-us/boarding/user/all/ebc/boarding-user/boarding-reg-intro/merchants-v2-add-merchant/merchants-v2-add-merch-acct-info.md "").{#merchants-v2-add-merchant_merchants-v2-add-merchant-step4}
+   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-reg-intro_merchants-v2-add-merchant:step:3:270a97fe`</sub>
+4. **Action:** Click **Start** in the Merchant Account Information section to enter account information. For more information, see [Add Merchant Account Information](/docs/cybs/en-us/boarding/user/all/ebc/boarding-user/boarding-reg-intro/merchants-v2-add-merchant/merchants-v2-add-merch-acct-info.md "").
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
-   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-reg-intro_merchants-v2-add-merchant:step:4:54bd694c`</sub>
-5. **Action:** Optional: click **Skip** in the Hierarchy Details section to skip the hierarchy step. {#merchants-v2-add-merchant_merchants-v2-add-merchant-step5}
+   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-reg-intro_merchants-v2-add-merchant:step:4:c0c80b55`</sub>
+5. **Action:** Optional: click **Skip** in the Hierarchy Details section to skip the hierarchy step.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
-   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-reg-intro_merchants-v2-add-merchant:step:5:cbc65137`</sub>
+   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-reg-intro_merchants-v2-add-merchant:step:5:8153fb6f`</sub>
 ### Via Partner admin (Business Center) — `en-us_boarding_user_all_ebc_boarding-user_boarding-reg-intro_merchants-v2-add-merchant_merchants-v2-add-merch-acct-info.md.md`
 
 1. **Action:** In Basic Information, enter the merchant account name and the organization ID in the provided text fields.
@@ -86,34 +86,34 @@ _Generated from `normalized/2026-08-08-boarding.claims.json`; do not hand-edit. 
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-reg-intro_merchants-v2-add-merchant_merchants-v2-add-merch-trans-org-prod:step:8:c302b507`</sub>
 ### Via Partner admin (Business Center) — `en-us_boarding_user_all_ebc_boarding-user_boarding-reg-intro_merchants-v2-add-to-existing.md.md`
 
-1. **Action:** Under Merchants, click **Manage Merchants**. The Manage Merchants page appears.{#boarding-merchants-v2-add-to-existing_merchants-v2-add-existing-step2}
+1. **Action:** Under Merchants, click **Manage Merchants**. The Manage Merchants page appears.
    - Actor: Partner admin (Business Center)
    - Expected outcome: The Manage Merchants page appears.
-   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-reg-intro_merchants-v2-add-to-existing:step:1:5dc5ef8e`</sub>
-2. **Action:** In the left navigation panel, click **Portfolio Management**.{#boarding-merchants-v2-add-to-existing_merchants-v2-add-existing-step1}
+   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-reg-intro_merchants-v2-add-to-existing:step:1:cbff3268`</sub>
+2. **Action:** In the left navigation panel, click **Portfolio Management**.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
-   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-reg-intro_merchants-v2-add-to-existing:step:2:93c0d1d8`</sub>
+   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-reg-intro_merchants-v2-add-to-existing:step:2:34fbd153`</sub>
 3. **Action:** age Merchants page appears.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-reg-intro_merchants-v2-add-to-existing:step:3:cc40b3f4`</sub>
-4. **Action:** Click **+ Add Merchant**.{#boarding-merchants-v2-add-to-existing_merchants-v2-add-existing-step3}
+4. **Action:** Click **+ Add Merchant**.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
-   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-reg-intro_merchants-v2-add-to-existing:step:4:b6debaf7`</sub>
-5. **Action:** Select **Add to an existing account** and then click **Next**.{#boarding-merchants-v2-add-to-existing_merchants-v2-add-existing-step4}
+   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-reg-intro_merchants-v2-add-to-existing:step:4:3543cb3b`</sub>
+5. **Action:** Select **Add to an existing account** and then click **Next**.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
-   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-reg-intro_merchants-v2-add-to-existing:step:5:7e75e0d8`</sub>
-6. **Action:** If you have more than one boarding package, the Boarding Presets section is displayed. Enter the name of the merchant organization to add the new transacting organization to. Then choose a boarding package from the drop-down menu, or enter text in the search field to find one. Then click **Next**. If you have only one boarding package, the Boarding Presets section does not display.{#boarding-merchants-v2-add-to-existing_merchants-v2-add-existing-step5}
+   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-reg-intro_merchants-v2-add-to-existing:step:5:3167d256`</sub>
+6. **Action:** If you have more than one boarding package, the Boarding Presets section is displayed. Enter the name of the merchant organization to add the new transacting organization to. Then choose a boarding package from the drop-down menu, or enter text in the search field to find one. Then click **Next**. If you have only one boarding package, the Boarding Presets section does not display.
    - Actor: Partner admin (Business Center)
    - Expected outcome: If you have more than one boarding package, the Boarding Presets section is displayed.
-   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-reg-intro_merchants-v2-add-to-existing:step:6:d7b62d53`</sub>
-7. **Action:** Optional: add additional organizations by clicking **Start** in the Hierarchy Details section. Or skip this step by clicking **Skip**.{#boarding-merchants-v2-add-to-existing_merchants-v2-add-existing-step6}
+   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-reg-intro_merchants-v2-add-to-existing:step:6:e66e74b6`</sub>
+7. **Action:** Optional: add additional organizations by clicking **Start** in the Hierarchy Details section. Or skip this step by clicking **Skip**.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
-   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-reg-intro_merchants-v2-add-to-existing:step:7:65de67d4`</sub>
+   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-reg-intro_merchants-v2-add-to-existing:step:7:38389ace`</sub>
 ### Via Partner admin (Business Center) — `en-us_boarding_user_all_ebc_boarding-user_boarding-reg-intro_merchants-v2-add-to-existing_merchants-v2-existing-trans-org-prod.md.md`
 
 1. **Action:** Click **Start** in the Transacting Organization and Products section. The Transacting Organization and Products page is displayed.
