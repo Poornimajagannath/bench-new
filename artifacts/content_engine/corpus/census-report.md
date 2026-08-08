@@ -1,6 +1,6 @@
 # Corpus census
 
-- When: `2026-08-07T07:10:41+00:00`
+- When: `2026-08-08T02:34:52+00:00`
 - Corpus: `data/products/payments/guides`
 - Documents classified: **38**
 - Eligible for ingestion: **29**
