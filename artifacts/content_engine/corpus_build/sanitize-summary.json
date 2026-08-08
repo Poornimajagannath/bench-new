@@ -1,21 +1,21 @@
 {
   "totals": {
-    "sections_total": 20661,
-    "sections_clean": 20433,
-    "code_blocks": 2382,
+    "sections_total": 21096,
+    "sections_clean": 20853,
+    "code_blocks": 2416,
     "quarantined_by_kind": {
-      "about_guide_boilerplate": 137,
-      "revision_history": 81,
-      "support_center": 10
+      "about_guide_boilerplate": 143,
+      "revision_history": 88,
+      "support_center": 12
     }
   },
   "products": [
     {
-      "product_id": "additional-amount-types",
+      "product_id": "response-codes",
       "fetched": true,
-      "bytes": 17461,
-      "sections_total": 2,
-      "sections_clean": 2,
+      "bytes": 2602,
+      "sections_total": 1,
+      "sections_clean": 1,
       "quarantined_by_kind": {},
       "code_blocks": 0
     },
@@ -110,6 +110,18 @@
       "code_blocks": 18
     },
     {
+      "product_id": "boarding-template-mgmt",
+      "fetched": true,
+      "bytes": 45608,
+      "sections_total": 27,
+      "sections_clean": 25,
+      "quarantined_by_kind": {
+        "revision_history": 1,
+        "about_guide_boilerplate": 1
+      },
+      "code_blocks": 0
+    },
+    {
       "product_id": "boarding",
       "fetched": true,
       "bytes": 268904,
@@ -144,15 +156,6 @@
         "revision_history": 4
       },
       "code_blocks": 86
-    },
-    {
-      "product_id": "country-codes",
-      "fetched": true,
-      "bytes": 33820,
-      "sections_total": 8,
-      "sections_clean": 8,
-      "quarantined_by_kind": {},
-      "code_blocks": 0
     },
     {
       "product_id": "country-codes",
@@ -197,6 +200,15 @@
       "code_blocks": 0
     },
     {
+      "product_id": "currency-codes-ctv",
+      "fetched": true,
+      "bytes": 11130,
+      "sections_total": 2,
+      "sections_clean": 2,
+      "quarantined_by_kind": {},
+      "code_blocks": 0
+    },
+    {
       "product_id": "dcc-merchant",
       "fetched": true,
       "bytes": 37111,
@@ -237,6 +249,15 @@
         "revision_history": 3
       },
       "code_blocks": 207
+    },
+    {
+      "product_id": "doc-release-notes",
+      "fetched": true,
+      "bytes": 180829,
+      "sections_total": 118,
+      "sections_clean": 118,
+      "quarantined_by_kind": {},
+      "code_blocks": 0
     },
     {
       "product_id": "echeck-user-guide",
@@ -319,9 +340,9 @@
     {
       "product_id": "installment-plans",
       "fetched": true,
-      "bytes": 135069,
-      "sections_total": 136,
-      "sections_clean": 134,
+      "bytes": 134370,
+      "sections_total": 135,
+      "sections_clean": 133,
       "quarantined_by_kind": {
         "about_guide_boilerplate": 1,
         "revision_history": 1
@@ -339,6 +360,18 @@
         "revision_history": 1
       },
       "code_blocks": 42
+    },
+    {
+      "product_id": "isv-plugin-o",
+      "fetched": true,
+      "bytes": 215806,
+      "sections_total": 176,
+      "sections_clean": 173,
+      "quarantined_by_kind": {
+        "revision_history": 1,
+        "support_center": 2
+      },
+      "code_blocks": 6
     },
     {
       "product_id": "built-by-them",
@@ -410,6 +443,17 @@
         "about_guide_boilerplate": 1
       },
       "code_blocks": 12
+    },
+    {
+      "product_id": "llm-getting-started",
+      "fetched": true,
+      "bytes": 3190,
+      "sections_total": 6,
+      "sections_clean": 5,
+      "quarantined_by_kind": {
+        "revision_history": 1
+      },
+      "code_blocks": 0
     },
     {
       "product_id": "lodging",
@@ -620,6 +664,18 @@
         "revision_history": 1
       },
       "code_blocks": 82
+    },
+    {
+      "product_id": "payouts-aft-dev",
+      "fetched": true,
+      "bytes": 140456,
+      "sections_total": 36,
+      "sections_clean": 34,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 1
+      },
+      "code_blocks": 12
     },
     {
       "product_id": "payouts-dev",
@@ -956,6 +1012,17 @@
       "code_blocks": 0
     },
     {
+      "product_id": "rn-2026-01-09",
+      "fetched": true,
+      "bytes": 10531,
+      "sections_total": 7,
+      "sections_clean": 5,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 2
+      },
+      "code_blocks": 0
+    },
+    {
       "product_id": "rn-2026-01-16",
       "fetched": true,
       "bytes": 3695,
@@ -1255,6 +1322,18 @@
       "code_blocks": 191
     },
     {
+      "product_id": "so-conversion",
+      "fetched": true,
+      "bytes": 16263,
+      "sections_total": 9,
+      "sections_clean": 7,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 1
+      },
+      "code_blocks": 0
+    },
+    {
       "product_id": "state-codes",
       "fetched": true,
       "bytes": 8759,
@@ -1415,6 +1494,17 @@
       "code_blocks": 72
     },
     {
+      "product_id": "uc-qsg",
+      "fetched": true,
+      "bytes": 21781,
+      "sections_total": 15,
+      "sections_clean": 14,
+      "quarantined_by_kind": {
+        "revision_history": 1
+      },
+      "code_blocks": 3
+    },
+    {
       "product_id": "unified-click-to-pay",
       "fetched": true,
       "bytes": 324160,
@@ -1448,6 +1538,18 @@
       "code_blocks": 0
     },
     {
+      "product_id": "visa-bank-accoun-val",
+      "fetched": true,
+      "bytes": 42104,
+      "sections_total": 44,
+      "sections_clean": 42,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 1
+      },
+      "code_blocks": 13
+    },
+    {
       "product_id": "webhooks",
       "fetched": true,
       "bytes": 146916,
@@ -1458,6 +1560,51 @@
         "revision_history": 1
       },
       "code_blocks": 36
+    },
+    {
+      "product_id": "sandbox",
+      "fetched": true,
+      "bytes": 554,
+      "sections_total": 1,
+      "sections_clean": 1,
+      "quarantined_by_kind": {},
+      "code_blocks": 0
+    },
+    {
+      "product_id": "testing-guide",
+      "fetched": true,
+      "bytes": 5214,
+      "sections_total": 1,
+      "sections_clean": 1,
+      "quarantined_by_kind": {},
+      "code_blocks": 0
+    },
+    {
+      "product_id": "rest-api-sdks",
+      "fetched": true,
+      "bytes": 25805,
+      "sections_total": 1,
+      "sections_clean": 1,
+      "quarantined_by_kind": {},
+      "code_blocks": 0
+    },
+    {
+      "product_id": "contact-us",
+      "fetched": true,
+      "bytes": 1323,
+      "sections_total": 1,
+      "sections_clean": 1,
+      "quarantined_by_kind": {},
+      "code_blocks": 0
+    },
+    {
+      "product_id": "faqs",
+      "fetched": true,
+      "bytes": 4812,
+      "sections_total": 1,
+      "sections_clean": 1,
+      "quarantined_by_kind": {},
+      "code_blocks": 0
     }
   ]
 }

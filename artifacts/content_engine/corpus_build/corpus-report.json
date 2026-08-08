@@ -2677,24 +2677,9 @@
     ]
   },
   "fetch": {
-    "roots_fetched": 131,
-    "total_bytes": 19504453,
+    "roots_fetched": 145,
+    "total_bytes": 20180481,
     "unfetchable": [
-      {
-        "root_path": "/api/reference.md",
-        "product_id": "reference",
-        "family": null,
-        "derivation": "guide_dir",
-        "source": "llms.txt",
-        "sample_urls": 1,
-        "listed_as_root_in_llms": false,
-        "http_status": 200,
-        "html_status": 200,
-        "bytes": 0,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "empty_200",
-        "unfetchable_bucket": "theirs"
-      },
       {
         "root_path": "/docs/barclays/en-us/hosted-fields/quick-start-guide/all/na/barclays-hosted-fields-qsg.md",
         "product_id": "barclays-hosted-fields-qsg",
@@ -2705,10 +2690,11 @@
         "listed_as_root_in_llms": false,
         "http_status": 200,
         "html_status": 200,
-        "bytes": 90983,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "unresolved_derivation",
-        "unfetchable_bucket": "ours"
+        "bytes": 29656,
+        "fetch_status": "ok",
+        "unfetchable_reason": null,
+        "unfetchable_bucket": null,
+        "fetch_error": "not markdown"
       },
       {
         "root_path": "/docs/barclays/en-us/platform/overview/all/na/barclays-solution.md",
@@ -2720,10 +2706,11 @@
         "listed_as_root_in_llms": false,
         "http_status": 200,
         "html_status": 200,
-        "bytes": 90983,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "unresolved_derivation",
-        "unfetchable_bucket": "ours"
+        "bytes": 50819,
+        "fetch_status": "ok",
+        "unfetchable_reason": null,
+        "unfetchable_bucket": null,
+        "fetch_error": "not markdown"
       },
       {
         "root_path": "/docs/barclays/en-us/webhooks/implementation/all/rest/webhooks.md",
@@ -2735,400 +2722,56 @@
         "listed_as_root_in_llms": false,
         "http_status": 200,
         "html_status": 200,
-        "bytes": 90983,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "unresolved_derivation",
-        "unfetchable_bucket": "ours"
+        "bytes": 131091,
+        "fetch_status": "ok",
+        "unfetchable_reason": null,
+        "unfetchable_bucket": null,
+        "fetch_error": "not markdown"
       },
       {
-        "root_path": "/docs/cybs/en-us/apple-pay/developer/all/rest.md",
-        "product_id": "rest",
-        "family": "apple-pay",
-        "derivation": "guide_dir",
+        "root_path": "/docs/cybs/en-us/additional-amount-types/reference/all/na/additional-amount-types.md",
+        "product_id": "additional-amount-types",
+        "family": "additional-amount-types",
+        "derivation": "already_root",
         "source": "llms.txt",
         "sample_urls": 1,
-        "listed_as_root_in_llms": false,
-        "http_status": 404,
-        "html_status": 404,
-        "bytes": 36538,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "derivation_miss",
-        "unfetchable_bucket": "ours"
-      },
-      {
-        "root_path": "/docs/cybs/en-us/boarding-template-management/user/all/ada.md",
-        "product_id": "ada",
-        "family": "boarding-template-management",
-        "derivation": "guide_dir",
-        "source": "llms.txt",
-        "sample_urls": 1,
-        "listed_as_root_in_llms": false,
+        "listed_as_root_in_llms": true,
         "http_status": 200,
-        "html_status": 500,
+        "html_status": 200,
         "bytes": 0,
         "fetch_status": "unfetchable",
         "unfetchable_reason": "empty_200",
-        "unfetchable_bucket": "ours"
-      },
-      {
-        "root_path": "/docs/cybs/en-us/boarding/user/all/ebc.md",
-        "product_id": "ebc",
-        "family": "boarding",
-        "derivation": "guide_dir",
-        "source": "llms.txt",
-        "sample_urls": 1,
-        "listed_as_root_in_llms": false,
-        "http_status": 404,
-        "html_status": 404,
-        "bytes": 36538,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "derivation_miss",
-        "unfetchable_bucket": "ours"
-      },
-      {
-        "root_path": "/docs/cybs/en-us/currency-codes/reference/ctv/na.md",
-        "product_id": "na",
-        "family": "currency-codes",
-        "derivation": "guide_dir",
-        "source": "llms.txt",
-        "sample_urls": 1,
-        "listed_as_root_in_llms": false,
-        "http_status": 200,
-        "html_status": 500,
-        "bytes": 0,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "empty_200",
-        "unfetchable_bucket": "ours"
-      },
-      {
-        "root_path": "/docs/cybs/en-us/doc-rel/relnote/all/na.md",
-        "product_id": "na",
-        "family": "doc-rel",
-        "derivation": "guide_dir",
-        "source": "llms.txt",
-        "sample_urls": 1,
-        "listed_as_root_in_llms": false,
-        "http_status": 404,
-        "html_status": 404,
-        "bytes": 36538,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "derivation_miss",
-        "unfetchable_bucket": "ours"
-      },
-      {
-        "root_path": "/docs/cybs/en-us/doc-rel/relnote/all/na/doc-release-notes/doc-release-notes-intro/April-2025.md",
-        "product_id": "April-2025",
-        "family": "doc-rel",
-        "derivation": "guide_dir",
-        "source": "llms.txt",
-        "sample_urls": 1,
-        "listed_as_root_in_llms": false,
-        "http_status": 500,
-        "html_status": 404,
-        "bytes": 5,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "site_defect",
         "unfetchable_bucket": "theirs"
       },
       {
-        "root_path": "/docs/cybs/en-us/doc-rel/relnote/all/na/doc-release-notes/doc-release-notes-intro/August-2025.md",
-        "product_id": "August-2025",
-        "family": "doc-rel",
-        "derivation": "guide_dir",
+        "root_path": "/docs/cybs/en-us/country-codes/reference/all/na/country-codes.md",
+        "product_id": "country-codes",
+        "family": "country-codes",
+        "derivation": "already_root",
         "source": "llms.txt",
         "sample_urls": 1,
-        "listed_as_root_in_llms": false,
+        "listed_as_root_in_llms": true,
         "http_status": 200,
-        "html_status": 500,
+        "html_status": 200,
         "bytes": 0,
         "fetch_status": "unfetchable",
         "unfetchable_reason": "empty_200",
-        "unfetchable_bucket": "ours"
-      },
-      {
-        "root_path": "/docs/cybs/en-us/doc-rel/relnote/all/na/doc-release-notes/doc-release-notes-intro/December-2025.md",
-        "product_id": "December-2025",
-        "family": "doc-rel",
-        "derivation": "guide_dir",
-        "source": "llms.txt",
-        "sample_urls": 1,
-        "listed_as_root_in_llms": false,
-        "http_status": 200,
-        "html_status": 500,
-        "bytes": 0,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "empty_200",
-        "unfetchable_bucket": "ours"
-      },
-      {
-        "root_path": "/docs/cybs/en-us/doc-rel/relnote/all/na/doc-release-notes/doc-release-notes-intro/February-2025.md",
-        "product_id": "February-2025",
-        "family": "doc-rel",
-        "derivation": "guide_dir",
-        "source": "llms.txt",
-        "sample_urls": 1,
-        "listed_as_root_in_llms": false,
-        "http_status": 500,
-        "html_status": 404,
-        "bytes": 5,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "site_defect",
         "unfetchable_bucket": "theirs"
       },
       {
-        "root_path": "/docs/cybs/en-us/doc-rel/relnote/all/na/doc-release-notes/doc-release-notes-intro/February-2026.md",
-        "product_id": "February-2026",
-        "family": "doc-rel",
-        "derivation": "guide_dir",
-        "source": "llms.txt",
-        "sample_urls": 1,
-        "listed_as_root_in_llms": false,
-        "http_status": 200,
-        "html_status": 500,
-        "bytes": 0,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "empty_200",
-        "unfetchable_bucket": "ours"
-      },
-      {
-        "root_path": "/docs/cybs/en-us/doc-rel/relnote/all/na/doc-release-notes/doc-release-notes-intro/January-2025.md",
-        "product_id": "January-2025",
-        "family": "doc-rel",
-        "derivation": "guide_dir",
-        "source": "llms.txt",
-        "sample_urls": 1,
-        "listed_as_root_in_llms": false,
-        "http_status": 500,
-        "html_status": 404,
-        "bytes": 5,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "site_defect",
-        "unfetchable_bucket": "theirs"
-      },
-      {
-        "root_path": "/docs/cybs/en-us/doc-rel/relnote/all/na/doc-release-notes/doc-release-notes-intro/January-2026.md",
-        "product_id": "January-2026",
-        "family": "doc-rel",
-        "derivation": "guide_dir",
-        "source": "llms.txt",
-        "sample_urls": 1,
-        "listed_as_root_in_llms": false,
-        "http_status": 200,
-        "html_status": 500,
-        "bytes": 0,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "empty_200",
-        "unfetchable_bucket": "ours"
-      },
-      {
-        "root_path": "/docs/cybs/en-us/doc-rel/relnote/all/na/doc-release-notes/doc-release-notes-intro/July-2025.md",
-        "product_id": "July-2025",
-        "family": "doc-rel",
-        "derivation": "guide_dir",
-        "source": "llms.txt",
-        "sample_urls": 1,
-        "listed_as_root_in_llms": false,
-        "http_status": 200,
-        "html_status": 500,
-        "bytes": 0,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "empty_200",
-        "unfetchable_bucket": "ours"
-      },
-      {
-        "root_path": "/docs/cybs/en-us/doc-rel/relnote/all/na/doc-release-notes/doc-release-notes-intro/June-2025.md",
-        "product_id": "June-2025",
-        "family": "doc-rel",
-        "derivation": "guide_dir",
-        "source": "llms.txt",
-        "sample_urls": 1,
-        "listed_as_root_in_llms": false,
-        "http_status": 500,
-        "html_status": 404,
-        "bytes": 5,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "site_defect",
-        "unfetchable_bucket": "theirs"
-      },
-      {
-        "root_path": "/docs/cybs/en-us/doc-rel/relnote/all/na/doc-release-notes/doc-release-notes-intro/March-2025.md",
-        "product_id": "March-2025",
-        "family": "doc-rel",
-        "derivation": "guide_dir",
-        "source": "llms.txt",
-        "sample_urls": 1,
-        "listed_as_root_in_llms": false,
-        "http_status": 500,
-        "html_status": 404,
-        "bytes": 5,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "site_defect",
-        "unfetchable_bucket": "theirs"
-      },
-      {
-        "root_path": "/docs/cybs/en-us/doc-rel/relnote/all/na/doc-release-notes/doc-release-notes-intro/March-2026.md",
-        "product_id": "March-2026",
-        "family": "doc-rel",
-        "derivation": "guide_dir",
-        "source": "llms.txt",
-        "sample_urls": 1,
-        "listed_as_root_in_llms": false,
-        "http_status": 200,
-        "html_status": 500,
-        "bytes": 0,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "empty_200",
-        "unfetchable_bucket": "ours"
-      },
-      {
-        "root_path": "/docs/cybs/en-us/doc-rel/relnote/all/na/doc-release-notes/doc-release-notes-intro/May-2025.md",
-        "product_id": "May-2025",
-        "family": "doc-rel",
-        "derivation": "guide_dir",
-        "source": "llms.txt",
-        "sample_urls": 1,
-        "listed_as_root_in_llms": false,
-        "http_status": 500,
-        "html_status": 404,
-        "bytes": 5,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "site_defect",
-        "unfetchable_bucket": "theirs"
-      },
-      {
-        "root_path": "/docs/cybs/en-us/doc-rel/relnote/all/na/doc-release-notes/doc-release-notes-intro/November-2025.md",
-        "product_id": "November-2025",
-        "family": "doc-rel",
-        "derivation": "guide_dir",
-        "source": "llms.txt",
-        "sample_urls": 1,
-        "listed_as_root_in_llms": false,
-        "http_status": 200,
-        "html_status": 500,
-        "bytes": 0,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "empty_200",
-        "unfetchable_bucket": "ours"
-      },
-      {
-        "root_path": "/docs/cybs/en-us/doc-rel/relnote/all/na/doc-release-notes/doc-release-notes-intro/October-2025.md",
-        "product_id": "October-2025",
-        "family": "doc-rel",
-        "derivation": "guide_dir",
-        "source": "llms.txt",
-        "sample_urls": 1,
-        "listed_as_root_in_llms": false,
-        "http_status": 200,
-        "html_status": 500,
-        "bytes": 0,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "empty_200",
-        "unfetchable_bucket": "ours"
-      },
-      {
-        "root_path": "/docs/cybs/en-us/doc-rel/relnote/all/na/doc-release-notes/doc-release-notes-intro/September-2025.md",
-        "product_id": "September-2025",
-        "family": "doc-rel",
-        "derivation": "guide_dir",
-        "source": "llms.txt",
-        "sample_urls": 1,
-        "listed_as_root_in_llms": false,
-        "http_status": 200,
-        "html_status": 500,
-        "bytes": 0,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "empty_200",
-        "unfetchable_bucket": "ours"
-      },
-      {
-        "root_path": "/docs/cybs/en-us/ebc/gettingstarted/all/rest.md",
-        "product_id": "rest",
+        "root_path": "/docs/cybs/en-us/ebc/gettingstarted/all/rest/doc101_ebc.md",
+        "product_id": "doc101_ebc",
         "family": "ebc",
-        "derivation": "guide_dir",
+        "derivation": "listed_root",
         "source": "llms.txt",
         "sample_urls": 1,
-        "listed_as_root_in_llms": false,
+        "listed_as_root_in_llms": true,
         "http_status": 500,
         "html_status": 404,
         "bytes": 5,
         "fetch_status": "unfetchable",
         "unfetchable_reason": "site_defect",
         "unfetchable_bucket": "theirs"
-      },
-      {
-        "root_path": "/docs/cybs/en-us/echeck/user/all/rest.md",
-        "product_id": "rest",
-        "family": "echeck",
-        "derivation": "guide_dir",
-        "source": "llms.txt",
-        "sample_urls": 1,
-        "listed_as_root_in_llms": false,
-        "http_status": 404,
-        "html_status": 404,
-        "bytes": 36538,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "derivation_miss",
-        "unfetchable_bucket": "ours"
-      },
-      {
-        "root_path": "/docs/cybs/en-us/google-pay/developer/ctv/rest.md",
-        "product_id": "rest",
-        "family": "google-pay",
-        "derivation": "guide_dir",
-        "source": "llms.txt",
-        "sample_urls": 1,
-        "listed_as_root_in_llms": false,
-        "http_status": 200,
-        "html_status": 500,
-        "bytes": 0,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "empty_200",
-        "unfetchable_bucket": "ours"
-      },
-      {
-        "root_path": "/docs/cybs/en-us/isv-plugins/admin/all/na.md",
-        "product_id": "na",
-        "family": "isv-plugins",
-        "derivation": "guide_dir",
-        "source": "llms.txt",
-        "sample_urls": 1,
-        "listed_as_root_in_llms": false,
-        "http_status": 404,
-        "html_status": 404,
-        "bytes": 36538,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "derivation_miss",
-        "unfetchable_bucket": "ours"
-      },
-      {
-        "root_path": "/docs/cybs/en-us/isv-plugins/get-started/all/na.md",
-        "product_id": "na",
-        "family": "isv-plugins",
-        "derivation": "guide_dir",
-        "source": "llms.txt",
-        "sample_urls": 1,
-        "listed_as_root_in_llms": false,
-        "http_status": 404,
-        "html_status": 404,
-        "bytes": 36538,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "derivation_miss",
-        "unfetchable_bucket": "ours"
-      },
-      {
-        "root_path": "/docs/cybs/en-us/llm/get-started/all/na.md",
-        "product_id": "na",
-        "family": "llm",
-        "derivation": "guide_dir",
-        "source": "llms.txt",
-        "sample_urls": 1,
-        "listed_as_root_in_llms": false,
-        "http_status": 404,
-        "html_status": 404,
-        "bytes": 36538,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "derivation_miss",
-        "unfetchable_bucket": "ours"
       },
       {
         "root_path": "/docs/cybs/en-us/mandates/relnote/all/na/mandates-april-2023.md",
@@ -3143,7 +2786,7 @@
         "bytes": 0,
         "fetch_status": "unfetchable",
         "unfetchable_reason": "empty_200",
-        "unfetchable_bucket": "theirs"
+        "unfetchable_bucket": "ours"
       },
       {
         "root_path": "/docs/cybs/en-us/mandates/relnote/all/na/mandates-oct-2024.md",
@@ -3158,7 +2801,7 @@
         "bytes": 0,
         "fetch_status": "unfetchable",
         "unfetchable_reason": "empty_200",
-        "unfetchable_bucket": "theirs"
+        "unfetchable_bucket": "ours"
       },
       {
         "root_path": "/docs/cybs/en-us/mandates/relnote/all/na/mandates-october-2023.md",
@@ -3173,7 +2816,7 @@
         "bytes": 0,
         "fetch_status": "unfetchable",
         "unfetchable_reason": "empty_200",
-        "unfetchable_bucket": "theirs"
+        "unfetchable_bucket": "ours"
       },
       {
         "root_path": "/docs/cybs/en-us/payer-auth-vpp/developer/all/rest/payer-auth-vpp.md",
@@ -3191,66 +2834,6 @@
         "unfetchable_bucket": "theirs"
       },
       {
-        "root_path": "/docs/cybs/en-us/payer-authentication/developer/all/rest.md",
-        "product_id": "rest",
-        "family": "payer-authentication",
-        "derivation": "guide_dir",
-        "source": "llms.txt",
-        "sample_urls": 1,
-        "listed_as_root_in_llms": false,
-        "http_status": 200,
-        "html_status": 500,
-        "bytes": 0,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "empty_200",
-        "unfetchable_bucket": "ours"
-      },
-      {
-        "root_path": "/docs/cybs/en-us/payouts-aft/developer/ctv/rest.md",
-        "product_id": "rest",
-        "family": "payouts-aft",
-        "derivation": "guide_dir",
-        "source": "llms.txt",
-        "sample_urls": 1,
-        "listed_as_root_in_llms": false,
-        "http_status": 404,
-        "html_status": 404,
-        "bytes": 36538,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "derivation_miss",
-        "unfetchable_bucket": "ours"
-      },
-      {
-        "root_path": "/docs/cybs/en-us/payouts/developer/ctv/rest.md",
-        "product_id": "rest",
-        "family": "payouts",
-        "derivation": "guide_dir",
-        "source": "llms.txt",
-        "sample_urls": 1,
-        "listed_as_root_in_llms": false,
-        "http_status": 200,
-        "html_status": 500,
-        "bytes": 0,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "empty_200",
-        "unfetchable_bucket": "ours"
-      },
-      {
-        "root_path": "/docs/cybs/en-us/platform/developer/all/rest.md",
-        "product_id": "rest",
-        "family": "platform",
-        "derivation": "guide_dir",
-        "source": "llms.txt",
-        "sample_urls": 1,
-        "listed_as_root_in_llms": false,
-        "http_status": 404,
-        "html_status": 404,
-        "bytes": 36538,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "derivation_miss",
-        "unfetchable_bucket": "ours"
-      },
-      {
         "root_path": "/docs/cybs/en-us/platform/relnote/all/na/rn-2025-06-06.md",
         "product_id": "rn-2025-06-06",
         "family": "platform",
@@ -3263,7 +2846,7 @@
         "bytes": 0,
         "fetch_status": "unfetchable",
         "unfetchable_reason": "empty_200",
-        "unfetchable_bucket": "theirs"
+        "unfetchable_bucket": "ours"
       },
       {
         "root_path": "/docs/cybs/en-us/platform/relnote/all/na/rn-2025-06-27.md",
@@ -3277,7 +2860,7 @@
         "html_status": 404,
         "bytes": 36538,
         "fetch_status": "unfetchable",
-        "unfetchable_reason": "derivation_miss",
+        "unfetchable_reason": "derivation_error",
         "unfetchable_bucket": "ours"
       },
       {
@@ -3292,22 +2875,7 @@
         "html_status": 404,
         "bytes": 36538,
         "fetch_status": "unfetchable",
-        "unfetchable_reason": "derivation_miss",
-        "unfetchable_bucket": "ours"
-      },
-      {
-        "root_path": "/docs/cybs/en-us/platform/relnote/all/na/rn-2026-01-09.md",
-        "product_id": "rn-2026-01-09",
-        "family": "platform",
-        "derivation": "guide_dir",
-        "source": "llms.txt",
-        "sample_urls": 1,
-        "listed_as_root_in_llms": false,
-        "http_status": 404,
-        "html_status": 200,
-        "bytes": 36538,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "derivation_miss",
+        "unfetchable_reason": "derivation_error",
         "unfetchable_bucket": "ours"
       },
       {
@@ -3321,70 +2889,24 @@
         "http_status": 200,
         "html_status": 404,
         "bytes": 17237,
-        "fetch_status": "ok",
-        "unfetchable_reason": null,
-        "unfetchable_bucket": null,
-        "fetch_error": "HTTP 404"
+        "fetch_status": "unfetchable",
+        "unfetchable_reason": "html_only",
+        "unfetchable_bucket": "theirs"
       },
       {
-        "root_path": "/docs/cybs/en-us/products/prod-notes/all/na.md",
-        "product_id": "na",
+        "root_path": "/docs/cybs/en-us/products/prod-notes/all/na/product-notes.md",
+        "product_id": "product-notes",
         "family": "products",
-        "derivation": "guide_dir",
+        "derivation": "listed_root",
         "source": "llms.txt",
         "sample_urls": 1,
-        "listed_as_root_in_llms": false,
-        "http_status": 404,
+        "listed_as_root_in_llms": true,
+        "http_status": 500,
         "html_status": 404,
-        "bytes": 36538,
+        "bytes": 5,
         "fetch_status": "unfetchable",
-        "unfetchable_reason": "derivation_miss",
-        "unfetchable_bucket": "ours"
-      },
-      {
-        "root_path": "/docs/cybs/en-us/recurring-billing/developer/all/rest.md",
-        "product_id": "rest",
-        "family": "recurring-billing",
-        "derivation": "guide_dir",
-        "source": "llms.txt",
-        "sample_urls": 1,
-        "listed_as_root_in_llms": false,
-        "http_status": 404,
-        "html_status": 404,
-        "bytes": 36538,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "derivation_miss",
-        "unfetchable_bucket": "ours"
-      },
-      {
-        "root_path": "/docs/cybs/en-us/recurring-billing/user/all/rest.md",
-        "product_id": "rest",
-        "family": "recurring-billing",
-        "derivation": "guide_dir",
-        "source": "llms.txt",
-        "sample_urls": 1,
-        "listed_as_root_in_llms": false,
-        "http_status": 404,
-        "html_status": 404,
-        "bytes": 36538,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "derivation_miss",
-        "unfetchable_bucket": "ours"
-      },
-      {
-        "root_path": "/docs/cybs/en-us/reporting/user/all/ebc.md",
-        "product_id": "ebc",
-        "family": "reporting",
-        "derivation": "guide_dir",
-        "source": "llms.txt",
-        "sample_urls": 1,
-        "listed_as_root_in_llms": false,
-        "http_status": 404,
-        "html_status": 404,
-        "bytes": 36538,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "derivation_miss",
-        "unfetchable_bucket": "ours"
+        "unfetchable_reason": "site_defect",
+        "unfetchable_bucket": "theirs"
       },
       {
         "root_path": "/docs/cybs/en-us/sa/developer/all/sa-checkout.md",
@@ -3398,7 +2920,7 @@
         "html_status": 404,
         "bytes": 36538,
         "fetch_status": "unfetchable",
-        "unfetchable_reason": "derivation_miss",
+        "unfetchable_reason": "derivation_error",
         "unfetchable_bucket": "ours"
       },
       {
@@ -3413,7 +2935,7 @@
         "html_status": 404,
         "bytes": 36538,
         "fetch_status": "unfetchable",
-        "unfetchable_reason": "derivation_miss",
+        "unfetchable_reason": "derivation_error",
         "unfetchable_bucket": "ours"
       },
       {
@@ -3432,34 +2954,19 @@
         "unfetchable_bucket": "ours"
       },
       {
-        "root_path": "/docs/cybs/en-us/samsung-pay/developer/ctv/so.md",
-        "product_id": "so",
+        "root_path": "/docs/cybs/en-us/samsung-pay/developer/ctv/so/samsungpay.md",
+        "product_id": "samsungpay",
         "family": "samsung-pay",
-        "derivation": "guide_dir",
+        "derivation": "listed_root",
         "source": "llms.txt",
         "sample_urls": 1,
-        "listed_as_root_in_llms": false,
+        "listed_as_root_in_llms": true,
         "http_status": 200,
-        "html_status": 500,
-        "bytes": 0,
+        "html_status": 200,
+        "bytes": 79166,
         "fetch_status": "unfetchable",
         "unfetchable_reason": "empty_200",
-        "unfetchable_bucket": "ours"
-      },
-      {
-        "root_path": "/docs/cybs/en-us/so-p12/migration/all/so.md",
-        "product_id": "so",
-        "family": "so-p12",
-        "derivation": "guide_dir",
-        "source": "llms.txt",
-        "sample_urls": 1,
-        "listed_as_root_in_llms": false,
-        "http_status": 404,
-        "html_status": 404,
-        "bytes": 36538,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "derivation_miss",
-        "unfetchable_bucket": "ours"
+        "unfetchable_bucket": "theirs"
       },
       {
         "root_path": "/docs/cybs/en-us/tink/developer/all/rest/tink.md",
@@ -3477,43 +2984,13 @@
         "unfetchable_bucket": "theirs"
       },
       {
-        "root_path": "/docs/cybs/en-us/unified-checkout/quick-start/all/na.md",
-        "product_id": "na",
-        "family": "unified-checkout",
-        "derivation": "guide_dir",
-        "source": "llms.txt",
-        "sample_urls": 1,
-        "listed_as_root_in_llms": false,
-        "http_status": 200,
-        "html_status": 500,
-        "bytes": 0,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "empty_200",
-        "unfetchable_bucket": "ours"
-      },
-      {
-        "root_path": "/docs/cybs/en-us/urban-mobility/developer/ctv/rest.md",
-        "product_id": "rest",
-        "family": "urban-mobility",
-        "derivation": "guide_dir",
-        "source": "llms.txt",
-        "sample_urls": 1,
-        "listed_as_root_in_llms": false,
-        "http_status": 404,
-        "html_status": 404,
-        "bytes": 36538,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "derivation_miss",
-        "unfetchable_bucket": "ours"
-      },
-      {
-        "root_path": "/docs/cybs/en-us/via/quick-start/all/na.md",
-        "product_id": "na",
+        "root_path": "/docs/cybs/en-us/via/quick-start/all/na/via-qsg.md",
+        "product_id": "via-qsg",
         "family": "via",
-        "derivation": "guide_dir",
+        "derivation": "listed_root",
         "source": "llms.txt",
         "sample_urls": 1,
-        "listed_as_root_in_llms": false,
+        "listed_as_root_in_llms": true,
         "http_status": 500,
         "html_status": 404,
         "bytes": 5,
@@ -3522,34 +2999,52 @@
         "unfetchable_bucket": "theirs"
       },
       {
-        "root_path": "/docs/cybs/en-us/visa-bank-validation/merchant/all/rest.md",
-        "product_id": "rest",
-        "family": "visa-bank-validation",
-        "derivation": "guide_dir",
+        "root_path": "/docs/vas/en-us/ad/acq/all/na/accept-devices-acq/accept-device-acq-implementation.md",
+        "product_id": "accept-device-acq-implementation",
+        "family": "ad",
+        "derivation": "listed_root",
         "source": "llms.txt",
         "sample_urls": 1,
-        "listed_as_root_in_llms": false,
-        "http_status": 404,
-        "html_status": 404,
-        "bytes": 36538,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "derivation_miss",
-        "unfetchable_bucket": "ours"
-      },
-      {
-        "root_path": "/docs/vas/en-us/ad/acq/all/na/accept-devices-acq.md",
-        "product_id": "accept-devices-acq",
-        "family": "ad",
-        "derivation": "guide_dir",
-        "source": "llms.txt",
-        "sample_urls": 3,
-        "listed_as_root_in_llms": false,
+        "listed_as_root_in_llms": true,
         "http_status": 200,
         "html_status": 200,
-        "bytes": 90983,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "unresolved_derivation",
-        "unfetchable_bucket": "ours"
+        "bytes": 476,
+        "fetch_status": "ok",
+        "unfetchable_reason": null,
+        "unfetchable_bucket": null,
+        "fetch_error": "not markdown"
+      },
+      {
+        "root_path": "/docs/vas/en-us/ad/acq/all/na/accept-devices-acq/accept-devices-acq-dist-integ.md",
+        "product_id": "accept-devices-acq-dist-integ",
+        "family": "ad",
+        "derivation": "listed_root",
+        "source": "llms.txt",
+        "sample_urls": 1,
+        "listed_as_root_in_llms": true,
+        "http_status": 200,
+        "html_status": 200,
+        "bytes": 548,
+        "fetch_status": "ok",
+        "unfetchable_reason": null,
+        "unfetchable_bucket": null,
+        "fetch_error": "not markdown"
+      },
+      {
+        "root_path": "/docs/vas/en-us/ad/acq/all/na/accept-devices-acq/home-acq.md",
+        "product_id": "home-acq",
+        "family": "ad",
+        "derivation": "listed_root",
+        "source": "llms.txt",
+        "sample_urls": 1,
+        "listed_as_root_in_llms": true,
+        "http_status": 200,
+        "html_status": 200,
+        "bytes": 462,
+        "fetch_status": "ok",
+        "unfetchable_reason": null,
+        "unfetchable_bucket": null,
+        "fetch_error": "not markdown"
       },
       {
         "root_path": "/docs/vas/en-us/agent-toolkit/quick-start/all/na/agent-toolkit.md",
@@ -3561,10 +3056,11 @@
         "listed_as_root_in_llms": false,
         "http_status": 200,
         "html_status": 200,
-        "bytes": 90983,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "unresolved_derivation",
-        "unfetchable_bucket": "ours"
+        "bytes": 11848,
+        "fetch_status": "ok",
+        "unfetchable_reason": null,
+        "unfetchable_bucket": null,
+        "fetch_error": "not markdown"
       },
       {
         "root_path": "/docs/vas/en-us/auto-fueling/developer/fiservrc/rest/auto-fuel.md",
@@ -3576,235 +3072,27 @@
         "listed_as_root_in_llms": false,
         "http_status": 200,
         "html_status": 200,
-        "bytes": 90983,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "unresolved_derivation",
-        "unfetchable_bucket": "ours"
+        "bytes": 25479,
+        "fetch_status": "ok",
+        "unfetchable_reason": null,
+        "unfetchable_bucket": null,
+        "fetch_error": "not markdown"
       },
       {
-        "root_path": "/docs/vas/en-us/doc-rel/relnote/all/na/doc-release-notes/doc-release-notes-intro/April-2025.md",
-        "product_id": "April-2025",
+        "root_path": "/docs/vas/en-us/doc-rel/relnote/all/na/doc-release-notes.md",
+        "product_id": "doc-release-notes",
         "family": "doc-rel",
-        "derivation": "guide_dir",
+        "derivation": "compendium",
         "source": "llms.txt",
-        "sample_urls": 1,
+        "sample_urls": 15,
         "listed_as_root_in_llms": false,
         "http_status": 200,
         "html_status": 200,
-        "bytes": 90983,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "unresolved_derivation",
-        "unfetchable_bucket": "ours"
-      },
-      {
-        "root_path": "/docs/vas/en-us/doc-rel/relnote/all/na/doc-release-notes/doc-release-notes-intro/August-2025.md",
-        "product_id": "August-2025",
-        "family": "doc-rel",
-        "derivation": "guide_dir",
-        "source": "llms.txt",
-        "sample_urls": 1,
-        "listed_as_root_in_llms": false,
-        "http_status": 200,
-        "html_status": 200,
-        "bytes": 90983,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "unresolved_derivation",
-        "unfetchable_bucket": "ours"
-      },
-      {
-        "root_path": "/docs/vas/en-us/doc-rel/relnote/all/na/doc-release-notes/doc-release-notes-intro/December-2025.md",
-        "product_id": "December-2025",
-        "family": "doc-rel",
-        "derivation": "guide_dir",
-        "source": "llms.txt",
-        "sample_urls": 1,
-        "listed_as_root_in_llms": false,
-        "http_status": 200,
-        "html_status": 200,
-        "bytes": 90983,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "unresolved_derivation",
-        "unfetchable_bucket": "ours"
-      },
-      {
-        "root_path": "/docs/vas/en-us/doc-rel/relnote/all/na/doc-release-notes/doc-release-notes-intro/February-2025.md",
-        "product_id": "February-2025",
-        "family": "doc-rel",
-        "derivation": "guide_dir",
-        "source": "llms.txt",
-        "sample_urls": 1,
-        "listed_as_root_in_llms": false,
-        "http_status": 200,
-        "html_status": 200,
-        "bytes": 90983,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "unresolved_derivation",
-        "unfetchable_bucket": "ours"
-      },
-      {
-        "root_path": "/docs/vas/en-us/doc-rel/relnote/all/na/doc-release-notes/doc-release-notes-intro/February-2026.md",
-        "product_id": "February-2026",
-        "family": "doc-rel",
-        "derivation": "guide_dir",
-        "source": "llms.txt",
-        "sample_urls": 1,
-        "listed_as_root_in_llms": false,
-        "http_status": 200,
-        "html_status": 200,
-        "bytes": 90983,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "unresolved_derivation",
-        "unfetchable_bucket": "ours"
-      },
-      {
-        "root_path": "/docs/vas/en-us/doc-rel/relnote/all/na/doc-release-notes/doc-release-notes-intro/January-2025.md",
-        "product_id": "January-2025",
-        "family": "doc-rel",
-        "derivation": "guide_dir",
-        "source": "llms.txt",
-        "sample_urls": 1,
-        "listed_as_root_in_llms": false,
-        "http_status": 200,
-        "html_status": 200,
-        "bytes": 90983,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "unresolved_derivation",
-        "unfetchable_bucket": "ours"
-      },
-      {
-        "root_path": "/docs/vas/en-us/doc-rel/relnote/all/na/doc-release-notes/doc-release-notes-intro/January-2026.md",
-        "product_id": "January-2026",
-        "family": "doc-rel",
-        "derivation": "guide_dir",
-        "source": "llms.txt",
-        "sample_urls": 1,
-        "listed_as_root_in_llms": false,
-        "http_status": 200,
-        "html_status": 200,
-        "bytes": 90983,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "unresolved_derivation",
-        "unfetchable_bucket": "ours"
-      },
-      {
-        "root_path": "/docs/vas/en-us/doc-rel/relnote/all/na/doc-release-notes/doc-release-notes-intro/July-2025.md",
-        "product_id": "July-2025",
-        "family": "doc-rel",
-        "derivation": "guide_dir",
-        "source": "llms.txt",
-        "sample_urls": 1,
-        "listed_as_root_in_llms": false,
-        "http_status": 200,
-        "html_status": 200,
-        "bytes": 90983,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "unresolved_derivation",
-        "unfetchable_bucket": "ours"
-      },
-      {
-        "root_path": "/docs/vas/en-us/doc-rel/relnote/all/na/doc-release-notes/doc-release-notes-intro/June-2025.md",
-        "product_id": "June-2025",
-        "family": "doc-rel",
-        "derivation": "guide_dir",
-        "source": "llms.txt",
-        "sample_urls": 1,
-        "listed_as_root_in_llms": false,
-        "http_status": 200,
-        "html_status": 200,
-        "bytes": 90983,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "unresolved_derivation",
-        "unfetchable_bucket": "ours"
-      },
-      {
-        "root_path": "/docs/vas/en-us/doc-rel/relnote/all/na/doc-release-notes/doc-release-notes-intro/March-2025.md",
-        "product_id": "March-2025",
-        "family": "doc-rel",
-        "derivation": "guide_dir",
-        "source": "llms.txt",
-        "sample_urls": 1,
-        "listed_as_root_in_llms": false,
-        "http_status": 200,
-        "html_status": 200,
-        "bytes": 90983,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "unresolved_derivation",
-        "unfetchable_bucket": "ours"
-      },
-      {
-        "root_path": "/docs/vas/en-us/doc-rel/relnote/all/na/doc-release-notes/doc-release-notes-intro/March-2026.md",
-        "product_id": "March-2026",
-        "family": "doc-rel",
-        "derivation": "guide_dir",
-        "source": "llms.txt",
-        "sample_urls": 1,
-        "listed_as_root_in_llms": false,
-        "http_status": 200,
-        "html_status": 200,
-        "bytes": 90983,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "unresolved_derivation",
-        "unfetchable_bucket": "ours"
-      },
-      {
-        "root_path": "/docs/vas/en-us/doc-rel/relnote/all/na/doc-release-notes/doc-release-notes-intro/May-2025.md",
-        "product_id": "May-2025",
-        "family": "doc-rel",
-        "derivation": "guide_dir",
-        "source": "llms.txt",
-        "sample_urls": 1,
-        "listed_as_root_in_llms": false,
-        "http_status": 200,
-        "html_status": 200,
-        "bytes": 90983,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "unresolved_derivation",
-        "unfetchable_bucket": "ours"
-      },
-      {
-        "root_path": "/docs/vas/en-us/doc-rel/relnote/all/na/doc-release-notes/doc-release-notes-intro/November-2025.md",
-        "product_id": "November-2025",
-        "family": "doc-rel",
-        "derivation": "guide_dir",
-        "source": "llms.txt",
-        "sample_urls": 1,
-        "listed_as_root_in_llms": false,
-        "http_status": 200,
-        "html_status": 200,
-        "bytes": 90983,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "unresolved_derivation",
-        "unfetchable_bucket": "ours"
-      },
-      {
-        "root_path": "/docs/vas/en-us/doc-rel/relnote/all/na/doc-release-notes/doc-release-notes-intro/October-2025.md",
-        "product_id": "October-2025",
-        "family": "doc-rel",
-        "derivation": "guide_dir",
-        "source": "llms.txt",
-        "sample_urls": 1,
-        "listed_as_root_in_llms": false,
-        "http_status": 200,
-        "html_status": 200,
-        "bytes": 90983,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "unresolved_derivation",
-        "unfetchable_bucket": "ours"
-      },
-      {
-        "root_path": "/docs/vas/en-us/doc-rel/relnote/all/na/doc-release-notes/doc-release-notes-intro/September-2025.md",
-        "product_id": "September-2025",
-        "family": "doc-rel",
-        "derivation": "guide_dir",
-        "source": "llms.txt",
-        "sample_urls": 1,
-        "listed_as_root_in_llms": false,
-        "http_status": 200,
-        "html_status": 200,
-        "bytes": 90983,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "unresolved_derivation",
-        "unfetchable_bucket": "ours"
+        "bytes": 157839,
+        "fetch_status": "ok",
+        "unfetchable_reason": null,
+        "unfetchable_bucket": null,
+        "fetch_error": "not markdown"
       },
       {
         "root_path": "/docs/vas/en-us/payments/acq/all/na/payments-acq.md",
@@ -3816,10 +3104,11 @@
         "listed_as_root_in_llms": false,
         "http_status": 200,
         "html_status": 200,
-        "bytes": 90983,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "unresolved_derivation",
-        "unfetchable_bucket": "ours"
+        "bytes": 90037,
+        "fetch_status": "ok",
+        "unfetchable_reason": null,
+        "unfetchable_bucket": null,
+        "fetch_error": "not markdown"
       },
       {
         "root_path": "/docs/vas/en-us/tms/acq/all/na/tms-acq.md",
@@ -3831,10 +3120,11 @@
         "listed_as_root_in_llms": false,
         "http_status": 200,
         "html_status": 200,
-        "bytes": 90983,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "unresolved_derivation",
-        "unfetchable_bucket": "ours"
+        "bytes": 33846,
+        "fetch_status": "ok",
+        "unfetchable_reason": null,
+        "unfetchable_bucket": null,
+        "fetch_error": "not markdown"
       },
       {
         "root_path": "/docs/vas/en-us/uc/acq/all/na/uc-acq.md",
@@ -3846,63 +3136,19 @@
         "listed_as_root_in_llms": false,
         "http_status": 200,
         "html_status": 200,
-        "bytes": 90983,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "unresolved_derivation",
-        "unfetchable_bucket": "ours"
-      },
-      {
-        "root_path": "/hello-world.md",
-        "product_id": "hello-world",
-        "family": null,
-        "derivation": "guide_dir",
-        "source": "llms.txt",
-        "sample_urls": 2,
-        "listed_as_root_in_llms": false,
-        "http_status": 200,
-        "html_status": 200,
-        "bytes": 37,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "empty_200",
-        "unfetchable_bucket": "theirs"
-      },
-      {
-        "root_path": "/resources.md",
-        "product_id": "resources",
-        "family": null,
-        "derivation": "guide_dir",
-        "source": "llms.txt",
-        "sample_urls": 1,
-        "listed_as_root_in_llms": false,
-        "http_status": 200,
-        "html_status": 200,
-        "bytes": 0,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "empty_200",
-        "unfetchable_bucket": "theirs"
-      },
-      {
-        "root_path": "/support.md",
-        "product_id": "support",
-        "family": null,
-        "derivation": "guide_dir",
-        "source": "llms.txt",
-        "sample_urls": 2,
-        "listed_as_root_in_llms": false,
-        "http_status": 200,
-        "html_status": 200,
-        "bytes": 0,
-        "fetch_status": "unfetchable",
-        "unfetchable_reason": "empty_200",
-        "unfetchable_bucket": "theirs"
+        "bytes": 16841,
+        "fetch_status": "ok",
+        "unfetchable_reason": null,
+        "unfetchable_bucket": null,
+        "fetch_error": "not markdown"
       }
     ]
   },
   "deep_link_spot_check": {
     "checked": 5,
-    "anchors_found": 4,
-    "anchors_missing": 1,
-    "pass": false,
+    "anchors_found": 5,
+    "anchors_missing": 0,
+    "pass": true,
     "results": [
       {
         "product_id": "boarding",
@@ -3947,32 +3193,32 @@
       {
         "product_id": "unified-checkout",
         "root_path": "/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.md",
-        "anchor": "uc-getting-started",
-        "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-getting-started",
+        "anchor": "uc-about-guide",
+        "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-about-guide",
         "html_url": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html",
         "html_status": 200,
-        "anchor_found_in_html": false,
-        "matched_attr": null
+        "anchor_found_in_html": true,
+        "matched_attr": "id"
       }
     ]
   },
   "sanitize": {
-    "sections_total": 20661,
-    "sections_clean": 20433,
-    "code_blocks": 2382,
+    "sections_total": 21096,
+    "sections_clean": 20853,
+    "code_blocks": 2416,
     "quarantined_by_kind": {
-      "about_guide_boilerplate": 137,
-      "revision_history": 81,
-      "support_center": 10
+      "about_guide_boilerplate": 143,
+      "revision_history": 88,
+      "support_center": 12
     }
   },
   "sanitize_products": [
     {
-      "product_id": "additional-amount-types",
+      "product_id": "response-codes",
       "fetched": true,
-      "bytes": 17461,
-      "sections_total": 2,
-      "sections_clean": 2,
+      "bytes": 2602,
+      "sections_total": 1,
+      "sections_clean": 1,
       "quarantined_by_kind": {},
       "code_blocks": 0
     },
@@ -4067,6 +3313,18 @@
       "code_blocks": 18
     },
     {
+      "product_id": "boarding-template-mgmt",
+      "fetched": true,
+      "bytes": 45608,
+      "sections_total": 27,
+      "sections_clean": 25,
+      "quarantined_by_kind": {
+        "revision_history": 1,
+        "about_guide_boilerplate": 1
+      },
+      "code_blocks": 0
+    },
+    {
       "product_id": "boarding",
       "fetched": true,
       "bytes": 268904,
@@ -4101,15 +3359,6 @@
         "revision_history": 4
       },
       "code_blocks": 86
-    },
-    {
-      "product_id": "country-codes",
-      "fetched": true,
-      "bytes": 33820,
-      "sections_total": 8,
-      "sections_clean": 8,
-      "quarantined_by_kind": {},
-      "code_blocks": 0
     },
     {
       "product_id": "country-codes",
@@ -4154,6 +3403,15 @@
       "code_blocks": 0
     },
     {
+      "product_id": "currency-codes-ctv",
+      "fetched": true,
+      "bytes": 11130,
+      "sections_total": 2,
+      "sections_clean": 2,
+      "quarantined_by_kind": {},
+      "code_blocks": 0
+    },
+    {
       "product_id": "dcc-merchant",
       "fetched": true,
       "bytes": 37111,
@@ -4194,6 +3452,15 @@
         "revision_history": 3
       },
       "code_blocks": 207
+    },
+    {
+      "product_id": "doc-release-notes",
+      "fetched": true,
+      "bytes": 180829,
+      "sections_total": 118,
+      "sections_clean": 118,
+      "quarantined_by_kind": {},
+      "code_blocks": 0
     },
     {
       "product_id": "echeck-user-guide",
@@ -4276,9 +3543,9 @@
     {
       "product_id": "installment-plans",
       "fetched": true,
-      "bytes": 135069,
-      "sections_total": 136,
-      "sections_clean": 134,
+      "bytes": 134370,
+      "sections_total": 135,
+      "sections_clean": 133,
       "quarantined_by_kind": {
         "about_guide_boilerplate": 1,
         "revision_history": 1
@@ -4296,6 +3563,18 @@
         "revision_history": 1
       },
       "code_blocks": 42
+    },
+    {
+      "product_id": "isv-plugin-o",
+      "fetched": true,
+      "bytes": 215806,
+      "sections_total": 176,
+      "sections_clean": 173,
+      "quarantined_by_kind": {
+        "revision_history": 1,
+        "support_center": 2
+      },
+      "code_blocks": 6
     },
     {
       "product_id": "built-by-them",
@@ -4367,6 +3646,17 @@
         "about_guide_boilerplate": 1
       },
       "code_blocks": 12
+    },
+    {
+      "product_id": "llm-getting-started",
+      "fetched": true,
+      "bytes": 3190,
+      "sections_total": 6,
+      "sections_clean": 5,
+      "quarantined_by_kind": {
+        "revision_history": 1
+      },
+      "code_blocks": 0
     },
     {
       "product_id": "lodging",
@@ -4577,6 +3867,18 @@
         "revision_history": 1
       },
       "code_blocks": 82
+    },
+    {
+      "product_id": "payouts-aft-dev",
+      "fetched": true,
+      "bytes": 140456,
+      "sections_total": 36,
+      "sections_clean": 34,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 1
+      },
+      "code_blocks": 12
     },
     {
       "product_id": "payouts-dev",
@@ -4913,6 +4215,17 @@
       "code_blocks": 0
     },
     {
+      "product_id": "rn-2026-01-09",
+      "fetched": true,
+      "bytes": 10531,
+      "sections_total": 7,
+      "sections_clean": 5,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 2
+      },
+      "code_blocks": 0
+    },
+    {
       "product_id": "rn-2026-01-16",
       "fetched": true,
       "bytes": 3695,
@@ -5212,6 +4525,18 @@
       "code_blocks": 191
     },
     {
+      "product_id": "so-conversion",
+      "fetched": true,
+      "bytes": 16263,
+      "sections_total": 9,
+      "sections_clean": 7,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 1
+      },
+      "code_blocks": 0
+    },
+    {
       "product_id": "state-codes",
       "fetched": true,
       "bytes": 8759,
@@ -5372,6 +4697,17 @@
       "code_blocks": 72
     },
     {
+      "product_id": "uc-qsg",
+      "fetched": true,
+      "bytes": 21781,
+      "sections_total": 15,
+      "sections_clean": 14,
+      "quarantined_by_kind": {
+        "revision_history": 1
+      },
+      "code_blocks": 3
+    },
+    {
       "product_id": "unified-click-to-pay",
       "fetched": true,
       "bytes": 324160,
@@ -5405,6 +4741,18 @@
       "code_blocks": 0
     },
     {
+      "product_id": "visa-bank-accoun-val",
+      "fetched": true,
+      "bytes": 42104,
+      "sections_total": 44,
+      "sections_clean": 42,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 1
+      },
+      "code_blocks": 13
+    },
+    {
       "product_id": "webhooks",
       "fetched": true,
       "bytes": 146916,
@@ -5415,6 +4763,51 @@
         "revision_history": 1
       },
       "code_blocks": 36
+    },
+    {
+      "product_id": "sandbox",
+      "fetched": true,
+      "bytes": 554,
+      "sections_total": 1,
+      "sections_clean": 1,
+      "quarantined_by_kind": {},
+      "code_blocks": 0
+    },
+    {
+      "product_id": "testing-guide",
+      "fetched": true,
+      "bytes": 5214,
+      "sections_total": 1,
+      "sections_clean": 1,
+      "quarantined_by_kind": {},
+      "code_blocks": 0
+    },
+    {
+      "product_id": "rest-api-sdks",
+      "fetched": true,
+      "bytes": 25805,
+      "sections_total": 1,
+      "sections_clean": 1,
+      "quarantined_by_kind": {},
+      "code_blocks": 0
+    },
+    {
+      "product_id": "contact-us",
+      "fetched": true,
+      "bytes": 1323,
+      "sections_total": 1,
+      "sections_clean": 1,
+      "quarantined_by_kind": {},
+      "code_blocks": 0
+    },
+    {
+      "product_id": "faqs",
+      "fetched": true,
+      "bytes": 4812,
+      "sections_total": 1,
+      "sections_clean": 1,
+      "quarantined_by_kind": {},
+      "code_blocks": 0
     }
   ],
   "toc": {
@@ -5628,10 +5021,18 @@
     {
       "product_id": "boarding-template-mgmt",
       "root_path": "/docs/cybs/en-us/boarding-template-management/user/all/ada/boarding-template-mgmt.md",
-      "fetched": false,
+      "fetched": true,
       "derivation": "listed_root",
       "unfetchable_reason": null,
-      "unfetchable_bucket": null
+      "unfetchable_bucket": null,
+      "bytes": 45608,
+      "sections_total": 27,
+      "sections_clean": 25,
+      "quarantined_by_kind": {
+        "revision_history": 1,
+        "about_guide_boilerplate": 1
+      },
+      "code_blocks": 0
     },
     {
       "product_id": "boarding-user",
@@ -5694,10 +5095,15 @@
     {
       "product_id": "contact-us",
       "root_path": "/support/contact-us.md",
-      "fetched": false,
+      "fetched": true,
       "derivation": "listed_root",
       "unfetchable_reason": null,
-      "unfetchable_bucket": null
+      "unfetchable_bucket": null,
+      "bytes": 1323,
+      "sections_total": 1,
+      "sections_clean": 1,
+      "quarantined_by_kind": {},
+      "code_blocks": 0
     },
     {
       "product_id": "country-codes",
@@ -5760,10 +5166,15 @@
     {
       "product_id": "currency-codes-ctv",
       "root_path": "/docs/cybs/en-us/currency-codes/reference/ctv/na/currency-codes-ctv.md",
-      "fetched": false,
+      "fetched": true,
       "derivation": "listed_root",
       "unfetchable_reason": null,
-      "unfetchable_bucket": null
+      "unfetchable_bucket": null,
+      "bytes": 11130,
+      "sections_total": 2,
+      "sections_clean": 2,
+      "quarantined_by_kind": {},
+      "code_blocks": 0
     },
     {
       "product_id": "dcc-merchant",
@@ -5826,10 +5237,15 @@
     {
       "product_id": "doc-release-notes",
       "root_path": "/docs/vas/en-us/doc-rel/relnote/all/na/doc-release-notes.md",
-      "fetched": false,
+      "fetched": true,
       "derivation": "compendium",
       "unfetchable_reason": null,
-      "unfetchable_bucket": null
+      "unfetchable_bucket": null,
+      "bytes": 180829,
+      "sections_total": 118,
+      "sections_clean": 118,
+      "quarantined_by_kind": {},
+      "code_blocks": 0
     },
     {
       "product_id": "doc101_ebc",
@@ -5888,10 +5304,15 @@
     {
       "product_id": "faqs",
       "root_path": "/support/faqs.md",
-      "fetched": false,
+      "fetched": true,
       "derivation": "listed_root",
       "unfetchable_reason": null,
-      "unfetchable_bucket": null
+      "unfetchable_bucket": null,
+      "bytes": 4812,
+      "sections_total": 1,
+      "sections_clean": 1,
+      "quarantined_by_kind": {},
+      "code_blocks": 0
     },
     {
       "product_id": "googlepay",
@@ -5953,9 +5374,9 @@
       "derivation": "already_root",
       "unfetchable_reason": null,
       "unfetchable_bucket": null,
-      "bytes": 135069,
-      "sections_total": 136,
-      "sections_clean": 134,
+      "bytes": 134370,
+      "sections_total": 135,
+      "sections_clean": 133,
       "quarantined_by_kind": {
         "about_guide_boilerplate": 1,
         "revision_history": 1
@@ -5996,10 +5417,18 @@
     {
       "product_id": "isv-plugin-o",
       "root_path": "/docs/cybs/en-us/isv-plugins/admin/all/na/isv-plugin-o.md",
-      "fetched": false,
+      "fetched": true,
       "derivation": "listed_root",
       "unfetchable_reason": null,
-      "unfetchable_bucket": null
+      "unfetchable_bucket": null,
+      "bytes": 215806,
+      "sections_total": 176,
+      "sections_clean": 173,
+      "quarantined_by_kind": {
+        "revision_history": 1,
+        "support_center": 2
+      },
+      "code_blocks": 6
     },
     {
       "product_id": "klarna",
@@ -6049,10 +5478,17 @@
     {
       "product_id": "llm-getting-started",
       "root_path": "/docs/cybs/en-us/llm/get-started/all/na/llm-getting-started.md",
-      "fetched": false,
+      "fetched": true,
       "derivation": "listed_root",
       "unfetchable_reason": null,
-      "unfetchable_bucket": null
+      "unfetchable_bucket": null,
+      "bytes": 3190,
+      "sections_total": 6,
+      "sections_clean": 5,
+      "quarantined_by_kind": {
+        "revision_history": 1
+      },
+      "code_blocks": 0
     },
     {
       "product_id": "lodging",
@@ -6395,10 +5831,18 @@
     {
       "product_id": "payouts-aft-dev",
       "root_path": "/docs/cybs/en-us/payouts-aft/developer/ctv/rest/payouts-aft-dev.md",
-      "fetched": false,
+      "fetched": true,
       "derivation": "listed_root",
       "unfetchable_reason": null,
-      "unfetchable_bucket": null
+      "unfetchable_bucket": null,
+      "bytes": 140456,
+      "sections_total": 36,
+      "sections_clean": 34,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 1
+      },
+      "code_blocks": 12
     },
     {
       "product_id": "payouts-dev",
@@ -6577,18 +6021,28 @@
     {
       "product_id": "response-codes",
       "root_path": "/api/reference/response-codes.md",
-      "fetched": false,
+      "fetched": true,
       "derivation": "listed_root",
       "unfetchable_reason": null,
-      "unfetchable_bucket": null
+      "unfetchable_bucket": null,
+      "bytes": 2602,
+      "sections_total": 1,
+      "sections_clean": 1,
+      "quarantined_by_kind": {},
+      "code_blocks": 0
     },
     {
       "product_id": "rest-api-sdks",
       "root_path": "/resources/rest-api-sdks.md",
-      "fetched": false,
+      "fetched": true,
       "derivation": "listed_root",
       "unfetchable_reason": null,
-      "unfetchable_bucket": null
+      "unfetchable_bucket": null,
+      "bytes": 25805,
+      "sections_total": 1,
+      "sections_clean": 1,
+      "quarantined_by_kind": {},
+      "code_blocks": 0
     },
     {
       "product_id": "rest-getting-started",
@@ -7007,10 +6461,17 @@
     {
       "product_id": "rn-2026-01-09",
       "root_path": "/docs/cybs/en-us/platform/relnote/all/na/rn-2026-01-09.md",
-      "fetched": false,
+      "fetched": true,
       "derivation": "guide_dir",
       "unfetchable_reason": null,
-      "unfetchable_bucket": null
+      "unfetchable_bucket": null,
+      "bytes": 10531,
+      "sections_total": 7,
+      "sections_clean": 5,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 2
+      },
+      "code_blocks": 0
     },
     {
       "product_id": "rn-2026-01-16",
@@ -7280,10 +6741,15 @@
     {
       "product_id": "sandbox",
       "root_path": "/hello-world/sandbox.md",
-      "fetched": false,
+      "fetched": true,
       "derivation": "listed_root",
       "unfetchable_reason": null,
-      "unfetchable_bucket": null
+      "unfetchable_bucket": null,
+      "bytes": 554,
+      "sections_total": 1,
+      "sections_clean": 1,
+      "quarantined_by_kind": {},
+      "code_blocks": 0
     },
     {
       "product_id": "secure-acceptance",
@@ -7336,10 +6802,18 @@
     {
       "product_id": "so-conversion",
       "root_path": "/docs/cybs/en-us/so-p12/migration/all/so/so-conversion.md",
-      "fetched": false,
+      "fetched": true,
       "derivation": "listed_root",
       "unfetchable_reason": null,
-      "unfetchable_bucket": null
+      "unfetchable_bucket": null,
+      "bytes": 16263,
+      "sections_total": 9,
+      "sections_clean": 7,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 1
+      },
+      "code_blocks": 0
     },
     {
       "product_id": "state-codes",
@@ -7434,10 +6908,15 @@
     {
       "product_id": "testing-guide",
       "root_path": "/hello-world/testing-guide.md",
-      "fetched": false,
+      "fetched": true,
       "derivation": "listed_root",
       "unfetchable_reason": null,
-      "unfetchable_bucket": null
+      "unfetchable_bucket": null,
+      "bytes": 5214,
+      "sections_total": 1,
+      "sections_clean": 1,
+      "quarantined_by_kind": {},
+      "code_blocks": 0
     },
     {
       "product_id": "time-zones",
@@ -7550,10 +7029,17 @@
     {
       "product_id": "uc-qsg",
       "root_path": "/docs/cybs/en-us/unified-checkout/quick-start/all/na/uc-qsg.md",
-      "fetched": false,
+      "fetched": true,
       "derivation": "listed_root",
       "unfetchable_reason": null,
-      "unfetchable_bucket": null
+      "unfetchable_bucket": null,
+      "bytes": 21781,
+      "sections_total": 15,
+      "sections_clean": 14,
+      "quarantined_by_kind": {
+        "revision_history": 1
+      },
+      "code_blocks": 3
     },
     {
       "product_id": "unified-checkout",
@@ -7611,10 +7097,18 @@
     {
       "product_id": "visa-bank-accoun-val",
       "root_path": "/docs/cybs/en-us/visa-bank-validation/merchant/all/rest/visa-bank-accoun-val.md",
-      "fetched": false,
+      "fetched": true,
       "derivation": "listed_root",
       "unfetchable_reason": null,
-      "unfetchable_bucket": null
+      "unfetchable_bucket": null,
+      "bytes": 42104,
+      "sections_total": 44,
+      "sections_clean": 42,
+      "quarantined_by_kind": {
+        "about_guide_boilerplate": 1,
+        "revision_history": 1
+      },
+      "code_blocks": 13
     },
     {
       "product_id": "webhooks",

@@ -77,7 +77,7 @@ DEFAULT_SPOT_CHECKS = [
     (
         "unified-checkout",
         "/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.md",
-        "uc-getting-started",
+        "uc-about-guide",
     ),
 ]
 

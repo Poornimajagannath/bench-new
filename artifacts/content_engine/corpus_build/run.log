@@ -1,0 +1,6 @@
+loaded /home/badari/workspace/poornima/visa-relay-bench/artifacts/content_engine/corpus_build/discovery.json
+derivation gate PASS: ours=9/175 < 15
+wrote /home/badari/workspace/poornima/visa-relay-bench/raw/2026-08-08/manifest.json
+fetched 145 roots, 20180481 bytes
+deep link spot check: 4/5 found
+sanitized 145 products, 20853/21096 clean sections

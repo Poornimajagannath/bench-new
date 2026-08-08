@@ -1,8 +1,8 @@
 {
   "checked": 5,
-  "anchors_found": 4,
-  "anchors_missing": 1,
-  "pass": false,
+  "anchors_found": 5,
+  "anchors_missing": 0,
+  "pass": true,
   "results": [
     {
       "product_id": "boarding",
@@ -47,12 +47,12 @@
     {
       "product_id": "unified-checkout",
       "root_path": "/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.md",
-      "anchor": "uc-getting-started",
-      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-getting-started",
+      "anchor": "uc-about-guide",
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-about-guide",
       "html_url": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html",
       "html_status": 200,
-      "anchor_found_in_html": false,
-      "matched_attr": null
+      "anchor_found_in_html": true,
+      "matched_attr": "id"
     }
   ]
 }

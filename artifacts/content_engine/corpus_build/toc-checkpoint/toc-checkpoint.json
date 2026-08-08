@@ -2,7 +2,8 @@
   "completed": [
     "additional-amount-types",
     "airline",
-    "boarding"
+    "boarding",
+    "response-codes"
   ],
   "products": {
     "boarding": {
@@ -28,7 +29,15 @@
       "toc_missed": [],
       "cache_hits": 0,
       "live_fetches": 0
+    },
+    "response-codes": {
+      "root_path": "/api/reference/response-codes.md",
+      "toc_topics": 0,
+      "toc_covered": 0,
+      "toc_missed": [],
+      "cache_hits": 0,
+      "live_fetches": 0
     }
   },
-  "updated_at": "2026-08-08T15:23:25+00:00"
+  "updated_at": "2026-08-08T15:45:02+00:00"
 }

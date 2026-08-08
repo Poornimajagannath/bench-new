@@ -24,6 +24,11 @@ from content_bench.content_engine.toc_fetch import url_to_local_name
 DEFAULT_UA = "Content-Bench/1.0 (corpus-toc)"
 
 
+def product_checkpoint_id(root_path: str) -> str:
+    """Stable checkpoint key — stem alone collides (e.g. two api-fields roots)."""
+    return root_path.strip("/").replace("/", "_")
+
+
 @dataclass
 class TocProductResult:
     product_id: str
@@ -96,9 +101,10 @@ def cross_check_toc_resumable(
     for prod in products:
         root_path = prod["root_path"]
         pid = product_id_from_root(root_path)
+        ck = product_checkpoint_id(root_path)
 
-        if pid in completed:
-            prev = product_state.get(pid, {})
+        if ck in completed:
+            prev = product_state.get(ck, {})
             results.append(
                 TocProductResult(
                     product_id=pid,
@@ -115,10 +121,17 @@ def cross_check_toc_resumable(
 
         # Load root text from raw file or inline
         root_text = prod.get("text")
-        if root_text is None and raw_dir and prod.get("local_path"):
-            raw_file = raw_dir / prod["local_path"]
-            if raw_file.is_file():
-                root_text = raw_file.read_text(encoding="utf-8", errors="replace")
+        if root_text is None and prod.get("local_path"):
+            lp = Path(prod["local_path"])
+            candidates = [lp]
+            if raw_dir is not None:
+                candidates.append(raw_dir / lp.name)
+                if not lp.is_absolute() and len(lp.parts) > 1:
+                    candidates.append(raw_dir / Path(*lp.parts[-1:]))
+            for raw_file in candidates:
+                if raw_file.is_file():
+                    root_text = raw_file.read_text(encoding="utf-8", errors="replace")
+                    break
         if not root_text:
             tr = TocProductResult(
                 product_id=pid,
@@ -164,8 +177,9 @@ def cross_check_toc_resumable(
 
         results.append(tr)
         if tr.status == "done":
-            completed.add(pid)
-            product_state[pid] = {
+            completed.add(ck)
+            product_state[ck] = {
+                "product_id": pid,
                 "root_path": root_path,
                 "toc_topics": tr.toc_topics,
                 "toc_covered": tr.toc_covered,
