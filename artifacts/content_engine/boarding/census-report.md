@@ -1,22 +1,22 @@
 # Corpus census
 
-- When: `2026-08-07T07:22:05+00:00`
+- When: `2026-08-07T22:56:28+00:00`
 - Corpus: `data/products/boarding/guides`
 - Documents classified: **236**
-- Eligible for ingestion: **182**
-- Quarantined (policy): **54**
+- Eligible for ingestion: **190**
+- Quarantined (policy): **46**
 
 ## Counts by kind
 
 | Kind | Count | Share | Quarantined by policy? |
 | --- | ---: | ---: | --- |
 | API reference (`api_reference`) | 6 | 2.5% | no |
-| How-to guide (`how_to_guide`) | 75 | 31.8% | no |
+| How-to guide (`how_to_guide`) | 93 | 39.4% | no |
 | Release note (`release_note`) | 0 | 0.0% | yes |
-| Index / navigation (`index_navigation`) | 54 | 22.9% | yes |
+| Index / navigation (`index_navigation`) | 46 | 19.5% | yes |
 | Legal (`legal`) | 0 | 0.0% | yes |
 | Marketing (`marketing`) | 0 | 0.0% | no |
-| Other / unclassified (`other`) | 101 | 42.8% | no |
+| Other / unclassified (`other`) | 91 | 38.6% | no |
 
 ## Policy (exclusions on paper)
 

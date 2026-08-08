@@ -1,20 +1,42 @@
 {
-  "generated_at": "2026-08-07T06:45:35+00:00",
-  "raw_dir": "raw/2026-08-07-boarding",
-  "claim_count": 645,
-  "schemas": [
-    "error_case",
-    "prose_claim",
-    "quickstart_step"
-  ],
+  "generated_at": "2026-08-07T22:56:28+00:00",
+  "raw_dir": "raw/2026-08-08-boarding",
+  "claim_count": 1248,
   "claims_by_schema": {
-    "quickstart_step": 550,
-    "prose_claim": 61,
-    "error_case": 34
+    "quickstart_step": 969,
+    "prose_claim": 214,
+    "error_case": 65
   },
-  "sample_source_pointers": [
-    "2026-08-07-boarding/en-us_boarding-template-management_user_all_ada_boarding-template-mgmt.md.md",
-    "2026-08-07-boarding/en-us_boarding_developer_all_rest_boarding.md.md",
-    "2026-08-07-boarding/en-us_boarding_user_all_ebc_boarding-user.md.md"
+  "docs_with_claims": 122,
+  "docs_ingested_denominator": 190,
+  "denominator_source": "census-report.json eligible_count (corpus: site HTML TOC, 236 files)",
+  "prose_constraint_kinds": {
+    "guidance": 124,
+    "prerequisite": 38,
+    "id_format_rule": 22,
+    "ttl_or_validity": 18,
+    "hierarchy_limit": 12
+  },
+  "top_docs_by_claims": [
+    [
+      "en-us_boarding_user_all_ebc_boarding-user.md.md",
+      428
+    ],
+    [
+      "en-us_boarding_developer_all_rest_boarding.md.md",
+      145
+    ],
+    [
+      "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt.md.md",
+      56
+    ],
+    [
+      "en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-boarding.md.md",
+      26
+    ],
+    [
+      "en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-add.md.md",
+      19
+    ]
   ]
 }

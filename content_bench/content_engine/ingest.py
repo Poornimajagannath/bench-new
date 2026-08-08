@@ -257,9 +257,21 @@ def _extract_claims_from_text(
         n, title = match.group(1), match.group(2).strip()
         if len(title) < 3:
             continue
+        # Navigation entries are not steps. A numbered "See [link]" line, or a
+        # line that is nothing but markdown links, is a cross-reference —
+        # extracting those as steps is how 3 landing pages produced 550 fake
+        # quickstart_step claims.
+        if re.search(r"\bSee \[", title):
+            continue
+        without_links = re.sub(r"\[[^\]]*\]\([^)]*\)", "", title).strip(" .*-—")
+        if len(without_links) < 12:
+            continue
+        # Step ids must be unique per occurrence: one doc can hold many
+        # procedures, so `doc_stem:step:{n}` collides across sections.
+        occ = hashlib.sha1(f"{match.start()}:{title}".encode()).hexdigest()[:8]
         claims.append(
             NormalizedClaim(
-                claim_id=f"{doc_stem}:step:{n}",
+                claim_id=f"{doc_stem}:step:{n}:{occ}",
                 schema="quickstart_step",
                 title=title[:120],
                 text=title,
@@ -284,15 +296,21 @@ def _extract_claims_from_text(
             )
         )
 
-    # Error cases
+    # Error cases — dedupe identical snippets within one doc (repeated error
+    # text is one fact, not N claims; identical ids must not collide).
+    seen_errors: set[str] = set()
     for match in re.finditer(
         r"(?i)\b(error|fault)\b[^\n]{0,80}\b(\d{3}|[A-Z][A-Z0-9_]{2,})\b",
         text,
     ):
         snippet = match.group(0).strip()
+        digest = hashlib.sha1(snippet.encode()).hexdigest()[:8]
+        if digest in seen_errors:
+            continue
+        seen_errors.add(digest)
         claims.append(
             NormalizedClaim(
-                claim_id=f"{doc_stem}:error:{hashlib.sha1(snippet.encode()).hexdigest()[:8]}",
+                claim_id=f"{doc_stem}:error:{digest}",
                 schema="error_case",
                 title=snippet[:80],
                 text=snippet,
@@ -519,6 +537,63 @@ def select_ingest_sources(
     return out[:limit], drops
 
 
+class CorpusMismatchError(RuntimeError):
+    """Census eligible count and ingestion input count differ.
+
+    The census-eligible set is the single corpus definition. If ingestion
+    would consume a different roster, fail loudly rather than silently
+    ingesting a slice — 3 landing pages standing in for 182 eligible docs is
+    how Wave 2 nearly shipped hollow.
+    """
+
+
+def select_ingest_sources_from_census(
+    census_report_path: Path,
+    *,
+    docs_dir: Optional[Path] = None,
+) -> Tuple[List[Path], List[DropRecord]]:
+    """The census-eligible set is the single input to ingestion.
+
+    Reads census-report.json (the decision record: kind + quarantine policy
+    already applied) and returns exactly the eligible files as sources, with
+    quarantined files recorded as drops. Raises CorpusMismatchError if the
+    resolved source count differs from the census eligible_count.
+    """
+    data = json.loads(census_report_path.read_text(encoding="utf-8"))
+    base = Path(docs_dir) if docs_dir else Path(data["docs_dir"])
+    if not base.is_absolute():
+        base = ROOT / base
+    srcs: List[Path] = []
+    drops: List[DropRecord] = []
+    missing: List[str] = []
+    for row in data.get("classifications") or []:
+        path = base / row["path"]
+        if row.get("quarantined"):
+            drops.append(
+                DropRecord(
+                    path=row["path"],
+                    reason="quarantine_policy",
+                    detail=f"census kind={row.get('kind')} — excluded by policy",
+                    bytes=row.get("bytes"),
+                    first_heading=row.get("title") or "(no heading)",
+                )
+            )
+            continue
+        if not path.is_file():
+            missing.append(row["path"])
+            continue
+        srcs.append(path)
+    eligible_count = int(data.get("eligible_count") or 0)
+    if len(srcs) != eligible_count:
+        raise CorpusMismatchError(
+            f"census eligible_count={eligible_count} but ingestion resolved "
+            f"{len(srcs)} sources (missing files: {missing[:5]}"
+            f"{'…' if len(missing) > 5 else ''}). Re-run the census against "
+            f"the current corpus before ingesting."
+        )
+    return srcs, drops
+
+
 def run_ingestion_snapshot(
     *,
     docs_dir: Path = DEFAULT_DOCS_DIR,
@@ -529,10 +604,16 @@ def run_ingestion_snapshot(
     sample_limit: int = 60,
     sources: Optional[Sequence[Path]] = None,
     quarantine_list_path: Optional[Path] = None,
+    census_report_path: Optional[Path] = None,
 ) -> Dict[str, Any]:
     quarantine_drops: List[DropRecord] = []
     if sources is not None:
         srcs = list(sources)
+    elif census_report_path is not None:
+        # One corpus definition: the census-eligible set is the roster.
+        srcs, quarantine_drops = select_ingest_sources_from_census(
+            census_report_path, docs_dir=docs_dir
+        )
     else:
         blocked = load_quarantine_basenames(quarantine_list_path)
         srcs, quarantine_drops = select_ingest_sources(
@@ -561,6 +642,8 @@ def run_ingestion_snapshot(
         "drops": [d.to_dict() for d in drops],
         "quarantine_skipped": len(quarantine_drops),
         "quarantine_list": str(quarantine_list_path) if quarantine_list_path else None,
+        "census_report": str(census_report_path) if census_report_path else None,
+        "ingest_input_count": len(srcs),
         "raw_dir": str(raw_dir.relative_to(ROOT)) if raw_dir.is_relative_to(ROOT) else str(raw_dir),
         "normalized_file": f"normalized/{raw_dir.name}.claims.json",
         "read_contract": ["normalized/", "content/"],

@@ -1,0 +1,126 @@
+{
+  "claims_total": 1248,
+  "claims_after_prefer_child": 619,
+  "mega_residuals": 19,
+  "mega_residual_samples": [
+    {
+      "claim_id": "en-us_boarding_developer_all_rest_boarding:prose:e3e8d8a94090",
+      "schema": "prose_claim",
+      "text": "You will apply product templates to a transacting organization when you create it. You can also create multiple template"
+    },
+    {
+      "claim_id": "en-us_boarding_developer_all_rest_boarding:prose:145c2754fa7e",
+      "schema": "prose_claim",
+      "text": "* The organization registration is done once using the `/registrations` endpoint. Modifications to existing organization"
+    },
+    {
+      "claim_id": "en-us_boarding_developer_all_rest_boarding:prose:0df1c137b48e",
+      "schema": "prose_claim",
+      "text": "* The boardingFlow field has two values: `ENTERPRISE` and `SMB`. Enterprise creates one organization at a time. SMB (Sma"
+    },
+    {
+      "claim_id": "en-us_boarding_developer_all_rest_boarding:prose:46b6822af1c6",
+      "schema": "prose_claim",
+      "text": "* The mode field is not currently supported."
+    },
+    {
+      "claim_id": "en-us_boarding_developer_all_rest_boarding:prose:2b9f7ce5c30c",
+      "schema": "prose_claim",
+      "text": "* The configurable field must be set to `true` for merchant organizations and `false` for transacting and structural org"
+    },
+    {
+      "claim_id": "en-us_boarding_user_all_ebc_boarding-user:step:2:09c1bb7f",
+      "schema": "quickstart_step",
+      "text": "Click the Status drop-down menu in the upper-right side of the page and select a status."
+    },
+    {
+      "claim_id": "en-us_boarding_user_all_ebc_boarding-user:step:3:fd1cf8ce",
+      "schema": "quickstart_step",
+      "text": "Click + Add Merchant.{#merchants-v2-transacting_merchants-v2-add-existing-step3}"
+    },
+    {
+      "claim_id": "en-us_boarding_user_all_ebc_boarding-user:step:4:e9ff5ab3",
+      "schema": "quickstart_step",
+      "text": "Select Add to an existing account and then click Next.{#merchants-v2-transacting_merchants-v2-add-existing-step4}"
+    },
+    {
+      "claim_id": "en-us_boarding_user_all_ebc_boarding-user:step:5:29f9fd60",
+      "schema": "quickstart_step",
+      "text": "If you have more than one boarding package, the Boarding Presets section is displayed. Enter the name of the merchant or"
+    },
+    {
+      "claim_id": "en-us_boarding_user_all_ebc_boarding-user:step:6:c95678cf",
+      "schema": "quickstart_step",
+      "text": "Optional: add additional organizations by clicking Start in the Hierarchy Details section. Or skip this step by clicking"
+    },
+    {
+      "claim_id": "en-us_boarding_user_all_ebc_boarding-user:step:1:2ee08ef7",
+      "schema": "quickstart_step",
+      "text": "Click + Add Merchant."
+    },
+    {
+      "claim_id": "en-us_boarding_user_all_ebc_boarding-user:step:2:7b72634e",
+      "schema": "quickstart_step",
+      "text": "Select Add to an existing account and then click Next."
+    },
+    {
+      "claim_id": "en-us_boarding_user_all_ebc_boarding-user:step:3:fe054d46",
+      "schema": "quickstart_step",
+      "text": "If you have more than one boarding package, choose a boarding package from the drop-down menu, or enter text in the sear"
+    },
+    {
+      "claim_id": "en-us_boarding_user_all_ebc_boarding-user:step:1:2698d0b4",
+      "schema": "quickstart_step",
+      "text": "Click + Add Merchant.{#merchants-v2-add-merchant_merchants-v2-add-merchant-step1}"
+    },
+    {
+      "claim_id": "en-us_boarding_user_all_ebc_boarding-user:step:2:4f0bd8b0",
+      "schema": "quickstart_step",
+      "text": "Select Board a new merchant account and click Next.{#merchants-v2-add-merchant_merchants-v2-add-merchant-step2}"
+    }
+  ],
+  "pages": [
+    {
+      "workflow_id": "create-merchant-organization",
+      "path": "content/boarding/workflows/create-merchant-organization.md",
+      "steps": 31,
+      "gaps": 29,
+      "fact_hash_guard": "pass"
+    },
+    {
+      "workflow_id": "extend-hierarchy",
+      "path": "content/boarding/workflows/extend-hierarchy.md",
+      "steps": 33,
+      "gaps": 31,
+      "fact_hash_guard": "pass"
+    },
+    {
+      "workflow_id": "enable-configure-products",
+      "path": "content/boarding/workflows/enable-configure-products.md",
+      "steps": 178,
+      "gaps": 139,
+      "fact_hash_guard": "pass"
+    },
+    {
+      "workflow_id": "search-organizations",
+      "path": "content/boarding/workflows/search-organizations.md",
+      "steps": 10,
+      "gaps": 11,
+      "fact_hash_guard": "pass"
+    },
+    {
+      "workflow_id": "change-organization-status",
+      "path": "content/boarding/workflows/change-organization-status.md",
+      "steps": 3,
+      "gaps": 6,
+      "fact_hash_guard": "pass"
+    },
+    {
+      "workflow_id": "send-registration-email",
+      "path": "content/boarding/workflows/send-registration-email.md",
+      "steps": 2,
+      "gaps": 4,
+      "fact_hash_guard": "pass"
+    }
+  ]
+}

@@ -72,7 +72,16 @@ Schemas: `quickstart_step`, `endpoint_fact`, `error_case`, `prose_claim`.
 
 **Claim kind** — the constraint subtype on a prose claim: `ttl_or_validity`,
 `ttl_and_reuse`, `reuse_or_rate_limit`, `pci_compliance`, `mandatory_header`,
-`device_encryption`, `guidance`, `constraint`.
+`device_encryption`, `id_format_rule`, `hierarchy_limit`, `status_transition`,
+`prerequisite`, `guidance`, `constraint`. The boarding classes (ID format,
+hierarchy, status, prerequisite) are the family's own version of the
+constraint-page class.
+
+**Mega-guide** — a family-root compendium file that concatenates its child
+pages (e.g. `boarding-user.md.md`). In composition the child page always wins
+on duplicate claim text (more specific source pointer); mega-guide claims with
+no child match are **residuals** — reported, never merged, because each is
+either unique content or a failed/quarantined child ingest.
 
 **Drop** — a source that produced no claims, recorded with a reason
 (`shell`, `no_schema_match`, `quarantine_policy`, …). Failures are kept, not

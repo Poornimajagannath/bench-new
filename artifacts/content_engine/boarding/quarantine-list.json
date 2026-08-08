@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-08-07T07:22:05+00:00",
+  "generated_at": "2026-08-07T22:56:28+00:00",
   "docs_dir": "data/products/boarding/guides",
   "exclude_kinds": [
     "index_navigation",
     "legal",
     "release_note"
   ],
-  "quarantine_count": 54,
+  "quarantine_count": 46,
   "paths": [
     "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-about-guide.md.md",
     "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-doc-rev.md.md",
@@ -15,11 +15,7 @@
     "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-tasks.md.md",
     "en-us_boarding_developer_all_rest_boarding_boarding-about-guide.md.md",
     "en-us_boarding_developer_all_rest_boarding_boarding-about-guide_boarding-revisions.md.md",
-    "en-us_boarding_developer_all_rest_boarding_boarding-about-guide_vpc-partner-reseller-disclaimer.md.md",
     "en-us_boarding_developer_all_rest_boarding_boarding-intro-overview.md.md",
-    "en-us_boarding_developer_all_rest_boarding_boarding-intro-overview_boarding-intro-ids.md.md",
-    "en-us_boarding_developer_all_rest_boarding_boarding-intro-overview_boarding-intro-organizations.md.md",
-    "en-us_boarding_developer_all_rest_boarding_boarding-intro-overview_boarding-intro-requirements.md.md",
     "en-us_boarding_developer_all_rest_boarding_boarding-intro-templat-0.md.md",
     "en-us_boarding_developer_all_rest_boarding_boarding-intro-template.md.md",
     "en-us_boarding_developer_all_rest_boarding_boarding-intro-template_templates-components.md.md",
@@ -42,11 +38,7 @@
     "en-us_boarding_developer_all_rest_boarding_templates-tasks.md.md",
     "en-us_boarding_user_all_ebc_boarding-user_boarding-about-guide.md.md",
     "en-us_boarding_user_all_ebc_boarding-user_boarding-about-guide_boarding-revisions.md.md",
-    "en-us_boarding_user_all_ebc_boarding-user_boarding-about-guide_vpc-partner-reseller-disclaimer.md.md",
     "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-overview.md.md",
-    "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-overview_boarding-intro-ids.md.md",
-    "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-overview_boarding-intro-organizations.md.md",
-    "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-overview_boarding-intro-requirements.md.md",
     "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-template.md.md",
     "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-template_templates-components.md.md",
     "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-template_templates-products.md.md",
@@ -72,11 +64,7 @@
       "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-tasks.md.md",
       "en-us_boarding_developer_all_rest_boarding_boarding-about-guide.md.md",
       "en-us_boarding_developer_all_rest_boarding_boarding-about-guide_boarding-revisions.md.md",
-      "en-us_boarding_developer_all_rest_boarding_boarding-about-guide_vpc-partner-reseller-disclaimer.md.md",
       "en-us_boarding_developer_all_rest_boarding_boarding-intro-overview.md.md",
-      "en-us_boarding_developer_all_rest_boarding_boarding-intro-overview_boarding-intro-ids.md.md",
-      "en-us_boarding_developer_all_rest_boarding_boarding-intro-overview_boarding-intro-organizations.md.md",
-      "en-us_boarding_developer_all_rest_boarding_boarding-intro-overview_boarding-intro-requirements.md.md",
       "en-us_boarding_developer_all_rest_boarding_boarding-intro-templat-0.md.md",
       "en-us_boarding_developer_all_rest_boarding_boarding-intro-template.md.md",
       "en-us_boarding_developer_all_rest_boarding_boarding-intro-template_templates-components.md.md",
@@ -99,11 +87,7 @@
       "en-us_boarding_developer_all_rest_boarding_templates-tasks.md.md",
       "en-us_boarding_user_all_ebc_boarding-user_boarding-about-guide.md.md",
       "en-us_boarding_user_all_ebc_boarding-user_boarding-about-guide_boarding-revisions.md.md",
-      "en-us_boarding_user_all_ebc_boarding-user_boarding-about-guide_vpc-partner-reseller-disclaimer.md.md",
       "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-overview.md.md",
-      "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-overview_boarding-intro-ids.md.md",
-      "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-overview_boarding-intro-organizations.md.md",
-      "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-overview_boarding-intro-requirements.md.md",
       "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-template.md.md",
       "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-template_templates-components.md.md",
       "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-template_templates-products.md.md",
@@ -200,17 +184,6 @@
       "quarantined": true
     },
     {
-      "path": "en-us_boarding_developer_all_rest_boarding_boarding-about-guide_vpc-partner-reseller-disclaimer.md.md",
-      "kind": "index_navigation",
-      "confidence": "medium",
-      "reasons": [
-        "filename looks like intro/index and content is navigation-heavy"
-      ],
-      "bytes": 2131,
-      "title": "VISA Platform Connect: Specifications and Conditions for Resellers/Partners",
-      "quarantined": true
-    },
-    {
       "path": "en-us_boarding_developer_all_rest_boarding_boarding-intro-overview.md.md",
       "kind": "index_navigation",
       "confidence": "high",
@@ -219,39 +192,6 @@
       ],
       "bytes": 784,
       "title": "Introduction to the Boarding Registration Service",
-      "quarantined": true
-    },
-    {
-      "path": "en-us_boarding_developer_all_rest_boarding_boarding-intro-overview_boarding-intro-ids.md.md",
-      "kind": "index_navigation",
-      "confidence": "medium",
-      "reasons": [
-        "filename looks like intro/index and content is navigation-heavy"
-      ],
-      "bytes": 1230,
-      "title": "Understanding Organization IDs",
-      "quarantined": true
-    },
-    {
-      "path": "en-us_boarding_developer_all_rest_boarding_boarding-intro-overview_boarding-intro-organizations.md.md",
-      "kind": "index_navigation",
-      "confidence": "medium",
-      "reasons": [
-        "filename looks like intro/index and content is navigation-heavy"
-      ],
-      "bytes": 1805,
-      "title": "Understanding Accounts and Organizations",
-      "quarantined": true
-    },
-    {
-      "path": "en-us_boarding_developer_all_rest_boarding_boarding-intro-overview_boarding-intro-requirements.md.md",
-      "kind": "index_navigation",
-      "confidence": "high",
-      "reasons": [
-        "filename looks like intro/index and content is navigation-heavy"
-      ],
-      "bytes": 375,
-      "title": "Requirements",
       "quarantined": true
     },
     {
@@ -497,17 +437,6 @@
       "quarantined": true
     },
     {
-      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-about-guide_vpc-partner-reseller-disclaimer.md.md",
-      "kind": "index_navigation",
-      "confidence": "medium",
-      "reasons": [
-        "filename looks like intro/index and content is navigation-heavy"
-      ],
-      "bytes": 2131,
-      "title": "VISA Platform Connect: Specifications and Conditions for Resellers/Partners",
-      "quarantined": true
-    },
-    {
       "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-overview.md.md",
       "kind": "index_navigation",
       "confidence": "high",
@@ -516,39 +445,6 @@
       ],
       "bytes": 909,
       "title": "Introduction to the Boarding Registration Service",
-      "quarantined": true
-    },
-    {
-      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-overview_boarding-intro-ids.md.md",
-      "kind": "index_navigation",
-      "confidence": "medium",
-      "reasons": [
-        "filename looks like intro/index and content is navigation-heavy"
-      ],
-      "bytes": 920,
-      "title": "Understanding Organization IDs",
-      "quarantined": true
-    },
-    {
-      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-overview_boarding-intro-organizations.md.md",
-      "kind": "index_navigation",
-      "confidence": "medium",
-      "reasons": [
-        "filename looks like intro/index and content is navigation-heavy"
-      ],
-      "bytes": 1801,
-      "title": "Understanding Accounts and Organizations",
-      "quarantined": true
-    },
-    {
-      "path": "en-us_boarding_user_all_ebc_boarding-user_boarding-intro-overview_boarding-intro-requirements.md.md",
-      "kind": "index_navigation",
-      "confidence": "high",
-      "reasons": [
-        "filename looks like intro/index and content is navigation-heavy"
-      ],
-      "bytes": 375,
-      "title": "Requirements",
       "quarantined": true
     },
     {

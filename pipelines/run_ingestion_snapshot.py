@@ -51,9 +51,28 @@ def main() -> int:
         default=str(ROOT / "artifacts/content_engine/corpus/quarantine-list.json"),
         help="Census quarantine-list.json; paths listed are skipped (policy)",
     )
+    parser.add_argument(
+        "--recall-baseline",
+        default=None,
+        help=(
+            "Named frozen baseline (markdown drop list) for the recall "
+            "section; 'none' to skip. Default: Wave 1 payments evidence, "
+            "auto-skipped for boarding docs dirs."
+        ),
+    )
+    parser.add_argument(
+        "--census-report",
+        default=None,
+        help=(
+            "census-report.json — when given, the census-eligible set is the "
+            "single ingestion input (one corpus definition); the quarantine "
+            "list flag is ignored"
+        ),
+    )
     args = parser.parse_args()
 
     quar = Path(args.quarantine_list)
+    census = Path(args.census_report) if args.census_report else None
     report = run_ingestion_snapshot(
         docs_dir=Path(args.docs_dir),
         raw_root=Path(args.raw_root),
@@ -61,13 +80,25 @@ def main() -> int:
         openapi_path=Path(args.openapi),
         stamp_date=args.stamp_date,
         sample_limit=args.sample_limit,
-        quarantine_list_path=quar if quar.is_file() else None,
+        quarantine_list_path=None if census else (quar if quar.is_file() else None),
+        census_report_path=census,
     )
 
-    # Recall vs Wave 1 prior no_schema_match set (frozen evidence), not the
-    # just-about-to-be-overwritten report (which may already include a partial fix).
+    # Recall vs a NAMED frozen baseline. The default baseline is Wave 1
+    # payments evidence — only meaningful for the payments corpus. Pass
+    # --recall-baseline for other products, or "none" to skip; a recall number
+    # against the wrong product's baseline is worse than no number.
     prior_paths: set[str] = set()
-    evidence_drops = ROOT / "evals/evidence/wave1-payments/top-20-drops.md"
+    if args.recall_baseline == "none":
+        evidence_drops = Path("/nonexistent")
+    elif args.recall_baseline:
+        evidence_drops = Path(args.recall_baseline)
+        if not evidence_drops.is_absolute():
+            evidence_drops = ROOT / evidence_drops
+    else:
+        evidence_drops = ROOT / "evals/evidence/wave1-payments/top-20-drops.md"
+        if "boarding" in str(args.docs_dir):
+            evidence_drops = Path("/nonexistent")  # wrong-product default guard
     if evidence_drops.is_file():
         for line in evidence_drops.read_text(encoding="utf-8").splitlines():
             # e.g. `1. `2026-08-07/….md` — no_schema_match — …`
