@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-08T04:22:02+00:00",
+  "generated_at": "2026-08-08T04:31:38+00:00",
   "denominator": {
     "matched_endpoint_sections": 176,
     "source": "api_reference.extract_api_reference_claims over raw/product-roots"

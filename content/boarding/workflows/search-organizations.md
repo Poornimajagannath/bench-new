@@ -76,59 +76,80 @@ _Generated from `normalized/2026-08-08-boarding.claims.json`; do not hand-edit. 
      ```
    - <sub>[`en-us_boarding_developer_all_rest_boarding:endpoint:get:83fa335c`](https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-retrieve-an-organization)</sub>
 
+5. **API:** `GET /oms/v1/organizations/{organizationId}` — Update an Organization's Information
+   - Actor: Partner system (REST API)
+   - test host: `https://apitest.cybersource.com`
+   - Required fields: **Gap:** not listed for this endpoint in the source.
+   - Example request:
+     ```json
+     {
+       "organizationInformation": {
+         "businessInformation": {
+           "phoneNumber": "5121230987"
+             }
+         }
+     }
+     ```
+   - Expected outcome: HTTP 200 OK (see example response).
+   - Example response:
+     ```json
+     200 OK
+     ```
+   - <sub>[`en-us_boarding_developer_all_rest_boarding:endpoint:get:7bf553fa`](https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-update-information-api)</sub>
+
 ### Business Center UI path
 
-5. **Action:** Find the merchant in search results and click the three dots (...) in the More column.
+6. **Action:** Find the merchant in search results and click the three dots (...) in the More column.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_merchants-v2-search-results-view-org-hierarchy:step:1:0102ee5b`</sub>
 
-6. **Action:** Select View Organization Hierarchy. The organizations immediately above and below the organization are displayed. You can view the hierarchy of these organizations by repeating the steps above.
+7. **Action:** Select View Organization Hierarchy. The organizations immediately above and below the organization are displayed. You can view the hierarchy of these organizations by repeating the steps above.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_merchants-v2-search-results-view-org-hierarchy:step:2:a759b28a`</sub>
 
-7. **Action:** In the left navigation panel, click the **Portfolio Management** icon.
+8. **Action:** In the left navigation panel, click the **Portfolio Management** icon.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_merchants-v2-search:step:1:120914e3`</sub>
 
-8. **Action:** Under Merchants, click **Manage Merchants**. The Manage Merchants page appears.
+9. **Action:** Under Merchants, click **Manage Merchants**. The Manage Merchants page appears.
    - Actor: Partner admin (Business Center)
    - Expected outcome: The Manage Merchants page appears.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_merchants-v2-search:step:2:818e5383`</sub>
 
-9. **Action:** Click **Search** to search for all merchants or use the search filters. There are three default search filters:
+10. **Action:** Click **Search** to search for all merchants or use the search filters. There are three default search filters:
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_merchants-v2-search:step:3:c256c329`</sub>
 
-10. **Action:** To add a filter, click **+ Add Filter**. Select a filter using the drop-down menu, or search for a filter by entering text into the New Filter field.
+11. **Action:** To add a filter, click **+ Add Filter**. Select a filter using the drop-down menu, or search for a filter by entering text into the New Filter field.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_merchants-v2-search:step:4:d74b4c90`</sub>
 
-11. **Action:** Click **Search** when you finish adding filters.
+12. **Action:** Click **Search** when you finish adding filters.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_merchants-v2-search:step:5:d81558aa`</sub>
 
-12. **Action:** To reset the search filters and start over, click **Reset Search** . To understand how to use the search results, see [Search Results](/docs/cybs/en-us/boarding/user/all/ebc/boarding-user/merchants-v2-search/merchants-v2-search-results.md).
+13. **Action:** To reset the search filters and start over, click **Reset Search** . To understand how to use the search results, see [Search Results](/docs/cybs/en-us/boarding/user/all/ebc/boarding-user/merchants-v2-search/merchants-v2-search-results.md).
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_merchants-v2-search:step:6:19c5eb67`</sub>
 
-13. **Action:** Find the merchant in search results and click the three dots (...) in the More column.
+14. **Action:** Find the merchant in search results and click the three dots (...) in the More column.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_merchants-v2-search_merchants-v2-search-results-view-org-hierarchy:step:1:de226944`</sub>
 
-14. **Action:** Select **View Organization Hierarchy**. The organizations immediately above and below the organization are displayed. You can view the hierarchy of these organizations by repeating the steps above.
+15. **Action:** Select **View Organization Hierarchy**. The organizations immediately above and below the organization are displayed. You can view the hierarchy of these organizations by repeating the steps above.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_merchants-v2-search_merchants-v2-search-results-view-org-hierarchy:step:2:ec54ca69`</sub>
 
-<!-- sequence_stats: steps=14 outcome_gaps=9 api_ops=4 ui_steps=10 -->
+<!-- sequence_stats: steps=15 outcome_gaps=9 api_ops=5 ui_steps=10 -->
 
 ## Constraints
 

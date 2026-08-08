@@ -94,6 +94,7 @@ BOARDING_WORKFLOWS: Tuple[WorkflowSpec, ...] = (
             "merchants-v2-search",
             "boarding-retrieve-an-organization",
             "boarding-retrieve-organizations",
+            "boarding-update-information-api",
         ),
     ),
     WorkflowSpec(

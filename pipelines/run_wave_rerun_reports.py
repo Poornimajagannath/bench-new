@@ -29,11 +29,29 @@ from content_bench.content_engine.humanizer import (  # noqa: E402
 )
 from content_bench.content_engine.ingest import _extract_claims_from_text  # noqa: E402
 from content_bench.content_engine.reference_pages import (  # noqa: E402
-    write_reference_pages_from_endpoint_facts,
+    load_reference_units,
+    write_reference_pages,
 )
-from content_bench.content_engine.workflow_pages import compose_all  # noqa: E402
+from content_bench.content_engine.workflow_pages import (  # noqa: E402
+    BOARDING_WORKFLOWS,
+    compose_all,
+    dedupe_prefer_child,
+    _claims_for,
+    _dedupe_endpoints,
+)
 
-OPENAPI = ROOT / "data" / "content_engine" / "specs" / "payments-core.openapi.json"
+# Wave 1 registered denominator (30 /pts/ ops). Fixture is engine-tests only.
+OPENAPI_REGISTERED = (
+    ROOT / "data" / "content_engine" / "specs" / "cybersource-payments.openapi.json"
+)
+OPENAPI_FIXTURE = ROOT / "data" / "content_engine" / "specs" / "payments-core.openapi.json"
+REGISTERED_UNITS = (
+    ROOT
+    / "artifacts"
+    / "content_engine"
+    / "generated"
+    / "cybersource-payments-openapi.api_reference_units.json"
+)
 PRODUCT_ROOTS = ROOT / "raw" / "product-roots"
 PRODUCT_ROOTS_REPORT = (
     ROOT / "artifacts" / "content_engine" / "product_roots" / "product-roots-report.json"
@@ -238,36 +256,12 @@ def render_product_roots_md(summary: Dict[str, Any]) -> str:
 
 
 def _normalize_pts_path(path: str) -> str:
-    p = path.rstrip("/")
-    # Collapse trailing empty segment variants for coverage compare.
-    return p
+    return path.rstrip("/")
 
 
-def wave1_payments() -> Dict[str, Any]:
-    payments_root = PRODUCT_ROOTS / "en-us_payments_developer_ctv_rest_payments.md.md"
-    text = payments_root.read_text(encoding="utf-8", errors="replace")
-    claims, _ = _extract_claims_from_text(
-        text,
-        source_pointer=payments_root.name,
-        doc_stem="payments",
-    )
-    claim_dicts = [c.to_dict() for c in claims]
-    eps = [c for c in claim_dicts if c["schema"] == "endpoint_fact"]
-    pts_eps = [
-        c
-        for c in eps
-        if (c.get("extras") or {}).get("path", "").startswith("/pts/")
-    ]
-
-    summary = write_reference_pages_from_endpoint_facts(
-        claim_dicts,
-        content_dir=ROOT / "content",
-        artifact_dir=ROOT / "artifacts" / "content_engine" / "a2",
-        path_prefix="/pts/",
-    )
-
-    oa = json.loads(OPENAPI.read_text(encoding="utf-8"))
-    pts_ops = []
+def _pts_ops_from_spec(spec_path: Path) -> List[Dict[str, Any]]:
+    oa = json.loads(spec_path.read_text(encoding="utf-8"))
+    pts_ops: List[Dict[str, Any]] = []
     for path, methods in (oa.get("paths") or {}).items():
         if not str(path).startswith("/pts/"):
             continue
@@ -283,54 +277,265 @@ def wave1_payments() -> Dict[str, Any]:
                     "operation_id": op.get("operationId"),
                 }
             )
+    return pts_ops
 
-    guide_keys = {
-        (
-            (c.get("extras") or {}).get("method"),
-            _normalize_pts_path((c.get("extras") or {}).get("path") or ""),
-        )
-        for c in pts_eps
-    }
 
-    def covered(op: Dict[str, Any]) -> bool:
-        m, p = op["method"], _normalize_pts_path(op["path"])
-        if (m, p) in guide_keys:
+def _guide_covers(op: Dict[str, Any], guide_keys: set) -> bool:
+    m, p = op["method"], _normalize_pts_path(op["path"])
+    if (m, p) in guide_keys:
+        return True
+    stem = re.sub(r"\{[^}]+\}", "", p).rstrip("/")
+    for gm, gp in guide_keys:
+        if gm != m:
+            continue
+        if _normalize_pts_path(gp) == p:
             return True
-        # Allow guide paths that omit `{id}` segments when the stem matches.
-        stem = re.sub(r"\{[^}]+\}", "", p).rstrip("/")
-        for gm, gp in guide_keys:
-            if gm != m:
-                continue
-            if _normalize_pts_path(gp) == p:
-                return True
-            gstem = re.sub(r"\{[^}]+\}", "", gp).rstrip("/")
-            if stem and (stem == gstem or stem.startswith(gstem) or gstem.startswith(stem)):
-                return True
-        return False
+        gstem = re.sub(r"\{[^}]+\}", "", gp).rstrip("/")
+        if stem and (stem == gstem or stem.startswith(gstem) or gstem.startswith(stem)):
+            return True
+    return False
 
-    coverage = []
-    for op in pts_ops:
-        coverage.append({**op, "covered_by_endpoint_fact": covered(op)})
 
-    covered_n = sum(1 for c in coverage if c["covered_by_endpoint_fact"])
+def wave1_payments() -> Dict[str, Any]:
+    """Regenerate reference pages from the registered OpenAPI (30 /pts/ ops).
+
+    The prior wave-rerun mistakenly used the engine-test fixture
+    ``payments-core.openapi.json`` (4 ops) and rendered pages from the
+    payments *guide* endpoint_facts. Wave 1 closeout denominator is the
+    registered spec — restore that path and report both numbers.
+    """
+    registered_ops = _pts_ops_from_spec(OPENAPI_REGISTERED)
+    fixture_ops = _pts_ops_from_spec(OPENAPI_FIXTURE)
+
+    units = load_reference_units(REGISTERED_UNITS)
+    summary = write_reference_pages(
+        units,
+        content_dir=ROOT / "content",
+        artifact_dir=ROOT / "artifacts" / "content_engine" / "a2",
+        clear_existing=True,
+        allow_endpoint_fact_lineage=False,
+    )
+
+    # Secondary: how many registered ops the payments product-root guide covers.
+    payments_root = PRODUCT_ROOTS / "en-us_payments_developer_ctv_rest_payments.md.md"
+    guide_keys: set = set()
+    guide_pts_facts = 0
+    if payments_root.is_file():
+        claims, _ = _extract_claims_from_text(
+            payments_root.read_text(encoding="utf-8", errors="replace"),
+            source_pointer=payments_root.name,
+            doc_stem="payments",
+        )
+        pts_eps = [
+            c
+            for c in claims
+            if c.schema == "endpoint_fact"
+            and (c.extras or {}).get("path", "").startswith("/pts/")
+        ]
+        guide_pts_facts = len(pts_eps)
+        guide_keys = {
+            (
+                (c.extras or {}).get("method"),
+                _normalize_pts_path((c.extras or {}).get("path") or ""),
+            )
+            for c in pts_eps
+        }
+
+    coverage = [
+        {**op, "covered_by_guide_endpoint_fact": _guide_covers(op, guide_keys)}
+        for op in registered_ops
+    ]
+    guide_covered = sum(1 for c in coverage if c["covered_by_guide_endpoint_fact"])
+
     return {
         "generated_at": _utc(),
-        "source_root": str(payments_root.relative_to(ROOT)),
-        "endpoint_facts_in_root": len(eps),
-        "endpoint_facts_pts": len(pts_eps),
+        "explanation": (
+            "The wave-rerun 3/4 figure used the engine-test fixture "
+            f"({OPENAPI_FIXTURE.name}, {len(fixture_ops)} /pts/ ops) and generated "
+            "pages from the payments product-root guide endpoint_facts — not the "
+            "registered Wave 1 OpenAPI. Nothing was dropped from the real spec; "
+            "the denominator source changed. This rerun restores the registered "
+            f"spec ({OPENAPI_REGISTERED.name}, {len(registered_ops)} /pts/ ops) and "
+            "regenerates reference pages from cybersource-payments-openapi units."
+        ),
+        "side_by_side": {
+            "wave1_closeout": {
+                "ratio": "30/30",
+                "pages": 30,
+                "denominator": 30,
+                "source_file": str(OPENAPI_REGISTERED.relative_to(ROOT)),
+                "evidence": "evals/evidence/wave1-payments/denominator-and-gaps.md",
+                "registered_source_id": "cybersource-payments-openapi",
+            },
+            "mistaken_wave_rerun": {
+                "ratio": "3/4",
+                "pages": 38,
+                "denominator": 4,
+                "source_file": str(OPENAPI_FIXTURE.relative_to(ROOT)),
+                "scope": "fixture /pts/ ops; pages from payments guide endpoint_facts",
+                "note": (
+                    "payments-core.openapi.json is labeled engine-tests only in "
+                    "registry/payments.json — not the Wave 1 denominator."
+                ),
+            },
+            "this_correction": {
+                "ratio": f"{summary['count']}/{len(registered_ops)}",
+                "pages": summary["count"],
+                "denominator": len(registered_ops),
+                "source_file": str(OPENAPI_REGISTERED.relative_to(ROOT)),
+                "units_file": str(REGISTERED_UNITS.relative_to(ROOT)),
+                "lineage": summary.get("lineage_origin"),
+            },
+        },
         "pages_written": summary["count"],
         "page_names": summary["pages_written"],
-        "lineage": summary["lineage_origin"],
-        "pts_denominator": {
-            "count": len(pts_ops),
-            "source": str(OPENAPI.relative_to(ROOT)),
-            "rule": "OpenAPI paths under /pts/",
+        "guide_secondary_coverage": {
+            "registered_ops_covered_by_guide_endpoint_fact": guide_covered,
+            "registered_ops_denominator": len(registered_ops),
+            "ratio": f"{guide_covered}/{len(registered_ops)}",
+            "guide_pts_endpoint_facts": guide_pts_facts,
+            "guide_source": str(payments_root.relative_to(ROOT))
+            if payments_root.is_file()
+            else None,
+            "note": (
+                "Secondary metric only — Wave 1 gate remains pages vs registered "
+                "OpenAPI ops, not guide coverage."
+            ),
+            "operations": coverage,
         },
-        "pts_covered": covered_n,
-        "pts_coverage_ratio": f"{covered_n}/{len(pts_ops)}",
-        "operations": coverage,
-        "guide_unique_pts_method_path": sorted(
-            {f"{m} {p}" for m, p in guide_keys if m and p}
+    }
+
+
+def _composition_eligibility(claims: List[Dict[str, Any]]) -> Dict[str, Any]:
+    """Explain 952 (all products) vs boarding-eligible vs used in the 6 workflows."""
+    # Cross-product denominator from the extraction report (all product roots).
+    extract_report = (
+        ROOT
+        / "artifacts"
+        / "content_engine"
+        / "api_reference"
+        / "api-reference-extraction-report.json"
+    )
+    cross_product_total = None
+    if extract_report.is_file():
+        cross_product_total = json.loads(extract_report.read_text()).get(
+            "after_api_reference_total"
+        )
+
+    kept, _ = dedupe_prefer_child(claims)
+    boarding_api_ref = [
+        c
+        for c in kept
+        if c.get("schema") == "endpoint_fact"
+        and (c.get("extras") or {}).get("pattern") == "api_reference"
+    ]
+
+    # Unique operations by anchor (richest claim wins).
+    by_anchor: Dict[str, Dict[str, Any]] = {}
+    for c in boarding_api_ref:
+        ex = c.get("extras") or {}
+        a = ex.get("anchor") or c.get("claim_id")
+        score = (
+            1 if ex.get("required_fields") else 0,
+            1 if ex.get("example_request") is not None else 0,
+        )
+        prev = by_anchor.get(a)
+        if prev is None:
+            by_anchor[a] = c
+            continue
+        prev_ex = prev.get("extras") or {}
+        prev_score = (
+            1 if prev_ex.get("required_fields") else 0,
+            1 if prev_ex.get("example_request") is not None else 0,
+        )
+        if score > prev_score:
+            by_anchor[a] = c
+
+    per_wf = []
+    used_anchors = set()
+    matched_claim_instances = 0
+    used_after_dedupe = 0
+    for spec in BOARDING_WORKFLOWS:
+        wf = _claims_for(spec, kept)
+        api = [
+            c
+            for c in wf
+            if c.get("schema") == "endpoint_fact"
+            and (c.get("extras") or {}).get("pattern") == "api_reference"
+        ]
+        deduped = _dedupe_endpoints(api)
+        matched_claim_instances += len(api)
+        used_after_dedupe += len(deduped)
+        for c in deduped:
+            used_anchors.add((c.get("extras") or {}).get("anchor"))
+        per_wf.append(
+            {
+                "workflow_id": spec.workflow_id,
+                "matched_api_reference_claims": len(api),
+                "used_after_dedupe": len(deduped),
+                "doc_matchers": list(spec.doc_matchers),
+            }
+        )
+
+    orphans = []
+    for a, c in sorted(by_anchor.items()):
+        if a in used_anchors:
+            continue
+        ex = c.get("extras") or {}
+        orphans.append(
+            {
+                "anchor": a,
+                "method": ex.get("method"),
+                "path": ex.get("path"),
+                "title": c.get("title"),
+                "reason": "no_workflow_doc_matcher",
+            }
+        )
+
+    excluded_claim_instances = matched_claim_instances - used_after_dedupe
+    return {
+        "cross_product_api_reference_claims": cross_product_total,
+        "cross_product_source": str(extract_report.relative_to(ROOT))
+        if extract_report.is_file()
+        else None,
+        "cross_product_note": (
+            "952 spans every product root (payments, tms, …). It is not the "
+            "boarding workflow eligibility pool."
+        ),
+        "boarding_api_reference_claims": len(boarding_api_ref),
+        "boarding_unique_ops_by_anchor": len(by_anchor),
+        "boarding_claims_source": "normalized/2026-08-08-boarding.claims.json "
+        "(after prefer-child; api_reference pattern only)",
+        "eligible_matched_claim_instances": matched_claim_instances,
+        "used_in_sequence_after_dedupe": used_after_dedupe,
+        "unique_ops_used": len(used_anchors),
+        "unique_ops_orphan": len(orphans),
+        "exclusion_breakdown": {
+            "not_boarding_product": {
+                "count": (cross_product_total or 0) - len(boarding_api_ref)
+                if cross_product_total is not None
+                else None,
+                "reason": "api_reference claims on non-boarding product roots",
+            },
+            "duplicate_host_or_stub_collapsed": {
+                "count": excluded_claim_instances,
+                "reason": (
+                    "prod+test host pairs and child Endpoint-stub pages collapsed "
+                    "to one richest claim per operation anchor"
+                ),
+            },
+            "no_workflow_doc_matcher": {
+                "count": len(orphans),
+                "reason": "boarding api_reference op whose anchor matched no workflow",
+                "orphans": orphans,
+            },
+        },
+        "per_workflow": per_wf,
+        "composer_note": (
+            "Composer already renders endpoint_fact as sequence API entries "
+            "(method/path/required fields/example), not only quickstart_step. "
+            "Underuse vs 952 was mostly cross-product scope + host/stub dedupe, "
+            "not a step-only filter."
         ),
     }
 
@@ -344,6 +549,9 @@ def wave2_boarding() -> Dict[str, Any]:
     if src.is_file() and raw.is_dir():
         (raw / src.name).write_text(src.read_text(encoding="utf-8"), encoding="utf-8")
     claims, drops = normalize_raw_dir(raw, openapi_path=None)
+    claim_dicts = [c.to_dict() for c in claims]
+    eligibility = _composition_eligibility(claim_dicts)
+
     result = compose_all(
         BOARDING_CLAIMS,
         out_dir=ROOT / "content" / "boarding" / "workflows",
@@ -372,6 +580,7 @@ def wave2_boarding() -> Dict[str, Any]:
             if c.schema == "endpoint_fact"
             and (c.extras or {}).get("pattern") == "api_reference"
         ),
+        "composition_eligibility": eligibility,
         "sequence": seq,
         "outcome_gap": {
             "numerator": seq["outcome_gaps"],
@@ -478,38 +687,46 @@ def main() -> int:
     (OUT_DIR / "wave1-payments-report.json").write_text(
         json.dumps(w1, indent=2) + "\n", encoding="utf-8"
     )
+    sb = w1["side_by_side"]
     w1_md = [
-        "# Wave 1 payments rerun — reference pages from endpoint_facts",
+        "# Wave 1 payments — denominator correction",
         "",
         f"Generated: {w1['generated_at']}",
         "",
-        f"Source root: `{w1['source_root']}`",
-        f"endpoint_fact claims in root: **{w1['endpoint_facts_in_root']}**",
-        f"of which path `/pts/…`: **{w1['endpoint_facts_pts']}**",
-        f"Pages written: **{w1['pages_written']}** (lineage: {w1['lineage']})",
+        w1["explanation"],
         "",
-        "## /pts/ coverage",
+        "## Side by side",
         "",
-        f"Denominator: **{w1['pts_denominator']['count']}** OpenAPI operations "
-        f"under `/pts/` (source: `{w1['pts_denominator']['source']}`).",
-        f"Covered by guide `endpoint_fact`: **{w1['pts_coverage_ratio']}**.",
+        "| Run | Ratio | Pages | Denominator | Source file |",
+        "|---|---|---:|---:|---|",
+        f"| Wave 1 closeout | {sb['wave1_closeout']['ratio']} | "
+        f"{sb['wave1_closeout']['pages']} | {sb['wave1_closeout']['denominator']} | "
+        f"`{sb['wave1_closeout']['source_file']}` |",
+        f"| Mistaken wave rerun | {sb['mistaken_wave_rerun']['ratio']} | "
+        f"{sb['mistaken_wave_rerun']['pages']} | {sb['mistaken_wave_rerun']['denominator']} | "
+        f"`{sb['mistaken_wave_rerun']['source_file']}` |",
+        f"| This correction | {sb['this_correction']['ratio']} | "
+        f"{sb['this_correction']['pages']} | {sb['this_correction']['denominator']} | "
+        f"`{sb['this_correction']['source_file']}` |",
         "",
-        "| Method | Path | operationId | Covered |",
+        f"Evidence for closeout 30/30: `{sb['wave1_closeout']['evidence']}`.",
+        f"Units used for correction: `{sb['this_correction']['units_file']}`.",
+        "",
+        "## Secondary: registered ops covered by payments guide endpoint_facts",
+        "",
+        f"**{w1['guide_secondary_coverage']['ratio']}** "
+        f"(denominator: registered `/pts/` ops; source: "
+        f"`{w1['guide_secondary_coverage']['guide_source']}`). "
+        f"{w1['guide_secondary_coverage']['note']}",
+        "",
+        "| Method | Path | operationId | Guide endpoint_fact |",
         "|---|---|---|---|",
     ]
-    for op in w1["operations"]:
+    for op in w1["guide_secondary_coverage"]["operations"]:
         w1_md.append(
             f"| `{op['method']}` | `{op['path']}` | `{op['operation_id']}` | "
-            f"{'yes' if op['covered_by_endpoint_fact'] else 'no'} |"
+            f"{'yes' if op['covered_by_guide_endpoint_fact'] else 'no'} |"
         )
-    w1_md += [
-        "",
-        "Guide unique `/pts/` method+path keys "
-        f"(source: payments product root extraction): **{len(w1['guide_unique_pts_method_path'])}**",
-        "",
-    ]
-    for k in w1["guide_unique_pts_method_path"]:
-        w1_md.append(f"- `{k}`")
     w1_md.append("")
     (OUT_DIR / "wave1-payments-report.md").write_text(
         "\n".join(w1_md), encoding="utf-8"
@@ -522,6 +739,7 @@ def main() -> int:
     addendum = patch_boarding_gap_report(soft, w2)
 
     og = w2["outcome_gap"]
+    el = w2["composition_eligibility"]
     w2_md = [
         "# Wave 2 boarding rerun — one-sequence workflows",
         "",
@@ -529,7 +747,51 @@ def main() -> int:
         "",
         f"Claims file: `{w2['claims_file']}` "
         f"(**{w2['claims_total']}** claims; source: renormalize + compose).",
-        f"api_reference endpoint_facts in boarding raw: **{w2['api_reference_facts']}**",
+        f"api_reference endpoint_facts in boarding corpus: **{w2['api_reference_facts']}**",
+        "",
+        "## Composition eligibility (952 vs 20)",
+        "",
+        el["composer_note"],
+        "",
+        f"- Cross-product api_reference claims: **{el['cross_product_api_reference_claims']}** "
+        f"(source: `{el['cross_product_source']}`). {el['cross_product_note']}",
+        f"- Boarding api_reference claims: **{el['boarding_api_reference_claims']}** "
+        f"(source: `{el['boarding_claims_source']}`)",
+        f"- Unique boarding ops (by anchor): **{el['boarding_unique_ops_by_anchor']}**",
+        f"- Eligible matched claim instances (doc_matchers): "
+        f"**{el['eligible_matched_claim_instances']}**",
+        f"- Used in sequence after dedupe: **{el['used_in_sequence_after_dedupe']}**",
+        f"- Unique ops used: **{el['unique_ops_used']}** / "
+        f"{el['boarding_unique_ops_by_anchor']}",
+        f"- Orphan ops (no matcher): **{el['unique_ops_orphan']}**",
+        "",
+        "### Why claims were excluded",
+        "",
+    ]
+    for key, row in el["exclusion_breakdown"].items():
+        w2_md.append(
+            f"- `{key}`: **{row.get('count')}** — {row.get('reason')}"
+        )
+    if el["exclusion_breakdown"]["no_workflow_doc_matcher"].get("orphans"):
+        w2_md.append("")
+        w2_md.append("Orphans:")
+        for o in el["exclusion_breakdown"]["no_workflow_doc_matcher"]["orphans"]:
+            w2_md.append(
+                f"  - `{o['anchor']}` — `{o['method']} {o['path']}` ({o['title']})"
+            )
+    w2_md += [
+        "",
+        "### Per workflow",
+        "",
+        "| Workflow | Matched api_reference claims | Used after dedupe |",
+        "|---|---:|---:|",
+    ]
+    for row in el["per_workflow"]:
+        w2_md.append(
+            f"| {row['workflow_id']} | {row['matched_api_reference_claims']} | "
+            f"{row['used_after_dedupe']} |"
+        )
+    w2_md += [
         "",
         "## Outcome gap (the number)",
         "",
@@ -539,7 +801,7 @@ def main() -> int:
         f"source: `{og['source']}`.",
         f"Prior figure: {og['prior_wave2']['ratio']} — {og['prior_wave2']['note']}",
         "",
-        "## Per workflow",
+        "## Per workflow (sequence)",
         "",
         "| Workflow | Steps | Outcome gaps | API | UI |",
         "|---|---:|---:|---:|---:|",
@@ -572,10 +834,16 @@ def main() -> int:
         f"{soft['denominator']['matched_endpoint_sections']}",
         f"- Product roots fetched: **{roots['totals']['roots_fetched']}** / "
         f"{roots['totals']['products_listed']} docs.md products",
-        f"- Wave 1 /pts/ coverage: **{w1['pts_coverage_ratio']}** "
-        f"(denominator: OpenAPI `/pts/` ops)",
+        f"- Wave 1 pages vs registered OpenAPI: "
+        f"**{sb['this_correction']['ratio']}** "
+        f"(source: `{sb['this_correction']['source_file']}`; "
+        f"mistaken rerun was {sb['mistaken_wave_rerun']['ratio']} from fixture)",
         f"- Wave 2 outcome gaps: **{og['ratio']}** "
         f"(denominator: composed API+UI sequence steps)",
+        f"- Boarding api_reference used in sequence: "
+        f"**{el['used_in_sequence_after_dedupe']}** / "
+        f"{el['boarding_unique_ops_by_anchor']} unique boarding ops "
+        f"(cross-product pool was {el['cross_product_api_reference_claims']})",
         "",
         "## Artifacts",
         "",
@@ -594,9 +862,16 @@ def main() -> int:
           f"/ {soft['denominator']['matched_endpoint_sections']}")
     print(f"product_roots {roots['totals']['roots_fetched']}/"
           f"{roots['totals']['products_listed']}")
-    print(f"wave1 pts {w1['pts_coverage_ratio']} pages={w1['pages_written']}")
-    print(f"wave2 outcome_gap {og['ratio']} "
-          f"(api={w2['sequence']['api_ops']} ui={w2['sequence']['ui_steps']})")
+    print(
+        f"wave1 registered {sb['this_correction']['ratio']} "
+        f"(mistaken was {sb['mistaken_wave_rerun']['ratio']})"
+    )
+    print(
+        f"wave2 outcome_gap {og['ratio']} "
+        f"(api={w2['sequence']['api_ops']} ui={w2['sequence']['ui_steps']}); "
+        f"api_ref used {el['used_in_sequence_after_dedupe']}/"
+        f"{el['boarding_unique_ops_by_anchor']} boarding ops"
+    )
     print("STOP — no Wave 3")
     return 0
 

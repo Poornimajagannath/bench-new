@@ -1,14 +1,14 @@
 # Wave 2 boarding — gap report (post endpoint extraction)
 
-Generated: 2026-08-08T04:22:03+00:00
+Generated: 2026-08-08T04:31:39+00:00
 
 ## The headline finding that changed shape
 
-**1. Stated outcomes are still mostly missing after API extraction.** Of **277** sequence steps across the six composed workflows (API operations + UI steps), **215** have no stated outcome (denominator: 277 steps; source: `composed workflow sequence_stats (API ops + UI steps; expected outcome Gap markers)`). Prior Wave 2 figure was 220/257 (Measured before endpoint extraction; UI-only step count.). Sequence mix: 20 API ops + 257 UI steps.
+**1. Stated outcomes are still mostly missing after API extraction.** Of **278** sequence steps across the six composed workflows (API operations + UI steps), **215** have no stated outcome (denominator: 278 steps; source: `composed workflow sequence_stats (API ops + UI steps; expected outcome Gap markers)`). Prior Wave 2 figure was 220/257 (Measured before endpoint extraction; UI-only step count.). Sequence mix: 21 API ops + 257 UI steps.
 
-- API ops in sequence: **20** (source: composition sequence_stats)
+- API ops in sequence: **21** (source: composition sequence_stats)
 - UI steps in sequence: **257**
-- Outcome gaps: **215/277**
+- Outcome gaps: **215/278**
 
 ## Per workflow
 
@@ -17,7 +17,7 @@ Generated: 2026-08-08T04:22:03+00:00
 | create-merchant-organization | 34 | 27 | 3 | 31 |
 | extend-hierarchy | 34 | 29 | 1 | 33 |
 | enable-configure-products | 189 | 145 | 11 | 178 |
-| search-organizations | 14 | 9 | 4 | 10 |
+| search-organizations | 15 | 9 | 5 | 10 |
 | change-organization-status | 4 | 3 | 1 | 3 |
 | send-registration-email | 2 | 2 | 0 | 2 |
 

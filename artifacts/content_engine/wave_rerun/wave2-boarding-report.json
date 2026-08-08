@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-08T04:22:03+00:00",
+  "generated_at": "2026-08-08T04:31:39+00:00",
   "claims_file": "normalized/2026-08-08-boarding.claims.json",
   "claims_total": 2436,
   "claims_after_prefer_child": 1251,
@@ -7,17 +7,114 @@
   "drops_on_renormalize": 38,
   "endpoint_facts": 76,
   "api_reference_facts": 70,
+  "composition_eligibility": {
+    "cross_product_api_reference_claims": 952,
+    "cross_product_source": "artifacts/content_engine/api_reference/api-reference-extraction-report.json",
+    "cross_product_note": "952 spans every product root (payments, tms, \u2026). It is not the boarding workflow eligibility pool.",
+    "boarding_api_reference_claims": 70,
+    "boarding_unique_ops_by_anchor": 19,
+    "boarding_claims_source": "normalized/2026-08-08-boarding.claims.json (after prefer-child; api_reference pattern only)",
+    "eligible_matched_claim_instances": 70,
+    "used_in_sequence_after_dedupe": 21,
+    "unique_ops_used": 19,
+    "unique_ops_orphan": 0,
+    "exclusion_breakdown": {
+      "not_boarding_product": {
+        "count": 882,
+        "reason": "api_reference claims on non-boarding product roots"
+      },
+      "duplicate_host_or_stub_collapsed": {
+        "count": 49,
+        "reason": "prod+test host pairs and child Endpoint-stub pages collapsed to one richest claim per operation anchor"
+      },
+      "no_workflow_doc_matcher": {
+        "count": 0,
+        "reason": "boarding api_reference op whose anchor matched no workflow",
+        "orphans": []
+      }
+    },
+    "per_workflow": [
+      {
+        "workflow_id": "create-merchant-organization",
+        "matched_api_reference_claims": 12,
+        "used_after_dedupe": 3,
+        "doc_matchers": [
+          "boarding-reg-intro",
+          "boarding-reg-create-merch-api",
+          "boarding-reg-create-transacting-api",
+          "boarding-reg-create-new-transacting-api",
+          "merchants-v2-add-merchant",
+          "merchants-v2-add-to-existing"
+        ]
+      },
+      {
+        "workflow_id": "extend-hierarchy",
+        "matched_api_reference_claims": 4,
+        "used_after_dedupe": 1,
+        "doc_matchers": [
+          "boarding-extend-hierarchy",
+          "boarding-reg-create-structural-api",
+          "merchants-v2-add-structural"
+        ]
+      },
+      {
+        "workflow_id": "enable-configure-products",
+        "matched_api_reference_claims": 36,
+        "used_after_dedupe": 11,
+        "doc_matchers": [
+          "boarding-products",
+          "boarding-pecs",
+          "pecs-",
+          "boarding-payer-auth",
+          "boarding-tms",
+          "boarding-enablement-products",
+          "boarding-enable-products",
+          "boarding-config-",
+          "boarding-update-product-api"
+        ]
+      },
+      {
+        "workflow_id": "search-organizations",
+        "matched_api_reference_claims": 14,
+        "used_after_dedupe": 5,
+        "doc_matchers": [
+          "merchants-v2-search",
+          "boarding-retrieve-an-organization",
+          "boarding-retrieve-organizations",
+          "boarding-update-information-api"
+        ]
+      },
+      {
+        "workflow_id": "change-organization-status",
+        "matched_api_reference_claims": 4,
+        "used_after_dedupe": 1,
+        "doc_matchers": [
+          "boarding-change-org-status",
+          "merchants-v2-status-chang"
+        ]
+      },
+      {
+        "workflow_id": "send-registration-email",
+        "matched_api_reference_claims": 0,
+        "used_after_dedupe": 0,
+        "doc_matchers": [
+          "merchants-v2-email"
+        ]
+      }
+    ],
+    "composer_note": "Composer already renders endpoint_fact as sequence API entries (method/path/required fields/example), not only quickstart_step. Underuse vs 952 was mostly cross-product scope + host/stub dedupe, not a step-only filter."
+  },
   "sequence": {
-    "steps": 277,
+    "steps": 278,
     "outcome_gaps": 215,
-    "api_ops": 20,
+    "api_ops": 21,
     "ui_steps": 257,
     "denominator_source": "composed workflow sequence (API ops + UI steps)"
   },
   "outcome_gap": {
     "numerator": 215,
-    "denominator": 277,
-    "ratio": "215/277",
+    "denominator": 278,
+    "ratio": "215/278",
     "source": "composed workflow sequence_stats (API ops + UI steps; expected outcome Gap markers)",
     "prior_wave2": {
       "ratio": "220/257",
@@ -58,11 +155,11 @@
     {
       "workflow_id": "search-organizations",
       "path": "content/boarding/workflows/search-organizations.md",
-      "steps": 14,
+      "steps": 15,
       "outcome_gaps": 9,
-      "api_ops": 4,
+      "api_ops": 5,
       "ui_steps": 10,
-      "gaps": 15,
+      "gaps": 16,
       "fact_hash_guard": "pass"
     },
     {
