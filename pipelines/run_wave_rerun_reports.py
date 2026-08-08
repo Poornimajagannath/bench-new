@@ -760,7 +760,8 @@ def main() -> int:
         f"- Unique boarding ops (by anchor): **{el['boarding_unique_ops_by_anchor']}**",
         f"- Eligible matched claim instances (doc_matchers): "
         f"**{el['eligible_matched_claim_instances']}**",
-        f"- Used in sequence after dedupe: **{el['used_in_sequence_after_dedupe']}**",
+        f"- Used in sequence after dedupe: **{el['used_in_sequence_after_dedupe']}** "
+        f"(sum across workflows; an op can appear in more than one workflow)",
         f"- Unique ops used: **{el['unique_ops_used']}** / "
         f"{el['boarding_unique_ops_by_anchor']}",
         f"- Orphan ops (no matcher): **{el['unique_ops_orphan']}**",
