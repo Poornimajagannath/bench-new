@@ -1,6 +1,6 @@
 # Corpus census
 
-- When: `2026-08-07T22:56:28+00:00`
+- When: `2026-08-08T02:28:04+00:00`
 - Corpus: `data/products/boarding/guides`
 - Documents classified: **236**
 - Eligible for ingestion: **190**

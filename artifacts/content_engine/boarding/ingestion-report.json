@@ -1,14 +1,15 @@
 {
   "stamp_date": "2026-08-08-boarding",
   "docs_fetched": 190,
-  "claims_extracted": 1248,
+  "claims_extracted": 2360,
   "claims_by_schema": {
     "quickstart_step": 969,
     "endpoint_fact": 0,
     "error_case": 65,
-    "prose_claim": 214
+    "prose_claim": 214,
+    "field_table": 1112
   },
-  "drop_count": 114,
+  "drop_count": 94,
   "drops": [
     {
       "path": "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-about-guide.md.md",
@@ -347,60 +348,11 @@
       "first_heading": "Template Components"
     },
     {
-      "path": "2026-08-08-boarding/en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-matrix-intro_templates-matrix-au.md.md",
-      "reason": "no_schema_match",
-      "detail": "no quickstart/endpoint/error/prose claim extracted",
-      "bytes": 1809,
-      "first_heading": "Account Updater Templates"
-    },
-    {
-      "path": "2026-08-08-boarding/en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-matrix-intro_templates-matrix-echeck.md.md",
-      "reason": "no_schema_match",
-      "detail": "no quickstart/endpoint/error/prose claim extracted",
-      "bytes": 1877,
-      "first_heading": "ACH Templates"
-    },
-    {
-      "path": "2026-08-08-boarding/en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-matrix-intro_templates-matrix-gift-card.md.md",
-      "reason": "no_schema_match",
-      "detail": "no quickstart/endpoint/error/prose claim extracted",
-      "bytes": 1425,
-      "first_heading": "Gift Card Templates"
-    },
-    {
       "path": "2026-08-08-boarding/en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-matrix-intro_templates-matrix-pa.md.md",
       "reason": "no_schema_match",
       "detail": "no quickstart/endpoint/error/prose claim extracted",
       "bytes": 2003,
       "first_heading": "Payer Authentication Templates"
-    },
-    {
-      "path": "2026-08-08-boarding/en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-matrix-intro_templates-matrix-sa.md.md",
-      "reason": "no_schema_match",
-      "detail": "no quickstart/endpoint/error/prose claim extracted",
-      "bytes": 6160,
-      "first_heading": "`Secure Acceptance` Templates"
-    },
-    {
-      "path": "2026-08-08-boarding/en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-matrix-intro_templates-matrix-tms.md.md",
-      "reason": "no_schema_match",
-      "detail": "no quickstart/endpoint/error/prose claim extracted",
-      "bytes": 3971,
-      "first_heading": "`Token Management Service` Templates"
-    },
-    {
-      "path": "2026-08-08-boarding/en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-matrix-intro_templates-matrix-vt.md.md",
-      "reason": "no_schema_match",
-      "detail": "no quickstart/endpoint/error/prose claim extracted",
-      "bytes": 1594,
-      "first_heading": "Virtual Terminal Templates"
-    },
-    {
-      "path": "2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-currency-codes.md.md",
-      "reason": "no_schema_match",
-      "detail": "no quickstart/endpoint/error/prose claim extracted",
-      "bytes": 33076,
-      "first_heading": "ISO Standard Currency Codes"
     },
     {
       "path": "2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-extend-hierarchy_boarding-extend-hierarchy-diagram.md.md",
@@ -683,60 +635,11 @@
       "first_heading": "Required Fields for Adding a Transacting Organization to an Existing Organization"
     },
     {
-      "path": "2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_templates-matrix-intro_templates-matrix-au.md.md",
-      "reason": "no_schema_match",
-      "detail": "no quickstart/endpoint/error/prose claim extracted",
-      "bytes": 1809,
-      "first_heading": "Account Updater Templates"
-    },
-    {
-      "path": "2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_templates-matrix-intro_templates-matrix-echeck.md.md",
-      "reason": "no_schema_match",
-      "detail": "no quickstart/endpoint/error/prose claim extracted",
-      "bytes": 1877,
-      "first_heading": "ACH Templates"
-    },
-    {
-      "path": "2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_templates-matrix-intro_templates-matrix-gift-card.md.md",
-      "reason": "no_schema_match",
-      "detail": "no quickstart/endpoint/error/prose claim extracted",
-      "bytes": 1425,
-      "first_heading": "Gift Card Templates"
-    },
-    {
       "path": "2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_templates-matrix-intro_templates-matrix-pa.md.md",
       "reason": "no_schema_match",
       "detail": "no quickstart/endpoint/error/prose claim extracted",
       "bytes": 2003,
       "first_heading": "Payer Authentication Templates"
-    },
-    {
-      "path": "2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_templates-matrix-intro_templates-matrix-sa.md.md",
-      "reason": "no_schema_match",
-      "detail": "no quickstart/endpoint/error/prose claim extracted",
-      "bytes": 6160,
-      "first_heading": "`Secure Acceptance` Templates"
-    },
-    {
-      "path": "2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_templates-matrix-intro_templates-matrix-tms.md.md",
-      "reason": "no_schema_match",
-      "detail": "no quickstart/endpoint/error/prose claim extracted",
-      "bytes": 3971,
-      "first_heading": "`Token Management Service` Templates"
-    },
-    {
-      "path": "2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_templates-matrix-intro_templates-matrix-vt.md.md",
-      "reason": "no_schema_match",
-      "detail": "no quickstart/endpoint/error/prose claim extracted",
-      "bytes": 1594,
-      "first_heading": "Virtual Terminal Templates"
-    },
-    {
-      "path": "2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_boarding-currency-codes.md.md",
-      "reason": "no_schema_match",
-      "detail": "no quickstart/endpoint/error/prose claim extracted",
-      "bytes": 33076,
-      "first_heading": "ISO Standard Currency Codes"
     },
     {
       "path": "2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_boarding-extend-hierarchy_boarding-extend-hierarchy-diagram.md.md",
@@ -760,53 +663,11 @@
       "first_heading": "Updating an Organization's Products (Version 2)"
     },
     {
-      "path": "2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_templates-matrix-intro_templates-matrix-au.md.md",
-      "reason": "no_schema_match",
-      "detail": "no quickstart/endpoint/error/prose claim extracted",
-      "bytes": 1809,
-      "first_heading": "Account Updater Templates"
-    },
-    {
-      "path": "2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_templates-matrix-intro_templates-matrix-echeck.md.md",
-      "reason": "no_schema_match",
-      "detail": "no quickstart/endpoint/error/prose claim extracted",
-      "bytes": 1877,
-      "first_heading": "ACH Templates"
-    },
-    {
-      "path": "2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_templates-matrix-intro_templates-matrix-gift-card.md.md",
-      "reason": "no_schema_match",
-      "detail": "no quickstart/endpoint/error/prose claim extracted",
-      "bytes": 1425,
-      "first_heading": "Gift Card Templates"
-    },
-    {
       "path": "2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_templates-matrix-intro_templates-matrix-pa.md.md",
       "reason": "no_schema_match",
       "detail": "no quickstart/endpoint/error/prose claim extracted",
       "bytes": 2003,
       "first_heading": "Payer Authentication Templates"
-    },
-    {
-      "path": "2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_templates-matrix-intro_templates-matrix-sa.md.md",
-      "reason": "no_schema_match",
-      "detail": "no quickstart/endpoint/error/prose claim extracted",
-      "bytes": 6160,
-      "first_heading": "`Secure Acceptance` Templates"
-    },
-    {
-      "path": "2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_templates-matrix-intro_templates-matrix-tms.md.md",
-      "reason": "no_schema_match",
-      "detail": "no quickstart/endpoint/error/prose claim extracted",
-      "bytes": 3971,
-      "first_heading": "`Token Management Service` Templates"
-    },
-    {
-      "path": "2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_templates-matrix-intro_templates-matrix-vt.md.md",
-      "reason": "no_schema_match",
-      "detail": "no quickstart/endpoint/error/prose claim extracted",
-      "bytes": 1594,
-      "first_heading": "Virtual Terminal Templates"
     }
   ],
   "quarantine_skipped": 46,
@@ -838,27 +699,6 @@
       "detail": "no quickstart/endpoint/error/prose claim extracted"
     },
     {
-      "path": "2026-08-08-boarding/en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-matrix-intro_templates-matrix-au.md.md",
-      "reason": "no_schema_match",
-      "bytes": 1809,
-      "first_heading": "Account Updater Templates",
-      "detail": "no quickstart/endpoint/error/prose claim extracted"
-    },
-    {
-      "path": "2026-08-08-boarding/en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-matrix-intro_templates-matrix-echeck.md.md",
-      "reason": "no_schema_match",
-      "bytes": 1877,
-      "first_heading": "ACH Templates",
-      "detail": "no quickstart/endpoint/error/prose claim extracted"
-    },
-    {
-      "path": "2026-08-08-boarding/en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-matrix-intro_templates-matrix-gift-card.md.md",
-      "reason": "no_schema_match",
-      "bytes": 1425,
-      "first_heading": "Gift Card Templates",
-      "detail": "no quickstart/endpoint/error/prose claim extracted"
-    },
-    {
       "path": "2026-08-08-boarding/en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-matrix-intro_templates-matrix-pa.md.md",
       "reason": "no_schema_match",
       "bytes": 2003,
@@ -866,31 +706,52 @@
       "detail": "no quickstart/endpoint/error/prose claim extracted"
     },
     {
-      "path": "2026-08-08-boarding/en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-matrix-intro_templates-matrix-sa.md.md",
+      "path": "2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-extend-hierarchy_boarding-extend-hierarchy-diagram.md.md",
       "reason": "no_schema_match",
-      "bytes": 6160,
-      "first_heading": "`Secure Acceptance` Templates",
+      "bytes": 934,
+      "first_heading": "Hierarchy Example",
       "detail": "no quickstart/endpoint/error/prose claim extracted"
     },
     {
-      "path": "2026-08-08-boarding/en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-matrix-intro_templates-matrix-tms.md.md",
+      "path": "2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-extend-hierarchy_boarding-reg-create-structural-api.md.md",
       "reason": "no_schema_match",
-      "bytes": 3971,
-      "first_heading": "`Token Management Service` Templates",
+      "bytes": 620,
+      "first_heading": "Add a Structural Organization to a Merchant Organization",
       "detail": "no quickstart/endpoint/error/prose claim extracted"
     },
     {
-      "path": "2026-08-08-boarding/en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-matrix-intro_templates-matrix-vt.md.md",
+      "path": "2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-extend-hierarchy_boarding-reg-create-structural-api_boarding-reg-create-structural-api-example.md.md",
       "reason": "no_schema_match",
-      "bytes": 1594,
-      "first_heading": "Virtual Terminal Templates",
+      "bytes": 2121,
+      "first_heading": "REST Example: Creating a Structural Organization",
       "detail": "no quickstart/endpoint/error/prose claim extracted"
     },
     {
-      "path": "2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-currency-codes.md.md",
+      "path": "2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-extend-hierarchy_boarding-reg-create-structural-api_boarding-reg-create-structural-api-req-fields.md.md",
       "reason": "no_schema_match",
-      "bytes": 33076,
-      "first_heading": "ISO Standard Currency Codes",
+      "bytes": 629,
+      "first_heading": "Required Fields for Boarding a Structural Organization",
+      "detail": "no quickstart/endpoint/error/prose claim extracted"
+    },
+    {
+      "path": "2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro_boarding-retrieve-organizations.md.md",
+      "reason": "no_schema_match",
+      "bytes": 753,
+      "first_heading": "Retrieve a List of Organizations",
+      "detail": "no quickstart/endpoint/error/prose claim extracted"
+    },
+    {
+      "path": "2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro_boarding-update-information-api.md.md",
+      "reason": "no_schema_match",
+      "bytes": 916,
+      "first_heading": "Update an Organization's Information",
+      "detail": "no quickstart/endpoint/error/prose claim extracted"
+    },
+    {
+      "path": "2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-payer-auth_boarding-payer-auth-enable-intro_boarding-payer-auth-enable-ex-rest.md.md",
+      "reason": "no_schema_match",
+      "bytes": 4406,
+      "first_heading": "REST Example: Enabling `Payer Authentication`",
       "detail": "no quickstart/endpoint/error/prose claim extracted"
     }
   ]
