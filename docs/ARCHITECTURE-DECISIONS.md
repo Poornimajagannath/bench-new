@@ -9,8 +9,11 @@ Invariants, in priority order:
    than guessing.
 4. Every eval and hand test leaves evidence. Failures are kept, not replaced.
 5. Denominators and eval expectations are computed from the source of truth
-   at runtime, never hard-coded. The family TOC is the denominator, not
-   llms.txt.
+   at runtime, never hard-coded. For docs corpus coverage the **product
+   root** mega-guide is the denominator (verbatim `*.md` at the family
+   guide path). The family HTML TOC is a cross-check that reports pages
+   whose content does not appear in the root. `llms.txt` is never a
+   denominator.
 
 Eval taxonomy: the deterministic task eval gates PRs. The live parity eval
 runs nightly as evidence and never gates a build.

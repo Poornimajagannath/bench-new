@@ -1,0 +1,4312 @@
+{
+  "product_id": "tms",
+  "root_path": "/docs/cybs/en-us/tms/developer/all/rest/tms.md",
+  "root_url": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.md",
+  "bytes": 776173,
+  "sections": [
+    {
+      "anchor": "tms-about-guide",
+      "title": "`Token Management Service` Developer Guide",
+      "byte_start": 0,
+      "byte_end": 1185,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-about-guide",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-doc-revisions",
+      "title": "Recent Revisions to This Document",
+      "byte_start": 1185,
+      "byte_end": 1296,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-doc-revisions",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-doc-revisions_section_gby_tsj_vjc",
+      "title": "26.07.01",
+      "byte_start": 1296,
+      "byte_end": 2181,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-doc-revisions_section_gby_tsj_vjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-doc-revisions_section_b5z_fsr_hjc",
+      "title": "26.05.02",
+      "byte_start": 2181,
+      "byte_end": 2807,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-doc-revisions_section_b5z_fsr_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-doc-revisions_section_lpj_24w_z3c",
+      "title": "26.05.01",
+      "byte_start": 2807,
+      "byte_end": 8355,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-doc-revisions_section_lpj_24w_z3c",
+      "heading_level": 2
+    },
+    {
+      "anchor": "vpc-partner-reseller-disclaimer",
+      "title": "VISA Platform Connect: Specifications and Conditions for Resellers/Partners",
+      "byte_start": 8355,
+      "byte_end": 10487,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#vpc-partner-reseller-disclaimer",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-network-tkn-terms-of-use-cybs",
+      "title": "TERMS OF USE APPLICABLE TO CARD NETWORK TOKENS",
+      "byte_start": 10487,
+      "byte_end": 14477,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-network-tkn-terms-of-use-cybs",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-overview",
+      "title": "Introduction to the `Token Management Service`",
+      "byte_start": 14477,
+      "byte_end": 16549,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-overview",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-token-types",
+      "title": "Types of Tokens",
+      "byte_start": 16549,
+      "byte_end": 19935,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-token-types",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ii-tkn-intro",
+      "title": "Instrument Identifier Tokens",
+      "byte_start": 19935,
+      "byte_end": 21641,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ii-tkn-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-tkn-intro",
+      "title": "Customer Tokens",
+      "byte_start": 21641,
+      "byte_end": 21884,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-tkn-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ship-tkn-intro",
+      "title": "Shipping Address Tokens",
+      "byte_start": 21884,
+      "byte_end": 22345,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ship-tkn-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-pi-tkn-intro",
+      "title": "Payment Instrument Tokens",
+      "byte_start": 22345,
+      "byte_end": 22676,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-pi-tkn-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn",
+      "title": "Network Tokens",
+      "byte_start": 22676,
+      "byte_end": 24421,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-workflows",
+      "title": "`Token Management Service` Workflows",
+      "byte_start": 24421,
+      "byte_end": 26018,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-workflows",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-workflow-tknization-tms",
+      "title": "PAN Tokenization Process Using `TMS`",
+      "byte_start": 26018,
+      "byte_end": 26762,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-workflow-tknization-tms",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-workflow-tknization-net-tkn",
+      "title": "Network Token Tokenization Process",
+      "byte_start": 26762,
+      "byte_end": 27547,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-workflow-tknization-net-tkn",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-workflow-push-provisioning",
+      "title": "Push Provisioning Process",
+      "byte_start": 27547,
+      "byte_end": 29522,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-workflow-push-provisioning",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-workflow-net-tkn-prov-merchant",
+      "title": "Network Token Provisioning for Merchants",
+      "byte_start": 29522,
+      "byte_end": 31953,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-workflow-net-tkn-prov-merchant",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-workflow-net-tkn-auth-cit-merchant",
+      "title": "Network Token CIT for Merchants",
+      "byte_start": 31953,
+      "byte_end": 33171,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-workflow-net-tkn-auth-cit-merchant",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-workflow-net-tkn-auth-mit-merchant",
+      "title": "Network Token MIT for Merchants",
+      "byte_start": 33171,
+      "byte_end": 34448,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-workflow-net-tkn-auth-mit-merchant",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-workflow-net-tkn-prov-aggregator",
+      "title": "Network Token Provisioning for Partners",
+      "byte_start": 34448,
+      "byte_end": 36896,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-workflow-net-tkn-prov-aggregator",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-workflow-net-tkn-auth-cit-aggregator",
+      "title": "Network Token CIT for Partners",
+      "byte_start": 36896,
+      "byte_end": 38288,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-workflow-net-tkn-auth-cit-aggregator",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-workflow-net-tkn-auth-mit-aggregator",
+      "title": "Network Token MIT for Partners",
+      "byte_start": 38288,
+      "byte_end": 39643,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-workflow-net-tkn-auth-mit-aggregator",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-create-request",
+      "title": "Requesting the `Token Management Service` API",
+      "byte_start": 39643,
+      "byte_end": 42056,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-create-request",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-headers",
+      "title": "HTTP Response Headers",
+      "byte_start": 42056,
+      "byte_end": 42798,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-headers",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-case-sensitivity",
+      "title": "Case Sensitivity",
+      "byte_start": 42798,
+      "byte_end": 43328,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-case-sensitivity",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-metadata",
+      "title": "Metadata",
+      "byte_start": 43328,
+      "byte_end": 43623,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-metadata",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-metadata_id18AIDJ00DBI",
+      "title": "Example: Metadata from a Response",
+      "byte_start": 43623,
+      "byte_end": 43795,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-metadata_id18AIDJ00DBI",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-patching",
+      "title": "Patching Considerations",
+      "byte_start": 43795,
+      "byte_end": 44751,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-patching",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-patching_id18AIE030JZJ",
+      "title": "Patching Examples",
+      "byte_start": 44751,
+      "byte_end": 49949,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-patching_id18AIE030JZJ",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-pagination",
+      "title": "Pagination",
+      "byte_start": 49949,
+      "byte_end": 52092,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-pagination",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-pagination_id18AIF000WL7",
+      "title": "Pagination Response Header",
+      "byte_start": 52092,
+      "byte_end": 52440,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-pagination_id18AIF000WL7",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-pagination_id18AIF0000TS",
+      "title": "Pagination Response Body Fields",
+      "byte_start": 52440,
+      "byte_end": 53144,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-pagination_id18AIF0000TS",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-pagination_id18AIF0030NW",
+      "title": "Examples",
+      "byte_start": 53144,
+      "byte_end": 56695,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-pagination_id18AIF0030NW",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-processors",
+      "title": "Supported Processors",
+      "byte_start": 56695,
+      "byte_end": 65330,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-processors",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-card-types",
+      "title": "Supported Card Types",
+      "byte_start": 65330,
+      "byte_end": 71450,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-card-types",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-test-cards",
+      "title": "Test Card Numbers",
+      "byte_start": 71450,
+      "byte_end": 77106,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-test-cards",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-onboarding",
+      "title": "`Token Management Service` Onboarding",
+      "byte_start": 77106,
+      "byte_end": 77889,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-onboarding",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-mid-hierarchy",
+      "title": "Merchant ID Hierarchy",
+      "byte_start": 77889,
+      "byte_end": 79598,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-mid-hierarchy",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-mid-reg",
+      "title": "Merchant ID Registration",
+      "byte_start": 79598,
+      "byte_end": 81220,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-mid-reg",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-mid-partner",
+      "title": "Portfolio MIDs for Partners",
+      "byte_start": 81220,
+      "byte_end": 82465,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-mid-partner",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-vault-hierarchy",
+      "title": "Token Vault Management",
+      "byte_start": 82465,
+      "byte_end": 83275,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-vault-hierarchy",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-vault-settings",
+      "title": "Configure the Token Vault Settings Using the `Business Center`",
+      "byte_start": 83275,
+      "byte_end": 84900,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-vault-settings",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-vault-mid-access",
+      "title": "Configure the Token Vault Access Using the `Business Center`",
+      "byte_start": 84900,
+      "byte_end": 86002,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-vault-mid-access",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-vault-network-tokenization",
+      "title": "Configure Network Tokenization Using the `Business Center`",
+      "byte_start": 86002,
+      "byte_end": 88752,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-vault-network-tokenization",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-mle-setup",
+      "title": "Token Management Message-Level Encryption Keys",
+      "byte_start": 88752,
+      "byte_end": 90385,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-mle-setup",
+      "heading_level": 1
+    },
+    {
+      "anchor": "keys-mle-create",
+      "title": "Creating a Token Management MLE Key",
+      "byte_start": 90385,
+      "byte_end": 91789,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#keys-mle-create",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-onboard",
+      "title": "Network Tokenization Overview",
+      "byte_start": 91789,
+      "byte_end": 93124,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-onboard",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-onboard_section_ecn_4qk_mjc",
+      "title": "Key Benefits and Features",
+      "byte_start": 93124,
+      "byte_end": 94427,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-onboard_section_ecn_4qk_mjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-net-tkn-onboard_section_ypk_crk_mjc",
+      "title": "Integration Models",
+      "byte_start": 94427,
+      "byte_end": 94954,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-onboard_section_ypk_crk_mjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-net-tkn-enablement",
+      "title": "Network Token Enablement",
+      "byte_start": 94954,
+      "byte_end": 95057,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-enablement",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-enablement_section_axk_rrk_mjc",
+      "title": "Merchants",
+      "byte_start": 95057,
+      "byte_end": 95544,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-enablement_section_axk_rrk_mjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-net-tkn-enablement_section_mjd_srk_mjc",
+      "title": "Partners",
+      "byte_start": 95544,
+      "byte_end": 96450,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-enablement_section_mjd_srk_mjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-workflow-net-tkn-onboard-aggregator",
+      "title": "Network Token Onboarding---Partner Model",
+      "byte_start": 96450,
+      "byte_end": 97758,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-workflow-net-tkn-onboard-aggregator",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-lcm",
+      "title": "Network Token Life-Cycle Management",
+      "byte_start": 97758,
+      "byte_end": 102633,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-lcm",
+      "heading_level": 1
+    },
+    {
+      "anchor": "net-tkn-lcm",
+      "title": "Network Token Life-Cycle Management Reports",
+      "byte_start": 102633,
+      "byte_end": 104544,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#net-tkn-lcm",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-overview-webhook",
+      "title": "Manage Webhook Subscriptions",
+      "byte_start": 104544,
+      "byte_end": 107325,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-overview-webhook",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-webhook-create-key-intro",
+      "title": "Create a Digital Signature Key",
+      "byte_start": 107325,
+      "byte_end": 108866,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-webhook-create-key-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-webhook-create-key-reqfields",
+      "title": "Required Fields for Creating a Digital Signature Key",
+      "byte_start": 108866,
+      "byte_end": 109512,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-webhook-create-key-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-webhook-create-key-ex-rest",
+      "title": "REST Example: Creating a Digital Signature Key",
+      "byte_start": 109512,
+      "byte_end": 110392,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-webhook-create-key-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-webhook-create-sub-intro",
+      "title": "Create Webhook Subscription",
+      "byte_start": 110392,
+      "byte_end": 111562,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-webhook-create-sub-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-webhook-create-sub-reqfields",
+      "title": "Required Fields for Creating Webhook Subscription",
+      "byte_start": 111562,
+      "byte_end": 112010,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-webhook-create-sub-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-webhook-create-sub-ex-rest",
+      "title": "REST Example: Creating a Webhook Subscription",
+      "byte_start": 112010,
+      "byte_end": 114386,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-webhook-create-sub-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-webhook-retrieve-sub-intro",
+      "title": "Retrieve the Details of a Webhook Subscription",
+      "byte_start": 114386,
+      "byte_end": 115100,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-webhook-retrieve-sub-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-webhook-retrieve-sub-ex-rest",
+      "title": "Example: Retrieving Webhook Subscription Details",
+      "byte_start": 115100,
+      "byte_end": 116229,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-webhook-retrieve-sub-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-webhook-manage-get-reply-status",
+      "title": "Response Codes",
+      "byte_start": 116229,
+      "byte_end": 116604,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-webhook-manage-get-reply-status",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-webhook-update-sub-intro",
+      "title": "Update Webhook Subscription",
+      "byte_start": 116604,
+      "byte_end": 117270,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-webhook-update-sub-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-webhook-update-sub-reqfields",
+      "title": "Required Field for Updating Webhook Subscription",
+      "byte_start": 117270,
+      "byte_end": 117585,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-webhook-update-sub-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-webhook-update-sub-ex-rest",
+      "title": "REST Example: Updating Webhook Subscriptions",
+      "byte_start": 117585,
+      "byte_end": 118965,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-webhook-update-sub-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-webhook-delete-sub-intro",
+      "title": "Delete Webhook Subscription",
+      "byte_start": 118965,
+      "byte_end": 119634,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-webhook-delete-sub-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-webhook-delete-sub-reqfields",
+      "title": "Required Field for Deleting a Webhook Subscription",
+      "byte_start": 119634,
+      "byte_end": 119894,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-webhook-delete-sub-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-webhook-delete-sub-ex-rest",
+      "title": "REST Example: Deleting a Webhook Subscription",
+      "byte_start": 119894,
+      "byte_end": 120432,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-webhook-delete-sub-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "net_tkn_lcm_examples",
+      "title": "Network Token Life-Cycle Management Notification Examples",
+      "byte_start": 120432,
+      "byte_end": 120680,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#net_tkn_lcm_examples",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-lcm-ex-rest",
+      "title": "REST Examples: Life-Cycle Management Notifications",
+      "byte_start": 120680,
+      "byte_end": 131474,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-lcm-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-trids",
+      "title": "Token Requestor IDs",
+      "byte_start": 131474,
+      "byte_end": 133968,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-trids",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-dcap",
+      "title": "Digital Commerce Authentication Program",
+      "byte_start": 133968,
+      "byte_end": 135098,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-dcap",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms_net_tkn_intro",
+      "title": "Manage Network Tokens",
+      "byte_start": 135098,
+      "byte_end": 135381,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms_net_tkn_intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms_net_tkn_intro_section_idv_fwf_3jc",
+      "title": "Tokenized Cards API",
+      "byte_start": 135381,
+      "byte_end": 137060,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms_net_tkn_intro_section_idv_fwf_3jc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms_net_tkn_intro_section_t22_gwf_3jc",
+      "title": "Payment Credentials API",
+      "byte_start": 137060,
+      "byte_end": 138806,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms_net_tkn_intro_section_t22_gwf_3jc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-net-tkn-partner-card-intro",
+      "title": "Provision a Network Token for a Card Number",
+      "byte_start": 138806,
+      "byte_end": 140710,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-partner-card-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-partner-card-reqfields",
+      "title": "Required Fields for Provisioning a Network Token for a Card Number",
+      "byte_start": 140710,
+      "byte_end": 141063,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-partner-card-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-partner-card-reqfields_section_jpc_xzz_sxb",
+      "title": "Related Information",
+      "byte_start": 141063,
+      "byte_end": 141438,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-partner-card-reqfields_section_jpc_xzz_sxb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-net-tkn-partner-card-ex-rest",
+      "title": "REST Example: Provisioning a Network Token for a Card Number",
+      "byte_start": 141438,
+      "byte_end": 143998,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-partner-card-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-retrieve-tkn-consumer-intro",
+      "title": "Retrieve a Network Token",
+      "byte_start": 143998,
+      "byte_end": 145225,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-retrieve-tkn-consumer-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-retrieve-tkn-consumer-ex-rest",
+      "title": "REST Example: Retrieving a Network Token",
+      "byte_start": 145225,
+      "byte_end": 147799,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-retrieve-tkn-consumer-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-delete-tkn-consumer-intro",
+      "title": "Delete a Network Token",
+      "byte_start": 147799,
+      "byte_end": 149243,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-delete-tkn-consumer-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-delete-tkn-consumer-ex-rest",
+      "title": "REST Example: Deleting a Network Token",
+      "byte_start": 149243,
+      "byte_end": 149650,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-delete-tkn-consumer-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-pay-cred-intro",
+      "title": "Generate Payment Credentials",
+      "byte_start": 149650,
+      "byte_end": 150680,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-pay-cred-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-pay-cred-intro_section_t5x_txf_3jc",
+      "title": "Prerequisites",
+      "byte_start": 150680,
+      "byte_end": 151400,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-pay-cred-intro_section_t5x_txf_3jc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-net-tkn-pay-cred-intro_section_hmt_j2c_2jc",
+      "title": "Endpoint",
+      "byte_start": 151400,
+      "byte_end": 152222,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-pay-cred-intro_section_hmt_j2c_2jc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-net-tkn-pay-cred-reqfields",
+      "title": "Required Fields for Generating Payment Credentials",
+      "byte_start": 152222,
+      "byte_end": 152922,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-pay-cred-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-pay-cred-reqfields_section_qdn_xfc_2jc",
+      "title": "Related Information",
+      "byte_start": 152922,
+      "byte_end": 153284,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-pay-cred-reqfields_section_qdn_xfc_2jc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-net-pay-cred-ex-rest",
+      "title": "REST Example: Generating Payment Credentials",
+      "byte_start": 153284,
+      "byte_end": 154803,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-pay-cred-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-pay-cred-dcap-intro",
+      "title": "Generate Payment Credentials for Digital Commerce Authentication Program",
+      "byte_start": 154803,
+      "byte_end": 156470,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-pay-cred-dcap-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-pay-cred-dcap-intro_section_hmt_j2c_2jc",
+      "title": "Endpoint",
+      "byte_start": 156470,
+      "byte_end": 157312,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-pay-cred-dcap-intro_section_hmt_j2c_2jc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-net-tkn-pay-cred-dcap-reqfields",
+      "title": "Required Fields for Generating Payment Credentials for DCAP",
+      "byte_start": 157312,
+      "byte_end": 160149,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-pay-cred-dcap-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-pay-cred-dcap-reqfields_section_qdn_xfc_2jc",
+      "title": "Related Information",
+      "byte_start": 160149,
+      "byte_end": 160526,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-pay-cred-dcap-reqfields_section_qdn_xfc_2jc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-net-tkn-pay-cred-dcap-ex-rest",
+      "title": "REST Example: Generating Payment Credentials for DCAP",
+      "byte_start": 160526,
+      "byte_end": 162337,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-pay-cred-dcap-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-pay-cred-passkey-intro",
+      "title": "Generate Payment Passkey Credentials",
+      "byte_start": 162337,
+      "byte_end": 163130,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-pay-cred-passkey-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-pay-cred-passkey-intro_section_hmt_j2c_2jc",
+      "title": "Endpoint",
+      "byte_start": 163130,
+      "byte_end": 163984,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-pay-cred-passkey-intro_section_hmt_j2c_2jc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-net-tkn-pay-cred-passkey-reqfields",
+      "title": "Required Fields for Generating Authenticated Passkey Payment Credentials",
+      "byte_start": 163984,
+      "byte_end": 169887,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-pay-cred-passkey-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-pay-cred-passkey-ex-rest",
+      "title": "REST Example: Generating Authenticated Passkey Payment Credentials",
+      "byte_start": 169887,
+      "byte_end": 173805,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-pay-cred-passkey-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-direct-merch-pay-intro",
+      "title": "Authorize a Payment While Ignoring Network Token",
+      "byte_start": 173805,
+      "byte_end": 174704,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-direct-merch-pay-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-direct-merch-pay-reqfields",
+      "title": "Required Fields for Authorizing a Payment While Ignoring Network Token",
+      "byte_start": 174704,
+      "byte_end": 176687,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-direct-merch-pay-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-direct-merch-pay-reqfields_section_jpc_xzz_sxb",
+      "title": "Related Information",
+      "byte_start": 176687,
+      "byte_end": 177074,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-direct-merch-pay-reqfields_section_jpc_xzz_sxb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-net-tkn-direct-merch-pay-ex-rest",
+      "title": "REST Example: Authorizing a Payment While Ignoring Network Token",
+      "byte_start": 177074,
+      "byte_end": 179948,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-direct-merch-pay-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-mit-update-auth-opt-intro",
+      "title": "Update Merchant-Initiated Transaction Authorization Options",
+      "byte_start": 179948,
+      "byte_end": 181394,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-mit-update-auth-opt-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-mit-update-auth-opt-reqfields",
+      "title": "Required Fields for Updating MIT Authorization Options",
+      "byte_start": 181394,
+      "byte_end": 181907,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-mit-update-auth-opt-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-mit-update-auth-opt-reqfields_section_jpc_xzz_sxb",
+      "title": "Related Information",
+      "byte_start": 181907,
+      "byte_end": 182279,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-mit-update-auth-opt-reqfields_section_jpc_xzz_sxb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-mit-update-auth-opt-ex-rest",
+      "title": "REST Example: Updating MIT Authorization Options",
+      "byte_start": 182279,
+      "byte_end": 183798,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-mit-update-auth-opt-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-create-cof-intro",
+      "title": "Provision a Network Token for a Consumer",
+      "byte_start": 183798,
+      "byte_end": 185171,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-create-cof-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-create-cof-reqfields",
+      "title": "Required Fields for Provisioning a COF Network Token for a Consumer",
+      "byte_start": 185171,
+      "byte_end": 185896,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-create-cof-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-create-cof-optfields",
+      "title": "Optional Fields for Provisioning a COF Network Token for a Consumer",
+      "byte_start": 185896,
+      "byte_end": 186397,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-create-cof-optfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-create-cof-ex-rest",
+      "title": "REST Example: Provisioning a Network Token for a Consumer",
+      "byte_start": 186397,
+      "byte_end": 188073,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-create-cof-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-create-token-intro",
+      "title": "Provision a Network Token for a Device Token",
+      "byte_start": 188073,
+      "byte_end": 189093,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-create-token-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-create-token-reqfields",
+      "title": "Required Fields for Provisioning a Network Token for a Device Token",
+      "byte_start": 189093,
+      "byte_end": 190068,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-create-token-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-create-token-optfields",
+      "title": "Optional Fields for Provisioning a Network Token for a Device Token",
+      "byte_start": 190068,
+      "byte_end": 190576,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-create-token-optfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-create-token-ex-rest",
+      "title": "REST Example: Provisioning a Network Token for a Device Token",
+      "byte_start": 190576,
+      "byte_end": 192238,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-create-token-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-create-intro",
+      "title": "Provision a Network Token with Push Provisioning",
+      "byte_start": 192238,
+      "byte_end": 194025,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-create-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-create-intro_tms-net-tkn-card-create-intro-ii-auth",
+      "title": "Use the Push Provisioning Instrument Identifier in Authorizations",
+      "byte_start": 194025,
+      "byte_end": 195031,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-create-intro_tms-net-tkn-card-create-intro-ii-auth",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-net-tkn-card-create-reqfields",
+      "title": "Required Fields for Provisioning a Network Token with Push Provisioning",
+      "byte_start": 195031,
+      "byte_end": 195628,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-create-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-create-optfields",
+      "title": "Optional Fields for Provisioning a Network Token with Push Provisioning",
+      "byte_start": 195628,
+      "byte_end": 196122,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-create-optfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-create-ex-rest",
+      "title": "REST Example: Provisioning a Network Token with Push Provisioning",
+      "byte_start": 196122,
+      "byte_end": 197650,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-create-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-lcm-simulate-intro",
+      "title": "Simulate Life-Cycle Management Events",
+      "byte_start": 197650,
+      "byte_end": 199224,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-lcm-simulate-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-lcm-simulate-reqfields",
+      "title": "Available Fields for Simulating Life-Cycle Management Events",
+      "byte_start": 199224,
+      "byte_end": 200144,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-lcm-simulate-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-lcm-simulate-ex-rest",
+      "title": "REST Example: Simulating Life-Cycle Management Events",
+      "byte_start": 200144,
+      "byte_end": 201456,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-lcm-simulate-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-fail-ex-rest",
+      "title": "Network Token Provision Failures",
+      "byte_start": 201456,
+      "byte_end": 205487,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-fail-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-card-art",
+      "title": "Card Art",
+      "byte_start": 205487,
+      "byte_end": 206034,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-card-art",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-art-retrieve-intro",
+      "title": "Retrieve Card Art",
+      "byte_start": 206034,
+      "byte_end": 212006,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-art-retrieve-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-art-combined-ex-rest",
+      "title": "REST Example: Retrieving Card Art Assets",
+      "byte_start": 212006,
+      "byte_end": 212723,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-art-combined-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-tokenize-intro",
+      "title": "Create Tokens",
+      "byte_start": 212723,
+      "byte_end": 214149,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-tokenize-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-tokenize-intro_section_bys_smk_dwb",
+      "title": "Endpoint",
+      "byte_start": 214149,
+      "byte_end": 214816,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-tokenize-intro_section_bys_smk_dwb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-tokenize-ii-nt-intro",
+      "title": "Create an Instrument Identifier and Provision a Network Token",
+      "byte_start": 214816,
+      "byte_end": 215277,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-tokenize-ii-nt-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-tokenize-ii-nt-intro_section_bys_smk_dwb",
+      "title": "Endpoint",
+      "byte_start": 215277,
+      "byte_end": 216021,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-tokenize-ii-nt-intro_section_bys_smk_dwb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-tokenize-ii-nt-reqfields",
+      "title": "Required Fields for Creating an Instrument Identifier and Provisioning a Network Token",
+      "byte_start": 216021,
+      "byte_end": 217461,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-tokenize-ii-nt-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-tokenize-ii-nt-reqfields_section_jpc_xzz_sxb",
+      "title": "Related Information",
+      "byte_start": 217461,
+      "byte_end": 217818,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-tokenize-ii-nt-reqfields_section_jpc_xzz_sxb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-tokenize-ii-nt-ex-rest",
+      "title": "REST Example: Creating an Instrument Identifier and Provisioning a Network Token",
+      "byte_start": 217818,
+      "byte_end": 218895,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-tokenize-ii-nt-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-tokenize-ii-nt-tt-intro",
+      "title": "Create an Instrument Identifier and Provision a Network Token Using a Transient Token",
+      "byte_start": 218895,
+      "byte_end": 219434,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-tokenize-ii-nt-tt-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-tokenize-ii-nt-tt-intro_section_bys_smk_dwb",
+      "title": "Endpoint",
+      "byte_start": 219434,
+      "byte_end": 220199,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-tokenize-ii-nt-tt-intro_section_bys_smk_dwb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-tokenize-ii-nt-tt-reqfields",
+      "title": "Required Fields for Creating an Instrument Identifier and Provisioning a Network Token Using a Transient Token",
+      "byte_start": 220199,
+      "byte_end": 221756,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-tokenize-ii-nt-tt-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-tokenize-ii-nt-tt-reqfields_section_jpc_xzz_sxb",
+      "title": "Related Information",
+      "byte_start": 221756,
+      "byte_end": 222122,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-tokenize-ii-nt-tt-reqfields_section_jpc_xzz_sxb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-tokenize-ii-nt-tt-ex-rest",
+      "title": "REST Example: Creating an Instrument Identifier and Provisioning a Network Token Using a Transient Token",
+      "byte_start": 222122,
+      "byte_end": 223141,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-tokenize-ii-nt-tt-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-tokenize-cust-pi-intro",
+      "title": "Create a Customer Payment Instrument",
+      "byte_start": 223141,
+      "byte_end": 223933,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-tokenize-cust-pi-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-tokenize-cust-pi-intro_section_bys_smk_dwb",
+      "title": "Endpoint",
+      "byte_start": 223933,
+      "byte_end": 224691,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-tokenize-cust-pi-intro_section_bys_smk_dwb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-tokenize-cust-pi-reqfields",
+      "title": "Required Fields for Creating an Instrument Identifier and Provisioning a Network Token",
+      "byte_start": 224691,
+      "byte_end": 226674,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-tokenize-cust-pi-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-tokenize-cust-pi-reqfields_section_jpc_xzz_sxb",
+      "title": "Related Information",
+      "byte_start": 226674,
+      "byte_end": 227037,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-tokenize-cust-pi-reqfields_section_jpc_xzz_sxb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-tokenize-cust-pi-ex-rest",
+      "title": "REST Example: Creating a Customer Payment Instrument",
+      "byte_start": 227037,
+      "byte_end": 229237,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-tokenize-cust-pi-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-tokenize-create-req-id-intro",
+      "title": "Create a Token with a Request ID",
+      "byte_start": 229237,
+      "byte_end": 230043,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-tokenize-create-req-id-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-tokenize-create-req-id-intro_section_bys_smk_dwb",
+      "title": "Endpoint",
+      "byte_start": 230043,
+      "byte_end": 231093,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-tokenize-create-req-id-intro_section_bys_smk_dwb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-tokenize-create-req-id-reqfields",
+      "title": "Required Fields for Creating a Token with a Request ID",
+      "byte_start": 231093,
+      "byte_end": 232615,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-tokenize-create-req-id-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-tokenize-create-req-id-reqfields_section_jpc_xzz_sxb",
+      "title": "Related Information",
+      "byte_start": 232615,
+      "byte_end": 232996,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-tokenize-create-req-id-reqfields_section_jpc_xzz_sxb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-tokenize-create-req-id-ex-rest",
+      "title": "REST Example: Creating a Token with a Request ID Identifier",
+      "byte_start": 232996,
+      "byte_end": 234199,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-tokenize-create-req-id-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-create-trans-token-intro",
+      "title": "Provision a Network Using a Transient Token",
+      "byte_start": 234199,
+      "byte_end": 234450,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-create-trans-token-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-create-trans-token-intro_section_zfm_4cy_hjc",
+      "title": "Endpoint",
+      "byte_start": 234450,
+      "byte_end": 235225,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-create-trans-token-intro_section_zfm_4cy_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-net-tkn-create-trans-token-reqfields",
+      "title": "Required Fields for Provisioning a Network Token Using a Transient Token",
+      "byte_start": 235225,
+      "byte_end": 235747,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-create-trans-token-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-create-trans-token-reqfields_section_jpc_xzz_sxb",
+      "title": "Related Information",
+      "byte_start": 235747,
+      "byte_end": 236140,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-create-trans-token-reqfields_section_jpc_xzz_sxb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-net-tkn-create-trans-token-ex-rest",
+      "title": "REST Example: Provisioning a Network Token Using a Transient Token",
+      "byte_start": 236140,
+      "byte_end": 236993,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-create-trans-token-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ii-tkn",
+      "title": "Instrument Identifier Tokens",
+      "byte_start": 236993,
+      "byte_end": 238687,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ii-tkn",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-manage-ii-tkn",
+      "title": "Manage Instrument Identifier Tokens",
+      "byte_start": 238687,
+      "byte_end": 240389,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-manage-ii-tkn",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ii-tkn-create-intro",
+      "title": "Create an Instrument Identifier",
+      "byte_start": 240389,
+      "byte_end": 240572,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ii-tkn-create-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ii-tkn-create-intro_section_bys_smk_dwb",
+      "title": "Endpoint",
+      "byte_start": 240572,
+      "byte_end": 241374,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ii-tkn-create-intro_section_bys_smk_dwb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-ii-tkn-create-reqfields",
+      "title": "Required Fields for Creating an Instrument Identifier",
+      "byte_start": 241374,
+      "byte_end": 241606,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ii-tkn-create-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ii-tkn-create-reqfields_section_jpc_xzz_sxb",
+      "title": "Related Information",
+      "byte_start": 241606,
+      "byte_end": 241960,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ii-tkn-create-reqfields_section_jpc_xzz_sxb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-ii-tkn-create-optfields",
+      "title": "Optional Fields for Creating an Instrument Identifier",
+      "byte_start": 241960,
+      "byte_end": 242483,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ii-tkn-create-optfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ii-tkn-create-optfields_section_jpc_xzz_sxb",
+      "title": "Related Information",
+      "byte_start": 242483,
+      "byte_end": 242837,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ii-tkn-create-optfields_section_jpc_xzz_sxb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-ii-tkn-create-ex-rest",
+      "title": "REST Example: Creating a Card Instrument Identifier",
+      "byte_start": 242837,
+      "byte_end": 243649,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ii-tkn-create-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ii-tkn-create-ex-bank-rest",
+      "title": "REST Example: Creating a Bank Account Instrument Identifier",
+      "byte_start": 243649,
+      "byte_end": 244717,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ii-tkn-create-ex-bank-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ii-tkn-create-device-tkn-intro",
+      "title": "Create an Instrument Identifier for Enrollable Network Tokens",
+      "byte_start": 244717,
+      "byte_end": 245768,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ii-tkn-create-device-tkn-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ii-tkn-create-device-tkn-intro_section_bys_smk_dwb",
+      "title": "Endpoint",
+      "byte_start": 245768,
+      "byte_end": 248354,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ii-tkn-create-device-tkn-intro_section_bys_smk_dwb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-ii-tkn-create-device-tkn-reqfields",
+      "title": "Required Fields for Creating an Instrument Identifier for a Device Token",
+      "byte_start": 248354,
+      "byte_end": 248898,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ii-tkn-create-device-tkn-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ii-tkn-create-device-tkn-optfields",
+      "title": "Optional Fields for Creating an Instrument Identifier",
+      "byte_start": 248898,
+      "byte_end": 249443,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ii-tkn-create-device-tkn-optfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ii-tkn-create-device-tkn-optfields_d98e131",
+      "title": "Related Information",
+      "byte_start": 249443,
+      "byte_end": 249799,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ii-tkn-create-device-tkn-optfields_d98e131",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-ii-tkn-create-device-tkn-ex-rest",
+      "title": "REST Example: Creating an Instrument Identifier for a Device Token",
+      "byte_start": 249799,
+      "byte_end": 252172,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ii-tkn-create-device-tkn-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-tap-create-ii-intro",
+      "title": "Create an Instrument Identifier and Network Token Using EMV Tags",
+      "byte_start": 252172,
+      "byte_end": 252456,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-tap-create-ii-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-tap-create-ii-intro_section_bys_smk_dwb",
+      "title": "Endpoint",
+      "byte_start": 252456,
+      "byte_end": 253218,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-tap-create-ii-intro_section_bys_smk_dwb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-tap-create-ii-reqfields",
+      "title": "Required Fields for Creating an Instrument Identifier and Network Token Using EMV Tags",
+      "byte_start": 253218,
+      "byte_end": 253756,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-tap-create-ii-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-tap-create-ii-reqfields_section_jpc_xzz_sxb",
+      "title": "Related Information",
+      "byte_start": 253756,
+      "byte_end": 254110,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-tap-create-ii-reqfields_section_jpc_xzz_sxb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-tap-create-ii-optfields",
+      "title": "Optional Field for Creating an Instrument Identifier and Network Token Using EMV Tags",
+      "byte_start": 254110,
+      "byte_end": 254412,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-tap-create-ii-optfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-tap-create-ii-optfields_section_jpc_xzz_sxb",
+      "title": "Related Information",
+      "byte_start": 254412,
+      "byte_end": 254766,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-tap-create-ii-optfields_section_jpc_xzz_sxb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-tap-create-ii-ex-rest",
+      "title": "REST Example: Creating an Instrument Identifier and Network Token Using EMV Tags",
+      "byte_start": 254766,
+      "byte_end": 258864,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-tap-create-ii-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ii-tkn-retrieve-intro",
+      "title": "Retrieve an Instrument Identifier",
+      "byte_start": 258864,
+      "byte_end": 259057,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ii-tkn-retrieve-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ii-tkn-retrieve-intro_section_bys_smk_dwb",
+      "title": "Endpoint",
+      "byte_start": 259057,
+      "byte_end": 260290,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ii-tkn-retrieve-intro_section_bys_smk_dwb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-ii-tkn-retrieve-ex-rest",
+      "title": "REST Example: Retrieving an Instrument Identifier",
+      "byte_start": 260290,
+      "byte_end": 262991,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ii-tkn-retrieve-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ii-tkn-update-intro",
+      "title": "Update an Instrument Identifier",
+      "byte_start": 262991,
+      "byte_end": 263174,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ii-tkn-update-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ii-tkn-update-intro_section_rlf_5mk_dwb",
+      "title": "Endpoint",
+      "byte_start": 263174,
+      "byte_end": 264405,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ii-tkn-update-intro_section_rlf_5mk_dwb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-ii-tkn-update-optfields",
+      "title": "Optional Fields for Updating an Instrument Identifier",
+      "byte_start": 264405,
+      "byte_end": 264866,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ii-tkn-update-optfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ii-tkn-update-optfields_section_jpc_xzz_sxb",
+      "title": "Related Information",
+      "byte_start": 264866,
+      "byte_end": 265220,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ii-tkn-update-optfields_section_jpc_xzz_sxb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-ii-tkn-update-ex-rest",
+      "title": "REST Example: Updating an Instrument Identifier",
+      "byte_start": 265220,
+      "byte_end": 266216,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ii-tkn-update-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ii-tkn-retrieve-pi-intro",
+      "title": "Retrieve an Instrument Identifier's Payment Instruments",
+      "byte_start": 266216,
+      "byte_end": 266511,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ii-tkn-retrieve-pi-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ii-tkn-retrieve-pi-intro_section_rlf_5mk_dwb",
+      "title": "Endpoint",
+      "byte_start": 266511,
+      "byte_end": 268094,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ii-tkn-retrieve-pi-intro_section_rlf_5mk_dwb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-ii-tkn-retrieve-pi-ex-rest",
+      "title": "REST Example: Retrieving an Instrument Identifier's Payment Instruments",
+      "byte_start": 268094,
+      "byte_end": 278558,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ii-tkn-retrieve-pi-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ii-retrieve-unmasked-card-intro",
+      "title": "Retrieve an Instrument Identifier with an Unmasked Card Number",
+      "byte_start": 278558,
+      "byte_end": 279964,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ii-retrieve-unmasked-card-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ii-retrieve-unmasked-card-intro_tms-ii-retrieve-unmasked-card-header",
+      "title": "Header Configuration",
+      "byte_start": 279964,
+      "byte_end": 281827,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ii-retrieve-unmasked-card-intro_tms-ii-retrieve-unmasked-card-header",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-ii-retrieve-unmasked-card-ex-rest",
+      "title": "REST Example: Retrieving an Instrument Identifier with an Unmasked Card Number",
+      "byte_start": 281827,
+      "byte_end": 283528,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ii-retrieve-unmasked-card-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ii-tkn-delete-intro",
+      "title": "Delete an Instrument Identifier",
+      "byte_start": 283528,
+      "byte_end": 283711,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ii-tkn-delete-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ii-tkn-delete-intro_section_rlf_5mk_dwb",
+      "title": "Endpoint",
+      "byte_start": 283711,
+      "byte_end": 284961,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ii-tkn-delete-intro_section_rlf_5mk_dwb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-ii-tkn-delete-ex-rest",
+      "title": "REST Example: Deleting an Instrument Identifier",
+      "byte_start": 284961,
+      "byte_end": 285466,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ii-tkn-delete-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-partner-ii-intro",
+      "title": "Provision a Network Token for an Existing Instrument Identifier",
+      "byte_start": 285466,
+      "byte_end": 286962,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-partner-ii-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-partner-ii-reqfields",
+      "title": "Required Fields for Provisioning a Network Token for an Existing Instrument Identifier",
+      "byte_start": 286962,
+      "byte_end": 287434,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-partner-ii-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-partner-ii-reqfields_section_jpc_xzz_sxb",
+      "title": "Related Information",
+      "byte_start": 287434,
+      "byte_end": 287803,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-partner-ii-reqfields_section_jpc_xzz_sxb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-net-tkn-partner-ii-optfields",
+      "title": "Optional Fields for Provisioning a Network Token for an Existing Instrument Identifier",
+      "byte_start": 287803,
+      "byte_end": 288122,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-partner-ii-optfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-partner-ii-ex-rest",
+      "title": "REST Example: Provisioning a Network Token for an Existing Instrument Identifier",
+      "byte_start": 288122,
+      "byte_end": 289093,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-partner-ii-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-pay-ii-tkn",
+      "title": "Payments with Instrument Identifier Tokens",
+      "byte_start": 289093,
+      "byte_end": 290794,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-pay-ii-tkn",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ii-create-valid-pay-intro",
+      "title": "Create an Instrument Identifier Token with Validated Payment Details",
+      "byte_start": 290794,
+      "byte_end": 291998,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ii-create-valid-pay-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ii-create-valid-pay-reqfields",
+      "title": "Required Fields for Creating an Instrument Identifier Token with Validated Payment Details",
+      "byte_start": 291998,
+      "byte_end": 295212,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ii-create-valid-pay-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ii-create-valid-pay-optfields",
+      "title": "Optional Field for Creating an Instrument Identifier Token with Validated Payment Details",
+      "byte_start": 295212,
+      "byte_end": 295692,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ii-create-valid-pay-optfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ii-create-valid-pay-optfields_section_jpc_xzz_sxb",
+      "title": "Related Information",
+      "byte_start": 295692,
+      "byte_end": 296064,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ii-create-valid-pay-optfields_section_jpc_xzz_sxb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-ii-create-valid-pay-ex-rest",
+      "title": "REST Example: Creating an Instrument Identifier with Validated Payment Details",
+      "byte_start": 296064,
+      "byte_end": 299638,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ii-create-valid-pay-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ii-tkn-pay-intro",
+      "title": "Authorize a Payment with an Instrument Identifier",
+      "byte_start": 299638,
+      "byte_end": 300495,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ii-tkn-pay-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ii-tkn-pay-reqfields",
+      "title": "Required Fields for Authorizing a Payment with an Instrument Identifier",
+      "byte_start": 300495,
+      "byte_end": 301497,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ii-tkn-pay-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ii-tkn-pay-reqfields_section_jpc_xzz_sxb",
+      "title": "Related Information",
+      "byte_start": 301497,
+      "byte_end": 301848,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ii-tkn-pay-reqfields_section_jpc_xzz_sxb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-ii-tkn-pay-ex-rest",
+      "title": "REST Example: Authorizing a Payment with an Instrument Identifier",
+      "byte_start": 301848,
+      "byte_end": 303761,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ii-tkn-pay-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ii-tkn-pay-create-ex-rest",
+      "title": "REST Example: Authorizing a Payment with an Instrument Identifier While Creating `TMS` Tokens",
+      "byte_start": 303761,
+      "byte_end": 306709,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ii-tkn-pay-create-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ii-tkn-credit-intro",
+      "title": "Making a Credit with an Instrument Identifier",
+      "byte_start": 306709,
+      "byte_end": 307535,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ii-tkn-credit-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ii-tkn-credit-reqfields",
+      "title": "Required Fields for Making a Credit with an Instrument Identifier",
+      "byte_start": 307535,
+      "byte_end": 308633,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ii-tkn-credit-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ii-tkn-credit-reqfields_section_jpc_xzz_sxb",
+      "title": "Related Information",
+      "byte_start": 308633,
+      "byte_end": 308993,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ii-tkn-credit-reqfields_section_jpc_xzz_sxb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-ii-tkn-credit-ex-rest",
+      "title": "REST Example: Making a Credit with an Instrument Identifier",
+      "byte_start": 308993,
+      "byte_end": 310532,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ii-tkn-credit-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-pi-tkn",
+      "title": "Payment Instrument Tokens",
+      "byte_start": 310532,
+      "byte_end": 310851,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-pi-tkn",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-manage-pi-tkn",
+      "title": "Manage Payment Instrument Tokens",
+      "byte_start": 310851,
+      "byte_end": 312386,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-manage-pi-tkn",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-pi-tkn-create-intro",
+      "title": "Create a Payment Instrument",
+      "byte_start": 312386,
+      "byte_end": 313216,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-pi-tkn-create-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-pi-tkn-create-reqfields",
+      "title": "Required Field for Creating a Payment Instrument",
+      "byte_start": 313216,
+      "byte_end": 313548,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-pi-tkn-create-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-pi-tkn-create-optfields",
+      "title": "Optional Fields for Creating a Payment Instrument",
+      "byte_start": 313548,
+      "byte_end": 314698,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-pi-tkn-create-optfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-pi-tkn-create-optfields_section_jpc_xzz_sxb",
+      "title": "Related Information",
+      "byte_start": 314698,
+      "byte_end": 315052,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-pi-tkn-create-optfields_section_jpc_xzz_sxb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-pi-tkn-create-ex-rest",
+      "title": "REST Example: Creating a Payment Instrument",
+      "byte_start": 315052,
+      "byte_end": 317348,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-pi-tkn-create-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-pi-tkn-retrieve-intro",
+      "title": "Retrieve a Payment Instrument",
+      "byte_start": 317348,
+      "byte_end": 318591,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-pi-tkn-retrieve-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-pi-tkn-retrieve-ex-rest",
+      "title": "REST Example: Retrieving a Payment Instrument",
+      "byte_start": 318591,
+      "byte_end": 320560,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-pi-tkn-retrieve-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-pi-tkn-retrieve-pi-card-intro",
+      "title": "Find Payment Instruments by Card Number",
+      "byte_start": 320560,
+      "byte_end": 322372,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-pi-tkn-retrieve-pi-card-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-pi-tkn-retrieve-pi-card-reqfields",
+      "title": "Required Fields for Finding Payment Instruments by Card Number",
+      "byte_start": 322372,
+      "byte_end": 322756,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-pi-tkn-retrieve-pi-card-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-pi-tkn-retrieve-pi-card-reqfields_section_jpc_xzz_sxb",
+      "title": "Related Information",
+      "byte_start": 322756,
+      "byte_end": 323140,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-pi-tkn-retrieve-pi-card-reqfields_section_jpc_xzz_sxb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-pi-tkn-retrieve-pi-card-ex-rest",
+      "title": "REST Example: Finding Payment Instruments by Card Number",
+      "byte_start": 323140,
+      "byte_end": 338721,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-pi-tkn-retrieve-pi-card-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-pi-tkn-retrieve-pi-unmasked-card-intro",
+      "title": "Retrieve a Payment Instrument with an Unmasked Card Number",
+      "byte_start": 338721,
+      "byte_end": 341794,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-pi-tkn-retrieve-pi-unmasked-card-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-pi-tkn-retrieve-pi-unmasked-card-ex-rest",
+      "title": "REST Example: Retrieving a Payment Instrument with an Unmasked Card Number",
+      "byte_start": 341794,
+      "byte_end": 344713,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-pi-tkn-retrieve-pi-unmasked-card-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-pi-tkn-update-intro",
+      "title": "Update a Payment Instrument",
+      "byte_start": 344713,
+      "byte_end": 345948,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-pi-tkn-update-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-pi-tkn-update-optfields",
+      "title": "Optional Fields for Updating a Payment Instrument",
+      "byte_start": 345948,
+      "byte_end": 346727,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-pi-tkn-update-optfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-pi-tkn-update-optfields_section_jpc_xzz_sxb",
+      "title": "Related Information",
+      "byte_start": 346727,
+      "byte_end": 347081,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-pi-tkn-update-optfields_section_jpc_xzz_sxb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-pi-tkn-update-ex-rest",
+      "title": "REST Example: Updating a Payment Instrument",
+      "byte_start": 347081,
+      "byte_end": 349567,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-pi-tkn-update-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-pi-tkn-delete-intro",
+      "title": "Delete a Payment Instrument",
+      "byte_start": 349567,
+      "byte_end": 350807,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-pi-tkn-delete-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-pi-tkn-delete-reqfields",
+      "title": "Required Fields for Deleting a Payment Instrument",
+      "byte_start": 350807,
+      "byte_end": 351129,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-pi-tkn-delete-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-pi-tkn-delete-reqfields_section_jpc_xzz_sxb",
+      "title": "Related Information",
+      "byte_start": 351129,
+      "byte_end": 351483,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-pi-tkn-delete-reqfields_section_jpc_xzz_sxb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-pi-tkn-delete-ex-rest",
+      "title": "REST Example: Deleting a Payment Instrument",
+      "byte_start": 351483,
+      "byte_end": 352044,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-pi-tkn-delete-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-pay-pi-tkn",
+      "title": "Payments with Payment Instrument Tokens",
+      "byte_start": 352044,
+      "byte_end": 353431,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-pay-pi-tkn",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-pi-tkn-pay-intro",
+      "title": "Authorizing a Payment with a Payment Instrument",
+      "byte_start": 353431,
+      "byte_end": 353683,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-pi-tkn-pay-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-pi-tkn-pay-intro_section_dqc_gyd_pwb",
+      "title": "Endpoint",
+      "byte_start": 353683,
+      "byte_end": 354362,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-pi-tkn-pay-intro_section_dqc_gyd_pwb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-pi-tkn-pay-reqfields",
+      "title": "Required Fields for Authorizing a Payment with a Payment Instrument",
+      "byte_start": 354362,
+      "byte_end": 355458,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-pi-tkn-pay-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-pi-tkn-pay-reqfields_section_jpc_xzz_sxb",
+      "title": "Related Information",
+      "byte_start": 355458,
+      "byte_end": 355809,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-pi-tkn-pay-reqfields_section_jpc_xzz_sxb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-pi-tkn-pay-optfields",
+      "title": "Optional Fields for Authorizing a Payment with a Payment Instrument",
+      "byte_start": 355809,
+      "byte_end": 358801,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-pi-tkn-pay-optfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-pi-tkn-pay-optfields_section_jpc_xzz_sxb",
+      "title": "Related Information",
+      "byte_start": 358801,
+      "byte_end": 359152,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-pi-tkn-pay-optfields_section_jpc_xzz_sxb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-pi-tkn-pay-ex-rest",
+      "title": "REST Example: Authorizing a Payment with a Payment Instrument",
+      "byte_start": 359152,
+      "byte_end": 361493,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-pi-tkn-pay-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-pi-tkn-credit-intro",
+      "title": "Making a Credit with a Payment Instrument",
+      "byte_start": 361493,
+      "byte_end": 361704,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-pi-tkn-credit-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-pi-tkn-credit-intro_section_mks_hyd_pwb",
+      "title": "Endpoint",
+      "byte_start": 361704,
+      "byte_end": 362397,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-pi-tkn-credit-intro_section_mks_hyd_pwb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-pi-tkn-credit-reqfields",
+      "title": "Required Fields for Making a Credit with a Payment Instrument",
+      "byte_start": 362397,
+      "byte_end": 363487,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-pi-tkn-credit-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-pi-tkn-credit-reqfields_section_jpc_xzz_sxb",
+      "title": "Related Information",
+      "byte_start": 363487,
+      "byte_end": 363847,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-pi-tkn-credit-reqfields_section_jpc_xzz_sxb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-pi-tkn-credit-ex-rest",
+      "title": "REST Example: Making a Credit with a Payment Instrument",
+      "byte_start": 363847,
+      "byte_end": 365574,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-pi-tkn-credit-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-tkn",
+      "title": "Customer Tokens",
+      "byte_start": 365574,
+      "byte_end": 365805,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-tkn",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-manage-cust-tkn",
+      "title": "Manage Customer Tokens",
+      "byte_start": 365805,
+      "byte_end": 367091,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-manage-cust-tkn",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-tkn-create-intro",
+      "title": "Create a Customer",
+      "byte_start": 367091,
+      "byte_end": 367882,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-tkn-create-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-tkn-create-reqfields",
+      "title": "Required Fields for Creating a Customer",
+      "byte_start": 367882,
+      "byte_end": 368321,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-tkn-create-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-tkn-create-reqfields_section_jpc_xzz_sxb",
+      "title": "Related Information",
+      "byte_start": 368321,
+      "byte_end": 368681,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-tkn-create-reqfields_section_jpc_xzz_sxb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-cust-tkn-create-ex-rest",
+      "title": "REST Example: Creating a Customer",
+      "byte_start": 368681,
+      "byte_end": 369892,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-tkn-create-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-tkn-retrieve-intro",
+      "title": "Retrieve a Customer",
+      "byte_start": 369892,
+      "byte_end": 371044,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-tkn-retrieve-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-tkn-retrieve-ex-rest",
+      "title": "REST Example: Retrieving a Customer",
+      "byte_start": 371044,
+      "byte_end": 372071,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-tkn-retrieve-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-tkn-update-intro",
+      "title": "Update a Customer",
+      "byte_start": 372071,
+      "byte_end": 373281,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-tkn-update-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-tkn-update-optfields",
+      "title": "Optional Fields for Updating a Customer",
+      "byte_start": 373281,
+      "byte_end": 373720,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-tkn-update-optfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-tkn-update-optfields_section_jpc_xzz_sxb",
+      "title": "Related Information",
+      "byte_start": 373720,
+      "byte_end": 374080,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-tkn-update-optfields_section_jpc_xzz_sxb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-cust-tkn-update-ex-rest",
+      "title": "REST Example: Updating a Customer",
+      "byte_start": 374080,
+      "byte_end": 375107,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-tkn-update-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-tkn-delete-intro",
+      "title": "Delete a Customer",
+      "byte_start": 375107,
+      "byte_end": 376256,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-tkn-delete-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-tkn-delete-reqfields",
+      "title": "Required Fields for Deleting a Customer Token",
+      "byte_start": 376256,
+      "byte_end": 376557,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-tkn-delete-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-tkn-delete-reqfields_section_jpc_xzz_sxb",
+      "title": "Related Information",
+      "byte_start": 376557,
+      "byte_end": 376917,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-tkn-delete-reqfields_section_jpc_xzz_sxb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-cust-tkn-delete-ex-rest",
+      "title": "REST Example: Deleting a Customer",
+      "byte_start": 376917,
+      "byte_end": 377401,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-tkn-delete-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-tkn-retrieve-default-pay-unmasked-intro",
+      "title": "Retrieve a Customer's Default Payment with an Unmasked Card Number",
+      "byte_start": 377401,
+      "byte_end": 380464,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-tkn-retrieve-default-pay-unmasked-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-tkn-retrieve-default-pay-unmasked-ex-rest",
+      "title": "REST Example: Retrieving a Customer's Default Payment with an Unmasked Card Number",
+      "byte_start": 380464,
+      "byte_end": 385211,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-tkn-retrieve-default-pay-unmasked-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-tkn-retrieve-default-pay-ship-intro",
+      "title": "Retrieve a Customer's Default Payment and Shipping Details",
+      "byte_start": 385211,
+      "byte_end": 386460,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-tkn-retrieve-default-pay-ship-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-tkn-retrieve-default-pay-ship-ex-rest",
+      "title": "REST Example: Retrieving a Customer's Default Payment and Shipping Details",
+      "byte_start": 386460,
+      "byte_end": 391991,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-tkn-retrieve-default-pay-ship-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-pay-cust-tkn",
+      "title": "Payments with Customer Tokens",
+      "byte_start": 391991,
+      "byte_end": 393435,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-pay-cust-tkn",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-tkn-create-valid-pay-intro",
+      "title": "Create a Customer Token with Validated Payment Details",
+      "byte_start": 393435,
+      "byte_end": 394356,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-tkn-create-valid-pay-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-tkn-create-valid-pay-reqfields",
+      "title": "Required Fields for Creating a Customer Token with Validated Payment Details Using the REST API",
+      "byte_start": 394356,
+      "byte_end": 395394,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-tkn-create-valid-pay-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-tkn-create-valid-pay-optfields",
+      "title": "Optional Field for Creating a Customer Token with Validated Payment Details Using the REST API",
+      "byte_start": 395394,
+      "byte_end": 395703,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-tkn-create-valid-pay-optfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-tkn-create-valid-pay-optfields_section_jpc_xzz_sxb",
+      "title": "Related Information",
+      "byte_start": 395703,
+      "byte_end": 396093,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-tkn-create-valid-pay-optfields_section_jpc_xzz_sxb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-cust-tkn-create-valid-pay-ex-rest",
+      "title": "REST Example: Creating a Customer Token with Validated Payment Details",
+      "byte_start": 396093,
+      "byte_end": 400179,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-tkn-create-valid-pay-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-tkn-pay-intro",
+      "title": "Authorizing a Payment with a Customer Token",
+      "byte_start": 400179,
+      "byte_end": 401013,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-tkn-pay-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-tkn-pay-reqfields",
+      "title": "Required Fields for Authorizing a Payment with a Customer Token",
+      "byte_start": 401013,
+      "byte_end": 401980,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-tkn-pay-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-tkn-pay-reqfields_section_jpc_xzz_sxb",
+      "title": "Related Information",
+      "byte_start": 401980,
+      "byte_end": 402337,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-tkn-pay-reqfields_section_jpc_xzz_sxb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-cust-tkn-pay-ex-rest",
+      "title": "REST Example: Authorizing a Payment with a Customer Token",
+      "byte_start": 402337,
+      "byte_end": 404628,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-tkn-pay-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-tkn-pay-nt-ex-rest",
+      "title": "REST Example: Authorizing a Payment Using a Customer Token Linked to a Network Token",
+      "byte_start": 404628,
+      "byte_end": 407425,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-tkn-pay-nt-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-tkn-credit-intro",
+      "title": "Making a Credit with a Customer Token",
+      "byte_start": 407425,
+      "byte_end": 408237,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-tkn-credit-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-tkn-credit-reqfields",
+      "title": "Required Fields for Making a Credit with a Customer Token",
+      "byte_start": 408237,
+      "byte_end": 409153,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-tkn-credit-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-tkn-credit-reqfields_section_jpc_xzz_sxb",
+      "title": "Related Information",
+      "byte_start": 409153,
+      "byte_end": 409519,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-tkn-credit-reqfields_section_jpc_xzz_sxb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-cust-tkn-credit-ex-rest",
+      "title": "REST Example: Making a Credit with a Customer Token",
+      "byte_start": 409519,
+      "byte_end": 411458,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-tkn-credit-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ship-tkn",
+      "title": "Shipping Address Tokens",
+      "byte_start": 411458,
+      "byte_end": 411907,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ship-tkn",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-manage-ship-addr-tkn",
+      "title": "Manage Shipping Address Tokens",
+      "byte_start": 411907,
+      "byte_end": 413389,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-manage-ship-addr-tkn",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ship-addr-tkn-create-intro",
+      "title": "Create a Customer Shipping Address",
+      "byte_start": 413389,
+      "byte_end": 413595,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ship-addr-tkn-create-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ship-addr-tkn-create-intro_section_hqw_rjt_gwb",
+      "title": "Endpoint",
+      "byte_start": 413595,
+      "byte_end": 415034,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ship-addr-tkn-create-intro_section_hqw_rjt_gwb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-ship-addr-tkn-create-reqfields",
+      "title": "Required Fields for Creating a Customer Shipping Address",
+      "byte_start": 415034,
+      "byte_end": 415571,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ship-addr-tkn-create-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ship-addr-tkn-create-reqfields_section_jpc_xzz_sxb",
+      "title": "Related Information",
+      "byte_start": 415571,
+      "byte_end": 415946,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ship-addr-tkn-create-reqfields_section_jpc_xzz_sxb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-ship-addr-tkn-create-ex-rest",
+      "title": "REST Example: Creating a Customer Shipping Address",
+      "byte_start": 415946,
+      "byte_end": 417081,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ship-addr-tkn-create-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ship-addr-add-default-addr-intro",
+      "title": "Add a Default Shipping Address",
+      "byte_start": 417081,
+      "byte_end": 418433,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ship-addr-add-default-addr-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ship-addr-add-default-addr-reqfields",
+      "title": "Required Fields for Adding a Default Shipping Address",
+      "byte_start": 418433,
+      "byte_end": 419008,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ship-addr-add-default-addr-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ship-addr-add-default-addr-reqfields_section_jpc_xzz_sxb",
+      "title": "Related Information",
+      "byte_start": 419008,
+      "byte_end": 419401,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ship-addr-add-default-addr-reqfields_section_jpc_xzz_sxb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-ship-addr-add-default-addr-ex-rest",
+      "title": "REST Example: Adding a Default Shipping Address",
+      "byte_start": 419401,
+      "byte_end": 420754,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ship-addr-add-default-addr-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ship-addr-add-nondefault-addr-intro",
+      "title": "Add a Non-Default Shipping Address",
+      "byte_start": 420754,
+      "byte_end": 420987,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ship-addr-add-nondefault-addr-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ship-addr-add-nondefault-addr-intro_section_xwm_zlp_mwb",
+      "title": "Endpoint",
+      "byte_start": 420987,
+      "byte_end": 422277,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ship-addr-add-nondefault-addr-intro_section_xwm_zlp_mwb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-ship-addr-add-nondefault-addr-reqfields",
+      "title": "Required Fields for Adding a Non-Default Shipping Address",
+      "byte_start": 422277,
+      "byte_end": 422932,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ship-addr-add-nondefault-addr-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ship-addr-add-nondefault-addr-reqfields_section_jpc_xzz_sxb",
+      "title": "Related Information",
+      "byte_start": 422932,
+      "byte_end": 423334,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ship-addr-add-nondefault-addr-reqfields_section_jpc_xzz_sxb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-ship-addr-add-nondefault-addr-ex-rest",
+      "title": "REST Example: Adding a Non-Default Shipping Address",
+      "byte_start": 423334,
+      "byte_end": 424841,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ship-addr-add-nondefault-addr-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ship-addr-change-default-addr-intro",
+      "title": "Change a Default Shipping Address",
+      "byte_start": 424841,
+      "byte_end": 426653,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ship-addr-change-default-addr-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ship-addr-change-default-addr-reqfields",
+      "title": "Required Fields for Changing a Default Shipping Address",
+      "byte_start": 426653,
+      "byte_end": 426948,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ship-addr-change-default-addr-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ship-addr-change-default-addr-reqfields_section_jpc_xzz_sxb",
+      "title": "Related Information",
+      "byte_start": 426948,
+      "byte_end": 427350,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ship-addr-change-default-addr-reqfields_section_jpc_xzz_sxb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-ship-addr-change-default-addr-ex-rest",
+      "title": "REST Example: Changing Default Shipping Address",
+      "byte_start": 427350,
+      "byte_end": 428506,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ship-addr-change-default-addr-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ship-addr-tkn-retrieve-intro",
+      "title": "Retrieve a Customer Shipping Address",
+      "byte_start": 428506,
+      "byte_end": 428722,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ship-addr-tkn-retrieve-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ship-addr-tkn-retrieve-intro_section_hqw_rjt_gwb",
+      "title": "Endpoint",
+      "byte_start": 428722,
+      "byte_end": 430378,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ship-addr-tkn-retrieve-intro_section_hqw_rjt_gwb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-ship-addr-tkn-retrieve-ex-rest",
+      "title": "REST Example: Retrieving a Shipping Address",
+      "byte_start": 430378,
+      "byte_end": 431246,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ship-addr-tkn-retrieve-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ship-addr-tkn-retrieve-all-intro",
+      "title": "Retrieve All Customer Shipping Addresses",
+      "byte_start": 431246,
+      "byte_end": 431482,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ship-addr-tkn-retrieve-all-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ship-addr-tkn-retrieve-all-intro_section_hqw_rjt_gwb",
+      "title": "Endpoint",
+      "byte_start": 431482,
+      "byte_end": 432974,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ship-addr-tkn-retrieve-all-intro_section_hqw_rjt_gwb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-ship-addr-tkn-retrieve-all-ex-rest",
+      "title": "REST Example: Retrieving All Customer Shipping Addresses",
+      "byte_start": 432974,
+      "byte_end": 434918,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ship-addr-tkn-retrieve-all-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ship-addr-tkn-update-intro",
+      "title": "Update a Customer Shipping Address",
+      "byte_start": 434918,
+      "byte_end": 435124,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ship-addr-tkn-update-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ship-addr-tkn-update-intro_section_hqw_rjt_gwb",
+      "title": "Endpoint",
+      "byte_start": 435124,
+      "byte_end": 436778,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ship-addr-tkn-update-intro_section_hqw_rjt_gwb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-ship-addr-tkn-update-reqfields",
+      "title": "Required Fields for Updating a Customer Shipping Address",
+      "byte_start": 436778,
+      "byte_end": 437189,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ship-addr-tkn-update-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ship-addr-tkn-update-reqfields_section_jpc_xzz_sxb",
+      "title": "Related Information",
+      "byte_start": 437189,
+      "byte_end": 437564,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ship-addr-tkn-update-reqfields_section_jpc_xzz_sxb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-ship-addr-tkn-update-ex-rest",
+      "title": "REST Example: Updating a Customer Shipping Address",
+      "byte_start": 437564,
+      "byte_end": 438679,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ship-addr-tkn-update-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ship-addr-tkn-delete-intro",
+      "title": "Delete a Customer Shipping Address",
+      "byte_start": 438679,
+      "byte_end": 438885,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ship-addr-tkn-delete-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ship-addr-tkn-delete-intro_section_hqw_rjt_gwb",
+      "title": "Endpoint",
+      "byte_start": 438885,
+      "byte_end": 440701,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ship-addr-tkn-delete-intro_section_hqw_rjt_gwb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-ship-addr-tkn-delete-reqfields",
+      "title": "Required Fields for Deleting a Customer Shipping Address",
+      "byte_start": 440701,
+      "byte_end": 441095,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ship-addr-tkn-delete-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ship-addr-tkn-delete-reqfields_section_jpc_xzz_sxb",
+      "title": "Related Information",
+      "byte_start": 441095,
+      "byte_end": 441470,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ship-addr-tkn-delete-reqfields_section_jpc_xzz_sxb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-ship-addr-tkn-delete-ex-rest",
+      "title": "REST Example: Deleting a Customer Shipping Address",
+      "byte_start": 441470,
+      "byte_end": 442108,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ship-addr-tkn-delete-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-pay-ship-addr-tkn",
+      "title": "Payments with Shipping Address Tokens",
+      "byte_start": 442108,
+      "byte_end": 443264,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-pay-ship-addr-tkn",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ship-addr-make-pay-nondefault-ship-addr-intro",
+      "title": "Authorizing a Payment with a Non-Default Shipping Address",
+      "byte_start": 443264,
+      "byte_end": 443599,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ship-addr-make-pay-nondefault-ship-addr-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ship-addr-make-pay-nondefault-ship-addr-intro_section_m1k_n4p_mwb",
+      "title": "Endpoint",
+      "byte_start": 443599,
+      "byte_end": 444452,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ship-addr-make-pay-nondefault-ship-addr-intro_section_m1k_n4p_mwb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-ship-addr-make-pay-nondefault-ship-addr-reqfields",
+      "title": "Required Fields for Authorizing a Payment with a Non-Default Shipping Address",
+      "byte_start": 444452,
+      "byte_end": 445630,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ship-addr-make-pay-nondefault-ship-addr-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ship-addr-make-pay-nondefault-ship-addr-reqfields_section_jpc_xzz_sxb",
+      "title": "Related Information",
+      "byte_start": 445630,
+      "byte_end": 446068,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ship-addr-make-pay-nondefault-ship-addr-reqfields_section_jpc_xzz_sxb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-ship-addr-make-pay-nondefault-ship-addr-ex-rest",
+      "title": "REST Example: Authorizing a Payment with a Non-Default Shipping Address",
+      "byte_start": 446068,
+      "byte_end": 448458,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ship-addr-make-pay-nondefault-ship-addr-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-pi-tkn",
+      "title": "Customer Payment Instruments",
+      "byte_start": 448458,
+      "byte_end": 448775,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-pi-tkn",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-manage-cust-pi-tkn",
+      "title": "Manage Customer Payment Instruments",
+      "byte_start": 448775,
+      "byte_end": 450617,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-manage-cust-pi-tkn",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-pi-tkn-create-intro",
+      "title": "Create a Customer Payment Instrument",
+      "byte_start": 450617,
+      "byte_end": 451944,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-pi-tkn-create-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-pi-tkn-create-reqfields",
+      "title": "Required Fields for Creating a Customer Payment Instrument",
+      "byte_start": 451944,
+      "byte_end": 452220,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-pi-tkn-create-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-pi-tkn-create-optfields",
+      "title": "Optional Fields for Creating a Customer Payment Instrument",
+      "byte_start": 452220,
+      "byte_end": 453471,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-pi-tkn-create-optfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-pi-tkn-create-optfields_section_jpc_xzz_sxb",
+      "title": "Related Information",
+      "byte_start": 453471,
+      "byte_end": 453840,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-pi-tkn-create-optfields_section_jpc_xzz_sxb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-cust-pi-tkn-create-ex-rest",
+      "title": "REST Example: Creating a Customer Payment Instrument",
+      "byte_start": 453840,
+      "byte_end": 456176,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-pi-tkn-create-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-pi-tkn-add-default-pi-ii-intro",
+      "title": "Add a Default Payment Instrument Using Instrument Identifier",
+      "byte_start": 456176,
+      "byte_end": 457632,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-pi-tkn-add-default-pi-ii-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-pi-tkn-add-default-pi-ii-reqfields",
+      "title": "Required Fields for Adding a Default Payment Instrument Using Instrument Identifier Using the REST API",
+      "byte_start": 457632,
+      "byte_end": 458027,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-pi-tkn-add-default-pi-ii-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-pi-tkn-add-default-pi-ii-reqfields_section_jpc_xzz_sxb",
+      "title": "Related Information",
+      "byte_start": 458027,
+      "byte_end": 458429,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-pi-tkn-add-default-pi-ii-reqfields_section_jpc_xzz_sxb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-cust-pi-tkn-add-default-pi-ii-optfields",
+      "title": "Optional Fields for Adding a Default Payment Instrument Using Instrument Identifier Using the REST API",
+      "byte_start": 458429,
+      "byte_end": 459640,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-pi-tkn-add-default-pi-ii-optfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-pi-tkn-add-default-pi-ii-optfields_section_jpc_xzz_sxb",
+      "title": "Related Information",
+      "byte_start": 459640,
+      "byte_end": 460042,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-pi-tkn-add-default-pi-ii-optfields_section_jpc_xzz_sxb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-cust-pi-tkn-add-default-pi-ii-ex-rest",
+      "title": "REST Example: Adding a Default Payment Instrument Using Instrument Identifier",
+      "byte_start": 460042,
+      "byte_end": 463097,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-pi-tkn-add-default-pi-ii-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-pi-tkn-add-default-pi-valid-intro",
+      "title": "Add a Default Payment Instrument with Validated Payment",
+      "byte_start": 463097,
+      "byte_end": 464078,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-pi-tkn-add-default-pi-valid-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-pi-tkn-add-default-pi-valid-reqfields",
+      "title": "Required Fields for Adding a Default Payment Instrument with Validated Payment Using the REST API",
+      "byte_start": 464078,
+      "byte_end": 465322,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-pi-tkn-add-default-pi-valid-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-pi-tkn-add-default-pi-valid-optfields",
+      "title": "Optional Field for Adding a Default Payment Instrument with Validated Payment Using the REST API",
+      "byte_start": 465322,
+      "byte_end": 465714,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-pi-tkn-add-default-pi-valid-optfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-pi-tkn-add-default-pi-valid-optfields_section_jpc_xzz_sxb",
+      "title": "Related Information",
+      "byte_start": 465714,
+      "byte_end": 466125,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-pi-tkn-add-default-pi-valid-optfields_section_jpc_xzz_sxb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-cust-pi-tkn-add-default-pi-valid-ex-rest",
+      "title": "REST Example: Adding a Default Payment Instrument with Validated Payment",
+      "byte_start": 466125,
+      "byte_end": 470304,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-pi-tkn-add-default-pi-valid-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-pi-tkn-add-nondefault-pi-ii-intro",
+      "title": "Add a Non-Default Payment Instrument Using Instrument Identifier",
+      "byte_start": 470304,
+      "byte_end": 472216,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-pi-tkn-add-nondefault-pi-ii-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-pi-tkn-add-nondefault-pi-ii-reqfields",
+      "title": "Required Fields for Adding a Non-Default Payment Instrument Using Instrument Identifier",
+      "byte_start": 472216,
+      "byte_end": 472765,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-pi-tkn-add-nondefault-pi-ii-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-pi-tkn-add-nondefault-pi-ii-reqfields_section_jpc_xzz_sxb",
+      "title": "Related Information",
+      "byte_start": 472765,
+      "byte_end": 473176,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-pi-tkn-add-nondefault-pi-ii-reqfields_section_jpc_xzz_sxb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-cust-pi-tkn-add-nondefault-pi-ii-optfields",
+      "title": "Optional Fields for Adding a Non-Default Payment Instrument Using Instrument Identifier",
+      "byte_start": 473176,
+      "byte_end": 474501,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-pi-tkn-add-nondefault-pi-ii-optfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-pi-tkn-add-nondefault-pi-ii-optfields_section_jpc_xzz_sxb",
+      "title": "Related Information",
+      "byte_start": 474501,
+      "byte_end": 474912,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-pi-tkn-add-nondefault-pi-ii-optfields_section_jpc_xzz_sxb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-cust-pi-tkn-add-nondefault-pi-ii-ex-rest",
+      "title": "REST Example: Adding a Non-Default Payment Instrument Using Instrument Identifier",
+      "byte_start": 474912,
+      "byte_end": 478001,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-pi-tkn-add-nondefault-pi-ii-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-pi-tkn-add-nondefault-pi-valid-intro",
+      "title": "Add a Non-Default Payment Instrument with Validated Payment",
+      "byte_start": 478001,
+      "byte_end": 479275,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-pi-tkn-add-nondefault-pi-valid-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-pi-tkn-add-nondefault-pi-valid-reqfields",
+      "title": "Required Fields for Adding a Non-Default Payment Instrument with Validated Payment Using the REST API",
+      "byte_start": 479275,
+      "byte_end": 480537,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-pi-tkn-add-nondefault-pi-valid-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-pi-tkn-add-nondefault-pi-valid-optfields",
+      "title": "Optional Field for Adding a Non-Default Payment Instrument with Validated Payment Using the REST API",
+      "byte_start": 480537,
+      "byte_end": 480946,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-pi-tkn-add-nondefault-pi-valid-optfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-pi-tkn-add-nondefault-pi-valid-optfields_section_jpc_xzz_sxb",
+      "title": "Related Information",
+      "byte_start": 480946,
+      "byte_end": 481366,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-pi-tkn-add-nondefault-pi-valid-optfields_section_jpc_xzz_sxb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-cust-pi-tkn-add-nondefault-pi-valid-ex-rest",
+      "title": "REST Example: Adding a Non-Default Payment Instrument with Validated Payment",
+      "byte_start": 481366,
+      "byte_end": 485566,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-pi-tkn-add-nondefault-pi-valid-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-pi-tkn-change-default-pi-intro",
+      "title": "Change a Customer's Default Payment Instrument",
+      "byte_start": 485566,
+      "byte_end": 487402,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-pi-tkn-change-default-pi-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-pi-tkn-change-default-pi-reqfields",
+      "title": "Required Fields for Changing a Customer's Default Payment Instrument",
+      "byte_start": 487402,
+      "byte_end": 487729,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-pi-tkn-change-default-pi-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-pi-tkn-change-default-pi-reqfields_section_jpc_xzz_sxb",
+      "title": "Related Information",
+      "byte_start": 487729,
+      "byte_end": 488131,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-pi-tkn-change-default-pi-reqfields_section_jpc_xzz_sxb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-cust-pi-tkn-change-default-pi-ex-rest",
+      "title": "REST Example: Changing a Customer's Default Payment Instrument",
+      "byte_start": 488131,
+      "byte_end": 490519,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-pi-tkn-change-default-pi-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-pi-tkn-retrieve-intro",
+      "title": "Retrieve a Customer Payment Instrument",
+      "byte_start": 490519,
+      "byte_end": 492273,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-pi-tkn-retrieve-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-pi-tkn-retrieve-ex-rest",
+      "title": "REST Example: Retrieving a Customer Payment Instrument",
+      "byte_start": 492273,
+      "byte_end": 494286,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-pi-tkn-retrieve-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-pi-tkn-retrieve-unmasked-intro",
+      "title": "Retrieve a Customer Payment Instrument with an Unmasked Card Number",
+      "byte_start": 494286,
+      "byte_end": 497822,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-pi-tkn-retrieve-unmasked-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-pi-tkn-retrieve-unmasked-ex-rest",
+      "title": "REST Example: Retrieving a Customer Payment Instrument with an Unmasked Card Number",
+      "byte_start": 497822,
+      "byte_end": 500518,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-pi-tkn-retrieve-unmasked-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-pi-tkn-retrieve-mult-intro",
+      "title": "List Payment Instruments for a Customer",
+      "byte_start": 500518,
+      "byte_end": 502298,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-pi-tkn-retrieve-mult-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-pi-tkn-retrieve-mult-reqfields",
+      "title": "Required Fields for Listing Payment Instruments for a Customer",
+      "byte_start": 502298,
+      "byte_end": 502605,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-pi-tkn-retrieve-mult-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-pi-tkn-retrieve-mult-reqfields_section_jpc_xzz_sxb",
+      "title": "Related Information",
+      "byte_start": 502605,
+      "byte_end": 502995,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-pi-tkn-retrieve-mult-reqfields_section_jpc_xzz_sxb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-cust-pi-tkn-retrieve-mult-ex-rest",
+      "title": "REST Example: Listing Payment Instruments for a Customer",
+      "byte_start": 502995,
+      "byte_end": 509804,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-pi-tkn-retrieve-mult-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-pi-tkn-update-intro",
+      "title": "Update a Customer Payment Instrument",
+      "byte_start": 509804,
+      "byte_end": 511559,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-pi-tkn-update-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-pi-tkn-update-reqfields",
+      "title": "Required Fields for Updating a Customer Payment Instrument",
+      "byte_start": 511559,
+      "byte_end": 512008,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-pi-tkn-update-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-pi-tkn-update-reqfields_section_jpc_xzz_sxb",
+      "title": "Related Information",
+      "byte_start": 512008,
+      "byte_end": 512377,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-pi-tkn-update-reqfields_section_jpc_xzz_sxb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-cust-pi-tkn-update-optfields",
+      "title": "Optional Fields for Updating a Customer Payment Instrument",
+      "byte_start": 512377,
+      "byte_end": 513542,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-pi-tkn-update-optfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-pi-tkn-update-optfields_section_jpc_xzz_sxb",
+      "title": "Related Information",
+      "byte_start": 513542,
+      "byte_end": 513911,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-pi-tkn-update-optfields_section_jpc_xzz_sxb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-cust-pi-tkn-update-ex-rest",
+      "title": "REST Example: Updating a Customer Payment Instrument",
+      "byte_start": 513911,
+      "byte_end": 516309,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-pi-tkn-update-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-pi-tkn-delete-intro",
+      "title": "Delete a Customer Payment Instrument",
+      "byte_start": 516309,
+      "byte_end": 518231,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-pi-tkn-delete-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-pi-tkn-delete-ex-rest",
+      "title": "REST Example: Deleting a Customer Payment Instrument",
+      "byte_start": 518231,
+      "byte_end": 518820,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-pi-tkn-delete-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-pay-cust-pi-tkn",
+      "title": "Payments with Customer Payment Instruments",
+      "byte_start": 518820,
+      "byte_end": 520377,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-pay-cust-pi-tkn",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-pi-tkn-pay-nondefault-pi-intro",
+      "title": "Authorizing a Payment with a Non-Default Payment Instrument",
+      "byte_start": 520377,
+      "byte_end": 521370,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-pi-tkn-pay-nondefault-pi-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-pi-tkn-pay-nondefault-pi-reqfields",
+      "title": "Required Fields for Authorizing a Payment with a Non-Default Payment Instrument",
+      "byte_start": 521370,
+      "byte_end": 522590,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-pi-tkn-pay-nondefault-pi-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-pi-tkn-pay-nondefault-pi-reqfields_section_jpc_xzz_sxb",
+      "title": "Related Information",
+      "byte_start": 522590,
+      "byte_end": 522998,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-pi-tkn-pay-nondefault-pi-reqfields_section_jpc_xzz_sxb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-cust-pi-tkn-pay-nondefault-pi-optfields",
+      "title": "Optional Fields for Authorizing a Payment with a Non-Default Payment Instrument",
+      "byte_start": 522998,
+      "byte_end": 526083,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-pi-tkn-pay-nondefault-pi-optfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-pi-tkn-pay-nondefault-pi-optfields_section_jpc_xzz_sxb",
+      "title": "Related Information",
+      "byte_start": 526083,
+      "byte_end": 526491,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-pi-tkn-pay-nondefault-pi-optfields_section_jpc_xzz_sxb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-cust-pi-tkn-pay-nondefault-pi-ex-rest",
+      "title": "REST Example: Authorizing a Payment with a Non-Default Payment Instrument",
+      "byte_start": 526491,
+      "byte_end": 528610,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-pi-tkn-pay-nondefault-pi-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-pi-tkn-credit-nondefault-pi-intro",
+      "title": "Making a Credit with a Non-Default Payment Instrument",
+      "byte_start": 528610,
+      "byte_end": 529570,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-pi-tkn-credit-nondefault-pi-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-pi-tkn-credit-nondefault-pi-reqfields",
+      "title": "Required Fields for Making a Credit with a Non-Default Payment Instrument",
+      "byte_start": 529570,
+      "byte_end": 530792,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-pi-tkn-credit-nondefault-pi-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-pi-tkn-credit-nondefault-pi-reqfields_section_jpc_xzz_sxb",
+      "title": "Related Information",
+      "byte_start": 530792,
+      "byte_end": 531209,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-pi-tkn-credit-nondefault-pi-reqfields_section_jpc_xzz_sxb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-cust-pi-tkn-credit-nondefault-pi-optfields",
+      "title": "Optional Fields for Making a Credit with a Non-Default Payment Instrument",
+      "byte_start": 531209,
+      "byte_end": 534285,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-pi-tkn-credit-nondefault-pi-optfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-cust-pi-tkn-credit-nondefault-pi-optfields_section_jpc_xzz_sxb",
+      "title": "Related Information",
+      "byte_start": 534285,
+      "byte_end": 534702,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-pi-tkn-credit-nondefault-pi-optfields_section_jpc_xzz_sxb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-cust-pi-tkn-credit-nondefault-pi-ex-rest",
+      "title": "REST Example: Making a Credit with a Non-Default Payment Instrument",
+      "byte_start": 534702,
+      "byte_end": 536529,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-cust-pi-tkn-credit-nondefault-pi-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-passkey-intro",
+      "title": "`Payment Passkey`",
+      "byte_start": 536529,
+      "byte_end": 537580,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-passkey-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-passkey-intro_section-workflow",
+      "title": "`Payment Passkey` Workflow",
+      "byte_start": 537580,
+      "byte_end": 539138,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-passkey-intro_section-workflow",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-passkey-intro_fig",
+      "title": "Figure:",
+      "byte_start": 539138,
+      "byte_end": 539357,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-passkey-intro_fig",
+      "heading_level": 4
+    },
+    {
+      "anchor": "tms-iframe-mapping",
+      "title": "Iframe Requirements",
+      "byte_start": 539357,
+      "byte_end": 542934,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-iframe-mapping",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-authenticate-intro",
+      "title": "Create Tokenized Card Authentication Options",
+      "byte_start": 542934,
+      "byte_end": 544746,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-authenticate-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-authenticate-reqfields",
+      "title": "Required Fields for Creating Tokenized Card Authentication Options",
+      "byte_start": 544746,
+      "byte_end": 548604,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-authenticate-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-authenticate-ex-rest",
+      "title": "REST Example: Creating Tokenized Card Authentication Options",
+      "byte_start": 548604,
+      "byte_end": 553722,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-authenticate-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-authenticate",
+      "title": "Authenticate with Passkey",
+      "byte_start": 553722,
+      "byte_end": 554944,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-authenticate",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-authenticate-step1",
+      "title": "Step 1: Cardholder authentication with FIDO",
+      "byte_start": 554944,
+      "byte_end": 555308,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-authenticate-step1",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-authenticate-step2",
+      "title": "Step 2: Create payment credentials with FIDO data",
+      "byte_start": 555308,
+      "byte_end": 556332,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-authenticate-step2",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-auth-step2-reqfields",
+      "title": "Required Fields for Creating Tokenized Credentials with Authenticated Passkey Service Credentials",
+      "byte_start": 556332,
+      "byte_end": 562282,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-auth-step2-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-auth-step2-ex-rest",
+      "title": "REST Example: Creating Tokenized Credentials with Authenticated Passkey Service Credentials",
+      "byte_start": 562282,
+      "byte_end": 566247,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-auth-step2-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-registration",
+      "title": "Register a Passkey and Authenticate",
+      "byte_start": 566247,
+      "byte_end": 567255,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-registration",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-reg-step1",
+      "title": "Step 1: Determine FIDO availability",
+      "byte_start": 567255,
+      "byte_end": 568314,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-reg-step1",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-reg-step1-reqfields",
+      "title": "Required Fields for Creating Tokenized Card Authentication Registration",
+      "byte_start": 568314,
+      "byte_end": 572248,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-reg-step1-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-reg-step1-optfields",
+      "title": "Optional Fields for Creating Tokenized Card Authentication Registration",
+      "byte_start": 572248,
+      "byte_end": 572907,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-reg-step1-optfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-reg-step1-ex-rest",
+      "title": "REST Example: Creating Tokenized Card Authentication Registration",
+      "byte_start": 572907,
+      "byte_end": 574678,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-reg-step1-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-reg-step2",
+      "title": "Step 2: Cardholder authentication with FIDO",
+      "byte_start": 574678,
+      "byte_end": 575030,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-reg-step2",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-reg-step3",
+      "title": "Step 3: Create payment credentials with FIDO data",
+      "byte_start": 575030,
+      "byte_end": 576018,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-reg-step3",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-reg-step3-reqfields",
+      "title": "Required Fields for Creating Tokenized Credentials with Authenticated Passkey Service Credentials",
+      "byte_start": 576018,
+      "byte_end": 581965,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-reg-step3-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-reg-step3-ex-rest",
+      "title": "REST Example: Creating Tokenized Credentials with Authenticated Passkey Service Credentials",
+      "byte_start": 581965,
+      "byte_end": 585927,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-reg-step3-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-stepup",
+      "title": "Step-up Authentication for Registration",
+      "byte_start": 585927,
+      "byte_end": 587953,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-stepup",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms_stepup_methods",
+      "title": "Step-Up Authentication Methods",
+      "byte_start": 587953,
+      "byte_end": 593861,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms_stepup_methods",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-stepup-web-app",
+      "title": "Step-up Authentication for Web Application or Phone",
+      "byte_start": 593861,
+      "byte_end": 594212,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-stepup-web-app",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-stepup-web-app-step1",
+      "title": "Step 1: Determine FIDO availability",
+      "byte_start": 594212,
+      "byte_end": 595315,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-stepup-web-app-step1",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-stepup-web-app-step1-reqfields",
+      "title": "Required Fields for Creating Tokenized Card Authentication Registration",
+      "byte_start": 595315,
+      "byte_end": 599271,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-stepup-web-app-step1-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-stepup-web-app-step1-optfields",
+      "title": "Optional Fields for Creating Tokenized Card Authentication Registration",
+      "byte_start": 599271,
+      "byte_end": 599963,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-stepup-web-app-step1-optfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-stepup-web-app-step1-ex-rest",
+      "title": "REST Example: Creating Tokenized Card Authentication Registration",
+      "byte_start": 599963,
+      "byte_end": 601767,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-stepup-web-app-step1-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-stepup-web-app-step2",
+      "title": "Step 2: Cardholder authentication with FIDO",
+      "byte_start": 601767,
+      "byte_end": 602141,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-stepup-web-app-step2",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-stepup-web-app-step3",
+      "title": "Step 3: Create payment credentials with FIDO data",
+      "byte_start": 602141,
+      "byte_end": 603173,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-stepup-web-app-step3",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-stepup-web-app-step3-reqfields",
+      "title": "Required Fields for Creating Tokenized Credentials with Authenticated Passkey Service Credentials",
+      "byte_start": 603173,
+      "byte_end": 609153,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-stepup-web-app-step3-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-stepup-web-app-step3-ex-rest",
+      "title": "REST Example: Creating Tokenized Credentials with Authenticated Passkey Service Credentials",
+      "byte_start": 609153,
+      "byte_end": 613148,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-stepup-web-app-step3-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-stepup-ext-web-app",
+      "title": "Step-up Authentication for External Web Application",
+      "byte_start": 613148,
+      "byte_end": 613512,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-stepup-ext-web-app",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-stepup-ext-web-app-step1",
+      "title": "Step 1: Validate the one-time password code",
+      "byte_start": 613512,
+      "byte_end": 614908,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-stepup-ext-web-app-step1",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-stepup-ext-web-app-step1-reqfields",
+      "title": "Required Fields for Validating an OTP or Issuer Authentication Code",
+      "byte_start": 614908,
+      "byte_end": 616105,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-stepup-ext-web-app-step1-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-stepup-ext-web-app-step1-ex-rest",
+      "title": "REST Example: Validating an OTP or Issuer Authentication Code",
+      "byte_start": 616105,
+      "byte_end": 616741,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-stepup-ext-web-app-step1-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-stepup-ext-web-app-step2",
+      "title": "Step 2: Determine FIDO availability",
+      "byte_start": 616741,
+      "byte_end": 617860,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-stepup-ext-web-app-step2",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-stepup-ext-web-app-step2-reqfields",
+      "title": "Required Fields for Creating Tokenized Card Authentication Registration",
+      "byte_start": 617860,
+      "byte_end": 621824,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-stepup-ext-web-app-step2-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-stepup-ext-web-app-step2-optfields",
+      "title": "Optional Fields for Creating Tokenized Card Authentication Registration",
+      "byte_start": 621824,
+      "byte_end": 622528,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-stepup-ext-web-app-step2-optfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-stepup-ext-web-app-step2-ex-rest",
+      "title": "REST Example: Creating Tokenized Card Authentication Registration",
+      "byte_start": 622528,
+      "byte_end": 624344,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-stepup-ext-web-app-step2-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-stepup-ext-web-app-step3",
+      "title": "Step 3: Cardholder authentication with FIDO",
+      "byte_start": 624344,
+      "byte_end": 624726,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-stepup-ext-web-app-step3",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-stepup-ext-web-app-step4",
+      "title": "Step 4: Create payment credentials with FIDO data",
+      "byte_start": 624726,
+      "byte_end": 625774,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-stepup-ext-web-app-step4",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-stepup-ext-web-app-step4-reqfields",
+      "title": "Required Fields for Creating Tokenized Credentials with Authenticated Passkey Service Credentials",
+      "byte_start": 625774,
+      "byte_end": 631766,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-stepup-ext-web-app-step4-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-stepup-ext-web-app-step4-ex-rest",
+      "title": "REST Example: Creating Tokenized Credentials with Authenticated Passkey Service Credentials",
+      "byte_start": 631766,
+      "byte_end": 635773,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-stepup-ext-web-app-step4-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-stepup-otp",
+      "title": "Step-up Authentication for One-Time Passwords",
+      "byte_start": 635773,
+      "byte_end": 636109,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-stepup-otp",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-stepup-otp-step1",
+      "title": "Step 1: Issuer sends a one-time password code",
+      "byte_start": 636109,
+      "byte_end": 637397,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-stepup-otp-step1",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-stepup-otp-step1-reqfields",
+      "title": "Required Fields for Creating an OTP for Tokenized Card Authentication",
+      "byte_start": 637397,
+      "byte_end": 638218,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-stepup-otp-step1-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-stepup-otp-step1-ex-rest",
+      "title": "REST Example: Creating an OTP for Tokenized Card Authentication",
+      "byte_start": 638218,
+      "byte_end": 638785,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-stepup-otp-step1-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-stepup-otp-step2",
+      "title": "Step 2: Validate the one-time password code",
+      "byte_start": 638785,
+      "byte_end": 640463,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-stepup-otp-step2",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-stepup-otp-step2-reqfields",
+      "title": "Required Fields for Validating an OTP or Issuer Authentication Code",
+      "byte_start": 640463,
+      "byte_end": 641636,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-stepup-otp-step2-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-stepup-otp-step2-ex-rest",
+      "title": "REST Example: Validating an OTP or Issuer Authentication Code",
+      "byte_start": 641636,
+      "byte_end": 642248,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-stepup-otp-step2-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-stepup-otp-step3",
+      "title": "Step 3: Determine FIDO availability",
+      "byte_start": 642248,
+      "byte_end": 643335,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-stepup-otp-step3",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-stepup-otp-step3-reqfields",
+      "title": "Required Fields for Creating Tokenized Card Authentication Registration",
+      "byte_start": 643335,
+      "byte_end": 647283,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-stepup-otp-step3-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-stepup-otp-step3-optfields",
+      "title": "Optional Fields for Creating Tokenized Card Authentication Registration",
+      "byte_start": 647283,
+      "byte_end": 647963,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-stepup-otp-step3-optfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-stepup-otp-step3-ex-rest",
+      "title": "REST Example: Creating Tokenized Card Authentication Registration",
+      "byte_start": 647963,
+      "byte_end": 649755,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-stepup-otp-step3-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-stepup-otp-step4",
+      "title": "Step 4: Cardholder authentication with FIDO",
+      "byte_start": 649755,
+      "byte_end": 650121,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-stepup-otp-step4",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-stepup-otp-step5",
+      "title": "Step 5: Create payment credentials with FIDO data",
+      "byte_start": 650121,
+      "byte_end": 651137,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-stepup-otp-step5",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-stepup-otp-step5-reqfields",
+      "title": "Required Fields for Creating Tokenized Credentials with Authenticated Passkey Service Credentials",
+      "byte_start": 651137,
+      "byte_end": 657105,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-stepup-otp-step5-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-stepup-otp-step5-ex-rest",
+      "title": "REST Example: Creating Tokenized Credentials with Authenticated Passkey Service Credentials",
+      "byte_start": 657105,
+      "byte_end": 661088,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-stepup-otp-step5-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ctf-intro",
+      "title": "Classic Cloud Token Framework",
+      "byte_start": 661088,
+      "byte_end": 662847,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ctf-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ctf-key-gen",
+      "title": "Cloud Token Framework Key Generation",
+      "byte_start": 662847,
+      "byte_end": 667517,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ctf-key-gen",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ctf-workflow",
+      "title": "Device Binding Workflow",
+      "byte_start": 667517,
+      "byte_end": 668660,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ctf-workflow",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ctf-workflow-stepup",
+      "title": "Device Binding Workflow with Step-Up Authentication",
+      "byte_start": 668660,
+      "byte_end": 670701,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ctf-workflow-stepup",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ctf-classic",
+      "title": "Bind a Device",
+      "byte_start": 670701,
+      "byte_end": 670853,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ctf-classic",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ctf-classic-step1",
+      "title": "Step 1: Create a device",
+      "byte_start": 670853,
+      "byte_end": 671486,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ctf-classic-step1",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ctf-classic-step1-reqfields",
+      "title": "Required Fields for Creating a Device",
+      "byte_start": 671486,
+      "byte_end": 672677,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ctf-classic-step1-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ctf-classic-step1-optfields",
+      "title": "Optional Fields for Creating a Device",
+      "byte_start": 672677,
+      "byte_end": 673761,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ctf-classic-step1-optfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ctf-classic-step1-ex-rest",
+      "title": "REST Example: Creating a Device",
+      "byte_start": 673761,
+      "byte_end": 674780,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ctf-classic-step1-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ctf-classic-step2",
+      "title": "Step 2: Bind a device",
+      "byte_start": 674780,
+      "byte_end": 675583,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ctf-classic-step2",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ctf-classic-step2-reqfields",
+      "title": "Required Fields for Binding a Device",
+      "byte_start": 675583,
+      "byte_end": 677471,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ctf-classic-step2-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ctf-classic-step2-ex-rest",
+      "title": "REST Example: Binding a Device",
+      "byte_start": 677471,
+      "byte_end": 680157,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ctf-classic-step2-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ctf-stepup",
+      "title": "Bind a Device with Step-Up Authentication",
+      "byte_start": 680157,
+      "byte_end": 680391,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ctf-stepup",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ctf-stepup-webapp",
+      "title": "Step-Up Authentication for Web Application or Phone",
+      "byte_start": 680391,
+      "byte_end": 680695,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ctf-stepup-webapp",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ctf-stepup-webapp-step1",
+      "title": "Step 1: Create a device",
+      "byte_start": 680695,
+      "byte_end": 681352,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ctf-stepup-webapp-step1",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ctf-stepup-webapp-step1-reqfields",
+      "title": "Required Fields for Creating a Device",
+      "byte_start": 681352,
+      "byte_end": 682555,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ctf-stepup-webapp-step1-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ctf-stepup-webapp-step1-optfields",
+      "title": "Optional Fields for Creating a Device",
+      "byte_start": 682555,
+      "byte_end": 683657,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ctf-stepup-webapp-step1-optfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ctf-stepup-webapp-step1-ex-rest",
+      "title": "REST Example: Creating a Device",
+      "byte_start": 683657,
+      "byte_end": 684694,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ctf-stepup-webapp-step1-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ctf-stepup-webapp-step2",
+      "title": "Step 2: Bind a device",
+      "byte_start": 684694,
+      "byte_end": 685521,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ctf-stepup-webapp-step2",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ctf-stepup-webapp-step2-reqfields",
+      "title": "Required Fields for Binding a Device",
+      "byte_start": 685521,
+      "byte_end": 687427,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ctf-stepup-webapp-step2-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ctf-stepup-webapp-step2-ex-rest",
+      "title": "REST Example: Binding a Device",
+      "byte_start": 687427,
+      "byte_end": 690131,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ctf-stepup-webapp-step2-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ctf-stepup-ext-webapp",
+      "title": "Step-Up Authentication for External Web Application",
+      "byte_start": 690131,
+      "byte_end": 690449,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ctf-stepup-ext-webapp",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ctf-stepup-ext-webapp-step1",
+      "title": "Step 1: Create a device",
+      "byte_start": 690449,
+      "byte_end": 691122,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ctf-stepup-ext-webapp-step1",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ctf-stepup-ext-webapp-step1-reqfields",
+      "title": "Required Fields for Creating a Device",
+      "byte_start": 691122,
+      "byte_end": 692333,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ctf-stepup-ext-webapp-step1-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ctf-stepup-ext-webapp-step1-optfields",
+      "title": "Optional Fields for Creating a Device",
+      "byte_start": 692333,
+      "byte_end": 693447,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ctf-stepup-ext-webapp-step1-optfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ctf-stepup-ext-webapp-step1-ex-rest",
+      "title": "REST Example: Creating a Device",
+      "byte_start": 693447,
+      "byte_end": 694496,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ctf-stepup-ext-webapp-step1-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ctf-stepup-ext-webapp-step2",
+      "title": "Step 2: Bind a device",
+      "byte_start": 694496,
+      "byte_end": 695339,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ctf-stepup-ext-webapp-step2",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ctf-stepup-ext-webapp-step2-reqfields",
+      "title": "Required Fields for Binding a Device",
+      "byte_start": 695339,
+      "byte_end": 697257,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ctf-stepup-ext-webapp-step2-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ctf-stepup-ext-webapp-step2-ex-rest",
+      "title": "REST Example: Binding a Device",
+      "byte_start": 697257,
+      "byte_end": 699973,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ctf-stepup-ext-webapp-step2-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ctf-stepup-ext-webapp-step3",
+      "title": "Step 3: Validate the one-time password code",
+      "byte_start": 699973,
+      "byte_end": 701643,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ctf-stepup-ext-webapp-step3",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ctf-stepup-ext-webapp-step3-reqfields",
+      "title": "Required Fields for Validating an OTP or Issuer Authentication Code",
+      "byte_start": 701643,
+      "byte_end": 702810,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ctf-stepup-ext-webapp-step3-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ctf-stepup-ext-webapp-step3-ex-rest",
+      "title": "REST Example: Validating an OTP or Issuer Authentication Code",
+      "byte_start": 702810,
+      "byte_end": 703416,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ctf-stepup-ext-webapp-step3-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ctf-stepup-otp",
+      "title": "Step-Up Authentication for One-Time Passwords",
+      "byte_start": 703416,
+      "byte_end": 703730,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ctf-stepup-otp",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ctf-stepup-otp-step1",
+      "title": "Step 1: Create a device",
+      "byte_start": 703730,
+      "byte_end": 704375,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ctf-stepup-otp-step1",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ctf-stepup-otp-step1-reqfields",
+      "title": "Required Fields for Creating a Device",
+      "byte_start": 704375,
+      "byte_end": 705572,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ctf-stepup-otp-step1-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ctf-stepup-otp-step1-optfields",
+      "title": "Optional Fields for Creating a Device",
+      "byte_start": 705572,
+      "byte_end": 706665,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ctf-stepup-otp-step1-optfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ctf-stepup-otp-step1-ex-rest",
+      "title": "REST Example: Creating a Device",
+      "byte_start": 706665,
+      "byte_end": 707693,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ctf-stepup-otp-step1-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ctf-stepup-otp-step2",
+      "title": "Step 2: Bind a device",
+      "byte_start": 707693,
+      "byte_end": 708508,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ctf-stepup-otp-step2",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ctf-stepup-otp-step2-reqfields",
+      "title": "Required Fields for Binding a Device",
+      "byte_start": 708508,
+      "byte_end": 710405,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ctf-stepup-otp-step2-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ctf-stepup-otp-step2-ex-rest",
+      "title": "REST Example: Binding a Device",
+      "byte_start": 710405,
+      "byte_end": 713100,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ctf-stepup-otp-step2-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ctf-stepup-otp-step3",
+      "title": "Step 3: Issuer sends a one-time password code",
+      "byte_start": 713100,
+      "byte_end": 714352,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ctf-stepup-otp-step3",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ctf-stepup-otp-step4",
+      "title": "Step 4: Validate the one-time password code",
+      "byte_start": 714352,
+      "byte_end": 715994,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ctf-stepup-otp-step4",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ctf-stepup-otp-step4-reqfields",
+      "title": "Required Fields for Validating an OTP or Issuer Authentication Code",
+      "byte_start": 715994,
+      "byte_end": 717140,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ctf-stepup-otp-step4-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ctf-stepup-otp-step4-ex-rest",
+      "title": "REST Example: Validating an OTP or Issuer Authentication Code",
+      "byte_start": 717140,
+      "byte_end": 717725,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ctf-stepup-otp-step4-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-device-jws-intro",
+      "title": "Create Tokenized Card Payment Credentials with Device Signed JWS",
+      "byte_start": 717725,
+      "byte_end": 718017,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-device-jws-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-device-jws-intro_tms-net-tkn-card-otp-intro-endpoint",
+      "title": "Endpoint",
+      "byte_start": 718017,
+      "byte_end": 718881,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-device-jws-intro_tms-net-tkn-card-otp-intro-endpoint",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-net-tkn-device-jws-reqfields",
+      "title": "Required Fields for Creating a Tokenized Card Payment Credentials with Device Signed JWS",
+      "byte_start": 718881,
+      "byte_end": 722520,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-device-jws-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-device-jws-optfields",
+      "title": "Optional Fields for Creating a Tokenized Card Payment Credentials with Device Signed JWS",
+      "byte_start": 722520,
+      "byte_end": 724428,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-device-jws-optfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-device-jws-optfields_section_j4d_spw_z3c",
+      "title": "Related Information",
+      "byte_start": 724428,
+      "byte_end": 724796,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-device-jws-optfields_section_j4d_spw_z3c",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-net-tkn-device-jws-ex-rest",
+      "title": "REST Example: Creating a Tokenized Card Payment Credentials with Device Signed JWS",
+      "byte_start": 724796,
+      "byte_end": 728991,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-device-jws-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ctf-delete-binding-intro",
+      "title": "Delete Binding",
+      "byte_start": 728991,
+      "byte_end": 729142,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ctf-delete-binding-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ctf-delete-binding-intro_tms-net-tkn-card-otp-intro-endpoint",
+      "title": "Endpoint",
+      "byte_start": 729142,
+      "byte_end": 729724,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ctf-delete-binding-intro_tms-net-tkn-card-otp-intro-endpoint",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-ctf-delete-binding-reqfields",
+      "title": "Required Fields for Deleting Binding",
+      "byte_start": 729724,
+      "byte_end": 730130,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ctf-delete-binding-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ctf-delete-binding-ex-rest",
+      "title": "REST Example: Deleting Binding",
+      "byte_start": 730130,
+      "byte_end": 730382,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ctf-delete-binding-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-create-vpp-intro",
+      "title": "Create Tokenized Card Payment Credentials with `Payment Passkey`",
+      "byte_start": 730382,
+      "byte_end": 730674,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-create-vpp-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-create-vpp-intro_tms-net-tkn-card-otp-intro-endpoint",
+      "title": "Endpoint",
+      "byte_start": 730674,
+      "byte_end": 731337,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-create-vpp-intro_tms-net-tkn-card-otp-intro-endpoint",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-net-tkn-create-vpp-reqfields",
+      "title": "Required Fields for Creating a Tokenized Card Payment Credentials with VPP",
+      "byte_start": 731337,
+      "byte_end": 732033,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-create-vpp-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-create-vpp-optfields",
+      "title": "Optional Fields for Creating a Tokenized Card Payment Credentials with VPP",
+      "byte_start": 732033,
+      "byte_end": 734489,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-create-vpp-optfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-create-vpp-ex-rest",
+      "title": "REST Example: Create Tokenized Card Payment Credentials with Payment Passkey",
+      "byte_start": 734489,
+      "byte_end": 737510,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-create-vpp-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-tap-intro",
+      "title": "Tap to Add Card",
+      "byte_start": 737510,
+      "byte_end": 740125,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-tap-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-card-art",
+      "title": "Card Art",
+      "byte_start": 740125,
+      "byte_end": 740672,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-card-art",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-art-retrieve-intro",
+      "title": "Retrieve Card Art",
+      "byte_start": 740672,
+      "byte_end": 746644,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-art-retrieve-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-art-combined-ex-rest",
+      "title": "REST Example: Retrieving Card Art Assets",
+      "byte_start": 746644,
+      "byte_end": 747361,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-art-combined-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-bin-lookup-service",
+      "title": "BIN Lookup Service and `TMS`",
+      "byte_start": 747361,
+      "byte_end": 750389,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-bin-lookup-service",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-bin-lookup-service-ex-rest",
+      "title": "REST Example: Retrieving an Instrument Identifier with BIN Details",
+      "byte_start": 750389,
+      "byte_end": 753371,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-bin-lookup-service-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-wallet-tkn",
+      "title": "Using `Token Management Service` with Wallet Apps",
+      "byte_start": 753371,
+      "byte_end": 753582,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-wallet-tkn",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-wallet-manage",
+      "title": "Manage Tokens with Wallet Apps",
+      "byte_start": 753582,
+      "byte_end": 755151,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-wallet-manage",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-wallet-create-cust-acct",
+      "title": "Create a New Customer Account",
+      "byte_start": 755151,
+      "byte_end": 755630,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-wallet-create-cust-acct",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-wallet-add-ship-addr",
+      "title": "Add a New Shipping Address",
+      "byte_start": 755630,
+      "byte_end": 756187,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-wallet-add-ship-addr",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-wallet-edit-ship-addr",
+      "title": "Edit or Delete a Shipping Address",
+      "byte_start": 756187,
+      "byte_end": 757266,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-wallet-edit-ship-addr",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-wallet-add-pay",
+      "title": "Create a New Payment Instrument with the Payments API",
+      "byte_start": 757266,
+      "byte_end": 758183,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-wallet-add-pay",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-wallet-edit-pay",
+      "title": "Edit or Delete a Payment Method",
+      "byte_start": 758183,
+      "byte_end": 759045,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-wallet-edit-pay",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-wallet-change-default-pay",
+      "title": "Change the Default Payment Method",
+      "byte_start": 759045,
+      "byte_end": 759747,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-wallet-change-default-pay",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-wallet-add-pay-addr",
+      "title": "Add a New Payment Method Address",
+      "byte_start": 759747,
+      "byte_end": 761145,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-wallet-add-pay-addr",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-wallet-view",
+      "title": "View Wallet",
+      "byte_start": 761145,
+      "byte_end": 761541,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-wallet-view",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-wallet-pay",
+      "title": "Payments with Tokens and Wallet Apps",
+      "byte_start": 761541,
+      "byte_end": 762040,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-wallet-pay",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-wallet-make-pay",
+      "title": "Authorize a Payment",
+      "byte_start": 762040,
+      "byte_end": 762750,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-wallet-make-pay",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-ref-info",
+      "title": "Reference Information",
+      "byte_start": 762750,
+      "byte_end": 762827,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ref-info",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-encrypt-decrypt",
+      "title": "Encrypt and Decrypt Data",
+      "byte_start": 762827,
+      "byte_end": 766197,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-encrypt-decrypt",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-http-status",
+      "title": "HTTP Status Codes",
+      "byte_start": 766197,
+      "byte_end": 767549,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-http-status",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-partner-retrieve-pay-cred-intro",
+      "title": "Retrieve Network Token Payment Credentials",
+      "byte_start": 767549,
+      "byte_end": 769802,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-partner-retrieve-pay-cred-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-validate-otp-intro",
+      "title": "Validate a One-Time Password or Issuer Authentication Code",
+      "byte_start": 769802,
+      "byte_end": 770359,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-validate-otp-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tms-net-tkn-card-validate-otp-intro_tms-net-tkn-card-validate-otp-endpoint",
+      "title": "Endpoint",
+      "byte_start": 770359,
+      "byte_end": 771382,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-card-validate-otp-intro_tms-net-tkn-card-validate-otp-endpoint",
+      "heading_level": 2
+    },
+    {
+      "anchor": "tms-net-tkn-partner-retrieve-aft-pay-cred-intro",
+      "title": "Retrieve Network Token AFT Payment Credentials",
+      "byte_start": 771382,
+      "byte_end": 773257,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-partner-retrieve-aft-pay-cred-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-key-dig-sig-intro",
+      "title": "Create a Digital Signature Key",
+      "byte_start": 773257,
+      "byte_end": 774772,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#wh-fg-key-dig-sig-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-optional-validate-intro",
+      "title": "Validating a Notification with the Digital Signature Key",
+      "byte_start": 774772,
+      "byte_end": 776173,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#wh-fg-optional-validate-intro",
+      "heading_level": 1
+    }
+  ]
+}

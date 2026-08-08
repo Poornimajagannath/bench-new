@@ -1,0 +1,400 @@
+{
+  "product_id": "security-keys",
+  "root_path": "/docs/cybs/en-us/security-keys/user/all/ada/security-keys.md",
+  "root_url": "https://developer.cybersource.com/docs/cybs/en-us/security-keys/user/all/ada/security-keys.md",
+  "bytes": 101843,
+  "sections": [
+    {
+      "anchor": "reference.dita_a3d5a5d5-8523-48e8-80d6-82dd712058cb",
+      "title": "Creating and Using Security Keys User Guide",
+      "byte_start": 0,
+      "byte_end": 919,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/security-keys/user/all/ada/security-keys.html#reference.dita_a3d5a5d5-8523-48e8-80d6-82dd712058cb",
+      "heading_level": 1
+    },
+    {
+      "anchor": "keys-revisions",
+      "title": "Recent Revisions to This Document",
+      "byte_start": 919,
+      "byte_end": 3581,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/security-keys/user/all/ada/security-keys.html#keys-revisions",
+      "heading_level": 1
+    },
+    {
+      "anchor": "vpc-partner-reseller-disclaimer",
+      "title": "VISA Platform Connect: Specifications and Conditions for Resellers/Partners",
+      "byte_start": 3581,
+      "byte_end": 5713,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/security-keys/user/all/ada/security-keys.html#vpc-partner-reseller-disclaimer",
+      "heading_level": 1
+    },
+    {
+      "anchor": "keys-intro",
+      "title": "Introduction to Creating and Using Security Keys",
+      "byte_start": 5713,
+      "byte_end": 7917,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/security-keys/user/all/ada/security-keys.html#keys-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "keys-manage",
+      "title": "Create a Security Key",
+      "byte_start": 7917,
+      "byte_end": 8574,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/security-keys/user/all/ada/security-keys.html#keys-manage",
+      "heading_level": 1
+    },
+    {
+      "anchor": "keys-manage_d28e63",
+      "title": "Figure:",
+      "byte_start": 8574,
+      "byte_end": 9291,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/security-keys/user/all/ada/security-keys.html#keys-manage_d28e63",
+      "heading_level": 4
+    },
+    {
+      "anchor": "keys-pgp-intro",
+      "title": "PGP Keys",
+      "byte_start": 9291,
+      "byte_end": 10506,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/security-keys/user/all/ada/security-keys.html#keys-pgp-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "keys-pgp-create",
+      "title": "Creating PGP Keys",
+      "byte_start": 10506,
+      "byte_end": 11418,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/security-keys/user/all/ada/security-keys.html#keys-pgp-create",
+      "heading_level": 1
+    },
+    {
+      "anchor": "keys-pgp-add",
+      "title": "Adding a PGP Key to Your Account",
+      "byte_start": 11418,
+      "byte_end": 12647,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/security-keys/user/all/ada/security-keys.html#keys-pgp-add",
+      "heading_level": 1
+    },
+    {
+      "anchor": "keys-pgp-permissions-create",
+      "title": "Granting User Permissions",
+      "byte_start": 12647,
+      "byte_end": 14570,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/security-keys/user/all/ada/security-keys.html#keys-pgp-permissions-create",
+      "heading_level": 1
+    },
+    {
+      "anchor": "keys-rest-intro",
+      "title": "REST API Keys",
+      "byte_start": 14570,
+      "byte_end": 15494,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/security-keys/user/all/ada/security-keys.html#keys-rest-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "restgs-task-p12",
+      "title": "Create a P12 Certificate",
+      "byte_start": 15494,
+      "byte_end": 18531,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/security-keys/user/all/ada/security-keys.html#restgs-task-p12",
+      "heading_level": 1
+    },
+    {
+      "anchor": "restgs-security-P12-upload",
+      "title": "Submit a Certificate Signing Request",
+      "byte_start": 18531,
+      "byte_end": 22092,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/security-keys/user/all/ada/security-keys.html#restgs-security-P12-upload",
+      "heading_level": 1
+    },
+    {
+      "anchor": "restgs-security-key-pair-task",
+      "title": "Transacting Merchant User: Create a Shared Secret Key Pair",
+      "byte_start": 22092,
+      "byte_end": 25128,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/security-keys/user/all/ada/security-keys.html#restgs-security-key-pair-task",
+      "heading_level": 1
+    },
+    {
+      "anchor": "keys-rest-mle-intro",
+      "title": "REST---API Response MLE Key",
+      "byte_start": 25128,
+      "byte_end": 26505,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/security-keys/user/all/ada/security-keys.html#keys-rest-mle-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "concept",
+      "title": "Create or Submit a REST---API Response MLE Key",
+      "byte_start": 26505,
+      "byte_end": 30432,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/security-keys/user/all/ada/security-keys.html#concept",
+      "heading_level": 1
+    },
+    {
+      "anchor": "keys-rest-mle-test",
+      "title": "Test Your API Response MLE Key",
+      "byte_start": 30432,
+      "byte_end": 33029,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/security-keys/user/all/ada/security-keys.html#keys-rest-mle-test",
+      "heading_level": 1
+    },
+    {
+      "anchor": "keys-secure-acceptance-intro",
+      "title": "Secure Acceptance Key",
+      "byte_start": 33029,
+      "byte_end": 33569,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/security-keys/user/all/ada/security-keys.html#keys-secure-acceptance-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "keys-secure-acceptance-create",
+      "title": "Creating a Secure Acceptance Key",
+      "byte_start": 33569,
+      "byte_end": 35647,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/security-keys/user/all/ada/security-keys.html#keys-secure-acceptance-create",
+      "heading_level": 1
+    },
+    {
+      "anchor": "keys-simple-order-intro",
+      "title": "Simple Order API Keys",
+      "byte_start": 35647,
+      "byte_end": 36148,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/security-keys/user/all/ada/security-keys.html#keys-simple-order-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "keys-simple-order-create",
+      "title": "Creating a Simple Order API Key",
+      "byte_start": 36148,
+      "byte_end": 38424,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/security-keys/user/all/ada/security-keys.html#keys-simple-order-create",
+      "heading_level": 1
+    },
+    {
+      "anchor": "keys-soap",
+      "title": "SOAP Toolkit Keys",
+      "byte_start": 38424,
+      "byte_end": 39896,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/security-keys/user/all/ada/security-keys.html#keys-soap",
+      "heading_level": 1
+    },
+    {
+      "anchor": "keys-soap-create",
+      "title": "Creating a SOAP Toolkit Key",
+      "byte_start": 39896,
+      "byte_end": 41734,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/security-keys/user/all/ada/security-keys.html#keys-soap-create",
+      "heading_level": 1
+    },
+    {
+      "anchor": "keys-mle-intro",
+      "title": "Token Management MLE Keys",
+      "byte_start": 41734,
+      "byte_end": 42312,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/security-keys/user/all/ada/security-keys.html#keys-mle-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "keys-mle-create",
+      "title": "Creating a Token Management MLE Key",
+      "byte_start": 42312,
+      "byte_end": 43780,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/security-keys/user/all/ada/security-keys.html#keys-mle-create",
+      "heading_level": 1
+    },
+    {
+      "anchor": "keys-managing",
+      "title": "Manage a Security Key",
+      "byte_start": 43780,
+      "byte_end": 44434,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/security-keys/user/all/ada/security-keys.html#keys-managing",
+      "heading_level": 1
+    },
+    {
+      "anchor": "keys-managing_d28e63",
+      "title": "Figure:",
+      "byte_start": 44434,
+      "byte_end": 45153,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/security-keys/user/all/ada/security-keys.html#keys-managing_d28e63",
+      "heading_level": 4
+    },
+    {
+      "anchor": "deactivate_key",
+      "title": "Deactivate a Key",
+      "byte_start": 45153,
+      "byte_end": 46125,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/security-keys/user/all/ada/security-keys.html#deactivate_key",
+      "heading_level": 1
+    },
+    {
+      "anchor": "delete_key",
+      "title": "Delete a Key",
+      "byte_start": 46125,
+      "byte_end": 47290,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/security-keys/user/all/ada/security-keys.html#delete_key",
+      "heading_level": 1
+    },
+    {
+      "anchor": "key_search",
+      "title": "Search for Keys Using Filters",
+      "byte_start": 47290,
+      "byte_end": 56790,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/security-keys/user/all/ada/security-keys.html#key_search",
+      "heading_level": 1
+    },
+    {
+      "anchor": "keys-meta-intro",
+      "title": "Meta Key Creation and Management",
+      "byte_start": 56790,
+      "byte_end": 59782,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/security-keys/user/all/ada/security-keys.html#keys-meta-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "keys-meta-create",
+      "title": "Create a Meta Key as a Portfolio User",
+      "byte_start": 59782,
+      "byte_end": 63698,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/security-keys/user/all/ada/security-keys.html#keys-meta-create",
+      "heading_level": 1
+    },
+    {
+      "anchor": "keys-meta-create-account",
+      "title": "Create a Meta Key as a Merchant Account User",
+      "byte_start": 63698,
+      "byte_end": 68244,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/security-keys/user/all/ada/security-keys.html#keys-meta-create-account",
+      "heading_level": 1
+    },
+    {
+      "anchor": "keys-meta-assign-all",
+      "title": "Assign a Meta Key to All Merchants",
+      "byte_start": 68244,
+      "byte_end": 69735,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/security-keys/user/all/ada/security-keys.html#keys-meta-assign-all",
+      "heading_level": 1
+    },
+    {
+      "anchor": "keys-meta-assign-selection",
+      "title": "Assign a Meta Key to Select Merchants",
+      "byte_start": 69735,
+      "byte_end": 71959,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/security-keys/user/all/ada/security-keys.html#keys-meta-assign-selection",
+      "heading_level": 1
+    },
+    {
+      "anchor": "keys-meta-assign-all-revoke",
+      "title": "Remove a Meta Key from all Merchants",
+      "byte_start": 71959,
+      "byte_end": 73245,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/security-keys/user/all/ada/security-keys.html#keys-meta-assign-all-revoke",
+      "heading_level": 1
+    },
+    {
+      "anchor": "keys-meta-assign-all-revoke-selection",
+      "title": "Remove a Meta Key from Select Merchants",
+      "byte_start": 73245,
+      "byte_end": 74960,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/security-keys/user/all/ada/security-keys.html#keys-meta-assign-all-revoke-selection",
+      "heading_level": 1
+    },
+    {
+      "anchor": "keys-meta-assign-convert",
+      "title": "Convert a Meta Key or Non-Meta Key",
+      "byte_start": 74960,
+      "byte_end": 76282,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/security-keys/user/all/ada/security-keys.html#keys-meta-assign-convert",
+      "heading_level": 1
+    },
+    {
+      "anchor": "keys-meta-delete",
+      "title": "Delete a Meta Key",
+      "byte_start": 76282,
+      "byte_end": 77469,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/security-keys/user/all/ada/security-keys.html#keys-meta-delete",
+      "heading_level": 1
+    },
+    {
+      "anchor": "keys-meta-regenerate",
+      "title": "Regenerate a Meta Key",
+      "byte_start": 77469,
+      "byte_end": 78762,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/security-keys/user/all/ada/security-keys.html#keys-meta-regenerate",
+      "heading_level": 1
+    },
+    {
+      "anchor": "keys-meta-edit",
+      "title": "Meta Keys in API Requests",
+      "byte_start": 78762,
+      "byte_end": 78917,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/security-keys/user/all/ada/security-keys.html#keys-meta-edit",
+      "heading_level": 1
+    },
+    {
+      "anchor": "keys-meta-api-rest",
+      "title": "REST API Payment Request with a Meta Key",
+      "byte_start": 78917,
+      "byte_end": 80616,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/security-keys/user/all/ada/security-keys.html#keys-meta-api-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "keys-meta-api-simple-order",
+      "title": "Simple Order API Payment Request Using a Meta Key",
+      "byte_start": 80616,
+      "byte_end": 83692,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/security-keys/user/all/ada/security-keys.html#keys-meta-api-simple-order",
+      "heading_level": 1
+    },
+    {
+      "anchor": "keys-meta-api-soap",
+      "title": "SOAP Payment Request Using a Meta Key",
+      "byte_start": 83692,
+      "byte_end": 87082,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/security-keys/user/all/ada/security-keys.html#keys-meta-api-soap",
+      "heading_level": 1
+    },
+    {
+      "anchor": "keys-meta-api-scmp",
+      "title": "SCMP API Payment Request using a Meta Key",
+      "byte_start": 87082,
+      "byte_end": 88943,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/security-keys/user/all/ada/security-keys.html#keys-meta-api-scmp",
+      "heading_level": 1
+    },
+    {
+      "anchor": "restgs-mle-intro",
+      "title": "Enable Message-Level Encryption",
+      "byte_start": 88943,
+      "byte_end": 91234,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/security-keys/user/all/ada/security-keys.html#restgs-mle-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "restgs-jwt-message-mle-dev-center",
+      "title": "Test Your REST---API Response MLE Key",
+      "byte_start": 91234,
+      "byte_end": 94571,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/security-keys/user/all/ada/security-keys.html#restgs-jwt-message-mle-dev-center",
+      "heading_level": 1
+    },
+    {
+      "anchor": "restgs-security-mle-reply",
+      "title": "Create or Submit a REST---API Response MLE Key",
+      "byte_start": 94571,
+      "byte_end": 99167,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/security-keys/user/all/ada/security-keys.html#restgs-security-mle-reply",
+      "heading_level": 1
+    },
+    {
+      "anchor": "restgs-security-key-pair-test-task",
+      "title": "Test Your Shared Secret Key Pair",
+      "byte_start": 99167,
+      "byte_end": 101843,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/security-keys/user/all/ada/security-keys.html#restgs-security-key-pair-test-task",
+      "heading_level": 1
+    }
+  ]
+}
