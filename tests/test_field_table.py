@@ -80,19 +80,23 @@ class EndpointUrlStyleTests(unittest.TestCase):
 
 
 class StepAnchorTests(unittest.TestCase):
-    """Loop C2: DITA anchors are markup, not step text."""
+    """Anchors are deep-link data: out of claim text, into extras."""
 
-    def test_anchor_stripped_from_step(self):
+    def test_anchor_lifted_to_metadata(self):
         text = (
             "# Guide\n\n"
             "1. Click the Portfolio Management icon in the pane.{#merchants-v2-step1}\n"
         )
         claims, _ = _extract_claims_from_text(
-            text, source_pointer="x.md", doc_stem="x"
+            text,
+            source_pointer="en-us_boarding_user_all_ebc_x.md.md",
+            doc_stem="x",
         )
         steps = [c for c in claims if c.schema == "quickstart_step"]
         self.assertEqual(len(steps), 1)
         self.assertNotIn("{#", steps[0].text)
+        self.assertEqual(steps[0].extras.get("anchor"), "merchants-v2-step1")
+        self.assertIn("merchants-v2-step1", steps[0].extras.get("deep_link") or "")
 
 
 if __name__ == "__main__":

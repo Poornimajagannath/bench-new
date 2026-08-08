@@ -12,6 +12,10 @@ _Generated from `normalized/2026-08-08-boarding.claims.json`; do not hand-edit. 
 
 - **Gap:** no prerequisite is specified in the source docs.
 
+## API endpoints
+
+- **Gap:** no endpoint_fact claims for this workflow in the source docs.
+
 ## Steps
 
 ### Via Partner admin (Business Center) — `en-us_boarding_user_all_ebc_boarding-user_merchants-v2-email.md.md`
@@ -28,7 +32,7 @@ _Generated from `normalized/2026-08-08-boarding.claims.json`; do not hand-edit. 
 ## Constraints
 
 - [ttl_or_validity] The email is valid for 24 hours.  
-  <sub>`en-us_boarding_user_all_ebc_boarding-user_merchants-v2-email:prose:7ca8aa96ad28` · 2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_merchants-v2-email.md.md</sub>
+  <sub>`en-us_boarding_user_all_ebc_boarding-user_merchants-v2-email:prose:7ca8aa96ad28`</sub> · 2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_merchants-v2-email.md.md
 
 ## Failure modes
 

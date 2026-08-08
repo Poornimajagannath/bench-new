@@ -338,7 +338,20 @@ def _extract_claims_from_text(
         )
         return claims, drops
 
-    # Quickstart steps: numbered headings or numbered lists
+    # API-reference pattern (Endpoint + Required Fields + REST Example) first.
+    # Rich endpoint_fact claims; UI quickstart_step extraction still runs below.
+    from content_bench.content_engine.api_reference import extract_api_reference_claims
+    from content_bench.content_engine.source_noise import (
+        attach_source_meta,
+        clean_claim_text,
+    )
+
+    api_claims, _api_report, covered_endpoints = extract_api_reference_claims(
+        text, source_pointer=source_pointer, doc_stem=doc_stem
+    )
+    claims.extend(api_claims)
+
+    # Quickstart steps: numbered headings or numbered lists (UI procedures).
     step_pat = re.compile(
         r"(?m)^(?:#{2,4}\s*)?(?:Step\s*)?(\d+)[.:)\s]+(.+?)(?:\n|$)"
     )
@@ -355,30 +368,44 @@ def _extract_claims_from_text(
         without_links = re.sub(r"\[[^\]]*\]\([^)]*\)", "", title).strip(" .*-—")
         if len(without_links) < 12:
             continue
-        # DITA anchors are markup, not step text; stripping them lets the
-        # prefer-child dedupe match mega-guide and child twins.
-        title = re.sub(r"\s*\{#[^}]+\}\s*$", "", title).strip()
-        if len(title) < 3:
+        # Anchors are live deep-link targets — lift into metadata, not delete.
+        clean_title, noise = clean_claim_text(title)
+        if len(clean_title) < 3:
             continue
         # Step ids must be unique per occurrence: one doc can hold many
         # procedures, so `doc_stem:step:{n}` collides across sections.
-        occ = hashlib.sha1(f"{match.start()}:{title}".encode()).hexdigest()[:8]
+        occ = hashlib.sha1(f"{match.start()}:{clean_title}".encode()).hexdigest()[:8]
+        extras: Dict[str, Any] = {"sequence": int(n)}
+        extras = attach_source_meta(
+            extras,
+            source_pointer=source_pointer,
+            raw_span_text=title,
+            full_text=text,
+            span_start=match.start(),
+            span_end=match.end(),
+        )
+        # Prefer noise from the step line itself (attach may see only the line).
+        extras.update(noise)
+        if noise.get("anchor"):
+            from content_bench.content_engine.source_noise import deep_link_for
+
+            link = deep_link_for(source_pointer, noise["anchor"])
+            if link:
+                extras["deep_link"] = link
         claims.append(
             NormalizedClaim(
                 claim_id=f"{doc_stem}:step:{n}:{occ}",
                 schema="quickstart_step",
-                title=title[:120],
-                text=title,
+                title=clean_title[:120],
+                text=clean_title,
                 source_pointer=source_pointer,
-                extras={"sequence": int(n)},
+                extras=extras,
             )
         )
 
-    # Endpoint facts: HTTP verbs + paths. Two documented shapes:
-    #   1) bare:       POST /pts/v2/payments
-    #   2) backticked full-URL (CyberSource guide style):
-    #      **Production:** `POST ``https://api.cybersource.com``/boarding/v1/registrations`
-    seen_endpoints: set[str] = set()
+    # Endpoint facts (thin C1 scanner): bare verb+path or backticked full URL.
+    # Skip keys already emitted by the API-reference pattern to avoid dupes.
+    seen_endpoints: set[str] = set(covered_endpoints)
     for match in re.finditer(
         r"\b(GET|POST|PUT|PATCH|DELETE)\b[`\s]*((?:https?://[A-Za-z0-9.-]+)?)[`\s]*(/[A-Za-z0-9_{}/.-]+)",
         text,
@@ -389,18 +416,29 @@ def _extract_claims_from_text(
         if key in seen_endpoints:
             continue
         seen_endpoints.add(key)
-        extras = {"method": method, "path": path}
+        label = f"{method} {host}{path}" if host else f"{method} {path}"
+        clean_label, noise = clean_claim_text(label)
+        extras = {"method": method, "path": path, "pattern": "verb_path"}
         if host:
             extras["host"] = host
             extras["environment"] = (
                 "test" if "test" in host else "production"
             )
+        extras = attach_source_meta(
+            extras,
+            source_pointer=source_pointer,
+            raw_span_text=match.group(0),
+            full_text=text,
+            span_start=match.start(),
+            span_end=match.end(),
+        )
+        extras.update(noise)
         claims.append(
             NormalizedClaim(
                 claim_id=f"{doc_stem}:endpoint:{method.lower()}:{hashlib.sha1(key.encode()).hexdigest()[:8]}",
                 schema="endpoint_fact",
                 title=f"{method} {path}",
-                text=(f"{method} {host}{path}" if host else f"{method} {path}"),
+                text=clean_label,
                 source_pointer=source_pointer,
                 extras=extras,
             )

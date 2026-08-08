@@ -68,7 +68,19 @@ transient-token TTL fact vanished.
 claims, and writes `normalized/<date>.claims.json` plus an ingestion report.
 
 **Claim** — one extracted fact with a schema, a source pointer, and stable id.
-Schemas: `quickstart_step`, `endpoint_fact`, `error_case`, `prose_claim`.
+Schemas: `quickstart_step`, `endpoint_fact`, `error_case`, `prose_claim`,
+`field_table`.
+
+**API-reference pattern** — the CyberSource guide shape: an `Endpoint` section
+(Production/Test verb+URL lines), a `Required Fields` definition list (api-fields
+links + instruction text), and a `REST Example` with fenced JSON. Extracts as
+`endpoint_fact` (not `quickstart_step`). UI procedures still yield steps; a
+page can produce both.
+
+**Source noise → metadata** — brace anchors (`{#id}`), image refs, and source
+line ranges live on `extras` (`anchor`, `anchors`, `image_refs`, `line_start`,
+`line_end`, `deep_link`). Claim `text` stays clean for dedupe and reading.
+Generated pages link via `deep_link`; they must never contain raw `{#…}`.
 
 **Claim kind** — the constraint subtype on a prose claim: `ttl_or_validity`,
 `ttl_and_reuse`, `reuse_or_rate_limit`, `pci_compliance`, `mandatory_header`,

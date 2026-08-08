@@ -12,6 +12,49 @@ _Generated from `normalized/2026-08-08-boarding.claims.json`; do not hand-edit. 
 
 - **Gap:** no prerequisite is specified in the source docs.
 
+## API endpoints
+
+### Change an Organization's Status
+
+- **Method:** `GET`
+- **Path:** `/oms/v1/organizations/{organizationId}`
+- **production host:** `https://api.cybersource.com`
+
+#### Example request
+
+```json
+{}
+```
+
+#### Example response
+
+```json
+200 OK
+```
+
+- <sub>[`en-us_boarding_developer_all_rest_boarding:endpoint:get:662fc29c`](https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-change-org-status)</sub>
+
+### Change an Organization's Status
+
+- **Method:** `GET`
+- **Path:** `/oms/v1/organizations/{organizationId}`
+- **test host:** `https://apitest.cybersource.com`
+
+#### Example request
+
+```json
+{}
+```
+
+#### Example response
+
+```json
+200 OK
+```
+
+- <sub>[`en-us_boarding_developer_all_rest_boarding:endpoint:get:6ff93759`](https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-change-org-status)</sub>
+
+
 ## Steps
 
 ### Via Partner admin (Business Center) — `en-us_boarding_user_all_ebc_boarding-user_merchants-v2-status-change.md.md`

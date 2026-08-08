@@ -13,33 +13,1458 @@ _Generated from `normalized/2026-08-08-boarding.claims.json`; do not hand-edit. 
 ## Preconditions
 
 - * You must include a merchant website URL. 3-D Secure protocol requires that the website URL must be in the format `https://www.example.com`.  
-  <sub>`en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-payer-auth:prose:58bfc6580728` · 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-payer-auth.md.md</sub>
+  <sub>`en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-payer-auth:prose:58bfc6580728`</sub> · 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-payer-auth.md.md
 - * You must include a merchant category code for your merchant.  
-  <sub>`en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-payer-auth:prose:a4431adf9e91` · 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-payer-auth.md.md</sub>
+  <sub>`en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-payer-auth:prose:a4431adf9e91`</sub> · 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-payer-auth.md.md
 - Must be in the format `http://www.example.com`.  
-  <sub>`en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-payer-auth_boarding-payer-auth-enable-intro_boarding-payer-auth-enable-reqfields:prose:452b05be0057` · 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-payer-auth_boarding-payer-auth-enable-intro_boarding-payer-auth-enable-reqfields.md.md</sub>
+  <sub>`en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-payer-auth_boarding-payer-auth-enable-intro_boarding-payer-auth-enable-reqfields:prose:452b05be0057`</sub> · 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-payer-auth_boarding-payer-auth-enable-intro_boarding-payer-auth-enable-reqfields.md.md
 - You must include the merchant business information during token requestor ID enrollment and when you create the ` TMS ` token vault.  
-  <sub>`en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-tms:prose:00452a944a4e` · 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-tms.md.md</sub>
+  <sub>`en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-tms:prose:00452a944a4e`</sub> · 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-tms.md.md
 - Having a TRID is a prerequisite for enabling network tokenization.  
-  <sub>`en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-tms_tms-vault-hierarchy_tms-trids:prose:bf5e52f8feb7` · 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-tms_tms-vault-hierarchy_tms-trids.md.md</sub>
+  <sub>`en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-tms_tms-vault-hierarchy_tms-trids:prose:bf5e52f8feb7`</sub> · 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-tms_tms-vault-hierarchy_tms-trids.md.md
 - * You must include a merchant website URL. 3-D Secure protocol requires that the website URL must be in the format `https://www.example.com`.  
-  <sub>`en-us_boarding_developer_all_rest_boarding_boarding-products_boarding-pecs-payer-auth:prose:58bfc6580728` · 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products_boarding-pecs-payer-auth.md.md</sub>
+  <sub>`en-us_boarding_developer_all_rest_boarding_boarding-products_boarding-pecs-payer-auth:prose:58bfc6580728`</sub> · 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products_boarding-pecs-payer-auth.md.md
 - * You must include a merchant category code for your merchant.  
-  <sub>`en-us_boarding_developer_all_rest_boarding_boarding-products_boarding-pecs-payer-auth:prose:a4431adf9e91` · 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products_boarding-pecs-payer-auth.md.md</sub>
+  <sub>`en-us_boarding_developer_all_rest_boarding_boarding-products_boarding-pecs-payer-auth:prose:a4431adf9e91`</sub> · 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products_boarding-pecs-payer-auth.md.md
 - You must include the merchant business information during token requestor ID enrollment and when you create the ` TMS ` token vault.  
-  <sub>`en-us_boarding_developer_all_rest_boarding_boarding-products_boarding-pecs-tms:prose:00452a944a4e` · 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products_boarding-pecs-tms.md.md</sub>
+  <sub>`en-us_boarding_developer_all_rest_boarding_boarding-products_boarding-pecs-tms:prose:00452a944a4e`</sub> · 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products_boarding-pecs-tms.md.md
 - IMPORTANT You must include this field for all card types configured for the processor.  
-  <sub>`en-us_boarding_developer_all_rest_boarding_boarding-products_pecs-add-delete-processor_pecs-add-delete-processor-req-fields:prose:477d5afd2eaa` · 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products_pecs-add-delete-processor_pecs-add-delete-processor-req-fields.md.md</sub>
+  <sub>`en-us_boarding_developer_all_rest_boarding_boarding-products_pecs-add-delete-processor_pecs-add-delete-processor-req-fields:prose:477d5afd2eaa`</sub> · 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products_pecs-add-delete-processor_pecs-add-delete-processor-req-fields.md.md
 - IMPORTANT You must include this field for all card types configured for the processor.  
-  <sub>`en-us_boarding_developer_all_rest_boarding_boarding-products_pecs-delete-processor_pecs-delete-processor-req-fields:prose:477d5afd2eaa` · 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products_pecs-delete-processor_pecs-delete-processor-req-fields.md.md</sub>
+  <sub>`en-us_boarding_developer_all_rest_boarding_boarding-products_pecs-delete-processor_pecs-delete-processor-req-fields:prose:477d5afd2eaa`</sub> · 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products_pecs-delete-processor_pecs-delete-processor-req-fields.md.md
 - * You must include a merchant website URL. 3-D Secure protocol requires that the website URL is in the format `https://www.example.com`.  
-  <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth:prose:609b36db9ed6` · 2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth.md.md</sub>
+  <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth:prose:609b36db9ed6`</sub> · 2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth.md.md
 - * You must include a merchant category code for your merchant.  
-  <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth:prose:a4431adf9e91` · 2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth.md.md</sub>
+  <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth:prose:a4431adf9e91`</sub> · 2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth.md.md
 - You must include the merchant business information during token requestor ID enrollment and when you create the ` TMS ` token vault.  
-  <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-tms:prose:00452a944a4e` · 2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-tms.md.md</sub>
+  <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-tms:prose:00452a944a4e`</sub> · 2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-tms.md.md
 - Having a TRID is a prerequisite for enabling network tokenization.  
-  <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-tms_tms-vault-hierarchy_tms-trids:prose:bf5e52f8feb7` · 2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-tms_tms-vault-hierarchy_tms-trids.md.md</sub>
+  <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-tms_tms-vault-hierarchy_tms-trids:prose:bf5e52f8feb7`</sub> · 2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-tms_tms-vault-hierarchy_tms-trids.md.md
+
+## API endpoints
+
+### Enable `Payer Authentication`
+
+- **Method:** `POST`
+- **Path:** `/boarding/v1/registrations`
+- **production host:** `https://api.cybersource.com`
+
+#### Required fields
+
+- [`organizationInformation.businessInformation.address.address1`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-address-address1.md)
+- [`organizationInformation.businessInformation.address.administrativeArea`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-address-admin-area.md)
+- [`organizationInformation.businessInformation.address.country`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-address-country.md)
+- [`organizationInformation.businessInformation.address.locality`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-address-locality.md)
+- [`organizationInformation.businessInformation.address.postalCode`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-address-postal-code.md)
+- [`organizationInformation.businessInformation.businessContact.email`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-contact-email.md)
+- [`organizationInformation.businessInformation.businessContact.firstName`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-business-contact-first-name.md)
+- [`organizationInformation.businessInformation.businessContact.lastName`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-business-contact-last-name.md)
+- [`organizationInformation.businessInformation.businessContact.phoneNumber`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-business-contact-phone-num.md)
+- [`organizationInformation.businessInformation.businessContact.websiteUrl`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-website-url.md) — Must be in the format `http://www.example.com`.
+- [`organizationInformation.businessInformation.name`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-name.md)
+- [`organizationInformation.configurable`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-configurable.md) — Set to `false`.
+- [`organizationInformation.parentOrganizationId`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-parent-organization-id.md)
+- [`organizationInformation.type`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-type.md) — Set to `TRANSACTING`.
+- [`registrationInformation.boardingFlow`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/reg-info-aa/reg-info-boarding-flow.md) — Set to `ADDPRODUCT`.
+- [`productInformation.selectedProducts.payments.payerAuthentication.configurationInformation. configurations.cardTypes.amexSafeKey.enabled`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-pay-payerauth-conf-info-conf-4.md) — Set to `true`.
+- [`productInformation.selectedProducts.payments.payerAuthentication.configurationInformation. configurations.cardTypes.CB.enabled`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-pay-payerauth-conf-info-con-10.md) — Set to `true`.
+- [`productInformation.selectedProducts.payments.payerAuthentication.configurationInformation. configurations.cardTypes.CB.requestorId`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-pay-payerauth-conf-info-conf-8.md) — Discover/Diners Club ProtectBuy-Specific Fields -----------------------------------------------
+- [`productInformation.selectedProducts.payments.payerAuthentication.configurationInformation. configurations.cardTypes.dinersClubInternationalProtectBuy.enabled`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-pay-payerauth-conf-info-con-17.md) — Set to `true`.
+- [`productInformation.selectedProducts.payments.payerAuthentication.configurationInformation. configurations.cardTypes.ELO.enabled`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-pay-payerauth-conf-info-con-23.md) — Set to `true`.
+- [`productInformation.selectedProducts.payments.payerAuthentication.configurationInformation. configurations.cardTypes.jCBJSecure.enabled`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-pay-payerauth-conf-info-con-29.md) — Set to `true`.
+- [`productInformation.selectedProducts.payments.payerAuthentication.configurationInformation. configurations.cardTypes.jCBJSecure.securePasswordForJCB`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-pay-payerauth-conf-info-con-30.md) — Mastercard/Meeza Identity Check-Specific Fields -----------------------------------------------
+- [`productInformation.selectedProducts.payments.payerAuthentication.configurationInformation. configurations.cardTypes.masterCardSecureCode.enabled`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-pay-payerauth-conf-info-con-36.md) — Set to `true`.
+- [`productInformation.selectedProducts.payments.payerAuthentication.configurationInformation. configurations.cardTypes.UPI.enabled`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-pay-payerauth-conf-info-con-42.md) — Set to `true`.
+- [`productInformation.selectedProducts.payments.payerAuthentication.configurationInformation. configurations.cardTypes.verifiedByVisa.enabled`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-pay-payerauth-conf-info-con-48.md) — Set to `true`.
+
+#### Example request
+
+```json
+{
+  "registrationInformation": {
+    "boardingFlow": "ADDPRODUCT"
+  },
+  "organizationInformation": {
+    "organizationId": "apitester00",
+    "parentOrganizationId": "nishtx",
+    "type": "TRANSACTING",
+    "configurable": false,
+    "businessInformation": {
+      "address": {
+        "country": "US",
+        "address1": "123 Main",
+        "postalCode": "99999",
+        "administrativeArea": "WA",
+        "locality": "Seattle"
+      },
+      "businessContact": {
+        "firstName": "Jane",
+        "lastName": "Smith",
+        "phoneNumber": "5551234567",
+        "email": "email@domain.com"
+      },
+      "name": "Test Merchant",
+      "websiteUrl": "https://www.example.com"
+    }
+  },
+  "productInformation": {
+    "selectedProducts": {
+      "payments": {
+        "payerAuthentication": {
+          "configurationInformation": {
+            "configurations": {
+              "cardTypes": {
+                "amexSafeKey": {
+                  "enabled": true,
+                  "currencies": [
+                    {
+                      "currencyCodes": ["ALL"],
+                      "acquirerId": "12345678901-1000",
+                      "processorMerchantId": "procmerch123"
+                    }
+                  ]
+                },
+                "CB": {
+                  "requestorId": "",
+                  "enabled": true,
+                  "currencies": [
+                    {
+                      "currencyCodes": ["ALL"],
+                      "acquirerId": "211111-1000",
+                      "processorMerchantId": "procmerch123"
+                    }
+                  ]
+                },
+                "dinersClubInternationalProtectBuy": {
+                  "enabled": true,
+                  "currencies": [
+                    {
+                      "currencyCodes": ["ALL"],
+                      "acquirerId": "311111-1000",
+                      "processorMerchantId": "procmerch123"
+                    }
+                  ]
+                },
+                "ELO": {
+                  "enabled": true,
+                  "currencies": [
+                    {
+                      "currencyCodes": ["ALL"],
+                      "acquirerId": "11111111-1000",
+                      "processorMerchantId": "procmerch123"
+                    }
+                  ]
+                },
+                "jCBJSecure": {
+                  "securePasswordForJCB": "jcbpass",
+                  "enabled": true,
+                  "currencies": [
+                    {
+                      "currencyCodes": ["ALL"],
+                      "acquirerId": "123456-1000",
+                      "processorMerchantId": "procmerch123"
+                    }
+                  ]
+                },
+                "masterCardSecureCode": {
+                  "enabled": true,
+                  "currencies": [
+                    {
+                      "currencyCodes": ["ALL"],
+                      "acquirerId": "522222-1000",
+                      "processorMerchantId": "procmerch123"
+                    }
+                  ]
+                },
+                "UPI": {
+                  "enabled": true,
+                  "currencies": [
+                    {
+                      "currencyCodes": ["ALL"],
+                      "acquirerId": "611111-1000",
+                      "processorMerchantId": "procmerch123"
+                    }
+                  ]
+                },
+                "verifiedByVisa": {
+                  "enabled": true,
+                  "currencies": [
+                    {
+                      "currencyCodes": ["ALL"],
+                      "acquirerId": "411111-1000",
+                      "processorMerchantId": "procmerch123"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+#### Example response
+
+```json
+{
+  "id": "87304104004",
+  "submitTimeUtc": "2024-05-14T15:53:19Z",
+  "status": "PROCESSING",
+  "registrationInformation": {
+    "mode": "COMPLETE",
+    "boardingPackageId": "190303004"
+  },
+  "organizationInformation": {
+    "organizationId": "apitester00",
+    "parentOrganizationId": "nishtx"
+  },
+  "message": "Request is being processed"
+}
+```
+
+- <sub>[`en-us_boarding_developer_all_rest_boarding:endpoint:post:ceabf7ee`](https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-payer-auth-enable-intro)</sub>
+
+### Enable `Payer Authentication`
+
+- **Method:** `POST`
+- **Path:** `/boarding/v1/registrations`
+- **test host:** `https://apitest.cybersource.com`
+
+#### Required fields
+
+- [`organizationInformation.businessInformation.address.address1`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-address-address1.md)
+- [`organizationInformation.businessInformation.address.administrativeArea`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-address-admin-area.md)
+- [`organizationInformation.businessInformation.address.country`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-address-country.md)
+- [`organizationInformation.businessInformation.address.locality`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-address-locality.md)
+- [`organizationInformation.businessInformation.address.postalCode`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-address-postal-code.md)
+- [`organizationInformation.businessInformation.businessContact.email`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-contact-email.md)
+- [`organizationInformation.businessInformation.businessContact.firstName`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-business-contact-first-name.md)
+- [`organizationInformation.businessInformation.businessContact.lastName`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-business-contact-last-name.md)
+- [`organizationInformation.businessInformation.businessContact.phoneNumber`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-business-contact-phone-num.md)
+- [`organizationInformation.businessInformation.businessContact.websiteUrl`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-website-url.md) — Must be in the format `http://www.example.com`.
+- [`organizationInformation.businessInformation.name`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-name.md)
+- [`organizationInformation.configurable`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-configurable.md) — Set to `false`.
+- [`organizationInformation.parentOrganizationId`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-parent-organization-id.md)
+- [`organizationInformation.type`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-type.md) — Set to `TRANSACTING`.
+- [`registrationInformation.boardingFlow`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/reg-info-aa/reg-info-boarding-flow.md) — Set to `ADDPRODUCT`.
+- [`productInformation.selectedProducts.payments.payerAuthentication.configurationInformation. configurations.cardTypes.amexSafeKey.enabled`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-pay-payerauth-conf-info-conf-4.md) — Set to `true`.
+- [`productInformation.selectedProducts.payments.payerAuthentication.configurationInformation. configurations.cardTypes.CB.enabled`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-pay-payerauth-conf-info-con-10.md) — Set to `true`.
+- [`productInformation.selectedProducts.payments.payerAuthentication.configurationInformation. configurations.cardTypes.CB.requestorId`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-pay-payerauth-conf-info-conf-8.md) — Discover/Diners Club ProtectBuy-Specific Fields -----------------------------------------------
+- [`productInformation.selectedProducts.payments.payerAuthentication.configurationInformation. configurations.cardTypes.dinersClubInternationalProtectBuy.enabled`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-pay-payerauth-conf-info-con-17.md) — Set to `true`.
+- [`productInformation.selectedProducts.payments.payerAuthentication.configurationInformation. configurations.cardTypes.ELO.enabled`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-pay-payerauth-conf-info-con-23.md) — Set to `true`.
+- [`productInformation.selectedProducts.payments.payerAuthentication.configurationInformation. configurations.cardTypes.jCBJSecure.enabled`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-pay-payerauth-conf-info-con-29.md) — Set to `true`.
+- [`productInformation.selectedProducts.payments.payerAuthentication.configurationInformation. configurations.cardTypes.jCBJSecure.securePasswordForJCB`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-pay-payerauth-conf-info-con-30.md) — Mastercard/Meeza Identity Check-Specific Fields -----------------------------------------------
+- [`productInformation.selectedProducts.payments.payerAuthentication.configurationInformation. configurations.cardTypes.masterCardSecureCode.enabled`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-pay-payerauth-conf-info-con-36.md) — Set to `true`.
+- [`productInformation.selectedProducts.payments.payerAuthentication.configurationInformation. configurations.cardTypes.UPI.enabled`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-pay-payerauth-conf-info-con-42.md) — Set to `true`.
+- [`productInformation.selectedProducts.payments.payerAuthentication.configurationInformation. configurations.cardTypes.verifiedByVisa.enabled`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-pay-payerauth-conf-info-con-48.md) — Set to `true`.
+
+#### Example request
+
+```json
+{
+  "registrationInformation": {
+    "boardingFlow": "ADDPRODUCT"
+  },
+  "organizationInformation": {
+    "organizationId": "apitester00",
+    "parentOrganizationId": "nishtx",
+    "type": "TRANSACTING",
+    "configurable": false,
+    "businessInformation": {
+      "address": {
+        "country": "US",
+        "address1": "123 Main",
+        "postalCode": "99999",
+        "administrativeArea": "WA",
+        "locality": "Seattle"
+      },
+      "businessContact": {
+        "firstName": "Jane",
+        "lastName": "Smith",
+        "phoneNumber": "5551234567",
+        "email": "email@domain.com"
+      },
+      "name": "Test Merchant",
+      "websiteUrl": "https://www.example.com"
+    }
+  },
+  "productInformation": {
+    "selectedProducts": {
+      "payments": {
+        "payerAuthentication": {
+          "configurationInformation": {
+            "configurations": {
+              "cardTypes": {
+                "amexSafeKey": {
+                  "enabled": true,
+                  "currencies": [
+                    {
+                      "currencyCodes": ["ALL"],
+                      "acquirerId": "12345678901-1000",
+                      "processorMerchantId": "procmerch123"
+                    }
+                  ]
+                },
+                "CB": {
+                  "requestorId": "",
+                  "enabled": true,
+                  "currencies": [
+                    {
+                      "currencyCodes": ["ALL"],
+                      "acquirerId": "211111-1000",
+                      "processorMerchantId": "procmerch123"
+                    }
+                  ]
+                },
+                "dinersClubInternationalProtectBuy": {
+                  "enabled": true,
+                  "currencies": [
+                    {
+                      "currencyCodes": ["ALL"],
+                      "acquirerId": "311111-1000",
+                      "processorMerchantId": "procmerch123"
+                    }
+                  ]
+                },
+                "ELO": {
+                  "enabled": true,
+                  "currencies": [
+                    {
+                      "currencyCodes": ["ALL"],
+                      "acquirerId": "11111111-1000",
+                      "processorMerchantId": "procmerch123"
+                    }
+                  ]
+                },
+                "jCBJSecure": {
+                  "securePasswordForJCB": "jcbpass",
+                  "enabled": true,
+                  "currencies": [
+                    {
+                      "currencyCodes": ["ALL"],
+                      "acquirerId": "123456-1000",
+                      "processorMerchantId": "procmerch123"
+                    }
+                  ]
+                },
+                "masterCardSecureCode": {
+                  "enabled": true,
+                  "currencies": [
+                    {
+                      "currencyCodes": ["ALL"],
+                      "acquirerId": "522222-1000",
+                      "processorMerchantId": "procmerch123"
+                    }
+                  ]
+                },
+                "UPI": {
+                  "enabled": true,
+                  "currencies": [
+                    {
+                      "currencyCodes": ["ALL"],
+                      "acquirerId": "611111-1000",
+                      "processorMerchantId": "procmerch123"
+                    }
+                  ]
+                },
+                "verifiedByVisa": {
+                  "enabled": true,
+                  "currencies": [
+                    {
+                      "currencyCodes": ["ALL"],
+                      "acquirerId": "411111-1000",
+                      "processorMerchantId": "procmerch123"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+#### Example response
+
+```json
+{
+  "id": "87304104004",
+  "submitTimeUtc": "2024-05-14T15:53:19Z",
+  "status": "PROCESSING",
+  "registrationInformation": {
+    "mode": "COMPLETE",
+    "boardingPackageId": "190303004"
+  },
+  "organizationInformation": {
+    "organizationId": "apitester00",
+    "parentOrganizationId": "nishtx"
+  },
+  "message": "Request is being processed"
+}
+```
+
+- <sub>[`en-us_boarding_developer_all_rest_boarding:endpoint:post:0817e1d1`](https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-payer-auth-enable-intro)</sub>
+
+### Enable `Token Management Service` Using a Template
+
+- **Method:** `POST`
+- **Path:** `/boarding/v1/registrations`
+- **production host:** `https://api.cybersource.com`
+
+#### Required fields
+
+- [`organizationInformation.businessInformation.address.address1`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-address-address1.md)
+- [`organizationInformation.businessInformation.address.administrativeArea`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-address-admin-area.md)
+- [`organizationInformation.businessInformation.address.country`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-address-country.md)
+- [`organizationInformation.businessInformation.address.locality`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-address-locality.md)
+- [`organizationInformation.businessInformation.address.postalCode`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-address-postal-code.md)
+- [`organizationInformation.businessInformation.businessContact.email`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-contact-email.md)
+- [`organizationInformation.businessInformation.businessContact.firstName`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-business-contact-first-name.md)
+- [`organizationInformation.businessInformation.businessContact.lastName`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-business-contact-last-name.md)
+- [`organizationInformation.businessInformation.businessContact.phoneNumber`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-business-contact-phone-num.md)
+- [`organizationInformation.businessInformation.name`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-name.md)
+- [`organizationInformation.configurable`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-configurable.md) — Set to `false`.
+- [`organizationInformation.parentOrganizationId`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-parent-organization-id.md)
+- [`organizationInformation.type`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-type.md) — Set to `TRANSACTING`.
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement.configurationInformation.templateId`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-tem.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement.subscriptionInformation.enabled`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-sub-enab.md) — Set to `true` to enable `Token Management Service`.
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement.subscriptionInformation.selfServiceability`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-sub-self.md)
+- [`registrationInformation.boardingFlow`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/reg-info-aa/reg-info-boarding-flow.md) — Set to `ADDPRODUCT`.
+
+#### Example request
+
+```json
+{
+  "registrationInformation": {
+    "boardingFlow": "ADDPRODUCT"
+  },
+  "organizationInformation": {
+    "parentOrganizationId": "3b2bwnhbm7cdzath0qcn0luhkpvb",
+    "type": "TRANSACTING",
+    "configurable": false,
+    "businessInformation": {
+      "name": "Test Merchant",
+      "address": {
+        "country": "US",
+        "address1": "123 Main",
+        "locality": "Seattle",
+        "administrativeArea": "WA",
+        "postalCode": "99999"
+      },
+      "businessContact": {
+        "firstName": "Jane",
+        "lastName": "Smith",
+        "phoneNumber": "5551234567",
+        "email": "email@domain.com"
+      }
+    }
+  },
+  "productInformation": {
+    "selectedProducts": {
+      "commerceSolutions": {
+        "tokenManagement": {
+          "subscriptionInformation": {
+            "enabled": true,
+            "selfServiceability": "NOT_SELF_SERVICEABLE"
+          },
+          "configurationInformation": {
+            "templateId": "43107BC1-E3DA-4019-9306-4510AD4DE05F"
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+#### Example response
+
+```json
+{
+  "id": "94498504004",
+  "submitTimeUtc": "2024-07-01T16:25:20Z",
+  "status": "SUCCESS",
+  "registrationInformation": {
+    "mode": "COMPLETE",
+    "boardingPackageId": "1168704004"
+  },
+  "organizationInformation": {
+    "organizationId": "{MerchantAccountOrgId}",
+    "parentOrganizationId": "{PortfolioOrgId}"
+  },
+  "message": "Request was processed successfully"
+}
+```
+
+- <sub>[`en-us_boarding_developer_all_rest_boarding:endpoint:post:0df2d69e`](https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-tms-enable-intro)</sub>
+
+### Enable `Token Management Service` Using a Template
+
+- **Method:** `POST`
+- **Path:** `/boarding/v1/registrations`
+- **test host:** `https://apitest.cybersource.com`
+
+#### Required fields
+
+- [`organizationInformation.businessInformation.address.address1`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-address-address1.md)
+- [`organizationInformation.businessInformation.address.administrativeArea`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-address-admin-area.md)
+- [`organizationInformation.businessInformation.address.country`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-address-country.md)
+- [`organizationInformation.businessInformation.address.locality`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-address-locality.md)
+- [`organizationInformation.businessInformation.address.postalCode`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-address-postal-code.md)
+- [`organizationInformation.businessInformation.businessContact.email`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-contact-email.md)
+- [`organizationInformation.businessInformation.businessContact.firstName`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-business-contact-first-name.md)
+- [`organizationInformation.businessInformation.businessContact.lastName`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-business-contact-last-name.md)
+- [`organizationInformation.businessInformation.businessContact.phoneNumber`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-business-contact-phone-num.md)
+- [`organizationInformation.businessInformation.name`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-name.md)
+- [`organizationInformation.configurable`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-configurable.md) — Set to `false`.
+- [`organizationInformation.parentOrganizationId`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-parent-organization-id.md)
+- [`organizationInformation.type`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-type.md) — Set to `TRANSACTING`.
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement.configurationInformation.templateId`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-tem.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement.subscriptionInformation.enabled`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-sub-enab.md) — Set to `true` to enable `Token Management Service`.
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement.subscriptionInformation.selfServiceability`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-sub-self.md)
+- [`registrationInformation.boardingFlow`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/reg-info-aa/reg-info-boarding-flow.md) — Set to `ADDPRODUCT`.
+
+#### Example request
+
+```json
+{
+  "registrationInformation": {
+    "boardingFlow": "ADDPRODUCT"
+  },
+  "organizationInformation": {
+    "parentOrganizationId": "3b2bwnhbm7cdzath0qcn0luhkpvb",
+    "type": "TRANSACTING",
+    "configurable": false,
+    "businessInformation": {
+      "name": "Test Merchant",
+      "address": {
+        "country": "US",
+        "address1": "123 Main",
+        "locality": "Seattle",
+        "administrativeArea": "WA",
+        "postalCode": "99999"
+      },
+      "businessContact": {
+        "firstName": "Jane",
+        "lastName": "Smith",
+        "phoneNumber": "5551234567",
+        "email": "email@domain.com"
+      }
+    }
+  },
+  "productInformation": {
+    "selectedProducts": {
+      "commerceSolutions": {
+        "tokenManagement": {
+          "subscriptionInformation": {
+            "enabled": true,
+            "selfServiceability": "NOT_SELF_SERVICEABLE"
+          },
+          "configurationInformation": {
+            "templateId": "43107BC1-E3DA-4019-9306-4510AD4DE05F"
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+#### Example response
+
+```json
+{
+  "id": "94498504004",
+  "submitTimeUtc": "2024-07-01T16:25:20Z",
+  "status": "SUCCESS",
+  "registrationInformation": {
+    "mode": "COMPLETE",
+    "boardingPackageId": "1168704004"
+  },
+  "organizationInformation": {
+    "organizationId": "{MerchantAccountOrgId}",
+    "parentOrganizationId": "{PortfolioOrgId}"
+  },
+  "message": "Request was processed successfully"
+}
+```
+
+- <sub>[`en-us_boarding_developer_all_rest_boarding:endpoint:post:f562c266`](https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-tms-enable-intro)</sub>
+
+### Enable `TMS` and Enroll in Network Tokenization for a New Merchant
+
+- **Method:** `POST`
+- **Path:** `/boarding/v1/registrations`
+- **production host:** `https://api.cybersource.com`
+
+#### Required fields
+
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.vault.defaultTokenType`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-vau.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.vault.location`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-21.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.vault.sensitivePrivileges.cardNumberMaskingFormat`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-22.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.vault.tokenFormats.customer`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-23.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.vault.tokenFormats.instrumentIdentifierBankAccount`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-24.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.vault.tokenFormats.instrumentIdentifierCard`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-25.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.vault.tokenFormats.paymentInstrument`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-26.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenEnrollment.businessInformation.acquirer.acquirerId`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement.configurationInformation. configurations.networkTokenEnrollment.businessInformation.acquirer.acquirerMerchantId`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf--0.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenEnrollment.businessInformation.address.country`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf--1.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenEnrollment.businessInformation.address.locality`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf--2.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenEnrollment.businessInformation.doingBusinessAs`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf--4.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement.configurationInformation. configurations.networkTokenEnrollment.businessInformation.name`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf--5.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenEnrollment.networkTokenServices. mastercardDigitalEnablementService.enrollment`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-13.md) — Set to `true`.
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenEnrollment.networkTokenServices.visaTokenService.enrollment`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-18.md) — Set to `true`.
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenEnrollment.businessInformation.websiteUrl`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf--3.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenServices.mastercardDigitalEnablementService.enableService`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-12.md) — Set to `true`.
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenServices.mastercardDigitalEnablementService.enableTransactionalTokens`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-11.md) — Set to `true`.
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenServices.notifications.enabled`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-15.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenServices.paymentCredentials.enabled`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-10.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenServices.visaTokenService.enableService`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-17.md) — Set to `true`.
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenServices.visaTokenService.enableTransactionalTokens`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-16.md) — Set to `true`.
+- [`organizationInformation.businessInformation.address.address1`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-address-address1.md)
+- [`organizationInformation.businessInformation.address.administrativeArea`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-address-admin-area.md)
+- [`organizationInformation.businessInformation.address.country`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-address-country.md)
+- [`organizationInformation.businessInformation.address.locality`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-address-locality.md)
+- [`organizationInformation.businessInformation.address.postalCode`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-address-postal-code.md)
+- [`organizationInformation.businessInformation.businessContact.email`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-contact-email.md)
+- [`organizationInformation.businessInformation.businessContact.firstName`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-business-contact-first-name.md)
+- [`organizationInformation.businessInformation.businessContact.lastName`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-business-contact-last-name.md)
+- [`organizationInformation.businessInformation.businessContact.phoneNumber`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-business-contact-phone-num.md)
+- [`organizationInformation.businessInformation.name`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-name.md)
+- [`organizationInformation.configurable`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-configurable.md) — Set to `true`.
+- [`organizationInformation.organizationId`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-organization-id.md)
+- [`organizationInformation.parentOrganizationId`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-parent-organization-id.md)
+- [`organizationInformation.type`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-type.md) — Set to `MERCHANT`.
+- [`registrationInformation.boardingFlow`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/reg-info-aa/reg-info-boarding-flow.md) — Set to `ADDPRODUCT`.
+
+#### Example request
+
+```json
+{
+  "registrationInformation": {
+    "boardingFlow": "ENTERPRISE"
+  },
+  "organizationInformation": {
+    "organizationId": "yourmerchantorgidhere",
+    "parentOrganizationId": "yourportfolioorgidhere",
+    "type": "MERCHANT",
+    "configurable": true,
+    "businessInformation": {
+      "name": "NetworkTokenMerchant",
+      "address": {
+        "country": "US",
+        "address1": "123456 SandMarket",
+        "locality": "ORMOND BEACH",
+        "administrativeArea": "FL",
+        "postalCode": "32176"
+      },
+      "websiteUrl": "https://www.NetworkTokenMerchant.com",
+      "businessContact": {
+        "firstName": "Token",
+        "lastName": "Man",
+        "phoneNumber": "6574567813",
+        "email": "networktokenman@visa.com"
+      }
+    }
+  },
+  "productInformation": {
+    "selectedProducts": {
+      "commerceSolutions": {
+        "tokenManagement": {
+          "subscriptionInformation": {
+            "enabled": true
+          },
+          "configurationInformation": {
+            "configurations": {
+              "vault": {
+                "location": "GDC",
+                "defaultTokenType": "CUSTOMER",
+                "tokenFormats": {
+                  "customer": "32_HEX",
+                  "paymentInstrument": "32_HEX",
+                  "instrumentIdentifierCard": "19_DIGIT_LAST_4",
+                  "instrumentIdentifierBankAccount": "32_HEX"
+                },
+                "sensitivePrivileges": {
+                  "cardNumberMaskingFormat": "FIRST_6_LAST_4"
+                },
+                "networkTokenServices": {
+                  "notifications": {
+                    "enabled": true
+                  },
+                  "paymentCredentials": {
+                    "enabled": true
+                  },
+                  "synchronousProvisioning": {
+                    "enabled": false
+                  },
+                  "visaTokenService": {
+                    "enableService": true,
+                    "enableTransactionalTokens": true
+                  },
+                  "mastercardDigitalEnablementService": {
+                    "enableService": true,
+                    "enableTransactionalTokens": true
+                  }
+                }
+              },
+              "networkTokenEnrollment": {
+                "businessInformation": {
+                  "name": "NetworkTokenMerchant",
+                  "doingBusinessAs": "NetworkTokenCo1",
+                  "address": {
+                    "country": "US",
+                    "locality": "ORMOND BEACH"
+                  },
+                  "websiteUrl": "https://www.NetworkTokenMerchant.com",
+                  "acquirer": {
+                    "acquirerId": "40010052242",
+                    "acquirerMerchantId": "MerchantOrgID"
+                  }
+                },
+                "networkTokenServices": {
+                  "visaTokenService": {
+                    "enrollment": true
+                  },
+                  "mastercardDigitalEnablementService": {
+                    "enrollment": true
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+#### Example response
+
+```json
+{
+  "id": "94498504004",
+  "submitTimeUtc": "2024-07-01T16:25:20Z",
+  "status": "SUCCESS",
+  "registrationInformation": {
+    "mode": "COMPLETE",
+    "boardingPackageId": "1168704004"
+  },
+  "organizationInformation": {
+    "organizationId": "{MerchantAccountOrgId}",
+    "parentOrganizationId": "{PortfolioOrgId}"
+  },
+  "message": "Request was processed successfully"
+}
+```
+
+- <sub>[`en-us_boarding_developer_all_rest_boarding:endpoint:post:cf72b996`](https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-tms-enable-net-tkn-intro)</sub>
+
+### Enable `TMS` and Enroll in Network Tokenization for a New Merchant
+
+- **Method:** `POST`
+- **Path:** `/boarding/v1/registrations`
+- **test host:** `https://apitest.cybersource.com`
+
+#### Required fields
+
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.vault.defaultTokenType`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-vau.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.vault.location`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-21.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.vault.sensitivePrivileges.cardNumberMaskingFormat`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-22.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.vault.tokenFormats.customer`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-23.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.vault.tokenFormats.instrumentIdentifierBankAccount`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-24.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.vault.tokenFormats.instrumentIdentifierCard`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-25.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.vault.tokenFormats.paymentInstrument`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-26.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenEnrollment.businessInformation.acquirer.acquirerId`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement.configurationInformation. configurations.networkTokenEnrollment.businessInformation.acquirer.acquirerMerchantId`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf--0.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenEnrollment.businessInformation.address.country`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf--1.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenEnrollment.businessInformation.address.locality`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf--2.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenEnrollment.businessInformation.doingBusinessAs`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf--4.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement.configurationInformation. configurations.networkTokenEnrollment.businessInformation.name`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf--5.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenEnrollment.networkTokenServices. mastercardDigitalEnablementService.enrollment`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-13.md) — Set to `true`.
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenEnrollment.networkTokenServices.visaTokenService.enrollment`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-18.md) — Set to `true`.
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenEnrollment.businessInformation.websiteUrl`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf--3.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenServices.mastercardDigitalEnablementService.enableService`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-12.md) — Set to `true`.
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenServices.mastercardDigitalEnablementService.enableTransactionalTokens`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-11.md) — Set to `true`.
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenServices.notifications.enabled`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-15.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenServices.paymentCredentials.enabled`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-10.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenServices.visaTokenService.enableService`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-17.md) — Set to `true`.
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenServices.visaTokenService.enableTransactionalTokens`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-16.md) — Set to `true`.
+- [`organizationInformation.businessInformation.address.address1`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-address-address1.md)
+- [`organizationInformation.businessInformation.address.administrativeArea`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-address-admin-area.md)
+- [`organizationInformation.businessInformation.address.country`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-address-country.md)
+- [`organizationInformation.businessInformation.address.locality`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-address-locality.md)
+- [`organizationInformation.businessInformation.address.postalCode`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-address-postal-code.md)
+- [`organizationInformation.businessInformation.businessContact.email`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-contact-email.md)
+- [`organizationInformation.businessInformation.businessContact.firstName`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-business-contact-first-name.md)
+- [`organizationInformation.businessInformation.businessContact.lastName`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-business-contact-last-name.md)
+- [`organizationInformation.businessInformation.businessContact.phoneNumber`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-business-contact-phone-num.md)
+- [`organizationInformation.businessInformation.name`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-name.md)
+- [`organizationInformation.configurable`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-configurable.md) — Set to `true`.
+- [`organizationInformation.organizationId`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-organization-id.md)
+- [`organizationInformation.parentOrganizationId`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-parent-organization-id.md)
+- [`organizationInformation.type`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-type.md) — Set to `MERCHANT`.
+- [`registrationInformation.boardingFlow`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/reg-info-aa/reg-info-boarding-flow.md) — Set to `ADDPRODUCT`.
+
+#### Example request
+
+```json
+{
+  "registrationInformation": {
+    "boardingFlow": "ENTERPRISE"
+  },
+  "organizationInformation": {
+    "organizationId": "yourmerchantorgidhere",
+    "parentOrganizationId": "yourportfolioorgidhere",
+    "type": "MERCHANT",
+    "configurable": true,
+    "businessInformation": {
+      "name": "NetworkTokenMerchant",
+      "address": {
+        "country": "US",
+        "address1": "123456 SandMarket",
+        "locality": "ORMOND BEACH",
+        "administrativeArea": "FL",
+        "postalCode": "32176"
+      },
+      "websiteUrl": "https://www.NetworkTokenMerchant.com",
+      "businessContact": {
+        "firstName": "Token",
+        "lastName": "Man",
+        "phoneNumber": "6574567813",
+        "email": "networktokenman@visa.com"
+      }
+    }
+  },
+  "productInformation": {
+    "selectedProducts": {
+      "commerceSolutions": {
+        "tokenManagement": {
+          "subscriptionInformation": {
+            "enabled": true
+          },
+          "configurationInformation": {
+            "configurations": {
+              "vault": {
+                "location": "GDC",
+                "defaultTokenType": "CUSTOMER",
+                "tokenFormats": {
+                  "customer": "32_HEX",
+                  "paymentInstrument": "32_HEX",
+                  "instrumentIdentifierCard": "19_DIGIT_LAST_4",
+                  "instrumentIdentifierBankAccount": "32_HEX"
+                },
+                "sensitivePrivileges": {
+                  "cardNumberMaskingFormat": "FIRST_6_LAST_4"
+                },
+                "networkTokenServices": {
+                  "notifications": {
+                    "enabled": true
+                  },
+                  "paymentCredentials": {
+                    "enabled": true
+                  },
+                  "synchronousProvisioning": {
+                    "enabled": false
+                  },
+                  "visaTokenService": {
+                    "enableService": true,
+                    "enableTransactionalTokens": true
+                  },
+                  "mastercardDigitalEnablementService": {
+                    "enableService": true,
+                    "enableTransactionalTokens": true
+                  }
+                }
+              },
+              "networkTokenEnrollment": {
+                "businessInformation": {
+                  "name": "NetworkTokenMerchant",
+                  "doingBusinessAs": "NetworkTokenCo1",
+                  "address": {
+                    "country": "US",
+                    "locality": "ORMOND BEACH"
+                  },
+                  "websiteUrl": "https://www.NetworkTokenMerchant.com",
+                  "acquirer": {
+                    "acquirerId": "40010052242",
+                    "acquirerMerchantId": "MerchantOrgID"
+                  }
+                },
+                "networkTokenServices": {
+                  "visaTokenService": {
+                    "enrollment": true
+                  },
+                  "mastercardDigitalEnablementService": {
+                    "enrollment": true
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+#### Example response
+
+```json
+{
+  "id": "94498504004",
+  "submitTimeUtc": "2024-07-01T16:25:20Z",
+  "status": "SUCCESS",
+  "registrationInformation": {
+    "mode": "COMPLETE",
+    "boardingPackageId": "1168704004"
+  },
+  "organizationInformation": {
+    "organizationId": "{MerchantAccountOrgId}",
+    "parentOrganizationId": "{PortfolioOrgId}"
+  },
+  "message": "Request was processed successfully"
+}
+```
+
+- <sub>[`en-us_boarding_developer_all_rest_boarding:endpoint:post:b8f6e30d`](https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-tms-enable-net-tkn-intro)</sub>
+
+### Enable `TMS` and Enroll in Network Tokenization for an Existing Merchant
+
+- **Method:** `POST`
+- **Path:** `/boarding/v1/registrations`
+- **production host:** `https://api.cybersource.com`
+
+#### Required fields
+
+- [`organizationInformation.parentOrganizationId`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-parent-organization-id.md)
+- [`organizationInformation.type`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-type.md) — Set to `MERCHANT`.
+- [`organizationInformation.configurable`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-configurable.md) — Set to `true`.
+- [`registrationInformation.boardingFlow`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/reg-info-aa/reg-info-boarding-flow.md) — Set to `ADDPRODUCT`.
+- [`organizationInformation.businessInformation.name`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-name.md)
+- [`organizationInformation.businessInformation.address.country`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-address-country.md)
+- [`organizationInformation.businessInformation.address.address1`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-address-address1.md)
+- [`organizationInformation.businessInformation.address.postalCode`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-address-postal-code.md)
+- [`organizationInformation.businessInformation.address.administrativeArea`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-address-admin-area.md)
+- [`organizationInformation.businessInformation.address.locality`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-address-locality.md)
+- [`organizationInformation.businessInformation.businessContact.firstName`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-business-contact-first-name.md)
+- [`organizationInformation.businessInformation.businessContact.lastName`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-business-contact-last-name.md)
+- [`organizationInformation.businessInformation.businessContact.phoneNumber`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-business-contact-phone-num.md)
+- [`organizationInformation.businessInformation.businessContact.email`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-contact-email.md)
+- [`organizationInformation.organizationId`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-organization-id.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.vault.location`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-21.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.vault.defaultTokenType`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-vau.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.vault.tokenFormats.customer`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-23.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.vault.tokenFormats.paymentInstrument`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-26.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.vault.tokenFormats.instrumentIdentifierCard`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-25.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.vault.tokenFormats.instrumentIdentifierBankAccount`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-24.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.vault.sensitivePrivileges.cardNumberMaskingFormat`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-22.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement.configurationInformation. configurations.networkTokenEnrollment.businessInformation.name`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf--5.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenEnrollment.businessInformation.doingBusinessAs`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf--4.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenEnrollment.businessInformation.address.country`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf--1.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenEnrollment.businessInformation.address.locality`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf--2.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenEnrollment.businessInformation.websiteUrl`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf--3.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenEnrollment.businessInformation.acquirer.acquirerId`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement.configurationInformation. configurations.networkTokenEnrollment.businessInformation.acquirer.acquirerMerchantId`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf--0.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenEnrollment.networkTokenServices.visaTokenService.enrollment`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-18.md) — Set to `true`.
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenEnrollment.networkTokenServices. mastercardDigitalEnablementService.enrollment`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-13.md) — Set to `true`.
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenServices.notifications.enabled`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-15.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenServices.paymentCredentials.enabled`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-10.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenServices.visaTokenService.enableService`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-17.md) — Set to `true`.
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenServices.visaTokenService.enableTransactionalTokens`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-16.md) — Set to `true`.
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenServices.mastercardDigitalEnablementService.enableService`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-12.md) — Set to `true`.
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenServices.mastercardDigitalEnablementService.enableTransactionalTokens`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-11.md) — Set to `true`.
+
+#### Example request
+
+```json
+{
+   "registrationInformation":{
+      "boardingFlow":"ADDPRODUCT"
+   },
+   "organizationInformation":{
+      "organizationId":"yourmerchantorgidhere",
+      "parentOrganizationId":"yourportfolioorgidhere",
+      "type":"MERCHANT",
+      "configurable":true,
+      "businessInformation":{
+         "name":"TokenMerchant",
+         "address":{
+            "country":"US",
+            "address1":"123456 SandMarket",
+            "locality":"ORMOND BEACH",
+            "administrativeArea":"FL",
+            "postalCode":"32176"
+         },
+         "websiteUrl":"https://www.MerchantUrlHere.com",
+         "businessContact":{
+            "firstName":"Token",
+            "lastName":"Man",
+            "phoneNumber":"6574567813",
+            "email":"tokenman@visa.com"
+         }
+      }
+   },
+   "productInformation":{
+      "selectedProducts":{
+         "commerceSolutions":{
+            "tokenManagement":{
+               "subscriptionInformation":{
+                  "enabled":true
+               },
+               "configurationInformation":{
+                  "configurations":{
+                        "vault":{
+                        "location": "GDC",
+                        "defaultTokenType":"CUSTOMER",
+                        "tokenFormats":{
+                           "customer":"32_HEX",
+                           "paymentInstrument":"32_HEX",
+                           "instrumentIdentifierCard":"19_DIGIT_LAST_4",
+                           "instrumentIdentifierBankAccount":"32_HEX"
+                        },
+                        "sensitivePrivileges":{
+                           "cardNumberMaskingFormat":"FIRST_6_LAST_4"
+                        }                     },
+                     "networkTokenEnrollment":{
+                        "businessInformation":{
+                           "name":"TokenMerchant",
+                           "doingBusinessAs":"NetworkTokenCo1",
+                           "address":{
+                              "country":"US",
+                              "locality":"ORMOND BEACH"
+                           },
+                           "websiteUrl":"https://www.MerchantUrlHere.com",
+                           "acquirer":{
+                              "acquirerId":"40010052242",
+                              "acquirerMerchantId":"yourmerchantorgidhere"
+                           }
+                        },
+                        "networkTokenServices":{
+                           "visaTokenService":{
+                              "enrollment":true
+                           },
+                           "mastercardDigitalEnablementService":{
+                              "enrollment":true
+                           }
+                        }
+                     },
+                        "networkTokenServices":{
+                           "notifications":{
+                              "enabled":true
+                           },
+                           "paymentCredentials":{
+                              "enabled":true
+                           },
+                           "visaTokenService":{
+                              "enableService":true,
+                              "enableTransactionalTokens":true
+                           },
+                           "mastercardDigitalEnablementService":{
+                              "enableService":true,
+                              "enableTransactionalTokens":true
+                           }
+                        }
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+```
+
+#### Example response
+
+```json
+{
+  "id": "94498504004",
+  "submitTimeUtc": "2024-07-01T16:25:20Z",
+  "status": "SUCCESS",
+  "registrationInformation": {
+    "mode": "COMPLETE",
+    "boardingPackageId": "1168704004"
+  },
+  "organizationInformation": {
+    "organizationId": "{MerchantAccountOrgId}",
+    "parentOrganizationId": "{PortfolioOrgId}"
+  },
+  "message": "Request was processed successfully"
+}
+```
+
+- <sub>[`en-us_boarding_developer_all_rest_boarding:endpoint:post:6b4e946b`](https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-tms-enable-net-tkn-existing-intro)</sub>
+
+### Enable `TMS` and Enroll in Network Tokenization for an Existing Merchant
+
+- **Method:** `POST`
+- **Path:** `/boarding/v1/registrations`
+- **test host:** `https://apitest.cybersource.com`
+
+#### Required fields
+
+- [`organizationInformation.parentOrganizationId`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-parent-organization-id.md)
+- [`organizationInformation.type`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-type.md) — Set to `MERCHANT`.
+- [`organizationInformation.configurable`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-configurable.md) — Set to `true`.
+- [`registrationInformation.boardingFlow`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/reg-info-aa/reg-info-boarding-flow.md) — Set to `ADDPRODUCT`.
+- [`organizationInformation.businessInformation.name`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-name.md)
+- [`organizationInformation.businessInformation.address.country`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-address-country.md)
+- [`organizationInformation.businessInformation.address.address1`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-address-address1.md)
+- [`organizationInformation.businessInformation.address.postalCode`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-address-postal-code.md)
+- [`organizationInformation.businessInformation.address.administrativeArea`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-address-admin-area.md)
+- [`organizationInformation.businessInformation.address.locality`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-address-locality.md)
+- [`organizationInformation.businessInformation.businessContact.firstName`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-business-contact-first-name.md)
+- [`organizationInformation.businessInformation.businessContact.lastName`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-business-contact-last-name.md)
+- [`organizationInformation.businessInformation.businessContact.phoneNumber`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-business-contact-phone-num.md)
+- [`organizationInformation.businessInformation.businessContact.email`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-business-info-contact-email.md)
+- [`organizationInformation.organizationId`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/org-info-aa/org-info-organization-id.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.vault.location`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-21.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.vault.defaultTokenType`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-vau.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.vault.tokenFormats.customer`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-23.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.vault.tokenFormats.paymentInstrument`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-26.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.vault.tokenFormats.instrumentIdentifierCard`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-25.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.vault.tokenFormats.instrumentIdentifierBankAccount`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-24.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.vault.sensitivePrivileges.cardNumberMaskingFormat`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-22.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement.configurationInformation. configurations.networkTokenEnrollment.businessInformation.name`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf--5.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenEnrollment.businessInformation.doingBusinessAs`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf--4.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenEnrollment.businessInformation.address.country`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf--1.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenEnrollment.businessInformation.address.locality`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf--2.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenEnrollment.businessInformation.websiteUrl`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf--3.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenEnrollment.businessInformation.acquirer.acquirerId`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-net.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement.configurationInformation. configurations.networkTokenEnrollment.businessInformation.acquirer.acquirerMerchantId`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf--0.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenEnrollment.networkTokenServices.visaTokenService.enrollment`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-18.md) — Set to `true`.
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenEnrollment.networkTokenServices. mastercardDigitalEnablementService.enrollment`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-13.md) — Set to `true`.
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenServices.notifications.enabled`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-15.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenServices.paymentCredentials.enabled`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-10.md)
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenServices.visaTokenService.enableService`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-17.md) — Set to `true`.
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenServices.visaTokenService.enableTransactionalTokens`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-16.md) — Set to `true`.
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenServices.mastercardDigitalEnablementService.enableService`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-12.md) — Set to `true`.
+- [`productInformation.selectedProducts.commerceSolutions.tokenManagement. configurationInformation.configurations.networkTokenServices.mastercardDigitalEnablementService.enableTransactionalTokens`](https://developer.cybersource.com/docs/cybs/en-us/api-fields/reference/all/rest/api-fields/prod-info-aa/prod-info-sel-prod-commerce-sol-tkn-mgmnt-conf-11.md) — Set to `true`.
+
+#### Example request
+
+```json
+{
+   "registrationInformation":{
+      "boardingFlow":"ADDPRODUCT"
+   },
+   "organizationInformation":{
+      "organizationId":"yourmerchantorgidhere",
+      "parentOrganizationId":"yourportfolioorgidhere",
+      "type":"MERCHANT",
+      "configurable":true,
+      "businessInformation":{
+         "name":"TokenMerchant",
+         "address":{
+            "country":"US",
+            "address1":"123456 SandMarket",
+            "locality":"ORMOND BEACH",
+            "administrativeArea":"FL",
+            "postalCode":"32176"
+         },
+         "websiteUrl":"https://www.MerchantUrlHere.com",
+         "businessContact":{
+            "firstName":"Token",
+            "lastName":"Man",
+            "phoneNumber":"6574567813",
+            "email":"tokenman@visa.com"
+         }
+      }
+   },
+   "productInformation":{
+      "selectedProducts":{
+         "commerceSolutions":{
+            "tokenManagement":{
+               "subscriptionInformation":{
+                  "enabled":true
+               },
+               "configurationInformation":{
+                  "configurations":{
+                        "vault":{
+                        "location": "GDC",
+                        "defaultTokenType":"CUSTOMER",
+                        "tokenFormats":{
+                           "customer":"32_HEX",
+                           "paymentInstrument":"32_HEX",
+                           "instrumentIdentifierCard":"19_DIGIT_LAST_4",
+                           "instrumentIdentifierBankAccount":"32_HEX"
+                        },
+                        "sensitivePrivileges":{
+                           "cardNumberMaskingFormat":"FIRST_6_LAST_4"
+                        }                     },
+                     "networkTokenEnrollment":{
+                        "businessInformation":{
+                           "name":"TokenMerchant",
+                           "doingBusinessAs":"NetworkTokenCo1",
+                           "address":{
+                              "country":"US",
+                              "locality":"ORMOND BEACH"
+                           },
+                           "websiteUrl":"https://www.MerchantUrlHere.com",
+                           "acquirer":{
+                              "acquirerId":"40010052242",
+                              "acquirerMerchantId":"yourmerchantorgidhere"
+                           }
+                        },
+                        "networkTokenServices":{
+                           "visaTokenService":{
+                              "enrollment":true
+                           },
+                           "mastercardDigitalEnablementService":{
+                              "enrollment":true
+                           }
+                        }
+                     },
+                        "networkTokenServices":{
+                           "notifications":{
+                              "enabled":true
+                           },
+                           "paymentCredentials":{
+                              "enabled":true
+                           },
+                           "visaTokenService":{
+                              "enableService":true,
+                              "enableTransactionalTokens":true
+                           },
+                           "mastercardDigitalEnablementService":{
+                              "enableService":true,
+                              "enableTransactionalTokens":true
+                           }
+                        }
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+```
+
+#### Example response
+
+```json
+{
+  "id": "94498504004",
+  "submitTimeUtc": "2024-07-01T16:25:20Z",
+  "status": "SUCCESS",
+  "registrationInformation": {
+    "mode": "COMPLETE",
+    "boardingPackageId": "1168704004"
+  },
+  "organizationInformation": {
+    "organizationId": "{MerchantAccountOrgId}",
+    "parentOrganizationId": "{PortfolioOrgId}"
+  },
+  "message": "Request was processed successfully"
+}
+```
+
+- <sub>[`en-us_boarding_developer_all_rest_boarding:endpoint:post:c7cc2d57`](https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-tms-enable-net-tkn-existing-intro)</sub>
+
+### Add a New Product to an Existing Organization
+
+- **Method:** `POST`
+- **Path:** `/products/v1/product-setups`
+- **production host:** `https://api.cybersource.com`
+
+- <sub>[`en-us_boarding_developer_all_rest_boarding:endpoint:post:8150da16`](https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-update-product-api)</sub>
+
+### Add a New Product to an Existing Organization
+
+- **Method:** `POST`
+- **Path:** `/products/v1/product-setups`
+- **test host:** `https://apitest.cybersource.com`
+
+- <sub>[`en-us_boarding_developer_all_rest_boarding:endpoint:post:4908017a`](https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-update-product-api)</sub>
+
+### Update Batch Group Using the PECS API
+
+- **Method:** `POST`
+- **Path:** `/products/v1/product-setups`
+- **production host:** `https://api.cybersource.com`
+
+- <sub>[`en-us_boarding_developer_all_rest_boarding:endpoint:post:dc305a7c`](https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#pecs-update-batch)</sub>
+
+### Update Batch Group Using the PECS API
+
+- **Method:** `POST`
+- **Path:** `/products/v1/product-setups`
+- **test host:** `https://apitest.cybersource.com`
+
+- <sub>[`en-us_boarding_developer_all_rest_boarding:endpoint:post:97973906`](https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#pecs-update-batch)</sub>
+
+### Add a Processor Using the PECS API
+
+- **Method:** `POST`
+- **Path:** `/products/v1/product-setups`
+- **production host:** `https://api.cybersource.com`
+
+- <sub>[`en-us_boarding_developer_all_rest_boarding:endpoint:post:b548956d`](https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#pecs-add-processor)</sub>
+
+### Add a Processor Using the PECS API
+
+- **Method:** `POST`
+- **Path:** `/products/v1/product-setups`
+- **test host:** `https://apitest.cybersource.com`
+
+- <sub>[`en-us_boarding_developer_all_rest_boarding:endpoint:post:a3c2ae2f`](https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#pecs-add-processor)</sub>
+
+### Delete a Processor Using the PECS API
+
+- **Method:** `POST`
+- **Path:** `/products/v1/product-setups`
+- **production host:** `https://api.cybersource.com`
+
+- <sub>[`en-us_boarding_developer_all_rest_boarding:endpoint:post:9d507b3f`](https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#pecs-delete-processor)</sub>
+
+### Delete a Processor Using the PECS API
+
+- **Method:** `POST`
+- **Path:** `/products/v1/product-setups`
+- **test host:** `https://apitest.cybersource.com`
+
+- <sub>[`en-us_boarding_developer_all_rest_boarding:endpoint:post:decc31ed`](https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#pecs-delete-processor)</sub>
+
+### Add and Delete a Processor Using the PECS API
+
+- **Method:** `POST`
+- **Path:** `/products/v1/product-setups`
+- **production host:** `https://api.cybersource.com`
+
+- <sub>[`en-us_boarding_developer_all_rest_boarding:endpoint:post:17114de1`](https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#pecs-add-delete-processor)</sub>
+
+### Add and Delete a Processor Using the PECS API
+
+- **Method:** `POST`
+- **Path:** `/products/v1/product-setups`
+- **test host:** `https://apitest.cybersource.com`
+
+- <sub>[`en-us_boarding_developer_all_rest_boarding:endpoint:post:10df3c29`](https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#pecs-add-delete-processor)</sub>
+
+### Configure `Payer Authentication` Using the PECS API
+
+- **Method:** `POST`
+- **Path:** `/products/v1/product-setups`
+- **production host:** `https://api.cybersource.com`
+
+- <sub>[`en-us_boarding_developer_all_rest_boarding:endpoint:post:7be46b00`](https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#pecs-config-payerauth)</sub>
+
+### Configure `Payer Authentication` Using the PECS API
+
+- **Method:** `POST`
+- **Path:** `/products/v1/product-setups`
+- **test host:** `https://apitest.cybersource.com`
+
+- <sub>[`en-us_boarding_developer_all_rest_boarding:endpoint:post:199873b9`](https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#pecs-config-payerauth)</sub>
+
+### Enable `TMS` with a Template Using the PECS API
+
+- **Method:** `POST`
+- **Path:** `/products/v1/product-setups`
+- **production host:** `https://api.cybersource.com`
+
+#### Example request
+
+```json
+{
+  "organizationId": "ergaergaerg001",
+  "commerceSolutions": {
+    "tokenManagement": {
+      "subscriptionInformation": {
+        "enabled": true,
+        "selfServiceability": "NOT_SELF_SERVICEABLE"
+      },
+      "configurationInformation": {
+        "templateId": "43107BC1-E3DA-4019-9306-4510AD4DE05F"
+      }
+    }
+  }
+}
+```
+
+#### Example response
+
+```json
+{
+  "setups": {
+    "commerceSolutions": {
+      "tokenManagement": {
+        "configurationStatus": {
+          "status": "SUCCESS",
+          "message": "Profile Assigned Successfully"
+        },
+        "subscriptionStatus": {
+          "status": "SUCCESS",
+          "message": "success"
+        }
+      }
+    }
+  },
+  "status": "PROCESSED",
+  "submitTimeUtc": "2022-06-03T08:46:13+0000"
+}
+```
+
+- <sub>[`en-us_boarding_developer_all_rest_boarding:endpoint:post:2a34127c`](https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-pecs-tms-enable-intro)</sub>
+
+### Enable `TMS` with a Template Using the PECS API
+
+- **Method:** `POST`
+- **Path:** `/products/v1/product-setups`
+- **test host:** `https://apitest.cybersource.com`
+
+#### Example request
+
+```json
+{
+  "organizationId": "ergaergaerg001",
+  "commerceSolutions": {
+    "tokenManagement": {
+      "subscriptionInformation": {
+        "enabled": true,
+        "selfServiceability": "NOT_SELF_SERVICEABLE"
+      },
+      "configurationInformation": {
+        "templateId": "43107BC1-E3DA-4019-9306-4510AD4DE05F"
+      }
+    }
+  }
+}
+```
+
+#### Example response
+
+```json
+{
+  "setups": {
+    "commerceSolutions": {
+      "tokenManagement": {
+        "configurationStatus": {
+          "status": "SUCCESS",
+          "message": "Profile Assigned Successfully"
+        },
+        "subscriptionStatus": {
+          "status": "SUCCESS",
+          "message": "success"
+        }
+      }
+    }
+  },
+  "status": "PROCESSED",
+  "submitTimeUtc": "2022-06-03T08:46:13+0000"
+}
+```
+
+- <sub>[`en-us_boarding_developer_all_rest_boarding:endpoint:post:ea27ebb1`](https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-pecs-tms-enable-intro)</sub>
+
 
 ## Steps
 
@@ -155,10 +1580,10 @@ _Generated from `normalized/2026-08-08-boarding.claims.json`; do not hand-edit. 
    - Actor: Partner admin (Business Center)
    - Expected outcome: The Manage Merchants page appears.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay_boarding-config-altpay-add:step:2:46c4bc64`</sub>
-3. **Action:** Search for the organization on the Manage Merchant page. For more information on searching for an organization, see [Searching for Organizations (Version 2)](/docs/cybs/en-us/boarding/user/all/ebc/boarding-user/merchants-v2-searc-0.md "").
+3. **Action:** Search for the organization on the Manage Merchant page. For more information on searching for an organization, see [Searching for Organizations (Version 2)](/docs/cybs/en-us/boarding/user/all/ebc/boarding-user/merchants-v2-searc-0.md).
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
-   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay_boarding-config-altpay-add:step:3:a08cfe83`</sub>
+   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay_boarding-config-altpay-add:step:3:6d4e39f8`</sub>
 4. **Action:** Find the organization in the Search Results table, and click the eyeball icon. The Merchant Details page appears.
    - Actor: Partner admin (Business Center)
    - Expected outcome: The Merchant Details page appears.
@@ -213,10 +1638,10 @@ _Generated from `normalized/2026-08-08-boarding.claims.json`; do not hand-edit. 
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay_boarding-config-altpay-boarding-self:step:6:ec52c350`</sub>
-7. **Action:** Click **Start** in the Merchant Account Information section to enter account information. For more information, see [Add Merchant Account Information](/docs/cybs/en-us/boarding/user/all/ebc/boarding-user/boarding-reg-intro/merchants-v2-add-merchant/merchants-v2-add-merch-acct-info.md "").
+7. **Action:** Click **Start** in the Merchant Account Information section to enter account information. For more information, see [Add Merchant Account Information](/docs/cybs/en-us/boarding/user/all/ebc/boarding-user/boarding-reg-intro/merchants-v2-add-merchant/merchants-v2-add-merch-acct-info.md).
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
-   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay_boarding-config-altpay-boarding-self:step:7:ed19a55b`</sub>
+   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay_boarding-config-altpay-boarding-self:step:7:f283b6ad`</sub>
 8. **Action:** Optional: click **Skip** in the Hierarchy Details section to skip the hierarchy step.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
@@ -232,11 +1657,11 @@ _Generated from `normalized/2026-08-08-boarding.claims.json`; do not hand-edit. 
 11. **Action:** Under Product Enablement, find Alternative Payments and select Allow Self Enablement under the Enablement drop-down menu.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
-   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay_boarding-config-altpay-boarding-self:step:11:eb957f7b`</sub>
+   - <sub>[`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay_boarding-config-altpay-boarding-self:step:11:eb957f7b`](https://developer.cybersource.com/docs/cybs/en-us/boarding/user/all/ebc/boarding-user/boarding-products/boarding-altpay/boarding-config-altpay-boarding-self.html#boarding-config-altpay-boarding-self_boarding-config-altpay-boarding-self-step8)</sub>
 12. **Action:** Click Save. Alternative Payments is now available for self-enablement for the merchant.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
-   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay_boarding-config-altpay-boarding-self:step:12:7d3fb96a`</sub>
+   - <sub>[`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay_boarding-config-altpay-boarding-self:step:12:7d3fb96a`](https://developer.cybersource.com/docs/cybs/en-us/boarding/user/all/ebc/boarding-user/boarding-products/boarding-altpay/boarding-config-altpay-boarding-self.html#boarding-config-altpay-boarding-self_boarding-config-altpay-boarding-self-step9)</sub>
 ### Via Partner admin (Business Center) — `en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay_boarding-config-altpay-boarding.md.md`
 
 1. **Action:** In the left navigation panel, click **Portfolio Management**.
@@ -263,10 +1688,10 @@ _Generated from `normalized/2026-08-08-boarding.claims.json`; do not hand-edit. 
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay_boarding-config-altpay-boarding:step:6:74e4ca33`</sub>
-7. **Action:** Click **Start** in the Merchant Account Information section to enter account information. For more information, see [Add Merchant Account Information](/docs/cybs/en-us/boarding/user/all/ebc/boarding-user/boarding-reg-intro/merchants-v2-add-merchant/merchants-v2-add-merch-acct-info.md "").
+7. **Action:** Click **Start** in the Merchant Account Information section to enter account information. For more information, see [Add Merchant Account Information](/docs/cybs/en-us/boarding/user/all/ebc/boarding-user/boarding-reg-intro/merchants-v2-add-merchant/merchants-v2-add-merch-acct-info.md).
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
-   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay_boarding-config-altpay-boarding:step:7:71913371`</sub>
+   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay_boarding-config-altpay-boarding:step:7:3a5e1999`</sub>
 8. **Action:** Optional: click **Skip** in the Hierarchy Details section to skip the hierarchy step.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
@@ -274,19 +1699,19 @@ _Generated from `normalized/2026-08-08-boarding.claims.json`; do not hand-edit. 
 9. **Action:** Click Start in the Transacting Organization and Products section to set up a transacting organization and configure products for it. The Transacting Organization and Products page appears.
    - Actor: Partner admin (Business Center)
    - Expected outcome: The Transacting Organization and Products page appears.
-   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay_boarding-config-altpay-boarding:step:9:4ff18883`</sub>
+   - <sub>[`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay_boarding-config-altpay-boarding:step:9:4ff18883`](https://developer.cybersource.com/docs/cybs/en-us/boarding/user/all/ebc/boarding-user/boarding-products/boarding-altpay/boarding-config-altpay-boarding.html#boarding-config-altpay-boarding_boarding-config-altpay-boarding-step6)</sub>
 10. **Action:** Under Transacting Organization Details, enter the transacting organization name and the organization ID.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
-   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay_boarding-config-altpay-boarding:step:10:19ff732e`</sub>
+   - <sub>[`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay_boarding-config-altpay-boarding:step:10:19ff732e`](https://developer.cybersource.com/docs/cybs/en-us/boarding/user/all/ebc/boarding-user/boarding-products/boarding-altpay/boarding-config-altpay-boarding.html#boarding-config-altpay-boarding_boarding-config-altpay-boarding-step7)</sub>
 11. **Action:** Under Product Enablement, find Alternative Payments and select Enabled under the Enablement drop-down menu.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
-   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay_boarding-config-altpay-boarding:step:11:5617dc0d`</sub>
+   - <sub>[`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay_boarding-config-altpay-boarding:step:11:5617dc0d`](https://developer.cybersource.com/docs/cybs/en-us/boarding/user/all/ebc/boarding-user/boarding-products/boarding-altpay/boarding-config-altpay-boarding.html#boarding-config-altpay-boarding_boarding-config-altpay-boarding-step8)</sub>
 12. **Action:** Click Configure. The Configure Alternative Payment Methods page appears.
    - Actor: Partner admin (Business Center)
    - Expected outcome: The Configure Alternative Payment Methods page appears.
-   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay_boarding-config-altpay-boarding:step:12:d6164c48`</sub>
+   - <sub>[`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay_boarding-config-altpay-boarding:step:12:d6164c48`](https://developer.cybersource.com/docs/cybs/en-us/boarding/user/all/ebc/boarding-user/boarding-products/boarding-altpay/boarding-config-altpay-boarding.html#boarding-config-altpay-boarding_boarding-config-altpay-boarding-step9)</sub>
 13. **Action:** Check the box next to each alternative payment method you want to enable and configure. You can choose alternative payment methods from these categories:
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
@@ -294,7 +1719,7 @@ _Generated from `normalized/2026-08-08-boarding.claims.json`; do not hand-edit. 
 14. **Action:** Click Continue. The Product Configuration page appears.
    - Actor: Partner admin (Business Center)
    - Expected outcome: The Product Configuration page appears.
-   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay_boarding-config-altpay-boarding:step:14:a142b937`</sub>
+   - <sub>[`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay_boarding-config-altpay-boarding:step:14:a142b937`](https://developer.cybersource.com/docs/cybs/en-us/boarding/user/all/ebc/boarding-user/boarding-products/boarding-altpay/boarding-config-altpay-boarding.html#boarding-config-altpay-boarding_boarding-config-altpay-boarding-step11)</sub>
 15. **Action:** Enter the required details for each alternative payment method you want to configure.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
@@ -302,7 +1727,7 @@ _Generated from `normalized/2026-08-08-boarding.claims.json`; do not hand-edit. 
 16. **Action:** Click Continue to return to the Merchant Details page.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
-   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay_boarding-config-altpay-boarding:step:16:661e57a2`</sub>
+   - <sub>[`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay_boarding-config-altpay-boarding:step:16:661e57a2`](https://developer.cybersource.com/docs/cybs/en-us/boarding/user/all/ebc/boarding-user/boarding-products/boarding-altpay/boarding-config-altpay-boarding.html#boarding-config-altpay-boarding_boarding-config-altpay-boarding-step13)</sub>
 ### Via Partner admin (Business Center) — `en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay_boarding-config-altpay-existing.md.md`
 
 1. **Action:** In the left navigation pane, click the Portfolio Management icon.
@@ -313,10 +1738,10 @@ _Generated from `normalized/2026-08-08-boarding.claims.json`; do not hand-edit. 
    - Actor: Partner admin (Business Center)
    - Expected outcome: The Manage Merchants page appears.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay_boarding-config-altpay-existing:step:2:6fb27c98`</sub>
-3. **Action:** Search for the organization in the Manage Merchant page. For more information on searching for an organization, see [Searching for Organizations (Version 2)](/docs/cybs/en-us/boarding/user/all/ebc/boarding-user/merchants-v2-searc-0.md "").
+3. **Action:** Search for the organization in the Manage Merchant page. For more information on searching for an organization, see [Searching for Organizations (Version 2)](/docs/cybs/en-us/boarding/user/all/ebc/boarding-user/merchants-v2-searc-0.md).
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
-   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay_boarding-config-altpay-existing:step:3:ccf10971`</sub>
+   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay_boarding-config-altpay-existing:step:3:33fe6b52`</sub>
 4. **Action:** Find the organization in the Search Results table and click the eyeball icon. The Merchant Details page appears.
    - Actor: Partner admin (Business Center)
    - Expected outcome: The Merchant Details page appears.
@@ -351,10 +1776,10 @@ _Generated from `normalized/2026-08-08-boarding.claims.json`; do not hand-edit. 
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay_boarding-config-altpay-existing:step:11:86fe1995`</sub>
 ### Via Partner admin (Business Center) — `en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-enablement-products-intro_boarding-enable-products-task.md.md`
 
-1. **Action:** Search for the organization on the Manage Merchant page. For more information on searching for an organization, see [Searching for Organizations (Version 2)](/docs/cybs/en-us/boarding/user/all/ebc/boarding-user/merchants-v2-searc-0.md "").
+1. **Action:** Search for the organization on the Manage Merchant page. For more information on searching for an organization, see [Searching for Organizations (Version 2)](/docs/cybs/en-us/boarding/user/all/ebc/boarding-user/merchants-v2-searc-0.md).
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
-   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-enablement-products-intro_boarding-enable-products-task:step:1:a9418ad9`</sub>
+   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-enablement-products-intro_boarding-enable-products-task:step:1:26970f70`</sub>
 2. **Action:** Find the organization in the Search Results table, and click the eyeball icon. The Merchant Details page appears.
    - Actor: Partner admin (Business Center)
    - Expected outcome: The Merchant Details page appears.
@@ -377,10 +1802,10 @@ _Generated from `normalized/2026-08-08-boarding.claims.json`; do not hand-edit. 
    - Actor: Partner admin (Business Center)
    - Expected outcome: The Manage Merchants page appears.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-add:step:2:5854d539`</sub>
-3. **Action:** Search for the organization on the Manage Merchant page. For more information on searching for an organization, see [Searching for Organizations (Version 2)](/docs/cybs/en-us/boarding/user/all/ebc/boarding-user/merchants-v2-searc-0.md "").
+3. **Action:** Search for the organization on the Manage Merchant page. For more information on searching for an organization, see [Searching for Organizations (Version 2)](/docs/cybs/en-us/boarding/user/all/ebc/boarding-user/merchants-v2-searc-0.md).
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
-   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-add:step:3:4faacb75`</sub>
+   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-add:step:3:3982b537`</sub>
 4. **Action:** Find the organization in the Search Results table, and click the eyeball icon. The Merchant Details page appears.
    - Actor: Partner admin (Business Center)
    - Expected outcome: The Merchant Details page appears.
@@ -396,7 +1821,7 @@ _Generated from `normalized/2026-08-08-boarding.claims.json`; do not hand-edit. 
 7. **Action:** In the Payer Authentication Set Up drop-down menu, choose a template.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
-   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-add:step:7:a2e6d18f`</sub>
+   - <sub>[`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-add:step:7:a2e6d18f`](https://developer.cybersource.com/docs/cybs/en-us/boarding/user/all/ebc/boarding-user/boarding-products/boarding-payer-auth/boarding-config-payer-auth-add.html#config-payer-auth-add_config-payer-auth-add-step1)</sub>
 8. **Action:** Click Configure for each `Payer Authentication` card service that you want to configure.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
@@ -420,15 +1845,15 @@ _Generated from `normalized/2026-08-08-boarding.claims.json`; do not hand-edit. 
 13. **Action:** Click the trash can icon to delete a configuration.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
-   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-add:step:13:4d90f8de`</sub>
+   - <sub>[`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-add:step:13:4d90f8de`](https://developer.cybersource.com/docs/cybs/en-us/boarding/user/all/ebc/boarding-user/boarding-products/boarding-payer-auth/boarding-config-payer-auth-add.html#config-payer-auth-add_config-payer-auth-add-step7)</sub>
 14. **Action:** Click View all currencies to collapse or expand all currencies that are configured.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
-   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-add:step:14:40ef0a0a`</sub>
+   - <sub>[`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-add:step:14:40ef0a0a`](https://developer.cybersource.com/docs/cybs/en-us/boarding/user/all/ebc/boarding-user/boarding-products/boarding-payer-auth/boarding-config-payer-auth-add.html#config-payer-auth-add_config-payer-auth-add-step8)</sub>
 15. **Action:** Click Save to save your configuration and return to the Payer Authentication Set Up and Enablement page.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
-   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-add:step:15:0c1a13af`</sub>
+   - <sub>[`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-add:step:15:0c1a13af`](https://developer.cybersource.com/docs/cybs/en-us/boarding/user/all/ebc/boarding-user/boarding-products/boarding-payer-auth/boarding-config-payer-auth-add.html#config-payer-auth-add_config-payer-auth-add-step9)</sub>
 16. **Action:** If you do not want to save your changes, click Cancel to return to the Payer Authentication Set Up and Enablement page.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
@@ -459,10 +1884,10 @@ _Generated from `normalized/2026-08-08-boarding.claims.json`; do not hand-edit. 
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-boarding:step:6:99c6b97f`</sub>
-7. **Action:** Click **Start** in the Merchant Account Information section to enter account information. For more information, see [Add Merchant Account Information](/docs/cybs/en-us/boarding/user/all/ebc/boarding-user/boarding-reg-intro/merchants-v2-add-merchant/merchants-v2-add-merch-acct-info.md "").
+7. **Action:** Click **Start** in the Merchant Account Information section to enter account information. For more information, see [Add Merchant Account Information](/docs/cybs/en-us/boarding/user/all/ebc/boarding-user/boarding-reg-intro/merchants-v2-add-merchant/merchants-v2-add-merch-acct-info.md).
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
-   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-boarding:step:7:6389a740`</sub>
+   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-boarding:step:7:b3bd5964`</sub>
 8. **Action:** Optional: click **Skip** in the Hierarchy Details section to skip the hierarchy step.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
@@ -537,10 +1962,10 @@ _Generated from `normalized/2026-08-08-boarding.claims.json`; do not hand-edit. 
    - Actor: Partner admin (Business Center)
    - Expected outcome: The Manage Merchants page appears.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-existing:step:2:d186554c`</sub>
-3. **Action:** Search for the organization in the Manage Merchant page. For more information on searching for an organization, see [Searching for Organizations (Version 2)](/docs/cybs/en-us/boarding/user/all/ebc/boarding-user/merchants-v2-searc-0.md "").
+3. **Action:** Search for the organization in the Manage Merchant page. For more information on searching for an organization, see [Searching for Organizations (Version 2)](/docs/cybs/en-us/boarding/user/all/ebc/boarding-user/merchants-v2-searc-0.md).
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
-   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-existing:step:3:649f9651`</sub>
+   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-existing:step:3:9b9c1b59`</sub>
 4. **Action:** Find the organization in the Search Results table and click the eyeball icon. The Merchant Details page appears.
    - Actor: Partner admin (Business Center)
    - Expected outcome: The Merchant Details page appears.
@@ -603,10 +2028,10 @@ _Generated from `normalized/2026-08-08-boarding.claims.json`; do not hand-edit. 
    - Actor: Partner admin (Business Center)
    - Expected outcome: The Manage Merchants page appears.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-tms_boarding-config-tms-add:step:2:d7adbcce`</sub>
-3. **Action:** Search for the organization on the Manage Merchant page. For more information on searching for an organization, see [Searching for Organizations (Version 2)](/docs/cybs/en-us/boarding/user/all/ebc/boarding-user/merchants-v2-searc-0.md "").
+3. **Action:** Search for the organization on the Manage Merchant page. For more information on searching for an organization, see [Searching for Organizations (Version 2)](/docs/cybs/en-us/boarding/user/all/ebc/boarding-user/merchants-v2-searc-0.md).
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
-   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-tms_boarding-config-tms-add:step:3:7734cc17`</sub>
+   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-tms_boarding-config-tms-add:step:3:6ab42d12`</sub>
 4. **Action:** Find the organization in the Search Results table, and click the eyeball icon. The Merchant Details page appears.
    - Actor: Partner admin (Business Center)
    - Expected outcome: The Merchant Details page appears.
@@ -653,10 +2078,10 @@ _Generated from `normalized/2026-08-08-boarding.claims.json`; do not hand-edit. 
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-tms_boarding-config-tms-new:step:6:aedf22e4`</sub>
-7. **Action:** Click **Start** in the Merchant Account Information section to enter account information. For more information, see [Add Merchant Account Information](/docs/cybs/en-us/boarding/user/all/ebc/boarding-user/boarding-reg-intro/merchants-v2-add-merchant/merchants-v2-add-merch-acct-info.md "").
+7. **Action:** Click **Start** in the Merchant Account Information section to enter account information. For more information, see [Add Merchant Account Information](/docs/cybs/en-us/boarding/user/all/ebc/boarding-user/boarding-reg-intro/merchants-v2-add-merchant/merchants-v2-add-merch-acct-info.md).
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
-   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-tms_boarding-config-tms-new:step:7:d444321f`</sub>
+   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-tms_boarding-config-tms-new:step:7:4a46e957`</sub>
 8. **Action:** Optional: click **Skip** in the Hierarchy Details section to skip the hierarchy step.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
@@ -791,31 +2216,31 @@ _Generated from `normalized/2026-08-08-boarding.claims.json`; do not hand-edit. 
 ## Constraints
 
 - [id_format_rule] The acquirer ID is the BIN of the merchant's acquiring bank and must be from 4 to 20 alphanumeric characters or a hyphen, and include `-1000`.  
-  <sub>`en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-payer-auth_boarding-payer-auth-enable-intro_boarding-payer-auth-enable-reqfields:prose:fb96fec35a26` · 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-payer-auth_boarding-payer-auth-enable-intro_boarding-payer-auth-enable-reqfields.md.md</sub>
+  <sub>`en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-payer-auth_boarding-payer-auth-enable-intro_boarding-payer-auth-enable-reqfields:prose:fb96fec35a26`</sub> · 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-payer-auth_boarding-payer-auth-enable-intro_boarding-payer-auth-enable-reqfields.md.md
 - [ttl_or_validity] Allow 2 to 3 days for the completion of your request.  
-  <sub>`en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-tms_tms-vault-hierarchy_tms-trids:prose:a99f103acaf8` · 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-tms_tms-vault-hierarchy_tms-trids.md.md</sub>
+  <sub>`en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-tms_tms-vault-hierarchy_tms-trids:prose:a99f103acaf8`</sub> · 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-tms_tms-vault-hierarchy_tms-trids.md.md
 - [id_format_rule] The acquirer ID is the BIN of the merchant's acquiring bank and must be from 4 to 20 alphanumeric characters or a hyphen, and include `-1000`.  
-  <sub>`en-us_boarding_developer_all_rest_boarding_boarding-products_boarding-pecs-payer-auth_pecs-config-payerauth_pecs-config-payerauth-req-fields:prose:fb96fec35a26` · 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products_boarding-pecs-payer-auth_pecs-config-payerauth_pecs-config-payerauth-req-fields.md.md</sub>
+  <sub>`en-us_boarding_developer_all_rest_boarding_boarding-products_boarding-pecs-payer-auth_pecs-config-payerauth_pecs-config-payerauth-req-fields:prose:fb96fec35a26`</sub> · 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products_boarding-pecs-payer-auth_pecs-config-payerauth_pecs-config-payerauth-req-fields.md.md
 - [id_format_rule] The acquirer merchant ID must be from 1 to 35 alphanumeric characters.  
-  <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-add:prose:1ac5173eb260` · 2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-add.md.md</sub>
+  <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-add:prose:1ac5173eb260`</sub> · 2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-add.md.md
 - [id_format_rule] The acquirer ID must be from 4 to 20 alphanumeric characters or a hyphen, and include `-1000`.  
-  <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-add:prose:f213e5b78ab0` · 2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-add.md.md</sub>
+  <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-add:prose:f213e5b78ab0`</sub> · 2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-add.md.md
 - [id_format_rule] The acquirer merchant ID must be from 1 to 35 alphanumeric characters.  
-  <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-boarding:prose:1ac5173eb260` · 2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-boarding.md.md</sub>
+  <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-boarding:prose:1ac5173eb260`</sub> · 2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-boarding.md.md
 - [id_format_rule] The acquirer ID must be from 4 to 20 alphanumeric characters or a hyphen, and include `-1000`.  
-  <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-boarding:prose:f213e5b78ab0` · 2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-boarding.md.md</sub>
+  <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-boarding:prose:f213e5b78ab0`</sub> · 2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-boarding.md.md
 - [id_format_rule] The acquirer merchant ID must be from 1 to 35 alphanumeric characters.  
-  <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-existing:prose:1ac5173eb260` · 2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-existing.md.md</sub>
+  <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-existing:prose:1ac5173eb260`</sub> · 2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-existing.md.md
 - [id_format_rule] The acquirer ID must be from 4 to 20 alphanumeric characters or a hyphen, and include `-1000`.  
-  <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-existing:prose:f213e5b78ab0` · 2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-existing.md.md</sub>
+  <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-existing:prose:f213e5b78ab0`</sub> · 2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-existing.md.md
 - [ttl_or_validity] Allow 2 to 3 days for the completion of your request.  
-  <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-tms_tms-vault-hierarchy_tms-trids:prose:a99f103acaf8` · 2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-tms_tms-vault-hierarchy_tms-trids.md.md</sub>
+  <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-tms_tms-vault-hierarchy_tms-trids:prose:a99f103acaf8`</sub> · 2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-tms_tms-vault-hierarchy_tms-trids.md.md
 
 ## Failure modes
 
 - error-codes  
-  <sub>`en-us_boarding_developer_all_rest_boarding_boarding-products_boarding-pecs-payer-auth_pecs-config-payerauth_pecs-config-payerauth-ex:error:c8c941da` · 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products_boarding-pecs-payer-auth_pecs-config-payerauth_pecs-config-payerauth-ex.md.md</sub>
+  <sub>`en-us_boarding_developer_all_rest_boarding_boarding-products_boarding-pecs-payer-auth_pecs-config-payerauth_pecs-config-payerauth-ex:error:c8c941da`</sub> · 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products_boarding-pecs-payer-auth_pecs-config-payerauth_pecs-config-payerauth-ex.md.md
 - error message appears if the acquirer merchant ID or acquirer ID do not meet these specifications  
-  <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-add:error:95df168d` · 2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-add.md.md</sub>
+  <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-add:error:95df168d`</sub> · 2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-add.md.md
 
 <!-- /section:facts -->

@@ -1,13 +1,8 @@
 {
-  "claims_total": 2403,
-  "claims_after_prefer_child": 1209,
-  "mega_residuals": 20,
+  "claims_total": 2436,
+  "claims_after_prefer_child": 1251,
+  "mega_residuals": 19,
   "mega_residual_samples": [
-    {
-      "claim_id": "en-us_boarding_developer_all_rest_boarding:endpoint:get:8366008e",
-      "schema": "endpoint_fact",
-      "text": "GET https://api.cybersource.com/oms/v1/organizations/org1"
-    },
     {
       "claim_id": "en-us_boarding_developer_all_rest_boarding:prose:e3e8d8a94090",
       "schema": "prose_claim",
@@ -77,6 +72,11 @@
       "claim_id": "en-us_boarding_user_all_ebc_boarding-user:step:1:c5aeeb05",
       "schema": "quickstart_step",
       "text": "Click + Add Merchant."
+    },
+    {
+      "claim_id": "en-us_boarding_user_all_ebc_boarding-user:step:2:f7810227",
+      "schema": "quickstart_step",
+      "text": "Select Board a new merchant account and click Next."
     }
   ],
   "pages": [
@@ -119,7 +119,7 @@
       "workflow_id": "send-registration-email",
       "path": "content/boarding/workflows/send-registration-email.md",
       "steps": 2,
-      "gaps": 4,
+      "gaps": 5,
       "fact_hash_guard": "pass"
     }
   ]

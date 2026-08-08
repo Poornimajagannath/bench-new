@@ -12,6 +12,161 @@ _Generated from `normalized/2026-08-08-boarding.claims.json`; do not hand-edit. 
 
 - **Gap:** no prerequisite is specified in the source docs.
 
+## API endpoints
+
+### Add a Structural Organization to a Merchant Organization
+
+- **Method:** `POST`
+- **Path:** `/boarding/v1/registrations`
+- **production host:** `https://api.cybersource.com`
+
+#### Example request
+
+```json
+{
+    "registrationInformation": {
+        "boardingFlow": "ENTERPRISE"
+    },
+    "organizationInformation": {
+        "organizationId": "yourstructuralorgidhere",
+        "status": "LIVE",
+        "parentOrganizationId": "yourmercahntorgidhere",
+        "type": "STRUCTURAL",
+        "configurable": false,
+        "businessInformation": {
+            "address": {
+                "country": "US",
+                "address1": "123 Main",
+                "postalCode": "99999",
+                "administrativeArea": "WA",
+                "locality": "Seattle"
+            },
+            "businessContact": {
+                "firstName": "Jane",
+                "lastName": "Smith",
+                "phoneNumber": "5551234567",
+                "email": "email@domain.com"
+            },
+            "technicalContact": {
+                "firstName": "Jane",
+                "lastName": "Smith",
+                "phoneNumber": "5551234567",
+                "email": "email@domain.com"
+            },
+            "emergencyContact": {
+                "firstName": "Jane",
+                "lastName": "Smith",
+                "phoneNumber": "5551234567",
+                "email": "email@domain.com"
+            },
+            "name": "Test Merchant",
+            "websiteUrl": "https://www.MerchantUrlHere.com",
+            "phoneNumber": "5551234567",
+            "timeZone": "America/Los_Angeles",
+            "merchantCategoryCode": "5999"
+        }
+    }
+}
+```
+
+#### Example response
+
+```json
+{
+    "id": "1695804002",
+    "submitTimeUtc": "2022-04-13T20:58:28Z",
+    "status": "SUCCESS",
+    "registrationInformation": {
+        "mode": "COMPLETE",
+        "boardingPackageId": "123456789012"
+    },
+    "organizationInformation": {
+        "organizationId": "yourstructuralorgidhere",
+        "parentOrganizationId": "yourmercahntorgidhere"
+    },
+    "message": "Request was processed successfully"
+}
+```
+
+- <sub>[`en-us_boarding_developer_all_rest_boarding:endpoint:post:e1c9cf6b`](https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-reg-create-structural-api)</sub>
+
+### Add a Structural Organization to a Merchant Organization
+
+- **Method:** `POST`
+- **Path:** `/boarding/v1/registrations`
+- **test host:** `https://apitest.cybersource.com`
+
+#### Example request
+
+```json
+{
+    "registrationInformation": {
+        "boardingFlow": "ENTERPRISE"
+    },
+    "organizationInformation": {
+        "organizationId": "yourstructuralorgidhere",
+        "status": "LIVE",
+        "parentOrganizationId": "yourmercahntorgidhere",
+        "type": "STRUCTURAL",
+        "configurable": false,
+        "businessInformation": {
+            "address": {
+                "country": "US",
+                "address1": "123 Main",
+                "postalCode": "99999",
+                "administrativeArea": "WA",
+                "locality": "Seattle"
+            },
+            "businessContact": {
+                "firstName": "Jane",
+                "lastName": "Smith",
+                "phoneNumber": "5551234567",
+                "email": "email@domain.com"
+            },
+            "technicalContact": {
+                "firstName": "Jane",
+                "lastName": "Smith",
+                "phoneNumber": "5551234567",
+                "email": "email@domain.com"
+            },
+            "emergencyContact": {
+                "firstName": "Jane",
+                "lastName": "Smith",
+                "phoneNumber": "5551234567",
+                "email": "email@domain.com"
+            },
+            "name": "Test Merchant",
+            "websiteUrl": "https://www.MerchantUrlHere.com",
+            "phoneNumber": "5551234567",
+            "timeZone": "America/Los_Angeles",
+            "merchantCategoryCode": "5999"
+        }
+    }
+}
+```
+
+#### Example response
+
+```json
+{
+    "id": "1695804002",
+    "submitTimeUtc": "2022-04-13T20:58:28Z",
+    "status": "SUCCESS",
+    "registrationInformation": {
+        "mode": "COMPLETE",
+        "boardingPackageId": "123456789012"
+    },
+    "organizationInformation": {
+        "organizationId": "yourstructuralorgidhere",
+        "parentOrganizationId": "yourmercahntorgidhere"
+    },
+    "message": "Request was processed successfully"
+}
+```
+
+- <sub>[`en-us_boarding_developer_all_rest_boarding:endpoint:post:28ac48d1`](https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-reg-create-structural-api)</sub>
+
+
 ## Steps
 
 ### Via Partner admin (Business Center) — `en-us_boarding_user_all_ebc_boarding-user_boarding-extend-hierarchy_merchants-v2-add-structural.md.md`
@@ -160,9 +315,9 @@ _Generated from `normalized/2026-08-08-boarding.claims.json`; do not hand-edit. 
 ## Constraints
 
 - [hierarchy_limit] You can board a small hierarchy of organizations using only merchant and transacting organizations.  
-  <sub>`en-us_boarding_developer_all_rest_boarding_boarding-extend-hierarchy:prose:892e49455a81` · 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-extend-hierarchy.md.md</sub>
+  <sub>`en-us_boarding_developer_all_rest_boarding_boarding-extend-hierarchy:prose:892e49455a81`</sub> · 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-extend-hierarchy.md.md
 - [hierarchy_limit] You can board a small hierarchy of organizations using only merchant and transacting organizations.  
-  <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-extend-hierarchy:prose:892e49455a81` · 2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_boarding-extend-hierarchy.md.md</sub>
+  <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-extend-hierarchy:prose:892e49455a81`</sub> · 2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_boarding-extend-hierarchy.md.md
 
 ## Failure modes
 

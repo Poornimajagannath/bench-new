@@ -12,6 +12,129 @@ _Generated from `normalized/2026-08-08-boarding.claims.json`; do not hand-edit. 
 
 - **Gap:** no prerequisite is specified in the source docs.
 
+## API endpoints
+
+### Retrieve a List of Organizations
+
+- **Method:** `GET`
+- **Path:** `/oms/v1/organizations`
+- **production host:** `https://api.cybersource.com`
+
+#### Example request
+
+```json
+GET https://api.cybersource.com/oms/v1/organizations?hierarchyQery=org1.descendents.1
+```
+
+#### Example response
+
+```json
+200 OK
+```
+
+- <sub>[`en-us_boarding_developer_all_rest_boarding:endpoint:get:ecdba5a5`](https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-retrieve-organizations)</sub>
+
+### Retrieve a List of Organizations
+
+- **Method:** `GET`
+- **Path:** `/oms/v1/organizations`
+- **test host:** `https://apitest.cybersource.com`
+
+#### Example request
+
+```json
+GET https://api.cybersource.com/oms/v1/organizations?hierarchyQery=org1.descendents.1
+```
+
+#### Example response
+
+```json
+200 OK
+```
+
+- <sub>[`en-us_boarding_developer_all_rest_boarding:endpoint:get:c4f0fff5`](https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-retrieve-organizations)</sub>
+
+### Retrieve a List of Organizations
+
+- **Method:** `GET`
+- **Path:** `/oms/v1/organizations?hierarchyQery`
+- **production host:** `https://api.cybersource.com`
+
+#### Example request
+
+```json
+GET https://api.cybersource.com/oms/v1/organizations?hierarchyQery=org1.descendents.1
+```
+
+#### Example response
+
+```json
+200 OK
+```
+
+- <sub>[`en-us_boarding_developer_all_rest_boarding:endpoint:get:88be0d9d`](https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-retrieve-organizations)</sub>
+
+### Retrieve Organization Details
+
+- **Method:** `GET`
+- **Path:** `/oms/v1/organizations/{organizationId}`
+- **production host:** `https://api.cybersource.com`
+
+#### Example request
+
+```json
+GET https://api.cybersource.com/oms/v1/organizations/org1
+```
+
+#### Example response
+
+```json
+200 OK
+```
+
+- <sub>[`en-us_boarding_developer_all_rest_boarding:endpoint:get:69b7b081`](https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-retrieve-an-organization)</sub>
+
+### Retrieve Organization Details
+
+- **Method:** `GET`
+- **Path:** `/oms/v1/organizations/{organizationId}`
+- **test host:** `https://apitest.cybersource.com`
+
+#### Example request
+
+```json
+GET https://api.cybersource.com/oms/v1/organizations/org1
+```
+
+#### Example response
+
+```json
+200 OK
+```
+
+- <sub>[`en-us_boarding_developer_all_rest_boarding:endpoint:get:9f1787e8`](https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-retrieve-an-organization)</sub>
+
+### Retrieve Organization Details
+
+- **Method:** `GET`
+- **Path:** `/oms/v1/organizations/org1`
+- **production host:** `https://api.cybersource.com`
+
+#### Example request
+
+```json
+GET https://api.cybersource.com/oms/v1/organizations/org1
+```
+
+#### Example response
+
+```json
+200 OK
+```
+
+- <sub>[`en-us_boarding_developer_all_rest_boarding:endpoint:get:83fa335c`](https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-retrieve-an-organization)</sub>
+
+
 ## Steps
 
 ### Via Partner admin (Business Center) — `en-us_boarding_user_all_ebc_boarding-user_merchants-v2-search-results-view-org-hierarchy.md.md`
@@ -46,10 +169,10 @@ _Generated from `normalized/2026-08-08-boarding.claims.json`; do not hand-edit. 
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_merchants-v2-search:step:5:d81558aa`</sub>
-6. **Action:** To reset the search filters and start over, click **Reset Search** . To understand how to use the search results, see [Search Results](/docs/cybs/en-us/boarding/user/all/ebc/boarding-user/merchants-v2-search/merchants-v2-search-results.md "").
+6. **Action:** To reset the search filters and start over, click **Reset Search** . To understand how to use the search results, see [Search Results](/docs/cybs/en-us/boarding/user/all/ebc/boarding-user/merchants-v2-search/merchants-v2-search-results.md).
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
-   - <sub>`en-us_boarding_user_all_ebc_boarding-user_merchants-v2-search:step:6:e2daf97f`</sub>
+   - <sub>`en-us_boarding_user_all_ebc_boarding-user_merchants-v2-search:step:6:19c5eb67`</sub>
 ### Via Partner admin (Business Center) — `en-us_boarding_user_all_ebc_boarding-user_merchants-v2-search_merchants-v2-search-results-view-org-hierarchy.md.md`
 
 1. **Action:** Find the merchant in search results and click the three dots (...) in the More column.
@@ -64,9 +187,9 @@ _Generated from `normalized/2026-08-08-boarding.claims.json`; do not hand-edit. 
 ## Constraints
 
 - [hierarchy_limit] * `distance` indicates levels of hierarchy.  
-  <sub>`en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro_boarding-retrieve-organizations_boarding-retrieve-organizations-query-parameters:prose:d1a55cdefae7` · 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro_boarding-retrieve-organizations_boarding-retrieve-organizations-query-parameters.md.md</sub>
+  <sub>`en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro_boarding-retrieve-organizations_boarding-retrieve-organizations-query-parameters:prose:d1a55cdefae7`</sub> · 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro_boarding-retrieve-organizations_boarding-retrieve-organizations-query-parameters.md.md
 - [hierarchy_limit] You can provide a whole number to specify the number levels of hierarchy to return.  
-  <sub>`en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro_boarding-retrieve-organizations_boarding-retrieve-organizations-query-parameters:prose:48cc94fecad6` · 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro_boarding-retrieve-organizations_boarding-retrieve-organizations-query-parameters.md.md</sub>
+  <sub>`en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro_boarding-retrieve-organizations_boarding-retrieve-organizations-query-parameters:prose:48cc94fecad6`</sub> · 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro_boarding-retrieve-organizations_boarding-retrieve-organizations-query-parameters.md.md
 
 ## Failure modes
 
