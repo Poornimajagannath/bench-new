@@ -1,0 +1,69 @@
+CONTENT-BENCH / BENCH-NEW — ARCHITECT HANDOFF
+Repo: https://github.com/Poornimajagannath/bench-new
+Public engine: https://github.com/Poornimajagannath/content-bench (engine only; never private corpus)
+Local model: nvidia/Qwen3.6-35B-A3B-NVFP4 @ http://127.0.0.1:8000/v1 (Hermes spark-qwen)
+
+INVARIANTS
+1) Never serve raw/
+2) content/ only via human-approved PR
+3) Doc agent answers from generated docs only; else say gap
+4) Keep evidence/failures; no silent drops
+5) Denominators from product root at runtime (not TOC alone; not llms.txt)
+6) No invention: assemble claims only; never author missing facts
+7) Corpus never leaves the machine (loopback-only generative prompts)
+
+PLAN STATUS — every original piece executed at least once
+- Wave1 payments: CLOSED 30/30 vs cybersource-payments.openapi.json
+- Wave2 boarding engine+composition: CLOSED
+- Template matrix: CLOSED → field_table schema
+- Product roots: 16/17 fetched; TOC 1421/1423
+- API-ref extraction + soft gaps: DONE
+- Boarding API ops in sequence: 19/19 unique
+- Improvement loop deterministic + local Qwen generative: DONE
+- No-invention guard + tests: DONE
+- outcome_missing flag: SHIPPED
+- Required Fields derivation contract: SHIPPED
+
+QUOTE ONLY THESE (name the source)
+- Outcome gaps: 215/278 (21 API + 257 UI)
+  Source: artifacts/content_engine/boarding/composition-report.json → sequence_totals.ratio
+  Per-step: outcome_missing true|false on content/boarding/workflows/*.md
+  DO NOT QUOTE: 222/277 or 220/257 (superseded; gap-report.md updated)
+- Soft gaps: missing RF 30/176; missing REST example 17/176; missing both 10/176; with RF 146/176
+  Source: artifacts/content_engine/wave_rerun/soft-gap-findings.json
+- Wave1: 30/30 OpenAPI — evals/evidence/wave1-payments/denominator-and-gaps.md
+- Product roots: 16/17; TOC gaps 2/1423
+
+DECISIONS
+- field_table: load-bearing; not a dated exclusion (WAVE2-CLOSEOUT.md)
+- Required fields: tag every field api_fields_link | required_fields_section | sibling_req_fields_page; refuse if none; NEVER infer from example JSON (api_reference.py)
+- Outcomes: gap marker / outcome_missing; never author outcomes (C4 class)
+- Improvement loop reports code_path + llm_called (not fake mode)
+
+LOOP JUDGMENT (sound)
+C1/C2 discarded (already fixed). C3 merged (reingest; safest class). C4 refused inventing outcomes. C5 refused upstream site bug. Qwen then drafted outcome_missing + RF augment; both shipped under contracts above.
+
+KEY PATHS
+- api_reference.py — RF derivation contract
+- workflow_pages.py — outcome_missing
+- ingest.py — field_table, rest_example
+- triage.py — prerequisites
+- pipelines/run_improvement_loop.py — local Qwen, honest code_path
+- artifacts/content_engine/boarding/gap-report.md — headline 215/278
+- evals/evidence/improvement-loop/ — L1/L2 evidence
+- mcp-server/ → evals/manual-runs.jsonl (gitignored)
+
+TRAPS
+1) Wrong denominator (fixture OpenAPI, llms.txt, TOC alone, stale headlines)
+2) Soft gap ≠ missing docs (plain DL parser bug looked like 57 missing RF; now 30)
+3) Example JSON keys ≠ required fields
+4) Inventing step outcomes
+5) Fake mode=llm without llm_called
+6) Host/stub collapse mistaken for orphans
+7) Shipping private corpus to public content-bench
+
+NEXT (spec v3 — not engine)
+Measurement-first wiki/portal phase consuming outcome_missing + soft gaps + composition ratios; corrected fetch rule; local model defaults; trap list above.
+
+THESIS
+A model that can lie and is tested to refuse (gap markers + derivation tags + loopback corpus) is the product. Gap report is ready to show. Spec v3 can be written from this handoff.
