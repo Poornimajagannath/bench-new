@@ -1,0 +1,1368 @@
+{
+  "product_id": "tap-to-phone",
+  "root_path": "/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.md",
+  "root_url": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.md",
+  "bytes": 134915,
+  "sections": [
+    {
+      "anchor": "tap-to-phone-about-guide",
+      "title": "Acceptance Devices \\| Tap to Pay on Android Solution Integration Guide",
+      "byte_start": 0,
+      "byte_end": 1430,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#tap-to-phone-about-guide",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tap-to-phone-doc-revisions",
+      "title": "Recent Revisions to This Document",
+      "byte_start": 1430,
+      "byte_end": 5232,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#tap-to-phone-doc-revisions",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tap-to-phone-intro",
+      "title": "Introduction to Acceptance Devices \\| Tap to Pay on Android Solution",
+      "byte_start": 5232,
+      "byte_end": 6057,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#tap-to-phone-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tap-to-phone-intro-android-device-reqs",
+      "title": "Compatibility Requirements for Android Devices",
+      "byte_start": 6057,
+      "byte_end": 7345,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#tap-to-phone-intro-android-device-reqs",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tap-to-phone-workflow",
+      "title": "Transaction Workflow for Tap to Pay on Android Solution",
+      "byte_start": 7345,
+      "byte_end": 7593,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#tap-to-phone-workflow",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tap-to-phone-workflow_fig_p3v_vqv_lfc",
+      "title": "Figure:",
+      "byte_start": 7593,
+      "byte_end": 8441,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#tap-to-phone-workflow_fig_p3v_vqv_lfc",
+      "heading_level": 4
+    },
+    {
+      "anchor": "tap-to-phone-intro-supported-pymnt-devices",
+      "title": "Payment Devices Supported by Tap to Pay on Android Solution",
+      "byte_start": 8441,
+      "byte_end": 10118,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#tap-to-phone-intro-supported-pymnt-devices",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-comply-pci-mpoc-intro",
+      "title": "PCI MPoC Standard Compliance",
+      "byte_start": 10118,
+      "byte_end": 11823,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-comply-pci-mpoc-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-comply-pci-mpoc-txn-workflow",
+      "title": "Transaction Workflow for the PCI-Certified MPoC Solution",
+      "byte_start": 11823,
+      "byte_end": 12991,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-comply-pci-mpoc-txn-workflow",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tap-to-phone-get-started-intro",
+      "title": "Getting Started with the Tap to Pay on Android Solution",
+      "byte_start": 12991,
+      "byte_end": 13528,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#tap-to-phone-get-started-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tap-to-phone-configure-ttp-intro",
+      "title": "Configuring the Tap to Pay on Android SDK",
+      "byte_start": 13528,
+      "byte_end": 13751,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#tap-to-phone-configure-ttp-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tap-to-phone-configure-project-settings-gradle",
+      "title": "Configure the Project *settings.gradle* File",
+      "byte_start": 13751,
+      "byte_end": 14575,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#tap-to-phone-configure-project-settings-gradle",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tap-to-phone-configure-project-build-gradle",
+      "title": "Configure the Project *build.gradle* File",
+      "byte_start": 14575,
+      "byte_end": 15156,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#tap-to-phone-configure-project-build-gradle",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tap-to-phone-configure-module-build-gradle",
+      "title": "Configure the Module *build.gradle* File",
+      "byte_start": 15156,
+      "byte_end": 17480,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#tap-to-phone-configure-module-build-gradle",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tap-to-phone-configure-android-manifest-xml",
+      "title": "Update the *AndroidManifest.xml* File",
+      "byte_start": 17480,
+      "byte_end": 19007,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#tap-to-phone-configure-android-manifest-xml",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tap-to-phone-configure-proguard-rules",
+      "title": "Configure ProGuard Rules to Enable Obfuscation",
+      "byte_start": 19007,
+      "byte_end": 20422,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#tap-to-phone-configure-proguard-rules",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-comply-pci-mpoc-install-app-intro",
+      "title": "Installing the Tap to Pay Ready App",
+      "byte_start": 20422,
+      "byte_end": 21114,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-comply-pci-mpoc-install-app-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-comply-pci-mpoc-install-app-task",
+      "title": "Install the Tap to Pay Ready App",
+      "byte_start": 21114,
+      "byte_end": 21850,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-comply-pci-mpoc-install-app-task",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-mid-secret-key-generate-intro",
+      "title": "Generating a Secret Key for an Existing Merchant ID",
+      "byte_start": 21850,
+      "byte_end": 22488,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-mid-secret-key-generate-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-mid-secret-key-generate-ebc-task",
+      "title": "Generate a Secret Key for an Existing Merchant ID in the Business Center",
+      "byte_start": 22488,
+      "byte_end": 24077,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-mid-secret-key-generate-ebc-task",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-mid-secret-key-generate-rest-api-task",
+      "title": "Generate a Secret Key for an Existing Merchant ID Using a REST API Request",
+      "byte_start": 24077,
+      "byte_end": 25246,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-mid-secret-key-generate-rest-api-task",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-mid-secret-key-generate-api-reqfields",
+      "title": "Required Fields for Generating a Secret Key for an Existing Merchant ID Using a REST API Request",
+      "byte_start": 25246,
+      "byte_end": 25564,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-mid-secret-key-generate-api-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-mid-secret-key-generate-api-ex-rest",
+      "title": "REST Example: Generating a Secret Key for an Existing Merchant ID Using a REST API Request",
+      "byte_start": 25564,
+      "byte_end": 26393,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-mid-secret-key-generate-api-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tap-to-phone-mposui-instance-create-intro",
+      "title": "Creating an mposUI Instance",
+      "byte_start": 26393,
+      "byte_end": 26608,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#tap-to-phone-mposui-instance-create-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tap-to-phone-mposui-instance-create-task",
+      "title": "Create an `mposUI` Instance",
+      "byte_start": 26608,
+      "byte_end": 28249,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#tap-to-phone-mposui-instance-create-task",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tap-to-phone-uiconfig-instance-create-intro",
+      "title": "Configure an mposUI Instance",
+      "byte_start": 28249,
+      "byte_end": 28551,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#tap-to-phone-uiconfig-instance-create-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tap-to-phone-uiconfig-instance-configure-task",
+      "title": "Create a `UiConfiguration` Instance",
+      "byte_start": 28551,
+      "byte_end": 30450,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#tap-to-phone-uiconfig-instance-configure-task",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-taptophone-config-instance",
+      "title": "Create a `TapToPhoneConfiguration` Instance",
+      "byte_start": 30450,
+      "byte_end": 31673,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-taptophone-config-instance",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-customize-default-ui-intro",
+      "title": "Customizing the Default User Interface",
+      "byte_start": 31673,
+      "byte_end": 32128,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-customize-default-ui-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-customize-default-ui-intro_fig_w4y_1q4_5fc",
+      "title": "Figure:",
+      "byte_start": 32128,
+      "byte_end": 32510,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-customize-default-ui-intro_fig_w4y_1q4_5fc",
+      "heading_level": 4
+    },
+    {
+      "anchor": "ttp-customize-default-ui-intro_fig_gk1_fq4_5fc",
+      "title": "Figure:",
+      "byte_start": 32510,
+      "byte_end": 32892,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-customize-default-ui-intro_fig_gk1_fq4_5fc",
+      "heading_level": 4
+    },
+    {
+      "anchor": "ttp-customize-default-ui-intro_fig_iv4_jq4_5fc",
+      "title": "Figure:",
+      "byte_start": 32892,
+      "byte_end": 35660,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-customize-default-ui-intro_fig_iv4_jq4_5fc",
+      "heading_level": 4
+    },
+    {
+      "anchor": "ttp-customize-default-ui-style-theme",
+      "title": "Customize Style Elements Using a Theme",
+      "byte_start": 35660,
+      "byte_end": 37804,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-customize-default-ui-style-theme",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-customize-default-ui-style-uiconfig",
+      "title": "Customize Style Elements Using a `UiConfiguration` Instance",
+      "byte_start": 37804,
+      "byte_end": 38857,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-customize-default-ui-style-uiconfig",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-customize-default-ui-dark-mode",
+      "title": "Enable Dark Mode in the Default User Interface",
+      "byte_start": 38857,
+      "byte_end": 40050,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-customize-default-ui-dark-mode",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-device-enroll-intro",
+      "title": "Enabling Device Enrollment",
+      "byte_start": 40050,
+      "byte_end": 40356,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-device-enroll-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-device-enroll-device",
+      "title": "Enroll a Device",
+      "byte_start": 40356,
+      "byte_end": 42228,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-device-enroll-device",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-device-enroll-prev-device",
+      "title": "Enroll a Previously Enrolled Device",
+      "byte_start": 42228,
+      "byte_end": 43668,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-device-enroll-prev-device",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-device-enroll-view-result",
+      "title": "View the Device Enrollment Result",
+      "byte_start": 43668,
+      "byte_end": 44688,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-device-enroll-view-result",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tap-to-phone-payment-txn-intro",
+      "title": "Tap to Pay on Android Payment Services",
+      "byte_start": 44688,
+      "byte_end": 44917,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#tap-to-phone-payment-txn-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tap-to-phone-payment-txn-sale",
+      "title": "Sale",
+      "byte_start": 44917,
+      "byte_end": 47111,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#tap-to-phone-payment-txn-sale",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tap-to-phone-payment-txn-refund",
+      "title": "Refund",
+      "byte_start": 47111,
+      "byte_end": 50148,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#tap-to-phone-payment-txn-refund",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tap-to-phone-payment-txn-standalone-credit",
+      "title": "Stand-Alone Credit",
+      "byte_start": 50148,
+      "byte_end": 52978,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#tap-to-phone-payment-txn-standalone-credit",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tap-to-phone-payment-txn-check-txn-status",
+      "title": "Check Transaction Status",
+      "byte_start": 52978,
+      "byte_end": 54896,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#tap-to-phone-payment-txn-check-txn-status",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tap-to-phone-payment-txn-pre-auth-task",
+      "title": "Pre-Authorization",
+      "byte_start": 54896,
+      "byte_end": 57869,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#tap-to-phone-payment-txn-pre-auth-task",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tap-to-phone-payment-txn-incremental-auth-task",
+      "title": "Incremental Authorization",
+      "byte_start": 57869,
+      "byte_end": 60608,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#tap-to-phone-payment-txn-incremental-auth-task",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tap-to-phone-payment-txn-capture-task",
+      "title": "Capture",
+      "byte_start": 60608,
+      "byte_end": 63191,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#tap-to-phone-payment-txn-capture-task",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-payment-txn-sale-airline-details",
+      "title": "Sale with Airline Details",
+      "byte_start": 63191,
+      "byte_end": 69494,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-payment-txn-sale-airline-details",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-payment-txn-sale-auto-rental-details",
+      "title": "Sale with Auto Rental Details",
+      "byte_start": 69494,
+      "byte_end": 73818,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-payment-txn-sale-auto-rental-details",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-payment-txn-sale-bill-ship-details",
+      "title": "Sale with Billing and Shipping Details",
+      "byte_start": 73818,
+      "byte_end": 77721,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-payment-txn-sale-bill-ship-details",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-payment-txn-sale-lodging-details",
+      "title": "Sale with Lodging Details",
+      "byte_start": 77721,
+      "byte_end": 82955,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-payment-txn-sale-lodging-details",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-payment-txn-sale-installment-details-task",
+      "title": "Sale with Installment Details",
+      "byte_start": 82955,
+      "byte_end": 85848,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-payment-txn-sale-installment-details-task",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-payment-txn-sale-merch-defined-data-details",
+      "title": "Sale with Merchant-Defined Data Details",
+      "byte_start": 85848,
+      "byte_end": 89284,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-payment-txn-sale-merch-defined-data-details",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tap-to-phone-payment-txn-sale-on-reader-tip-task",
+      "title": "Sale with On-Reader Tipping",
+      "byte_start": 89284,
+      "byte_end": 93095,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#tap-to-phone-payment-txn-sale-on-reader-tip-task",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-payment-txn-sale-payment-facilitator-task",
+      "title": "Sale with Payment Facilitator Details",
+      "byte_start": 93095,
+      "byte_end": 95800,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-payment-txn-sale-payment-facilitator-task",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-payment-txn-sale-tax-details-task",
+      "title": "Sale with Tax Details",
+      "byte_start": 95800,
+      "byte_end": 98476,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-payment-txn-sale-tax-details-task",
+      "heading_level": 1
+    },
+    {
+      "anchor": "tap-to-phone-payment-txn-email-receipt-task",
+      "title": "Email a Customer Receipt",
+      "byte_start": 98476,
+      "byte_end": 99932,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#tap-to-phone-payment-txn-email-receipt-task",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-release-notes-intro",
+      "title": "Release Notes for Tap to Pay on Android Solution",
+      "byte_start": 99932,
+      "byte_end": 100608,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-release-notes-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-rel-notes-v2-115-intro",
+      "title": "SDK Version 2.115.0 Release Notes",
+      "byte_start": 100608,
+      "byte_end": 100886,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-rel-notes-v2-115-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-rel-notes-v2-115-fixed",
+      "title": "Fixed Issues",
+      "byte_start": 100886,
+      "byte_end": 101080,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-rel-notes-v2-115-fixed",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-rel-notes-v2-114-intro",
+      "title": "SDK Version 2.114.0 Release Notes",
+      "byte_start": 101080,
+      "byte_end": 101358,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-rel-notes-v2-114-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-rel-notes-v2-114-features",
+      "title": "New Features",
+      "byte_start": 101358,
+      "byte_end": 101635,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-rel-notes-v2-114-features",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-rel-notes-v2-114-improve",
+      "title": "Improvements",
+      "byte_start": 101635,
+      "byte_end": 101804,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-rel-notes-v2-114-improve",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-rel-notes-v2-113-intro",
+      "title": "SDK Version 2.113.0 Release Notes",
+      "byte_start": 101804,
+      "byte_end": 102082,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-rel-notes-v2-113-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-rel-notes-v2-113-fixed",
+      "title": "Fixed Issues",
+      "byte_start": 102082,
+      "byte_end": 102478,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-rel-notes-v2-113-fixed",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-rel-notes-v2-112-intro",
+      "title": "SDK Version 2.112.0 Release Notes",
+      "byte_start": 102478,
+      "byte_end": 102756,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-rel-notes-v2-112-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-rel-notes-v2-112-improve",
+      "title": "Improvements",
+      "byte_start": 102756,
+      "byte_end": 102889,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-rel-notes-v2-112-improve",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-rel-notes-v2-112-fixed",
+      "title": "Fixed Issues",
+      "byte_start": 102889,
+      "byte_end": 103089,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-rel-notes-v2-112-fixed",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-archive-intro",
+      "title": "Archive of Release Notes",
+      "byte_start": 103089,
+      "byte_end": 104278,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-archive-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-rel-notes-v2-111-intro",
+      "title": "SDK Version 2.111.0 Release Notes",
+      "byte_start": 104278,
+      "byte_end": 104556,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-rel-notes-v2-111-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-rel-notes-v2-111-features",
+      "title": "New Features",
+      "byte_start": 104556,
+      "byte_end": 105034,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-rel-notes-v2-111-features",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-rel-notes-v2-110-intro",
+      "title": "SDK Version 2.110.0 Release Notes",
+      "byte_start": 105034,
+      "byte_end": 105312,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-rel-notes-v2-110-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-rel-notes-v2-110-features",
+      "title": "New Features",
+      "byte_start": 105312,
+      "byte_end": 105524,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-rel-notes-v2-110-features",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-rel-notes-v2-110-improve",
+      "title": "Improvements",
+      "byte_start": 105524,
+      "byte_end": 105893,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-rel-notes-v2-110-improve",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-rel-notes-v2-110-fixed",
+      "title": "Fixed Issues",
+      "byte_start": 105893,
+      "byte_end": 106384,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-rel-notes-v2-110-fixed",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-rel-notes-v2-110-general",
+      "title": "General Information",
+      "byte_start": 106384,
+      "byte_end": 106658,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-rel-notes-v2-110-general",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-rel-notes-v2-109-intro",
+      "title": "SDK Version 2.109.0 Release Notes",
+      "byte_start": 106658,
+      "byte_end": 106936,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-rel-notes-v2-109-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-rel-notes-v2-109-features",
+      "title": "New Features",
+      "byte_start": 106936,
+      "byte_end": 107222,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-rel-notes-v2-109-features",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-rel-notes-v2-109-fixed",
+      "title": "Fixed Issues",
+      "byte_start": 107222,
+      "byte_end": 107347,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-rel-notes-v2-109-fixed",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-rel-notes-v2-108-0-intro",
+      "title": "SDK Version 2.108.0 Release Notes",
+      "byte_start": 107347,
+      "byte_end": 107629,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-rel-notes-v2-108-0-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-rel-notes-v2-108-0-features",
+      "title": "New Features",
+      "byte_start": 107629,
+      "byte_end": 107816,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-rel-notes-v2-108-0-features",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-rel-notes-v2-108-0-improve",
+      "title": "Improvements",
+      "byte_start": 107816,
+      "byte_end": 107977,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-rel-notes-v2-108-0-improve",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-rel-notes-v2-108-0-fixed",
+      "title": "Fixed Issues",
+      "byte_start": 107977,
+      "byte_end": 108161,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-rel-notes-v2-108-0-fixed",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-rel-notes-v2-108-0-general",
+      "title": "General Information",
+      "byte_start": 108161,
+      "byte_end": 108373,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-rel-notes-v2-108-0-general",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-rel-notes-v2-107-0-intro",
+      "title": "SDK Version 2.107.0 Release Notes",
+      "byte_start": 108373,
+      "byte_end": 108655,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-rel-notes-v2-107-0-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-rel-notes-v2-107-0-newfeatures",
+      "title": "New Features",
+      "byte_start": 108655,
+      "byte_end": 108832,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-rel-notes-v2-107-0-newfeatures",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-rel-notes-v2-107-0-improve",
+      "title": "Improvements",
+      "byte_start": 108832,
+      "byte_end": 108999,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-rel-notes-v2-107-0-improve",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-rel-notes-v2-107-0-fixed",
+      "title": "Fixed Issues",
+      "byte_start": 108999,
+      "byte_end": 109633,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-rel-notes-v2-107-0-fixed",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-rel-notes-v2-107-0-general",
+      "title": "General Information",
+      "byte_start": 109633,
+      "byte_end": 109929,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-rel-notes-v2-107-0-general",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-rel-notes-v2-106-0-intro",
+      "title": "SDK Version 2.106.0 Release Notes",
+      "byte_start": 109929,
+      "byte_end": 110211,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-rel-notes-v2-106-0-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-rel-notes-v2-106-0-newfeatures",
+      "title": "New Features",
+      "byte_start": 110211,
+      "byte_end": 110530,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-rel-notes-v2-106-0-newfeatures",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-rel-notes-v2-105-0-intro",
+      "title": "SDK Version 2.105.0 Release Notes",
+      "byte_start": 110530,
+      "byte_end": 110812,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-rel-notes-v2-105-0-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-rel-notes-v2-105-0-improve",
+      "title": "Improvements",
+      "byte_start": 110812,
+      "byte_end": 111067,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-rel-notes-v2-105-0-improve",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-rel-notes-v2-105-0-fixed",
+      "title": "Fixed Issues",
+      "byte_start": 111067,
+      "byte_end": 111374,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-rel-notes-v2-105-0-fixed",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-rel-notes-v2-104-0-intro",
+      "title": "SDK Version 2.104.0 Release Notes",
+      "byte_start": 111374,
+      "byte_end": 111656,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-rel-notes-v2-104-0-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-rel-notes-v2-104-0-improve",
+      "title": "Improvements",
+      "byte_start": 111656,
+      "byte_end": 112169,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-rel-notes-v2-104-0-improve",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-v2-103-1-intro",
+      "title": "SDK Version 2.103.1 Release Notes",
+      "byte_start": 112169,
+      "byte_end": 112459,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-v2-103-1-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-v2-103-1-fixed-issues",
+      "title": "Fixed Issues",
+      "byte_start": 112459,
+      "byte_end": 112692,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-v2-103-1-fixed-issues",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-v2-103-0-intro",
+      "title": "SDK Version 2.103.0 Release Notes",
+      "byte_start": 112692,
+      "byte_end": 112982,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-v2-103-0-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-v2-103-0-newfeatures",
+      "title": "New Features",
+      "byte_start": 112982,
+      "byte_end": 113485,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-v2-103-0-newfeatures",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-v2-103-0-improve",
+      "title": "Improvements",
+      "byte_start": 113485,
+      "byte_end": 113678,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-v2-103-0-improve",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-v2-103-0-fixed-issues",
+      "title": "Fixed Issues",
+      "byte_start": 113678,
+      "byte_end": 113829,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-v2-103-0-fixed-issues",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-v2-102-0-intro",
+      "title": "SDK Version 2.102.0 Release Notes",
+      "byte_start": 113829,
+      "byte_end": 114119,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-v2-102-0-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-v2-102-0-newfeatures",
+      "title": "New Features",
+      "byte_start": 114119,
+      "byte_end": 114479,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-v2-102-0-newfeatures",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-v2-102-0-improve",
+      "title": "Improvements",
+      "byte_start": 114479,
+      "byte_end": 114987,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-v2-102-0-improve",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-v2-101-1-intro",
+      "title": "SDK Version 2.101.1 Release Notes",
+      "byte_start": 114987,
+      "byte_end": 115277,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-v2-101-1-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-v2-101-1-newfeatures",
+      "title": "New Features",
+      "byte_start": 115277,
+      "byte_end": 115492,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-v2-101-1-newfeatures",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-v2-101-1-improve",
+      "title": "Improvements",
+      "byte_start": 115492,
+      "byte_end": 115823,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-v2-101-1-improve",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-sdk-v2-101-1-fixed-issues",
+      "title": "Fixed Issues",
+      "byte_start": 115823,
+      "byte_end": 116254,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-sdk-v2-101-1-fixed-issues",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-v2-100-0-intro",
+      "title": "SDK Version 2.100.0 Release Notes",
+      "byte_start": 116254,
+      "byte_end": 116543,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-v2-100-0-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-v2-100-0-improve",
+      "title": "Improvements",
+      "byte_start": 116543,
+      "byte_end": 116703,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-v2-100-0-improve",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-sdk-v2-100-0-fixed-issues",
+      "title": "Fixed Issues",
+      "byte_start": 116703,
+      "byte_end": 116950,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-sdk-v2-100-0-fixed-issues",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-v2-99-0-intro",
+      "title": "SDK Version 2.99.0 Release Notes",
+      "byte_start": 116950,
+      "byte_end": 117234,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-v2-99-0-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-v2-99-0-new-features",
+      "title": "New Features",
+      "byte_start": 117234,
+      "byte_end": 117471,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-v2-99-0-new-features",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-v2-99-0-improve",
+      "title": "Improvements",
+      "byte_start": 117471,
+      "byte_end": 117896,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-v2-99-0-improve",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-sdk-v2-98-0-intro",
+      "title": "SDK Version 2.98.0 Release Notes",
+      "byte_start": 117896,
+      "byte_end": 118188,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-sdk-v2-98-0-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-sdk-v2-98-0-updated-rqmnts",
+      "title": "Updated Requirements",
+      "byte_start": 118188,
+      "byte_end": 118468,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-sdk-v2-98-0-updated-rqmnts",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-sdk-v2-98-0-new-features",
+      "title": "New Features",
+      "byte_start": 118468,
+      "byte_end": 118634,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-sdk-v2-98-0-new-features",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-sdk-v2-98-0-improve",
+      "title": "Improvements",
+      "byte_start": 118634,
+      "byte_end": 119267,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-sdk-v2-98-0-improve",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-sdk-v2-98-0-fixed-issues",
+      "title": "Fixed Issues",
+      "byte_start": 119267,
+      "byte_end": 119585,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-sdk-v2-98-0-fixed-issues",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-sdk-v2-97-0-intro",
+      "title": "SDK Version 2.97.0 Release Notes",
+      "byte_start": 119585,
+      "byte_end": 119877,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-sdk-v2-97-0-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-sdk-v2-97-0-improve",
+      "title": "Improvements",
+      "byte_start": 119877,
+      "byte_end": 120257,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-sdk-v2-97-0-improve",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-sdk-v2-96-0-intro",
+      "title": "SDK Version 2.96.0 Release Notes",
+      "byte_start": 120257,
+      "byte_end": 120549,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-sdk-v2-96-0-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-sdk-v2-96-0-fixed-issues",
+      "title": "Fixed Issues",
+      "byte_start": 120549,
+      "byte_end": 120741,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-sdk-v2-96-0-fixed-issues",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-sdk-v2-95-0-intro",
+      "title": "SDK Version 2.95.0 Release Notes",
+      "byte_start": 120741,
+      "byte_end": 121033,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-sdk-v2-95-0-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-sdk-v2-95-0-improve",
+      "title": "Improvements",
+      "byte_start": 121033,
+      "byte_end": 121245,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-sdk-v2-95-0-improve",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-sdk-v2-95-0-fixed-issues",
+      "title": "Fixed Issues",
+      "byte_start": 121245,
+      "byte_end": 121643,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-sdk-v2-95-0-fixed-issues",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-sdk-v2-94-0-intro",
+      "title": "SDK Version 2.94.0 Release Notes",
+      "byte_start": 121643,
+      "byte_end": 121935,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-sdk-v2-94-0-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-sdk-v2-94-0-fixed-issues",
+      "title": "Fixed Issues",
+      "byte_start": 121935,
+      "byte_end": 122229,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-sdk-v2-94-0-fixed-issues",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-sdk-v2-94-0-new-features",
+      "title": "New Features",
+      "byte_start": 122229,
+      "byte_end": 122651,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-sdk-v2-94-0-new-features",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-sdk-v2-93-0-intro",
+      "title": "SDK Version 2.93.0 Release Notes",
+      "byte_start": 122651,
+      "byte_end": 122943,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-sdk-v2-93-0-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-sdk-v2-93-0-improve",
+      "title": "Improvements",
+      "byte_start": 122943,
+      "byte_end": 123136,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-sdk-v2-93-0-improve",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-sdk-v2-93-0-updated-rqmnts",
+      "title": "Updated Requirements",
+      "byte_start": 123136,
+      "byte_end": 123417,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-sdk-v2-93-0-updated-rqmnts",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-sdk-v2-93-0-fixed-issues",
+      "title": "Fixed Issues",
+      "byte_start": 123417,
+      "byte_end": 124062,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-sdk-v2-93-0-fixed-issues",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-sdk-v2-92-0-intro",
+      "title": "SDK Version 2.92.0 Release Notes",
+      "byte_start": 124062,
+      "byte_end": 124354,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-sdk-v2-92-0-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-sdk-v2-92-0-improve",
+      "title": "Improvements",
+      "byte_start": 124354,
+      "byte_end": 124677,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-sdk-v2-92-0-improve",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-sdk-v2-91-0-intro",
+      "title": "SDK Version 2.91.0 Release Notes",
+      "byte_start": 124677,
+      "byte_end": 124969,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-sdk-v2-91-0-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-sdk-v2-91-0-new-features",
+      "title": "New Features",
+      "byte_start": 124969,
+      "byte_end": 125198,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-sdk-v2-91-0-new-features",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-sdk-v2-91-0-improve",
+      "title": "Improvements",
+      "byte_start": 125198,
+      "byte_end": 125400,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-sdk-v2-91-0-improve",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-sdk-v2-91-0-fixed-issues",
+      "title": "Fixed Issues",
+      "byte_start": 125400,
+      "byte_end": 125800,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-sdk-v2-91-0-fixed-issues",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-sdk-v2-90-0-intro",
+      "title": "SDK Version 2.90.0 Release Notes",
+      "byte_start": 125800,
+      "byte_end": 126092,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-sdk-v2-90-0-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-sdk-v2-90-0-new-features",
+      "title": "New Features",
+      "byte_start": 126092,
+      "byte_end": 126372,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-sdk-v2-90-0-new-features",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-sdk-v2-90-0-improve",
+      "title": "Improvements",
+      "byte_start": 126372,
+      "byte_end": 126578,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-sdk-v2-90-0-improve",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-sdk-v2-90-0-updated-rqmnts",
+      "title": "Updated Requirements",
+      "byte_start": 126578,
+      "byte_end": 126859,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-sdk-v2-90-0-updated-rqmnts",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-sdk-v2-90-0-fixed-issues",
+      "title": "Fixed Issues",
+      "byte_start": 126859,
+      "byte_end": 127103,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-sdk-v2-90-0-fixed-issues",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-sdk-v2-90-0-gen-info",
+      "title": "General Information",
+      "byte_start": 127103,
+      "byte_end": 127360,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-sdk-v2-90-0-gen-info",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-sdk-v2-89-0-intro",
+      "title": "SDK Version 2.89.0 Release Notes",
+      "byte_start": 127360,
+      "byte_end": 127652,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-sdk-v2-89-0-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-sdk-v2-89-0-fixed-issues",
+      "title": "Fixed Issues",
+      "byte_start": 127652,
+      "byte_end": 127890,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-sdk-v2-89-0-fixed-issues",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-sdk-v2-89-0-improve",
+      "title": "Improvements",
+      "byte_start": 127890,
+      "byte_end": 128088,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-sdk-v2-89-0-improve",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-sdk-v2-88-0-intro",
+      "title": "SDK Version 2.88.0 Release Notes",
+      "byte_start": 128088,
+      "byte_end": 128380,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-sdk-v2-88-0-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-sdk-v2-88-0-new-features",
+      "title": "New Features",
+      "byte_start": 128380,
+      "byte_end": 128836,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-sdk-v2-88-0-new-features",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-sdk-v2-88-0-improve",
+      "title": "Improvements",
+      "byte_start": 128836,
+      "byte_end": 129093,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-sdk-v2-88-0-improve",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-sdk-v2-87-0-intro",
+      "title": "SDK Version 2.87.0 Release Notes",
+      "byte_start": 129093,
+      "byte_end": 129385,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-sdk-v2-87-0-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-sdk-v2-87-0-gen-info",
+      "title": "General Information",
+      "byte_start": 129385,
+      "byte_end": 129673,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-sdk-v2-87-0-gen-info",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-sdk-v2-87-0-update-requirements",
+      "title": "Updated Requirements",
+      "byte_start": 129673,
+      "byte_end": 129958,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-sdk-v2-87-0-update-requirements",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-sdk-v2-87-0-fixed-issues",
+      "title": "Fixed Issues",
+      "byte_start": 129958,
+      "byte_end": 130311,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-sdk-v2-87-0-fixed-issues",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-sdk-v2-86-0-intro",
+      "title": "SDK Version 2.86.0 Release Notes",
+      "byte_start": 130311,
+      "byte_end": 130591,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-sdk-v2-86-0-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-sdk-v2-86-0-improve",
+      "title": "Improvements",
+      "byte_start": 130591,
+      "byte_end": 130784,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-sdk-v2-86-0-improve",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-sdk-v2-85-0-intro",
+      "title": "SDK Version 2.85.0 Release Notes",
+      "byte_start": 130784,
+      "byte_end": 131064,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-sdk-v2-85-0-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-sdk-v2-85-0-improve",
+      "title": "Improvements",
+      "byte_start": 131064,
+      "byte_end": 131393,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-sdk-v2-85-0-improve",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-sdk-v2-85-0-fixed-issues",
+      "title": "Fixed Issues",
+      "byte_start": 131393,
+      "byte_end": 131834,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-sdk-v2-85-0-fixed-issues",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-sdk-v2-84-0-intro",
+      "title": "SDK Version 2.84.0 Release Notes",
+      "byte_start": 131834,
+      "byte_end": 132114,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-sdk-v2-84-0-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-sdk-v2-84-0-improve",
+      "title": "Improvements",
+      "byte_start": 132114,
+      "byte_end": 132434,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-sdk-v2-84-0-improve",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-sdk-v2-83-0-intro",
+      "title": "SDK Version 2.83.0 Release Notes",
+      "byte_start": 132434,
+      "byte_end": 132714,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-sdk-v2-83-0-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-sdk-v2-83-0-new-features",
+      "title": "New Features",
+      "byte_start": 132714,
+      "byte_end": 132952,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-sdk-v2-83-0-new-features",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-sdk-v2-83-0-improve",
+      "title": "Improvements",
+      "byte_start": 132952,
+      "byte_end": 133294,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-sdk-v2-83-0-improve",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-sdk-v2-83-0-fixed-issues",
+      "title": "Fixed Issues",
+      "byte_start": 133294,
+      "byte_end": 133830,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-sdk-v2-83-0-fixed-issues",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-sdk-v2-82-0-intro",
+      "title": "SDK Version 2.82.0 Release Notes",
+      "byte_start": 133830,
+      "byte_end": 134110,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-sdk-v2-82-0-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-sdk-v2-82-0-new-features",
+      "title": "New Features",
+      "byte_start": 134110,
+      "byte_end": 134295,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-sdk-v2-82-0-new-features",
+      "heading_level": 1
+    },
+    {
+      "anchor": "ttp-aio-release-notes-sdk-v2-82-0-fixed-issues",
+      "title": "Fixed Issues",
+      "byte_start": 134295,
+      "byte_end": 134915,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tap-to-phone/integration/all/rest/tap-to-phone.html#ttp-aio-release-notes-sdk-v2-82-0-fixed-issues",
+      "heading_level": 1
+    }
+  ]
+}

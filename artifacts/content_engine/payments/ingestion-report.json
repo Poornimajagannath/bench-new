@@ -1,102 +1,158 @@
 {
-  "stamp_date": "2026-08-09",
+  "stamp_date": "2026-08-07",
   "docs_fetched": 29,
-  "claims_extracted": 5769,
+  "claims_extracted": 6813,
   "claims_by_schema": {
     "quickstart_step": 1321,
-    "endpoint_fact": 653,
+    "endpoint_fact": 1696,
     "error_case": 112,
-    "prose_claim": 1073,
+    "prose_claim": 1074,
     "field_table": 2610
   },
-  "drop_count": 13,
+  "drop_count": 21,
   "drops": [
     {
       "path": "en-us_payer-authentication_developer_all_rest_payer-auth_pa-testing-intro.md.md",
       "reason": "quarantine_policy",
-      "detail": "census kind=index_navigation \u2014 excluded by policy",
+      "detail": "excluded by corpus census quarantine list",
       "bytes": 400,
       "first_heading": "Testing Payer Authentication"
     },
     {
       "path": "en-us_payer-authentication_developer_all_rest_payer-auth_pa2-ccdc-intro.md.md",
       "reason": "quarantine_policy",
-      "detail": "census kind=index_navigation \u2014 excluded by policy",
+      "detail": "excluded by corpus census quarantine list",
       "bytes": 2452,
       "first_heading": "Implementing Direct API for Payer Authentication"
     },
     {
       "path": "en-us_payments_developer_ctv_rest_payments_payments-debit-prepaid-process-intro.md.md",
       "reason": "quarantine_policy",
-      "detail": "census kind=index_navigation \u2014 excluded by policy",
+      "detail": "excluded by corpus census quarantine list",
       "bytes": 688,
       "first_heading": "Debit and Prepaid Card Processing"
     },
     {
       "path": "en-us_payments_developer_ctv_rest_payments_payments-intro.md.md",
       "reason": "quarantine_policy",
-      "detail": "census kind=index_navigation \u2014 excluded by policy",
+      "detail": "excluded by corpus census quarantine list",
       "bytes": 914,
       "first_heading": "Introduction to Payments"
     },
     {
       "path": "en-us_payments_developer_ctv_rest_payments_payments-processing-basic-intro.md.md",
       "reason": "quarantine_policy",
-      "detail": "census kind=index_navigation \u2014 excluded by policy",
+      "detail": "excluded by corpus census quarantine list",
       "bytes": 229,
       "first_heading": "Standard Payment Processing"
     },
     {
       "path": "en-us_tms_developer_all_rest_tms_tms-cust-tkn.md.md",
       "reason": "quarantine_policy",
-      "detail": "census kind=index_navigation \u2014 excluded by policy",
+      "detail": "excluded by corpus census quarantine list",
       "bytes": 230,
       "first_heading": "Customer Tokens"
     },
     {
       "path": "en-us_tms_developer_all_rest_tms_tms-cust-tkn_tms-cust-pi-tkn.md.md",
       "reason": "quarantine_policy",
-      "detail": "census kind=index_navigation \u2014 excluded by policy",
+      "detail": "excluded by corpus census quarantine list",
       "bytes": 316,
       "first_heading": "Customer Payment Instruments"
     },
     {
       "path": "en-us_tms_developer_all_rest_tms_tms-onboarding.md.md",
       "reason": "quarantine_policy",
-      "detail": "census kind=index_navigation \u2014 excluded by policy",
+      "detail": "excluded by corpus census quarantine list",
       "bytes": 783,
       "first_heading": "`Token Management Service` Onboarding"
     },
     {
       "path": "en-us_tms_developer_all_rest_tms_tms-pi-tkn.md.md",
       "reason": "quarantine_policy",
-      "detail": "census kind=index_navigation \u2014 excluded by policy",
+      "detail": "excluded by corpus census quarantine list",
       "bytes": 318,
       "first_heading": "Payment Instrument Tokens"
     },
     {
-      "path": "2026-08-09/en-us_tms_developer_all_rest_tms_tms-cust-tkn_tms-ship-tkn.md.md",
+      "path": "2026-08-07/en-us_payer-authentication_developer_all_rest_payer-auth_pa2-ccdc-intro.md.md",
+      "reason": "no_schema_match",
+      "detail": "no quickstart/endpoint/error/prose claim extracted",
+      "bytes": 2452,
+      "first_heading": "Implementing Direct API for Payer Authentication"
+    },
+    {
+      "path": "2026-08-07/en-us_payments_developer_ctv_rest_payments_payments-debit-prepaid-process-intro.md.md",
+      "reason": "no_schema_match",
+      "detail": "no quickstart/endpoint/error/prose claim extracted",
+      "bytes": 688,
+      "first_heading": "Debit and Prepaid Card Processing"
+    },
+    {
+      "path": "2026-08-07/en-us_payments_developer_ctv_rest_payments_payments-intro.md.md",
+      "reason": "no_schema_match",
+      "detail": "no quickstart/endpoint/error/prose claim extracted",
+      "bytes": 914,
+      "first_heading": "Introduction to Payments"
+    },
+    {
+      "path": "2026-08-07/en-us_payments_developer_ctv_rest_payments_payments-processing-basic-intro.md.md",
+      "reason": "no_schema_match",
+      "detail": "no quickstart/endpoint/error/prose claim extracted",
+      "bytes": 229,
+      "first_heading": "Standard Payment Processing"
+    },
+    {
+      "path": "2026-08-07/en-us_tms_developer_all_rest_tms_tms-cust-tkn.md.md",
+      "reason": "no_schema_match",
+      "detail": "no quickstart/endpoint/error/prose claim extracted",
+      "bytes": 230,
+      "first_heading": "Customer Tokens"
+    },
+    {
+      "path": "2026-08-07/en-us_tms_developer_all_rest_tms_tms-cust-tkn_tms-cust-pi-tkn.md.md",
+      "reason": "no_schema_match",
+      "detail": "no quickstart/endpoint/error/prose claim extracted",
+      "bytes": 316,
+      "first_heading": "Customer Payment Instruments"
+    },
+    {
+      "path": "2026-08-07/en-us_tms_developer_all_rest_tms_tms-cust-tkn_tms-ship-tkn.md.md",
       "reason": "no_schema_match",
       "detail": "no quickstart/endpoint/error/prose claim extracted",
       "bytes": 448,
       "first_heading": "Shipping Address Tokens"
     },
     {
-      "path": "2026-08-09/en-us_tms_developer_all_rest_tms_tms-ii-tkn.md.md",
+      "path": "2026-08-07/en-us_tms_developer_all_rest_tms_tms-ii-tkn.md.md",
       "reason": "no_schema_match",
       "detail": "no quickstart/endpoint/error/prose claim extracted",
       "bytes": 1693,
       "first_heading": "Instrument Identifier Tokens"
     },
     {
-      "path": "2026-08-09/en-us_tms_developer_all_rest_tms_tms-wallet-tkn.md.md",
+      "path": "2026-08-07/en-us_tms_developer_all_rest_tms_tms-onboarding.md.md",
+      "reason": "no_schema_match",
+      "detail": "no quickstart/endpoint/error/prose claim extracted",
+      "bytes": 783,
+      "first_heading": "`Token Management Service` Onboarding"
+    },
+    {
+      "path": "2026-08-07/en-us_tms_developer_all_rest_tms_tms-pi-tkn.md.md",
+      "reason": "no_schema_match",
+      "detail": "no quickstart/endpoint/error/prose claim extracted",
+      "bytes": 318,
+      "first_heading": "Payment Instrument Tokens"
+    },
+    {
+      "path": "2026-08-07/en-us_tms_developer_all_rest_tms_tms-wallet-tkn.md.md",
       "reason": "no_schema_match",
       "detail": "no quickstart/endpoint/error/prose claim extracted",
       "bytes": 210,
       "first_heading": "Using `Token Management Service` with Wallet Apps"
     },
     {
-      "path": "2026-08-09/sandbox.md",
+      "path": "2026-08-07/sandbox.md",
       "reason": "no_schema_match",
       "detail": "no quickstart/endpoint/error/prose claim extracted",
       "bytes": 622,
@@ -104,11 +160,11 @@
     }
   ],
   "quarantine_skipped": 9,
-  "quarantine_list": null,
-  "census_report": "artifacts/content_engine/corpus/census-report.json",
+  "quarantine_list": "/home/badari/workspace/poornima/visa-relay-bench/artifacts/content_engine/corpus/quarantine-list.json",
+  "census_report": null,
   "ingest_input_count": 29,
-  "raw_dir": "raw/2026-08-09",
-  "normalized_file": "normalized/2026-08-09.claims.json",
+  "raw_dir": "raw/2026-08-07",
+  "normalized_file": "normalized/2026-08-07.claims.json",
   "read_contract": [
     "normalized/",
     "content/"
@@ -118,19 +174,19 @@
   ],
   "recall": {
     "prior_no_schema_match": 20,
-    "recovered": 7,
-    "still_dropped": 13,
+    "recovered": 8,
+    "still_dropped": 12,
     "recovered_names": [
       "en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_ctp-intro.md.md",
       "en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_da-payments.md.md",
       "en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_microform-integ-v2.md.md",
       "en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_payments_intro_digt_accpt_sec_intg.md.md",
       "en-us_digital-accept-flex_developer_all_rest_digital-accept-flex_uc-intro.md.md",
+      "en-us_payer-authentication_developer_all_rest_payer-auth_pa-testing-intro.md.md",
       "en-us_payer-authentication_developer_all_rest_payer-auth_pa2-intro-intro.md.md",
       "en-us_tms_developer_all_rest_tms_tms-bin-lookup-service.md.md"
     ],
     "still_dropped_names": [
-      "en-us_payer-authentication_developer_all_rest_payer-auth_pa-testing-intro.md.md",
       "en-us_payer-authentication_developer_all_rest_payer-auth_pa2-ccdc-intro.md.md",
       "en-us_payments_developer_ctv_rest_payments_payments-debit-prepaid-process-intro.md.md",
       "en-us_payments_developer_ctv_rest_payments_payments-intro.md.md",
@@ -148,74 +204,74 @@
   },
   "human_check_sample": [
     {
-      "path": "2026-08-09/en-us_tms_developer_all_rest_tms_tms-cust-tkn_tms-ship-tkn.md.md",
+      "path": "2026-08-07/en-us_payer-authentication_developer_all_rest_payer-auth_pa2-ccdc-intro.md.md",
+      "reason": "no_schema_match",
+      "bytes": 2452,
+      "first_heading": "Implementing Direct API for Payer Authentication",
+      "detail": "no quickstart/endpoint/error/prose claim extracted"
+    },
+    {
+      "path": "2026-08-07/en-us_payments_developer_ctv_rest_payments_payments-debit-prepaid-process-intro.md.md",
+      "reason": "no_schema_match",
+      "bytes": 688,
+      "first_heading": "Debit and Prepaid Card Processing",
+      "detail": "no quickstart/endpoint/error/prose claim extracted"
+    },
+    {
+      "path": "2026-08-07/en-us_payments_developer_ctv_rest_payments_payments-intro.md.md",
+      "reason": "no_schema_match",
+      "bytes": 914,
+      "first_heading": "Introduction to Payments",
+      "detail": "no quickstart/endpoint/error/prose claim extracted"
+    },
+    {
+      "path": "2026-08-07/en-us_payments_developer_ctv_rest_payments_payments-processing-basic-intro.md.md",
+      "reason": "no_schema_match",
+      "bytes": 229,
+      "first_heading": "Standard Payment Processing",
+      "detail": "no quickstart/endpoint/error/prose claim extracted"
+    },
+    {
+      "path": "2026-08-07/en-us_tms_developer_all_rest_tms_tms-cust-tkn.md.md",
+      "reason": "no_schema_match",
+      "bytes": 230,
+      "first_heading": "Customer Tokens",
+      "detail": "no quickstart/endpoint/error/prose claim extracted"
+    },
+    {
+      "path": "2026-08-07/en-us_tms_developer_all_rest_tms_tms-cust-tkn_tms-cust-pi-tkn.md.md",
+      "reason": "no_schema_match",
+      "bytes": 316,
+      "first_heading": "Customer Payment Instruments",
+      "detail": "no quickstart/endpoint/error/prose claim extracted"
+    },
+    {
+      "path": "2026-08-07/en-us_tms_developer_all_rest_tms_tms-cust-tkn_tms-ship-tkn.md.md",
       "reason": "no_schema_match",
       "bytes": 448,
       "first_heading": "Shipping Address Tokens",
       "detail": "no quickstart/endpoint/error/prose claim extracted"
     },
     {
-      "path": "2026-08-09/en-us_tms_developer_all_rest_tms_tms-ii-tkn.md.md",
+      "path": "2026-08-07/en-us_tms_developer_all_rest_tms_tms-ii-tkn.md.md",
       "reason": "no_schema_match",
       "bytes": 1693,
       "first_heading": "Instrument Identifier Tokens",
       "detail": "no quickstart/endpoint/error/prose claim extracted"
     },
     {
-      "path": "2026-08-09/en-us_tms_developer_all_rest_tms_tms-wallet-tkn.md.md",
+      "path": "2026-08-07/en-us_tms_developer_all_rest_tms_tms-onboarding.md.md",
       "reason": "no_schema_match",
-      "bytes": 210,
-      "first_heading": "Using `Token Management Service` with Wallet Apps",
+      "bytes": 783,
+      "first_heading": "`Token Management Service` Onboarding",
       "detail": "no quickstart/endpoint/error/prose claim extracted"
     },
     {
-      "path": "2026-08-09/sandbox.md",
+      "path": "2026-08-07/en-us_tms_developer_all_rest_tms_tms-pi-tkn.md.md",
       "reason": "no_schema_match",
-      "bytes": 622,
-      "first_heading": "Source: https://developer.cybersource.com/hello-world/sandbox.md",
+      "bytes": 318,
+      "first_heading": "Payment Instrument Tokens",
       "detail": "no quickstart/endpoint/error/prose claim extracted"
-    },
-    {
-      "path": "en-us_payer-authentication_developer_all_rest_payer-auth_pa-testing-intro.md.md",
-      "reason": "quarantine_policy",
-      "bytes": 400,
-      "first_heading": "Testing Payer Authentication",
-      "detail": "census kind=index_navigation \u2014 excluded by policy"
-    },
-    {
-      "path": "en-us_payer-authentication_developer_all_rest_payer-auth_pa2-ccdc-intro.md.md",
-      "reason": "quarantine_policy",
-      "bytes": 2452,
-      "first_heading": "Implementing Direct API for Payer Authentication",
-      "detail": "census kind=index_navigation \u2014 excluded by policy"
-    },
-    {
-      "path": "en-us_payments_developer_ctv_rest_payments_payments-debit-prepaid-process-intro.md.md",
-      "reason": "quarantine_policy",
-      "bytes": 688,
-      "first_heading": "Debit and Prepaid Card Processing",
-      "detail": "census kind=index_navigation \u2014 excluded by policy"
-    },
-    {
-      "path": "en-us_payments_developer_ctv_rest_payments_payments-intro.md.md",
-      "reason": "quarantine_policy",
-      "bytes": 914,
-      "first_heading": "Introduction to Payments",
-      "detail": "census kind=index_navigation \u2014 excluded by policy"
-    },
-    {
-      "path": "en-us_payments_developer_ctv_rest_payments_payments-processing-basic-intro.md.md",
-      "reason": "quarantine_policy",
-      "bytes": 229,
-      "first_heading": "Standard Payment Processing",
-      "detail": "census kind=index_navigation \u2014 excluded by policy"
-    },
-    {
-      "path": "en-us_tms_developer_all_rest_tms_tms-cust-tkn.md.md",
-      "reason": "quarantine_policy",
-      "bytes": 230,
-      "first_heading": "Customer Tokens",
-      "detail": "census kind=index_navigation \u2014 excluded by policy"
     }
   ]
 }

@@ -1,0 +1,1816 @@
+{
+  "product_id": "cp-retail",
+  "root_path": "/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.md",
+  "root_url": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.md",
+  "bytes": 387909,
+  "sections": [
+    {
+      "anchor": "cp-retail-about-guide",
+      "title": "Card Present Connect \\| Retail Integration Guide",
+      "byte_start": 0,
+      "byte_end": 1048,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-retail-about-guide",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-retail-doc-revisions",
+      "title": "Recent Revisions to This Document",
+      "byte_start": 1048,
+      "byte_end": 3838,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-retail-doc-revisions",
+      "heading_level": 1
+    },
+    {
+      "anchor": "vpc-partner-reseller-disclaimer",
+      "title": "VISA Platform Connect: Specifications and Conditions for Resellers/Partners",
+      "byte_start": 3838,
+      "byte_end": 5970,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#vpc-partner-reseller-disclaimer",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-intro-cpc",
+      "title": "Introduction to Card Present Connect \\| Retail",
+      "byte_start": 5970,
+      "byte_end": 6786,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-intro-cpc",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-enabling-task",
+      "title": "Enabling the Card Present Connect Platform",
+      "byte_start": 6786,
+      "byte_end": 7559,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-enabling-task",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-intro-transactions",
+      "title": "Supported Card Entry Modes",
+      "byte_start": 7559,
+      "byte_end": 8895,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-intro-transactions",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-intro-about-transactions-emv",
+      "title": "EMV Card Entry Modes",
+      "byte_start": 8895,
+      "byte_end": 9872,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-intro-about-transactions-emv",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-intro-about-transactions-swipe",
+      "title": "Magnetic Stripe Entry Mode",
+      "byte_start": 9872,
+      "byte_end": 11287,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-intro-about-transactions-swipe",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-intro-about-transactions-keyed",
+      "title": "Hand-Keyed Entry Mode",
+      "byte_start": 11287,
+      "byte_end": 11783,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-intro-about-transactions-keyed",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-intro-transactions-risk-control",
+      "title": "Card-Present Transaction Risk Control Requirements",
+      "byte_start": 11783,
+      "byte_end": 13166,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-intro-transactions-risk-control",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-auth-sca-intro",
+      "title": "Strong Customer Authentication Support in the EU Region",
+      "byte_start": 13166,
+      "byte_end": 14566,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-auth-sca-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-auth-sca-requirements",
+      "title": "Requirements for Strong Customer Authentication Support in the EU Region",
+      "byte_start": 14566,
+      "byte_end": 15575,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-auth-sca-requirements",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-auth-sca-soft-decline-response-codes",
+      "title": "Supported Soft Decline Authorization Response Codes in the EU Region",
+      "byte_start": 15575,
+      "byte_end": 19005,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-auth-sca-soft-decline-response-codes",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-payment-services-intro",
+      "title": "Retail Payment Services Using EMV and Card Data",
+      "byte_start": 19005,
+      "byte_end": 20506,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-payment-services-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-emv-card-data",
+      "title": "Retail EMV and Card Data",
+      "byte_start": 20506,
+      "byte_end": 22869,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-emv-card-data",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-emv-contact-onlinepin-auth-intro",
+      "title": "Authorization with Contact EMV and Online PIN",
+      "byte_start": 22869,
+      "byte_end": 23386,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-emv-contact-onlinepin-auth-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-emv-contact-onlinepin-auth-intro_d7e16",
+      "title": "Endpoint",
+      "byte_start": 23386,
+      "byte_end": 23726,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-emv-contact-onlinepin-auth-intro_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "cp-emv-contact-onlinepin-auth-reqfields",
+      "title": "Required Fields for Processing an Authorization with Contact EMV and Online PIN",
+      "byte_start": 23726,
+      "byte_end": 27314,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-emv-contact-onlinepin-auth-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-emv-fields-required-country",
+      "title": "Country-Specific Required Fields for Processing an Authorization with Contact EMV or Contactless PIN",
+      "byte_start": 27314,
+      "byte_end": 28443,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-emv-fields-required-country",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-emv-contact-onlinepin-auth-ex-rest",
+      "title": "REST Example: Processing an Authorization with Contact EMV and Online PIN",
+      "byte_start": 28443,
+      "byte_end": 31375,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-emv-contact-onlinepin-auth-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-emv-contact-offlinepin-auth-intro",
+      "title": "Authorization with Contact EMV and Offline PIN",
+      "byte_start": 31375,
+      "byte_end": 31782,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-emv-contact-offlinepin-auth-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-emv-contact-offlinepin-auth-intro_d7e16",
+      "title": "Endpoint",
+      "byte_start": 31782,
+      "byte_end": 32126,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-emv-contact-offlinepin-auth-intro_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "cp-emv-contact-offlinepin-auth-reqfields",
+      "title": "Required Fields for Processing an Authorization with Contact EMV and Offline PIN",
+      "byte_start": 32126,
+      "byte_end": 35191,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-emv-contact-offlinepin-auth-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-emv-contact-offlinepin-auth-ex-rest",
+      "title": "REST Example: Processing an Authorization with Contact EMV and Offline PIN",
+      "byte_start": 35191,
+      "byte_end": 38062,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-emv-contact-offlinepin-auth-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-emv-contactless-onlinepin-auth-intro",
+      "title": "Authorization with Contactless EMV and Online PIN",
+      "byte_start": 38062,
+      "byte_end": 38640,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-emv-contactless-onlinepin-auth-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-emv-contactless-onlinepin-auth-intro_d7e16",
+      "title": "Endpoint",
+      "byte_start": 38640,
+      "byte_end": 38996,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-emv-contactless-onlinepin-auth-intro_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "cp-emv-contactless-onlinepin-auth-reqfields",
+      "title": "Required Fields for Processing an Authorization with Contactless EMV and Online PIN",
+      "byte_start": 38996,
+      "byte_end": 42603,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-emv-contactless-onlinepin-auth-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-emv-contactless-onlinepin-auth-ex-rest",
+      "title": "REST Example: Processing an Authorization with Contactless EMV and Online PIN",
+      "byte_start": 42603,
+      "byte_end": 45975,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-emv-contactless-onlinepin-auth-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-auth-mag-intro",
+      "title": "Authorization with Magnetic Stripe Swipe",
+      "byte_start": 45975,
+      "byte_end": 46361,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-auth-mag-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-auth-mag-intro_d7e16",
+      "title": "Endpoint",
+      "byte_start": 46361,
+      "byte_end": 46665,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-auth-mag-intro_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "cp-services-auth-mag-reqfields",
+      "title": "Required Fields for Processing an Authorization with Swiped Track Data",
+      "byte_start": 46665,
+      "byte_end": 49250,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-auth-mag-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-auth-mag-ex-json-rest",
+      "title": "REST Example: Processing an Authorization with Swiped Track Data",
+      "byte_start": 49250,
+      "byte_end": 51504,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-auth-mag-ex-json-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-auth-key-intro",
+      "title": "Authorizations with Hand-Keyed Data",
+      "byte_start": 51504,
+      "byte_end": 51834,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-auth-key-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-auth-key-intro_d7e16",
+      "title": "Endpoint",
+      "byte_start": 51834,
+      "byte_end": 52138,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-auth-key-intro_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "cp-services-auth-key-reqfields",
+      "title": "Required Fields for Processing an Authorization with Hand-Keyed Data",
+      "byte_start": 52138,
+      "byte_end": 55439,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-auth-key-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-auth-key-ex-rest",
+      "title": "REST Example: Authorization with Hand Keyed Data",
+      "byte_start": 55439,
+      "byte_end": 58193,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-auth-key-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-auth-cash-adv-intro",
+      "title": "Authorization for Cash Advance with Credit Card",
+      "byte_start": 58193,
+      "byte_end": 59601,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-auth-cash-adv-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-auth-cash-adv-intro_d7e16",
+      "title": "Endpoint",
+      "byte_start": 59601,
+      "byte_end": 59925,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-auth-cash-adv-intro_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "cp-services-auth-cash-adv-req-fields",
+      "title": "Required Fields for Authorization for Cash Advance with Credit Card",
+      "byte_start": 59925,
+      "byte_end": 64034,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-auth-cash-adv-req-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-auth-cash-adv-ex-rest",
+      "title": "REST Example: Authorization for Cash Advance with Credit Card",
+      "byte_start": 64034,
+      "byte_end": 67359,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-auth-cash-adv-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-deferred-auth-intro",
+      "title": "Deferred Authorization",
+      "byte_start": 67359,
+      "byte_end": 68650,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-deferred-auth-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-deferred-auth-intro_d7e16",
+      "title": "Endpoint",
+      "byte_start": 68650,
+      "byte_end": 68974,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-deferred-auth-intro_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "cp-services-deferred-auth-api-reqfields",
+      "title": "Required Fields for Deferred Authorization",
+      "byte_start": 68974,
+      "byte_end": 72674,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-deferred-auth-api-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-deferred-auth-api-ex-rest",
+      "title": "REST Example: Deferred Authorization",
+      "byte_start": 72674,
+      "byte_end": 75773,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-deferred-auth-api-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-basic-auth-reversal-intro",
+      "title": "Authorization Reversal",
+      "byte_start": 75773,
+      "byte_end": 76397,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#payments-processing-basic-auth-reversal-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-basic-auth-reversal-intro_d19e85",
+      "title": "Endpoint",
+      "byte_start": 76397,
+      "byte_end": 76895,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#payments-processing-basic-auth-reversal-intro_d19e85",
+      "heading_level": 2
+    },
+    {
+      "anchor": "payments-processing-basic-auth-reversal-required-fields",
+      "title": "Required Fields for Processing an Authorization Reversal",
+      "byte_start": 76895,
+      "byte_end": 78200,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#payments-processing-basic-auth-reversal-required-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-basic-auth-reversal-ex-rest",
+      "title": "REST Example: Processing an Authorization Reversal",
+      "byte_start": 78200,
+      "byte_end": 79335,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#payments-processing-basic-auth-reversal-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-basic-capture-intro",
+      "title": "Capture",
+      "byte_start": 79335,
+      "byte_end": 79551,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#payments-processing-basic-capture-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-basic-capture-intro_d19e127",
+      "title": "Endpoint",
+      "byte_start": 79551,
+      "byte_end": 80026,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#payments-processing-basic-capture-intro_d19e127",
+      "heading_level": 2
+    },
+    {
+      "anchor": "payments-processing-basic-capture-required-fields",
+      "title": "Required Fields for Capturing an Authorization",
+      "byte_start": 80026,
+      "byte_end": 80875,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#payments-processing-basic-capture-required-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-basic-capture-ex-rest",
+      "title": "REST Example: Capturing an Authorization",
+      "byte_start": 80875,
+      "byte_end": 81941,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#payments-processing-basic-capture-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-capture-contact-emv-auth-intro",
+      "title": "Capture for Contact EMV Authorization",
+      "byte_start": 81941,
+      "byte_end": 82591,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-capture-contact-emv-auth-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-capture-contact-emv-auth-intro_d7e127",
+      "title": "Endpoint",
+      "byte_start": 82591,
+      "byte_end": 83074,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-capture-contact-emv-auth-intro_d7e127",
+      "heading_level": 2
+    },
+    {
+      "anchor": "cp-services-capture-contact-emv-auth-required-fields",
+      "title": "Required Fields for Capturing a Contact EMV Authorization",
+      "byte_start": 83074,
+      "byte_end": 84518,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-capture-contact-emv-auth-required-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-capture-contact-emv-auth-ex-rest",
+      "title": "REST Example: Capturing a Contact EMV Authorization",
+      "byte_start": 84518,
+      "byte_end": 86002,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-capture-contact-emv-auth-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-standalone-credit-intro",
+      "title": "Stand-Alone Credit",
+      "byte_start": 86002,
+      "byte_end": 86470,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-standalone-credit-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-standalone-credit-intro_d7e169",
+      "title": "Endpoint",
+      "byte_start": 86470,
+      "byte_end": 86814,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-standalone-credit-intro_d7e169",
+      "heading_level": 2
+    },
+    {
+      "anchor": "cp-services-standalone-credit-required-fields",
+      "title": "Required Fields for Processing a Stand-Alone Credit",
+      "byte_start": 86814,
+      "byte_end": 89393,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-standalone-credit-required-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-standalone-credit-ex-rest",
+      "title": "REST Example: Stand-Alone Credit",
+      "byte_start": 89393,
+      "byte_end": 91772,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-standalone-credit-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-basic-void-intro",
+      "title": "Void for a Capture or Credit",
+      "byte_start": 91772,
+      "byte_end": 92026,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#payments-processing-basic-void-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-basic-void-intro_d19e268",
+      "title": "Endpoints",
+      "byte_start": 92026,
+      "byte_end": 92800,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#payments-processing-basic-void-intro_d19e268",
+      "heading_level": 2
+    },
+    {
+      "anchor": "payments-processing-basic-void-required-fields",
+      "title": "Required Fields for Voiding a Capture or Credit",
+      "byte_start": 92800,
+      "byte_end": 93227,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#payments-processing-basic-void-required-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-processing-basic-void-ex-rest",
+      "title": "REST Example: Voiding a Capture or Credit",
+      "byte_start": 93227,
+      "byte_end": 94039,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#payments-processing-basic-void-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-timeout-void-intro",
+      "title": "Timeout Void for a Capture, Sale, Refund, or Credit",
+      "byte_start": 94039,
+      "byte_end": 94746,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-timeout-void-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-timeout-void-intro_d7e585",
+      "title": "Endpoint",
+      "byte_start": 94746,
+      "byte_end": 95030,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-timeout-void-intro_d7e585",
+      "heading_level": 2
+    },
+    {
+      "anchor": "cp-timeout-void-required-fields",
+      "title": "Required Fields for Processing a Timeout Void for a Capture, Sale, Refund, or Credit",
+      "byte_start": 95030,
+      "byte_end": 95588,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-timeout-void-required-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-timeout-void-ex-rest-ctv",
+      "title": "REST Example: Processing a Timeout Void for a Capture, Sale, Refund, or Credit",
+      "byte_start": 95588,
+      "byte_end": 96393,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-timeout-void-ex-rest-ctv",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-pd-pin-debit-intro",
+      "title": "Introduction to PIN Debit Processing",
+      "byte_start": 96393,
+      "byte_end": 97611,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-pd-pin-debit-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-pd-integrating",
+      "title": "PIN Debit Integration",
+      "byte_start": 97611,
+      "byte_end": 98399,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-pd-integrating",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-processing-flow",
+      "title": "PIN Debit Transactions",
+      "byte_start": 98399,
+      "byte_end": 100478,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-processing-flow",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-network-routing-intro",
+      "title": "PIN Debit Network Routing",
+      "byte_start": 100478,
+      "byte_end": 101428,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-network-routing-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-vs-cc-processing",
+      "title": "PIN Debit Processing Versus Credit Card Processing",
+      "byte_start": 101428,
+      "byte_end": 102480,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-vs-cc-processing",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-recon",
+      "title": "PIN Debit Reconciliation",
+      "byte_start": 102480,
+      "byte_end": 102767,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-recon",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-feature-track-data-intro",
+      "title": "Track Data",
+      "byte_start": 102767,
+      "byte_end": 103481,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-feature-track-data-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-terminal-id",
+      "title": "Terminal IDs",
+      "byte_start": 103481,
+      "byte_end": 103844,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-terminal-id",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-feature-ebt-intro",
+      "title": "Electronic Benefit Transfer",
+      "byte_start": 103844,
+      "byte_end": 105222,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-feature-ebt-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-feature-intro",
+      "title": "PIN Debit Optional Features",
+      "byte_start": 105222,
+      "byte_end": 105410,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-feature-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-feature-cash-back-intro",
+      "title": "Cash Back",
+      "byte_start": 105410,
+      "byte_end": 106399,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-feature-cash-back-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-feature-merchdescr-intro",
+      "title": "Merchant Descriptors",
+      "byte_start": 106399,
+      "byte_end": 108026,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-feature-merchdescr-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-feature-mit-reversal-intro",
+      "title": "Merchant-Inititated Reversals",
+      "byte_start": 108026,
+      "byte_end": 108668,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-feature-mit-reversal-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-feature-partial-auth-intro",
+      "title": "Partial Authorizations",
+      "byte_start": 108668,
+      "byte_end": 110363,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-feature-partial-auth-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-feature-pnt-intro",
+      "title": "Payment Network Tokens",
+      "byte_start": 110363,
+      "byte_end": 110538,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-feature-pnt-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-feature-surcharge-intro",
+      "title": "Surcharge Fees",
+      "byte_start": 110538,
+      "byte_end": 111446,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-feature-surcharge-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-processing",
+      "title": "PIN Debit Services",
+      "byte_start": 111446,
+      "byte_end": 111990,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-processing",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-cntctlss-purch-task",
+      "title": "PIN Debit Purchase with Contactless EMV",
+      "byte_start": 111990,
+      "byte_end": 112253,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-cntctlss-purch-task",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-cntctlss-purch-task_d7e16",
+      "title": "Endpoint",
+      "byte_start": 112253,
+      "byte_end": 112541,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-cntctlss-purch-task_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "pd-cntctlss-purch-req-fields",
+      "title": "Required Fields for a PIN Debit Purchase with Contactless EMV",
+      "byte_start": 112541,
+      "byte_end": 115835,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-cntctlss-purch-req-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-cntctlss-purch-ex-rest",
+      "title": "REST Example: PIN Debit Purchase with Contactless EMV",
+      "byte_start": 115835,
+      "byte_end": 117897,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-cntctlss-purch-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-contact-purch-task",
+      "title": "PIN Debit Purchase with Contact EMV",
+      "byte_start": 117897,
+      "byte_end": 118151,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-contact-purch-task",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-contact-purch-task_d7e16",
+      "title": "Endpoint",
+      "byte_start": 118151,
+      "byte_end": 118435,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-contact-purch-task_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "pd-contact-purch-req-fields",
+      "title": "Required Fields for a PIN Debit Purchase with Contact EMV",
+      "byte_start": 118435,
+      "byte_end": 122308,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-contact-purch-req-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-contact-purch-ex-rest",
+      "title": "REST Example: PIN Debit Purchase with Contact EMV",
+      "byte_start": 122308,
+      "byte_end": 125424,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-contact-purch-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-cash-back-cntctlss-task",
+      "title": "PIN Debit Purchase with Contactless EMV and Cash Back",
+      "byte_start": 125424,
+      "byte_end": 126005,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-cash-back-cntctlss-task",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-cash-back-cntctlss-task_d7e16",
+      "title": "Endpoint",
+      "byte_start": 126005,
+      "byte_end": 126309,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-cash-back-cntctlss-task_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "pd-cash-back-cntctlss-req-fields",
+      "title": "Required Fields for a PIN Debit Purchase with Contactless EMV and Cash Back",
+      "byte_start": 126309,
+      "byte_end": 129844,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-cash-back-cntctlss-req-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-cash-back-cntctlss-ex-rest",
+      "title": "REST Example: PIN Debit Purchase with Contactless EMV and Cash Back",
+      "byte_start": 129844,
+      "byte_end": 131977,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-cash-back-cntctlss-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-purch-swipe-merchdescr-task",
+      "title": "PIN Debit Purchase with Swiped Track Data and Merchant Descriptors",
+      "byte_start": 131977,
+      "byte_end": 133451,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-purch-swipe-merchdescr-task",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-purch-swipe-merchdescr-task_d7e16",
+      "title": "Endpoint",
+      "byte_start": 133451,
+      "byte_end": 133771,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-purch-swipe-merchdescr-task_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "pd-purch-swipe-merchdescr-req-fields",
+      "title": "Required Fields for a PIN Debit Purchase with Swiped Track Data and Merchant Descriptors",
+      "byte_start": 133771,
+      "byte_end": 137090,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-purch-swipe-merchdescr-req-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-purch-swipe-merchdescr-ex-rest",
+      "title": "REST Example: PIN Debit Purchase with Swiped Track Data and Merchant Descriptors",
+      "byte_start": 137090,
+      "byte_end": 139391,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-purch-swipe-merchdescr-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-purch-swipe-partial-task",
+      "title": "PIN Debit Partial Authorization with Swiped Track Data",
+      "byte_start": 139391,
+      "byte_end": 140035,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-purch-swipe-partial-task",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-purch-swipe-partial-task_d7e16",
+      "title": "Endpoint",
+      "byte_start": 140035,
+      "byte_end": 140343,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-purch-swipe-partial-task_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "pd-purch-swipe-partial-req-fields",
+      "title": "Required Fields for a Swiped PIN Debit Partial Authorization",
+      "byte_start": 140343,
+      "byte_end": 143853,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-purch-swipe-partial-req-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-purch-swipe-partial-ex-rest",
+      "title": "REST Example: PIN Debit Partial Authorization with Swiped Track Data",
+      "byte_start": 143853,
+      "byte_end": 146236,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-purch-swipe-partial-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-cntctlss-purch-srchrg-task",
+      "title": "PIN Debit Purchase with Contactless EMV and a Surcharge Fee",
+      "byte_start": 146236,
+      "byte_end": 146856,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-cntctlss-purch-srchrg-task",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-cntctlss-purch-srchrg-task_d7e16",
+      "title": "Endpoint",
+      "byte_start": 146856,
+      "byte_end": 147172,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-cntctlss-purch-srchrg-task_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "pd-cntctlss-purch-srchrg-req-fields",
+      "title": "Required Fields for a PIN Debit Purchase with Contactless EMV and a Surcharge Fee",
+      "byte_start": 147172,
+      "byte_end": 150728,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-cntctlss-purch-srchrg-req-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-cntctlss-purch-srchrg-ex-rest",
+      "title": "REST Example: PIN Debit Purchase with Contactless EMV and a Surcharge Fee",
+      "byte_start": 150728,
+      "byte_end": 152909,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-cntctlss-purch-srchrg-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-bal-inq-cntctlss-task",
+      "title": "PIN Debit Balance Inquiry with Contactless EMV",
+      "byte_start": 152909,
+      "byte_end": 153680,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-bal-inq-cntctlss-task",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-bal-inq-cntctlss-task_d7e16",
+      "title": "Endpoint",
+      "byte_start": 153680,
+      "byte_end": 153976,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-bal-inq-cntctlss-task_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "pd-bal-inq-cntctlss-req-fields",
+      "title": "Required Fields for a PIN Debit Balance Inquiry with Contactless EMV",
+      "byte_start": 153976,
+      "byte_end": 157920,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-bal-inq-cntctlss-req-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-bal-inq-cntctlss-ex-rest",
+      "title": "REST Example: PIN Debit Balance Inquiry with Contactless EMV",
+      "byte_start": 157920,
+      "byte_end": 160341,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-bal-inq-cntctlss-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-bal-inq-swipe-task",
+      "title": "PIN Debit Balance Inquiry with Swiped Track Data",
+      "byte_start": 160341,
+      "byte_end": 161112,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-bal-inq-swipe-task",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-bal-inq-swipe-task_d7e16",
+      "title": "Endpoint",
+      "byte_start": 161112,
+      "byte_end": 161396,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-bal-inq-swipe-task_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "pd-bal-inq-swipe-req-fields",
+      "title": "Required Fields for a PIN Debit Balance Inquiry with Swiped Track Data",
+      "byte_start": 161396,
+      "byte_end": 165487,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-bal-inq-swipe-req-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-bal-inq-swipe-ex-rest",
+      "title": "REST Example: PIN Debit Balance Inquiry with Swiped Track Data",
+      "byte_start": 165487,
+      "byte_end": 167850,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-bal-inq-swipe-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-credit-swipe-task",
+      "title": "PIN Debit Credit with Swiped Track Data",
+      "byte_start": 167850,
+      "byte_end": 168061,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-credit-swipe-task",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-credit-swipe-task_d7e169",
+      "title": "Endpoint",
+      "byte_start": 168061,
+      "byte_end": 168345,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-credit-swipe-task_d7e169",
+      "heading_level": 2
+    },
+    {
+      "anchor": "pd-credit-swipe-req-fields",
+      "title": "Required Fields for a PIN Debit Credit with Swiped Track Data",
+      "byte_start": 168345,
+      "byte_end": 171001,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-credit-swipe-req-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-credit-swipe-ex-rest",
+      "title": "REST Example: PIN Debit Credit with Swiped Track Data",
+      "byte_start": 171001,
+      "byte_end": 172946,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-credit-swipe-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-credit-cntctlss-task",
+      "title": "PIN Debit Credit with Contactless EMV",
+      "byte_start": 172946,
+      "byte_end": 173157,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-credit-cntctlss-task",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-credit-cntctlss-task_d7e169",
+      "title": "Endpoint",
+      "byte_start": 173157,
+      "byte_end": 173453,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-credit-cntctlss-task_d7e169",
+      "heading_level": 2
+    },
+    {
+      "anchor": "pd-credit-cntctlss-req-fields",
+      "title": "Required Fields for a PIN Debit Credit with Contactless EMV",
+      "byte_start": 173453,
+      "byte_end": 176551,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-credit-cntctlss-req-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-credit-cntctlss-ex-rest",
+      "title": "REST Example: PIN Debit Credit with Contactless EMV",
+      "byte_start": 176551,
+      "byte_end": 178720,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-credit-cntctlss-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-purch-credit-reversal-task",
+      "title": "Reverse a PIN Debit Purchase or Credit",
+      "byte_start": 178720,
+      "byte_end": 179121,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-purch-credit-reversal-task",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-purch-credit-reversal-task_d7e514",
+      "title": "Endpoint",
+      "byte_start": 179121,
+      "byte_end": 179541,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-purch-credit-reversal-task_d7e514",
+      "heading_level": 2
+    },
+    {
+      "anchor": "pd-purch-credit-reversal-req-fields",
+      "title": "Required Fields to Reverse a PIN Debit Purchase or Credit",
+      "byte_start": 179541,
+      "byte_end": 181634,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-purch-credit-reversal-req-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-purch-credit-reversal-ex-rest",
+      "title": "REST Example: Reverse a PIN Debit Purchase or Credit",
+      "byte_start": 181634,
+      "byte_end": 183298,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-purch-credit-reversal-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-ebt-purch-vouch-snap-task",
+      "title": "PIN Debit EBT Purchase with a SNAP Voucher",
+      "byte_start": 183298,
+      "byte_end": 184421,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-ebt-purch-vouch-snap-task",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-ebt-purch-vouch-snap-task_d7e16",
+      "title": "Endpoint",
+      "byte_start": 184421,
+      "byte_end": 184733,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-ebt-purch-vouch-snap-task_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "pd-ebt-voucher-snap-req-fields",
+      "title": "Required Fields for a PIN Debit EBT Purchase with a SNAP Voucher",
+      "byte_start": 184733,
+      "byte_end": 188974,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-ebt-voucher-snap-req-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-ebt-voucher-snap-ex-rest",
+      "title": "REST Example: PIN Debit EBT Purchase with a SNAP Voucher",
+      "byte_start": 188974,
+      "byte_end": 191155,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-ebt-voucher-snap-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-ebt-purch-swipe-snap-task",
+      "title": "PIN Debit EBT Purchase with SNAP Account Swiped Track Data",
+      "byte_start": 191155,
+      "byte_end": 191749,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-ebt-purch-swipe-snap-task",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-ebt-purch-swipe-snap-task_d7e16",
+      "title": "Endpoint",
+      "byte_start": 191749,
+      "byte_end": 192061,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-ebt-purch-swipe-snap-task_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "pd-ebt-snap-req-fields",
+      "title": "Required Fields for a PIN Debit EBT Purchase with SNAP Account Swiped Track Data",
+      "byte_start": 192061,
+      "byte_end": 195846,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-ebt-snap-req-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-ebt-snap-ex-rest",
+      "title": "REST Example: PIN Debit EBT Purchase with SNAP Account Swiped Track Data",
+      "byte_start": 195846,
+      "byte_end": 198015,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-ebt-snap-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-ebt-purch-swipe-snap-bal-inq-task",
+      "title": "PIN Debit EBT Purchase with SNAP Account Swiped Track Data and Balance Response Data",
+      "byte_start": 198015,
+      "byte_end": 198898,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-ebt-purch-swipe-snap-bal-inq-task",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-ebt-purch-swipe-snap-bal-inq-task_d7e16",
+      "title": "Endpoint",
+      "byte_start": 198898,
+      "byte_end": 199242,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-ebt-purch-swipe-snap-bal-inq-task_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "pd-ebt-snap-bal-inq-req-fields",
+      "title": "Required Fields for a PIN Debit EBT Purchase with SNAP Account Swiped Track Data and Balance Response Data",
+      "byte_start": 199242,
+      "byte_end": 203759,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-ebt-snap-bal-inq-req-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-ebt-snap-bal-inq-ex-rest",
+      "title": "REST Example: PIN Debit EBT Purchase with SNAP Account Swiped Track Data and Balance Response Data",
+      "byte_start": 203759,
+      "byte_end": 207083,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-ebt-snap-bal-inq-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-ebt-purch-cash-bnft-cashback-task",
+      "title": "PIN Debit EBT Purchase with a Cash Benefits Account Swiped Track Data and Cash Back",
+      "byte_start": 207083,
+      "byte_end": 207774,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-ebt-purch-cash-bnft-cashback-task",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-ebt-purch-cash-bnft-cashback-task_d7e16",
+      "title": "Endpoint",
+      "byte_start": 207774,
+      "byte_end": 208118,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-ebt-purch-cash-bnft-cashback-task_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "pd-ebt-cash-bnft-cashback-req-fields",
+      "title": "Required Fields for a PIN Debit EBT Purchase with a Cash Benefits Account Swiped Track Data and Cash Back",
+      "byte_start": 208118,
+      "byte_end": 212359,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-ebt-cash-bnft-cashback-req-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-ebt-cash-bnft-cashback-ex-rest",
+      "title": "REST Example: PIN Debit EBT Purchase with a Cash Benefits Account Swiped Track Data and Cash Back",
+      "byte_start": 212359,
+      "byte_end": 214662,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-ebt-cash-bnft-cashback-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-ebt-credit-task",
+      "title": "Credit a PIN Debit EBT Purchase with SNAP Account",
+      "byte_start": 214662,
+      "byte_end": 215207,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-ebt-credit-task",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-ebt-credit-task_d7e169",
+      "title": "Endpoint",
+      "byte_start": 215207,
+      "byte_end": 215483,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-ebt-credit-task_d7e169",
+      "heading_level": 2
+    },
+    {
+      "anchor": "pd-ebt-snap-credit-req-fields",
+      "title": "Required Fields to Credit a PIN Debit EBT Purchase with SNAP Account",
+      "byte_start": 215483,
+      "byte_end": 219608,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-ebt-snap-credit-req-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-ebt-snap-credit-ex-rest",
+      "title": "REST Example: Credit a PIN Debit EBT Purchase with SNAP Account",
+      "byte_start": 219608,
+      "byte_end": 221959,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-ebt-snap-credit-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-ebt-void-task",
+      "title": "Reverse a PIN Debit EBT Purchase",
+      "byte_start": 221959,
+      "byte_end": 222438,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-ebt-void-task",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-ebt-void-task_d7e514",
+      "title": "Endpoint",
+      "byte_start": 222438,
+      "byte_end": 222806,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-ebt-void-task_d7e514",
+      "heading_level": 2
+    },
+    {
+      "anchor": "pd-ebt-void-req-fields",
+      "title": "Required Fields to Reverse a PIN Debit EBT Purchase",
+      "byte_start": 222806,
+      "byte_end": 224248,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-ebt-void-req-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "pd-ebt-void-ex-rest",
+      "title": "REST Example: Reverse a PIN Debit EBT Purchase",
+      "byte_start": 224248,
+      "byte_end": 225406,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#pd-ebt-void-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-mpos-intro",
+      "title": "Mobile Point-of-Sale Payment Services",
+      "byte_start": 225406,
+      "byte_end": 225903,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-mpos-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-mpos-supported-trxns",
+      "title": "Supported Mobile Point-of-Sale Solutions",
+      "byte_start": 225903,
+      "byte_end": 229338,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-mpos-supported-trxns",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-auth-mpos-embed-reader-sw-pin-intro",
+      "title": "Authorization with an mPOS Using an Embedded Reader and Software PIN Entry",
+      "byte_start": 229338,
+      "byte_end": 230335,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-auth-mpos-embed-reader-sw-pin-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-auth-mpos-embed-reader-sw-pin-intro_d7e16",
+      "title": "Endpoint",
+      "byte_start": 230335,
+      "byte_end": 230723,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-auth-mpos-embed-reader-sw-pin-intro_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "cp-services-auth-mpos-embed-reader-sw-pin-api-reqfields",
+      "title": "Required Fields for Processing an Authorization with an mPOS Using an Embedded Reader and Software PIN Entry",
+      "byte_start": 230723,
+      "byte_end": 234254,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-auth-mpos-embed-reader-sw-pin-api-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-auth-mpos-embed-reader-sw-pin-mc-api-ex-rest",
+      "title": "REST Example: Processing an Authorization with an mPOS Using an Embedded Reader and Software PIN Entry for Mastercard",
+      "byte_start": 234254,
+      "byte_end": 237636,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-auth-mpos-embed-reader-sw-pin-mc-api-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-auth-mpos-embed-reader-sw-pin-visa-api-ex-rest",
+      "title": "REST Example: Processing an Authorization with an mPOS Using an Embedded Reader and Software PIN Entry for Visa",
+      "byte_start": 237636,
+      "byte_end": 240966,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-auth-mpos-embed-reader-sw-pin-visa-api-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-auth-mpos-embed-reader-sw-no-pin-intro",
+      "title": "Authorization with an mPOS Using an Embedded Reader and Software with No PIN Entry",
+      "byte_start": 240966,
+      "byte_end": 242017,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-auth-mpos-embed-reader-sw-no-pin-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-auth-mpos-embed-reader-sw-no-pin-intro_d7e16",
+      "title": "Endpoint",
+      "byte_start": 242017,
+      "byte_end": 242417,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-auth-mpos-embed-reader-sw-no-pin-intro_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "cp-services-auth-mpos-embed-reader-sw-no-pin-api-reqfields",
+      "title": "Required Fields for Processing an Authorization with an mPOS Using an Embedded Reader and Software with No PIN Entry",
+      "byte_start": 242417,
+      "byte_end": 246014,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-auth-mpos-embed-reader-sw-no-pin-api-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-auth-mpos-embed-reader-sw-no-pin-mc-api-ex-rest",
+      "title": "REST Example: Processing an Authorization with an mPOS Using an Embedded Reader and Software with No PIN Entry for Mastercard",
+      "byte_start": 246014,
+      "byte_end": 249418,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-auth-mpos-embed-reader-sw-no-pin-mc-api-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-auth-mpos-embed-reader-sw-no-pin-visa-api-ex-rest",
+      "title": "REST Example: Processing an Authorization with an mPOS Using an Embedded Reader and Software with No PIN Entry for Visa",
+      "byte_start": 249418,
+      "byte_end": 252770,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-auth-mpos-embed-reader-sw-no-pin-visa-api-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-auth-mpos-external-contact-only-reader-no-pin-intro",
+      "title": "Authorization with an mPOS Using an External, Contact-Only Reader with No PIN Entry",
+      "byte_start": 252770,
+      "byte_end": 253845,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-auth-mpos-external-contact-only-reader-no-pin-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-auth-mpos-external-contact-only-reader-no-pin-intro_d7e16",
+      "title": "Endpoint",
+      "byte_start": 253845,
+      "byte_end": 254297,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-auth-mpos-external-contact-only-reader-no-pin-intro_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "cp-services-auth-mpos-external-contact-only-reader-no-pin-api-reqfields",
+      "title": "Required Fields for Processing an Authorization with an mPOS Using an External, Contact-Only Reader with No PIN Entry",
+      "byte_start": 254297,
+      "byte_end": 257917,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-auth-mpos-external-contact-only-reader-no-pin-api-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-auth-mpos-external-contact-only-reader-no-pin-mc-api-ex-rest",
+      "title": "REST Example: Processing an Authorization with an mPOS Using an External, Contact-Only Reader with No PIN Entry for Mastercard",
+      "byte_start": 257917,
+      "byte_end": 261344,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-auth-mpos-external-contact-only-reader-no-pin-mc-api-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-auth-mpos-external-contact-only-reader-no-pin-visa-api-ex-rest",
+      "title": "REST Example: Processing an Authorization with an mPOS Using an External, Contact-Only Reader with No PIN Entry for Visa",
+      "byte_start": 261344,
+      "byte_end": 264719,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-auth-mpos-external-contact-only-reader-no-pin-visa-api-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-auth-mpos-external-reader-hw-pin-intro",
+      "title": "Authorization with an mPOS Using an External Reader and Hardware PIN Entry",
+      "byte_start": 264719,
+      "byte_end": 265736,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-auth-mpos-external-reader-hw-pin-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-auth-mpos-external-reader-hw-pin-intro_d7e16",
+      "title": "Endpoint",
+      "byte_start": 265736,
+      "byte_end": 266136,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-auth-mpos-external-reader-hw-pin-intro_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "cp-services-auth-mpos-external-reader-hw-pin-api-reqfields",
+      "title": "Required Fields for Processing an Authorization with an mPOS Using an External Reader and Hardware PIN Entry",
+      "byte_start": 266136,
+      "byte_end": 269668,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-auth-mpos-external-reader-hw-pin-api-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-auth-mpos-external-reader-hw-pin-mc-api-ex-rest",
+      "title": "REST Example: Processing an Authorization with an mPOS Using an External Reader and Hardware PIN Entry for Mastercard",
+      "byte_start": 269668,
+      "byte_end": 273051,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-auth-mpos-external-reader-hw-pin-mc-api-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-auth-mpos-external-reader-hw-pin-visa-api-ex-rest",
+      "title": "REST Example: Processing an Authorization with an mPOS Using an External Reader and Hardware PIN Entry for Visa",
+      "byte_start": 273051,
+      "byte_end": 276382,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-auth-mpos-external-reader-hw-pin-visa-api-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-auth-mpos-external-reader-sw-pin-intro",
+      "title": "Authorization with an mPOS Using an External Reader and Software PIN Entry",
+      "byte_start": 276382,
+      "byte_end": 277368,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-auth-mpos-external-reader-sw-pin-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-auth-mpos-external-reader-sw-pin-intro_d7e16",
+      "title": "Endpoint",
+      "byte_start": 277368,
+      "byte_end": 277768,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-auth-mpos-external-reader-sw-pin-intro_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "cp-services-auth-mpos-external-reader-sw-pin-api-reqfields",
+      "title": "Required Fields for Processing an Authorization with an mPOS Using an External Reader and Software PIN Entry",
+      "byte_start": 277768,
+      "byte_end": 281273,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-auth-mpos-external-reader-sw-pin-api-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-auth-mpos-external-reader-sw-pin-mc-api-ex-rest",
+      "title": "REST Example: Processing an Authorization with an mPOS Using an External Reader and Software PIN Entry for Mastercard",
+      "byte_start": 281273,
+      "byte_end": 284657,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-auth-mpos-external-reader-sw-pin-mc-api-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-auth-mpos-external-reader-sw-pin-visa-api-ex-rest",
+      "title": "REST Example: Processing an Authorization with an mPOS Using an External Reader and Software PIN Entry for Visa",
+      "byte_start": 284657,
+      "byte_end": 287989,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-auth-mpos-external-reader-sw-pin-visa-api-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-sale-mpos-embed-reader-sw-pin-intro",
+      "title": "Sale with an mPOS Using an Embedded Reader and Software PIN Entry",
+      "byte_start": 287989,
+      "byte_end": 288971,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-sale-mpos-embed-reader-sw-pin-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-sale-mpos-embed-reader-sw-pin-intro_d7e16",
+      "title": "Endpoint",
+      "byte_start": 288971,
+      "byte_end": 289359,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-sale-mpos-embed-reader-sw-pin-intro_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "cp-services-sale-mpos-embed-reader-sw-pin-api-reqfields",
+      "title": "Required Fields for Processing a Sale with an mPOS Using an Embedded Reader and Software PIN Entry",
+      "byte_start": 289359,
+      "byte_end": 293048,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-sale-mpos-embed-reader-sw-pin-api-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-sale-mpos-embed-reader-sw-pin-mc-api-ex-rest",
+      "title": "REST Example: Processing a Sale with an mPOS Using an Embedded Reader and Software PIN Entry for Mastercard",
+      "byte_start": 293048,
+      "byte_end": 296436,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-sale-mpos-embed-reader-sw-pin-mc-api-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-sale-mpos-embed-reader-sw-pin-visa-api-ex-rest",
+      "title": "REST Example: Processing a Sale with an mPOS Using an Embedded Reader and Software PIN Entry for Visa",
+      "byte_start": 296436,
+      "byte_end": 299772,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-sale-mpos-embed-reader-sw-pin-visa-api-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-sale-mpos-embed-reader-sw-no-pin-intro",
+      "title": "Sale with an mPOS Using an Embedded Reader and Software with No PIN Entry",
+      "byte_start": 299772,
+      "byte_end": 300808,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-sale-mpos-embed-reader-sw-no-pin-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-sale-mpos-embed-reader-sw-no-pin-intro_d7e16",
+      "title": "Endpoint",
+      "byte_start": 300808,
+      "byte_end": 301208,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-sale-mpos-embed-reader-sw-no-pin-intro_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "cp-services-sale-mpos-embed-reader-sw-no-pin-api-reqfields",
+      "title": "Required Fields for Processing a Sale with an mPOS Using an Embedded Reader and Software with No PIN Entry",
+      "byte_start": 301208,
+      "byte_end": 304963,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-sale-mpos-embed-reader-sw-no-pin-api-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-sale-mpos-embed-reader-sw-no-pin-mc-api-ex-rest",
+      "title": "REST Example: Processing a Sale with an mPOS Using an Embedded Reader and Software with No PIN Entry for Mastercard",
+      "byte_start": 304963,
+      "byte_end": 308373,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-sale-mpos-embed-reader-sw-no-pin-mc-api-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-sale-mpos-embed-reader-sw-no-pin-visa-api-ex-rest",
+      "title": "REST Example: Processing a Sale with an mPOS Using an Embedded Reader and Software with No PIN Entry for Visa",
+      "byte_start": 308373,
+      "byte_end": 311731,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-sale-mpos-embed-reader-sw-no-pin-visa-api-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-sale-mpos-external-contact-only-reader-no-pin-intro",
+      "title": "Sale with an mPOS Using an External, Contact-Only Reader with No PIN Entry",
+      "byte_start": 311731,
+      "byte_end": 312791,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-sale-mpos-external-contact-only-reader-no-pin-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-sale-mpos-external-contact-only-reader-no-pin-intro_d7e16",
+      "title": "Endpoint",
+      "byte_start": 312791,
+      "byte_end": 313243,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-sale-mpos-external-contact-only-reader-no-pin-intro_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "cp-services-sale-mpos-external-contact-only-reader-no-pin-api-reqfields",
+      "title": "Required Fields for Processing a Sale with an mPOS Using an External, Contact-Only Reader with No PIN Entry",
+      "byte_start": 313243,
+      "byte_end": 317021,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-sale-mpos-external-contact-only-reader-no-pin-api-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-sale-mpos-external-contact-only-reader-no-pin-mc-api-ex-rest",
+      "title": "REST Example: Processing a Sale with an mPOS Using an External, Contact-Only Reader with No PIN Entry for Mastercard",
+      "byte_start": 317021,
+      "byte_end": 320454,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-sale-mpos-external-contact-only-reader-no-pin-mc-api-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-sale-mpos-external-contact-only-reader-no-pin-visa-api-ex-rest",
+      "title": "REST Example: Processing a Sale with an mPOS Using an External, Contact-Only Reader with No PIN Entry for Visa",
+      "byte_start": 320454,
+      "byte_end": 323835,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-sale-mpos-external-contact-only-reader-no-pin-visa-api-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-sale-mpos-external-reader-hw-pin-intro",
+      "title": "Sale with an mPOS Using an External Reader and Hardware PIN Entry",
+      "byte_start": 323835,
+      "byte_end": 324837,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-sale-mpos-external-reader-hw-pin-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-sale-mpos-external-reader-hw-pin-intro_d7e16",
+      "title": "Endpoint",
+      "byte_start": 324837,
+      "byte_end": 325237,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-sale-mpos-external-reader-hw-pin-intro_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "cp-services-sale-mpos-external-reader-hw-pin-api-reqfields",
+      "title": "Required Fields for Processing a Sale with an mPOS Using an External Reader and Hardware PIN Entry",
+      "byte_start": 325237,
+      "byte_end": 328927,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-sale-mpos-external-reader-hw-pin-api-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-sale-mpos-external-reader-hw-pin-mc-api-ex-rest",
+      "title": "REST Example: Processing a Sale with an mPOS Using an External Reader and Hardware PIN Entry for Mastercard",
+      "byte_start": 328927,
+      "byte_end": 332316,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-sale-mpos-external-reader-hw-pin-mc-api-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-sale-mpos-external-reader-hw-pin-visa-api-ex-rest",
+      "title": "REST Example: Processing a Sale with an mPOS Using an External Reader and Hardware PIN Entry for Visa",
+      "byte_start": 332316,
+      "byte_end": 335653,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-sale-mpos-external-reader-hw-pin-visa-api-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-sale-mpos-external-reader-sw-pin-intro",
+      "title": "Sale with an mPOS Using an External Reader and Software PIN Entry",
+      "byte_start": 335653,
+      "byte_end": 336624,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-sale-mpos-external-reader-sw-pin-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-sale-mpos-external-reader-sw-pin-intro_d7e16",
+      "title": "Endpoint",
+      "byte_start": 336624,
+      "byte_end": 337024,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-sale-mpos-external-reader-sw-pin-intro_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "cp-services-sale-mpos-external-reader-sw-pin-api-reqfields",
+      "title": "Required Fields for Processing a Sale with an mPOS Using an External Reader and Software PIN Entry",
+      "byte_start": 337024,
+      "byte_end": 340687,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-sale-mpos-external-reader-sw-pin-api-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-sale-mpos-external-reader-sw-pin-mc-api-ex-rest",
+      "title": "REST Example: Processing a Sale with an mPOS Using an External Reader and Software PIN Entry for Mastercard",
+      "byte_start": 340687,
+      "byte_end": 344077,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-sale-mpos-external-reader-sw-pin-mc-api-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-sale-mpos-external-reader-sw-pin-visa-api-ex-rest",
+      "title": "REST Example: Processing a Sale with an mPOS Using an External Reader and Software PIN Entry for Visa",
+      "byte_start": 344077,
+      "byte_end": 347415,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-sale-mpos-external-reader-sw-pin-visa-api-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "dcc-intro",
+      "title": "`Dynamic Currency Conversion` Payment Services",
+      "byte_start": 347415,
+      "byte_end": 348344,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#dcc-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-dcc-auth-intro",
+      "title": "Authorization with `Dynamic Currency Conversion`",
+      "byte_start": 348344,
+      "byte_end": 348624,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-dcc-auth-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-dcc-auth-intro_d7e16",
+      "title": "Endpoint",
+      "byte_start": 348624,
+      "byte_end": 348928,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-dcc-auth-intro_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "cp-services-dcc-auth-api-req-fields",
+      "title": "Required Fields for Authorization with `Dynamic Currency Conversion`",
+      "byte_start": 348928,
+      "byte_end": 353618,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-dcc-auth-api-req-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-dcc-auth-api-opt-fields",
+      "title": "Optional Fields for Authorization with `Dynamic Currency Conversion`",
+      "byte_start": 353618,
+      "byte_end": 354465,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-dcc-auth-api-opt-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-dcc-auth-api-ex-rest",
+      "title": "REST Example: Authorization with `Dynamic Currency Conversion`",
+      "byte_start": 354465,
+      "byte_end": 357633,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-dcc-auth-api-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-dcc-capture-intro",
+      "title": "Capture with `Dynamic Currency Conversion`",
+      "byte_start": 357633,
+      "byte_end": 357900,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-dcc-capture-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-dcc-capture-intro_d7e127",
+      "title": "Endpoint",
+      "byte_start": 357900,
+      "byte_end": 358331,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-dcc-capture-intro_d7e127",
+      "heading_level": 2
+    },
+    {
+      "anchor": "cp-services-dcc-capture-api-req-fields",
+      "title": "Required Fields for Capture with `Dynamic Currency Conversion`",
+      "byte_start": 358331,
+      "byte_end": 360982,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-dcc-capture-api-req-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-dcc-capture-api-ex-rest",
+      "title": "REST Example: Capture with `Dynamic Currency Conversion`",
+      "byte_start": 360982,
+      "byte_end": 362430,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-dcc-capture-api-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-dcc-sale-intro",
+      "title": "Sale with `Dynamic Currency Conversion`",
+      "byte_start": 362430,
+      "byte_end": 362756,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-dcc-sale-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-dcc-sale-intro_d7e16",
+      "title": "Endpoint",
+      "byte_start": 362756,
+      "byte_end": 363060,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-dcc-sale-intro_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "cp-services-dcc-sale-api-req-fields",
+      "title": "Required Fields for Sale with `Dynamic Currency Conversion`",
+      "byte_start": 363060,
+      "byte_end": 368103,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-dcc-sale-api-req-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-dcc-sale-api-opt-fields",
+      "title": "Optional Fields for Sale with `Dynamic Currency Conversion`",
+      "byte_start": 368103,
+      "byte_end": 368932,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-dcc-sale-api-opt-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-dcc-sale-api-ex-rest",
+      "title": "REST Example: Sale with `Dynamic Currency Conversion`",
+      "byte_start": 368932,
+      "byte_end": 372008,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-dcc-sale-api-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-dcc-standalone-credit-intro",
+      "title": "Stand-Alone Credit with `Dynamic Currency Conversion`",
+      "byte_start": 372008,
+      "byte_end": 372316,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-dcc-standalone-credit-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-dcc-standalone-credit-intro_d7e169",
+      "title": "Endpoint",
+      "byte_start": 372316,
+      "byte_end": 372676,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-dcc-standalone-credit-intro_d7e169",
+      "heading_level": 2
+    },
+    {
+      "anchor": "cp-services-dcc-standalone-credit-api-req-fields",
+      "title": "Required Fields for Credit with `Dynamic Currency Conversion`",
+      "byte_start": 372676,
+      "byte_end": 376096,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-dcc-standalone-credit-api-req-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-services-dcc-standalone-credit-api-ex-rest",
+      "title": "REST Example: Credit with `Dynamic Currency Conversion`",
+      "byte_start": 376096,
+      "byte_end": 378570,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-services-dcc-standalone-credit-api-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "cp-retail-mlv-test-cases",
+      "title": "Retail Message-Level Validation Test Cases",
+      "byte_start": 378570,
+      "byte_end": 387454,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#cp-retail-mlv-test-cases",
+      "heading_level": 1
+    },
+    {
+      "anchor": "payments-relax-reqs",
+      "title": "Relaxed Requirements for Address Data and Expiration Date in Payment Transactions",
+      "byte_start": 387454,
+      "byte_end": 387909,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/cp-retail/integration/ctv/rest/cp-retail.html#payments-relax-reqs",
+      "heading_level": 1
+    }
+  ]
+}

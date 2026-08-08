@@ -1,0 +1,624 @@
+{
+  "product_id": "echeck-user-guide",
+  "root_path": "/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.md",
+  "root_url": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.md",
+  "bytes": 124021,
+  "sections": [
+    {
+      "anchor": "doctemp-about-guide",
+      "title": "eCheck Merchant Guide",
+      "byte_start": 0,
+      "byte_end": 882,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#doctemp-about-guide",
+      "heading_level": 1
+    },
+    {
+      "anchor": "devtemp-doc-revisions",
+      "title": "Recent Revisions to This Document",
+      "byte_start": 882,
+      "byte_end": 3063,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#devtemp-doc-revisions",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-txnprocess-intro",
+      "title": "Introduction to the eCheck Service",
+      "byte_start": 3063,
+      "byte_end": 4997,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-txnprocess-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-intro-txn-types",
+      "title": "eCheck Transaction Types",
+      "byte_start": 4997,
+      "byte_end": 12187,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-intro-txn-types",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-gs",
+      "title": "Getting Started with the eCheck Service",
+      "byte_start": 12187,
+      "byte_end": 12902,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-gs",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-application-intro",
+      "title": "eCheck Application",
+      "byte_start": 12902,
+      "byte_end": 13768,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-application-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-application-procedure",
+      "title": "Submitting the eCheck Application",
+      "byte_start": 13768,
+      "byte_end": 14925,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-application-procedure",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-application-fields",
+      "title": "Completing eCheck Application Fields",
+      "byte_start": 14925,
+      "byte_end": 19285,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-application-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-partner-onboard-sandbox-merchant",
+      "title": "Boarding Your Merchant Account for Sandbox Testing",
+      "byte_start": 19285,
+      "byte_end": 20859,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-partner-onboard-sandbox-merchant",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-txnprocess-overview",
+      "title": "Overview of eCheck Transaction Processing",
+      "byte_start": 20859,
+      "byte_end": 23127,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-txnprocess-overview",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-txnprocess-settlement",
+      "title": "eCheck Settlement",
+      "byte_start": 23127,
+      "byte_end": 26057,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-txnprocess-settlement",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-txnprocess-returns",
+      "title": "eCheck Returns",
+      "byte_start": 26057,
+      "byte_end": 28393,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-txnprocess-returns",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-txnrprocess-chargebacks",
+      "title": "eCheck Chargebacks",
+      "byte_start": 28393,
+      "byte_end": 30150,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-txnrprocess-chargebacks",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-txnrprocess-creditsrefunds",
+      "title": "eCheck Credits and Refunds",
+      "byte_start": 30150,
+      "byte_end": 31008,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-txnrprocess-creditsrefunds",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-status",
+      "title": "eCheck Transaction Statuses During Processing",
+      "byte_start": 31008,
+      "byte_end": 31784,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-status",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-integrations",
+      "title": "eCheck Integrations",
+      "byte_start": 31784,
+      "byte_end": 32243,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-integrations",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-risk-reserve",
+      "title": "eCheck Risk Reserve",
+      "byte_start": 32243,
+      "byte_end": 35212,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-risk-reserve",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-processing-limits",
+      "title": "eCheck Processing Limits and Settings",
+      "byte_start": 35212,
+      "byte_end": 36593,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-processing-limits",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-txnprocess-noc",
+      "title": "eCheck Notice of Change",
+      "byte_start": 36593,
+      "byte_end": 37965,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-txnprocess-noc",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-txnprocess-pmtauth",
+      "title": "Payment Authorization and Authentication for eCheck Transactions",
+      "byte_start": 37965,
+      "byte_end": 40586,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-txnprocess-pmtauth",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-txnproces-recret",
+      "title": "eCheck Records Retention Requirements",
+      "byte_start": 40586,
+      "byte_end": 42579,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-txnproces-recret",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-bc-settings-intro",
+      "title": "Manage eCheck Settings in the `Business Center`",
+      "byte_start": 42579,
+      "byte_end": 43973,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-bc-settings-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-bc-permissions",
+      "title": "Managing Merchant Permissions in the `Business Center`",
+      "byte_start": 43973,
+      "byte_end": 44575,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-bc-permissions",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-bc-permissions-roles.dita",
+      "title": "Creating Roles",
+      "byte_start": 44575,
+      "byte_end": 47807,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-bc-permissions-roles.dita",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-bc-permissions-useracct.dita",
+      "title": "Creating a User Account and Adding Roles",
+      "byte_start": 47807,
+      "byte_end": 48632,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-bc-permissions-useracct.dita",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-bc-settings",
+      "title": "Accessing eCheck Settings in the `Business Center`",
+      "byte_start": 48632,
+      "byte_end": 50253,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-bc-settings",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-statements",
+      "title": "eCheck Statements",
+      "byte_start": 50253,
+      "byte_end": 50760,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-statements",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-statements-settlement-acct",
+      "title": "eCheck Settlement Account Statements",
+      "byte_start": 50760,
+      "byte_end": 51489,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-statements-settlement-acct",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-statements-reserve-acct",
+      "title": "eCheck Reserve Account Statements",
+      "byte_start": 51489,
+      "byte_end": 52246,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-statements-reserve-acct",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-bc-intro",
+      "title": "Process eCheck Transactions Using the `Business Center`",
+      "byte_start": 52246,
+      "byte_end": 52608,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-bc-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-bc-submit-vt",
+      "title": "Submitting Transactions Using the Virtual Terminal",
+      "byte_start": 52608,
+      "byte_end": 52838,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-bc-submit-vt",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-quick-start-vt-settings",
+      "title": "Configuring the Virtual Terminal to Process eCheck Transactions",
+      "byte_start": 52838,
+      "byte_end": 54136,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-quick-start-vt-settings",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-vt",
+      "title": "Processing eCheck Transactions Using the Virtual Terminal",
+      "byte_start": 54136,
+      "byte_end": 55792,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-vt",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-quick-start-rb-tms",
+      "title": "Submitting Transactions Using Recurring Billing and Token Management Service",
+      "byte_start": 55792,
+      "byte_end": 57086,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-quick-start-rb-tms",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-recurring-subs",
+      "title": "Creating an eCheck Recurring Subscription",
+      "byte_start": 57086,
+      "byte_end": 59541,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-recurring-subs",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-req-od-txn",
+      "title": "Requesting an On-Demand Transaction",
+      "byte_start": 59541,
+      "byte_end": 61070,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-req-od-txn",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-search-details",
+      "title": "eCheck Transaction Search and Details",
+      "byte_start": 61070,
+      "byte_end": 62110,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-search-details",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-api-intro",
+      "title": "Process eCheck Transactions Using the REST API",
+      "byte_start": 62110,
+      "byte_end": 62317,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-api-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-api-debit-intro",
+      "title": "Processing an eCheck Debit Transaction Using the REST API",
+      "byte_start": 62317,
+      "byte_end": 63186,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-api-debit-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-api-req-fields",
+      "title": "Required Fields for an eCheck Debit Transaction",
+      "byte_start": 63186,
+      "byte_end": 66551,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-api-req-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-api-optional-fields",
+      "title": "Optional Fields for an eCheck Debit Transaction",
+      "byte_start": 66551,
+      "byte_end": 67264,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-api-optional-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-api-debit-example",
+      "title": "REST Example: eCheck Debit Transaction",
+      "byte_start": 67264,
+      "byte_end": 68654,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-api-debit-example",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-api-recurring-intro",
+      "title": "Processing a Recurring eCheck Debit Transaction Using the REST API",
+      "byte_start": 68654,
+      "byte_end": 69581,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-api-recurring-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-api-recurring-req-fields",
+      "title": "Required Fields for a Recurring eCheck Debit Transaction",
+      "byte_start": 69581,
+      "byte_end": 73602,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-api-recurring-req-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-api-recurring-example",
+      "title": "REST Example: Recurring eCheck Debit Transaction",
+      "byte_start": 73602,
+      "byte_end": 75176,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-api-recurring-example",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-api-cre-token-standalone",
+      "title": "Creating an eCheck Token Using the REST API",
+      "byte_start": 75176,
+      "byte_end": 76217,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-api-cre-token-standalone",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-api-cre-token-standalone-req-fields",
+      "title": "Required Fields for Creating an eCheck Token",
+      "byte_start": 76217,
+      "byte_end": 77050,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-api-cre-token-standalone-req-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-api-cre-token-standalone-example",
+      "title": "REST Example: Creating an eCheck Token",
+      "byte_start": 77050,
+      "byte_end": 79128,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-api-cre-token-standalone-example",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-api-cre-token-with-txn",
+      "title": "Creating an eCheck Token and Processing an eCheck Transaction Using the REST API",
+      "byte_start": 79128,
+      "byte_end": 80271,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-api-cre-token-with-txn",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-api-cre-token-with-txn-req-fields",
+      "title": "Required Fields for Creating an eCheck Token and Processing an eCheck Transaction",
+      "byte_start": 80271,
+      "byte_end": 84689,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-api-cre-token-with-txn-req-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-api-cre-token-with-txn-opt-fields",
+      "title": "Optional Fields for Creating an eCheck Token and Processing an eCheck Transaction",
+      "byte_start": 84689,
+      "byte_end": 87044,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-api-cre-token-with-txn-opt-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-api-cre-token-with-txn-example",
+      "title": "REST Example: Creating an eCheck Token and Processing an eCheck Transaction",
+      "byte_start": 87044,
+      "byte_end": 89100,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-api-cre-token-with-txn-example",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-api-use-token-submit-debit-txn",
+      "title": "Using an eCheck Token to Submit an eCheck Debit Transaction Using the REST API",
+      "byte_start": 89100,
+      "byte_end": 90111,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-api-use-token-submit-debit-txn",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-api-use-token-submit-debit-txn-req-fields",
+      "title": "Required Fields for Using an eCheck Token to Submit an eCheck Debit Transaction",
+      "byte_start": 90111,
+      "byte_end": 92895,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-api-use-token-submit-debit-txn-req-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-api-use-token-submit-debit-txn-opt-fields",
+      "title": "Optional Fields for Using an eCheck Token to Submit an eCheck Debit Transaction",
+      "byte_start": 92895,
+      "byte_end": 94552,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-api-use-token-submit-debit-txn-opt-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-api-use-token-submit-debit-txn-example",
+      "title": "REST Example: Using an eCheck Token to Submit an eCheck Debit Transaction",
+      "byte_start": 94552,
+      "byte_end": 95867,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-api-use-token-submit-debit-txn-example",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-pay-unified-checkout-invoice-paybylink-intro",
+      "title": "Accepting eCheck Payments through Unified Checkout, Pay by Link, and Invoicing",
+      "byte_start": 95867,
+      "byte_end": 96406,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-pay-unified-checkout-invoice-paybylink-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck_pay_unified_checkout",
+      "title": "Accepting eCheck Payments through `Unified Checkout`",
+      "byte_start": 96406,
+      "byte_end": 97951,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck_pay_unified_checkout",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-bc-invoicing",
+      "title": "Accepting eCheck Payments through Invoices",
+      "byte_start": 97951,
+      "byte_end": 99981,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-bc-invoicing",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-bc-pay-by-link",
+      "title": "Accepting eCheck Payments through Payment Links",
+      "byte_start": 99981,
+      "byte_end": 102301,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-bc-pay-by-link",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-reports-recon",
+      "title": "eCheck Reconciliation Reports",
+      "byte_start": 102301,
+      "byte_end": 103631,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-reports-recon",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-reports-recon-funding",
+      "title": "Funding Details Report",
+      "byte_start": 103631,
+      "byte_end": 104280,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-reports-recon-funding",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-reports-recon-funding-fields",
+      "title": "Fields in the Funding Details Report",
+      "byte_start": 104280,
+      "byte_end": 107654,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-reports-recon-funding-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-reports-recon-chargeback",
+      "title": "Chargeback Details Report",
+      "byte_start": 107654,
+      "byte_end": 108352,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-reports-recon-chargeback",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-reports-recon-chargeback-fields",
+      "title": "Fields in the Chargeback Details Report",
+      "byte_start": 108352,
+      "byte_end": 111801,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-reports-recon-chargeback-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-reports-recon-deposit",
+      "title": "Deposit Details Report",
+      "byte_start": 111801,
+      "byte_end": 112680,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-reports-recon-deposit",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-reports-recon-deposit-line-items",
+      "title": "Deposit Details Report Line Items",
+      "byte_start": 112680,
+      "byte_end": 114050,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-reports-recon-deposit-line-items",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-reports-recon-deposit-fields",
+      "title": "Fields in the Deposit Details Report",
+      "byte_start": 114050,
+      "byte_end": 117406,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-reports-recon-deposit-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-reports-use-case",
+      "title": "eCheck Reconciliation Reporting Case Study",
+      "byte_start": 117406,
+      "byte_end": 118045,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-reports-use-case",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-reports-use-case-day1",
+      "title": "Day 1",
+      "byte_start": 118045,
+      "byte_end": 118643,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-reports-use-case-day1",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-reports-use-case-day2",
+      "title": "Day 2",
+      "byte_start": 118643,
+      "byte_end": 119214,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-reports-use-case-day2",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-reports-use-case-day3",
+      "title": "Day 3",
+      "byte_start": 119214,
+      "byte_end": 119907,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-reports-use-case-day3",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-reports-use-case-day4",
+      "title": "Day 4",
+      "byte_start": 119907,
+      "byte_end": 120817,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-reports-use-case-day4",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-reports-use-case-day5",
+      "title": "Day 5",
+      "byte_start": 120817,
+      "byte_end": 121537,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-reports-use-case-day5",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-reports-use-case-day6",
+      "title": "Day 6",
+      "byte_start": 121537,
+      "byte_end": 122535,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-reports-use-case-day6",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-reports-use-case-day7",
+      "title": "Day 7",
+      "byte_start": 122535,
+      "byte_end": 123469,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-reports-use-case-day7",
+      "heading_level": 1
+    },
+    {
+      "anchor": "echeck-reports-use-case-day8",
+      "title": "Day 8",
+      "byte_start": 123469,
+      "byte_end": 124021,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/echeck/user/all/rest/echeck-user-guide.html#echeck-reports-use-case-day8",
+      "heading_level": 1
+    }
+  ]
+}

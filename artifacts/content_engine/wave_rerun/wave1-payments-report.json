@@ -1,0 +1,255 @@
+{
+  "generated_at": "2026-08-08T04:31:38+00:00",
+  "explanation": "The wave-rerun 3/4 figure used the engine-test fixture (payments-core.openapi.json, 4 /pts/ ops) and generated pages from the payments product-root guide endpoint_facts \u2014 not the registered Wave 1 OpenAPI. Nothing was dropped from the real spec; the denominator source changed. This rerun restores the registered spec (cybersource-payments.openapi.json, 30 /pts/ ops) and regenerates reference pages from cybersource-payments-openapi units.",
+  "side_by_side": {
+    "wave1_closeout": {
+      "ratio": "30/30",
+      "pages": 30,
+      "denominator": 30,
+      "source_file": "data/content_engine/specs/cybersource-payments.openapi.json",
+      "evidence": "evals/evidence/wave1-payments/denominator-and-gaps.md",
+      "registered_source_id": "cybersource-payments-openapi"
+    },
+    "mistaken_wave_rerun": {
+      "ratio": "3/4",
+      "pages": 38,
+      "denominator": 4,
+      "source_file": "data/content_engine/specs/payments-core.openapi.json",
+      "scope": "fixture /pts/ ops; pages from payments guide endpoint_facts",
+      "note": "payments-core.openapi.json is labeled engine-tests only in registry/payments.json \u2014 not the Wave 1 denominator."
+    },
+    "this_correction": {
+      "ratio": "30/30",
+      "pages": 30,
+      "denominator": 30,
+      "source_file": "data/content_engine/specs/cybersource-payments.openapi.json",
+      "units_file": "artifacts/content_engine/generated/cybersource-payments-openapi.api_reference_units.json",
+      "lineage": [
+        "generated_from_spec"
+      ]
+    }
+  },
+  "pages_written": 30,
+  "page_names": [
+    "createPullFundsTransfer.md",
+    "createPullFundsRefund.md",
+    "createPullFundsReversal.md",
+    "getTransactionBatchDetails.md",
+    "getTransactionBatches.md",
+    "getTransactionBatchId.md",
+    "billingAgreementsRegistration.md",
+    "billingAgreementsDeRegistration.md",
+    "billingAgreementsIntimation.md",
+    "refundCapture.md",
+    "voidCapture.md",
+    "createCredit.md",
+    "voidCredit.md",
+    "createOrder.md",
+    "updateOrder.md",
+    "createSessionRequest.md",
+    "updateSessionRequest.md",
+    "createOrderRequest.md",
+    "retrieveOrDeletePaymentToken.md",
+    "createPayment.md",
+    "incrementAuth.md",
+    "capturePayment.md",
+    "refundPayment.md",
+    "authReversal.md",
+    "voidPayment.md",
+    "octCreatePayment.md",
+    "refreshPaymentStatus.md",
+    "voidRefund.md",
+    "mitReversal.md",
+    "mitVoid.md"
+  ],
+  "guide_secondary_coverage": {
+    "registered_ops_covered_by_guide_endpoint_fact": 12,
+    "registered_ops_denominator": 30,
+    "ratio": "12/30",
+    "guide_pts_endpoint_facts": 76,
+    "guide_source": "raw/product-roots/en-us_payments_developer_ctv_rest_payments.md.md",
+    "note": "Secondary metric only \u2014 Wave 1 gate remains pages vs registered OpenAPI ops, not guide coverage.",
+    "operations": [
+      {
+        "method": "POST",
+        "path": "/pts/v2/payments",
+        "operation_id": "createPayment",
+        "covered_by_guide_endpoint_fact": true
+      },
+      {
+        "method": "PATCH",
+        "path": "/pts/v2/payments/{id}",
+        "operation_id": "incrementAuth",
+        "covered_by_guide_endpoint_fact": true
+      },
+      {
+        "method": "POST",
+        "path": "/pts/v2/payments/{id}/reversals",
+        "operation_id": "authReversal",
+        "covered_by_guide_endpoint_fact": true
+      },
+      {
+        "method": "POST",
+        "path": "/pts/v2/reversals",
+        "operation_id": "mitReversal",
+        "covered_by_guide_endpoint_fact": true
+      },
+      {
+        "method": "POST",
+        "path": "/pts/v2/payments/{id}/captures",
+        "operation_id": "capturePayment",
+        "covered_by_guide_endpoint_fact": true
+      },
+      {
+        "method": "POST",
+        "path": "/pts/v2/payments/{id}/refunds",
+        "operation_id": "refundPayment",
+        "covered_by_guide_endpoint_fact": true
+      },
+      {
+        "method": "POST",
+        "path": "/pts/v2/captures/{id}/refunds",
+        "operation_id": "refundCapture",
+        "covered_by_guide_endpoint_fact": true
+      },
+      {
+        "method": "POST",
+        "path": "/pts/v2/credits",
+        "operation_id": "createCredit",
+        "covered_by_guide_endpoint_fact": true
+      },
+      {
+        "method": "POST",
+        "path": "/pts/v2/payments/{id}/voids",
+        "operation_id": "voidPayment",
+        "covered_by_guide_endpoint_fact": true
+      },
+      {
+        "method": "POST",
+        "path": "/pts/v2/captures/{id}/voids",
+        "operation_id": "voidCapture",
+        "covered_by_guide_endpoint_fact": true
+      },
+      {
+        "method": "POST",
+        "path": "/pts/v2/refunds/{id}/voids",
+        "operation_id": "voidRefund",
+        "covered_by_guide_endpoint_fact": false
+      },
+      {
+        "method": "POST",
+        "path": "/pts/v2/credits/{id}/voids",
+        "operation_id": "voidCredit",
+        "covered_by_guide_endpoint_fact": true
+      },
+      {
+        "method": "POST",
+        "path": "/pts/v2/voids",
+        "operation_id": "mitVoid",
+        "covered_by_guide_endpoint_fact": true
+      },
+      {
+        "method": "POST",
+        "path": "/pts/v2/refresh-payment-status/{id}",
+        "operation_id": "refreshPaymentStatus",
+        "covered_by_guide_endpoint_fact": false
+      },
+      {
+        "method": "POST",
+        "path": "/pts/v2/billing-agreements",
+        "operation_id": "billingAgreementsRegistration",
+        "covered_by_guide_endpoint_fact": false
+      },
+      {
+        "method": "PATCH",
+        "path": "/pts/v2/billing-agreements/{id}",
+        "operation_id": "billingAgreementsDeRegistration",
+        "covered_by_guide_endpoint_fact": false
+      },
+      {
+        "method": "POST",
+        "path": "/pts/v2/billing-agreements/{id}/intimations",
+        "operation_id": "billingAgreementsIntimation",
+        "covered_by_guide_endpoint_fact": false
+      },
+      {
+        "method": "POST",
+        "path": "/pts/v2/payment-references/{id}/intents",
+        "operation_id": "createOrderRequest",
+        "covered_by_guide_endpoint_fact": false
+      },
+      {
+        "method": "POST",
+        "path": "/pts/v2/payment-references",
+        "operation_id": "createSessionRequest",
+        "covered_by_guide_endpoint_fact": false
+      },
+      {
+        "method": "PATCH",
+        "path": "/pts/v2/payment-references/{id}",
+        "operation_id": "updateSessionRequest",
+        "covered_by_guide_endpoint_fact": false
+      },
+      {
+        "method": "POST",
+        "path": "/pts/v2/intents",
+        "operation_id": "createOrder",
+        "covered_by_guide_endpoint_fact": false
+      },
+      {
+        "method": "PATCH",
+        "path": "/pts/v2/intents/{id}",
+        "operation_id": "updateOrder",
+        "covered_by_guide_endpoint_fact": false
+      },
+      {
+        "method": "POST",
+        "path": "/pts/v2/payment-tokens",
+        "operation_id": "retrieveOrDeletePaymentToken",
+        "covered_by_guide_endpoint_fact": false
+      },
+      {
+        "method": "GET",
+        "path": "/pts/v1/transaction-batches",
+        "operation_id": "getTransactionBatches",
+        "covered_by_guide_endpoint_fact": false
+      },
+      {
+        "method": "GET",
+        "path": "/pts/v1/transaction-batches/{id}",
+        "operation_id": "getTransactionBatchId",
+        "covered_by_guide_endpoint_fact": false
+      },
+      {
+        "method": "GET",
+        "path": "/pts/v1/transaction-batch-details/{id}",
+        "operation_id": "getTransactionBatchDetails",
+        "covered_by_guide_endpoint_fact": false
+      },
+      {
+        "method": "POST",
+        "path": "/pts/v2/payouts",
+        "operation_id": "octCreatePayment",
+        "covered_by_guide_endpoint_fact": false
+      },
+      {
+        "method": "POST",
+        "path": "/pts/v1/pull-funds-transfer",
+        "operation_id": "createPullFundsTransfer",
+        "covered_by_guide_endpoint_fact": false
+      },
+      {
+        "method": "POST",
+        "path": "/pts/v1/pull-funds-transfer/{id}/reversal",
+        "operation_id": "createPullFundsReversal",
+        "covered_by_guide_endpoint_fact": false
+      },
+      {
+        "method": "POST",
+        "path": "/pts/v1/pull-funds-transfer/{id}/refund",
+        "operation_id": "createPullFundsRefund",
+        "covered_by_guide_endpoint_fact": false
+      }
+    ]
+  }
+}

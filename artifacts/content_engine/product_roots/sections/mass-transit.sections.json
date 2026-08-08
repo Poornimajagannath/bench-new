@@ -1,0 +1,1376 @@
+{
+  "product_id": "mass-transit",
+  "root_path": "/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.md",
+  "root_url": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.md",
+  "bytes": 401764,
+  "sections": [
+    {
+      "anchor": "um-about-guide",
+      "title": "Card Present Connect \\| Mass Transit Developer Guide",
+      "byte_start": 0,
+      "byte_end": 1870,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-about-guide",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-doc-revisions",
+      "title": "Recent Revisions to This Document",
+      "byte_start": 1870,
+      "byte_end": 5006,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-doc-revisions",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-intro-overview",
+      "title": "Introduction to Card Present Connect \\| Mass Transit",
+      "byte_start": 5006,
+      "byte_end": 5383,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-intro-overview",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-intro-rider",
+      "title": "Transit Rider Benefits",
+      "byte_start": 5383,
+      "byte_end": 5903,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-intro-rider",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-intro-merchant",
+      "title": "Transit System Benefits",
+      "byte_start": 5903,
+      "byte_end": 6457,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-intro-merchant",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-intro-supported-card-types",
+      "title": "Supported Card Types",
+      "byte_start": 6457,
+      "byte_end": 6844,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-intro-supported-card-types",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-intro-terms",
+      "title": "Mass Transit Terminology",
+      "byte_start": 6844,
+      "byte_end": 10946,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-intro-terms",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-intro-reqs",
+      "title": "Mass Transit Prerequisites",
+      "byte_start": 10946,
+      "byte_end": 11536,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-intro-reqs",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-intro-mlv-emvcert",
+      "title": "Mass Transit Validation and Certification",
+      "byte_start": 11536,
+      "byte_end": 11984,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-intro-mlv-emvcert",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-intro-mlv2",
+      "title": "Message-Level Validation",
+      "byte_start": 11984,
+      "byte_end": 12588,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-intro-mlv2",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-intro-emvl3-cert",
+      "title": "EMV Level 3 Certification",
+      "byte_start": 12588,
+      "byte_end": 13931,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-intro-emvl3-cert",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-workflow-first-ride-risk",
+      "title": "First Ride Risk",
+      "byte_start": 13931,
+      "byte_end": 14352,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-workflow-first-ride-risk",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-workflow-first-ride-risk-codes",
+      "title": "First Ride Risk Eligibility Reason Codes",
+      "byte_start": 14352,
+      "byte_end": 15735,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-workflow-first-ride-risk-codes",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-test-cases",
+      "title": "Transit Test Cases",
+      "byte_start": 15735,
+      "byte_end": 24597,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-test-cases",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-transit-models-flows-intro",
+      "title": "Mass Transit Models and Workflows",
+      "byte_start": 24597,
+      "byte_end": 25129,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-transit-models-flows-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-models-flows-amex-payg-intro",
+      "title": "American Express Mass Transit Model",
+      "byte_start": 25129,
+      "byte_end": 25441,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-models-flows-amex-payg-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-models-flows-amex-payg-function-feature",
+      "title": "American Express Pay As You Go Model Capabilities and Features",
+      "byte_start": 25441,
+      "byte_end": 27593,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-models-flows-amex-payg-function-feature",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-models-flows-amex-payg-flow",
+      "title": "American Express Pay As You Go Workflow",
+      "byte_start": 27593,
+      "byte_end": 27926,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-models-flows-amex-payg-flow",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-models-flows-amex-payg-flow_fig_fqh_y5d_j3c",
+      "title": "Figure:",
+      "byte_start": 27926,
+      "byte_end": 29566,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-models-flows-amex-payg-flow_fig_fqh_y5d_j3c",
+      "heading_level": 4
+    },
+    {
+      "anchor": "um-models-flows-amex-payg-auth-capture",
+      "title": "American Express Authorization and Capture Options",
+      "byte_start": 29566,
+      "byte_end": 30560,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-models-flows-amex-payg-auth-capture",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-models-flows-discover-payg-intro",
+      "title": "Discover Pay As You Go Model",
+      "byte_start": 30560,
+      "byte_end": 30763,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-models-flows-discover-payg-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-models-flows-discover-payg-feature",
+      "title": "Discover Pay As You Go Model Features",
+      "byte_start": 30763,
+      "byte_end": 31851,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-models-flows-discover-payg-feature",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-models-flows-discover-payg-flow",
+      "title": "Discover Pay As You Go Model Workflow",
+      "byte_start": 31851,
+      "byte_end": 33648,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-models-flows-discover-payg-flow",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-models-flows-discover-aggregate",
+      "title": "Discover Pay As You Go Aggregated Transactions",
+      "byte_start": 33648,
+      "byte_end": 34843,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-models-flows-discover-aggregate",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-models-flows-mc-payg-intro",
+      "title": "Mastercard Pay As You Go Model",
+      "byte_start": 34843,
+      "byte_end": 35050,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-models-flows-mc-payg-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-models-flows-mc-payg-feature",
+      "title": "Mastercard Pay As You Go Model Features",
+      "byte_start": 35050,
+      "byte_end": 36132,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-models-flows-mc-payg-feature",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-models-flows-mc-payg-flow",
+      "title": "Mastercard Pay As You Go Workflow",
+      "byte_start": 36132,
+      "byte_end": 37577,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-models-flows-mc-payg-flow",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-intro-models-visa",
+      "title": "Visa Mass Transit Model",
+      "byte_start": 37577,
+      "byte_end": 37761,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-intro-models-visa",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-intro-models-visa_fig_rxt_312_j3c",
+      "title": "Figure:",
+      "byte_start": 37761,
+      "byte_end": 38115,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-intro-models-visa_fig_rxt_312_j3c",
+      "heading_level": 4
+    },
+    {
+      "anchor": "um-intro-models-visa-mtt",
+      "title": "Visa Mobility and Transport Transaction Model Capabilities and Features",
+      "byte_start": 38115,
+      "byte_end": 40587,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-intro-models-visa-mtt",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-workflow-visa-mtt",
+      "title": "Visa Mobility and Transport Transaction Workflow",
+      "byte_start": 40587,
+      "byte_end": 40832,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-workflow-visa-mtt",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-workflow-visa-mtt_fig_yvg_y43_k3c",
+      "title": "Figure:",
+      "byte_start": 40832,
+      "byte_end": 42391,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-workflow-visa-mtt_fig_yvg_y43_k3c",
+      "heading_level": 4
+    },
+    {
+      "anchor": "um-models-flows-common-intro",
+      "title": "Common Mass Transit Transaction Workflows and Features",
+      "byte_start": 42391,
+      "byte_end": 42685,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-models-flows-common-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-transit-models-flows-aggregated",
+      "title": "Aggregated Fare Transaction Workflow",
+      "byte_start": 42685,
+      "byte_end": 43289,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-transit-models-flows-aggregated",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-transit-models-flows-aggregated_fig_q2r_wmd_j3c",
+      "title": "Figure:",
+      "byte_start": 43289,
+      "byte_end": 43627,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-transit-models-flows-aggregated_fig_q2r_wmd_j3c",
+      "heading_level": 4
+    },
+    {
+      "anchor": "um-models-flows-aggregated-tms-ctv-intro",
+      "title": "Aggregated Model with the `Token Management Service`",
+      "byte_start": 43627,
+      "byte_end": 44801,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-models-flows-aggregated-tms-ctv-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-models-flows-aggregated-tms-ctv-workflow",
+      "title": "Aggregated Model with the `Token Management Service` Workflow",
+      "byte_start": 44801,
+      "byte_end": 47933,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-models-flows-aggregated-tms-ctv-workflow",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-models-flows-common-denylist",
+      "title": "Near Real-Time Workflow",
+      "byte_start": 47933,
+      "byte_end": 49413,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-models-flows-common-denylist",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-models-flows-common-fare-calc",
+      "title": "Fare Calculation and Submission Workflow",
+      "byte_start": 49413,
+      "byte_end": 50944,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-models-flows-common-fare-calc",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-models-flows-common-debt-recovery",
+      "title": "Debt Recovery Workflows",
+      "byte_start": 50944,
+      "byte_end": 52875,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-models-flows-common-debt-recovery",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-models-flows-common-debt-recovery_fig_glc_2d2_j3c",
+      "title": "Figure:",
+      "byte_start": 52875,
+      "byte_end": 54238,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-models-flows-common-debt-recovery_fig_glc_2d2_j3c",
+      "heading_level": 4
+    },
+    {
+      "anchor": "um-models-flows-common-debt-recovery_fig_ibv_nh1_zhc",
+      "title": "Figure:",
+      "byte_start": 54238,
+      "byte_end": 55654,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-models-flows-common-debt-recovery_fig_ibv_nh1_zhc",
+      "heading_level": 4
+    },
+    {
+      "anchor": "um-models-flows-common-debt-recovery_fig_xpp_lr3_k3c",
+      "title": "Figure:",
+      "byte_start": 55654,
+      "byte_end": 56902,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-models-flows-common-debt-recovery_fig_xpp_lr3_k3c",
+      "heading_level": 4
+    },
+    {
+      "anchor": "um-models-flows-common-debt-recovery_fig_ltd_wr3_k3c",
+      "title": "Figure:",
+      "byte_start": 56902,
+      "byte_end": 57536,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-models-flows-common-debt-recovery_fig_ltd_wr3_k3c",
+      "heading_level": 4
+    },
+    {
+      "anchor": "um-models-flows-mult-accts",
+      "title": "Using Multiple Accounts for Processing Functions",
+      "byte_start": 57536,
+      "byte_end": 59347,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-models-flows-mult-accts",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-models-flows-journey-hist-intro",
+      "title": "Journey History Service",
+      "byte_start": 59347,
+      "byte_end": 61280,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-models-flows-journey-hist-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-models-flows-journey-hist-flow",
+      "title": "Journey History Service Workflow",
+      "byte_start": 61280,
+      "byte_end": 62046,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-models-flows-journey-hist-flow",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-emv-vpc",
+      "title": "Mass Transit Payment Services Using EMV and Card Data",
+      "byte_start": 62046,
+      "byte_end": 66021,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-emv-vpc",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-trxn-types",
+      "title": "Mass Transit Transaction Types",
+      "byte_start": 66021,
+      "byte_end": 77174,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-trxn-types",
+      "heading_level": 1
+    },
+    {
+      "anchor": "mt-auth-fields-matrix",
+      "title": "Required Fields for Authorizations with EMV Data",
+      "byte_start": 77174,
+      "byte_end": 104778,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#mt-auth-fields-matrix",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-amex-acct-status-auth-intro",
+      "title": "American Express Account Status Check Authorization with EMV Data",
+      "byte_start": 104778,
+      "byte_end": 105180,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-amex-acct-status-auth-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-amex-acct-status-auth-intro_d7e16",
+      "title": "Endpoint",
+      "byte_start": 105180,
+      "byte_end": 105544,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-amex-acct-status-auth-intro_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "um-processing-amex-acct-status-reqd-fields",
+      "title": "Required Fields for a American Express Account Status Check AVR Authorization with EMV Data",
+      "byte_start": 105544,
+      "byte_end": 110253,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-amex-acct-status-reqd-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-amex-tsc-auth-ex-rest",
+      "title": "REST Example: American Express Account Status Check Authorization with EMV Data",
+      "byte_start": 110253,
+      "byte_end": 113827,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-amex-tsc-auth-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-amex-auth-intro",
+      "title": "American Express Delayed Online Authorization with EMV Data",
+      "byte_start": 113827,
+      "byte_end": 114187,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-amex-auth-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-amex-auth-intro_d7e16",
+      "title": "Endpoint",
+      "byte_start": 114187,
+      "byte_end": 114503,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-amex-auth-intro_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "um-processing-amex-do-auth-reqd-fields",
+      "title": "Required Fields for a American Express Delayed Online Authorization with EMV Data",
+      "byte_start": 114503,
+      "byte_end": 118675,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-amex-do-auth-reqd-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-amex-do-auth-ex-rest",
+      "title": "REST Example: American Express Delayed Online Authorization with EMV Data",
+      "byte_start": 118675,
+      "byte_end": 122273,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-amex-do-auth-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-discover-auth-intro",
+      "title": "Discover Authorization with EMV Data",
+      "byte_start": 122273,
+      "byte_end": 122635,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-discover-auth-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-discover-auth-intro_d7e16",
+      "title": "Endpoint",
+      "byte_start": 122635,
+      "byte_end": 122967,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-discover-auth-intro_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "um-processing-discover-auth-reqd-fields",
+      "title": "Required Fields for a Discover Authorization with EMV Data",
+      "byte_start": 122967,
+      "byte_end": 127413,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-discover-auth-reqd-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-discover-auth-ex-rest",
+      "title": "REST Example: Discover Authorization with EMV Data",
+      "byte_start": 127413,
+      "byte_end": 130917,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-discover-auth-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-mc-auth-intro",
+      "title": "Mastercard Authorization with EMV Data",
+      "byte_start": 130917,
+      "byte_end": 132045,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-mc-auth-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-mc-auth-intro_d7e16",
+      "title": "Endpoint",
+      "byte_start": 132045,
+      "byte_end": 132353,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-mc-auth-intro_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "um-processing-mc-auth-reqd-fields",
+      "title": "Required Fields for a Mastercard Authorization with EMV Data",
+      "byte_start": 132353,
+      "byte_end": 137643,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-mc-auth-reqd-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-mc-auth-ex-rest",
+      "title": "REST Example: Mastercard Authorization with EMV Data",
+      "byte_start": 137643,
+      "byte_end": 140557,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-mc-auth-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-visa-avr-intro",
+      "title": "Visa Account Verification Request with EMV Data",
+      "byte_start": 140557,
+      "byte_end": 140826,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-visa-avr-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-visa-avr-intro_d7e16",
+      "title": "Endpoint",
+      "byte_start": 140826,
+      "byte_end": 141138,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-visa-avr-intro_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "um-processing-visa-avr-reqd-fields",
+      "title": "Required Fields for a Visa AVR Authorization with EMV Data",
+      "byte_start": 141138,
+      "byte_end": 144813,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-visa-avr-reqd-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-visa-avr-ex-rest",
+      "title": "REST Example: Visa AVR Authorization with EMV Data",
+      "byte_start": 144813,
+      "byte_end": 149124,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-visa-avr-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "mt-sale-fields-matrix",
+      "title": "Required Fields for a Sale with EMV Data",
+      "byte_start": 149124,
+      "byte_end": 165445,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#mt-sale-fields-matrix",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-sale-discover-intro",
+      "title": "Discover Sale with EMV Data",
+      "byte_start": 165445,
+      "byte_end": 165704,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-sale-discover-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-sale-discover-intro_d7e16",
+      "title": "Endpoint",
+      "byte_start": 165704,
+      "byte_end": 166036,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-sale-discover-intro_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "um-processing-sale-discover-reqd-fields",
+      "title": "Required Fields for a Discover Sale with EMV Data",
+      "byte_start": 166036,
+      "byte_end": 170884,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-sale-discover-reqd-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-sale-discover-ex-rest",
+      "title": "REST Example: Discover Sale with EMV Data",
+      "byte_start": 170884,
+      "byte_end": 174237,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-sale-discover-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-sale-deferred-intro",
+      "title": "Visa Deferred Sale with EMV Data",
+      "byte_start": 174237,
+      "byte_end": 175389,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-sale-deferred-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-sale-deferred-intro_d7e16",
+      "title": "Endpoint",
+      "byte_start": 175389,
+      "byte_end": 175721,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-sale-deferred-intro_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "um-processing-sale-deferred-reqd-fields",
+      "title": "Required Fields for a Visa Deferred Sale with EMV Data",
+      "byte_start": 175721,
+      "byte_end": 180516,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-sale-deferred-reqd-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-sale-deferred-ex-rest",
+      "title": "REST Example: Visa Deferred Sale with EMV Data",
+      "byte_start": 180516,
+      "byte_end": 184992,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-sale-deferred-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "mt-auth-dr-fields-matrix",
+      "title": "Required Fields for Authorizations for Debt Recovery",
+      "byte_start": 184992,
+      "byte_end": 208727,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#mt-auth-dr-fields-matrix",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-auth-debtrecov-intro",
+      "title": "Tap-Initiated Authorization for Debt Recovery with EMV Data",
+      "byte_start": 208727,
+      "byte_end": 209232,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-auth-debtrecov-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-auth-debtrecov-intro_d7e16",
+      "title": "Endpoint",
+      "byte_start": 209232,
+      "byte_end": 209568,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-auth-debtrecov-intro_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "um-processing-auth-debtrecov-reqd-fields",
+      "title": "Required Fields for a Tap-Initiated Authorization for Debt Recovery with EMV Data",
+      "byte_start": 209568,
+      "byte_end": 214230,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-auth-debtrecov-reqd-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-auth-debtrecov-ex-rest",
+      "title": "REST Example: Tap-Initiated Authorization for Debt Recovery with EMV Data",
+      "byte_start": 214230,
+      "byte_end": 217049,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-auth-debtrecov-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-auth-mit-intro",
+      "title": "Merchant-Initiated Authorization for Debt Recovery with Stored Card Data",
+      "byte_start": 217049,
+      "byte_end": 217369,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-auth-mit-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-auth-mit-intro_d7e16",
+      "title": "Endpoint",
+      "byte_start": 217369,
+      "byte_end": 217681,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-auth-mit-intro_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "um-processing-auth-mit-reqd-fields",
+      "title": "Required Fields for a Merchant-Initiated Authorization for Debt Recovery with Stored Card Data",
+      "byte_start": 217681,
+      "byte_end": 222773,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-auth-mit-reqd-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-auth-mit-ex-rest",
+      "title": "REST Example: Merchant-Initiated Authorization for Debt Recovery with Stored Card Data",
+      "byte_start": 222773,
+      "byte_end": 225384,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-auth-mit-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "mt-sale-dr-fields-matrix",
+      "title": "Required Fields for a Sale for Debt Recovery",
+      "byte_start": 225384,
+      "byte_end": 251212,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#mt-sale-dr-fields-matrix",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-sale-debtrecov-intro",
+      "title": "Tap-Initiated Sale for Mastercard Debt Recovery with EMV Data",
+      "byte_start": 251212,
+      "byte_end": 251713,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-sale-debtrecov-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-sale-debtrecov-intro_d7e16",
+      "title": "Endpoint",
+      "byte_start": 251713,
+      "byte_end": 252049,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-sale-debtrecov-intro_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "um-processing-sale-debtrecov-mc-eu-reqd-fields",
+      "title": "Required Fields for a Tap-Initiated Sale for Mastercard Debt Recovery with EMV Data",
+      "byte_start": 252049,
+      "byte_end": 257309,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-sale-debtrecov-mc-eu-reqd-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-sale-debtrecov-mc-ex-rest",
+      "title": "REST Example: Tap-Initiated Sale for Mastercard Debt Recovery with EMV Data",
+      "byte_start": 257309,
+      "byte_end": 260204,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-sale-debtrecov-mc-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-sale-debtrecov-intro-visa",
+      "title": "Tap-Initiated Sale for Visa Debt Recovery with EMV Data",
+      "byte_start": 260204,
+      "byte_end": 260698,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-sale-debtrecov-intro-visa",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-sale-debtrecov-intro-visa_d7e16",
+      "title": "Endpoint",
+      "byte_start": 260698,
+      "byte_end": 261054,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-sale-debtrecov-intro-visa_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "um-processing-sale-debtrecov-reqd-fields",
+      "title": "Required Fields for a Tap-Initiated Sale for Visa Debt Recovery with EMV Data",
+      "byte_start": 261054,
+      "byte_end": 266546,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-sale-debtrecov-reqd-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-sale-debtrecov-ex-rest",
+      "title": "REST Example: Tap-Initiated Sale for Visa Debt Recovery with EMV Data",
+      "byte_start": 266546,
+      "byte_end": 269462,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-sale-debtrecov-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "mt-discover-mit-debtrecov-sale-intro",
+      "title": "Merchant-Initiated Sale for Discover Debt Recovery with Card Data",
+      "byte_start": 269462,
+      "byte_end": 269777,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#mt-discover-mit-debtrecov-sale-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "mt-discover-mit-debtrecov-sale-intro_d7e16",
+      "title": "Endpoint",
+      "byte_start": 269777,
+      "byte_end": 270121,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#mt-discover-mit-debtrecov-sale-intro_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "mt-discover-mit-debtrecov-sale-reqfields",
+      "title": "Required Fields for a Merchant-Initiated Sale for Discover Debt Recovery with Card Data",
+      "byte_start": 270121,
+      "byte_end": 274334,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#mt-discover-mit-debtrecov-sale-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "mt-discover-mit-debtrecov-sale-api-ex-rest",
+      "title": "REST Example: Merchant-Initiated Sale for Discover Debt Recovery with Card Data",
+      "byte_start": 274334,
+      "byte_end": 277047,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#mt-discover-mit-debtrecov-sale-api-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "mt-mc-mit-debtrecov-sale-intro",
+      "title": "Merchant-Initiated Sale for Mastercard Debt Recovery with Card Data",
+      "byte_start": 277047,
+      "byte_end": 277346,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#mt-mc-mit-debtrecov-sale-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "mt-mc-mit-debtrecov-sale-intro_d7e16",
+      "title": "Endpoint",
+      "byte_start": 277346,
+      "byte_end": 277666,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#mt-mc-mit-debtrecov-sale-intro_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "mt-mc-mit-debtrecov-sale-reqfields",
+      "title": "Required Fields for a Merchant-Initiated Sale for Mastercard Debt Recovery with Card Data",
+      "byte_start": 277666,
+      "byte_end": 282519,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#mt-mc-mit-debtrecov-sale-reqfields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "mt-mc-mit-debtrecov-sale-ex-rest",
+      "title": "REST Example: Merchant-Initiated Sale for Mastercard Debt Recovery with Card Data",
+      "byte_start": 282519,
+      "byte_end": 285275,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#mt-mc-mit-debtrecov-sale-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-sale-mit-intro",
+      "title": "Merchant-Initiated Sale for Visa Debt Recovery with Stored Card Data",
+      "byte_start": 285275,
+      "byte_end": 285579,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-sale-mit-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-sale-mit-intro_d7e16",
+      "title": "Endpoint",
+      "byte_start": 285579,
+      "byte_end": 285891,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-sale-mit-intro_d7e16",
+      "heading_level": 2
+    },
+    {
+      "anchor": "um-processing-sale-mit-reqd-fields",
+      "title": "Required Fields for a Merchant-Initiated Sale for Visa Debt Recovery with Stored Card Data",
+      "byte_start": 285891,
+      "byte_end": 291175,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-sale-mit-reqd-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-sale-mit-ex-rest",
+      "title": "REST Example: Merchant-Initiated Sale for Visa Debt Recovery with Stored Card Data",
+      "byte_start": 291175,
+      "byte_end": 293995,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-sale-mit-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-tms",
+      "title": "Mass Transit Payment Services Using TMS Tokens",
+      "byte_start": 293995,
+      "byte_end": 295972,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-tms",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-mc-auth-tkn-intro",
+      "title": "Mastercard Authorization with a Token",
+      "byte_start": 295972,
+      "byte_end": 296345,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-mc-auth-tkn-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-mc-auth-tkn-reqd-fields",
+      "title": "Required Fields for a Mastercard Authorization with a Token",
+      "byte_start": 296345,
+      "byte_end": 300869,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-mc-auth-tkn-reqd-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-mc-auth-tkn-ex-rest",
+      "title": "REST Example: Mastercard Authorization with a Token",
+      "byte_start": 300869,
+      "byte_end": 304635,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-mc-auth-tkn-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-visa-avr-tkn-intro",
+      "title": "Visa Account Verification Request with a Token",
+      "byte_start": 304635,
+      "byte_end": 305085,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-visa-avr-tkn-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-visa-avr-tkn-reqd-fields",
+      "title": "Required Fields for a Visa AVR Authorization with a Transient Token",
+      "byte_start": 305085,
+      "byte_end": 307898,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-visa-avr-tkn-reqd-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-visa-avr-tkn-ex-rest",
+      "title": "REST Example: Visa AVR Authorization with a Transient Token",
+      "byte_start": 307898,
+      "byte_end": 311254,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-visa-avr-tkn-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-sale-deferred-tkn-intro",
+      "title": "Visa Deferred Sale with a Token",
+      "byte_start": 311254,
+      "byte_end": 311780,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-sale-deferred-tkn-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-sale-deferred-tkn-reqd-fields",
+      "title": "Required Fields for a Visa Deferred Sale with a Token",
+      "byte_start": 311780,
+      "byte_end": 315506,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-sale-deferred-tkn-reqd-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-sale-deferred-tkn-ex-rest",
+      "title": "REST Example: Visa Deferred Sale with a Token",
+      "byte_start": 315506,
+      "byte_end": 319088,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-sale-deferred-tkn-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-auth-debtrecov-tkn-intro",
+      "title": "Tap-Initiated Authorization for Debt Recovery with a Token",
+      "byte_start": 319088,
+      "byte_end": 319778,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-auth-debtrecov-tkn-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-auth-debtrecov-tkn-reqd-fields",
+      "title": "Required Fields for a Tap-Initiated Authorization for Debt Recovery with a Token",
+      "byte_start": 319778,
+      "byte_end": 323532,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-auth-debtrecov-tkn-reqd-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-auth-debtrecov-tkn-ex-rest",
+      "title": "REST Example: Tap-Initiated Authorization for Debt Recovery with a Token",
+      "byte_start": 323532,
+      "byte_end": 327702,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-auth-debtrecov-tkn-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-auth-mit-tkn-intro",
+      "title": "Merchant-Initiated Authorization for Debt Recovery with a Token",
+      "byte_start": 327702,
+      "byte_end": 328168,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-auth-mit-tkn-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-auth-mit-tkn-reqd-fields",
+      "title": "Required Fields for a Merchant-Initiated Authorization for Debt Recovery with a Token",
+      "byte_start": 328168,
+      "byte_end": 332281,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-auth-mit-tkn-reqd-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-auth-mit-tkn-ex-rest",
+      "title": "REST Example: Merchant-Initiated Authorization for Debt Recovery with a Token",
+      "byte_start": 332281,
+      "byte_end": 336789,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-auth-mit-tkn-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-sale-debtrecov-tkn-intro",
+      "title": "Tap-Initiated Sale for Debt Recovery with a Token",
+      "byte_start": 336789,
+      "byte_end": 337501,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-sale-debtrecov-tkn-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-sale-debtrecov-tkn-reqd-fields",
+      "title": "Required Fields for a Tap-Initiated Sale for Debt Recovery with a Token",
+      "byte_start": 337501,
+      "byte_end": 341339,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-sale-debtrecov-tkn-reqd-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-sale-debtrecov-tkn-ex-rest",
+      "title": "REST Example: Tap-Initiated Sale for Debt Recovery with a Token",
+      "byte_start": 341339,
+      "byte_end": 345390,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-sale-debtrecov-tkn-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-sale-mit-tkn-intro",
+      "title": "Merchant-Initiated Sale for Debt Recovery with a Token",
+      "byte_start": 345390,
+      "byte_end": 345826,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-sale-mit-tkn-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-sale-mit-tkn-reqd-fields",
+      "title": "Required Fields for a Merchant-Initiated Sale for Debt Recovery with a Token",
+      "byte_start": 345826,
+      "byte_end": 350159,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-sale-mit-tkn-reqd-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-sale-mit-tkn-ex-rest",
+      "title": "REST Example: Merchant-Initiated Sale for Debt Recovery with a Token",
+      "byte_start": 350159,
+      "byte_end": 354528,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-sale-mit-tkn-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-followon",
+      "title": "Mass Transit Follow-On Payment Services",
+      "byte_start": 354528,
+      "byte_end": 354797,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-followon",
+      "heading_level": 1
+    },
+    {
+      "anchor": "mt-capture-fields-matrix",
+      "title": "Required Fields for Mass Transit Captures",
+      "byte_start": 354797,
+      "byte_end": 358927,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#mt-capture-fields-matrix",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-capture-intro",
+      "title": "Capture",
+      "byte_start": 358927,
+      "byte_end": 359360,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-capture-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-capture-intro_d7e127",
+      "title": "Endpoint",
+      "byte_start": 359360,
+      "byte_end": 359783,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-capture-intro_d7e127",
+      "heading_level": 2
+    },
+    {
+      "anchor": "um-processing-capture-reqd-fields",
+      "title": "Required Fields for a Capture",
+      "byte_start": 359783,
+      "byte_end": 360972,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-capture-reqd-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-capture-ex-rest",
+      "title": "REST Example: Capture",
+      "byte_start": 360972,
+      "byte_end": 362455,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-capture-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "mt-reversal-fields-matrix",
+      "title": "Required Fields for Mass Transit Reversals",
+      "byte_start": 362455,
+      "byte_end": 368059,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#mt-reversal-fields-matrix",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-rev-intro",
+      "title": "Authorization Reversal",
+      "byte_start": 368059,
+      "byte_end": 368223,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-rev-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-rev-intro_d7e85",
+      "title": "Endpoint",
+      "byte_start": 368223,
+      "byte_end": 368629,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-rev-intro_d7e85",
+      "heading_level": 2
+    },
+    {
+      "anchor": "um-processing-rev-reqd-fields",
+      "title": "Required Fields for an Authorization Reversal",
+      "byte_start": 368629,
+      "byte_end": 369805,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-rev-reqd-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-rev-ex-rest",
+      "title": "REST Example: Authorization Reversal",
+      "byte_start": 369805,
+      "byte_end": 371359,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-rev-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-timeout-rev-intro",
+      "title": "Time-Out Authorization Reversal",
+      "byte_start": 371359,
+      "byte_end": 371831,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-timeout-rev-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-timeout-rev-reqd-fields",
+      "title": "Required Fields for a Time-Out Authorization Reversal",
+      "byte_start": 371831,
+      "byte_end": 372834,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-timeout-rev-reqd-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-timeout-rev-ex-rest",
+      "title": "REST Example: Time-Out Authorization Reversal",
+      "byte_start": 372834,
+      "byte_end": 374574,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-timeout-rev-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-credit-intro",
+      "title": "Stand-Alone Credit with a Token",
+      "byte_start": 374574,
+      "byte_end": 375589,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-credit-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-credit-intro_d7e169",
+      "title": "Endpoint",
+      "byte_start": 375589,
+      "byte_end": 375897,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-credit-intro_d7e169",
+      "heading_level": 2
+    },
+    {
+      "anchor": "um-processing-credit-tkn-reqd-fields",
+      "title": "Required Fields for a Stand-Alone Credit with a Token",
+      "byte_start": 375897,
+      "byte_end": 377644,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-credit-tkn-reqd-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-credit-tkn-vpc-ex-rest",
+      "title": "REST Example: Stand-Alone Credit with a Token",
+      "byte_start": 377644,
+      "byte_end": 380119,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-credit-tkn-vpc-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "mt-void-fields-matrix",
+      "title": "Required Field for Timeout Voids",
+      "byte_start": 380119,
+      "byte_end": 382401,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#mt-void-fields-matrix",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-timeout-void-intro",
+      "title": "Time-Out Void",
+      "byte_start": 382401,
+      "byte_end": 382894,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-timeout-void-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-timeout-void-intro_d7e585",
+      "title": "Endpoint",
+      "byte_start": 382894,
+      "byte_end": 383222,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-timeout-void-intro_d7e585",
+      "heading_level": 2
+    },
+    {
+      "anchor": "um-processing-timeout-void-reqd-fields",
+      "title": "Required Field for a Time-Out Void",
+      "byte_start": 383222,
+      "byte_end": 383792,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-timeout-void-reqd-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-timeout-void-ex-rest",
+      "title": "REST Example: Time-Out Void",
+      "byte_start": 383792,
+      "byte_end": 384835,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-timeout-void-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-token-intro",
+      "title": "Mass Transit Token Management Services",
+      "byte_start": 384835,
+      "byte_end": 385065,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-token-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-token-create-intro",
+      "title": "Creating a Token",
+      "byte_start": 385065,
+      "byte_end": 386020,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-token-create-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-token-create-intro_fig_uf5_w22_j3c",
+      "title": "Figure:",
+      "byte_start": 386020,
+      "byte_end": 387068,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-token-create-intro_fig_uf5_w22_j3c",
+      "heading_level": 4
+    },
+    {
+      "anchor": "um-processing-token-create-reqd-fields",
+      "title": "Required Fields for Creating a Token",
+      "byte_start": 387068,
+      "byte_end": 388537,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-token-create-reqd-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-token-create-ex-rest",
+      "title": "REST Example: Create a Token",
+      "byte_start": 388537,
+      "byte_end": 389759,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-token-create-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-token-get-intro",
+      "title": "Retrieving Transient Token Details",
+      "byte_start": 389759,
+      "byte_end": 390467,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-token-get-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-token-get-ex-rest",
+      "title": "REST Example: Retrieve Transient Token Details",
+      "byte_start": 390467,
+      "byte_end": 392100,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-token-get-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-token-get-ii-intro",
+      "title": "Retrieving an Instrument Identifier Details",
+      "byte_start": 392100,
+      "byte_end": 392787,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-token-get-ii-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-token-get-ii-ex-rest",
+      "title": "REST Example: Retrieving Instrument Identifier Details",
+      "byte_start": 392787,
+      "byte_end": 393993,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-token-get-ii-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-token-get-ii-pi-ch-intro",
+      "title": "Retrieving Card Hash Details",
+      "byte_start": 393993,
+      "byte_end": 394538,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-token-get-ii-pi-ch-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-token-get-ii-pi-ch-ex-rest",
+      "title": "REST Example: Retrieving Card Hash Details",
+      "byte_start": 394538,
+      "byte_end": 396395,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-token-get-ii-pi-ch-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-token-get-pi-intro",
+      "title": "Retrieving Payment Instrument Details",
+      "byte_start": 396395,
+      "byte_end": 396973,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-token-get-pi-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-token-get-pi-ex-rest",
+      "title": "REST Example: Retrieving Payment Instrument Details",
+      "byte_start": 396973,
+      "byte_end": 398700,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-token-get-pi-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-token-delete-ii-intro",
+      "title": "Deleting an Instrument Identifier",
+      "byte_start": 398700,
+      "byte_end": 399398,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-token-delete-ii-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-token-delete-ii-ex-rest",
+      "title": "REST Example: Deleting an Instrument Identifier",
+      "byte_start": 399398,
+      "byte_end": 400501,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-token-delete-ii-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-token-delete-pi-ch-intro",
+      "title": "Deleting a Card Hash",
+      "byte_start": 400501,
+      "byte_end": 401228,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-token-delete-pi-ch-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "um-processing-token-delete-pi-ch-ex-rest",
+      "title": "REST Example: Deleting a Card Hash",
+      "byte_start": 401228,
+      "byte_end": 401764,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/urban-mobility/developer/ctv/rest/mass-transit.html#um-processing-token-delete-pi-ch-ex-rest",
+      "heading_level": 1
+    }
+  ]
+}

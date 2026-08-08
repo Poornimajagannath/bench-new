@@ -33,6 +33,8 @@
     "mitVoid.md"
   ],
   "count": 30,
-  "lineage_origin": "generated_from_spec",
+  "lineage_origin": [
+    "generated_from_spec"
+  ],
   "artifact_dir": "artifacts/content_engine/a2"
 }

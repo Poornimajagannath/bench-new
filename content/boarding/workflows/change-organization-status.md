@@ -14,20 +14,41 @@ _Generated from `normalized/2026-08-08-boarding.claims.json`; do not hand-edit. 
 
 ## Steps
 
-### Via Partner admin (Business Center) — `en-us_boarding_user_all_ebc_boarding-user_merchants-v2-status-change.md.md`
+### REST API path
 
-1. **Action:** Find the merchant in the search results and click the eyeball icon in the More column.
+1. **API:** `GET /oms/v1/organizations/{organizationId}` — Change an Organization's Status
+   - Actor: Partner system (REST API)
+   - test host: `https://apitest.cybersource.com`
+   - Required fields: **Gap:** not listed for this endpoint in the source.
+   - Example request:
+     ```json
+     {}
+     ```
+   - Expected outcome: HTTP 200 OK (see example response).
+   - Example response:
+     ```json
+     200 OK
+     ```
+   - <sub>[`en-us_boarding_developer_all_rest_boarding:endpoint:get:6ff93759`](https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-change-org-status)</sub>
+
+### Business Center UI path
+
+2. **Action:** Find the merchant in the search results and click the eyeball icon in the More column.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_merchants-v2-status-change:step:1:6739b4df`</sub>
-2. **Action:** Click the **Status** drop-down menu in the upper-right side of the page and select a status.
+
+3. **Action:** Click the **Status** drop-down menu in the upper-right side of the page and select a status.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_merchants-v2-status-change:step:2:780c8902`</sub>
-3. **Action:** Click **Confirm**.
+
+4. **Action:** Click **Confirm**.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_merchants-v2-status-change:step:3:86078fe2`</sub>
+
+<!-- sequence_stats: steps=4 outcome_gaps=3 api_ops=1 ui_steps=3 -->
 
 ## Constraints
 

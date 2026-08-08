@@ -1,0 +1,433 @@
+{
+  "denominator_source": "product_root",
+  "roots_dir": "/home/badari/workspace/poornima/visa-relay-bench/raw/product-roots",
+  "before_endpoint_fact_by_product": {
+    "boarding": 9,
+    "click-to-pay": 21,
+    "cp-retail": 10,
+    "digital-accept-flex": 31,
+    "echeck-user-guide": 4,
+    "invoicing": 18,
+    "paybylink": 11,
+    "payments": 14,
+    "payouts-dev": 4,
+    "recurring-billing-dev": 34,
+    "security-keys": 0,
+    "tap-to-phone": 2,
+    "tms": 208,
+    "unified-checkout": 23,
+    "mass-transit": 22,
+    "webhooks": 27
+  },
+  "after_endpoint_fact_by_product": {
+    "boarding": 42,
+    "click-to-pay": 34,
+    "cp-retail": 90,
+    "digital-accept-flex": 53,
+    "echeck-user-guide": 4,
+    "invoicing": 30,
+    "paybylink": 11,
+    "payments": 76,
+    "payouts-dev": 16,
+    "recurring-billing-dev": 34,
+    "security-keys": 0,
+    "tap-to-phone": 2,
+    "tms": 577,
+    "unified-checkout": 25,
+    "mass-transit": 66,
+    "webhooks": 27
+  },
+  "after_api_reference_by_product": {
+    "boarding": 42,
+    "click-to-pay": 34,
+    "cp-retail": 90,
+    "digital-accept-flex": 51,
+    "echeck-user-guide": 0,
+    "invoicing": 27,
+    "paybylink": 0,
+    "payments": 76,
+    "payouts-dev": 16,
+    "recurring-billing-dev": 0,
+    "security-keys": 0,
+    "tap-to-phone": 0,
+    "tms": 525,
+    "unified-checkout": 25,
+    "mass-transit": 66,
+    "webhooks": 0
+  },
+  "before_total": 438,
+  "after_total": 1087,
+  "after_api_reference_total": 952,
+  "pattern_scan": {
+    "documents": 16,
+    "endpoint_headings": 176,
+    "matched": 176,
+    "matched_with_required_fields": 119,
+    "matched_with_example": 159,
+    "claims_emitted": 952,
+    "skipped": 0,
+    "skipped_by_reason": {}
+  },
+  "soft_gaps_by_reason": {
+    "matched_without_required_fields": 57,
+    "matched_without_rest_example": 17
+  },
+  "hard_skips_by_reason": {},
+  "products": [
+    {
+      "product_id": "boarding",
+      "file": "en-us_boarding_developer_all_rest_boarding.md.md",
+      "before_endpoint_fact": 9,
+      "after_endpoint_fact": 42,
+      "after_api_reference": 42,
+      "steps": 78,
+      "scan": {
+        "source_pointer": "en-us_boarding_developer_all_rest_boarding.md.md",
+        "endpoint_headings": 20,
+        "matched": 20,
+        "matched_with_required_fields": 7,
+        "matched_with_example": 14,
+        "claims_emitted": 42,
+        "skipped": []
+      },
+      "soft_gaps": [
+        {
+          "reason": "matched_without_required_fields",
+          "count": 13,
+          "detail": "Endpoint+URL matched; no Required Fields list in span"
+        },
+        {
+          "reason": "matched_without_rest_example",
+          "count": 6,
+          "detail": "Endpoint+URL matched; no REST Example fences in span"
+        }
+      ]
+    },
+    {
+      "product_id": "click-to-pay",
+      "file": "en-us_click-to-pay_developer_all_rest_click-to-pay.md.md",
+      "before_endpoint_fact": 21,
+      "after_endpoint_fact": 34,
+      "after_api_reference": 34,
+      "steps": 218,
+      "scan": {
+        "source_pointer": "en-us_click-to-pay_developer_all_rest_click-to-pay.md.md",
+        "endpoint_headings": 9,
+        "matched": 9,
+        "matched_with_required_fields": 1,
+        "matched_with_example": 5,
+        "claims_emitted": 34,
+        "skipped": []
+      },
+      "soft_gaps": [
+        {
+          "reason": "matched_without_required_fields",
+          "count": 8,
+          "detail": "Endpoint+URL matched; no Required Fields list in span"
+        },
+        {
+          "reason": "matched_without_rest_example",
+          "count": 4,
+          "detail": "Endpoint+URL matched; no REST Example fences in span"
+        }
+      ]
+    },
+    {
+      "product_id": "cp-retail",
+      "file": "en-us_cp-retail_integration_ctv_rest_cp-retail.md.md",
+      "before_endpoint_fact": 10,
+      "after_endpoint_fact": 90,
+      "after_api_reference": 90,
+      "steps": 22,
+      "scan": {
+        "source_pointer": "en-us_cp-retail_integration_ctv_rest_cp-retail.md.md",
+        "endpoint_headings": 43,
+        "matched": 43,
+        "matched_with_required_fields": 43,
+        "matched_with_example": 43,
+        "claims_emitted": 90,
+        "skipped": []
+      },
+      "soft_gaps": []
+    },
+    {
+      "product_id": "digital-accept-flex",
+      "file": "en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md.md",
+      "before_endpoint_fact": 31,
+      "after_endpoint_fact": 53,
+      "after_api_reference": 51,
+      "steps": 290,
+      "scan": {
+        "source_pointer": "en-us_digital-accept-flex_developer_all_rest_digital-accept-flex.md.md",
+        "endpoint_headings": 11,
+        "matched": 11,
+        "matched_with_required_fields": 2,
+        "matched_with_example": 9,
+        "claims_emitted": 51,
+        "skipped": []
+      },
+      "soft_gaps": [
+        {
+          "reason": "matched_without_required_fields",
+          "count": 9,
+          "detail": "Endpoint+URL matched; no Required Fields list in span"
+        },
+        {
+          "reason": "matched_without_rest_example",
+          "count": 2,
+          "detail": "Endpoint+URL matched; no REST Example fences in span"
+        }
+      ]
+    },
+    {
+      "product_id": "echeck-user-guide",
+      "file": "en-us_echeck_user_all_rest_echeck-user-guide.md.md",
+      "before_endpoint_fact": 4,
+      "after_endpoint_fact": 4,
+      "after_api_reference": 0,
+      "steps": 96,
+      "scan": {
+        "source_pointer": "en-us_echeck_user_all_rest_echeck-user-guide.md.md",
+        "endpoint_headings": 0,
+        "matched": 0,
+        "matched_with_required_fields": 0,
+        "matched_with_example": 0,
+        "claims_emitted": 0,
+        "skipped": []
+      },
+      "soft_gaps": []
+    },
+    {
+      "product_id": "invoicing",
+      "file": "en-us_invoicing_developer_all_rest_invoicing.md.md",
+      "before_endpoint_fact": 18,
+      "after_endpoint_fact": 30,
+      "after_api_reference": 27,
+      "steps": 101,
+      "scan": {
+        "source_pointer": "en-us_invoicing_developer_all_rest_invoicing.md.md",
+        "endpoint_headings": 1,
+        "matched": 1,
+        "matched_with_required_fields": 1,
+        "matched_with_example": 0,
+        "claims_emitted": 27,
+        "skipped": []
+      },
+      "soft_gaps": [
+        {
+          "reason": "matched_without_rest_example",
+          "count": 1,
+          "detail": "Endpoint+URL matched; no REST Example fences in span"
+        }
+      ]
+    },
+    {
+      "product_id": "paybylink",
+      "file": "en-us_paybylink_developer_all_rest_paybylink.md.md",
+      "before_endpoint_fact": 11,
+      "after_endpoint_fact": 11,
+      "after_api_reference": 0,
+      "steps": 4,
+      "scan": {
+        "source_pointer": "en-us_paybylink_developer_all_rest_paybylink.md.md",
+        "endpoint_headings": 0,
+        "matched": 0,
+        "matched_with_required_fields": 0,
+        "matched_with_example": 0,
+        "claims_emitted": 0,
+        "skipped": []
+      },
+      "soft_gaps": []
+    },
+    {
+      "product_id": "payments",
+      "file": "en-us_payments_developer_ctv_rest_payments.md.md",
+      "before_endpoint_fact": 14,
+      "after_endpoint_fact": 76,
+      "after_api_reference": 76,
+      "steps": 30,
+      "scan": {
+        "source_pointer": "en-us_payments_developer_ctv_rest_payments.md.md",
+        "endpoint_headings": 35,
+        "matched": 35,
+        "matched_with_required_fields": 30,
+        "matched_with_example": 35,
+        "claims_emitted": 76,
+        "skipped": []
+      },
+      "soft_gaps": [
+        {
+          "reason": "matched_without_required_fields",
+          "count": 5,
+          "detail": "Endpoint+URL matched; no Required Fields list in span"
+        }
+      ]
+    },
+    {
+      "product_id": "payouts-dev",
+      "file": "en-us_payouts_developer_ctv_rest_payouts-dev.md.md",
+      "before_endpoint_fact": 4,
+      "after_endpoint_fact": 16,
+      "after_api_reference": 16,
+      "steps": 4,
+      "scan": {
+        "source_pointer": "en-us_payouts_developer_ctv_rest_payouts-dev.md.md",
+        "endpoint_headings": 6,
+        "matched": 6,
+        "matched_with_required_fields": 6,
+        "matched_with_example": 6,
+        "claims_emitted": 16,
+        "skipped": []
+      },
+      "soft_gaps": []
+    },
+    {
+      "product_id": "recurring-billing-dev",
+      "file": "en-us_recurring-billing_developer_all_rest_recurring-billing-dev.md.md",
+      "before_endpoint_fact": 34,
+      "after_endpoint_fact": 34,
+      "after_api_reference": 0,
+      "steps": 66,
+      "scan": {
+        "source_pointer": "en-us_recurring-billing_developer_all_rest_recurring-billing-dev.md.md",
+        "endpoint_headings": 0,
+        "matched": 0,
+        "matched_with_required_fields": 0,
+        "matched_with_example": 0,
+        "claims_emitted": 0,
+        "skipped": []
+      },
+      "soft_gaps": []
+    },
+    {
+      "product_id": "security-keys",
+      "file": "en-us_security-keys_user_all_ada_security-keys.md.md",
+      "before_endpoint_fact": 0,
+      "after_endpoint_fact": 0,
+      "after_api_reference": 0,
+      "steps": 158,
+      "scan": {
+        "source_pointer": "en-us_security-keys_user_all_ada_security-keys.md.md",
+        "endpoint_headings": 0,
+        "matched": 0,
+        "matched_with_required_fields": 0,
+        "matched_with_example": 0,
+        "claims_emitted": 0,
+        "skipped": []
+      },
+      "soft_gaps": []
+    },
+    {
+      "product_id": "tap-to-phone",
+      "file": "en-us_tap-to-phone_integration_all_rest_tap-to-phone.md.md",
+      "before_endpoint_fact": 2,
+      "after_endpoint_fact": 2,
+      "after_api_reference": 0,
+      "steps": 114,
+      "scan": {
+        "source_pointer": "en-us_tap-to-phone_integration_all_rest_tap-to-phone.md.md",
+        "endpoint_headings": 0,
+        "matched": 0,
+        "matched_with_required_fields": 0,
+        "matched_with_example": 0,
+        "claims_emitted": 0,
+        "skipped": []
+      },
+      "soft_gaps": []
+    },
+    {
+      "product_id": "tms",
+      "file": "en-us_tms_developer_all_rest_tms.md.md",
+      "before_endpoint_fact": 208,
+      "after_endpoint_fact": 577,
+      "after_api_reference": 525,
+      "steps": 244,
+      "scan": {
+        "source_pointer": "en-us_tms_developer_all_rest_tms.md.md",
+        "endpoint_headings": 29,
+        "matched": 29,
+        "matched_with_required_fields": 11,
+        "matched_with_example": 27,
+        "claims_emitted": 525,
+        "skipped": []
+      },
+      "soft_gaps": [
+        {
+          "reason": "matched_without_required_fields",
+          "count": 18,
+          "detail": "Endpoint+URL matched; no Required Fields list in span"
+        },
+        {
+          "reason": "matched_without_rest_example",
+          "count": 2,
+          "detail": "Endpoint+URL matched; no REST Example fences in span"
+        }
+      ]
+    },
+    {
+      "product_id": "unified-checkout",
+      "file": "en-us_unified-checkout_developer_all_rest_unified-checkout.md.md",
+      "before_endpoint_fact": 23,
+      "after_endpoint_fact": 25,
+      "after_api_reference": 25,
+      "steps": 177,
+      "scan": {
+        "source_pointer": "en-us_unified-checkout_developer_all_rest_unified-checkout.md.md",
+        "endpoint_headings": 4,
+        "matched": 4,
+        "matched_with_required_fields": 0,
+        "matched_with_example": 2,
+        "claims_emitted": 25,
+        "skipped": []
+      },
+      "soft_gaps": [
+        {
+          "reason": "matched_without_required_fields",
+          "count": 4,
+          "detail": "Endpoint+URL matched; no Required Fields list in span"
+        },
+        {
+          "reason": "matched_without_rest_example",
+          "count": 2,
+          "detail": "Endpoint+URL matched; no REST Example fences in span"
+        }
+      ]
+    },
+    {
+      "product_id": "mass-transit",
+      "file": "en-us_urban-mobility_developer_ctv_rest_mass-transit.md.md",
+      "before_endpoint_fact": 22,
+      "after_endpoint_fact": 66,
+      "after_api_reference": 66,
+      "steps": 69,
+      "scan": {
+        "source_pointer": "en-us_urban-mobility_developer_ctv_rest_mass-transit.md.md",
+        "endpoint_headings": 18,
+        "matched": 18,
+        "matched_with_required_fields": 18,
+        "matched_with_example": 18,
+        "claims_emitted": 66,
+        "skipped": []
+      },
+      "soft_gaps": []
+    },
+    {
+      "product_id": "webhooks",
+      "file": "en-us_webhooks_implementation_all_rest_webhooks.md.md",
+      "before_endpoint_fact": 27,
+      "after_endpoint_fact": 27,
+      "after_api_reference": 0,
+      "steps": 47,
+      "scan": {
+        "source_pointer": "en-us_webhooks_implementation_all_rest_webhooks.md.md",
+        "endpoint_headings": 0,
+        "matched": 0,
+        "matched_with_required_fields": 0,
+        "matched_with_example": 0,
+        "claims_emitted": 0,
+        "skipped": []
+      },
+      "soft_gaps": []
+    }
+  ]
+}

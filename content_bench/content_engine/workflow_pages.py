@@ -94,6 +94,7 @@ BOARDING_WORKFLOWS: Tuple[WorkflowSpec, ...] = (
             "merchants-v2-search",
             "boarding-retrieve-an-organization",
             "boarding-retrieve-organizations",
+            "boarding-update-information-api",
         ),
     ),
     WorkflowSpec(
@@ -124,6 +125,54 @@ def _doc_name(claim: Dict[str, Any]) -> str:
     return Path(str(claim.get("source_pointer") or "")).name
 
 
+def _citation(claim: Dict[str, Any]) -> str:
+    """Claim id + optional working deep link (never a raw brace anchor)."""
+    cid = claim.get("claim_id") or ""
+    link = (claim.get("extras") or {}).get("deep_link")
+    if link:
+        return f"<sub>[`{cid}`]({link})</sub>"
+    return f"<sub>`{cid}`</sub>"
+
+
+def _render_endpoint_block(claim: Dict[str, Any]) -> List[str]:
+    """Render one endpoint_fact (API-reference or thin verb_path) into facts."""
+    ex = claim.get("extras") or {}
+    method = ex.get("method") or ""
+    path = ex.get("path") or ""
+    host = ex.get("host") or ""
+    env = ex.get("environment") or ""
+    title = claim.get("title") or f"{method} {path}"
+    lines = [
+        f"### {title}",
+        "",
+        f"- **Method:** `{method}`",
+        f"- **Path:** `{path}`",
+    ]
+    if host:
+        label = f"{env} host" if env else "Host"
+        lines.append(f"- **{label}:** `{host}`")
+    fields = ex.get("required_fields") or []
+    if fields:
+        lines += ["", "#### Required fields", ""]
+        for f in fields:
+            name = f.get("name") or ""
+            instr = (f.get("instruction") or "").strip()
+            url = f.get("field_url") or ""
+            name_md = f"[`{name}`]({url})" if url else f"`{name}`"
+            if instr:
+                lines.append(f"- {name_md} — {instr}")
+            else:
+                lines.append(f"- {name_md}")
+    req = ex.get("example_request")
+    resp = ex.get("example_response")
+    if req is not None:
+        lines += ["", "#### Example request", "", "```json", req, "```"]
+    if resp is not None:
+        lines += ["", "#### Example response", "", "```json", resp, "```"]
+    lines += ["", f"- {_citation(claim)}", ""]
+    return lines
+
+
 def _actor_for_doc(doc: str) -> str:
     if "_developer_all_rest_" in doc or "_developer_ctv_rest_" in doc:
         return "Partner system (REST API)"
@@ -145,6 +194,24 @@ def _expected_outcome(action: str) -> Optional[str]:
     return None
 
 
+def _endpoint_outcome(claim: Dict[str, Any]) -> Optional[str]:
+    """Outcome from the REST example response when the UI prose states none."""
+    ex = claim.get("extras") or {}
+    resp = ex.get("example_response")
+    if resp is None:
+        return None
+    resp_s = str(resp).strip()
+    if not resp_s:
+        return None
+    # Prefer a compact status signal when present.
+    m = re.search(r'"status"\s*:\s*"([^"]+)"', resp_s)
+    if m:
+        return f'Response status `{m.group(1)}` (see example response).'
+    if re.match(r"^\d{3}\b", resp_s):
+        return f"HTTP {resp_s.splitlines()[0].strip()} (see example response)."
+    return "Successful response body documented in the REST example."
+
+
 def dedupe_prefer_child(
     claims: Sequence[Dict[str, Any]],
     *,
@@ -156,6 +223,10 @@ def dedupe_prefer_child(
     dropped (child carries the fact with the specific pointer). Mega claims
     with no child match are residuals: kept out of pages, reported for
     review — unique content or a failed child ingest, never silently merged.
+
+    Exception: ``endpoint_fact`` claims with ``pattern=api_reference`` stay.
+    The Endpoint + Required Fields + REST Example shape only survives intact
+    on the product-root mega-guide; child TOC pages split it apart.
     """
     mega = set(mega_names)
     child_texts = {
@@ -167,6 +238,12 @@ def dedupe_prefer_child(
     residuals: List[Dict[str, Any]] = []
     for c in claims:
         if _doc_name(c) not in mega:
+            kept.append(c)
+            continue
+        if (
+            c.get("schema") == "endpoint_fact"
+            and (c.get("extras") or {}).get("pattern") == "api_reference"
+        ):
             kept.append(c)
             continue
         if _norm_text(c["text"]) in child_texts:
@@ -181,7 +258,113 @@ def _claims_for(spec: WorkflowSpec, claims: Sequence[Dict[str, Any]]) -> List[Di
         doc = _doc_name(c)
         if any(m in doc for m in spec.doc_matchers):
             out.append(c)
+            continue
+        # Mega-guide API refs: match on operation anchor / title (the root
+        # filename is just ``…_boarding.md.md`` and lacks the section slug).
+        if c.get("schema") == "endpoint_fact":
+            ex = c.get("extras") or {}
+            blob = " ".join(
+                [
+                    doc,
+                    str(c.get("title") or ""),
+                    str(ex.get("anchor") or ""),
+                    str(ex.get("operation_title") or ""),
+                ]
+            )
+            if any(m in blob for m in spec.doc_matchers):
+                out.append(c)
     return out
+
+
+def _endpoint_richness(claim: Dict[str, Any]) -> tuple:
+    """Prefer claims that still carry Required Fields + REST Example.
+
+    Child TOC pages often hold only the Endpoint stub; the product-root
+    mega-guide holds the full pattern. Never let the stub win the dedupe.
+    """
+    ex = claim.get("extras") or {}
+    return (
+        1 if ex.get("required_fields") else 0,
+        1 if ex.get("example_request") is not None else 0,
+        1 if ex.get("example_response") is not None else 0,
+        1 if ex.get("environment") == "test" else 0,
+    )
+
+
+def _dedupe_endpoints(endpoints: Sequence[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    rich = [
+        c
+        for c in endpoints
+        if (c.get("extras") or {}).get("pattern") == "api_reference"
+    ]
+    show = list(rich or endpoints)
+    # One claim per operation: richest extras win (fields/example over stub).
+    by_anchor: Dict[str, Dict[str, Any]] = {}
+    for c in show:
+        ex = c.get("extras") or {}
+        key = f"{ex.get('anchor')}:{ex.get('method')}:{ex.get('path')}"
+        prev = by_anchor.get(key)
+        if prev is None or _endpoint_richness(c) > _endpoint_richness(prev):
+            by_anchor[key] = c
+    return list(by_anchor.values())
+
+
+def _render_sequence_api_step(step_no: int, claim: Dict[str, Any]) -> List[str]:
+    """One numbered sequence entry for an API-reference endpoint_fact."""
+    ex = claim.get("extras") or {}
+    method = ex.get("method") or ""
+    path = ex.get("path") or ""
+    host = ex.get("host") or ""
+    env = ex.get("environment") or ""
+    title = claim.get("title") or f"{method} {path}"
+    lines = [
+        f"{step_no}. **API:** `{method} {path}` — {title}",
+        "   - Actor: Partner system (REST API)",
+    ]
+    if host:
+        label = f"{env} host" if env else "host"
+        lines.append(f"   - {label}: `{host}`")
+    fields = ex.get("required_fields") or []
+    if fields:
+        lines.append("   - Required fields:")
+        for f in fields:
+            name = f.get("name") or ""
+            instr = (f.get("instruction") or "").strip()
+            url = f.get("field_url") or ""
+            name_md = f"[`{name}`]({url})" if url else f"`{name}`"
+            if instr:
+                lines.append(f"     - {name_md} — {instr}")
+            else:
+                lines.append(f"     - {name_md}")
+    else:
+        lines.append(
+            "   - Required fields: **Gap:** not listed for this endpoint in the source."
+        )
+    req = ex.get("example_request")
+    resp = ex.get("example_response")
+    if req is not None:
+        lines.append("   - Example request:")
+        lines.append("     ```json")
+        for jl in str(req).splitlines() or [str(req)]:
+            lines.append(f"     {jl}")
+        lines.append("     ```")
+    else:
+        lines.append(
+            "   - Example request: **Gap:** no REST Example request in the source."
+        )
+    outcome = _endpoint_outcome(claim)
+    if outcome:
+        lines.append(f"   - Expected outcome: {outcome}")
+    else:
+        lines.append("   - Expected outcome: **Gap:** not stated in source.")
+    if resp is not None and outcome:
+        lines.append("   - Example response:")
+        lines.append("     ```json")
+        for jl in str(resp).splitlines() or [str(resp)]:
+            lines.append(f"     {jl}")
+        lines.append("     ```")
+    lines.append(f"   - {_citation(claim)}")
+    return lines
 
 
 def compose_workflow_page(
@@ -194,6 +377,9 @@ def compose_workflow_page(
     steps = [c for c in wf_claims if c["schema"] == "quickstart_step"]
     prose = [c for c in wf_claims if c["schema"] == "prose_claim"]
     errors = [c for c in wf_claims if c["schema"] == "error_case"]
+    endpoints = _dedupe_endpoints(
+        [c for c in wf_claims if c["schema"] == "endpoint_fact"]
+    )
 
     prereqs = [
         c for c in prose if c.get("extras", {}).get("claim_kind") == "prerequisite"
@@ -205,7 +391,8 @@ def compose_workflow_page(
         not in (None, "guidance", "prerequisite")
     ]
 
-    # Order steps by (source doc, sequence, appearance).
+    # One continuous sequence: API operations first (callable path), then UI
+    # steps — single numbering, never restarting at 1 per source fragment.
     steps_sorted = sorted(
         steps,
         key=lambda c: (_doc_name(c), int(c.get("extras", {}).get("sequence") or 0)),
@@ -229,52 +416,79 @@ def compose_workflow_page(
     if prereqs:
         for c in prereqs:
             lines.append(f"- {c['text'].strip()}  ")
-            lines.append(f"  <sub>`{c['claim_id']}` · {c['source_pointer']}</sub>")
+            lines.append(f"  {_citation(c)} · {c['source_pointer']}")
     else:
         lines.append("- **Gap:** no prerequisite is specified in the source docs.")
+
     lines += ["", "## Steps", ""]
 
-    if not steps_sorted:
-        lines.append("- **Gap:** the source docs describe this workflow but list no procedural steps.")
-    current_doc = None
     step_no = 0
-    for c in steps_sorted:
-        doc = _doc_name(c)
-        if doc != current_doc:
-            current_doc = doc
-            variant = _actor_for_doc(doc)
-            lines.append(f"### Via {variant} — `{doc}`")
-            lines.append("")
-            step_no = 0
-        step_no += 1
-        action = c["text"].strip()
-        outcome = _expected_outcome(action)
-        lines.append(f"{step_no}. **Action:** {action}")
-        lines.append(f"   - Actor: {_actor_for_doc(doc)}")
+    outcome_gaps = 0
+    sequence_len = 0
+
+    if not endpoints and not steps_sorted:
         lines.append(
-            f"   - Expected outcome: {outcome}"
-            if outcome
-            else "   - Expected outcome: **Gap:** not stated in source."
+            "- **Gap:** the source docs describe this workflow but list no "
+            "API operations or procedural steps."
         )
-        lines.append(f"   - <sub>`{c['claim_id']}`</sub>")
+    else:
+        if endpoints:
+            lines.append("### REST API path")
+            lines.append("")
+            for c in endpoints:
+                step_no += 1
+                sequence_len += 1
+                block = _render_sequence_api_step(step_no, c)
+                if any("Expected outcome: **Gap:**" in ln for ln in block):
+                    outcome_gaps += 1
+                lines.extend(block)
+                lines.append("")
+        if steps_sorted:
+            lines.append("### Business Center UI path")
+            lines.append("")
+            for c in steps_sorted:
+                step_no += 1
+                sequence_len += 1
+                doc = _doc_name(c)
+                action = re.sub(r"\{#[^}]+\}", "", c["text"]).strip()
+                outcome = _expected_outcome(action)
+                if not outcome:
+                    outcome_gaps += 1
+                lines.append(f"{step_no}. **Action:** {action}")
+                lines.append(f"   - Actor: {_actor_for_doc(doc)}")
+                lines.append(
+                    f"   - Expected outcome: {outcome}"
+                    if outcome
+                    else "   - Expected outcome: **Gap:** not stated in source."
+                )
+                lines.append(f"   - {_citation(c)}")
+                lines.append("")
+
+    # Stash counts for composition report consumers (HTML comment, machine-readable).
+    lines.append(
+        f"<!-- sequence_stats: steps={sequence_len} outcome_gaps={outcome_gaps} "
+        f"api_ops={len(endpoints)} ui_steps={len(steps_sorted)} -->"
+    )
+
     lines += ["", "## Constraints", ""]
     if constraints:
         for c in constraints:
             kind = c.get("extras", {}).get("claim_kind")
-            lines.append(f"- [{kind}] {c['text'].strip()}  ")
-            lines.append(f"  <sub>`{c['claim_id']}` · {c['source_pointer']}</sub>")
+            body = re.sub(r"\{#[^}]+\}", "", c["text"]).strip()
+            lines.append(f"- [{kind}] {body}  ")
+            lines.append(f"  {_citation(c)} · {c['source_pointer']}")
     else:
         lines.append("- **Gap:** no constraint-kind claims found for this workflow.")
     lines += ["", "## Failure modes", ""]
     if errors:
         seen = set()
         for c in errors:
-            t = c["text"].strip()
+            t = re.sub(r"\{#[^}]+\}", "", c["text"]).strip()
             if _norm_text(t) in seen:
                 continue
             seen.add(_norm_text(t))
             lines.append(f"- {t}  ")
-            lines.append(f"  <sub>`{c['claim_id']}` · {c['source_pointer']}</sub>")
+            lines.append(f"  {_citation(c)} · {c['source_pointer']}")
     else:
         lines.append(
             "- **Gap:** no error cases documented for this workflow in the source docs."
@@ -296,16 +510,38 @@ def compose_all(
 
     out_dir.mkdir(parents=True, exist_ok=True)
     pages: List[Dict[str, Any]] = []
+    total_steps = 0
+    total_outcome_gaps = 0
+    total_api = 0
+    total_ui = 0
     for spec in workflows:
         md = compose_workflow_page(spec, kept, stamp=stamp)
         path = out_dir / f"{spec.workflow_id}.md"
         path.write_text(md, encoding="utf-8")
-        n_steps = md.count("**Action:**")
+        m = re.search(
+            r"<!-- sequence_stats: steps=(\d+) outcome_gaps=(\d+) "
+            r"api_ops=(\d+) ui_steps=(\d+) -->",
+            md,
+        )
+        if m:
+            n_steps, n_og, n_api, n_ui = (int(m.group(i)) for i in range(1, 5))
+        else:
+            n_steps = md.count("**Action:**") + md.count("**API:**")
+            n_og = md.count("Expected outcome: **Gap:**")
+            n_api = md.count("**API:**")
+            n_ui = md.count("**Action:**")
+        total_steps += n_steps
+        total_outcome_gaps += n_og
+        total_api += n_api
+        total_ui += n_ui
         pages.append(
             {
                 "workflow_id": spec.workflow_id,
                 "path": str(path.relative_to(ROOT) if path.is_relative_to(ROOT) else path),
                 "steps": n_steps,
+                "outcome_gaps": n_og,
+                "api_ops": n_api,
+                "ui_steps": n_ui,
                 "gaps": md.count("**Gap:**"),
             }
         )
@@ -314,6 +550,13 @@ def compose_all(
         "claims_total": len(claims),
         "claims_after_prefer_child": len(kept),
         "mega_residuals": len(residuals),
+        "sequence_totals": {
+            "steps": total_steps,
+            "outcome_gaps": total_outcome_gaps,
+            "api_ops": total_api,
+            "ui_steps": total_ui,
+            "denominator_source": "composed workflow sequence (API ops + UI steps)",
+        },
         "mega_residual_samples": [
             {
                 "claim_id": c["claim_id"],

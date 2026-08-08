@@ -1,0 +1,1000 @@
+{
+  "product_id": "webhooks",
+  "root_path": "/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.md",
+  "root_url": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.md",
+  "bytes": 146916,
+  "sections": [
+    {
+      "anchor": "webhooks-about-guide",
+      "title": "Webhooks Implementation Guide",
+      "byte_start": 0,
+      "byte_end": 983,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#webhooks-about-guide",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-doc-revisions",
+      "title": "Recent Revisions to This Document",
+      "byte_start": 983,
+      "byte_end": 2561,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-doc-revisions",
+      "heading_level": 1
+    },
+    {
+      "anchor": "vpc-partner-reseller-disclaimer",
+      "title": "VISA Platform Connect: Specifications and Conditions for Resellers/Partners",
+      "byte_start": 2561,
+      "byte_end": 4693,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#vpc-partner-reseller-disclaimer",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-intro",
+      "title": "Introduction to Webhooks",
+      "byte_start": 4693,
+      "byte_end": 7143,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-workflow-options",
+      "title": "Webhooks Integration Overview",
+      "byte_start": 7143,
+      "byte_end": 9863,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-workflow-options",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-workflow-options_opt-tasks",
+      "title": "Optional Set Up Tasks",
+      "byte_start": 9863,
+      "byte_end": 10846,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-workflow-options_opt-tasks",
+      "heading_level": 2
+    },
+    {
+      "anchor": "wh-fg-product-event-types",
+      "title": "Supported Products and Event Types",
+      "byte_start": 10846,
+      "byte_end": 12034,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-product-event-types",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-product-event-types_alt-pay",
+      "title": "Alternative Payment Methods",
+      "byte_start": 12034,
+      "byte_end": 12598,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-product-event-types_alt-pay",
+      "heading_level": 2
+    },
+    {
+      "anchor": "wh-fg-product-event-types_dm",
+      "title": "Decision Manager",
+      "byte_start": 12598,
+      "byte_end": 13318,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-product-event-types_dm",
+      "heading_level": 2
+    },
+    {
+      "anchor": "wh-fg-product-event-types_echeck",
+      "title": "`eCheck`",
+      "byte_start": 13318,
+      "byte_end": 14258,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-product-event-types_echeck",
+      "heading_level": 2
+    },
+    {
+      "anchor": "wh-fg-product-event-types_fme",
+      "title": "`Fraud Management Essentials`",
+      "byte_start": 14258,
+      "byte_end": 15626,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-product-event-types_fme",
+      "heading_level": 2
+    },
+    {
+      "anchor": "wh-fg-product-event-types_invoicing",
+      "title": "Invoicing",
+      "byte_start": 15626,
+      "byte_end": 17462,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-product-event-types_invoicing",
+      "heading_level": 2
+    },
+    {
+      "anchor": "wh-fg-product-event-types_pbl",
+      "title": "Pay By Link",
+      "byte_start": 17462,
+      "byte_end": 23460,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-product-event-types_pbl",
+      "heading_level": 2
+    },
+    {
+      "anchor": "wh-fg-product-event-types_rb",
+      "title": "Recurring Billing",
+      "byte_start": 23460,
+      "byte_end": 24132,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-product-event-types_rb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "wh-fg-product-event-types_tms",
+      "title": "`Token Management Service`",
+      "byte_start": 24132,
+      "byte_end": 25059,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-product-event-types_tms",
+      "heading_level": 2
+    },
+    {
+      "anchor": "wh-fg-product-event-types_uc",
+      "title": "Unified Checkout",
+      "byte_start": 25059,
+      "byte_end": 25815,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-product-event-types_uc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "wh-fg-server-security",
+      "title": "Set Up Your Security",
+      "byte_start": 25815,
+      "byte_end": 26618,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-server-security",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-server-security_section_ykc_y1p_33c",
+      "title": "API Keys",
+      "byte_start": 26618,
+      "byte_end": 27073,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-server-security_section_ykc_y1p_33c",
+      "heading_level": 2
+    },
+    {
+      "anchor": "wh-fg-server-security_section_v2j_z1p_33c",
+      "title": "Digital Signature Key",
+      "byte_start": 27073,
+      "byte_end": 27461,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-server-security_section_v2j_z1p_33c",
+      "heading_level": 2
+    },
+    {
+      "anchor": "wh-fg-server-security_section_cm4_sqp_33c",
+      "title": "OAuth and OAuth with JWT",
+      "byte_start": 27461,
+      "byte_end": 28062,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-server-security_section_cm4_sqp_33c",
+      "heading_level": 2
+    },
+    {
+      "anchor": "wh-fg-server-security_section_yyq_xbp_33c",
+      "title": "Message-Level Encryption",
+      "byte_start": 28062,
+      "byte_end": 28403,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-server-security_section_yyq_xbp_33c",
+      "heading_level": 2
+    },
+    {
+      "anchor": "webhooks-keys-intro",
+      "title": "Create REST API Keys",
+      "byte_start": 28403,
+      "byte_end": 29812,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#webhooks-keys-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "webhooks-keys-shared-secret",
+      "title": "Create a Shared Secret Key Pair",
+      "byte_start": 29812,
+      "byte_end": 32789,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#webhooks-keys-shared-secret",
+      "heading_level": 1
+    },
+    {
+      "anchor": "webhooks-keys-p12",
+      "title": "Create a P12 Certificate",
+      "byte_start": 32789,
+      "byte_end": 36422,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#webhooks-keys-p12",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-key-dig-sig-intro",
+      "title": "Create a Digital Signature Key",
+      "byte_start": 36422,
+      "byte_end": 37976,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-key-dig-sig-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-key-dig-sig-req-fields",
+      "title": "Required Fields for Creating a Digital Signature Key",
+      "byte_start": 37976,
+      "byte_end": 38598,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-key-dig-sig-req-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-key-dig-sig-ex",
+      "title": "Example: Creating a Digital Signature Key",
+      "byte_start": 38598,
+      "byte_end": 39432,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-key-dig-sig-ex",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-key-dig-sig-dev-ex",
+      "title": "REST Interactive Example: Creating a Digital Signature Key",
+      "byte_start": 39432,
+      "byte_end": 40285,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-key-dig-sig-dev-ex",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-optional-validate-intro",
+      "title": "Validating a Notification with the Digital Signature Key",
+      "byte_start": 40285,
+      "byte_end": 41701,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-optional-validate-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-optional-validate-sig-format",
+      "title": "Digital Signature Format",
+      "byte_start": 41701,
+      "byte_end": 42336,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-optional-validate-sig-format",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-optional-validate",
+      "title": "Validating a Notification",
+      "byte_start": 42336,
+      "byte_end": 42991,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-optional-validate",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-optional-validate-ex",
+      "title": "Example: Validating a Notification",
+      "byte_start": 42991,
+      "byte_end": 50006,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-optional-validate-ex",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-oauth-cred-intro",
+      "title": "(Optional) Provide Your OAuth Credentials",
+      "byte_start": 50006,
+      "byte_end": 52316,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-oauth-cred-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-oauth-cred-req-fields",
+      "title": "Required Fields for Providing Your OAuth Credentials",
+      "byte_start": 52316,
+      "byte_end": 53015,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-oauth-cred-req-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-oauth-cred-ex",
+      "title": "Example: Providing Your OAuth Credentials",
+      "byte_start": 53015,
+      "byte_end": 54000,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-oauth-cred-ex",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-oauth-cred-dev-ex",
+      "title": "REST Interactive Example: Providing Your OAuth Credentials",
+      "byte_start": 54000,
+      "byte_end": 54849,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-oauth-cred-dev-ex",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-product-list-intro",
+      "title": "Retrieve a List of Products and Events",
+      "byte_start": 54849,
+      "byte_end": 56284,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-product-list-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-product-list-ex",
+      "title": "Example: Retrieving a List Products and Event",
+      "byte_start": 56284,
+      "byte_end": 56953,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-product-list-ex",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-product-events-dev-ex",
+      "title": "REST Interactive Example: Retrieving Product and Event Types",
+      "byte_start": 56953,
+      "byte_end": 57748,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-product-events-dev-ex",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-mle-intro",
+      "title": "Message-Level Encryption",
+      "byte_start": 57748,
+      "byte_end": 58875,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-mle-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-mle-prepare",
+      "title": "Preparing Your Workspace",
+      "byte_start": 58875,
+      "byte_end": 59102,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-mle-prepare",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-mle-generate",
+      "title": "**Generate Certificate and Key Pair**",
+      "byte_start": 59102,
+      "byte_end": 60689,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-mle-generate",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-mle-register",
+      "title": "Register the Certificate",
+      "byte_start": 60689,
+      "byte_end": 61232,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-mle-register",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-key-mle-req-fields",
+      "title": "Required Fields for Registering Your Message-Level Encryption Keys",
+      "byte_start": 61232,
+      "byte_end": 62380,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-key-mle-req-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-mle-ex",
+      "title": "Example: Registering Your Certificate",
+      "byte_start": 62380,
+      "byte_end": 65470,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-mle-ex",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-mle-dev-ex",
+      "title": "REST Interactive Example: Registering Your Certificate",
+      "byte_start": 65470,
+      "byte_end": 66174,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-mle-dev-ex",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-mle-secure",
+      "title": "Security Best Practices",
+      "byte_start": 66174,
+      "byte_end": 66973,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-mle-secure",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-mle-troubleshooting",
+      "title": "Troubleshooting",
+      "byte_start": 66973,
+      "byte_end": 67469,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-mle-troubleshooting",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-mle-view",
+      "title": "Viewing Certificate Details",
+      "byte_start": 67469,
+      "byte_end": 67680,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-mle-view",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-subscribe-intro",
+      "title": "Create a Webhook Subscription",
+      "byte_start": 67680,
+      "byte_end": 68334,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscribe-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-subscription-mutual-api-intro",
+      "title": "Create a Webhook Subscription",
+      "byte_start": 68334,
+      "byte_end": 68821,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-mutual-api-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-subscription-mutual-api-intro_healthcheck-url",
+      "title": "Health Check URL",
+      "byte_start": 68821,
+      "byte_end": 69328,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-mutual-api-intro_healthcheck-url",
+      "heading_level": 2
+    },
+    {
+      "anchor": "wh-fg-subscription-mutual-api-intro_url-validation",
+      "title": "URL Validation",
+      "byte_start": 69328,
+      "byte_end": 69798,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-mutual-api-intro_url-validation",
+      "heading_level": 2
+    },
+    {
+      "anchor": "wh-fg-subscription-mutual-api-intro_retry-policy",
+      "title": "Retry Policy",
+      "byte_start": 69798,
+      "byte_end": 70581,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-mutual-api-intro_retry-policy",
+      "heading_level": 2
+    },
+    {
+      "anchor": "wh-fg-subscription-mutual-api-intro_subscribe",
+      "title": "Subscription ID",
+      "byte_start": 70581,
+      "byte_end": 71129,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-mutual-api-intro_subscribe",
+      "heading_level": 2
+    },
+    {
+      "anchor": "wh-fg-subscription-mutual-api-intro_endpoint-create-sub",
+      "title": "Endpoints",
+      "byte_start": 71129,
+      "byte_end": 71608,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-mutual-api-intro_endpoint-create-sub",
+      "heading_level": 2
+    },
+    {
+      "anchor": "wh-fg-subscription-mutual-req-fields",
+      "title": "Required Fields for Subscribing to Webhooks",
+      "byte_start": 71608,
+      "byte_end": 72456,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-mutual-req-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-subscription-mutual-opt-fields",
+      "title": "Optional Fields for Subscribing to Webhooks",
+      "byte_start": 72456,
+      "byte_end": 74553,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-mutual-opt-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-subscription-mutual-ex",
+      "title": "Example: Creating a Webhook Subscription",
+      "byte_start": 74553,
+      "byte_end": 76383,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-mutual-ex",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-subscription-mutual-reply-status",
+      "title": "**Response Codes**",
+      "byte_start": 76383,
+      "byte_end": 76756,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-mutual-reply-status",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-subscription-notification-scope-mutual",
+      "title": "**Notification Scope Response Indicators**",
+      "byte_start": 76756,
+      "byte_end": 77840,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-notification-scope-mutual",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-status-mutual",
+      "title": "**Subscription Statuses**",
+      "byte_start": 77840,
+      "byte_end": 79185,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-status-mutual",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-subscription-mutual-ex-dev",
+      "title": "**REST Interactive Example: Create a Webhook Subscription**",
+      "byte_start": 79185,
+      "byte_end": 80007,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-mutual-ex-dev",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-subscription-oauth-api-intro",
+      "title": "Create a Webhook Subscription Using OAuth",
+      "byte_start": 80007,
+      "byte_end": 83115,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-oauth-api-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-subscription-oauth-req-fields",
+      "title": "Required Fields for Subscribing to Webhooks Using OAuth",
+      "byte_start": 83115,
+      "byte_end": 84158,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-oauth-req-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-subscription-oauth-opt-fields",
+      "title": "Optional Fields for Subscribing to Webhooks Using OAuth",
+      "byte_start": 84158,
+      "byte_end": 86281,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-oauth-opt-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-subscription-oauth-ex",
+      "title": "Example: Creating a Webhook Subscription Using OAuth",
+      "byte_start": 86281,
+      "byte_end": 87956,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-oauth-ex",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-subscription-oath-reply-status",
+      "title": "**Response Codes**",
+      "byte_start": 87956,
+      "byte_end": 88325,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-oath-reply-status",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-subscription-notification-scope-oauth",
+      "title": "**Notification Scope Response Indicators**",
+      "byte_start": 88325,
+      "byte_end": 89407,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-notification-scope-oauth",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-status-oauth",
+      "title": "**Subscription Statuses**",
+      "byte_start": 89407,
+      "byte_end": 90750,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-status-oauth",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-subscription-oauth-dev-ex",
+      "title": "**REST Interactive Example: Create a Webhook Subscription Using OAuth**",
+      "byte_start": 90750,
+      "byte_end": 91630,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-oauth-dev-ex",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-subscription-oauth-jwt-api-intro",
+      "title": "Create a Webhook Subscription Using OAuth with JWT",
+      "byte_start": 91630,
+      "byte_end": 94590,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-oauth-jwt-api-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-subscription-oauth-jwt-req-fields",
+      "title": "Required Fields for Subscribing to Webhooks Using OAuth with JWT",
+      "byte_start": 94590,
+      "byte_end": 95871,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-oauth-jwt-req-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-subscription-oauth-jwt-opt-fields",
+      "title": "Optional Fields for Subscribing to Webhooks Using OAuth with JWT",
+      "byte_start": 95871,
+      "byte_end": 98013,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-oauth-jwt-opt-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-subscription-oauth-jwt-ex",
+      "title": "Example: Creating a Webhook Subscription Using OAuth with JWT",
+      "byte_start": 98013,
+      "byte_end": 100284,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-oauth-jwt-ex",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-subscription-oauth-jwt-reply-status",
+      "title": "**Response Codes**",
+      "byte_start": 100284,
+      "byte_end": 100663,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-oauth-jwt-reply-status",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-subscription-notification-scope-oauth-jwt",
+      "title": "**Notification Scope Response Indicators**",
+      "byte_start": 100663,
+      "byte_end": 101753,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-notification-scope-oauth-jwt",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-status-oauth-jwt",
+      "title": "**Subscription Statuses**",
+      "byte_start": 101753,
+      "byte_end": 103104,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-status-oauth-jwt",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-subscription-oauth-jwt-dev-ex",
+      "title": "**REST Interactive Example: Create a Webhook Subscription Using OAuth with JWT**",
+      "byte_start": 103104,
+      "byte_end": 104022,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-oauth-jwt-dev-ex",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-url-validation",
+      "title": "URL Review and Approval Process",
+      "byte_start": 104022,
+      "byte_end": 104837,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-url-validation",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-url-validation_section_hnx_jdt_1jc",
+      "title": "**Overview**",
+      "byte_start": 104837,
+      "byte_end": 106280,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-url-validation_section_hnx_jdt_1jc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "wh-fg-url-validation_section_onx_jdt_1jc",
+      "title": "**If Your Subscription Is Marked BLOCKED**",
+      "byte_start": 106280,
+      "byte_end": 106625,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-url-validation_section_onx_jdt_1jc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "wh-fg-trig-tms-webhook",
+      "title": "Create a Sample Webhook Subscription",
+      "byte_start": 106625,
+      "byte_end": 110005,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-trig-tms-webhook",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-optional-intro",
+      "title": "Optional Set-Up Tasks",
+      "byte_start": 110005,
+      "byte_end": 110548,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-optional-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-subscription-health-check-url",
+      "title": "Webhook Health Check URL and Automatic Revalidation",
+      "byte_start": 110548,
+      "byte_end": 113052,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-health-check-url",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-optional-retry",
+      "title": "Configure the Retry Policy",
+      "byte_start": 113052,
+      "byte_end": 114730,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-optional-retry",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-optional-retry-example",
+      "title": "Example: Retry Policy in a Subscription Request",
+      "byte_start": 114730,
+      "byte_end": 115139,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-optional-retry-example",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-notification-format",
+      "title": "Webhook Notification Field Descriptions",
+      "byte_start": 115139,
+      "byte_end": 116360,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-notification-format",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-notification-payload-ex",
+      "title": "Example: Notification Payload",
+      "byte_start": 116360,
+      "byte_end": 117866,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-notification-payload-ex",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-subscription-manage-intro",
+      "title": "Manage Webhook Subscriptions Requests",
+      "byte_start": 117866,
+      "byte_end": 118498,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-manage-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-subscription-manage-get-intro",
+      "title": "Retrieve the Details of a Webhook Subscription",
+      "byte_start": 118498,
+      "byte_end": 119446,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-manage-get-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-subscription-manage-get-ex",
+      "title": "Example: Retrieving the Details of a Webhook Subscription",
+      "byte_start": 119446,
+      "byte_end": 120577,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-manage-get-ex",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-subscription-manage-get-reply-status",
+      "title": "Response Codes",
+      "byte_start": 120577,
+      "byte_end": 120950,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-manage-get-reply-status",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-subscription-manage-get-dev-ex",
+      "title": "REST Interactive Example: Retrieve the Details of a Webhook Subscription",
+      "byte_start": 120950,
+      "byte_end": 121747,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-manage-get-dev-ex",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-subscription-manage-get-list-intro",
+      "title": "Retrieve All of an Organization's Subscriptions",
+      "byte_start": 121747,
+      "byte_end": 122902,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-manage-get-list-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-subscription-manage-get-list-req-fields",
+      "title": "Required Query Parameters for Retrieving All of an Organization's Subscriptions",
+      "byte_start": 122902,
+      "byte_end": 123638,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-manage-get-list-req-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-subscription-manage-get-list-opt-fields",
+      "title": "Optional Query Parameters for Retrieving All of an Organization's Subscriptions",
+      "byte_start": 123638,
+      "byte_end": 124354,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-manage-get-list-opt-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-subscription-manage-get-list-ex",
+      "title": "Example: Retrieving All of an Organization's Subscriptions",
+      "byte_start": 124354,
+      "byte_end": 124742,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-manage-get-list-ex",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-subscription-manage-get-list-reply-status",
+      "title": "Response Codes",
+      "byte_start": 124742,
+      "byte_end": 125125,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-manage-get-list-reply-status",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-subscription-manage-get-list-dev-ex",
+      "title": "**REST Interactive Example: Retrieving all of an Organization's Subscriptions**",
+      "byte_start": 125125,
+      "byte_end": 126011,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-manage-get-list-dev-ex",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-subscription-manage-patch-intro",
+      "title": "Update a Webhook Subscription",
+      "byte_start": 126011,
+      "byte_end": 126958,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-manage-patch-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-subscription-manage-patch-opt-fields",
+      "title": "Optional Fields for Updating a Webhook Subscription",
+      "byte_start": 126958,
+      "byte_end": 129598,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-manage-patch-opt-fields",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-subscription-manage-patch-ex",
+      "title": "Example: Updating a Webhook Subscription",
+      "byte_start": 129598,
+      "byte_end": 130209,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-manage-patch-ex",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-subscription-manage-patch-reply-status",
+      "title": "Response Codes",
+      "byte_start": 130209,
+      "byte_end": 130586,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-manage-patch-reply-status",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-subscription-manage-patch-dev-ex",
+      "title": "**REST Interactive Example: Updating a Webhook Subscription**",
+      "byte_start": 130586,
+      "byte_end": 131308,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-manage-patch-dev-ex",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-subscription-manage-delete-intro",
+      "title": "Delete a Webhook Subscription",
+      "byte_start": 131308,
+      "byte_end": 132206,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-manage-delete-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-subscription-manage-delete-ex",
+      "title": "Example: Deleting a Webhook Subscription",
+      "byte_start": 132206,
+      "byte_end": 132548,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-manage-delete-ex",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-subscription-manage-delete-reply-status",
+      "title": "Response Codes",
+      "byte_start": 132548,
+      "byte_end": 132927,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-manage-delete-reply-status",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-subscription-manage-delete-dev-ex",
+      "title": "REST Interactive Example: Deleting a Webhook Subscription",
+      "byte_start": 132927,
+      "byte_end": 133644,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-manage-delete-dev-ex",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-subscription-manage-test-intro",
+      "title": "Verify a Webhook Subscription's Configuration",
+      "byte_start": 133644,
+      "byte_end": 134921,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-manage-test-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-subscription-manage-test-ex",
+      "title": "Example: Verifying a Webhook Subscription's Configuration",
+      "byte_start": 134921,
+      "byte_end": 135864,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-manage-test-ex",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-subscription-manage-test-reply-status",
+      "title": "Response Codes",
+      "byte_start": 135864,
+      "byte_end": 136239,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-manage-test-reply-status",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-subscription-manage-test-dev-ex",
+      "title": "REST Interactive Example: Verifying a Webhook Subscription's Configuration",
+      "byte_start": 136239,
+      "byte_end": 137022,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-manage-test-dev-ex",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-subscription-manage-activate-intro",
+      "title": "Activate a Webhook Subscription",
+      "byte_start": 137022,
+      "byte_end": 137397,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-manage-activate-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-subscription-manage-activate-intro_endpoint-status",
+      "title": "Endpoints",
+      "byte_start": 137397,
+      "byte_end": 137979,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-manage-activate-intro_endpoint-status",
+      "heading_level": 2
+    },
+    {
+      "anchor": "wh-fg-subscription-manage-activate-ex",
+      "title": "Example: Activate a Webhook Subscription",
+      "byte_start": 137979,
+      "byte_end": 138349,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-manage-activate-ex",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-subscription-manage-activate-reply-status",
+      "title": "Response Codes",
+      "byte_start": 138349,
+      "byte_end": 138732,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-manage-activate-reply-status",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-subscription-manage-activate-dev-ex",
+      "title": "REST Interactive Example: Activating a Webhook Subscription",
+      "byte_start": 138732,
+      "byte_end": 139457,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-manage-activate-dev-ex",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-subscription-manage-deactivate-intro",
+      "title": "Deactivate a Webhook Subscription",
+      "byte_start": 139457,
+      "byte_end": 140304,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-manage-deactivate-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-subscription-manage-deactivate-ex",
+      "title": "Example: Deactivate a Webhook Subscription",
+      "byte_start": 140304,
+      "byte_end": 140684,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-manage-deactivate-ex",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-subscription-manage-deactivate-reply-status",
+      "title": "Response Codes",
+      "byte_start": 140684,
+      "byte_end": 141071,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-manage-deactivate-reply-status",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-subscription-manage-deactivate-dev-ex",
+      "title": "REST Interactive Example: Deactivating a Webhook Subscription",
+      "byte_start": 141071,
+      "byte_end": 141810,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-manage-deactivate-dev-ex",
+      "heading_level": 1
+    },
+    {
+      "anchor": "wh-fg-subscription-troubleshooting",
+      "title": "Troubleshooting Webhook Subscriptions",
+      "byte_start": 141810,
+      "byte_end": 144322,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#wh-fg-subscription-troubleshooting",
+      "heading_level": 1
+    },
+    {
+      "anchor": "restgs-security-key-pair-test-task",
+      "title": "Step 2B: Test Your Shared Secret Key Pair",
+      "byte_start": 144322,
+      "byte_end": 146916,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/webhooks/implementation/all/rest/webhooks.html#restgs-security-key-pair-test-task",
+      "heading_level": 1
+    }
+  ]
+}

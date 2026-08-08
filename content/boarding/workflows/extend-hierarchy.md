@@ -14,155 +14,254 @@ _Generated from `normalized/2026-08-08-boarding.claims.json`; do not hand-edit. 
 
 ## Steps
 
-### Via Partner admin (Business Center) — `en-us_boarding_user_all_ebc_boarding-user_boarding-extend-hierarchy_merchants-v2-add-structural.md.md`
+### REST API path
 
-1. **Action:** Click **+ Add Merchant**.
+1. **API:** `POST /boarding/v1/registrations` — Add a Structural Organization to a Merchant Organization
+   - Actor: Partner system (REST API)
+   - test host: `https://apitest.cybersource.com`
+   - Required fields: **Gap:** not listed for this endpoint in the source.
+   - Example request:
+     ```json
+     {
+         "registrationInformation": {
+             "boardingFlow": "ENTERPRISE"
+         },
+         "organizationInformation": {
+             "organizationId": "yourstructuralorgidhere",
+             "status": "LIVE",
+             "parentOrganizationId": "yourmercahntorgidhere",
+             "type": "STRUCTURAL",
+             "configurable": false,
+             "businessInformation": {
+                 "address": {
+                     "country": "US",
+                     "address1": "123 Main",
+                     "postalCode": "99999",
+                     "administrativeArea": "WA",
+                     "locality": "Seattle"
+                 },
+                 "businessContact": {
+                     "firstName": "Jane",
+                     "lastName": "Smith",
+                     "phoneNumber": "5551234567",
+                     "email": "email@domain.com"
+                 },
+                 "technicalContact": {
+                     "firstName": "Jane",
+                     "lastName": "Smith",
+                     "phoneNumber": "5551234567",
+                     "email": "email@domain.com"
+                 },
+                 "emergencyContact": {
+                     "firstName": "Jane",
+                     "lastName": "Smith",
+                     "phoneNumber": "5551234567",
+                     "email": "email@domain.com"
+                 },
+                 "name": "Test Merchant",
+                 "websiteUrl": "https://www.MerchantUrlHere.com",
+                 "phoneNumber": "5551234567",
+                 "timeZone": "America/Los_Angeles",
+                 "merchantCategoryCode": "5999"
+             }
+         }
+     }
+     ```
+   - Expected outcome: Response status `SUCCESS` (see example response).
+   - Example response:
+     ```json
+     {
+         "id": "1695804002",
+         "submitTimeUtc": "2022-04-13T20:58:28Z",
+         "status": "SUCCESS",
+         "registrationInformation": {
+             "mode": "COMPLETE",
+             "boardingPackageId": "123456789012"
+         },
+         "organizationInformation": {
+             "organizationId": "yourstructuralorgidhere",
+             "parentOrganizationId": "yourmercahntorgidhere"
+         },
+         "message": "Request was processed successfully"
+     }
+     ```
+   - <sub>[`en-us_boarding_developer_all_rest_boarding:endpoint:post:28ac48d1`](https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-reg-create-structural-api)</sub>
+
+### Business Center UI path
+
+2. **Action:** Click **+ Add Merchant**.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-extend-hierarchy_merchants-v2-add-structural:step:1:7f5e7b76`</sub>
-2. **Action:** Select **Add to an existing account** and then click **Next**.
+
+3. **Action:** Select **Add to an existing account** and then click **Next**.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-extend-hierarchy_merchants-v2-add-structural:step:2:e5744258`</sub>
-3. **Action:** If you have more than one boarding package, choose a boarding package from the drop-down menu, or enter text in the search field to find one. Then click **Next**.
+
+4. **Action:** If you have more than one boarding package, choose a boarding package from the drop-down menu, or enter text in the search field to find one. Then click **Next**.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-extend-hierarchy_merchants-v2-add-structural:step:3:7b6225e2`</sub>
-### Via Partner admin (Business Center) — `en-us_boarding_user_all_ebc_boarding-user_boarding-extend-hierarchy_merchants-v2-add-structural_merchants-v2-add-structural-hierarchy.md.md`
 
-1. **Action:** In the Hierarchy Details page, select the organization to which you are adding the structural node.
+5. **Action:** In the Hierarchy Details page, select the organization to which you are adding the structural node.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-extend-hierarchy_merchants-v2-add-structural_merchants-v2-add-structural-hierarchy:step:1:6d3a6581`</sub>
-2. **Action:** Click the **+ Add** button. The Add Organization pop-up window appears.
+
+6. **Action:** Click the **+ Add** button. The Add Organization pop-up window appears.
    - Actor: Partner admin (Business Center)
    - Expected outcome: The Add Organization pop-up window appears.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-extend-hierarchy_merchants-v2-add-structural_merchants-v2-add-structural-hierarchy:step:2:1350d065`</sub>
-3. **Action:** Select **Structural Organization** from the Organization Type drop-down menu.
+
+7. **Action:** Select **Structural Organization** from the Organization Type drop-down menu.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-extend-hierarchy_merchants-v2-add-structural_merchants-v2-add-structural-hierarchy:step:3:965cb8ad`</sub>
-4. **Action:** To choose the placement of the structural organization in the hierarchy, select **Add Child** or **Add Parent** in the Placement drop-down menu.
+
+8. **Action:** To choose the placement of the structural organization in the hierarchy, select **Add Child** or **Add Parent** in the Placement drop-down menu.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-extend-hierarchy_merchants-v2-add-structural_merchants-v2-add-structural-hierarchy:step:4:7e181cfd`</sub>
-5. **Action:** Optional: edit the name and organization ID of the organization.
+
+9. **Action:** Optional: edit the name and organization ID of the organization.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-extend-hierarchy_merchants-v2-add-structural_merchants-v2-add-structural-hierarchy:step:5:b30984b5`</sub>
-6. **Action:** Optional: Click the **Add optional details** button to edit the address of the organization, then click **Save** to return to the Hierarchy Details page.
+
+10. **Action:** Optional: Click the **Add optional details** button to edit the address of the organization, then click **Save** to return to the Hierarchy Details page.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-extend-hierarchy_merchants-v2-add-structural_merchants-v2-add-structural-hierarchy:step:6:713f72a2`</sub>
-7. **Action:** Click **Close** to return to the Add Merchant page.
+
+11. **Action:** Click **Close** to return to the Add Merchant page.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-extend-hierarchy_merchants-v2-add-structural_merchants-v2-add-structural-hierarchy:step:7:eab5a6dc`</sub>
-### Via Partner admin (Business Center) — `en-us_boarding_user_all_ebc_boarding-user_boarding-extend-hierarchy_merchants-v2-add-structural_merchants-v2-add-structural-prod.md.md`
 
-1. **Action:** Click **Start** in the Transacting Organization and Products section. The Transacting Organization and Products page is displayed.
+12. **Action:** Click **Start** in the Transacting Organization and Products section. The Transacting Organization and Products page is displayed.
    - Actor: Partner admin (Business Center)
    - Expected outcome: The Transacting Organization and Products page is displayed.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-extend-hierarchy_merchants-v2-add-structural_merchants-v2-add-structural-prod:step:1:f4b51f99`</sub>
-2. **Action:** Optional: modify the name and ID of the organization by using the text fields in the Transacting Organization Details section. By default, the name is the merchant name with 001 added to the end of the name. If you accept this default, additional transacting organizations will have default names that iterate the numbers at the end of their names, beginning with 002.
+
+13. **Action:** Optional: modify the name and ID of the organization by using the text fields in the Transacting Organization Details section. By default, the name is the merchant name with 001 added to the end of the name. If you accept this default, additional transacting organizations will have default names that iterate the numbers at the end of their names, beginning with 002.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-extend-hierarchy_merchants-v2-add-structural_merchants-v2-add-structural-prod:step:2:02d17e48`</sub>
-3. **Action:** Optional: to edit the organization information, Click **Edit** in the Transacting Organization Information section. After editing, click **Apply**.
+
+14. **Action:** Optional: to edit the organization information, Click **Edit** in the Transacting Organization Information section. After editing, click **Apply**.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-extend-hierarchy_merchants-v2-add-structural_merchants-v2-add-structural-prod:step:3:45e419e5`</sub>
-4. **Action:** To enable a product in the Product Enablement section, click the Enablement drop-down menu and select **Enabled**.
+
+15. **Action:** To enable a product in the Product Enablement section, click the Enablement drop-down menu and select **Enabled**.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-extend-hierarchy_merchants-v2-add-structural_merchants-v2-add-structural-prod:step:4:e32b33bf`</sub>
-5. **Action:** To modify the configuration, click the **Edit** or **configure** button (depending on the product). Some products are not configurable.
+
+16. **Action:** To modify the configuration, click the **Edit** or **configure** button (depending on the product). Some products are not configurable.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-extend-hierarchy_merchants-v2-add-structural_merchants-v2-add-structural-prod:step:5:fb2151e7`</sub>
-6. **Action:** To confirm the configuration, click **Apply**.
+
+17. **Action:** To confirm the configuration, click **Apply**.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-extend-hierarchy_merchants-v2-add-structural_merchants-v2-add-structural-prod:step:6:b4c95481`</sub>
-7. **Action:** To save all product configurations, click **Save**. You are returned to the Add Merchant page.
+
+18. **Action:** To save all product configurations, click **Save**. You are returned to the Add Merchant page.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-extend-hierarchy_merchants-v2-add-structural_merchants-v2-add-structural-prod:step:7:8f7fd64f`</sub>
-8. **Action:** To continue working with this organization, click **Continue working with this merchant** . To finish and return to Merchant Management, click **Return to merchant management**.
+
+19. **Action:** To continue working with this organization, click **Continue working with this merchant** . To finish and return to Merchant Management, click **Return to merchant management**.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-extend-hierarchy_merchants-v2-add-structural_merchants-v2-add-structural-prod:step:8:ef888126`</sub>
-### Via Partner admin (Business Center) — `en-us_boarding_user_all_ebc_boarding-user_merchants-v2-add-structural-hierarchy.md.md`
 
-1. **Action:** In the Hierarchy Details page, select the organization to which you are adding the structural node.
+20. **Action:** In the Hierarchy Details page, select the organization to which you are adding the structural node.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_merchants-v2-add-structural-hierarchy:step:1:b16d553b`</sub>
-2. **Action:** Click the + Add button. The Add Organization pop-up window appears.
+
+21. **Action:** Click the + Add button. The Add Organization pop-up window appears.
    - Actor: Partner admin (Business Center)
    - Expected outcome: The Add Organization pop-up window appears.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_merchants-v2-add-structural-hierarchy:step:2:51fcf2ca`</sub>
-3. **Action:** Select Structural Organization from the Organization Type drop-down menu.
+
+22. **Action:** Select Structural Organization from the Organization Type drop-down menu.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_merchants-v2-add-structural-hierarchy:step:3:90b1833f`</sub>
-4. **Action:** To choose the placement of the structural organization in the hierarchy, select Add Child or Add Parent in the Placement drop-down menu.
+
+23. **Action:** To choose the placement of the structural organization in the hierarchy, select Add Child or Add Parent in the Placement drop-down menu.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_merchants-v2-add-structural-hierarchy:step:4:115623bd`</sub>
-5. **Action:** Optional: edit the name and organization ID of the organization.
+
+24. **Action:** Optional: edit the name and organization ID of the organization.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_merchants-v2-add-structural-hierarchy:step:5:9ebf2bd7`</sub>
-6. **Action:** Optional: Click the Add optional details button to edit the address of the organization, then click Save to return to the Hierarchy Details page.
+
+25. **Action:** Optional: Click the Add optional details button to edit the address of the organization, then click Save to return to the Hierarchy Details page.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_merchants-v2-add-structural-hierarchy:step:6:7e8f3f2e`</sub>
-7. **Action:** Click Close to return to the Add Merchant page.
+
+26. **Action:** Click Close to return to the Add Merchant page.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_merchants-v2-add-structural-hierarchy:step:7:d80cecce`</sub>
-### Via Partner admin (Business Center) — `en-us_boarding_user_all_ebc_boarding-user_merchants-v2-add-structural-prod.md.md`
 
-1. **Action:** Click Start in the Transacting Organization and Products section. The Transacting Organization and Products page is displayed.
+27. **Action:** Click Start in the Transacting Organization and Products section. The Transacting Organization and Products page is displayed.
    - Actor: Partner admin (Business Center)
    - Expected outcome: The Transacting Organization and Products page is displayed.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_merchants-v2-add-structural-prod:step:1:3af938c6`</sub>
-2. **Action:** Optional: modify the name and ID of the organization by using the text fields in the Transacting Organization Details section. By default, the name is the merchant name with 001 added to the end of the name. If you accept this default, additional transacting organizations will have default names that iterate the numbers at the end of their names, beginning with 002.
+
+28. **Action:** Optional: modify the name and ID of the organization by using the text fields in the Transacting Organization Details section. By default, the name is the merchant name with 001 added to the end of the name. If you accept this default, additional transacting organizations will have default names that iterate the numbers at the end of their names, beginning with 002.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_merchants-v2-add-structural-prod:step:2:01933e8e`</sub>
-3. **Action:** Optional: to edit the organization information, Click Edit in the Transacting Organization Information section. After editing, click Apply.
+
+29. **Action:** Optional: to edit the organization information, Click Edit in the Transacting Organization Information section. After editing, click Apply.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_merchants-v2-add-structural-prod:step:3:ab9ad285`</sub>
-4. **Action:** To enable a product in the Product Enablement section, click the Enablement drop-down menu and select Enabled.
+
+30. **Action:** To enable a product in the Product Enablement section, click the Enablement drop-down menu and select Enabled.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_merchants-v2-add-structural-prod:step:4:0ad53da0`</sub>
-5. **Action:** To modify the configuration, click the Edit or configure button (depending on the product). Some products are not configurable.
+
+31. **Action:** To modify the configuration, click the Edit or configure button (depending on the product). Some products are not configurable.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_merchants-v2-add-structural-prod:step:5:599a972f`</sub>
-6. **Action:** To confirm the configuration, click Apply.
+
+32. **Action:** To confirm the configuration, click Apply.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_merchants-v2-add-structural-prod:step:6:d14f934c`</sub>
-7. **Action:** To save all product configurations, click Save. You are returned to the Add Merchant page.
+
+33. **Action:** To save all product configurations, click Save. You are returned to the Add Merchant page.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_merchants-v2-add-structural-prod:step:7:08721d21`</sub>
-8. **Action:** To continue working with this organization, click Continue working with this merchant. To finish and return to Merchant Management, click Return to merchant management.
+
+34. **Action:** To continue working with this organization, click Continue working with this merchant. To finish and return to Merchant Management, click Return to merchant management.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_merchants-v2-add-structural-prod:step:8:6f653668`</sub>
 
+<!-- sequence_stats: steps=34 outcome_gaps=29 api_ops=1 ui_steps=33 -->
+
 ## Constraints
 
 - [hierarchy_limit] You can board a small hierarchy of organizations using only merchant and transacting organizations.  
-  <sub>`en-us_boarding_developer_all_rest_boarding_boarding-extend-hierarchy:prose:892e49455a81` · 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-extend-hierarchy.md.md</sub>
+  <sub>`en-us_boarding_developer_all_rest_boarding_boarding-extend-hierarchy:prose:892e49455a81`</sub> · 2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-extend-hierarchy.md.md
 - [hierarchy_limit] You can board a small hierarchy of organizations using only merchant and transacting organizations.  
-  <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-extend-hierarchy:prose:892e49455a81` · 2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_boarding-extend-hierarchy.md.md</sub>
+  <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-extend-hierarchy:prose:892e49455a81`</sub> · 2026-08-08-boarding/en-us_boarding_user_all_ebc_boarding-user_boarding-extend-hierarchy.md.md
 
 ## Failure modes
 

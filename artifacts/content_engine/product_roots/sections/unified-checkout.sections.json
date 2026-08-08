@@ -1,0 +1,1768 @@
+{
+  "product_id": "unified-checkout",
+  "root_path": "/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.md",
+  "root_url": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.md",
+  "bytes": 509657,
+  "sections": [
+    {
+      "anchor": "uc-about-guide",
+      "title": "`Unified Checkout` Developer Guide",
+      "byte_start": 0,
+      "byte_end": 1004,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-about-guide",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-doc-revisions",
+      "title": "Recent Revisions to This Document",
+      "byte_start": 1004,
+      "byte_end": 1804,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-doc-revisions",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-doc-revisions_section_fvr_nyv_ljc",
+      "title": "26.07.01",
+      "byte_start": 1804,
+      "byte_end": 4267,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-doc-revisions_section_fvr_nyv_ljc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-doc-revisions_section_ebl_njy_hjc",
+      "title": "26.05.01",
+      "byte_start": 4267,
+      "byte_end": 4642,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-doc-revisions_section_ebl_njy_hjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-doc-revisions_section_jzm_k4c_1jc",
+      "title": "26.04.01",
+      "byte_start": 4642,
+      "byte_end": 17342,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-doc-revisions_section_jzm_k4c_1jc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-intro",
+      "title": "Introduction to `Unified Checkout`",
+      "byte_start": 17342,
+      "byte_end": 18924,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-intro_fig-1",
+      "title": "Figure:",
+      "byte_start": 18924,
+      "byte_end": 21370,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-intro_fig-1",
+      "heading_level": 4
+    },
+    {
+      "anchor": "uc-qs-intro",
+      "title": "`Unified Checkout` Quick Start",
+      "byte_start": 21370,
+      "byte_end": 21683,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-qs-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-qs-intro_section_tkt_rgg_gfc",
+      "title": "Key Features",
+      "byte_start": 21683,
+      "byte_end": 22020,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-qs-intro_section_tkt_rgg_gfc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-qs-intro_section_vkt_rgg_gfc",
+      "title": "Benefits",
+      "byte_start": 22020,
+      "byte_end": 22636,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-qs-intro_section_vkt_rgg_gfc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-qsg-step1",
+      "title": "Step 1: Enable `Unified Checkout`",
+      "byte_start": 22636,
+      "byte_end": 25392,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-qsg-step1",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-qsg-step2",
+      "title": "Step 2: Set Up the Server-Side Component",
+      "byte_start": 25392,
+      "byte_end": 27925,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-qsg-step2",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-qsg-step3",
+      "title": "Step 3: Set Up the Client-Side Component",
+      "byte_start": 27925,
+      "byte_end": 33188,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-qsg-step3",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-qsg-step4",
+      "title": "Step 4: Configure Unified Checkout",
+      "byte_start": 33188,
+      "byte_end": 35385,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-qsg-step4",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-qsg-step5",
+      "title": "Step 5: Test Your Unified Checkout Integration",
+      "byte_start": 35385,
+      "byte_end": 37528,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-qsg-step5",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-getting-started-integration-flow",
+      "title": "`Unified Checkout` Flow",
+      "byte_start": 37528,
+      "byte_end": 38223,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-getting-started-integration-flow",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-getting-started-integration-flow_fig_uc-payment-flow",
+      "title": "Figure:",
+      "byte_start": 38223,
+      "byte_end": 39248,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-getting-started-integration-flow_fig_uc-payment-flow",
+      "heading_level": 4
+    },
+    {
+      "anchor": "uc-pay-methods-intro",
+      "title": "Payment Methods",
+      "byte_start": 39248,
+      "byte_end": 41448,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-pay-methods-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-card",
+      "title": "Cards",
+      "byte_start": 41448,
+      "byte_end": 63244,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-pay-methods-card",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_pay_methods_pay_tkn",
+      "title": "Pay with Token",
+      "byte_start": 63244,
+      "byte_end": 67400,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc_pay_methods_pay_tkn",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-echeck",
+      "title": "eCheck/ACH Service",
+      "byte_start": 67400,
+      "byte_end": 68199,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-pay-methods-echeck",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-enable-digital-pay-echeck",
+      "title": "Enrolling in eCheck/ACH Services",
+      "byte_start": 68199,
+      "byte_end": 69383,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-enable-digital-pay-echeck",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-ui-echeck",
+      "title": "Pay with eCheck/ACH Service UI",
+      "byte_start": 69383,
+      "byte_end": 70294,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-ui-echeck",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-dig-wallets",
+      "title": "Digital Wallets",
+      "byte_start": 70294,
+      "byte_end": 71802,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-pay-methods-dig-wallets",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-dig-wallets-applepay",
+      "title": "Apple Pay",
+      "byte_start": 71802,
+      "byte_end": 72197,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-pay-methods-dig-wallets-applepay",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-enable-digital-pay-applepay",
+      "title": "Enrolling in Apple Pay",
+      "byte_start": 72197,
+      "byte_end": 74113,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-enable-digital-pay-applepay",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-enable-digital-pay-applepay-prep-test-device",
+      "title": "Preparing a Device for Testing Apple Pay on `Unified Checkout`",
+      "byte_start": 74113,
+      "byte_end": 75091,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-enable-digital-pay-applepay-prep-test-device",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-ui-applepay",
+      "title": "Apple Pay UI",
+      "byte_start": 75091,
+      "byte_end": 75272,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-ui-applepay",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-ui-applepay_fig-uc-ui-applepay",
+      "title": "Figure:",
+      "byte_start": 75272,
+      "byte_end": 75504,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-ui-applepay_fig-uc-ui-applepay",
+      "heading_level": 4
+    },
+    {
+      "anchor": "uc-pay-methods-dig-wallets-googlepay",
+      "title": "Google Pay",
+      "byte_start": 75504,
+      "byte_end": 75791,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-pay-methods-dig-wallets-googlepay",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-enable-digital-pay-google",
+      "title": "Enrolling in Google Pay",
+      "byte_start": 75791,
+      "byte_end": 76755,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-enable-digital-pay-google",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-enable-digital-pay-googlepay-manage-authentication",
+      "title": "Managing Google Pay Authentication Types",
+      "byte_start": 76755,
+      "byte_end": 79108,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-enable-digital-pay-googlepay-manage-authentication",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-ui-googlepay",
+      "title": "Google Pay UI",
+      "byte_start": 79108,
+      "byte_end": 79491,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-ui-googlepay",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-dig-wallets-ctp",
+      "title": "`Click to Pay`",
+      "byte_start": 79491,
+      "byte_end": 79857,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-pay-methods-dig-wallets-ctp",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-enable-digital-pay-ctp",
+      "title": "Enabling `Click to Pay` in the `Business Center`",
+      "byte_start": 79857,
+      "byte_end": 81833,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-enable-digital-pay-ctp",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-authentication-steps",
+      "title": "Set Up Customer Authentication for Click to Pay",
+      "byte_start": 81833,
+      "byte_end": 85808,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-authentication-steps",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-authentication",
+      "title": "Click to Pay Customer Authentication",
+      "byte_start": 85808,
+      "byte_end": 87117,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-authentication",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-ui-ctp",
+      "title": "`Click to Pay` UI",
+      "byte_start": 87117,
+      "byte_end": 87303,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-ui-ctp",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-ui-ctp_fig-uc-ui-ctp",
+      "title": "Figure:",
+      "byte_start": 87303,
+      "byte_end": 87524,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-ui-ctp_fig-uc-ui-ctp",
+      "heading_level": 4
+    },
+    {
+      "anchor": "uc-appendix-ui-ux",
+      "title": "`Click to Pay` UI Guidelines",
+      "byte_start": 87524,
+      "byte_end": 89531,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-appendix-ui-ux",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-appendix-ui-ux_fig-ctp-recog-device",
+      "title": "Figure:",
+      "byte_start": 89531,
+      "byte_end": 90130,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-appendix-ui-ux_fig-ctp-recog-device",
+      "heading_level": 4
+    },
+    {
+      "anchor": "uc-appendix-ui-ux_fig-ctp-recog-account",
+      "title": "Figure:",
+      "byte_start": 90130,
+      "byte_end": 90784,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-appendix-ui-ux_fig-ctp-recog-account",
+      "heading_level": 4
+    },
+    {
+      "anchor": "uc-appendix-ui-ux_fig-ctp-no-account",
+      "title": "Figure:",
+      "byte_start": 90784,
+      "byte_end": 91037,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-appendix-ui-ux_fig-ctp-no-account",
+      "heading_level": 4
+    },
+    {
+      "anchor": "uc-appendix-ui-ux-ex",
+      "title": "`Click to Pay` UI Examples",
+      "byte_start": 91037,
+      "byte_end": 91568,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-appendix-ui-ux-ex",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-appendix-ui-ux-ex_fig-ctp-ex1",
+      "title": "Figure:",
+      "byte_start": 91568,
+      "byte_end": 91830,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-appendix-ui-ux-ex_fig-ctp-ex1",
+      "heading_level": 4
+    },
+    {
+      "anchor": "uc-appendix-ui-ux-ex_fig-ctp-ex2",
+      "title": "Figure:",
+      "byte_start": 91830,
+      "byte_end": 92569,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-appendix-ui-ux-ex_fig-ctp-ex2",
+      "heading_level": 4
+    },
+    {
+      "anchor": "uc-appendix-ui-ux-ex_fig-ctp-ex3",
+      "title": "Figure:",
+      "byte_start": 92569,
+      "byte_end": 93466,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-appendix-ui-ux-ex_fig-ctp-ex3",
+      "heading_level": 4
+    },
+    {
+      "anchor": "uc-appendix-ui-ux-ex_fig-ctp-ex4",
+      "title": "Figure:",
+      "byte_start": 93466,
+      "byte_end": 94552,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-appendix-ui-ux-ex_fig-ctp-ex4",
+      "heading_level": 4
+    },
+    {
+      "anchor": "uc-appendix-ui-ux-ex_fig-ctp-ex5",
+      "title": "Figure:",
+      "byte_start": 94552,
+      "byte_end": 95338,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-appendix-ui-ux-ex_fig-ctp-ex5",
+      "heading_level": 4
+    },
+    {
+      "anchor": "uc-appendix-ui-ux-ex_fig-ctp-ex6",
+      "title": "Figure:",
+      "byte_start": 95338,
+      "byte_end": 95597,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-appendix-ui-ux-ex_fig-ctp-ex6",
+      "heading_level": 4
+    },
+    {
+      "anchor": "uc-appendix-ui-ux-ex_fig-ctp-ex7",
+      "title": "Figure:",
+      "byte_start": 95597,
+      "byte_end": 95856,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-appendix-ui-ux-ex_fig-ctp-ex7",
+      "heading_level": 4
+    },
+    {
+      "anchor": "uc-appendix-ui-ux-ex_fig-ctp-ex8",
+      "title": "Figure:",
+      "byte_start": 95856,
+      "byte_end": 96115,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-appendix-ui-ux-ex_fig-ctp-ex8",
+      "heading_level": 4
+    },
+    {
+      "anchor": "uc-pay-methods-dig-wallets-paze",
+      "title": "Paze",
+      "byte_start": 96115,
+      "byte_end": 96444,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-pay-methods-dig-wallets-paze",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-ui-paze",
+      "title": "Paze UI",
+      "byte_start": 96444,
+      "byte_end": 96782,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-ui-paze",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-altpay-methods-intro",
+      "title": "Alternative Payment Methods",
+      "byte_start": 96782,
+      "byte_end": 97836,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-altpay-methods-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-obt",
+      "title": "Online Bank Transfers",
+      "byte_start": 97836,
+      "byte_end": 102746,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-pay-methods-obt",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-obt-bancontact",
+      "title": "Bancontact",
+      "byte_start": 102746,
+      "byte_end": 104449,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-pay-methods-obt-bancontact",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-obt-dragonpay",
+      "title": "DragonPay",
+      "byte_start": 104449,
+      "byte_end": 106192,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-pay-methods-obt-dragonpay",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-obt-tink",
+      "title": "Tink Pay By Bank",
+      "byte_start": 106192,
+      "byte_end": 109959,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-pay-methods-obt-tink",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-obt-ideal",
+      "title": "iDeal",
+      "byte_start": 109959,
+      "byte_end": 111808,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-pay-methods-obt-ideal",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-obt-mybank",
+      "title": "MyBank",
+      "byte_start": 111808,
+      "byte_end": 113538,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-pay-methods-obt-mybank",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-obt-multibanco",
+      "title": "Multibanco",
+      "byte_start": 113538,
+      "byte_end": 115282,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-pay-methods-obt-multibanco",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-obt-p24",
+      "title": "Przelewy24\\|P24",
+      "byte_start": 115282,
+      "byte_end": 117035,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-pay-methods-obt-p24",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-obt-status-ppro",
+      "title": "Verify Status for Online Bank Transfers",
+      "byte_start": 117035,
+      "byte_end": 118340,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-pay-methods-obt-status-ppro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-obt-status-non-ppro",
+      "title": "Verify Status for Online Bank Transfers (Tink Pay By Bank)",
+      "byte_start": 118340,
+      "byte_end": 120171,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-pay-methods-obt-status-non-ppro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-obt-handle-response",
+      "title": "Handle Responses",
+      "byte_start": 120171,
+      "byte_end": 121960,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-pay-methods-obt-handle-response",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-bnpl",
+      "title": "Buy Now, Pay Later",
+      "byte_start": 121960,
+      "byte_end": 126394,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-pay-methods-bnpl",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-bnpl-afterpay",
+      "title": "Afterpay",
+      "byte_start": 126394,
+      "byte_end": 129574,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-pay-methods-bnpl-afterpay",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-bnpl-afterpay-status",
+      "title": "Verify Status for Afterpay",
+      "byte_start": 129574,
+      "byte_end": 131488,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-pay-methods-bnpl-afterpay-status",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-bnpl-handle-response",
+      "title": "Handle Responses",
+      "byte_start": 131488,
+      "byte_end": 132741,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-pay-methods-bnpl-handle-response",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-bnpl-captures",
+      "title": "Captures",
+      "byte_start": 132741,
+      "byte_end": 133002,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-pay-methods-bnpl-captures",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-bnpl-captures_d8e147",
+      "title": "Endpoint",
+      "byte_start": 133002,
+      "byte_end": 134537,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-pay-methods-bnpl-captures_d8e147",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-pay-methods-ppr",
+      "title": "Post-Pay Reference Payments",
+      "byte_start": 134537,
+      "byte_end": 136736,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-pay-methods-ppr",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-ppr-konbini",
+      "title": "Konbini",
+      "byte_start": 136736,
+      "byte_end": 139087,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-pay-methods-ppr-konbini",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-ppr-status-ppro",
+      "title": "Verify Status for Post-Pay Reference",
+      "byte_start": 139087,
+      "byte_end": 140383,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-pay-methods-ppr-status-ppro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-ppr-handle-response",
+      "title": "Handle Responses",
+      "byte_start": 140383,
+      "byte_end": 141971,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-pay-methods-ppr-handle-response",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-wallets",
+      "title": "Alternative Payment Wallets",
+      "byte_start": 141971,
+      "byte_end": 144625,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-pay-methods-wallets",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-bnpl-paypal",
+      "title": "PayPal",
+      "byte_start": 144625,
+      "byte_end": 149615,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-pay-methods-bnpl-paypal",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-bnpl-paypal_section_zfp_mv3_cjc",
+      "title": "Example: Multiple Line-Items",
+      "byte_start": 149615,
+      "byte_end": 150658,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-pay-methods-bnpl-paypal_section_zfp_mv3_cjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-pay-methods-obt-venmo",
+      "title": "Venmo",
+      "byte_start": 150658,
+      "byte_end": 154987,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-pay-methods-obt-venmo",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-obt-venmo_section_ar5_zbj_cjc",
+      "title": "Example: Multiple Line-Items",
+      "byte_start": 154987,
+      "byte_end": 156024,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-pay-methods-obt-venmo_section_ar5_zbj_cjc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-pay-methods-paypal-venmo-status",
+      "title": "Verify Status for PayPal and Venmo",
+      "byte_start": 156024,
+      "byte_end": 158927,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-pay-methods-paypal-venmo-status",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-wallet-handle-response",
+      "title": "Handle Responses",
+      "byte_start": 158927,
+      "byte_end": 160648,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-pay-methods-wallet-handle-response",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-wallet-captures",
+      "title": "Captures",
+      "byte_start": 160648,
+      "byte_end": 160913,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-pay-methods-wallet-captures",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-pay-methods-wallet-captures_d8e147",
+      "title": "Endpoint",
+      "byte_start": 160913,
+      "byte_end": 162456,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-pay-methods-wallet-captures_d8e147",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-integration-methods-intro",
+      "title": "Integration Methods",
+      "byte_start": 162456,
+      "byte_end": 170761,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-integration-methods-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-integration-methods-checkout",
+      "title": "Checkout",
+      "byte_start": 170761,
+      "byte_end": 170850,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-integration-methods-checkout",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-integration-methods-checkout_section_rrx_wlh_njc",
+      "title": "Checkout UI",
+      "byte_start": 170850,
+      "byte_end": 171330,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-integration-methods-checkout_section_rrx_wlh_njc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-integration-methods-checkout_section_iqk_xlh_njc",
+      "title": "Checkout Integration JavaScript Example",
+      "byte_start": 171330,
+      "byte_end": 175760,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-integration-methods-checkout_section_iqk_xlh_njc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-integration-methods-buttons",
+      "title": "Button",
+      "byte_start": 175760,
+      "byte_end": 175843,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-integration-methods-buttons",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-integration-methods-buttons_section_rrx_wlh_njc",
+      "title": "Button UI",
+      "byte_start": 175843,
+      "byte_end": 176024,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-integration-methods-buttons_section_rrx_wlh_njc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-integration-methods-buttons_fig_j5v_dqh_njc",
+      "title": "Figure:",
+      "byte_start": 176024,
+      "byte_end": 176287,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-integration-methods-buttons_fig_j5v_dqh_njc",
+      "heading_level": 4
+    },
+    {
+      "anchor": "uc-integration-methods-buttons_section_iqk_xlh_njc",
+      "title": "Button Integration JavaScript Example",
+      "byte_start": 176287,
+      "byte_end": 180095,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-integration-methods-buttons_section_iqk_xlh_njc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-integration-methods-trigger",
+      "title": "Trigger",
+      "byte_start": 180095,
+      "byte_end": 180180,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-integration-methods-trigger",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-integration-methods-trigger_section_rrx_wlh_njc",
+      "title": "Trigger UI",
+      "byte_start": 180180,
+      "byte_end": 180364,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-integration-methods-trigger_section_rrx_wlh_njc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-integration-methods-trigger_fig_unb_2qh_njc",
+      "title": "Figure:",
+      "byte_start": 180364,
+      "byte_end": 180628,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-integration-methods-trigger_fig_unb_2qh_njc",
+      "heading_level": 4
+    },
+    {
+      "anchor": "uc-integration-methods-trigger_section_iqk_xlh_njc",
+      "title": "Trigger Integration JavaScript Example",
+      "byte_start": 180628,
+      "byte_end": 186319,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-integration-methods-trigger_section_iqk_xlh_njc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-integration-methods-components",
+      "title": "Components",
+      "byte_start": 186319,
+      "byte_end": 186416,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-integration-methods-components",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-integration-methods-components_section_rrx_wlh_njc",
+      "title": "Components UI",
+      "byte_start": 186416,
+      "byte_end": 186615,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-integration-methods-components_section_rrx_wlh_njc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-integration-methods-components_fig_tvf_2qh_njc",
+      "title": "Figure:",
+      "byte_start": 186615,
+      "byte_end": 186888,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-integration-methods-components_fig_tvf_2qh_njc",
+      "heading_level": 4
+    },
+    {
+      "anchor": "uc-integration-methods-components_section_iqk_xlh_njc",
+      "title": "Components Integration JavaScript Example",
+      "byte_start": 186888,
+      "byte_end": 192416,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-integration-methods-components_section_iqk_xlh_njc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-getting-started-ss-setup",
+      "title": "Server-Side Set Up",
+      "byte_start": 192416,
+      "byte_end": 193592,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-getting-started-ss-setup",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-capture-context-intro",
+      "title": "Capture Context",
+      "byte_start": 193592,
+      "byte_end": 195233,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-capture-context-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-capture-context-intro_uc-capture-context-codeblock",
+      "title": "Capture Context Example",
+      "byte_start": 195233,
+      "byte_end": 196786,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-capture-context-intro_uc-capture-context-codeblock",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-capture-context-intro_uc-capture-context-diagram",
+      "title": "Card Entry Form",
+      "byte_start": 196786,
+      "byte_end": 197351,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-capture-context-intro_uc-capture-context-diagram",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc_versioning",
+      "title": "Versioning",
+      "byte_start": 197351,
+      "byte_end": 199445,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc_versioning",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-capture-context-versions",
+      "title": "Client Version History",
+      "byte_start": 199445,
+      "byte_end": 202664,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-capture-context-versions",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-getting-started-cs-setup-intro",
+      "title": "Client-Side Set Up",
+      "byte_start": 202664,
+      "byte_end": 204169,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-getting-started-cs-setup-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-getting-started-cs-js-library-intro",
+      "title": "Loading the JavaScript Library",
+      "byte_start": 204169,
+      "byte_end": 206089,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-getting-started-cs-js-library-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-getting-started-cs-js-library-example",
+      "title": "JavaScript Example: Initializing the SDK",
+      "byte_start": 206089,
+      "byte_end": 206389,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-getting-started-cs-js-library-example",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-getting-started-cs-js-button-example",
+      "title": "JavaScript Example: Displaying the Button List",
+      "byte_start": 206389,
+      "byte_end": 207117,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-getting-started-cs-js-button-example",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-getting-started-cs-js-trigger-ctp-pan-example",
+      "title": "JavaScript Example: Client-Defined Trigger for `Click to Pay` or PAN Entry",
+      "byte_start": 207117,
+      "byte_end": 208144,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-getting-started-cs-js-trigger-ctp-pan-example",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-getting-started-cs-js-payment-example",
+      "title": "JavaScript Example: Processing a Payment",
+      "byte_start": 208144,
+      "byte_end": 209232,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-getting-started-cs-js-payment-example",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-session-integrate-ex-auth",
+      "title": "JavaScript Example: Authorization",
+      "byte_start": 209232,
+      "byte_end": 210221,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-session-integrate-ex-auth",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-session-integrate-ex-sale",
+      "title": "JavaScript Example: Sale",
+      "byte_start": 210221,
+      "byte_end": 211014,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-session-integrate-ex-sale",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-session-integrate-ex-sale-dm",
+      "title": "JavaScript Example: Sale with `Decision Manager`",
+      "byte_start": 211014,
+      "byte_end": 211877,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-session-integrate-ex-sale-dm",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-session-integrate-ex-manual-tkn",
+      "title": "JavaScript Example: No Service Orchestration",
+      "byte_start": 211877,
+      "byte_end": 213177,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-session-integrate-ex-manual-tkn",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-getting-started-button-widget-sidebar",
+      "title": "JavaScript Example: Setting Up with Full Sidebar",
+      "byte_start": 213177,
+      "byte_end": 214531,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-getting-started-button-widget-sidebar",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-getting-started-button-widget-embedded",
+      "title": "JavaScript Example: Setting Up with the Embedded Component",
+      "byte_start": 214531,
+      "byte_end": 216348,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-getting-started-button-widget-embedded",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_intro_setup",
+      "title": "Configuration",
+      "byte_start": 216348,
+      "byte_end": 216494,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc_intro_setup",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-intro-setup-ebc",
+      "title": "Configure the `Unified Checkout` Merchant Experience",
+      "byte_start": 216494,
+      "byte_end": 218686,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-intro-setup-ebc",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-enabling-ebc",
+      "title": "Enable `Unified Checkout`",
+      "byte_start": 218686,
+      "byte_end": 221274,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-enabling-ebc",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_intro_payment_options",
+      "title": "Configure Payment Options",
+      "byte_start": 221274,
+      "byte_end": 227115,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc_intro_payment_options",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_intro_look_and_feel",
+      "title": "Customize the `Unified Checkout` Look and Feel",
+      "byte_start": 227115,
+      "byte_end": 233182,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc_intro_look_and_feel",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_ui_config_examples",
+      "title": "Look and Feel UI Examples",
+      "byte_start": 233182,
+      "byte_end": 233382,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc_ui_config_examples",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_ui_config_ex_button_list",
+      "title": "Button List",
+      "byte_start": 233382,
+      "byte_end": 233789,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc_ui_config_ex_button_list",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_ui_config_ex_contact",
+      "title": "Contact Details",
+      "byte_start": 233789,
+      "byte_end": 234240,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc_ui_config_ex_contact",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_ui_config_ex_saved_cards",
+      "title": "Saved Cards",
+      "byte_start": 234240,
+      "byte_end": 234697,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc_ui_config_ex_saved_cards",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_ui_config_ex_card_entry",
+      "title": "Card Entry",
+      "byte_start": 234697,
+      "byte_end": 235157,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc_ui_config_ex_card_entry",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_ui_config_ex_review",
+      "title": "Review Details",
+      "byte_start": 235157,
+      "byte_end": 235616,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc_ui_config_ex_review",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_intro_customer_data",
+      "title": "Configure Customer Data and Payment Flow",
+      "byte_start": 235616,
+      "byte_end": 242725,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc_intro_customer_data",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_ebc_api_info",
+      "title": "Capture Context Fields in the `Business Center`",
+      "byte_start": 242725,
+      "byte_end": 250398,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc_ebc_api_info",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-manage-permissions-intro",
+      "title": "Manage Permissions",
+      "byte_start": 250398,
+      "byte_end": 251893,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-manage-permissions-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-manage-permissions-merch",
+      "title": "Managing Permissions as a Direct Merchant",
+      "byte_start": 251893,
+      "byte_end": 253071,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-manage-permissions-merch",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-manage-permissions-port",
+      "title": "Managing Permissions as a Portfolio Administrator",
+      "byte_start": 253071,
+      "byte_end": 254809,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-manage-permissions-port",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_pay_processing_intro",
+      "title": "Process Payments with `Unified Checkout`",
+      "byte_start": 254809,
+      "byte_end": 258248,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc_pay_processing_intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-appendix-webhooks",
+      "title": "Webhooks Support",
+      "byte_start": 258248,
+      "byte_end": 258976,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-appendix-webhooks",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-appendix-webhooks_section_zg3_yvq_ljc",
+      "title": "Integration",
+      "byte_start": 258976,
+      "byte_end": 261906,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-appendix-webhooks_section_zg3_yvq_ljc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-appendix-webhooks_opt-tasks",
+      "title": "Optional Set Up Tasks",
+      "byte_start": 261906,
+      "byte_end": 264901,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-appendix-webhooks_opt-tasks",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-setup-capture-context",
+      "title": "Sessions API",
+      "byte_start": 264901,
+      "byte_end": 265192,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-setup-capture-context",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-capture-context-features",
+      "title": "Capture Context",
+      "byte_start": 265192,
+      "byte_end": 268857,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-capture-context-features",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-capture-context-features_section_ybj_nzz_sxb",
+      "title": "Related Information",
+      "byte_start": 268857,
+      "byte_end": 269556,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-capture-context-features_section_ybj_nzz_sxb",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc_cc_allowed_card_networks",
+      "title": "Allowed Card Networks",
+      "byte_start": 269556,
+      "byte_end": 271164,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc_cc_allowed_card_networks",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_cc_allowed_card_networks_section_bwj_5qt_dkc",
+      "title": "Domestic Scheme Rules",
+      "byte_start": 271164,
+      "byte_end": 272050,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc_cc_allowed_card_networks_section_bwj_5qt_dkc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc_cc_target_origin",
+      "title": "Target Origins",
+      "byte_start": 272050,
+      "byte_end": 272950,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc_cc_target_origin",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_cc_allowed_pay_type",
+      "title": "Allowed Payment Types",
+      "byte_start": 272950,
+      "byte_end": 274679,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc_cc_allowed_pay_type",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_cc_client_version",
+      "title": "Client Version",
+      "byte_start": 274679,
+      "byte_end": 275571,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc_cc_client_version",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_cc_ctp_enroll_precheck",
+      "title": "Auto-check Enrollment",
+      "byte_start": 275571,
+      "byte_end": 276413,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc_cc_ctp_enroll_precheck",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_cc_button_type",
+      "title": "Button Type",
+      "byte_start": 276413,
+      "byte_end": 277256,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc_cc_button_type",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-session-button-text",
+      "title": "Customize Button Text",
+      "byte_start": 277256,
+      "byte_end": 278066,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-session-button-text",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_cc_complete_mandate",
+      "title": "Complete Mandate",
+      "byte_start": 278066,
+      "byte_end": 279308,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc_cc_complete_mandate",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_cc_complete_type",
+      "title": "completeMandate.type",
+      "byte_start": 279308,
+      "byte_end": 279864,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc_cc_complete_type",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_cc_complete_dm",
+      "title": "completeMandate.decisionManager",
+      "byte_start": 279864,
+      "byte_end": 280446,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc_cc_complete_dm",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_cc_complete_auth",
+      "title": "completeMandate.consumerAuthentication",
+      "byte_start": 280446,
+      "byte_end": 283311,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc_cc_complete_auth",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_cc_complete_tms",
+      "title": "completeMandate.tms",
+      "byte_start": 283311,
+      "byte_end": 288171,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc_cc_complete_tms",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_cc_capture_mandate",
+      "title": "Capture Mandate",
+      "byte_start": 288171,
+      "byte_end": 289089,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc_cc_capture_mandate",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_cc_combo_cards",
+      "title": "captureMandate.comboCard",
+      "byte_start": 289089,
+      "byte_end": 290300,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc_cc_combo_cards",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_cc_cpf",
+      "title": "captureMandate.CPF",
+      "byte_start": 290300,
+      "byte_end": 290840,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc_cc_cpf",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_cc_save_card",
+      "title": "captureMandate.requestSaveCredentials",
+      "byte_start": 290840,
+      "byte_end": 291597,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc_cc_save_card",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_cc_rem_confirm_screen",
+      "title": "captureMandate.showConfirmationStep",
+      "byte_start": 291597,
+      "byte_end": 292068,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc_cc_rem_confirm_screen",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_cc_capture_billing_type",
+      "title": "captureMandate.billingType",
+      "byte_start": 292068,
+      "byte_end": 293323,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc_cc_capture_billing_type",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_cc_capture_req_email",
+      "title": "captureMandate.requestEmail",
+      "byte_start": 293323,
+      "byte_end": 293821,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc_cc_capture_req_email",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_cc_capture_req_phone",
+      "title": "captureMandate.requestPhone",
+      "byte_start": 293821,
+      "byte_end": 294050,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc_cc_capture_req_phone",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_cc_capture_req_ship",
+      "title": "captureMandate.requestShipping",
+      "byte_start": 294050,
+      "byte_end": 294639,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc_cc_capture_req_ship",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_cc_capture_ship_to",
+      "title": "captureMandate.shipToCountries",
+      "byte_start": 294639,
+      "byte_end": 294915,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc_cc_capture_ship_to",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_cc_include_prefix",
+      "title": "Include Card Prefix",
+      "byte_start": 294915,
+      "byte_end": 297571,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc_cc_include_prefix",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_cc_email_autolookup",
+      "title": "Email Autolookup",
+      "byte_start": 297571,
+      "byte_end": 298471,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc_cc_email_autolookup",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_cc_mobile_identity",
+      "title": "Mobile as Identity for `Click to Pay`",
+      "byte_start": 298471,
+      "byte_end": 299327,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc_cc_mobile_identity",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-appendix-uc-auth-ex",
+      "title": "Example: `Unified Checkout` Complete Capture Context",
+      "byte_start": 299327,
+      "byte_end": 309357,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-appendix-uc-auth-ex",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-validate-capture-context-intro",
+      "title": "Validating the Capture Context",
+      "byte_start": 309357,
+      "byte_end": 313211,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-validate-capture-context-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-session-validate",
+      "title": "Session Validation",
+      "byte_start": 313211,
+      "byte_end": 314073,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-session-validate",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-tokens-intro",
+      "title": "Transient Tokens",
+      "byte_start": 314073,
+      "byte_end": 314827,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-tokens-intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-tokens-format",
+      "title": "Transient Token Format",
+      "byte_start": 314827,
+      "byte_end": 315440,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-tokens-format",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-trans-tkn-ex",
+      "title": "Example: Transient Token Format",
+      "byte_start": 315440,
+      "byte_end": 318683,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-trans-tkn-ex",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-tokens-verification",
+      "title": "Token Verification",
+      "byte_start": 318683,
+      "byte_end": 319420,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-tokens-verification",
+      "heading_level": 1
+    },
+    {
+      "anchor": "dual-co-brand-card-support",
+      "title": "Dual-Branded Cards",
+      "byte_start": 319420,
+      "byte_end": 320855,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#dual-co-brand-card-support",
+      "heading_level": 1
+    },
+    {
+      "anchor": "dual-co-brand-card-support_section_jm1_vyt_dkc",
+      "title": "Domestic Scheme Rules",
+      "byte_start": 320855,
+      "byte_end": 321739,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#dual-co-brand-card-support_section_jm1_vyt_dkc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-auth-tokens",
+      "title": "Authorizations with a Transient Token",
+      "byte_start": 321739,
+      "byte_end": 324390,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-auth-tokens",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-auth-tokens_endpt-auth",
+      "title": "Endpoint",
+      "byte_start": 324390,
+      "byte_end": 324849,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-auth-tokens_endpt-auth",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-auth-tokens_auth-reqfields-rest",
+      "title": "Required Field for an Authorization with a Transient Token",
+      "byte_start": 324849,
+      "byte_end": 325227,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-auth-tokens_auth-reqfields-rest",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-auth-tokens-ex-rest",
+      "title": "REST Example: Requesting an Authorization with a Transient Token",
+      "byte_start": 325227,
+      "byte_end": 326673,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-auth-tokens-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-reference-test-cards",
+      "title": "Test Your Configuration",
+      "byte_start": 326673,
+      "byte_end": 327907,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-reference-test-cards",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-reference-test-cards-uc",
+      "title": "`Unified Checkout` Test Cards",
+      "byte_start": 327907,
+      "byte_end": 331114,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-reference-test-cards-uc",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-reference-test-cards-visa-ctp",
+      "title": "Visa and Mastercard `Click to Pay` Test Cards",
+      "byte_start": 331114,
+      "byte_end": 331279,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-reference-test-cards-visa-ctp",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-reference-test-cards-visa-ctp_uc-reference-test-cards-visa-ctp",
+      "title": "Visa Test Cards",
+      "byte_start": 331279,
+      "byte_end": 332743,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-reference-test-cards-visa-ctp_uc-reference-test-cards-visa-ctp",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-reference-test-cards-visa-ctp_uc-reference-test-cards-visa-ctp-mc",
+      "title": "Mastercard Test Cards",
+      "byte_start": 332743,
+      "byte_end": 334462,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-reference-test-cards-visa-ctp_uc-reference-test-cards-visa-ctp-mc",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-reference-test-cards-auth-ctp",
+      "title": "Test Cards for Authentication by `Click to Pay`",
+      "byte_start": 334462,
+      "byte_end": 336920,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-reference-test-cards-auth-ctp",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-reference-test-cards-auth-echeck",
+      "title": "Echeck Test Values",
+      "byte_start": 336920,
+      "byte_end": 337229,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-reference-test-cards-auth-echeck",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_appendix_authentication",
+      "title": "Test Authentication",
+      "byte_start": 337229,
+      "byte_end": 346931,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc_appendix_authentication",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_appendix_handle_errors",
+      "title": "Handle Errors",
+      "byte_start": 346931,
+      "byte_end": 347220,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc_appendix_handle_errors",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_handle_errors_uc_checkout",
+      "title": "UnifiedCheckoutError",
+      "byte_start": 347220,
+      "byte_end": 348419,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc_handle_errors_uc_checkout",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_handle_errors_detect",
+      "title": "Detect Errors",
+      "byte_start": 348419,
+      "byte_end": 349120,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc_handle_errors_detect",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_handle_errors_pattern",
+      "title": "Error Handling Patterns",
+      "byte_start": 349120,
+      "byte_end": 350307,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc_handle_errors_pattern",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_handle_errors_codes",
+      "title": "Error Codes",
+      "byte_start": 350307,
+      "byte_end": 356938,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc_handle_errors_codes",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_appendix_v1_reason_codes",
+      "title": "Reason Codes",
+      "byte_start": 356938,
+      "byte_end": 362778,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc_appendix_v1_reason_codes",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-token-get-pymnt-details",
+      "title": "Payment Details API",
+      "byte_start": 362778,
+      "byte_end": 364357,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-token-get-pymnt-details",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-token-get-pymnt-details_d8e1140",
+      "title": "Endpoint",
+      "byte_start": 364357,
+      "byte_end": 365142,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-token-get-pymnt-details_d8e1140",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc-token-get-pymnt-details-ex-rest",
+      "title": "REST Example: Retrieving Transient Token Payment Details",
+      "byte_start": 365142,
+      "byte_end": 366126,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-token-get-pymnt-details-ex-rest",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-appendix-js-reference-v1_api_reference",
+      "title": "JavaScript API Reference",
+      "byte_start": 366126,
+      "byte_end": 366378,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-appendix-js-reference-v1_api_reference",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_appendix_js_initialize",
+      "title": "VAS.UnifiedCheckout(sessionJWT)",
+      "byte_start": 366378,
+      "byte_end": 367333,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc_appendix_js_initialize",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_appendix_js_interface",
+      "title": "UnifiedCheckoutInterface",
+      "byte_start": 367333,
+      "byte_end": 373583,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc_appendix_js_interface",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_appendix_js_checkout",
+      "title": "Checkout",
+      "byte_start": 373583,
+      "byte_end": 378207,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc_appendix_js_checkout",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_appendix_js_trigger",
+      "title": "Trigger",
+      "byte_start": 378207,
+      "byte_end": 379637,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc_appendix_js_trigger",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_appendix_js_pay_button",
+      "title": "PaymentButton",
+      "byte_start": 379637,
+      "byte_end": 381238,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc_appendix_js_pay_button",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-appendix-js-events",
+      "title": "Events",
+      "byte_start": 381238,
+      "byte_end": 381452,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-appendix-js-events",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-appendix-js-events_uc-appendix-js-events-subscribe",
+      "title": "Subscribe to Events",
+      "byte_start": 381452,
+      "byte_end": 382011,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-appendix-js-events_uc-appendix-js-events-subscribe",
+      "heading_level": 2
+    },
+    {
+      "anchor": "uc_v1_migration_intro",
+      "title": "Update to `Unified Checkout` Version 1",
+      "byte_start": 382011,
+      "byte_end": 396507,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc_v1_migration_intro",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_v1_migrate_reason_codes",
+      "title": "Update Reason Codes",
+      "byte_start": 396507,
+      "byte_end": 398028,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc_v1_migrate_reason_codes",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_v1_migration_checklist",
+      "title": "Version 1 Update Checklist",
+      "byte_start": 398028,
+      "byte_end": 398921,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc_v1_migration_checklist",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-appendix",
+      "title": "Appendix",
+      "byte_start": 398921,
+      "byte_end": 399043,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-appendix",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-appendix-jwts",
+      "title": "JSON Web Tokens",
+      "byte_start": 399043,
+      "byte_end": 400681,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-appendix-jwts",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-appendix-supp-countries",
+      "title": "Supported Countries for Digital Payments",
+      "byte_start": 400681,
+      "byte_end": 400824,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-appendix-supp-countries",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-appendix-supp-countries-a-d",
+      "title": "Supported Countries for Digital Payments A-D",
+      "byte_start": 400824,
+      "byte_end": 425671,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-appendix-supp-countries-a-d",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-appendix-supp-countries-e-k",
+      "title": "Supported Countries for Digital Payments E-K",
+      "byte_start": 425671,
+      "byte_end": 443339,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-appendix-supp-countries-e-k",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-appendix-supp-countries-l-r",
+      "title": "Supported Countries for Digital Payments L-R",
+      "byte_start": 443339,
+      "byte_end": 464325,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-appendix-supp-countries-l-r",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-appendix-supp-countries-s-z",
+      "title": "Supported Countries for Digital Payments S-Z",
+      "byte_start": 464325,
+      "byte_end": 497299,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-appendix-supp-countries-s-z",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc-appendix-languages",
+      "title": "Supported Locales",
+      "byte_start": 497299,
+      "byte_end": 501283,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-appendix-languages",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_security_recs",
+      "title": "Security Recommendations",
+      "byte_start": 501283,
+      "byte_end": 505118,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc_security_recs",
+      "heading_level": 1
+    },
+    {
+      "anchor": "uc_pci_compliance",
+      "title": "PCI Compliance",
+      "byte_start": 505118,
+      "byte_end": 507526,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc_pci_compliance",
+      "heading_level": 1
+    },
+    {
+      "anchor": "vpc-partner-reseller-disclaimer",
+      "title": "Visa Platform Connect: Specifications and Conditions for Resellers/Partners",
+      "byte_start": 507526,
+      "byte_end": 509657,
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#vpc-partner-reseller-disclaimer",
+      "heading_level": 1
+    }
+  ]
+}
