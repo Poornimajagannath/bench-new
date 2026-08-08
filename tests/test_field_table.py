@@ -51,5 +51,49 @@ class FieldTableTests(unittest.TestCase):
         self.assertTrue(all("ACH Templates" in (c.extras.get("table") or "") for c in rows))
 
 
+class EndpointUrlStyleTests(unittest.TestCase):
+    """Loop C1: backticked full-URL endpoint lines must yield endpoint_fact."""
+
+    def test_backticked_full_url_endpoint(self):
+        text = (
+            "Create a Merchant Organization {#x}\n=====================\n\n"
+            "**Production:** `POST ``https://api.cybersource.com``/boarding/v1/registrations`\n"
+            "**Test:** `POST ``https://apitest.cybersource.com``/boarding/v1/registrations`\n"
+        )
+        claims, drops = _extract_claims_from_text(
+            text, source_pointer="x.md", doc_stem="x"
+        )
+        eps = [c for c in claims if c.schema == "endpoint_fact"]
+        self.assertEqual(len(eps), 2, msg=[c.text for c in claims])
+        envs = {c.extras.get("environment") for c in eps}
+        self.assertEqual(envs, {"production", "test"})
+        self.assertFalse(drops)
+
+    def test_bare_verb_path_still_works(self):
+        text = "# T\n\nSend a POST /pts/v2/payments request with the body below.\n"
+        claims, _ = _extract_claims_from_text(
+            text, source_pointer="x.md", doc_stem="x"
+        )
+        eps = [c for c in claims if c.schema == "endpoint_fact"]
+        self.assertEqual(len(eps), 1)
+        self.assertEqual(eps[0].extras["path"], "/pts/v2/payments")
+
+
+class StepAnchorTests(unittest.TestCase):
+    """Loop C2: DITA anchors are markup, not step text."""
+
+    def test_anchor_stripped_from_step(self):
+        text = (
+            "# Guide\n\n"
+            "1. Click the Portfolio Management icon in the pane.{#merchants-v2-step1}\n"
+        )
+        claims, _ = _extract_claims_from_text(
+            text, source_pointer="x.md", doc_stem="x"
+        )
+        steps = [c for c in claims if c.schema == "quickstart_step"]
+        self.assertEqual(len(steps), 1)
+        self.assertNotIn("{#", steps[0].text)
+
+
 if __name__ == "__main__":
     unittest.main()

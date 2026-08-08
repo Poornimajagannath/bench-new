@@ -1,15 +1,15 @@
 {
   "stamp_date": "2026-08-08-boarding",
   "docs_fetched": 190,
-  "claims_extracted": 2360,
+  "claims_extracted": 2403,
   "claims_by_schema": {
     "quickstart_step": 969,
-    "endpoint_fact": 0,
+    "endpoint_fact": 43,
     "error_case": 65,
     "prose_claim": 214,
     "field_table": 1112
   },
-  "drop_count": 94,
+  "drop_count": 84,
   "drops": [
     {
       "path": "en-us_boarding-template-management_user_all_ada_boarding-template-mgmt_templates-about-guide.md.md",
@@ -362,13 +362,6 @@
       "first_heading": "Hierarchy Example"
     },
     {
-      "path": "2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-extend-hierarchy_boarding-reg-create-structural-api.md.md",
-      "reason": "no_schema_match",
-      "detail": "no quickstart/endpoint/error/prose claim extracted",
-      "bytes": 620,
-      "first_heading": "Add a Structural Organization to a Merchant Organization"
-    },
-    {
       "path": "2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-extend-hierarchy_boarding-reg-create-structural-api_boarding-reg-create-structural-api-example.md.md",
       "reason": "no_schema_match",
       "detail": "no quickstart/endpoint/error/prose claim extracted",
@@ -381,20 +374,6 @@
       "detail": "no quickstart/endpoint/error/prose claim extracted",
       "bytes": 629,
       "first_heading": "Required Fields for Boarding a Structural Organization"
-    },
-    {
-      "path": "2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro_boarding-retrieve-organizations.md.md",
-      "reason": "no_schema_match",
-      "detail": "no quickstart/endpoint/error/prose claim extracted",
-      "bytes": 753,
-      "first_heading": "Retrieve a List of Organizations"
-    },
-    {
-      "path": "2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro_boarding-update-information-api.md.md",
-      "reason": "no_schema_match",
-      "detail": "no quickstart/endpoint/error/prose claim extracted",
-      "bytes": 916,
-      "first_heading": "Update an Organization's Information"
     },
     {
       "path": "2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-payer-auth_boarding-payer-auth-enable-intro_boarding-payer-auth-enable-ex-rest.md.md",
@@ -453,13 +432,6 @@
       "first_heading": "Token Vault Management"
     },
     {
-      "path": "2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products_boarding-pecs-payer-auth_pecs-config-payerauth.md.md",
-      "reason": "no_schema_match",
-      "detail": "no quickstart/endpoint/error/prose claim extracted",
-      "bytes": 529,
-      "first_heading": "Configure `Payer Authentication` Using the PECS API"
-    },
-    {
       "path": "2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products_boarding-pecs-tms_boarding-pecs-tms-enable-intro_boarding-pecs-tms-enable-ex-rest.md.md",
       "reason": "no_schema_match",
       "detail": "no quickstart/endpoint/error/prose claim extracted",
@@ -502,25 +474,11 @@
       "first_heading": "Required Fields for Adding a New Products"
     },
     {
-      "path": "2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products_pecs-add-delete-processor.md.md",
-      "reason": "no_schema_match",
-      "detail": "no quickstart/endpoint/error/prose claim extracted",
-      "bytes": 673,
-      "first_heading": "Add and Delete a Processor Using the PECS API"
-    },
-    {
       "path": "2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products_pecs-add-delete-processor_pecs-add-delete-processor-ex.md.md",
       "reason": "no_schema_match",
       "detail": "no quickstart/endpoint/error/prose claim extracted",
       "bytes": 1883,
       "first_heading": "Example: Adding and Deleting a Processor Using the PECS API"
-    },
-    {
-      "path": "2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products_pecs-add-processor.md.md",
-      "reason": "no_schema_match",
-      "detail": "no quickstart/endpoint/error/prose claim extracted",
-      "bytes": 460,
-      "first_heading": "Add a Processor Using the PECS API"
     },
     {
       "path": "2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products_pecs-add-processor_pecs-add-processor-ex.md.md",
@@ -537,25 +495,11 @@
       "first_heading": "Required Fields for Adding a Processor Using the PECS API"
     },
     {
-      "path": "2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products_pecs-delete-processor.md.md",
-      "reason": "no_schema_match",
-      "detail": "no quickstart/endpoint/error/prose claim extracted",
-      "bytes": 609,
-      "first_heading": "Delete a Processor Using the PECS API"
-    },
-    {
       "path": "2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products_pecs-delete-processor_pecs-delete-processor-ex.md.md",
       "reason": "no_schema_match",
       "detail": "no quickstart/endpoint/error/prose claim extracted",
       "bytes": 1845,
       "first_heading": "Example: Deleting a Processor Using the PECS API"
-    },
-    {
-      "path": "2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products_pecs-update-batch.md.md",
-      "reason": "no_schema_match",
-      "detail": "no quickstart/endpoint/error/prose claim extracted",
-      "bytes": 465,
-      "first_heading": "Update Batch Group Using the PECS API"
     },
     {
       "path": "2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products_pecs-update-batch_pecs-update-batch-ex.md.md",
@@ -579,13 +523,6 @@
       "first_heading": "REST Example: Creating a Transacting Organization with Integration Information"
     },
     {
-      "path": "2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-reg-intro_boarding-reg-create-merch-api.md.md",
-      "reason": "no_schema_match",
-      "detail": "no quickstart/endpoint/error/prose claim extracted",
-      "bytes": 536,
-      "first_heading": "Create a Merchant Organization"
-    },
-    {
       "path": "2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-reg-intro_boarding-reg-create-merch-api_boarding-reg-create-merch-api-example.md.md",
       "reason": "no_schema_match",
       "detail": "no quickstart/endpoint/error/prose claim extracted",
@@ -598,13 +535,6 @@
       "detail": "no quickstart/endpoint/error/prose claim extracted",
       "bytes": 2665,
       "first_heading": "Required Fields for Boarding a Merchant Organization"
-    },
-    {
-      "path": "2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-reg-intro_boarding-reg-create-new-transacting-api.md.md",
-      "reason": "no_schema_match",
-      "detail": "no quickstart/endpoint/error/prose claim extracted",
-      "bytes": 705,
-      "first_heading": "Add a Transacting Organization to a New Merchant Organization"
     },
     {
       "path": "2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-reg-intro_boarding-reg-create-new-transacting-api_boarding-reg-create-new-transacting-api-example.md.md",
@@ -713,13 +643,6 @@
       "detail": "no quickstart/endpoint/error/prose claim extracted"
     },
     {
-      "path": "2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-extend-hierarchy_boarding-reg-create-structural-api.md.md",
-      "reason": "no_schema_match",
-      "bytes": 620,
-      "first_heading": "Add a Structural Organization to a Merchant Organization",
-      "detail": "no quickstart/endpoint/error/prose claim extracted"
-    },
-    {
       "path": "2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-extend-hierarchy_boarding-reg-create-structural-api_boarding-reg-create-structural-api-example.md.md",
       "reason": "no_schema_match",
       "bytes": 2121,
@@ -734,24 +657,31 @@
       "detail": "no quickstart/endpoint/error/prose claim extracted"
     },
     {
-      "path": "2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro_boarding-retrieve-organizations.md.md",
-      "reason": "no_schema_match",
-      "bytes": 753,
-      "first_heading": "Retrieve a List of Organizations",
-      "detail": "no quickstart/endpoint/error/prose claim extracted"
-    },
-    {
-      "path": "2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-manage-org-intro_boarding-update-information-api.md.md",
-      "reason": "no_schema_match",
-      "bytes": 916,
-      "first_heading": "Update an Organization's Information",
-      "detail": "no quickstart/endpoint/error/prose claim extracted"
-    },
-    {
       "path": "2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-payer-auth_boarding-payer-auth-enable-intro_boarding-payer-auth-enable-ex-rest.md.md",
       "reason": "no_schema_match",
       "bytes": 4406,
       "first_heading": "REST Example: Enabling `Payer Authentication`",
+      "detail": "no quickstart/endpoint/error/prose claim extracted"
+    },
+    {
+      "path": "2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-tms_boarding-tms-enable-intro_boarding-tms-enable-ex-rest.md.md",
+      "reason": "no_schema_match",
+      "bytes": 1616,
+      "first_heading": "REST Example: Enabling `TMS` Using a Template",
+      "detail": "no quickstart/endpoint/error/prose claim extracted"
+    },
+    {
+      "path": "2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-tms_boarding-tms-enable-intro_boarding-tms-enable-reqfields.md.md",
+      "reason": "no_schema_match",
+      "bytes": 4269,
+      "first_heading": "Required Fields for Enabling `TMS` Using a Template",
+      "detail": "no quickstart/endpoint/error/prose claim extracted"
+    },
+    {
+      "path": "2026-08-08-boarding/en-us_boarding_developer_all_rest_boarding_boarding-products-intro_boarding-tms_boarding-tms-enable-net-tkn-existing-intro_boarding-tms-enable-net-tkn-existing-ex-rest.md.md",
+      "reason": "no_schema_match",
+      "bytes": 4265,
+      "first_heading": "REST Example: Enabling `TMS` and Enrolling in Network Tokenization for an Existing Merchant",
       "detail": "no quickstart/endpoint/error/prose claim extracted"
     }
   ]

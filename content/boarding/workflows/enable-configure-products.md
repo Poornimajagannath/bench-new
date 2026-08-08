@@ -229,14 +229,14 @@ _Generated from `normalized/2026-08-08-boarding.claims.json`; do not hand-edit. 
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay_boarding-config-altpay-boarding-self:step:10:92c9fcb4`</sub>
-11. **Action:** Under Product Enablement, find Alternative Payments and select Allow Self Enablement under the Enablement drop-down menu.{#boarding-config-altpay-boarding-self_boarding-config-altpay-boarding-self-step8}
+11. **Action:** Under Product Enablement, find Alternative Payments and select Allow Self Enablement under the Enablement drop-down menu.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
-   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay_boarding-config-altpay-boarding-self:step:11:3e8de3f9`</sub>
-12. **Action:** Click Save. Alternative Payments is now available for self-enablement for the merchant.{#boarding-config-altpay-boarding-self_boarding-config-altpay-boarding-self-step9}
+   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay_boarding-config-altpay-boarding-self:step:11:eb957f7b`</sub>
+12. **Action:** Click Save. Alternative Payments is now available for self-enablement for the merchant.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
-   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay_boarding-config-altpay-boarding-self:step:12:8c900dce`</sub>
+   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay_boarding-config-altpay-boarding-self:step:12:7d3fb96a`</sub>
 ### Via Partner admin (Business Center) — `en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay_boarding-config-altpay-boarding.md.md`
 
 1. **Action:** In the left navigation panel, click **Portfolio Management**.
@@ -271,38 +271,38 @@ _Generated from `normalized/2026-08-08-boarding.claims.json`; do not hand-edit. 
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay_boarding-config-altpay-boarding:step:8:c87239f4`</sub>
-9. **Action:** Click Start in the Transacting Organization and Products section to set up a transacting organization and configure products for it. The Transacting Organization and Products page appears.{#boarding-config-altpay-boarding_boarding-config-altpay-boarding-step6}
+9. **Action:** Click Start in the Transacting Organization and Products section to set up a transacting organization and configure products for it. The Transacting Organization and Products page appears.
    - Actor: Partner admin (Business Center)
    - Expected outcome: The Transacting Organization and Products page appears.
-   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay_boarding-config-altpay-boarding:step:9:529cbd84`</sub>
-10. **Action:** Under Transacting Organization Details, enter the transacting organization name and the organization ID.{#boarding-config-altpay-boarding_boarding-config-altpay-boarding-step7}
+   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay_boarding-config-altpay-boarding:step:9:4ff18883`</sub>
+10. **Action:** Under Transacting Organization Details, enter the transacting organization name and the organization ID.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
-   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay_boarding-config-altpay-boarding:step:10:27b675c4`</sub>
-11. **Action:** Under Product Enablement, find Alternative Payments and select Enabled under the Enablement drop-down menu.{#boarding-config-altpay-boarding_boarding-config-altpay-boarding-step8}
+   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay_boarding-config-altpay-boarding:step:10:19ff732e`</sub>
+11. **Action:** Under Product Enablement, find Alternative Payments and select Enabled under the Enablement drop-down menu.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
-   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay_boarding-config-altpay-boarding:step:11:5590cfca`</sub>
-12. **Action:** Click Configure. The Configure Alternative Payment Methods page appears.{#boarding-config-altpay-boarding_boarding-config-altpay-boarding-step9}
+   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay_boarding-config-altpay-boarding:step:11:5617dc0d`</sub>
+12. **Action:** Click Configure. The Configure Alternative Payment Methods page appears.
    - Actor: Partner admin (Business Center)
    - Expected outcome: The Configure Alternative Payment Methods page appears.
-   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay_boarding-config-altpay-boarding:step:12:fefbafd1`</sub>
+   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay_boarding-config-altpay-boarding:step:12:d6164c48`</sub>
 13. **Action:** Check the box next to each alternative payment method you want to enable and configure. You can choose alternative payment methods from these categories:
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay_boarding-config-altpay-boarding:step:13:6c53b944`</sub>
-14. **Action:** Click Continue. The Product Configuration page appears.{#boarding-config-altpay-boarding_boarding-config-altpay-boarding-step11}
+14. **Action:** Click Continue. The Product Configuration page appears.
    - Actor: Partner admin (Business Center)
    - Expected outcome: The Product Configuration page appears.
-   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay_boarding-config-altpay-boarding:step:14:66d3600b`</sub>
+   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay_boarding-config-altpay-boarding:step:14:a142b937`</sub>
 15. **Action:** Enter the required details for each alternative payment method you want to configure.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay_boarding-config-altpay-boarding:step:15:e3a6f564`</sub>
-16. **Action:** Click Continue to return to the Merchant Details page.{#boarding-config-altpay-boarding_boarding-config-altpay-boarding-step13}
+16. **Action:** Click Continue to return to the Merchant Details page.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
-   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay_boarding-config-altpay-boarding:step:16:1b3e9011`</sub>
+   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay_boarding-config-altpay-boarding:step:16:661e57a2`</sub>
 ### Via Partner admin (Business Center) — `en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-altpay_boarding-config-altpay-existing.md.md`
 
 1. **Action:** In the left navigation pane, click the Portfolio Management icon.
@@ -393,10 +393,10 @@ _Generated from `normalized/2026-08-08-boarding.claims.json`; do not hand-edit. 
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-add:step:6:4a7a2bea`</sub>
-7. **Action:** In the Payer Authentication Set Up drop-down menu, choose a template.{#config-payer-auth-add_config-payer-auth-add-step1}
+7. **Action:** In the Payer Authentication Set Up drop-down menu, choose a template.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
-   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-add:step:7:63737da1`</sub>
+   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-add:step:7:a2e6d18f`</sub>
 8. **Action:** Click Configure for each `Payer Authentication` card service that you want to configure.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
@@ -417,18 +417,18 @@ _Generated from `normalized/2026-08-08-boarding.claims.json`; do not hand-edit. 
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
    - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-add:step:12:440e2e63`</sub>
-13. **Action:** Click the trash can icon to delete a configuration.{#config-payer-auth-add_config-payer-auth-add-step7}
+13. **Action:** Click the trash can icon to delete a configuration.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
-   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-add:step:13:67bf86a1`</sub>
-14. **Action:** Click View all currencies to collapse or expand all currencies that are configured.{#config-payer-auth-add_config-payer-auth-add-step8}
+   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-add:step:13:4d90f8de`</sub>
+14. **Action:** Click View all currencies to collapse or expand all currencies that are configured.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
-   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-add:step:14:79ccfa0b`</sub>
-15. **Action:** Click Save to save your configuration and return to the Payer Authentication Set Up and Enablement page.{#config-payer-auth-add_config-payer-auth-add-step9}
+   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-add:step:14:40ef0a0a`</sub>
+15. **Action:** Click Save to save your configuration and return to the Payer Authentication Set Up and Enablement page.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.
-   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-add:step:15:de251be1`</sub>
+   - <sub>`en-us_boarding_user_all_ebc_boarding-user_boarding-products_boarding-payer-auth_boarding-config-payer-auth-add:step:15:0c1a13af`</sub>
 16. **Action:** If you do not want to save your changes, click Cancel to return to the Payer Authentication Set Up and Enablement page.
    - Actor: Partner admin (Business Center)
    - Expected outcome: **Gap:** not stated in source.

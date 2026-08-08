@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-08T02:32:38+00:00",
+  "generated_at": "2026-08-08T02:33:40+00:00",
   "mode": "deterministic",
   "llm_key_present": false,
   "spend_usd": 0.0,
@@ -14,8 +14,8 @@
         "artifacts/content_engine/boarding/ingestion-report.json \u2014 drop log",
         "data/products/boarding/guides/en-us_boarding_developer_all_rest_boarding_boarding-reg-intro_boarding-reg-create-merch-api.md.md"
       ],
-      "recheck": "pass: page contains a backticked full-URL endpoint line and the current extractor yields 0 endpoint_fact claims",
-      "status": "proposed"
+      "recheck": "fail: endpoint_facts=2 url_line=True \u2014 defect no longer reproduces",
+      "status": "discarded"
     },
     {
       "id": "C2-step-anchor-noise",
@@ -23,8 +23,8 @@
       "evidence": [
         "artifacts/content_engine/boarding/composition-report.json \u2014 mega_residual_samples"
       ],
-      "recheck": "pass: 4 residual step samples still carry {#anchor} tokens in claim text",
-      "status": "proposed"
+      "recheck": "fail: no anchored residual steps remain",
+      "status": "discarded"
     },
     {
       "id": "C3-payments-still-dropped",
@@ -33,13 +33,14 @@
         "evals/evidence/wave1-payments/extraction-recall-fix.md \u2014 still-dropped names"
       ],
       "recheck_detail": {
-        "would_now_claim": [],
+        "would_now_claim": [
+          "en-us_tms_developer_all_rest_tms_tms-bin-lookup-service.md.md"
+        ],
         "still_zero": [
           "en-us_payer-authentication_developer_all_rest_payer-auth_pa2-ccdc-intro.md.md",
           "en-us_payments_developer_ctv_rest_payments_payments-debit-prepaid-process-intro.md.md",
           "en-us_payments_developer_ctv_rest_payments_payments-intro.md.md",
           "en-us_payments_developer_ctv_rest_payments_payments-processing-basic-intro.md.md",
-          "en-us_tms_developer_all_rest_tms_tms-bin-lookup-service.md.md",
           "en-us_tms_developer_all_rest_tms_tms-cust-tkn.md.md",
           "en-us_tms_developer_all_rest_tms_tms-cust-tkn_tms-cust-pi-tkn.md.md",
           "en-us_tms_developer_all_rest_tms_tms-cust-tkn_tms-ship-tkn.md.md",
@@ -49,8 +50,8 @@
           "sandbox.md"
         ]
       },
-      "recheck": "fail: no previously dropped page yields claims",
-      "status": "discarded"
+      "recheck": "pass: 1/12 previously dropped payments pages now yield claims under the current extractor",
+      "status": "proposed"
     },
     {
       "id": "C4-missing-outcomes",
@@ -75,7 +76,6 @@
     }
   ],
   "proposed_within_cap": [
-    "C1-endpoint-url-style",
-    "C2-step-anchor-noise"
+    "C3-payments-still-dropped"
   ]
 }
