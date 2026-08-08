@@ -11,13 +11,21 @@ PR that introduces it. Architecture invariants live in
 own table of contents. Example: Boarding REST API, Boarding Business Center,
 Boarding Template Management.
 
-**TOC** — the family's own HTML navigation tree on the vendor site. The source
-of truth for what pages exist.
+**Product root** — the family mega-guide markdown file at the guide path
+(e.g. `…/boarding/developer/all/rest/boarding.md`). Canonical verbatim
+corpus source. Derived from docs.md intro links by promoting the guide
+directory to `{guide}.md` (the family name repeated when that directory
+matches the family). Split into addressable sections by heading `{#anchor}`s.
+
+**TOC** — the family's own HTML navigation tree on the vendor site. A
+cross-check against the product root: any TOC page whose content does not
+appear in the root is a real gap. Not the coverage denominator.
 
 **Denominator** — the count a coverage claim is measured against. Always
-computed at runtime from the source of truth (the family TOC for docs, the
-registered spec for API operations). Never hard-coded, never taken from
-`llms.txt`. Every reported number arrives with its denominator and its source.
+computed at runtime from the source of truth (the **product root** for docs
+corpus coverage; the registered spec for API operations). Never hard-coded,
+never taken from `llms.txt`. Every reported number arrives with its
+denominator and its source.
 
 **llms.txt hint** — the vendor's agent-discovery file. A discovery aid only.
 Demonstrated incomplete: 27 boarding URLs listed vs 236 pages in the family

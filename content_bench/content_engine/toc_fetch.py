@@ -1,10 +1,14 @@
-"""Family corpus fetch — the denominator comes from the site TOC.
+"""Family TOC fetch — cross-check adapter against the product root.
 
-Deep module: interface = family seeds -> topic denominator -> local paths +
-fetch report. Two adapters justify the seam:
+Deep module: interface = family seeds -> TOC topic list -> local paths +
+fetch report. The **product root** (see ``product_roots.py``) is the corpus
+source of truth and coverage denominator. This module remains the TOC
+walker used as a cross-check: any TOC page whose content does not appear in
+its product root is a real gap.
 
-  * **Site HTML TOC** (default) — the source of truth for coverage. The
-    denominator is the set of topic paths in the family's own navigation tree.
+Two adapters justify the seam:
+
+  * **Site HTML TOC** — navigation tree used for the cross-check topic list.
   * **llms.txt** — a discovery *hint*, never a denominator. Demonstrated:
     3 boarding entries listed vs 80+ pages in the family TOC.
 
@@ -12,10 +16,6 @@ Fidelity rule: a paraphrase must never enter raw/. Topics are fetched with a
 plain HTTP client, `.md` first, byte-for-byte (trailing newline normalized
 only). HTML->markdown conversion is a *fallback* reserved for broken `.md`
 endpoints, and its output is marked in-band as html-fallback.
-
-Invariant (docs/ARCHITECTURE-DECISIONS.md #5): denominators are computed from
-the source of truth at runtime, never hard-coded. Every census built on this
-module must state the denominator source: ``site_html_toc``.
 """
 
 from __future__ import annotations
