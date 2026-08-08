@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "kinds": {
+    "revision_history": "Recent Revisions to This Document and changelog-style sections",
+    "about_guide_boilerplate": "About This Guide, audience, and conventions boilerplate",
+    "support_center": "Support Center link blocks with no procedural content",
+    "navigation_list": "Pure navigation lists and link-only index shells"
+  },
+  "exclude_kinds": [
+    "revision_history",
+    "about_guide_boilerplate",
+    "support_center",
+    "navigation_list"
+  ],
+  "notes": "Section-level quarantine for cleaned corpus. These kinds produced broken Auth Setup pages when left inline. Lift content to quarantine/ with reason; never discard."
+}
