@@ -68,6 +68,28 @@ class ConstraintDetectorTests(unittest.TestCase):
         self.assertEqual(triage.constraint_kind(s), "prerequisite")
         s2 = "You must have a portfolio account on our platform."
         self.assertEqual(triage.constraint_kind(s2), "prerequisite")
+        # L1-prereq-pattern-tune (C3 sibling triage / Spark Qwen proposal)
+        self.assertEqual(
+            triage.constraint_kind(
+                "Before you can implement payer authentication services, "
+                "your business team must contact your acquirer and Cybersource."
+            ),
+            "prerequisite",
+        )
+        self.assertEqual(
+            triage.constraint_kind(
+                "This implementation requires the use of JavaScript to "
+                "leverage the authentication."
+            ),
+            "prerequisite",
+        )
+        self.assertEqual(
+            triage.constraint_kind(
+                "Notify your account representative that you want to "
+                "implement payer authentication."
+            ),
+            "prerequisite",
+        )
 
     def test_page_and_sentence_detectors_agree_on_boarding_classes(self):
         page = (

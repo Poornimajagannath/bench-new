@@ -273,6 +273,32 @@ def recheck_llm_candidate(cand: Dict[str, Any]) -> Dict[str, Any]:
             cand["why_discarded"] = "Stale relative to current extractor."
             return cand
 
+    if "rest_example" in proposal or (
+        "json code block" in proposal and "rest" in proposal
+    ):
+        if (ROOT / "tests/test_rest_example.py").is_file():
+            cand["status"] = "discarded"
+            cand["recheck"] = (
+                "fail: rest_example schema already implemented "
+                "(tests/test_rest_example.py)"
+            )
+            cand["why_discarded"] = "Stale relative to current extractor."
+            return cand
+    if "prerequisite_pattern" in proposal.replace("-", "_") or (
+        "_prerequisite_pattern" in proposal or "prereq" in proposal
+        and "before you can" in proposal
+    ):
+        # Pattern already expanded after L1 merge.
+        from content_bench.content_engine import triage as _triage
+        if _triage.constraint_kind(
+            "Before you can implement payer authentication services, "
+            "your business team must contact your acquirer."
+        ) == "prerequisite":
+            cand["status"] = "discarded"
+            cand["recheck"] = "fail: prerequisite pattern already expanded (L1)"
+            cand["why_discarded"] = "Stale relative to current extractor."
+            return cand
+
     resolved: List[str] = []
     unresolved: List[str] = []
     for e in cand.get("evidence") or []:

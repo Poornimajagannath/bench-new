@@ -22,7 +22,12 @@ CLAIM_SCHEMAS = (
     "error_case",
     "prose_claim",
     "field_table",
+    "rest_example",
 )
+
+_FENCED_BLOCK = re.compile(r"(?m)^```([^\n]*)\n(.*?)^```\s*$", re.S)
+_REQ_LABEL = re.compile(r"(?i)^\s*(?:>\s*)?request(?:\s|$|:)")
+_RESP_LABEL = re.compile(r"(?i)^\s*(?:>\s*)?response\b")
 
 _DROP_PATTERNS = (
     (re.compile(r"\brevision history\b", re.I), "revision_history"),
@@ -312,6 +317,76 @@ def _extract_field_table_claims(
     return claims
 
 
+def _extract_rest_example_claims(
+    text: str,
+    *,
+    source_pointer: str,
+    doc_stem: str,
+) -> List[NormalizedClaim]:
+    """One claim per fenced JSON body on standalone REST Example pages.
+
+    Wave 2 closeout remaining shape: REST example pages whose facts are JSON
+    code blocks (no Endpoint/Required Fields section). Extracts only what is
+    on the page — role from the nearest Request/Response label, top-level
+    keys from parsed JSON, compact body text capped at 500 chars.
+    """
+    claims: List[NormalizedClaim] = []
+    heading = _first_heading(text)
+    # Build (start, end, body) spans with preceding non-empty label line.
+    for match in _FENCED_BLOCK.finditer(text):
+        lang = (match.group(1) or "").strip().lower()
+        body = match.group(2).strip()
+        if lang and lang not in {"json", "js", "javascript"}:
+            continue
+        if not body or body[0] not in "{[":
+            continue
+        try:
+            parsed = json.loads(body)
+        except json.JSONDecodeError:
+            continue
+        before = text[: match.start()]
+        label_line = ""
+        for line in reversed(before.splitlines()):
+            s = line.strip()
+            if not s or set(s) <= {"=", "-", "*", " "}:
+                continue
+            if s.startswith("#"):
+                break
+            label_line = s
+            break
+        role = "unknown"
+        if _RESP_LABEL.match(label_line):
+            role = "response"
+        elif _REQ_LABEL.match(label_line):
+            role = "request"
+        if isinstance(parsed, dict):
+            keys = list(parsed.keys())
+        elif isinstance(parsed, list):
+            keys = ["[array]"]
+        else:
+            keys = []
+        compact = json.dumps(parsed, separators=(",", ":"), ensure_ascii=False)
+        if len(compact) > 500:
+            compact = compact[:500]
+        digest = hashlib.sha1(f"{role}:{compact}".encode()).hexdigest()[:10]
+        title_bit = heading or "REST example"
+        claims.append(
+            NormalizedClaim(
+                claim_id=f"{doc_stem}:rest_example:{role}:{digest}",
+                schema="rest_example",
+                title=f"{title_bit} ({role})"[:120],
+                text=compact,
+                source_pointer=source_pointer,
+                extras={
+                    "role": role,
+                    "top_level_keys": keys,
+                    "page_heading": heading,
+                },
+            )
+        )
+    return claims
+
+
 def _extract_claims_from_text(
     text: str,
     *,
@@ -474,6 +549,12 @@ def _extract_claims_from_text(
 
     claims.extend(
         _extract_field_table_claims(
+            text, source_pointer=source_pointer, doc_stem=doc_stem
+        )
+    )
+
+    claims.extend(
+        _extract_rest_example_claims(
             text, source_pointer=source_pointer, doc_stem=doc_stem
         )
     )
