@@ -1,26 +1,38 @@
 {
-  "generated_at": "2026-08-08T04:56:04+00:00",
-  "mode": "llm",
+  "generated_at": "2026-08-08T05:00:26+00:00",
+  "code_path": "local_spark_qwen_draft",
+  "code_path_note": "called local Spark Qwen `nvidia/Qwen3.6-35B-A3B-NVFP4` at `http://127.0.0.1:8000/v1` (Hermes provider spark-qwen).",
+  "requested_path": "local-llm",
+  "llm_called": true,
   "llm_key_present": false,
+  "cloud_corpus_egress": "forbidden",
+  "no_invention_rule": "The loop may rephrase, restructure, and assemble existing claims, and may never author a fact absent from the claim set. A step with no stated outcome must receive a gap marker, not an invented result.",
   "llm_endpoint": {
     "source": "spark-qwen-local",
     "base_url": "http://127.0.0.1:8000/v1",
-    "model": "nvidia/Qwen3.6-35B-A3B-NVFP4"
+    "model": "nvidia/Qwen3.6-35B-A3B-NVFP4",
+    "hermes_provider": "spark-qwen"
   },
   "llm_meta": {
     "endpoint_source": "spark-qwen-local",
+    "hermes_provider": "spark-qwen",
     "model": "nvidia/Qwen3.6-35B-A3B-NVFP4",
+    "base_url": "http://127.0.0.1:8000/v1",
     "usage": {
-      "prompt_tokens": 2916,
-      "total_tokens": 3422,
-      "completion_tokens": 506,
+      "prompt_tokens": 3729,
+      "total_tokens": 4371,
+      "completion_tokens": 642,
       "prompt_tokens_details": null
     },
-    "raw_response_chars": 2027
+    "elapsed_seconds": 12.868,
+    "raw_response_chars": 2628,
+    "llm_called": true
   },
   "spend_usd": 0.0,
   "budget_usd": 2.0,
   "max_prs": 3,
+  "max_completion_tokens": 8000,
+  "timeout_seconds": 180,
   "candidates": [
     {
       "id": "C1-endpoint-url-style",
@@ -30,6 +42,7 @@
         "artifacts/content_engine/boarding/ingestion-report.json \u2014 drop log",
         "data/products/boarding/guides/en-us_boarding_developer_all_rest_boarding_boarding-reg-intro_boarding-reg-create-merch-api.md.md"
       ],
+      "source": "deterministic",
       "recheck": "fail: endpoint_facts=2 url_line=True \u2014 defect no longer reproduces",
       "status": "discarded"
     },
@@ -39,6 +52,7 @@
       "evidence": [
         "artifacts/content_engine/boarding/composition-report.json \u2014 mega_residual_samples"
       ],
+      "source": "deterministic",
       "recheck": "fail: no anchored residual steps remain",
       "status": "discarded"
     },
@@ -49,13 +63,14 @@
         "evals/evidence/wave1-payments/extraction-recall-fix.md \u2014 still-dropped names",
         "evals/evidence/wave1-payments/c3-payments-reingest.md"
       ],
+      "source": "deterministic",
       "recheck_detail": {
         "would_now_claim": [
+          "en-us_payer-authentication_developer_all_rest_payer-auth_pa2-ccdc-intro.md.md",
+          "en-us_payments_developer_ctv_rest_payments_payments-debit-prepaid-process-intro.md.md",
           "en-us_tms_developer_all_rest_tms_tms-bin-lookup-service.md.md"
         ],
         "still_zero": [
-          "en-us_payer-authentication_developer_all_rest_payer-auth_pa2-ccdc-intro.md.md",
-          "en-us_payments_developer_ctv_rest_payments_payments-debit-prepaid-process-intro.md.md",
           "en-us_payments_developer_ctv_rest_payments_payments-intro.md.md",
           "en-us_payments_developer_ctv_rest_payments_payments-processing-basic-intro.md.md",
           "en-us_tms_developer_all_rest_tms_tms-cust-tkn.md.md",
@@ -67,7 +82,7 @@
           "sandbox.md"
         ]
       },
-      "recheck": "fail: already merged \u2014 recovered 1 claiming page(s); see c3-payments-reingest.md",
+      "recheck": "fail: already merged \u2014 recovered 3 claiming page(s); see c3-payments-reingest.md",
       "status": "discarded",
       "why_discarded": "C3 already executed and recorded as MERGED."
     },
@@ -77,9 +92,17 @@
       "evidence": [
         "artifacts/content_engine/boarding/gap-report.md \u2014 headline 1"
       ],
+      "source": "deterministic",
       "recheck": "n/a",
       "status": "discarded",
-      "why_discarded": "Outcomes are facts about the product; generating them without a source would invent facts. Upstream docs-team work, tracked in the gap report."
+      "why_discarded": "Outcomes are facts about the product; generating them without a source would invent facts. Upstream docs-team work, tracked in the gap report.",
+      "gap_marker_demo": {
+        "kind": "gap_marker",
+        "text": "[gap: no stated outcome in source claims]",
+        "source_claim_ids": [],
+        "status": "proposed_gap",
+        "why": "The loop may rephrase, restructure, and assemble existing claims, and may never author a fact absent from the claim set. A step with no stated outcome must receive a gap marker, not an invented result."
+      }
     },
     {
       "id": "C5-llms-txt-defect",
@@ -88,53 +111,59 @@
         "artifacts/content_engine/boarding/gap-report.md \u2014 headline 3",
         "artifacts/content_engine/boarding/toc-fetch-report.md \u2014 probe"
       ],
+      "source": "deterministic",
       "recheck": "n/a",
       "status": "discarded",
       "why_discarded": "Production docs-site defect; not fixable from this repo. Bug already raised externally."
     },
     {
-      "id": "L1-prereq-pattern-tune",
-      "proposal": "Update the `_PREREQUISITE_PATTERN` regex in the extractor to capture 'Before you can...' and 'This implementation requires...' phrasing, which are currently missed by the strict list of `prerequisite|must have|you must include|requires that|must be in the format`. This will recover load-bearing prerequisite claims from pages like `pa2-ccdc-intro`.",
+      "id": "L2-prerequisite-prose-extractor",
+      "proposal": "Create a new `prerequisite_prose` schema/extractor to capture load-bearing prerequisite sentences (e.g., 'Before you can...', 'must contact acquirer') that do not match the existing `_PREREQUISITE_PATTERN` regex. The current pattern only matches specific keywords, missing broader instructional prose found in pages like `pa2-ccdc-intro` (pre-tune) and potentially others. This extractor should target fenced text blocks or paragraph-level constraints in API reference and guide pages.",
       "change_type": "extractor",
       "evidence": [
-        "evals/evidence/wave1-payments/c3-payments-reingest.md \u2014 pa2-ccdc-intro is a soft schema gap (prerequisite prose) where _PREREQUISITE_PATTERN only matches specific keywords, missing 'Before you can\u2026 must contact' and 'This implementation requires\u2026'"
-      ],
-      "source": "llm",
-      "evidence_resolved": [
-        "evals/evidence/wave1-payments/c3-payments-reingest.md"
-      ],
-      "status": "proposed",
-      "recheck": "pass: 1 evidence path(s) resolve; proposal is non-inventive"
-    },
-    {
-      "id": "L1-field-table-schema",
-      "proposal": "Add a `field_table` schema to the extraction engine to parse template matrix tables. This schema should extract one claim per data row, capturing field name, value, and table heading context. This addresses the Wave 2 closeout decision to load-board content that was previously out of scope.",
-      "change_type": "schema",
-      "evidence": [
-        "evals/evidence/WAVE2-CLOSEOUT.md \u2014 Decision: add a `field_table` schema so the tables extract. Implementation: one `field_table` claim per data row (field, value, table heading as context; `#` and setext headings both carried)."
+        "evals/evidence/wave1-payments/c3-payments-reingest.md \u2014 pa2-ccdc-intro soft schema gap (prerequisite prose) where current pattern misses 'Before you can\u2026 must contact' and 'This implementation requires\u2026'",
+        "evals/evidence/WAVE2-CLOSEOUT.md \u2014 boarding gap report headline 1: 222 steps lack stated outcomes, implying a need for better extraction of procedural context or constraints if they exist in prose"
       ],
       "source": "llm",
       "status": "discarded",
-      "recheck": "fail: field_table schema already implemented (WAVE2-CLOSEOUT + tests/test_field_table.py)",
+      "recheck": "fail: prerequisite pattern already expanded (L1)",
       "why_discarded": "Stale relative to current extractor."
     },
     {
-      "id": "L1-rest-example-json",
-      "proposal": "Extend the extraction pipeline to parse JSON code blocks within REST example pages as structured claims. Currently, REST example pages are among the zero-claim eligible docs because their facts are contained in JSON code blocks which the current prose/schema extractors do not match.",
+      "id": "L2-endpoint-required-fields-augment",
+      "proposal": "Augment the `endpoint_fact` extractor or create a companion `endpoint_constraint` schema to explicitly capture 'Required Fields' lists associated with matched endpoints. Currently, 57/176 matched endpoints lack this list, leaving partners unable to form valid requests. The extractor should look for adjacent tables or lists labeled 'Required Fields' or similar headers within the endpoint section.",
       "change_type": "extractor",
       "evidence": [
-        "evals/evidence/WAVE2-CLOSEOUT.md \u2014 Remaining 48 zero-claim docs... by shape: REST example pages whose facts are JSON code blocks... That is the next schema gap, recorded here"
+        "evals/evidence/WAVE2-CLOSEOUT.md \u2014 Soft-gap findings: 57/176 matched Endpoint sections omit Required Fields list",
+        "evals/evidence/WAVE2-CLOSEOUT.md \u2014 Table of endpoints with no Required Fields list (e.g., /boarding/v1/registrations POST)"
       ],
       "source": "llm",
       "evidence_resolved": [
+        "evals/evidence/WAVE2-CLOSEOUT.md",
         "evals/evidence/WAVE2-CLOSEOUT.md"
       ],
       "status": "proposed",
-      "recheck": "pass: 1 evidence path(s) resolve; proposal is non-inventive"
+      "recheck": "pass: 2 evidence path(s) resolve; proposal is non-inventive"
+    },
+    {
+      "id": "L2-boarding-step-outcome-gap-marker",
+      "proposal": "Add a gap marker for the 222 boarding workflow steps that lack stated outcomes. Since the content does not provide the outcome, the pipeline should explicitly flag these steps as 'outcome_missing' in the composition report rather than silently omitting them or assuming success. This ensures the gap is visible for upstream documentation fixes.",
+      "change_type": "gap_marker",
+      "evidence": [
+        "evals/evidence/WAVE2-CLOSEOUT.md \u2014 Boarding gap report: 222 of 277 sequence steps have no stated outcome",
+        "evals/evidence/WAVE2-CLOSEOUT.md \u2014 Headline finding 1: 'The boarding docs tell a partner what to click but not what should happen'"
+      ],
+      "source": "llm",
+      "evidence_resolved": [
+        "evals/evidence/WAVE2-CLOSEOUT.md",
+        "evals/evidence/WAVE2-CLOSEOUT.md"
+      ],
+      "status": "proposed",
+      "recheck": "pass: 2 evidence path(s) resolve; proposal is non-inventive"
     }
   ],
   "proposed_within_cap": [
-    "L1-prereq-pattern-tune",
-    "L1-rest-example-json"
+    "L2-endpoint-required-fields-augment",
+    "L2-boarding-step-outcome-gap-marker"
   ]
 }
