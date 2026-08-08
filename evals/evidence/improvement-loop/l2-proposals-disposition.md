@@ -4,7 +4,7 @@
 
 | ID | Status | Proposal |
 | --- | --- | --- |
-| L2-endpoint-required-fields-augment | **HOLD** | Capture Required Fields next to matched endpoints (57/176 soft gap). |
+| L2-endpoint-required-fields-augment | **CLEARED → shipped** | Capture Required Fields next to matched endpoints (57/176 soft gap). |
 | L2-boarding-step-outcome-gap-marker | **APPROVED → merged** | Flag steps with no stated outcome as `outcome_missing` (not invent results). |
 | L2-prerequisite-prose-extractor | discarded | Stale — L1 already expanded `_PREREQUISITE_PATTERN`. |
 
@@ -83,5 +83,4 @@ example-JSON inference.
 - If none of those exist for an endpoint, leave `required_fields` empty and
   keep the soft-gap finding — never populate from example JSON keys.
 
-Until that contract is in the implementation plan, **do not merge** the
-required-fields augment.
+Contract is now in `api_reference.py` and enforced by tests; fields are tagged.

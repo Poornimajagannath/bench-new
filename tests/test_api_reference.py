@@ -4,7 +4,12 @@ from __future__ import annotations
 
 import unittest
 
-from content_bench.content_engine.api_reference import extract_api_reference_claims
+from content_bench.content_engine.api_reference import (
+    DERIVATION_API_FIELDS_LINK,
+    DERIVATION_REQUIRED_FIELDS_SECTION,
+    DERIVATION_SIBLING_REQ_FIELDS_PAGE,
+    extract_api_reference_claims,
+)
 from content_bench.content_engine.ingest import _extract_claims_from_text
 from content_bench.content_engine.source_noise import (
     clean_claim_text,
@@ -90,6 +95,8 @@ class ApiReferenceExtractionTests(unittest.TestCase):
         fields = {f["name"]: f["instruction"] for f in test.extras["required_fields"]}
         self.assertIn("organizationInformation.type", fields)
         self.assertIn("MERCHANT", fields["organizationInformation.type"])
+        for f in test.extras["required_fields"]:
+            self.assertEqual(f["derivation_source"], DERIVATION_API_FIELDS_LINK)
         self.assertIn("type", test.extras["example_request"])
         self.assertIn("SUCCESS", test.extras["example_response"])
         self.assertEqual(test.extras["anchor"], "boarding-reg-create-merch-api")
@@ -190,6 +197,123 @@ class RenderDeepLinkTests(unittest.TestCase):
         self.assertIn("1. **API:**", page)
         self.assertRegex(page, r"2\. \*\*Action:\*\*")
         self.assertIn("sequence_stats:", page)
+
+
+PLAIN_RF_API = """\
+Add a Structural Organization to a Merchant Organization {#boarding-reg-create-structural-api}
+==============================================================================================
+
+Endpoint {#boarding-reg-create-structural-api_d7e665}
+-----------------------------------------------------
+
+**Test:** `POST ``https://apitest.cybersource.com``/boarding/v1/registrations`
+
+Required Fields for Boarding a Structural Organization {#boarding-reg-create-structural-api-req-fields}
+=======================================================================================================
+
+organizationInformation.type
+:
+Set the value to `STRUCTURAL`.
+
+organizationInformation.configurable
+:
+Set the value to `false`.
+
+REST Example: Creating a Structural Organization {#boarding-reg-create-structural-api-example}
+==============================================================================================
+
+Request
+
+```
+{
+    "organizationInformation": {
+        "type": "STRUCTURAL",
+        "configurable": false,
+        "extraFromExampleOnly": "nope"
+    }
+}
+```
+"""
+
+ENDPOINT_ONLY = """\
+Add a Structural Organization to a Merchant Organization {#boarding-reg-create-structural-api}
+==============================================================================================
+
+Endpoint {#boarding-reg-create-structural-api_ep}
+------------------------------------------------
+
+**Test:** `POST ``https://apitest.cybersource.com``/boarding/v1/registrations`
+"""
+
+SIBLING_RF = """\
+Required Fields for Boarding a Structural Organization {#boarding-reg-create-structural-api-req-fields}
+=======================================================================================================
+
+organizationInformation.parentOrganizationId
+:
+Set to the parent org id.
+"""
+
+
+class RequiredFieldsDerivationTests(unittest.TestCase):
+    def test_plain_dl_terms_tagged_required_fields_section(self):
+        claims, report, _ = extract_api_reference_claims(
+            PLAIN_RF_API,
+            source_pointer="boarding.md.md",
+            doc_stem="boarding",
+        )
+        self.assertEqual(report.matched_with_required_fields, 1)
+        self.assertFalse(
+            any(g.missing_required_fields for g in report.soft_gaps)
+        )
+        fields = claims[0].extras["required_fields"]
+        self.assertEqual(len(fields), 2)
+        self.assertTrue(
+            all(
+                f["derivation_source"] == DERIVATION_REQUIRED_FIELDS_SECTION
+                for f in fields
+            )
+        )
+        names = {f["name"] for f in fields}
+        self.assertEqual(
+            names,
+            {
+                "organizationInformation.type",
+                "organizationInformation.configurable",
+            },
+        )
+        # Example-only key must never become a required field.
+        self.assertNotIn("extraFromExampleOnly", names)
+
+    def test_sibling_page_tagged_sibling_req_fields_page(self):
+        claims, report, _ = extract_api_reference_claims(
+            ENDPOINT_ONLY,
+            source_pointer="boarding-reg-create-structural-api.md.md",
+            doc_stem="boarding",
+            sibling_pages={
+                "boarding-reg-create-structural-api-req-fields.md.md": SIBLING_RF
+            },
+        )
+        self.assertEqual(report.matched_with_required_fields, 1)
+        fields = claims[0].extras["required_fields"]
+        self.assertEqual(len(fields), 1)
+        self.assertEqual(
+            fields[0]["derivation_source"], DERIVATION_SIBLING_REQ_FIELDS_PAGE
+        )
+        self.assertEqual(
+            fields[0]["name"], "organizationInformation.parentOrganizationId"
+        )
+
+    def test_no_authoritative_source_keeps_soft_gap(self):
+        claims, report, _ = extract_api_reference_claims(
+            ENDPOINT_ONLY,
+            source_pointer="boarding-no-rf.md.md",
+            doc_stem="boarding",
+            sibling_pages={},
+        )
+        self.assertEqual(report.matched_with_required_fields, 0)
+        self.assertTrue(any(g.missing_required_fields for g in report.soft_gaps))
+        self.assertEqual(claims[0].extras.get("required_fields") or [], [])
 
 
 if __name__ == "__main__":

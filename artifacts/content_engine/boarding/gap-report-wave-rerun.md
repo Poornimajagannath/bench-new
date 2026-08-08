@@ -29,9 +29,9 @@ Matched Endpoint sections that document a verb+URL but omit the Required Fields 
 
 Denominator: **176** matched Endpoint sections (source: `api_reference.extract_api_reference_claims over raw/product-roots`).
 
-- Missing Required Fields: **57** / 176
+- Missing Required Fields: **30** / 176
 - Missing REST Example: **17** / 176
-- Missing both: **16** / 176
+- Missing both: **10** / 176
 
 ## Endpoints with no Required Fields list
 

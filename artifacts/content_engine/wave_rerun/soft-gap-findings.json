@@ -1,20 +1,25 @@
 {
-  "generated_at": "2026-08-08T04:31:38+00:00",
+  "generated_at": "2026-08-08T05:45:37+00:00",
   "denominator": {
     "matched_endpoint_sections": 176,
-    "source": "api_reference.extract_api_reference_claims over raw/product-roots"
+    "source": "api_reference.extract_api_reference_claims over raw/product-roots (RF derivation contract)"
   },
   "counts": {
-    "missing_required_fields": 57,
+    "missing_required_fields": 30,
     "missing_rest_example": 17,
-    "missing_both": 16
+    "missing_both": 10,
+    "matched_with_required_fields": 146
+  },
+  "derivation_source_counts": {
+    "api_fields_link": 7631,
+    "required_fields_section": 3263
   },
   "by_product_missing_required_fields": {
-    "boarding": 13,
-    "click-to-pay": 8,
-    "digital-accept-flex": 9,
-    "payments": 5,
-    "tms": 18,
+    "boarding": 4,
+    "click-to-pay": 6,
+    "digital-accept-flex": 7,
+    "payments": 1,
+    "tms": 8,
     "unified-checkout": 4
   },
   "by_product_missing_rest_example": {
@@ -26,16 +31,6 @@
     "unified-checkout": 2
   },
   "findings_missing_required_fields": [
-    {
-      "product_id": "boarding",
-      "method": "POST",
-      "path": "/boarding/v1/registrations",
-      "operation_title": "Add a Structural Organization to a Merchant Organization",
-      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-reg-create-structural-api",
-      "missing_required_fields": true,
-      "missing_rest_example": false,
-      "line": 4264
-    },
     {
       "product_id": "boarding",
       "method": "GET",
@@ -77,104 +72,14 @@
       "line": 1506
     },
     {
-      "product_id": "boarding",
-      "method": "POST",
-      "path": "/products/v1/product-setups",
-      "operation_title": "Add a New Product to an Existing Organization",
-      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-update-product-api",
-      "missing_required_fields": true,
-      "missing_rest_example": true,
-      "line": 2851
-    },
-    {
-      "product_id": "boarding",
-      "method": "POST",
-      "path": "/products/v1/product-setups",
-      "operation_title": "Update Batch Group Using the PECS API",
-      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#pecs-update-batch",
-      "missing_required_fields": true,
-      "missing_rest_example": true,
-      "line": 2992
-    },
-    {
-      "product_id": "boarding",
-      "method": "POST",
-      "path": "/products/v1/product-setups",
-      "operation_title": "Add a Processor Using the PECS API",
-      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#pecs-add-processor",
-      "missing_required_fields": true,
-      "missing_rest_example": true,
-      "line": 3090
-    },
-    {
-      "product_id": "boarding",
-      "method": "POST",
-      "path": "/products/v1/product-setups",
-      "operation_title": "Delete a Processor Using the PECS API",
-      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#pecs-delete-processor",
-      "missing_required_fields": true,
-      "missing_rest_example": true,
-      "line": 3240
-    },
-    {
-      "product_id": "boarding",
-      "method": "POST",
-      "path": "/products/v1/product-setups",
-      "operation_title": "Add and Delete a Processor Using the PECS API",
-      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#pecs-add-delete-processor",
-      "missing_required_fields": true,
-      "missing_rest_example": true,
-      "line": 3348
-    },
-    {
-      "product_id": "boarding",
-      "method": "POST",
-      "path": "/products/v1/product-setups",
-      "operation_title": "Configure `Payer Authentication` Using the PECS API",
-      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#pecs-config-payerauth",
-      "missing_required_fields": true,
-      "missing_rest_example": true,
-      "line": 3528
-    },
-    {
-      "product_id": "boarding",
-      "method": "POST",
-      "path": "/products/v1/product-setups",
-      "operation_title": "Enable `TMS` with a Template Using the PECS API",
-      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-pecs-tms-enable-intro",
-      "missing_required_fields": true,
-      "missing_rest_example": false,
-      "line": 3985
-    },
-    {
-      "product_id": "boarding",
-      "method": "POST",
-      "path": "/products/v1/product-setups",
-      "operation_title": "Enable `TMS` and Enroll in Network Tokenization Using the PECS API",
-      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-pecs-tms-enable-intro",
-      "missing_required_fields": true,
-      "missing_rest_example": false,
-      "line": 4060
-    },
-    {
       "product_id": "click-to-pay",
-      "method": "POST",
-      "path": "/boarding/v1/registrations",
-      "operation_title": "Enabling `Click to Pay Drop-In UI` Using the API",
-      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#boarding-click-to-pay-enable-intro",
+      "method": "GET",
+      "path": "/flex/v2/payment-details/",
+      "operation_title": "Payment Details API",
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-token-get-pymnt-details",
       "missing_required_fields": true,
       "missing_rest_example": false,
-      "line": 316
-    },
-    {
-      "product_id": "click-to-pay",
-      "method": "POST",
-      "path": "/boarding/v1/registrations",
-      "operation_title": "Enable `Click to Pay` Customer Authentication Using the API",
-      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#boarding-click-to-pay-auth-enable-intro",
-      "missing_required_fields": true,
-      "missing_rest_example": false,
-      "line": 3132
+      "line": 2022
     },
     {
       "product_id": "click-to-pay",
@@ -189,32 +94,22 @@
     {
       "product_id": "click-to-pay",
       "method": "GET",
-      "path": "/flex/v2/payment-credentials/",
-      "operation_title": "Payment Credentials API",
-      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-token-get-pymnt-credentials",
-      "missing_required_fields": true,
-      "missing_rest_example": true,
-      "line": 4549
-    },
-    {
-      "product_id": "click-to-pay",
-      "method": "GET",
-      "path": "/flex/v2/payment-details/",
-      "operation_title": "Payment Details API",
-      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-token-get-pymnt-details",
-      "missing_required_fields": true,
-      "missing_rest_example": false,
-      "line": 2022
-    },
-    {
-      "product_id": "click-to-pay",
-      "method": "GET",
       "path": "/flex/v2/payment-details/",
       "operation_title": "Payment Details API",
       "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-token-get-pymnt-details",
       "missing_required_fields": true,
       "missing_rest_example": true,
       "line": 4229
+    },
+    {
+      "product_id": "click-to-pay",
+      "method": "GET",
+      "path": "/flex/v2/payment-credentials/",
+      "operation_title": "Payment Credentials API",
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-token-get-pymnt-credentials",
+      "missing_required_fields": true,
+      "missing_rest_example": true,
+      "line": 4549
     },
     {
       "product_id": "click-to-pay",
@@ -239,32 +134,32 @@
     {
       "product_id": "digital-accept-flex",
       "method": "POST",
-      "path": "/boarding/v1/registrations",
-      "operation_title": "Enabling `Click to Pay Drop-In UI` Using the API",
-      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#boarding-click-to-pay-enable-intro",
+      "path": "/pts/v2/payments/",
+      "operation_title": "Captures",
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-pay-methods-bnpl-captures",
       "missing_required_fields": true,
-      "missing_rest_example": false,
-      "line": 10646
+      "missing_rest_example": true,
+      "line": 5863
     },
     {
       "product_id": "digital-accept-flex",
       "method": "POST",
-      "path": "/boarding/v1/registrations",
-      "operation_title": "Enable `Click to Pay` Customer Authentication Using the API",
-      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#boarding-click-to-pay-auth-enable-intro",
+      "path": "/pts/v2/payments/",
+      "operation_title": "Captures",
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-pay-methods-wallet-captures",
       "missing_required_fields": true,
-      "missing_rest_example": false,
-      "line": 13157
+      "missing_rest_example": true,
+      "line": 6349
     },
     {
       "product_id": "digital-accept-flex",
-      "method": "GET",
-      "path": "/flex/v2/payment-credentials/",
-      "operation_title": "Payment Credentials API",
-      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-token-get-pymnt-credentials",
+      "method": "POST",
+      "path": "/pts/v2/payments",
+      "operation_title": "Authorizations with a Transient Token",
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-auth-tokens",
       "missing_required_fields": true,
       "missing_rest_example": false,
-      "line": 12234
+      "line": 8790
     },
     {
       "product_id": "digital-accept-flex",
@@ -288,13 +183,13 @@
     },
     {
       "product_id": "digital-accept-flex",
-      "method": "POST",
-      "path": "/pts/v2/payments",
-      "operation_title": "Authorizations with a Transient Token",
-      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-auth-tokens",
+      "method": "GET",
+      "path": "/flex/v2/payment-credentials/",
+      "operation_title": "Payment Credentials API",
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#ctp-token-get-pymnt-credentials",
       "missing_required_fields": true,
       "missing_rest_example": false,
-      "line": 8790
+      "line": 12234
     },
     {
       "product_id": "digital-accept-flex",
@@ -307,36 +202,6 @@
       "line": 14445
     },
     {
-      "product_id": "digital-accept-flex",
-      "method": "POST",
-      "path": "/pts/v2/payments/",
-      "operation_title": "Captures",
-      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-pay-methods-bnpl-captures",
-      "missing_required_fields": true,
-      "missing_rest_example": true,
-      "line": 5863
-    },
-    {
-      "product_id": "digital-accept-flex",
-      "method": "POST",
-      "path": "/pts/v2/payments/",
-      "operation_title": "Captures",
-      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/digital-accept-flex/developer/all/rest/digital-accept-flex.html#uc-pay-methods-wallet-captures",
-      "missing_required_fields": true,
-      "missing_rest_example": true,
-      "line": 6349
-    },
-    {
-      "product_id": "payments",
-      "method": "POST",
-      "path": "/pts/v2/payments",
-      "operation_title": "Authorization with Payment Network Tokens",
-      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#pnt-auth-intro",
-      "missing_required_fields": true,
-      "missing_rest_example": false,
-      "line": 1505
-    },
-    {
       "product_id": "payments",
       "method": "POST",
       "path": "/pts/v2/payments",
@@ -347,74 +212,14 @@
       "line": 5704
     },
     {
-      "product_id": "payments",
-      "method": "POST",
-      "path": "/pts/v2/payments",
-      "operation_title": "Processor-Specific Requirements",
-      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-pa-amex-intro_section_kl3_tbh_xwb",
-      "missing_required_fields": true,
-      "missing_rest_example": false,
-      "line": 7327
-    },
-    {
-      "product_id": "payments",
-      "method": "POST",
-      "path": "/pts/v2/payments",
-      "operation_title": "JCB J/Secure",
-      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-pa-jcb-intro",
-      "missing_required_fields": true,
-      "missing_rest_example": false,
-      "line": 7550
-    },
-    {
-      "product_id": "payments",
-      "method": "POST",
-      "path": "/pts/v2/payments",
-      "operation_title": "Mastercard Identity Check",
-      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/payments/developer/ctv/rest/payments.html#payments-processing-pa-mc-intro",
-      "missing_required_fields": true,
-      "missing_rest_example": false,
-      "line": 7766
-    },
-    {
       "product_id": "tms",
       "method": "POST",
-      "path": "/tms/v1/instrumentidentifiers",
-      "operation_title": "Create an Instrument Identifier",
-      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ii-tkn-create-intro",
+      "path": "/tms/v2/tokenize",
+      "operation_title": "Create Tokens",
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-tokenize-intro",
       "missing_required_fields": true,
-      "missing_rest_example": false,
-      "line": 4825
-    },
-    {
-      "product_id": "tms",
-      "method": "POST",
-      "path": "/tms/v1/instrumentidentifiers",
-      "operation_title": "Create an Instrument Identifier for Enrollable Network Tokens",
-      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ii-tkn-create-device-tkn-intro",
-      "missing_required_fields": true,
-      "missing_rest_example": false,
-      "line": 4988
-    },
-    {
-      "product_id": "tms",
-      "method": "POST",
-      "path": "/tms/v1/instrumentidentifiers",
-      "operation_title": "Create an Instrument Identifier and Network Token Using EMV Tags",
-      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-tap-create-ii-intro",
-      "missing_required_fields": true,
-      "missing_rest_example": false,
-      "line": 5167
-    },
-    {
-      "product_id": "tms",
-      "method": "DELETE",
-      "path": "/tms/v1/instrumentidentifiers/{instrumentIdentifierTokenId}",
-      "operation_title": "Delete an Instrument Identifier",
-      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ii-tkn-delete-intro",
-      "missing_required_fields": true,
-      "missing_rest_example": false,
-      "line": 6010
+      "missing_rest_example": true,
+      "line": 4195
     },
     {
       "product_id": "tms",
@@ -448,16 +253,6 @@
     },
     {
       "product_id": "tms",
-      "method": "DELETE",
-      "path": "/tms/v2/customers/",
-      "operation_title": "Delete a Customer Shipping Address",
-      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ship-addr-tkn-delete-intro",
-      "missing_required_fields": true,
-      "missing_rest_example": false,
-      "line": 9961
-    },
-    {
-      "product_id": "tms",
       "method": "GET",
       "path": "/tms/v2/customers/",
       "operation_title": "Retrieve a Customer Shipping Address",
@@ -478,63 +273,13 @@
     },
     {
       "product_id": "tms",
-      "method": "PATCH",
-      "path": "/tms/v2/customers/",
-      "operation_title": "Update a Customer Shipping Address",
-      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ship-addr-tkn-update-intro",
+      "method": "DELETE",
+      "path": "/tms/v2/tokenized-cards/{id}/bindings/{clientDeviceID}",
+      "operation_title": "Delete Binding",
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ctf-delete-binding-intro",
       "missing_required_fields": true,
       "missing_rest_example": false,
-      "line": 9858
-    },
-    {
-      "product_id": "tms",
-      "method": "POST",
-      "path": "/tms/v2/customers/",
-      "operation_title": "Create a Customer Shipping Address",
-      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ship-addr-tkn-create-intro",
-      "missing_required_fields": true,
-      "missing_rest_example": false,
-      "line": 9304
-    },
-    {
-      "product_id": "tms",
-      "method": "POST",
-      "path": "/tms/v2/customers/",
-      "operation_title": "Add a Non-Default Shipping Address",
-      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ship-addr-add-nondefault-addr-intro",
-      "missing_required_fields": true,
-      "missing_rest_example": false,
-      "line": 9528
-    },
-    {
-      "product_id": "tms",
-      "method": "POST",
-      "path": "/tms/v2/tokenize",
-      "operation_title": "Create Tokens",
-      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-tokenize-intro",
-      "missing_required_fields": true,
-      "missing_rest_example": true,
-      "line": 4195
-    },
-    {
-      "product_id": "tms",
-      "method": "POST",
-      "path": "/tms/v2/tokenize",
-      "operation_title": "Create a Customer Payment Instrument",
-      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-tokenize-cust-pi-intro",
-      "missing_required_fields": true,
-      "missing_rest_example": false,
-      "line": 4398
-    },
-    {
-      "product_id": "tms",
-      "method": "POST",
-      "path": "/tms/v2/tokenize",
-      "operation_title": "Provision a Network Using a Transient Token",
-      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-net-tkn-create-trans-token-intro",
-      "missing_required_fields": true,
-      "missing_rest_example": false,
-      "line": 4703
+      "line": 16719
     },
     {
       "product_id": "tms",
@@ -545,36 +290,6 @@
       "missing_required_fields": true,
       "missing_rest_example": true,
       "line": 17484
-    },
-    {
-      "product_id": "tms",
-      "method": "DELETE",
-      "path": "/tms/v2/tokenized-cards/{id}/bindings/{clientDeviceID}",
-      "operation_title": "Delete Binding",
-      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/tms/developer/all/rest/tms.html#tms-ctf-delete-binding-intro",
-      "missing_required_fields": true,
-      "missing_rest_example": false,
-      "line": 16719
-    },
-    {
-      "product_id": "unified-checkout",
-      "method": "GET",
-      "path": "/flex/v2/payment-details/",
-      "operation_title": "Payment Details API",
-      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-token-get-pymnt-details",
-      "missing_required_fields": true,
-      "missing_rest_example": false,
-      "line": 5680
-    },
-    {
-      "product_id": "unified-checkout",
-      "method": "POST",
-      "path": "/pts/v2/payments",
-      "operation_title": "Authorizations with a Transient Token",
-      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-auth-tokens",
-      "missing_required_fields": true,
-      "missing_rest_example": false,
-      "line": 5183
     },
     {
       "product_id": "unified-checkout",
@@ -595,6 +310,26 @@
       "missing_required_fields": true,
       "missing_rest_example": true,
       "line": 2273
+    },
+    {
+      "product_id": "unified-checkout",
+      "method": "POST",
+      "path": "/pts/v2/payments",
+      "operation_title": "Authorizations with a Transient Token",
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-auth-tokens",
+      "missing_required_fields": true,
+      "missing_rest_example": false,
+      "line": 5183
+    },
+    {
+      "product_id": "unified-checkout",
+      "method": "GET",
+      "path": "/flex/v2/payment-details/",
+      "operation_title": "Payment Details API",
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/unified-checkout/developer/all/rest/unified-checkout.html#uc-token-get-pymnt-details",
+      "missing_required_fields": true,
+      "missing_rest_example": false,
+      "line": 5680
     }
   ],
   "findings_missing_rest_example": [
@@ -604,7 +339,7 @@
       "path": "/products/v1/product-setups",
       "operation_title": "Add a New Product to an Existing Organization",
       "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-update-product-api",
-      "missing_required_fields": true,
+      "missing_required_fields": false,
       "missing_rest_example": true,
       "line": 2851
     },
@@ -614,7 +349,7 @@
       "path": "/products/v1/product-setups",
       "operation_title": "Update Batch Group Using the PECS API",
       "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#pecs-update-batch",
-      "missing_required_fields": true,
+      "missing_required_fields": false,
       "missing_rest_example": true,
       "line": 2992
     },
@@ -624,7 +359,7 @@
       "path": "/products/v1/product-setups",
       "operation_title": "Add a Processor Using the PECS API",
       "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#pecs-add-processor",
-      "missing_required_fields": true,
+      "missing_required_fields": false,
       "missing_rest_example": true,
       "line": 3090
     },
@@ -634,7 +369,7 @@
       "path": "/products/v1/product-setups",
       "operation_title": "Delete a Processor Using the PECS API",
       "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#pecs-delete-processor",
-      "missing_required_fields": true,
+      "missing_required_fields": false,
       "missing_rest_example": true,
       "line": 3240
     },
@@ -644,7 +379,7 @@
       "path": "/products/v1/product-setups",
       "operation_title": "Add and Delete a Processor Using the PECS API",
       "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#pecs-add-delete-processor",
-      "missing_required_fields": true,
+      "missing_required_fields": false,
       "missing_rest_example": true,
       "line": 3348
     },
@@ -654,19 +389,9 @@
       "path": "/products/v1/product-setups",
       "operation_title": "Configure `Payer Authentication` Using the PECS API",
       "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#pecs-config-payerauth",
-      "missing_required_fields": true,
+      "missing_required_fields": false,
       "missing_rest_example": true,
       "line": 3528
-    },
-    {
-      "product_id": "click-to-pay",
-      "method": "GET",
-      "path": "/flex/v2/payment-credentials/",
-      "operation_title": "Payment Credentials API",
-      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-token-get-pymnt-credentials",
-      "missing_required_fields": true,
-      "missing_rest_example": true,
-      "line": 4549
     },
     {
       "product_id": "click-to-pay",
@@ -677,6 +402,16 @@
       "missing_required_fields": true,
       "missing_rest_example": true,
       "line": 4229
+    },
+    {
+      "product_id": "click-to-pay",
+      "method": "GET",
+      "path": "/flex/v2/payment-credentials/",
+      "operation_title": "Payment Credentials API",
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-token-get-pymnt-credentials",
+      "missing_required_fields": true,
+      "missing_rest_example": true,
+      "line": 4549
     },
     {
       "product_id": "click-to-pay",
@@ -771,64 +506,14 @@
   ],
   "findings_missing_both": [
     {
-      "product_id": "boarding",
-      "method": "POST",
-      "path": "/products/v1/product-setups",
-      "operation_title": "Add a New Product to an Existing Organization",
-      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#boarding-update-product-api",
+      "product_id": "click-to-pay",
+      "method": "GET",
+      "path": "/flex/v2/payment-details/",
+      "operation_title": "Payment Details API",
+      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-token-get-pymnt-details",
       "missing_required_fields": true,
       "missing_rest_example": true,
-      "line": 2851
-    },
-    {
-      "product_id": "boarding",
-      "method": "POST",
-      "path": "/products/v1/product-setups",
-      "operation_title": "Update Batch Group Using the PECS API",
-      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#pecs-update-batch",
-      "missing_required_fields": true,
-      "missing_rest_example": true,
-      "line": 2992
-    },
-    {
-      "product_id": "boarding",
-      "method": "POST",
-      "path": "/products/v1/product-setups",
-      "operation_title": "Add a Processor Using the PECS API",
-      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#pecs-add-processor",
-      "missing_required_fields": true,
-      "missing_rest_example": true,
-      "line": 3090
-    },
-    {
-      "product_id": "boarding",
-      "method": "POST",
-      "path": "/products/v1/product-setups",
-      "operation_title": "Delete a Processor Using the PECS API",
-      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#pecs-delete-processor",
-      "missing_required_fields": true,
-      "missing_rest_example": true,
-      "line": 3240
-    },
-    {
-      "product_id": "boarding",
-      "method": "POST",
-      "path": "/products/v1/product-setups",
-      "operation_title": "Add and Delete a Processor Using the PECS API",
-      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#pecs-add-delete-processor",
-      "missing_required_fields": true,
-      "missing_rest_example": true,
-      "line": 3348
-    },
-    {
-      "product_id": "boarding",
-      "method": "POST",
-      "path": "/products/v1/product-setups",
-      "operation_title": "Configure `Payer Authentication` Using the PECS API",
-      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/boarding/developer/all/rest/boarding.html#pecs-config-payerauth",
-      "missing_required_fields": true,
-      "missing_rest_example": true,
-      "line": 3528
+      "line": 4229
     },
     {
       "product_id": "click-to-pay",
@@ -839,16 +524,6 @@
       "missing_required_fields": true,
       "missing_rest_example": true,
       "line": 4549
-    },
-    {
-      "product_id": "click-to-pay",
-      "method": "GET",
-      "path": "/flex/v2/payment-details/",
-      "operation_title": "Payment Details API",
-      "deep_link": "https://developer.cybersource.com/docs/cybs/en-us/click-to-pay/developer/all/rest/click-to-pay.html#uc-token-get-pymnt-details",
-      "missing_required_fields": true,
-      "missing_rest_example": true,
-      "line": 4229
     },
     {
       "product_id": "click-to-pay",
@@ -931,14 +606,12 @@
       "line": 2273
     }
   ],
-  "pattern_scan": {
-    "documents": 16,
-    "endpoint_headings": 176,
-    "matched": 176,
-    "matched_with_required_fields": 119,
-    "matched_with_example": 159,
-    "claims_emitted": 952,
-    "skipped": 0,
-    "skipped_by_reason": {}
+  "contract": {
+    "allowed_derivation_sources": [
+      "api_fields_link",
+      "required_fields_section",
+      "sibling_req_fields_page"
+    ],
+    "forbidden": "inferring required fields from REST Example JSON keys"
   }
 }

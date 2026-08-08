@@ -3,9 +3,12 @@
 ## The three headline findings
 
 **1. The boarding docs tell a partner what to click but not what should
-happen.** Of 277 sequence steps in the six composed workflows (API + UI), **222 have no stated outcome**
-`composition-report.json` / generated pages, gaps marked in-line). A developer
-following these steps has no way to know whether a step worked.
+happen.** Of **278** sequence steps in the six composed workflows (API + UI),
+**215 have no stated outcome** (live recount: `composition-report.json` →
+`sequence_totals.ratio` / per-step `outcome_missing: true` flags on
+`content/boarding/workflows/*.md`). A developer following these steps has no
+way to know whether a step worked. Do not quote older 222/277 or 220/257
+figures — they are superseded.
 
 **2. The programmatic boarding path has no procedural documentation.** Of the
 257 composed steps, **233 are Business Center UI steps and 24 are REST API
@@ -87,9 +90,9 @@ Artifacts: `toc-fetch-report.md`, `census-report.md`, `quarantine-list.md`.
    pages — only in the family compendium. A partner reading topic pages never
    sees them; an agent deep-linking anchors cannot cite them.
 7. **Expected outcomes are largely unstated.** Across the six composed
-   workflows, 220 of 257 steps have no stated outcome ("what should I see if
-   it worked") in the source prose — visible as explicit gaps in the
-   generated pages.
+   workflows, **215 of 278** steps have no stated outcome ("what should I see
+   if it worked") — machine-readable as `outcome_missing: true` on each step
+   and recounted in `composition-report.json` → `sequence_totals.ratio`.
 
 ## Next (not done in this pass)
 
@@ -103,11 +106,11 @@ Artifacts: `toc-fetch-report.md`, `census-report.md`, `quarantine-list.md`.
 
 Matched Endpoint sections that document a verb+URL but omit the Required Fields list and/or a REST Example leave a partner unable to form a valid request. These are gap-report findings, not extractor warnings.
 
-Denominator: **176** matched Endpoint sections (source: `api_reference.extract_api_reference_claims over raw/product-roots`).
+Denominator: **176** matched Endpoint sections (source: `api_reference.extract_api_reference_claims over raw/product-roots` with RF derivation contract).
 
-- Missing Required Fields: **57** / 176
+- Missing Required Fields: **30** / 176
 - Missing REST Example: **17** / 176
-- Missing both: **16** / 176
+- Missing both: **10** / 176
 
 ## Endpoints with no Required Fields list
 
@@ -220,11 +223,11 @@ Denominator: **176** matched Endpoint sections (source: `api_reference.extract_a
 
 Matched Endpoint sections that document a verb+URL but omit the Required Fields list and/or a REST Example leave a partner unable to form a valid request. These are gap-report findings, not extractor warnings.
 
-Denominator: **176** matched Endpoint sections (source: `api_reference.extract_api_reference_claims over raw/product-roots`).
+Denominator: **176** matched Endpoint sections (source: `api_reference.extract_api_reference_claims over raw/product-roots` with RF derivation contract).
 
-- Missing Required Fields: **57** / 176
+- Missing Required Fields: **30** / 176
 - Missing REST Example: **17** / 176
-- Missing both: **16** / 176
+- Missing both: **10** / 176
 
 ## Endpoints with no Required Fields list
 
@@ -337,11 +340,11 @@ Denominator: **176** matched Endpoint sections (source: `api_reference.extract_a
 
 Matched Endpoint sections that document a verb+URL but omit the Required Fields list and/or a REST Example leave a partner unable to form a valid request. These are gap-report findings, not extractor warnings.
 
-Denominator: **176** matched Endpoint sections (source: `api_reference.extract_api_reference_claims over raw/product-roots`).
+Denominator: **176** matched Endpoint sections (source: `api_reference.extract_api_reference_claims over raw/product-roots` with RF derivation contract).
 
-- Missing Required Fields: **57** / 176
+- Missing Required Fields: **30** / 176
 - Missing REST Example: **17** / 176
-- Missing both: **16** / 176
+- Missing both: **10** / 176
 
 ## Endpoints with no Required Fields list
 
@@ -454,11 +457,11 @@ Denominator: **176** matched Endpoint sections (source: `api_reference.extract_a
 
 Matched Endpoint sections that document a verb+URL but omit the Required Fields list and/or a REST Example leave a partner unable to form a valid request. These are gap-report findings, not extractor warnings.
 
-Denominator: **176** matched Endpoint sections (source: `api_reference.extract_api_reference_claims over raw/product-roots`).
+Denominator: **176** matched Endpoint sections (source: `api_reference.extract_api_reference_claims over raw/product-roots` with RF derivation contract).
 
-- Missing Required Fields: **57** / 176
+- Missing Required Fields: **30** / 176
 - Missing REST Example: **17** / 176
-- Missing both: **16** / 176
+- Missing both: **10** / 176
 
 ## Endpoints with no Required Fields list
 
