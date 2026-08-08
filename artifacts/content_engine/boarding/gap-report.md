@@ -1,5 +1,24 @@
 # Wave 2 boarding — gap report
 
+## The three headline findings
+
+**1. The boarding docs tell a partner what to click but not what should
+happen.** Of 257 procedural steps in the six composed workflows, **220 have no
+stated outcome** in the source prose (denominator: 257 steps; source:
+`composition-report.json` / generated pages, gaps marked in-line). A developer
+following these steps has no way to know whether a step worked.
+
+**2. The programmatic boarding path has no procedural documentation.** Of the
+257 composed steps, **233 are Business Center UI steps and 24 are REST API
+steps** (source: actor counts across `content/boarding/workflows/*.md`). The
+flagship workflow — Create a Merchant Organization — has **31 UI steps and 0
+API steps**. The REST family exists as reference material (endpoints, field
+tables) only: for a partner boarding merchants through the API — the Stripe
+Connect equivalent — there is nothing to follow.
+
+**3. The agent-discovery surface is broken** (detail below): `llms.txt` omits
+the Merchant Boarding alias, whose `.md` endpoint returns HTTP 500.
+
 ## Headline finding (production docs site)
 
 **CyberSource `llms.txt` — the file that exists so AI agents can discover the docs — does not expose a distinct Merchant Boarding API family under `/merchant-boarding/`, and that path’s machine-readable `.md` endpoint returns HTTP 500 while the HTML variant redirects into the Business Center boarding guide.**
