@@ -4,7 +4,7 @@
 
 | ID | Status | Proposal |
 | --- | --- | --- |
-| L2-endpoint-required-fields-augment | **CLEARED → shipped** | Capture Required Fields next to matched endpoints (57/176 soft gap). |
+| L2-endpoint-required-fields-augment | **CLEARED → shipped** | Capture Required Fields with derivation tags (57→30/176). |
 | L2-boarding-step-outcome-gap-marker | **APPROVED → merged** | Flag steps with no stated outcome as `outcome_missing` (not invent results). |
 | L2-prerequisite-prose-extractor | discarded | Stale — L1 already expanded `_PREREQUISITE_PATTERN`. |
 
